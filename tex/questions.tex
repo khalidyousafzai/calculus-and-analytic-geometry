@@ -1,0 +1,183 @@
+\باب{سوال جواب}
+
+\renewcommand{\QuestionNB}{\hspace{-2.25em}سوال~\arabic{Question}.\ }
+\setlength{\QuestionIndent}{3em}
+
+
+
+\begin{ExerciseList}
+  \vspace{-\baselineskip}%
+  \Exercise[title=سوالات]
+  \ExePart{اعشاری نظام}
+  \Question{کیا نام ہے}
+  \Question{باپ کا نام کیا ہے}
+  \ExePart{عدم مساوات}
+  \Question{جی دوبارہ}
+  \Question{ہاں دوبارہ}
+\end{ExerciseList}
+
+\باب{دوم}
+\begin{otherlanguage}{english}
+\begin{Exercise}\label{EX11}
+        \vspace{-\baselineskip}% <-- You don't need this line of code if there's some text here
+        \Question In problem \ref{EX11-1-i}-\ref{EX11-1-iii}, determine whether the given differential equation is separable  
+        \begin{tasks}(2)
+            \task\label{EX11-1-i} $\frac{dy}{dx}-\sin{(x+y)}=0$     
+            \task $\frac{dy}{dx}=4y^2-3y+1$ 
+            \task\label{EX11-1-iii} $\frac{ds}{dt}=t\ln{(s^{2t})}+8t^2$ 
+        \end{tasks}
+        \Question In problem \ref{EX11-2-iv}-\ref{EX11-2-viii}, solve the equation 
+        \begin{tasks}[resume=true](2)
+            \task\label{EX11-2-iv} $\frac{dx}{dt}=3xt^2$
+            \task $y^{-1}dy+ye^{\cos{x}}\sin{x}dx=0$
+            \task $(x+xy^2)dx+ye^{\cos{x}}\sin{x}dx=0$
+            \task\label{EX11-2-viii} $\frac{dy}{dt} = \frac{y}{t+1} + 4t^2 +  4t$, $\quad$ $y(1) = 10$
+        \end{tasks}
+    \end{Exercise}
+
+\setboolean{firstanswerofthechapter}{true}
+    \begin{multicols}{2}
+        \begin{Answer}[ref={EX11}]
+            \Question 
+            \begin{tasks}
+                \task This is a solution of Ex 1
+                \task This is a solution of Ex 2 
+                \task This is a solution of Ex 3 
+            \end{tasks} 
+            \Question 
+            \begin{tasks}[resume=true]
+                \task This is a solution of Ex 4
+                \task This is a solution of Ex 5 
+                \task This is a solution of Ex 6 
+                \task This is a solution of Ex 7 
+            \end{tasks} 
+        \end{Answer}
+    \end{multicols}
+    \setboolean{firstanswerofthechapter}{false}
+
+    \begin{Exercise}\label{EX12}
+        Another exercise. 
+        \Question If you don't need a horizontal list, you can simply use \verb|\Question|
+    \end{Exercise}
+    \begin{multicols}{2}
+        \begin{Answer}[ref={EX12}]
+            \Question This is a solution of Ex 1
+        \end{Answer}
+    \end{multicols}
+
+
+
+    \begin{Exercise}\label{EX21}
+        \vspace{-\baselineskip}% <-- You don't need this line of code if there's some text here
+        \Question Eight systems of differential equations and five direction fields are given below.  Determine the system that corresponds to each direction field and sketch the solution curves that correspond to the initial conditions $(x_0, y_0) = (0,1)$ and $(x_0, y_0) = (1,-1)$.
+        \begin{tasks}(3)
+            \task $\begin{aligned}
+            \frac{dx}{dt} & = -x \\     
+            \frac{dy}{dt} & = y-1
+            \end{aligned}$
+            \task $\begin{aligned}
+            \frac{dx}{dt} & = x^2 - 1 \\        
+            \frac{dy}{dt} & = y
+            \end{aligned}$
+            \task $\begin{aligned}
+            \frac{dx}{dt} & = x+2y \\
+            \frac{dy}{dt} & = -y
+            \end{aligned}$
+            \task $\begin{aligned}
+            \frac{dx}{dt} & = 2x \\
+            \frac{dy}{dt} & =  y
+            \end{aligned}$
+            \task $\begin{aligned}
+            \frac{dx}{dt} & = x \\
+            \frac{dy}{dt}  & = 2y
+            \end{aligned}$ 
+            \task$\begin{aligned}
+            \frac{dx}{dt} & = x-1 \\
+            \frac{dy}{dt} & = -y
+            \end{aligned}$
+            \task$\begin{aligned}
+            \frac{dx}{dt} & = x^2-1 \\
+            \frac{dy}{dt} & = -y
+            \end{aligned}$        
+            \task $\begin{aligned}
+            \frac{dx}{dt} & = x- 2y \\
+            \frac{dy}{dt} & =  -y
+            \end{aligned}$
+        \end{tasks}
+    \end{Exercise}
+    \setboolean{firstanswerofthechapter}{true}
+    \begin{multicols}{2}
+        \begin{Answer}[ref={EX21}]
+            \Question 
+            \begin{tasks}
+                \task This is a solution of Ex 1
+                \task This is a solution of Ex 2 
+                \task This is a solution of Ex 3 
+                \task This is a solution of Ex 4 
+                \task This is a solution of Ex 5 
+                \task This is a solution of Ex 6 
+                \task This is a solution of Ex 7 
+                \task This is a solution of Ex 8 
+            \end{tasks}
+        \end{Answer}
+    \end{multicols}
+    \setboolean{firstanswerofthechapter}{false}
+    \newpage        
+    \begin{Exercise}\label{EX22}
+        Since these are systems, maybe it's better to put the \verb|aligned| enviroment within  \verb|\left\{| and \verb|\right.|: 
+        \Question Eight systems of differential equations and five direction fields are given below.  Determine the system that corresponds to each direction field and sketch the solution curves that correspond to the initial conditions $(x_0, y_0) = (0,1)$ and $(x_0, y_0) = (1,-1)$.
+        \begin{tasks}(3)
+            \task $\left\{\begin{aligned}
+            \frac{dx}{dt} & = -x \\     
+            \frac{dy}{dt} & = y-1
+            \end{aligned}\right.$
+            \task $\left\{\begin{aligned}
+            \frac{dx}{dt} & = x^2 - 1 \\        
+            \frac{dy}{dt} & = y
+            \end{aligned}\right.$
+            \task $\left\{\begin{aligned}
+            \frac{dx}{dt} & = x+2y \\
+            \frac{dy}{dt} & = -y
+            \end{aligned}\right.$
+            \task $\left\{\begin{aligned}
+            \frac{dx}{dt} & = 2x \\
+            \frac{dy}{dt} & =  y
+            \end{aligned}\right.$
+            \task $\left\{\begin{aligned}
+            \frac{dx}{dt} & = x \\
+            \frac{dy}{dt}  & = 2y
+            \end{aligned}\right.$ 
+            \task$\left\{\begin{aligned}
+            \frac{dx}{dt} & = x-1 \\
+            \frac{dy}{dt} & = -y
+            \end{aligned}\right.$
+            \task $\left\{\begin{aligned}
+            \frac{dx}{dt} & = x^2-1 \\
+            \frac{dy}{dt} & = -y
+            \end{aligned}\right.$        
+            \task $\left\{\begin{aligned}
+            \frac{dx}{dt} & = x- 2y \\
+            \frac{dy}{dt} & =  -y
+            \end{aligned}\right.$
+        \end{tasks}
+    \end{Exercise}
+    \begin{multicols}{2}
+        \begin{Answer}[ref={EX22}]
+            \Question 
+            \begin{tasks}
+                \task This is a solution of Ex 1
+                \task This is a solution of Ex 2 
+                \task This is a solution of Ex 3 
+                \task This is a solution of Ex 4 
+                \task This is a solution of Ex 5 
+                \task This is a solution of Ex 6 
+                \task This is a solution of Ex 7 
+                \task This is a solution of Ex 8 
+            \end{tasks}
+        \end{Answer}
+    \end{multicols}
+\setboolean{firstanswerofthechapter}{true}
+    \begin{multicols}{2}\raggedcolumns
+        \shipoutAnswer
+    \end{multicols}
+\end{otherlanguage}

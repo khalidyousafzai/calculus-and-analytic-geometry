@@ -1,0 +1,44 @@
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\cosec}{cosec}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arcCot}
+\DeclareMathOperator{\arccsc}{arcCsc}
+\DeclareMathOperator{\arccosine}{arcCos}
+\DeclareMathOperator{\arccosh}{arcCosh}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arcsech}{arcsech}
+\DeclareMathOperator{\arccsch}{arcCsch}
+\DeclareMathOperator{\arccoth}{arcCoth} 
+\DeclareMathOperator{\erf}{erf} 
+\DeclareMathOperator{\erfc}{erfc} 
+%the following two Sine Integral symbols doesnot clash with SI units package
+\DeclareMathOperator{\kSi}{Si} 
+\DeclareMathOperator{\ksi}{si} 
+\DeclareMathOperator{\kS}{S} 
+%cosine integral, exponential integral, logrithmic integral
+\DeclareMathOperator{\ci}{ci} 
+\DeclareMathOperator{\kC}{C} 
+\DeclareMathOperator{\Ei}{Ei} 
+\DeclareMathOperator{\li}{li} 
+%Fresnel Cosine and SineIntegrals and their Auxiliary integrals
+\DeclareMathOperator{\FC}{C} 
+\DeclareMathOperator{\FS}{S} 
+\DeclareMathOperator{\FAC}{c}                  %complementary Fresnel integral
+\DeclareMathOperator{\FAS}{s}                     %complementary Fresnel integral
+\DeclareMathOperator{\gammaQ}{Q}                     %Incomplete gamma function
+\DeclareMathOperator{\gammaP}{P}                     %Incomplete gamma function
+%Hermite polynomials
+\DeclareMathOperator{\He}{He} 
+%Complex Natural Logarithm, Principal Value
+\DeclareMathOperator{\Ln}{Ln} 
+%Residue 
+\DeclareMathOperator{\Res}{Res}
+%Lagrange interpolation formula
+\DeclareMathOperator{\Lagrange}{L}
+%statistics UpperControlLimit and Lower Control Limit, Average Outgoing Quality
+\DeclareMathOperator{\UCL}{UCL} 
+\DeclareMathOperator{\LCL}{LCL} 
+\DeclareMathOperator{\OC}{OC} 
+\DeclareMathOperator{\AOQ}{AOQ} 

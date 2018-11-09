@@ -1,0 +1,82 @@
+%draws left and right arrows where needed e.g.  
+% \draw[->-=0.5] (0,0)--(3,0); draws arrow at the middle
+\tikzset{->-/.style={decoration={markings, mark=at position #1 with {\arrow{latex}}},postaction={decorate}}}
+\tikzset{-<-/.style={decoration={markings, mark=at position #1 with {\arrow{latex reversed}}},postaction={decorate}}}
+
+
+%draws right angles \RightAngle{A}{B}{C}
+\providecommand{\RightAngle}[4][5pt]{\draw[gray] ($#3!#1!#2$)--($ #3!2!($($#3!#1!#2$)!.5!($#3!#1!#4$)$) $) --($#3!#1!#4$) ;     }
+%colours
+\definecolor{lgray}{cmyk}{0,0,0,0.2}
+\definecolor{dgray}{cmyk}{0,0,0,0.7}
+%draws a cross just like ocirc, circ; usage \fill(0,2)circle(1.5py);\draw(0,2)node[kcross]{};
+\tikzset{kcross/.style={cross out, draw, 
+         minimum size=2*(2pt-\pgflinewidth), 
+         inner sep=0pt, outer sep=0pt}}
+
+
+%tikz, pgfplot TABLE
+\pgfplotsset{select coords between index/.style 2 args={
+    x filter/.code={
+        \ifnum\coordindex<#1\def\pgfmathresult{}\fi
+        \ifnum\coordindex>#2\def\pgfmathresult{}\fi
+    }
+}}
+%
+%boxed circuits
+%=========================================
+%\leftBox[K]{3,2}   draws a box with lower end at (3,2) and the terminals called Ka and Kb
+\newcommand{\boxLeft}[2][p]{
+\coordinate (a) at (#2);
+\draw (a)++(-0.025,0.5) coordinate (b);
+\draw (a)++(-0.04,1) coordinate (c);
+\draw (a)++(-0.12,1.5) coordinate (d);
+\draw (a)++(-0.2,2) coordinate (e);
+\draw (a)++(-0.15,2.5) coordinate (f);
+\draw (a)++(0.5,3) coordinate (g);
+
+\draw (a)++(0.7,2.5)coordinate(h);
+\draw (a)++(0.6,2)coordinate(i);
+\draw (a)++(0.75,1.5)coordinate(j);
+\draw (a)++(0.7,1)coordinate(k);
+\draw (a)++(0.7,0.5)coordinate(l);
+\draw (a)++(0.6,0)coordinate(m);
+\draw plot [smooth cycle] coordinates {(a) (b) (c) (d) (e) (f) (g) (h) (i) (j) (k) (l) (m)};
+\draw (h)coordinate(#1a);
+\draw(l)coordinate(#1b);
+}
+%===================
+%\rightBox[J]{3,2}   draws a box with lower end at (3,2) and the terminals called Ja and Jb
+\newcommand{\boxRight}[2][p]{
+\coordinate (aa) at (#2);
+\draw (aa)++(0.025,0.5) coordinate(ba);
+\draw (aa)++(0.04,1)coordinate(ca);
+\draw (aa)++ (0.12,1.5)coordinate(da);
+\draw (aa)++(0.13,2)coordinate(ea);
+\draw (aa)++(0.1,2.5)coordinate(fa);
+\draw (aa)++(-0.5,3)coordinate(ga);
+
+\draw (aa)++(-0.8,2.5) coordinate(ha);
+\draw (aa)++(-0.8,2) coordinate(ia);
+\draw (aa)++ (-0.75,1.5) coordinate(ja);
+\draw (aa)++(-0.7,1) coordinate(ka);
+\draw (aa)++(-0.7,0.5) coordinate(la);
+\draw (aa)++(-0.5,0) coordinate(ma);
+\draw plot [smooth cycle] coordinates {(aa) (ba) (ca) (da) (ea) (fa) (ga) (ha) (ia) (ja) (ka) (la) (ma)};
+\draw (ha)coordinate(#1a);
+\draw(la)coordinate(#1b);
+}
+%===================
+%writes text above matrix entries (outside the matrix bars)
+\newcommand\bovermat[2]{%
+  \makebox[0pt][r]{$\raisebox{16pt}[0pt][0pt]{\text{\RL{#1}}}$}#2}
+\newcommand\covermat[2]{%
+  \makebox[0pt][c]{$\raisebox{16pt}[0pt][0pt]{\text{\RL{#1}}}$}#2}
+\newcommand\partialphantom{\vphantom{\frac{\partial e_{P,M}}{\partial w_{1,1}}}}
+
+%=============================
+%when a table is all math, instead of using $$ in each cell use the following.Text can be entered in a cell with \text{} 
+%usage \begin{matrix}{C|L} ;not needed in array as array is $$ by default
+\newcolumntype{L}{>{$}l<{$}}
+\newcolumntype{C}{>{$}c<{$}}
+\newcolumntype{R}{>{$}r<{$}}
