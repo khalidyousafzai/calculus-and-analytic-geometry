@@ -104,7 +104,7 @@
 \renewcommand{\theexamplecounter}{\arabic{examplecounter}.\thechapter}
 
 \newenvironment*{مثال}
-{\par\noindent\ignorespaces    مثال \refstepcounter{examplecounter} \theexamplecounter :}%
+{\par\noindent\ignorespaces    مثال \refstepcounter{examplecounter} \theexamplecounter :\quad}%
 {\hfill\qedsymbol  \vspace{\baselineskip}\par}
 %{\noindent\ignorespaces \vspace{\baselineskip} \hrule \vspace{\baselineskip}  مثال \refstepcounter{examplecounter} \theexamplecounter :}%
 %{\par\noindent \hrule  \vspace{\baselineskip}}
@@ -116,7 +116,7 @@
 \renewcommand{\thepracticecounter}{\arabic{practicecounter}.\thechapter}
 
 \newenvironment*{مشق}
-{\par\noindent\ignorespaces \vspace{\baselineskip} \hrule \vspace{\baselineskip} مشق \refstepcounter{practicecounter} \thepracticecounter :}%
+{\par\noindent\ignorespaces \vspace{\baselineskip} \hrule \vspace{\baselineskip} مشق \refstepcounter{practicecounter} \thepracticecounter :\quad}%
 {\par\noindent \hrule  \vspace{\baselineskip}}
 %---------
 
@@ -147,7 +147,7 @@
 \renewcommand{\thekthcounter}{\arabic{kthcounter}.\thechapter}
 
 \newenvironment*{مسئلہ}				
-{\par\noindent\ignorespaces  مسئلہ \refstepcounter{kthcounter} \thekthcounter :}%
+{\par\noindent\ignorespaces  مسئلہ \refstepcounter{kthcounter} \thekthcounter :\quad}%
 {\par\noindent }
 %--------------------
 %--------------------
@@ -158,7 +158,7 @@
 %\renewcommand{\thekprcounter}{\arabic{kprcounter}.\thechapter}
 
 \newenvironment*{ثبوت}				
-{\noindent\ignorespaces  ثبوت :}%
+{\noindent\ignorespaces  ثبوت :\quad}%
 {\par\hfill\qedsymbol  \vspace{\baselineskip}\par }
 %{\par\noindent\qedsymbol  \vspace{\baselineskip} }
 %--------------------
@@ -170,7 +170,7 @@
 %\renewcommand{\thedfrcounter}{\arabic{kdfcounter}.\thechapter}
 
 \newenvironment*{تعریف}				
-{\par\noindent\ignorespaces  تعریف :}%
+{\par\noindent\ignorespaces  تعریف :\quad}%
 {\par\noindent }
 %--------------------
 %--------------------
