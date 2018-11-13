@@ -1642,3 +1642,427 @@ y=\sqrt{4-x}&(-\infty,4]&[0,\infty)
 %==================
 
 \جزوحصہء{تفاعل کی ترسیم}
+تفاعل \عددی{f} کی تقسیم سے مراد مساوات \عددی{y=f(x)} کی ترسیم ہے جو کارتیسی مستوی پر وہ نقطے ہیں جن کے محدد تفاعل \عددی{f} کی داخلی، خارجی جوڑیاں \عددی{(x,y)} ہیں۔
+
+ضروری نہیں کہ ہر منحنی جو آپ ترسیم کریں تفاعل کی منحنی ہو۔تفاعل ہونے کا بنیادی شرط یہ ہے کہ تفاعل کے دائرہ کار میں ہر \عددی{x} کے لئے تفاعل کی صرف اور صرف ایک (یکتا) قیمت \عددی{f(x)} ہو لہٰذا کوئی بھی \ترچھا{انتصابی} خط تفاعل کی ترسیم کو ایک سے زیادہ مرتبہ قطع نہیں کر سکتا ہے۔چونکہ دائرے کو انتصابی خط دو مرتبہ قطع کر سکتا ہے لہٰذا  دائرہ تفاعل نہیں ہے (شکل \حوالہ{شکل_ابتدا_دائرہ_تفاعل_نہیں})۔ جیسا آپ شکل \حوالہ{شکل_ابتدا_دائرہ_تفاعل_نہیں} سے دیکھ سکتے ہیں \عددی{x} کی ایک ہی قیمت پر \عددی{y} کی دو قیمتیں ملتی ہیں۔اگر تفاعل \عددی{f} کی دائرہ کار میں نقطہ \عددی{a} پایا جاتا ہو تب انتصابی خط \عددی{x=a} تفاعل کو صرف ایک نقطہ \عددی{(a,f(a))} پر قطع کرے گا۔
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-1.25,0)--(1.5,0)node[right]{$x$};
+\draw[-latex](0,-1.25)--(0,1.25)node[above]{$y$};
+\draw[name path=kC](0,0) circle (1);
+\draw[name path=kA](0.5,-1.25)--(0.5,1.25);
+\draw[name intersections={of={kA and kC}}](intersection-1)node[circ]{} (intersection-2)node[circ]{};
+\end{tikzpicture}
+\caption{دائرے کو تفاعل تصور کرنا غلط }
+\label{شکل_ابتدا_دائرہ_تفاعل_نہیں}
+\end{figure}
+
+\ابتدا{مثال}\شناخت{مثال_ابتدا_مربع_ترسیم}
+وقفہ \عددی{[-2,2]} پر تفاعل \عددی{y=x^2} ترسیم کریں۔\\
+حل:\quad
+\موٹا{پہلا قدم:}\quad
+پہلے ایسے \عددی{(x,y)} نقطوں کا جدول بناتے ہیں جو تفاعل کی مساوات کو مطمئن کرتے ہوں۔
+\begin{align*}
+\begin{array}{c|rrrrrrr}
+x&-2.00&-1.50&-1.00&0.00&1.00&1.50&2.00\\
+\hline
+y&4.00&2.25&1.00&0.00&1.00&2.25&4.00
+\end{array}
+\end{align*}
+\موٹا{دوسرا قدم:}\quad
+جدول میں دیے نقطوں کو \عددی{xy} مستوی پر ترسیم کرتے ہیں (شکل \حوالہ{شکل_مثال_ابتدا_مربع_ترسیم})۔\\
+\موٹا{تیسرا قدم:}\quad
+ترسیم کردہ نقطوں سے گزرتی ہموار منحنی کھینچیں۔منحنی پر سرخی لکھیں۔
+\begin{figure}
+\centering
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,axis lines=middle,xmin=-2.5,xmax=2.5,ymax=4.5,xlabel style={at={(current axis.right of origin)},anchor=north west},xlabel=$x$,ylabel=$y$,ylabel style={at={(current axis.above origin)},anchor=south east}]
+\addplot[only marks] plot coordinates {(-2,4) (-1.5,2.25) (-1,1) (0,0) (1,1) (1.5,2.25) (2,4)};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,axis lines=middle,xmin=-2.5,xmax=2.5,ymax=4.5,xlabel style={at={(current axis.right of origin)},anchor=north west},xlabel=$x$,ylabel=$y$,ylabel style={at={(current axis.above origin)},anchor=south east}]
+\addplot[domain=-2:2] {x^2}node[pos=0.7,right]{$y=x^2$};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}%
+\caption{تفاعل $\,y=x^2\,$ کی ترسیم (مثال \حوالہ{مثال_ابتدا_مربع_ترسیم})}
+\label{شکل_مثال_ابتدا_مربع_ترسیم}
+\end{figure}
+\انتہا{مثال}
+%============================
+
+احصاء میں استعمال کئی تفاعل کو شکل \حوالہ{شکل_ابتدا_اہم_تفاعل_ترسیم} میں ترسیم کیا گیا ہے۔ان تفاعل کی شکل و صورت جاننا مفید ثابت ہو گا۔
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[axis equal,small,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=north west},xlabel=$x$,ylabel=$y$,ylabel style={at={(current axis.above origin)},anchor=south east},xtick={1},ytick={1},xticklabels={$1$},yticklabels={$1$}]
+\addplot[domain=-2:2]{x^3}node[pos=0.9,right]{$y=x^3$};
+\draw (axis cs:1,-6)node[right,align=right,font=\footnotesize]{ $(-\infty,\infty)$\, \RL{دائرہ کار} \\ $(-\infty,\infty)$ \, سعت};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}%
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[axis equal,small,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=north west},xlabel=$x$,ylabel=$y$,ylabel style={at={(current axis.above origin)},anchor=south east},xtick={1},ytick={1},xticklabels={$1$},yticklabels={$1$},ymin=0]
+\addplot[domain=-2:-0.5]{(x^2)^(1/3)};
+\addplot[domain=0.5:2]{(x^2)^(1/3)}node[pos=0.6,above left]{$y=x^{\tfrac{2}{3}}$};
+\addplot[domain=-0.5:0.5,smooth]{(x^2)^(1/3)};
+\draw (axis cs:-1,2)node[align=right,font=\footnotesize]{ $(-\infty,\infty)$\, \RL{دائرہ کار} \\ $[0,\infty)$ \, سعت};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[axis equal,small,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=north west},xlabel=$x$,ylabel=$y$,ylabel style={at={(current axis.above origin)},anchor=south east},xtick={1},ytick={1},xticklabels={$1$},yticklabels={$1$},ymin=0]
+\addplot[domain=0:0.5]{(sqrt(x)};
+\addplot[domain=0.5:2]{(sqrt(x)}node[pos=0.6,below right]{$y=\sqrt{x}$};
+\draw (axis cs:1,0.5)node[align=right,font=\footnotesize]{ $[0,\infty)$\, \RL{دائرہ کار} \\ $[0,\infty)$ \, سعت};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}%
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[axis equal,small,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=north west},xlabel=$x$,ylabel=$y$,ylabel style={at={(current axis.above origin)},anchor=south east},xtick={1},ytick={1},xticklabels={$1$},yticklabels={$1$},ymin=0]
+\addplot[domain=0:2]{sqrt(x^3)}node[pos=0.6,below right]{$y=x^{\tfrac{3}{2}}$};
+\draw (axis cs:2,0.5)node[align=right,font=\footnotesize]{ $[0,\infty)$\, \RL{دائرہ کار} \\ $[0,\infty)$ \, سعت};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,axis equal,small,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=north west},xlabel=$x$,ylabel=$y$,ylabel style={at={(current axis.above origin)},anchor=south east},xtick={1},ytick={1},xticklabels={$1$},yticklabels={$1$}]
+\addplot[domain=0.5:2.5]{1/x}node[pos=0.5,above right]{$y=\tfrac{1}{x}$};
+\addplot[domain=-2.5:-0.5]{1/x};
+\draw (axis cs:0,-1)node[right,align=right,font=\footnotesize]{$(-\infty,0)\cup (0,\infty)$\, \RL{دائرہ کار} \\ $(-\infty,0)\cup (0,\infty)$\, سعت};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}%
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[axis equal,small,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=north west},xlabel=$x$,ylabel=$y$,ylabel style={at={(current axis.above origin)},anchor=south east},xtick={1},ytick={1},xticklabels={$1$},yticklabels={$1$},ymin=-1.5]
+\addplot[domain=0.5:2]{1/(x^2)}node[pos=0.5,right]{$y=\tfrac{1}{x^2}$};
+\addplot[domain=-0.5:-2]{1/(x^2)};
+\draw (axis cs:0,-0.5)node[below,fill=white, align=right,font=\footnotesize]{$(-\infty,0)\cup (0,\infty)\,$ \RL{دائرہ کار} \\ $(0,\infty)\,$سعت};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+\caption{چند اہم تفاعل کی ترسیم}
+\label{شکل_ابتدا_اہم_تفاعل_ترسیم}
+\end{figure}
+
+\جزوحصہء{مجموعے، فرق، حاصل ضرب اور حاصل تقسیم}
+اعداد کی طرح تفاعل کا مجموعہ، تفریق، ضرب اور (ماسوائے جب نسب نما صفر ہو) حاصل تقسیم لے کر نئے تفاعل حاصل کیے جا سکتے ہیں۔اگر \عددی{f} اور \عددی{g} تفاعل ہوں تب ایسے \عددی{x} کے لئے جو دونوں تفاعل کے دائرہ کار میں پایا جاتا ہو کے لئے تفاعل \عددی{f+g}، \عددی{f-g} اور \عددی{fg} کی تعریف درج ذیل ہے۔
+\begin{align*}
+(f+g)(x)&=f(x)+g(x)\\
+(f-g)(x)&=f(x)-g(x)\\
+(fg)(x)&=f(x)g(x)
+\end{align*}
+\عددی{f} اور \عددی{g} کی دائرہ کار کے اشتراک \عددی{D(f)\cap D(g)} جہاں \عددی{g(x)\ne 0} ہو ہم تفاعل \عددی{\tfrac{f}{g}} کی درج ذیل تعریف پیش کر سکتے ہیں۔ 
+\begin{align*}
+(\tfrac{f}{g})(x)=\frac{f(x)}{g(x)}\quad \quad (g(x)\ne 0)
+\end{align*}
+تفاعل کو مستقل سے ضرب دیا جا سکتا ہے۔یوں اگر \عددی{c} حقیقی عدد ہو تب تفاعل \عددی{cf} کی تعریف درج ذیل ہو گی۔
+\begin{align*}
+(cf)(x)=cf(x)
+\end{align*}
+
+\ابتدا{مثال}
+\begin{align*}
+\begin{array}{lll}
+\text{تفاعل}&\text{کلیہ}&\text{\RL{دائرہ کار}}\\
+\hline
+f&f(x)=\sqrt{x}&[0,\infty)\\
+g&g(x)=\sqrt{1-x}&(-\infty,1]\\
+3g&3g(x)=3\sqrt{1-x}&(-\infty,1]\\
+f+g&(f+g)(x)=\sqrt{x}+\sqrt{1-x}&[0,1]=D(f)\cap D(g)\\
+f-g&(f-g)(x)=\sqrt{x}-\sqrt{1-x}&[0,1]\\
+g-f&(g-f)(x)=\sqrt{1-x}-\sqrt{x}&[0,1]\\
+f\cdot g&(f\cdot g)(x)=f(x)g(x)=\sqrt{x(1-x)}&[0,1]\\
+\tfrac{f}{g}&\tfrac{f}{g}(x)=\tfrac{f(x)}{g(x)}=\sqrt{\tfrac{x}{1-x}}&[0,1)\,\, (x=1\,\text{ماسوائے})\\
+\tfrac{g}{f}&\tfrac{g}{f}(x)=\tfrac{g(x)}{f(x)}=\sqrt{\tfrac{1-x}{x}}&(0,1]\,\,(x=0\,\text{ماسوائے})
+\end{array}
+\end{align*}
+\انتہا{مثال}
+%=======================
+
+\جزوحصہء{مرکب تفاعل}
+نقطہ در نقطہ \عددی{x} پر ایک تفاعل\عددی{g} کے نتائج \عددی{g(x)} پر دوسرا تفاعل \عددی{f} لاگو کرتے ہوئے تیسرا تفاعل \عددی{f(g(x))} حاصل کیا جا سکتا ہے جس کو \اصطلاح{مرکب تفاعل}\فرہنگ{تفاعل!مرکب}\حاشیہب{composite function}\فرہنگ{function!composite} \عددی{f\circ g} کہتے ہیں۔
+
+\ابتدا{تعریف}
+اگر \عددی{f} اور \عددی{g} تفاعل ہوں تب مرکب تفاعل \عددی{f\circ g} کی تعریف درج ذیل ہے۔
+\begin{align*}
+(f\circ g)(x)=f(g(x))
+\end{align*}
+\عددی{f\circ g} کا دائرہ کار ان \عددی{x} پر مشتمل ہے جو \عددی{g} کے دائرہ کار میں پائے جاتے ہیں اور جن پر \عددی{g} کی سعت  \عددی{f} کے دائرہ کار میں پائی جاتی ہو۔ 
+\انتہا{تعریف}
+%=======================
+
+تعریف کی رو سے دو تفاعل کا مرکب اس صورت حاصل کیا جا سکتا ہے جب پہلے تفاعل کی سعت دوسرے تفاعل کی دائرہ کار میں پایا جاتا ہو۔\عددی{f\circ g} حاصل کرنے کی خاطر ہم \عددی{g(x)} معلوم کر کے \عددی{f(g(x))} حاصل کرتے ہیں (شکل \حوالہ{شکل_ابتدا_مرکب_تفاعل})۔
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw[rotate=20] (0,0) circle (1cm and 0.5cm);
+\draw[rotate=0](2,-1) circle (1cm and 0.5cm);
+\draw[rotate around={-30:(3.5,1)}] (3.5,1)circle (1.25cm  and 0.75cm);
+\draw[-stealth] (0,0.15)node[circ]{}node[left]{$x$} to [out=0,in=135] node[pos=0.6,above right]{$g$}(2,-0.75);
+\draw(2,-0.75)++(0.05,-0.05)node[circ]{}node[below]{$g(x)$};
+\draw[-stealth](2,-0.75)++(0.05,-0.05)to [out=20,in=-135] node[pos=0.5,right]{$f$}(3,1);
+\draw(3,1)++(0.05,0.05)node[circ]{}node[right]{$f(g(x))$}++(0,0.05)coordinate(kA);
+\draw[-stealth](0,0.15) to [out=45,in=130] node[pos=0.5,above,rotate=20]{$f\circ g$}(kA);
+\end{tikzpicture}
+\caption{مرکب تفاعل}
+\label{شکل_ابتدا_مرکب_تفاعل}
+\end{figure}
+
+
+معین \عددی{g\circ f} حاصل کرنے کے لئے ہم پہلے \عددی{f(x)} اور بعد میں \عددی{g(f(x))} حاصل کرتے ہیں۔\عددی{g\circ f} کا دائرہ کار ان \عددی{x} پر مشتمل ہو گا جن پر \عددی{f} کی سعت \عددی{g} کی دائرہ کار میں پائی جاتی ہو۔
+
+تفاعل \عددی{f\circ g} اور \عددی{g\circ f} عموماً مختلف ہوں گے۔
+
+\ابتدا{مثال}
+اگر \عددی{f(x)=\sqrt{x}} اور \عددی{g(x)=x+1} ہوں تب درج ذیل حاصل کریں۔
+\begin{multicols}{4}
+\begin{enumerate}[a.]
+\item
+$(f\circ g)(x)$
+\item
+$(g\circ f)(x)$
+\item
+$(f\circ f)(x)$
+\item
+$(g\circ g)(x)$
+\end{enumerate}
+\end{multicols}
+حل:
+\begin{align*}
+\begin{array}{ll}
+\multicolumn{1}{c}{\text{مرکب}}&\text{\RL{دائرہ کار}}\\
+\hline
+(f\circ g)(x)=f(g(x))=\sqrt{g(x)}=\sqrt{x+1}&[-1,\infty)\\  
+(g\circ f)(x)=g(f(x))=f(x)+1=\sqrt{x}+1&[0,\infty)\\
+(f\circ f)(x)=f(f(x))=\sqrt{f(x)}=\sqrt{\sqrt{x}}=x^{\tfrac{1}{4}}&[0,\infty)\\
+(g\circ g)(x)=g(g(x))=g(x+1)=(x+1)+1=x+2&(-\infty,\infty)
+\end{array}
+\end{align*}
+یہ جاننے کے لئے کہ \عددی{f\circ g} کا دائرہ کار کیوں \عددی{[-1,\infty)} ہے، غور کریں کہ \عددی{g(x)=x+1} تمام حقیقی \عددی{x} کے لئے معین ہے لیکن یہ \عددی{f} کے دائرہ کار میں صرف \عددی{x+1\ge 0} یعنی \عددی{x\ge -1} کی صورت میں شامل ہوتا ہے۔
+\انتہا{مثال}
+%========================
+
+\جزوحصہء{جفت تفاعل اور طاق تفاعل۔ تشاکل}
+\عددی{f} کی دائرہ کار میں ہر \عددی{x} پر \عددی{f(-x)=f(x)} کی صورت میں تفاعل \عددی{y=f(x)} \اصطلاح{جفت}\فرہنگ{جفت}\حاشیہب{even}\فرہنگ{even} کہلاتا ہے۔دھیان رہے کہ \عددی{x} اور \عددی{-x} دونوں کا \عددی{f} کے دائرہ کار میں ہونا لازمی ہے۔تفاعل \عددی{f(x)=x^2} جفت ہے چونکہ \عددی{f(-x)=(-x)^2=x^2=f(x)} ہے۔
+
+چونکہ \عددی{f(-x)=f(x)} ہے لہٰذا نقطہ \عددی{(x,y)} اس صورت ترسیم پر پایا جائے گا جب نقطہ \عددی{(-x,y)} بھی ترسیم پر پایا جاتا ہو۔یوں جفت تفاعل کی ترسیم \عددی{y} محور کے لحاظ سے تشاکل ہو گی (شکل \حوالہ{شکل_ابتدا_جفت_طاق_تفاعل}-الف)۔\عددی{y} محور کے ایک جانب ترسیم جانتے ہوئے دوسری جانب کی ترسیم جوں کی توں بنائی جا سکتی ہے۔
+
+
+\عددی{f} کی دائرہ کار میں ہر \عددی{x} پر \عددی{f(-x)=-f(x)} کی صورت میں تفاعل \عددی{y=f(x)} \اصطلاح{طاق}\فرہنگ{طاق}\حاشیہب{odd}\فرہنگ{odd} کہلاتا ہے۔دھیان رہے کہ \عددی{x} اور \عددی{-x} دونوں کا \عددی{f} کے دائرہ کار میں ہونا لازمی ہے۔تفاعل \عددی{f(x)=x^3} طاق ہے چونکہ \عددی{f(-x)=(-x)^3=-x^3=-f(x)} ہے۔
+
+طاق تفاعل کی ترسیم مبدا کے لحاظ سے تشاکل ہو گی (شکل \حوالہ{شکل_ابتدا_جفت_طاق_تفاعل}-ب)۔چونکہ \عددی{f(-x)=-f(x)} ہے لہٰذا نقطہ \عددی{(x,y)} صرف اور صرف اس صورت ترسیم پر پایا جائے گا جب نقطہ \عددی{(-x,-y)} بھی ترسیم پر پایا جاتا ہو۔یہاں بھی \عددی{y} محور کی ایک جانب ترسیم کو دیکھتے ہوئے محور کی دوسری جانب ترسیم کھینچی جا سکتی ہے۔
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[axis equal,small,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=north west},xlabel=$x$,ylabel=$y$,ylabel style={at={(current axis.above origin)},anchor=south east},xtick={\empty},ytick={\empty}]
+\addplot[domain=-2:2]{x^2}node[pos=0.9,left]{$y=x^2$};
+\addplot[only marks] plot coordinates {(-1,1) (1,1)};
+\draw(axis cs:-1,1)node[left]{$(-x,y)$};
+\draw(axis cs:1,1)node[right]{$(x,y)$};
+\end{axis}
+\end{tikzpicture}
+\caption*{(الف) جفت تفاعل}
+\end{subfigure}%
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[axis equal,small,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=north west},xlabel=$x$,ylabel=$y$,ylabel style={at={(current axis.above origin)},anchor=south east},xtick={\empty},ytick={\empty}]
+\addplot[domain=-1.28:1.28]{x^3}node[pos=0.95,right]{$y=x^3$};
+\addplot[only marks] plot coordinates {(-1,-1) (1,1)};
+\draw(axis cs:-1,-1)node[left]{$(-x,-y)$};
+\draw(axis cs:1,1)node[right]{$(x,y)$};
+\end{axis}
+\end{tikzpicture}
+\caption*{(ب) طاق تفاعل}
+\end{subfigure}
+\caption{جفت اور طاق تفاعل}
+\label{شکل_ابتدا_جفت_طاق_تفاعل}
+\end{figure}
+
+\جزوحصہء{ٹکڑوں میں معین تفاعل}
+بعض اوقات ایک تفاعل دائرہ کار کے مختلف حصوں پر مختلف کلیات استعمال کرتا ہے۔اس کی ایک مثال درج ذیل مطلق قیمت تفاعل ہے (شکل \حوالہ{شکل_ابتدا_مطلق_قیمت_تفاعل})۔
+\begin{align*}
+\abs{x}=
+\begin{cases}
+\phantom{-}x&x\ge 0\\
+-x&x<0
+\end{cases}
+\end{align*}
+%
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[axis equal,small,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=north west},xlabel=$x$,ylabel=$y$,ylabel style={at={(current axis.above origin)},anchor=south east}]
+\addplot[domain=-3:0]{-x}node[pos=0.6,left,yshift={-1mm}]{$y=-x$};
+\addplot[domain=0:3]{x}node[pos=0.4,right,yshift={-1mm}]{$y=x$};
+\draw (axis cs:0.5,3)node[right]{$y=\abs{x}$};
+\end{axis}
+\end{tikzpicture}
+\caption{مطلق قیمت تفاعل}
+\label{شکل_ابتدا_مطلق_قیمت_تفاعل}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[axis equal,small,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=north west},xlabel=$x$,ylabel=$y$,ylabel style={at={(current axis.above origin)},anchor=south east}]
+\addplot[domain=-2.5:0]{-x}node[pos=0.1,above right]{$y=-x$};
+\addplot[domain=0:1]{x^2}node[pos=0.6,right]{$y=x^2$};
+\addplot[domain=1:2.5]{1}node[pos=0.5,above]{$y=1$};
+\draw (axis cs:0.5,3)node[right]{$y=f(x)$};
+\end{axis}
+\end{tikzpicture}
+\caption{ٹکڑوں میں معین تفاعل برائے مثال \حوالہ{مثال_ابتدا_ٹکڑوں_میں_معین_الف}}
+\label{شکل_مثال_ابتدا_ٹکڑوں_میں_معین_الف}
+\end{minipage}%
+\end{figure}
+
+مزید مثالیں درج ذیل ہیں۔
+
+\ابتدا{مثال}\شناخت{مثال_ابتدا_ٹکڑوں_میں_معین_الف}
+درج ذیل تفاعل مکمل حقیقی خط پر معین ہے لیکن اس کی قیمت مختلف وقفوں پر مختلف کلیات دیتے ہیں (شکل \حوالہ{شکل_مثال_ابتدا_ٹکڑوں_میں_معین_الف})۔
+\begin{align*}
+f(x)=
+\begin{cases}
+-x&x<0\\
+\phantom{-}x^2&0\le x\le 1\\
+\phantom{-}1&x>1
+\end{cases}
+\end{align*}
+\انتہا{مثال}
+%===========================
+\ابتدا{مثال}\شناخت{مثال_ابتدا_عددی_صحیح_زمین}\ترچھا{بڑا ترین عدد تفاعل}\\
+ایسا تفاعل جس کی قیمت کسی بھی عدد \عددی{x} پر وہ بڑا ترین عدد ہو جو \عددی{x} کے برابر یا اس سے کم ہو  \اصطلاح{بڑا ترین عدد تفاعل}\فرہنگ{تفاعل!بڑا ترین عدد}\حاشیہب{greatest integer function}\فرہنگ{function!greatest integer} یا \اصطلاح{عدد صحیح زمین تفاعل}\فرہنگ{تفاعل!عددی صحیح زمین}\حاشیہب{integer floor function}\فرہنگ{function!integer floor} کہلاتا جس کو \عددی{\lfloor x \rfloor} سے ظاہر کیا جاتا ہے (شکل \حوالہ{شکل_مثال_ابتدا_عددی_صحیح_زمین})۔  آپ دیکھ سکتے ہیں کہ درج ذیل ہوں گے۔
+\begin{align*}
+\begin{array}{llll}
+\lfloor 2.4 \rfloor=2,& \lfloor 1.9\rfloor=1,& \lfloor 0 \rfloor=0, & \lfloor -1.2\rfloor=-2\\
+\lfloor 2\rfloor=2,& \lfloor 0.2\rfloor =0,& \lfloor -0.3\rfloor =-1,& \lfloor -2\rfloor=-2
+\end{array}
+\end{align*}
+%
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[axis equal,small,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=north west},xlabel=$x$,ylabel=$y$,ylabel style={at={(current axis.above origin)},anchor=south east}]
+\addplot[domain=-2.5:3.5]{x}node[pos=0.9,above left]{$y=x$};
+\draw(axis cs:2,1)node[ocirc]{}--(axis cs:1,1)node[circ]{};
+\draw(axis cs:3,2)node[ocirc]{}--(axis cs:2,2)node[circ]{};
+\draw(axis cs:4,3)node[ocirc]{}--(axis cs:3,3)node[circ]{};
+\draw(axis cs:1,0)node[ocirc]{}--(axis cs:0,0)node[circ]{};
+\draw(axis cs:3,1.5)node[]{$y=\lfloor x\rfloor$};
+\draw(axis cs:0,-1)node[ocirc]{}--(axis cs:-1,-1)node[circ]{};
+\draw(axis cs:-1,-2)node[ocirc]{}--(axis cs:-2,-2)node[circ]{};
+\end{axis}
+\end{tikzpicture}
+\caption{عدد صحیح زمین تفاعل (مثال \حوالہ{مثال_ابتدا_عددی_صحیح_زمین})}
+\label{شکل_مثال_ابتدا_عددی_صحیح_زمین}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[axis equal,small,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=north west},xlabel=$x$,ylabel=$y$,ylabel style={at={(current axis.above origin)},anchor=south east}]
+\addplot[domain=-2.5:3.5]{x}node[pos=0.8,below right]{$y=x$};
+\draw(axis cs:0,1)node[ocirc]{}--(axis cs:1,1)node[circ]{};
+\draw(axis cs:1,2)node[ocirc]{}--(axis cs:2,2)node[circ]{};
+\draw(axis cs:2,3)node[ocirc]{}--(axis cs:3,3)node[circ]{};
+\draw(axis cs:-1,0)node[ocirc]{}--(axis cs:0,0)node[circ]{};
+\draw(axis cs:3,1.2)node[]{$y=\lceil x\rceil$};
+\draw(axis cs:-2,-1)node[ocirc]{}--(axis cs:-1,-1)node[circ]{};
+\draw(axis cs:-3,-2)node[ocirc]{}--(axis cs:-2,-2)node[circ]{};
+\end{axis}
+\end{tikzpicture}
+\caption{عدد صحیح چھت تفاعل (مثال \حوالہ{مثال_ابتدا_عددی_صحیح_چھت})}
+\label{شکل_مثال_ابتدا_عددی_صحیح_چھت}
+\end{minipage}%
+\end{figure}
+\انتہا{مثال}
+%=======================
+\ابتدا{مثال}\شناخت{مثال_ابتدا_عددی_صحیح_چھت}
+ایسا تفاعل جس کی قیمت کسی بھی عدد \عددی{x} پر وہ کم ترین عدد ہو جو \عددی{x} کے برابر یا اس سے زیادہ ہو  \اصطلاح{کم ترین عدد تفاعل}\فرہنگ{تفاعل!کم ترین عدد}\حاشیہب{least integer function}\فرہنگ{function!least integer} یا \اصطلاح{عدد صحیح چھت تفاعل}\فرہنگ{تفاعل!عددی صحیح چھت}\حاشیہب{integer ceiling function}\فرہنگ{function!integer ceiling} کہلاتا ہے جس کو  \عددی{\lceil x \rceil } سے ظاہر کیا جاتا ہے (شکل \حوالہ{شکل_مثال_ابتدا_عددی_صحیح_زمین})۔ ۔اس کی مثال شہر میں  کرائے کی ٹیکسی  کا کرایا ہے جو فی کلومیٹر ادا کرنا ہوتا ہے۔اضافی نا مکمل کلومیٹر  کی صورت میں مکمل کلومیٹر کا کرایا ادا کرنا ہوتا ہے۔یوں درج ذیل ہوں گے۔
+\begin{align*}
+\lceil 3.2 \rceil=4,\quad \lceil 2.9\rceil=3,\quad \lceil 0\rceil=0,\quad \lceil 2\rceil=2,\\
+\lceil -5\rceil=-5,\quad \lceil -5.6\rceil=-5,\quad \lceil -0.9\rceil=0,\quad \lceil -7.2\rceil=-7
+\end{align*}
+\انتہا{مثال}
+%==================
+
+\حصہء{سوالات}
+تفاعل کا دائرہ کار اور اس کی سعت تلاش کریں۔
+
+\ابتدا{سوال}
+$f(x)=1+x^2$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$f(x)=1-\sqrt{x}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$F(t)=\tfrac{1}{\sqrt{t}}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$F(t)=\tfrac{1}{1+\sqrt{t}}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$g(z)=\sqrt{4-z^2}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$g(z)=\tfrac{1}{\sqrt{4-z^2}}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_کیا_ترسیم_تفاعل_ہے_الف}
+ شکل \حوالہ{شکل_سوال_ابتدا_کیا_ترسیم_تفاعل_ہے_الف} کون سی ترسیم  تفاعل کو ظاہر کرتی ہیں۔
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-0.25,0)--(2,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2.25)node[above]{$y$};
+\draw (0.5,1.25) to [out=90,in=-170] (2,2.25);
+\draw(0.5,1.25) to [out=-90,in=170] (2,0.25);
+\draw(1,-0.5)node[below]{(الف)};
+\end{tikzpicture}
+\end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-0.25,0)--(2,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2.25)node[above]{$y$};
+\draw (0,0.2)--(0.5,0.2) to [out=80,in=180] (1,1) to [out=0,in=100] (1.5,0.2) to [out=80,in=-120] (2,2);
+\draw(1,-0.5)node[below]{(ب)};
+\end{tikzpicture}
+\end{subfigure}%
+\caption{اشکال برائے سوال \حوالہ{سوال_ابتدا_کیا_ترسیم_تفاعل_ہے_الف}}
+\label{شکل_سوال_ابتدا_کیا_ترسیم_تفاعل_ہے_الف}
+\end{figure}
+\انتہا{سوال}
