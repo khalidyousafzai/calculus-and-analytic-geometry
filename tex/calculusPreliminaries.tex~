@@ -2805,3 +2805,299 @@ x^2+4x+4-4+y^2-6y+9-9&=3\\
 یوں رداس \عددی{a=4} اور مرکز \عددی{(h,k)=(-2,3)} ہیں۔
 \انتہا{مثال}
 %======================
+
+\جزوحصہء{اندرون اور بیرون}
+دائرہ \عددی{(x-h)^2+(y-k)^2=a^2} کے اندر وہ نقطے پائے جاتے ہیں جن کا \عددی{(h,k)} سے فاصلہ \عددی{a} اکائیوں  سے کم ہو۔یہ نقطے درج ذیل عدم مساوات کو مطمئن کرتے ہیں۔
+\begin{align*}
+(x-h)^2+(y-k)^2<a^2
+\end{align*}
+اس خطہ کو دائرے کی \اصطلاح{اندرون}\فرہنگ{اندرون}\حاشیہب{interior}\فرہنگ{interior} کہتے ہیں (شکل \حوالہ{شکل_ابتدا_دائرہ_اندرون})۔
+
+دائرے کی \اصطلاح{بیرون}\فرہنگ{بیرون}\حاشیہب{exterior}\فرہنگ{exterior} ان نقطوں پر مشتمل ہو گا جن کا \عددی{(h,k)} سے فاصلہ \عددی{a} اکائیوں سے زیادہ ہو۔ایسے نقطے درج ذیل مساوات کو مطمئن کرتے ہیں۔
+\begin{align*}
+(x-h)^2+(y-k)^2>a^2
+\end{align*} 
+%
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-0.25,0)--(3,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2.5)node[above]{$y$};
+\draw(1.5,1.25) circle (1);
+\draw(1.5,1.25)node[circ]{}node[below]{$(h,k)$}--++(135:1)node[pos=0.5,shift={(45:0.2)}]{$a$};
+\draw(1.5,1.25)++(30:0.75)--++(0.5,0.3)node[right]{\RL{اندرون}};
+\end{tikzpicture}
+\caption{دائرے کی اندرون}
+\label{شکل_ابتدا_دائرہ_اندرون}
+\end{figure}
+
+\ابتدا{مثال}
+\begin{align*}
+\begin{array}{lr}
+\text{\RL{عدم مساوات}} &\text{\RL{خطہ}}\\
+\hline
+x^2+y^2<1&\text{\RL{اکائی دائرے کی اندرون}}\\
+x^2+y^2\le 1&\text{\RL{اکائی دائرہ اور اس کی اندرون}}\\
+x^2+y^2>1&\text{\RL{اکائی دائرے کی بیرون}}\\
+x^2+y^2\ge 1&\text{\RL{اکائی دائرہ اور اس کی بیرون}}
+\end{array}
+\end{align*}
+\انتہا{مثال}
+%=============================
+
+\جزوحصہء{قطع مکافی ترسیم}
+مساوات \عددی{y=3x^2} یا \عددی{y=-5x^2} جن کی عمومی صورت درج ذیل ہے
+\begin{align*}
+y=ax^2
+\end{align*}
+ کی ترسیم کو \اصطلاح{قطع مکافی}\فرہنگ{قطع مکافی}\حاشیہب{parabola}\فرہنگ{parabola} کہتے ہیں جس کی \اصطلاح{محور}\فرہنگ{محور}\حاشیہب{axis}\فرہنگ{axis} تشاکل \عددی{y} محور ہے۔اس قطع مکافی کی \اصطلاح{راس}\فرہنگ{راس}\حاشیہب{vertex}\فرہنگ{vertex} (جہاں قطع مکافی اور محور ایک دوسرے کو قطع کرتے ہیں) مبدا پر پائی جاتی ہے۔مثبت \عددی{a} \عددی{(a>0)} کی صورت میں یہ قطع مکافی اوپر رخ کھلتا ہے جبکہ منفی \عددی{a} \عددی{a<0} کی صورت میں  یہ قطع مکافی نیچے کو کھلتا ہے۔ \عددی{\abs{a}} کی قیمت جتنی زیادہ ہو قطع مکافی اتنا تنگ ہو گا (شکل \حوالہ{شکل_ابتدا_قطع_مکافی_الف})۔ 
+
+کلیہ \عددی{y=ax^2} میں \عددی{x} اور \عددی{y} کو  آپس میں ادل بدل کرنے  سے درج ذیل کلیہ ملتا ہے۔
+\begin{align*}
+x=ay^2
+\end{align*}
+اس قطع مکافی  کی ترسیم کا محور، \عددی{x} محور ہو گا اور اس کی راس مبدا پر پائی جائے گی  (شکل \حوالہ{شکل_ابتدا_قطع_مکافی_ب})۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},ytick={\empty},xtick={\empty}]
+\addplot[domain=-2:2]{2*x^2}node[pos=0.95,fill=white,font=\footnotesize]{$y=2x^2$};
+\addplot[domain=-3:3]{1/2*x^2}node[pos=0.95,above,font=\footnotesize]{$y=\tfrac{x^2}{2}$};
+\addplot[domain=-3:3]{-x^2}node[pos=0.75,above right,rotate=-50,font=\footnotesize]{$y=-x^2$};
+\addplot[domain=-2:2]{-3*x^2}node[pos=0.95,fill=white,font=\footnotesize]{$y=-\tfrac{x^2}{3}$};
+\draw(axis cs:-0.25,5)node[rotate=90]{\RL{محور}};
+\draw(axis cs:-0.25,-5)node[rotate=90]{\RL{تشاکل}};
+\end{axis}
+\end{tikzpicture}
+\caption{قطع مکافی $y=ax^2$}
+\label{شکل_ابتدا_قطع_مکافی_الف}
+\end{minipage}%
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},ytick={\empty},xtick={\empty}]
+\addplot[domain=0:2]({1/2*x^2},{x})node[pos=0.95,fill=white,font=\footnotesize]{$x=\tfrac{y^2}{2}$};
+\addplot[domain=0:2]({1/2*x^2},{-x});
+\addplot[domain=0:1.2]({2*x^2},{x})node[pos=0.7,above,rotate=20,font=\footnotesize]{$x=2y^2$};
+\addplot[domain=0:1.2]({2*x^2},{-x});
+\addplot[domain=0:1.2]({-x^2},{x})node[pos=1,above,font=\footnotesize]{$x=-y^2$};
+\addplot[domain=0:1.2]({-x^2},{-x});
+\addplot[domain=0:1]({-3*x^2},{x})node[pos=0.85,below,rotate=-10,font=\footnotesize]{$x=-3y^2$};
+\addplot[domain=0:1]({-3*x^2},{-x});
+\draw(axis cs:1.5,0.25)node[]{\RL{محور}};
+\draw(axis cs:-1.5,0.25)node[]{\RL{تشاکل}};
+\end{axis}
+\end{tikzpicture}
+\caption{قطع مکافی $x=ay^2$}
+\label{شکل_ابتدا_قطع_مکافی_ب}
+\end{minipage}%
+\end{figure}
+
+
+\ابتدا{مثال}\شناخت{مثال_ابتدا_تفاعل_حصے}
+کلیہ \عددی{x=y^2} ہمیں \عددی{x} بطور \عددی{y} کا تفاعل دیتا ہے لیکن یہ ہمیں \عددی{y} بطور \عددی{x} کا تفاعل نہیں دیتا ہے۔\عددی{y} کے لئے حل کرتے ہوئے \عددی{y=\mp\sqrt{x}} حاصل ہوتا ہے   جو ہر مثبت \عددی{x} کے لئے \عددی{y} کی دو قیمتیں دیتا ہے جبکہ تفاعل کی تعریف کی رو سے اس کو صرف ایک قیمت دینی چاہیے۔
+
+ان مساوات کو دو علیحدہ علیحدہ تفاعل \عددی{y=\sqrt{x}} اور \عددی{y=-\sqrt{x}} تصور کیا جا سکتا ہے چونکہ اب ہر مثبت \عددی{x} کے لئے یہ کلیات \عددی{y} کی ایک قیمت دیتے ہیں۔\عددی{y=\sqrt{x}} کی ترسیم قطع مکافی کا بالائی حصہ اور \عددی{y=-\sqrt{x}} قطع مکافی کا نچلا حصہ دیتے ہیں (شکل \حوالہ{شکل_مثال_ابتدا_تفاعل_حصے})۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},ytick={1},xtick={1}]
+\addplot[domain=0:0.25,smooth]{sqrt(x)};
+\addplot[domain=0.25:2]{sqrt(x)}node[pos=0.7,below,rotate=10,font=\footnotesize]{$y=\sqrt{x}$};
+\addplot[domain=0:0.25,smooth]{-sqrt(x)};
+\addplot[domain=0.25:2]{-sqrt(x)}node[pos=0.7,above,rotate=-10,font=\footnotesize]{$y=-\sqrt{x}$};
+\end{axis}
+\end{tikzpicture}
+\caption{تفاعل $y=\sqrt{x}$ اور $y=-\sqrt{x}$ کی ترسیم مبدا پر ملتے ہیں اور مساوات $x=y^2$ کی ترسیم دیتے ہیں (مثال \حوالہ{مثال_ابتدا_تفاعل_حصے})}
+\label{شکل_مثال_ابتدا_تفاعل_حصے}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},ytick={0.5},xtick={1},xticklabels={$h$},yticklabels={$k$}]
+\addplot[domain=-2:2]{x^2}node[pos=0,fill=white,font=\footnotesize]{$y=x^2$};
+\addplot[domain=-1:3]{0.5+(x-1)^2}node[pos=0.7,below right,rotate=72,font=\footnotesize]{$y=a(x-h)^2+k$};
+\addplot[dashed] plot coordinates {(1,0) (1,4)}node[pos=0.7,fill=white,rotate=90]{\RL{نیا محور}};
+\draw(axis cs:0,0)node[circ]{}node[below left]{$0$};
+\draw(axis cs:1,0.5)node[circ]{}node[pin=0:{\RL{نئی راس}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{قطع مکافی $y=ax^2,\,\, a>0$ کو $h$ اکائیاں دائیں اور $k$ اکائیاں اوپر منتقل کیا گیا ہے}
+\label{شکل_مثال_مبدا_منتقل}
+\end{minipage}%
+\end{figure}
+
+\انتہا{مثال}
+%=====================================
+
+\جزوحصہء{دو درجی مساوات \عددی{y=ax^2+bx+c,\,\, a\ne 0}}
+قطع مکافی \عددی{y=ax^2} کو دائیں یا بائیں منتقل کرنے کی خاطر ہم
+\begin{align}
+y=a(x-h)^2
+\end{align}
+لکھتے ہیں اور اس کو انتصابی بھی منتقل کرنے کی خاطر ہم
+\begin{align}\label{مساوات_ابتدا_دو_درجی_الف}
+y-k=a(x-h)^2
+\end{align}
+لکھتے ہیں۔دونوں منتقلی سے قطع مکافی کی راس \عددی{(h,k)} کو منتقل ہوتی ہے جبکہ اس کا محور \عددی{x=k} ہو گا (شکل \حوالہ{شکل_مثال_مبدا_منتقل})۔
+
+مساوات \حوالہ{مساوات_ابتدا_دو_درجی_الف} کے دائیں ہاتھ کو کھول کر لکھنے سے درج ذیل صورت کی مساوات حاصل ہوتی ہے
+\begin{align}\label{مساوات_ابتدا_دو_درجی_ب}
+y=ax^2+bx+c
+\end{align}
+جس سے ہمیں معلوم ہوتا ہے کہ \عددی{y=ax^2+bx+c,\,\, a\ne 0} طرز کی ہر مساوات کی ترسیم  درحقیقت \عددی{y=ax^2} کی ترسیم ہو گی جس کو کہیں اور منتقل کیا گیا ہے۔کیوں؟ اس لئے کہ جس طرح مساوات \حوالہ{مساوات_ابتدا_دو_درجی_الف} سے مساوات \حوالہ{مساوات_ابتدا_دو_درجی_ب} حاصل کی گئی اسی طرح واپس مساوات \حوالہ{مساوات_ابتدا_دو_درجی_ب} سے مساوات \حوالہ{مساوات_ابتدا_دو_درجی_الف} بھی حاصل کیا جا سکتا ہے۔منحنی \عددی{y=ax^2+bx+c} اور \عددی{y=ax^2} کی صورت اور سمت بندی ایک جیسی ہیں۔
+
+قطع مکافی \عددی{y=ax^2+bx+c} کا محور خط \عددی{x=-\tfrac{b}{2a}} ہو گا۔اس کا قطع \عددی{y} حاصل کرنے کی خاطر \عددی{x=0} پر کیا جائے گا۔
+
+\begin{mdframed}[frametitle={منحنی \عددی{y=ax^2+bx+c,\,\,a\ne 0} کی ترسیم}]
+مساوات \عددی{y=ax^2+bx+c} کی ترسیم قطع مکافی ہے جو \عددی{a>0} کی صورت میں اوپر رخ اور \عددی{a<0} کی صورت میں نیچے رخ کھلتا ہے۔اس کی محور درج ذیل خط ہے۔
+\begin{align}
+x=-\frac{b}{2a}
+\end{align} 
+اس کی راس اس نقطے پر ہو گی جہاں قطع مکافی اور محور آپس میں ملتے ہوں۔راس کا \عددی{x} محدد \عددی{x=-\tfrac{b}{2a}} ہو گا جس کو قطع مکافی کی مساوات میں پر کرتے ہوئے راس کا \عددی{y} محدد حاصل کیا جا سکتا ہے۔
+\end{mdframed}
+
+%========================
+\ابتدا{مثال}\شناخت{مثال_ابتدا_قطع_مکافی_منتقل}\ترچھا{ترسیم قطع مکافی}\\
+مساوات \عددی{y=-\tfrac{1}{2}x^2-x+4} ترسیم کریں۔\\
+حل:\quad
+\موٹا{پہلا قدم:}\quad
+مساوات \عددی{y=ax^2+bx+c} کے ساتھ موازنہ کرتے ہوئے درج ذیل لکھا جا سکتا ہے۔
+\begin{align*}
+a=-\frac{1}{2},\quad b=-1,\quad c=4
+\end{align*}
+\موٹا{دوسرا قدم:}\quad
+چونکہ \عددی{a<0} ہے لہٰذا قطع مکافی نیچے کھلا ہے۔\\
+\موٹا{تیسرا قدم:}\quad
+قطع مکافی کی محور اور راس تلاش کرتے ہیں۔اس کی محور درج ذیل خط ہے۔
+\begin{align*}
+x=-\frac{b}{2a}=-\frac{(-1)}{2(-\tfrac{1}{2})}=-1
+\end{align*} 
+یوں راس کا \عددی{x} محدد \عددی{-1} ہے جس کو دی گئی مساوات میں پر کرتے ہوئے راس کا \عددی{y} محدد حاصل کرتے ہیں۔
+\begin{align*}
+y=-\frac{1}{2}(-1)^2-(-1)=\frac{9}{2}
+\end{align*}
+اس طرح راس \عددی{(-1,\tfrac{9}{2})} ہو گی۔\\
+\موٹا{چوتھا قدم:}\quad
+قطع \عددی{x} (اگر پایا جاتا ہو) تلاش کرتے ہیں۔
+\begin{align*}
+-\frac{1}{2}x^2-x+4&=0 && \text{\RL{قطع مکافی کی مساوات میں $y=0$ پر کریں}}\\
+x^2+2x-8&=0 && \text{\RL{دو درجی مساوات کو کسی بھی طریقہ سے حل کریں}}
+(x-2)(x+4)&=0\\
+x=2,\quad x&=-4
+\end{align*} 
+\موٹا{پانچواں قدم:}\quad
+آپ \عددی{y=ax^2} کو ترسیم کرتے ہوئے منتقلی اور تشاکل کے اصول استعمال کر کے منتقلی کے بعد کے \عددی{xy} محور کھینچیں (شکل \حوالہ{شکل_مثال_ابتدا_قطع_مکافی_منتقل})۔
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,clip=false,axis lines=middle,xlabel={$x$},ylabel={$y$},ymin=-0.5,ymax=6,xmax=3,ytick={1,2,3,4},xtick={-4,-3,-2,-1,0,1,2},xmin=-4.4]
+\addplot[domain=-4.2:2.2]{-1/2*x^2-x+4};
+\draw(axis cs:0,4)node[circ]{}node[right]{$(0,4)$}node[pin=45:{\RL{قطع $x$}}]{};
+\draw(axis cs:-4,0)node[circ]{};
+\draw(axis cs:2,0)node[circ]{};
+\draw(axis cs:-1,9/2)node[circ]{}node[above left]{\RL{راس $(-1,\tfrac{9}{2})$}};
+\draw[dashed] (axis cs:-1,-0.25)--(axis cs:-1,6)node[pos=0.7,rotate=90,above left]{\RL{محور \quad $x=-1$}};
+\draw[](axis cs:-3.5,2.5)node[rotate=60,font=\footnotesize]{$y=-\tfrac{1}{2}x^2-x+4$};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم قطع مکافی (مثال \حوالہ{مثال_ابتدا_قطع_مکافی_منتقل})}
+\label{شکل_مثال_ابتدا_قطع_مکافی_منتقل}
+\end{figure}
+\انتہا{مثال}
+%========================
+
+\حصہء{سوالات}
+
+\موٹا{ترسیم کی منتقلی}\\
+
+\ابتدا{سوال}\شناخت{سوال_ابتدا_قطع_مکافی_منتقلی_الف}
+شکل \حوالہ{شکل_سوال_ابتدا_قطع_مکافی_منتقلی_الف} میں \عددی{y=-x^2} کی ترسیم اور اس کی منتقل کردہ اشکال دکھائے گئے ہیں۔منتقل کردہ ترسیم کی مساوات لکھیں۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,axis lines=middle,ymin=-3,xlabel={$x$},ylabel={$y$},ymax=1,xtick={-7,-6,-5,-4,-3,-2,-1,1,2,3,4},xticklabels={$-7$,,,,,,,,,,$4$},ytick={\empty}]
+\addplot[domain=-2:2]{-x^2}node[pos=0.25,above left,rotate=84,font=\footnotesize]{$y=-x^2$};
+\addplot[domain=-9:-5]{-(x+7)^2};
+\addplot[domain=2:6]{-(x-4)^2};
+\draw(axis cs:-7,-2)node[]{(الف)};
+\draw(axis cs:4,-2)node[]{(ب)};
+\end{axis}
+\end{tikzpicture}
+\caption{اشکال برائے سوال \حوالہ{سوال_ابتدا_قطع_مکافی_منتقلی_الف}}
+\label{شکل_سوال_ابتدا_قطع_مکافی_منتقلی_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,clip=false,axis lines=middle,xlabel={$x$},ylabel={$y$},xmax=3.5,ymin=-6,xtick={-1,0,1},ytick={3,-5}]
+\addplot[domain=-2.5:2.5]{x^2}node[pos=0.7,fill=white,font=\footnotesize]{$y=x^2$};
+\addplot[domain=-2.5:2.5]{3+x^2}node[pos=0,left]{(الف)};
+\addplot[domain=-2.5:2.5]{-5+x^2}node[pos=0,left]{(ب)};
+\end{axis}
+\end{tikzpicture}
+\caption{اشکال برائے سوال \حوالہ{سوال_ابتدا_قطع_مکافی_منتقلی_ب}}
+\label{شکل_سوال_ابتدا_قطع_مکافی_منتقلی_ب}
+\end{minipage}
+\end{figure}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_قطع_مکافی_منتقلی_ب}
+شکل \حوالہ{شکل_سوال_ابتدا_قطع_مکافی_منتقلی_ب} میں \عددی{y=x^2} کی ترسیم اور اس کی منتقل کردہ اشکال دکھائے گئے ہیں۔منتقل کردہ ترسیم کی مساوات لکھیں۔
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_قطع_مکافی_منتقلی_پ}
+شکل \حوالہ{شکل_سوال_ابتدا_قطع_مکافی_منتقلی_پ} میں دکھائے گئے ترسیم کی مساوات درج ذیل میں سے منتخب کریں۔
+\begin{align*}
+y=(x-1)^2-4,\quad y=(x-2)^2+2,\quad y=(x+2)^2+2,\quad y=(x+3)^2-2 
+\end{align*}
+%
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-4,-3,-2,-1,1,2,3},ytick={1,2,3,4},ymax=9,xmax=4.5]
+\addplot[domain=-4:0.4]{(x+2)^2+2}node[pos=0.1,right]{(ب)};
+\addplot[domain=-0.4:4]{(x-2)^2+2}node[pos=0.9,left]{(الف)};
+\addplot[domain=-5:-1]{(x+3)^2-2}node[pos=0,right]{(پ)};
+\addplot[domain=-1.2:3.5]{(x-1)^2-4}node[pos=0.6,left]{(ت)};
+\draw(axis cs:-2,2)node[circ]{}node[below]{$(-2,2)$};
+\draw(axis cs:2,2)node[circ]{}node[below]{$(2,2)$};
+\draw(axis cs:-3,-2)node[circ]{}node[below]{$(-3,-2)$};
+\draw(axis cs:1,-4)node[circ]{}node[below]{$(1,-4)$};
+\end{axis}
+\end{tikzpicture}
+\caption{اشکال برائے سوال \حوالہ{سوال_ابتدا_قطع_مکافی_منتقلی_پ}}
+\label{شکل_سوال_ابتدا_قطع_مکافی_منتقلی_پ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-4,-3,-2,-1,1,2,3},ytick={1,2,3,4},ymax=7,xmax=5,xtick={\empty},ytick={\empty}]
+\addplot[domain=-4.2:0.4]{-(x+2)^2+3}node[pos=0.3,left]{(ب)};
+\draw(axis cs:-2,3)node[circ]{}node[above]{$(-2,3)$};
+\addplot[domain=-1.2:3.2]{-(x-1)^2+4}node[pos=0.6,right]{(الف)};
+\draw(axis cs:1,4)node[circ]{}node[above]{$(1,4)$};
+\addplot[domain=-6:-2]{-(x+4)^2-1}node[pos=0.25,left]{(پ)};
+\draw(axis cs:-4,-1)node[circ]{}node[xshift={-1cm}]{$(-4,-1)$};
+\addplot[domain=-0.4:4]{-(x-2)^2}node[pos=0.75,right]{(ت)};
+\draw(axis cs:2,0)node[circ]{}node[above]{$(2,0)$};
+\end{axis}
+\end{tikzpicture}
+\caption{اشکال برائے سوال \حوالہ{سوال_ابتدا_قطع_مکافی_منتقلی_ت}}
+\label{شکل_سوال_ابتدا_قطع_مکافی_منتقلی_ت}
+\end{minipage}
+\end{figure}
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_قطع_مکافی_منتقلی_ت}
+
+\انتہا{سوال}
+%========================
