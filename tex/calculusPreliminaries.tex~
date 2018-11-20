@@ -319,7 +319,7 @@ x&=-5
 \انتہا{مثال}
 %======================
 \ابتدا{مثال}
-درج ذیل عدم مساوات حل کریں۔حل سلسلہ ترسیم  کریں۔
+درج ذیل عدم مساوات حل کریں۔حل سلسلہ کو ترسیم  کریں۔
 \begin{align*}
 (\text{الف})\quad \abs{2x-5}&\le1&& (\text{ب})\quad \abs{2x-5}\ge 1
 \end{align*} 
@@ -428,7 +428,7 @@ $\abs{y-5}<1$
 \end{multicols} 
 \انتہا{سوال}
 %====================
-عدم مساوات حل کرتے ہوئے حل سلسلہ ترسیم کریں۔
+عدم مساوات حل کرتے ہوئے حل سلسلہ کو ترسیم کریں۔
 \begin{multicols}{2}
 \begin{enumerate}[]
 \item
@@ -511,7 +511,7 @@ $\abs{\frac{s}{2}-1}=1$
 \end{enumerate}
 \end{multicols}
 
-سوال \حوالہ{سوال_ابتدا_عدم_مساوات_الف} تا سوال \حوالہ{سوال_ابتدا_عدم_مساوات_ب} میں دیے عدم مساوات حل کریں۔حل سلسلہ کو وقفوں یا وقفوں کے اشتراک کی صورت میں لکھیں۔حل سلسلہ ترسیم کریں\\
+سوال \حوالہ{سوال_ابتدا_عدم_مساوات_الف} تا سوال \حوالہ{سوال_ابتدا_عدم_مساوات_ب} میں دیے عدم مساوات حل کریں۔حل سلسلہ کو وقفوں یا وقفوں کے اشتراک کی صورت میں لکھیں۔حل سلسلہ کو  ترسیم کریں\\
 %
 \ابتدا{سوال}\شناخت{سوال_ابتدا_عدم_مساوات_الف}
 $\abs{x}<2$\\
@@ -671,7 +671,7 @@ $-\tfrac{1}{2}<x\le 3$
 \انتہا{سوال}
 %===================
 \ابتدا{سوال}
-عدم مساوات \عددی{\abs{x}+\abs{y}\le 1} ترسیم کریں۔
+عدم مساوات \عددی{\abs{x}+\abs{y}\le 1} کو ترسیم کریں۔
 \انتہا{سوال}
 %====================
 \ابتدا{سوال}
@@ -2176,7 +2176,9 @@ $g(z)=\tfrac{1}{\sqrt{4-z^2}}$
 \موٹا{تفاعل کا کلیہ اخذ کرنا}
 
 \ابتدا{سوال}
-متوازی الاضلاع مثلث کے رقبہ اور محیط کو ضلع کی لمبائی \عددی{x} کا تفاعل لکھیں۔
+متوازی الاضلاع مثلث کے رقبہ اور محیط کو ضلع کی لمبائی \عددی{x} کا تفاعل لکھیں۔\\
+جواب:\quad
+$A=\tfrac{\sqrt{3}}{4}x^2,\quad p=3x$
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}
@@ -2184,7 +2186,8 @@ $g(z)=\tfrac{1}{\sqrt{4-z^2}}$
 \انتہا{سوال}
 %=========================
 \ابتدا{سوال}
-مکعب کی ضلع کی لمبائی کو مکعب کی وتری لمبائی \عددی{d} کی صورت میں لکھیں۔مکعب کا سطحی رقبہ اور حجم کو \عددی{d} کا تفاعل لکھیں۔ 
+مکعب کی ضلع کی لمبائی کو مکعب کی وتری لمبائی \عددی{d} کی صورت میں لکھیں۔مکعب کا سطحی رقبہ اور حجم کو \عددی{d} کا تفاعل لکھیں۔ \\
+$x=\tfrac{d}{\sqrt{3}},\quad A=2d^2,\quad V=\tfrac{d^3}{3\sqrt{3}}$
 \انتہا{سوال}
 %====================
 \ابتدا{سوال}
@@ -2196,7 +2199,57 @@ $g(z)=\tfrac{1}{\sqrt{4-z^2}}$
 سوال \حوالہ{سوال_ابتدا_تفاعل_ترسیم_الف} تا سوال \حوالہ{سوال_ابتدا_تفاعل_ترسیم_ب} میں دیے تفاعل ترسیم کریں۔ان میں کونسی تشاکل پائی جاتی ہے (اگر پائی جاتی ہو تب)۔اشکال \حوالہ{شکل_ابتدا_اہم_تفاعل_ترسیم} میں دی ترسیم کا سہارا لیا جا سکتا ہے۔
 
 \ابتدا{سوال}\شناخت{سوال_ابتدا_تفاعل_ترسیم_الف}
-$y=-x^3$
+$y=-x^3$\\
+جواب:\quad
+مبدا کے لحاظ سے تشاکل ہے۔ شکل \حوالہ{شکل_جواب_سوال_ابتدا_تفاعل_ترسیم_الف}
+\begin{figure}
+\centering
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},ylabel style={at={(current axis.above origin)},anchor=south},xlabel style={at={(current axis.right of origin)},anchor=west},xtick={-1,1}]
+\addplot[domain=-2:2]{-x^3};
+\draw(axis cs:0,4)node[right,font=\scriptsize]{$y=-x^3$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_تفاعل_ترسیم_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},ylabel style={at={(current axis.above origin)},anchor=south},xlabel style={at={(current axis.right of origin)},anchor=west},ymin=-3,ymax=3]
+\addplot[domain=-3:0.5]{-1/x};
+\addplot[domain=0.5:3]{-1/x};
+\draw(axis cs:0,1.5)node[right,font=\scriptsize]{$y=-\tfrac{1}{x}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_تفاعل_ترسیم_درکار_پ}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},ylabel style={at={(current axis.above origin)},anchor=south},xlabel style={at={(current axis.right of origin)},anchor=west},ymax=5]
+\addplot[domain=-4:4]{sqrt{abs(x)}};
+\draw(axis cs:0,3)node[right,font=\scriptsize]{$y=\sqrt{\abs{x}}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_تفاعل_ترسیم_درکار_ت}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},ylabel style={at={(current axis.above origin)},anchor=south},xlabel style={at={(current axis.right of origin)},anchor=west},xtick={-1,1}]
+\addplot[domain=-2.2:2.2]{1/8*x^3};
+\draw(axis cs:0,1)node[right,font=\scriptsize]{$y=\tfrac{x^3}{8}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_تفاعل_ترسیم_درکار_ٹ}
+\end{minipage}
+\end{figure}
 \انتہا{سوال}
 %======================
 \ابتدا{سوال}
@@ -2204,7 +2257,9 @@ $y=-\tfrac{1}{x^2}$
 \انتہا{سوال}
 %====================================
 \ابتدا{سوال}
-$y=-\tfrac{1}{x}$
+$y=-\tfrac{1}{x}$\\
+جواب:\quad
+مبدا کے لحاظ سے تشاکل ہے۔شکل \حوالہ{شکل_جواب_سوال_ابتدا_تفاعل_ترسیم_درکار_پ}
 \انتہا{سوال}
 %====================================
 \ابتدا{سوال}
@@ -2212,7 +2267,9 @@ $y=\tfrac{1}{\abs{x}}$
 \انتہا{سوال}
 %====================================
 \ابتدا{سوال}
-$y=\sqrt{\abs{x}}$
+$y=\sqrt{\abs{x}}$\\
+جواب:\quad
+\عددی{y} محدد کے لحاظ سے تشاکل ہے۔ شکل \حوالہ{شکل_جواب_سوال_ابتدا_تفاعل_ترسیم_درکار_ت}
 \انتہا{سوال}
 %====================================
 \ابتدا{سوال}
@@ -2220,7 +2277,9 @@ $y=\sqrt{-x}$
 \انتہا{سوال}
 %====================================
 \ابتدا{سوال}
-$y=\tfrac{x^3}{8}$
+$y=\tfrac{x^3}{8}$\\
+جواب:\quad
+مبدا کے لحاظ سے تشاکل ہے۔ شکل \حوالہ{شکل_جواب_سوال_ابتدا_تفاعل_ترسیم_درکار_ٹ}
 \انتہا{سوال}
 %====================================
 \ابتدا{سوال}
@@ -2228,7 +2287,58 @@ $y=-4\sqrt{x}$
 \انتہا{سوال}
 %====================================
 \ابتدا{سوال}
-$y=-x^{\tfrac{3}{2}}$
+$y=-x^{\tfrac{3}{2}}$\\
+جواب:\quad
+کوئی تشاکل نہیں پایا جاتا ہے۔ شکل \حوالہ{شکل_جواب_سوال_ابتدا_تفاعل_ترسیم_ث}
+\begin{figure}
+\centering
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},ylabel style={at={(current axis.above origin)},anchor=south},xlabel style={at={(current axis.right of origin)},anchor=west},xtick={-1,1},ymax=1,xmax=4]
+\addplot[domain=0:3]{-x^(3/2)};
+\draw(axis cs:2,-2)node[right,font=\scriptsize]{$y=-x^{\tfrac{3}{2}}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_تفاعل_ترسیم_ث}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},ylabel style={at={(current axis.above origin)},anchor=south},xlabel style={at={(current axis.right of origin)},anchor=west},xmax=12]
+\addplot[domain=-8:8]{((-x)^2)^(1/3)};
+\draw(axis cs:1,1)node[right,font=\scriptsize]{$y=(-x)^{\tfrac{2}{3}}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_تفاعل_ترسیم_درکار_ج}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},ylabel style={at={(current axis.above origin)},anchor=south},xlabel style={at={(current axis.right of origin)},anchor=west},ymax=5]
+\addplot[domain=0:5]{x};
+\addplot[domain=0:5]{-x};
+\draw(axis cs:1,4)node[right,font=\scriptsize]{$\abs{y}=x$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_تفاعل_ترسیم_درکار_چ}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},ylabel style={at={(current axis.above origin)},anchor=south},xlabel style={at={(current axis.right of origin)},anchor=west},xtick={-1,1},ymax=4]
+\addplot[domain=-3:3]{x};
+\addplot[domain=-3:3]{-x};
+\draw(axis cs:0,3)node[right,font=\scriptsize]{$y^2=x^2$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_تفاعل_ترسیم_درکار_ح}
+\end{minipage}
+\end{figure}
 \انتہا{سوال}
 %====================================
 \ابتدا{سوال}
@@ -2236,7 +2346,9 @@ $y=(-x)^{\tfrac{3}{2}}$
 \انتہا{سوال}
 %====================================
 \ابتدا{سوال}
-$y=(-x)^{\tfrac{2}{3}}$
+$y=(-x)^{\tfrac{2}{3}}$\\
+جواب:\quad
+\عددی{y} محور کے لحاظ سے تشاکل۔ شکل \حوالہ{شکل_جواب_سوال_ابتدا_تفاعل_ترسیم_درکار_ج}
 \انتہا{سوال}
 %====================================
 \ابتدا{سوال}\شناخت{سوال_ابتدا_تفاعل_ترسیم_ب}
@@ -2244,7 +2356,10 @@ $y=-x^{\tfrac{2}{3}}$
 \انتہا{سوال}
 %====================================
 \ابتدا{سوال}
-(الف) \عددی{\abs{y}=x} اور (ب) \عددی{y^2=x^2} ترسیم کریں۔یہ مساوات \عددی{x} کے تفاعل کو ظاہر نہیں کرتے ہیں۔تفاعل نہ ہونے کی وجہ پیش کریں۔
+(الف) \عددی{\abs{y}=x} اور (ب) \عددی{y^2=x^2} ترسیم کریں۔یہ مساوات \عددی{x} کے تفاعل کو ظاہر نہیں کرتے ہیں۔تفاعل نہ ہونے کی وجہ پیش کریں۔\\
+جواب:\quad
+(الف) \عددی{x} کی ہر مثبت قیمت کے لئے \عددی{y} کی دو قیمتیں پائی جاتی ہیں۔ شکل \حوالہ{شکل_جواب_سوال_ابتدا_تفاعل_ترسیم_درکار_چ}\\
+(ب) ہر \عددی{x\ne 0} کے لئے \عددی{y} کی دو قیمتیں پائی جاتی ہیں۔ شکل \حوالہ{شکل_جواب_سوال_ابتدا_تفاعل_ترسیم_درکار_ح}
 \انتہا{سوال}
 %======================
 \ابتدا{سوال}
@@ -2256,7 +2371,9 @@ $y=-x^{\tfrac{2}{3}}$
 سوال \حوالہ{سوال_ابتدا_طاق_جفت_الف} تا سوال \حوالہ{سوال_ابتدا_طاق_جفت_ب} میں کون سا تفاعل جفت، کون سا طاق اور کون سا نہ طاق اور نہ جفت ہیں؟
 
 \ابتدا{سوال}\شناخت{سوال_ابتدا_طاق_جفت_الف}
-$f(x)=3$
+$f(x)=3$\\
+جواب:\quad
+جفت
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}
@@ -2264,7 +2381,9 @@ $f(x)=x^{-5}$
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
-$f(x)=x^2+1$
+$f(x)=x^2+1$\\
+جواب:\quad
+جفت
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
@@ -2272,15 +2391,29 @@ $f(x)=x^2+x$
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
-$g(x)=x^3+x$
+$g(x)=x^3+x$\\
+جواب:\quad
+طاق
 \انتہا{سوال}
 %=====================
+\ابتدا{سوال}
+$g(x)=x^4+3x^2-1$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$g(x)=\tfrac{1}{x^2-1}$\\
+جواب:\quad
+جفت
+\انتہا{سوال}
+%==========================
 \ابتدا{سوال}
 $g(x)=\tfrac{x}{x^2-1}$
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
-$h(t)=\tfrac{1}{t-1}$
+$h(t)=\tfrac{1}{t-1}$\\
+جواب:\quad
+نا جفت اور نا طاق
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
@@ -2288,7 +2421,9 @@ $h(t)=\abs{t^3}$
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
-$h(t)=2t+1$
+$h(t)=2t+1$\\
+جواب:\quad
+نا جفت اور نا طاق
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}\شناخت{سوال_ابتدا_طاق_جفت_ب}
@@ -2300,7 +2435,10 @@ $h(t)=2\abs{t}+1$
 سوال \حوالہ{سوال_ابتدا_تلاش_دائرہ_کار_الف} تا سوال \حوالہ{سوال_ابتدا_تلاش_دائرہ_کار_ب} میں \عددی{f}، \عددی{g}، \عددی{f+g} اور \عددی{f\cdot g} کا دائرہ کار اور سعت تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_ابتدا_تلاش_دائرہ_کار_الف}
-$f(x)=x,\quad g(x)=\sqrt{x-1}$
+$f(x)=x,\quad g(x)=\sqrt{x-1}$\\
+جوابات:\quad
+$D_f:-\infty<x<\infty,, D_g:x\ge 1, , R_f:-\infty<y<\infty,, R_g:y\ge 0,$\
+$D_{f+g}=D_{f\cdot g}=D_g,, R_{f+g}:y\ge 1,, R_{f\cdot g}:y\ge 0$
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}\شناخت{سوال_ابتدا_تلاش_دائرہ_کار_ب}
@@ -2310,7 +2448,10 @@ $f(x)=\sqrt{x+1},\quad g(x)=\sqrt{x-1}$
 سوال \حوالہ{سوال_ابتدا_تلاش_دائرہ_کار_پ} تا سوال \حوالہ{سوال_ابتدا_تلاش_دائرہ_کار_ت} میں \عددی{f}، \عددی{g}، \عددی{\tfrac{f}{g}} اور \عددی{\tfrac{g}{f}} کا دائرہ کار اور سعت تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_ابتدا_تلاش_دائرہ_کار_پ}
-$f(x)=2,\quad g(x)=x^2+1$
+$f(x)=2,\quad g(x)=x^2+1$\\
+جواب:\quad
+$D_f:-\infty<x<\infty, \, D_g:-\infty<x<\infty,\, R_f:y=2,\, R_g:y\ge 1,$\\
+$ D_{\tfrac{f}{g}}:-\infty<x<\infty,\, R_{\tfrac{f}{g}}:0<y\le 2,\, D_{\tfrac{g}{f}}:-\infty<x<\infty,\, R_{\tfrac{g}{f}}:y\ge \tfrac{1}{2}$
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}\شناخت{سوال_ابتدا_تلاش_دائرہ_کار_ت}
@@ -2340,6 +2481,27 @@ $g(g(2))$
 $f(f(x))$
 \item
 $g(g(x))$
+\end{enumerate}
+\end{multicols}
+جواب:
+\begin{multicols}{4}
+\begin{enumerate}[a.]
+\item
+$2$
+\item
+$22$
+\item
+$x^2+2$
+\item
+$x^2+10x+22$
+\item
+$5$
+\item
+$-2$
+\item
+$g+10$
+\item
+$x^4-6x^2+6$
 \end{enumerate}
 \end{multicols}
 \انتہا{سوال}
@@ -2386,6 +2548,23 @@ $f(u(v(x)))$
 $f(v(u(x)))$
 \end{enumerate}
 \end{multicols}
+جواب:
+\begin{multicols}{4}
+\begin{enumerate}[a.]
+\item
+$\tfrac{4}{x^2}-5$
+\item
+$\tfrac{4}{x^2}-5$
+\item
+$(\tfrac{4}{x}-5)^2$
+\item
+$(\tfrac{1}{4x-5})^2$
+\item
+$\tfrac{1}{4x^2-5}$
+\item
+$\tfrac{1}{(4x-5)^2}$
+\end{enumerate}
+\end{multicols}
 \انتہا{سوال}
 %======================
 \ابتدا{سوال}
@@ -2427,6 +2606,23 @@ $y=\sqrt{(x-3)^3}$
 $y=(2x-6)^3$
 \end{enumerate}
 \end{multicols}
+جواب:
+\begin{multicols}{4}
+\begin{enumerate}[a.]
+\item
+$f(g(x))$
+\item
+$j(g(x))$
+\item
+$g(g(x))$
+\item
+$j(j(x))$
+\item
+$g(h(f(x)))$
+\item
+$h(j(f(x)))$
+\end{enumerate}
+\end{multicols}
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}
@@ -2458,8 +2654,21 @@ $y=\sqrt{x^3-3}$
 \text{(ب)}&x+2&3x&\\
 \text{(ج)} & &\sqrt{x-5}&\sqrt{x^2-5}\\
 \text{(د)} &\frac{x}{x-1}&\frac{x}{x-1}&\\
-\text{(ہ)} &1+\frac{1}{x}&x\\
+\text{(ہ)}& \frac{1}{x-1}&1+\frac{1}{x}&\\
 \text{(و)} &\frac{1}{x}&&x
+\end{array}
+\end{align*}
+جواب:
+\begin{align*}
+\begin{array}{cccc}
+&g(x)&f(x)&(f\circ g)(x)\\
+\hline
+\text{(الف)} & x-7& \sqrt{x}&\sqrt{x-7}\\
+\text{(ب)}&x+2&3x&3x+6\\
+\text{(ج)} &x^2 &\sqrt{x-5}&\sqrt{x^2-5}\\
+\text{(د)} &\frac{x}{x-1}&\frac{x}{x-1}&x\\
+\text{(ہ)}& \frac{1}{x-1}&1+\frac{1}{x}&x\\
+\text{(و)} &\frac{1}{x}&\frac{1}{x}&x
 \end{array}
 \end{align*}
 \انتہا{سوال}
@@ -2479,6 +2688,36 @@ x,& 0\le x\le 1\\
 2-x,&1\le x\le 2
 \end{cases}
 \end{align*}
+جواب: \quad
+شکل \حوالہ{شکل_سوال_ابتدا_ٹکڑوں_میں-معین_الف}
+\begin{figure}
+\centering
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},ylabel style={at={(current axis.above origin)},anchor=south},xlabel style={at={(current axis.right of origin)},anchor=west},xtick={1,2},,ytick={1},xmax=4,ymax=2]
+\addplot[domain=0:1]{x};
+\addplot[domain=1:2]{2-x};
+\draw(axis cs:0,1)node[above right,font=\tiny]{$f(x)=\begin{cases} x,& 0\le x \le 1\\ 2-x,& 1<x\le 2 \end{cases}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_ابتدا_ٹکڑوں_میں-معین_الف}
+\end{minipage}%
+\begin{minipage}{0.6\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,height=3.5cm,width=6cm,axis lines=middle,xlabel={$x$},ylabel={$y$},ylabel style={at={(current axis.above origin)},anchor=south},xlabel style={at={(current axis.right of origin)},anchor=west},xtick={1},,ytick={2},ymin=0]
+\addplot[domain=-2.5:1]{3-x};
+\addplot[domain=1:3]{2*x};
+\draw(axis cs:0.5,4)node[right,fill=white,font=\tiny]{$F(x)=\begin{cases} 3-x,& x\le 1\\ 2x,& x>1\end{cases}$};
+\draw(axis cs:1,2)node[circ]{};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_ابتدا_ٹکڑوں_میں-معین_ب}
+\end{minipage}\hfill
+\end{figure}
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
@@ -2497,6 +2736,8 @@ F(x)=\begin{cases}
 2x,&x>1
 \end{cases}
 \end{align*}
+جواب:\quad
+شکل \حوالہ{شکل_سوال_ابتدا_ٹکڑوں_میں-معین_ب}
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}\شناخت{سوال_ابتدا_ٹکڑوں_میں-معین_ب}
@@ -2536,6 +2777,11 @@ x,&0\le x
 \caption{اشکال برائے سوال \حوالہ{سوال_ابتدا_ٹکڑوں_میں_معین_مساوات_تلاش_الف}}
 \label{شکل_سوال_ابتدا_ٹکڑوں_میں_معین_مساوات_تلاش_الف}
 \end{figure}
+
+جواب:\quad
+$y=\begin{cases} x,& 0\le x\le1\\ 2-x,&1<x\le 2   \end{cases} \quad \text{(الف)}$
+\quad
+$y=\begin{cases} 2,& 0\le x<1 \,\text{یا}\, 2\le x<3\\ 0,&1\le x< 2 \, \text{یا}\, 3\le x\le 4 \end{cases} \quad \text{(ب)}$
 \انتہا{سوال}
 %=============================
 
@@ -2573,7 +2819,10 @@ x,&0\le x
 %=============================
 \موٹا{عدد صحیح چھت اور زمین تفاعل}\\
 \ابتدا{سوال}
-\عددی{x} کی کن قیمتوں کے لئے (الف) \عددی{\lfloor x\rfloor=0} ہو گا؟ (ب) \عددی{\lceil x\rceil =0} ہو گا؟
+\عددی{x} کی کن قیمتوں کے لئے (الف) \عددی{\lfloor x\rfloor=0} ہو گا؟ (ب) \عددی{\lceil x\rceil =0} ہو گا؟\\
+جواب:\quad
+$0\le x<1\quad \text{الف}$ \quad
+$-1<x\le 0\quad \text{(ب)}$
 \انتہا{سوال}
 %==========================
 \ابتدا{سوال}
@@ -2581,7 +2830,9 @@ x,&0\le x
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
-کیا تمام \عددی{x} کے لئے \عددی{\lceil x\rceil=\lfloor x\rfloor} ہو گا؟ اپنے جواب کی وجہ پیش کریں۔
+کیا تمام \عددی{x} کے لئے \عددی{\lceil x\rceil=\lfloor x\rfloor} ہو گا؟ اپنے جواب کی وجہ پیش کریں۔\\
+جواب:\quad
+ہاں
 \انتہا{سوال}
 %=================
 \ابتدا{سوال}
@@ -2598,7 +2849,7 @@ f(x)=\begin{cases}
 
 \ابتدا{سوال}
 فرض کریں کہ \عددی{f} جفت تفاعل اور \عددی{g} طاق تفاعل ہیں اور دونوں تفاعل مکمل حقیقی خط \عددی{\Re} پر معین ہیں۔درج ذیل میں سے کون سے تفاعل (جب معین ہوں تب) جفت ہیں اور کون سے طاق ہیں؟
-\begin{multicols}{4}
+\begin{multicols}{3}
 \begin{enumerate}[a.]
 \item
 $fg$
@@ -2618,6 +2869,29 @@ $g\circ f$
 $f\circ f$
 \item
 $g \circ g$
+\end{enumerate}
+\end{multicols}
+جواب:
+\begin{multicols}{3}
+\begin{enumerate}[a.]
+\item
+طاق
+\item
+طاق
+\item
+طاق
+\item
+جفت
+\item
+جفت
+\item
+جفت
+\item
+جفت
+\item
+جفت
+\item
+طاق
 \end{enumerate}
 \end{multicols}
 \انتہا{سوال}
@@ -2991,7 +3265,7 @@ x^2+2x-8&=0 && \text{\RL{دو درجی مساوات کو کسی بھی طریق�
 x=2,\quad x&=-4
 \end{align*} 
 \موٹا{پانچواں قدم:}\quad
-آپ \عددی{y=ax^2} کو ترسیم کرتے ہوئے منتقلی اور تشاکل کے اصول استعمال کر کے منتقلی کے بعد کے \عددی{xy} محور کھینچیں (شکل \حوالہ{شکل_مثال_ابتدا_قطع_مکافی_منتقل})۔
+ \عددی{y=ax^2} کا خاکہ بناتے ہوئے منتقلی اور تشاکل کے اصول استعمال کر کے منتقلی کے بعد کے \عددی{xy} محور کھینچیں (شکل \حوالہ{شکل_مثال_ابتدا_قطع_مکافی_منتقل})۔
 \begin{figure}
 \centering
 \begin{tikzpicture}
@@ -3014,7 +3288,6 @@ x=2,\quad x&=-4
 \حصہء{سوالات}
 
 \موٹا{ترسیم کی منتقلی}\\
-
 \ابتدا{سوال}\شناخت{سوال_ابتدا_قطع_مکافی_منتقلی_الف}
 شکل \حوالہ{شکل_سوال_ابتدا_قطع_مکافی_منتقلی_الف} میں \عددی{y=-x^2} کی ترسیم اور اس کی منتقل کردہ اشکال دکھائے گئے ہیں۔منتقل کردہ ترسیم کی مساوات لکھیں۔
 \begin{figure}
@@ -3046,6 +3319,11 @@ x=2,\quad x&=-4
 \label{شکل_سوال_ابتدا_قطع_مکافی_منتقلی_ب}
 \end{minipage}
 \end{figure}
+
+
+جواب:\quad
+$y=-(x+7)^2\quad \text{(الف)}$\quad
+$y=-(x-4)^2\quad \text{(ب)}$
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}\شناخت{سوال_ابتدا_قطع_مکافی_منتقلی_ب}
@@ -3095,6 +3373,10 @@ y=(x-1)^2-4,\quad y=(x-2)^2+2,\quad y=(x+2)^2+2,\quad y=(x+3)^2-2
 \label{شکل_سوال_ابتدا_قطع_مکافی_منتقلی_ت}
 \end{minipage}
 \end{figure}
+
+
+جواب:\quad
+(الف) \عددی{y=(x-2)^2+2} (ب) \عددی{y=(x+2)^2+2} (پ) \عددی{y=(x+3)^2-2} (ت) \عددی{y=(x-1)^2-4}
 \انتہا{سوال}
 %==========================
 \ابتدا{سوال}\شناخت{سوال_ابتدا_قطع_مکافی_منتقلی_ت}
@@ -3105,7 +3387,62 @@ y=(x-1)^2-4,\quad y=(x-2)^2+2,\quad y=(x+2)^2+2,\quad y=(x+3)^2-2
 سوال \حوالہ{سوال_ابتدا_منتقل_شدہ_الف} تا سوال \حوالہ{سوال_ابتدا_منتقل_شدہ_ب} میں ترسیم منتقل کریں۔ منتقل شدہ ترسیم کی مساوات حاصل کریں۔اصل اور منتقل شدہ ترسیم کھینچیں۔
 
 \ابتدا{سوال}\شناخت{سوال_ابتدا_منتقل_شدہ_الف}
-\عددی{x^2+y^2=49} کو \عددی{3} نیچے، \عددی{2} بائیں منتقل کریں۔
+\عددی{x^2+y^2=49} کو \عددی{3} نیچے، \عددی{2} بائیں منتقل کریں۔\\
+جواب:\quad
+\عددی{(x+2)^2+(y+3)^2=49}،  شکل \حوالہ{شکل_جواب_سوال_ابتدا_منتقل_شدہ_الف}
+\begin{figure}
+\centering
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={-2},ytick={-3},xticklabels={},yticklabels={},ymax=9]
+\addplot[domain=0:360,samples=50]({7*cos(x)},{7*sin(x)});
+\addplot[domain=0:360,samples=50]({-2+7*cos(x)},{-3+7*sin(x)});
+\draw(axis cs:-2,-3)node[circ]{}node[above,xshift={-1.5mm},font=\tiny]{$(-2,-3)$};
+\draw(axis cs:0,8) node[right,font=\tiny]{$x^2+y^2=49$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_منتقل_شدہ_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},ymin=-2,ymax=2,xmax=2]
+\addplot[domain=-1.2:1]{x^3};
+\addplot[domain=-2:0.4]{-1+(x+1)^3}node[pos=1,fill=white,right,font=\tiny]{$y+1=(x+1)^3$};
+\draw(axis cs:1,1)node[fill=white,font=\tiny]{$y=x^3$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_منتقل_شدہ_ب}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={1},ytick={1}]
+\addplot[domain=0:0.5]{sqrt(x)};
+\addplot[domain=0.5:4]{sqrt(x)}node[pos=0.7,below,font=\tiny]{$y=\sqrt{x}$};
+\addplot[domain=-0.81:-0.4,smooth]{sqrt(x+0.81)};
+\addplot[domain=-0.4:4,smooth]{sqrt(x+0.81)}node[pos=0.5,above,rotate=18,font=\tiny]{$y=\sqrt{x+0.81}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_منتقل_شدہ_پ}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={3.5},xticklabels={$\tfrac{7}{2}$},ytick={-7},yticklabels={$-7$}]
+\addplot[domain=-3:3]{2*x}node[above,font=\tiny]{$y=2x$};
+\addplot[domain=-3:6]{2*x-7};
+\draw(axis cs:0,-7.5)node[right,font=\tiny]{$y=2x-7$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_منتقل_شدہ_ت}
+\end{minipage}\hfill
+\end{figure}
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}
@@ -3113,7 +3450,9 @@ y=(x-1)^2-4,\quad y=(x-2)^2+2,\quad y=(x+2)^2+2,\quad y=(x+3)^2-2
 \انتہا{سوال}
 %===================
 \ابتدا{سوال}
-\عددی{y=x^3}  کو \عددی{1} نیچے، \عددی{1} بائیں منتقل کریں۔
+\عددی{y=x^3}  کو \عددی{1} نیچے، \عددی{1} بائیں منتقل کریں۔\\
+جواب:\quad
+\عددی{y+1=(x+1)^3}، شکل \حوالہ{شکل_جواب_سوال_ابتدا_منتقل_شدہ_ب} 
 \انتہا{سوال}
 %===================
 \ابتدا{سوال}
@@ -3121,7 +3460,9 @@ y=(x-1)^2-4,\quad y=(x-2)^2+2,\quad y=(x+2)^2+2,\quad y=(x+3)^2-2
 \انتہا{سوال}
 %===================
 \ابتدا{سوال}
-\عددی{y=\sqrt{x}}  کو  \عددی{0.81} بائیں منتقل کریں۔
+\عددی{y=\sqrt{x}}  کو  \عددی{0.81} بائیں منتقل کریں۔\\
+جواب:\quad
+\عددی{y=\sqrt{x+0.81}}، شکل \حوالہ{شکل_جواب_سوال_ابتدا_منتقل_شدہ_پ}
 \انتہا{سوال}
 %=============
 \ابتدا{سوال}
@@ -3129,7 +3470,61 @@ y=(x-1)^2-4,\quad y=(x-2)^2+2,\quad y=(x+2)^2+2,\quad y=(x+3)^2-2
 \انتہا{سوال}
 %=========================
 \ابتدا{سوال}
-\عددی{y=2x-7}  کو \عددی{7} اوپر منتقل کریں۔
+\عددی{y=2x-7}  کو \عددی{7} اوپر منتقل کریں۔\\
+جواب:\quad
+\عددی{y=2x}، شکل \حوالہ{شکل_جواب_سوال_ابتدا_منتقل_شدہ_ت}
+%
+\begin{figure}
+\centering
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},ymax=2.7]
+\addplot[domain=0:4]{sqrt(x)}node[pos=0.6,below,font=\tiny]{$y=\sqrt{x}$};
+\addplot[domain=0:4]{-sqrt(x)};
+\addplot[domain=-1:3]{sqrt(x+1)}node[pos=0.6,above,rotate=20,font=\tiny]{$x+1=y^2$};
+\addplot[domain=-1:3]{-sqrt(x+1)};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_منتقل_شدہ_ٹ}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,tiny,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={1,2},ytick={-1,1,2}]
+\addplot[domain=1.5:4]{1+1/(x-1)}node[pos=0,right,font=\tiny]{$y-1=\tfrac{1}{x-1}$};
+\addplot[domain=-3:0.65]{1+1/(x-1)}node[pos=0.5,above left,font=\tiny]{$y-1=\tfrac{1}{x-1}$};
+\addplot[domain=0.4:3]{1/x}node[pos=0.5,above right,yshift={-1.5mm},font=\tiny]{$y=\tfrac{1}{x}$};
+\addplot[domain=-0.4:-3]{1/x}node[pos=0.5,below left,yshift={-1.5mm},font=\tiny]{$y=\tfrac{1}{x}$};
+\draw[dashed](axis cs:1,-3)--(axis cs:1,3);
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_منتقل_شدہ_ث}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={-4},ytick={2},xmin=-4.5]
+\addplot[domain=-4:-3.5]{sqrt(x+4)};
+\addplot[domain=-3.5:2]{sqrt(x+4)}node[pos=0.1,right,font=\tiny]{$y=\sqrt{x+4}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_منتقل_کریں_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick=2,ytick=2]
+\addplot[domain=-3:7]{abs(x-2)}node[pos=0.75,above left,font=\tiny]{$y=\abs{x-2}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_منتقل_کریں_ب}
+\end{minipage}%
+\end{figure}
 \انتہا{سوال}
 %===================
 \ابتدا{سوال}
@@ -3137,7 +3532,9 @@ y=(x-1)^2-4,\quad y=(x-2)^2+2,\quad y=(x+2)^2+2,\quad y=(x+3)^2-2
 \انتہا{سوال}
 %===================
 \ابتدا{سوال}
-\عددی{y=x^2}  کو \عددی{1} بائیں منتقل کریں۔
+\عددی{y=x^2}  کو \عددی{1} بائیں منتقل کریں۔\\
+جواب:\quad
+\عددی{x+1=y^2}، شکل \حوالہ{شکل_جواب_سوال_ابتدا_منتقل_شدہ_ٹ}
 \انتہا{سوال}
 %===================
 \ابتدا{سوال}
@@ -3145,7 +3542,9 @@ y=(x-1)^2-4,\quad y=(x-2)^2+2,\quad y=(x+2)^2+2,\quad y=(x+3)^2-2
 \انتہا{سوال}
 %===================
 \ابتدا{سوال}
-\عددی{y=\tfrac{1}{x}}  کو \عددی{1} اوپر، \عددی{1} دائیں منتقل کریں۔
+\عددی{y=\tfrac{1}{x}}  کو \عددی{1} اوپر، \عددی{1} دائیں منتقل کریں۔\\
+جواب:\quad
+\عددی{y-1=\tfrac{1}{x-1}}،  شکل \حوالہ{شکل_جواب_سوال_ابتدا_منتقل_شدہ_ث}
 \انتہا{سوال}
 %===================
 \ابتدا{سوال}\شناخت{سوال_ابتدا_منتقل_شدہ_ب}
@@ -3157,7 +3556,59 @@ y=(x-1)^2-4,\quad y=(x-2)^2+2,\quad y=(x+2)^2+2,\quad y=(x+3)^2-2
 
 
 \ابتدا{سوال}\شناخت{سوال_ابتدا_منتقل_کریں_الف}
-$y=\sqrt{x+4}$
+$y=\sqrt{x+4}$\\
+جواب:\quad
+شکل \حوالہ{شکل_جواب_سوال_ابتدا_منتقل_کریں_الف}
+\begin{figure}
+\centering
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,tiny,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={1},ytick={1},ymin=0,xmin=0]
+\addplot[domain=1:1.5]{1+sqrt(x-1)};
+\addplot[domain=1.5:5]{1+sqrt(x-1)}node[pos=0.4,below right,font=\tiny]{$y=1+\sqrt{x-1}$};
+\draw(axis cs:1,1)node[circ]{}node[below,font=\tiny]{$(1,1)$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_منتقل_کریں_پ}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={-1},ytick={1}]
+\addplot[domain=-3:-1]{((x+1)^2)^(1/3)};
+\addplot[domain=-1:-0.75]{((x+1)^2)^(1/3)};
+\addplot[domain=-0.75:2]{((x+1)^2)^(1/3)}node[pos=0.6,below right,font=\tiny]{$y=(x+1)^{\tfrac{2}{3}}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_منتقل_کریں_ت}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},ymax=2,xtick={-1,1},ytick={1}]
+\addplot[domain=-0.5:0.5]{1-(x^2)^(1/3)};
+\addplot[domain=-3:-0.5]{1-(x^2)^(1/3)};
+\addplot[domain=0.5:3]{1-(x^2)^(1/3)}node[pos=0,above right,font=\tiny]{$y=1-x^{\tfrac{2}{3}}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_منتقل_کریں_ٹ}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,tiny,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={1,2},ytick={-1,-2}]
+\addplot[domain=-2.2:0.2]({1+(x+1)^3},{x})node[above,font=\tiny]{$y=\sqrt[\leftroot{-2}3]{x-1}-1$};
+\draw(axis cs:1,-1)node[circ]{}node[right,font=\tiny]{$(1,-1)$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_منتقل_کریں_ث}
+\end{minipage}%
+\end{figure}
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
@@ -3165,7 +3616,9 @@ $y=\sqrt{9-x}$
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
-$y=\abs{x-2}$
+$y=\abs{x-2}$\\
+جواب:\quad
+شکل \حوالہ{شکل_جواب_سوال_ابتدا_منتقل_کریں_ب}
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
@@ -3173,7 +3626,9 @@ $y=\abs{1-x}-1$
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
-$y=1+\sqrt{x-1}$
+$y=1+\sqrt{x-1}$\\
+جواب:\quad
+شکل \حوالہ{شکل_جواب_سوال_ابتدا_منتقل_کریں_پ}
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
@@ -3181,7 +3636,9 @@ $y=1-\sqrt{x}$
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
-$y=(x+1)^{\tfrac{2}{3}}$
+$y=(x+1)^{\tfrac{2}{3}}$\\
+جواب:\quad
+شکل \حوالہ{شکل_جواب_سوال_ابتدا_منتقل_کریں_ت}
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
@@ -3189,7 +3646,9 @@ $y=(x-8)^{\tfrac{2}{3}}$
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
-$y=1-x^{\tfrac{2}{3}}$
+$y=1-x^{\tfrac{2}{3}}$\\
+جواب:\quad
+شکل \حوالہ{شکل_جواب_سوال_ابتدا_منتقل_کریں_ٹ}
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
@@ -3197,7 +3656,9 @@ $y+4=x^{\tfrac{2}{3}}$
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
-$y=\sqrt[\leftroot{-2}3]{x-1}-1$
+$y=\sqrt[\leftroot{-2}3]{x-1}-1$\\
+جواب:\quad
+شکل \حوالہ{شکل_جواب_سوال_ابتدا_منتقل_کریں_ث}
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
@@ -3205,7 +3666,60 @@ $y=(x+2)^{\tfrac{3}{2}}+1$
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
-$y=\tfrac{1}{x-2}$
+$y=\tfrac{1}{x-2}$\\
+جواب:\quad
+شکل \حوالہ{شکل_جواب_سوال_ابتدا_منتقل_کریں_ج}
+\begin{figure}
+\centering
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={1,2,3,4}]
+\addplot[domain=2.5:5]{1/(x-2)}node[pos=0.5,above right,font=\tiny]{$y=\tfrac{1}{x-2}$};
+\addplot[domain=-1:1.5]{1/(x-2)};
+\draw[dashed](axis cs:2,-2)--(axis cs:2,2);
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_منتقل_کریں_ج}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={-3,-2,-1,1,2,3},ytick={1,2,3}]
+\addplot[domain=0.5:4]{1/x+2}node[pos=0.2,right,font=\tiny]{$y=\tfrac{1}{x}+2$};
+\addplot[domain=-4:-0.4]{1/x+2};
+\draw[dashed](axis cs:-3,2)--(axis cs:3,2);
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_منتقل_کریں_چ}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,tiny,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$}]
+\addplot[domain=1.4:4]{1/((x-1)^2)}node[pos=0.2,right,font=\tiny]{$y=\tfrac{1}{(x-1)^2}$};
+\addplot[domain=-2:0.6]{1/((x-1)^2)};
+\draw[dashed](axis cs:1,0)--(axis cs:1,4);
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_منتقل_کریں_ح}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},ymin=0]
+\addplot[domain=0.5:3]{1/(x^2)+1}node[pos=0.5,above right,font=\tiny]{$y=\tfrac{1}{x^2}+1$};
+\addplot[domain=-3:-0.5]{1/(x^2)+1};
+\draw[dashed](axis cs:-3,1)--(axis cs:3,1);
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_منتقل_کریں_خ}
+\end{minipage}\hfill
+\end{figure}
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
@@ -3213,7 +3727,9 @@ $y=\tfrac{1}{x}-2$
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
-$y=\tfrac{1}{x}+2$
+$y=\tfrac{1}{x}+2$\\
+جواب:\quad
+شکل \حوالہ{شکل_جواب_سوال_ابتدا_منتقل_کریں_چ}
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
@@ -3221,7 +3737,9 @@ $y=\tfrac{1}{x+2}$
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
-$y=\tfrac{1}{(x-1)^2}$
+$y=\tfrac{1}{(x-1)^2}$\\
+جواب:\quad
+شکل \حوالہ{شکل_جواب_سوال_ابتدا_منتقل_کریں_ح}
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
@@ -3229,7 +3747,10 @@ $y=\tfrac{1}{x^2}-1$
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
-$y=\tfrac{1}{x^2}+1$
+$y=\tfrac{1}{x^2}+1$\\
+جواب:\quad
+شکل \حوالہ{شکل_جواب_سوال_ابتدا_منتقل_کریں_خ}
+%=======================================
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}\شناخت{سوال_ابتدا_منتقل_کریں_ب}
@@ -3238,27 +3759,623 @@ $y=\tfrac{1}{(x+1)^2}$
 %=======================
 
 \ابتدا{سوال}\شناخت{سوال_ابتدا_دیا_سعت_الف}
-شکل \حوالہ{شکل_سوال_ابتدا_دیا_سعت_الف} میں دکھائے گئے تفاعل \عددی{f(x)} کا دائرہ کار \عددی{[0,2]} اور سعت \عددی{[0,1]} ہے۔درج ذیل تفاعل کے دائرہ کار اور سعت تلاش کرتے ہوئے نیا تفاعل ترسیم کریں۔
+شکل \حوالہ{شکل_سوال_ابتدا_دیا_سعت_الف} میں دکھائے گئے تفاعل \عددی{f(x)} کا دائرہ کار \عددی{[0,2]} اور سعت \عددی{[0,1]} ہے۔درج ذیل تفاعل کے دائرہ کار اور سعت تلاش کرتے ہوئے نئے تفاعل کا خاکہ بنائیں۔
 \begin{multicols}{4}
 \begin{enumerate}[a.]
 \item
 $f(x)+2$
+\item
+$f(x)-1$
+\item
+$2f(x)$
+\item
+$-f(x)$
+\item
+$f(x+2)$
+\item
+$f(x-1)$
+\item
+$f(-x)$
+\item
+$-f(x+1)+1$
 \end{enumerate}
 \end{multicols}
 % 
 \begin{figure}
 \centering
+\begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}
-\draw[-latex](-0.5,0)--(3,0)node[right]{$x$};
-\draw[-latex] (0,-0.2)--(0,1.2)node[above]{$y$};
-\draw(0,0) to [out=0, in=180] (1,1) to [out=0, in=180] (2,0);
-\draw(1,1)node[right,xshift={4mm}]{$f(x)$};
-\draw(0,0)node[below left]{$0$};
-\foreach \x in {1,2}{\draw(\x,0)node[below]{$\x$}--++(0,0.1);}
-\draw(0,1)node[left]{$1$}--++(0.1,0);
+\begin{axis}[tiny,clip=false,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={180,360},ytick={1},xticklabels={$1$,$2$},yticklabels={$1$},xmax=400,ymax=2.5]
+\addplot[domain=-90:270]({x+90},{0.5+0.5*sin(x)})node[pos=0.5,above right,font=\tiny]{$y=f(x)$};
+\draw(axis cs:0,0) node[below,font=\tiny]{$0$};
+\end{axis}
 \end{tikzpicture}
 \caption{تفاعل برائے سوال \حوالہ{سوال_ابتدا_دیا_سعت_الف}}
 \label{شکل_سوال_ابتدا_دیا_سعت_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[x={0.5cm},y={0.5cm}]
+\draw[-latex](-5.5,0)--(1,0)node[right]{$t$};
+\draw[-latex] (0,-3.5)--(0,1)node[above]{$y$};
+\draw(-4,0)--(-2,-3)--(0,0);
+\draw(-2,-3)node[left]{$y=g(t)$};
+\foreach \x in {-4,-2}{\draw(\x,0)node[below]{$\x$}--++(0,0.2);}
+\draw(0,-3)node[left]{$-3$}--++(0.2,0);
+\end{tikzpicture}
+\caption{تفاعل برائے سوال \حوالہ{سوال_ابتدا_دیا_سعت_ب}}
+\label{شکل_سوال_ابتدا_دیا_سعت_ب}
+\end{minipage}
 \end{figure}
+%========================================
+\begin{figure}
+\centering
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={180,360},ytick={2,3},xticklabels={$1$,$2$},yticklabels={$2$,$3$},xmax=400,ymax=3.5,ymin=0]
+\addplot[domain=-90:270]({x+90},{2+0.5+0.5*sin(x)})node[pos=0.5,above right,font=\tiny]{$y=f(x)+2$};
+\draw(axis cs:0,0) node[below,font=\tiny]{$0$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=south},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={180,360},ytick={-1},xticklabels={$1$,$2$},yticklabels={$-1$},xmax=400,ymax=1,ymin=-1.5]
+\addplot[domain=-90:270]({x+90},{-1+0.5+0.5*sin(x)})node[pos=0.1,right,font=\tiny]{$y=f(x)-1$};
+\draw(axis cs:0,0) node[below left,font=\tiny]{$0$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={180,360},ytick={1,2},xticklabels={$1$,$2$},yticklabels={$1$,$2$},xmax=400,ymax=3.5,ymin=0]
+\addplot[domain=-90:270]({x+90},{1+1*sin(x)})node[pos=0.5,above right,font=\tiny]{$y=2f(x)$};
+\draw(axis cs:0,0) node[below,font=\tiny]{$0$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={180,360},ytick={-1},xticklabels={$1$,$2$},yticklabels={$-1$},xmax=400,ymax=2,ymin=-2]
+\addplot[domain=-90:270]({x+90},{-0.5-0.5*sin(x)})node[pos=0.5,below,font=\tiny]{$y=-f(x)$};
+\draw(axis cs:0,0) node[left,font=\tiny]{$0$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={-180,-360},xticklabels={$-1$,$-2$},ytick={1},yticklabels={$1$},ymax=3.5,xmax=50]
+\addplot[domain=-90:270]({x+90-360},{0.5+0.5*sin(x)})node[pos=0.5,above,font=\tiny]{$y=f(x+2)$};
+\draw(axis cs:0,0) node[below,font=\tiny]{$0$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={180,360,540},xticklabels={$1$,$2$,$3$},ytick={1},yticklabels={$1$},ymax=3.5,xmin=0,xmax=600]
+\addplot[domain=-90:270]({x+90+180},{0.5+0.5*sin(x)})node[pos=0.5,above,font=\tiny]{$y=f(x-1)$};
+\draw(axis cs:0,0) node[below left,font=\tiny]{$0$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={-180,-360},xticklabels={$-1$,$-2$},ytick={1},yticklabels={$1$},xmax=50,ymax=3.5,ymin=0]
+\addplot[domain=-90:270]({-x-90},{0.5+0.5*sin(x)})node[pos=0.5,above,font=\tiny]{$y=f(-x)$};
+\draw(axis cs:0,0) node[below,font=\tiny]{$0$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={-180,180},xticklabels={$-1$,$1$},ytick={1},yticklabels={$1$},ymax=3.5,xmin=-200,xmax=360]
+\addplot[domain=-90:270]({x+90-180},{1-0.5-0.5*sin(x)})node[pos=1,above,font=\tiny]{$y=-f(x+1)+1$};
+\draw(axis cs:0,0) node[below left,font=\tiny]{$0$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\caption{اشکال برائے سوال \حوالہ{سوال_ابتدا_دیا_سعت_الف} کے جوابات}
+\label{شکل_جواب_سوال_ابتدا_دیا_سعت_الف}
+\end{figure}
+
+جوابات:اشکال کے لئے شکل \حوالہ{شکل_جواب_سوال_ابتدا_دیا_سعت_الف} دیکھیں۔جبکہ دائرہ کار اور سعت درج ذیل ہیں۔
+\begin{multicols}{3}
+\begin{enumerate}[a.]
+\item
+$D:[0,2], R:[2,3]$
+\item
+$D:[0,2],R:[-1,0]$
+\item
+$D:[0,2],R=[0,2]$
+\item
+$D:[0,2],R:[-1,0]$
+\item
+$D:[-2,0],R:[0,1]$
+\item
+$D:[1,3],R:[0,1]$
+\item
+$D:[-2,0],R:[0,1]$
+\item
+$D:[-1,1],R:[0,1]$
+\end{enumerate}
+\end{multicols}
+
 \انتہا{سوال}
 %========================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_دیا_سعت_ب}
+شکل \حوالہ{شکل_سوال_ابتدا_دیا_سعت_ب} میں دکھائے گئے تفاعل \عددی{g(t)} کا دائرہ کار \عددی{[-4,0]} اور سعت \عددی{[-3,0]} ہے۔درج ذیل تفاعل کے دائرہ کار اور سعت تلاش کرتے ہوئے نئے تفاعل کا خاکہ بنائیں۔
+\begin{multicols}{4}
+\begin{enumerate}[a.]
+\item
+$g(-t)$
+\item
+$-g(t)$
+\item
+$g(t)+3$
+\item
+$1-g(t)$
+\item
+$g(-t+2)$
+\item
+$g(t-2)$
+\item
+$g(1-t)$
+\item
+$-g(t-4)$
+\end{enumerate}
+\end{multicols}
+\انتہا{سوال}
+%============================
+
+\موٹا{دائرے}\\
+
+سوال \حوالہ{سوال_ابتدا_دائرہ_مرکز_الف} تا سوال \حوالہ{سوال_ابتدا_دائرہ_مرکز_ب} میں دائرے کا رداس \عددی{a} اور مرکز \عددی{C(h,k)} دیا گیا ہے۔دائرے کی مساوات لکھیں۔دائرہ اور دائرے کی مرکز کا \عددی{xy} مستوی میں خاکہ کھینچیں۔دائرے کا قطع \عددی{x} اور قطع \عددی{y} (اگر پائے جاتے ہوں) کی نشاندہی کریں اور اس کے محدد لکھیں۔  
+
+\ابتدا{سوال}\شناخت{سوال_ابتدا_دائرہ_مرکز_الف}
+$C(0,2),\quad a=2$\\
+جواب:\quad
+\عددی{x^2+(y-2)^2=4}، شکل \حوالہ{شکل_جواب_سوال_ابتدا_دائرہ_مرکز_الف}
+%
+\begin{figure}
+\centering
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},ymax=5,ytick={\empty}]
+\addplot[domain=0:360,samples=100]({2*cos(x)},{2+2*sin(x)});
+\draw(axis cs:0,2)node[circ]{}node[left,font=\tiny]{$C(0,2)$};
+\draw(axis cs:0,4)node[circ]{}node[above right,font=\tiny]{$(0,4)$};
+\draw(axis cs:0,1)node[right,fill=white,font=\tiny]{$x^2+(y-2)^2=4$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_دائرہ_مرکز_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},ytick={\empty},ymin=0,ymax=9]
+\addplot[domain=0:360,samples=100]({-1+sqrt(10)*cos(x)},{5+sqrt(10)*sin(x)});
+\draw(axis cs:-1,5)node[circ]{}node[left,font=\tiny]{$C(-1,5)$};
+\draw(axis cs:0,2)node[circ]{}node[right,font=\tiny]{$(0,2)$};
+\draw(axis cs:0,8)node[circ]{}node[above right,font=\tiny]{$(0,8)$};
+%\draw(axis cs:-6,3)node[right,fill=white,font=\tiny]{$(x+1)^2+(y-5)^2=10$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_دائرہ_مرکز_ب}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},ytick={\empty},ymax=0.5,xmax=0.5]
+\addplot[domain=0:360,samples=100]({-sqrt(3)+2*cos(x)},{-2+2*sin(x)});
+\draw(axis cs:-1.732,-2)node[circ]{}node[below,font=\tiny]{$C(-\sqrt{3},-2)$};
+\draw(axis cs:0,-3)node[circ]{}node[right,font=\tiny]{$(0,-3)$};
+\draw(axis cs:0,-1)node[circ]{}node[right,font=\tiny]{$(0,-1)$};
+\draw(axis cs:-1.732,0)node[circ]{}node[above,font=\tiny]{$(-\sqrt{3},0)$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_دائرہ_مرکز_پ}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},ytick={\empty},ymax=4]
+\addplot[domain=0:360,samples=100]({-2+2*cos(x)},{2+2*sin(x)});
+\draw(axis cs:-2,2)node[circ]{}node[above,font=\tiny]{$C(-2,2)$};
+\draw(axis cs:0,2)node[circ]{}node[right,font=\tiny]{$(0,2)$};
+\draw(axis cs:-2,0)node[circ]{}node[above,font=\tiny]{$(-2,0)$};
+%\draw(axis cs:-6,3)node[right,fill=white,font=\tiny]{$(x+1)^2+(y-5)^2=10$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_مساوات_سے_مرکز_الف}
+\end{minipage}
+\end{figure}
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$C(-3,0),\quad a=3$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$C(-1,5),\quad a=\sqrt{10}$\\
+جواب:\quad
+\عددی{(x+1)^2+(y-5)^2=10}، شکل \حوالہ{شکل_جواب_سوال_ابتدا_دائرہ_مرکز_ب}
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$C(1,1),\quad a=\sqrt{2}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$C(-\sqrt{3},-2),\quad a=2$\\
+جواب:\quad
+\عددی{(x+\sqrt{3})^2+(y+2)^2=4}، شکل \حوالہ{شکل_جواب_سوال_ابتدا_دائرہ_مرکز_پ}
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_دائرہ_مرکز_ب}
+$C(3,\tfrac{1}{2}),\quad a=5$
+\انتہا{سوال}
+%==========================
+
+سوال \حوالہ{سوال_ابتدا_مساوات_سے_مرکز_الف} تا سوال \حوالہ{سوال_ابتدا_مساوات_سے_مرکز_ب} میں دیے گئے دائرے ترسیم کریں۔دائرے کا مرکز اور قطع \عددی{x}، قطع \عددی{y} (اگر پائے جاتے ہوں) کے محدد دکھائیں۔
+
+\ابتدا{سوال}\شناخت{سوال_ابتدا_مساوات_سے_مرکز_الف}
+$x^2+y^2+4x-4y+4=0$\\
+جواب:\quad
+\عددی{(x+2)^2+(y-2)^2=4}، شکل \حوالہ{شکل_جواب_سوال_ابتدا_مساوات_سے_مرکز_الف}
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$x^2+y^2-8x+4y+16=0$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$x^2+y^2-3y-4=0$\\
+\عددی{x^2+(y-\tfrac{3}{2})^2=\tfrac{25}{4}}،  شکل \حوالہ{شکل_جواب_سوال_ابتدا_مساوات_سے_مرکز_ب}
+\begin{figure}
+\centering
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},ytick={-2,-1,1,2,3,4},ymax=5]
+\addplot[domain=0:360,samples=100]({5/2*cos(x)},{3/2+5/2*sin(x)});
+\draw(axis cs:0,3/2)node[circ]{}node[right,font=\tiny]{$C(0,\tfrac{3}{2})$};
+\draw(axis cs:-2,0)node[circ]{}node[above left,font=\tiny]{$(-2,0)$};
+\draw(axis cs:2,0)node[circ]{}node[above right,font=\tiny]{$(2,0)$};
+\draw(axis cs:0,4)node[right,above right,font=\tiny]{$(0,4)$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_مساوات_سے_مرکز_ب}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$}]
+\addplot[domain=0:360,samples=100]({2+sqrt(8)*cos(x)},{-2+sqrt(8)*sin(x)});
+\draw(axis cs:2,-2)node[circ]{}node[right,font=\tiny]{$C(2,-2)$};
+\draw(axis cs:0,-4)node[circ]{}node[right,font=\tiny]{$(0,-4)$};
+\draw(axis cs:0,0)node[circ]{}node[above left,font=\tiny]{$(0,0)$};
+\draw(axis cs:4,0)node[circ]{}node[right,above right,font=\tiny]{$(4,0)$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_مساوات_سے_مرکز_پ}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},ytick={-4},xtick={\empty}]
+\addplot[domain=-1.3:3.2]{x^2-2*x-3};
+\draw(axis cs:-1,0)node[circ]{}node[above left,font=\tiny]{$(-1,0)$};
+\draw(axis cs:0,-3)node[circ]{}node[left,font=\tiny]{$(0,-3)$};
+\draw(axis cs:3,0)node[circ]{}node[below left,font=\tiny]{$(3,0)$};
+\draw(axis cs:1,-4)node[circ]{}node[below right,font=\tiny]{$(1,-4)$};
+\draw[dashed](axis cs:1,0.25)--(axis cs:1,-4.2)node[pos=0.5,xshift={-2mm},rotate=90,font=\small]{محور}node[pos=0.5,below,rotate=90,font=\tiny]{$x=1$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_قطع_مکافی_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={-2},ytick={4}]
+\addplot[domain=-0.2:4.2]{-x^2+4*x};
+\draw(axis cs:0,0)node[circ]{}node[below right,font=\tiny]{$(0,0)$};
+\draw(axis cs:4,0)node[circ]{}node[above right,font=\tiny]{$(4,0)$};
+\draw(axis cs:2,4)node[circ]{}node[above,font=\tiny]{$(2,4)$};
+\draw[dashed](axis cs:2,-0.2)--(axis cs:2,4.2)node[pos=0.5,xshift={-2mm},rotate=90,font=\small]{محور}node[pos=0.5,below,rotate=90,font=\tiny]{$x=2$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_قطع_مکافی_ب}
+\end{minipage}
+\end{figure}
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$x^2+y^2-4x-\tfrac{9}{4}=0$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$x^2+y^2-4x+4y=0$\\
+\عددی{(x-2)^2(y+2)^2=8}، شکل \حوالہ{شکل_جواب_سوال_ابتدا_مساوات_سے_مرکز_پ}
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_مساوات_سے_مرکز_ب}
+$x^2+y^2+2x=3$
+\انتہا{سوال}
+%==========================
+
+\موٹا{قطع مکافی}\\
+
+سوال \حوالہ{سوال_ابتدا_قطع_مکافی_الف} تا سوال \حوالہ{سوال_ابتدا_قطع_مکافی_ب} میں دیے گئے قطع مکافی ترسیم کریں۔ راس، محور اور قطع \عددی{x}، قطع \عددی{y} بھی ظاہر کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_ابتدا_قطع_مکافی_الف}
+$y=x^2-2x-3$\\
+\عددی{y=x^2-2x-3}، شکل \حوالہ{شکل_جواب_سوال_ابتدا_قطع_مکافی_الف}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$y=x^2+4x+3$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$y=-x^2+4x$\\
+جواب:\quad
+\عددی{y=-x^2+4x} شکل \حوالہ{شکل_جواب_سوال_ابتدا_قطع_مکافی_ب}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$y=-x^2+4x-5$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$y=-x^2-6x-5$\\
+جواب:\quad
+شکل \حوالہ{شکل_جواب_سوال_ابتدا_قطع_مکافی_پ}
+\begin{figure}
+\centering
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},ytick={4},xtick={\empty}]
+\addplot[domain=0.2:-6.2]{-x^2-6*x-5};
+\draw(axis cs:-5,0)node[circ]{}node[above left,font=\tiny]{$C(-5,0)$};
+\draw(axis cs:-1,0)node[circ]{}node[above left,font=\tiny]{$(-1,0)$};
+\draw(axis cs:-6,-5)node[circ]{}node[left,font=\tiny]{$(-6,-5)$};
+\draw(axis cs:0,-5)node[circ]{}node[right,font=\tiny]{$(0,-5)$};
+\draw(axis cs:-3,4)node[circ]{}node[right,above,font=\tiny]{$(-3,4)$};
+\draw[dashed](axis cs:-3,-5)--(axis cs:-3,4)node[pos=0.25,xshift={-2mm},rotate=90,font=\small]{محور}node[pos=0.25,below,rotate=90,font=\tiny]{$x=-3$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_قطع_مکافی_پ}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},ymin=0,xtick={-1},ytick={\empty}]
+\addplot[domain=-3:1.5]{1/2*x^2+x+4};
+\draw(axis cs:-2,4)node[circ]{}node[left,font=\tiny]{$C(-2,4)$};
+\draw(axis cs:0,4)node[circ]{}node[right,font=\tiny]{$(0,4)$};
+\draw(axis cs:-1,7/2)node[circ]{}node[below left,font=\tiny]{$(-1,\tfrac{7}{2})$};
+\draw[dashed](axis cs:-1,0)--(axis cs:-1,6)node[pos=0.2,xshift={-2mm},rotate=90,font=\small]{محور}node[pos=0.25,xshift={1mm},rotate=90,font=\tiny]{$x=-1$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_قطع_مکافی_ت}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},ymax=1]
+\addplot[domain=-1.25:2]{x-x^2};
+\draw(axis cs:1/2,1/4)node[circ]{}node[above right,font=\tiny]{$(\tfrac{1}{2},\tfrac{1}{4})$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_جواب_سوال_ابتدا_قطع_مکافی_ٹ}
+\end{minipage}\hfill
+\end{figure}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$y=2x^2-x+3$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$y=-\tfrac{1}{2}x^2+x+4$\\
+جواب:\quad
+شکل \حوالہ{شکل_جواب_سوال_ابتدا_قطع_مکافی_ت}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_قطع_مکافی_ب}
+$y=-\tfrac{1}{4}x^2+2x+4$
+\انتہا{سوال}
+%=======================
+
+\ابتدا{سوال}
+قطع مکافی \عددی{y=x-x^2} ترسیم کرتے ہوئے \عددی{f(x)=\sqrt{x-x^2}} کا دائرہ کار اور سعت تلاش کریں۔\\
+جواب:\quad
+شکل \حوالہ{شکل_جواب_سوال_ابتدا_قطع_مکافی_ٹ}
+\انتہا{سوال}
+%=============================
+\ابتدا{سوال}
+قطع مکافی \عددی{y=3-2x-x^2} ترسیم کرتے ہوئے \عددی{g(x)=\sqrt{3-2x-x^2}} کا دائرہ کار اور سعت تلاش کریں۔
+\انتہا{سوال}
+%=====================
+
+\موٹا{عدم مساوات}\\
+
+سوال \حوالہ{سوال_ابتدا_عدم_مساوات_دیا_گیا_ہے_الف} تا سوال \حوالہ{سوال_ابتدا_عدم_مساوات_دیا_گیا_ہے_ب} میں دیے گئے عدم مساوات اور عدم مساوات کی جوڑیوں پر تبصرہ کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_ابتدا_عدم_مساوات_دیا_گیا_ہے_الف}
+$x^2+y^2>7$\\
+جواب:\quad
+رداس \عددی{\sqrt{7}} کے دائرے کی بیرون۔دائرے کا مرکز مبدا پر ہے۔
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+$x^2+y^2<5$
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+$(x-1)^2+y^2\le 4$\\
+جواب:\quad
+\عددی{(1,0)} پر مرکز اور رداس \عددی{2} دائرے پر اور اس کے اندر۔
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+$x^2+(y-2)^2\ge 4$
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+$x^2+y^2>1,\quad x^2+y^2<4$\\
+جواب:\quad
+دائرہ \عددی{x^2+y^2=1} اور دائرہ \عددی{x^2+y^2=4} کے بیچ جھلی۔(وہ نقطے جن کا مبدا سے فاصل \عددی{1} اور \عددی{2} کے بیچ ہے۔)
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+$x^2+y^2\le 4,\quad (x+2)^2+y^2\le 4$
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+$x^2+y^2+6y<0,\quad y>-3$\\
+جواب:\quad
+خط \عددی{y=-3} کی بالائی جانب رداس \عددی{3} کے دائرہ کی اندرون۔دائرے کا مرکز \عددی{(0,-3)} ہے۔
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_عدم_مساوات_دیا_گیا_ہے_ب}
+$x^2+y^2-4x+2y>4,\quad x>2$
+\انتہا{سوال}
+%===========================
+
+\ابتدا{سوال}
+ایسا عدم مساوات لکھیں جو رداس \عددی{\sqrt{6}} کے دائرہ جس کا مرکز \عددی{(-2,1)} ہو کے اندر نقطوں کو ظاہر کرتی ہو۔\\
+جواب:\quad
+$(x+2)^2+(y-1)^2<6$
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+رداس \عددی{4} اور مرکز \عددی{(-4,2)} والے دائرے کے باہر نقطوں کے لئے عدم مساوات لکھیں۔
+\انتہا{سوال}
+%===============================
+\ابتدا{سوال}
+رداس \عددی{2} اور مرکز \عددی{(0,0)} دائرے پر یا اس کے اندر، اور نقطہ  \عددی{(1,0)} سے گزرتا انتصابی خط پر یا اس کے دائیں جانب نقطوں کو عدم مساوات کی جوڑی کی صورت میں لکھیں۔\\
+جواب:\quad
+$x^2+y^2\le 2,\quad x\ge 1$
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+رداس \عددی{2} اور مرکز \عددی{(0,0)}والے  دائرے کے باہر اور ایسے دائرا، جس کا مرکز \عددی{(1,3)} ہو اور جو مبدا سے گزرتا ہو، کے اندر نقطوں کو عدم مساوات کی جوڑی کی صورت میں لکھیں۔
+\انتہا{سوال}
+%=============================
+
+\موٹا{منتقلی خطوط}\\
+
+\ابتدا{سوال}
+خط \عددی{y=mx} جو مبدا سے گزرتا ہے کو افقی اور انتصابی منتقل کیا جاتا ہے تا کہ یہ نقطہ \عددی{(x_0,y_0)} سے گزرے۔ نئے خط کی مساوات تلاش کریں (جس کو نقطہ-ڈھلوان مساوات کہتے ہیں)۔\\
+جواب:\quad
+$y=y_0+m(x-x_0)$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+خط \عددی{y=mx} کو انتصابی منتقل کیا جاتا ہے تا کہ یہ نقطہ \عددی{(0,b)} سے گزرے۔نئے خط کی مساوات تلاش کریں۔
+\انتہا{سوال}
+%=============================
+
+\موٹا{خطوط، دائرے اور قطع مکافی کا ایک دوسرے کو قطع ہونا}\\
+
+سوال \حوالہ{سوال_ابتدا_قطع_کرنا_الف} تا سوال \حوالہ{سوال_ابتدا_قطع_کرنا_ب} میں دیے دو مساوات ترسیم کرتے ہوئے ان نقطوں کو تلاش کریں جہاں یہ خطوط ایک دوسرے کو قطع کرتے ہیں۔
+
+\ابتدا{سوال}\شناخت{سوال_ابتدا_قطع_کرنا_الف}
+$y=2x,\quad x^2+y^2=1$\\
+جواب:\quad
+$(\tfrac{1}{\sqrt{5}},\tfrac{2}{\sqrt{5}}),\quad (-\tfrac{1}{\sqrt{5}},-\tfrac{2}{\sqrt{5}})$
+\انتہا{سوال}
+%================================
+\ابتدا{سوال}
+$x+y=1,\quad (x-1)^2+y^2=1$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$y-x=1,\quad y=x^2$\\
+جواب:\quad
+$(\tfrac{1-\sqrt{5}}{2},\tfrac{3-\sqrt{5}}{2}),\quad (\tfrac{1+\sqrt{5}}{2},\tfrac{3+\sqrt{5}}{2})$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$x+y=0,\quad y=-(x-1)^2$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$y=-x^2,\quad y=2x^2-1$\\
+جواب:\quad
+$(-\tfrac{1}{\sqrt{3}},-\tfrac{1}{3}),\quad (\tfrac{1}{\sqrt{3}},-\tfrac{1}{3})$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$y=\tfrac{1}{4}x^2,\quad y=(x-1)^2$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$x^2+y^2=1,\quad (x-1)^2+y^2=1$\\
+جواب:\quad
+$(\tfrac{1}{2},-\tfrac{\sqrt{3}}{2}),\quad (\tfrac{1}{2},\tfrac{\sqrt{3}}{2})$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_قطع_کرنا_ب}
+$x^2+y^2=1,\quad x^2+y=1$
+\انتہا{سوال}
+%=======================
+
+سوال \حوالہ{سوال_ابتدا_تبدیلی_مستقل_الف} تا سوال \حوالہ{سوال_ابتدا_تبدیلی_مستقل_ب} میں مساوات \عددی{y=f(ax)} میں مستقل \عددی{a} کی تبدیلی کے اثرات کو دیکھنے کی خاطر ہم \عددی{y=f(ax)} کو کمپیوٹر کی مدد سے ترسیم کرتے ہیں۔کمپیوٹر استعمال کرتے ہوئے درج ذیل کریں۔
+\begin{enumerate}[a.]
+\item
+\عددی{y=f(x)} کے ساتھ ساتھ \عددی{a=2,3,\cdots,10} لیتے ہوئے دیے گئے وقفے پر \عددی{y=f(ax)} ترسیم کریں۔ \عددی{a} کی (مثبت) قیمت  بڑھانے کے اثرات پر تبصرہ کریں۔
+\item
+\عددی{y=f(x)} کے ساتھ ساتھ \عددی{a=-2,-3,\cdots,-10} لیتے ہوئے دیے گئے وقفے پر \عددی{y=f(ax)} ترسیم کریں۔ اب ترسیم پر اثرات کیا ہیں؟
+\item
+\عددی{y=f(x)} اور \عددی{y=f(ax)} کو \عددی{a=\tfrac{1}{2}, \tfrac{1}{3}, \tfrac{1}{4}} کے لئے ترسیم کریں۔ترسیم پر \عددی{\abs{a}<1} کا کیا اثر پایا جاتا ہے؟
+\end{enumerate}
+
+\ابتدا{سوال}\شناخت{سوال_ابتدا_تبدیلی_مستقل_الف}
+$f(x)=\tfrac{5x}{x^2+4},\quad [-10,10]$
+\انتہا{سوال}
+%============================
+\ابتدا{سوال}
+$f(x)=\tfrac{2x(x-1)}{x^2+1},\quad [-3,-2]$
+\انتہا{سوال}
+%============================
+\ابتدا{سوال}
+$f(x)=\tfrac{x+1}{2x^2+1},\quad [-2,-2]$
+\انتہا{سوال}
+%============================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_تبدیلی_مستقل_ب}
+$f(x)=\tfrac{x^4-4x^3+10}{x^2+4},\quad [-1,4]$
+\انتہا{سوال}
+%============================
+
