@@ -12,7 +12,6 @@
 %\pgfplotsset{compat=1.9}
 \usepgfplotslibrary{polar}
 \usepackage{ifdraft}
-\usepackage{mdframed}  %framing boxes
 \usepackage{multicol}                                        %for getting multicolumn itemize, enumerate etc
 \usepackage{enumerate}                   %for getting better auto numbering in enumerate
 %pathmorphing gives the ripples like look
@@ -62,8 +61,8 @@
 \graphicspath{{./fig/figFrontPage/}{./fig/figCalculusA/}{./fig/figCalculusB/}}%paths to figures
 
 
-%\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusPreliminariesA}
-\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminariesA}
+\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusPreliminariesA}
+%\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminariesA}
 %
 %\includeonly{./tex/cktSymbols,./tex/cktPreface,./tex/prefaceFirstBook,./tex/mathNumericalMethodsForDifferentialEquations,./tex/mathAppendixAdditionalProofs,./tex/mathAppendixAuxiliaryMaterial,./tex/mathTables}%
 
