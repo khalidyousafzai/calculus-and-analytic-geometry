@@ -4381,3 +4381,1383 @@ $f(x)=\tfrac{x^4-4x^3+10}{x^2+4},\quad [-1,4]$
 \انتہا{سوال}
 %============================
 
+
+
+\حصہ{تکونیاتی تفاعل}
+اس حصہ میں ریڈیئن، تکونی تفاعل، دوریت اور بنیادی تکونی مماثل پر غور کیا جائے گا۔ 
+
+\جزوحصہء{ریڈیئن}
+چھوٹی جماعتوں میں زاویوں کو درجات کی صورت میں ناپا جاتا ہے۔ احصاء میں زاویہ کو ریڈیئن میں ناپا جاتا ہے جہاں \عددی{180^{\circ}} کو \عددی{\pi} ریڈیئن کہتے ہیں۔ریڈیئن کی استعمال سے حساب آسان ہو جاتا ہے۔
+
+شکل \حوالہ{شکل_ابتدا_اکائی_دائرہ_ریڈیئن}-ا میں رداس \عددی{r} کا دائرہ دکھایا گیا ہے جس کے مرکز \عددی{C} سے دو شعاعیں نکل رہی ہیں جو مرکز پر وسطی زاویہ \عددی{\theta} بناتی ہیں۔یہ شعاعیں دائرے کو \عددی{A} اور \عددی{B} پر قطع کرتی ہیں۔قوس \عددی{AB} کی لمبائی \عددی{s} ہے۔اگر دائرے کا رداس \عددی{1} ہو تب ہم اس دائرے کو  \اصطلاح{اکائی دائرہ}\فرہنگ{اکائی!دائرہ}\حاشیہب{unit circle}\فرہنگ{unit!circle} کہتے ہیں۔اکائی دائرے پر اکائی لمبائی کا قوس جتنا زاویہ بناتی ہے اس کو ایک ریڈیئن زاویہ کہتے ہیں (یہی ایک ریڈیئن کی تعریف ہے)۔ شکل \حوالہ{شکل_ابتدا_اکائی_دائرہ_ریڈیئن}-ب میں ایک ریڈیئن کی اس تعریف کی وضاحت کی گئی ہے۔شکل \حوالہ{شکل_ابتدا_اکائی_دائرہ_ریڈیئن}-ج میں اکائی لمبائی کے دو قوس ساتھ ساتھ رکھے گئے ہیں جو ایک ایک ریڈیئن کا وسطی زاویہ بناتے ہیں۔یوں کل قوس کی لمبائی \عددی{2} ہے اور کل زاویہ \عددی{2} ریڈیئن ہے۔آپ دیکھ سکتے ہیں کہ اکائی دائرے پر وسطی زاویہ کی ریڈیئن میں ناپ قوس کی لمبائی کے برابر ہو گی۔شکل \حوالہ{شکل_ابتدا_اکائی_دائرہ_ریڈیئن}-د میں اس حقیقت کو دکھایا گیا ہے۔
+\begin{figure}
+\centering
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\draw(0,0) circle (1);
+\draw(0,0)node[below]{$C$}--++(10:1.2)node[shift={(-80:0.2)}]{$A$}node[pos=0.5,shift={(-80:0.2)}]{$r$};
+\draw(0,0)--++(55:1.2)node[shift={(145:0.2)}]{$B$};
+\draw[thick] ([shift={(10:1)}]0,0) arc (10:55:1);
+\draw[] ([shift={(10:0.3)}]0,0) arc (10:55:0.3);
+\draw(0,0)++(35:0.5)node[]{$\theta$};
+\draw(0,0)++(35:1.2)node[]{$s$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\draw(0,0) circle (1);
+\draw(0,0)node[below]{$C$}--++(10:1.2)node[shift={(-80:0.2)}]{$A$}node[pos=0.5,shift={(-80:0.2)}]{$1$};
+\draw(0,0)--++(55:1.2)node[shift={(145:0.2)}]{$B$};
+\draw[thick] ([shift={(10:1)}]0,0) arc (10:55:1);
+\draw[] ([shift={(10:0.3)}]0,0) arc (10:55:0.3);
+\draw(0,0)++(35:0.5)node[]{$1$};
+\draw(0,0)++(35:1.2)node[]{$1$};
+\draw(-0.5,1)node[left]{\RL{اکائی دائرہ}};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\draw(0,0) circle (1);
+\draw(0,0)--++(10:1.2)node[pos=0.5,shift={(-80:0.2)}]{$1$};
+\draw(0,0)--++(55:1.2);
+\draw[thick] ([shift={(10:1)}]0,0) arc (10:55:1);
+\draw[] ([shift={(10:0.3)}]0,0) arc (10:55:0.3);
+\draw(0,0)++(35:0.5)node[]{$1$};
+\draw(0,0)++(35:1.2)node[]{$1$};
+\draw(0,0)--++(100:1.2);
+\draw[thick] ([shift={(55:1)}]0,0) arc (55:100:1);
+\draw[] ([shift={(55:0.3)}]0,0) arc (55:100:0.3);
+\draw(0,0)++(75:0.5)node[]{$1$};
+\draw(0,0)++(75:1.2)node[]{$1$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\draw(0,0) circle (1);
+\draw(0,0)--++(10:1.2)node[pos=0.5,shift={(-80:0.2)}]{$1$};
+\draw(0,0)--++(60:1.2);
+\draw[thick] ([shift={(10:1)}]0,0) arc (10:60:1);
+\draw[] ([shift={(10:0.3)}]0,0) arc (10:60:0.3);
+\draw(0,0)++(35:0.5)node[]{$\theta$};
+\draw(0,0)++(35:1.2)node[]{$\theta$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\caption{ریڈیئن کی تعریف}
+\label{شکل_ابتدا_اکائی_دائرہ_ریڈیئن}
+\end{figure}
+%
+
+زاویہ \عددی{ACB} کی ریڈیئن ناپ کی تعریف \ترچھا{اکائی دائرے} کی قوس \عددی{AB} کی لمبائی ہے۔چونکہ اکائی دائرے کا محیط \عددی{2\pi}  ہے اور ایک مکمل چکر \عددی{360^{\circ}} ہے لہٰذا درج ذیل تعلق لکھا جا سکتا ہے۔
+\begin{align*}
+\boxed{\pi\,\text{ریڈیئن}=180^{\circ}}
+\end{align*}
+%
+
+
+\ابتدا{مثال}\شناخت{مثال_ابتدا_درجہ_ریڈیئن_الف}\موٹا{درجہ سے ریڈیئن میں زاویے کی تبدیلی}\\
+\عددی{45^{\circ}} کو ریڈیئن میں لکھیں  اور \عددی{\tfrac{\pi}{6}} کو درجہ میں لکھیں۔\\
+حل:\quad
+شکل \حوالہ{شکل_مثال_ابتدا_درجہ_ریڈیئن_الف} دیکھیں۔
+\begin{align*}
+45\cdot\frac{\pi}{180}&=\frac{\pi}{4}\,\text{ریڈیئن}\\
+\frac{\pi}{6}\cdot \frac{180}{\pi}&=30^{\circ}
+\end{align*}
+%
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[x={1.5cm},y={1.5cm},font=\small]
+\draw(0,0)--++(1,0)--++(0,1)--(0,0);
+\draw(0.5,0)node[below]{$1$} (1,0.5)node[right]{$1$};
+\draw(45:1.4142/2)node[shift={(135:0.3cm)},]{$\sqrt{2}$};
+\draw(0.35,0)node[above]{$45^{\circ}$};
+\draw(1,1)++(-112.5:0.4)node[]{$45^{\circ}$};
+\draw(1,0)node[shift={(-0.15,0.15)},]{$90^{\circ}$};
+\begin{scope}[xshift=-2.5cm]
+\draw(0,0)--++(1,0)--++(0,1)--(0,0);
+\draw(0.5,0)node[below]{$1$} (1,0.5)node[right]{$1$};
+\draw(45:1.4142/2)node[shift={(135:0.3cm)},]{$\sqrt{2}$};
+\draw(22.5:0.4)node[]{$\tfrac{\pi}{4}$};
+\draw(1,1)++(-112.5:0.4)node[]{$\tfrac{\pi}{4}$};
+\draw(1,0)node[above left,]{$\tfrac{\pi}{2}$};
+\end{scope}
+\end{tikzpicture}
+\end{subfigure}%
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[x={1.5cm},y={1.5cm},font=\small]
+\draw(0,0)--++(1,0)--++(0,1.732)--(0,0);
+\draw(0.5,0)node[below]{$1$} (1,0.866)node[right]{$\sqrt{3}$};
+\draw(60:1)node[shift={(150:0.2cm)},]{$2$};
+\draw(0.3,0)node[above,]{$60^{\circ}$};
+\draw(1,1.732)++(-105:0.5)node[shift={(-0.05,-0.2)}]{$30^{\circ}$};
+\draw(1,0)node[above left,]{$90^{\circ}$};
+\begin{scope}[xshift=-2.5cm]
+\draw(0,0)--++(1,0)--++(0,1.732)--(0,0);
+\draw(0.5,0)node[below]{$1$} (1,0.866)node[right]{$\sqrt{3}$};
+\draw(60:1)node[shift={(150:0.2cm)},]{$2$};
+\draw(0.3,0)node[above,]{$\tfrac{\pi}{3}$};
+\draw(1,1.732)++(-105:0.5)node[]{$\tfrac{\pi}{6}$};
+\draw(1,0)node[above left,]{$\tfrac{\pi}{2}$};
+\end{scope}
+\end{tikzpicture}
+\end{subfigure}
+\caption{اشکال برائے مثال \حوالہ{مثال_ابتدا_درجہ_ریڈیئن_الف}}
+\label{شکل_مثال_ابتدا_درجہ_ریڈیئن_الف}
+\end{figure}
+\انتہا{مثال}
+%======================
+\موٹا{ریڈیئن اور درجہ}
+\begin{align*}
+1^{\circ}&=\frac{\pi}{180}\approx 0.02 \,\text{ریڈیئن}\\
+1\,\text{ریڈیئن}&=\frac{180}{\pi}\approx 57^{\circ}
+\end{align*}
+
+دھیان رہے کہ زاویے کی پیمائش درجات میں ہونے کو \عددی{^{\circ}} کی علامت سے ظاہر کیا جاتا ہے جبکہ ریڈیئن کو بغیر علامت لکھا جاتا ہے۔یوں  \عددی{\theta=45^{\circ}}  سے مراد پینتالیس درجہ ہو گا جبکہ \عددی{\theta=3} سے مراد تین ریڈیئن ہو گا۔
+
+\عددی{xy} مستوی میں شعاع کا راس مبدا پر اور شعاع کا ابتدائی مقام مثبت \عددی{x} محور پر ہونے کی صورت میں زاویہ کے مقام کو  \اصطلاح{معیاری مقام}\فرہنگ{معیاری!مقام}\حاشیہب{standard position}\فرہنگ{standard!position} کہتے ہیں۔مثبت \عددی{x} محور سے گھڑی کی  سوئی کے مخالف رخ زاویہ کی ناپ مثبت اور گھڑی کی سوئی کی رخ ناپ منفی تصور کی جاتی ہے (شکل \حوالہ{شکل_ابتدا_زاویہ_کی_ناپ})۔یوں مثبت \عددی{x} محور کا زاویہ \عددی{0} ریڈیئن اور منفی \عددی{x} محور کا زاویہ \عددی{\pi} ریڈیئن  ہو گا۔
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-0.25,0)--(3,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
+\draw[-latex](0,0)--++(30:3);
+\draw[-stealth]([shift={(0:0.8)}]0,0) arc (0:30:0.8);
+\draw(20:0.8)node[right]{\RL{مثبت ناپ}}; 
+\begin{scope}[xshift={-4cm},yshift={1cm}]
+\draw[-latex](-2,0)--(1.5,0)node[right]{$x$};
+\draw[-latex](0,-1.5)--(0,1)node[above]{$y$};
+\draw[-latex](0,0)--++(-135:2);
+\draw[-stealth]([shift={(0:0.8)}]0,0) arc (0:-135:0.8);
+\draw(-60:0.8)node[right]{\RL{منفی ناپ}}; 
+\end{scope}
+\end{tikzpicture}
+\caption{زاویے کی ناپ}
+\label{شکل_ابتدا_زاویہ_کی_ناپ}
+\end{figure}  
+
+گھڑی مخالف چکر بیان کرتے ہوئے زاویے کی ناپ \عددی{2\pi} یعنی \عددی{360^{\circ}} سے زیادہ ہو سکتی ہے۔اسی طرح گھڑی کی رخ چکر بیان کرتے ہوئے زاویہ کی ناپ کچھ بھی ممکن ہے (شکل \حوالہ{شکل_ابتدا_زاویہ_ناپ})۔
+\begin{figure}
+\centering
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={\empty},ytick={\empty},ymin=-0.75]
+\addplot[mark=none,thick] plot coordinates {(0,0) ({2*cos(40)},{2*sin(40)})};
+\addplot[-stealth,domain=0:400,samples=100]({(0.25+0.25/400*x)*cos(x)},{(0.25+0.25/400*x)*sin(x)})node[pos=0.8,below right]{$\tfrac{9\pi}{4}$};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}%
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={\empty},ytick={\empty},ymin=-0.75,ymax=1.5]
+\addplot[-stealth,domain=0:540,samples=100]({(0.25+0.25/400*x)*cos(x)},{(0.25+0.25/400*x)*sin(x)})node[pos=0.7,above right]{$3\pi$};
+\draw[thick](axis cs:0,0)--(axis cs:-1.5,0);
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}%
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={\empty},ytick={\empty},ymax=1]
+\addplot[mark=none,thick] plot coordinates {(0,0) ({2*cos(-135)},{2*sin(-135)})};
+\addplot[-stealth,domain=0:-135,samples=100]({(0.25-0.25/135*x)*cos(x)},{(0.25-0.25/135*x)*sin(x)})node[pos=0.7,below right]{$-\tfrac{3\pi}{4}$};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}%
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ylabel={$y$},xtick={\empty},ytick={\empty},ymax=1]
+\addplot[-stealth,domain=0:-450,samples=100]({(0.25-0.25/450*x)*cos(x)},{(0.25-0.25/450*x)*sin(x)})node[pos=0.6,above right]{$-\tfrac{5\pi}{2}$};
+\draw[thick](axis cs:0,0)--(axis cs:0,-1);
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}%
+\caption{مثبت اور منفی ریڈیئن}
+\label{شکل_ابتدا_زاویہ_ناپ}
+\end{figure}
+
+شکل \حوالہ{شکل_ابتدا_جسامت_اور_زاویہ}-ا میں چند اشکال  کو لچکدار \عددی{xy} مستوی پر دکھایا گیا ہے۔اس \عددی{xy} مستوی کو کھینچ کر \عددی{x} رخ اور \عددی{y} رخ کی لمبائیاں \عددی{k} گنا کرنے سے  شکل \حوالہ{شکل_ابتدا_جسامت_اور_زاویہ}-ب حاصل ہوتا ہے۔ہم کہتے ہیں کہ  جسامت \عددی{k} گنا کر دی گئی ہے۔یوں اگر بائیں شکل کے تکون کی افقی اور انتصابی اطراف کی لمبائیاں بالترتیب \عددی{a} اور \عددی{b} ہوں تب اس کی وتر کی لمبائی \عددی{\sqrt{a^2+b^2}} ہو گی۔دائیں شکل میں تکون کی افقی اور انتصابی اطراف کی لمبائیاں بالترتیب \عددی{ka} اور \عددی{kb} ہوں گی لہٰذا اس کا وتر \عددی{\sqrt{(ka)^2+(kb)^2}=k\sqrt{a^2+b^2}} ہو گا۔آپ نے دیکھا کہ دائیں مستوی پر نا صرف افقی اور انتصابی خط بلکہ ترچھے خط کی لمبائی بھی \عددی{k} گنا ہو گئی ہے۔چونکہ ہر ترچھے خط کو کسی تکون کا وتر تصور کیا جا سکتا ہے لہٰذا دائیں مستوی پر (ہر افقی اور ہر انتصابی خط کے ساتھ ساتھ) ہر ترچھے خط کی لمبائی \عددی{k} گنا ہو گی۔کیا جسامت \عددی{k} گنا  کرنے سے لمبائی قوس بھی \عددی{k} گنا ہو گی؟ اس کا جواب ہے "جی ہاں" جس کا ثبوت اب پیش کرتے ہیں۔
+\begin{figure}
+\centering
+\begin{tikzpicture}[x=0.75cm,y=0.75cm]
+\draw[-latex](-1.25,0)--(2.5,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,1.25)node[above]{$y$};
+\draw(1,0) circle (0.75);
+\draw(2,0)--(2,1)--(0,0);
+\draw(0,0)--(-0.75,1);
+\draw(-0.2,0.6)node[]{$\alpha$};
+\draw(-0.6,0.3)node[]{$\beta$};
+\RightAngle{(2,1)}{(2,0)}{(2.5,0)};
+\draw(-0.5,-0.5)node[]{(ا)};
+\begin{scope}[x={1.5cm},y={1.5cm},xshift={-6cm}]
+\draw[-latex](-1.25,0)--(2.5,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,1.25)node[above]{$y$};
+\draw(1,0) circle (0.75);
+\draw(2,0)--(2,1)--(0,0);
+\draw(0,0)--(-0.75,1);
+\draw(-0.1,0.3)node[]{$\alpha$};
+\draw(-0.3,0.15)node[]{$\beta$};
+\RightAngle{(2,1)}{(2,0)}{(0,0)};
+\draw(-0.5,-0.5)node[]{(ب)};
+\end{scope}
+\end{tikzpicture}
+\caption{شکل بڑھانے یا گھٹانے کا زاویہ پر اثر نہیں پایا جاتا ہے۔}
+\label{شکل_ابتدا_جسامت_اور_زاویہ}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw([shift={(0:2)}]0,0) arc (0:80:2);
+\coordinate (kA) at (0:2);
+\coordinate (kB) at (20:2);
+\coordinate (kC) at (50:2);
+\coordinate (kD) at (80:2);
+\draw(kA)node[right]{$a$}--(kB)node[right]{$b$}--(kC)node[right]{$c$}--(kD)node[above]{$d$};
+\end{tikzpicture}
+\caption{قوس کی لمبائی}
+\label{شکل_ابتدا_قوس_لمبائی}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\centering
+\begin{tikzpicture}
+\draw(0,0) circle (1.25);
+\draw(0,0) circle (2);
+\draw(0,0)--++(-10:2.5);
+\draw(0,0)--++(45:2.5);
+\draw[thick]([shift={(-10:1.25)}]0,0) arc (-10:45:1.25);
+\draw[thick]([shift={(-10:2)}]0,0) arc (-10:45:2);
+\draw([shift={(-10:0.4)}]0,0) arc (-10:45:0.4);
+\draw(17:0.6)node[]{$\theta$};
+\draw(15:2)node[above right]{$s'$};
+\draw(15:1.25)node[above right]{$s$};
+\draw[-stealth](0,0)--++(120:1.25)node[pos=0.5,fill=white]{$r$};
+\draw[-stealth](0,0)--++(-120:2)node[pos=0.25,fill=white]{$r'$};
+\end{tikzpicture}
+\caption{محیط دائرہ}
+\label{شکل_ابتدا_دائرہ_اور_ریڈیئن}
+\end{minipage}%
+\end{figure}
+
+شکل \حوالہ{شکل_ابتدا_قوس_لمبائی} میں قوس کی لمبائی جاننے کی خطر قوس پر مختلف نقطے منتخب کرتے ہوئے ان کے بیچ سیدھے خط کھینچے گئے ہیں۔ان سیدھے خطوط کی مجموعی لمبائی کو قوس کی تخمینی لمبائی لی جا سکتی ہے۔آپ دیکھ سکتے ہیں کہ قوس پر نقطوں کی تعداد بڑھا کر اس کو زیادہ ٹکڑوں میں تقسیم کرتے ہوئے قوس کی لمبائی اور سیدھے خطوط کی مجموعی لمبائی میں فرق کو ہم جتنا چاہیں کم کر سکتے ہیں۔اب اگر اس قوس کی جسامت کو \عددی{k} گنا کیا جائے تب ہر سیدھے خط کی لمبائی \عددی{k} گنا ہو گی لہٰذا ان کی مجموعی لمبائی (جو قوس کی لمبائی ہے) بھی \عددی{k} گنا ہو گی۔(ثبوت مکمل ہوا۔)
+
+
+شکل \حوالہ{شکل_ابتدا_قوس_زاویہ_رداس}-ا میں رداس \عددی{r} کے دائرے پر قوس \عددی{s} اور وسطی زاویہ \عددی{\theta} دکھائے گئے ہیں۔اس دائرے کے مرکز پر ہم \عددی{1} رداس کا دائرہ بناتے ہیں (شکل \حوالہ{شکل_ابتدا_قوس_زاویہ_رداس}-ب؛ اگر دیے گئے دائرے کا رداس اکائی سے کم ہو تب یہ دائرہ اکائی دائرے کے اندر نظر آئے گا)۔ (جیسا شکل \حوالہ{شکل_ابتدا_قوس_زاویہ_رداس}-ب میں دکھایا گیا ہے) ریڈیئن کی تعریف کی رو سے اکائی دائرے پر قوس اور زاویہ آپس میں برابر ہوں گے۔شکل \حوالہ{شکل_ابتدا_قوس_زاویہ_رداس}-ب میں دونوں دائروں پر  قوس کی لمبائیوں کا تناسب \عددی{\tfrac{s}{\theta}} اور دائروں کے رداس کی لمبائیوں کا تناسب \عددی{\tfrac{r}{1}} ایک جیسا ہوں گے، یعنی \عددی{\tfrac{s}{\theta}=\tfrac{r}{1}} جس سے درج ذیل اہم ترین کلیہ ملتا ہے۔
+
+\موٹا{قوس، رداس اور زاویے کا تعلق}
+\begin{align*}
+s=r\theta
+\end{align*}
+
+%
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw (0,0) circle (1.75);
+\draw(0,0)--++(-10:1.75);
+\draw(0,0)--++(30:1.75)node[pos=0.5,above]{$r$};
+\draw[thick]([shift={(-10:1.75)}]0,0) arc (-10:30:1.75);
+\draw(10:0.5)node[]{$\theta$};
+\draw(10:2)node[]{$s$};
+\end{tikzpicture}
+\end{subfigure}%
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw (0,0) circle (1) circle (1.75);
+\draw(0,0)--++(-10:1.75);
+\draw(0,0)--++(30:1.75);
+\draw[-stealth](0,0)--++(135:1)node[pos=0.5,fill=white]{$1$};
+\draw[thick]([shift={(-10:1)}]0,0) arc (-10:30:1);
+\draw[thick]([shift={(-10:1.75)}]0,0) arc (-10:30:1.75);
+\draw(10:0.5)node[]{$\theta$};
+\draw(10:1.2)node[]{$\theta$};
+\draw(10:2)node[]{$s$};
+\end{tikzpicture}
+\end{subfigure}%
+\caption{قوس، رداس اور زاویے کا تعلق۔}
+\label{شکل_ابتدا_قوس_زاویہ_رداس}
+\end{figure}
+% 
+
+\موٹا{زاویہ ناپنے کی روایت: ریڈیئن استعمال کریں}\\
+یہاں کے بعد اس کتاب میں زاویے کو ریڈیئن میں ناپا جائے گا۔جہاں زاویے کو ریڈیئن میں نہیں ناپا گیا ہو وہاں صریحاً بتلایا جائے گا۔یوں اگر ہم زاویہ \عددی{\tfrac{\pi}{6}} کی بات کریں تب اس سے مراد \عددی{\tfrac{\pi}{6}} ریڈیئن کا زاویہ ہو گا نا کہ \عددی{\tfrac{\pi}{6}} درجے کا زاویہ۔
+
+
+\ابتدا{مثال}
+رداس \عددی{8} کے دائرے پر غور کریں۔ (الف) دائرے پر \عددی{2\pi} لمبائی کا قوس، دائرے کے مرکز پر کیا وسطی زاویہ بناتا ہے۔ (ب) اس قوس کی لمبائی تلاش کریں جو 
+\عددی{\tfrac{3\pi}{4}} وسطی زاویہ بناتا ہو۔\\
+حل:\quad
+\begin{gather*}
+\begin{aligned}
+ s=r\theta=8(\tfrac{3\pi}{4})=6\pi \quad \text{(ب)}
+\end{aligned}\quad\quad
+\begin{aligned}
+\theta=\frac{s}{r}=\frac{2\pi}{8}=\frac{\pi}{4} \quad \text{(الف)}
+\end{aligned}
+\end{gather*} 
+\انتہا{مثال}
+%================================
+
+\جزوحصہء{چھ بنیادی تکونیاتی تفاعل}
+آپ  زاویہ حادہ کے تکونیاتی تفاعل سے بخوبی واقف ہوں گے جو قائمہ مثلث کے اطراف کی لمبائیوں کی تناسب سے حاصل ہوتے ہیں (شکل \حوالہ{شکل_ابتدا_قائمہ_مثلث})۔ ہم انہیں تعریف کو وسعت دیتے ہوئے  زاویہ منفرجہ اور منفی زاویوں پر بھی لاگو کرتے ہیں جہاں معیاری مقام پر رداس \عددی{r} کے دائرے میں زاویہ پایا جاتا ہے۔ہم اب ان تکونیاتی تفاعل کو نقطہ \عددی{N(x,y)} کے محدد کی صورت میں بیان کرتے ہیں جہاں مبدا سے خارج ہوتا ہوا شعاع دائرے کو \عددی{N(x,y)} پر قطع کرتا ہے۔
+\begin{figure}
+\centering
+\begin{minipage}[b][][b]{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\path[name path=kX](0,0)--(3,0);
+\draw(0,0)--++(30:2)coordinate(kA);
+\draw(kA)--($(0,0)!(kA)!(3,0)$)coordinate(kB)--(0,0);
+\RightAngle{(0,0)}{(kB)}{(kA)};
+\draw[-stealth]([shift={(0:0.6)}]0,0) arc (0:30:0.6);
+\draw(14:0.8)node[]{$\theta$};
+\draw($(0,0)!0.5!(kB)$)node[below]{قاعدہ};
+\draw($(kA)!0.5!(kB)$)node[right]{عمود};
+\draw($(0,0)!0.5!(kA)$)node[above]{وتر};
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}[b][][b]{0.66\textwidth}
+\begin{gather*}
+\begin{aligned}
+\text{سائن}\quad \sin \theta&=\tfrac{\text{عمود}}{\text{وتر}},\\
+\text{کوسائن}\quad\cos \theta&=\tfrac{\text{قاعدہ}}{\text{وتر}},\\
+\text{ٹینجنٹ}\quad \tan \theta&=\tfrac{\text{عمود}}{\text{قاعدہ}},
+\end{aligned}\quad\quad
+\begin{aligned}
+\text{کوسیکنٹ}\quad\csc&=\tfrac{\text{وتر}}{\text{عمود}}\\
+\text{سیکنٹ}\quad\sec&=\tfrac{\text{وتر}}{\text{قاعدہ}}\\
+\text{کوٹینجنٹ}\quad\cot&=\tfrac{\text{قاعدہ}}{\text{عمود}}
+\end{aligned}
+\end{gather*}
+\end{minipage}%
+\caption{قائمہ مثلث اور تکونیاتی تفاعل}
+\label{شکل_ابتدا_قائمہ_مثلث}
+\end{figure}
+
+شکل \حوالہ{شکل_ابتدا_تفاعل_تکونیاتی}-ا کو دیکھتے ہوئے ان تفاعل کو یہاں پیش کرتے ہیں۔
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-1.5,0)--(2,0)node[right]{$x$};
+\draw[-latex](0,-1.25)--(0,1.5)node[above]{$y$};
+\draw(0,0)node[below left]{$M$} circle (1);
+\draw[-latex](0,0)--++(135:1.7);
+\draw[-stealth]([shift={(0:0.3)}]0,0) arc (0:135:0.3);
+\draw(45:0.5)node[]{$\theta$};
+\draw(135:1)node[circ]{}node[left]{$N(x,y)$};
+\draw(135:0.6)node[shift={(45:0.2)}]{$r$};
+\draw(1,0)node[below right]{$r$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-1.5,0)--(2,0);
+\draw[-latex](0,-1.25)--(0,1.5);
+\draw(0,0)node[below left]{$M$} circle (1);
+\draw[-latex](0,0)--++(55:1.7);
+\draw[-stealth]([shift={(0:0.3)}]0,0) arc (0:55:0.3);
+\draw(24:0.45)node[font=\small]{$\theta$};
+\draw(55:1)node[circ]{}node[right,xshift={1mm}]{$N(x,y)$}coordinate(kA);
+\draw[thick](0,0)--++(55:1);
+\draw(55:0.6)node[shift={(145:0.15)}]{$r$};
+\draw(1,0)node[below right]{$r$};
+\draw[dashed,thick](kA)--($(0,0)!(kA)!(1.5,0)$)node[pos=0.6,right,font=\small]{$y$}coordinate(kB);
+\draw[thick](0,0)--(kB)node[pos=0.5,below]{$x$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\caption{تکونیاتی تفاعل}
+\label{شکل_ابتدا_تفاعل_تکونیاتی}
+\end{figure}
+
+\موٹا{چھ تکونیاتی تفاعل}
+\begin{gather*}
+\begin{aligned}
+\text{سائن}\quad \sin \theta&=\frac{y}{r}\\
+\text{کوسائن}\quad \cos \theta&=\frac{x}{r}\\
+\text{ٹینجنٹ}\quad \tan \theta&=\frac{y}{x}
+\end{aligned}\quad\quad
+\begin{aligned}
+\text{کوسیکنٹ}\quad \csc \theta&=\frac{r}{y}\\
+\text{سیکنٹ}\quad \sec \theta&=\frac{r}{x}\\
+\text{کوٹینجنٹ}\quad \cot \theta&=\frac{x}{y}
+\end{aligned}
+\end{gather*}
+
+
+آپ شکل \حوالہ{شکل_ابتدا_تفاعل_تکونیاتی}-ب سے دیکھ سکتے ہیں کہ زاویہ حادہ کی صورت میں تکونیاتی تفاعل کی توسیعی تعریف اور قائمہ زاویہ تکونی تعریف ایک جیسے ہیں۔ 
+
+جیسا آپ دیکھ سکتے ہیں \عددی{x=0} کی صورت میں \عددی{\tan \theta} اور \عددی{\sec \theta} غیر معین ہیں (چونکہ کسی بھی عدد کو صفر سے تقسیم نہیں کیا جا سکتا ہے)۔یوں یہ \عددی{\theta=\mp\tfrac{\pi}{2},\mp\tfrac{3\pi}{2},\cdots} کے لئے غیر معین ہیں۔اسی طرح \عددی{y=0} یعنی \عددی{\theta=0,\mp \pi, \mp 2\pi,\cdots} کے لئے \عددی{\cot \theta} اور \عددی{\csc \theta} غیر معین ہیں۔
+
+اسی طرح درج ذیل تعریف بھی لکھے جا سکتے ہیں۔
+
+\موٹا{تکونیاتی تفاعل کے باہمی تعلقات}
+\begin{align*}
+\tan\theta&=\frac{\sin\theta}{\cos\theta}&\cot\theta&=\frac{1}{\tan\theta}\\
+\sec\theta&=\frac{1}{\cos\theta}& \csc\theta&=\frac{1}{\sin\theta}
+\end{align*}
+
+
+مستوی میں نقطہ \عددی{N(x,y)} کو مبدا سے فاصلہ \عددی{r} اور زاویہ \عددی{\theta} کی صورت میں لکھا جا سکتا ہے (شکل \حوالہ{شکل_ابتدا_کارتیسی_رداس_زاویہ})۔چونکہ \عددی{\cos\theta=\tfrac{x}{r}} اور \عددی{\sin\theta=\tfrac{y}{r}} ہیں لہٰذا درج ذیل ہو گا۔
+\begin{align*}
+x=r\cos\theta,\quad y=r\sin\theta
+\end{align*}
+%
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-1.25,0)--(1.5,0)node[right]{$x$};
+\draw[-latex](0,-1.2)--(0,1.5)node[above]{$y$};
+\draw(0,0)node[below left]{$M$} circle (1);
+\draw[-latex,thick](0,0)--(160:1.5)node[pos=0.33,shift={(70:0.2)}]{$r$};
+\draw(160:1)node[circ]{} ++(0,0.1)--++(-0.5,0.5)node[above,xshift={-0.5cm},font=\footnotesize]{$N(x,y)=(r\cos\theta,r\sin\theta)$};
+\draw[-stealth]([shift={(0:0.3)}]0,0) arc (0:160:0.3);
+\draw(45:0.5)node[]{$\theta$};
+\end{tikzpicture}
+\caption{مستوی میں کارتیسی محدد کا $r$ اور $\theta$ میں اظہار۔}
+\label{شکل_ابتدا_کارتیسی_رداس_زاویہ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\begin{tikzpicture}
+\draw[-latex](-1.25,0)--(1.5,0)node[right]{$x$};
+\draw[-latex](0,-1.2)--(0,1.5)node[above]{$y$};
+\draw(0,0) circle (1);
+\draw[thick](0,0)--(120:1)node[pos=0.6,shift={(30:0.2)}]{$1$}coordinate(kA);
+\draw(kA)++(-0.05,0.05)--++(-0.5,0.25)node[above,xshift={-0.5cm},font=\footnotesize]{$N(x,y)=(\cos\theta,\sin\theta)$};
+\draw[-stealth]([shift={(0:0.3)}]0,0) arc (0:120:0.3);
+\draw(45:0.5)node[]{$\theta$};
+\draw(kA)--($(0,0)!(kA)!(1,0)$)coordinate(kB)node[pos=0.6,left,xshift={1mm},font=\footnotesize]{$\abs{y}$};
+\draw($(kB)!0.5!(0,0)$)node[below,font=\footnotesize]{$\abs{x}$};
+\shade[lgray] (0,0)--(kA)--(kB)--(0,0);
+\end{tikzpicture}
+\caption{زاویہ $\theta$ کے لئے زاویہ حادہ تکون}
+\label{شکل_ابتدا_تکون_زاویہ_حادہ}
+\end{minipage}\hfill
+\end{figure}
+
+\جزوحصہء{تکونیاتی تفاعل کی قیمتیں}
+شکل \حوالہ{شکل_ابتدا_تفاعل_تکونیاتی} کے دائرے میں \عددی{r=1} ہونے کی صورت میں \عددی{\sin\theta} اور \عددی{\cos\theta} کی تعارفی مساوات درج ذیل صورت اختیار کرتی ہیں۔
+\begin{align*}
+\cos\theta=x,\quad \sin\theta=y
+\end{align*}
+یوں ہم سائن اور کوسائن کی قیمتوں کو بالترتیب نقطہ \عددی{N(x,y)} کی \عددی{x} اور \عددی{y} محدد سے پڑھ سکتے ہیں۔نقطہ \عددی{N} سے \عددی{x} محور پر قائمہ گراتے ہوئے حاصل حوالہ تکون سے بھی انہیں حاصل کیا جا سکتا ہے (شکل \حوالہ{شکل_ابتدا_تکون_زاویہ_حادہ})۔ہم \عددی{x} اور \عددی{y} کی قیمتیں تکون کی اطراف سے ناپتے ہیں۔\عددی{x} اور \عددی{y} کی علامتیں اس ربع سے تعین کی جاتی ہیں جس میں تکون پایا جاتا ہو۔
+
+\ابتدا{مثال}\شناخت{مثال_ابتدا_تکونیاتی_قیمتیں_الف}
+\عددی{\tfrac{2\pi}{3}} ریڈیئن کا سائن اور کوسائن تلاش کریں۔\\
+حل:\quad
+\موٹا{پہلا قدم}\quad
+زاویے کو معیاری مقام پر اکائی دائرے میں بنائیں۔حوالہ  تکون کے اطراف کی لمبائیاں لکھیں (شکل \حوالہ{شکل_مثال_ابتدا_تکونیاتی_قیمتیں_الف})۔\\
+\موٹا{دوسرا قدم}\quad
+جہاں اکائی دائرے کو شعاع قطع کرتی ہے اس نقطے کے محدد دریافت کریں:
+\begin{align*}
+\cos\frac{2\pi}{3}&=x\,\text{\RL{کا محدد}} \,N=-\frac{1}{2}\\
+\sin\frac{2\pi}{3}&=y\,\text{\RL{کا محدد}} \,N=\frac{\sqrt{3}}{2}\\
+\end{align*}
+%
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[x={1.2cm},y={1.2cm}]
+\draw[-latex](-1.25,0)--(1.25,0)node[right]{$x$};
+\draw[-latex](0,-1.1)--(0,1.2)node[right]{$y$};
+\draw(0,0) circle (1);
+\draw(0,0)--++(120:1)coordinate(kA);
+\draw[-stealth]([shift={(0:0.3)}]0,0) arc (0:120:0.3);
+\draw(45:0.5)node[]{$\tfrac{2\pi}{3}$};
+\draw(kA)--($(0,0)!(kA)!(-1,0)$)coordinate(kB)node[pos=0.6,left,xshift={0.5mm}]{$\tfrac{\sqrt{3}}{2}$};
+\draw($(kB)!0.5!(0,0)$)node[below]{$\tfrac{1}{2}$};
+\draw(kA)++(100:0.1)--++(100:0.5)node[above]{$(\cos\tfrac{2\pi}{3},\sin\tfrac{2\pi}{3})=(-\tfrac{1}{2},\tfrac{\sqrt{3}}{2})$};
+\end{tikzpicture}
+\caption{تکونیاتی تفاعل کی قیمتیں (مثال \حوالہ{مثال_ابتدا_تکونیاتی_قیمتیں_الف})}
+\label{شکل_مثال_ابتدا_تکونیاتی_قیمتیں_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[x={1.2cm},y={1.2cm}]
+\draw[-latex](-1.25,0)--(1.25,0)node[right]{$x$};
+\draw[-latex](0,-1.12)--(0,1.2)node[above]{$y$};
+\draw(0.6,0.5)node[above]{$A$}node[below]{\RL{تمام مثبت}};
+\draw(-0.6,0.5)node[above]{$S$}node[below]{\RL{سائن مثبت}};
+\draw(-0.6,-0.5)node[above]{$T$}node[below]{\RL{ٹینجنٹ مثبت}};
+\draw(0.6,-0.5)node[above]{$C$}node[below]{\RL{کوسائن مثبت}};
+\end{tikzpicture}
+\caption{قاعدہ $CAST$}
+\label{شکل_ابتدا_تکونیاتی_علامت}
+\end{minipage}\hfill
+\end{figure}
+
+تکونیاتی تفاعل کی قیمتوں کی علامت جاننے کے لئے  شکل \حوالہ{شکل_ابتدا_تکونیاتی_علامت} میں دکھایا گیا \عددی{CAST} کا قاعدہ یاد رکھیں۔
+\انتہا{مثال}
+%========================
+\ابتدا{مثال}\شناخت{مثال_ابتدا_منفی_زاویہ_تکونی}
+\عددی{-\tfrac{\pi}{4}} ریڈیئن کا سائن اور کوسائن تلاش کریں۔\\
+حل:\quad
+\موٹا{پہلا قدم:}\quad
+معیاری مقام پر اکائی دائرے میں زاویہ کھینچ کر حوالہ تکون کے اطراف کی لمبائیاں لکھیں (شکل \حوالہ{شکل_مثال_ابتدا_منفی_زاویہ_تکونی})۔\\
+\موٹا{دوسرا قدم:}\quad
+نقطہ \عددی{N} کے محدد تلاش کریں۔
+\begin{align*}
+\cos(-\tfrac{\pi}{4})&=x\,\text{\RL{کا محدد}}\,N=\frac{\sqrt{2}}{2}\\
+\sin(-\tfrac{\pi}{4})&=y\,\text{\RL{کا محدد}}\,N=-\frac{\sqrt{2}}{2}
+\end{align*}
+%
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-1.25,0)--(1.25,0)node[right]{$x$};
+\draw[-latex](0,-1.2)--(0,1.2)node[above]{$y$};
+\draw(0,0) circle (1)node[pos=0.4,below left]{$1$};
+\draw(0,0)--++(-45:1)coordinate(kA)node[below right]{$N:[\cos (-\tfrac{\pi}{4}),\sin(-\tfrac{\pi}{4})]=(\tfrac{\sqrt{2}}{2},-\tfrac{\sqrt{2}}{2})$};
+\draw[-stealth]([shift={(0:0.3)}]0,0) arc (0:-45:0.3);
+\draw(-22:0.55)node[font=\footnotesize]{$-\tfrac{\pi}{4}$};
+\draw(kA)--($(0,0)!(kA)!(1,0)$)coordinate(kB)node[pos=0.5,right,fill=white,font=\footnotesize]{$\tfrac{\sqrt{2}}{2}$};
+\draw($(kB)!0.5!(0,0)$)node[above,font=\footnotesize]{$\tfrac{\sqrt{2}}{2}$};
+\end{tikzpicture}
+\caption{شکل برائے مثال \حوالہ{مثال_ابتدا_منفی_زاویہ_تکونی}}
+\label{شکل_مثال_ابتدا_منفی_زاویہ_تکونی}
+\end{figure}
+\انتہا{مثال}
+%========================
+
+درج بالا دو مثالوں کی طرح حل کرتے ہوئے جدول میں دیے قیمتیں حاصل کی جا سکتی ہیں۔
+\begin{table}
+\centering
+\begin{otherlanguage}{english}
+\begin{tabular}{C|RRRRRRRRRRR}
+\text{\urdufont{درجہ}} &-180^{\circ}&-135^{\circ}&-90^{\circ}&-45^{\circ}& 0^{\circ} &30^{\circ}&45^{\circ}&60^{\circ}&90^{\circ}&135^{\circ}&180^{\circ}\\
+\text{\urdufont{ریڈیئن}}&-\pi&-\frac{3\pi}{4}&-\frac{\pi}{2}&-\frac{\pi}{4}&0&\frac{\pi}{6}&\frac{\pi}{4}&\frac{\pi}{3}&\frac{\pi}{2}&\frac{3\pi}{4}&\pi\Bstrut\\ 
+\hline
+\sin \theta&0&-\tfrac{\sqrt{2}}{2}&-1&-\tfrac{\sqrt{2}}{2}&0&\tfrac{1}{2}&\frac{\sqrt{2}}{2}&\frac{\sqrt{3}}{2}&1&\tfrac{\sqrt{2}}{2}&0\Bstrut\\
+\cos\theta&-1&-\tfrac{\sqrt{2}}{2}&0&\tfrac{\sqrt{2}}{2}&1&\frac{\sqrt{3}}{2}&\frac{\sqrt{2}}{2}&\tfrac{1}{2}&0&-\tfrac{\sqrt{2}}{2}&-1\Bstrut\\
+\tan\theta&0&1&&-1&0&\frac{1}{\sqrt{3}}&1&\sqrt{3}&&-1&0
+\end{tabular}
+\end{otherlanguage}
+\end{table}
+
+\جزوحصہء{ترسیم}
+تکونیاتی تفاعل کو کارتیسی محدد میں ترسیم کرتے ہوئے ہم عموماً غیر تابع متغیر \عددی{\theta} کو \عددی{x} سے ظاہر کرتے ہیں (شکل \حوالہ{شکل_ابتدا_چھ_بنیادی_ترسیم})۔
+\begin{figure}
+\centering
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,axis lines=middle,width=4cm,xlabel={$x$},ylabel={$y$},ymin=-1.2,ymax=1.5,xmin=-200,xmax=400,ytick={-1,1},xtick={-180,-90,90,180,270,360},xticklabels={$-\pi$,$-\tfrac{\pi}{2}$,$\tfrac{\pi}{2}$,$\pi$,$\tfrac{3\pi}{2}$,$2\pi$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-180:360,samples=100]{sin(x)};
+\draw(axis cs:200,1.3)node[font=\footnotesize]{$y=\sin x$};
+\end{axis}
+\end{tikzpicture}
+دائرہ کار:\عددی{(-\infty,\infty)}\\
+سعت:\عددی{[-1,1]}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,axis lines=middle,width=4cm,xlabel={$x$},ylabel={$y$},ymin=-1.2,ymax=1.5,xmin=-200,xmax=400,ytick={-1,1},xtick={-180,-90,90,180,270,360},xticklabels={$-\pi$,$-\tfrac{\pi}{2}$,$\tfrac{\pi}{2}$,$\pi$,$\tfrac{3\pi}{2}$,$2\pi$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-180:360,samples=100]{cos(x)};
+\draw(axis cs:200,1.3)node[font=\footnotesize]{$y=\cos x$};
+\end{axis}
+\end{tikzpicture}
+دائرہ کار:\عددی{(-\infty,\infty)}\\
+سعت:\عددی{[-1,1]}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,axis lines=middle,width=4cm,xlabel={$x$},ylabel={$y$},ymin=-4.2,ymax=4.5,xmin=-300,xmax=400,ytick={-1,1},xtick={-180,-90,90,180,270},xticklabels={$-\pi$,$-\tfrac{\pi}{2}$,$\tfrac{\pi}{2}$,$\pi$,$\tfrac{3\pi}{2}$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-260:-100,samples=100]{tan(x)};
+\addplot[domain=-80:80,samples=100]{tan(x)};
+\addplot[domain=100:260,samples=100]{tan(x)};
+\draw[dashed](axis cs:-270,-4.2)--(axis cs:-270,4.5);
+\draw[dashed](axis cs:-90,-4.2)--(axis cs:-90,4.5);
+\draw[dashed](axis cs:90,-4.2)--(axis cs:90,4.5);
+\draw[dashed](axis cs:270,-4.2)--(axis cs:270,4.5);
+\draw(axis cs:200,4)node[font=\footnotesize,fill=white]{$y=\tan x$};
+\end{axis}
+\end{tikzpicture}
+دائرہ کار:ماسوائے \عددی{\tfrac{\pi}{2}} تمام حقیقی اعداد\\
+سعت:\عددی{(-\infty,\infty)}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,axis lines=middle,width=4cm,xlabel={$x$},ylabel={$y$},ymin=-4,ymax=4.5,xmin=-300,xmax=360,ytick={-1,1},xtick={-270,-180,-90,90,180,270},xticklabels={$-\tfrac{3\pi}{2}$,$-\pi$,,$\tfrac{\pi}{2}$,$\pi$,$\tfrac{3\pi}{2}$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-260:-100,samples=100]{sec(x)};
+\addplot[domain=-80:80,samples=100]{sec(x)};
+\addplot[domain=100:260,samples=100]{sec(x)};
+\draw[dashed](axis cs:-270,-4,2)--(axis cs:-270,4.5);
+\draw[dashed](axis cs:-90,-4,2)--(axis cs:-90,4.5);
+\draw[dashed](axis cs:90,-4,2)--(axis cs:90,4.5);
+\draw[dashed](axis cs:270,-4,2)--(axis cs:270,4.5);
+\draw(axis cs:200,4)node[font=\footnotesize,fill=white]{$y=\sec x$};
+\end{axis}
+\end{tikzpicture}
+دائرہ کار: \عددی{x\ne \mp\tfrac{\pi}{2},\mp\tfrac{3\pi}{2},\cdots}\\
+سعت:\عددی{(-\infty,-1]\cup[1,\infty)}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[axis on top=true,tiny,axis lines=middle,width=4cm,xlabel={$x$},ylabel={$y$},ymin=-4.2,ymax=4.5,xmin=-400,xmax=400,ytick={-1,1},xtick={-270,90,180,360},xticklabels={$-\tfrac{3\pi}{2}$,$\tfrac{\pi}{2}$,$\pi$,$2\pi$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-350:-190,samples=100]{cosec(x)};
+\addplot[domain=-170:170,samples=100]{cosec(x)};
+\addplot[domain=190:350,samples=100]{cosec(x)};
+\draw[dashed](axis cs:-360,-4.2)--(axis cs:-360,4.5);
+\draw[dashed](axis cs:-180,-4.2)--(axis cs:-180,4.5);
+\draw[dashed](axis cs:180,-4.2)--(axis cs:180,4.5);
+\draw[dashed](axis cs:360,-4.2)--(axis cs:360,4.5);
+\draw(axis cs:200,4)node[font=\footnotesize,fill=white]{$y=\csc x$};
+\end{axis}
+\end{tikzpicture}
+دائرہ کار: \عددی{x\ne 0,\mp \pi,\mp2\pi,\cdots\cdots}\\
+سعت:\عددی{(-\infty,-1]\cup[1,\infty)}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[tiny,axis lines=middle,width=4cm,xlabel={$x$},ylabel={$y$},ymin=-4.2,ymax=4.5,xmin=-200,xmax=400,ytick={-1,1},xtick={-180,-90,90,180,270,360},xticklabels={$-\pi$,$-\tfrac{\pi}{2}$,$\tfrac{\pi}{2}$,$\pi$,$\tfrac{3\pi}{2}$,$2\pi$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-170:-10,samples=50]{cot(x)};
+\addplot[domain=10:170,samples=50]{cot(x)};
+\addplot[domain=190:350,samples=50]{cot(x)};
+\draw[dashed](axis cs:-180,-4,2)--(axis cs:-180,4.5);
+\draw[dashed](axis cs:180,-4,2)--(axis cs:180,4.5);
+\draw[dashed](axis cs:360,-4,2)--(axis cs:360,4.5);
+\draw(axis cs:200,4)node[font=\footnotesize,fill=white]{$y=\cot x$};
+\end{axis}
+\end{tikzpicture}
+دائرہ کار: \عددی{x\ne 0,\mp \pi,\mp 2\pi,\cdots}\\
+سعت:\عددی{(-\infty,\infty)}
+\end{minipage}
+\caption{چھ بنیادی تکونیاتی تفاعل کے ترسیم۔ان تفاعل کی دوریت صاف ظاہر ہے۔}
+\label{شکل_ابتدا_چھ_بنیادی_ترسیم}
+\end{figure}
+
+\جزوحصہء{دوریت}
+معیاری مقام پر زاویہ \عددی{x} اور زاویہ \عددی{x+2\pi} ہم مکان ہوں گے۔یوں ان دونوں زاویوں کے تکونیاتی تفاعل کی قیمتیں ایک جیسی ہوں گی۔مثال کے طور پر \عددی{\cos(x+2\pi)=\cos x} ہو گا۔ایسے تفاعل جن کی قیمت مقررہ وقفوں سے دہراتی ہو \اصطلاح{دوری}\فرہنگ{دوری}\حاشیہب{periodic}\فرہنگ{periodic}  کہلاتا ہے۔ 
+
+\ابتدا{تعریف}
+اگر کسی مثبت عدد \عددی{p} کے لئے تمام \عددی{x} پر \عددی{f(x+p)=f(x)} ہو تب تفاعل \عددی{f(x)} \اصطلاح{دوری} کہلاتا ہے۔\عددی{p} کی ایسی کم سے کم قیمت  کو \عددی{f(x)} کا \اصطلاح{دوری عرصہ}\فرہنگ{دوری عرصہ} \حاشیہب{period}\فرہنگ{period} کہتے ہیں۔ 
+\انتہا{تعریف}
+
+ہم شکل \حوالہ{شکل_ابتدا_چھ_بنیادی_ترسیم} سے دیکھ سکتے ہیں  کہ ٹینجنٹ اور کوٹینجنٹ تفاعل کا دوری عرصہ \عددی{p=\pi} ہے جبکہ باقی چار تفاعل کا دوری عرصہ \عددی{2\pi} ہے۔
+
+شکل \حوالہ{شکل_ابتدا_کم_زیادہ_دوری_عرصہ} میں \عددی{y=\cos 2x} اور \عددی{y=\cos \tfrac{x}{2}} ترسیم کیے گئے ہیں۔تکونیاتی تفاعل میں \عددی{x} کو \عددی{1} سے بڑی عدد سے ضرب کرنے سے تفاعل تیز ہو جاتا ہے (اس کی تعدد بڑھ جاتی ہے اور اس کا دوری عرصہ کم ہو جاتا ہے) جبکہ \عددی{1} سے کم عدد سے \عددی{x} کو ضرب کرنے سے تفاعل آہستہ ہو جاتا ہے جس سے اس کا دوری عرصہ بڑھ جاتا ہے۔ 
+\begin{figure}
+\centering
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[axis on top=true,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ymin=-1.2,ymax=1.4,xmin=-200,xmax=750,xtick={-180,180,360,540,720},xticklabels={$-\pi$,$\pi$,$2\pi$,$3\pi$,$4\pi$},ytick={-1,1}]
+\addplot[domain=-180:720,samples=130]{cos(2*x)};
+\draw(axis cs:360,1)node[above]{$y=\cos 2x$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[axis on top=true,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ymin=-1.2,ymax=1.4,xmin=-200,xmax=750,xtick={-180,180,360,540,720},xticklabels={$-\pi$,$\pi$,$2\pi$,$3\pi$,$4\pi$},ytick={-1,1}]
+\addplot[domain=-180:720,samples=100]{cos(1/2*x)};
+\draw(axis cs:360,1)node[above]{$y=\cos \tfrac{x}{2}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\caption{$\cos 2x$ کا دوری عرصہ کم ہے جبکہ $\cos\tfrac{x}{2}$ کا دوری عرصہ زیادہ ہے۔}
+\label{شکل_ابتدا_کم_زیادہ_دوری_عرصہ}
+\end{figure}
+
+دوری تفاعل کی اہمیت اس حقیقت کی بنا ہے کہ سائنس میں عموماً طبعی نظام جن پر ہم غور کرتے ہیں  کا رویہ دوری ہوتا ہے۔دل کی دھڑکن، دماغی  لہریں اور  گھریلو استعمال کی \عددی{220} وولٹ کی بجلی دوری ہیں۔اسی طرح خرد امواج تندور میں برقناطیسی میدان جو خوراک کو گرم کرتی ہیں دوری ہوتی ہیں۔موسمی کاروبار میں سرمایہ کی آمد و رفت اور گھومنے والی مشین کا رویہ بھی دوری ہوتا ہے۔ ہمارے پاس پختہ شواہد موجود ہیں جن کے تحت دنیا پر برفانی عہد تقریباً \عددی{\num{90000}} تا \عددی{\num{100000}} سال کے وقفہ سے دہراتا ہے۔
+
+اگر اتنے زیادہ چیزیں دوری ہیں تب ہم صرف تکونیاتی تفاعل پر کیوں غور کرنا چاہتے ہیں؟ اس کا جواب اعلٰی احصاء کا ایک حیرت کن مسئلہ دیتا ہے جس کے تحت ہر دوری تفاعل، جسے ہم ریاضی نمونہ میں استعمال کرنا چاہیں گے، کو ہم سائن اور کوسائن تفاعل کا مجموعہ لکھ سکتے ہیں۔  یوں سائن اور کوسائن تفاعل کا احصاء جانتے ہوئے ہم کسی بھی دوری تفاعل کا ریاضی نمونہ اخذ کر سکیں گے۔
+
+\جزوحصہء{جفت بالمقابل طاق}
+شکل \حوالہ{شکل_ابتدا_چھ_بنیادی_ترسیم} سے ظاہر ہے کہ کوسائن اور سیکنٹ تفاعل جفت ہیں جبکہ باقی چار تفاعل طاق ہیں:
+\begin{align*}
+\begin{array}{ll}
+\text{جفت}&\text{طاق}\\
+\hline
+\cos(-x)=\cos x &\sin(-x)=-\sin x\\
+\sec(-x)=\sec x&\tan(-x)=-\tan x\\
+&\csc(-x)=-\csc x\\
+&\cot(-x)=-\cot x
+\end{array}
+\end{align*}
+
+\جزوحصہء{مماثل}
+اکائی دائرے پر نقطہ \عددی{N(\cos \theta,\sin\theta)} سے \عددی{x} محور پر قائمہ گراتے ہوئے حاصل حوالہ تکون پر مسئلہ فیثاغورث کے اطلاق سے درج ذیل ملتا ہے (شکل \حوالہ{شکل_ابتدا_عمومی_زاویہ_تکون})۔
+\begin{align}\label{مساوات_ابتدا_مماثل_الف}
+\cos^2\theta +\sin^2\theta=1
+\end{align}
+یہ مساوات \عددی{\theta} کی تمام قیمتوں  کے لئے درست ہے اور غالباً  یہ اہم ترین تکونیاتی مماثل ہے۔
+\begin{figure}
+\centering
+\begin{tikzpicture}[x={1.5cm},y={1.5cm}]
+\draw[-latex](-1.2,0)--(1.5,0)node[right]{$x$};
+\draw[-latex](0,-1.2)--(0,1.25)node[above]{$y$};
+\draw(0,0) circle (1);
+\draw(0,0)--++(120:1)node[circ]{}coordinate(kA)node[above left]{$N(\cos \theta,\sin\theta)$};
+\draw[-stealth]([shift={(0:0.3)}]0,0) arc (0:120:0.3);
+\draw(45:0.5)node[]{$\theta$};
+\draw(kA)--($(0,0)!(kA)!(-1,0)$)coordinate(kB)node[pos=0.5,left,fill=white,font=\footnotesize]{$\abs{\sin\theta}$};
+\RightAngle{(kA)}{(kB)}{(0,0)};
+\draw($(0,0)!0.5!(kB)$)node[below,font=\footnotesize]{$\abs{\cos \theta}$};
+\draw(60:1)node[right,yshift={1mm}]{$x^2+y^2=1$};
+\draw(1,0)node[below right]{$1$};
+\end{tikzpicture}
+\caption{عمومی زاویہ $\theta$ کے لئے حوالہ تکون۔}
+\label{شکل_ابتدا_عمومی_زاویہ_تکون}
+\end{figure}
+
+مساوات \حوالہ{مساوات_ابتدا_مماثل_الف} کے دونوں ہاتھ کو ایک بار \عددی{\cos^2\theta} اور ایک بار \عددی{\sin^2\theta} سے تقسیم کرتے ہوئے درج ذیل مماثل حاصل ہوتے ہیں۔
+\begin{align*}
+1+\tan^2\theta&=\sec^2\theta\\
+1+\cot^2\theta&=\csc^2\theta
+\end{align*}
+
+آپ درج ذیل مماثل سے بخوبی واقف ہوں گے۔
+\begin{gather}
+\begin{aligned}\label{مساوات_ابتدا_مماثل_ب}
+\cos(A+B)&=\cos A\cos B-\sin A\sin B\\
+\sin(A+B)&=\sin A\cos B+\cos A\sin B
+\end{aligned}\quad\quad \text{\RL{مجموعہ زاویہ کلیات}}
+\end{gather}
+اس کتاب میں تمام درکار مماثل کو مساوات \حوالہ{مساوات_ابتدا_مماثل_الف} اور مساوات \حوالہ{مساوات_ابتدا_مماثل_ب} سے حاصل کیا جا سکتا ہے۔مساوات \حوالہ{مساوات_ابتدا_مماثل_ب} \عددی{A} اور \عددی{B} کی ہر قیمت کے لئے درست ہیں۔\عددی{\cos(A-B)} اور \عددی{\sin(A-B)} کے لئے بھی اسی طرح کے کلیات پائے جاتے ہیں (سوال \حوالہ{سوال_ابتدا_اضافی_مماثل_پ} اور سوال \حوالہ{سوال_ابتدا_اضافی_مماثل_ب})۔ 
+
+مجموعہ زاویہ کلیات میں \عددی{A} اور \عددی{B} دونوں کے لئے \عددی{\theta} پر کرنے سے درج ذیل مماثل حاصل ہوتے ہیں۔
+ \begin{gather}
+\begin{aligned}\label{مساوات_ابتدا_مماثل_پ}
+\cos 2\theta&=\cos^2\theta-\sin^2\theta\\
+\sin2\theta&=2\sin\theta\cos\theta
+\end{aligned}\quad \quad \text{\RL{دوہرا زاویہ کلیات}}
+\end{gather}
+
+درج ذیل کلیات
+\begin{align*}
+\cos^2\theta+\sin^2\theta=1,\quad \quad \cos^2\theta-\sin^2\theta=\cos2\theta
+\end{align*}
+ کو آپس میں جمع کرنے سے  \عددی{2\cos^2\theta=1+\cos2\theta} اور  تفریق کرنے سے \عددی{2\sin^2\theta=1-\cos2\theta} حاصل ہوتا ہے جن سے دوہرا زاویے کے درج ذیل مزید دو کلیات حاصل ہوتے ہیں۔
+\begin{align}
+\cos^2\theta&=\frac{1+\cos2\theta}{2}\\
+\sin^2\theta&=\frac{1-\cos 2\theta}{2}
+\end{align}
+درج بالا میں \عددی{\theta} کی جگہ \عددی{\tfrac{\theta}{2}} لکھنے سے \اصطلاح{نصف زاویہ کلیات}\فرہنگ{نصف زاویہ!کلیات}\حاشیہب{half angle formulae}\فرہنگ{half angle formulae} حاصل ہوتے ہیں۔
+
+\جزوحصہء{قاعدہ کوسائن}
+اگر تکون \عددی{ABC} کے اضلاع \عددی{a}، \عددی{b} اور \عددی{c} ہوں اور \عددی{c} کے سامنے  زاویہ \عددی{\theta} ہو تب درج ذیل ہو گا (شکل \حوالہ{شکل_ابتدا_قاعدہ_کوسائن})۔
+\begin{align}
+c^2=a^2+b^2-2ab\cos \theta
+\end{align}
+%
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-2,0)--(2.75,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
+\draw(0,0)node[below left]{$C$}--++(135:2)node[above]{$B(a\cos \theta,a\sin\theta)$}node[pos=0.5,below left]{$a$}coordinate(kA);
+\draw(kA)--(2,0)node[pos=0.5,above right]{$c$}node[below]{$A(b,0)$};
+\draw(1,0)node[below]{$b$};
+\draw[-stealth]([shift={(0:0.3)}]0,0) arc (0:135:0.3);
+\draw(45:0.5)node[]{$\theta$};
+\draw[dashed](kA)--($(0,0)!(kA)!(-2,0)$)coordinate(kD)node[below]{$D$};
+\RightAngle{(kA)}{(kD)}{(0,0)}
+\end{tikzpicture}
+\caption{قاعدہ کوسائن}
+\label{شکل_ابتدا_قاعدہ_کوسائن}
+\end{figure}
+اس مساوات کو \اصطلاح{قاعدہ کوسائن}\فرہنگ{کوسائن!قاعدہ}\حاشیہب{law of cosines}\فرہنگ{cosines!law} کہتے ہیں۔
+
+اس کلیہ کو حاصل کرنے کی خاطر تکون کو کارتیسی محدد پر یوں بنائیں کہ اس کا ایک راس مبدا پر اور ایک ضلع \عددی{x} محور پر ہو (شکل \حوالہ{شکل_ابتدا_قاعدہ_کوسائن})۔ راس \عددی{B} سے \عددی{x} محور پر قائمہ گرائیں۔ یوں حاصل قائمہ مثلث \عددی{ABD} پر مسئلہ فیثاغورث کا اطلاق کرتے ہیں جہاں  \عددی{A} سے \عددی{D} تک فاصلہ \عددی{b-a\cos\theta} لکھا جائے گا (مثلاً \عددی{b=3} اور \عددی{a\cos\theta=-2} کی صورت میں \عددی{AD=3-(-2)=5} ہو گا اور \عددی{a\cos\theta=1} کی صورت میں \عددی{AD=3-1=2} ہو گا)۔یوں درج ذیل لکھا جا سکتا ہے
+\begin{align*}
+c^2&=(b-a\cos\theta)^2+(a\sin\theta)^2\\
+&=a^2(\cos^2\theta+\sin^2\theta)+b^2-2ab\cos\theta\\
+&=a^2+b^2-2ab\cos\theta
+\end{align*}
+جہاں آخری قدم پر \عددی{\cos^2\theta+\sin^2\theta=1} کا سہارا لیا گیا ہے۔
+
+قاعدہ کوسائن مسئلہ فیثاغورث کو عمومی بناتا ہے۔آپ دیکھ سکتے ہیں کہ \عددی{\theta=\tfrac{\pi}{2}} کی صورت میں \عددی{\cos\tfrac{\pi}{2}=0} کی بنا قاعدہ کوسائن سے  \عددی{c^2=a^2+b^2} یعنی مسئلہ فیثاغورث  حاصل ہوتا ہے۔
+
+ \حصہء{سوالات}
+\موٹا{ریڈیئن، درجہ اور دائری قوس}\\
+
+\ابتدا{سوال}
+رداس \عددی{\SI{10}{\centi\meter}} کے دائرے پر کتنی لمبائی کا قوس  (الف) \عددی{\tfrac{4\pi}{5}} ریڈیئن (ب) \عددی{110^{\circ}} کا وسطی زاویہ بنائے گا؟\\
+جواب:\quad
+(الف) \عددی{8\pi} سنٹی میٹر  (ب) \عددی{0.19} میٹر
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+رداس \عددی{8} کے دائرے پر \عددی{10\pi} لمبائی کا قوس، مرکز پر کتنا وسطی زاویہ بناتا ہے؟ جواب درجات اور ریڈیئن میں تلاش کریں۔ 
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}\موٹا{کیلکولیٹر}\quad
+\عددی{80^{\circ}} کا وسطی زاویہ بنانے  کی خاطر  آپ \عددی{\SI{30}{\centi\meter}} قطر کے قرص پر مرکز سے  دو خط کھینچنا چاہتے ہیں۔محیط پر قرص کی لمبائی \عددی{\SI{1}{\milli\meter}} درستگی تک تلاش کریں۔\\
+جواب:\quad
+$\SI{20.9}{\centi\meter}$  
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}\موٹا{کیلکولیٹر}\quad
+ایک میٹر قطر کے پہیا کو ہموار زمین پر\عددی{\SI{30}{\centi\meter}} چلایا جاتا ہے۔پہیا کتنا زاویہ گھوما ہو گا؟ جواب (الف) ریڈیئن کے دسواں حصہ اور (ب) درجہ کے ایک حصہ درستگی تک تلاش کریں۔
+\انتہا{سوال}
+%=============================
+\موٹا{تکونیاتی تفاعل کی قدر پیمائی}
+
+\ابتدا{سوال}
+درج ذیل بایاں جدول مکمل کریں۔ کیلکولیٹر یا جدول سے جوابات پڑھنے کی اجازت نہیں ہے۔
+\begin{align*}
+\begin{array}{cccccc}
+\theta&-\pi&-\tfrac{2\pi}{3}&0&\tfrac{\pi}{2}&\tfrac{3\pi}{4}\Bstrut\\ 
+\hline
+\sin \theta\\
+\cos \theta\\
+\tan \theta\\
+\cot \theta\\
+\sec\theta\\
+\csc\theta
+\end{array}\quad\quad
+\begin{array}{cccccc}
+\theta&-\tfrac{3\pi}{2}&-\tfrac{\pi}{3}&-\tfrac{\pi}{6}&\tfrac{\pi}{4}&\tfrac{5\pi}{8}\Bstrut\\ 
+\hline
+\sin \theta\\
+\cos \theta\\
+\tan \theta\\
+\cot \theta\\
+\sec\theta\\
+\csc\theta
+\end{array}
+\end{align*}
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+درج بالا دایاں جدول مکمل کریں۔ کیلکولیٹر یا جدول سے جوابات پڑھنے کی اجازت نہیں ہے۔
+\انتہا{سوال}
+%========================
+
+سوال \حوالہ{سوال_ابتدا_تفاعل_تلاش_الف} تا سوال \حوالہ{سوال_ابتدا_تفاعل_تلاش_ب} میں \عددی{\sin x}، \عددی{\cos x}، \عددی{\tan x} میں سے ایک دیا گیا ہے۔باقی دو تفاعل کو دیے گئے وقفے کے اندر تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_ابتدا_تفاعل_تلاش_الف}
+$\sin x=\tfrac{3}{5},\quad  [\tfrac{\pi}{2},\pi]\text{دائرہ کار:}$\\
+جواب:\quad
+$\cos x=-\tfrac{4}{5},\quad \tan x=-\tfrac{3}{4}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$\tan x=2,\quad  [0,\tfrac{\pi}{2}]\text{دائرہ کار:}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$\cos x=\tfrac{1}{3},\quad  [-\tfrac{\pi}{2},0]\text{دائرہ کار:}$\\
+جواب:\quad
+$\sin x=-\tfrac{\sqrt{8}}{3},\quad \tan x=-\sqrt{8}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$\cos x=-\tfrac{5}{13},\quad  [\tfrac{\pi}{2},\pi]\text{دائرہ کار:}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$\tan x=\tfrac{1}{2},\quad  [\pi,\tfrac{3\pi}{2}]\text{دائرہ کار:}$\\
+جواب:\quad
+$\sin x=-\tfrac{1}{\sqrt{5}},\quad \cos x=-\tfrac{2}{\sqrt{5}}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_تفاعل_تلاش_ب}
+$\sin x=-\tfrac{1}{2},\quad  [\pi,\tfrac{3\pi}{2}]\text{دائرہ کار:}$
+\انتہا{سوال}
+%========================
+\موٹا{تکونیاتی تفاعل کی ترسیم}\\
+سوال \حوالہ{سوال_ابتدا_تکونیاتی_تفاعل_ترسیم_الف} تا سوال \حوالہ{سوال_ابتدا_تکونیاتی_تفاعل_ترسیم_ب} میں دیا گیا تفاعل ترسیم کریں۔ہر تفاعل کا دوری عرصہ تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_ابتدا_تکونیاتی_تفاعل_ترسیم_الف}
+$\sin 2x$\\
+جواب:\quad
+دوری عرصہ \عددی{\pi} ہے۔شکل \حوالہ{شکل_سوال_ابتدا_تکونیاتی_تفاعل_ترسیم_الف} 
+\begin{figure}
+\centering
+\begin{minipage}{0.25\textwidth}
+\begin{tikzpicture}
+\begin{axis}[tiny,axis lines=middle,width=4cm,xtick={90,180},xticklabels={$\tfrac{\pi}{2}$,$2\pi$},ytick={-1,1},xlabel={$x$},ylabel={$y$},ymin=-1.2,ymax=1.2,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-90:240,samples=100]{sin(2*x)};
+\draw(axis cs:150,1)node[font=\tiny]{$y=\sin 2x$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_ابتدا_تکونیاتی_تفاعل_ترسیم_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\begin{tikzpicture}
+\begin{axis}[tiny,axis lines=middle,width=4cm,xtick={1,2},ytick={-1,1},xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ymin=-1.2,ymax=1.2,xmax=3.5]
+\addplot[domain=-1.2:2.5,samples=100]{cos(180*x)};
+\draw(axis cs:1,1)node[font=\tiny]{$y=\cos \pi x$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_ابتدا_تکونیاتی_تفاعل_ترسیم_درکار_ب}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\begin{tikzpicture}
+\begin{axis}[tiny,axis lines=middle,width=4cm,xtick={3,6},ytick={-1,1},xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ymin=-1.2,ymax=1.2]
+\addplot[domain=-1:7,samples=100]{-sin(180/3*x)};
+\draw(axis cs:2,1)node[font=\tiny]{$y=-\sin \tfrac{\pi x}{3}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_ابتدا_تکونیاتی_تفاعل_ترسیم_درکار_پ}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\begin{tikzpicture}
+\begin{axis}[tiny,axis lines=middle,width=4cm,xtick={180,360},xticklabels={$\pi$,$2\pi$},ytick={-1,1},xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ymin=-1.2,ymax=1.2]
+\addplot[domain=-45:460,samples=100]{cos(x-180/2)};
+\draw(axis cs:275,1)node[font=\tiny]{$y=\cos(x-\tfrac{\pi}{2})$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_ابتدا_تکونیاتی_تفاعل_ترسیم_درکار_ت}
+\end{minipage}%
+\end{figure}
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$\sin \tfrac{x}{2}$
+\انتہا{سوال}
+%============================
+\ابتدا{سوال}
+$\cos \pi x$\\
+جواب:\quad
+دائرہ کار: \عددی{2}، شکل \حوالہ{شکل_سوال_ابتدا_تکونیاتی_تفاعل_ترسیم_درکار_ب}
+\انتہا{سوال}
+%============================
+\ابتدا{سوال}
+$\cos\tfrac{\pi x}{2}$
+\انتہا{سوال}
+%============================
+\ابتدا{سوال}
+$-\sin \tfrac{\pi x}{3}$\\
+جواب:\quad
+دائرہ کار: \عددی{6}، شکل \حوالہ{شکل_سوال_ابتدا_تکونیاتی_تفاعل_ترسیم_درکار_پ}
+\انتہا{سوال}
+%============================
+\ابتدا{سوال}
+$-\cos 2\pi x$
+\انتہا{سوال}
+%============================
+\ابتدا{سوال}
+$\cos (x-\tfrac{\pi}{2})$\\
+جواب:\quad
+دائرہ کار: \عددی{2\pi}، شکل \حوالہ{شکل_سوال_ابتدا_تکونیاتی_تفاعل_ترسیم_درکار_ت}
+\انتہا{سوال}
+%============================
+\ابتدا{سوال}
+$\sin (x+\tfrac{\pi}{2})$
+\انتہا{سوال}
+%============================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_تکونیاتی_تفاعل_ترسیم_درکار_ٹ}
+$\sin (x-\tfrac{\pi}{4})+1$\\
+جواب:\quad
+دائرہ کار: \عددی{2\pi}، شکل \حوالہ{شکل_سوال_ابتدا_تکونیاتی_تفاعل_ترسیم_درکار_ٹ}
+\begin{figure}
+\centering
+\begin{minipage}{0.33\textwidth}
+\begin{tikzpicture}
+\begin{axis}[tiny,axis lines=middle,width=4cm,xtick={45,135,315},xticklabels={$\tfrac{\pi}{2}$,$\tfrac{3\pi}{4}$,$\tfrac{7\pi}{4}$},ytick={1,2},xlabel={$x$},ylabel={$y$},ymin=-0.2,ymax=3.2,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-90:400,samples=100]{sin(x-45)+1};
+\draw(axis cs:200,2.2)node[font=\tiny]{$y=\sin(x-\tfrac{\pi}{4})+1$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_ابتدا_تکونیاتی_تفاعل_ترسیم_درکار_ٹ}
+\end{minipage}\hfill
+\begin{minipage}{0.33\textwidth}
+\begin{tikzpicture}
+\begin{axis}[tiny,axis lines=middle,width=4cm,xtick={\empty},ytick={-2,-1,1,2},xlabel={$t$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ymin=-2.2,ymax=2.2,xmin=-200,xmax=220]
+\draw[dashed](axis cs:-180,-2.2)--(axis cs:-180,2.2)node[pos=0.5,below,fill=white,font=\tiny]{$-\pi$};
+\draw[dashed](axis cs:-90,-2.2)--(axis cs:-90,2.2)node[pos=0.5,below,fill=white,font=\tiny]{$-\tfrac{\pi}{2}$};
+\draw[dashed](axis cs:90,-2.2)--(axis cs:90,2.2)node[pos=0.5,below,fill=white,font=\tiny]{$\tfrac{\pi}{2}$};
+\draw[dashed](axis cs:180,-2.2)--(axis cs:180,2.2)node[pos=0.5,below,fill=white,font=\tiny]{$\pi$};
+\addplot[domain=-170:-100]{cot(2*x)};
+\addplot[domain=-80:-10]{cot(2*x)};
+\addplot[domain=10:80]{cot(2*x)};
+\addplot[domain=100:170]{cot(2*x)};
+\draw(axis cs:180,1)node[fill=white,font=\tiny]{$\cos 2t$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_ابتدا_تکونیاتی_تفاعل_ترسیم_درکار_ث}
+\end{minipage}\hfill
+\begin{minipage}{0.33\textwidth}
+\begin{tikzpicture}
+\begin{axis}[tiny,axis lines=middle,width=4cm,xtick={-3,-2,-1,1,2,3},ytick={-1,1},xlabel={$t$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ymin=-3.2,ymax=3.2,xmin=-3.2,xmax=4]
+\draw[dashed](axis cs:-3,-3.2)--(axis cs:-3,3.2);
+\draw[dashed](axis cs:-1,-3.2)--(axis cs:-1,3.2);
+\draw[dashed](axis cs:1,-3.2)--(axis cs:1,3.2);
+\draw[dashed](axis cs:3,-3.2)--(axis cs:3,3.2);
+\addplot[domain=-2.9:-1.1,samples=100]{sec(90*x)};
+\addplot[domain=-0.9:0.9,samples=100]{sec(90*x)};
+\addplot[domain=1.1:2.9,samples=100]{sec(90*x)};
+\draw(axis cs:3,1)node[fill=white,font=\tiny]{$y=\sec \tfrac{\pi t}{2}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_ابتدا_تکونیاتی_تفاعل_ترسیم_درکار_ج}
+\end{minipage}\hfill
+\end{figure}
+\انتہا{سوال}
+%============================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_تکونیاتی_تفاعل_ترسیم_ب}
+$\cos (x+\tfrac{\pi}{4})-1$
+\انتہا{سوال}
+%============================
+
+سوال \حوالہ{سوال_ابتدا_ترسیم_تشاکل_الف} تا سوال \حوالہ{سوال_ابتدا_ترسیم_تشاکل_ب} میں دیے تفاعل کو \عددی{ts} مستوی میں ترسیم کریں جہاں افقی محور \عددی{t} ہو۔ہر تفاعل کا دوری عرصہ اور تشاکل تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_ابتدا_ترسیم_تشاکل_الف}
+$s=\cot 2t$\\
+جواب:\quad 
+دائرہ کار:\عددی{\tfrac{\pi}{2}}، شکل \حوالہ{شکل_سوال_ابتدا_تکونیاتی_تفاعل_ترسیم_درکار_ث}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$s=-\tan \pi t$
+\انتہا{سوال}
+%============================
+\ابتدا{سوال}
+$s=\sec \tfrac{\pi t}{2}$\\
+جواب:\quad
+دائرہ کار: \عددی{4}، شکل \حوالہ{شکل_سوال_ابتدا_تکونیاتی_تفاعل_ترسیم_درکار_ج}
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_ترسیم_تشاکل_ب}
+$s=\csc \tfrac{t}{2}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+کمپیوٹر استعمال کرتے ہوئے\\
+ (الف)\quad
+  \عددی{y=\cos x} اور \عددی{y=\sec x} کو \عددی{-\tfrac{3\pi}{2} \le x\le \tfrac{3\pi}{2}} کے لئے ایک ساتھ ترسیم کریں۔\عددی{\sec x} کے رویہ  پر \عددی{\cos x} کی قیمت اور علامت کے لحاظ سے تبصرہ کریں۔\\
+(ب)\quad
+  \عددی{-pi\le x\le 2\pi} کے لئے \عددی{y=\sin x} اور \عددی{y=\csc x} کو ایک ساتھ ترسیم کریں۔ \عددی{\csc x} کے رویہ پر \عددی{\sin x}  کی قیمت اور علامت کے لحاظ سے تبصرہ کریں۔
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+\عددی{-7\le x7} کے لئے \عددی{y=\tan x} اور \عددی{y=\cot x} کو ایک ساتھ ترسیم کریں۔\عددی{\tan x} کی قیمت اور علامت کے لحاظ سے \عددی{\cot x} پر تبصرہ کریں۔
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+\عددی{y=\sin x} اور \عددی{y=\lfloor \sin x\rfloor} کو ایک ساتھ ترسیم کریں۔\عددی{\lfloor \sin x\rfloor} کا دائرہ کار اور سعت تلاش کریں۔
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+\عددی{y=\sin x} اور \عددی{y=\lceil \sin x\rceil} کو ایک ساتھ ترسیم کریں۔\عددی{\lceil \sin x\rceil} کا دائرہ کار اور سعت تلاش کریں۔
+\انتہا{سوال}
+%========================
+
+\موٹا{اضافی تکونیاتی مماثل}\\
+
+مجموعہ زاویہ کلیات استعمال کرتے ہوئے سوال \حوالہ{سوال_ابتدا_اضافی_مماثل_الف} تا سوال \حوالہ{سوال_ابتدا_اضافی_مماثل_ب} میں دیے گئے مماثل حاصل کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_ابتدا_اضافی_مماثل_الف}
+$\cos (x-\tfrac{\pi}{2})=\sin x$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$\cos(x+\tfrac{\pi}{2})=-\sin x$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$\sin(x+\tfrac{\pi}{2})=\cos x$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$\sin(x-\tfrac{\pi}{2})=-\cos x$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_اضافی_مماثل_پ}
+$\cos(A-B)=\cos A\cos B+\sin A\sin B$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_اضافی_مماثل_ب}
+$\sin(A-B)=\sin A\cos B-\cos A\sin B$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+اگر سوال \حوالہ{سوال_ابتدا_اضافی_مماثل_پ} میں \عددی{B=A} پر کیا جائے تب کیا حاصل ہو گا؟ کیا آپ حاصل کردہ مماثل کو پہلے سے جانتے ہیں؟ 
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+مجموعہ زاویہ کلیات میں \عددی{B=2\pi} لینے سے کیا حاصل ہو گا؟ کیا آپ نتائج سے مطمئن ہیں؟
+\انتہا{سوال}
+%=========================
+
+\موٹا{مجموعہ زاویہ کلیات کا استعمال}\\
+سوال \حوالہ{سوال_ابتدا_صورت_الف} تا سوال \حوالہ{سوال_ابتدا_صورت_ب} میں دی گئی مقدار کو \عددی{\sin x} اور \عددی{\cos x} کی صورت میں لکھیں۔
+
+\ابتدا{سوال}\شناخت{سوال_ابتدا_صورت_الف}
+$\cos (\pi+x)$\\
+جواب:\quad
+$-\cos x$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$\sin(2\pi-x)$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$\sin(\tfrac{3\pi}{2}-x)$\\
+جواب:\quad
+$-\cos x$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_صورت_ب}
+$\cos(\tfrac{3\pi}{2}+x)$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+\عددی{\sin(\tfrac{\pi}{4}+\tfrac{\pi}{3})} استعمال کرتے ہوئے \عددی{\sin \tfrac{7\pi}{12}} کی قیمت  حاصل کریں۔\\
+جواب:\quad
+$\tfrac{\sqrt{6}+\sqrt{2}}{4}$
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+\عددی{\cos(\tfrac{\pi}{4}+\tfrac{2\pi}{3})} استعمال کرتے ہوئے \عددی{\cos \tfrac{11\pi}{12}} کی قیمت  حاصل کریں۔
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+\عددی{\cos \tfrac{\pi}{12}}  کی قیمت حاصل کریں۔\\
+جواب:\quad
+$\tfrac{1+\sqrt{3}}{2\sqrt{2}}$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+\عددی{\sin \tfrac{5\pi}{12}}  کی قیمت حاصل کریں۔
+\انتہا{سوال}
+%=======================
+\موٹا{دوہرا زاویہ کلیات کا استعمال}\\
+سوال \حوالہ{سوال_ابتدا_دوہرا_زاویہ_الف} تا سوال \حوالہ{سوال_ابتدا_دوہرا_زاویہ_ب} میں تفاعل کی قیمت تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_ابتدا_دوہرا_زاویہ_الف}
+$\cos^2 \tfrac{\pi}{8}$\\
+جواب:\quad
+$\tfrac{2+\sqrt{2}}{4}$
+\انتہا{سوال}
+%=============================
+\ابتدا{سوال}
+$\cos^2 \tfrac{\pi}{12}$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$\sin^2 \tfrac{\pi}{12}$\\
+جواب:\quad
+$\tfrac{2-\sqrt{3}}{4}$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_دوہرا_زاویہ_ب}
+$\sin^2 \tfrac{\pi}{8}$
+\انتہا{سوال}
+%=====================
+\موٹا{نظریہ اور مثالیں}\\
+
+\ابتدا{سوال}\ترچھا{ٹینجنٹ مجموعہ زاویہ} کا کلیہ 
+\عددی{\tan(A+B)=\tfrac{\tan A+\tan B}{1-\tan A\tan B}} ہے۔اس کلیہ  کو اخذ کریں۔
+\انتہا{سوال}
+%================
+\ابتدا{سوال}
+\عددی{\tan(A-B)} کا کلیہ اخذ کریں۔
+\انتہا{سوال}
+%============================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_دائرہ_کوسائن}
+قاعدہ کوسائن کو شکل \حوالہ{شکل_سوال_ابتدا_دائرہ_کوسائن} پر لاگو کرتے ہوئے \عددی{\cos(A-B)} کا کلیہ حاصل کریں۔
+\begin{figure}
+\centering
+\begin{minipage}{0.3\textwidth}
+\begin{tikzpicture}
+\draw[-latex](-1.25,0)--(1.5,0)node[right]{$x$};
+\draw[-latex] (0,-1.2)--(0,1.5)node[above]{$y$};
+\draw(0,0) circle (1);
+\draw(0,0)--++(60:1)coordinate(kA);
+\draw(0,0)--++(160:1)coordinate(kB);
+\draw[-stealth]([shift={(0:0.3)}]0,0) arc (0:160:0.3);
+\draw[-stealth]([shift={(0:0.5)}]0,0) arc (0:60:0.5);
+\draw(125:0.5)node[]{$A$};
+\draw(22:0.7)node[]{$B$};
+\draw(kA)--(kB);
+\draw(1,0)node[below right]{$1$};
+\end{tikzpicture}
+\caption{شکل برائے سوال \حوالہ{سوال_ابتدا_دائرہ_کوسائن}}
+\label{شکل_سوال_ابتدا_دائرہ_کوسائن}
+\end{minipage}\hfill
+\begin{minipage}{0.6\textwidth}
+\begin{tikzpicture}
+\draw(0,0)node[below]{$B$}--(2,0)node[below]{$C$}node[pos=0.4,below]{$a$};
+\draw(2,0)--(1.5,2)node[above]{$A$}node[pos=0.5,right]{$b$};
+\draw(1.5,2)--(0,0)node[pos=0.5,left]{$c$};
+\draw(1.5,2)--($(0,0)!(1.5,2)!(2,0)$)node[pos=0.5,left]{$h$};
+\begin{scope}[xshift=3cm]
+\draw(0,0)node[below]{$B$}--(2,0)node[below]{$C$}node[pos=0.5,below]{$a$};
+\draw(2,0)--(3,2)node[above]{$A$}node[pos=0.4,right]{$b$};
+\draw(3,2)--(0,0)node[pos=0.5,left]{$c$};
+\draw(3,2)--($(0,0)!(3,2)!(3.5,0)$)node[pos=0.5,right]{$h$}coordinate(kB);
+\draw(2.2,0)--(3.2,0);
+\end{scope}
+\end{tikzpicture}
+\caption{اشکال برائے سوال \حوالہ{سوال_ابتدا_قاعدہ_سائن}}
+\label{شکل_سوال_ابتدا_قاعدہ_سائن}
+\end{minipage}
+\end{figure}
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+قاعدہ کوسائن کو شکل \حوالہ{شکل_سوال_ابتدا_دائرہ_کوسائن} کی طرز کے شکل پر لاگو کرتے ہوئے \عددی{\cos (A+B)} کا کلیہ اخذ کریں۔یہ شکل کیسا ہو گا۔ 
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}\ترچھا{کیلکولیٹر}\quad
+ایک مثلث کے اضلاع \عددی{a=2}، \عددی{b=3} اور زاویہ \عددی{C=60^{\circ}} ہیں۔  ضلع \عددی{c} کی لمبائی تلاش کریں۔ \\
+جواب:\quad
+$c=\sqrt{7}\approx 2.646$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\ترچھا{کیلکولیٹر}\quad
+ایک مثلث کے اضلاع \عددی{a=2}، \عددی{b=3} اور زاویہ \عددی{C=40^{\circ}} ہیں۔  ضلع \عددی{c} کی لمبائی تلاش کریں۔ 
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_قاعدہ_سائن}\ترچھا{قاعدہ سائن}\quad
+قاعدہ سائن کہتا ہے کہ اگر مثلث کے زاویے \عددی{A}، \عددی{B}، \عددی{C} کے سامنے اضلاع بالترتیب \عددی{a}، \عددی{b}، \عددی{c} ہوں تب درج ذیل ہو گا۔
+\begin{align*}
+\tfrac{\sin A}{a}=\tfrac{\sin B}{b}=\tfrac{\sin C}{c}
+\end{align*} 
+اشکال \حوالہ{شکل_سوال_ابتدا_قاعدہ_سائن} اور مماثل \عددی{\sin(\pi-\theta)=\sin \theta} استعمال کرتے ہوئے اس قاعدہ کو اخذ کریں۔
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}\ترچھا{کیلکولیٹر} \quad
+ایک مثلث کے اضلاع \عددی{a=2}، \عددی{b=3} اور زاویہ \عددی{C=60^{\circ}} ہیں۔  \عددی{\sin B} کو قاعدہ سائن سے حاصل کریں۔
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}\ترچھا{کیلکولیٹر}\quad
+ایک مثلث کا ضلع \عددی{c=2} اور زاویے  \عددی{A=\tfrac{\pi}{4}} اور \عددی{B=\tfrac{\pi}{3}} ہیں۔زاویہ \عددی{A} کا مخالف ضلع \عددی{a} اور  تلاش کریں۔\\
+جواب:\quad
+$a=1.464$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال} \ترچھا{تخمین \عددی{\sin x\approx x}}  
+\quad
+\عددی{x} کی چھوٹی قیمتوں کے لئے \عددی{\sin x \approx x} ہوتا ہے جہاں \عددی{x} کی ناپ ریڈیئن میں ہے۔اس کی وجہ تیسرے باب میں بتلائی جائے گی۔ \عددی{\abs{x}<0.1} کے لئے تخمینی خلل \عددی{5000} میں \عددی{1} حصہ سے کم ہو گا۔\\
+(الف)\quad
+کمپیوٹر پر \عددی{y=x} اور \عددی{y=\sin x} کو مبدا کے قریب قیمتوں کے لئے ترسیم کریں جہاں \عددی{x} کی ناپ ریڈیئن میں ہے۔مبدا کے بالکل قریب کیا صورت حال ہے؟\\
+(ب)\quad
+کمپیوٹر پر \عددی{y=x} اور \عددی{y=\sin x} کو مبدا کے قریب قیمتوں کے لئے ترسیم کریں جہاں \عددی{x} کی ناپ درجات میں ہے۔مبدا کے بالکل قریب کیا صورت حال ہے؟\\
+(پ)\quad
+کیلکولیٹر استعمال کرتے ہوئے \عددی{x=0.1} کے لئے \عددی{\sin x} حاصل کریں۔اگر آپ کا کیلکولیٹر ریڈیئن استعمال کر رہا ہو تب جواب تقریباً \عددی{0.1} ہی ہو گا۔اگر کیلکولیٹر درجات استعمال کر رہا ہو تب جواب مختلف ہو گا۔
+\انتہا{سوال}
+%===================
+
+\موٹا{عمومی سائن ترسیم}\\
+شکل \حوالہ{شکل_ابتدا_عمومی_سائن} میں درج ذیل تفاعل کی ترسیم یعنی عمومی سائن ترسیم دکھائی گئی ہے جہاں \عددی{\abs{A}} حیطہ، \عددی{\abs{B}} دوری عرصہ، \عددی{C} افقی منتقلی اور \عددی{D} انتصابی منتقلی ہے۔سوال \حوالہ{سوال_ابتدا_عمومی_سائن_الف} تا سوال \حوالہ{سوال_ابتدا_عمومی_سائن_ب} میں عمومی سائن تفاعل کے \عددی{A}، \عددی{B}، \عددی{C} اور \عددی{D} تلاش کریں۔تفاعل ترسیم کریں۔ 
+\begin{align*}
+f(x)=A\sin\big(\tfrac{2\pi}{B}(x-C)\big)+D
+\end{align*}
+%
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,axis on top,small,axis lines=middle,ymin=-0.2,ymax=2.5,xmax=900,xtick={\empty},ytick={0.3,1.3,2.3},yticklabels={$D-A$,$D$,$D+A$},xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\draw[stealth-stealth] (axis cs:200,0)--(axis cs:200,1.3)node[pos=0.5,fill=white,align=center,font=\footnotesize]{\RL{انتصابی منتقلی} \\  $D$};
+\draw[stealth-stealth](axis cs:0,1.5)--(axis cs:150,1.5)node[pos=0.5,above,align=center,font=\footnotesize]{\RL{افقی منتقلی}  \\ $C$};
+\addplot[domain=-20:720,samples=100]{1.3+sin(x-150)};
+\draw[dashed](axis cs:0,1.3)--(axis cs:900,1.3)node[pos=1,right,font=\footnotesize]{$y=D$};
+\draw[](axis cs:150+90+20,2.3)--(axis cs:150+90+180,2.3);
+\draw[stealth-stealth](axis cs:150+90+150,1.3)--(axis cs:150+90+150,2.3)node[pos=0.5,fill=white,font=\footnotesize,align=center]{حیطہ \\ $A$};
+\draw[](axis cs:150+180,1.2)--(axis cs:150+180,0.15);
+\draw[](axis cs:150+180+360,1.2)--(axis cs:150+180+360,0.15);
+\draw[stealth-stealth](axis cs:150+180,0.2)--(axis cs:150+180+360,0.2)node[pos=0.6,fill=white,align=center,font=\footnotesize]{\RL{دوری عرصہ}\\ $B$};
+\draw(axis cs:0,0)node[below left]{$M$};
+\end{axis}
+\end{tikzpicture}
+\caption{عمومی سائن تفاعل}
+\label{شکل_ابتدا_عمومی_سائن}
+\end{figure}
+
+\ابتدا{سوال}\شناخت{سوال_ابتدا_عمومی_سائن_الف}
+$y=2\sin (x+\pi)-1$\\
+جواب:\quad
+\عددی{A=2,B=2\pi,C=-\pi,D=-1}؛ شکل \حوالہ{شکل_سوال_ابتدا_عمومی_سائن_الف}
+\begin{figure}
+\centering
+\begin{minipage}{0.33\textwidth}
+\begin{tikzpicture}
+\begin{axis}[clip=false,tiny,axis lines=middle,width=4cm,ytick={-3,1},xlabel={$x$},ylabel={$y$},ymin=-3.2,ymax=1.5,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-90,90,270,540},xticklabels={$-\tfrac{\pi}{2}$,$\tfrac{\pi}{2}$,$\tfrac{3\pi}{2}$,$\tfrac{5\pi}{2}$}]
+\addplot[domain=-200:400,samples=100]{2*sin(x+180)-1};
+\draw(axis cs:290,-2)node[font=\tiny,fill=white]{$y=2\sin(x+\pi)-1$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_ابتدا_عمومی_سائن_الف}
+\end{minipage}%
+\begin{minipage}{0.33\textwidth}
+\begin{tikzpicture}
+\begin{axis}[clip=false,tiny,axis lines=middle,width=4cm,ytick={-0.318,0.955},yticklabels={$-\tfrac{1}{\pi}$,$\tfrac{3}{\pi}$},xlabel={$t$},ylabel={$y$},ymin=-0.5,ymax=1.2,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-1,1,3,5}]
+\addplot[domain=-2:6,samples=100]{-2/pi*sin(90*x)+1/pi};
+\draw(axis cs:3,0.5)node[font=\tiny,fill=white]{$y=\tfrac{2}{\pi}\sin\tfrac{\pi t}{2}+\tfrac{1}{\pi}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_ابتدا_عمومی_سائن_درکار_ب}
+\end{minipage}%
+\end{figure}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$y=\tfrac{1}{2}\sin(\pi x-\pi)+\tfrac{1}{2}$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$y=-\tfrac{2}{\pi}\sin(-\tfrac{\pi t}{2})+\tfrac{1}{\pi}$\\
+جواب:\quad
+\عددی{A=-\tfrac{2}{\pi}, B=4,C=0,D=\tfrac{1}{\pi}}؛ شکل \حوالہ{شکل_سوال_ابتدا_عمومی_سائن_درکار_ب}
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}\شناخت{سوال_ابتدا_عمومی_سائن_ب}
+$y=\tfrac{L}{2\pi}\sin \tfrac{2\pi t}{L}, \quad L>0$
+\انتہا{سوال}
+%=========================
+سوال \حوالہ{سوال_ابتدا_عمومی_سائن_مزید_الف} تا سوال \حوالہ{سوال_ابتدا_عمومی_سائن_مزید_الف} میں عمومی سائن تفاعل \عددی{f(x)=A\sin(\tfrac{2\pi}{B}(x-C))+D} پر ترسیم کی مدد سے غور کیا جائے گا۔ترسیم کے لئے کمپیوٹر استعمال کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_ابتدا_عمومی_سائن_مزید_الف} \ترچھا{دوری عرصہ}\quad
+\عددی{A=3,C=D=0} لیتے ہوئے (الف) \عددی{B=1,3,2\pi, 5\pi} کے لئے وقفہ \عددی{-4\pi\le x\le 4\pi} پر تفاعل ترسیم کریں۔دوری عرصہ بڑھانے سے تفاعل کی صورت پر کیا اثر ہوتا ہے؟  (ب)  \عددی{B} کی منفی قیمتوں کے لئے ترسیم پر کیا اثر ہو گا؟ \عددی{B=-3} اور \عددی{B=-2\pi} کے لئے ترسیم کرتے ہوئے دیکھیں۔
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}\ترچھا{افقی منتقلی}\quad
+\عددی{A=3,B=6,D=0} لیتے ہوئے (الف) تفاعل \عددی{f(x)} کو \عددی{C=0,1,2} کے لئے وقفہ \عددی{-4\pi\le x\le 4\pi} پر ترسیم کریں۔ \عددی{C} کی بڑھتے مثبت قیمت کا ترسیم پر کیا اثر ہو گا؟  (ب) \عددی{C} کی منفی قیمتوں کے لئے ترسیم کیسی ہو گی۔ (پ)  صفر افقی منتقلی کے لئے \عددی{C} کی کم تر مثبت قیمت کیا ہو گی؟ترسیم کر کے اپنے جواب کی تصدیق کریں۔
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}\ترچھا{انتصابی منتقلی}\quad
+\عددی{A=3,B=6,C=0} لیتے ہوئے (الف) تفاعل \عددی{f(x)} کو \عددی{D=0,1,3} کے لئے وقفہ \عددی{-4\pi \le x\le 4\pi} پر ترسیم کریں۔\عددی{D} کی بڑھتی مثبت قیمتوں کے لئے ترسیم پر کیا اثر ہو گا؟ (ب) \عددی{D} کی منفی قیمتوں کے لئے ترسیم کیسی ہو گی؟
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}\ترچھا{حیطہ}\quad
+\عددی{B=6,C=D=0} لیتے ہوئے (الف) \عددی{A} کی مثبت بڑھتی قیمتوں کا ترسیم پر کیا اثر ہو گا؟ \عددی{f(x)} کو \عددی{A=1,5,9} کے لئے ترسیم کرتے ہوئے اپنے جواب کی تصدیق کریں۔ (ب) \عددی{A} کی منفی قیمتوں کے لئے ترسیم کیسی ہو گی؟ 
+\انتہا{سوال}
+%====================
