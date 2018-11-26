@@ -1,0 +1,42 @@
+\documentclass{standalone}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage{bm}	
+\usepackage{steinmetz}		%\phase to show angle of phasors
+\usepackage{amsmath}
+\usepackage{commath}	
+\usepackage{pgfplots,filecontents}
+%\pgfplotsset{compat=1.9}
+%\usepgfplotslibrary{polar}
+\usepackage{circuitikz}
+\usepackage{siunitx}
+%\usepackage{tikz-3dplot}
+%\usetikzlibrary{3d,shadings,fadings,intersections,calc}
+
+%\input{../../tex/myEMTvectors.tex}
+\usepackage{graphics}
+\usepackage[]{graphicx} 
+  \setmainlanguage{english}
+\setotherlanguages{arabic}
+\newfontfamily\arabicfont[Scale=1.0,Script=Arabic]{Jameel Noori Nastaleeq}
+\newfontfamily\urdufont[Scale=1.0,Script=Arabic]{Jameel Noori Nastaleeq}
+
+
+
+%\pgfplotsset{major y grid style={dashed}}
+\DeclareMathOperator{\kSi}{Si} 
+\begin{document}
+\begin{urdufont}
+
+\begin{tikzpicture}
+\begin{axis}[clip=false,height=5cm,width=0.75\textwidth,grid=both,small,xlabel={\RL{دن $t\,\,$}},ytick={0,0.2,0.4,0.6,0.8,1},yticklabels={$0$,$50$,$100$,$150$,$200$,$250$},ymin=0,ymax=1.1,xmin=-2,xmax=2,xtick={-2,-1,0,1,2},xticklabels={$0$,$10$,$20$,$30$,$40$},ylabel={\RL{آبادی $p\,\,$}}]
+\addplot [] table [x index={0}, y index={1}]{normalDistributionFlies.dat};
+\draw(axis cs:0,0.5)node[circ]{}node[left]{$N(20,125)$};
+\draw(axis cs:1.7,0.955)node[circ]{}node[left,yshift={1mm}]{$Q(37,239)$};
+\draw[shorten >=-0.75cm,shorten <=-0.75cm](axis cs:0,0.5)--(axis cs:1.7,0.955);
+\draw[dashed](axis cs:0,0.5)--(axis cs:1.7,0.5)node[pos=0.5,below]{$\Delta t=17$};
+\draw[dashed](axis cs:1.7,0.5)--(axis cs:1.7,0.955)node[pos=0.5,right,fill=white]{$\Delta p=114$};
+\end{axis}%
+\end{tikzpicture}
+\end{urdufont}
+\end{document}
