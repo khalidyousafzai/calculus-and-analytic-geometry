@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2018.2.24)  27 NOV 2018 17:03
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2018.2.24)  29 NOV 2018 16:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1835,14 +1835,14 @@ Package: ifsym 2000/04/18 I.Kloeckl
 Package: polynom 2006/04/20 0.17 (CH,HA)
 \pld@currstage=\count316
 )
-(./tex/myUrduCommandsMaths.tex
+(./tex/myUrduCommandsCalculus.tex
 \c@examplecounter=\count317
 \c@practicecounter=\count318
 \c@questioncounter=\count319
 \c@lawcounter=\count320
 \c@kthcounter=\count321
-) (./tex/myUrduGreek.tex) (./tex/myEMTvectors.tex) (./tex/myDeclareFunctions.te
-x)
+) (./tex/myUrduGreek.tex)
+(./tex/myEMTvectors.tex) (./tex/myDeclareFunctions.tex)
 (./tex/myCircuitDimensionsAndMathematicalSymbols.tex)
 (./tex/myTikzCommandsCircuitAnalysis.tex)
 \@indexfile=\write5
@@ -1862,11 +1862,7 @@ LaTeX Font Warning: Font shape `EU1/ppl/m/n' undefined
 (Font)              using `EU1/lmr/m/n' instead on input line 6.
 
 ) (./tex/prefaceFirstBook.aux) (./tex/calculusPreliminaries.aux)
-(./tex/calculusLimitsAndContinuity.aux)
-No file ./tex/mathAppendixAdditionalProofs.aux.
-No file ./tex/mathAppendixAuxiliaryMaterial.aux.
-No file ./tex/mathTables.aux.
-)
+(./tex/calculusLimitsAndContinuity.aux) (./tex/calculusAppendixB.aux))
 \openout1 = `calculusAndAnalyticGeometry.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
@@ -1885,7 +1881,8 @@ LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 88.
 LaTeX Font Info:    ... okay on input line 88.
 LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 88.
 LaTeX Font Info:    Try loading font information for T3+cmr on input line 88.
- (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
+
+(/usr/share/texmf/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
 LaTeX Font Info:    ... okay on input line 88.
@@ -3276,39 +3273,36 @@ Overfull \hbox (2.16617pt too wide) in paragraph at lines 360--367
  []
 
 [102] [103]
-Underfull \hbox (badness 10000) in paragraph at lines 442--444
+Underfull \hbox (badness 10000) in paragraph at lines 443--445
 [][]
  []
 
 [104]
-Underfull \hbox (badness 10000) in paragraph at lines 542--543
-[][]
- []
-
-
-Overfull \hbox (35.37167pt too wide) in paragraph at lines 548--550
+Overfull \hbox (0.35516pt too wide) in paragraph at lines 550--552
 []\EU1/JameelNooriNastaleeq(0)/bx/n/10 حاصل کر سکتا ہو۔اس جدول سے  $[] \OML/zpl
 m/m/it/10 f\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )$  \EU1/Jamee
 lNooriNastaleeq(0)/bx/n/10 کی اندازاً قیمت حاصل کریں۔اس کے برعکس نقاط  $\OML/zp
 lm/m/it/10 x \OT1/zplm/m/n/10 = \OMS/zplm/m/n/10 ^^@\OT1/ppl/m/n/10 2.9, \OMS/z
-plm/m/n/10 ^^@\OT1/ppl/m/n/10 2.99, \OMS/zplm/m/n/10 ^^@\OT1/ppl/m/n/10 2.999, 
-[] $[]
+plm/m/n/10 ^^@\OT1/ppl/m/n/10 2.99, [] $[]
  []
 
-[105] [106] [107] [108] [109] [110] [111] [112] [113] [114]) [115] [116
+[105] [106] [107] [108] [109] [110] [111] [112] [113] [114] [115] [116]
+[117] [118] [119] [120] [121] [122] [123]) [124] [125]
+\openout2 = `./tex/calculusAppendixB.aux'.
 
 
+(./tex/calculusAppendixB.tex [126
 
 
 
 ]
-(./calculusAndAnalyticGeometry.aux (./tex/mathPreface.aux)
+ضمیمہ ا.
+) [127] [128
+
+
+] (./calculusAndAnalyticGeometry.aux (./tex/mathPreface.aux)
 (./tex/prefaceFirstBook.aux) (./tex/calculusPreliminaries.aux)
-(./tex/calculusLimitsAndContinuity.aux)
-No file ./tex/mathAppendixAdditionalProofs.aux.
-No file ./tex/mathAppendixAuxiliaryMaterial.aux.
-No file ./tex/mathTables.aux.
-)
+(./tex/calculusLimitsAndContinuity.aux) (./tex/calculusAppendixB.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 3.75237pt have occurred.
@@ -3318,12 +3312,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 46475 strings out of 493918
- 1098050 string characters out of 6150563
- 1321105 words of memory out of 5000000
- 48816 multiletter control sequences out of 15000+600000
+ 46650 strings out of 493918
+ 1101904 string characters out of 6150563
+ 1322043 words of memory out of 5000000
+ 48987 multiletter control sequences out of 15000+600000
  53817 words of font info for 202 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  72i,25n,92p,10495b,2270s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on calculusAndAnalyticGeometry.pdf (31 pages).
+Output written on calculusAndAnalyticGeometry.pdf (43 pages).

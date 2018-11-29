@@ -49,7 +49,7 @@
 \usepackage{polynom}
 
 
-\input{./tex/myUrduCommandsMaths.tex}                  %turning latex into urdu
+\input{./tex/myUrduCommandsCalculus.tex}                  %turning latex into urdu
 \input{./tex/myUrduGreek.tex}
 \input{./tex/myEMTvectors.tex}
 \input{./tex/myDeclareFunctions.tex}     %\sech, \csch, \arcsh, \arcs   hyperbolic and arc-secant etc
@@ -61,8 +61,8 @@
 \graphicspath{{./fig/figFrontPage/}{./fig/figCalculusLimits/}{./fig/figCalculusB/}}%paths to figures
 
 
-%\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries}
-\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusLimitsAndContinuity}
+%\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusAppendixB}
+\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusLimitsAndContinuity,./tex/calculusAppendixB}
 %
 %\includeonly{./tex/cktSymbols,./tex/cktPreface,./tex/prefaceFirstBook,./tex/mathNumericalMethodsForDifferentialEquations,./tex/mathAppendixAdditionalProofs,./tex/mathAppendixAuxiliaryMaterial,./tex/mathTables}%
 
@@ -121,6 +121,7 @@
 
 
 
+
 %=========================================================
 %\addcontentsline{toc}{chapter}{حوالہ}     %it is standard not to include References in toc. 
 %\renewcommand*{\bibname}{حوالہ}      %this command has to be placed right here
@@ -140,9 +141,8 @@
 %\end{thebibliography}
 %============================================================
 \appendix
-\include{./tex/mathAppendixAdditionalProofs}
-\include{./tex/mathAppendixAuxiliaryMaterial}
-\include{./tex/mathTables}
+\include{./tex/calculusAppendixB}
+
 %
 
 %\include{./tex/emtEndOfBookTableDivergenceCurlGradientLaplacian}
