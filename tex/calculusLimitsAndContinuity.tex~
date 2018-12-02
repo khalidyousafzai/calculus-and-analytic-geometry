@@ -1415,11 +1415,11 @@ $f(x)=\sqrt{3x+1},\quad x=0$
 \انتہا{سوال}
 %==========================
 
-\حصہ{ہدف قیمتیں اور حد کی تعریف}\شناخت{حصہ_حد_ہدف_قیمتیں_اور_حد}
+\حصہ{مطلوبہ قیمتیں اور حد کی تعریف}\شناخت{حصہ_حد_مطلوبہ_قیمتیں_اور_حد}
 اس حصہ میں ہم حد کی با ضابطہ تعریف پیش کرتے ہیں۔یہ تعریف کسی بھی مثال کے لئے قابل استعمال ہو گی۔ اس سے پہلے ہم تفاعل کی خارجی قیمت کو مقررہ حدود کے اندر رکھنے کی خاطر اس کے داخلی قیمتوں پر غور کرتے ہیں۔
 
-\جزوحصہء{خارجی قیمتوں کو ہدف کے قریب رکھنا}
-ہم بعض اوقات جاننا چاہتے ہیں کہ \عددی{x} کی کون سی قیمتیں  تفاعل \عددی{y=f(x)} کی قیمتوں کو کسی مخصوص ہدف قیمت کے قریب رکھے گی۔کتنا قریب کا دارومدار درپیش مسئلہ پر ہو گا۔مثلاً پٹرول پمپ پر ہم آخری قطرہ حاصل کرنا چاہیں گے۔مرمت کے دوران  مستری انجن  کی  نلی کا قطر \عددی{\SI{50}{\micro\meter}} درستگی کے اندر رکھنا چاہے گا اور دوا ساز اجزاء کو قریبی ملی گرام تک ناپے گا۔
+\جزوحصہء{خارجی قیمتوں کو مطلوبہ قیمتوں کے قریب رکھنا}
+ہم بعض اوقات جاننا چاہتے ہیں کہ \عددی{x} کی کون سی قیمتیں  تفاعل \عددی{y=f(x)} کی قیمتوں کو کسی مخصوص مطلوبہ قیمت کے قریب رکھے گی۔کتنا قریب کا دارومدار درپیش مسئلہ پر ہو گا۔مثلاً پٹرول پمپ پر ہم آخری قطرہ حاصل کرنا چاہیں گے۔مرمت کے دوران  مستری انجن  کی  نلی کا قطر \عددی{\SI{50}{\micro\meter}} درستگی کے اندر رکھنا چاہے گا اور دوا ساز اجزاء کو قریبی ملی گرام تک ناپے گا۔
 
 \ابتدا{مثال}\شناخت{مثال_حد_قابو_الف}\ترچھا{خطی تفاعل قابو کرنا}\\
 تفاعل \عددی{y=2x-1} کے خارجی قیمت کو \عددی{y_0=7} کے \عددی{2} اکائی قریب رکھنے کی خاطر \عددی{x} کو \عددی{x_0=4} کے کتنا قریب رکھنا ضروری ہے؟\\
@@ -1439,11 +1439,13 @@ $f(x)=\sqrt{3x+1},\quad x=0$
 \عددی{x} کو \عددی{x_0=4} کے \عددی{1} اکائی کے اندر  رکھتے ہوئے \عددی{y} کی قیمت \عددی{y_0=7} کے \عددی{2} اکائیوں کے اندر رہے گی (شکل \حوالہ{شکل_مثال_حد_قابو_الف})۔
 \begin{figure}
 \centering
+\begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}[x={0.25cm},y={0.25cm}]
 \draw[-latex](-1,0)--(12,0)node[right]{$x$};
 \draw[-latex](0,-2.5)--(0,12)node[above]{$y$};
-\draw[dashed,name path=kA](0,9)node[left]{$9$}--++(12,0)node[pos=0.75,above]{\RL{بالائی حدود}}node[right]{$y=9$};
-\draw[dashed,name path=kB](0,5)node[left]{$5$}--++(12,0)node[pos=0.75,above]{\RL{نچلی حدود}}node[right]{$y=5$};
+\draw[dashed,name path=kA](0,9)node[left]{$9$}--++(12,0)node[pos=0.75,above]{\RL{بالائی سطح}}node[right]{$y=9$};
+\draw[dashed,name path=kB](0,5)node[left]{$5$}--++(12,0)node[pos=0.75,above]{\RL{نچلی سطح}}node[right]{$y=5$};
 \draw(0,7)node[circ]{}node[left]{$7$};
 \draw[name path=kC](-0.5,-2)--(7,13)node[right]{$y=2x-1$};
 \draw[dashed](3,0)node[below]{$3$}--(3,12);
@@ -1455,10 +1457,213 @@ $f(x)=\sqrt{3x+1},\quad x=0$
 \RL{اس کو قابو کریں}};
 \draw(4,7)node[circ]{};
 \end{tikzpicture}
-\caption{$x$ کی قیمت قابو کرتے ہوئے $y$ کی قیمت قابو کی جاتی ہے}
+\caption{$x$ کی قیمت قابو کرتے ہوئے $y$ کی قیمت قابو کی جاتی ہے (مثال \حوالہ{مثال_حد_قابو_الف})}
 \label{شکل_مثال_حد_قابو_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1.75,2.28},ytick={1.8,2.2}]
+\addplot[domain=0.6667:0.8] {sqrt(3*x-2)};
+\addplot[domain=0.8:3.2] {sqrt(3*x-2)}node[pos=0.9,left,xshift={-1mm}]{$y=\sqrt{3x-2}$};
+\addplot[dashed] plot coordinates {(1.75,0) (1.75,1.8)};
+\addplot[dashed]plot coordinates {(2.28,0) (2.28,2.2)};
+\addplot[dashed] plot coordinates {(0,1.8) (4,1.8)};
+\addplot[dashed]plot coordinates {(0,2.2) (4,2.2)};
+\end{axis}
+\end{tikzpicture}
+\caption{$y$ کو $1.8$ اور $2.2$ کے اندر رکھنے کی خاطر $x$ کو $1.75$ اور $2.28$ کے اندر رکھنا ہو گا۔}
+\label{شکل_مثال_حد_قابو_ب}
+\end{minipage}
 \end{figure}
 \انتہا{مثال}
 %==========================
 
 \جزوحصہء{ٹیکنالوجی}
+\ترچھا{مطلوبہ قیمتیں:}\quad
+کمپیوٹر پر ترسیم کھینچ کر مطلوبہ قیمتوں پر تجربے کیے جا سکتے ہیں۔درکار تفاعل کی ترسیم پر بالائی اور نچلی مطلوبہ سطحوں کو افقی لکیروں سے ظاہر کریں۔ترسیم کو اتنا بڑا کریں کہ مطلوبہ وقفہ صاف نظر آئے۔یوں مطلوبہ وقفہ میں تفاعل کا رویہ دیکھا جا سکتا ہے۔
+
+مثال کے طور پر \عددی{f(x)=\sqrt{3x-2}} کے ترسیم پر \عددی{y} محور کے مطلوبہ وقفہ \عددی{(1.8,2.2)} پر غور کریں۔یوں \عددی{y_1=f(x)}، \عددی{y_2=1.8} اور \عددی{y_3=2.2} ترسیم کریں (شکل \حوالہ{شکل_مثال_حد_قابو_ب})۔اسی طرح مطلوبہ وقفہ \عددی{(1.98,2.02)} اور \عددی{(1.9998,2.0002)} پر بھی تفاعل کا رویہ دیکھیں۔
+
+\ابتدا{مثال}
+\عددی{\SI{6}{\centi\meter}} اندرونی قطر کے ایک لڑر پیمائشی پیالے پر \عددی{\SI{1}{\milli\meter}} وقفہ پر افقی لکیریں کیوں کھینچی گئی ہوتی ہیں۔\\
+پیالے میں مائع کا حجم \عددی{H=\pi r^2 h=36\pi h} ہو گا جہاں پیالے کا اندرونی رداس \عددی{r} اور مائع کی گہرائی \عددی{h} ہے۔ ایک لٹر \عددی{(\SI{1000}{\centi\meter\cubed})} پانی ناپنے کی خاطر \عددی{h} کتنا ہو گا؟ ناپ میں خلل \عددی{\SI{1}{\percent}} سے کم ہونا چاہیے۔\\
+حل:\quad
+ہم \عددی{h} کا ایسا وقفہ تلاش کرنا چاہتے ہیں کہ درج ذیل مطمئن ہوتا ہو۔
+\begin{align*}
+\abs{H-1000}=\abs{36\pi h-1000}\le 10
+\end{align*}
+یوں ہمیں درج ذیل عدم مساوات حل کرنی ہو گی۔
+\begin{align*}
+\abs{36\pi h-1000}&\le 10\\
+-10\le 36\pi h-1000&\le 10\\
+990\le 36\pi h&\le 1010\\
+\tfrac{990}{36\pi}\le h &\le \tfrac{1010}{36\pi}\\
+8.8\le h &\le 8.9
+\end{align*}
+یوں \عددی{\SI{1}{\percent}} درستگی کی خاطر درکار وقفہ گہرائی \عددی{8.9-8.8=\SI{0.1}{\centi\meter}} یعنی \عددی{\SI{1}{\milli\meter}} ہے۔پیالے پر ایک ملی میٹر فاصلے پر افقی لکیریں ہمیں ایک فی صد درستگی تک مائع ناپنے میں مدد دیتی ہیں جو کھانا تیار کرنے کے لئے کافی درستگی ہے۔
+\انتہا{مثال}
+%================
+
+\جزوحصہء{حد کی با ضابطہ تعریف}
+مطلوبہ قیمت مسئلے میں ہم جاننا چاہتے ہیں کہ متغیر \عددی{x} کو کسی مخصوص قیمت \عددی{x_0} کے کتنے قریب رکھتے ہوئے تفاعل \عددی{f(x)} کی قیمت کو مطلوبہ قیمت \عددی{y_0} کے قریب مخصوص وقفہ میں رکھنا ممکن ہو گا۔یہ دکھانے کی خاطر کہ \عددی{x\to x_0} کرنے سے \عددی{f(x)} کا حد \عددی{L} حاصل ہوتا ہے، ہمیں دکھانا ہو گا کہ ہم 
+\عددی{x} کو \عددی{x_0} کے بہت قریب کرتے ہوئے  \عددی{f(x)} اور \عددی{L} میں فرق کو \ترچھا{کسی بھی معینہ خلل} سے کم کر سکتے ہیں۔
+
+فرض کریں ہم  \عددی{f(x)} کی قیمت کو دیکھتے ہوئے \عددی{x} کو \عددی{x_0} کے قریب لاتے ہیں (تاہم  ہم \عددی{x} کی قیمت کو کبھی بھی \عددی{x_0} کے برابر نہیں کرتے ہیں)۔ہم چاہیں گے کہ ہم کہہ سکیں کہ \عددی{x_0} سے \عددی{x} کا فاصلہ \عددی{\delta} سے کم رکھنے سے \عددی{f(x)} اور \عددی{L} کی قیمت میں فرق \عددی{L} کی اکائی کے دسویں حصے  سے کم ہو گی (شکل \حوالہ{شکل_حد_تعریف_ایک_قدم})۔البتہ اتنا کافی نہیں ہے چونکہ \عددی{x} کو \عددی{x_0} کے مزید قریب کرنے سے کیا معلوم کہ وقفہ \عددی{L-\tfrac{1}{10}} تا \عددی{L+\tfrac{1}{10}} کے بیچ \عددی{f(x)} کی قیمت  \عددی{L} کے مزید قریب ہونے کی بجائے تھر تھراتی ہو۔
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-0.25,0)--(4,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,3.2)node[above]{$y$};
+\draw(2,0)node[ocirc]{}node[below]{$x_0$};
+\draw(1,0)node[]{$($}node[below]{$x_0-\delta$};
+\draw(3,0)node[]{$)$}node[below]{$x_0+\delta$};
+\draw(2.4,0)node[circ]{}node[above]{$x$};
+\draw(0,1.5)node[left]{$L$}--++(0.1,0);
+\draw(0,0.5)node[rotate=90]{$($}node[left,xshift={-1mm}]{$L-\tfrac{1}{10}$};
+\draw(0,2.5)node[rotate=90]{$)$}node[left,xshift={-1mm}]{$L+\tfrac{1}{10}$};
+\draw(0,2.1)node[circ]{}node[right]{$f(x)$};
+\draw [decorate,decoration={brace,amplitude=10pt},yshift=10pt](1,0) -- (3,0)node [black,midway,yshift=15pt] {\footnotesize
+\RL{یہاں تمام $x\ne x_0$ کے لئے}};
+\draw [decorate,decoration={brace,amplitude=10pt},xshift=20pt](0,2.5) -- (0,0.5)node [black,midway,right,xshift=9pt] {\footnotesize
+\RL{$f(x)$ یہاں رہے گا}};
+\end{tikzpicture}
+\caption{حد کی تعریف میں ایک قدم}
+\label{شکل_حد_تعریف_ایک_قدم}
+\end{figure}
+
+ہمیں بتلایا جا سکتا ہے کہ  \عددی{\tfrac{L}{100}} یا \عددی{\tfrac{L}{1000}} یا \عددی{\tfrac{L}{100,000}} سے کم خلل کو برداشت کیا جا سکتا ہے۔ہر مرتبہ ہم \عددی {x_0} کے قریب  ایسا نیا وقفہ \عددی{\delta} تلاش کرتے ہیں جس کے اندر \عددی{x} رکھتے ہوئے قابل برداشت خلل کے اندر رہا جا سکتا ہے۔البتہ ہر مرتبہ اس امکان کو رد نہیں کیا جا سکتا ہے کہ \عددی{x_0} کے مزید قریب جانے سے  \عددی{f(x)} کی قیمت تھر تھراتے ہوئے \عددی{L} سے دور ہو جاتی ہو۔
+
+شکل \حوالہ{شکل_حد_شکی_اور_عالم} میں اس مسئلے کی وضاحت کی گئی ہے جسے آپ ایک شکی انسان اور ایک عالم کے مابین بحث تصور کر سکتے ہیں۔شکی انسان قابل قبول خلل \عددی{\epsilon}  پیش کرتا ہے جس کے مقابلے میں عالم درکار \عددی{\delta} پیش کرتا ہے۔
+\begin{figure}
+\centering
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\dY}{0.75}
+\draw[-latex](0,0)--(4,0)node[right]{$x$};
+\draw[-latex](0,0)--(0,2)node[above]{$y$};
+\draw[name path=kC](0,0.10) to [out=45,in=-170] (2,1) to [out=10,in=-135](4,2);
+\draw[dashed,name path=kA] (0,1+\dY)node[left]{$L+\tfrac{1}{10}$}--++(4,0);
+\draw[dashed,name path=kB] (0,1-\dY)node[left]{$L-\tfrac{1}{10}$}--++(4,0);
+\path[dashed,name path=kL](0,1)--++(4,0);
+\draw[dashed,name intersections={of={kC and kL}}](0,1)--(intersection-1)node[circ]{}--($(0,0)!(intersection-1)!(4,0)$)node[below]{$x_0$};
+\end{tikzpicture}
+\caption{پہلا مقابلہ: $\abs{f(x)-L}< \epsilon=\tfrac{1}{10}$ کریں}
+\end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\dY}{0.75}
+\draw[-latex](0,0)--(4,0)node[right]{$x$};
+\draw[-latex](0,0)--(0,2)node[above]{$y$};
+\draw[name path=kC](0,0.10) to [out=45,in=-170] (2,1) to [out=10,in=-135](4,2);
+\draw[dashed,name path=kA] (0,1+\dY)node[left]{$L+\tfrac{1}{10}$}--++(4,0);
+\draw[dashed,name path=kB] (0,1-\dY)node[left]{$L-\tfrac{1}{10}$}--++(4,0);
+\path[dashed,name path=kL](0,1)--++(4,0);
+\draw[dashed,name intersections={of={kC and kL}}](0,1)--(intersection-1)node[circ]{}--($(0,0)!(intersection-1)!(4,0)$)node[below]{$x_0$};
+\draw[dashed,name intersections={of={kC and kA}}](0,1+\dY)--(intersection-1)--($(0,0)!(intersection-1)!(4,0)$)node[below]{$x_0-\delta_1$};
+\draw[dashed,name intersections={of={kC and kB}}](0,1-\dY)--(intersection-1)--($(0,0)!(intersection-1)!(4,0)$)node[below]{$x_0+\delta_1$};
+\end{tikzpicture}
+\caption{پہلے جواب: $\abs{x-x_0}<\delta_1$ رکھیں}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\dY}{0.35}
+\draw[-latex](0,0)--(4,0)node[right]{$x$};
+\draw[-latex](0,0)--(0,2)node[above]{$y$};
+\draw[name path=kC](0,0.10) to [out=45,in=-170] (2,1) to [out=10,in=-135](4,2);
+\draw[dashed,name path=kA] (0,1+\dY)node[left]{$L+\tfrac{1}{100}$}--++(4,0);
+\draw[dashed,name path=kB] (0,1-\dY)node[left]{$L-\tfrac{1}{100}$}--++(4,0);
+\path[dashed,name path=kL](0,1)--++(4,0);
+\draw[dashed,name intersections={of={kC and kL}}](0,1)--(intersection-1)node[circ]{}--($(0,0)!(intersection-1)!(4,0)$)node[below]{$x_0$};
+\end{tikzpicture}
+\caption{دوسرا مقابلہ: $\abs{f(x)-L}< \epsilon=\tfrac{1}{100}$ کریں}
+\end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\dY}{0.35}
+\draw[-latex](0,0)--(4,0)node[right]{$x$};
+\draw[-latex](0,0)--(0,2)node[above]{$y$};
+\draw[name path=kC](0,0.10) to [out=45,in=-170] (2,1) to [out=10,in=-135](4,2);
+\draw[dashed,name path=kA] (0,1+\dY)node[left]{$L+\tfrac{1}{100}$}--++(4,0);
+\draw[dashed,name path=kB] (0,1-\dY)node[left]{$L-\tfrac{1}{100}$}--++(4,0);
+\path[dashed,name path=kL](0,1)--++(4,0);
+\draw[dashed,name intersections={of={kC and kL}}](0,1)--(intersection-1)node[circ]{}--($(0,0)!(intersection-1)!(4,0)$)node[below]{$x_0$};
+\draw[dashed,name intersections={of={kC and kA}}](0,1+\dY)--(intersection-1)--($(0,0)!(intersection-1)!(4,0)$)node[below]{$x_0-\delta_2$};
+\draw[dashed,name intersections={of={kC and kB}}](0,1-\dY)--(intersection-1)--($(0,0)!(intersection-1)!(4,0)$)node[below]{$x_0+\delta_2$};
+\end{tikzpicture}
+\caption{دوسرا جواب: $\abs{x-x_0}<\delta_2$ رکھیں}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\dY}{0.175}
+\draw[-latex](0,0)--(4,0)node[right]{$x$};
+\draw[-latex](0,0)--(0,2)node[above]{$y$};
+\draw[name path=kC](0,0.10) to [out=45,in=-170] (2,1) to [out=10,in=-135](4,2);
+\draw[dashed,name path=kA] (0,1+\dY)node[above left,solid]{$L+\tfrac{1}{1000}$}--++(4,0);
+\draw[dashed,name path=kB] (0,1-\dY)node[below left,solid]{$L-\tfrac{1}{1000}$}--++(4,0);
+\path[dashed,name path=kL](0,1)node[left]{$L$}--++(4,0);
+\draw[dashed,name intersections={of={kC and kL}}](0,1)--(intersection-1)node[circ]{}--($(0,0)!(intersection-1)!(4,0)$)node[below]{$x_0$};
+\end{tikzpicture}
+\caption{تیسرا مقابلہ: $\abs{f(x)-L}< \epsilon=\tfrac{1}{1000}$ کریں}
+\end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\dY}{0.175}
+\draw[-latex](0,0)--(4,0)node[right]{$x$};
+\draw[-latex](0,0)--(0,2)node[above]{$y$};
+\draw[name path=kC](0,0.10) to [out=45,in=-170] (2,1) to [out=10,in=-135](4,2);
+\draw[dashed,name path=kA] (0,1+\dY)node[above left,solid]{$L+\tfrac{1}{1000}$}--++(4,0);
+\draw[dashed,name path=kB] (0,1-\dY)node[below left,solid]{$L-\tfrac{1}{1000}$}--++(4,0);
+\path[dashed,name path=kL](0,1)node[left]{$L$}--++(4,0);
+\draw[dashed,name intersections={of={kC and kL}}](0,1)--(intersection-1)node[circ]{}--($(0,0)!(intersection-1)!(4,0)$)node[below]{$x_0$};
+\draw[dashed,name intersections={of={kC and kA}}](0,1+\dY)--(intersection-1)--($(0,0)!(intersection-1)!(4,0)$)node[below,xshift={3mm}]{$x_0+\delta_3$};
+\draw[dashed,name intersections={of={kC and kB}}](0,1-\dY)--(intersection-1)--($(0,0)!(intersection-1)!(4,0)$)node[below,xshift={-3mm}]{$x_0-\delta_3$};
+\end{tikzpicture}
+\caption{تیسرا جواب: $\abs{x-x_0}<\delta_3$ رکھیں}
+\end{subfigure}%
+\caption{شکی شخص اور عالم کا مقابلہ}
+\label{شکل_حد_شکی_اور_عالم}
+\end{figure}
+
+اس نا ختم ہونے والی بحث کو ہم یوں ختم کر سکتے ہیں کہ ہم ثابت کریں کہ ہر \عددی{\sigma} کے لئے ایسا \عددی{\delta} تلاش کرنا ممکن ہے جو \عددی{f(x)} کو \عددی{L} کے  قریب قابل قبول فاصلہ \عددی{\epsilon} کے اندر رکھتا ہو (شکل \حوالہ{شکل_حد_تعریف})۔
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-0.25,0)--(4,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,3.2)node[above]{$y$};
+\draw(2,0)node[ocirc]{}node[below]{$x_0$};
+\draw(1,0)node[]{$($}node[below]{$x_0-\delta$};
+\draw(3,0)node[]{$)$}node[below]{$x_0+\delta$};
+\draw(2.4,0)node[circ]{}node[above]{$x$};
+\draw(0,1.5)node[left]{$L$}--++(0.1,0);
+\draw(0,0.5)node[rotate=90]{$($}node[left,xshift={-1mm}]{$L-\epsilon$};
+\draw(0,2.5)node[rotate=90]{$)$}node[left,xshift={-1mm}]{$L+\epsilon$};
+\draw(0,2.1)node[circ]{}node[right]{$f(x)$};
+\draw [decorate,decoration={brace,amplitude=10pt},yshift=10pt](1,0) -- (3,0)node [black,midway,yshift=15pt] {\footnotesize
+\RL{یہاں تمام $x\ne x_0$ کے لئے}};
+\draw [decorate,decoration={brace,amplitude=10pt},xshift=20pt](0,2.5) -- (0,0.5)node [black,midway,right,xshift=9pt] {\footnotesize
+\RL{$f(x)$ یہاں رہے گا}};
+\end{tikzpicture}
+\caption{حد کی تعریف میں $\delta$ اور $\epsilon$ کا تعلق۔}
+\label{شکل_حد_تعریف}
+\end{figure}
+
+یوں آخر کار ہم ریاضی کی زبان میں یہ کہہ سکتے ہیں کہ \عددی{x} کو \عددی{x_0} کے جتنا زیادہ قریب کیا جائے، \عددی{f(x)} کی قیمت \عددی{L} کے اتنی قریب ہو گی۔
+
+\ابتدا{تعریف}\موٹا{حد کی با ضابطہ تعریف}\\
+فرض کریں کہ  \عددی{x_0} پر ایک کھلے وقفہ میں،  ممکنہ طور پر ماسوائے نقطہ \عددی{x_0} پر، \عددی{f(x)} معین ہے۔اگر ہر عدد \عددی{\epsilon>0} کے لئے ایسا مطابقتی عدد \عددی{\delta>0} پایا جاتا ہو کہ تمام \عددی{x} کے لئے درج ذیل مطمئن ہوتے ہوں  
+\begin{align*}
+0<\abs{x-x_0}<\delta,\quad \abs{f(x)-L}<\epsilon
+\end{align*}
+تب ہم کہتے ہیں کہ جیسے جیسے \عددی{x} کی قیمت \عددی{x_0} کے قریب پہنچتی ہو ویسے ویسے \عددی{f(x)} کی قیمت حد \عددی{L} کے قریب پہنچتی ہے جس کو الجبرائی طور پر درج ذیل لکھا جاتا ہے۔
+\begin{align*}
+\lim_{x\to x_0} f(x)=L
+\end{align*} 
+\انتہا{تعریف}
+%=========================
