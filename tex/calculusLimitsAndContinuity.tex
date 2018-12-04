@@ -1419,7 +1419,7 @@ $f(x)=\sqrt{3x+1},\quad x=0$
 اس حصہ میں ہم حد کی با ضابطہ تعریف پیش کرتے ہیں۔یہ تعریف کسی بھی مثال کے لئے قابل استعمال ہو گی۔ اس سے پہلے ہم تفاعل کی خارجی قیمت کو مقررہ حدود کے اندر رکھنے کی خاطر اس کے داخلی قیمتوں پر غور کرتے ہیں۔
 
 \جزوحصہء{خارجی قیمتوں کو مطلوبہ قیمتوں کے قریب رکھنا}
-ہم بعض اوقات جاننا چاہتے ہیں کہ \عددی{x} کی کون سی قیمتیں  تفاعل \عددی{y=f(x)} کی قیمتوں کو کسی مخصوص مطلوبہ قیمت کے قریب رکھے گی۔کتنا قریب کا دارومدار درپیش مسئلہ پر ہو گا۔مثلاً پٹرول پمپ پر ہم آخری قطرہ حاصل کرنا چاہیں گے۔مرمت کے دوران  مستری انجن  کی  نلی کا قطر \عددی{\SI{50}{\micro\meter}} درستگی کے اندر رکھنا چاہے گا اور دوا ساز اجزاء کو قریبی ملی گرام تک ناپے گا۔
+ہم بعض اوقات جاننا چاہتے ہیں کہ \عددی{x} کی کون سی قیمتیں  تفاعل \عددی{y=f(x)} کی قیمتوں کو کسی مخصوص مطلوبہ قیمت کے قریب رکھے گی۔کتنا قریب کا دارومدار درپیش مسئلہ پر ہو گا۔مثلاً پٹرول پمپ پر ہم آخری قطرہ حاصل کرنا چاہیں گے۔مرمت کے دوران  مستری انجن  کی  سلنڈر کا قطر \عددی{\SI{50}{\micro\meter}} درستگی کے اندر رکھنا چاہے گا اور دوا ساز اجزاء کو قریبی ملی گرام تک ناپے گا۔
 
 \ابتدا{مثال}\شناخت{مثال_حد_قابو_الف}\ترچھا{خطی تفاعل قابو کرنا}\\
 تفاعل \عددی{y=2x-1} کے خارجی قیمت کو \عددی{y_0=7} کے \عددی{2} اکائی قریب رکھنے کی خاطر \عددی{x} کو \عددی{x_0=4} کے کتنا قریب رکھنا ضروری ہے؟\\
@@ -1946,3 +1946,594 @@ $a=2.7591,b=3.2391,x_0=3$
 %=======================
 
 \موٹا{\عددی{\delta} کا حصول بذریعہ ترسیم}\\
+سوال \حوالہ{سوال_حد_ترسیم_ڈیلٹا_الف} تا سوال \حوالہ{سوال_حد_ترسیم_ڈیلٹا_ب} میں ترسیم سے ایسا \عددی{\delta>0} تلاش کریں کہ تمام \عددی{x} کے لئے درج ذیل ہو۔
+\begin{align*}
+0<\abs{x-x_0}<\delta\quad \implies \quad 0<\abs{f(x)-L}<\epsilon
+\end{align*}
+
+\ابتدا{سوال}\شناخت{سوال_حد_ترسیم_ڈیلٹا_الف}
+$f(x)=2x-4,x_0=5, L=6,\epsilon=0.2$\quad
+شکل \حوالہ{شکل_سوال_حد_ترسیم_ڈیلٹا_الف}
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\draw[-latex](-0.25,0)--(4,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
+\draw[name path=kC](0.25,-0.5)--(4,2)node[pos=0.9,left,xshift={-2mm}]{$y=2x-4$};
+\path[name path=kA](0,1)--++(4,0);
+\draw[dashed,name intersections={of=kA and kC}](0,1)node[left]{$6$}--(intersection-1)--($(0,0)!(intersection-1)!(4,0)$)node[below]{$5$};
+\path[name path=kA](0,0.5)--++(4,0);
+\draw[dashed,name intersections={of=kA and kC}](0,0.5)node[left]{$5.8$}--(intersection-1)--($(0,0)!(intersection-1)!(4,0)$)node[below]{$4.9$};
+\path[name path=kA](0,1.5)--++(4,0);
+\draw[dashed,name intersections={of=kA and kC}](0,1.5)node[left]{$6$}--(intersection-1)--($(0,0)!(intersection-1)!(4,0)$)node[below]{$5.1$};
+\end{tikzpicture}
+\caption{ترسیم برائے سوال \حوالہ{سوال_حد_ترسیم_ڈیلٹا_الف}}
+\label{شکل_سوال_حد_ترسیم_ڈیلٹا_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\draw[-latex](-4,0)--(0.2,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
+\draw[name path=kC,shorten >=-0.5cm](0.25,0.25)--(-4,2)node[pos=0.75,above right]{$y=-\tfrac{3}{2}x+3$};
+\path[name path=kA](0,1)--++(-4,0);
+\draw[dashed,name intersections={of=kA and kC}](0,1)node[right]{$7.5$}--(intersection-1)--($(0,0)!(intersection-1)!(-4,0)$)node[below]{$-3$};
+\path[name path=kA](0,1.3)--++(-4,0);
+\draw[dashed,name intersections={of=kA and kC}](0,1.3)node[right]{$7.65$}--(intersection-1)--($(0,0)!(intersection-1)!(-4,0)$)node[below]{$-3.1$};
+\path[name path=kA](0,0.7)--++(-4,0);
+\draw[dashed,name intersections={of=kA and kC}](0,0.7)node[right]{$7.35$}--(intersection-1)--($(0,0)!(intersection-1)!(-4,0)$)node[below]{$-2.9$};
+\end{tikzpicture}
+\caption{ترسیم برائے سوال \حوالہ{سوال_حد_ترسیم_ڈیلٹا_پ}}
+\label{شکل_سوال_حد_ترسیم_ڈیلٹا_پ}
+\end{minipage}%
+\end{figure}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_حد_ترسیم_ڈیلٹا_پ}
+$f(x)=-\tfrac{3}{2}x+3,x_0=-3,L=7.5,\epsilon=0.15$\quad
+شکل \حوالہ{شکل_سوال_حد_ترسیم_ڈیلٹا_پ}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_حد_ترسیم_ڈیلٹا_ت}
+$f(x)=\sqrt{x},x_0=1,L=1,\epsilon=\tfrac{1}{4}$\quad
+شکل \حوالہ{شکل_سوال_حد_ترسیم_ڈیلٹا_ت}
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={0.5625,1,1.5625},xticklabels={$\tfrac{9}{16}$,$1$,$\tfrac{25}{16}$},ytick={0.75,1,1.25},yticklabels={$\tfrac{3}{4}$,$1$,$\tfrac{5}{4}$}]
+\addplot[domain=0:0.5]{sqrt(x)};
+\addplot[domain=0.5:3]{sqrt(x)}node[pos=0.6,below right]{$y=\sqrt{x}$};
+\addplot[dashed] plot coordinates {(0,0.75)(0.5625,0.75)(0.5625,0)};
+\addplot[dashed] plot coordinates {(0,1)(1,1)(1,0)};
+\addplot[dashed] plot coordinates {(0,1.25)(1.5625,1.25)(1.5625,0)};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم برائے سوال \حوالہ{سوال_حد_ترسیم_ڈیلٹا_ت}}
+\label{شکل_سوال_حد_ترسیم_ڈیلٹا_ت}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={3},ytick={2,4},ymax=5.5,ymin=0,xmin=-1.5,xmax=5]
+\addplot[domain=-1:-0.5]{2*sqrt(x+1)};
+\addplot[domain=-0.5:4]{2*sqrt(x+1)}node[pos=1,above]{$y=2\sqrt{x+1}$};
+\addplot[dashed] plot coordinates {(0,4.2)(3.41,4.2)(3.41,0)};
+\addplot[dashed] plot coordinates {(0,4)(3,4)(3,0)};
+\addplot[dashed] plot coordinates {(0,3.8)(2.61,3.8)(2.61,0)};
+\draw(axis cs:0,4.2)node[above left,font=\footnotesize]{$4.2$}  (axis cs:0,3.8)node[below left,font=\footnotesize]{$3.8$};
+\draw(axis cs:2.61,0)node[below left,font=\footnotesize]{$2.61$}  (axis cs:3.41,0)node[below right,font=\footnotesize]{$3.41$};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم برائے سوال \حوالہ{سوال_حد_ترسیم_ڈیلٹا_ٹ}}
+\label{شکل_سوال_حد_ترسیم_ڈیلٹا_ٹ}
+\end{minipage}%
+\end{figure}
+\انتہا{سوال}
+%=============================
+\ابتدا{سوال}\شناخت{سوال_حد_ترسیم_ڈیلٹا_ٹ}
+$f(x)=2\sqrt{x+1},x_0=3,L=4,\epsilon=0.2$\quad
+شکل \حوالہ{شکل_سوال_حد_ترسیم_ڈیلٹا_ٹ}
+\انتہا{سوال}
+%=====================
+
+\ابتدا{سوال}\شناخت{سوال_حد_ترسیم_ڈیلٹا_ث}
+$f(x)=x^2,x_0=2,L=4,\epsilon=1$\quad
+شکل \حوالہ{شکل_سوال_حد_ترسیم_ڈیلٹا_ث}
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={2},ytick={3,4,5},xmax=3.5]
+\addplot[domain=-1.4:2.4]{x^2}node[pos=0,right]{$y=x^2$};
+\addplot[dashed] plot coordinates {(0,3)(1.732,3)(1.732,0)};
+\addplot[dashed] plot coordinates {(0,4)(2,4)(2,0)};
+\addplot[dashed] plot coordinates {(0,5)(2.236,5)(2.236,0)};
+\draw(axis cs:1.732,0)node[pin=-135:{$\sqrt{3}$}]{};
+\draw(axis cs:2.236,0)node[pin=-45:{$\sqrt{5}$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم برائے سوال \حوالہ{سوال_حد_ترسیم_ڈیلٹا_ث}}
+\label{شکل_سوال_حد_ترسیم_ڈیلٹا_ث}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-1},ytick={3},yticklabel style={anchor=west,xshift={1mm}},ymax=4.5]
+\addplot[domain=-2:0.25]{4-x^2}node[pos=0.75,above left]{$y=4-x^2$};
+\addplot[dashed] plot coordinates {(0,3.25)(-0.866,3.25)(-0.866,0)};
+\addplot[dashed] plot coordinates {(0,3)(-1,3)(-1,0)};
+\addplot[dashed] plot coordinates {(0,2.75)(-1.118,2.75)(-1.118,0)};
+\draw(axis cs:0,3.25)node[pin=10:{$3.25$}]{}  (axis cs:0,2.75)node[pin=-10:{$2.75$}]{};
+\draw(axis cs:-1.118,0)node[pin=-135:{$-\tfrac{5}{2}$}]{}  (axis cs:-0.866,0)node[pin=-45:{$-\tfrac{3}{2}$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم برائے سوال \حوالہ{سوال_حد_ترسیم_ڈیلٹا_ج}}
+\label{شکل_سوال_حد_ترسیم_ڈیلٹا_ج}
+\end{minipage}%
+\end{figure}
+\انتہا{سوال}
+%=============================
+\ابتدا{سوال}\شناخت{سوال_حد_ترسیم_ڈیلٹا_ج}
+$f(x)=4-x^2,x_0=-1,L=3,\epsilon=0.25$\quad
+شکل \حوالہ{شکل_سوال_حد_ترسیم_ڈیلٹا_ج}
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_حد_ترسیم_ڈیلٹا_چ}
+$f(x)=\tfrac{2}{\sqrt{-x}},x_0=-1,L=2,\epsilon=0.5$\quad
+شکل \حوالہ{شکل_سوال_حد_ترسیم_ڈیلٹا_چ}
+
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-1.7778,-1,-0.64},xticklabels={$-\tfrac{16}{9}$,$-1$,$-\tfrac{16}{25}$},ytick={1.5,2,2.5},yticklabel style={anchor=west,xshift={1mm}}]
+\addplot[domain=-2:-0.25]{2/sqrt(-x)}node[pos=0.75,above left]{$y=\tfrac{2}{\sqrt{-x}}$};
+\addplot[dashed] plot coordinates {(0,1.5)(-1.7778,1.5)(-1.7778,0)};
+\addplot[dashed] plot coordinates {(0,2)(-1,2)(-1,0)};
+\addplot[dashed] plot coordinates {(0,2.5)(-0.64,2.5)(-0.64,0)};
+%\draw(axis cs:1.732,0)node[pin=-135:{$\sqrt{3}$}]{};
+%\draw(axis cs:2.236,0)node[pin=-45:{$\sqrt{5}$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم برائے سوال \حوالہ{سوال_حد_ترسیم_ڈیلٹا_چ}}
+\label{شکل_سوال_حد_ترسیم_ڈیلٹا_چ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xmin=0,ymin=0,xtick={\empty},ytick={\empty}]
+\addplot[name path=kC,domain=0.25:0.75]{1/x}node[pos=0.25,above right]{$y=\tfrac{1}{x}$};
+\path[name path=kA](axis cs:0,2)--(axis cs:1,2);
+\draw[dashed,name intersections={of={kA and kC}}](axis cs:0,2)node[left]{$1.99$}--(intersection-1)--($(axis cs:0,0)!(intersection-1)!(axis cs:1,0)$)node[below]{$\tfrac{1}{1.99}$};
+\path[name path=kA](axis cs:0,2.3)--(axis cs:1,2.3);
+\draw[dashed,name intersections={of={kA and kC}}](axis cs:0,2.3)node[left]{$2$}--(intersection-1)--($(axis cs:0,0)!(intersection-1)!(axis cs:1,0)$)node[below]{$\tfrac{1}{2}$};
+\path[name path=kA](axis cs:0,3)--(axis cs:1,3);
+\draw[dashed,name intersections={of={kA and kC}}](axis cs:0,3)node[left]{$2.01$}--(intersection-1)--($(axis cs:0,0)!(intersection-1)!(axis cs:1,0)$)node[below]{$\tfrac{1}{2.01}$};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم برائے سوال \حوالہ{سوال_حد_ترسیم_ڈیلٹا_ب}}
+\label{شکل_سوال_حد_ترسیم_ڈیلٹا_ب}
+\end{minipage}%
+\end{figure}
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\شناخت{سوال_حد_ترسیم_ڈیلٹا_ب}
+$f(x)=\tfrac{1}{x},x_0=\tfrac{1}{2},L=2,\epsilon=0.01$\quad
+شکل \حوالہ{شکل_سوال_حد_ترسیم_ڈیلٹا_ب}
+
+\انتہا{سوال}
+%=====================
+\موٹا{\عددی{\delta} کا الجبرائی حصول}\\
+سوال \حوالہ{سوال_حد_تلاش_ڈیلٹا_الجبرائی_الف} تا سوال \حوالہ{سوال_حد_تلاش_ڈیلٹا_الجبرائی_ب} میں \عددی{f(x)} اور اعداد  \عددی{L}، \عددی{x_0} اور \عددی{\epsilon>0} دیے گئے ہیں۔ہر سوال میں \عددی{x_0} کے ارد گرد ایسا کھلا وقفہ تلاش کریں جس پر عدم مساوات \عددی{\abs{f(x)-L}<\epsilon} مطمئن ہوتی ہو۔اس کے بعد \عددی{\delta>0}  کی ایسی قیمت تلاش کریں کہ  عدم مساوات \عددی{0<\abs{x-x_0}<\delta} کو مطمئن کرنے والے ہر \عددی{x} کے لئے عدم مساوات \عددی{\abs{f(x)-L}<\epsilon} مطمئن ہوتی ہے۔ 
+
+\ابتدا{سوال}\شناخت{سوال_حد_تلاش_ڈیلٹا_الجبرائی_الف}
+$f(x)=x+1,L=5,x_0=4,\epsilon=0.01$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$f(x)=2x-2,L=-6,x_0=-2,\epsilon=0.02$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$f(x)=\sqrt{x+1},L=1,x_0=0,\epsilon=0.1$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$f(x)=\sqrt{x},L=\tfrac{1}{2},x_0=\tfrac{1}{4},\epsilon=0.1$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$f(x)=\sqrt{19-x},L=3,x_0=10,\epsilon=1$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$f(x)=\sqrt{x-7},L=4,x_0=23,\epsilon=1$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$f(x)=\tfrac{1}{x},L=\tfrac{1}{4},x_0=4,\epsilon=0.05$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$f(x)=x^2,L=3,x_0=\sqrt{3},\epsilon=0.1$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$f(x)=x^2,L=4,x_0=-2,\epsilon=0.5$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$f(x)=\tfrac{1}{x},L=-1,x_0=-1,\epsilon=0.1$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$f(x)=x^2-5,L=11,x_0=4,\epsilon=1$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$f(x)=\tfrac{120}{x},L=5,x_0=24,\epsilon=1$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$f(x)=mx,m>0,L=2m,x_0=2,\epsilon=0.03$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$f(x)=mx,m>0,L=3m,x_0=3,\epsilon=c>0$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$f(x)=mx+b,m>0,L=\tfrac{m}{2}+b,x_0=\tfrac{1}{2},\epsilon=c>0$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_حد_تلاش_ڈیلٹا_الجبرائی_ب}
+$f(x)=mx+b,m>0,L=m+b,x_0=1,\epsilon=0.05$
+\انتہا{سوال}
+%========================
+\موٹا{با ضابطہ حد پر مزید سوالات}\\
+سوال \حوالہ{سوال_حد_مزید_الف} تا سوال \حوالہ{سوال_حد_مزید_ب} میں تفاعل \عددی{f(x)}، نقطہ \عددی{x_0} اور مثبت عدد \عددی{\epsilon} دیے گئے ہیں۔\عددی{\lim\limits_{x\to x_0}f(x)} تلاش کریں۔اس کے بعد ایسا عدد \عددی{\delta>0} تلاش کریں کہ تمام \عددی{x} کے لئے درج ذیل ہو۔
+\begin{align*}
+0<\abs{x-x_0}<\delta\quad \implies \quad \abs{f(x)-L}<\epsilon
+\end{align*} 
+
+\ابتدا{سوال}\شناخت{سوال_حد_مزید_الف}
+$f(x)=3-2x,x_0=3,\epsilon=0.02$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$f(x)=-3x-2,x_0=-1,\epsilon=0.03$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$f(x)=\tfrac{x^2-4}{x-2},x_0=2,\epsilon=0.05$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$f(x)=\tfrac{x^2+6x+5}{x+5},x_0=-5,\epsilon=0.05$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$f(x)=\sqrt{1-5x},x_0=-3,\epsilon=0.5$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_حد_مزید_ب}
+$f(x)=\tfrac{4}{x},x_0=2,\epsilon=0.4$
+\انتہا{سوال}
+%=====================
+
+سوال \حوالہ{سوال_حد_فقرہ_الف} تا سوال \حوالہ{سوال_حد_فقرہ_ب} میں دیا گیا فقرہ حد ثابت کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_حد_فقرہ_الف}
+$\lim\limits_{x\to 4} (9-x)=5$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$\lim\limits_{x\to 3} (3x-7)=2$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$\lim\limits_{x\to 9} \sqrt{x-5}=2$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$\lim\limits_{x\to 0} \sqrt{4-x}=2$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$f(x)=\begin{cases} x^2,&x\ne 1\\ 2,&x=1 \end{cases}$\,\,
+کے لئے \,\,
+$\lim\limits_{x\to 1} f(x)=1$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$f(x)=\begin{cases} x^2,&x\ne -2\\ 1,&x=-2 \end{cases}$\,\,
+کے لئے \,\,
+$\lim\limits_{x\to -2} f(x)=4$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$\lim\limits_{x\to 1} \tfrac{1}{x}=1$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$\lim\limits_{x\to \sqrt{3}} \tfrac{1}{x^2}=\tfrac{1}{3}$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$\lim\limits_{x\to -3} \tfrac{x^2-9}{x+3}=-6$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$\lim\limits_{x\to 1} \tfrac{x^2-1}{x-1}=2$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$f(x)=\begin{cases} 4-2x,&x<1\\ 6x-4,&x\ge 1 \end{cases}$\,\,
+کے لئے \,\,
+$\lim\limits_{x\to 1} f(x)=2$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$f(x)=\begin{cases} 2x,&x<0\\  \tfrac{x}{2},&x\ge 0 \end{cases}$\,\,
+کے لئے \,\,
+$\lim\limits_{x\to 0} f(x)=0$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_حد_فقرہ_پ}
+$\lim\limits_{x\to 0} x\sin \tfrac{1}{x}=0$\quad
+شکل \حوالہ{شکل_سوال_حد_فقرہ_پ}
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,scaled x ticks=false,scaled y ticks=false,small,axis lines=middle,xtick={-0.00555,0.00555},xticklabels={$-\tfrac{1}{\pi}$,$\tfrac{1}{\pi}$},ytick={\empty},xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor={west}}]
+\addplot[domain=-0.001:-0.01,samples=200]{x*sin(1/x)};
+\addplot[domain=0.001:0.01,samples=200]{x*sin(1/x)}node[pos=0.75,right]{$x\sin\tfrac{1}{x}$};
+\addplot[dashed,domain=-0.01:0.01]{x}node[pos=0.8,above,sloped]{$y=x$};
+\addplot[dashed,domain=-0.01:0.01]{-x}node[pos=0.2,above,sloped]{$y=-x$};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم برائے سوال \حوالہ{سوال_حد_فقرہ_پ}}
+\label{شکل_سوال_حد_فقرہ_پ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,axis lines=middle,xtick={-1,-0.6365,0.6365,1},xticklabels={$-1$,$-\tfrac{2}{\pi}$,$\tfrac{2}{\pi}$,$1$},ytick={-1,1},ymin=-1.2,ymax=1.2,xmin=-1.2,xmax=1.2,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor={west}}]
+\addplot[domain=0.1:1]{x*x*sin(deg(1/x))}node[pos=0.5,right]{$x^2\sin\tfrac{1}{x}$};
+\addplot[domain=-0.1:-1,samples=200]{x*x*sin(deg(1/x))};
+\addplot[dashed,domain=-1:1]{x*x}node[pos=0.1,right]{$y=x^2$};
+\addplot[dashed,domain=-1:1]{-x*x}node[pos=0.9,left]{$y=-x^2$};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم برائے سوال \حوالہ{سوال_حد_فقرہ_ب}}
+\label{شکل_سوال_حد_فقرہ_ب}
+\end{minipage}%
+\end{figure}
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_حد_فقرہ_ب}
+$\lim\limits_{x\to 0} x^2\sin\tfrac{1}{x}=0$\quad
+شکل \حوالہ{شکل_سوال_حد_فقرہ_ب}
+\انتہا{سوال}
+%=====================
+
+\موٹا{نظریہ اور مثالیں}\\
+
+\ابتدا{سوال}
+\عددی{\lim\limits_{x\to 2}f(x)=5} سے کیا مراد ہے۔تبصرہ کریں۔
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+\عددی{\lim\limits_{x\to 0}g(x)=k} سے کیا مراد ہے۔تبصرہ کریں۔
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+یہ کہنا کہ "جیسے جیسے \عددی{x} کی قیمت \عددی{x_0} کے نزدیک تر ہوتی جاتی ہے ویسے ویسے \عددی{f(x)} کی قیمت \عددی{L} کے قریب ہوتی جاتی ہے" سے یہ اخذ نہیں کیا جا سکتا ہے کہ \عددی{f(x)} کا حد \عددی{L} ہے۔ مثال دے کر وضاحت کریں۔
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+یہ کہنا کہ "کسی بھی دیے گئے \عددی{\epsilon>0}  کے لئے ایسا \عددی{x} پایا جاتا ہے جس پر \عددی{\abs{f(x)-L}<\epsilon} ہے" سے یہ مراد نہیں لیا جا سکتا ہے کہ \عددی{f(x)} کا حد \عددی{L} ہے۔مثال دے کر وضاحت کریں۔
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\ترچھا{انجن کی سلنڈر کی  رگڑائی}\\
+انجن سلنڈر  کا رقبہ عمودی تراش \عددی{\SI{58}{\centi\meter\squared}} حاصل کرنے کے لئے رگڑائی کرنے سے پہلے آپ جاننا چاہیں گے کہ سلنڈر کے رقبہ میں خلل کو \عددی{\SI{\mp 0.06}{\centi\meter\squared}} درستگی کے اندر رکھنے کے لئے درکار \عددی{\SI{8.593}{\centi\meter}} قطر  میں چھوٹ کتنی ہے۔یہ جاننے کی خاطر آپ \عددی{A=\tfrac{\pi d^2}{4}} لکھ کر \عددی{\abs{A-58}\le 0.06} کو حل کرتے ہوئے قطر \عددی{d} تلاش کرتے ہو۔قطر کا کیا وقفہ حاصل ہو گا؟\\
+جواب:\quad
+\عددی{[8.589,8.598]}
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_حد_اوہم_قانون}
+اوہم کا قانون کہتا ہے کہ \عددی{V=IR} ہو گا جہاں \عددی{V} برقی دباو، \عددی{I} برقی رو اور \عددی{R} برقی مزاحمت ہیں جن کی اکائیاں بالترتیب وولٹ \عددی{\si{\volt}}، ایمپیئر \عددی{\si{\ampere}} اور اوہم \عددی{\si{\ohm}} ہیں (شکل \حوالہ{شکل_سوال_حد_اوہم_قانون})۔ آپ کے ادارے کو کہا گیا ہے کہ وہ برقی مزاحمت فراہم کرے۔برقی دباو \عددی{\SI{220}{\volt}} ہو گی جبکہ برقی رو \عددی{\SI{10}{\milli\ampere}\mp\SI{0.1}{\milli\ampere}} ہونی ضروری ہے۔ مطلوبہ برقی رو \عددی{\SI{10}{\milli\ampere}} میں چھوٹ \عددی{\SI{0.1}{\milli\ampere}} ہے۔درکار برقی مزاحمت کا وقفہ کیا ہو گا؟
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw(0,0) to [american voltage source,l={$V$}]++(0,\y) to [short,i={$I$}]++(\x,0) to [resistor,l={$R$}]++(0,-\y) to [short] (0,0);
+\end{tikzpicture}
+\caption{قانون اوہم (سوال \حوالہ{سوال_حد_اوہم_قانون})}
+\label{شکل_سوال_حد_اوہم_قانون}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-0.5,0)--(4,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
+\draw[name path=kC](-0.5,0.2) to [out=10,in=-140] (2,1)node[ocirc]{};
+\draw(2,1.5)node[circ]{} to [out=50,in=-160] (4,2)node[above left]{$y=f(x)$};
+\draw[dashed](0,1.65)node[left,yshift=1mm]{$L+\epsilon$}--++(4,0);
+\draw[dashed](0,1.15)node[left]{$L-\epsilon$}--++(4,0);
+\draw(0,1.4)node[left]{$L$}--++(0.1,0);
+\draw[dashed](1,0)node[below,xshift=-3mm]{$x_0-\delta$}--++(0,2);
+\draw[dashed](3,0)node[below]{$x_0+\delta$}--++(0,2);
+\draw(2,0)node[below]{$x_0$}--++(0,0.1);
+\path[name path=kA] (1.3,0)node[pin=-60:{$x'$}]{}--++(0,2);
+\draw[name intersections={of={kA and kC}}](1.3,0)node[circ]{}--(intersection-1)--($(0,0)!(intersection-1)!(0,2)$)node[circ]{};
+
+\end{tikzpicture}
+\caption{}
+\label{شکل_حد_غیر_موجود}
+\end{minipage}%
+\end{figure}
+\انتہا{سوال}
+%==================
+
+\موٹا{کب \عددی{x\to x_0} کرنے سے  عدد \عددی{L} تفاعل \عددی{f(x)} کا  حد نہیں ہو گا؟}\\
+یہ ثابت کرنے کی خاطر آپ کو ایسا \عددی{\epsilon>0} تلاش کرنا ہو گا جس کے لئے ایسا کوئی \عددی{\delta>0} نہیں پایا جاتا ہو کہ عدم مساوات \عددی{0<\abs{x-x_0}<\delta} کو مطمئن کرنے والے تمام \عددی{x} کے لئے  \عددی{\abs{f(x)-L}<\epsilon} ہو۔یہ ثابت کرنے کی خاطر ہم  اس \عددی{\epsilon} کے لئے ثابت کریں گے کہ ہر \عددی{\delta>0} کے لئے ایسا \عددی{x} پایا جاتا ہے کہ \عددی{0<\abs{x-x_0}<\delta} اور \عددی{\abs{f(x)-L}\ge \epsilon} ہوں (مثلاً شکل \حوالہ{شکل_حد_غیر_موجود}  میں نقطہ \عددی{x=x'})۔
+
+\ابتدا{سوال}\شناخت{سوال_حد_نہیں_پایا_جاتا_الف}
+فرض کریں
+\,\,$f(x)=\begin{cases} x,&x<1\\ x+1,&x>1 \end{cases}$\,\, 
+ہے جس کو شکل \حوالہ{شکل_سوال_حد_نہیں_پایا_جاتا_الف} میں دکھایا گیا ہے۔
+(الف) \quad
+\عددی{\epsilon=\tfrac{1}{2}} لیتے ہوئے دکھائیں کہ عدم مساوات \عددی{0<\abs{x-1}<\delta} کو مطمئن کرنے والے تمام \عددی{x} کے لئے   کوئی بھی \عددی{\delta>0} عدم مساوات \عددی{\abs{f(x)-2}<\tfrac{1}{2}} کو مطمئن نہیں کرتا ہے۔یعنی ہر \عددی{\delta} کے لئے ایسا \عددی{x} پایا جاتا ہے جس پر
+ \عددی{0<\abs{x-1}<\delta} اور \عددی{\abs{f(x)-2}\ge \tfrac{1}{2}} ہوتے ہیں۔یوں \عددی{\lim_{x\to 1}f(x)\ne 2} ہو گا۔\\
+(ب)\quad 
+دکھائیں \عددی{\lim_{x\to 1}f(x)\ne 1}\\
+(پ)\quad 
+دکھائیں \عددی{\lim_{x\to 1}f(x)\ne 1.5}
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,axis lines=middle,xtick={1},ytick={1,2},xlabel={$x$},ylabel={$y$}]
+\addplot[domain=-1:1]{x}node[pos=0.25,below right,fill=white]{$y=x$};
+\addplot[domain=1:3]{x+1}node[pos=0.5,above left]{$y=x+1$};
+\draw(axis cs:1,1)node[ocirc]{};
+\draw (axis cs:1,2)node[ocirc]{};
+\end{axis}
+\end{tikzpicture}
+\caption{تفاعل کا ترسیم برائے سوال \حوالہ{سوال_حد_نہیں_پایا_جاتا_الف}}
+\label{شکل_سوال_حد_نہیں_پایا_جاتا_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,axis lines=middle,xtick={2},ytick={1,2,3,4},xlabel={$x$},ylabel={$y$},ymax=4.5]
+\addplot[domain=0:2]{x^2}node[ocirc]{}node[pos=0.25,right]{$y=x^2$};
+\addplot[] plot coordinates {(2,2) (4,2)};
+\draw(axis cs:2,2)node[ocirc]{};
+\draw(axis cs:2,3)node[circ]{};
+\draw(axis cs:3.4,3.5)node[]{$y=h(x)$};
+\draw(axis cs:3,2)node[above]{$y=2$};
+\end{axis}
+\end{tikzpicture}
+\caption{تفاعل کا ترسیم برائے سوال \حوالہ{سوال_حد_نہیں_پایا_جاتا_ب}}
+\label{شکل_سوال_حد_نہیں_پایا_جاتا_ب}
+\end{minipage}%
+\end{figure}
+\انتہا{سوال}
+%============
+\ابتدا{سوال}\شناخت{سوال_حد_نہیں_پایا_جاتا_ب}
+تفاعل (شکل \حوالہ{شکل_سوال_حد_نہیں_پایا_جاتا_ب}) \quad 
+$h(x)=\begin{cases}x^2,&x<2\\  3,&x=2\\ 2,& x>2  \end{cases}$
+کے لئے درج ذیل دکھائیں۔\\
+(الف)\quad
+$\lim\limits_{x\to 2} h(x)\ne 4$\\
+(ب)\quad
+$\lim\limits_{x\to 2} h(x)\ne 3$\\
+(پ)\quad
+$\lim\limits_{x\to 2} h(x)\ne 2$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\شناخت{سوال_حد_نہیں_پایا_جاتا_پ}
+تفاعل کی ترسیم شکل \حوالہ{شکل_سوال_حد_نہیں_پایا_جاتا_پ} اس کے لئے درج ذیل دکھائیں۔\\
+(الف)\quad
+$\lim\limits_{x\to 2} f(x)\ne 4$\\
+(ب)\quad
+$\lim\limits_{x\to 2} f(x)\ne 4.2$\\
+(پ)\quad
+$\lim\limits_{x\to 2} f(x)\ne 3$
+%
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,y=0.5cm]
+\draw[-latex](-0.25,0)--(4,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,6)node[above]{$y$};
+\draw(3,3)node[ocirc]{} to [out=0,in=150] (4,1.5);
+\draw(3,4.8)node[ocirc]{} to [out=135,in=-20](0.5,5);
+\draw(3,4)node[circ]{};
+\foreach \y in {3,4,4.8}{\draw(0,\y)node[left]{$\y$}--++(0.1,0);}
+\draw(3,0)node[below]{$3$}--++(0,0.1);
+\draw(2,2)node[]{$y=f(x)$};
+\end{tikzpicture}
+\caption{ترسیم برائے سوال \حوالہ{سوال_حد_نہیں_پایا_جاتا_پ}}
+\label{شکل_سوال_حد_نہیں_پایا_جاتا_پ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\draw[-latex](-2,0)--(1,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2.5)node[above]{$y$};
+\draw(-1,1) to [out=-170,in=30] (-2,-0.25);
+\draw(-1,1)node[ocirc]{} to [out=10,in=-135](1,2);
+\foreach \y in {1,2}{\draw(0,\y)node[left]{$\y$}--++(0.1,0);}
+\draw(-1,0)node[below]{$-1$}--++(0,0.1);
+\draw(-1,2)node[circ]{};
+\draw(-0.75,0.5)node[]{$y=g(x)$};
+\end{tikzpicture}
+\caption{ترسیم برائے سوال \حوالہ{سوال_حد_نہیں_پایا_جاتا_ت}}
+\label{شکل_سوال_حد_نہیں_پایا_جاتا_ت}
+\end{minipage}
+\end{figure}
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\شناخت{سوال_حد_نہیں_پایا_جاتا_ت}
+دکھائیں کہ شکل \حوالہ{شکل_سوال_حد_نہیں_پایا_جاتا_ت} کی ترسیم کے لئے \عددی{\lim\limits_{x\to -1}g(x)\ne 2} ہے۔کیا ایسا نظر آتا ہے جیسے حد \عددی{\lim\limits_{x\to -1}g(x)} موجود ہے؟ اگر حد موجود ہے تو اس کو تلاش کریں اور اگر حد نہیں پایا جاتا تو اس کی وجہ پیش کریں۔
+\انتہا{سوال}
+%=====================
+
+\موٹا{حد بذریعہ ترسیم۔کمپیوٹر کا استعمال}\\
+سوال \حوالہ{سوال_حد_ترسیم_کمپیوٹر_الف} تا سوال \حوالہ{سوال_حد_ترسیم_کمپیوٹر_ب} میں آپ نے ترسیم کے ذریعہ \عددی{\delta} تلاش کرنا ہو گا۔کمپیوٹر استعمال کرتے ہوئے درج ذیل اقدام کریں۔\\
+(الف) \quad
+تفاعل \عددی{y=f(x)} کو نقطہ \عددی{x_0} کے قریب ترسیم کریں۔\\
+(ب) \quad
+ترسیم کو دیکھ کر حد کا اندازہ لگائیں۔حد کو حساب کے ذریعہ تلاش کرتے ہوئے اپنے اندازے کی تصدیق کریں۔\\
+(پ)\quad
+\عددی{\epsilon=0.2} لیتے ہوئے تحدیدی خطوط \عددی{y_1=L-\epsilon} اور \عددی{y_2=L+\epsilon} کھینچیں۔ساتھ ہی \عددی{x_0} کے قریب تفاعل \عددی{f} ترسیم  کریں۔\\
+(ت) \quad
+درج بالا جزو (پ) سے ایسے \عددی{\delta>0} کا اندازہ لگائیں کہ تمام \عددی{x} کے لئے درج ذیل مطمئن ہوتے ہوں۔
+\begin{align*}
+0<\abs{x-x_0}<\delta\quad \implies \quad \abs{f(x)-L}<\epsilon
+\end{align*}
+اپنا اندازہ پرکھنے کی خاطر \عددی{f}، \عددی{y_1} اور \عددی{y_2} کو وقفہ \عددی{0<\abs{x-x_0}<\delta} پر ترسیم کریں۔اگر تفاعل کی کوئی قیمت وقفہ \عددی{[L-\epsilon,L+\epsilon]} کے باہر پائی جاتی ہو تب منتخب کردہ\عددی{\delta} بہت بڑا تھا لہٰذا \عددی{\delta} کی چھوٹی قیمت لیتے ہوئے دوبارہ کوشش کریں۔ \\
+(ٹ)\quad
+جزو (پ) اور (ت) کو \عددی{\epsilon=0.1,0.05,0.001} کے لئے دہرائیں۔
+
+%=========================
+\ابتدا{سوال}\شناخت{سوال_حد_ترسیم_کمپیوٹر_الف}
+$f(x)=\tfrac{x^4-81}{x-3}, x_0=3$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$f(x)=\tfrac{5x^3+9x^2}{2x^5+3x^2}, x_0=0$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$f(x)=\tfrac{\sin 2x}{3x}, x_0=0$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$f(x)=\tfrac{x(1-\cos x)}{x-\sin x}, x_0=0$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$f(x)=\tfrac{\sqrt[\leftroot{-2}3]{x}-1}{x-1}, x_0=1$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\شناخت{سوال_حد_ترسیم_کمپیوٹر_ب}
+$f(x)=\tfrac{3x^2-(7x+1)\sqrt{x}+5}{x-1}, x_0=1$
+\انتہا{سوال}
+%===================
+
+\حصہ{حد کے تصور کی توسیع}
