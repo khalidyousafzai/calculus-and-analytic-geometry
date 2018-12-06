@@ -29,7 +29,7 @@
 \begin{urdufont}
 
 \begin{tikzpicture}
-\begin{axis}[clip=false,height=5cm,width=0.75\textwidth,grid=both,small,xlabel={\RL{دن $t\,\,$}},ytick={0,0.2,0.4,0.6,0.8,1},yticklabels={$0$,$50$,$100$,$150$,$200$,$250$},ymin=0,ymax=1.1,xmin=-2,xmax=2,xtick={-2,-1,0,1,2},xticklabels={$0$,$10$,$20$,$30$,$40$},ylabel={\RL{آبادی $p\,\,$}}]
+\begin{axis}[clip=false,height=5cm,width=0.45\textwidth,grid=both,small,xlabel={\RL{دن $t\,\,$}},ytick={0,0.2,0.4,0.6,0.8,1},yticklabels={$0$,$50$,$100$,$150$,$200$,$250$},ymin=0,ymax=1.1,xmin=-2,xmax=2,xtick={-2,-1,0,1,2},xticklabels={$0$,$10$,$20$,$30$,$40$},ylabel={\RL{آبادی $p\,\,$}}]
 \addplot [] table [x index={0}, y index={1}]{normalDistributionFlies.dat};
 \draw(axis cs:0,0.5)node[circ]{}node[left]{$N(20,125)$};
 \draw[shorten >=-0.75cm,shorten <=-0.75cm](axis cs:0,0.5)--(axis cs:1.7,0.955);
@@ -39,7 +39,7 @@
 \draw(axis cs:1.7,0.955)node[circ]{}node[below right]{$Q$};
 \draw(axis cs:1.4,0.919)node[circ]{};
 \draw(axis cs:1.1,0.864)node[circ]{};
-\draw(axis cs:0.72,0.8)node[circ]{}node[left]{$B(28,200)$};
+\draw(axis cs:0.72,0.8)node[circ]{}node[left]{$B(27,200)$};
 \end{axis}%
 \end{tikzpicture}
 \end{urdufont}
