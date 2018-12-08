@@ -114,8 +114,10 @@
 %------
 %practice problems environment مشق
 
-\newcounter{practicecounter}[chapter]                              %practice here means مشق
-\renewcommand{\thepracticecounter}{\arabic{practicecounter}.\thechapter}
+\newcounter{practicecounter}[section]                              %practice here means مشق
+\renewcommand{\thepracticecounter}{\arabic{practicecounter}}
+%\newcounter{practicecounter}[chapter]                              %practice here means مشق
+%\renewcommand{\thepracticecounter}{\arabic{practicecounter}.\thechapter}
 
 \newenvironment*{مشق}
 {\par\noindent\ignorespaces \vspace{\baselineskip} \hrule \vspace{\baselineskip} مشق \refstepcounter{practicecounter} \thepracticecounter :\quad}%
@@ -126,6 +128,7 @@
 
 \newcounter{questioncounter}[section]
 \renewcommand{\thequestioncounter}{\arabic{questioncounter}}
+%\newcounter{questioncounter}[chapter]
 %\renewcommand{\thequestioncounter}{\arabic{questioncounter}.\thechapter}
 
 \newenvironment*{سوال}				
@@ -135,8 +138,10 @@
 
 %defining a LAW   قانون
 
-\newcounter{lawcounter}[chapter]
-\renewcommand{\thelawcounter}{\arabic{lawcounter}.\thechapter}
+\newcounter{lawcounter}[section]
+\renewcommand{\thelawcounter}{\arabic{lawcounter}}
+%\newcounter{lawcounter}[chapter]
+%\renewcommand{\thelawcounter}{\arabic{lawcounter}.\thechapter}
 
 \newenvironment*{قانون}				
 {\par\medskip \refstepcounter{lawcounter} }%
@@ -146,8 +151,10 @@
 
 %defining a THEOREM   مسئلہ
 
-\newcounter{kthcounter}[chapter]
-\renewcommand{\thekthcounter}{\arabic{kthcounter}.\thechapter}
+\newcounter{kthcounter}[section]
+\renewcommand{\thekthcounter}{\arabic{kthcounter}}
+%\newcounter{kthcounter}[chapter]
+%\renewcommand{\thekthcounter}{\arabic{kthcounter}.\thechapter}
 
 \newenvironment*{مسئلہ}				
 {\par\noindent\ignorespaces  مسئلہ \refstepcounter{kthcounter} \thekthcounter :\quad}%

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2018.2.24)  6 DEC 2018 16:24
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2018.2.24)  8 DEC 2018 15:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3248,21 +3248,40 @@ LaTeX Font Info:    Font shape `EU1/JameelNooriNastaleeq(0)/bx/n' will be
 
 
 
-]) [147]
+] [147]
+Overfull \hbox (13.73772pt too wide) in paragraph at lines 102--108
+ [][][][] 
+ []
+
+[148] [149] [150]
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
+[][]
+ []
+
+[151]
+Overfull \hbox (1.42624pt too wide) in paragraph at lines 273--288
+ [][][][] 
+ []
+
+
+Overfull \hbox (1.42624pt too wide) in paragraph at lines 295--310
+ [][][][] 
+ []
+
+[152] [153]) [154]
 \openout2 = `./tex/calculusAppendixB.aux'.
 
-
-(./tex/calculusAppendixB.tex [148
-
-
-
-]
+ (./tex/calculusAppendixB.tex
 ضمیمہ ا.
 LaTeX Font Info:    Font shape `EU1/JameelNooriNastaleeq(0)/m/n' will be
 (Font)              scaled to size 20.74pt on input line 1.
 LaTeX Font Info:    Font shape `EU1/JameelNooriNastaleeq(0)/bx/n' will be
 (Font)              scaled to size 20.74pt on input line 1.
-) [149] [150
+) [155
+
+
+
+] [156
 
 
 ] (./calculusAndAnalyticGeometry.aux (./tex/mathPreface.aux)
@@ -3274,12 +3293,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 46155 strings out of 493918
- 1091643 string characters out of 6150563
- 1256044 words of memory out of 5000000
- 48500 multiletter control sequences out of 15000+600000
+ 46403 strings out of 493918
+ 1097041 string characters out of 6150563
+ 1349175 words of memory out of 5000000
+ 48748 multiletter control sequences out of 15000+600000
  33095 words of font info for 134 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 72i,14n,92p,10495b,2032s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,14n,356p,10495b,2180s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on calculusAndAnalyticGeometry.pdf (13 pages).
+Output written on calculusAndAnalyticGeometry.pdf (19 pages).
