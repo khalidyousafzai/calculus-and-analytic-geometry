@@ -20,8 +20,43 @@ Print("======================================");
 kill(all);
 print("1.3 Q55");
 
-eqa:%pi*r^2-58=0.06;
-eqb:-0.06=%pi*r^2-58;
-float(2*solve(eqa,r));
-float(2*solve(eqb,r));
+eqa:%pi*r^2-58=0;
+eqb:%pi*r^2-58=0.06;
+eqc:-0.06=%pi*r^2-58;
+2*float(solve(eqa,r));
+2*float(solve(eqb,r));
+2*float(solve(eqc,r));
 
+
+Print("======================================");
+kill(all);
+print("sec 1.6 Q1");
+
+eq:x*(x+1)*(x-2);
+ev(eq,x=2);
+ev(eq,x=0.5);
+k:diff(eq,x);
+ev(k,x=2);
+ev(k,x=0.5);
+
+Print("======================================");
+kill(all);
+print("sec 1.6 Q2");
+
+eq:0.5+(x-1)^2;
+ev(eq,x=0);
+ev(eq,x=2);
+k:diff(eq,x);
+ev(k,x=0);
+ev(k,x=2);
+
+Print("======================================");
+kill(all);
+print("sec 1.6 Q3");
+
+eq:-x*(x-1)*(x-1.5);
+ev(eq,x=0);
+ev(eq,x=1);
+k:diff(eq,x);
+ev(k,x=0);
+ev(k,x=1);
