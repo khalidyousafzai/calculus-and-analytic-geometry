@@ -1,0 +1,205 @@
+\باب{تفرق}
+گزشتہ باب میں ہم نے دیکھا کہ کسی نقطہ پر سیکنٹ کی ڈھلوان کی حد کو اس نقطے پر منحنی کی ڈھلوان کہتے ہیں۔ یہ حد، جس کو تفرق کہتے ہیں، تفاعل تبدیل ہونے کی شرح کی ناپ ہے جو احصاء میں اہم ترین تصورات میں سے ایک ہے۔تفرق کو سائنس، معاشیات اور دیگر شعبوں میں بہت زیادہ استعمال کیا جاتا ہے جہاں سمتی رفتار اور اسراع کا حساب، مشین کی کارکردگی سمجھنے، وغیرہ کے لئے اس کو استعمال میں لایا جاتا ہے۔تفرق کو حد سے تلاش کرنا مشکل کام ہے۔اس باب میں تفرق حاصل کرنے کے طریقوں پر غور کیا جائے گا۔ 
+
+\حصہ{تفاعل کا تفرق}
+گزشتہ باب کے آخر میں ہم نے نقطہ \عددی{x=x_0} پر منحنی \عددی{y=f(x)} کی ڈھلوان \عددی{m} کی درج ذیل تعریف پیش کی۔
+\begin{align*}
+m=\lim_{h\to 0}\frac{f(x_0+h)-f(x_0)}{h}
+\end{align*} 
+اس حد کو، بشرطیکہ یہ موجود ہو، \عددی{x_0} پر \عددی{f} کا تفرق کہتے ہیں۔اس حصے میں \عددی{f} کی دائرہ کار میں ہر نقطے پر \عددی{f} کی ڈھلوان پر  بطور تفاعل غور کیا جائے گا۔
+
+\ابتدا{تعریف}
+متغیر \عددی{x} کے لحاظ سے تفاعل \عددی{f} کا \اصطلاح{تفرق}\فرہنگ{تفرق}\حاشیہب{derivative}\فرہنگ{derivative} درج ذیل  تفاعل \عددی{f'} ہے، بشرطیکہ یہ حد موجود ہو۔
+\begin{align*}
+f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}
+\end{align*}
+\انتہا{تعریف}
+%===========================
+
+\عددی{f'} کا دائرہ کار، نقطوں کا وہ سلسلہ جہاں یہ حد موجود ہو، تفاعل \عددی{f} کے دائرہ کار سے کم ہو سکتا ہے۔ اگر \عددی{f'(x)} موجود ہو تب ہم کہتے ہیں کہ \عددی{x} پر \عددی{f} کا \اصطلاح{تفرق} پایا جاتا ہے یا کہ \عددی{x} پر \عددی{f} \اصطلاح{قابل تفرق}\فرہنگ{تفرق!قابل}\حاشیہب{differentiable}\فرہنگ{differentiable} ہے۔
+
+\جزوحصہء{علامتیت}
+تفاعل \عددی{y=f(x)} کی تفرق کو ظاہر کرنے کے کئی طریقے رائج ہیں۔\عددی{f'(x)} کے علاوہ درج ذیل علامتیں کافی مقبول ہیں۔
+\begin{description}
+\جزو{$y'$}
+یہ مختصر علامت ہے جو غیر تابع متغیر کی نشاندہی نہیں کرتی ہے۔
+\جزو{$\tfrac{\dif y}{\dif x}$}
+یہ علامت دونوں متغیرات کی نشاندہی کرتی ہے اور تفرق کو \عددی{\dif} سے ظاہر کرتی ہے۔  
+\جزو{$\tfrac{\dif f}{\dif x}$}
+یہ علامت تفاعل کا نام واضح کرتی ہے۔
+\جزو{$\tfrac{\dif}{\dif x} f(x)$}
+اس علامت سے ظاہر ہوتا ہے کہ تفرق کا عمل \عددی{f} پر لاگو کیا جاتا ہے (شکل \حوالہ{شکل_تفرق_ڈبہ_صورت})۔
+\جزو{$D_xf$}
+یہ تفرقی عامل ہے۔
+\جزو{$\dot{y}$} 
+نیوٹن اس علامت کو استعمال کرتے تھے جو اب وقتی تفرق کو ظاہر کرنے کے لئے استعمال کیا جاتا ہے۔
+\end{description} 
+
+ہم \عددی{\tfrac{\dif y}{\dif x}} کو "\عددی{x} کے لحاظ سے \عددی{y} کو تفرق" پڑھتے ہیں۔اسی طرح \عددی{\tfrac{\dif f}{\dif x}} اور \عددی{\tfrac{\dif}{\dif x}f(x)} کو "\عددی{x} کے لحاظ سے \عددی{f} کا تفرق" پڑھا جاتا ہے۔
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw(0,0) rectangle ++(2,1);
+\draw[latex-](0,0.5)--++(-2,0)node[pos=0.5,above,align=center]{\RL{داخلی تفاعل}\\  $y=f(x)$};
+\draw[-latex](2,0.5)--++(2,0)node[pos=0.5,above,align=center]{\RL{خارجی تفرق}\\ $y'=\tfrac{\dif f}{\dif x}$};
+\draw(1,0.5)node[align=center]{\RL{عمل تفرق}\\ $\tfrac{\dif}{\dif x}$};
+\end{tikzpicture}
+\caption{تفرق کے عمل کی ڈبہ صورت}
+\label{شکل_تفرق_ڈبہ_صورت}
+\end{figure}
+
+\جزوحصہء{تفرق کی تعریف سے تفرق کا حصول}
+مثال \حوالہ{مثال_حد_سیدھا_خط_الف} اور مثال \حوالہ{مثال_حد_ڈھلوان} میں تفاعل \عددی{y=mx+b} اور \عددی{y=\tfrac{1}{x}} کے تفرق کو تعریف سے حاصل کرنا دکھایا گیا۔مثال \حوالہ{مثال_حد_سیدھا_خط_الف} میں 
+\begin{align*}
+\frac{\dif}{\dif x}(mx+b)=m
+\end{align*}
+اور   مثال \حوالہ{مثال_حد_ڈھلوان} میں
+\begin{align}
+\frac{\dif}{\dif x}\big(\frac{1}{x}\big)=-\frac{1}{x^2}
+\end{align}
+حاصل کیا گیا۔
+
+\موٹا{تفرق کی تعریف سے  تفرق کے حاصل کے اقدام} 
+\begin{enumerate}[1.]
+\item
+\عددی{f(x)} اور \عددی{f(x+h)} لکھیں۔
+\item
+درج ذیل تفریقی حاصل تقسیم کو پھیلا کر اس کی سادہ ترین صورت حاصل کریں۔
+\begin{align*}
+\frac{f(x+h)-f(x)}{h}
+\end{align*}
+\item
+سادہ ترین حاصل تقسیم سے \عددی{f'(x)} حاصل کرنے کی خاطر درج ذیل حد تلاش کریں۔
+\begin{align*}
+f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}
+\end{align*}
+\end{enumerate}
+
+مزید دو مثال درج ذیل ہیں۔
+
+\ابتدا{مثال}\شناخت{مثال_تفرق_حصول_بذریعہ_تعریف_الف}
+\begin{enumerate}[a.]
+\item
+\عددی{f(x)=\tfrac{x}{x-1}} کو تفرق کریں۔
+\item
+تفاعل \عددی{y=f(x)} کی ڈھلوان کس نقطے پر \عددی{-1} کے برابر ہے؟
+\end{enumerate}
+حل:\quad  (ا) \quad  ہم مذکورہ بالا تین اقدام استعمال کرتے ہوئے تعریف سے تفرق حاصل کرتے ہیں۔\\
+\موٹا{پہلا قدم:} یہاں \عددی{f(x)=\tfrac{x}{x-1}} ہے جس سے \عددی{f(x+h)=\tfrac{x+h}{(x+h)-1}} لکھا جا سکتا ہے۔\\
+\موٹا{دوسرا قدم:}
+\begin{align*}
+\frac{f(x+h)-f(x)}{h}&=\frac{\tfrac{x+h}{x+h-1}-\tfrac{x}{x-1}}{h}\\
+&=\frac{1}{h}\cdot \frac{(x+h)(x-1)-x(x+h-1)}{(x+h-1)(x-1)}\\
+&=\frac{1}{h}\cdot \frac{-h}{(x+h-1)(x-1)}
+\end{align*}
+\موٹا{تیسرا قدم:}
+\begin{align*}
+f'(x)&=\lim_{h\to 0} \frac{-1}{(x+h-1)(x-)}=-\frac{1}{(x-1)^2}
+\end{align*}
+(ب) \quad \عددی{y=f(x)} کی ڈھلوان اس صورت \عددی{-1} کے برابر ہو گی جب درج ذیل ہو۔
+\begin{align*}
+-\frac{1}{(x-1)^2}=-1
+\end{align*}
+اس مساوات \عددی{(x-1)^2=1} کے مترادف ہے لہٰذا  \عددی{x=2} اور \عددی{x=0} درکار نتائج ہیں (شکل  \حوالہ{شکل_مثال_تفرق_حصول_بذریعہ_تعریف_الف})۔
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1,2},ytick={2},xlabel style={at={(current axis.right of origin)},anchor=west}]
+\addplot[domain=-3:0.75,samples=50]{x/(x-1)};
+\addplot[domain=1.25:4]{x/(x-1)}node[pos=0.15,right]{$y=\tfrac{x}{x-1}$};
+\draw[shorten <=-1.5cm, shorten >=-0.5cm](axis cs:0,0)node[circ]{}node[below left]{$(0,0)$}--(axis cs:1,-1);
+\draw[shorten <=-1.5cm](axis cs:2,2)node[circ]{}node[below left]{$(2,2)$}--(axis cs:3,1);
+\draw[dashed] (axis cs:1,-3)--(axis cs:1,5);
+\draw(axis cs:-1.75,1.5)node[above]{$m=-1$};
+\draw(axis cs:3,1)node[below]{$m=-1$};
+\end{axis}
+\end{tikzpicture}
+\caption{
+\عددی{x=0} اور \عددی{x=2} پر \عددی{y'=-1} ہو گا (مثال \حوالہ{مثال_تفرق_حصول_بذریعہ_تعریف_الف})۔
+}
+\label{شکل_مثال_تفرق_حصول_بذریعہ_تعریف_الف}
+\end{figure}
+\انتہا{مثال}
+%=====================
+\ابتدا{مثال}\شناخت{مثال_تفرق_حصول_بذریعہ_تعریف_ب}
+\begin{enumerate}[1.]
+\item
+\عددی{x>0} کے لئے \عددی{y=\sqrt{x}} کا تفرق حاصل کریں۔
+\item
+\عددی{x=4} پر تفاعل \عددی{y=\sqrt{x}} کے مماس کی مساوات حاصل کریں۔
+\end{enumerate}
+حل:\quad
+(ا) \quad \موٹا{پہلا قدم:}\quad
+\begin{align*}
+f(x)=\sqrt{x},\quad f(x+h)=\sqrt{x+h}
+\end{align*}
+\موٹا{دوسرا قدم:}
+\begin{align*}
+\frac{f(x+h)-f(h)}{h}&=\frac{\sqrt{x+h}-\sqrt{x}}{h}&& \text{\RL{$\tfrac{\sqrt{x+h}+\sqrt{x}}{\sqrt{x+h}+\sqrt{x}}$ سے ضرب دیتے ہیں}}\\
+&=\frac{(x+h)-x}{h(\sqrt{x+h}+\sqrt{x})}\\
+&=\frac{1}{\sqrt{x+h}+\sqrt{x}}
+\end{align*}
+\موٹا{تیسرا قدم:}
+\begin{align*}
+f'(x)&=\lim_{h\to 0}\frac{1}{\sqrt{x+h}+\sqrt{x}}=\frac{1}{2\sqrt{x}}
+\end{align*}
+شکل \حوالہ{شکل_مثال_تفرق_حصول_بذریعہ_تعریف_ب} دیکھیں۔\\
+(ب)\quad
+\عددی{x=4} پر تفاعل کی ڈھلوان درج ذیل ہے۔
+\begin{align*}
+\frac{\dif y}{\dif x}|_{x=4}=\frac{1}{2\sqrt{x}}|_{x=4}=\frac{1}{4}
+\end{align*}
+نقطہ \عددی{(4,2)} سے گزرتا ہوا خط جس کی ڈھلوان \عددی{\tfrac{1}{4}} ہو \عددی{(4,2)} پر \عددی{f} کا مماس ہو گا۔مماس کی مساوات حاصل کرتے ہیں۔
+\begin{align*}
+y&=2+\frac{1}{4}(x-4)=\frac{1}{4}x+1
+\end{align*}
+%
+\begin{figure}
+\centering
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},ymin=-0.3,xtick={\empty},ytick={\empty}]
+\addplot[domain=0:0.5]{sqrt(x)};
+\addplot[domain=0.5:8]{sqrt(x)}node[pos=0.8,sloped, below]{$y=\sqrt{x}$};
+\draw[shorten <=-2.5cm,shorten >=-1.5cm](axis cs:4,2)node[circ]{}--(axis cs:5,2.25)node[pos=1,sloped,above]{$m=\tfrac{1}{2\sqrt{x}}$};
+\draw[dashed](axis cs:4,2)--(axis cs:4,0)node[circ]{}node[below]{$x$};
+\end{axis}
+\end{tikzpicture}
+\caption{تفاعل \عددی{y=\sqrt{x}}}
+\end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y'$},xtick={\empty},ytick={\empty},xmin=0,ymin=-0.3,ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=0.25:8,samples=50]{1/(2*sqrt(x))}node[pos=0.8,sloped, above]{$y'=\tfrac{1}{2\sqrt{x}}$};
+\draw[dashed](axis cs:4,0.25)node[circ]{}--(axis cs:4,0)node[circ]{}node[below]{$x$};
+\end{axis}
+\end{tikzpicture}
+\caption{
+\عددی{x>0} کے لئے  \عددی{y'=\tfrac{1}{2\sqrt{x}}}
+}
+\end{subfigure}
+\begin{subfigure}{0.55\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},ymin=-0.3,xtick={4},ytick={1,2},xmin=-1]
+\addplot[domain=0:0.5]{sqrt(x)};
+\addplot[domain=0.5:8]{sqrt(x)}node[pos=0.8,sloped, below]{$y=\sqrt{x}$};
+\draw[shorten <=-3cm,shorten >=-1.5cm](axis cs:4,2)node[circ]{}node[below xshift={1mm}]{$(4,2)$}--(axis cs:5,2.25)node[pos=1,sloped,above]{$y=\tfrac{1}{4}x+1$};
+\end{axis}
+\end{tikzpicture}
+\caption{
+تفاعل \عددی{y=\sqrt{x}} اور نقطہ \عددی{(4,2)} پر اس کا مماس \عددی{y=\tfrac{1}{4}x+1}۔
+}
+\end{subfigure}
+\caption{اشکال برائے مثال \حوالہ{مثال_تفرق_حصول_بذریعہ_تعریف_ب}۔نقطہ \عددی{x=0} پر تفاعل معین ہے لیکن اس کا تفرق غیر معین ہے۔}
+\label{شکل_مثال_تفرق_حصول_بذریعہ_تعریف_ب}
+\end{figure}
+\انتہا{مثال}
+
+
+%======================
+
+\جزوحصہء{اندازاً حاصل قیمتوں سے \عددی{f'} کی ترسیم}
+

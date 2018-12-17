@@ -61,10 +61,10 @@
 \graphicspath{{./fig/figFrontPage/}{./fig/figCalculusLimits/}{./fig/figCalculusB/}}%paths to figures
 
 
-%\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusLimitsAndContinuityA,./tex/calculusAppendixB}
-\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusLimitsAndContinuityA,./tex/calculusAppendixB}
+%\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusAppendixB}
+%\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusDerivatives,./tex/calculusAppendixB}
 %
-%\includeonly{./tex/cktSymbols,./tex/cktPreface,./tex/prefaceFirstBook,./tex/mathNumericalMethodsForDifferentialEquations,./tex/mathAppendixAdditionalProofs,./tex/mathAppendixAuxiliaryMaterial,./tex/mathTables}%
+\includeonly{./tex/cktSymbols,./tex/cktPreface,./tex/prefaceFirstBook,./tex/calculusLimitsAndContinuity}%
 
 
 \author{
@@ -118,7 +118,7 @@
 
 \include{./tex/calculusPreliminaries}
 \include{./tex/calculusLimitsAndContinuity}
-\include{./tex/calculusLimitsAndContinuityA}
+\include{./tex/calculusDerivatives}
 
 
 
