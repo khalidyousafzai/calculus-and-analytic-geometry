@@ -358,7 +358,7 @@ dfdx(\x)=3*\x*\x-8*\x-7;
 \begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty}]
 \addplot[domain=-4:0]{-x}node[pos=0.5,below left]{$y'=-1$};
 \addplot[domain=0:4]{x}node[pos=0.5,below right]{$y'=1$};
-\draw(axis cs:1,3)node[right]{$y=\abs{x}$};
+\draw(axis cs:1,3)node[above right]{$y=\abs{x}$};
 \end{axis}
 \end{tikzpicture}
 \caption{چونکہ مبدا پر بائیں ہاتھ اور دائیں ہاتھ تفرق مختلف ہیں لہٰذا مبدا پر تفاعل کا تفرق غیر موجود ہے (مثال \حوالہ{مثال_تفرق_مبدا_پر_غیر_موجود})۔}
@@ -391,3 +391,344 @@ dfdx(\x)=3*\x*\x-8*\x-7;
 \end{align*}
 \انتہا{مثال}
 %==========================
+
+\جزوحصہء{کسی نقطے پر تفاعل کا تفرق کب نہیں پایا جاتا ہے؟}
+اگر نقطہ \عددی{N(x_0,f(x_0))} اور اس کے قریب نقطہ \عددی{Q} سے گزرتے ہوئے سیکنٹ کی ڈھلوان، \عددی{Q} کو \عددی{N} کے نزدیک تر کرنے سے تحدیدی قیمت اختیار کرتی ہو  تب تفاعل \عددی{f(x)} نقطہ \عددی{N} پر قابل تفرق ہو گا۔اگر \عددی{Q} کو \عددی{N} کے نزدیک تر کرنے سے سیکنٹ کی ڈھلوان  تحدیدی قیمت اختیار نہ کرتی ہو یا یہ سیکنٹ انتصابی تحدیدی صورت اختیار کرتی ہو، تب اس تفاعل کا \عددی{N} پر تفرق نہیں پایا جائے گا۔ہموار منحنی والے تفاعل کا درج ذیل صورتوں میں نقطہ \عددی{N} پر تفرق نہیں پایا جائے گا۔
+\begin{enumerate}[1.]
+\item
+نوکدار منحنی۔منحنی کی نوک  پر بائیں تفرق اور دائیں تفرق ایک جیسے نہیں ہوتے ہیں (شکل \حوالہ{شکل_تفرق_نا_قابل_نقطے}-ا)۔
+\item
+راس، جہاں \عددی{NQ} کی تحدیدی ڈھلوان ایک طرف سے \عددی{\infty} اور دوسری طرف سے \عددی{-\infty} ہوتی ہے (شکل \حوالہ{شکل_تفرق_نا_قابل_نقطے}-ب)۔ 
+\item
+انتصابی مماس، جہاں دونوں اطراف سے تحدیدی \عددی{NQ} کی ڈھلوان \عددی{\infty} یا \عددی{-\infty} ہوتی ہے (شکل \حوالہ{شکل_تفرق_نا_قابل_نقطے}-ج)۔
+\item
+عدم استمرار (شکل \حوالہ{شکل_تفرق_نا_قابل_نقطے}-د اور شکل \حوالہ{شکل_تفرق_نا_قابل_نقطے}-ہ)۔
+\end{enumerate}
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[thick](0,0) to [out=45,in=-110]node[pos=0.2,left]{$Q^-$}coordinate[pos=0.2](kA)coordinate[pos=0.4](kB)coordinate[pos=0.6](kC)coordinate[pos=0.8](kD)coordinate[pos=0.95](kE)(1.5,2)node[shift={(-160:0.3)}]{$N$}coordinate(kN) to [out=-20,in=110]node[pos=0.8,left]{$Q^+$}coordinate[pos=0.8](kAA)coordinate[pos=0.6](kBB)coordinate[pos=0.4](kCC)coordinate[pos=0.2](kDD)coordinate[pos=0.05](kEE)(3,0);
+\draw[gray,shorten <=-0.5cm, shorten >=-0.5cm] (kN)--(kA);
+\draw[gray,shorten <=-0.5cm, shorten >=-1cm] (kN)--(kB);
+\draw[gray,shorten <=-0.5cm, shorten >=-1.5cm] (kN)--(kC);
+\draw[gray,shorten <=-0.5cm, shorten >=-2cm] (kN)--(kD);
+\draw[shorten <=-0.5cm, shorten >=-2.5cm] (kN)--(kE);
+%
+\draw[gray,shorten <=-0.5cm, shorten >=-0.5cm] (kN)--(kAA);
+\draw[gray,shorten <=-0.5cm, shorten >=-1cm] (kN)--(kBB);
+\draw[gray,shorten <=-0.5cm, shorten >=-1.5cm] (kN)--(kCC);
+\draw[gray,shorten <=-0.5cm, shorten >=-2cm] (kN)--(kDD);
+\draw[shorten <=-0.5cm, shorten >=-2.5cm] (kN)--(kEE);
+%
+\draw(kA)node[circ]{} (kN)node[circ]{} (kAA)node[circ]{};
+\end{tikzpicture}
+\caption{نوک پر بائیں اور دائیں تفرق ایک دوسرے سے مختلف ہوتے ہیں۔}
+\end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[thick](0,0) to [out=45,in=-90]node[pos=0.2,left]{$Q^-$}coordinate[pos=0.2](kA)coordinate[pos=0.4](kB)coordinate[pos=0.6](kC)coordinate[pos=0.8](kD)coordinate[pos=0.95](kE)(1.5,2)node[shift={(-160:0.3)}]{$N$}coordinate(kN) to [out=-90,in=135]node[pos=0.8,right,yshift=1mm]{$Q^+$}coordinate[pos=0.8](kAA)coordinate[pos=0.6](kBB)coordinate[pos=0.4](kCC)coordinate[pos=0.2](kDD)coordinate[pos=0.05](kEE)(3,0);
+\draw[gray,shorten <=-0.5cm, shorten >=-0.5cm] (kN)--(kA);
+\draw[gray,shorten <=-0.5cm, shorten >=-0.75cm] (kN)--(kB);
+\draw[gray,shorten <=-0.5cm, shorten >=-1.25cm] (kN)--(kC);
+\draw[gray,shorten <=-0.5cm, shorten >=-1.5cm] (kN)--(kD);
+\draw[shorten <=-0.5cm, shorten >=-2cm] (kN)--(kE);
+%
+\draw[gray,shorten <=-0.5cm, shorten >=-0.5cm] (kN)--(kAA);
+\draw[gray,shorten <=-0.5cm, shorten >=-0.75cm] (kN)--(kBB);
+\draw[gray,shorten <=-0.5cm, shorten >=-1.25cm] (kN)--(kCC);
+\draw[gray,shorten <=-0.5cm, shorten >=-1.5cm] (kN)--(kDD);
+%
+\draw(kA)node[circ]{} (kN)node[circ]{} (kAA)node[circ]{};
+\end{tikzpicture}
+\caption{راس پر ایک طرف سے ڈھلوان $\infty$ جبکہ دوسری طرف سے $-\infty$ ہوتی ہے۔}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[thick](0,0) to [out=-10,in=90]node[pos=0.2,left]{$Q^-$}coordinate[pos=0.2](kA)coordinate[pos=0.4](kB)coordinate[pos=0.6](kC)coordinate[pos=0.8](kD)coordinate[pos=0.95](kE)++(1.5,-1.5)node[shift={(-160:0.3)}]{$N$}coordinate(kN) to [out=-90,in=170]node[pos=0.8,right,yshift=1mm]{$Q^+$}coordinate[pos=0.8](kAA)coordinate[pos=0.6](kBB)coordinate[pos=0.4](kCC)coordinate[pos=0.2](kDD)coordinate[pos=0.05](kEE)++(1.5,-1.5);
+\draw[gray,shorten <=-0.5cm, shorten >=-0.5cm] (kN)--(kA);
+\draw[gray,shorten <=-0.5cm, shorten >=-0.75cm] (kN)--(kB);
+\draw[gray,shorten <=-0.5cm, shorten >=-1cm] (kN)--(kC);
+\draw[gray,shorten <=-0.5cm, shorten >=-1.25cm] (kN)--(kD);
+%\draw[shorten <=-0.5cm, shorten >=-1.5cm] (kN)--(kE);
+\draw[shorten <=-1.5cm](kN)--++(90:1.5);
+%
+\draw[gray,shorten <=-0.5cm, shorten >=-0.5cm] (kN)--(kAA);
+\draw[gray,shorten <=-0.5cm, shorten >=-0.75cm] (kN)--(kBB);
+\draw[gray,shorten <=-0.5cm, shorten >=-1cm] (kN)--(kCC);
+\draw[gray,shorten <=-0.5cm, shorten >=-1.25cm] (kN)--(kDD);
+%\draw[shorten <=-0.5cm, shorten >=-1.5cm] (kN)--(kEE);
+%
+\draw(kA)node[circ]{} (kN)node[circ]{} (kAA)node[circ]{};
+\end{tikzpicture}
+\caption{نقطہ $N$ پر مماس انتصابی ہے۔}
+\end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[thick](0,0) to [out=10,in=-135]node[pos=0.2,shift={(135:0.3)}]{$Q^-$}coordinate[pos=0.2](kA)coordinate[pos=0.4](kB)coordinate[pos=0.6](kC)coordinate[pos=0.8](kD)coordinate[pos=1](kE)++(1.5,1) ++(0,1)node[shift={(-160:0.3)}]{$N$}coordinate(kN) to [out=-10,in=135]node[pos=0.8,left]{$Q^+$}coordinate[pos=0.8](kAA)coordinate[pos=0.6](kBB)coordinate[pos=0.4](kCC)coordinate[pos=0.2](kDD)coordinate[pos=0.05](kEE)++(1.5,-1.5);
+\draw[gray,shorten <=-0.5cm, shorten >=-0.5cm] (kN)--(kA);
+\draw[gray,shorten <=-0.5cm, shorten >=-0.5cm] (kN)--(kB);
+\draw[gray,shorten <=-0.5cm, shorten >=-0.5cm] (kN)--(kC);
+\draw[gray,shorten <=-0.5cm, shorten >=-0.75cm] (kN)--(kD);
+\draw[shorten <=-0.5cm, shorten >=-1cm] (kN)--(kE);
+%
+\draw[gray,shorten <=-0.5cm, shorten >=-0.5cm] (kN)--(kAA);
+\draw[gray,shorten <=-0.5cm, shorten >=-0.75cm] (kN)--(kBB);
+\draw[gray,shorten <=-0.5cm, shorten >=-1cm] (kN)--(kCC);
+\draw[gray,shorten <=-0.5cm, shorten >=-1.25cm] (kN)--(kDD);
+\draw[shorten <=-0.5cm, shorten >=-1.5cm] (kN)--(kEE);
+%
+\draw(kA)node[circ]{} (kN)node[circ]{} (kAA)node[circ]{} (kE)node[ocirc]{};
+\end{tikzpicture}
+\caption{عدم استمرار}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[thick](0,0) to [out=-45,in=-180]node[pos=0.2,above]{$Q^-$}coordinate[pos=0.2](kA)coordinate[pos=0.4](kB)coordinate[pos=0.6](kC)coordinate[pos=0.8](kD)coordinate[pos=1](kE)++(1.5,-1)coordinate(kNN) to [out=0,in=135]node[pos=0.8,above right]{$Q^+$}coordinate[pos=0.8](kAA)coordinate[pos=0.6](kBB)coordinate[pos=0.4](kCC)coordinate[pos=0.2](kDD)coordinate[pos=0.05](kEE)++(1.5,-1);
+\draw(kNN)++(0,1.5)coordinate(kN)node[right]{$N$};
+\draw[gray,shorten <=-0.5cm, shorten >=-0.5cm] (kN)--(kA);
+\draw[gray,shorten <=-0.5cm, shorten >=-0.5cm] (kN)--(kB);
+\draw[gray,shorten <=-0.5cm, shorten >=-0.5cm] (kN)--(kC);
+\draw[gray,shorten <=-0.5cm, shorten >=-0.75cm] (kN)--(kD);
+\draw[shorten <=-0.5cm, shorten >=-1cm] (kN)--(kE);
+%
+\draw[gray,shorten <=-0.5cm, shorten >=-0.5cm] (kN)--(kAA);
+\draw[gray,shorten <=-0.5cm, shorten >=-0.75cm] (kN)--(kBB);
+\draw[gray,shorten <=-0.5cm, shorten >=-1cm] (kN)--(kCC);
+\draw[gray,shorten <=-0.5cm, shorten >=-1.25cm] (kN)--(kDD);
+%\draw[shorten <=-0.5cm, shorten >=-1.5cm] (kN)--(kEE);
+%
+\draw(kA)node[circ]{} (kN)node[circ]{} (kAA)node[circ]{} (kE)node[ocirc]{};
+\end{tikzpicture}
+\caption{عدم استمرار}
+\end{subfigure}%
+\caption{ان نقطوں کی پہچان جہاں تفاعل نا قابل تفرق ہو گا۔}
+\label{شکل_تفرق_نا_قابل_نقطے}
+\end{figure}
+
+\جزوحصہء{قابل تفرق تفاعل استمراری ہوں گے}
+جس نقطے پر ایک تفاعل قابل تفرق ہو اس پر یہ تفاعل استمراری ہو گا۔
+
+\ابتدا{مسئلہ}\شناخت{مسئلہ_تفرق_قابل_تفرق_استمراری_ہے}
+اگر \عددی{x=c} پر \عددی{f} کا تفرق موجود ہو تب \عددی{x=c} پر \عددی{f} استمراری ہو گا۔
+\انتہا{مسئلہ}
+%=========================
+\ابتدا{ثبوت}
+ہم جانتے ہیں کہ \عددی{f'(c)} موجود ہے اور ہم نے دکھانا ہے کہ \عددی{\lim_{x\to c}f(x)=f(c)} یا اس کا مماثل \عددی{\lim_{h\to 0}f(c+h)=f(c)} درست ہیں۔ اگر \عددی{h\ne 0} ہو تب درج ذیل ہو گا۔
+\begin{align*}
+f(c+h)&=f(c)+(f(c+h)-f(c))\\
+&=f(c)+\frac{f(c+h)-f(c)}{h}\cdot h
+\end{align*}
+اب \عددی{h\to 0} لیں۔ مسئلہ \حوالہ{مسئلہ_حد_قواعد-الف} کے تحت درج ذیل ہو گا۔
+\begin{align*}
+\lim_{h\to 0}f(c+h)&=\lim_{h\to 0} f(c)+\lim_{h\to 0} \frac{f(c+h)-f(c)}{h}\cdot \lim_{h\to 0}h\\
+&=f(c)+f'(c)\cdot 0\\
+&=f(c)
+\end{align*}
+\انتہا{ثبوت}
+%===========================
+
+اسی قسم کی دلیل سے ثابت ہوتا ہے کہ اگر \عددی{x=c} پر \عددی{f} کا یک طرفہ (بایاں یا دایاں) تفرق پایا جاتا ہو تب \عددی{x=c} پر \عددی{f} اسی طرف (بائیں یا دائیں) سے استمراری ہو گا۔
+
+\موٹا{انتباہ}\quad مسئلہ \حوالہ{مسئلہ_تفرق_قابل_تفرق_استمراری_ہے} کا الٹ درست نہیں ہے یعنی جس نقطے پر تفاعل استمراری ہو اس پر تفاعل نا قابل تفرق ہو سکتا ہے جیسے ہم نے مثال \حوالہ{مثال_تفرق_مبدا_پر_غیر_موجود} میں دیکھا۔
+
+\موٹا{استمراری تفاعل کی ترسیم کتنی غیر ہموار ہو سکتی ہے؟} ہم نے دیکھا کہ مطلق قیمت تفاعل \عددی{y=\abs{x}} ایک نقطہ پر نا قابل تفرق ہوتا ہے۔یوں ہم استمراری دندان ترسیم (شکل \حوالہ{شکل_تفرق_دندان_ترسیم}) بنا سکتے ہیں جو لا متناہی تعداد کے نقطوں پر نا قابل تفرق ہو گا۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[x=0.5cm]
+\draw[-latex](-5,0)--(5,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,1.5)node[above]{$y$};
+\draw(0,0)--++(1,1)node[above right]{$y=f(x)$}--++(1,-1)--++(1,1)--++(1,-1)--++(0.5,0.5);
+\draw(0,0)--++(-1,1)--++(-1,-1)--++(-1,1)--++(-1,-1)--++(-0.5,0.5);
+\end{tikzpicture}
+\caption{دندان ترسیم استمراری لیکن لا متناہی نقطوں پر نا قابل تفرق ہے۔}
+\label{شکل_تفرق_دندان_ترسیم}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-2,0)--(2,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,1.5)node[above]{$y$};
+\draw[thick](-2,0)--(0,0)node[ocirc]{} (0,1)node[circ]{}--(2,1)node[pos=0.75,above]{$y=\cup(x)$};
+\end{tikzpicture}
+\caption{اکائی سیڑھی تفاعل متوسط قیمت خاصیت نہیں رکھتا ہے لہٰذا حقیقی خط پر یہ کسی دوسرے تفاعل کا تفرق نہیں ہو سکتا ہے۔}
+\label{شکل_تفرق_اکائی_سیڑھی_تفاعل}
+\end{minipage}
+\end{figure}
+
+\موٹا{کیا استمراری تفاعل ہر نقطے پر نا قابل تفرق ہو سکتا ہے؟} اس کا جواب ہے "جی ہاں" جیسے  \ترچھا{کارل وائشسٹراس}\حاشیہب{جرمن ریاضی دان کارل وائشسٹراس [1815-1897]} نے \سن{1872} میں درج ذیل کلیہ (اور کئی اور) پیش کرتے ہوئے ثابت کیا۔
+\begin{align*}
+f(x)=\sum_{n=0}^{\infty}\big(\frac{2}{3}\big)^n\cos (9^n\pi x)
+\end{align*}
+یہ کلیہ \عددی{f} کو  بڑھتی تعدد کے کوسائن تفاعل کے مجموعے کی صورت میں پیش کرتا ہے۔بل کو بل دینے سے ایسا تفاعل حاصل ہوتا ہے جس کا تحدیدی سیکنٹ کسی بھی نقطے پر حاصل کرنا ممکن نہیں ہوتا ہے لہٰذا اس کا مماس کہیں پر بھی نہیں پایا جاتا ہے۔ 
+
+استمراری تفاعل جن کا کسی بھی نقطے پر مماس نہ پایا جاتا ہو \ترچھا{نظریہ ابتری}\فرہنگ{نظریہ!ابتری}\حاشیہب{chaos theory}\فرہنگ{chaos theory} میں کلیدی کردار ادا کرتے ہیں۔ ایسے تفاعل کو متناہی لمبائی مختص کرنا ممکن نہیں ہوتا ہے۔ہم منحنی کی لمبائی اور تفرق کا تعلق پر بعد میں غور کریں گے۔
+
+\جزوحصہء{تفرق کی متوسط قیمت خاصیت}
+ضروری نہیں ہے کہ ایک تفاعل کسی دوسرے کا تفرقی تفاعل ہو۔درج ذیل مسئلہ سے اس حقیقت کو اخذ کیا جا سکتا ہے۔
+
+\ابتدا{مسئلہ}\شناخت{مسئلہ_تفرق_متوسط_قیمت_خاصیت}
+اگر جس وقفے پر \عددی{f} قابل تفرق ہو اس وقفے میں نقطہ \عددی{a} اور \عددی{b} پائے جاتے ہیں تب  \عددی{f'(a)} اور \عددی{f'(b)} کے بیچ ہر قیمت کا تفرق \عددی{f'} پایا جائے گا۔ 
+\انتہا{مسئلہ}
+%===========================
+
+مسئلہ \حوالہ{مسئلہ_تفرق_متوسط_قیمت_خاصیت} (جس کا ثبوت ہم پیش نہیں کریں گے)  کہتا ہے کہ کسی وقفے پر ایک تفاعل اس صورت تک کسی دوسرے تفاعل کا تفرق نہیں ہو گا جب تک اس وقفے پر یہ متوسط قیمت خاصیت نہ رکھتا ہو (شکل \حوالہ{شکل_تفرق_اکائی_سیڑھی_تفاعل})۔ ایک تفاعل کب کسی دوسرے تفاعل کا تفرق ہو گا؟ یہ احصاء کی اہم ترین سوالات میں سے ایک ہے جس کا جواب نیوٹن اور لیبنٹز نے دے کر ریاضیات میں انقلاب برپا کیا۔ان کے جواب کو ہم باب میں دیکھیں گے۔
+
+\حصہء{سوالات}
+\موٹا{تفرقی تفاعل اور قیمتوں کی تلاش}\\
+سوال \حوالہ{سوال_تفرق_قیمت_تلاش_الف} تا سوال \حوالہ{سوال_تفرق_قیمت_تلاش_ب} میں تفرق کی تعریف استعمال کرتے ہوئے دیے گئے تفاعل کے تفرق کی قیمت تلاش کریں۔  
+
+\ابتدا{سوال}\شناخت{سوال_تفرق_قیمت_تلاش_الف}\quad
+$f(x)=4-x^2; \quad f'(-3), f'(0), f'(1)$
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}
+$F(x)=(x-1)^2+1;\quad F'(-1), F'(0), F'(2)$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$g(t)=\tfrac{1}{t^2};\quad g'(-1), g'(2), g'(\sqrt{3})$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$k(z)=\tfrac{1-z}{2z};\quad k'(-1), k'(1), k'(\sqrt{2})$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$p(\theta)=\sqrt{3\theta};\quad p'(1), p'(3), p'(\tfrac{2}{3})$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}\شناخت{سوال_تفرق_قیمت_تلاش_ب}\quad
+$r(s)=\sqrt{2s+1};\quad r'(0), r'(1), r'(\tfrac{1}{2})$
+\انتہا{سوال}
+%====================
+سوال \حوالہ{سوال_تفرق_درکار_حاصل_الف} تا سوال \حوالہ{سوال_تفرق_درکار_حاصل_ب} میں دیا گیا تفرق حاصل کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_تفرق_درکار_حاصل_الف}
+$y=2x^3;\quad \tfrac{\dif y}{\dif x}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$r=\tfrac{s^3}{2}+1;\quad \tfrac{\dif r}{\dif s}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$s=\tfrac{t}{2t+1};\quad \tfrac{\dif s}{\dif t}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$v=t-\tfrac{1}{t};\quad \tfrac{\dif v}{\dif t}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$p=\tfrac{1}{\sqrt{q+1}};\quad \tfrac{\dif p}{\dif q}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_تفرق_درکار_حاصل_ب}
+$z=\tfrac{1}{\sqrt{3w-2}};\quad \tfrac{\dif z}{\dif w}$
+\انتہا{سوال}
+%========================
+\موٹا{ڈھلوان اور مماسی خطوط}\\
+سوال \حوالہ{سوال_تفرق_ڈھلوان_تلاش_الف} تا سوال \حوالہ{سوال_تفرق_ڈھلوان_تلاش_ب} میں تفاعل کا تفرق حاصل کرتے ہوئے دیے گئے غیر تابع متغیر پر مماس کی ڈھلوان تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_تفرق_ڈھلوان_تلاش_الف}
+$f(x)=x+\tfrac{9}{x};\quad x=-3$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$k(x)=\tfrac{1}{2+x};\quad x=2$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$s=t^3-t^2;\quad t=-1$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_تفرق_ڈھلوان_تلاش_ب}
+$y=(x+1)^3;\quad x=-2$
+\انتہا{سوال}
+%=====================
+سوال \حوالہ{سوال_تفرق_مماس_مساوات_الف} تا سوال \حوالہ{سوال_تفرق_مماس_مساوات_ب} میں تفاعل کا تفرق حاصل کریں۔ ترسیم پر دیے گئے نقطے پہ تفاعل کے مماس کی مساوات تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_تفرق_مماس_مساوات_الف}
+$f(x)=\tfrac{8}{\sqrt{x-2}};\quad (x,y)=(6,4)$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\شناخت{سوال_تفرق_مماس_مساوات_ب}
+$g(z)=1+\sqrt{4-z};\quad (z,w)=(3,2)$
+\انتہا{سوال}
+%======================
+سوال \حوالہ{سوال_تفرق_قیمت_نقطے_پر_تلاش_الف} تا سوال \حوالہ{سوال_تفرق_قیمت_نقطے_پر_تلاش_ب} میں تفرق کی قیمت تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_تفرق_قیمت_نقطے_پر_تلاش_الف}
+$\left. \tfrac{\dif s}{\dif t}\right\vert_{t=-1};\quad s=1-3t^2$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\left. \tfrac{\dif y}{\dif x}\right\vert_{x=\sqrt{3}};\quad y=1-\tfrac{1}{x}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\left. \tfrac{\dif r}{\dif \theta}\right\vert_{\theta=0};\quad r=\tfrac{2}{\sqrt{4-\theta}}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\شناخت{سوال_تفرق_قیمت_نقطے_پر_تلاش_ب}
+$\left. \tfrac{\dif w}{\dif z}\right\vert_{z=4};\quad w=z+\sqrt{z}$
+\انتہا{سوال}
+%======================
+\موٹا{تفرق کے حصول کا متبادل کلیہ}\\
+تحدیدی سیکنٹ سے تفرق کا حاصل کلیہ مستعمل نقطوں کی علامتی اظہار پر منحصر ہوتا ہے۔شکل \حوالہ{شکل_تفرق_متبادل_طریقہ} میں سیکنٹ کی ڈھلوان \عددی{\tfrac{f(x)-f(c)}{x-c}} ہے جس کی \عددی{N} پر  تحدیدی قیمت (\عددی{Q} کو \عددی{N} کے نزدیک تر کرتے ہوئے) \عددی{N} پر تفاعل کا تفرق دیتی ہے۔
+\begin{align*}
+f'(c)=\lim_{x\to c} \frac{f(x)-f(c)}{x-c}
+\end{align*}
+%
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=2-sin(\x);}]
+\pgfmathsetmacro{\kS}{70}
+\pgfmathsetmacro{\kE}{260}
+\pgfmathsetmacro{\kN}{\kS+0.1*(\kE-\kS)}
+\pgfmathsetmacro{\kQ}{\kS+0.7*(\kE-\kS)}
+\draw(0,0)--(5,0);
+\draw[domain=\kS:\kE] plot ({\x*pi/180},{f(\x)});
+\draw[shorten <=-0.5cm, shorten >=-0.5cm] ({\kN*pi/180},{f(\kN)})node[circ]{}coordinate(kA)node[above,xshift=-2mm,yshift=2mm]{$N(c,f(c))$}--({\kQ*pi/180},{f(\kQ)})node[circ]{}coordinate(kB)node[left,yshift=2mm]{$Q(x,f(x))$};
+\draw[dashed](kA)--($(0,0)!(kA)!(5,0)$)node[circ]{}node[below]{$c$}coordinate[pos=0.4](kL);
+\path[name path=kR](kB)--($(0,0)!(kB)!(5,0)$);
+\path[name path=kH](kA)--++(5,0);
+\draw[name intersections={of={kH and kR}}] (kA)--(intersection-1)--(kB);
+\draw[dashed] (intersection-1)--($(0,0)!(intersection-1)!(5,0)$)node[circ]{}node[below]{$x$}coordinate(kRB);
+\draw[stealth-stealth](kL)--($(intersection-1)!(kL)!(kRB)$)node[pos=0.5,fill=white]{$h=x-c$};
+\draw(kB)++(0.3,0)--++(0.3,0)coordinate[pos=0.5](kTop);
+\draw(intersection-1)++(0.3,0)--++(0.3,0)coordinate[pos=0.5](kBot);
+\draw[stealth-stealth](kTop)--(kBot)node[pos=0.5,right]{$f(x)-f(c)$};
+\end{tikzpicture}
+\caption{حصول تفرق کا متبادل کلیہ}
+\label{شکل_تفرق_متبادل_طریقہ}
+\end{figure} 
+
+اس کلیہ کا استعمال چند تفرق کا حصول آسان بناتا ہے۔سوال \حوالہ{سوال_تفرق_متبادل_الف} تا سوال \حوالہ{سوال_تفرق_متبادل_ب} میں اس کلیہ کی مدد سے \عددی{c} پر تفاعل کا تفرق حاصل کریں۔  
+
+\ابتدا{سوال}\شناخت{سوال_تفرق_متبادل_الف}
+$f(x)=\tfrac{1}{x+2},\quad c=-1$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$f(x)=\tfrac{1}{(x-1)^2},\quad c=2$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$g(t)=\tfrac{t}{t-1},\quad c=3$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_تفرق_متبادل_ب}
+$k(s)=1+\sqrt{s},\quad c=9$
+\انتہا{سوال}
+%=====================
+\موٹا{ترسیمات}
