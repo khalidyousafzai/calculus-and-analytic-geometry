@@ -587,7 +587,9 @@ f(x)=\sum_{n=0}^{\infty}\big(\frac{2}{3}\big)^n\cos (9^n\pi x)
 سوال \حوالہ{سوال_تفرق_قیمت_تلاش_الف} تا سوال \حوالہ{سوال_تفرق_قیمت_تلاش_ب} میں تفرق کی تعریف استعمال کرتے ہوئے دیے گئے تفاعل کے تفرق کی قیمت تلاش کریں۔  
 
 \ابتدا{سوال}\شناخت{سوال_تفرق_قیمت_تلاش_الف}\quad
-$f(x)=4-x^2; \quad f'(-3), f'(0), f'(1)$
+$f(x)=4-x^2; \quad f'(-3), f'(0), f'(1)$\\
+جواب:\quad
+$-2x,6,0,-2$
 \انتہا{سوال}
 %==================
 \ابتدا{سوال}
@@ -595,7 +597,9 @@ $F(x)=(x-1)^2+1;\quad F'(-1), F'(0), F'(2)$
 \انتہا{سوال}
 %====================
 \ابتدا{سوال}
-$g(t)=\tfrac{1}{t^2};\quad g'(-1), g'(2), g'(\sqrt{3})$
+$g(t)=\tfrac{1}{t^2};\quad g'(-1), g'(2), g'(\sqrt{3})$\\
+جواب:\quad
+$-\tfrac{2}{t^3},2,-\tfrac{1}{4},-\tfrac{2}{3\sqrt{3}}$
 \انتہا{سوال}
 %====================
 \ابتدا{سوال}
@@ -603,7 +607,9 @@ $k(z)=\tfrac{1-z}{2z};\quad k'(-1), k'(1), k'(\sqrt{2})$
 \انتہا{سوال}
 %====================
 \ابتدا{سوال}
-$p(\theta)=\sqrt{3\theta};\quad p'(1), p'(3), p'(\tfrac{2}{3})$
+$p(\theta)=\sqrt{3\theta};\quad p'(1), p'(3), p'(\tfrac{2}{3})$\\
+جواب:\quad
+$\tfrac{3}{2\sqrt{3\theta}},\tfrac{3}{2\sqrt{3}},\tfrac{1}{2},\tfrac{3}{2\sqrt{2}}$
 \انتہا{سوال}
 %====================
 \ابتدا{سوال}\شناخت{سوال_تفرق_قیمت_تلاش_ب}\quad
@@ -613,7 +619,9 @@ $r(s)=\sqrt{2s+1};\quad r'(0), r'(1), r'(\tfrac{1}{2})$
 سوال \حوالہ{سوال_تفرق_درکار_حاصل_الف} تا سوال \حوالہ{سوال_تفرق_درکار_حاصل_ب} میں دیا گیا تفرق حاصل کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_تفرق_درکار_حاصل_الف}
-$y=2x^3;\quad \tfrac{\dif y}{\dif x}$
+$y=2x^3;\quad \tfrac{\dif y}{\dif x}$\\
+جواب:\quad
+$6x^2$
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}
@@ -621,7 +629,9 @@ $r=\tfrac{s^3}{2}+1;\quad \tfrac{\dif r}{\dif s}$
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}
-$s=\tfrac{t}{2t+1};\quad \tfrac{\dif s}{\dif t}$
+$s=\tfrac{t}{2t+1};\quad \tfrac{\dif s}{\dif t}$\\
+جواب:\quad
+$\tfrac{1}{(2t+1)^2}$
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}
@@ -629,7 +639,9 @@ $v=t-\tfrac{1}{t};\quad \tfrac{\dif v}{\dif t}$
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}
-$p=\tfrac{1}{\sqrt{q+1}};\quad \tfrac{\dif p}{\dif q}$
+$p=\tfrac{1}{\sqrt{q+1}};\quad \tfrac{\dif p}{\dif q}$\\
+جواب:\quad
+ $-\tfrac{1}{2(q+1)\sqrt{q+1}}$
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}\شناخت{سوال_تفرق_درکار_حاصل_ب}
@@ -640,7 +652,9 @@ $z=\tfrac{1}{\sqrt{3w-2}};\quad \tfrac{\dif z}{\dif w}$
 سوال \حوالہ{سوال_تفرق_ڈھلوان_تلاش_الف} تا سوال \حوالہ{سوال_تفرق_ڈھلوان_تلاش_ب} میں تفاعل کا تفرق حاصل کرتے ہوئے دیے گئے غیر تابع متغیر پر مماس کی ڈھلوان تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_تفرق_ڈھلوان_تلاش_الف}
-$f(x)=x+\tfrac{9}{x};\quad x=-3$
+$f(x)=x+\tfrac{9}{x};\quad x=-3$\\
+جواب:\quad
+$1-\tfrac{9}{x^2},0$
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
@@ -648,7 +662,9 @@ $k(x)=\tfrac{1}{2+x};\quad x=2$
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
-$s=t^3-t^2;\quad t=-1$
+$s=t^3-t^2;\quad t=-1$\\
+جواب:\quad
+$3t^2-2t,5$
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}\شناخت{سوال_تفرق_ڈھلوان_تلاش_ب}
@@ -658,7 +674,9 @@ $y=(x+1)^3;\quad x=-2$
 سوال \حوالہ{سوال_تفرق_مماس_مساوات_الف} تا سوال \حوالہ{سوال_تفرق_مماس_مساوات_ب} میں تفاعل کا تفرق حاصل کریں۔ ترسیم پر دیے گئے نقطے پہ تفاعل کے مماس کی مساوات تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_تفرق_مماس_مساوات_الف}
-$f(x)=\tfrac{8}{\sqrt{x-2}};\quad (x,y)=(6,4)$
+$f(x)=\tfrac{8}{\sqrt{x-2}};\quad (x,y)=(6,4)$\\
+جواب:\quad
+$\tfrac{-4}{(x-2)\sqrt{x-2}},y-4=-\tfrac{1}{2}(x-6)$
 \انتہا{سوال}
 %======================
 \ابتدا{سوال}\شناخت{سوال_تفرق_مماس_مساوات_ب}
@@ -668,7 +686,9 @@ $g(z)=1+\sqrt{4-z};\quad (z,w)=(3,2)$
 سوال \حوالہ{سوال_تفرق_قیمت_نقطے_پر_تلاش_الف} تا سوال \حوالہ{سوال_تفرق_قیمت_نقطے_پر_تلاش_ب} میں تفرق کی قیمت تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_تفرق_قیمت_نقطے_پر_تلاش_الف}
-$\left. \tfrac{\dif s}{\dif t}\right\vert_{t=-1};\quad s=1-3t^2$
+$\left. \tfrac{\dif s}{\dif t}\right\vert_{t=-1};\quad s=1-3t^2$\\
+جواب:\quad
+$6$
 \انتہا{سوال}
 %======================
 \ابتدا{سوال}
@@ -676,7 +696,9 @@ $\left. \tfrac{\dif y}{\dif x}\right\vert_{x=\sqrt{3}};\quad y=1-\tfrac{1}{x}$
 \انتہا{سوال}
 %======================
 \ابتدا{سوال}
-$\left. \tfrac{\dif r}{\dif \theta}\right\vert_{\theta=0};\quad r=\tfrac{2}{\sqrt{4-\theta}}$
+$\left. \tfrac{\dif r}{\dif \theta}\right\vert_{\theta=0};\quad r=\tfrac{2}{\sqrt{4-\theta}}$\\
+جواب:\quad
+$\tfrac{1}{8}$
 \انتہا{سوال}
 %======================
 \ابتدا{سوال}\شناخت{سوال_تفرق_قیمت_نقطے_پر_تلاش_ب}
@@ -697,7 +719,7 @@ f'(c)=\lim_{x\to c} \frac{f(x)-f(c)}{x-c}
 \pgfmathsetmacro{\kN}{\kS+0.1*(\kE-\kS)}
 \pgfmathsetmacro{\kQ}{\kS+0.7*(\kE-\kS)}
 \draw(0,0)--(5,0);
-\draw[domain=\kS:\kE] plot ({\x*pi/180},{f(\x)});
+\draw[domain=\kS:\kE] plot ({\x*pi/180},{f(\x)})node[above]{$y=f(x)$};
 \draw[shorten <=-0.5cm, shorten >=-0.5cm] ({\kN*pi/180},{f(\kN)})node[circ]{}coordinate(kA)node[above,xshift=-2mm,yshift=2mm]{$N(c,f(c))$}--({\kQ*pi/180},{f(\kQ)})node[circ]{}coordinate(kB)node[left,yshift=2mm]{$Q(x,f(x))$};
 \draw[dashed](kA)--($(0,0)!(kA)!(5,0)$)node[circ]{}node[below]{$c$}coordinate[pos=0.4](kL);
 \path[name path=kR](kB)--($(0,0)!(kB)!(5,0)$);
@@ -716,7 +738,9 @@ f'(c)=\lim_{x\to c} \frac{f(x)-f(c)}{x-c}
 اس کلیہ کا استعمال چند تفرق کا حصول آسان بناتا ہے۔سوال \حوالہ{سوال_تفرق_متبادل_الف} تا سوال \حوالہ{سوال_تفرق_متبادل_ب} میں اس کلیہ کی مدد سے \عددی{c} پر تفاعل کا تفرق حاصل کریں۔  
 
 \ابتدا{سوال}\شناخت{سوال_تفرق_متبادل_الف}
-$f(x)=\tfrac{1}{x+2},\quad c=-1$
+$f(x)=\tfrac{1}{x+2},\quad c=-1$\\
+جواب:\quad
+$-1$
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
@@ -724,7 +748,9 @@ $f(x)=\tfrac{1}{(x-1)^2},\quad c=2$
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
-$g(t)=\tfrac{t}{t-1},\quad c=3$
+$g(t)=\tfrac{t}{t-1},\quad c=3$\\
+جواب:\quad
+$-\tfrac{1}{4}$
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}\شناخت{سوال_تفرق_متبادل_ب}
@@ -732,3 +758,169 @@ $k(s)=1+\sqrt{s},\quad c=9$
 \انتہا{سوال}
 %=====================
 \موٹا{ترسیمات}
+سوال \حوالہ{سوال_شکل_تفرق_اصل_تلاش_الف} تا سوال \حوالہ{سوال_شکل_تفرق_اصل_تلاش_ب} میں دیے گئے تفاعل کا تفرق شکل \حوالہ{شکل_تفرق_اصل_تلاش} میں تلاش کریں۔
+\begin{figure}
+\centering
+\begin{minipage}{1\textwidth}
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}[]
+\begin{axis}[small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty}]
+\addplot[domain=-2:2]{x^3};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}[]
+\begin{axis}[small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty}]
+\addplot[domain=-2:2]{x};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}[]
+\begin{axis}[small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty}]
+\addplot[domain=-2:2]{x^2};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}[]
+\begin{axis}[small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty},xlabel style={at={(current axis.right of origin)},anchor=west}]
+\addplot[domain=-7:7,samples=100]{-sin(deg(x))};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{تفاعل کے تفرق}
+\label{شکل_تفرق_اصل_تلاش}
+\end{minipage}
+\begin{minipage}{1\textwidth}
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}[]
+\begin{axis}[small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty}]
+\addplot[domain=-2:2]{1/2*x^2};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}[]
+\begin{axis}[small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty},xlabel style={at={(current axis.right of origin)},anchor=west}]
+\addplot[domain=-7:7,samples=100]{cos(deg(x))};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}[]
+\begin{axis}[small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty}]
+\addplot[domain=-2:2]{1/3*x^3};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}[]
+\begin{axis}[small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty}]
+\addplot[domain=-1:1]{1/4*x^4};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\caption{اصل تفاعل}
+\label{شکل_تفرق_اصل}
+\end{minipage}
+\end{figure}
+
+\ابتدا{سوال}\شناخت{سوال_شکل_تفرق_اصل_تلاش_الف}
+شکل \حوالہ{شکل_تفرق_اصل}-ا\\
+جواب:\quad
+شکل \حوالہ{شکل_تفرق_اصل_تلاش}-ب
+\انتہا{سوال}
+%==============================
+\ابتدا{سوال}
+شکل \حوالہ{شکل_تفرق_اصل}-ب\\
+جواب:\quad
+شکل \حوالہ{شکل_تفرق_اصل_تلاش}-د
+\انتہا{سوال}
+%==============================
+\ابتدا{سوال}
+شکل \حوالہ{شکل_تفرق_اصل}-ج\\
+جواب:\quad
+شکل \حوالہ{شکل_تفرق_اصل_تلاش}-ج
+\انتہا{سوال}
+%==============================
+\ابتدا{سوال}\شناخت{سوال_شکل_تفرق_اصل_تلاش_ب}
+شکل \حوالہ{شکل_تفرق_اصل}-د\\
+جواب:\quad
+شکل \حوالہ{شکل_تفرق_اصل_تلاش}-ا
+\انتہا{سوال}
+%==============================
+\ابتدا{سوال}\شناخت{سوال_تفرق_کیا_موجود_الف}
+قطعات کو جوڑ کر شکل \حوالہ{شکل_سوال_تفرق_کیا_موجود_الف} حاصل کی گئی ہے۔(ا) وقفہ \عددی{[-4,6]} پر کہاں \عددی{f'} غیر معین ہو گا؟ اپنے جواب کی وجہ پیش کریں۔ (ب) انتصابی محور کو \عددی{y'} کہتے ہوئے \عددی{f'} کو ترسیم کریں۔ترسیم سیڑھی نما ہو گا۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\begin{tikzpicture}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xmin=-6,xmax=7.5,ymin=-3,ymax=3,xtick={1,6},ytick={\empty}]
+\addplot[] plot coordinates {(-4,0) (0,2) (1,-2) (4,-2) (6,2)};
+\draw(axis cs:-4,0)node[circ]{}node[below]{$(-4,0)$}  (axis cs:0,2)node[circ]{}node[left]{$(0,2)$} (axis cs:1,-2)node[circ]{}node[below]{$(1,-2)$}  (axis cs:4,-2)node[circ]{}node[right]{$(4,-2)$} (axis cs:6,2)node[circ]{}node[above]{$(6,2)$} (axis cs:3,1.5)node[]{$y=f(x)$};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم برائے سوال \حوالہ{سوال_تفرق_کیا_موجود_الف}}
+\label{شکل_سوال_تفرق_کیا_موجود_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\begin{tikzpicture}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y'$},xmin=-6,xmax=7.5,ymin=-3,ymax=3,xtick={-2,1,3,5},ytick={1}]
+\draw[thick](axis cs:-2,-2)node[circ]{}--(axis cs:0,-2)node[ocirc]{}node[right]{$-2$} (axis cs:0,0)node[ocirc]{}--(axis cs:1,0)node[ocirc]{} (axis cs:1,1)node[ocirc]{}--(axis cs:3,1)node[ocirc]{} (axis cs:3,-1)node[ocirc]{}--(axis cs:5,-1)node[circ]{} (axis cs:3,2)node[right]{$y=f'(x)$};
+\end{axis}
+\end{tikzpicture}
+\caption{تفاعل کے تفرق کا ترسیم برائے سوال \حوالہ{سوال_تفرق_سے_اصل_کا_حصول}}
+\label{شکل_سوال_تفرق_سے_اصل_کا_حصول}
+\end{minipage}
+\end{figure}
+
+جواب:\quad
+(ا) \عددی{x=0,1,4}؛ (ب) شکل \حوالہ{شکل_سوال_تفرق_کیا_موجود_الف_جواب}
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y'$},xmin=-5,xmax=7,ymin=-5,ymax=3]
+\draw[thick](axis cs:-4,0.5)node[ocirc]{}--(axis cs:0,0.5)node[ocirc]{} (axis cs:0,-4)node[ocirc]{}--(axis cs:1,-4)node[ocirc]{} (axis cs:1,0)node[ocirc]{}--(axis cs:4,0)node[ocirc]{} (axis cs:4,2)node[ocirc]{}--(axis cs:6,2)node[ocirc]{};
+\end{axis}
+\end{tikzpicture}
+\caption{جواب برائے سوال \حوالہ{سوال_تفرق_سے_اصل_کا_حصول}}
+\label{شکل_سوال_تفرق_کیا_موجود_الف_جواب}
+\end{minipage}
+\end{figure}
+\انتہا{سوال}
+%============================
+\ابتدا{سوال}\شناخت{سوال_تفرق_سے_اصل_کا_حصول}\ترچھا{تفاعل کے تفرق سے اصل تفرق کی وصولی}\\
+(ا) \quad
+درج ذیل طریقے سے تفاعل \عددی{f} ترسیم کو وقفہ \عددی{[-2,5]} پر کریں۔
+\begin{enumerate}[1.]
+\item
+بند قطعات کو جوڑ کر ترسیم حاصل کریں۔
+\item
+ترسیم کو نقطہ \عددی{(-2,3)} سے شروع کریں۔
+\item
+تفاعل کا تفرق شکل \حوالہ{شکل_سوال_تفرق_سے_اصل_کا_حصول} میں دکھایا گیا ہے۔
+\end{enumerate}
+(ب)\quad
+نقطہ \عددی{(-2,0)} سے شروع کرتے ہوئے جزو (ا) کا ترسیم دوبارہ حاصل کریں۔
+\انتہا{سوال}
+%======================
