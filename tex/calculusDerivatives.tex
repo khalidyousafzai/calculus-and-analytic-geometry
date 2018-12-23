@@ -924,3 +924,509 @@ $k(s)=1+\sqrt{s},\quad c=9$
 نقطہ \عددی{(-2,0)} سے شروع کرتے ہوئے جزو (ا) کا ترسیم دوبارہ حاصل کریں۔
 \انتہا{سوال}
 %======================
+سوال \حوالہ{سوال_تفرق_نا_قابل_الف} تا سوال \حوالہ{سوال_تفرق_نا_قابل_د} میں نقطہ \عددی{N} پر بائیں اور دائیں ہاتھ تفرق کا موازنہ کرتے ہوئے دکھائیں کہ اس نقطے پر تفاعل نا قابل تفرق ہے۔
+
+\ابتدا{سوال}\شناخت{سوال_تفرق_نا_قابل_الف}
+تفاعل کو شکل  \حوالہ{شکل_سوال_تفرق_نا_قابل_الف} میں دکھایا گیا ہے۔\\
+جواب:\quad
+چونکہ \عددی{\lim_{x\to 0^+}f'(x)=1} جبکہ \عددی{\lim_{x\to 0^-}f'(x)=0} ہے لہٰذا \عددی{x=0} پر \عددی{f(x)} نا قابل تفرق ہے۔
+ \begin{figure}
+\centering
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty},ymin=-0.5,font=\footnotesize,ylabel style={at={(current axis.above origin)},anchor=south},xlabel style={at={(current axis.right of origin)},anchor=west}]
+\addplot[domain=-1.4142:0]{x^2}node[pos=0.5,fill=white]{$y=x^2$};
+\addplot[domain=0:2]{x}node[pos=0.5,fill=white]{$y=x$};
+\draw(axis cs:0,0)node[circ]{}node[below right]{$N(0,0)$};
+\draw(axis cs:0,2)node[right]{$y=f(x)$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تفرق_نا_قابل_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty},ymin=-0.5,font=\footnotesize,ylabel style={at={(current axis.above origin)},anchor=south},xtick={1,2},ytick={1,3},xmax=3,xlabel style={at={(current axis.right of origin)},anchor=west}]
+\addplot[] plot coordinates {(-2,2) (1,2)};
+\addplot[domain=1:2]{2*x}node[pos=0.5,right]{$y=2x$};
+\draw(axis cs:1,2)node[circ]{}node[below right]{$N(1,2)$};
+\draw(axis cs:0,4)node[left]{$y=f(x)$};
+\draw(axis cs:-2,2)node[above]{$y=2$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تفرق_نا_قابل_ب}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty},ymin=-0.5,font=\footnotesize,ylabel style={at={(current axis.above origin)},anchor=south},xtick={1},ytick={1},xmax=3,xlabel style={at={(current axis.right of origin)},anchor=west}]
+\addplot[domain=0:1]{sqrt(x)}node[pos=0.3,right]{$y=\sqrt{x}$};
+\addplot[domain=1:2]{2*x-1}node[pos=0.5,fill=white]{$y=2x-1$};
+\draw(axis cs:1,1)node[circ]{}node[right]{$N(1,1)$};
+\draw(axis cs:0,3)node[right]{$y=f(x)$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تفرق_نا_قابل_ج}
+\end{minipage}\hfill
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty},ymin=-0.5,font=\footnotesize,ylabel style={at={(current axis.above origin)},anchor=south},xtick={1},ytick={1},xmax=3,ymax=2,xlabel style={at={(current axis.right of origin)},anchor=west}]
+\addplot[domain=-1:1]{x}node[pos=0.15,right]{$y=x$};
+\addplot[domain=1:2.5]{1/x}node[pos=0.5,above right]{$y=\tfrac{1}{x}$};
+\draw(axis cs:1,1)node[circ]{}node[above]{$N(1,1)$};
+\draw(axis cs:0,2)node[right]{$y=f(x)$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تفرق_نا_قابل_د}
+\end{minipage}%
+\end{figure}
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\شناخت{سوال_تفرق_نا_قابل_ب}
+تفاعل کو شکل  \حوالہ{شکل_سوال_تفرق_نا_قابل_ب} میں دکھایا گیا ہے۔
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}\شناخت{سوال_تفرق_نا_قابل_ج}
+تفاعل کو شکل  \حوالہ{شکل_سوال_تفرق_نا_قابل_ج} میں دکھایا گیا ہے۔\\
+جواب:\quad
+چونکہ \عددی{\lim_{x\to 1^+}f'(x)=2} جبکہ \عددی{\lim_{x\to 1^-}f'(x)=\tfrac{1}{2}} ہے لہٰذا \عددی{x=1} پر \عددی{f(x)} نا قابل تفرق ہے۔
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}\شناخت{سوال_تفرق_نا_قابل_د}
+تفاعل کو شکل  \حوالہ{شکل_سوال_تفرق_نا_قابل_د} میں دکھایا گیا ہے۔
+\انتہا{سوال}
+%===========================
+سوال \حوالہ{سوال_تفرق_کیا_ہے_الف} تا سوال \حوالہ{سوال_تفرق_کیا_ہے_و} میں بند دائرہ کار \عددی{D} پر تفاعل کا ترسیم دکھایا گیا ہے۔کن نقطوں پر تفاعل (ا) قابل تفرق، (ب) استمراری لیکن نا قابل تفرق، (ج) غیر استمراری اور نا قابل تفرق ہے؟
+
+\ابتدا{سوال}\شناخت{سوال_تفرق_کیا_ہے_الف}
+ترسیم شکل \حوالہ{شکل_سوال_تفرق_کیا_ہے_الف} میں دکھایا گیا ہے جبکہ \عددی{D:-3\le x\le 2} ہے۔
+\begin{figure}
+\centering
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty},ymin=-0.5,font=\footnotesize,ylabel style={at={(current axis.above origin)},anchor=south},xtick={-3,-2,1,2},ytick={-2,1,2}, xmin=-3.5, xmax=2.5,ymin=-2.5, ymax=2.5,xlabel style={at={(current axis.right of origin)},anchor=west}]
+\draw(axis cs:-3,2)node[circ]{}--(axis cs:2,-2)node[circ]{};
+\draw(axis cs:0,1.5)node[right]{$y=f(x)$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تفرق_کیا_ہے_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty},ymin=-0.5,font=\footnotesize,ylabel style={at={(current axis.above origin)},anchor=south},xtick={-3,6},xticklabels={$-2$,$3$},ytick={\empty},xlabel style={at={(current axis.right of origin)},anchor=west},xmin=-4,xmax=7]
+\addplot[domain=-3:6,samples=100]{e^(-0.1*x)*sin(deg(x+3))}node[pos=0,circ]{}node[pos=1,circ]{};
+\draw(axis cs:0,1)node[right]{$y=f(x)$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تفرق_کیا_ہے_ب}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty},ymin=-0.5,font=\footnotesize,ylabel style={at={(current axis.above origin)},anchor=south},xtick={-3,3},xticklabels={$-3$,$3$},ytick={-3,3},xlabel style={at={(current axis.right of origin)},anchor=west},xmin=-4,xmax=4,ymin=-4,ymax=4]
+\draw(axis cs:-3,0) to [out=10,in=-100] node[pos=0,circ]{}node[pos=1,ocirc]{}(axis cs:0,3);
+\draw(axis cs:0,-3) to [out=80,in=-170]node[pos=0,ocirc]{}node[pos=1,circ]{} (axis cs:3,0);
+\draw(axis cs:0,0)node[circ]{};
+\draw(axis cs:0,2)node[right]{$y=f(x)$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تفرق_کیا_ہے_ج}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty},ymin=-0.5,font=\footnotesize,ylabel style={at={(current axis.above origin)},anchor=south},xtick={-2,-1,2,3},ytick={1,2,3},xlabel style={at={(current axis.right of origin)},anchor=west},xmin=-2.5,xmax=3.5,ymax=5]
+\draw(axis cs:-2,3)--(axis cs:-1,0)node[pos=0,circ]{}--(axis cs:0,3)node[pos=1,ocirc]{};
+\addplot[domain=0:3]{3/2.25*(2.25-(x-1.5)^2)}node[pos=0,circ]{}node[pos=1,circ]{};
+\draw(axis cs:2,2.667)node[ocirc]{} (axis cs:2,1.5)node[circ]{};
+\draw(axis cs:0,4)node[right]{$y=f(x)$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تفرق_کیا_ہے_د}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty},ymin=-0.5,font=\footnotesize,ylabel style={at={(current axis.above origin)},anchor=south},xtick={-1,1,2},ytick={1},xlabel style={at={(current axis.right of origin)},anchor=west},xmin=-1.5,xmax=2.5,ymin=-0.2,ymax=4]
+\draw(axis cs:-1,1)node[circ]{} to [out=-20,in=90] (axis cs:0,0) to [out=90,in=-170] (axis cs:2,2)node[circ]{};
+\draw(axis cs:0,3)node[right]{$y=f(x)$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تفرق_کیا_ہے_ہ}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty},ymin=-0.5,font=\footnotesize,ylabel style={at={(current axis.above origin)},anchor=south},xtick={-3,-2,-1,1,2,3},xticklabels={,$-2$,$-1$,$1$,$2$,},ytick={2,4},xlabel style={at={(current axis.right of origin)},anchor=west},xmin=-3.5,xmax=3.5,ymin=-1.5,ymax=5]
+\addplot[domain=-2:2]{x^2};
+\addplot[domain=-2:-3]{8-x^2}node[pos=1,circ]{};
+\addplot[domain=2:3]{8-x^2}node[pos=1,circ]{};
+\draw(axis cs:0,5)node[right]{$y=f(x)$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تفرق_کیا_ہے_و}
+\end{minipage}
+\end{figure}
+
+جواب:\quad
+(ا) \عددی{-3\le x\le 2} (ب) کوئی نہیں (ج) کوئی نہیں۔
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}\شناخت{سوال_تفرق_کیا_ہے_ب}
+ترسیم شکل \حوالہ{شکل_سوال_تفرق_کیا_ہے_ب} میں دکھایا گیا ہے جبکہ \عددی{D:-2\le x\le 3} ہے۔
+\انتہا{سوال}
+%==================================
+\ابتدا{سوال}\شناخت{سوال_تفرق_کیا_ہے_ج}
+ترسیم شکل \حوالہ{شکل_سوال_تفرق_کیا_ہے_ج} میں دکھایا گیا ہے جبکہ \عددی{D:-3\le x\le 3} ہے۔\\
+جواب:\quad
+(ا) \عددی{-3\le x<0, 0<x\le 3} (ب) کوئی نہیں (ج) \عددی{x=0}
+\انتہا{سوال}
+%==================================
+\ابتدا{سوال}\شناخت{سوال_تفرق_کیا_ہے_د}
+ترسیم شکل \حوالہ{شکل_سوال_تفرق_کیا_ہے_د} میں دکھایا گیا ہے جبکہ \عددی{D:-2\le x\le 3} ہے۔
+\انتہا{سوال}
+%==================================
+\ابتدا{سوال}\شناخت{سوال_تفرق_کیا_ہے_ہ}
+ترسیم شکل \حوالہ{شکل_سوال_تفرق_کیا_ہے_ہ} میں دکھایا گیا ہے جبکہ \عددی{D:-1\le x\le 2} ہے۔\\
+جواب:\quad
+(ا) \عددی{-1\le x<0, 0<x\le 2} (ب) \عددی{x=0} (ج) کوئی نہیں۔
+\انتہا{سوال}
+%==================================
+\ابتدا{سوال}\شناخت{سوال_تفرق_کیا_ہے_و}
+ترسیم شکل \حوالہ{شکل_سوال_تفرق_کیا_ہے_و} میں دکھایا گیا ہے جبکہ \عددی{D:-3\le x\le 3} ہے۔
+\انتہا{سوال}
+%==================================
+سوال \حوالہ{سوال_تفرق_معلومات_تلاش_کریں_الف} تا سوال \حوالہ{سوال_تفرق_معلومات_تلاش_کریں_ب} میں درج ذیل کریں۔
+\begin{enumerate}[a.]
+\item
+تفاعل \عددی{y=f(x)} کا تفرق \عددی{y'=f'(x)} تلاش کریں۔
+\item
+\عددی{y=f(x)} اور \عددی{y'=f'(x)} کو علیحدہ محدد پر قریب قریب ترسیم کرتے ہوئے درج ذیل کا جواب دیں۔
+\item
+\عددی{x} کی کن قیمتوں کے لئے  \عددی{y'} کی قیمت  مثبت، منفی اور صفر ہے۔
+\item
+\عددی{x} بڑھنے سے \عددی{x} کی قیمتوں کے کن وقفوں پر \عددی{y=f(x)} بڑھتا ہے؟ گھٹتا ہے؟ اس کا جزو (ج) کے جوابات کے ساتھ کیا تعلق ہے؟ (اگلے باب میں اس تعلق پر غور کیا جائے گا۔)
+\end{enumerate} 
+
+\ابتدا{سوال}\شناخت{سوال_تفرق_معلومات_تلاش_کریں_الف}
+$y=-x^2$\\
+جواب:\quad
+(ا) \عددی{y'=-2x} (ج) \عددی{x<0,x=0,x>0} (د) \عددی{-\infty<x<0,0<x<\infty}
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$y=-\tfrac{1}{x}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\شناخت{سوال_تفرق_درکار_پ}
+$y=\tfrac{x^3}{3}$\\
+جواب:\quad
+(ا) \عددی{y'=x^2}، (ب) شکل \حوالہ{شکل_سوال_تفرق_درکار_پ} ، (ج) \عددی{x\ne 0}، \عددی{x=0}، کوئی نہیں،  (د) \عددی{-\infty<x<\infty}، کوئی نہیں۔
+\begin{figure}
+\centering
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-1,1},ytick={-1,1},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ymax=2]
+\addplot[domain=-1.5:1.5]{x^3/3};
+\draw(axis cs:0,1.5)node[right]{$y=\tfrac{x^3}{3}$};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y'$},xtick={-1,1},ytick={1},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ymax=2]
+\addplot[domain=-1.5:1.5]{x^2};
+\draw(axis cs:0,1.75)node[right,fill=white]{$y'=x^2$};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}%
+\caption{ترسیم برائے شکل \حوالہ{سوال_تفرق_درکار_پ}}
+\label{شکل_سوال_تفرق_درکار_پ}
+\end{figure}
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\شناخت{سوال_تفرق_معلومات_تلاش_کریں_ب}
+$y=\tfrac{x^4}{4}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+کیا \عددی{y=x^3} کا کبھی منفی ڈھلوان ہو گا؟ اگر ہے تو کہاں ہو گا؟ اپنے جواب کی وجہ پیش کریں۔\\
+جواب:\quad
+\عددی{y'=3x^2} کبھی بھی منفی نہیں ہو گا۔
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+کیا \عددی{y=2\sqrt{x}} کا افقی مماس پایا جاتا ہے؟ اگر پایا جاتا ہے تو کہاں پایا جاتا ہے۔ اپنے جواب کی وجہ پیش کریں۔
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+کیا قطع مکافی \عددی{y=2x^2-13x+5} کے مماس کا ڈھلوان \عددی{-1} ہو سکتا ہے۔اگر ممکن ہے تب اس مماس کی مساوات حاصل کریں اور وہ نقطہ تلاش کریں جہاں مماس منحنی کو مس کرتا ہے۔ اگر ممکن نہیں ہے تب اپنے جواب کی وجہ پیش کریں۔\\
+جواب:\quad
+ہاں، \عددی{y+16=-(x-3)} نقطہ \عددی{(3,-16)} پر مماس ہے۔
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+کیا منحنی \عددی{y=\sqrt{x}} کا کوئی مماس \عددی{x} محور کو \عددی{x=-1} پر قطع کرتا ہے؟ ممکن ہونے کی صورت میں نقطہ مماس اور مماس کی مساوات تلاش کریں جبکہ غیر ممکن ہونے کی صورت میں وجہ پیش کریں۔ 
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+کیا \عددی{(-\infty,\infty)} پر قابل تفرق تفاعل کا تفرق \عددی{y=\lfloor x\rfloor} ہو سکتا ہے؟ اپنے جواب کی وجہ پیش کریں۔ \\
+جواب:\quad
+نہیں، چونکہ تفاعل \عددی{y=\lfloor x\rfloor} متوسط قیمت خاصیت پر پورا نہیں اترتا ہے۔
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+\عددی{f(x)=\abs{x}} کے تفرق کو ترسیم کرنے کے بعد \عددی{y=\tfrac{\abs{x}-0}{x-0}=\tfrac{\abs{x}}{x}} ترسیم کریں۔ان سے آپ کیا نتیجہ اخذ کر سکتے ہیں؟
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+یہ جانتے ہوئے کہ \عددی{x=x_0} پر تفاعل \عددی{f(x)} قابل تفرق ہے، آپ \عددی{x=x_0} پر تفاعل \عددی{-f} کی قابل تفرق ہونے کے بارے میں کیا کہہ سکتے ہیں؟ اپنے جواب کی وجہ پیش کریں۔\\
+جواب:\quad
+ہاں؛ 
+$(-f)'(x)=-(f'(x))$
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}
+کیا \عددی{t=7} پر \عددی{g(t)} کا قابل تفرق ہونے سے آپ \عددی{t=7} پر \عددی{3g} کے قابل تفرق ہونے کے بارے میں کچھ کہہ سکتے ہیں؟ اپنے جواب کی وجہ پیش کریں۔
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+فرض کریں کہ \عددی{t} کی تمام قیمتوں کے لئے تفاعل \عددی{g(t)} اور \عددی{h(t)} معین ہیں اور \عددی{g(0)=h(0)=0} ہے۔ کیا \عددی{\lim_{t\to 0}\tfrac{g(t)}{h(t)}} موجود ہو گا؟ اگر حد موجود ہو تب کیا یہ حد ضرور صفر کے برابر ہو گا؟ اپنے جواب کی وجہ پیش کریں۔\\
+جواب:\quad
+\عددی{g(t)=mt} اور \عددی{h(t)=t} کے لئے \عددی{\lim_{t\to 0}\tfrac{g(t)}{h(t)}=m} ہو گا جو غیر صفر ہو سکتا ہے۔ 
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+(ا) فرض کریں کہ \عددی{-1\le x\le 1} کے لئے تفاعل \عددی{f(x)} شرط \عددی{\abs{f(x)}\le x^2} کو مطمئن کرتا ہے۔ دکھائیں کہ \عددی{x=0} پر \عددی{f} قابل تفرق ہے اور \عددی{f'(0)} حاصل کریں۔ (ب) دکھائیں کہ \عددی{x=0} پر
+\begin{align*}
+f(x)=
+\begin{cases}
+x^2\sin \frac{1}{x},&x\ne 0\\
+0,&x=0
+\end{cases}
+\end{align*}
+قابل تفرق ہے اور \عددی{f'(0)} تلاش کریں۔
+
+
+\انتہا{سوال}
+%=========================
+\موٹا{کمپیوٹر کا استعمال}
+
+\ابتدا{سوال}
+\عددی{0\le x\le 2} کے لئے \عددی{y=\tfrac{1}{2\sqrt{x}}} کو ترسیم کریں۔اس کے اوپر پہلے \عددی{h=1,0.5,0.1} لیتے ہوئے \عددی{y=\tfrac{\sqrt{x+h}-\sqrt{x}}{h}} ترسیم کریں اور بعد میں \عددی{h=-1,-0.5,-0.1} لے کر ترسیم کریں۔سمجھائیں کہ کیا ہو رہا ہے۔
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+\عددی{-2\le x\le 2} اور \عددی{0\le y\le 3} لیتے ہوئے \عددی{y=3x^2} ترسیم کریں۔اسی کے اوپر پہلے \عددی{h=2,1,0.2} لیتے ہوئے \عددی{y=\tfrac{(x+h)^3-x^3}{h}} ترسیم کریں اور بعد میں \عددی{h=-2,-1,-0.2} لے کر ترسیم کریں۔ سمجھائیں کیا ہو رہا ہے۔ 
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\ترچھا{وائشسٹراس کا نا قابل تفرق تفاعل}
+وائشسٹراس تفاعل \عددی{f(x)=\sum_{n=0}^{\infty}()^n\cos(9^n\pi x)} کے پہلے آٹھ ارکان کا مجموعہ درج ذیل ہے۔
+\begin{multline*}
+g(x)=\cos (\pi x)+\big(\frac{2}{3}\big)^1\cos (9\pi x)+\big(\frac{2}{3}\big)^2\cos (9^2\pi x)\\
++\big(\frac{2}{3}\big)^3\cos (9^3\pi x)+\cdots+\big(\frac{2}{3}\big)^7\cos (9^7\pi x)
+\end{multline*}
+اس تفاعل کو ترسیم کریں۔ترسیم کی جسامت بڑی کرتے ہوئے دیکھیں کہ یہ کتنی بلدار ہے۔
+\انتہا{سوال}
+%=====================
+سوال \حوالہ{سوال_تفرق_کمپیوٹر_سے_تلاش_الف} تا سوال \حوالہ{سوال_تفرق_کمپیوٹر_سے_تلاش_ب} میں کمپیوٹر استعمال کرتے ہوئے درج ذیل کریں۔
+\begin{enumerate}[a.]
+\item
+\عددی{y=f(x)} ترسیم کرتے ہوئے اس کا رویہ دیکھیں۔
+\item
+عمومی جسامت قدم \عددی{h} لیتے ہوئے عمومی نقطہ \عددی{x}  پر حاصل تقسیم  \عددی{q} متعارف کریں۔
+\item
+\عددی{h\to 0} کرتے ہوئے حد لینے سے کون سا کلیہ حاصل ہوتا ہے؟
+\item
+\عددی{x=x_0} پر کرتے ہوئے تفاعل اور اس نقطے پر مماس ترسیم کریں۔
+\item
+\عددی{x_0} سے \عددی{x} کی بڑی اور چھوٹی قیمتیں جزو (ج) میں پر کریں۔ کیا کلیہ اور ترسیم ایک جیسا مطلب پیش کرتے ہیں؟
+\item
+جزو (ج) میں حاصل کیا گیا کلیہ ترسیم کریں۔اس کی قیمتیں منفی، مثبت یا صفر ہونے کا کیا مطلب ہے؟ کیا جزو (ا) کی ترسیم کے ساتھ اس کا کوئی مطلب بنتا ہے؟ اپنے جواب کی وجہ پیش کریں۔
+\end{enumerate}
+
+\ابتدا{سوال}\شناخت{سوال_تفرق_کمپیوٹر_سے_تلاش_الف}
+$f(x)=x^3+x^2-x,\quad x_0=1$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$f(x)=x^{\tfrac{1}{3}}+x^{\tfrac{2}{3}},\quad x_0=1$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$f(x)=\tfrac{4x}{x^2+1},\quad x_0=2$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$f(x)=\tfrac{x-1}{3x^2+1},\quad x_0=-1$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$f(x)=\sin 2x,\quad x_0=\tfrac{\pi}{2}$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_تفرق_کمپیوٹر_سے_تلاش_ب}
+$f(x)=x^2\cos x,\quad x_0=\tfrac{\pi}{4}$
+\انتہا{سوال}
+%=====================
+
+\حصہ{قواعد تفرق}
+اس حصے میں تفرق کی تعریف استعمال کیے بغیر تفاعل کا تفرق حاصل کرنا سکھایا جائے گا۔
+
+\جزوحصہء{طاقت، مجموعے اور تفریق}
+تفرق کا پہلا قاعدہ یہ ہے کہ مستقل کا تفرق صفر کے برابر ہے۔
+
+\ابتدا{قانون}\موٹا{مستقل کا تفرق}\\
+اگر \عددی{c} مستقل ہو تب \عددی{\tfrac{\dif}{\dif x} c=0} ہو گا۔
+\انتہا{قانون}
+%=====================
+
+\ابتدا{مثال}
+\begin{align*}
+\frac{\dif}{\dif x} (8)=0,\quad \frac{\dif}{\dif x}\big(-\frac{1}{2}\big)=0,\quad \frac{\dif}{\dif x}(\sqrt{3})=0
+\end{align*}
+\انتہا{مثال}
+%=======================
+
+\موٹا{قاعدہ کا ثبوت}
+ہم تفرق کی تعریف استعمال کرتے ہوئے \عددی{f(x)=c} کا تفرق حاصل کرتے ہیں (شکل \حوالہ{شکل_تفرق_مستقل_صفر_ہو_گا})۔ہر \عددی{x} پر درج ذیل ہو گا۔
+\begin{align*}
+f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}=\lim_{h\to 0}\frac{c-c}{h}=\lim_{h\to 0}0=0
+\end{align*} 
+%
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-0.25,0)--(4,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2.5)node[above]{$y$};
+\draw(-0.25,1.75)--(4,1.75)node[right]{$y=c$};
+\draw[dashed](1.5,1.75)node[above]{$(x,c)$}--(1.5,0)node[below]{$x$} (3,1.75)node[above]{$(x+h,c)$}--(3,0)node[below]{$x+h$};
+\draw(0,1.75)node[above left]{$c$};
+\end{tikzpicture}
+\caption{مستقل کا تفرق صفر ہو گا۔}
+\label{شکل_تفرق_مستقل_صفر_ہو_گا}
+\end{figure}
+
+اگلا قاعدہ ہمیں \عددی{x^n} کا تفرق دیتا ہے جہاں \عددی{n} مثبت عدد صحیح ہے۔
+
+\ابتدا{قانون}\موٹا{قاعدہ طاقت برائے مثبت عدد صحیح}\\
+اگر \عددی{n} مثبت عدد صحیح ہو تب درج ذیل ہو گا۔
+\begin{align*}
+\frac{\dif}{\dif x} x^n=nx^{n-1}
+\end{align*}
+\انتہا{قانون}
+%=========================
+
+قاعدہ طاقت استعمال کرتے ہوئے ہم  طاقت \عددی{n} سے \عددی{1} منفی کرتے ہوئے جواب کو \عددی{n} سے ضرب دیتے ہیں۔
+
+\ابتدا{مثال}
+\begin{align*}
+\begin{array}{c|c|c|c|c|c}
+f&x&x^2&x^3&x^4&\cdots\\
+\hline
+f'&1&2x&3x^2&4x^3&\cdots
+\end{array}
+\end{align*}
+\انتہا{مثال}
+%=======================
+\موٹا{قاعدے کا ثبوت}\\
+اگر \عددی{f(x)=x^n} ہو تب \عددی{f(x+h)=(x+h)^n} ہو گا۔چونکہ \عددی{n} مثبت عدد صحیح ہے ہم درج ذیل حقیقت 
+\begin{align*}
+a^n-b^n=(a-b)(a^{n-1+a^{n-2}b}+\cdots+ab^{n-2}+b^{n-1})
+\end{align*}
+استعمال کرتے ہوئے تفریقی حاصل تقسیم کی سادہ صورت حاصل کرتے ہیں۔ہم \عددی{a=x+h} اور \عددی{b=x} لیتے ہیں۔یوں \عددی{h=a-b} ہو گا۔اس طرح 
+\begin{align*}
+\frac{f(x+h)-f(x)}{h}&=\frac{(x+h)^n-x^n}{h}\\
+&=\frac{(h)[(x+h)^{n-1}+(x+h)^{n-2}x+\cdots+(x+h)x^{n-2}+x^{n-1}]}{h}\\
+&=(x+h)^{n-1}+(x+h)^{n-2}x+\cdots+(x+h)x^{n-2}+x^{n-1}
+\end{align*}
+لکھا جا سکتا ہے جو \عددی{n} ارکان پر مشتمل ہے اور  \عددی{h\to 0} کرتے ہوئے ہر رکن کا  حد \عددی{x^{n-1}} ہے۔یوں درج ذیل  نتیجہ حاصل ہوتا ہے۔ 
+\begin{align*}
+\frac{\dif}{\dif x}x^n=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}=nx^{n-1}
+\end{align*}
+
+%=======================
+اگلا قاعدہ کہتا ہے کہ قابل تفرق تفاعل کو مستقل سے ضرب دینے سے حاصل تفاعل کا تفرق بھی اس مستقل سے ضرب ہو گا۔
+
+\ابتدا{قانون}\موٹا{قاعدہ مستقل مضرب}\\
+اگر \عددی{u} متغیر \عددی{x} کا قابل تفرق تفاعل ہو اور \عددی{c} ایک مستقل ہو تب درج ذیل ہو گا۔
+\begin{align*}
+\frac{\dif}{\dif x} (cu)=c\frac{\dif u}{\dif x}
+\end{align*}
+\انتہا{قانون}
+%====================
+
+بالخصوص مثبت عدد صحیح \عددی{n} کی صورت میں درج ذیل ہو گا۔
+\begin{align*}
+\frac{\dif}{\dif x} (cx^n)=cnx^{n-1}
+\end{align*}
+
+\ابتدا{مثال}\شناخت{مثال_تفرق_ڈھلوان_اور_مستقل}
+تفرقی کلیہ \عددی{\tfrac{\dif}{\dif x}(3x^2)=3\cdot 2x=6x} کہتی ہے کہ \عددی{y} محور کو \عددی{3} سے ضرب دیتے ہوئے ترسیم \عددی{y=x^2} کی پیمائش تبدیل کرنے سے ہر نقطے کی ڈھلوان \عددی{3} سے ضرب ہو گی (شکل \حوالہ{شکل_مثال_تفرق_ڈھلوان_اور_مستقل})۔
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1,2},ytick={1,2,3}]
+\addplot[domain=-0.25:2]{x^2}node[above,xshift={2mm}]{$y=x^2$};
+\addplot[domain=-0.25:1.25]{3*x^2}node[left]{$y=3x^2$};
+\draw[dashed](axis cs:1,0)--(axis cs:1,3)node[left]{$(1,3)$};
+\draw[dashed](axis cs:1,1)node[circ]{}node[right]{$(1,1)$} (axis cs:1,3)node[circ]{};
+\draw[shorten <=-1cm](axis cs:1,1)--(axis cs:1.5,2)node[right]{$m=2$};
+\draw[shorten <=-1cm](axis cs:1,3)--(axis cs:1.2,4.2)node[right]{$m=6$};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم برائے مثال \حوالہ{مثال_تفرق_ڈھلوان_اور_مستقل}}
+\label{شکل_مثال_تفرق_ڈھلوان_اور_مستقل}
+\end{figure}
+\انتہا{مثال}
+%======================
+\ابتدا{مثال}
+قابل تفرق تفاعل کے منفی کا تفرق اس تفاعل کے تفرق کا منفی ہو گا۔قاعدہ تین میں \عددی{c=-1} لیتے ہوئے درج ذیل ملتا ہے۔
+\begin{align*}
+\frac{\dif}{\dif x}(-u)=\frac{\dif}{\dif x}(-1\cdot u)=-1\cdot \frac{\dif}{\dif x}(u)=-\frac{\dif u}{\dif x}
+\end{align*}
+\انتہا{مثال}
+%======================
+
+\موٹا{قاعدہ تین کا ثبوت}\\
+\begin{align*}
+\frac{\dif}{\dif x} cu&=\lim_{h\to 0}\frac{cu(x+h)-cu(x)}{h}&&\text{\RL{\عددی{f(x)=cu(x)} کے تفرق کی تعریف}}\\
+&=c\lim_{h\to 0}\frac{u(x+h)-u(x)}{h} && \text{\RL{تحدیدی خاصیت}}\\
+&=c\frac{\dif u}{\dif x}&&\text{\RL{\عددی{u} قابل تفرق ہے}}
+\end{align*}
+
+اگلا قاعدہ کہتا ہے کہ دو قابل تفرق تفاعل کے مجموعے کا تفرق ان کے انفرادی تفرق کا مجموعہ ہو گا۔
+
+\ابتدا{قانون}\موٹا{قاعدہ مجموعہ}\\
+اگر \عددی{u} اور \عددی{v} متغیر \عددی{x} کے قابل تفرق تفاعل ہوں تب ان کا مجموعہ \عددی{u+v} ہر اس نقطے پر قابل تفرق ہو گا جہاں \عددی{u} اور \عددی{v} دونوں قابل تفرق ہوں۔ایسے نقطے پر درج ذیل ہو گا۔
+\begin{align*}
+\frac{\dif}{\dif x} (u+v)=\frac{\dif u}{\dif x}+\frac{\dif v}{\dif x}
+\end{align*}
+\انتہا{قانون}
+%================================
+
+قاعدہ مجموعہ اور قاعدہ مستقل مضرب کو ملا کر مساوی \اصطلاح{تفریقی قاعدہ} حاصل ہو گا جس کے تحت دو قابل تفرق تفاعل کے حاصل تفریق کا تفرق ان کے تفرق کا تفریق ہو گا:
+\begin{align*}
+\frac{\dif}{\dif x} (u-v)=\frac{\dif}{\dif x}[u+(-1)v]=\frac{\dif u}{\dif x}+(-1)\frac{\dif v}{\dif x}=\frac{\dif u}{\dif x}-\frac{\dif v}{\dif x}
+\end{align*} 
+
+قاعدہ مجموعہ کو وسعت دے کر دو  سے زیادہ تفاعل کے لئے بھی استعمال کیا جا سکتا ہے بس اتنا ضروری ہے کہ مجموعہ میں ارکان کی تعداد متناہی ہو۔اگر \عددی{u_1,u_2,\cdots,u_n} متغیر \عددی{x} کے قابل تفرق تفاعل ہوں تب \عددی{u_1+u_2+\cdots+u_n} بھی قابل تفرق ہو گا اور اس کا تفرق درج ذیل ہو گا۔
+\begin{align*}
+\frac{\dif}{\dif x}(u_1+u_2+\cdots+u_n)=\frac{\dif u_1}{\dif x}+\frac{\dif u_2}{\dif x}+\cdots+\frac{\dif u_n}{\dif x}
+\end{align*}

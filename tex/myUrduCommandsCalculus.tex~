@@ -100,10 +100,10 @@
 %================
 
 %environment for examples مثال
-\newcounter{examplecounter}[section]
-\renewcommand{\theexamplecounter}{\arabic{examplecounter}}
-%\newcounter{examplecounter}[chapter]
-%\renewcommand{\theexamplecounter}{\arabic{examplecounter}.\thechapter}
+%\newcounter{examplecounter}[section]
+%\renewcommand{\theexamplecounter}{\arabic{examplecounter}}
+\newcounter{examplecounter}[chapter]
+\renewcommand{\theexamplecounter}{\arabic{examplecounter}.\thechapter}
 
 \newenvironment*{مثال}
 {\par\noindent\ignorespaces    مثال \refstepcounter{examplecounter} \theexamplecounter :\quad}%
@@ -114,10 +114,10 @@
 %------
 %practice problems environment مشق
 
-\newcounter{practicecounter}[section]                              %practice here means مشق
-\renewcommand{\thepracticecounter}{\arabic{practicecounter}}
-%\newcounter{practicecounter}[chapter]                              %practice here means مشق
-%\renewcommand{\thepracticecounter}{\arabic{practicecounter}.\thechapter}
+%\newcounter{practicecounter}[section]                              %practice here means مشق
+%\renewcommand{\thepracticecounter}{\arabic{practicecounter}}
+\newcounter{practicecounter}[chapter]                              %practice here means مشق
+\renewcommand{\thepracticecounter}{\arabic{practicecounter}.\thechapter}
 
 \newenvironment*{مشق}
 {\par\noindent\ignorespaces \vspace{\baselineskip} \hrule \vspace{\baselineskip} مشق \refstepcounter{practicecounter} \thepracticecounter :\quad}%
@@ -138,10 +138,10 @@
 
 %defining a LAW   قانون
 
-\newcounter{lawcounter}[section]
-\renewcommand{\thelawcounter}{\arabic{lawcounter}}
-%\newcounter{lawcounter}[chapter]
-%\renewcommand{\thelawcounter}{\arabic{lawcounter}.\thechapter}
+%\newcounter{lawcounter}[section]
+%\renewcommand{\thelawcounter}{\arabic{lawcounter}}
+\newcounter{lawcounter}[chapter]
+\renewcommand{\thelawcounter}{\arabic{lawcounter}.\thechapter}
 
 \newenvironment*{قانون}				
 {\par\medskip \refstepcounter{lawcounter} }%
@@ -151,10 +151,10 @@
 
 %defining a THEOREM   مسئلہ
 
-\newcounter{kthcounter}[section]
-\renewcommand{\thekthcounter}{\arabic{kthcounter}}
-%\newcounter{kthcounter}[chapter]
-%\renewcommand{\thekthcounter}{\arabic{kthcounter}.\thechapter}
+%\newcounter{kthcounter}[section]
+%\renewcommand{\thekthcounter}{\arabic{kthcounter}}
+\newcounter{kthcounter}[chapter]
+\renewcommand{\thekthcounter}{\arabic{kthcounter}.\thechapter}
 
 \newenvironment*{مسئلہ}				
 {\par\noindent\ignorespaces  مسئلہ \refstepcounter{kthcounter} \thekthcounter :\quad}%
