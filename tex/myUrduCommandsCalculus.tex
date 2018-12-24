@@ -94,7 +94,6 @@
 \renewcommand*{\thelemma}{\arabic{lemma}.\thechapter}
 \renewcommand*{\thedefinition}{\arabic{definition}.\thechapter}
 
-
 %================
 %my environments
 %================
@@ -194,5 +193,33 @@
 {\par\noindent\ignorespaces  مفروضہ \quad}%
 {\par\noindent }
 %--------------------
+%???????????????????????????
+%--------------------
+
+%defining a RULE   قاعدہ
+
+%\newcounter{krucounter}[section]
+%\renewcommand{\thekrucounter}{\arabic{krucounter}}
+\newcounter{krucounter}[chapter]
+\renewcommand{\thekrucounter}{\arabic{krucounter}.\thechapter}
+
+\newenvironment*{قاعدہ}				
+{\par\noindent\ignorespaces  قاعدہ \refstepcounter{krucounter} \thekrucounter :\quad}%
+{\par\noindent }
+%--------------------
+%--------------------
+
+%defining a Proof   ثبوت قاعدہ
+
+%\newcounter{kprRcounter}[chapter]
+%\renewcommand{\thekprRcounter}{\arabic{kprRcounter}.\thechapter}
+
+\newenvironment*{ثبوت قاعدہ}				
+{\noindent\ignorespaces  ثبوت قاعدہ :\quad}%
+{\par\hfill\qedsymbol  \vspace{\baselineskip}\par }
+%{\par\noindent\qedsymbol  \vspace{\baselineskip} }
+%--------------------
+%--------------------
+
 
 
