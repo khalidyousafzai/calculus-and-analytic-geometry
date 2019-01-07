@@ -1,0 +1,14 @@
+clear;
+clf;
+hold on;
+[x, y] = meshgrid (linspace (-5,5,100), linspace (-5,5,100));
+f=x.^3+y.^3-9.*x.*y;
+contour(x,y,f,[0,0],"color","k");
+plot([-5,5],[0,0]);
+plot([0,0],[-5,5]);
+set(gca,"xaxislocation","origin")
+set(gca,"yaxislocation","origin")
+set(gca,"box","off")
+box off;
+
+print  -dpdflatexstandalone kcontour.pdf

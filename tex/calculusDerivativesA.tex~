@@ -1640,7 +1640,7 @@ s=f(t)=0.78540-0.63662\cos 2t-0.07074\cos 6t-0.02546\cos 10t-0.01299\cos 14t
 \begin{tikzpicture}
 \begin{axis}[clip=false,small,axis lines=middle,xlabel={$t$},ylabel={$s$},ymin=-1.5,ymax=2,xmin=-3.5,xmax=3.9,xtick={-3.142,-1.571,1.571,3.142},xticklabels={$-\pi$,$-\tfrac{\pi}{2}$,$\tfrac{\pi}{2}$,$\pi$},ytick={-1,1},yticklabels={,$1$}]
 \addplot[domain=-3.142:3.142,samples=400]{1.2732*sin(deg(2*x))+0.4244*sin(deg(6*x))+0.25465*sin(deg(10*x))+0.18186*sin(deg(14*x))+0.14147*sin(deg(18*x))};
-\draw[thin] (axis cs:-3.142,1)--(axis cs:-1.571,1)  (axis cs:-1.571,-1)  (axis cs:0,-1)  (axis cs:0,1)--(axis cs:1.571,1)node[pin=45:{$s=k(t)$}]{} (axis cs:1.571,-1)--(axis cs:3.142,-1);
+\draw[thin] (axis cs:-3.142,1)--(axis cs:-1.571,1)  (axis cs:-1.571,-1)--(axis cs:0,-1)  (axis cs:0,1)--(axis cs:1.571,1)node[pin=45:{$s=k(t)$}]{} (axis cs:1.571,-1)--(axis cs:3.142,-1);
 \draw(axis cs:1.571,0.25)node[pin=45:{$y=h(t)$}]{};
 \end{axis}
 \end{tikzpicture}
@@ -1675,3 +1675,301 @@ s=h(t)=1.2732\sin 2t+0.4244\sin 6t+0.25465\sin 10t+0.18186\sin 14t+0.14147\sin 1
 \end{enumerate}
 \انتہا{سوال}
 %============================
+
+\حصہ{خفی تفرق اور ناطق قوت نما}
+بعض اوقات مساوات \عددی{F(x,y)=0} کو \عددی{y=f(x)} روپ میں لکھنا ممکن نہیں ہوتا ہے۔اس کے باوجود ہم \عددی{\tfrac{\dif y}{\dif x}} کو \ترچھا{خفی تفرق} سے حاصل کر سکتے ہیں۔ اس حصہ میں اس ترکیب پر غور کیا جائے گا اور  اس کے ذریعہ طاقتی قاعدہ کو وسعت دیتے ہوئے تمام ناطق تفاعل کو شامل کیا جائے گا۔
+
+\جزوحصہء{خفی تفرق}
+چونکہ مساوات \عددی{x^3+y^3-9xy=0}  درحقیقت تین تفاعل \عددی{y=f_1(x)}، \عددی{y=f_2(x)} اور \عددی{y=f_3(x)} کا ملاپ ہے جو ماسوائے نقطہ \عددی{M} اور \عددی{A} کے قابل تفرق ہیں لہٰذا اس  کے ترسیم کا تقریباً ہر نقطے پر اچھی طرح معین ڈھلوان پایا جاتا ہے  (شکل \حوالہ{شکل_تفرق_خفی_تفاعل_الف})۔ خفی تفاعل کا تفرق لینے کی خاطر \عددی{y} کو \عددی{x} کا تفاعل تصور کرتے ہوئے قواعد برائے قوت نما، طاقت، مجموعہ، تفریق، حاصل ضرب، حاصل تقسیم اور زنجیری قاعدہ زیر استعمال لائے جاتے ہیں۔اس کے بعد \عددی{\tfrac{\dif y}{\dif x}} کے لئے حل کرتے ہوئے کسی بھی نقطہ \عددی{(x,y)} پر تفرق حاصل کیا جا سکتا ہے۔
+\begin{figure}
+\centering
+\includegraphics[width=8cm,height=4cm]{"kcontour-inc"}
+\caption{}
+\label{شکل_تفرق_خفی_تفاعل_الف}
+\end{figure}
+
+اس ترکیب کو \اصطلاح{خفی تفرق}\فرہنگ{خفی!تفرق}\حاشیہب{implicit differentiation}\فرہنگ{implicit!differentiation} کہتے ہیں۔
+
+\ابتدا{مثال}\شناخت{مثال_تفرق_خفی_ب}
+\عددی{y^2=x} ہے۔\عددی{\tfrac{\dif y}{\dif x}} تلاش کریں۔\\
+حل:\quad
+مساوات \عددی{y^2=x} در حقیقت دو تفاعل \عددی{y_1=\sqrt{x}} اور \عددی{y_2=-\sqrt{x}} کو ظاہر کرتی ہے جہاں جذر کی مثبت قیمت لی جاتی ہے۔ہم \عددی{x>0} کے لئے ان دونوں تفاعل کا تفرق لینا جانتے ہیں۔
+\begin{align*}
+\frac{\dif y_1}{\dif x}=\frac{1}{2\sqrt{x}},\quad \frac{\dif y_2}{\dif x}=-\frac{1}{2\sqrt{x}}
+\end{align*}
+آئیں اب اس مساوات کو دو تفاعل میں تقسیم کیے بغیر اس کا تفرق حاصل کریں۔ہم {y} کو \عددی{x} کا قابل تفرق تفاعل تصور  کرتے ہوئے مساوات کے دونوں اطراف کا \عددی{x} کے لحاظ سے تفرق زنجیری قاعدہ سے حاصل کرتے ہیں۔یوں \عددی{f(x)=y^2} لکھ کر \عددی{\tfrac{\dif f}{\dif x}=2y} لکھا جا سکتا ہے لہٰذا
+\begin{align*}
+y^2&=x\\
+2y\frac{\dif y}{\dif x}&=1&&\text{\RL{زنجیری قاعدہ}}\\
+\frac{\dif y}{\dif x}&=\frac{1}{2y}
+\end{align*}
+ہو گا۔ یہ کلیہ دونوں  صریح تفاعل  \عددی{y_1=\sqrt{x}} اور \عددی{y_2=-\sqrt{x}} کا تفرق دیتا ہے۔
+\begin{align*}
+\frac{\dif y_1}{\dif x}=\frac{1}{2y_1}=\frac{1}{2\sqrt{x}},\quad \frac{\dif y_2}{\dif x}=\frac{1}{2y_2}=-\frac{1}{2\sqrt{x}}
+\end{align*}
+%
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=sqrt(\x);}]
+\pgfmathsetmacro{\A}{1.5}
+\pgfmathsetmacro{\nA}{f(\A)}
+\pgfmathsetmacro{\nB}{f(\A+0.1)}
+\begin{axis}[clip=false,small,axis lines=middle,xtick={\empty},ytick={\empty},xlabel={$x$},ylabel={$y$}]
+\addplot[domain=0:0.5]{sqrt(x)};
+\addplot[domain=0:0.5]{-sqrt(x)};
+\addplot[domain=0.5:3]{sqrt(x)}node[right]{$y_1=\sqrt{x}$};
+\addplot[domain=0.5:3]{-sqrt(x)}node[right]{$y_2=-\sqrt{x}$};
+\draw[shorten <=-1.5cm, shorten >=-1.5cm](axis cs:\A,\nA)--(axis cs:\A+0.1,\nB);
+\draw[shorten <=-1.5cm, shorten >=-1.5cm](axis cs:\A,-\nA)--(axis cs:\A+0.1,-\nB);
+\draw[dashed](axis cs:\A,\nA)--(axis cs:\A,-\nA);
+\draw(axis cs:\A,\nA)node[below right]{$N(x,\sqrt{x})$}node[pin=90:{$\tfrac{\dif y_1}{\dif x}=\tfrac{1}{2y_1}=\tfrac{1}{2\sqrt{x}}$}]{};
+\draw(axis cs:\A,-\nA)node[above right]{$Q(x,-\sqrt{x})$}node[pin=-90:{$\tfrac{\dif y_2}{\dif x}=\tfrac{1}{2y_2}=-\tfrac{1}{2\sqrt{x}}$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم برائے مثال \حوالہ{مثال_تفرق_خفی_ب}}
+\label{شکل_مثال_تفرق_خفی_ب}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=-sqrt(25-\x^2);},font=\small]
+\pgfmathsetmacro{\A}{3}
+\pgfmathsetmacro{\nA}{f(\A)}
+\pgfmathsetmacro{\nB}{f(\A+0.1)}
+\begin{axis}[axis equal,clip=false,small,axis lines=middle,xtick={\empty},ytick={\empty},xlabel={$x$},ylabel={$y$},xmin=-6,xmax=6,ymin=-6,ymax=6.5]
+\draw(axis cs:0,0) circle (5);
+\draw[shorten <=-1cm, shorten >=-1cm](axis cs:\A,\nA)node[circ]{}node[above left]{$(3,-4)$}node[below right]{$\tfrac{\dif y}{\dif x}=-\tfrac{x}{y}=\tfrac{3}{4}$}--(axis cs:\A+0.1,\nB);
+\draw(axis cs:5,0)node[circ]{}node[below left]{$-5$} (axis cs:-5,0)node[circ]{}node[below right]{$5$};
+\draw(axis cs:-4,2.5)node[fill=white,font=\footnotesize]{$y_1=\sqrt{25-x^2}$};
+\draw(axis cs:-4,-2.5)node[fill=white,font=\footnotesize]{$y_2=-\sqrt{25-x^2}$};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم برائے مثال \حوالہ{مثال_تفرق_خفی_ج}}
+\label{شکل_مثال_تفرق_خفی_ج}
+\end{minipage}
+\end{figure}
+\انتہا{مثال}
+%========================
+\ابتدا{مثال}\شناخت{مثال_تفرق_خفی_ج}
+نقطہ \عددی{(3,-4)} پر دائرہ \عددی{x^2+y^2=25} کی ڈھلوان تلاش کریں (شکل \حوالہ{شکل_مثال_تفرق_خفی_ج})۔\\
+حل:\quad
+دائرہ در حقیقت دو قابل تفرق تفاعل \عددی{y_1=\sqrt{25-x^2}} اور \عددی{y_2=-\sqrt{25-x^2}} کو ظاہر کرتا ہے۔ نقطہ \عددی{(3,-4)} تفاعل \عددی{y_2} پر پایا جاتا ہے لہٰذا ہم صریحاً ڈھلوان تلاش کر سکتے ہیں:
+\begin{align}\label{مساوات_تفرق_دائرہ_نچلا}
+\left. \frac{\dif y_2}{\dif x}\right|_{x=3}=-\frac{-2x}{2\sqrt{25-x^2}}=-\frac{-6}{2\sqrt{25-9}}=\frac{3}{4}
+\end{align}
+ہم دائرے کی مساوات کا \عددی{x} کے لحاظ سے خفی تفرق
+\begin{align*}
+\frac{\dif}{\dif x}(x^2)+\frac{\dif }{\dif x}(y^2)&=\frac{\dif}{\dif x}(25)\\
+2x+2y\frac{\dif y}{\dif x}&=0\\
+\frac{\dif y}{\dif x}&=-\frac{x}{y}
+\end{align*}
+لے کر \عددی{(3,-4)} پر ڈھلوان کی قیمت تلاش کر سکتے ہیں۔
+\begin{align*}
+\left. \frac{\dif y}{\dif x}\right|_{(3,-4)}=-\frac{3}{-4}=\frac{3}{4}
+\end{align*}
+دھیان رہے کہ مساوات \حوالہ{مساوات_تفرق_دائرہ_نچلا} صرف \عددی{x} محور کے نیچے جوابات دیتی ہے جبکہ درج بالا تمام نقطوں پر قابل استعمال ہے۔خفی تفرق کی قیمت عموماً \عددی{x} اور \عددی{y} دونوں پر منحصر ہوتی ہے جبکہ صریحاً حاصل تفرق کے کلیہ میں صرف \عددی{x} درکار ہو گا۔
+\انتہا{مثال}
+%===========================
+دیگر خفی تفاعل کا تفرق بھی درج بالا دو مثالوں کی طرح حاصل کی جاتی ہے۔ہم \عددی{y} کو \عددی{x} کا قابل تفرق تفاعل تصور کرتے ہوئے مساوات کے دونوں اطراف تفرق کے قواعد استعمال کرتے ہیں۔
+
+\ابتدا{مثال}
+\عددی{2y=x^2+\sin y} کے لئے \عددی{\tfrac{\dif y}{\dif x}} تلاش کریں۔\\
+حل:\quad
+\begin{align*}
+2y&=x^2+\sin y\\
+\frac{\dif}{\dif x}(2y)&=\frac{\dif}{\dif x}(x^2+\sin y)\\
+&=\frac{\dif}{\dif x}(x^2)+\frac{\dif}{\dif x}(\sin y)\\
+2\frac{\dif y}{\dif x}&=2x+\cos y\frac{\dif y}{\dif x}\\
+2\frac{\dif y}{\dif x}-\cos y \frac{\dif y}{\dif x}&=2x\\
+\frac{\dif y}{\dif x}(2-\cos y)&=2x\\
+\frac{\dif y}{\dif x}&=\frac{2x}{2-\cos y}
+\end{align*}
+\انتہا{مثال}
+%=================
+خفی تفرق چار اقدام پر مشتمل ہے۔
+\begin{enumerate}[1.]
+\item
+\عددی{y} کو \عددی{x} کا قابل تفرق تفاعل تصور کرتے ہوئے مساوات کے دونوں اطراف کو تفرق کے قواعد کے مطابق تفرق کریں۔
+\item
+\عددی{\tfrac{\dif y}{\dif x}} والے اجزاء کو ایک طرف اکٹھا کریں۔\\
+\item
+\عددی{\tfrac{\dif y}{\dif x}} کو تجزی کریں۔\\
+\item
+\عددی{\tfrac{\dif y}{\dif x}} کے لئے حل کریں۔
+\end{enumerate}
+
+\جزوحصہء{عدسہ، مماس اور عمودی خطوط}
+روشنی کی کرن عدسہ میں نقطہ \عددی{N} پر داخل ہوتے ہوئے سمت تبدیل کرتی ہے (شکل \حوالہ{شکل_تفرق_عدسہ})۔ مماس کے ساتھ قائمہ خط کو عمودی خط کہتے ہیں۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\draw([shift={(60:2)}]0,0) arc (60:120:2)node[left,yshift=-1mm]{\RL{قوس سطح عدسہ}};
+\draw(-1,2)--(1.5,2)node[right]{مماس};
+\draw(0,1)--(0,3)node[above]{عمود};
+\RightAngle{(0,3)}{(0,2)}{(1,2)};
+\draw[-<-=0.75](0,2)--++(135:1)node[above]{کرن};
+\draw[->-=0.75](0,2)--++(-70:1);
+\draw([shift={(90:0.5)}]0,2) arc (90:135:0.5);
+\draw(0,2)++(110:0.8)node[]{$A$};
+\draw([shift={(-70:0.5)}]0,2) arc (-70:-90:0.5);
+\draw(0,2)++(-80:0.8)node[]{$B$};
+\draw(0,2)node[below left]{$N$};
+\end{tikzpicture}
+\caption{عدسہ میں کرن داخل ہوتے ہوئے عمود کی طرف جھکتی ہے۔}
+\label{شکل_تفرق_عدسہ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[]
+\pgfmathsetmacro{\lmt}{sqrt(28/3)}
+\begin{axis}[clip=false,small,axis lines=middle,xtick={\empty},ytick={\empty},xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=\lmt-0.5:\lmt,smooth]{x/2+sqrt(7-3/4*x^2)}node[pos=0.8,fill=white]{$x^2-xy+y^2=7$};
+\addplot[domain=-\lmt:-\lmt+0.5,smooth]{x/2+sqrt(7-3/4*x^2)};
+\addplot[domain=-\lmt+0.5:\lmt-0.5,smooth]{x/2+sqrt(7-3/4*x^2)};
+\addplot[domain=\lmt-0.5:\lmt,smooth]{x/2-sqrt(7-3/4*x^2)};
+\addplot[domain=-\lmt:-\lmt+0.5,smooth]{x/2-sqrt(7-3/4*x^2)};
+\addplot[domain=-\lmt+0.5:\lmt-0.5,smooth]{x/2-sqrt(7-3/4*x^2)};
+\addplot[domain=-3:0.5]{4/5*x+14/5}node[pos=0.15,sloped,above]{مماس};
+\addplot[domain=-2:1]{-5/4*x+3/4}node[pos=0.15,sloped,above]{عمود};
+\draw(axis cs:-1,2)node[circ]{}node[left]{$(-1,2)$};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیمات برائے مثال \حوالہ{مثال_تفرق_خفی_تفاعل_د}}
+\label{شکل_مثال_تفرق_خفی_تفاعل_د}
+\end{minipage}%
+\end{figure}
+
+\ابتدا{تعریف}
+نقطہ \عددی{N} پر منحنی کے مماس کے ساتھ  قائمہ خط کو \اصطلاح{عمودی}\فرہنگ{عمودی}\حاشیہب{normal}\فرہنگ{normal} کہتے ہیں۔اس خط کو \عددی{N} پر منحنی کا \اصطلاح{عمود} کہتے ہیں۔ 
+\انتہا{تعریف}
+%=======================
+
+عدسہ کی سطح پر تبصرہ عموماً دو درجی منحنیات کی مدد سے کیا جاتا ہے۔ان منحنیات کے مماس اور عمود کو خفی تفرق سے حاصل کیا جا سکتا ہے۔
+
+\ابتدا{مثال}\شناخت{مثال_تفرق_خفی_تفاعل_د}
+نقطہ \عددی{(-1,2)} پر منحنی \عددی{x^2-xy+y^2=7} کا مماس اور عمود تلاش کریں (شکل \حوالہ{شکل_مثال_تفرق_خفی_تفاعل_د})۔\\
+حل:\quad
+ہم خفی تفرق سے \عددی{\tfrac{\dif y}{\dif x}} تلاش کرتے ہیں۔
+\begin{align*}
+x^2-xy+y^2&=7\\
+\frac{\dif}{\dif x}(x^2)-\frac{\dif}{\dif x}(xy)+\frac{\dif}{\dif x}(y^2)&=\frac{\dif}{\dif x}(7)\\
+2x-(x\frac{\dif y}{\dif x}+y\frac{\dif x}{\dif x})+2y\frac{\dif y}{\dif x}&=0\\
+(2y-x)\frac{\dif y}{\dif x}&=y-2x\\
+\frac{\dif y}{\dif x}&=\frac{y-2x}{2y-x}
+\end{align*}
+نقطہ \عددی{(x,y)=(-1,2)} پر ڈھلوان حاصل کرنے کی خاطر درج بالا میں  پر کرتے ہیں۔
+\begin{align*}
+\left.\frac{\dif y}{\dif x}\right|_{(-1,2)}=\left. \frac{y-2x}{2y-x}\right|_{(-1,2)}=\frac{2-2(-1)}{2(2)-(-1)}=\frac{4}{5}
+\end{align*}
+\عددی{(-1,2)} پر مماس کی مساوات حاصل کرتے ہیں۔
+\begin{align*}
+y&=2+\frac{4}{5}(x-(-1))\\
+y&=\frac{4}{5}+\frac{14}{5}
+\end{align*}
+اسی طرح منحنی کا عمود نقطہ \عددی{(-1,2)} پر حاصل کرتے ہیں۔
+\begin{align*}
+y&=2-\frac{5}{4}(x-(-1))\\
+y&-\frac{5}{4}+\frac{3}{4}
+\end{align*}
+\انتہا{مثال}
+%=====================
+\جزوحصہء{خفی تفرق سے بلند درجی تفرق کا حصول}
+خفی تفرق سے بلند درجی تفرق حاصل کیا جا سکتا ہے۔
+
+\ابتدا{مثال}
+\عددی{2x^3-3y^2=7} کے لئے \عددی{\tfrac{\dif^{\,2}y}{\dif x^2}} تلاش کریں۔\\
+حل:\quad
+ہم دونوں اطراف کا \عددی{x} کے لحاظ سے تفرق حاصل کرتے ہوئے پہلے \عددی{\tfrac{\dif y}{\dif x}} حاصل کرتے ہیں۔
+\begin{align*}
+2x^3-3y^2&=7\\
+\frac{\dif}{\dif x}(2x^3)-\frac{\dif}{\dif x}(3y^2)&=\frac{\dif}{\dif x}(7)\\
+6x62-6yy'&=0\\
+x^2-yy'&=0\\
+y'&=\frac{x^2}{y}\quad\quad \text{(\RL{اگر $y\ne 0$})}
+\end{align*}
+ہم اب مساوات \عددی{x^2-yy'=0} کا تفرق لیتے ہوئے \عددی{y''} حاصل کرتے ہیں۔
+\begin{align*}
+\frac{\dif}{\dif x}(x^2)-\frac{\dif}{\dif x}(yy')&=\frac{\dif}{\dif x}(0)\\
+2x-y'y'-yy''&=0\\
+yy''&=2x-(y')^2\\
+y''&=\frac{2x}{y}-\frac{(y')^2}{y}\quad\quad \text{(\RL{اگر $y\ne 0$})}
+\end{align*}
+ہم آخر میں \عددی{y'=\tfrac{x^2}{y}} پر کرتے ہوئے \عددی{x} اور \عددی{y} کی روپ میں \عددی{y''} حاصل کرتے ہیں۔
+\begin{align*}
+y''=\frac{2x}{y}-\frac{(x^2/y)^2}{y}=\frac{2x}{y}-\frac{x^4}{y^3}\quad\quad \text{(\RL{اگر $y\ne 0$})}
+\end{align*}
+\انتہا{مثال}
+%======================
+\جزوحصہء{قابل تفرق تفاعل کے ناطق طاقت}
+ہم  جانتے ہیں کہ طاقتی قاعدہ
+\begin{align*}
+\frac{\dif}{\dif x}x^n=nx^{n-1}
+\end{align*}
+عدد صحیح \عددی{n} کے لئے درست ہے۔ہم اب دکھاتے ہیں کہ یہ قاعدہ کسی بھی ناطق عدد کے لئے درست ہے۔
+
+\ابتدا{مسئلہ}\موٹا{ناطق طاقت کے لئے طاقتی قاعدہ}\\
+اگر \عددی{} ناطق عدد ہو تب \عددی{x^{n-1}} کے دائرہ کار کے ہر اندرونی نقطہ \عددی{x} پر \عددی{x^n} قابل تفرق ہو گا اور یہ تفرق درج ذیل ہو گا۔
+\begin{align*}
+\frac{\dif}{\dif x}x^n=nx^{n-1}
+\end{align*}
+\انتہا{مسئلہ}
+%========================
+\ابتدا{ثبوت}
+فرض کریں \عددی{p} اور \عددی{q} عدد صحیح ہیں جہاں \عددی{q>0} اور  
+$y=\sqrt[q]{x^p}=x^{p/q}$
+ہے۔تب 
+\begin{align*}
+y^q=x^p
+\end{align*}
+ہو گا۔یہ مساوات \عددی{} اور \عددی{} کے طاقتوں کا ملاپ ہے لہٰذا (اس حصہ کے ابتدا میں اعلٰی مسئلہ کے تحت) \عددی{y} متغیر \عددی{x} کا قابل تفرق تفاعل ہو گا۔ چونکہ \عددی{p} اور \عددی{q} عدد صحیح ہیں (جن کے لئے ہمارے پاس قاعدہ طاقت ہے) ہم خفی مساوات کے دونوں اطراف کا \عددی{x} کے لحاظ سے تفرق لے سکتے ہیں:
+\begin{align*}
+qy^{q-1}\frac{\dif y}{\dif x}=px^{p-1}
+\end{align*} 
+اب اگر \عددی{y\ne 0} ہو تب دونوں اطراف کو \عددی{qy^{q-1}} سے تقسیم کیا جا سکتا ہے:
+\begin{align*}
+\frac{\dif y}{\dif x}&=\frac{px^{p-1}}{qy^{q-1}}\\
+&=\frac{p}{q}\cdot\frac{x^{p-1}}{(x^{(p/q)})^{q-1}}\\
+&=\frac{p}{q}\cdot \frac{x^{p-1}}{x^{p-p/q}}\\
+&=\frac{p}{q}\cdot x^{(p-1)-(p-p/q)}\\
+&=\frac{p}{q}\cdot x^{{(p/q)-1}}
+\end{align*}
+یوں ثبوت مکمل ہوتا ہے۔
+\انتہا{ثبوت}
+%===========================
+\ابتدا{مثال}
+\begin{enumerate}[a.]
+\item
+\begin{align*}
+\frac{\dif}{\dif x}(x^{1/2})=\frac{1}{2}x^{-1/2}=\frac{1}{2\sqrt{x}} &&\text{\RL{تفاعل $x\ge 0$  جبکہ تفرق $x>0$ کے لئے معین ہے}}
+\end{align*}
+\item
+\begin{align*}
+\frac{\dif}{\dif x}(x^{1/5})=\frac{1}{5}x^{-4/5}&&\text{\RL{تفاعل تمام $x$ جبکہ تفرق $x\ne 0$ کے لئے معین ہے}}
+\end{align*}
+\end{enumerate}
+\انتہا{مثال}
+%=========================
+طاقتی قاعدہ کی ایک روپ جس میں زنجیری قاعدہ ضم ہے کہتا ہے کہ اگر \عددی{n} ناطق عدد ہو اور \عددی{x} پر \عددی{u} قابل تفرق ہو اور \عددی{(u(x))^{n-1}} معین ہو تب \عددی{x} پر \عددی{u^n} قابل تفرق ہو گا اور یہ تفرق درج ذیل ہو گا۔
+\begin{align}
+\frac{\dif}{\dif x} u^n=nu^{n-1}\frac{\dif u}{\dif x}
+\end{align} 
+
+\ابتدا{مثال}
+\begin{enumerate}[a.]
+\item
+\begin{align*}
+\frac{\dif}{\dif x}(1-x^2)^{1/4}=\frac{1}{4}(1-x^2)^{-3/4}(-2x)
+\end{align*}
+تفاعل وقفہ \عددی{[-1,1]} جبکہ تفرق وقفہ \عددی{(-1,1)} پر معین ہے۔
+\item
+\begin{align*}
+\frac{\dif}{\dif x}(\cos x)^{-1/5}&=-\frac{1}{5}(\cos x)^{-6/5}\frac{\dif}{\dif x} (\cos x)\\
+&=-\frac{1}{5}(\cos x)^{-6/5}(-\sin x)\\
+&=\frac{1}{5}\sin x(\cos x)^{-6/5}
+\end{align*}
+\end{enumerate}
+\انتہا{مثال}
+%==========================
