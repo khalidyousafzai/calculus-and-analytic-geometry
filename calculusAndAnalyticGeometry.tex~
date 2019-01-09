@@ -14,12 +14,14 @@
 \usepackage{ifdraft}
 \usepackage{multicol}                                        %for getting multicolumn itemize, enumerate etc
 \usepackage{enumerate}                   %for getting better auto numbering in enumerate
+
 %pathmorphing gives the ripples like look
 \usetikzlibrary{3d,shadings,fadings,intersections,calc,decorations.markings,decorations.pathreplacing,external,shapes.misc,decorations.pathmorphing,patterns}
 
 %\tikzexternalize[mode=list and make] %disable to generate figures
 %\tikzexternaldisable  %enables figures after this command. put this is the tex file
 
+\usepackage{scrextend}   % \begin{labeling}{}  \end{labeling}   just like Description
 %for vertical spacing in tables use\Tstrut and \Bstrut  
 \newcommand\Tstrut{\rule{0pt}{2.6ex}}       % Top strut
 \newcommand\Bstrut{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
@@ -58,11 +60,11 @@
 
 %\input{./tex/myElectronicsVariablesBetter.tex}         %these are all tested. to use at the very end when book is finished
 
-\graphicspath{{./fig/figFrontPage/}{./fig/figCalculusLimits/}{./fig/figCalculusB/}}%paths to figures
+\graphicspath{{./fig/figFrontPage/}{./fig/figCalculusLimits/}{./fig/figCalculusDerivatives/}}%paths to figures
 
 
 %\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusDerivativesA,./tex/calculusAppendixB}
-\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusDerivativesA,./tex/calculusAppendixB}
+\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusDerivatives,./tex/calculusDerivativesA,./tex/calculusAppendixB}
 %
 %\includeonly{./tex/cktSymbols,./tex/cktPreface,./tex/prefaceFirstBook,./tex/calculusLimitsAndContinuity}%
 
