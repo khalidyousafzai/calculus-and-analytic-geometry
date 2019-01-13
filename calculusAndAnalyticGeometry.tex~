@@ -58,15 +58,15 @@
 \input{./tex/myCircuitDimensionsAndMathematicalSymbols.tex} % resistor sizes and Laplace, Fourier, Complex, Phasor, etc  symbols
 \input{./tex/myTikzCommandsCircuitAnalysis.tex}
 
-\DeclareSIUnit\litre{\liter}
+
 
 %\input{./tex/myElectronicsVariablesBetter.tex}         %these are all tested. to use at the very end when book is finished
 
 \graphicspath{{./fig/figFrontPage/}{./fig/figCalculusLimits/}{./fig/figCalculusDerivatives/}}%paths to figures
 
 
-%\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusDerivativesA,./tex/calculusAppendixB}
-\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusDerivativesA,./tex/calculusAppendixB}
+%\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusAppendixB}
+\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusApplicationsOfDerivatives,./tex/calculusAppendixB}
 %
 %\includeonly{./tex/cktSymbols,./tex/cktPreface,./tex/prefaceFirstBook,./tex/calculusLimitsAndContinuity}%
 
@@ -123,7 +123,7 @@
 \include{./tex/calculusPreliminaries}
 \include{./tex/calculusLimitsAndContinuity}
 \include{./tex/calculusDerivatives}
-\include{./tex/calculusDerivativesA}
+\include{./tex/calculuscalculusApplicationsOfDerivatives}
 
 
 
