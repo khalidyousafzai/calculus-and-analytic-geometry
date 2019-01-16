@@ -1,0 +1,6 @@
+function y = f (x)
+y=x^3+x^2-3*x-3;
+endfunction
+
+ [x, info] = fsolve ("f", 0.5)
+

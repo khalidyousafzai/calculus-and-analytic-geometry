@@ -424,13 +424,103 @@ h(3)&=(3)^{2/3}=9^{1/3}
 
 \حصہء{سوالات}
 \موٹا{ترسیم سے انتہائی نقطوں کا حصول}\\
-کیا سوال \حوالہ{سوال_استعمال_ترسیم_سے_مطلق_الف} تا سوال \حوالہ{سوال_استعمال_ترسیم_سے_مطلق_الف} میں \عددی{[a,b]} کے بیچ تفاعل کے مطلق انتہائی قیمتیں پائی جاتی ہیں؟ سمجھائیں کہ آپ کے جواب اور مسئلہ \حوالہ{مسئلہ_استعمال_بلند_تر_کمتر} میں کس طرح تضاد نہیں پایا جاتا ہے۔
+کیا سوال \حوالہ{سوال_استعمال_ترسیم_سے_مطلق_الف} تا سوال \حوالہ{سوال_استعمال_ترسیم_سے_مطلق_ب} میں \عددی{[a,b]} کے بیچ تفاعل کے مطلق انتہائی قیمتیں پائی جاتی ہیں؟ سمجھائیں کہ آپ کے جواب اور مسئلہ \حوالہ{مسئلہ_استعمال_بلند_تر_کمتر} میں کس طرح تضاد نہیں پایا جاتا ہے۔
 
+\begin{figure}
+\centering
+\begin{subfigure}{0.33\textwidth}
+\centering
+\begin{tikzpicture}[x=0.6cm][x=0.6cm]
+\draw[-latex] (-0.25,0)--(4.25,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
+\draw(1,0.5)node[circ]{} to [out=30,in=180] (2,1)node[above]{$y=h(x)$} to [out=0,in=180] (3,0.25) to [out=0,in=-120](4,2)node[circ]{};
+\foreach \x/\l in {1/a,2/{c_1},3/{c_2},4/b}{\draw(\x,0)node[below]{$\l$}--++(0,0.1);}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.33\textwidth}
+\centering
+\begin{tikzpicture}[x=0.6cm]
+\draw[-latex] (-0.25,0)--(4.25,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
+\draw(1,1)node[circ]{} to [out=30,in=180] (2.5,2) to [out=0,in=150] node[pos=0.5,right]{$y=f(x)$}(4,0.5)node[circ]{};
+\foreach \x/\l in {1/a,2.5/{c},4/b}{\draw(\x,0)node[below]{$\l$}--++(0,0.1);}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.33\textwidth}
+\centering
+\begin{tikzpicture}[x=0.6cm]
+\draw[-latex] (-0.25,0)--(4.25,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
+\draw(1,0.5)node[ocirc]{} to [out=20,in=-110] (3,2) to [out=-70,in=150] node[pos=0.2,right]{$y=f(x)$}(4,0.5)node[ocirc]{};
+\foreach \x/\l in {1/a,3/{c},4/b}{\draw(\x,0)node[below]{$\l$}--++(0,0.1);}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\begin{subfigure}{0.33\textwidth}
+\centering
+\begin{tikzpicture}[x=0.6cm]
+\draw[-latex] (-0.25,0)--(4.25,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
+\draw(1,2)node[ocirc]{} to [out=-50,in=180] (3,0.5)node[ocirc]{} to [out=0,in=-140] node[pos=1,above]{$y=h(x)$}(4,1)node[ocirc]{};
+\draw(3,1)node[circ]{};
+\foreach \x/\l in {1/a,3/{c},4/b}{\draw(\x,0)node[below]{$\l$}--++(0,0.1);}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.33\textwidth}
+\centering
+\begin{tikzpicture}[x=0.6cm]
+\draw[-latex] (-0.25,0)--(4.25,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
+\draw(1,0.5)node[circ]{} to [out=80,in=-150] (2,2)node[circ]{}  (2,1.5)node[ocirc]{}to [out=-30,in=170] node[pos=0.5,above right]{$y=g(x)$}(4,1)node[circ]{};
+\foreach \x/\l in {1/a,2/{c},4/b}{\draw(\x,0)node[below]{$\l$}--++(0,0.1);}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.33\textwidth}
+\centering
+\begin{tikzpicture}[x=0.6cm]
+\draw[-latex] (-0.25,0)--(4.25,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
+\draw(1,1.5)node[ocirc]{} to [out=-20,in=110] (2.5,0.5) to [out=80,in=-150] node[pos=1,above left]{$y=g(x)$}(4,1.5)node[circ]{};
+\draw(1,2)node[circ]{};
+\foreach \x/\l in {1/a,2.5/{c},4/b}{\draw(\x,0)node[below]{$\l$}--++(0,0.1);}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{اشکال برائے سوال \حوالہ{سوال_استعمال_ترسیم_سے_مطلق_الف} تا سوال \حوالہ{سوال_استعمال_ترسیم_سے_مطلق_ب}}
+\label{شکل_سوال_استعمال_ترسیم_سے_مطلق_الف}
+\end{figure}
+%
 \ابتدا{سوال}\شناخت{سوال_استعمال_ترسیم_سے_مطلق_الف}
-
+شکل \حوالہ{شکل_سوال_استعمال_ترسیم_سے_مطلق_الف}-ا
 \انتہا{سوال}
 %===================
+\ابتدا{سوال}
+شکل \حوالہ{شکل_سوال_استعمال_ترسیم_سے_مطلق_الف}-ب
+\انتہا{سوال}
+%======================================
+\ابتدا{سوال}
+شکل \حوالہ{شکل_سوال_استعمال_ترسیم_سے_مطلق_الف}-ج
+\انتہا{سوال}
+%=======================================
+\ابتدا{سوال}
+شکل \حوالہ{شکل_سوال_استعمال_ترسیم_سے_مطلق_الف}-د
+\انتہا{سوال}
+%=======================================
+\ابتدا{سوال}
+شکل \حوالہ{شکل_سوال_استعمال_ترسیم_سے_مطلق_الف}-ہ
+\انتہا{سوال}
+%=======================================
+\ابتدا{سوال}\شناخت{سوال_استعمال_ترسیم_سے_مطلق_ب}
+شکل \حوالہ{شکل_سوال_استعمال_ترسیم_سے_مطلق_الف}-و
+\انتہا{سوال}
+%=======================
+
 \موٹا{بند وقفہ پر مطلق انتہا}
+%=======================================
 
 سوال \حوالہ{سوال_استعمال_مطلق_قیمتیں_تلاش_الف} تا سوال \حوالہ{سوال_استعمال_مطلق_قیمتیں_تلاش_ب} میں دیے گئے وقفے پر تفاعل کی مطلق انتہائی قیمتیں تلاش کریں۔تفاعل کو ترسیم کرتے ہوئے انتہائی نقطوں کی نشاندہی کریں۔
 
@@ -630,15 +720,47 @@ $f(x)=x^{3/4}-\sin x+\tfrac{1}{2},\quad [0,2\pi]$
 \جزوحصہء{مسئلہ رول}
 جن دو نقطوں پر تفاعل \عددی{f(x)} محور \عددی{x} کو قطع  کرتا ہے اگر ان کے بیچ تفاعل قابل تفرق ہو تب \عددی{f(x)} کی  ترسیم کی جیومیٹری کو دیکھ کر ایسا معلوم ہوتا ہے کہ ان نقطوں کے بیچ کم سے کم ایک ایسا نقطہ ضرور پایا جائے گا جس پر تفاعل کا مماس افقی ہو۔ \ترچھا{مشل رول} \عددی{(1652-1719)} کا \عددی{300} سال پرانا \اصطلاح{مسئلہ رول} ہمیں یقین دہانی کراتا ہے کہ حقیقتاً ایسا ہی ہو گا۔
 
-\ابتدا{مسئلہ}\موٹا{مسئلہ رول}\فرہنگ{مسئلہ!رول}\حاشیہب{Rolle's theorem}\فرہنگ{theorem!Rolle's}\\
+\ابتدا{مسئلہ}\شناخت{مسئلہ_استعمال_مسئلہ_رول}\موٹا{مسئلہ رول}\فرہنگ{مسئلہ!رول}\حاشیہب{Rolle's theorem}\فرہنگ{theorem!Rolle's}\\
 فرض کریں بند وقفہ \عددی{[a,b]} کے ہر نقطہ پر تفاعل \عددی{y=f(x)} استمراری ہے اور وقفہ کی اندرون \عددی{(a,b)} کے ہر نقطہ پر تفاعل قابل تفرق ہے۔ اگر
 \begin{align*}
 f(a)=f(b)=0
 \end{align*}
-تب \عددی{(a,b)} میں کم سے کم ایسا ایک نقطہ \عددی{c} ہو گا جس پر درج ذیل ہو گا۔
+تب \عددی{(a,b)} میں کم سے کم ایسا ایک نقطہ \عددی{c} ہو گا جس پر درج ذیل ہو گا (شکل \حوالہ{شکل_مسئلہ_استعمال_مسئلہ_رول})۔
 \begin{align*}
 f'(c)=0
 \end{align*}
+%
+\begin{figure}
+\centering
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,x=0.75cm]
+\draw[name path=kx,-latex](-0.25,0)--(5.5,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
+\draw[name path=kC](0.5,-0.25) to [out=70,in=180] (2.5,2) to [out=0,in=110] node[pos=0.5,right]{$y=f(x)$}(4.5,-0.5);
+\draw[name intersections={of={kx and kC}}](intersection-1)node[below right]{$a$} (intersection-2)node[below left]{$b$};
+\draw(1.5,2)--(3.5,2)node[pos=0.5,above]{$f'(c)=0$};
+\draw[dashed](2.5,2)--(2.5,0)node[below]{$c$};
+\end{tikzpicture}
+\end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,x=0.75cm]
+\draw[name path=kx,-latex](-0.25,0)--(5.5,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
+\draw[name path=kC](0.5,-0.25) to [out=70,in=180] (1.5,1.5) to [out=0,in=180](2.5,0.5) to [out=0,in=180](3.5,2) to [out=0,in=150]node[pos=0.5,right]{$y=f(x)$}(5,-0.5);
+\draw[name intersections={of={kx and kC}}](intersection-1)node[below right]{$a$} (intersection-2)node[below left]{$b$};
+\draw(1,1.5)--(2,1.5)node[pos=0.5,above]{$f'(c_1)=0$};
+\draw(2,0.5)--(3,0.5)node[pos=0.5,above]{$f'(c_2)=0$};
+\draw(3,2)--(4,2)node[pos=0.5,above]{$f'(c_3)=0$};
+\draw[dashed](1.5,1.5)--(1.5,0)node[below]{$c_1$};
+\draw[dashed](2.5,0.5)--(2.5,0)node[below]{$c_2$};
+\draw[dashed](3.5,2)--(3.5,0)node[below]{$c_3$};
+\end{tikzpicture}
+\end{subfigure}
+\caption{مسئلہ رول کہتا ہے کہ جن نقطوں پر تفاعل \عددی{x} محور کو قطع کرتا ہے، ان کے بیچ ایک یا ایک سے زیادہ نقطوں پر تفاعل کا تفرق صفر کے برابر ہو گا۔}
+\label{شکل_مسئلہ_استعمال_مسئلہ_رول}
+\end{figure}
 \انتہا{مسئلہ}
 %======================
 \ابتدا{ثبوت}
@@ -657,4 +779,195 @@ f'(c)=0
 
 اگر زیادہ سے زیادہ قیمت اور کم سے کم قیمت دونوں \عددی{a} یا \عددی{b} پر پائے جاتے ہوں تب \عددی{f} مستقل ہو گا۔یوں \عددی{f'=0} ہو گا لہٰذا وقفے  کے کسی بھی نقطے کو \عددی{c} لیا جا سکتا ہے۔یوں ثبوت مکمل ہوتا ہے۔
 \انتہا{ثبوت}
+%=======================
+
+مسئلہ \حوالہ{مسئلہ_استعمال_مسئلہ_رول} میں دیے شرائط لازمی ہیں۔اگر صرف ایک نقطہ پر بھی یہ شرائط مطمئن نہ ہوتے ہوں تب ضروری نہیں کہ ترسیم کا افقی مماس پایا جاتا ہو (شکل \حوالہ{شکل_استعمال_افقی_مماس_نہیں_ہے})۔
+\begin{figure}
+\centering
+\begin{subfigure}[t]{0.33\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-0.25,0)--(3,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
+\draw(0.5,2)node[ocirc]{} to [out=-60,in=110] node[pos=0.5,above right]{$y=f(x)$}(2.5,0)node[circ]{}node[below]{$b$};
+\draw(0.5,0)node[circ]{}node[below]{$a$};
+\end{tikzpicture}
+\caption{ایک آخری نقطہ پر غیر استمراری}
+\end{subfigure}%
+\begin{subfigure}[t]{0.33\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-0.25,0)--(3,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
+\draw(0.5,0)node[circ]{}node[below]{$a$} to [out=70,in=-110](1.5,2)node[circ]{} (1.5,1.5)node[ocirc]{} to [out=-70,in=150](2.5,0)node[circ]{}node[below]{$b$};
+\draw(1.5,0)node[below]{$x_0$}--++(0,0.1);
+\draw(2,1)node[right]{$y=f(x)$};
+\end{tikzpicture}
+\caption{اندرونی نقطہ پر غیر استمراری}
+\end{subfigure}%
+\begin{subfigure}[t]{0.33\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-0.25,0)--(3,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
+\draw(0.5,0)node[ocirc]{}node[below]{$a$} to [out=45,in=-90] (1.5,2)node[right]{$y=f(x)$} to [out=-90,in=150](2.5,0)node[circ]{}node[below]{$b$};
+\draw(1.5,0)node[below]{$x_0$}--++(0,0.1);
+\end{tikzpicture}
+\caption{
+\عددی{[a,b]} پر استمراری لیکن کسی اندرونی نقطہ پر نا قابل تفرق
+}
+\end{subfigure}%
+\caption{کوئی افقی مماس نہیں پایا جاتا ہے۔}
+\label{شکل_استعمال_افقی_مماس_نہیں_ہے}
+\end{figure}
+
+\ابتدا{مثال}\شناخت{مثال_استعمال_رول_تصدیق_الف}
+درج ذیل کثیر رکنی وقفہ \عددی{[-3,3]} کے ہر نقطہ پر استمراری ہے اور \عددی{(-3,3)} کے ہر نقطہ پر قابل تفرق ہے۔
+\begin{align*}
+f(x)=\frac{x^3}{3}-3x
+\end{align*}
+چونکہ \عددی{f(-3)=f(3)=0} ہے لہٰذا مسئلہ رول کے تحت \عددی{a=-3} اور \عددی{b=3}  کھلا وقفہ کے بیچ کم سے کم ایک نقطہ پر \عددی{f'=0} ہو گا۔ حقیقتاً اس وقفے میں \عددی{f'(x)=x^2-3} دو نقطوں \عددی{x=\sqrt{3}} اور \عددی{x=-\sqrt{3}}  پر صفر کے برابر ہے (شکل \حوالہ{شکل_مثال_استعمال_رول_تصدیق_الف})۔ 
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-3,3},ytick={\empty},xmin=-3.5,xmax=4]
+\addplot[domain=-3.2:3.2,smooth]{1/3*x^3-3*x}node[above left]{$y=\frac{x^3}{3}-3x$};
+\draw(axis cs:-1.732-0.5,3.464)--(axis cs:-1.723+0.5,3.464);
+\draw(axis cs:1.732-0.5,-3.464)--(axis cs:1.723+0.5,-3.464);
+\draw(axis cs:-1.732,3.464)node[circ]{}node[above]{$(-\sqrt{3},2\sqrt{3})$}  (axis cs:1.732,-3.464)node[circ]{}node[below]{$(\sqrt{3},-2\sqrt{3})$};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم برائے مثال \حوالہ{مثال_استعمال_رول_تصدیق_الف}}
+\label{شکل_مثال_استعمال_رول_تصدیق_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xmin=0,ymin=0,xtick={\empty},ytick={\empty}]
+\addplot[domain=0.2:2.5]{sin(deg(x))}node[below]{$y=f(x)$};
+\addplot[domain=0.5:2]{0.25*x+0.64}node[pos=0.5,above,rotate=25]{ڈھلوان \عددی{f'(c)}};
+%\addplot[draw=none,domain=0.5:2.5]{0.25*x+0.354};
+\draw[] (axis cs:0.49932,0.4788)node[left]{$A$}--(axis cs:2.08,0.873)node[above]{$B$}node[pos=0.15,pin=-70:{ڈھلوان $\tfrac{f(b)-f(a)}{b-a}$}]{};
+\draw[dashed](axis cs:0.49932,0.4788)--(axis cs:0.49932,0)node[below]{$a$};
+\draw[dashed](axis cs:2.08,0.873)--(axis cs:2.08,0)node[below]{$b$};
+\draw[dashed](axis cs:1.318,0.968)--(axis cs:1.318,0)node[below]{$c$};
+\end{axis}
+\end{tikzpicture}
+\caption{جیومیٹریائی طور پر مسئلہ اوسط قیمت کہتا ہے کہ \عددی{A} اور \عددی{B} کے بیچ کہیں پر تفاعل کا مماس قطع \عددی{AB} کے متوازی ہو گا۔}
+\label{شکل_استعمال_مسئلہ_اوسط_جیومیٹری}
+\end{minipage}
+\end{figure}
+\انتہا{مثال}
+%================================
+
+\جزوحصہء{مسئلہ اوسط قیمت}
+مسئلہ رول کی ترچھی صورت مسئلہ اوسط قیمت ہے (شکل \حوالہ{شکل_استعمال_مسئلہ_اوسط_جیومیٹری})۔ قطع \عددی{AB} کے متوازی نقطہ \عددی{A} اور \عددی{B} کے بیچ کہیں پر  تفاعل کا  ایسا مماس پایا جاتا ہے جس کی ڈھلوان قطع کی ڈھلوان کے برابر ہو گی۔
+
+%================================
+\ابتدا{مسئلہ}\شناخت{مسئلہ_استعمال_اوسط_قیمت}\موٹا{مسئلہ اوسط قیمت}
+فرض کریں بند وقفہ \عددی{[a,b]} کے ہر نقطہ پر \عددی{y=f(x)} استمراری ہے اور اس کی اندرون \عددی{(a,b)} کے ہر نقطہ پر \عددی{f} قابل تفرق ہے تب \عددی{(a,b)} میں کم سے کم ایک ایسا نقطہ پایا جائے گا جو درج ذیل کو مطمئن کرے گا۔
+\begin{align}\label{مساوات_استعمال_مسئلہ_اوسط_قیمت_الف}
+\frac{f(b)-f(a)}{b-a}=f'(c)
+\end{align}
+\انتہا{مسئلہ}
+%===========================
+\ابتدا{ثبوت}
+ہم \عددی{f} کی ترسیم پر دو نقطوں \عددی{A(a,f(a))} اور \عددی{B(b,f(b))} کے بیچ سیدھی لکیر کھینچتے ہیں (شکل \حوالہ{شکل_مسئلہ_استعمال_اوسط_قیمت}-ا)۔یہ لکیر درج ذیل تفاعل کی ترسیم ہو گی۔
+\begin{align}\label{مساوات_استعمال_مسئلہ_اوسط_قیمت_ب}
+g(x)=f(a)+\frac{f(b)-f(a)}{b-a}(x-a)&&\text{\RL{(نقطہ ڈھلوان صورت)}}
+\end{align} 
+نقطہ \عددی{x} پر \عددی{f} اور \عددی{g} کے بیچ انتصابی فاصلہ
+\begin{gather}
+\begin{aligned}\label{مساوات_استعمال_مسئلہ_اوسط_قیمت_ج}
+h(x)&=f(x)-g(x)\\
+&=f(x)-f(a)-\frac{f(b)-f(a)}{b-a}(x-a)
+\end{aligned}
+\end{gather}
+ہو گا۔شکل \حوالہ{شکل_مسئلہ_استعمال_اوسط_قیمت}-ب میں \عددی{f}، \عددی{g} اور \عددی{h} دکھائے گئے ہیں۔
+\begin{figure}
+\centering
+\begin{subfigure}[t]{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},xmin=0,ymin=0,xtick={\empty},ytick={\empty},y axis line style={draw=none}]
+\addplot[domain=0.2:2.5]{sin(deg(x))}node[pos=0.4,above left]{$y=f(x)$};
+\addplot[domain=0.25:2.5]{0.25*x+0.354};
+%\draw[] (axis cs:0.49932,0.4788)node[left]{$A$}--(axis cs:2.08,0.873)node[above]{$B$};
+\draw[dashed](axis cs:0.49932,0.4788)node[left,yshift={1mm}]{$A(a,f(a))$}--(axis cs:0.49932,0)node[below]{$a$};
+\draw[dashed](axis cs:2.08,0.873)node[right,xshift=2mm]{$B(b,f(b))$}--(axis cs:2.08,0)node[below]{$b$};
+\end{axis}
+\end{tikzpicture}
+\caption{وقفہ \عددی{[a,b]} پر \عددی{f} اور قطع \عددی{AB} کے ترسیم۔}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},xmin=0,ymin=0,xtick={\empty},ytick={\empty},y axis line style={draw=none}]
+\addplot[domain=0.2:2.5]{sin(deg(x))}node[pos=0.4,sloped,above]{$y=f(x)$};
+\addplot[,domain=0.25:2.5]{0.25*x+0.354}node[pos=0.5,sloped,below]{$y=g(x)$};
+\addplot[domain=0.4993:2.08]{sin(deg(x))-0.25*x-0.354}node[pos=0.5,sloped,above,font=\scriptsize]{$h(x)=f(x)-g(x)$};
+%\draw[] (axis cs:0.49932,0.4788)node[left]{$A$}--(axis cs:2.08,0.873)node[above]{$B$};
+\draw[dashed](axis cs:0.49932,0.4788)node[left,yshift={1mm}]{$A(a,f(a))$}--(axis cs:0.49932,0)node[below]{$a$};
+\draw[dashed](axis cs:2.08,0.873)node[right,xshift=2mm]{$B(b,f(b))$}--(axis cs:2.08,0)node[below]{$b$};
+\end{axis}
+\end{tikzpicture}
+\caption{\عددی{f(x)} اور \عددی{g(x)} کے بیچ افقی فاصلہ \عددی{h(x)} ہے۔}
+\end{subfigure}
+\caption{مسئلہ اوسط قیمت۔}
+\label{شکل_مسئلہ_استعمال_اوسط_قیمت}
+\end{figure}
+
+تفاعل \عددی{h} وقفہ \عددی{[a,b]} پر مسئلہ رول کو مطمئن کرتا ہے۔ تفاعل \عددی{h} وقفہ \عددی{[a,b]} پر استمراری اور \عددی{(a,b)} پر قابل تفرق  ہے (چونکہ اس وقفہ پر \عددی{f} اور \عددی{g} استمراری اور قابل تفرق ہیں)۔ مزید چونکہ \عددی{f} اور \عددی{g} دونوں نقطہ \عددی{A} اور \عددی{B} سے گزرتے ہیں لہٰذا \عددی{h(a)=h(b)=0} ہے۔ یوں \عددی{(a,b)} میں کسی نقطہ \عددی{c} پر \عددی{h'(x)=0} ہو گا۔ یہ وہ نقطہ ہے جو ہمیں مساوات \حوالہ{مساوات_استعمال_مسئلہ_اوسط_قیمت_الف} میں درکار ہے۔
+
+مساوات \حوالہ{مساوات_استعمال_مسئلہ_اوسط_قیمت_الف} کی تصدیق کی خاطر ہم \عددی{x} کے لحاظ سے مساوات \حوالہ{مساوات_استعمال_مسئلہ_اوسط_قیمت_ج} کے دونوں ہاتھ  کا تفرق لے کر اس میں \عددی{x=c} پر کرتے ہیں۔
+\begin{align*}
+h'(x)&=f'(x)-\frac{f(b)-f(a)}{b-a}&&\text{\RL{(تفرق)}}\\
+h'(c)&=f'(c)-\frac{f(b)-f(a)}{b-a}&& (x=c)\\
+0&=f'(c)-\frac{f(b)-f(a)}{b-a}&&(h'(c)=0)\\
+f'(c)&=\frac{f(b)-f(a)}{b-a}
+\end{align*}
+یوں ثبوت مکمل ہوتا ہے۔
+\انتہا{ثبوت}
+%===============================
+
+دھیان رہے کہ مسئلہ اوسط قیمت میں نقطہ \عددی{a} یا \عددی{b} پر \عددی{f} کا قابل تفرق ہونا ضروری نہیں ہے البتہ ان نقطوں پر \عددی{f} کا استمراری ہونا کافی ہے (شکل \حوالہ{شکل_استعمال_تفرق_ضروری_نہیں})۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,axis equal,small,axis lines=middle,xlabel={$x$},ylabel={y},xtick={-1,1},ytick={1},ymax=1.5,xmin=-1.25,xmax=1.5,ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-1:-0.9]{sqrt(1-x^2)};
+\addplot[domain=0.9:1]{sqrt(1-x^2)};
+\addplot[domain=-0.9:0.9]{sqrt(1-x^2)}node[pos=0.5,above right,align=center]{$y=\sqrt{1-x^2}$ \\   $-1\le x\le 1$};
+\addplot[] plot coordinates {(-0.5,1) (0.5,1)};
+\end{axis}
+\end{tikzpicture}
+\caption{
+اگرچہ \عددی{y=\sqrt{1-x^2}} نقطہ \عددی{-1} اور \عددی{1} پر نا قابل تفرق ہے یہ \عددی{[-1,1]} پر مسئلہ اوسط قیمت کو مطمئن کرتا ہے۔
+}
+\label{شکل_استعمال_تفرق_ضروری_نہیں}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,axis equal,small,axis lines=middle,xlabel={$x$},ylabel={y},xtick={1,2},ytick={1,4},ylabel style={at={(current axis.above origin)},anchor=south},ymin=-0.2,ymax=5]
+\addplot[domain=0:2]{x^2}node[pos=0.7,right]{$y=x^2$};
+\addplot[domain=0.7:1.5]{2*x-1};
+\draw(axis cs:0,0) node[below left]{$A(0,0)$}--(axis cs:2,4)node[above]{$B(2,4)$};
+\draw(axis cs:0,0)node[circ]{} (axis cs:1,1)node[circ]{}node[right]{$(1,1)$}  (axis cs:2,4)node[circ]{};
+\end{axis}
+\end{tikzpicture}
+\caption{نقطہ \عددی{c=1} پر مماس قطع \عددی{AB} کے متوازی ہے (مثال \حوالہ{مثال_استعمال_یہاں_نقطہ_دیکھ_سکتے_ہیں})}
+\label{شکل_مثال_استعمال_یہاں_نقطہ_دیکھ_سکتے_ہیں}
+\end{minipage}
+\end{figure}
+ ہم عموماً \عددی{c} کے بارے میں صرف اتنا ہی جانتے ہیں جتنا یہ مسئلہ ہمیں بتاتا ہے، یعنی کہ، \عددی{c} موجود ہے۔اگلی مثال کی طرح بعض اوقات ہم \عددی{c} کو جان پاتے ہیں لیکن ایسا شاذونادر ہو گا۔
+
+\ابتدا{مثال}\شناخت{مثال_استعمال_یہاں_نقطہ_دیکھ_سکتے_ہیں}
+وقفہ \عددی{0\le x\le 2} پر تفاعل \عددی{f(x)=x^2} استمراری ہے اور \عددی{0<x<2} پر یہ قابل تفرق ہے (شکل \حوالہ{شکل_مثال_استعمال_یہاں_نقطہ_دیکھ_سکتے_ہیں})۔ چونکہ \عددی{f(0)=0} اور \عددی{f(2)=4} ہیں لہٰذا مسئلہ اوسط قیمت کے تحت اس وقفہ میں نقطہ \عددی{c} پر تفرق \عددی{f'(x)=2x} کی قیمت لازماً \عددی{\tfrac{4-0}{2-0}=2} ہو گی۔ موجودہ مثال میں ہم \عددی{2x=2} کو حل کرتے ہوئے
+ \عددی{x=c=1} حاصل کر پاتے ہیں۔ 
+\انتہا{مثال}
 %=======================
