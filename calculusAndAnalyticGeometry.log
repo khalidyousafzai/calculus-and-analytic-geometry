@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2019.1.12)  16 JAN 2019 16:28
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2019.1.12)  17 JAN 2019 13:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1860,7 +1860,8 @@ Package: polynom 2006/04/20 0.17 (CH,HA)
 \c@questioncounter=\count319
 \c@lawcounter=\count320
 \c@kthcounter=\count321
-\c@krucounter=\count322
+\c@kcocounter=\count322
+\c@krucounter=\count323
 ) (./tex/myUrduGreek.tex)
 (./tex/myEMTvectors.tex) (./tex/myDeclareFunctions.tex)
 (./tex/myCircuitDimensionsAndMathematicalSymbols.tex)
@@ -3129,7 +3130,7 @@ File: siunitx-abbreviations.cfg 2013/07/31 v2.5s siunitx: Abbreviated units
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box91
-\c__siunitx_mathsf_int=\count323
+\c__siunitx_mathsf_int=\count324
 LaTeX Font Info:    Try loading font information for OT1+ppl on input line 92.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
@@ -3175,7 +3176,7 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 92.
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-\c__siunitx_mathtt_int=\count324
+\c__siunitx_mathtt_int=\count325
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 12.50409pt on input line 104.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
@@ -3355,17 +3356,22 @@ Overfull \hbox (29.34828pt too wide) in paragraph at lines 906--915
  [][][][][][] 
  []
 
-[343] [344]) [345]
+[343] [344] [345]
+Overfull \hbox (16.32503pt too wide) in paragraph at lines 1030--1037
+ [][][][] 
+ []
+
+[346] [347] [348] [349] [350]) [351]
 \openout2 = `./tex/calculusAppendixB.aux'.
 
- (./tex/calculusAppendixB.tex [346
+ (./tex/calculusAppendixB.tex [352
 
 
 
 
 ]
 ضمیمہ ا.
-) [347] [348
+) [353] [354
 
 
 
@@ -3382,12 +3388,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 48576 strings out of 493918
- 1142270 string characters out of 6150563
- 1374167 words of memory out of 5000000
- 50898 multiletter control sequences out of 15000+600000
+ 48650 strings out of 493918
+ 1143779 string characters out of 6150563
+ 1374671 words of memory out of 5000000
+ 50972 multiletter control sequences out of 15000+600000
  53817 words of font info for 202 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  73i,18n,388p,10495b,2284s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on calculusAndAnalyticGeometry.pdf (31 pages).
+Output written on calculusAndAnalyticGeometry.pdf (37 pages).
