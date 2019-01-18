@@ -5,3 +5,10 @@ endfunction
  [x, info] = fsolve ("f", 0.5)
  [x, info] = fsolve ("f", 2)
 
+
+function y = f (x)
+y=x^3+3*x+1;
+endfunction
+
+ [x, info] = fsolve ("f", 0.1)
+
