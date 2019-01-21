@@ -65,9 +65,9 @@
 \graphicspath{{./fig/figFrontPage/}{./fig/figCalculusLimits/}{./fig/figCalculusDerivatives/}}%paths to figures
 
 
-%\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusAppendixB}
+%\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/questions,./tex/calculusAppendixB}
 %
-\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusApplicationsOfDerivatives,./tex/calculusAppendixB}
+\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/questions,./tex/calculusAppendixB}
 %
 %\includeonly{./tex/cktSymbols,./tex/cktPreface,./tex/prefaceFirstBook,./tex/calculusLimitsAndContinuity}%
 
@@ -125,7 +125,7 @@
 \include{./tex/calculusLimitsAndContinuity}
 \include{./tex/calculusDerivatives}
 \include{./tex/calculusApplicationsOfDerivatives}
-
+\include{./tex/questions}
 
 
 
