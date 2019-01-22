@@ -1,0 +1,42 @@
+Print("======================================");
+kill(all);
+print("sec 3.4, Q29");
+
+y:x^(2/3)*(5/2-x);
+
+dy:diff(y,x);
+ratsimp(ddy);
+
+ev(y,x=-0.5);
+
+Print("======================================");
+kill(all);
+print("sec 3.4, Q41");
+
+f:2*x+1/2*x^2-1/3*x^3;
+ev(f,x=-1);
+float(%);
+ev(f,x=1/2);
+float(%);
+ev(f,x=2);
+float(%);
+
+Print("======================================");
+kill(all);
+print("sec 3.4, Q43");
+
+f:1/4*x^4-2*x^3+4.5*x^2;
+float(ev(f,x=0));
+float(ev(f,x=1));
+float(ev(f,x=3));
+
+Print("======================================");
+kill(all);
+print("sec 3.4, Q45");
+
+f:1/4*x^4-6*x^2;
+float(ev(f,x=-2*sqrt(3)));
+float(ev(f,x=0));
+float(ev(f,x=3.464));
+float(ev(f,x=-2));
+float(ev(f,x=2));
