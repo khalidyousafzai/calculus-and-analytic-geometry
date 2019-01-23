@@ -38,3 +38,64 @@ f:1/4*x^4-6*x^2;
 float(ev(f,x=-2*sqrt(3)));
 float(ev(f,x=0));
 float(ev(f,x=3.464));
+float(ev(f,x=-2));
+float(ev(f,x=2));
+
+Print("======================================");
+kill(all);
+print("sec 3.4, Q47");
+
+ydd:4*(4-x)*(5*x^2-16*x+8);
+fdd:expand(ydd);
+fd:integrate(fdd,x);
+f:integrate(fd,x);
+
+float(ev(f,x=0));
+float(ev(f,x=(8-2*sqrt(6))/5));
+float(ev(f,x=8/5));
+float(ev(f,x=(8+2*sqrt(6))/5));
+float(ev(f,x=4));
+
+Print("======================================");
+kill(all);
+print("sec 3.4, Q49");
+
+yd:(sec(x))^2;
+y:integrate(yd,x);
+
+Print("======================================");
+kill(all);
+print("sec 3.4, Q51");
+
+yd:cot(x/2);
+y:integrate(yd,x);
+
+Print("======================================");
+kill(all);
+print("sec 3.4, Q53");
+
+yd:(tan(x))^2-1;
+y:integrate(yd,x);
+float(ev(y,x=-%pi/4));
+float(ev(y,x=0));
+float(ev(y,x=%pi/4));
+
+Print("======================================");
+kill(all);
+print("sec 3.4, Q55");
+
+yd:cos(x);
+y:integrate(yd,x);
+float(ev(y,x=0));
+float(ev(y,x=%pi/2));
+float(ev(y,x=%pi));
+float(ev(y,x=3/2*%pi));
+float(ev(y,x=2*%pi));
+
+Print("======================================");
+kill(all);
+print("sec 3.4, Q57");
+
+yd:(x+1)^(-2/3);
+y:integrate(yd,x);
+float(ev(y,x=-1));

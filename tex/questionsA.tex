@@ -21,7 +21,7 @@
 %========================
 \begin{figure}
 \centering
-\begin{minipage}{0.22\textwidth}
+\begin{subfigure}{0.22\textwidth}
 \centering
 \begin{tikzpicture}
 \begin{axis}[width=4cm,font=\tiny,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty}]
@@ -30,10 +30,9 @@
 \draw(axis cs:0,3)node[circ]{}node[left]{$N$};
 \end{axis}
 \end{tikzpicture}
-\caption{ترسیم سوال \حوالہ{سوال_استعمال_ترخیمی_ترسیم_الف}}
-\label{شکل_سوال_استعمال_ترخیمی_ترسیم_الف}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.22\textwidth}
 \centering
 \begin{tikzpicture}
 \begin{axis}[width=4cm,font=\tiny,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty}]
@@ -42,10 +41,9 @@
 \draw(axis cs:0,4)node[circ]{}node[left]{$N$};
 \end{axis}
 \end{tikzpicture}
-\caption{ترسیم سوال \حوالہ{سوال_استعمال_ترخیمی_ترسیم_ب}}
-\label{شکل_سوال_استعمال_ترخیمی_ترسیم_ب}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.22\textwidth}
 \centering
 \begin{tikzpicture}
 \begin{axis}[clip=false,width=4cm,font=\tiny,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty},ymax=2,ymin=-1.5]
@@ -54,21 +52,19 @@
 \draw(axis cs:0,1.5)node[circ]{}node[left]{$N$};
 \end{axis}
 \end{tikzpicture}
-\caption{ترسیم سوال \حوالہ{سوال_استعمال_ترخیمی_ترسیم_پ}}
-\label{شکل_سوال_استعمال_ترخیمی_ترسیم_پ}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.22\textwidth}
 \centering
 \begin{tikzpicture}
 \begin{axis}[clip=false,width=4cm,font=\tiny,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty},ymin=-2.5,ymax=1.5]
-\addplot[domain=0:6.284]{sin(deg(x))}node[pos=0.625,below left]{$y=f'(x)$};
-\addplot[domain=0:6.284]{-cos(deg(x))}node[pos=0.5,above right]{$y=f'(x)$};
+\addplot[domain=0:6.284]{sin(deg(x))}node[pos=0.75,below]{$y=f'(x)$};
+\addplot[domain=0:6.284]{cos(deg(x))}node[above left]{$y=f''(x)$};
 \draw(axis cs:0,-1.5)node[circ]{}node[left]{$N$};
 \end{axis}
 \end{tikzpicture}
-\caption{ترسیم سوال \حوالہ{سوال_استعمال_ترخیمی_ترسیم_ت}}
-\label{شکل_سوال_استعمال_ترخیمی_ترسیم_ت}
-\end{minipage}
+\caption{}
+\end{subfigure}
 \end{figure}
 
 
@@ -79,7 +75,7 @@
 %==============
 \begin{figure}
 \centering
-\begin{minipage}{0.22\textwidth}
+\begin{subfigure}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[declare function={y(\x)=1.5-sin(deg(\x));}]
 \pgfmathsetmacro{\kp}{60/180*3.142}
@@ -101,10 +97,11 @@
 \draw(axis cs:1+\kt,\ktt)node[circ]{}node[above]{$T$};
 \end{axis}
 \end{tikzpicture}
-\caption{ترسیم برائے سوال \حوالہ{سوال_استعمال_تفرق_منفی_یا_مثبت}}
-\label{شکل_سوال_استعمال_تفرق_منفی_یا_مثبت}
-\end{minipage}\hfill
-\begin{minipage}{0.75\textwidth}
+\caption{}
+\end{subfigure}\hfill
+\caption{ترسیم برائے سوال \حوالہ{سوال_استعمال_ترخیمی_ترسیم_الف}}
+\label{شکل_سوال_استعمال_ترخیمی_ترسیم_الف}
+\begin{subfigure}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[x=0.5cm]
 \draw(-4,0)node[left]{$y':$}--(4,0);
@@ -116,9 +113,8 @@
 \foreach \x/\s in {-2/-,0/+,2/-}{\draw(\x,0)node[above]{\s};}
 \end{scope}
 \end{tikzpicture}
-\caption{ترسیم برائے سوال \حوالہ{سوال_استعمال_تفرق_نقش}}
-\label{شکل_سوال_استعمال_تفرق_نقش}
-\end{minipage}
+\caption{}
+\end{subfigure}
 \end{figure}
 
 \ابتدا{سوال}
@@ -150,11 +146,9 @@ x>6&&y'<0,\,y''<0
 %=================
 \ابتدا{سوال}\شناخت{سوال_استعمال_تفرق_نقش}
 دو مرتبہ قابل تفرق تفاعل \عددی{y=f(x)} جو نقطہ \عددی{(-2,2)}، \عددی{(-1,1)}، \عددی{(0,0)}، \عددی{(1,1)} اور \عددی{(2,2)} سے گزرتا ہے اور جس کے یک درجی تفرق کی علامت کا نقش شکل \حوالہ{شکل_سوال_استعمال_تفرق_نقش} میں دیا گیا ہے کو ترسیم کریں۔
-\انتہا{سوال}
-%==============
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{subfigure}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[x=0.3cm,font=\small]
 \draw[-latex](-0.5,0)--(17,0)node[right]{$t$};
@@ -165,8 +159,8 @@ x>6&&y'<0,\,y''<0
 \end{tikzpicture}
 \caption{ترسیم برائے سوال \حوالہ{سوال_استعمال_فاصلہ_وقت}}
 \label{شکل_سوال_استعمال_فاصلہ_وقت}
-\end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[x=0.3cm,font=\small]
 \draw[-latex](-0.5,0)--(17,0)node[right]{$t$};
@@ -177,15 +171,16 @@ x>6&&y'<0,\,y''<0
 \end{tikzpicture}
 \caption{ترسیم برائے سوال \حوالہ{سوال_استعمال_فاصلہ_وقت_دوم}}
 \label{شکل_سوال_استعمال_فاصلہ_وقت_دوم}
-\end{minipage}
+\end{subfigure}
 \end{figure}
-%
+\انتہا{سوال}
+%==============
 \ابتدا{سوال}\شناخت{سوال_استعمال_فاصلہ_وقت}\ترچھا{سمتی رفتار اور اسراع}\\
-محددی لکیر پر آگے پیچھے حرکت کرتے ہوئے جسم کا مقام بالمقابل وقت  شکل \حوالہ{شکل_سوال_استعمال_فاصلہ_وقت} میں دکھایا گیا ہے۔ (ا) جسم مبدا سے کب دور اور  کب مبدا کی طرف حرکت کرتا ہے؟  (ب) کب سمتی رفتار صفر ہے؟ (ج) کب اسراع صفر ہے؟ (د)  کب اسراع مثبت اور کب منفی ہے؟ 
+محددی لکیر پر آگے پیچے حرکت کرتے ہوئے جسم کا مقام بالمقابل وقت  شکل \حوالہ{شکل_سوال_استعمال_فاصلہ_وقت} میں دکھایا گیا ہے۔ (ا) جسم مبدا سے کب دور اور  کب مبدا کی طرف حرکت کرتا ہے؟  (ب) کب سمتی رفتار صفر ہے؟ (ج) کب اسراع صفر ہے؟ (د)  کب اسراع مثبت اور کب منفی ہے؟ 
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}\شناخت{سوال_استعمال_فاصلہ_وقت_دوم}\ترچھا{سمتی رفتار اور اسراع}\\
-محددی لکیر پر آگے پیچھے حرکت کرتے ہوئے جسم کا مقام بالمقابل وقت  شکل \حوالہ{شکل_سوال_استعمال_فاصلہ_وقت_دوم} میں دکھایا گیا ہے۔ (ا) جسم مبدا سے کب دور اور  کب مبدا کی طرف حرکت کرتا ہے؟  (ب) کب سمتی رفتار صفر ہے؟ (ج) کب اسراع صفر ہے؟ (د)  کب اسراع مثبت اور کب منفی ہے؟ 
+محددی لکیر پر آگے پیچے حرکت کرتے ہوئے جسم کا مقام بالمقابل وقت  شکل \حوالہ{شکل_سوال_استعمال_فاصلہ_وقت_دوم} میں دکھایا گیا ہے۔ (ا) جسم مبدا سے کب دور اور  کب مبدا کی طرف حرکت کرتا ہے؟  (ب) کب سمتی رفتار صفر ہے؟ (ج) کب اسراع صفر ہے؟ (د)  کب اسراع مثبت اور کب منفی ہے؟ 
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}\شناخت{سوال_استعمال_حاشیہ_الف}\ترچھا{حاشیہ لاگت}\\
@@ -200,7 +195,7 @@ x>6&&y'<0,\,y''<0
 %=====================
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{subfigure}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\small,x=0.5cm]
 \draw[-latex](-0.25,0)--(7,0)node[right]{$x$};
@@ -210,8 +205,8 @@ x>6&&y'<0,\,y''<0
 \end{tikzpicture}
 \caption{لاگت بالمقابل پیداوار (سوال \حوالہ{سوال_استعمال_حاشیہ_الف})}
 \label{شکل_سوال_استعمال_حاشیہ_الف}
-\end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\small,x=0.25cm]
 \draw[-latex](-0.25,0)--(14,0)node[right]{$t$};
@@ -222,7 +217,7 @@ x>6&&y'<0,\,y''<0
 \end{tikzpicture}
 \caption{آمدن بالمقابل سال (سوال \حوالہ{سوال_استعمال_حاشیہ_ب})}
 \label{شکل_سوال_استعمال_حاشیہ_ب}
-\end{minipage}
+\end{subfigure}
 \end{figure}
 
 \ابتدا{سوال}
@@ -282,7 +277,7 @@ y'=(x-1)^2(x-2)(x-4)
 \انتہا{سوال}
 %================================
 \موٹا{کمپیوٹر کا استعمال}\\
-سوال \حوالہ{سوال_استعمال_کمپیوٹر_نقطہ_تصریف_الف} تا سوال \حوالہ{سوال_استعمال_کمپیوٹر_نقطہ_تصریف_ب} میں تفاعل کی ترسیم پر نقطہ تصریف (اگر موجود ہو)، مقامی کم سے کم اور مقامی زیادہ سے زیادہ نقطے  تلاش کریں۔ تفاعل کو ترسیم کرتے ہوئے ان نقطوں کی نشاندہی کریں۔ ساتھ ہی تفاعل کا یک درجی تفرق اور دو درجی تفرق بھی ترسیم کریں۔ جہاں یہ ترسیمات \عددی{x} محدد کو قطع کرتی ہیں، ان کا تفاعل کے ساتھ کیا تعلق ہے؟ اس کے علاوہ تفرق کے تفاعل کے ترسیم کے ساتھ کیا تعلقات ہیں؟ 
+سوال \حوالہ{سوال_استعمال_کمپیوٹر_نقطہ_تصریف_الف} تا سوال \حوالہ{سوال_استعمال_کمپیوٹر_نقطہ_تصریف_ب} میں تفاعل کی ترسیم پر نقطہ تصریف (اگر موجود ہو)، مقامی کم سے کم اور مقامی زیاسدہ سے زیادہ نقطے  تلاش کریں۔ تفاعل کو ترسیم کرتے ہوئے ان نقطوں کی نشاندہی کریں۔ ساتھ ہی تفاعل کا یک درجی تفرق اور دو درجی تفرق بھی ترسیم کریں۔ جہاں یہ ترسیمات \عددی{x} محدد کو قطع کرتی ہیں، ان کا تفاعل کے ساتھ کیا تعلق ہے؟ اس کے علاوہ تفرق کے تفاعل کے ترسیم کے ساتھ کیا تعلقات ہیں؟ 
 
 \ابتدا{سوال}\شناخت{سوال_استعمال_کمپیوٹر_نقطہ_تصریف_الف}
 $y=x65-5x64-240$
@@ -346,7 +341,7 @@ $y=\tfrac{x^4}{4}-\tfrac{x^3}{3}-4x^2+12x+20$
 \end{enumerate}
 \انتہا{سوال}
 %========================
-\ابتدا{سوال}\شناخت{سوال_استعمال_کمپیوٹر_نقطہ_تصریف_ب}
+\ابتدا{سوال}
 کیا \عددی{x=-3} کے قریب \عددی{y=x^2+3\sin 2x} کا افقی مماس پایا جاتا ہے؟ اپنے جواب کی وجہ پیش کریں۔
 \انتہا{سوال}
 %===========================
