@@ -17,6 +17,8 @@
 
 %pathmorphing gives the ripples like look
 \usetikzlibrary{3d,shadings,fadings,intersections,calc,decorations.markings,decorations.pathreplacing,external,shapes.misc,decorations.pathmorphing,patterns}
+%kkkkkk
+\pgfplotsset{xlabel style/.style={at={(current axis.right of origin)},anchor=west}}
 
 %\tikzexternalize[mode=list and make] %disable to generate figures
 %\tikzexternaldisable  %enables figures after this command. put this is the tex file
@@ -65,9 +67,9 @@
 \graphicspath{{./fig/figFrontPage/}{./fig/figCalculusLimits/}{./fig/figCalculusDerivatives/}}%paths to figures
 
 
-\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusAppendixB}
+%\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/questions,./tex/calculusAppendixB}
 %
-%\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/questions,./tex/calculusAppendixB}
+\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusApplicationsOfDerivatives,./tex/questions,./tex/calculusAppendixB}
 %
 %\includeonly{./tex/cktSymbols,./tex/cktPreface,./tex/prefaceFirstBook,./tex/calculusLimitsAndContinuity}%
 
