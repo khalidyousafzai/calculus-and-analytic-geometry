@@ -22,6 +22,7 @@
 
 \protected\def\numpi{\text{\ensuremath{\pi}}}  %25 june 2015, these two lines were added to be able to use numpi as pi in SI commands.
 \sisetup{input-symbols = \numpi}					%without it, in the presence of mathpazo package, SI would show beta instead of pi
+\DeclareSIUnit\litre{\liter}
 
 \usepackage{steinmetz}		%\phase to show angle of phasors
 \usepackage[version=3]{mhchem}     %chemical symbols such as \ce{H2O}
@@ -53,7 +54,7 @@
 
 
 \newfontfamily\arabicfont[Scale=1.0,Script=Arabic]{Jameel Noori Nastaleeq}
-\newfontfamily\urduTechTermsfont[Scale=1.0,Script=Arabic]{XB Tabriz Bold}
+\newfontfamily\urduTechTermsfont[Scale=1.0,Script=Arabic]{Jameel Noori Nastaleeq Bold}
 \newfontfamily\urdufont[WordSpace=60.0,Script=Arabic]{Jameel Noori Nastaleeq}
 %\newfontfamily\urduTechTermsfont[Scale=1.25,WordSpace=35.0,Script=Arabic]{Jameel Noori Nastaleeq Kasheeda}
 \newfontfamily\urdufontBig[Scale=1.25,WordSpace=60.0,Script=Arabic]{Jameel Noori Nastaleeq}
