@@ -153,7 +153,7 @@ $\lim_{x\to \mp\infty}[f(x)]^{m/n}=L^{m/n}$
 \begin{tikzpicture}
 \begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
 \addplot[domain=-5:10.5,smooth]{(5*x^2+8*x-3)/(3*x^2+2)}node[above left,yshift=2mm]{$y=\tfrac{5x^2+8x-3}{3x^2+2}$};
-\addplot[domain=-5:10]{5/3}node[pos=0.6,below]{$y=\tfrac{5}{3}$};
+\addplot[domain=-5:10]{5/3}node[pos=0.6,pin=-45:{$y=\tfrac{5}{3}$}]{};
 \end{axis}
 \end{tikzpicture}
 \caption{ترسیم تفاعل اور حد (مثال \حوالہ{مثال_استعمال_حد_لا_متناہی_الف})}
@@ -182,7 +182,7 @@ $\lim_{x\to \mp\infty}[f(x)]^{m/n}=L^{m/n}$
 \انتہا{مثال}
 
 %===========================
-\ابتدا{مثال}\شناخت{مثال_استعمال_حد_لا_متناہی_ج}\ترچھا{شمار کنندہ کی بلند ترین طاقت نسب نما کی بلند ترین طاقت سے زیادہ ہے}
+\ابتدا{مثال}\شناخت{مثال_استعمال_حد_لا_متناہی_ج}\ترچھا{شمار کنندہ کی بلند ترین طاقت نسب نما کی بلند ترین طاقت سے زیادہ ہے۔} شکل \حوالہ{شکل_مثال_استعمال_حد_لا_متناہی_ج} 
 \begin{enumerate}[a.]
 \item
 \begin{align*}
@@ -197,7 +197,39 @@ $\lim_{x\to \mp\infty}[f(x)]^{m/n}=L^{m/n}$
 \end{enumerate}
 \انتہا{مثال}
 %===========================
-
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\k}{-4/7}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$}]
+\addplot[domain=-5:\k-0.2,smooth]{(2*x^2-3)/(7*x+4)};
+\addplot[domain=\k-0.2:\k-0.1,smooth]{(2*x^2-3)/(7*x+4)};
+\addplot[domain=\k+0.1:\k+0.2,smooth]{(2*x^2-3)/(7*x+4)};
+\addplot[domain=\k+0.2:4.2,smooth]{(2*x^2-3)/(7*x+4)}node[above left]{$y=\tfrac{2x^2-3}{7x+4}$};
+\addplot[] plot coordinates {(\k,-4) (\k,3)};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم برائے مثال \حوالہ{مثال_استعمال_حد_لا_متناہی_ج}}
+\label{شکل_مثال_استعمال_حد_لا_متناہی_ج}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},axis line style=thick]
+\addplot[domain=-4:-0.25]{1/x};
+\addplot[domain=0.25:4]{1/x}node[pos=0.5,above right]{$y=\tfrac{1}{x}$};
+\draw(axis cs:2.5,0)node[below,align=center]{\RL{افقی متقارب}\\ $y=0$ };
+\draw(axis cs:-2,0)node[above]{\RL{افقی متقارب}};
+\draw(axis cs:0,-2)node[below,rotate=90]{\RL{انتصابی متقارب}};
+\draw(axis cs:0,2.5)node[above,rotate=90,align=center]{\RL{انتصابی متقارب}\\ $x=0$  };
+\end{axis}
+\end{tikzpicture}
+\caption{محددی محور قطع زائد \عددی{y=\tfrac{1}{x}} کے دونوں شاخوں کے متقارب ہیں۔}
+\label{شکل_استعمال_متقارب_محور}
+\end{minipage}
+\end{figure}
 مثال \حوالہ{مثال_استعمال_حد_لا_متناہی_الف} تا مثال \حوالہ{مثال_استعمال_حد_لا_متناہی_ج} سے \عددی{x\to \mp\infty} پر ناطق تفاعل کی حد حاصل کرنے کا ایک نقش ملتا ہے۔
 \begin{enumerate}[a.]
 \item
@@ -207,3 +239,206 @@ $\lim_{x\to \mp\infty}[f(x)]^{m/n}=L^{m/n}$
 \item
 اگر شمار کنندہ کی بلند تر طاقت نسب نما کی بلند تر طاقت  سے زیادہ  ہو تب تفاعل کا حد \عددی{\infty} یا \عددی{-\infty}  ہو گا۔ حد کی علامت نسب نما اور شمار کنندہ کی علامتوں سے حاصل ہو گا۔ 
 \end{enumerate}
+
+\موٹا{ناطق تفاعل کے لئے خلاصہ}
+\begin{enumerate}[a.]
+\item 
+اگر  درجہ \عددی{f} اور درجہ \عددی{g} ایک دوسرے کے برابر ہوں تب \عددی{\lim\limits_{x\to \mp \infty} \frac{f(x)}{g(x)}=\frac{a_n}{b_n}} یعنی 
+ \عددی{f} اور \عددی{g} کے اول عددی سروں کی نسبت کے برابر ہو گا۔ 
+\item 
+اگر  درجہ \عددی{f} درجہ  \عددی{g} سے کم ہو تب \عددی{\lim\limits_{x\to \mp \infty} \frac{f(x)}{g(x)}=0} ہو گا۔
+ \item 
+اگر  درجہ \عددی{f} درجہ \عددی{g} سے زیادہ ہو تب \عددی{\lim\limits_{x\to \mp \infty} \frac{f(x)}{g(x)}=\mp \infty}ہو گا جہاں شمار کنندہ اور نسب نما کی علامتوں سے علامت تعین ہو گا۔
+\end{enumerate}
+
+کثیر رکنی \عددی{a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0,\, a_n\ne 0} کا اول عددی سر \عددی{a_n} ہے جو بلند تر طاقتی جزو کا عددی سر ہے۔
+
+\حصہء{افقی اور انتصابی متقارب}
+اگر مبدا سے دور چلتے ہوئے ایک تفاعل اور کسی مقررہ لکیر کے درمیان فاصل صفر تک پہنچتا ہو تب ہم کہتے ہیں کہ ترسیم لکیر تک متقاربی پہنچتی ہے اور اس لکیر کو ترسیم کا \اصطلاح{متقارب}\فرہنگ{متقارب}\حاشیہب{asymptote}\فرہنگ{asymptote} کہتے ہیں۔
+
+\ابتدا{مثال}
+محددی محور تفاعل \عددی{y=\tfrac{1}{x}} کے متقارب ہیں (شکل \حوالہ{شکل_استعمال_متقارب_محور})۔ ترسیم کے دائیں حصے پر 
+\begin{align*}
+\lim_{x\to \infty}\frac{1}{x}=0
+\end{align*}
+اور ترسیم کے بائیں حصے پر
+\begin{align*}
+\lim_{x\to -\infty}\frac{1}{x}=0
+\end{align*}
+ہیں لہٰذا \عددی{x} محور \عددی{y=\tfrac{1}{x}} کا متقارب ہے۔ اسی  طرح  اوپر اور نیچے
+\begin{align*}
+\lim_{x\to 0^+}\frac{1}{x}=\infty,\quad \lim_{x\to 0^-}\frac{1}{x}=-\infty
+\end{align*}
+ہیں لہٰذا \عددی{y} محور بھی \عددی{y=\tfrac{1}{x}} کا متقارب ہے۔
+
+یاد رہے کہ \عددی{x=0} پر نسب نما صفر ہے لہٰذا تفاعل غیر معین ہے۔
+\انتہا{مثال}
+%==========================
+
+\ابتدا{تعریف}
+تفاعل \عددی{y=f(x)} کا خط \عددی{y=b} اس صورت افقی متقارب ہو گا جب 
+\begin{align*}
+\text{ہو۔}\quad \lim_{x\to -\infty} f(x)=b\quad \text{یا}\quad \lim_{x\to \infty} f(x)=b
+\end{align*}
+
+تفاعل \عددی{y=f(x)} کا خط \عددی{x=a} اس صورت انتصابی متقارب ہو گا جب 
+\begin{align*}
+\text{ہو۔}\quad \lim_{x\to a^-} f(x)=\mp \infty\quad \text{یا}\quad \lim_{x\to a^+} f(x)=\mp \infty
+\end{align*}
+\انتہا{تعریف}
+%========================
+
+\ابتدا{مثال}\شناخت{مثال_استعمال_انتصابی_متقارب_الف}
+\عددی{\tfrac{\pi}{2}} کے طاق عدد صحیح مضرب پر، جہاں \عددی{\cos x=0} ہے، درج ذیل دونوں منحنیات کے انتصابی متقارب  پائے جاتے ہیں (شکل \حوالہ{شکل_مثال_استعمال_انتصابی_متقارب_الف})۔
+\begin{align*}
+y=\sec x=\frac{1}{\cos x},\quad y=\tan x=\frac{\sin x}{\cos x}
+\end{align*}
+
+\عددی{\pi} کے عدد صحیح مضرب پر، جہاں \عددی{\sin x=0} ہے، درج ذیل دونوں منحنیات کے انتصابی متقارب  پائے جاتے ہیں (شکل \حوالہ{شکل_مثال_استعمال_انتصابی_متقارب_ب})۔
+\begin{align*}
+y=\csc x=\frac{1}{\sin x},\quad y=\cot x=\frac{\cos x}{\sin x}
+\end{align*}
+%
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\c}{3/2*pi}
+\pgfmathsetmacro{\b}{pi}
+\pgfmathsetmacro{\a}{1/2*pi}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ytick={1},xtick={\a,\b,\c,-\a,-\b,-\c},xticklabels={$\tfrac{\pi}{2}$,$\pi$,$\tfrac{3\pi}{2}$,$-\tfrac{\pi}{2}$,$-\pi$,$-\tfrac{3\pi}{2}$},xmin=-\c-0.2,xmax=\c+0.6]
+\addplot[domain=-0.9*pi/2:0.9*pi/2]{sec(deg(x))}node[pos=0.9,right]{$y=\sec x$};
+\addplot[domain=-pi-0.9*pi/2:-pi+0.9*pi/2]{sec(deg(x))};
+\addplot[domain=pi-0.9*pi/2:pi+0.9*pi/2]{sec(deg(x))};
+\addplot[] plot coordinates {(-\c,-6.5) (-\c,6.5)};
+\addplot[] plot coordinates {(-\a,-6.5) (-\a,6.5)};
+\addplot[] plot coordinates {(\c,-6.5) (\c,6.5)};
+\addplot[] plot coordinates {(\a,-6.5) (\a,6.5)};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\c}{3/2*pi}
+\pgfmathsetmacro{\b}{pi}
+\pgfmathsetmacro{\a}{1/2*pi}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ytick={1},xtick={\a,\b,\c,-\a,-\b,-\c},xticklabels={$\tfrac{\pi}{2}$,$\pi$,$\tfrac{3\pi}{2}$,$-\tfrac{\pi}{2}$,$-\pi$,$-\tfrac{3\pi}{2}$},xmin=-\c-0.2,xmax=\c+0.6]
+\addplot[domain=-0.9*pi/2:0.9*pi/2]{tan(deg(x))}node[pos=0.9,right]{$y=\tan x$};
+\addplot[domain=-pi-0.9*pi/2:-pi+0.9*pi/2]{tan(deg(x))};
+\addplot[domain=pi-0.9*pi/2:pi+0.9*pi/2]{tan(deg(x))};
+\addplot[] plot coordinates {(-\c,-6.5) (-\c,6.5)};
+\addplot[] plot coordinates {(-\a,-6.5) (-\a,6.5)};
+\addplot[] plot coordinates {(\c,-6.5) (\c,6.5)};
+\addplot[] plot coordinates {(\a,-6.5) (\a,6.5)};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+\caption{انتصابی متقارب (مثال \حوالہ{مثال_استعمال_انتصابی_متقارب_الف})}
+\label{شکل_مثال_استعمال_انتصابی_متقارب_الف}
+\end{figure}
+%
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{pi}
+\pgfmathsetmacro{\b}{2*pi}
+\pgfmathsetmacro{\d}{pi/2}
+\pgfmathsetmacro{\e}{3/2*pi}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ytick={1},xtick={-\a,\a,\b,-\d,\d,\e},xticklabels={$-\pi$,$\pi$,$2\pi$,$-\tfrac{\pi}{2}$,$\tfrac{\pi}{2}$,$\tfrac{3\pi}{2}$},xmin=-\a-0.2,xmax=\b+0.4]
+\addplot[domain=0.2:pi-0.2]{cosec(deg(x))}node[pos=0.9,right]{$y=\csc x$};
+\addplot[domain=pi+0.2:pi+pi-0.2]{cosec(deg(x))};
+\addplot[domain=-pi+0.2:-pi+pi-0.2]{cosec(deg(x))};
+\addplot[] plot coordinates {(-\a,-5) (-\a,5)};
+\addplot[] plot coordinates {(\a,-5) (\a,5)};
+\addplot[] plot coordinates {(\b,-5) (\b,5)};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{pi}
+\pgfmathsetmacro{\b}{2*pi}
+\pgfmathsetmacro{\d}{pi/2}
+\pgfmathsetmacro{\e}{3/2*pi}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ytick={1},xtick={-\a,\a,\b,-\d,\d,\e},xticklabels={$-\pi$,$\pi$,$2\pi$,$-\tfrac{\pi}{2}$,$\tfrac{\pi}{2}$,$\tfrac{3\pi}{2}$},xmin=-\a-0.2,xmax=\b+0.4]
+\addplot[domain=0.2:pi-0.2]{cot(deg(x))}node[pos=0.1,right]{$y=\cot x$};
+\addplot[domain=pi+0.2:pi+pi-0.2]{cot(deg(x))};
+\addplot[domain=-pi+0.2:-pi+pi-0.2]{cot(deg(x))};
+\addplot[] plot coordinates {(-\a,-5) (-\a,5)};
+\addplot[] plot coordinates {(\a,-5) (\a,5)};
+\addplot[] plot coordinates {(\b,-5) (\b,5)};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+\caption{انتصابی متقارب (مثال \حوالہ{مثال_استعمال_انتصابی_متقارب_الف})}
+\label{شکل_مثال_استعمال_انتصابی_متقارب_ب}
+\end{figure}
+\انتہا{مثال}
+%====================
+\ابتدا{مثال}\شناخت{مثال_استعمال_انتصابی_متقارب_دوم}
+درج ذیل ترسیم کے متقارب تلاش کریں۔
+\begin{align*}
+y=\frac{x+3}{x+2}
+\end{align*}
+حل:\quad
+ہم \عددی{x\to \mp \infty} پر اور \عددی{x\to -2}، جہاں نسب نما صفر ہے، پر ترسیم کا رویہ دیکھنا چاہتے ہیں۔ قلم و کاغذ استعمال کرتے ہوئے \عددی{x+3} اور \عددی{x+2} سے تقسیم کر کے 
+\begin{align*}
+y=\frac{x+3}{x+2}=1+\frac{1}{x+2}
+\end{align*}
+لکھا جا سکتا ہے۔ہم دیکھتے ہیں کہ \عددی{\tfrac{1}{x}} کی منحنی کو \عددی{1} اکائی اوپر اور \عددی{2} اکائیاں بائیں منتقل کرتے ہوئے درج بالا منحنی حاصل ہو گی۔یوں محددی محور کی بجائے خط \عددی{y=1} اور خط \عددی{x=-2} متقارب خط ہوں گے۔ 
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-6:-2-0.2]{1+1/(x+2)};
+\addplot[domain=-2+0.2:3]{1+1/(x+2)};
+\addplot[] plot coordinates {(-2,-4) (-2,6)};
+\draw(axis cs:-2,5)node[left,align=center]{$x=-2$\\   \RL{انتصابی متقارب}};
+\draw(axis cs:-5,1)node[above,align=center]{\RL{افقی متقارب}\\ $y=1$};
+\addplot[] plot coordinates {(-6,1) (3,1)};
+\draw(axis cs:0,3)node[right]{$y=1+\tfrac{1}{x+2}$};
+\end{axis}
+\end{tikzpicture}
+\caption{انتصابی متقارب (مثال \حوالہ{مثال_استعمال_انتصابی_متقارب_دوم})}
+\label{شکل_مثال_استعمال_انتصابی_متقارب_دوم}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-5:-2-0.2]{-8/(x^2-4)};
+\addplot[domain=-2+0.2:2-0.2]{-8/(x^2-4)};
+\addplot[domain=2+0.2:6]{-8/(x^2-4)};
+\addplot[] plot coordinates {(-2,-10) (-2,10)}node[pos=0.9,left,align=center]{\RL{انتصابی متقارب}\\ $x=-2$};
+\addplot[] plot coordinates {(2,-10) (2,10)}node[pos=0.9,right,align=center]{\RL{انتصابی متقارب}\\ $x=2$};
+\draw(axis cs:4,0)node[pin=60:{$y=0$\,\RL{افقی متقارب}}]{};
+\draw(axis cs:2.25,-5)node[right]{$y=-\tfrac{8}{x^2-4}$};
+\end{axis}
+\end{tikzpicture}
+\caption{انتصابی متقارب (مثال \حوالہ{مثال_استعمال_انتصابی_متقارب_سوم})}
+\label{شکل_مثال_استعمال_انتصابی_متقارب_سوم}
+\end{minipage}
+\end{figure}
+
+\انتہا{مثال}
+%=======================
+\ابتدا{مثال}\شناخت{مثال_استعمال_انتصابی_متقارب_سوم}
+درج ذیل ترسیم کا متقارب تلاش کریں۔
+\begin{align*}
+y=-\frac{8}{x^2-4}
+\end{align*}
+حل:\quad
+ہم \عددی{x\to \mp \infty} اور \عددی{x-\mp 2}، جہاں نسب نما صفر ہے، پر ترسیم کے رویہ میں دلچسپی رکھتے ہیں۔
+
+چونکہ \عددی{\lim_{x\to \mp \infty}f(x)=0}  لہٰذا افقی متقارب خط \عددی{y=0} ہے (شکل \حوالہ{شکل_مثال_استعمال_انتصابی_متقارب_سوم})۔ چونکہ \عددی{\lim_{x\to 2^+}f(x)=\infty} اور \عددی{\lim_{x\to 2^-}f(x)=-\infty} سے \عددی{x=2} متقاربی خط حاصل ہوتا ہے۔اسی طرح \عددی{x=-2} بھی متقاربی خط حاصل ہو گا۔ 
+\انتہا{مثال}
+%=========================
+
+ایسا معلوم ہوتا ہے کہ جہاں ناطق تفاعل کا نسب نما صفر ہو وہاں تفاعل کا انتصابی متقارب پایا جائے گا۔یہ تقریباً درست ہے۔ حقیقت میں ناطق تفاعل کی کم تر جزو تک تخفیف شدہ  صورت میں جہاں نسب نما کا صفر ہو وہاں تفاعل کا انتصابی صفر ہو گا۔
