@@ -415,7 +415,7 @@ y=\frac{x+3}{x+2}=1+\frac{1}{x+2}
 \begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
 \addplot[domain=-5:-2-0.2]{-8/(x^2-4)};
 \addplot[domain=-2+0.2:2-0.2]{-8/(x^2-4)};
-\addplot[domain=2+0.2:6]{-8/(x^2-4)};
+\addplot[domain=2+0.2:5.9]{-8/(x^2-4)};
 \addplot[] plot coordinates {(-2,-10) (-2,10)}node[pos=0.9,left,align=center]{\RL{انتصابی متقارب}\\ $x=-2$};
 \addplot[] plot coordinates {(2,-10) (2,10)}node[pos=0.9,right,align=center]{\RL{انتصابی متقارب}\\ $x=2$};
 \draw(axis cs:4,0)node[pin=60:{$y=0$\,\RL{افقی متقارب}}]{};
@@ -442,3 +442,331 @@ y=-\frac{8}{x^2-4}
 %=========================
 
 ایسا معلوم ہوتا ہے کہ جہاں ناطق تفاعل کا نسب نما صفر ہو وہاں تفاعل کا انتصابی متقارب پایا جائے گا۔یہ تقریباً درست ہے۔ حقیقت میں ناطق تفاعل کی کم تر جزو تک تخفیف شدہ  صورت میں جہاں نسب نما کا صفر ہو وہاں تفاعل کا انتصابی متقارب پایا جائے گا۔
+
+\ابتدا{مثال}\شناخت{مثال_استعمال_قابل_ہٹاو_عدم_استمرار}\ترچھا{نسب نما میں صفر پر قابل ہٹاو عدم استمرار}
+درج ذیل کی ترسیم 
+\begin{align*}
+f(x)=\frac{x^3-1}{x^2-1}
+\end{align*}
+کا \عددی{x=-1} پر انتصابی متقارب پایا جاتا ہے لیکن \عددی{x=1} پر نہیں پایا جاتا ہے۔ چونکہ
+\begin{align*}
+\frac{x^3-1}{x^2-1}=\frac{(x-1)(x^2+x+1)}{(x-1)(x+1)}=\frac{x^2+x+1}{x+1}
+\end{align*}
+لکھا جا سکتا ہے لہٰذا عدم استمرار قابل  ہٹاو ہے اور \عددی{x\to1} پر تفاعل کا حد \عددی{\tfrac{3}{2}} ہے (شکل \حوالہ{شکل_مثال_استعمال_قابل_ہٹاو_عدم_استمرار})۔
+\انتہا{مثال}
+%==============================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-4:-1.2]{(x^2+x+1)/(x+1)};
+\addplot[domain=-0.8:5]{(x^2+x+1)/(x+1)}node[pos=0.8,above left]{$y=\tfrac{x^3-1}{x^2-1}$};
+\draw(axis cs:1,1.5)node[ocirc]{};
+\addplot[] plot coordinates {(-1,-6) (-1,4)};
+\end{axis}
+\end{tikzpicture}
+\caption{
+منحنی \عددی{f(x)=\tfrac{x^3-1}{x^2-1}} کی \عددی{x=1} پر عدم استمرار قابل ہٹاو ہے لہٰذا اس کی صرف \عددی{x=-1} پر متقاربی خط ہو گا۔
+}
+\label{شکل_مثال_استعمال_قابل_ہٹاو_عدم_استمرار}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\a}{pi}
+\pgfmathsetmacro{\b}{2*pi}
+\pgfmathsetmacro{\c}{3*pi}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ymin=0,ymax=4,xtick={\a,\b,\c,-\a,-\b,-\c},xticklabels={$\pi$,$2\pi$,$3\pi$,$-\pi$,$-2\pi$,$-3\pi$}]
+\addplot[domain=-10:10,samples=200]{2+(sin(deg(x)))/x}node[above left,yshift=3mm]{$y=2+\tfrac{\sin x}{x}$};
+\draw(axis cs:0,3)node[ocirc]{};
+\addplot[] plot coordinates {(-10,2) (10,2)};
+\end{axis}
+\end{tikzpicture}
+\caption{منحنی اپنے متقاربی خط کو لامتناہی بار قطع کر سکتی ہے (مثال \حوالہ{مثال_استعمال_مسئلہ_بیچ})۔}
+\label{شکل_مثال_استعمال_مسئلہ_بیچ}
+\end{minipage}
+\end{figure}
+
+
+مسئلہ \حوالہ{مسئلہ_حد_بیچ} (صفحہ \حوالہصفحہ{مسئلہ_حد_بیچ} مسئلہ بیچ) بھی \عددی{x\to \mp\infty} پر حد کے لئے قابل لاگو ہے۔ اس کی ایک مثال پیش کرتے ہیں۔
+
+
+\ابتدا{مثال}\شناخت{مثال_استعمال_مسئلہ_بیچ}
+مسئلہ بیچ استعمال کرتے ہوئے درج ذیل منحنی کے متقارب تلاش کریں۔
+\begin{align*}
+y=2+\frac{\sin x}{x}
+\end{align*}
+حل:\quad
+ہم \عددی{x\to 0} جہاں نسب نما صفر ہو گا اور \عددی{x\to \mp\infty} پر منحنی کے رویہ میں دلچسپی رکھتے ہیں۔
+
+ہم جانتے ہیں کہ \عددی{\lim_{x\to 0}\tfrac{\sin x}{x}=1} ہے لہٰذا مبدا پر کوئی متقارب نہیں پایا جاتا ہے۔ چونکہ
+\begin{align*}
+0\le \abs{\frac{\sin x}{x}}\le \abs{\frac{1}{x}}
+\end{align*}
+اور \عددی{\lim_{x\to \mp\infty}\abs{\tfrac{1}{x}}=0} ہے لہٰذا مسئلہ بیچ کے تحت \عددی{\lim_{x\to\mp\infty}\tfrac{\sin x}{x}=0} ہو گا۔یوں 
+\begin{align*}
+\lim_{x\to \mp\infty}(2+\frac{\sin x}{x})=2+0=2
+\end{align*}
+ہو گا لہٰذا منحنی کے بائیں اور دائیں متقاربی خط \عددی{y=2} ہو گا (شکل \حوالہ{شکل_مثال_استعمال_مسئلہ_بیچ})۔
+\انتہا{مثال}
+%=====================
+
+\حصہء{ترچھے متقارب}
+اگر شمار کنندہ کا درجہ نسب نما کے درجے سے ایک زیادہ ہو تب ترسیم کا ایک ترچھا متقارب پایا جائے گا جو نا افقی اور نا انتصابی ہو گا۔
+
+\ابتدا{مثال}\شناخت{مثال_استعمال_ترچھا_متقارب}
+درج ذیل کے متقارب تلاش کریں۔
+\begin{align*}
+f(x)=\frac{x^2-3}{2x-4}
+\end{align*}
+حل:\quad
+ہم \عددی{x\to \mp \infty} پر اور \عددی{x\to 2}، جہاں نسب نما صفر ہو گا، پر ترسیم کے رویہ میں دلچسپی رکھتے ہیں۔ \عددی{x^2-3} کو \عددی{2x-4} سے تقسیم کرتے ہوئے درج ذیل لکھا جا سکتا ہے۔ 
+\begin{align*}
+\frac{x^2-3}{2x-4}=\frac{x}{2}+1+\frac{1}{2x-4}
+\end{align*}
+چونکہ \عددی{\lim_{x\to 2^+}f(x)=\infty} اور \عددی{\lim_{x\to 2^-}f(x)=-\infty} ہیں لہٰذا \عددی{x=2} دو طرفہ متقارب ہے۔ \عددی{x\to \mp\infty} پر حاصل تقسیم صفر تک پہنچتی اور \عددی{f(x)\to \tfrac{x}{2}+1}تک پہنچتی ہے۔یوں \عددی{y=\tfrac{x}{2}+1} دونوں اطراف متقاربی خط ہے (شکل \حوالہ{شکل_مثال_استعمال_ترچھا_متقارب})۔
+\انتہا{مثال}
+%======================== 
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=\x/2+1+1/(2*\x-4);}]
+\pgfmathsetmacro{\a}{f(5)}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-2.25:1.9,smooth]{f(x)};
+\addplot[domain=2.1:6,smooth]{f(x)};
+\addplot[domain=-2.25:6]{x/2+1}node[pos=0.7,below right,align=center]{$y=\tfrac{x}{2}+1$\\   \RL{ترچھا متقارب}};
+\addplot[] plot coordinates {(2,-3) (2,7)}node[pos=0.1,right,align=center]{\RL{انتصابی متقارب}\\ $x=2$};
+\draw(axis cs:-0.5,3)node[left]{$y=\tfrac{x^2-3}{2x-4}$};
+\draw[latex-](axis cs:5,\a)--(5,\a+1.5)node[above,yshift=-2mm,align=right]{\RL{$x\to \mp \infty$ کرنے سے}\\  \RL{منحنی اور خط کے بیچ}\\  \RL{فاصلہ صفر تک پہنچتا ہے }\\  \RL{}};
+\draw[latex-](axis cs:5,3.5)--(axis cs:5,3);
+\end{axis}
+\end{tikzpicture}
+\caption{ترچھا متقارب (مثال \حوالہ{مثال_استعمال_ترچھا_متقارب})}
+\label{شکل_مثال_استعمال_ترچھا_متقارب}
+\end{figure}
+
+\جزوحصہء{متقارب اور غالب اجزاء کی مدد سے ترسیم}
+درج ذیل تفاعل کے تمام مشاہدوں
+\begin{align*}
+f(x)=\frac{x^2-3}{2x-4}
+\end{align*} 
+میں غالباً سب سے اہم مشاہدہ
+\begin{align*}
+f(x)=\frac{x}{2}+1+\frac{1}{2x-4}
+\end{align*}
+ہے جس سے  درج ذیل لکھے جا سکتے ہیں۔
+\begin{align*}
+f(x)&\approx \frac{x}{2}+1&&\text{\RL{$x$ کی بڑی قیمتوں کے لئے}}\\
+f(x)&=\frac{1}{2x-4}&&\text{\RL{$2$ کے قریب $x$ کی قیمتوں کے لئے}}
+\end{align*}
+بڑی \عددی{x} پر \عددی{f} کا رویہ \عددی{y=\tfrac{x}{2}+1} ہو گا جہاں \عددی{\tfrac{1}{2x-4}} قابل نظر انداز ہو گا۔ \عددی{x=2} کے قریب  \عددی{\tfrac{1}{2x-4}} تفاعل \عددی{f} کا غالب جزو ہو گا لہٰذا  \عددی{x=2} کے قریب \عددی{f} کا رویہ \عددی{\tfrac{1}{2x-4}} کے رویے کی طرح ہو گا۔ 
+
+ہم کہتے ہیں کہ \عددی{x} کی بڑی مطلق مقدار پر \عددی{\tfrac{x}{2}+1} کا \اصطلاح{غلبہ}\فرہنگ{غلبہ}\حاشیہب{dominates}\فرہنگ{dominates} ہے جبکہ \عددی{x=2} کے قریب \عددی{\tfrac{1}{2x-4}} \اصطلاح{غالب}\فرہنگ{غالب}\حاشیہب{dominant}\فرہنگ{dominant} ہے۔ تفاعل کا رویہ جاننے میں غالب اجزاء کلیدی کردار ادا کرتے ہیں۔ 
+
+\ابتدا{مثال}\شناخت{مثال_استعمال_رویہ_الف}
+درج ذیل ترسیم کریں۔
+\begin{align*}
+y=\frac{x^3+1}{x}
+\end{align*}
+حل:\quad
+ہم تشاکل، غالب اجزاء، متقارب، اتار، چڑھاو، انتہائی نقطے اور مقعر پر غور کرتے ہیں۔\\
+ \موٹا{پہلا قدم:}\quad \ترچھا{تشاکل۔} \quad نہیں پایا جاتا ہے۔\\
+\موٹا{دوسرا قدم:}\quad  \ترچھا{غالب اجزاء اور متقارب۔}\quad
+ہم ناطق تفاعل کو کثیر رکنی جمع حاصل تقسیم کی صورت میں لکھتے ہیں۔
+\begin{align}\label{مساوات_استعمال_تقسیم_جمع_حاصل}
+y=x^2+\frac{1}{x}
+\end{align}
+\عددی{\abs{x}} کی بری قیمت کے لئے \عددی{y\approx x^2} اور \عددی{x=0} کے قریب \عددی{y\approx \tfrac{1}{x}} ہو گا۔ 
+مساوات \حوالہ{مساوات_استعمال_تقسیم_جمع_حاصل} میں \عددی{x=0} پر انتصابی متقارب نظر آتا ہے جہاں نسب نما صفر ہو گا۔\\
+\موٹا{تیسرا قدم:}\quad  \ترچھا{انتہا، اتار اور چڑھاو۔}\quad
+یک رتبی تفرق
+\begin{align*}
+y'=2x-\frac{1}{x^2}=\frac{2x^3-1}{x^2}
+\end{align*} 
+نقطہ \عددی{x=0}پر غیر معین ہے جبکہ درج ذیل پر صفر ہے۔\\
+\begin{minipage}{0.25\textwidth}
+\begin{align*}
+2x-\frac{1}{x^2}&=0\\
+2x^3-1&=0\\
+x^3&=\frac{1}{2}\\
+x&=\frac{1}{\sqrt[3]{2}}\approx 0.8
+\end{align*}
+\end{minipage}\hfill
+\begin{minipage}{0.75\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\draw[-latex](-1,0)--(2.5,0)node[right]{$x$};
+\draw[dashed] (0,0)node[below]{$0$}--++(0,1.5);
+\draw[dashed](1.5,0)node[below]{$0.8$}--++(0,1.5);
+\draw(-1,1.2)node[left]{$2x^3-1$};
+\draw(-0.5,1.2)node[]{$-$};
+\draw(0.75,1.2)node[]{$-$};
+\draw(2,1.2)node[]{$+$};
+%
+\draw(-1,0.8)node[left]{$x^2$};
+\draw(-0.5,0.8)node[]{$+$};
+\draw(0.75,0.8)node[]{$+$};
+\draw(2,0.8)node[]{$+$};
+%
+\draw(-1,0.4)node[left]{$y'=\tfrac{2x^3-1}{x^2}$};
+\draw(-0.5,0.4)node[]{$-$};
+\draw(0.75,0.4)node[]{$-$};
+\draw(2,0.4)node[]{$+$};
+%
+\draw[dashed](0,-0.5)--++(0,-0.5)node[below,align=center]{\RL{انتہا}\\   \RL{غیر موجود}};
+\draw[dashed](1.5,-0.5)--++(0,-0.5)node[below,align=center]{\RL{مقامی}\\  \RL{کم سے کم}};
+%
+\draw[latex-](-0.25,-0.75)--++(-0.5,0.5);
+\draw[latex-](1.5-0.5,-0.75)--++(-0.5,0.5);
+\draw[-latex](1.5+0.25,-0.75)--++(0.5,0.5);
+\end{tikzpicture}
+\end{minipage}
+
+\موٹا{چوتھا قدم:} \quad \ترچھا{مقعر۔}\quad
+دو رتبی تفرق
+\begin{align*}
+y''=2+\frac{2}{x^3}=\frac{2x^3+2}{x^3}
+\end{align*}
+نقطہ \عددی{x=0} پر غیر معین ہے  اور درج ذیل پر صفر ہے:\\
+\begin{minipage}{0.25\textwidth}
+\begin{align*}
+2+\frac{2}{x^3}&=0\\
+2x^3+2&=0\\
+x^3&=-1\\
+x&=-1
+\end{align*}
+\end{minipage}\hfill
+\begin{minipage}{0.75\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\draw[-latex](-1,0)--(2.5,0)node[right]{$x$};
+\draw[dashed] (0,0)node[below]{$-1$}--++(0,1.5);
+\draw[dashed](1.5,0)node[below]{$0$}--++(0,1.5);
+\draw(-1,1.2)node[left]{$2x^3+2$};
+\draw(-0.5,1.2)node[]{$-$};
+\draw(0.75,1.2)node[]{$+$};
+\draw(2,1.2)node[]{$+$};
+%
+\draw(-1,0.8)node[left]{$x^3$};
+\draw(-0.5,0.8)node[]{$-$};
+\draw(0.75,0.8)node[]{$-$};
+\draw(2,0.8)node[]{$+$};
+%
+\draw(-1,0.4)node[left]{$y''=\tfrac{2x^3+2}{x^3}$};
+\draw(-0.5,0.4)node[]{$+$};
+\draw(0.75,0.4)node[]{$-$};
+\draw(2,0.4)node[]{$+$};
+%
+\draw[dashed](0,-0.5)--++(0,-0.5)node[below,align=center]{\RL{نقطہ تصریف}};
+\draw[dashed](1.5,-0.5)--++(0,-0.5)node[below,align=center]{};
+%
+\draw(-0.75,0)node[below]{\RL{مقعر اوپر}};
+\draw(0.75,0)node[below]{\RL{مقعر نیچے}};
+\draw(2.25,0)node[below]{\RL{مقعر اوپر}};
+\end{tikzpicture}
+\end{minipage}
+
+\موٹا{پانچواں قدم:}\quad \ترچھا{درج بالا معلومات کو اکٹھا کر کے ترسیم کا خاکہ بناتے ہیں۔}\\
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\draw[-latex](-2.5,0)--(3,0)node[right]{$x$};
+\draw[dashed] (-1.5,0)node[below]{$-1$}--++(0,1);
+\draw[dashed](0,0)node[below]{$0$}--++(0,1);
+\draw[dashed](1.5,0)node[below]{$0.8$}--++(0,1);
+\draw[dashed] (-1.5,-0.5)--++(0,-0.5)node[below]{تصریف};
+\draw[dashed] (0,-0.5)--++(0,-0.5)node[below,align=center]{انتصابی\\  متقارب};
+\draw[dashed] (1.5,-0.5)--++(0,-0.5)node[below,align=center]{مقامی\\ کم سے کم};
+%
+\draw(-1.75,-1) to [out=180,in=-90]++(-0.5,0.5);
+\draw(-0.5,-1) to [out=90,in=0]++(-0.5,0.5);
+\draw(1,-1) to [out=180,in=-90]++(-0.5,0.5);
+\draw(1.75,-1) to [out=0,in=-90]++(0.5,0.5);
+%
+\draw[latex-](-1.75,0.5)node[below left]{\RL{مقعر اوپر}}--++(-0.5,0.5);
+\draw[latex-](-0.5,0.5)node[below left,xshift=2mm]{\RL{مقعر نیچے}}--++(-0.5,0.5);
+\draw[latex-](1,0.5)node[below left,xshift=2mm]{\RL{مقعر اوپر}}--++(-0.5,0.5);
+\draw[-latex](1.75,0.5)node[below right]{\RL{مقعر اوپر}}--++(0.5,0.5);
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[dashed](0,0)--++(0,2);
+\draw(-0.25,0) to [out=100,in=-45]++(-0.75,0.75)node[circ]{} to [out=135,in=-80]++(-0.75,1.25);
+\draw(0.25,2) to [out=-80,in=180]++(0.75,-1)node[circ]{} to [out=0,in=-135]++(0.75,0.5);
+\end{tikzpicture}
+\end{minipage}
+
+\موٹا{چھٹا قدم:} \quad \ترچھا{غالب اجزاء، قطع منحنی اور افقی مماس۔} اس سے منحنی کی ترسیم کھینچنے میں مدد ملتی ہے۔\\
+\begin{minipage}{1\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-1,0.8},ytick={1.9}]
+\addplot[domain=-3:3]{x^2}node[pos=0.9,left]{$y=x^2$};
+\addplot[domain=-3.25:-0.11,smooth]{1/x};
+\addplot[domain=0.11:3,smooth]{1/x}node[above left]{$y=\tfrac{1}{x}$};
+\draw(axis cs:-1,0)node[circ]{};
+\draw(axis cs:0.8,1.9)node[circ]{};
+\draw(axis cs:0.8-0.25,1.9)--(axis cs:0.8+0.25,1.9);
+\end{axis}
+\end{tikzpicture}
+\end{minipage}
+
+\موٹا{ساتواں قدم:} \quad \ترچھا{ان تمام معلومات کو مد نظر رکھتے ہوئے تفاعل کی ترسیم کھینچتے ہیں۔} \\
+\begin{minipage}{1\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-1,0.8},ytick={1.9}]
+\addplot[domain=-3:3]{x^2};
+\addplot[domain=-3.25:-0.11,smooth]{1/x};
+\addplot[domain=0.11:3,smooth]{1/x};
+\addplot[domain=-3:-0.11]{x^2+1/x};
+\addplot[domain=0.11:3.25]{x^2+1/x}node[pos=0.9,above left]{$y=x^2+\tfrac{1}{x}$};
+\draw(axis cs:-1,0)node[circ]{};
+\draw(axis cs:0.8,1.9)node[circ]{};
+\draw(axis cs:0.8-0.25,1.9)--(axis cs:0.8+0.25,1.9);
+\draw(axis cs:-1.5,-2)node[below left,align=center]{\RL{$x=0$ کے قریب}\\   \RL{منحنی $y=\tfrac{1}{x}$}\\   \RL{کے نزدیک ہے}};
+\draw(axis cs:3,2)node[above right,align=center]{\RL{بڑی $\abs{x}$ کے لئے}\\   \RL{ترسیم $y=x^2$}\\   \RL{کے نزدیک ہے}};
+\end{axis}
+\end{tikzpicture}
+\end{minipage}
+\انتہا{مثال}
+%======================
+
+\موٹا{تفاعل \عددی{y=f(x)} ترسیم کرنے کا لائحہ عمل}\\
+\begin{enumerate}[1.]
+\item
+تشاکل کی نشاندہی کریں۔\\
+ کیا تفاعل طاق یا جفت ہے؟
+\item
+کیا معلوم تفاعل کو منتقل کرنے سے موجودہ تفاعل حاصل ہو گا؟
+\item
+غالب اجزاء تلاش کریں۔\\
+ناطق تفاعل کو کثیر رکنی جمع حاصل تقسیم کی صورت میں لکھیں۔
+\item
+متقارب خطوط اور قابل ہٹاو عدم استمرار تلاش کریں۔\\
+ کیا کسی نقطے پر نسب نما صفر ہے؟ \\
+\عددی{x\to\mp\infty} کرنے سے کیا ہوتا ہے؟ 
+\item
+\عددی{f'} حاصل کرتے ہوئے \عددی{f'=0} کو حل کریں۔  نقطہ فاصل اور وقفہ اتار اور وقفہ چڑھاو دریافت کریں۔
+\item
+\عددی{f''} سے مقعر اور نقطہ تصریف معلوم کریں۔
+\item
+ترسیم کی عمومی صورت کا خاکہ بنائیں۔
+\item
+مخصوص نقطوں، مثلاً آخری نقطے، نقطہ فاصل، قطع محدد، پر \عددی{f} کی قیمت تلاش کریں۔
+\item
+ان تمام معلومات کو مد نظر رکھتے ہوئے تفاعل ترسیم کریں۔ 
+\end{enumerate}
+
+\حصہء{سوالات}
+\موٹا{\عددی{x\to \mp \infty} پر حد کا حساب}\\
+سوال \حوالہ{سوال_استعمال_ترسیم_تفاعل_الف} تا سوال \حوالہ{سوال_استعمال_ترسیم_تفاعل_الف} میں (ا) \عددی{x\to\infty} پر (ب) \عددی{x\to -\infty} پر حد تلاش کریں۔ (کمپیوٹر پر تفاعل ترسیم کرتے ہوئے حد کی ذہنی تصویر بنانے میں مدد ملتی ہے۔)
+
+\ابتدا{سوال}\شناخت{سوال_استعمال_ترسیم_تفاعل_الف}
+$f(x)=\tfrac{2}{x}-3$
+\انتہا{سوال}
+%=======================

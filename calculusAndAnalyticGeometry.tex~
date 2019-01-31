@@ -37,11 +37,6 @@
 \usepackage{IEEEtrantools}
 \usepackage{multirow}   %for multiple row cells in a table column
 \usepackage[misc]{ifsym} 
-
-\usepackage{scalerel}
-\usepackage{stackengine} 
-\newcommand\showdiv[1]{\overline{\smash{)}#1}}
-\newcommand\ph[1]{#1}
  
 \newcommand*{\kStrokeOne}{|}                                      %tally marks (statistics)
 \newcommand*{\kStrokeTwo}{|\!|}
@@ -70,11 +65,11 @@
 \graphicspath{{./fig/figFrontPage/}{./fig/figCalculusLimits/}{./fig/figCalculusDerivatives/}}%paths to figures
 
 
-%\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/questions,./tex/calculusAppendixB}
+\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusApplicationsOfDerivativesA,./tex/questions,./tex/calculusAppendixB}
 %
 %\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusApplicationsOfDerivatives,./tex/calculusApplicationsOfDerivativesA,./tex/questions,./tex/calculusAppendixB}
 %
-\includeonly{./tex/cktSymbols,./tex/cktPreface,./tex/prefaceFirstBook,./tex/calculusApplicationsOfDerivativesA,./tex/questions,./tex/calculusAppendixB}%
+%\includeonly{./tex/cktSymbols,./tex/cktPreface,./tex/prefaceFirstBook,./tex/calculusApplicationsOfDerivativesA,./tex/questions,./tex/calculusAppendixB}%
 
 
 \author{
