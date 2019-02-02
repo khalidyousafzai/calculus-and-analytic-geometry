@@ -109,3 +109,24 @@ y:integrate(yd,x);
 float(ev(y,x=-2));
 float(ev(y,x=0));
 float(ev(y,x=1));
+
+
+Print("======================================");
+kill(all);
+print("sec 3.6, ex1");
+
+f:x*(30-2*x)^2;
+expand(f);
+yd:diff(f,x,1);
+expand(%);
+factor(%);
+solve(yd=0,x);
+
+Print("======================================");
+kill(all);
+print("sec 3.6, ex2");
+
+r:(500/%pi)^(1/3);
+h:1000/(%pi*r^2);
+trigsimp(h);
+

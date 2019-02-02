@@ -99,3 +99,26 @@ print("sec 3.4, Q57");
 yd:(x+1)^(-2/3);
 y:integrate(yd,x);
 float(ev(y,x=-1));
+
+Print("======================================");
+kill(all);
+print("sec 3.4, Q59");
+
+yd:expand(x^(-2/3)*(x-1));
+y:integrate(yd,x);
+float(ev(y,x=-2));
+float(ev(y,x=0));
+float(ev(y,x=1));
+
+
+Print("======================================");
+kill(all);
+print("sec 3.6, ex1");
+
+f:x*(30-2*x)^2;
+expand(f);
+yd:diff(f,x,1);
+expand(%);
+factor(%);
+solve(yd=0,x);
+
