@@ -1,7 +1,7 @@
 \ProvidesPackage{khalidUrduBooksMaths}
 \usepackage{fontspec}
 \usepackage{makeidx}
-\usepackage{amsmath}                                                                         %\tfrac for fractions in text
+%\usepackage{amsmath}                                                                         %\tfrac for fractions in text
 \usepackage{amssymb}      
 \usepackage{amsthm}      						%theorem environment. started using in the maths book
 \usepackage{mathtools}
@@ -54,7 +54,7 @@
 
 
 \newfontfamily\arabicfont[Scale=1.0,Script=Arabic]{Jameel Noori Nastaleeq}
-\newfontfamily\urduTechTermsfont[Scale=1.0,Script=Arabic]{Jameel Noori Nastaleeq Bold}
+\newfontfamily\urduTechTermsfont[Scale=1.0,Script=Arabic]{XB Tabriz}
 \newfontfamily\urdufont[WordSpace=60.0,Script=Arabic]{Jameel Noori Nastaleeq}
 %\newfontfamily\urduTechTermsfont[Scale=1.25,WordSpace=35.0,Script=Arabic]{Jameel Noori Nastaleeq Kasheeda}
 \newfontfamily\urdufontBig[Scale=1.25,WordSpace=60.0,Script=Arabic]{Jameel Noori Nastaleeq}

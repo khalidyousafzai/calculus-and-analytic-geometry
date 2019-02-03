@@ -31,12 +31,14 @@
 %========================
 %\usepackage[hidelinks]{hyperref}  %used in machines book but not here
 \usepackage{./tex/khalidUrduBooksMaths}                     %my sty file
-\usepackage{amsmath}
 \usepackage{amsbsy} %for bold Poynting, lessgtr symbol
 \usepackage{mathrsfs}   %for Poynting symbol
 \usepackage{IEEEtrantools}
 \usepackage{multirow}   %for multiple row cells in a table column
 \usepackage[misc]{ifsym} 
+
+\newtagform{brackets}{)}{(}   			%mathtools command to correct braces around equation numbers
+\usetagform{brackets}				%had to do this after ubuntu upgrade messed up braces around eq numbers.
  
 \newcommand*{\kStrokeOne}{|}                                      %tally marks (statistics)
 \newcommand*{\kStrokeTwo}{|\!|}

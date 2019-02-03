@@ -6000,7 +6000,8 @@ $\tfrac{\dif S}{\dif t}=2\pi r\tfrac{\dif r}{\dif t}$
 \draw ([shift={(180:0.5cm and 0.15cm)}]0,-\h) arc (180:360:0.5cm and 0.15cm);
 \draw(-0.5,0)--++(0,-\h) (0.5,0)--++(0,-\h);
 \draw[dashed] (0,-2/3*\h) circle (0.5cm and 0.15cm);
-\draw(0,2/3*\h) circle (0.5cm and 0.15cm);
+\fill[white](-0.5,2/3*\h)--(-0.05,0)--++(0,-0.1)--++(0.1,0)--++(0,0.1)--(0.5,2/3*\h)--++(-1,0);
+\draw[fill=white](0,2/3*\h) circle (0.5cm and 0.15cm);
 \draw(-0.5,2/3*\h)--(-0.05,0)--++(0,-0.15);
 \draw(0.5,2/3*\h)--(0.05,0)--++(0,-0.15);
 \end{tikzpicture}
