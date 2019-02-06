@@ -1,7 +1,7 @@
 \ProvidesPackage{khalidUrduBooksMaths}
 \usepackage{fontspec}
 \usepackage{makeidx}
-%\usepackage{amsmath}                                                                         %\tfrac for fractions in text
+\usepackage{amsmath}                                                                         %\tfrac for fractions in text
 \usepackage{amssymb}      
 \usepackage{amsthm}      						%theorem environment. started using in the maths book
 \usepackage{mathtools}
@@ -49,6 +49,7 @@
 %\linenumbers												%for line numbers in pdf
 
 \setmainlanguage[numerals=maghrib]{arabic}     %for english numbers use numerals=maghrib, for arabic numerals=arabicdigits
+\csname @Latintrue\endcsname
 \setotherlanguages{english}
 
 
