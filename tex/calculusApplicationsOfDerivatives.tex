@@ -4208,3 +4208,2929 @@ $y=\tfrac{x^4}{4}-\tfrac{x^3}{3}-4x^2+12x+20$
 \انتہا{سوال}
 %===========================
 
+\حصہ{\عددی{x\to \mp \infty} پر حد، متقارب اور   غالب اجزاء}
+اس حصہ میں  ناطق تفاعل (دو کثیر رکنیوں کے حاصل تقسیم)  کے علاوہ دیگر تفاعل، جن کا \عددی{x\to \mp \infty} پر دلچسپ حد ہو، کی ترسیمات پر  متقارب اور غالب اجزاء کی مدد سے   غور کیا جائے گا۔
+
+\جزوحصہء{\عددی{x\to \mp \infty} پر حد}
+تفاعل \عددی{f(x)=\tfrac{1}{x}} تمام \عددی{x\ne 0} کے لئے معین ہے۔ مثبت اور بتدریج بڑھتی \عددی{x}  کے لئے \عددی{\tfrac{1}{x}} کی قیمت بتدریج  گھٹے گی۔ منفی \عددی{x} جس کی مقدار بتدریج بڑھتی ہو  کے لئے \عددی{\tfrac{1}{x}} کی مقدار بتدریج  گھٹے گی۔ ہم مختصراً کہتے ہیں کہ \عددی{x\to\mp\infty} پر \عددی{f(x)=\tfrac{1}{x}} کا حد \عددی{0} ہے۔ 
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xmax=4.9,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-4:-0.22]{1/x};
+\addplot[domain=0.22:4]{1/x}node[above left]{$y=\tfrac{1}{x}$};
+\end{axis}
+\end{tikzpicture}
+\caption{تفاعل \عددی{y=\tfrac{1}{x}} کی ترسیم۔}
+\label{شکل_استعمال_حد_معکوس_ترسیم}
+\end{figure}
+
+\ابتدا{تعریف}
+\begin{enumerate}[1.]
+\item
+اگر ہر عدد \عددی{\epsilon>0} کے لئے ایسا مطابقتی عدد \عددی{M} موجود ہو کہ تمام \عددی{x>M}  کے لئے \عددی{\abs{f(x)-L}<\epsilon} ہو یعنی
+\begin{align*}
+x>M\quad \implies \quad \abs{f(x)-L}<\epsilon
+\end{align*}
+ تب ہم کہتے ہیں کہ \عددی{x} لامتناہی تک پہنچنے پر  \عددی{f(x)} کا حد \عددی{L} ہے جس کو ہم
+\begin{align*}
+\lim_{x\to\infty} f(x)=L
+\end{align*}
+لکھتے ہیں۔
+\item
+اگر ہر عدد \عددی{\epsilon>0} کے لئے ایسا مطابقتی عدد \عددی{N} موجود ہو کہ تمام \عددی{x<N}  کے لئے \عددی{\abs{f(x)-L}<\epsilon} ہو یعنی
+\begin{align*}
+x<N\quad \implies \quad \abs{f(x)-L}<\epsilon
+\end{align*}
+ تب ہم کہتے ہیں کہ \عددی{x} منفی لامتناہی تک پہنچنے پر  \عددی{f(x)} کا حد \عددی{L} ہے جس کو ہم
+\begin{align*}
+\lim_{x\to-\infty} f(x)=L
+\end{align*}
+لکھتے ہیں۔
+
+\end{enumerate}
+\انتہا{تعریف}
+%===========================
+
+لامتناہی کو \عددی{\infty} سے ظاہر کیا جاتا ہے جو حقیقی عدد نہیں ہے لہٰذا اس کو حساب میں عام اعداد کی طرح استعمال نہیں کیا جا سکتا ہے۔ 
+
+\عددی{x\to \mp \infty} پر تفاعل کا حد تلاش کرنے کی حکمت عملی وہی ہے جو حصہ \حوالہ{حصہ_حد_قواعد} میں استعمال کی گئی۔ وہاں ہم نے مستقل تفاعل \عددی{y=k} اور مماثل تفاعل \عددی{y=x} کے حد حاصل کیے۔اس کے بعد الجبرائی ملاپ کا ایک مسئلہ استعمال کرتے ہوئے ان نتائج سے دیگر تفاعل کے حد حاصل کیے گئے۔ یہاں ابتدائی تفاعل کو \عددی{y=k} اور \عددی{y=x} کی بجائے \عددی{y=k} اور \عددی{y=\tfrac{1}{x}} لیتے ہوئے ہم یہی کچھ دوبارہ کرتے ہیں۔ 
+
+با ضابطہ  تعریف استعمال کرتے ہوئے ہمیں درج ذیل ثابت کرنا ہو گا۔
+\begin{align}\label{مساوات_استعمال_معکوس_حد}
+\lim_{x\to \mp \infty} k=k,\quad \lim_{x\to \mp \infty}\frac{1}{x}=0
+\end{align}
+ہم مستقل تفاعل کا حد سوال کے لئے  رکھتے ہیں جبکہ دوسرے تفاعل کو یہاں ثابت کرتے ہیں۔
+
+\ابتدا{مثال}\شناخت{مثال_استعمال_حد_معکوس_ترسیم_ثبوت}
+درج ذیل دکھائیں۔
+\begin{multicols}{2}
+\begin{enumerate}[a.]
+\item
+$\lim_{x\to\infty}\frac{1}{x}=0$
+\item
+$\lim_{x\to -\infty}\frac{1}{x}=0$
+\end{enumerate}
+\end{multicols}
+حل:
+\begin{enumerate}[a.]
+\item
+فرض کریں \عددی{\epsilon>0} دیا گیا ہے۔ہمیں ایسا عدد \عددی{M} تلاش کرنے ہے کہ تمام \عددی{x} کے لئے درج ذیل مطمئن ہوتا ہو۔
+\begin{align*}
+x>M,\quad \implies \quad \abs{\frac{1}{x}-0}=\abs{\frac{1}{x}}<\epsilon
+\end{align*}
+\عددی{M=\tfrac{1}{\epsilon}} یا اس سے بڑا مثبت عدد منتخب کرنے سے درج بالا مطمئن ہوتا ہے۔ یوں \عددی{\lim_{x\to\infty}\tfrac{1}{x}=0} ثابت ہوتا ہے (شکل \حوالہ{شکل_مثال_استعمال_حد_معکوس_ترسیم_ثبوت})۔
+\item
+فرض کریں \عددی{\epsilon>0} دیا گیا ہے۔ہمیں ایسا عدد \عددی{N} تلاش کرنے ہے کہ تمام \عددی{x} کے لئے درج ذیل مطمئن ہوتا ہو۔
+\begin{align*}
+x<N,\quad \implies \quad \abs{\frac{1}{x}-0}=\abs{\frac{1}{x}}<\epsilon
+\end{align*}
+\عددی{N=-\tfrac{1}{\epsilon}} یا \عددی{-\tfrac{1}{\epsilon}} سے کم منتخب کرنے سے درج بالا مطمئن ہوتا ہے۔ یوں \عددی{\lim_{x\to-\infty}\tfrac{1}{x}=0} ثابت ہوتا ہے (شکل \حوالہ{شکل_مثال_استعمال_حد_معکوس_ترسیم_ثبوت})۔
+\end{enumerate}
+%
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-1,1},xticklabels={,},ytick={-1,1},yticklabels={,$\epsilon$}]
+\addplot[domain=-2:-0.5]{1/x};
+\addplot[domain=0.5:2]{1/x};
+\draw(axis cs:-1,1)node[]{$y=\tfrac{1}{x}$};
+\draw[dashed](0,1)--(2,1)node[right]{$y=\epsilon$}  (1,1)--(1,0)node[below]{$M=\tfrac{1}{\epsilon}$};
+\draw[dashed](0,-1)node[right,font=\scriptsize]{$-\epsilon$}--(-2,-1)   (-1,-1)--(-1,0)node[above]{$N=-\tfrac{1}{\epsilon}$};
+\draw[stealth-] (axis cs:1.75,0)--(axis cs:1.75,-0.5);
+\draw[stealth-](axis cs:1.75,1)--(axis cs:1.75,1.5)node[above,align=right]{\RL{کسی بھی \عددی{\epsilon} کے لئے }\\   \RL{\عددی{x=\tfrac{1}{\epsilon}} پر ترسیم اس}\\   \RL{خطہ میں داخل ہوتی ہے}};
+\draw[stealth-] (axis cs:-1.75,0)--(axis cs:-1.75,-0.5);
+\draw[stealth-](axis cs:-1.75,-1)--(axis cs:-1.75,-1.5)node[below,align=right]{\RL{کسی بھی \عددی{\epsilon} کے لئے }\\   \RL{\عددی{x=-\tfrac{1}{\epsilon}} پر ترسیم اس}\\   \RL{خطہ میں داخل ہوتی ہے}};
+\end{axis}
+\end{tikzpicture}
+\caption{حد کی تلاش میں جیومیٹری (مثال \حوالہ{مثال_استعمال_حد_معکوس_ترسیم_ثبوت})}
+\label{شکل_مثال_استعمال_حد_معکوس_ترسیم_ثبوت}
+\end{figure}
+
+\انتہا{مثال}
+%=========================
+
+مساوات \حوالہ{مساوات_استعمال_معکوس_حد} کو استعمال کرتے ہوئے درج ذیل مسئلہ سے ہم دیگر حل تلاش کر سکتے ہیں۔
+
+\ابتدا{مسئلہ}\موٹا{\عددی{x\to\mp\infty} پر حل کے خواص}\\
+اگر \عددی{\lim_{x\to\mp\infty}f(x)=L} اور \عددی{\lim_{x\to\mp\infty}g(x)=M} ہوں تب درج ذیل درست ہوں گے۔ (\عددی{L} اور \عددی{M} حقیقی اعداد ہیں۔)
+\begin{description}
+\item[قاعدہ مجموعہ:]\quad
+$\lim_{x\to \mp\infty}[f(x)+g(x)]=L+M$
+\item[قاعدہ فرق:]\quad
+$\lim_{x\to \mp\infty}[f(x)-g(x)]=L-M$
+\item[قاعدہ ضرب:]\quad
+$\lim_{x\to \mp\infty}f(x)\cdot g(x)=L\cdot M$
+\item[قاعدہ ضرب مستقل:]\quad
+$\lim_{x\to \mp\infty}k f(x)=kL$
+\item[قاعدہ حاصل تقسیم:]\quad
+$\lim_{x\to \mp\infty} \frac{f(x)}{g(x)}=\frac{L}{M}$
+\item[قاعدہ طاقت:]\quad
+اگر \عددی{m} اور \عددی{n} عدد صحیح ہوں تب
+$\lim_{x\to \mp\infty}[f(x)]^{m/n}=L^{m/n}$
+\end{description}
+\انتہا{مسئلہ}
+%========================
+
+یہ خواص بالکل مسئلہ \حوالہ{مسئلہ_حد_قواعد-الف} (صفحہ \حوالہصفحہ{مسئلہ_حد_قواعد-الف}) میں دیے گئے خواص کی طرح ہیں اور انہیں ہم بالکل اسی طرح استعمال کرتے ہیں۔
+
+\ابتدا{مثال}
+\begin{enumerate}[a.]
+\item
+\begin{align*}
+\lim_{x\to \infty}(5+\tfrac{1}{x})&=\lim_{x\to\infty} 5+\lim_{x\to\infty}\tfrac{1}{x}&&\text{\RL{قاعدہ مجموعہ}}\\
+&=5+0=5&&\text{\RL{معلوم قیمتیں}}
+\end{align*}
+\item
+\begin{align*}
+\lim_{x\to-\infty}\frac{\pi\sqrt{3}}{x^2}&=\lim_{x\to-\infty}\pi\sqrt{3}\cdot \frac{1}{x}\cdot \frac{1}{x}\\
+&=\lim_{x\to-\infty}\pi\sqrt{3}\cdot\lim_{x\to-\infty}\frac{1}{x}\cdot\lim_{x\to-\infty}\frac{1}{x}&&\text{\RL{قاعدہ ضرب}}\\
+&=\pi\sqrt{3}\cdot 0 \cdot 0=0&&\text{\RL{معلوم قیمتیں}}
+\end{align*}
+\end{enumerate}
+\انتہا{مثال}
+%========================
+\ابتدا{مثال}\شناخت{مثال_استعمال_حد_لا_متناہی_الف}\ترچھا{شمار کنندہ اور نسب نما میں بلند تر طاقت ایک جیسے ہیں} (شکل \حوالہ{شکل_مثال_استعمال_حد_لا_متناہی_الف})
+\begin{align*}
+\lim_{x\to\infty} \frac{5x^2+8x-3}{3x^2+2}&=\lim_{x\to\infty}\frac{5+\tfrac{8}{x}-\tfrac{3}{x^2}}{3+\tfrac{2}{x^2}}&&\text{\RL{شمار کنندہ اور نسب نما کو \عددی{x^2} سے تقسیم کریں}}\\
+&=\frac{5+0-0}{3+0}=\frac{5}{3}
+\end{align*}
+%
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-5:10.5,smooth]{(5*x^2+8*x-3)/(3*x^2+2)}node[above left,yshift=2mm]{$y=\tfrac{5x^2+8x-3}{3x^2+2}$};
+\addplot[domain=-5:10]{5/3}node[pos=0.6,pin=-45:{$y=\tfrac{5}{3}$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم تفاعل اور حد (مثال \حوالہ{مثال_استعمال_حد_لا_متناہی_الف})}
+\label{شکل_مثال_استعمال_حد_لا_متناہی_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-4.25:0.5,smooth]{(11*x+2)/(2*x^3-1)};
+\addplot[domain=1:5.9,smooth]{(11*x+2)/(2*x^3-1)}node[above left,yshift=2mm]{$y=\tfrac{11x+2}{2x^3-1}$};
+\draw(axis cs:0.793,-10)--(axis cs:0.793,12);
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم تفاعل اور حد (مثال \حوالہ{مثال_استعمال_حد_لا_متناہی_ب})}
+\label{شکل_مثال_استعمال_حد_لا_متناہی_ب}
+\end{minipage}\hfill
+\end{figure}
+\انتہا{مثال}
+%=====================
+\ابتدا{مثال}\شناخت{مثال_استعمال_حد_لا_متناہی_ب}\ترچھا{شمار کنندہ کی بلند ترین طاقت نسب نما کی بلند ترین طاقت سے کم ہے} (شکل \حوالہ{شکل_مثال_استعمال_حد_لا_متناہی_ب})
+\begin{align*}
+\lim_{x\to -\infty}\frac{11x+2}{2x^3-1}&=\lim_{x\to-\infty}\frac{\tfrac{11}{x^2}+\tfrac{2}{x^3}}{2-\tfrac{1}{x^3}}&&\text{\RL{شمار کنندہ اور نسب نما کو \عددی{x^3} سے تقسیم کریں}}\\
+&=\frac{0+0}{2-0}=0
+\end{align*}
+\انتہا{مثال}
+
+%===========================
+\ابتدا{مثال}\شناخت{مثال_استعمال_حد_لا_متناہی_ج}\ترچھا{شمار کنندہ کی بلند ترین طاقت نسب نما کی بلند ترین طاقت سے زیادہ ہے۔} شکل \حوالہ{شکل_مثال_استعمال_حد_لا_متناہی_ج} 
+\begin{enumerate}[a.]
+\item
+\begin{align*}
+\lim_{x\to -\infty}\frac{2x^2-3}{7x+4}&=\lim_{x\to-\infty}\frac{2x-\tfrac{3}{x}}{7+\tfrac{4}{x}}&&\text{\RL{شمار کنندہ اور نسب نما کو \عددی{x} سے تقسیم کریں}}\\
+&=-\infty
+\end{align*}
+\item
+\begin{align*}
+\lim_{x\to-\infty}\frac{-4x^3+7x}{2x^2-3x-10}&=\lim_{x\to-\infty}\frac{-4x+\tfrac{7}{x}}{2-\tfrac{3}{x}-\tfrac{10}{x^2}}&&\text{\RL{شمار کنندہ اور نسب نما کو \عددی{x^2} سے تقسیم کریں}}\\
+&=\frac{\infty}{2}=\infty
+\end{align*}
+\end{enumerate}
+\انتہا{مثال}
+%===========================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\k}{-4/7}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$}]
+\addplot[domain=-5:\k-0.2,smooth]{(2*x^2-3)/(7*x+4)};
+\addplot[domain=\k-0.2:\k-0.1,smooth]{(2*x^2-3)/(7*x+4)};
+\addplot[domain=\k+0.1:\k+0.2,smooth]{(2*x^2-3)/(7*x+4)};
+\addplot[domain=\k+0.2:4.2,smooth]{(2*x^2-3)/(7*x+4)}node[above left]{$y=\tfrac{2x^2-3}{7x+4}$};
+\addplot[] plot coordinates {(\k,-4) (\k,3)};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم برائے مثال \حوالہ{مثال_استعمال_حد_لا_متناہی_ج}}
+\label{شکل_مثال_استعمال_حد_لا_متناہی_ج}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},axis line style=thick]
+\addplot[domain=-4:-0.25]{1/x};
+\addplot[domain=0.25:4]{1/x}node[pos=0.5,above right]{$y=\tfrac{1}{x}$};
+\draw(axis cs:2.5,0)node[below,align=center]{\RL{افقی متقارب}\\ $y=0$ };
+\draw(axis cs:-2,0)node[above]{\RL{افقی متقارب}};
+\draw(axis cs:0,-2)node[below,rotate=90]{\RL{انتصابی متقارب}};
+\draw(axis cs:0,2.5)node[above,rotate=90,align=center]{\RL{انتصابی متقارب}\\ $x=0$  };
+\end{axis}
+\end{tikzpicture}
+\caption{محددی محور قطع زائد \عددی{y=\tfrac{1}{x}} کے دونوں شاخوں کے متقارب ہیں۔}
+\label{شکل_استعمال_متقارب_محور}
+\end{minipage}
+\end{figure}
+مثال \حوالہ{مثال_استعمال_حد_لا_متناہی_الف} تا مثال \حوالہ{مثال_استعمال_حد_لا_متناہی_ج} سے \عددی{x\to \mp\infty} پر ناطق تفاعل کی حد حاصل کرنے کا ایک نقش ملتا ہے۔
+\begin{enumerate}[a.]
+\item
+اگر شمار کنندہ اور نسب نما کی بلند تر طاقت ایک جیسی ہو تب تفاعل کا حد بلند تر ارکان کی عددی سر کا حاصل تقسیم ہو گا۔
+\item
+اگر شمار کنندہ کی بلند تر طاقت نسب نما کی بلند تر طاقت  سے کم ہو تب تفاعل کا حد صفر  ہو گا۔
+\item
+اگر شمار کنندہ کی بلند تر طاقت نسب نما کی بلند تر طاقت  سے زیادہ  ہو تب تفاعل کا حد \عددی{\infty} یا \عددی{-\infty}  ہو گا۔ حد کی علامت نسب نما اور شمار کنندہ کی علامتوں سے حاصل ہو گا۔ 
+\end{enumerate}
+
+\موٹا{ناطق تفاعل کے لئے خلاصہ}
+\begin{enumerate}[a.]
+\item 
+اگر  درجہ \عددی{f} اور درجہ \عددی{g} ایک دوسرے کے برابر ہوں تب \عددی{\lim\limits_{x\to \mp \infty} \frac{f(x)}{g(x)}=\frac{a_n}{b_n}} یعنی 
+ \عددی{f} اور \عددی{g} کے اول عددی سروں کی نسبت کے برابر ہو گا۔ 
+\item 
+اگر  درجہ \عددی{f} درجہ  \عددی{g} سے کم ہو تب \عددی{\lim\limits_{x\to \mp \infty} \frac{f(x)}{g(x)}=0} ہو گا۔
+ \item 
+اگر  درجہ \عددی{f} درجہ \عددی{g} سے زیادہ ہو تب \عددی{\lim\limits_{x\to \mp \infty} \frac{f(x)}{g(x)}=\mp \infty}ہو گا جہاں شمار کنندہ اور نسب نما کی علامتوں سے علامت تعین ہو گا۔
+\end{enumerate}
+
+کثیر رکنی \عددی{a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0,\, a_n\ne 0} کا اول عددی سر \عددی{a_n} ہے جو بلند تر طاقتی جزو کا عددی سر ہے۔
+
+\حصہء{افقی اور انتصابی متقارب}
+اگر مبدا سے دور چلتے ہوئے ایک تفاعل اور کسی مقررہ لکیر کے درمیان فاصل صفر تک پہنچتا ہو تب ہم کہتے ہیں کہ ترسیم لکیر تک متقاربی پہنچتی ہے اور اس لکیر کو ترسیم کا \اصطلاح{متقارب}\فرہنگ{متقارب}\حاشیہب{asymptote}\فرہنگ{asymptote} کہتے ہیں۔
+
+\ابتدا{مثال}
+محددی محور تفاعل \عددی{y=\tfrac{1}{x}} کے متقارب ہیں (شکل \حوالہ{شکل_استعمال_متقارب_محور})۔ ترسیم کے دائیں حصے پر 
+\begin{align*}
+\lim_{x\to \infty}\frac{1}{x}=0
+\end{align*}
+اور ترسیم کے بائیں حصے پر
+\begin{align*}
+\lim_{x\to -\infty}\frac{1}{x}=0
+\end{align*}
+ہیں لہٰذا \عددی{x} محور \عددی{y=\tfrac{1}{x}} کا متقارب ہے۔ اسی  طرح  اوپر اور نیچے
+\begin{align*}
+\lim_{x\to 0^+}\frac{1}{x}=\infty,\quad \lim_{x\to 0^-}\frac{1}{x}=-\infty
+\end{align*}
+ہیں لہٰذا \عددی{y} محور بھی \عددی{y=\tfrac{1}{x}} کا متقارب ہے۔
+
+یاد رہے کہ \عددی{x=0} پر نسب نما صفر ہے لہٰذا تفاعل غیر معین ہے۔
+\انتہا{مثال}
+%==========================
+
+\ابتدا{تعریف}
+تفاعل \عددی{y=f(x)} کا خط \عددی{y=b} اس صورت افقی متقارب ہو گا جب 
+\begin{align*}
+\text{ہو۔}\quad \lim_{x\to -\infty} f(x)=b\quad \text{یا}\quad \lim_{x\to \infty} f(x)=b
+\end{align*}
+
+تفاعل \عددی{y=f(x)} کا خط \عددی{x=a} اس صورت انتصابی متقارب ہو گا جب 
+\begin{align*}
+\text{ہو۔}\quad \lim_{x\to a^-} f(x)=\mp \infty\quad \text{یا}\quad \lim_{x\to a^+} f(x)=\mp \infty
+\end{align*}
+\انتہا{تعریف}
+%========================
+
+\ابتدا{مثال}\شناخت{مثال_استعمال_انتصابی_متقارب_الف}
+\عددی{\tfrac{\pi}{2}} کے طاق عدد صحیح مضرب پر، جہاں \عددی{\cos x=0} ہے، درج ذیل دونوں منحنیات کے انتصابی متقارب  پائے جاتے ہیں (شکل \حوالہ{شکل_مثال_استعمال_انتصابی_متقارب_الف})۔
+\begin{align*}
+y=\sec x=\frac{1}{\cos x},\quad y=\tan x=\frac{\sin x}{\cos x}
+\end{align*}
+
+\عددی{\pi} کے عدد صحیح مضرب پر، جہاں \عددی{\sin x=0} ہے، درج ذیل دونوں منحنیات کے انتصابی متقارب  پائے جاتے ہیں (شکل \حوالہ{شکل_مثال_استعمال_انتصابی_متقارب_ب})۔
+\begin{align*}
+y=\csc x=\frac{1}{\sin x},\quad y=\cot x=\frac{\cos x}{\sin x}
+\end{align*}
+%
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\c}{3/2*pi}
+\pgfmathsetmacro{\b}{pi}
+\pgfmathsetmacro{\a}{1/2*pi}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ytick={1},xtick={\a,\b,\c,-\a,-\b,-\c},xticklabels={$\tfrac{\pi}{2}$,$\pi$,$\tfrac{3\pi}{2}$,$-\tfrac{\pi}{2}$,$-\pi$,$-\tfrac{3\pi}{2}$},xmin=-\c-0.2,xmax=\c+0.6]
+\addplot[domain=-0.9*pi/2:0.9*pi/2]{sec(deg(x))}node[pos=0.9,right]{$y=\sec x$};
+\addplot[domain=-pi-0.9*pi/2:-pi+0.9*pi/2]{sec(deg(x))};
+\addplot[domain=pi-0.9*pi/2:pi+0.9*pi/2]{sec(deg(x))};
+\addplot[] plot coordinates {(-\c,-6.5) (-\c,6.5)};
+\addplot[] plot coordinates {(-\a,-6.5) (-\a,6.5)};
+\addplot[] plot coordinates {(\c,-6.5) (\c,6.5)};
+\addplot[] plot coordinates {(\a,-6.5) (\a,6.5)};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\c}{3/2*pi}
+\pgfmathsetmacro{\b}{pi}
+\pgfmathsetmacro{\a}{1/2*pi}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ytick={1},xtick={\a,\b,\c,-\a,-\b,-\c},xticklabels={$\tfrac{\pi}{2}$,$\pi$,$\tfrac{3\pi}{2}$,$-\tfrac{\pi}{2}$,$-\pi$,$-\tfrac{3\pi}{2}$},xmin=-\c-0.2,xmax=\c+0.6]
+\addplot[domain=-0.9*pi/2:0.9*pi/2]{tan(deg(x))}node[pos=0.9,right]{$y=\tan x$};
+\addplot[domain=-pi-0.9*pi/2:-pi+0.9*pi/2]{tan(deg(x))};
+\addplot[domain=pi-0.9*pi/2:pi+0.9*pi/2]{tan(deg(x))};
+\addplot[] plot coordinates {(-\c,-6.5) (-\c,6.5)};
+\addplot[] plot coordinates {(-\a,-6.5) (-\a,6.5)};
+\addplot[] plot coordinates {(\c,-6.5) (\c,6.5)};
+\addplot[] plot coordinates {(\a,-6.5) (\a,6.5)};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+\caption{انتصابی متقارب (مثال \حوالہ{مثال_استعمال_انتصابی_متقارب_الف})}
+\label{شکل_مثال_استعمال_انتصابی_متقارب_الف}
+\end{figure}
+%
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{pi}
+\pgfmathsetmacro{\b}{2*pi}
+\pgfmathsetmacro{\d}{pi/2}
+\pgfmathsetmacro{\e}{3/2*pi}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ytick={1},xtick={-\a,\a,\b,-\d,\d,\e},xticklabels={$-\pi$,$\pi$,$2\pi$,$-\tfrac{\pi}{2}$,$\tfrac{\pi}{2}$,$\tfrac{3\pi}{2}$},xmin=-\a-0.2,xmax=\b+0.4]
+\addplot[domain=0.2:pi-0.2]{cosec(deg(x))}node[pos=0.9,right]{$y=\csc x$};
+\addplot[domain=pi+0.2:pi+pi-0.2]{cosec(deg(x))};
+\addplot[domain=-pi+0.2:-pi+pi-0.2]{cosec(deg(x))};
+\addplot[] plot coordinates {(-\a,-5) (-\a,5)};
+\addplot[] plot coordinates {(\a,-5) (\a,5)};
+\addplot[] plot coordinates {(\b,-5) (\b,5)};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{pi}
+\pgfmathsetmacro{\b}{2*pi}
+\pgfmathsetmacro{\d}{pi/2}
+\pgfmathsetmacro{\e}{3/2*pi}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ytick={1},xtick={-\a,\a,\b,-\d,\d,\e},xticklabels={$-\pi$,$\pi$,$2\pi$,$-\tfrac{\pi}{2}$,$\tfrac{\pi}{2}$,$\tfrac{3\pi}{2}$},xmin=-\a-0.2,xmax=\b+0.4]
+\addplot[domain=0.2:pi-0.2]{cot(deg(x))}node[pos=0.1,right]{$y=\cot x$};
+\addplot[domain=pi+0.2:pi+pi-0.2]{cot(deg(x))};
+\addplot[domain=-pi+0.2:-pi+pi-0.2]{cot(deg(x))};
+\addplot[] plot coordinates {(-\a,-5) (-\a,5)};
+\addplot[] plot coordinates {(\a,-5) (\a,5)};
+\addplot[] plot coordinates {(\b,-5) (\b,5)};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+\caption{انتصابی متقارب (مثال \حوالہ{مثال_استعمال_انتصابی_متقارب_الف})}
+\label{شکل_مثال_استعمال_انتصابی_متقارب_ب}
+\end{figure}
+\انتہا{مثال}
+%====================
+\ابتدا{مثال}\شناخت{مثال_استعمال_انتصابی_متقارب_دوم}
+درج ذیل ترسیم کے متقارب تلاش کریں۔
+\begin{align*}
+y=\frac{x+3}{x+2}
+\end{align*}
+حل:\quad
+ہم \عددی{x\to \mp \infty} پر اور \عددی{x\to -2}، جہاں نسب نما صفر ہے، پر ترسیم کا رویہ دیکھنا چاہتے ہیں۔ قلم و کاغذ استعمال کرتے ہوئے \عددی{x+3} اور \عددی{x+2} سے تقسیم کر کے 
+\begin{align*}
+y=\frac{x+3}{x+2}=1+\frac{1}{x+2}
+\end{align*}
+لکھا جا سکتا ہے۔ہم دیکھتے ہیں کہ \عددی{\tfrac{1}{x}} کی منحنی کو \عددی{1} اکائی اوپر اور \عددی{2} اکائیاں بائیں منتقل کرتے ہوئے درج بالا منحنی حاصل ہو گی۔یوں محددی محور کی بجائے خط \عددی{y=1} اور خط \عددی{x=-2} متقارب خط ہوں گے۔ 
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-6:-2-0.2]{1+1/(x+2)};
+\addplot[domain=-2+0.2:3]{1+1/(x+2)};
+\addplot[] plot coordinates {(-2,-4) (-2,6)};
+\draw(axis cs:-2,5)node[left,align=center]{$x=-2$\\   \RL{انتصابی متقارب}};
+\draw(axis cs:-5,1)node[above,align=center]{\RL{افقی متقارب}\\ $y=1$};
+\addplot[] plot coordinates {(-6,1) (3,1)};
+\draw(axis cs:0,3)node[right]{$y=1+\tfrac{1}{x+2}$};
+\end{axis}
+\end{tikzpicture}
+\caption{انتصابی متقارب (مثال \حوالہ{مثال_استعمال_انتصابی_متقارب_دوم})}
+\label{شکل_مثال_استعمال_انتصابی_متقارب_دوم}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-5:-2-0.2]{-8/(x^2-4)};
+\addplot[domain=-2+0.2:2-0.2]{-8/(x^2-4)};
+\addplot[domain=2+0.2:5.9]{-8/(x^2-4)};
+\addplot[] plot coordinates {(-2,-10) (-2,10)}node[pos=0.9,left,align=center]{\RL{انتصابی متقارب}\\ $x=-2$};
+\addplot[] plot coordinates {(2,-10) (2,10)}node[pos=0.9,right,align=center]{\RL{انتصابی متقارب}\\ $x=2$};
+\draw(axis cs:4,0)node[pin=60:{$y=0$\,\RL{افقی متقارب}}]{};
+\draw(axis cs:2.25,-5)node[right]{$y=-\tfrac{8}{x^2-4}$};
+\end{axis}
+\end{tikzpicture}
+\caption{انتصابی متقارب (مثال \حوالہ{مثال_استعمال_انتصابی_متقارب_سوم})}
+\label{شکل_مثال_استعمال_انتصابی_متقارب_سوم}
+\end{minipage}
+\end{figure}
+
+\انتہا{مثال}
+%=======================
+\ابتدا{مثال}\شناخت{مثال_استعمال_انتصابی_متقارب_سوم}
+درج ذیل ترسیم کا متقارب تلاش کریں۔
+\begin{align*}
+y=-\frac{8}{x^2-4}
+\end{align*}
+حل:\quad
+ہم \عددی{x\to \mp \infty} اور \عددی{x-\mp 2}، جہاں نسب نما صفر ہے، پر ترسیم کے رویہ میں دلچسپی رکھتے ہیں۔
+
+چونکہ \عددی{\lim_{x\to \mp \infty}f(x)=0}  لہٰذا افقی متقارب خط \عددی{y=0} ہے (شکل \حوالہ{شکل_مثال_استعمال_انتصابی_متقارب_سوم})۔ چونکہ \عددی{\lim_{x\to 2^+}f(x)=\infty} اور \عددی{\lim_{x\to 2^-}f(x)=-\infty} سے \عددی{x=2} متقاربی خط حاصل ہوتا ہے۔اسی طرح \عددی{x=-2} بھی متقاربی خط حاصل ہو گا۔ 
+\انتہا{مثال}
+%=========================
+
+ایسا معلوم ہوتا ہے کہ جہاں ناطق تفاعل کا نسب نما صفر ہو وہاں تفاعل کا انتصابی متقارب پایا جائے گا۔یہ تقریباً درست ہے۔ حقیقت میں ناطق تفاعل کی کم تر جزو تک تخفیف شدہ  صورت میں جہاں نسب نما کا صفر ہو وہاں تفاعل کا انتصابی متقارب پایا جائے گا۔
+
+\ابتدا{مثال}\شناخت{مثال_استعمال_قابل_ہٹاو_عدم_استمرار}\ترچھا{نسب نما میں صفر پر قابل ہٹاو عدم استمرار}
+درج ذیل کی ترسیم 
+\begin{align*}
+f(x)=\frac{x^3-1}{x^2-1}
+\end{align*}
+کا \عددی{x=-1} پر انتصابی متقارب پایا جاتا ہے لیکن \عددی{x=1} پر نہیں پایا جاتا ہے۔ چونکہ
+\begin{align*}
+\frac{x^3-1}{x^2-1}=\frac{(x-1)(x^2+x+1)}{(x-1)(x+1)}=\frac{x^2+x+1}{x+1}
+\end{align*}
+لکھا جا سکتا ہے لہٰذا عدم استمرار قابل  ہٹاو ہے اور \عددی{x\to1} پر تفاعل کا حد \عددی{\tfrac{3}{2}} ہے (شکل \حوالہ{شکل_مثال_استعمال_قابل_ہٹاو_عدم_استمرار})۔
+\انتہا{مثال}
+%==============================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-4:-1.2]{(x^2+x+1)/(x+1)};
+\addplot[domain=-0.8:5]{(x^2+x+1)/(x+1)}node[pos=0.8,above left]{$y=\tfrac{x^3-1}{x^2-1}$};
+\draw(axis cs:1,1.5)node[ocirc]{};
+\addplot[] plot coordinates {(-1,-6) (-1,4)};
+\end{axis}
+\end{tikzpicture}
+\caption{
+منحنی \عددی{f(x)=\tfrac{x^3-1}{x^2-1}} کی \عددی{x=1} پر عدم استمرار قابل ہٹاو ہے لہٰذا اس کی صرف \عددی{x=-1} پر متقاربی خط ہو گا۔
+}
+\label{شکل_مثال_استعمال_قابل_ہٹاو_عدم_استمرار}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\a}{pi}
+\pgfmathsetmacro{\b}{2*pi}
+\pgfmathsetmacro{\c}{3*pi}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ymin=0,ymax=4,xtick={\a,\b,\c,-\a,-\b,-\c},xticklabels={$\pi$,$2\pi$,$3\pi$,$-\pi$,$-2\pi$,$-3\pi$}]
+\addplot[domain=-10:10,samples=200]{2+(sin(deg(x)))/x}node[above left,yshift=3mm]{$y=2+\tfrac{\sin x}{x}$};
+\draw(axis cs:0,3)node[ocirc]{};
+\addplot[] plot coordinates {(-10,2) (10,2)};
+\end{axis}
+\end{tikzpicture}
+\caption{منحنی اپنے متقاربی خط کو لامتناہی بار قطع کر سکتی ہے (مثال \حوالہ{مثال_استعمال_مسئلہ_بیچ})۔}
+\label{شکل_مثال_استعمال_مسئلہ_بیچ}
+\end{minipage}
+\end{figure}
+
+
+مسئلہ \حوالہ{مسئلہ_حد_بیچ} (صفحہ \حوالہصفحہ{مسئلہ_حد_بیچ} مسئلہ بیچ) بھی \عددی{x\to \mp\infty} پر حد کے لئے قابل لاگو ہے۔ اس کی ایک مثال پیش کرتے ہیں۔
+
+
+\ابتدا{مثال}\شناخت{مثال_استعمال_مسئلہ_بیچ}
+مسئلہ بیچ استعمال کرتے ہوئے درج ذیل منحنی کے متقارب تلاش کریں۔
+\begin{align*}
+y=2+\frac{\sin x}{x}
+\end{align*}
+حل:\quad
+ہم \عددی{x\to 0} جہاں نسب نما صفر ہو گا اور \عددی{x\to \mp\infty} پر منحنی کے رویہ میں دلچسپی رکھتے ہیں۔
+
+ہم جانتے ہیں کہ \عددی{\lim_{x\to 0}\tfrac{\sin x}{x}=1} ہے لہٰذا مبدا پر کوئی متقارب نہیں پایا جاتا ہے۔ چونکہ
+\begin{align*}
+0\le \abs{\frac{\sin x}{x}}\le \abs{\frac{1}{x}}
+\end{align*}
+اور \عددی{\lim_{x\to \mp\infty}\abs{\tfrac{1}{x}}=0} ہے لہٰذا مسئلہ بیچ کے تحت \عددی{\lim_{x\to\mp\infty}\tfrac{\sin x}{x}=0} ہو گا۔یوں 
+\begin{align*}
+\lim_{x\to \mp\infty}(2+\frac{\sin x}{x})=2+0=2
+\end{align*}
+ہو گا لہٰذا منحنی کے بائیں اور دائیں متقاربی خط \عددی{y=2} ہو گا (شکل \حوالہ{شکل_مثال_استعمال_مسئلہ_بیچ})۔
+\انتہا{مثال}
+%=====================
+
+\حصہء{ترچھے متقارب}
+اگر شمار کنندہ کا درجہ نسب نما کے درجے سے ایک زیادہ ہو تب ترسیم کا ایک ترچھا متقارب پایا جائے گا جو نا افقی اور نا انتصابی ہو گا۔
+
+\ابتدا{مثال}\شناخت{مثال_استعمال_ترچھا_متقارب}
+درج ذیل کے متقارب تلاش کریں۔
+\begin{align*}
+f(x)=\frac{x^2-3}{2x-4}
+\end{align*}
+حل:\quad
+ہم \عددی{x\to \mp \infty} پر اور \عددی{x\to 2}، جہاں نسب نما صفر ہو گا، پر ترسیم کے رویہ میں دلچسپی رکھتے ہیں۔ \عددی{x^2-3} کو \عددی{2x-4} سے تقسیم کرتے ہوئے درج ذیل لکھا جا سکتا ہے۔ 
+\begin{align*}
+\frac{x^2-3}{2x-4}=\frac{x}{2}+1+\frac{1}{2x-4}
+\end{align*}
+چونکہ \عددی{\lim_{x\to 2^+}f(x)=\infty} اور \عددی{\lim_{x\to 2^-}f(x)=-\infty} ہیں لہٰذا \عددی{x=2} دو طرفہ متقارب ہے۔ \عددی{x\to \mp\infty} پر حاصل تقسیم صفر تک پہنچتی اور \عددی{f(x)\to \tfrac{x}{2}+1}تک پہنچتی ہے۔یوں \عددی{y=\tfrac{x}{2}+1} دونوں اطراف متقاربی خط ہے (شکل \حوالہ{شکل_مثال_استعمال_ترچھا_متقارب})۔
+\انتہا{مثال}
+%======================== 
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=\x/2+1+1/(2*\x-4);}]
+\pgfmathsetmacro{\a}{f(5)}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-2.25:1.9,smooth]{f(x)};
+\addplot[domain=2.1:6,smooth]{f(x)};
+\addplot[domain=-2.25:6]{x/2+1}node[pos=0.7,below right,align=center]{$y=\tfrac{x}{2}+1$\\   \RL{ترچھا متقارب}};
+\addplot[] plot coordinates {(2,-3) (2,7)}node[pos=0.1,right,align=center]{\RL{انتصابی متقارب}\\ $x=2$};
+\draw(axis cs:-0.5,3)node[left]{$y=\tfrac{x^2-3}{2x-4}$};
+\draw[latex-](axis cs:5,\a)--(5,\a+1.5)node[above,yshift=-2mm,align=right]{\RL{$x\to \mp \infty$ کرنے سے}\\  \RL{منحنی اور خط کے بیچ}\\  \RL{فاصلہ صفر تک پہنچتا ہے }\\  \RL{}};
+\draw[latex-](axis cs:5,3.5)--(axis cs:5,3);
+\end{axis}
+\end{tikzpicture}
+\caption{ترچھا متقارب (مثال \حوالہ{مثال_استعمال_ترچھا_متقارب})}
+\label{شکل_مثال_استعمال_ترچھا_متقارب}
+\end{figure}
+
+\جزوحصہء{متقارب اور غالب اجزاء کی مدد سے ترسیم}
+درج ذیل تفاعل کے تمام مشاہدوں
+\begin{align*}
+f(x)=\frac{x^2-3}{2x-4}
+\end{align*} 
+میں غالباً سب سے اہم مشاہدہ
+\begin{align*}
+f(x)=\frac{x}{2}+1+\frac{1}{2x-4}
+\end{align*}
+ہے جس سے  درج ذیل لکھے جا سکتے ہیں۔
+\begin{align*}
+f(x)&\approx \frac{x}{2}+1&&\text{\RL{$x$ کی بڑی قیمتوں کے لئے}}\\
+f(x)&=\frac{1}{2x-4}&&\text{\RL{$2$ کے قریب $x$ کی قیمتوں کے لئے}}
+\end{align*}
+بڑی \عددی{x} پر \عددی{f} کا رویہ \عددی{y=\tfrac{x}{2}+1} ہو گا جہاں \عددی{\tfrac{1}{2x-4}} قابل نظر انداز ہو گا۔ \عددی{x=2} کے قریب  \عددی{\tfrac{1}{2x-4}} تفاعل \عددی{f} کا غالب جزو ہو گا لہٰذا  \عددی{x=2} کے قریب \عددی{f} کا رویہ \عددی{\tfrac{1}{2x-4}} کے رویے کی طرح ہو گا۔ 
+
+ہم کہتے ہیں کہ \عددی{x} کی بڑی مطلق مقدار پر \عددی{\tfrac{x}{2}+1} کا \اصطلاح{غلبہ}\فرہنگ{غلبہ}\حاشیہب{dominates}\فرہنگ{dominates} ہے جبکہ \عددی{x=2} کے قریب \عددی{\tfrac{1}{2x-4}} \اصطلاح{غالب}\فرہنگ{غالب}\حاشیہب{dominant}\فرہنگ{dominant} ہے۔ تفاعل کا رویہ جاننے میں غالب اجزاء کلیدی کردار ادا کرتے ہیں۔ 
+
+\ابتدا{مثال}\شناخت{مثال_استعمال_رویہ_الف}
+درج ذیل ترسیم کریں۔
+\begin{align*}
+y=\frac{x^3+1}{x}
+\end{align*}
+حل:\quad
+ہم تشاکل، غالب اجزاء، متقارب، اتار، چڑھاو، انتہائی نقطے اور مقعر پر غور کرتے ہیں۔\\
+ \موٹا{پہلا قدم:}\quad \ترچھا{تشاکل۔} \quad نہیں پایا جاتا ہے۔\\
+\موٹا{دوسرا قدم:}\quad  \ترچھا{غالب اجزاء اور متقارب۔}\quad
+ہم ناطق تفاعل کو کثیر رکنی جمع حاصل تقسیم کی صورت میں لکھتے ہیں۔
+\begin{align}\label{مساوات_استعمال_تقسیم_جمع_حاصل}
+y=x^2+\frac{1}{x}
+\end{align}
+\عددی{\abs{x}} کی بری قیمت کے لئے \عددی{y\approx x^2} اور \عددی{x=0} کے قریب \عددی{y\approx \tfrac{1}{x}} ہو گا۔ 
+مساوات \حوالہ{مساوات_استعمال_تقسیم_جمع_حاصل} میں \عددی{x=0} پر انتصابی متقارب نظر آتا ہے جہاں نسب نما صفر ہو گا۔\\
+\موٹا{تیسرا قدم:}\quad  \ترچھا{انتہا، اتار اور چڑھاو۔}\quad
+یک رتبی تفرق
+\begin{align*}
+y'=2x-\frac{1}{x^2}=\frac{2x^3-1}{x^2}
+\end{align*} 
+نقطہ \عددی{x=0}پر غیر معین ہے جبکہ درج ذیل پر صفر ہے۔\\
+\begin{minipage}{0.25\textwidth}
+\begin{align*}
+2x-\frac{1}{x^2}&=0\\
+2x^3-1&=0\\
+x^3&=\frac{1}{2}\\
+x&=\frac{1}{\sqrt[3]{2}}\approx 0.8
+\end{align*}
+\end{minipage}\hfill
+\begin{minipage}{0.75\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\draw[-latex](-1,0)--(2.5,0)node[right]{$x$};
+\draw[dashed] (0,0)node[below]{$0$}--++(0,1.5);
+\draw[dashed](1.5,0)node[below]{$0.8$}--++(0,1.5);
+\draw(-1,1.2)node[left]{$2x^3-1$};
+\draw(-0.5,1.2)node[]{$-$};
+\draw(0.75,1.2)node[]{$-$};
+\draw(2,1.2)node[]{$+$};
+%
+\draw(-1,0.8)node[left]{$x^2$};
+\draw(-0.5,0.8)node[]{$+$};
+\draw(0.75,0.8)node[]{$+$};
+\draw(2,0.8)node[]{$+$};
+%
+\draw(-1,0.4)node[left]{$y'=\tfrac{2x^3-1}{x^2}$};
+\draw(-0.5,0.4)node[]{$-$};
+\draw(0.75,0.4)node[]{$-$};
+\draw(2,0.4)node[]{$+$};
+%
+\draw[dashed](0,-0.5)--++(0,-0.5)node[below,align=center]{\RL{انتہا}\\   \RL{غیر موجود}};
+\draw[dashed](1.5,-0.5)--++(0,-0.5)node[below,align=center]{\RL{مقامی}\\  \RL{کم سے کم}};
+%
+\draw[latex-](-0.25,-0.75)--++(-0.5,0.5);
+\draw[latex-](1.5-0.5,-0.75)--++(-0.5,0.5);
+\draw[-latex](1.5+0.25,-0.75)--++(0.5,0.5);
+\end{tikzpicture}
+\end{minipage}
+
+\موٹا{چوتھا قدم:} \quad \ترچھا{مقعر۔}\quad
+دو رتبی تفرق
+\begin{align*}
+y''=2+\frac{2}{x^3}=\frac{2x^3+2}{x^3}
+\end{align*}
+نقطہ \عددی{x=0} پر غیر معین ہے  اور درج ذیل پر صفر ہے:\\
+\begin{minipage}{0.25\textwidth}
+\begin{align*}
+2+\frac{2}{x^3}&=0\\
+2x^3+2&=0\\
+x^3&=-1\\
+x&=-1
+\end{align*}
+\end{minipage}\hfill
+\begin{minipage}{0.75\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\draw[-latex](-1,0)--(2.5,0)node[right]{$x$};
+\draw[dashed] (0,0)node[below]{$-1$}--++(0,1.5);
+\draw[dashed](1.5,0)node[below]{$0$}--++(0,1.5);
+\draw(-1,1.2)node[left]{$2x^3+2$};
+\draw(-0.5,1.2)node[]{$-$};
+\draw(0.75,1.2)node[]{$+$};
+\draw(2,1.2)node[]{$+$};
+%
+\draw(-1,0.8)node[left]{$x^3$};
+\draw(-0.5,0.8)node[]{$-$};
+\draw(0.75,0.8)node[]{$-$};
+\draw(2,0.8)node[]{$+$};
+%
+\draw(-1,0.4)node[left]{$y''=\tfrac{2x^3+2}{x^3}$};
+\draw(-0.5,0.4)node[]{$+$};
+\draw(0.75,0.4)node[]{$-$};
+\draw(2,0.4)node[]{$+$};
+%
+\draw[dashed](0,-0.5)--++(0,-0.5)node[below,align=center]{\RL{نقطہ تصریف}};
+\draw[dashed](1.5,-0.5)--++(0,-0.5)node[below,align=center]{};
+%
+\draw(-0.75,0)node[below]{\RL{مقعر اوپر}};
+\draw(0.75,0)node[below]{\RL{مقعر نیچے}};
+\draw(2.25,0)node[below]{\RL{مقعر اوپر}};
+\end{tikzpicture}
+\end{minipage}
+
+\موٹا{پانچواں قدم:}\quad \ترچھا{درج بالا معلومات کو اکٹھا کر کے ترسیم کا خاکہ بناتے ہیں۔}\\
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\draw[-latex](-2.5,0)--(3,0)node[right]{$x$};
+\draw[dashed] (-1.5,0)node[below]{$-1$}--++(0,1);
+\draw[dashed](0,0)node[below]{$0$}--++(0,1);
+\draw[dashed](1.5,0)node[below]{$0.8$}--++(0,1);
+\draw[dashed] (-1.5,-0.5)--++(0,-0.5)node[below]{تصریف};
+\draw[dashed] (0,-0.5)--++(0,-0.5)node[below,align=center]{انتصابی\\  متقارب};
+\draw[dashed] (1.5,-0.5)--++(0,-0.5)node[below,align=center]{مقامی\\ کم سے کم};
+%
+\draw(-1.75,-1) to [out=180,in=-90]++(-0.5,0.5);
+\draw(-0.5,-1) to [out=90,in=0]++(-0.5,0.5);
+\draw(1,-1) to [out=180,in=-90]++(-0.5,0.5);
+\draw(1.75,-1) to [out=0,in=-90]++(0.5,0.5);
+%
+\draw[latex-](-1.75,0.5)node[below left]{\RL{مقعر اوپر}}--++(-0.5,0.5);
+\draw[latex-](-0.5,0.5)node[below left,xshift=2mm]{\RL{مقعر نیچے}}--++(-0.5,0.5);
+\draw[latex-](1,0.5)node[below left,xshift=2mm]{\RL{مقعر اوپر}}--++(-0.5,0.5);
+\draw[-latex](1.75,0.5)node[below right]{\RL{مقعر اوپر}}--++(0.5,0.5);
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[dashed](0,0)--++(0,2);
+\draw(-0.25,0) to [out=100,in=-45]++(-0.75,0.75)node[circ]{} to [out=135,in=-80]++(-0.75,1.25);
+\draw(0.25,2) to [out=-80,in=180]++(0.75,-1)node[circ]{} to [out=0,in=-135]++(0.75,0.5);
+\end{tikzpicture}
+\end{minipage}
+
+\موٹا{چھٹا قدم:} \quad \ترچھا{غالب اجزاء، قطع منحنی اور افقی مماس۔} اس سے منحنی کی ترسیم کھینچنے میں مدد ملتی ہے۔\\
+\begin{minipage}{1\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-1,0.8},ytick={1.9}]
+\addplot[domain=-3:3]{x^2}node[pos=0.9,left]{$y=x^2$};
+\addplot[domain=-3.25:-0.11,smooth]{1/x};
+\addplot[domain=0.11:3,smooth]{1/x}node[above left]{$y=\tfrac{1}{x}$};
+\draw(axis cs:-1,0)node[circ]{};
+\draw(axis cs:0.8,1.9)node[circ]{};
+\draw(axis cs:0.8-0.25,1.9)--(axis cs:0.8+0.25,1.9);
+\end{axis}
+\end{tikzpicture}
+\end{minipage}
+
+\موٹا{ساتواں قدم:} \quad \ترچھا{ان تمام معلومات کو مد نظر رکھتے ہوئے تفاعل کی ترسیم کھینچتے ہیں۔} \\
+\begin{minipage}{1\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-1,0.8},ytick={1.9}]
+\addplot[domain=-3:3]{x^2};
+\addplot[domain=-3.25:-0.11,smooth]{1/x};
+\addplot[domain=0.11:3,smooth]{1/x};
+\addplot[domain=-3:-0.11]{x^2+1/x};
+\addplot[domain=0.11:3.25]{x^2+1/x}node[pos=0.9,above left]{$y=x^2+\tfrac{1}{x}$};
+\draw(axis cs:-1,0)node[circ]{};
+\draw(axis cs:0.8,1.9)node[circ]{};
+\draw(axis cs:0.8-0.25,1.9)--(axis cs:0.8+0.25,1.9);
+\draw(axis cs:-1.5,-2)node[below left,align=center]{\RL{$x=0$ کے قریب}\\   \RL{منحنی $y=\tfrac{1}{x}$}\\   \RL{کے نزدیک ہے}};
+\draw(axis cs:3,2)node[above right,align=center]{\RL{بڑی $\abs{x}$ کے لئے}\\   \RL{ترسیم $y=x^2$}\\   \RL{کے نزدیک ہے}};
+\end{axis}
+\end{tikzpicture}
+\end{minipage}
+\انتہا{مثال}
+%======================
+
+\موٹا{تفاعل \عددی{y=f(x)} ترسیم کرنے کا لائحہ عمل}\\
+\begin{enumerate}[1.]
+\item
+تشاکل کی نشاندہی کریں۔\\
+ کیا تفاعل طاق یا جفت ہے؟
+\item
+کیا معلوم تفاعل کو منتقل کرنے سے موجودہ تفاعل حاصل ہو گا؟
+\item
+غالب اجزاء تلاش کریں۔\\
+ناطق تفاعل کو کثیر رکنی جمع حاصل تقسیم کی صورت میں لکھیں۔
+\item
+متقارب خطوط اور قابل ہٹاو عدم استمرار تلاش کریں۔\\
+ کیا کسی نقطے پر نسب نما صفر ہے؟ \\
+\عددی{x\to\mp\infty} کرنے سے کیا ہوتا ہے؟ 
+\item
+\عددی{f'} حاصل کرتے ہوئے \عددی{f'=0} کو حل کریں۔  نقطہ فاصل اور وقفہ اتار اور وقفہ چڑھاو دریافت کریں۔
+\item
+\عددی{f''} سے مقعر اور نقطہ تصریف معلوم کریں۔
+\item
+ترسیم کی عمومی صورت کا خاکہ بنائیں۔
+\item
+مخصوص نقطوں، مثلاً آخری نقطے، نقطہ فاصل، قطع محدد، پر \عددی{f} کی قیمت تلاش کریں۔
+\item
+ان تمام معلومات کو مد نظر رکھتے ہوئے تفاعل ترسیم کریں۔ 
+\end{enumerate}
+
+
+\حصہء{سوالات}
+\موٹا{\عددی{x\to \mp \infty} پر حد کا حساب}\\
+سوال \حوالہ{سوال_استعمال_ترسیم_تفاعل_الف} تا سوال \حوالہ{سوال_استعمال_ترسیم_تفاعل_ب} میں (ا) \عددی{x\to\infty} پر (ب) \عددی{x\to -\infty} پر حد تلاش کریں۔ (کمپیوٹر پر تفاعل ترسیم کرتے ہوئے حد کی ذہنی تصویر بنانے میں مدد ملتی ہے۔)
+
+\ابتدا{سوال}\شناخت{سوال_استعمال_ترسیم_تفاعل_الف}
+$f(x)=\tfrac{2}{x}-3$\\
+جواب:\quad
+(ا) \عددی{-3}، (ب) \عددی{-3}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$f(x)=\pi-\tfrac{2}{x^2}$
+\انتہا{سوال}
+%=============================
+\ابتدا{سوال}
+$g(x)=\tfrac{1}{2+\tfrac{1}{x}}$\\
+جواب:\quad
+(ا) \عددی{\tfrac{1}{2}}، (ب) \عددی{\tfrac{1}{2}}
+\انتہا{سوال}
+%==============
+\ابتدا{سوال}
+$g(x)=\tfrac{1}{8-\tfrac{5}{x^2}}$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$h(x)=\tfrac{-5+\tfrac{7}{x}}{3-\tfrac{1}{x^2}}$\\
+جواب:\quad
+(ا) \عددی{-\tfrac{5}{3}}، (ب) \عددی{-\tfrac{5}{3}}
+\انتہا{سوال}
+%=================
+\ابتدا{سوال}\شناخت{سوال_استعمال_ترسیم_تفاعل_ب}
+$h(x)=\tfrac{3-\tfrac{2}{x}}{4+\tfrac{\sqrt{2}}{x^2}}$
+\انتہا{سوال}
+%===================
+سوال \حوالہ{سوال_استعمال_درکار_حد_الف} تا سوال \حوالہ{سوال_استعمال_درکار_حد_ب} میں حد تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_استعمال_درکار_حد_الف}
+$\lim\limits_{x\to\infty}\tfrac{\sin 2x}{x}$\\
+جواب:\quad
+$0$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$\lim\limits_{\theta\to\infty}\tfrac{\cos \theta}{3\theta}$
+\انتہا{سوال}
+%=================
+\ابتدا{سوال}
+$\lim\limits_{t\to-\infty}\tfrac{2-t+\sin t}{t+\cos t}$\\
+جواب:\quad
+\عددی{-1}
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_درکار_حد_ب}
+$\lim\limits_{r\to \infty}\tfrac{r+\sin r}{2r+7-5\sin r}$
+\انتہا{سوال}
+%=========================
+\موٹا{ناطق تفاعل کی حد}\\
+سوال \حوالہ{سوال_استعمال_ناطق_حد_الف} تا سوال \حوالہ{سوال_استعمال_ناطق_حد_ب} میں دیے ناطق تفاعل کی (ا) \عددی{x\to \infty} اور (ب) \عددی{x\to -\infty} پر حد تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_استعمال_ناطق_حد_الف}
+$f(x)=\tfrac{2x+3}{5x+7}$\\
+جواب:\quad
+(ا) \عددی{\tfrac{2}{5}}، (ب) \عددی{\tfrac{2}{5}}
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$f(x)=\tfrac{2x^3+7}{x^3-x^2+x+7}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$f(x)=\tfrac{x+1}{x^2+3}$\\
+جواب:\quad
+(ا) \عددی{0}، (ب) \عددی{0}
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$f(x)=\tfrac{3x+7}{x^2-2}$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$f(x)=\tfrac{1-12x^3}{4x^2+12}$\\
+جواب:\quad
+(ا) \عددی{-\infty}، (ب) \عددی{\infty}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$g(x)=\tfrac{1}{x^3-4x+1}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$h(x)=\tfrac{7x^3}{x^3-3x^2+6x}$\\
+جواب:\quad
+(ا) \عددی{7}، (ب) \عددی{7}
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$g(x)=\tfrac{3x^2-6x}{4x-8}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$f(x)=\tfrac{2x^5+3}{-x^2+x}$\\
+جواب:\quad
+(ا) \عددی{-\infty}، (ب) \عددی{\infty}
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$g(x)=\tfrac{10x^5+x^4+31}{x^6}$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$g(x)=\tfrac{x^4}{x^3+1}$\\
+جواب:\quad
+(ا) \عددی{\infty}، (ب) \عددی{-\infty}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$h(x)=\tfrac{9x^4+x}{2x^4+5x^2-x+6}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$h(x)=\tfrac{-2x^3-2x+3}{3x^3+3x^2-5x}$\\
+جواب:\quad
+(ا) \عددی{-\tfrac{2}{3}}، (ب) \عددی{-\tfrac{2}{3}}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_ناطق_حد_ب}
+$h(x)=\tfrac{-x^4}{x^4-7x^3+7x^2+9}$
+\انتہا{سوال}
+%=======================
+
+\موٹا{حد برائے غیر عدد صحیح طاقت یا منفی طاقت}\\
+ایسی نسبت جس کی نسب نما اور شمار کنندہ میں غیر عدد صحیح یا منفی طاقت پائی جاتی ہوں کی حد بالکل ناطق تفاعل کی حد کی طرح تلاش کی جاتی ہے۔ نسب نما میں \عددی{x} کی بلند تر طاقت سے نسب نما اور شمار کنندہ کو تقسیم کرتے ہوئے آگے بڑھیں۔ سوال \حوالہ{سوال_استعمال_غیر_ناطق_حد_تلاش_الف} تا سوال \حوالہ{سوال_استعمال_غیر_ناطق_حد_تلاش_ب} میں حد تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_استعمال_غیر_ناطق_حد_تلاش_الف}
+$\lim\limits_{x\to\infty}\tfrac{2\sqrt{x}+x^{-1}}{3x-7}$\\
+جواب:\quad
+\عددی{0}
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$\lim\limits_{x\to\infty}\tfrac{2+\sqrt{x}}{2-\sqrt{x}}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$\lim\limits_{x\to -\infty}\tfrac{\sqrt[3]{x}-\sqrt[5]{x}}{\sqrt[3]{x}+\sqrt[5]{x}}$\\
+جواب:\quad
+\عددی{1}
+\انتہا{سوال}
+%=============================
+\ابتدا{سوال}
+$\lim\limits_{x\to\infty}\tfrac{x^{-1}+x^{-4}}{x^{-2}-x^{-3}}$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$\lim\limits_{x\to\infty}\tfrac{2x^{5/3}-x^{1/3}+7}{x^{8/5}+3x+\sqrt{x}}$\\
+جواب:\quad
+\عددی{\infty}
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_غیر_ناطق_حد_تلاش_ب}
+$\lim\limits_{x\to-\infty}\tfrac{\sqrt[3]{x}-5x+3}{2x+x^{2/3}-4}$
+\انتہا{سوال}
+%=========================
+\begin{figure}
+\centering
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},
+ylabel style={at={(current axis.above origin)},anchor=south},xmin=-3.2,xmax=3.2,ymin=-2.25,ymax=2.5,xtick={-1,1},xticklabels={,$1$},ytick={-2,-1,1,2}]
+\draw(axis cs:1,2)node[circ]{}--(axis cs:-1,-2)node[circ]{};
+\draw(axis cs:1,2) to [out=-60,in=180](axis cs:3,1);
+\draw(axis cs:-1,-2) to [out=120,in=0](axis cs:-3,-1);
+\draw(axis cs:0,0)node[circ]{};
+\end{axis}
+\end{tikzpicture}
+\caption{ایک ممکنہ حل برائے سوال \حوالہ{سوال_استعمال_حد_سے_ترسیم_الف}}
+\label{شکل_سوال_استعمال_حد_سے_ترسیم_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},
+ylabel style={at={(current axis.above origin)},anchor=south},xmin=-3.2,xmax=3.2,ymin=-3,ymax=3,xtick={-1,1},ytick={\empty}]
+\draw(axis cs:-1,3) to [out=-90,in=180] (axis cs:0,0.5) to [out=0,in=-90] (axis cs:1,3);
+\draw(axis cs:-3,-0.01) to [out=0,in=90](axis cs:-1,-3);
+\draw(axis cs:1,-3) to [out=90,in=180](axis cs:3,-0.01);
+\draw(axis cs:0,0)node[circ]{};
+\draw[dashed](axis cs:-1,-3)--(axis cs:-1,3);
+\draw[dashed](axis cs:1,-3)--(axis cs:1,3);
+\end{axis}
+\end{tikzpicture}
+\caption{ایک ممکنہ حل برائے سوال \حوالہ{سوال_استعمال_حد_سے_ترسیم_درکار_پ}}
+\label{شکل_سوال_استعمال_حد_سے_ترسیم_درکار_پ}
+\end{minipage}\hfill
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},
+ylabel style={at={(current axis.above origin)},anchor=south},ymin=0]
+\addplot[domain=-2:1.5]{1/(x-2)^2};
+\addplot[domain=2.5:6]{1/(x-2)^2}node[pos=0.25,right]{$y=\tfrac{1}{(x-2)^2}$};
+\end{axis}
+\end{tikzpicture}
+\caption{ایک ممکنہ حل برائے سوال \حوالہ{سوال_استعمال_ایجاد_تفاعل_الف}}
+\label{شکل_سوال_استعمال_ایجاد_تفاعل_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},
+ylabel style={at={(current axis.above origin)},anchor=south},ymin=-1.25,ymax=1.5,xtick={\empty}]
+\addplot[domain=-2:-0.01]{x/(abs(x))};
+\addplot[domain=0.01:2]{x/(abs(x))};
+\draw(axis cs:-0.5,0.5)node[left,align=center]{$h(x)=\tfrac{x}{\abs{x}}$\\  $x\ne 0$};
+\draw(axis cs:0,-1)node[ocirc]{}  (axis cs:0,1)node[ocirc]{};
+\end{axis}
+\end{tikzpicture}
+\caption{ایک ممکنہ حل برائے سوال \حوالہ{سوال_استعمال_ایجاد_تفاعل_درکار_پ}}
+\label{شکل_سوال_استعمال_ایجاد_تفاعل_درکار_پ}
+\end{minipage}
+\end{figure}
+\موٹا{قیمتوں اور حد سے ترسیم کا حصول}\\
+سوال \حوالہ{سوال_استعمال_حد_سے_ترسیم_الف} تا سوال \حوالہ{سوال_استعمال_حد_سے_ترسیم_ب} میں دیے شرائط پر پورا اترتی ترسیم کا خاکہ بنائیں۔ ترسیم کا کلیہ درکار نہیں ہے لہٰذا کارتیسی محدد پر ایسی ترسیم کھینچیں جو دیے شرائط پر پورا اترتی ہو۔(ان شرائط کو کئی ترسیمات مطمئن کر سکتی ہیں لہٰذا آپ کے ترسیمات دیے گئے جوابی ترسیمات سے مختلف ہو سکتی ہیں۔)
+
+\ابتدا{سوال}\شناخت{سوال_استعمال_حد_سے_ترسیم_الف}
+$f(0)=0,f(1)=2, f(-1)=-2,\lim\limits_{x\to -\infty}=-1,\lim\limits_{x\to\infty}=1$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_حد_سے_ترسیم_الف}
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$f(0)=0, \lim\limits_{x\to \mp\infty}f(x)=0,\lim\limits_{x\to 0^+}=2,\lim\limits_{x\to0^-}=-2$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_حد_سے_ترسیم_درکار_پ}
+$f(0)=0, \lim\limits_{x\to \mp\infty}f(x)=0,\lim\limits_{x\to 1^-}f(x)=\lim\limits_{x\to-1^+}f(x)=\infty,$\\
+$\lim\limits_{x\to1^+}f(x)=-\infty, \lim\limits_{x\to-1^-}f(x)=-\infty$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_حد_سے_ترسیم_درکار_پ}
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_حد_سے_ترسیم_ب}
+$f(2)=1,f(-1)=0, \lim\limits_{x\to \infty}f(x)=0,\lim\limits_{x\to 0^+}f(x)=\infty,$\\
+$\lim\limits_{x\to 0^-}f(x)=-\infty,\lim\limits_{x\to-\infty}f(x)=1$
+\انتہا{سوال}
+%==========================
+
+\موٹا{تفاعل کی ایجاد}\\
+سوال \حوالہ{سوال_استعمال_ایجاد_تفاعل_الف} تا سوال \حوالہ{سوال_استعمال_ایجاد_تفاعل_ب} میں ایسا تفاعل تلاش کریں جو دیے گئے شرائط کو مطمئن کرتا ہو اور اس تفاعل کو ترسیم کریں۔ (چونکہ کئی تفاعل ان شرائط کو مطمئن کر سکتے ہیں لہٰذا آپ کے جوابات دیے گئے جوابات سے مختلف ہو سکتے ہیں۔ آپ ٹکڑوں میں تفاعل کے کلیات استعمال کر سکتے ہیں۔)  
+
+\ابتدا{سوال}\شناخت{سوال_استعمال_ایجاد_تفاعل_الف}
+$\lim\limits_{x\to\mp\infty}f(x)=0, \lim\limits_{x\to 2^-}f(x)=\infty,\lim\limits_{x\to 2^+}f(x)=\infty$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_ایجاد_تفاعل_الف}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$\lim\limits_{x\to\mp\infty}g(x)=0, \lim\limits_{x\to 3^-}g(x)=-\infty,\lim\limits_{x\to 3^+}g(x)=\infty$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_استعمال_ایجاد_تفاعل_درکار_پ}
+$\lim\limits_{x\to-\infty}h(x)=-1, \lim\limits_{x\to \infty}h(x)=1,\lim\limits_{x\to 0^-}h(x)=-1,\lim\limits_{x\to 0^+}h(x)=1$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_ایجاد_تفاعل_درکار_پ}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_استعمال_ایجاد_تفاعل_ب}
+$\lim\limits_{x\to\mp\infty}k(x)=1, \lim\limits_{x\to 1^-}k(x)=\infty,\lim\limits_{x\to 1^+}(x)=-\infty$
+\انتہا{سوال}
+%=======================
+\begin{figure}
+\centering
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},
+ylabel style={at={(current axis.above origin)},anchor=south},xtick={1}]
+\addplot[domain=-2.5:0.9]{1/(x-1)};
+\addplot[domain=1.1:4.5]{1/(x-1)}node[pos=0.5,right]{$y=\tfrac{1}{x-1}$};
+\draw[dashed](axis cs:1,-10)--(axis cs:1,10)node[pos=0.2,right]{$x=1$};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم سوال \حوالہ{سوال_استعمال_ناطق_غالب_متقارب_الف}}
+\label{شکل_سوال_استعمال_ناطق_غالب_متقارب_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},
+ylabel style={at={(current axis.above origin)},anchor=south},xtick={-2}]
+\addplot[domain=-4.5:-2.1]{1/(2*x+4)};
+\addplot[domain=-1.9:2.5]{1/(2*x+4)}node[above left,xshift=2mm]{$y=\tfrac{1}{2x+4}$};
+\draw[dashed](axis cs:-2,-4)--(axis cs:-2,4)node[below left]{$x=-2$};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم سوال \حوالہ{سوال_استعمال_ناطق_غالب_متقارب_درکار_پ}}
+\label{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_پ}
+\end{minipage}\hfill
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-2,-3},ytick={1.5}]
+\addplot[domain=-4.5:-2.2]{(x+3)/(x+2)};
+\addplot[domain=-1.8:1.5]{(x+3)/(x+2)}node[above left,xshift=2mm]{$y=\tfrac{x+3}{x+2}$};
+\draw[dashed](axis cs:-2,-4)--(axis cs:-2,5)node[pos=0.8,left]{$x=-2$};
+\draw[dashed](axis cs:-4.5,1)--(axis cs:1.5,1)node[pos=0.25,above]{$y=1$};
+\addplot[dashed,domain=-4.5:-2.2]{1/(x+2)}node[pos=1,left]{$y=\tfrac{1}{x+2}$};
+\addplot[dashed,domain=-1.8:1.5]{1/(x+2)};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم سوال \حوالہ{سوال_استعمال_ناطق_غالب_متقارب_درکار_ت}}
+\label{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_ت}
+\end{minipage}\hfill
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},
+ylabel style={at={(current axis.above origin)},anchor=south},xtick={1}]
+\addplot[domain=-3.5:0.8]{(2*x^2+x-1)/(x^2-1)};
+\addplot[domain=1.2:3.5]{(2*x^2+x-1)/(x^2-1)}node[pos=0.25,right,xshift=2mm]{$y=\tfrac{2x^2+x-1}{x^2-1}$};
+\draw[dashed](axis cs:1,-5)--(axis cs:1,5)node[pos=0.25,right]{$x=1$};
+\draw[dashed](axis cs:-3.5,2)--(axis cs:3.5,2)node[pos=0.25,above]{$y=2$};
+\addplot[dashed,domain=-3.5:0.8]{1/(x-1)}node[pos=0.2,below]{$y=\tfrac{1}{x-1}$};
+\addplot[dashed,domain=1.2:3.5]{1/(x-1)};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم سوال \حوالہ{سوال_استعمال_ناطق_غالب_متقارب_درکار_ٹ}}
+\label{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_ٹ}
+\end{minipage}
+\end{figure}
+%===================================
+\begin{figure}
+\centering
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},
+ylabel style={at={(current axis.above origin)},anchor=south},xtick={-1,1},xticklabels={,$1$},ytick={-1,1}]
+\addplot[domain=-3:-0.5]{(x^2-1)/x};
+\addplot[domain=0.5:3]{(x^2-1)/x}node[pos=0.6,right]{$y=\tfrac{x^2-1}{x}$};
+\addplot[dashed,domain=-3:3]{x}node[pos=0.8,above left]{$y=x$};
+\addplot[dashed,domain=-3:-0.5]{-1/x}node[left]{$y=-\tfrac{1}{x}$};
+\addplot[dashed,domain=0.5:3]{-1/x};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم سوال \حوالہ{سوال_استعمال_ناطق_غالب_متقارب_درکار_ث}}
+\label{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_ث}
+\end{minipage}\hfill
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},
+ylabel style={at={(current axis.above origin)},anchor=south},xmin=-2.5,xmax=2.5]
+\addplot[domain=-2:-0.5]{(x^4+1)/(x^2)};
+\addplot[domain=0.5:2]{(x^4+1)/(x^2)}node[pos=0.5,below right]{$y=\tfrac{x^4+1}{x^2}$};
+\addplot[dashed,domain=-2:2]{x^2}node[pos=0.25,left]{$y=x^2$};
+\addplot[dashed,domain=-2:-0.5]{1/x^2}node[pos=0,above]{$y=\tfrac{1}{x^2}$};
+\addplot[dashed,domain=0.5:2]{1/x^2};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم سوال \حوالہ{سوال_استعمال_ناطق_غالب_متقارب_درکار_ج}}
+\label{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_ج}
+\end{minipage}\hfill
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},
+ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=1.1:2]{1/(x^2-1)}node[pos=0.2,right]{$y=\tfrac{1}{x^2-1}$};
+\addplot[domain=-0.9:0.9]{1/(x^2-1)};
+\addplot[domain=-1.1:-2]{1/(x^2-1)};
+\draw[dashed](axis cs:-1,-5)--(axis cs:-1,5);
+\draw[dashed](axis cs:1,-5)--(axis cs:1,5);
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم سوال \حوالہ{سوال_استعمال_ناطق_غالب_متقارب_درکار_چ}}
+\label{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_چ}
+\end{minipage}\hfill
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1},ytick=-1]
+\addplot[domain=-3:-1.1]{-(x^2-2)/(x^2-1)};
+\addplot[domain=-0.9:0.9]{-(x^2-2)/(x^2-1)};
+\addplot[domain=1.1:3]{-(x^2-2)/(x^2-1)}node[pos=0.2,right]{$y=-\tfrac{x^2-2}{x^2-1}$};
+\draw[dashed](axis cs:-1,-5)--(axis cs:-1,5);
+\draw[dashed](axis cs:1,-5)--(axis cs:1,5);
+\draw[dashed](axis cs:-3,-1)--(axis cs:3,-1);
+\addplot[dashed,domain=-3:-1.1]{1/(x^2-1)}node[pos=0.9,left]{$y=\tfrac{1}{x^2-1}$};
+\addplot[dashed,domain=-0.9:0.9]{1/(x^2-1)};
+\addplot[dashed,domain=1.1:3]{1/(x^2-1)};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم سوال \حوالہ{سوال_استعمال_ناطق_غالب_متقارب_درکار_ح}}
+\label{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_ح}
+\end{minipage}
+\end{figure}
+%=======================================
+\begin{figure}
+\centering
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1},ytick={4}]
+\addplot[domain=-4:0.8]{x^2/(x-1)};
+\addplot[domain=1.2:4]{x^2/(x-1)};
+\addplot[dashed,domain=-4:4]{x+1}node[pos=0.2,left]{$y=x+1$};
+\addplot[dashed,domain=-4:0.8]{1/(x-1)};
+\addplot[dashed,domain=1.2:4]{1/(x-1)}node[pos=0.85,above]{$y=\tfrac{1}{x-1}$};
+\draw(axis cs:-3,3)node[font=\tiny]{$y=\tfrac{x^2}{x-1}$};
+\draw[dashed](axis cs:1,-5)--(axis cs:1,6);
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم سوال \حوالہ{سوال_استعمال_ناطق_غالب_متقارب_درکار_خ}}
+\label{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_خ}
+\end{minipage}\hfill
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1,2},ytick={4}]
+\addplot[domain=-4:0.6]{(x^2-4)/(x-1)};
+\addplot[domain=1.5:4]{(x^2-4)/(x-1)};
+\addplot[dashed,domain=-4:4]{x+1}node[pos=0,right]{$y=x+1$};
+\addplot[dashed,domain=-4:0.6]{-3/(x-1)};
+\addplot[dashed,domain=1.5:4]{-3/(x-1)}node[pos=0.5,below right]{$y=-\tfrac{3}{x-1}$};
+\draw(axis cs:1,6)node[above right]{$y=\tfrac{x^2-4}{x-1}$};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم سوال \حوالہ{سوال_استعمال_ناطق_غالب_متقارب_درکار_د}}
+\label{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_د}
+\end{minipage}\hfill
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1},ytick={3}]
+\addplot[domain=-4:0.8]{(x^2-x+1)/(x-1)};
+\addplot[domain=1.2:4]{(x^2-x+1)/(x-1)};
+\draw(axis cs:0,5)node[left]{$y=\tfrac{x^2-x+1}{x-1}$};
+\addplot[dashed,domain=-4:4]{x}node[pos=0.2,above]{$y=x$};
+\draw[dashed](axis cs:1,-5)--(axis cs:1,5);
+\addplot[dashed,domain=-4:0.6]{1/(x-1)};
+\addplot[dashed,domain=1.2:4]{1/(x-1)}node[above]{$y=\tfrac{1}{x-1}$};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم  سوال \حوالہ{سوال_استعمال_ناطق_غالب_متقارب_درکار_ڈ}}
+\label{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_ڈ}
+\end{minipage}\hfill
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-2,1},ytick={\empty}]
+\addplot[domain=-8:-2.6]{(x-1)^3/(x^2+x-2)};
+\addplot[domain=-1.6:6]{(x-1)^3/(x^2+x-2)}node[above left,xshift=3mm]{$y=\tfrac{(x-1)^3}{x^2+x-2}$};
+\draw(axis cs:1,0)node[ocirc]{};
+\addplot[dashed,domain=-8:6]{x-4}node[pos=0.7,below right]{$y=x-4$};
+\draw[dashed](axis cs:-2,-20)--(axis cs:-2,16);
+\addplot[dashed,domain=-8:-2.6]{9/(x+2)}node[pos=0,below,shift={(2mm,1mm)}]{$y=\tfrac{9}{x+2}$};
+\addplot[dashed,domain=-1.6:6]{9/(x+2)};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم  سوال \حوالہ{سوال_استعمال_ناطق_غالب_متقارب_درکار_ذ}}
+\label{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_ذ}
+\end{minipage}
+\end{figure}
+%=====================================
+\begin{figure}
+\centering
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-1,1}]
+\addplot[domain=-3:-1.2]{x/(x^2-1)};
+\addplot[domain=-0.8:0.8]{x/(x^2-1)};
+\addplot[domain=1.2:3]{x/(x^2-1)}node[pos=0.25,right]{$y=\tfrac{x}{x^2-1}$};
+\draw[dashed](axis cs:-1,-2.25)--(axis cs:-1,2.25);
+\draw[dashed](axis cs:1,-2.25)--(axis cs:1,2.25);
+\draw(axis cs:-1,1)node[left]{$x=-1$};
+\draw(axis cs:1,-1.5)node[right]{$x=1$};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم سوال \حوالہ{سوال_استعمال_ناطق_غالب_متقارب_درکار_ر}}
+\label{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_ر}
+\end{minipage}\hfill
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ymin=0,ymax=2.25]
+\addplot[domain=-3:3]{8/(x^2+4)}node[pos=1,below left]{$y=\tfrac{8}{x^2+4}$};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم سوال \حوالہ{سوال_استعمال_ناطق_غالب_متقارب_درکار_ڑ}}
+\label{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_ڑ}
+\end{minipage}\hfill
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny]
+\begin{axis}[font=\tiny,clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xmin=-2.25,xmax=2.5,ymax=2.25]
+\draw[dashed](axis cs:-2,-2)--(axis cs:-2,2)node[pos=0.9,right]{$x=-2$};
+\draw[dashed](axis cs:2,-2)--(axis cs:2,2)node[pos=0.2,left]{$x=2$};
+\addplot[domain=-1.8:1.8]{x/sqrt(4-x^2)}node[pos=1,fill=white,xshift=-2mm,fill=white]{$y=\tfrac{x}{\sqrt{4-x^2}}$};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم سوال \حوالہ{سوال_استعمال_کلیہ_ترسیم_الف}}
+\label{شکل_سوال_استعمال_کلیہ_ترسیم_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny]
+\begin{axis}[font=\tiny,clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ytick={-1,1,2},ymax=3.5]
+\addplot[domain=0.04:3]{(x^2)^(1/3)+1/(x^(1/3))}node[pos=0.5,below,xshift=2.5mm]{$y=x^{\tfrac{2}{3}}+x^{-\tfrac{1}{3}}$};
+\addplot[domain=0.2:3]({-x},{(x^2)^(1/3)-1/(x^(1/3))});
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم سوال \حوالہ{سوال_استعمال_کلیہ_ترسیم_درکار_پ}}
+\label{شکل_سوال_استعمال_کلیہ_ترسیم_درکار_پ}
+\end{minipage}\hfill
+
+\end{figure}
+%==============================
+\موٹا{ناطق تفاعل کی ترسیم}\\
+سوال \حوالہ{سوال_استعمال_ناطق_غالب_متقارب_الف} تا سوال \حوالہ{سوال_استعمال_ناطق_غالب_متقارب_ب} میں دیے گئے ناطق تفاعل ترسیم کریں۔متقارب خطوط اور غالب اجزاء کی ترسیمات بھی شامل کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_استعمال_ناطق_غالب_متقارب_الف}
+$y=\tfrac{1}{x-1}$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_ناطق_غالب_متقارب_الف}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$y=\tfrac{1}{x+1}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_ناطق_غالب_متقارب_درکار_پ}
+$y=\tfrac{1}{2x+4}$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_پ}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$y=\tfrac{-3}{x-3}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_ناطق_غالب_متقارب_درکار_ت}
+$y=\tfrac{x+3}{x+2}$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_ت}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$y=\tfrac{2x}{x+1}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_ناطق_غالب_متقارب_درکار_ٹ}
+$y=\tfrac{2x^2+x-1}{x^2-1}$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_ٹ}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$y=\tfrac{x^2-49}{x^2+5x-14}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_ناطق_غالب_متقارب_درکار_ث}
+$y=\tfrac{x^2-1}{x}$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_ث}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$y=\tfrac{x^2+4}{2x}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_ناطق_غالب_متقارب_درکار_ج}
+$y=\tfrac{x^4+1}{x^2}$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_ج}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$y=\tfrac{x^3+1}{x^2}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_ناطق_غالب_متقارب_درکار_چ}
+$y=\tfrac{1}{x^2-1}$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_چ}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$y=\tfrac{x^2}{x^2-1}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_ناطق_غالب_متقارب_درکار_ح}
+$y=-\tfrac{x^2-2}{x^2-1}$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_ح}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$y=\tfrac{x^2-4}{x^2-2}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_ناطق_غالب_متقارب_درکار_خ}
+$y=\tfrac{x^2}{x-1}$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_خ}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$y=-\tfrac{x^2}{x+1}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_ناطق_غالب_متقارب_درکار_د}
+$y=\tfrac{x^2-4}{x-1}$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_د}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$y=-\tfrac{x^2-4}{x+1}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_ناطق_غالب_متقارب_درکار_ڈ}
+$y=\tfrac{x^2-x+1}{x-1}$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_ڈ}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$y=-\tfrac{x^2-x+1}{x-1}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_ناطق_غالب_متقارب_درکار_ذ}
+$y=\tfrac{x^3-3x^2+3x-1}{x^2+x-2}$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_ذ}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$y=\tfrac{x^3+x-2}{x-x^2}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_ناطق_غالب_متقارب_درکار_ر}
+$y=\tfrac{x}{x^2-1}$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_ر}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$y=\tfrac{x-1}{x^2(x-2)}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_ناطق_غالب_متقارب_درکار_ڑ}
+$y=\tfrac{8}{x^2+4}$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_ناطق_غالب_متقارب_درکار_ڑ}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_ناطق_غالب_متقارب_ب}
+$y=\tfrac{4x}{x^2+4}$
+\انتہا{سوال}
+%========================
+\begin{figure}
+\centering
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ymax=1.5,ytick={1},xtick={-1,1}]
+\addplot[domain=-3:3,smooth]{sin(deg(pi/(x^2+1)))}node[pos=0.75,right]{$y=\sin\tfrac{\pi}{x^2+1}$};
+\draw(axis cs:-1,1)node[circ]{}node[above]{$(-1,1)$};
+\draw(axis cs:1,1)node[circ]{}node[above]{$(1,1)$};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم سوال \حوالہ{سوال_استعمال_کلیہ_ترسیم_درکار_ت}}
+\label{شکل_سوال_استعمال_کلیہ_ترسیم_درکار_ت}
+\end{minipage}\hfill
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{pi/2}
+\begin{axis}[font=\tiny,clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},xmin=-2,xmax=2.2]
+\addplot[domain=-\a+0.2:-0.2,smooth]{sec(deg(x))+1/x};
+\addplot[domain=0.2:\a-0.2,smooth]{sec(deg(x))+1/x}node[above]{$y=\sec x+\tfrac{1}{x}$};
+\addplot[dashed,domain=-\a+0.2:\a-0.2]{sec(deg(x))}node[pos=0.75,pin=20:{$y=\sec x$}]{};
+\addplot[dashed,domain=-\a+0.2:-0.2]{1/x};
+\addplot[dashed,domain=0.2:\a-0.2]{1/x}node[pos=0.9,pin=10:{$y=\tfrac{1}{x}$}]{};
+\draw[dashed](axis cs:-\a,-5)--(axis cs:-\a,5);
+\draw[dashed](axis cs:\a,-5)--(axis cs:\a,5);
+\draw(axis cs:-\a,0)node[below,fill=white]{$-\tfrac{\pi}{2}$};
+\draw(axis cs:\a,0)node[below,fill=white]{$\tfrac{\pi}{2}$};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم سوال \حوالہ{سوال_استعمال_اجزاء_سے_پورا_الف}}
+\label{شکل_سوال_استعمال_اجزاء_سے_پورا_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{pi/2}
+\begin{axis}[font=\tiny,clip=false,small,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty} ,xticklabels={\empty}, xmin=-2,xmax=2.2,ytick={-2,2}]
+\draw[dashed](axis cs:-\a,-3)--(axis cs:-\a,6);
+\draw[dashed](axis cs:\a,-3)--(axis cs:\a,6);
+\draw(axis cs:-\a,0)node[below,fill=white]{$-\tfrac{\pi}{2}$};
+\draw(axis cs:\a,0)node[below,fill=white]{$\tfrac{\pi}{2}$};
+\addplot[domain=-\a+0.3:-0.4]{tan(deg(x))+1/x^2};
+\addplot[domain=0.4:\a-0.2]{tan(deg(x))+1/x^2}node[above]{$y=\tan x+\tfrac{1}{x^2}$};
+\addplot[dashed,domain=-\a+0.3:\a-0.2]{tan(deg(x))}node[pos=0.8,pin=20:{$y=\tan x$}]{};
+\addplot[dashed,domain=-\a:-0.4]{1/x^2};
+\addplot[dashed,domain=0.4:\a-0.2]{1/x^2}node[pos=0.9,pin=20:{$y=\tfrac{1}{x^2}$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم سوال \حوالہ{سوال_استعمال_اجزاء_سے_پورا_درکار_پ}}
+\label{شکل_سوال_استعمال_اجزاء_سے_پورا_درکار_پ}
+\end{minipage}\hfill
+
+\end{figure}
+%==================================
+\موٹا{کمپیوٹر کا استعمال}\\
+سوال \حوالہ{سوال_استعمال_کلیہ_ترسیم_الف} تا سوال \حوالہ{سوال_استعمال_کلیہ_ترسیم_ب} کو کمپیوٹر پر ترسیم کریں۔ تفاعل کے کلیہ اور ترسیم کا تعلق سمجھائیں۔
+
+\ابتدا{سوال}\شناخت{سوال_استعمال_کلیہ_ترسیم_الف}
+$y=\tfrac{x}{\sqrt{4-x^2}}$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_کلیہ_ترسیم_الف}
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=\tfrac{-1}{\sqrt{4-x^2}}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_کلیہ_ترسیم_درکار_پ}
+$y=x^{2/3}+\tfrac{1}{x^{1/3}}$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_کلیہ_ترسیم_درکار_پ}
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=2\sqrt{x}+\tfrac{2}{\sqrt{x}}-3$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_کلیہ_ترسیم_درکار_ت}
+$y=\sin(\tfrac{\pi}{x^2+1})$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_کلیہ_ترسیم_درکار_ت}
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_کلیہ_ترسیم_ب}
+$y=-\cos(\tfrac{\pi}{x^2+1})$
+\انتہا{سوال}
+%==========================
+\موٹا{اجزاء کی ترسیمات}\\
+سوال \حوالہ{سوال_استعمال_اجزاء_سے_پورا_الف} تا سوال \حوالہ{سوال_استعمال_اجزاء_سے_پورا_ب} میں تفاعل کے اجزاء کو انفرادی ایک ساتھ ترسیم کریں۔ان ترسیمات کو دیکھتے ہوئے تفاعل کا خاکہ کھینچیں۔
+
+\ابتدا{سوال}\شناخت{سوال_استعمال_اجزاء_سے_پورا_الف}
+$y=\sec x+\tfrac{1}{x},\quad -\tfrac{\pi}{2}<x<\tfrac{\pi}{2}$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_اجزاء_سے_پورا_الف}
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$y=\sec x-\tfrac{1}{x^2},\quad -\tfrac{\pi}{2}<x<\tfrac{\pi}{2}$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_استعمال_اجزاء_سے_پورا_درکار_پ}
+$y=\tan x+\tfrac{1}{x^2},\quad -\tfrac{\pi}{2}<x<\tfrac{\pi}{2}$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_استعمال_اجزاء_سے_پورا_درکار_پ}
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_استعمال_اجزاء_سے_پورا_ب}
+$y=\tfrac{1}{x}-\tan x,\quad -\tfrac{\pi}{2}<x<\tfrac{\pi}{2}$
+\انتہا{سوال}
+%=====================
+\موٹا{نظریہ اور مثالیں}
+
+\ابتدا{سوال}
+\عددی{f(x)=\tfrac{x^3+x^2}{x^2+1}} لیں۔ دکھائیں کہ ایسا \عددی{c} پایا جاتا ہے کہ \عددی{f(c)} کی قیمت درج ذیل ہو۔ 
+\begin{multicols}{3}
+\begin{enumerate}[a.]
+\item
+$-2$
+\item
+$\cos 3$
+\item
+$\num{5000000}$
+\end{enumerate}
+\end{multicols}
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+\عددی{\lim\limits_{x\to\infty}(\sqrt{x^2+x}-\sqrt{x^2-x})} تلاش کریں۔
+\انتہا{سوال}
+%=================
+\ابتدا{سوال}\ترچھا{تشاکلی۔}\quad
+فرض کریں وقفہ \عددی{x>0} پر جفت تفاعل بڑھتا ہے۔وقفہ \عددی{x<0} پر تفاعل کا رویہ کیا ہو گا؟\\
+جواب:\quad
+بڑھتا
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}\ترچھا{تشاکلی۔}\quad
+فرض کریں وقفہ \عددی{x<0} پر جفت تفاعل بڑھتا ہے۔وقفہ \عددی{x>0} پر تفاعل کا رویہ کیا ہو گا؟
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+فرض کریں \عددی{f(x)} اور \عددی{g(x)} کثیر رکنی ہیں اور \عددی{ \lim_{x\to\infty}\tfrac{f(x)}{g(x)}=2} ہے۔کیا 
+\عددی{ \lim_{x\to-\infty}\tfrac{f(x)}{g(x)}} کے بارے میں کچھ اخذ کرنا ممکن ہے؟ اپنے جواب کی وجہ بین کریں۔
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+فرض کریں \عددی{f(x)} اور \عددی{g(x)} کثیر رکنی ہیں۔ اگر \عددی{g(x)} کبھی بھی صفر نہیں ہو تب کیا \عددی{\tfrac{f(x)}{g(x)}} کی ترسیم کا متقارب ہو گا؟ اپنے جواب کی وجہ پیش کریں۔
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+دیے گئے ناطق تفاعل کے  کتنے افقی متقارب ہو سکتے ہیں؟ اپنے جواب کی وجہ پیش کریں۔\\
+جواب:\quad
+\عددی{2}
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+دیے گئے ناطق تفاعل کے  کتنے انتصابی متقارب ہو سکتے ہیں؟ اپنے جواب کی وجہ پیش کریں۔
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+\begin{enumerate}[a.]
+\item
+
+ایک ترسیم اپنے متقاربی خط کو قطع کر سکتی ہے۔ منحنی \عددی{y=2+\tfrac{\sin x}{x}} (مثال \حوالہ{مثال_استعمال_مسئلہ_بیچ}) متقاربی خط کو لامتناہی بار قطع کرتی ہے۔ دکھائیں کہ \عددی{x\to \infty} پر اس ترسیم کی ڈھلوان متقاربی خط کی ڈھلوان تک پہنچتی ہے۔ 
+\item
+درج ذیل خواص رکھنے والے تفاعل \عددی{f(x)} کی مثال پیش کریں۔
+\begin{enumerate}[1)]
+\item
+\عددی{x>0} پر \عددی{f} قابل تفرق ہے۔
+\item
+$\lim\limits_{x\to\infty}f(x)=2$
+\item
+\عددی{\lim\limits_{x\to\infty}f'(x)} غیر موجود ہے۔
+\end{enumerate}
+\end{enumerate}
+جواب:\quad
+(ب) \عددی{f(x)=2+\tfrac{1}{x}\sin x^2} ممکن ہے۔
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+ہم درج ذیل تفاعل کی متقاربی خط تلاش کرنا چاہتے ہیں۔
+\begin{align*}
+y=\frac{x^2+3x+7}{x+2}
+\end{align*}
+ایسا کرنے کی خاطر ہم اس تفاعل کو کثیر رکنی اور حاصل تقسیم کا مجموعہ لکھتے ہیں
+\begin{align*}
+\frac{x^2+3x+7}{x+2}=x+1+\frac{5}{x+2}
+\end{align*}
+جس کی ترچھی متقارب \عددی{y=x+1} ہے۔
+
+اگر ہم نسب نما اور شمار کنندہ کو \عددی{x} سے تقسیم کریں تب
+\begin{align*}
+\frac{x^2+3x+7}{x+2}=\frac{x+3+\tfrac{7}{x}}{1+\tfrac{2}{x}}
+\end{align*} 
+ملتا ہے جس کی متقارب \عددی{y=x+3} ہے۔
+
+ان میں سے کون کا خط متقارب ہے؟ اپنے جواب کی وجہ پیش کریں۔
+\انتہا{سوال}
+%==========================
+سوال \حوالہ{سوال_استعمال_تصدیق_حد_الف} اور سوال \حوالہ{سوال_استعمال_تصدیق_حد_ب} میں حد کی با ضابطہ تعریف استعمال کرتے ہوئے \عددی{x\to \mp\infty} پر دی گئی حد کی تصدیق کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_استعمال_تصدیق_حد_الف}
+اگر \عددی{f} کی قیمت مستقل ہو \عددی{f(x)=k} تب \عددی{\lim_{x\to\infty}f(x)=k} ہو گا۔
+\انتہا{سوال}
+%==============
+\ابتدا{سوال}\شناخت{سوال_استعمال_تصدیق_حد_ب}
+اگر \عددی{f} کی قیمت مستقل ہو \عددی{f(x)=k} تب \عددی{\lim_{x\to-\infty}f(x)=k} ہو گا۔
+\انتہا{سوال}
+%===========================
+\موٹا{کمپیوٹر ترسیمات کے مزید مشاہدے}\\
+سوال \حوالہ{سوال_استعمال_مزید_ترسیم_متقارب_الف} تا سوال \حوالہ{سوال_استعمال_مزید_ترسیم_متقارب_ب} میں تفاعل ترسیم کریں۔ ان تفاعل کے متقاربی خط تلاش کریں۔ متقاربی خط جہاں ہیں، اس کی وجہ پیش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_استعمال_مزید_ترسیم_متقارب_الف}
+$y=-\tfrac{x^2-4}{x+1}$\\
+جواب:\quad
+$x=-1,\, y=1-x$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$y=\tfrac{x^2+x-6}{2x-2}$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$y=\tfrac{x^3-x^2-1}{x^2-1}$\\
+جواب:\quad
+$x=1,\,x=-1,\,y=x-1$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_استعمال_مزید_ترسیم_متقارب_ب}
+$y=\tfrac{x^3-2x^2+x+1}{x-x^2}$
+\انتہا{سوال}
+%=======================
+سوال \حوالہ{سوال_استعمال_تفاعل_اور_غالب_الف} تا سوال \حوالہ{سوال_استعمال_تفاعل_اور_غالب_ب} میں تفاعل کی ترسیم کے ساتھ غالب اجزاء بھی ترسیم کریں۔تفاعل کی ترسیم اور غالب اجزاء کی ترسیمات کا تعلق بیان کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_استعمال_تفاعل_اور_غالب_الف}
+$y=x^3+\tfrac{3}{x}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=x^3-\tfrac{3}{x}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=2\sin x+\tfrac{1}{x}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=2\cos x-\tfrac{1}{x}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=\tfrac{x^2}{2}+3\sin 2x$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_تفاعل_اور_غالب_ب}
+$y=(x-1)^{11}+2\sin 2\pi x$
+\انتہا{سوال}
+%==========================
+سوال \حوالہ{سوال_استعمال_ترسیم_سے_رویہ_الف} اور سوال \حوالہ{سوال_استعمال_ترسیم_سے_رویہ_ب} کا تفاعل ترسیم کریں۔اس کے بعد درج ذیل کے جوابات دیں۔
+\begin{enumerate}[a.]
+\item
+\عددی{x\to0^+} اور \عددی{x\to 0^-} پر ترسیم کا رویہ کیسا ہے؟
+\item
+\عددی{x\to \mp\infty} پر ترسیم کا رویہ کیسا ہے؟
+\item
+\عددی{x\to 1} اور \عددی{x\to -1} پر ترسیم کا رویہ کیسا ہے؟
+\end{enumerate}
+اپنے جوابات کی وجہ پیش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_استعمال_ترسیم_سے_رویہ_الف}
+$y=\tfrac{3}{2}(x-\tfrac{1}{x})^{2/3}$\\
+جواب:\quad
+(ا) \عددی{y\to \infty}، (ب) \عددی{y\to \infty}، (ج) \عددی{x=\mp 1} پر کنگرہ
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_ترسیم_سے_رویہ_ب}
+$y=\tfrac{3}{2}(\tfrac{x}{x-1})^{2/3}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+تفاعل \عددی{y=-\tfrac{x^3-2}{x^2+1}} کو درج ذیل وقفوں پر ترسیم کریں۔
+\begin{multicols}{3}
+\begin{enumerate}[a.]
+\item
+$-9\le x\le 9$
+\item
+$-90\le x\le 90$
+\item
+$-900\le x\le 900$
+\end{enumerate}
+\end{multicols}
+
+جزو-1 کی ترسیم بہترین ہو گی۔ جزو-ب میں مبدا کے قریب کچھ ہو گا جو بہتر نظر نہیں آئے گا جبکہ جزو-ج کی ترسیم عین \عددی{y=-x} کی ترسیم نظر آئے گی۔ ایسا کیوں ہے؟\\
+جواب:\quad
+جزو-ج میں فاصلے اتنے زیادہ ہیں کہ چھوٹی حرکت نظر نہیں آتی ہے۔
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+تفاعل \عددی{y=\tfrac{x^{2/3}}{x^2-1}} کو وقفہ \عددی{-2\le x\le 2} پر ترسیم کریں۔  \عددی{x=-1} اور \عددی{x=1}  کے بیچ ترسیم  نیچے مقعر نظر آئے گی اور مبدا پر کوئی کنگرہ نظر نہیں آئے گا۔مبدا کے بالکل قریب وقفہ پر ترسیم کرتے ہوئے مبدا پر کنگرہ نمودار ہوتا ہے۔ پہلی ترسیم میں کنگرہ کیوں نظر نہیں آیا؟ 
+\انتہا{سوال}
+%==========================
+\موٹا{لامتناہی پر حد واضح کرنا}\\
+بعض اوقات متغیرات کی تبدیلی سے ایسا تفاعل حاصل ہوتا ہے جس کی حد  تلاش کرنا ہمیں آتا ہے۔مثال کے طور پر 
+\begin{align*}
+\lim\limits_{x\to\infty}\sin\tfrac{1}{x}&=\lim\limits_{\theta\to0^+}\sin\theta&& (\theta=\tfrac{1}{x})
+\end{align*}
+آپ دیکھ سکتے ہیں کہ لامتناہی پر حد کو یوں کمپیوٹر پر دیکھا جا سکتا ہے۔سوال \حوالہ{سوال_استعمال_حد_نظر_آئے_ب} تا سوال \حوالہ{سوال_استعمال_حد_نظر_آئے_الف} میں یوں اس طرح کا طریقہ بیان کریں تا کہ ترسیم پر حد کو دیکھا جا سکے۔ ان حدود کو تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_استعمال_حد_نظر_آئے_الف}
+$\lim\limits_{x\to\mp\infty} x\sin\tfrac{1}{x}$\\
+جواب:\quad
+$1$
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+$\lim\limits_{x\to-\infty} \tfrac{\cos \tfrac{1}{x}}{1+\tfrac{1}{x}}$
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+$\lim\limits_{x\to\mp\infty}\tfrac{3x+4}{2x-5}$\\
+جواب:\quad
+$\tfrac{3}{2}$
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+$\lim\limits_{x\to\infty} (\tfrac{1}{x})^{1/x}$
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+$\lim\limits_{x\to\mp\infty} (3+\tfrac{2}{x})(\cos \tfrac{1}{x})$\\
+واب:\quad
+$3$
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_حد_نظر_آئے_ب}
+$\lim\limits_{x\to\infty} (\tfrac{3}{x^2}-\cos\tfrac{1}{x})(1+\sin\tfrac{1}{x})$
+\انتہا{سوال}
+%===========================
+
+\حصہ{بہترین بنانا}
+کسی چیز کو بہترین بنانے سے مراد اس چیز کی کسی خاصیت کو کم سے کم یا زیادہ سے زیادہ بنانا ہے۔ تیل کے ڈبے کی کون سی شکل بنانے پر کم تر لاگت آتی ہے؟ \عددی{\SI{30}{\centi\meter}} قطر لکڑ سے کتنی مضبوط ترین  شہتیر  حاصل کی جا سکتی ہے؟ حسابی نمونہ استعمال کرتے ہوئے اس طرز کے سوالات کے جواب حاصل کرنے کی خاطر ہم تفاعل کی کم سے کم یا زیادہ سے زیادہ قیمت تلاش کرتے ہیں۔
+
+\جزوحصہء{کاروبار اور صنعتی مثالیں}
+
+\ابتدا{مثال}\شناخت{مثال_استعمال_ڈبہ}\ترچھا{دھاتی چادر کا استعمال}\\
+ ایک چکور چادر جس کا ضلع \عددی{\SI{30}{\centi\meter}} ہے کے کونوں سے چھوٹے چکور کاٹ کر، اطراف کو اوپر موڑتے ہوئے کھلا ڈبہ بنایا جاتا ہے۔ کونوں سے کس جسامت کے چکور کاٹ کر زیادہ سے زیادہ حجم کا ڈبہ حاصل ہو گا؟
+
+حل:\quad
+شکل \حوالہ{شکل_مثال_استعمال_ڈبہ} میں کٹا ہوا چادر دکھایا گیا ہے۔ کٹے ہوئے چکور کا ضلع \عددی{x} سنٹی میٹر ہے۔ یوں ڈبے کا حجم \عددی{H} مربع سنٹی میٹر 
+\begin{align*}
+H(x)=x(30-2x)^2=4x^3-120x^2+900x
+\end{align*}
+ہو گا۔چونکہ چادر کے  ضلع \عددی{\SI{30}{\centi\meter}} ہے لہٰذا \عددی{0\le x\le 15} ہو گا جو تفاعل \عددی{H} کا دائرہ کار ہے۔
+
+شکل \حوالہ{شکل_مثال_استعمال_ڈبہ_دوم} میں حجم بالمقابل \عددی{x} دکھایا گیا ہے  جس کے تحت \عددی{x=0} اور \عددی{x=15} پر حجم صفر ہو گا۔زیادہ سے زیادہ حجم تلاش کرنے کی خطر \عددی{x} کے لحاظ سے \عددی{H} کے تفرق کو صفر کے برابر پر کرتے ہوئے حل کرتے ہیں۔
+\begin{align*}
+\frac{\dif H}{\dif x}=12x^2-240x+900=12(x-15)(x-5)=0, 
+\end{align*}
+یوں \عددی{x=5} اور \عددی{x=15} ملتا ہے جن میں سے صرف \عددی{x=5} دائرہ کار کے اندر پایا جاتا ہے۔ اس نقطہ فاصل اور دائرہ کار کے دو آخری نقطوں پر \عددی{H} کی قیمتیں درج ذیل ہیں۔
+\begin{align*}
+H(5)&=2000,&&\text{\RL{نقطہ فاصل}}\\
+H(0)&=0,\quad H(15)=0&&\text{\RL{آخری نقطے}}
+\end{align*}
+یوں زیادہ سے زیادہ حجم \عددی{\SI{2000}{\centi\meter\cubed}} ہے جو \عددی{\SI{5}{\centi\meter}} ضلع چکور کاٹنے سے ملے گا۔
+\انتہا{مثال}
+%==========================
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{2}
+\pgfmathsetmacro{\b}{0.75}
+\draw(0,0)--++(0,-\b)--++(\a,0)--++(0,\b)--++(\b,0)--++(0,\a)--++(-\b,0)--++(0,\b)--++(-\a,0)--++(0,-\b)--++(-\b,0)--++(0,-\a)--++(\b,0);
+\draw[dashed](-\b,0)--++(0,-\b)--++(\b,0)node[pos=0.5,below]{$x$};
+\draw[dashed](\a,-\b)--++(\b,0)node[pos=0.5,below]{$x$}--++(0,\b)node[pos=0.5,right]{$x$};
+\draw[dashed](\a+\b,\a)--++(0,\b)node[pos=0.5,right]{$x$}--++(-\b,0);
+\draw[dashed](-\b,\a)--++(0,\b)--++(\b,0);
+\draw[] (-\b,-\b)++(0,-0.2)--++(0,-0.5);
+\draw[] (\a+\b,-\b)++(0,-0.2)--++(0,-0.5);
+\draw[] (-\b,-\b)++(-0.2,0)--++(-0.5,0);
+\draw[] (-\b,\a+\b)++(-0.2,0)--++(-0.5,0);
+\draw[stealth-stealth] (-\b,-\b-0.5)--++(\a+2*\b,0)node[pos=0.5,fill=white]{$30$};
+\draw[stealth-stealth] (-\b-0.5,-\b)--++(0,\a+2*\b)node[pos=0.5,fill=white]{$30$};
+\end{tikzpicture}
+\end{subfigure}%
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{2}
+\pgfmathsetmacro{\aa}{0.75*\a}
+\pgfmathsetmacro{\b}{0.75}
+\pgfmathsetmacro{\ang}{70}
+\draw[name path=top](0,0)--++(\a,0)--++(\ang:\aa)--++(-\a,0)--++(\ang:-\aa);
+\draw(0,0)--++(0,-\b)--++(\a,0)--++(\ang:\aa)--++(0,\b);
+\draw(0,0)++(0,-\b)++(\a,0)--++(0,\b);
+\path[name path=ld](\ang:\aa)++(0,-\b)--++(\ang:-\aa);
+\path[name path=tr](\ang:\aa)++(0,-\b)--++(\a,0);
+\draw[name intersections={of=top and ld}] (\ang:\aa)--++(0,-\b)--(intersection-1);
+\draw[name intersections={of=top and tr}] (\ang:\aa)++(0,-\b)--(intersection-1);
+\draw[stealth-stealth](0,-\b-0.2)--++(\a,0)node[pos=0.5,below]{$30-2x$};
+\draw[stealth-stealth](\a+0.2,-\b)--++(\ang:\aa)node[pos=0.5,right]{$30-2x$};
+\draw[stealth-stealth](-0.2,0)--++(0,-\b)node[pos=0.5,left]{$x$};
+\end{tikzpicture}
+\end{subfigure}
+\caption{چادر سے ڈبہ بنانا (مثال \حوالہ{مثال_استعمال_ڈبہ})۔}
+\label{شکل_مثال_استعمال_ڈبہ}
+\end{figure}
+%
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$H$},xmax=17,ymax=2200,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={5,15},ytick={2000}]
+\addplot[domain=0:15,smooth]{x*(30-2*x)^2}node[pos=0.7,right,align=center]{$H=x(30-2x)^2$\\  $0<x<15$}node[pos=0,pin=145:{\RL{کم سے کم}}]{}node[pos=1,pin=45:{\RL{کم سے کم}}]{};
+\draw(axis cs:5,2000)node[pin=30:{\RL{زیادہ سے زیادہ}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{حجم بالمقابل \عددی{x} (مثال \حوالہ{مثال_استعمال_ڈبہ})۔}
+\label{شکل_مثال_استعمال_ڈبہ_دوم}
+\end{figure}
+
+\ابتدا{مثال}\شناخت{مثال_استعمال_بیلن_چادر}\ترچھا{بیلن}\\
+آپ کو ایک لٹر تیل کا بلینی ڈبہ بنانے کو کہا گیا ہے۔ کم سے کم  ٹین کی چادر استعمال کرتے ہوئے ڈبہ بنائیں۔
+
+حل:\quad
+ٹین ڈبے کی لمبائی \عددی{h} اور اس کا رداس \عددی{r} لیتے ہیں (شکل \حوالہ{شکل_مثال_استعمال_بیلن_چادر})۔اگر \عددی{h} اور \عددی{r} کی ناپ سنٹی میٹر میں ہو تب 
+\begin{align}\label{مساوات_مثال_استعمال_بیلن_چادر_الف}
+H=\pi r^2*h=1000&& (\SI{1000}{\centi\meter\cubed}=\text{\RL{ایک لٹر}})
+\end{align}
+درکار ہے۔کم سے کم ٹین استعمال کرنے سے کیا مراد ہے؟ اس سے ایک مطلب ٹین کی موٹائی اور ڈبے کی تیاری  میں ٹین کے ضیاع کو نظر انداز کرتے ہوئے کم سے کم چادر کا استعمال ہو سکتا ہے۔ (سوال میں ٹین کے ضیاع کو شامل کیا گیا ہے۔) ہم یہی مطلب لیتے ہوئے حل کرتے ہیں۔ بیلن میں استعمال چادر کا  سطحی رقبہ
+\begin{align}\label{مساوات_مثال_استعمال_بیلن_چادر_ب}
+S=\underbrace{2\pi r^2}_{\text{\RL{بیلن کے دو سر}}}+\underbrace{2\pi rh}_{\text{\RL{بیلنی دیوار}}}
+\end{align}
+ہے جس کو کم سے کم بنانا مقصود ہے اور ساتھ ہی ساتھ \عددی{\pi r^2h=1000} کی شرط  کو مطمئن کرنا ضروری ہے۔
+
+مساوات \حوالہ{مساوات_مثال_استعمال_بیلن_چادر_ب} میں دو آزاد متغیر ہیں۔ نقطہ فاصل معلوم کرنے کی خاطر ہمیں ایسا تفاعل چاہیے جس میں ایک آزاد متغیر ہو۔ ہم مساوات \حوالہ{مساوات_مثال_استعمال_بیلن_چادر_الف} اور مساوات \حوالہ{مساوات_مثال_استعمال_بیلن_چادر_ب} کو ملا کر ایک متغیر کو خارج کر سکتے ہیں۔
+
+ہم مساوات \حوالہ{مساوات_مثال_استعمال_بیلن_چادر_الف} کو \عددی{h} کے لئے حل کرتے ہوئے
+\begin{align*}
+h=\frac{1000}{\pi r^2}
+\end{align*}
+اس کو مساوات \حوالہ{مساوات_مثال_استعمال_بیلن_چادر_ب} میں پر کرتے ہوئے \عددی{h} سے چٹکارہ  حاصل کرتے ہیں۔
+\begin{align*}
+S=2\pi r^2+2\pi rh=2\pi r^2+2\pi r\frac{1000}{\pi r^2}=2\pi r^2+\frac{2000}{r}
+\end{align*}
+\عددی{r} کی چھوٹی قیمت کے لئے \عددی{\tfrac{2000}{r}} جزو غالب ہو گا جس کی بنا \عددی{S} کی قیمت بڑی ہو گی۔ ٹین کا ڈبہ نلکی یا پائپ نما ہو گا۔ \عددی{r} کی بڑی قیمت کے لئے \عددی{2\pi r^2} جزو غالب ہو گا جس کی بنا \عددی{S} کی قیمت بڑی ہو گی۔ ٹین کا ڈبہ چپٹی صورت کا ہو گا۔ \عددی{r} کی مذکورہ بالا قیمتوں کے بیچ کہیں سطحی رقبہ کم سے کم حاصل ہو گا۔
+
+\عددی{S} اپنے پورے دائرہ کار \عددی{(0,r)} میں قابل تفرق ہے لہٰذا  کم سے کم  \عددی{S} قیمت تلاش کرنے کی خاطر اس کے تفرق کو صفر کے برابر پر کرتے ہوئے نقطہ فاصل \عددی{r} کے لئے حل کرتے ہیں۔ 
+\begin{align*}
+S&=2\pi r^2+\frac{2000}{r}\\
+\frac{\dif S}{\dif r}&=4\pi r-\frac{2000}{r^2}&&\text{\RL{تفرق}}\\
+4\pi r-\frac{2000}{r^2}&=0&&\text{\RL{تفرق کو صفر کے برابر پر کرتے ہیں}}\\
+4\pi r^3&=2000&&\text{\RL{$r$ کے لئے حل کریں}}\\
+r&=\sqrt[3]{\frac{500}{\pi}}&&\text{\RL{نقطہ فاصل}}
+\end{align*}
+اگر دائرہ کار کے آخری سر پائے جاتے تب ہم نقطہ فاصل اور آخری سروں پر تفاعل کی قیمت حاصل کرتے ہوئے دیکھتے کہ \عددی{S} کی کم سے کم قیمت  کتنی ہے اور کہاں پائی جاتی ہے۔چونکہ دائرہ کار بند وقفہ نہیں ہے لہٰذا اس کے آخری سر نہیں پائے جاتے ہیں لہٰذا ہمیں  \عددی{r=\sqrt[3]{\tfrac{500}{\pi}}} کے قریب تفاعل کا رویہ دیکھنا ہو گا۔ ہم تفاعل کا دو رتبی تفرق 
+\begin{align*}
+\frac{\dif S}{\dif r}&=4\pi r-\frac{2000}{r}\\
+\frac{\dif^{\,2}S}{\dif r^2}&=4\pi+\frac{4000}{r^2}
+\end{align*}
+پر غور کرتے ہیں جو \عددی{S} کی پورے دائرہ کار پر مثبت ہے (شکل \حوالہ{شکل_مثال_استعمال_بیلن_چادر})۔یوں پورے دائرہ کار پر \عددی{S} کی ترسیم اوپر مقعر ہو گی اور  \عددی{r=\sqrt[3]{\tfrac{500}{\pi}}} پر \عددی{S} کی قیمت کم سے کم ہو گی۔ جب
+\begin{align*}
+r&=\sqrt[3]{\frac{500}{\pi}}\\
+h&=\frac{1000}{\pi r^2}=2\sqrt[3]{\frac{500}{\pi}}=2r
+\end{align*}
+ہو۔ اس کے تحت کم سے کم ٹین کی چادر استعمال کرتے ہوئے ڈبہ بنانے کی خاطر ڈبے کی لمبائی اور قطر ایک دوسرے کے برابر ہونا ضروری ہے۔یوں درج ذیل ہوں گے۔
+\begin{align*}
+r\approx \SI{5.42}{\centi\meter},\quad h\approx \SI{10.84}{\centi\meter}
+\end{align*}
+\انتہا{مثال}
+%============================
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw(0,0.1)--++(0,-0.2);
+\draw[-stealth](0,0)--++(1,0)node[pos=0.5,fill=white]{$r$};
+\draw(0,0) circle (1cm and 0.25cm);
+\draw([shift={(-180:1cm and 0.25cm)}]0,-2) arc (-180:0:1cm and 0.25cm);
+\draw(-1,0)--++(0,-2);
+\draw(1,0)--++(0,-2);
+\draw(-1.1,0)--++(-0.3,0);
+\draw(-1.1,-2)--++(-0.3,0);
+\draw[stealth-stealth](-1.3,0)--++(0,-2)node[pos=0.5,fill=white]{$h$};
+\end{tikzpicture}
+\end{subfigure}%
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=2*pi*\x^2+2000/\x;}]
+\pgfmathsetmacro{\rmin}{5.42}
+\pgfmathsetmacro{\Smin}{f(\rmin)}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$r$},ylabel={$S$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ymin=0,xmin=0,ytick={\empty},xtick={\empty}]
+\addplot[domain=1.4:13]{f(x)}node[left,align=center]{$S=2\pi r^2+\tfrac{2000}{r}$\\ $r>0$};
+\draw(axis cs:\rmin-1,\Smin)--(axis cs:\rmin+1,\Smin);
+\draw[dashed](axis cs:\rmin,\Smin)--(axis cs:\rmin,0)node[below]{$r=\sqrt[3]{\tfrac{500}{\pi}}$};
+\draw(axis cs:\rmin,\Smin)node[pin=-45:{\RL{کم سے کم}}]{};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}%
+\caption{ٹین کا ڈبہ (مثال \حوالہ{مثال_استعمال_بیلن_چادر})}
+\label{شکل_مثال_استعمال_بیلن_چادر}
+\end{figure}
+
+\موٹا{کم سے کم اور زیادہ سے زیادہ قیمت مسائل حل کرنے کا لائحہ عمل}
+\begin{enumerate}[1.]
+\item
+\ترچھا{مسئلہ پڑھیں۔} مسئلہ پڑھ کر دیکھیں کہ کون سی معلوم دی گئی ہے؟ کون سی نہیں دی گئی ہے؟   کیا مطلوب ہے؟
+\item
+\ترچھا{تصویر بنائیں} اور اہم حصوں کی نشاندہی کریں۔
+\item
+ \ترچھا{متغیرات متعارف کریں۔} تصویر اور مسئلہ میں ہر تعلق کو مساوات کی صورت میں لکھیں۔
+\item
+\ترچھا{نا معلوم متغیر کی نشاندہی کریں} اور اس کی مساوات لکھیں۔ کوشش کریں کہ نا معلوم کو صرف ایک متغیر یا دو متغیرات کی صورت میں لکھیں۔ ایسا کرنے میں آپ کو کہیں مساوات سے باقی متغیرات خارج کرنے ہوں گے۔
+\item 
+\ترچھا{نقطہ فاصل اور آخری نقطوں کی جانچ۔} یک رتبی اور دو رتبی تفرق سے نقطہ فاصل (جہاں \عددی{f'=0} یا غیر معین ہو گا) تلاش کریں اور تفاعل کا مقعر دریافت کریں۔
+\end{enumerate}
+
+\جزوحصہء{ریاضیات سے چند مثالیں}
+
+\ابتدا{مثال}\شناخت{مثال_استعمال_دو_اعداد}\ترچھا{اعداد کا حاصل ضرب}\\
+ایسے دو مثبت اعداد تلاش کریں کی ان کا مجموعہ \عددی{20} اور  حاصل ضرب زیادہ سے زیادہ ہو۔
+
+حل:\quad
+اگر پہلا عدد \عددی{x} ہو تب دوسرا عدد \عددی{20-x} ہو گا اور ان کا حاصل ضرب
+\begin{align*}
+f(x)=x(20-x)=20x-x^2
+\end{align*}
+ہو گا جو زیادہ سے زیادہ مطلوب ہے۔ \عددی{f} کا دائرہ کار بند وقفہ \عددی{0\le x\le 20} ہے۔
+
+ہم نقطہ فاصل اور آخری نقطوں پر \عددی{f} کی قیمت حاصل کرتے ہیں۔ یک رتبی تفرق
+\begin{align*}
+f'(x)=20-2x
+\end{align*}
+پورے وقفہ \عددی{0\le x\le 20} پر معین ہے اور صرف \عددی{x=10} پر صفر ہے۔ اس نقطہ فاصل اور آخری سروں پر تفاعل کی قیمتیں
+\begin{align*}
+f(10)&=10(20-10)=100\\
+f(0)&=0,\quad f(20)=0
+\end{align*}
+ہیں۔یوں \عددی{f(10)=100} زیادہ سے زیادہ قیمت ہو گی اور درکار اعداد \عددی{10} اور \عددی{(20-10)=10} ہوں گے (شکل \حوالہ{شکل_مثال_استعمال_دو_اعداد})۔
+\انتہا{مثال}
+%====================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=\x*(20-\x);}]
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={10,20},ytick=100,ymax=120,xmax=22]
+\addplot[domain=0:20]{f(x)}node[pos=0.75,fill=white,align=center]{$y=x(20-x)$\\  $0\le x\le 20$};
+\draw[dashed](axis cs:0,100)--(axis cs:10,100)--(axis cs:10,0);
+\draw(axis cs:10,100)node[pin=30:{\RL{زیادہ سے زیادہ}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{
+\عددی{x} اور \عددی{(20-x)} کے حاصل ضرب کی زیادہ سے زیادہ قیمت \عددی{100} ہے (مثال \حوالہ{مثال_استعمال_دو_اعداد})۔
+}
+\label{شکل_مثال_استعمال_دو_اعداد}
+\end{minipage}\hfill\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=sqrt(4-\x^2);}]
+\pgfmathsetmacro{\a}{1.25}
+\pgfmathsetmacro{\b}{f(\a)}
+\begin{axis}[axis equal,clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xmin=-2.5,xmax=3,xtick={\empty},ytick={\empty}]
+\addplot[domain=-2:-1.8,smooth]{f(x)};
+\addplot[domain=1.8:2,smooth]{f(x)};
+\addplot[domain=-1.8:1.8,smooth]{f(x)}node[pos=0.5,above left]{$x^2+y^2=4$};
+\draw(axis cs:\a,0)node[below]{$x$}--(axis cs:\a,\b)node[pin=45:{$(x,\sqrt{4-x^2})$}]{}--(axis cs:-\a,\b)--(axis cs:-\a,0)node[below]{$-x$};
+\draw(axis cs:-2,0)node[below,xshift=-2mm]{$-2$} (axis cs:2,0)node[below]{$2$};
+\end{axis}
+\end{tikzpicture}
+\caption{نصف دائرہ اور مستطیل (مثال \حوالہ{مثال_استعمال_نصف_دائرہ_میں_بند})۔}
+\label{شکل_مثال_استعمال_نصف_دائرہ_میں_بند}
+\end{minipage}
+\end{figure}
+
+
+\ابتدا{مثال}\شناخت{مثال_استعمال_نصف_دائرہ_میں_بند} \ترچھا{جیومیٹری}\\
+رداس \عددی{2} کے نصف دائرے میں ایسا مستطیل بنانا ہے کہ اس کا رقبہ زیادہ سے زیادہ ہو۔مستطیل کا زیادہ سے زیادہ رقبہ کیا ہو گا اور اس کے اضلاع کیا ہوں گے؟
+
+حل:\quad
+نصف دائرے کو کارتیسی محدد کے مبدا پر رکھتے ہوئے اس کے اندر مستطیل کو شکل \حوالہ{شکل_مثال_استعمال_نصف_دائرہ_میں_بند} میں دکھایا گیا ہے۔ مستطیل کا نچلا دایاں کونا \عددی{x} پر ہے۔ ہم مستطیل کے اضلاع اور رقبہ \عددی{S} کو \عددی{x} کی صورت میں لکھتے ہیں۔ 
+\begin{align*}
+\text{لمبائی}:2x,\quad \text{چوڑائی}:\sqrt{4-x^2},\quad \text{رقبہ}:2x\sqrt{4-x^2}
+\end{align*}
+آپ دیکھ سکتے ہیں کہ \عددی{x} (مستطیل کا منتخب کونا) کی قیمت وقفہ \عددی{0\le x\le 2} میں پائی جاتی ہے۔
+
+ہمیں استمراری تفاعل
+\begin{align*}
+S=2x\sqrt{4-x^2}
+\end{align*}
+کی مطلق زیادہ سے زیادہ قیمت وقفہ \عددی{[0,2]} پر  تلاش کرنی ہے۔ ہم نقطہ فاصل اور دائرہ کار کے آخری نقطوں پر \عددی{S} کی قیمت معلوم کرتے ہیں۔ تفاعل \عددی{S} کا تفرق
+\begin{align*}
+\frac{\dif S}{\dif x}=\frac{-2x^2}{\sqrt{4-x^2}}+2\sqrt{4-x^2}
+\end{align*}
+نقطہ \عددی{x=2} پر غیر معین اور درج ذیل نقطوں پر صفر ہے۔
+\begin{align*}
+\frac{-2x^2}{\sqrt{4-x^2}}+2\sqrt{4-x^2}&=0\\
+-2x^2+2(4-x^2)&=0&&\text{\RL{دونوں اطراف کو $\sqrt{4-x^2}$ سے ضرب دیں}}\\
+8-4x^2&=0\\
+x^2&=2\\
+x&=\mp \sqrt{2}
+\end{align*}
+\عددی{x=-\sqrt{2}} اور \عددی{x=\sqrt{2}} میں سے صرف \عددی{x=\sqrt{2}} تفاعل کے دائرہ کار کے اندر پایا جاتا ہے لہٰذا یہ صفر نقطہ فاصل ہے۔ دائرہ کار کی آخری نقطوں اور اس اکلوتے نقطہ فاصل پر تفاعل کی قیمتیں درج ذیل ہیں۔
+\begin{align*}
+S(\sqrt{2})&=2\sqrt{2}\sqrt{4-2}=4 &&\text{\RL{نقطہ فاصل پر قیمت}}\\
+S(0)&=0,\quad S(2)=0&&\text{\RL{آخری نقطوں پر قیمت}}
+\end{align*}
+یوں مستطیل کا زیادہ سے زیادہ رقبہ \عددی{4} ہے جب اس کی لمبائی \عددی{2x=2\sqrt{2}} اور چوڑائی \عددی{\sqrt{4-x^2=\sqrt{2}}} ہو گی۔
+\انتہا{مثال}
+%======================
+
+\جزوحصہء{پیئغ د فغما اور قانون ابن سھل}
+خلا میں روشنی کی رفتار \عددی{\SI{3e8}{\meter\per\second}} ہے۔ہوا میں روشنی کی رفتار اس سے معمولی کم ہے جبکہ کثیف ذریعہ مثلاً شیشہ میں اس کی رفتار مزید کم ہے (تقریباً اس کے \عددی{\tfrac{2}{3}} تیز)۔ 
+
+بصریات میں \اصطلاح{اصول فغما}\فرہنگ{اصول!فغما}\حاشیہب{Fermat's principle}\فرہنگ{Fermat's principle} کہتا ہے کہ ایک نقطہ سے دوسرے نقطہ تک  روشنی تیز ترین راستے سے پہنچتی ہے۔ اس مشاہدے کی مدد سے ہم ایک ذریعہ (مثلاً ہوا) میں نقطہ سے دوسرے ذریعہ (مثلاً پانی) میں نقطے تک روشنی کی راہ کی پیش گوئی کر سکتے ہیں۔
+
+\ابتدا{مثال}\شناخت{مثال_استعمال_مسئلہ_فغما}
+ہوا میں روشنی کی رفتار \عددی{c_1} اور پانی میں روشنی کی رفتار \عددی{c_2} لیتے ہوئے ہوا میں نقطہ \عددی{A} سے پانی میں نقطہ \عددی{B} تک روشنی کی راہ کی پیش گوئی کریں۔ہوا اور پانی کا سرحد سیدھی سطح ہے۔
+
+حل:\quad
+ہم دونوں ذریعوں کے بیچ سرحد کو \عددی{x} محور پر رکھتے ہوئے \عددی{A} تا \عددی{B} وہ راہ تلاش کرتے ہیں جس پر چلتے ہوئے روشنی کو کم سے کم وقت درکار ہو گا (شکل \حوالہ{شکل_مثال_استعمال_مسئلہ_فغما})۔ ایک یکساں ذریعہ میں شعاع کی رفتار تبدیل نہیں ہوتی ہے لہٰذا اس میں کم سے کم وقت سے مراد کم سے کم فاصلہ ہے اور شعاع دو نقطوں کے بیچ سیدھے خط پر حرکت کرتی ہے۔یوں \عددی{A} تا \عددی{B} راہ دو سیدھے خطوط پر مشتمل ہو گی۔پہلا خط \عددی{A} سے \عددی{N} تک ہو گا اور دوسرا خط \عددی{N} سے \عددی{B} تک ہو گا۔ \عددی{N} وہ نقطہ ہے جہاں شعاع ایک ذریعہ سے دوسرے ذریعہ میں داخل ہوتی ہے۔فاصل اور وقت کا تعلق درج ذیل ہے۔
+\begin{align*}
+\text{وقت}=\frac{\text{فاصلہ}}{\text{رفتار}}
+\end{align*}
+یوں \عددی{A} سے \عددی{N} تک درکار وقت
+\begin{align*}
+t_1=\frac{AN}{c_1}=\frac{\sqrt{a^2+x^2}}{c_1}
+\end{align*}
+اور \عددی{N} سے \عددی{B} تک درکار وقت
+\begin{align*}
+t_2=\frac{NB}{c_2}=\frac{\sqrt{b^2+(d-x)^2}}{c_2}
+\end{align*}
+ہو گا۔\عددی{A} سے \عددی{B} تک پہنچنے کے لئے درکار کل وقت دونوں کا مجموعہ ہو گا۔
+\begin{align}\label{مساوات_استعمال_فغما_الف}
+t=t_1+t_2=\frac{\sqrt{a^2+x^2}}{c_1}+\frac{\sqrt{b^2+(d-x)^2}}{c_2}
+\end{align}
+اس مساوات میں \عددی{t} متغیر \عددی{x} کا قابل تفرق تفاعل ہے اور تفاعل کا دائرہ کار \عددی{[0,d]} ہے۔ہم اس بند دائرہ کار پر کم سے کم وقت معلوم کرنا چاہتے ہیں۔ہم تفرق
+ \begin{align}\label{مساوات_استعمال_فغما_ب}
+\frac{\dif t}{\dif x}=\frac{x}{c_1\sqrt{a^2+x^2}}-\frac{(d-x)}{c_2\sqrt{b^2+(d-x)^2}}
+\end{align}
+لیتے ہیں جس کو شکل \حوالہ{شکل_مثال_استعمال_مسئلہ_فغما} کی مدد سے \عددی{\theta_1} اور \عددی{\theta_2} کی صورت میں لکھا جا سکتا ہے۔
+\begin{align}\label{مساوات_استعمال_فغما_پ}
+\frac{\dif t}{\dif x}=\frac{\sin \theta_1}{c_1}-\frac{\sin\theta_2}{c_2}
+\end{align} 
+مساوات \حوالہ{مساوات_استعمال_فغما_ب} سے ظاہر ہے کہ \عددی{x=0} پر \عددی{\tfrac{\dif t}{\dif x}<0} اور \عددی{x=d} پر
+ \عددی{\tfrac{\dif t}{\dif x}>0} ہو گا۔یوں اند نقطوں کے درمیان کسی نقطہ \عددی{x_0} پر \عددی{\tfrac{\dif t}{\dif x}=0} ہو گا۔چونکہ \عددی{\tfrac{\dif t}{\dif x}}  مسلسل بڑھتا تفاعل ہے (سوال \حوالہ{سوال_استعمال_مسئلہ_فغما}) لہٰذا صرف ایک ایسا نقطہ پایا جائے گا جس پر درج ذیل ہو گا۔
+\begin{align}\label{مساوات_استعمال_فغما_ت}
+\frac{\sin \theta_1}{c_1}=\frac{\sin\theta_2}{c_2}
+\end{align}
+مساوات \حوالہ{مساوات_استعمال_فغما_ت} کو \اصطلاح{ابن سھل کا قانون انعطاف}\فرہنگ{قانون انعطاف!ابن سھل}\حاشیہب{Ibn Sahl's law of relection}\فرہنگ{Ibn Sahl's law} کہتے ہیں\حاشیہد{مغربی دنیا میں اس کو {\beginL Snell's law \endL} کہتے ہیں۔}۔
+\انتہا{مثال}
+%=====================
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\angA}{70}
+\pgfmathsetmacro{\angB}{50}
+\pgfmathsetmacro{\la}{3}
+\pgfmathsetmacro{\lb}{2}
+\draw[-<-=0.5](0,0)--++(90+\angA:\la)node[left]{$A$}coordinate(TL);
+\draw[->-=0.5](0,0)node[above right]{$N$}--++(-90+\angB:\lb)coordinate(BR)node[right]{$B$};
+\draw[-latex](-3,0)--(3,0)node[right]{$x$};
+\draw(0,-2)--(0,1.5);
+\draw(TL)--($(0,0)!(TL)!(-2.5,0)$)coordinate(O)node[pos=0.5,left]{$a$};
+\draw(O)--++(0,-1.5);
+\draw(O)--++(0,1.5)node[above]{$y$};
+\path(O)--(0,0)node[pos=0.5,below]{$x$};
+\draw(BR)--($(0,0)!(BR)!(0,-1.5)$)node[pos=0.5,below]{$d-x$}coordinate(BOT);
+\path(BOT)--(0,0)node[pos=0.5,left]{$b$};
+\path(BR)--($(0,0)!(BR)!(2,0)$)coordinate(D);
+\draw(D)node[below]{$d$}--++(0,0.1);
+\draw([shift={(90:0.5)}]0,0) arc (90:90+\angA:0.5);
+\draw(0,0)++(90+\angA/2:0.8)node[]{$\theta_1$};
+\draw([shift={(-90:0.5)}]0,0) arc (-90:-90+\angB:0.5);
+\draw(0,0)++(-90+\angB/2:0.8)node[]{$\theta_2$};
+\draw(1,1)node[]{\RL{ذریعہ الف}};
+\draw(-1.5,-1)node[]{\RL{ذریعہ ب}};
+\end{tikzpicture}
+\caption{ایک ذریعہ سے دوسرے ذریعہ میں داخل ہوتے ہوئے شعاع کی راہ (مثال \حوالہ{مثال_استعمال_مسئلہ_فغما})}
+\label{شکل_مثال_استعمال_مسئلہ_فغما}
+\end{figure}
+
+\جزوحصہء{معاشیات میں لاگت اور آمدنی}
+نظریہ معاشیات میں احصاء کے اہم کردار ہے۔اس کی دو مثالیں پیش کرتے ہیں۔ پہلی مثال لاگت، آمدنی اور منافع کے تعلق  کے بارے میں ہے۔
+
+فرض کریں کہ
+\begin{enumerate}
+\item[]
+\عددی{x} ارکان فروخت کرنے سے آمدنی \عددی{r(x)} ہے۔
+\item[]
+\عددی{x} ارکان کی لاگت پیداوار \عددی{c(x)} ہے۔
+\item[]
+\عددی{x} ارکان فروخت کرنے سے منافع \عددی{p(x)=r(x)-c(x)} ہے۔
+\end{enumerate}
+
+حاشیہ آمدنی اور حاشیہ لاگت پیداوار درج ذیل ہیں۔
+\begin{align*}
+\frac{\dif r}{\dif x}&=\text{\RL{حاشیہ آمدنی}}\\
+\frac{\dif c}{\dif x}&=\text{\RL{حاشیہ لاگت}}
+\end{align*}
+ان تفرق کا آمدنی کے ساتھ تعلق کو درج ذیل مسئلہ پیش کرتا ہے۔ 
+
+\ابتدا{مسئلہ}\شناخت{مسئلہ_استعمال_زیادہ_منافع_الف}
+زیادہ سے زیادہ منافع (اگر پایا جاتا ہو) اس صورت ہو گا جب حاشیہ لاگت پیداوار اور حاشیہ آمدنی ایک دوسرے کے برابر ہوں۔
+\انتہا{مسئلہ}
+%===============
+\ابتدا{ثبوت}
+ہم فرض کرتے ہیں کہ تمام \عددی{x>0} پر \عددی{r(x)} اور \عددی{c(x)} قابل تفرق ہیں لہٰذا \عددی{p(x)=r(x)-c(x)} کی زیادہ سے زیادہ قیمت (اگر پائی جاتی ہو)  \عددی{p'(x)=0} پر پائی جائے گی۔چونکہ \عددی{p'(x)=r'(x)-c'(x)} ہے لہٰذا \عددی{p'(x)=0} سے مراد
+\begin{align*}
+r'(x)-c'(x)=0,\quad \stackrel{\text{یعنی}}{\implies} \quad r'(x)=c'(x)
+\end{align*}
+ہے۔یوں ثبوت مکمل ہوتا ہے (شکل \حوالہ{شکل_مسئلہ_استعمال_زیادہ_منافع_الف})۔
+\انتہا{ثبوت}
+%===================
+ \begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=\x^3-6*\x^2+15*\x;g(\x)=-\x^3+6*\x^2+1*\x;}]
+\pgfmathsetmacro{\a}{(6-sqrt(15))/3}
+\pgfmathsetmacro{\b}{(6+sqrt(15))/3}
+\pgfmathsetmacro{\c}{3-sqrt(2)}
+\pgfmathsetmacro{\fa}{f(\a)}
+\pgfmathsetmacro{\ga}{g(\a)}
+\pgfmathsetmacro{\fb}{f(\b)}
+\pgfmathsetmacro{\gb}{g(\b)}
+\pgfmathsetmacro{\fc}{f(\c)}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty},xlabel style={at={(current axis.right of origin)},anchor=west}]
+\addplot[domain=0:4.75]{f(x)}node[left]{\RL{$c(x)$\, لاگت}};
+\addplot[domain=0:4.75]{g(x)}node[right]{\RL{$r(x)$\, آمدنی}};
+\draw(axis cs:\a,\fa)--(axis cs:\a,\ga)coordinate[pos=0.5](kMin);
+\draw(axis cs:\b,\fb)--(axis cs:\b,\gb)coordinate[pos=0.5](kMax);
+\draw(kMax)++(0.1,0)--++(1,-1.5)node[right,align=center]{\RL{زیادہ سے زیادہ منافع}\\ $c'(x)=r'(x)$};
+\draw(kMin)++(0.1,0)--++(0.5,-0.25)node[right]{\RL{$c'(x)=r'(x)$   مقامی زیادہ سے زیادہ نقصان،کم سے کم منافع}};
+\draw[dashed](axis cs:\a,\ga)--(axis cs:\a,0);
+\draw[dashed](axis cs:\b,\fb)--(axis cs:\b,0);
+\draw(axis cs:\a,\fa)--++(axis cs:-0.5,-4.5);
+\draw(axis cs:\a,\fa)--++(axis cs:0.5,4.5);
+\draw(axis cs:\b,\fb)--++(axis cs:-0.5,-4.5);
+\draw(axis cs:\b,\fb)--++(axis cs:0.5,4.5);
+\draw(axis cs:\a,\ga)--++(axis cs:-0.35,-3.15);
+\draw(axis cs:\a,\ga)--++(axis cs:0.6,5.4);
+\draw(axis cs:\b,\gb)--++(axis cs:-0.5,-4.5);
+\draw(axis cs:\b,\gb)--++(axis cs:0.5,4.5);
+\draw(axis cs:\c,\fc)node[below]{$N$}node[pin=100:{\RL{نا منافع نا نقصان}}]{};
+\draw(axis cs:2.25,0)node[below]{\RL{تعداد اشیاء}};
+\draw(axis cs:0,25)node[above,rotate=90]{\RL{روپیہ}};
+\end{axis}
+\end{tikzpicture}
+\caption{
+عموماً تفاعل لاگت کا  مقعر پہلے نیچے اور بعد میں اوپر ہوتا ہے۔ تفاعل لاگت تفاعل آمدنی کو نا منافع نا نقصان کے نقطہ \عددی{N} پر قطع کرتا ہے۔\عددی{N} کے بائیں  خسارہ اور اس کے دائیں منافع ہو گا۔ 
+}
+\label{شکل_مسئلہ_استعمال_زیادہ_منافع_الف}
+\end{figure}
+
+ہمیں مسئلہ \حوالہ{مسئلہ_استعمال_زیادہ_منافع_الف} سے کیا ہدایت ملتی ہے؟ ایسی سطح پیداوار جہاں \عددی{p'(x)=0} ہو، پر زیادہ سے زیادہ منافع یا زیادہ سے زیادہ نقصان ہو گا۔ لیکن معاشی پیشنگوئی  کرتے ہوئے پیداوار کی ان سطحوں پر نظر رکھیں جہاں حاشیہ لاگت اور حاشیہ آمدنی ایک دوسرے کے برابر ہوں۔اگر زیادہ سے زیادہ منافع پایا جاتا ہو، وہ ان  سطح پیداوار میں سے ایک پر ہو گا۔
+\begin{figure}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=(\x^3-6*\x^2+15*\x);l(\x)=9*\x;}]
+\pgfmathsetmacro{\a}{2-sqrt(2)}
+\pgfmathsetmacro{\b}{2+sqrt(2)}
+\pgfmathsetmacro{\fa}{f(\a)}
+\pgfmathsetmacro{\la}{l(\a)}
+\pgfmathsetmacro{\fb}{f(\b)}
+\pgfmathsetmacro{\lb}{l(\b)}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\a,\b},xticklabels={$2-\sqrt{2}$,$2+\sqrt{2}$},ytick={\empty}]
+\addplot[domain=0:5]{f(x)}node[left]{$c(x)=x^3-6x^2+15x$};
+\addplot[domain=0:5.5]{l(x)}node[right]{$r(x)=9x$};
+\draw(axis cs:\a,\fa)--(axis cs:\a,\la)node[pos=0.5,pin=0:{\text{\RL{زیادہ سے زیادہ نقصان}}}]{};
+\draw(axis cs:\b,\fb)--(axis cs:\b,\lb)node[pos=0.5,pin=0:{\text{\RL{زیادہ سے زیادہ منافع}}}]{};
+%\draw[dashed](axis cs:\a,\la)--(axis cs:\a,0)node[below]{$2-\sqrt{2}$};
+%\draw[dashed](axis cs:\b,\fb)--(axis cs:\b,0)node[below]{$2+\sqrt{2}$};
+\draw(axis cs:\a,\fa)--++(axis cs:-0.5,-4.5);
+\draw(axis cs:\a,\fa)--++(axis cs:0.5,4.5);
+\draw(axis cs:\b,\fb)--++(axis cs:-0.5,-4.5);
+\draw(axis cs:\b,\fb)--++(axis cs:0.5,4.5);
+\end{axis}
+\end{tikzpicture}
+\caption{لاگت بالمقابل منافع (مثال \حوالہ{مثال_استعمال_منافع_لاگت_الف})}
+\label{شکل_مثال_استعمال_منافع_لاگت_الف}
+\end{figure}
+\ابتدا{مثال}\شناخت{مثال_استعمال_منافع_لاگت_الف}
+لاگت اور آمدنی تفاعل درج ذیل ہیں
+\begin{align*}
+r(x)=9x,\quad c(x)=x^3-6x^2+15x
+\end{align*}
+جہاں  تعداد پیداوار  \عددی{x} ہے (\عددی{x} کی اکائی \عددی{1000} اشیاء ہے)۔ کیا ایسی سطح پیداوار پائی جاتی ہے جس پر منافع زیادہ سے زیادہ ہو گا؟ اگر ایسا ہو تب زیادہ سے زیادہ منافع کس سطح پیداوار پر ہو گا؟
+
+حل:\quad
+\begin{align*}
+r(x)&=9x,\quad c(x)=x^3-6x^2+15x\\
+r'(x)&=9,\quad c'(x)=3x^2-12x+15 &&\text{\RL{$r'$ اور $c'$ تلاش کریں}}\\
+3x^2-12x+15&=9 &&\text{\RL{ایک دوسرے کے برابر پر کریں}}\\
+3x^2-12x+6&=0&&\text{\RL{ترتیب دیں}}\\
+x^2-4x+2&=0\\
+x&=\frac{4\mp\sqrt{16-4\cdot 2}}{2}&&\text{\RL{دو درجی مساوات حل کریں}}\\
+&=\frac{4\mp\sqrt{2}}{2}\\
+&=2\mp \sqrt{2}
+\end{align*}
+زیادہ سے زیادہ منافع کا امکان \عددی{2+\sqrt{2}} یا \عددی{2-\sqrt{2}} سطح پیداوار پر حاصل ہو گا (شکل \حوالہ{شکل_مثال_استعمال_منافع_لاگت_الف})۔ آپ دونوں نقطوں پر آمدنی کا حساب کر کے دیکھیں گے کہ \عددی{x=2+\sqrt{2}} پر زیادہ سے زیادہ منافع حاصل ہو گا جبکہ \عددی{x=2-\sqrt{2}} پر زیادہ سے زیادہ نقصان ہو گا۔ 
+\انتہا{مثال}
+%=====================
+
+بہترین سطح پیداوار کو کم سے کم  اوسط لاگت والی سطح پیداوار تصور کیا جا سکتا ہے۔ اگلے مسئلہ میں یہ سطح پیداوار حاصل کی گئی ہے۔ 
+
+\ابتدا{مسئلہ}\شناخت{مسئلہ_استعمال_سطح_پیداوار}
+اوسط کم سے کم لاگت پیداوار (اگر پائی جاتی ہو) اس سطح پیداوار پر ہو گی جس پر اوسط لاگت اور حاشیہ لاگت ایک دوسرے کے برابر ہوں۔
+\انتہا{مسئلہ}
+%===========================
+\ابتدا{ثبوت}
+ہم فرض کرتے ہیں کہ
+\begin{enumerate}
+\item[]
+\عددی{x>0} اشیاء کی لاگت پیداوار \عددی{c(x)}
+\item[]
+\عددی{x} اشیاء کی اوسط لاگت پیداوار \عددی{\tfrac{c(x)}{x}}
+\end{enumerate}
+قابل تفرق ہیں۔
+
+اگر لاگت کو کم سے کم کرنا ممکن ہو، یہ اس صورت ہو گا جب درج ذیل ہو۔
+\begin{align*}
+\frac{\dif}{\dif x}(\tfrac{c(x)}{x})&=0\\
+\frac{xc'(x)-c(x)}{x^2}&=0&&\text{\RL{قاعدہ حاصل تقسیم}}\\
+xc'(x)-c(x)&=0&&\text{\RL{$x^2$ سے ضرب دیں}}\\
+\underbrace{c'(x)}_{\text{\RL{حاشیہ لاگت}}}&=\underbrace{\frac{c(x)}{x}}_{\text{\RL{اوسط لاگت}}}
+\end{align*}
+\انتہا{ثبوت}
+%==========================
+
+ہمیں دھیان سے مسئلہ \حوالہ{مسئلہ_استعمال_سطح_پیداوار} استعمال  کرنا ہو گا جو یہ نہیں کہتا ہے کہ کم سے کم اوسط لاگت  کی سطح پیداوار موجود ہے بلکہ کہتا ہے کہ اگر ایسی سطح موجود ہو تب اس کو کہاں تلاش کرنا چاہیے۔ جہاں اوسط لاگت اور حاشیہ لاگت ایک دوسرے کے برابر ہوں وہاں دیکھیں کہ آیا کم سے کم اوسط لاگت پائی جاتی ہے۔
+
+\ابتدا{مثال}
+تفاعل لاگت \عددی{c(x)=x^3-6x^2+15x} ہے  (\عددی{x} کی اکائی \عددی{1000} اشیاء ہے)۔ کیا ایسی سطح پیداوار ہے جہاں اوسط لاگت کم سے کم ہو؟ اگر ایسا ہو تب اس سطح پیداوار کو تلاش کریں۔
+
+حل:\quad
+ہم جہاں اوسط لاگت اور حاشیہ لاگت ایک دوسرے کے برابر ہوں، وہاں دیکھتے ہیں۔
+\begin{align*}
+c(x)&=x^3-6x^2+15x&&\text{لاگت}\\
+c'(x)&=3x^2-12x+15&&\text{\RL{حاشیہ لاگت}}\\
+\frac{c(x)}{x}&=x^2-6x+15&&\text{\RL{اوسط لاگت}}\\
+3x^2-12x+15&=x^2-6x+15\\
+2x^2-6x&=0\\
+2x(x-3)&=0\\
+x&=0,\quad x=3
+\end{align*}
+چونکہ \عددی{x>0} ہے لہٰذا کم سے کم اوسط لاگت صرف \عددی{x=3}  ہزار کی پیداوار پر ممکن ہے۔
+
+ہم تفرق کو دیکھتے ہیں۔
+\begin{align*}
+\frac{c(x)}{x}&=x^2-6x+15&&\text{\RL{اوسط لاگت}}\\
+\frac{\dif}{\dif x}(\tfrac{c(x)}{x})&=2x-6\\
+\frac{\dif^{\,2}}{\dif x^2}(\tfrac{c(x)}{x})&=2>0
+\end{align*}
+دو رتبی تفرق مثبت ہے لہٰذا \عددی{x=3}  پر مطلق کم سے کم ہو گا۔
+\انتہا{مثال}
+
+%=========================
+
+\جزوحصہء{غیر مسلسل مظہر کا نمونہ بذریعہ تفرقی تفاعل}
+اگر آپ سوچ رہے ہوں کہ جب \عددی{x} عدد صحیح ہے (چونکہ مکمل اشیاء پیدا کیے جاتے ہیں) تب ہم لاگت اور آمدنی کو ظاہر کرنے کے لئے قابل تفرق تفاعل \عددی{c(x)} اور \عددی{r(x)} کس طرح استعمال کر سکتے ہیں۔اس پر غور کرتے ہیں۔
+
+جب \عددی{x} کی قیمت بڑی ہو تب ہم لاگت اور آمدنی کو ہموار منحنیات \عددی{c(x)} اور \عددی{r(x)} سے ظاہر کر سکتے ہیں جو نا صرف \عددی{x} کی عدد صحیح قیمتوں بالکل ان کے بیچ تمام قیمتوں پر قابل تفرق ہیں۔ان قابل تفرق تفاعل، جو \عددی{x} کی عدد صحیح قیمتوں کے لئے لاگت اور آمدنی کو ظاہر کرتے ہیں، کی قیمتوں پر ہم احصاء کی مدد سے  غور کر سکتے ہیں۔یوں حاصل نتائج کو ہم حقیقی دنیا میں منتقل کرتے ہوئے امید کرتے ہیں کہ ہم اس سے فائدہ اٹھا سکیں۔جب ہم ایسا کرتے ہوں، جیسا نظریہ معاشیات میں ہم نے کیا، ہم کہتے ہیں کہ یہ تفاعل حقیقت کا اچھا نمونہ ہے۔
+
+ایسی صورتوں میں جب احصاء کہتا ہو کہ بہترین پیداوار \عددی{x} کی غیر عدد صحیح قیمت پر ہو گی، جیسا  مثال \حوالہ{مثال_استعمال_منافع_لاگت_الف} میں \عددی{x=2+\sqrt{2}} ہزار کا جواب حاصل ہوا، تب ہم اس کا قریب ترین موزوں عدد صحیح لیتے ہیں۔ اگر ہم  \عددی{20} اشیاء کو ڈبوں میں بند کرتے ہوں تب \عددی{x=2+\sqrt{2}} ہزار کی صورت میں  ہم \عددی{3410} یا \عددی{3420} لے سکتے ہیں۔ 
+
+
+\حصہء{سوالات}
+ہر سوال کو حل کرنے سے پہلے بہتر ہو گا کہ موزوں دائرہ کار لیتے ہوئے تفاعل کو کمپیوٹر پر ترسیم کریں۔\\
+\موٹا{جیومیٹری کے مسائل}\\
+\ابتدا{سوال}
+رداس \عددی{r}  دائرہ کے محیط پر دو نقطوں سے وسط تک سیدھی لکیریں کھینچی جاتی ہیں۔اس خطہ کے محیط کی لمبائی \عددی{(2r+s)} ہے جو \عددی{\SI{100}{\meter}} کے برابر ہے۔\عددی{r} اور \عددی{s} کی کن قیمتوں سے خطے کا رقبہ زیادہ سے زیادہ ہو گا؟\\
+جواب:\quad
+$r=\SI{25}{\meter}, s=\SI{50}{\meter}$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+ایک قائمہ مثلث کا وتر \عددی{\SI{5}{\centi\meter}} ہے۔اس کا زیادہ سے زیادہ رقبہ کتنا ممکن ہے؟
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+ایک مستطیل جس کا رقبہ \عددی{\SI{16}{\centi\meter\squared}} ہے کا کم سے کم محیط کتنا ہو گا؟\\
+جواب:\quad
+$\SI{16}{\centi\meter}$
+\انتہا{سوال}
+%=============================
+\ابتدا{سوال}
+دکھائیں کہ ایک محیط کے تمام مستطیل میں اس کا رقبہ سب سے زیادہ ہو گا جو چکور ہو۔
+\انتہا{سوال}
+%=============================
+\ابتدا{سوال}\شناخت{سوال_استعمال_مثلث_میں_چکور}
+ایک قائمہ مساوی الساقین مثلث کا وتر \عددی{2} اکائیاں لمبا ہے۔اس میں محصور مستطیل کو شکل \حوالہ{شکل_سوال_استعمال_مثلث_میں_چکور} میں دکھایا گیا ہے۔
+\begin{enumerate}[a.]
+\item
+\عددی{N} کے محدد کو \عددی{x} کی صورت میں لکھیں۔(خط \عددی{AB} کی مساوات لکھ کر آپ ایسا کر سکتے ہیں۔)
+\item
+مستطیل کا رقبہ \عددی{x} کی صورت میں لکھیں۔
+\item
+مستطیل کا زیادہ سے زیادہ رقبہ کتنا ہو سکتا ہے؟
+\end{enumerate}
+جواب:\quad
+(ا) \عددی{(x,1-x)}، (ب) \عددی{A(x)=2x(1-x)}، (ج) \عددی{\tfrac{1}{2}} مربع اکائیاں
+\انتہا{سوال}
+%====================
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\len}{1.75}
+\pgfmathsetmacro{\kx}{0.6*\len}
+\pgfmathsetmacro{\ky}{\len*tan(45)}
+\draw[-latex](-2.5,0)--(3,0)node[right]{$x$};
+\draw[-latex](0,-0.25)node[below left]{$0$}--(0,2.25)node[above]{$y$};
+\draw[name path=kR](0,\ky)--(\len,0)node[below]{$1$}node[above right]{$A$};
+\draw[name path=kL](0,\ky)node[above right]{$B$}--(-\len,0)node[below]{$-1$};
+\RightAngle{(-\len,0)}{(0,\ky)}{(\len,0)};
+\path[name path=kA](-\kx,0)--++(0,\len);
+\draw[name intersections={of=kL and kA}](-\kx,0)--(intersection-1)coordinate(LL); 
+\path[name path=kB](\kx,0)--++(0,\ky);
+\draw[name intersections={of=kR and kB}](\kx,0)node[below]{$x$}--(intersection-1)node[right]{$N(x,?)$}; 
+\draw(intersection-1)--(LL);
+\end{tikzpicture}
+\caption{مثلث میں محصور مستطیل (سوال \حوالہ{سوال_استعمال_مثلث_میں_چکور})}
+\label{شکل_سوال_استعمال_مثلث_میں_چکور}
+\end{figure}
+
+\ابتدا{سوال}
+ایک مستطیل کا قاعدہ \عددی{x} محور پر ہے جبکہ اس کے بالائی دو راس قطع مکافی \عددی{y=12-x^2} پر ہیں۔اس مستطیل کا زیادہ سے زیادہ رقبہ کتنا ممکن ہے؟
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+آپ  \عددی{\SI{15}{\centi\meter}\times \SI{8}{\centi\meter}} چادر کے کونوں سے چکور چادر کاٹ کر کھلا مستطیل ڈبہ بنانا چاہتے ہیں۔اس ڈبے کی زیادہ سے زیادہ حجم کیا ہو سکتی ہے؟\\
+جواب:\quad
+$\tfrac{14}{3}\times \tfrac{35}{3}\times\tfrac{5}{3}\,\si{\centi\meter\cubed}$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+آپ \عددی{(a,0)} سے \عددی{(0,b)} تک لکیر کھینچ کر ربع اول میں بند خطہ بناتے ہیں۔دکھائیں کہ اس خطے کا رقبہ اس صورت زیادہ سے زیادہ ہو گا جب \عددی{a=b} ہو۔ 
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+ایک دریا کے کنارے مستطیل رقبے کو تین اطراف سے \عددی{\SI{800}{\meter}} کل لمبائی کی دیوار سے گھیرا جاتا ہے۔ زیادہ سے زیادہ رقبہ کتنا ہو سکتا ہے؟\\
+جواب:\quad
+$\SI{80000}{\meter\squared}$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+\عددی{\SI{216}{\meter\squared}} مستطیل رقبے کو دھاتی تار سے گھیرا جاتا ہے۔کسی ایک ضلع کے متوازی تار سے اس خطے کو دو برابر حصوں میں تقسیم کیا جاتا ہے۔کم سے کم تار استعمال کرنا مقصود ہے۔ مستطیل کی جسامت کیا ہونی چاہیے؟ تار کی کم سے کم لمبائی کیا ہو گی؟  
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}\ترچھا{کم ترین وزنی فولادی ٹینکی}\\
+بغیر ڈھکن چکور قاعدہ والی ٹینکی درکار ہے جس کا حجم \عددی{\SI{256}{\meter\cubed}} ہو۔ یہ ٹینکی \عددی{\SI{1}{\centi\meter}} موٹی فولادی چادر سے بنائی جائے گی۔ بطور انجنیئر آپ کا کام ہے کہ ہلکی ترین ٹینکی بنانے کے لئے ٹینکی کا اضلاع تلاش کریں۔ اضلاع کیا ہوں گے؟\\
+جواب:\quad
+$8\times 8\times 4\,\si{\meter\cubed}$
+\انتہا{سوال}
+%============================
+\ابتدا{سوال}\ترچھا{بارش کا پانی}\\
+بارانی علاقے میں بارش کا پانی ذخیرہ کرنے کے لئے زمین کی  کھدائی کر کے  بغیر ڈھکن \عددی{\SI{1125}{\meter\cubed}} حجم کی ٹینکی بنائی جاتی ہے جس کا قاعدہ چکور ہے۔ٹینکی کی گہرائی \عددی{y} میٹر جبکہ قاعدہ کی ضلع کی لمبائی \عددی{x} میٹر ہے۔ ٹینکی کا قاعدہ اور اطراف پر لاگت کے ساتھ ساتھ کھدائی کی لاگت بھی ہے جو حاصل ضرب \عددی{xy} کے راست متناسب ہے۔اگر کل لاگت  \عددی{c=5(x^2+4xy)+10xy} ہو تب لاگت کو کم سے کم رکھنے کی خاطر \عددی{x} اور \عددی{y}  کی ہوں گے؟ 
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+ایک مستطیل اشتہار میں \عددی{\SI{50}{\centi\meter\squared}} رقبے پر لکھائی ہو گی۔بالائی اور نچلے جانب \عددی{\SI{4}{\centi\meter}} اور اطراف پر \عددی{\SI{2}{\centi\meter}} خالی جگہ ہو گی۔کم سے کم کاغذ استعمال کرنے کے لئے مستطیل اشتہار کے اضلاع کیا ہوں گے؟ \\
+جواب:\quad
+$\SI{9}{\centi\meter}\times \SI{18}{\centi\meter}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_کرہ_میں-مخروط}
+رداس \عددی{r=3} کی کرہ میں محصور دائری مخروط کا زیادہ سے زیادہ حجم کیا ہو سکتا ہے (شکل \حوالہ{سوال_استعمال_کرہ_میں-مخروط})؟
+\انتہا{سوال}
+%=========================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\draw(0,0) circle (1cm and 0.15cm);
+\path ([shift={(0:1cm and 0.15cm)}]0,0) arc (0:180:1cm and 0.15cm)coordinate[pos=0.25](kA);
+\draw(-1,0)--(0,2)--(1,0);
+\draw(0,0.75)node[circ]{}--(kA)node[pos=0.5,shift={(45:0.2)}]{$3$};
+\draw(0,0.75)--(0,2)node[pos=0.35,left]{$3$};
+\draw(0,0.75)--(0,0)node[pos=0.5,left]{$y$}--(1,0);
+\RightAngle{(0,0.75)}{(0,0)}{(1,0)}
+\draw(0,0.75) circle (1.25);
+\end{tikzpicture}
+\caption{کرہ میں مخروط (سوال \حوالہ{سوال_استعمال_کرہ_میں-مخروط})}
+\label{شکل_سوال_استعمال_کرہ_میں-مخروط}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\la}{3}
+\pgfmathsetmacro{\lb}{1}
+\pgfmathsetmacro{\lc}{1}
+\pgfmathsetmacro{\angA}{20}
+\pgfmathsetmacro{\angB}{45}
+\draw(0,0)--++(-\angA:\la)--++(0,\lc)--++(-\angA:-\la)--++(0,-\lc);
+\draw(-\angA:\la)--++(\angB:\lb)--++(0,\lc)--++(-\angA:-\la)--++(\angB:-\lb);
+\draw(0,0)++(-\angA:\la)++(0,\lc)--++(\angB:\lb);
+\draw(-\angA:\la/2)--++(0,\lc)node[pos=0.5,pin=-155:{گولائی}]{}--++(\angB:\lb);
+\draw[dashed](0,0)--++(\angB:\lb)--++(0,\lc);
+\draw[dashed](\angB:\lb)--++(-\angA:\la);
+\draw[dashed](-\angA:\la/2)--++(\angB:\lb)--++(0,\lc);
+\draw[stealth-stealth](0,\lc)++(\angB:\lb)++(0,0.2)--++(-\angA:\la)node[pos=0.5,sloped,above]{لمبائی};
+\end{tikzpicture}
+\caption{ڈبہ برائے سوال \حوالہ{سوال_استعمال_ڈبہ_حجم_الف}}
+\label{شکل_سوال_استعمال_ڈبہ_حجم_الف}
+\end{minipage}%
+\end{figure}
+%
+\ابتدا{سوال}
+ایک مثلث کے دو اضلاع کی لمبائیاں \عددی{a} اور \عددی{b} ہیں جن کے بیچ زاویہ \عددی{\theta} ہے۔\عددی{\theta} کی کون سے قیمت مثلث کی زیادہ سے زیادہ رقبہ دے گی۔ (اشارہ: \عددی{S=\tfrac{1}{2}ab\sin \theta})\\
+جواب:\quad
+$\tfrac{\pi}{2}$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+ایک قائمہ مثلث کا وتر \عددی{\sqrt{5}} ہے جبکہ اس کے باقی اضلاع \عددی{x} اور \عددی{y} ہیں۔تفاعل \عددی{s=2x+y} کی زیادہ سے زیادہ قیمت تلاش کریں۔
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+\عددی{\SI{1000}{\centi\meter}} حجم کا بغیر ڈھکن قائمہ دائری بیلن  بنایا جاتا ہے۔ کم سے کم بیلن کی جسامت تلاش کریں۔\\
+جواب:\quad
+$r=h=\tfrac{10}{\sqrt[3]{\pi}}\,\si{\centi\meter}$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+\عددی{\SI{1000}{\centi\meter}} حجم کا  قائمہ دائری بیلنی ڈبہ  بنایا جاتا ہے۔چادر سے بیلن کے اطراف کاٹتے ہوئے کوئی مال ضائع نہیں ہوتا ہے البتہ بالائی اور نچلے دائری حصے کو \عددی{2r\times 2r} چکور سے کاٹتے ہوئے مال ضائع ہوتا ہے۔یوں ایک ڈبہ بنانے کے لئے \عددی{S=8r^2+2\pi rh} رقبے کی چادر درکار ہو گی نا کہ \عددی{S=2\pi r^2+2\pi r h} (مثال \حوالہ{مثال_استعمال_بیلن_چادر})۔ مثال  \حوالہ{مثال_استعمال_بیلن_چادر} میں کم سے کم لاگت کے لئے \عددی{h} اور \عددی{r} کا تعلق \عددی{h=2r}  تھا۔اب ان کا تعلق کیا ہو گا؟
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_ڈبہ_حجم_الف}
+(ا) ایک مستطیل ڈبہ کی لمبائی اور گولائی کا مجموعہ \عددی{\SI{108}{\centi\meter}} ہے (شکل \حوالہ{شکل_سوال_استعمال_ڈبہ_حجم_الف})۔ اس ڈبے  کے سر چکور ہیں۔اس ڈبے کی زیادہ سے زیادہ حجم کیا ہو سکتی ہے؟   (ب) اس ڈبے کی لمبائی بالمقابل حجم ترسیم کریں اور جزو-الف کے جواب کے ساتھ موازنہ کریں۔\\
+جواب:\quad
+$\SI{18}{\centi\meter}\times\SI{18}{\centi\meter}\times \SI{36}{\centi\meter}$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+گزشتہ سوال میں چکور سروں کی بجائے چکور اطراف تصور کریں۔یوں ڈبے کا حجم \عددی{h\times h\times w} اور  گولائی \عددی{2h+2w} ہو گی۔ اب ڈبے کی زیادہ سے زیادہ حجم کیا ہو گی؟
+\انتہا{سوال}
+%=================
+\ابتدا{سوال}\شناخت{سوال_استعمال_خیالی_بیلن}
+(ا) ایک مستطیل چادر جس کا محیط \عددی{\SI{36}{\centi\meter}} اور  اضلاع \عددی{x} اور \عددی{y} ہیں کو گول کرتے ہوئے بیلن بنایا جاتا ہے جس کے سر کھلے ہیں۔اس بیلن کی زیادہ سے زیادہ حجم کیا ہو سکتی ہے؟ (ب) اس مستطیل چادر کے ایک کنارے کو محور تصور کرتے ہوئے، چادر کو اس محور کے گرد گھمایا جاتا ہے جو خیالی بیلنی صورت بناتا ہے۔اس بیلن کا زیادہ سے زیادہ حجم کیا ہو گا؟   (شکل \حوالہ{شکل_سوال_استعمال_خیالی_بیلن})\\
+جواب:\quad
+(ا) \عددی{\SI{12}{\centi\meter}}، \عددی{\SI{6}{\centi\meter}}؛ (ب)  \عددی{\SI{12}{\centi\meter}}، \عددی{\SI{6}{\centi\meter}}
+\انتہا{سوال}
+%=====================
+\begin{figure}
+\centering
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\draw(0,0) rectangle ++(3,2);
+\draw(1.5,0)node[below]{$x$};
+\draw(0,1)node[left]{$y$};
+\end{tikzpicture}
+\end{subfigure}%
+\begin{subfigure}{0.2\textwidth}
+\centering
+\begin{tikzpicture}
+\draw(0,2)  circle (0.5cm and 0.25cm);
+\draw([shift={(0:0.5cm and 0.25cm)}]0,0) arc (0:-180:0.5cm and 0.25cm);
+\draw(-0.5,0)--++(0,2)node[pos=0.5,left]{$y$};
+\draw(0.5,0)--++(0,2);
+\draw(0,2)++(25:0.5cm and 0.25cm)node[pin=45:{محیط $x$}]{};
+\end{tikzpicture}
+\end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[name path=kC](0,2)  circle (2cm and 0.5cm);
+\draw([shift={(0:2cm and 0.5cm)}]0,0)arc (0:-180:2cm and 0.5cm);
+\draw(-2,0)--++(0,2)node[pos=0.5,left]{$y$};
+\draw(2,0)--++(0,2);
+\path[name path=kA](0,2)--++(0,-1);
+\draw[name intersections={of={kA and kC}}](0,2)--(intersection-1);
+\path[name path=kB](0,2)--++(-160:2);
+\draw[name intersections={of={kB and kC}}](0,2)--(intersection-1)node[pos=0.5,above]{$x$};
+\end{tikzpicture}
+\end{subfigure}
+\caption{چادر اور بیلن (سوال \حوالہ{سوال_استعمال_خیالی_بیلن})}
+\label{شکل_سوال_استعمال_خیالی_بیلن}
+\end{figure}
+%
+\ابتدا{سوال}
+ایک قائمہ مثلث کا وتر \عددی{\sqrt{3}} ہے۔اس کو ایک ضلع کے گرد گھما کر فرضی مخروط  بنایا جاتا ہے۔اس مخروط کا زیادہ سے زیادہ حجم کیا ممکن ہے اور اس کا رداس اور قد کیا ہوں گے؟
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\ترچھا{دائرہ بالمقابل چکور}
+\begin{enumerate}[a.]
+\item
+\عددی{\SI{4}{\meter}} لمبی تار کو دو ٹکڑوں میں تقسیم کرتے ہوئے ایک چکور اور ایک دائرہ بنایا جاتا ہے۔ ان ٹکڑوں کی لمبائیاں کیا ہوں گی کہ دائرے اور چکور کا مجموعی رقبہ زیادہ سے زیادہ ہو؟
+\item
+چکور اور دائرے کے مجموعی رقبے کو دائرے کی رداس کا تفاعل لکھ کر ترسیم کریں۔جزو الف میں حاصل جواب کے ساتھ ہم آہنگی دیکھیں۔
+\item
+اب کل رقبے کو چکور کے ضلع کی لمبائی کا تفاعل لکھ کر ترسیم کریں اور جزو الف میں حاصل جواب کے ساتھ ہم آہنگی دیکھیں۔
+\end{enumerate}
+جواب:\quad
+(ا) دائرے کا محیط \عددی{\SI{4}{\meter}} ہے۔
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+مکعب اور کرہ کی سطحی رقبوں کے مجموعے کو مستقل رکھیں۔ مکعب کے ضلع اور کرہ کے رداس کی کون سی نسبت (ا) کم سے کم، (ب) زیادہ سے زیادہ مجموعی حجم دے گی؟
+\انتہا{سوال}
+%=============================
+\ابتدا{سوال}\شناخت{سوال_استعمال_کھڑکی}
+ایک مستطیل شیشہ کے اوپر نصف دائری شیشہ مل کر کھڑکی بناتے ہیں (شکل \حوالہ{شکل_سوال_استعمال_کھڑکی})۔مستطیل شیشہ شفاف ہے جبکہ نصف دائری شیشہ ہلکا سیاہ ہے اور فی مربع رقبہ نصف روشنی کو گزرنے دیتا ہے۔ کھڑکی کا محیط مستقل ہے۔زیادہ سے زیادہ روشنی کے لئے کھڑکی کی جسامت تلاش کریں۔ \\
+جواب:\quad
+اگر نصف دائرے کا رداس \عددی{r}، مستطیل کا قاعدہ \عددی{2r} اور اس کی بلندی \عددی{h} ہوں تب \عددی{\tfrac{2r}{h}=\tfrac{8}{4+\pi}} ہو گا۔
+\انتہا{سوال}
+%=================================
+\ابتدا{سوال}
+ایک بیلنی گودام تعمیر کرنی ہے جس کی چھت نصف کروی ہو گی۔ فی مربع سطحی رقبہ نصف کرہ پر لاگت بیلنی دیوار کی فی مربع سطحی رقبہ کی لاگت سے دگنی ہے۔مستقل حجم کی صورت میں کم سے کم کل لاگت کے لئے گودام کی جسامت تلاش کریں۔تعمیر میں نچلی سطح (زمین) پر لاگت اور ضیاع کو نظر انداز کریں۔ 
+\انتہا{سوال}
+%==============================
+\ابتدا{سوال}\شناخت{سوال_استعمال_پانی_نالی}
+ایک پانی کی نالی تعمیر کرنی ہے جس کی جسامت شکل \حوالہ{شکل_سوال_استعمال_پانی_نالی} میں دکھائی گئی ہے۔ صرف زاویہ \عددی{\theta} متغیر ہے۔ زیادہ سے زیادہ حجم کے لئے \عددی{\theta} کی قیمت تلاش کریں۔\\
+جواب:\quad
+$\tfrac{\pi}{6}$
+\انتہا{سوال}
+%==========================
+\begin{figure}
+\centering
+\begin{minipage}{0.25\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{2}
+\pgfmathsetmacro{\b}{0.75}
+\draw(0,0)rectangle++(\a,\b);
+\draw([shift={(0:\a/2)}]\a/2,\b) arc (0:180:\a/2);
+\end{tikzpicture}
+\caption{کھڑکی (سوال \حوالہ{سوال_استعمال_کھڑکی})}
+\label{شکل_سوال_استعمال_کھڑکی}
+\end{minipage}\hfill
+\begin{minipage}{0.75\textwidth}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{0.5}
+\pgfmathsetmacro{\b}{2.5}
+\pgfmathsetmacro{\angA}{30}
+\pgfmathsetmacro{\angB}{20}
+\draw(0,0)--++(90+\angA:\a)--++(\angB:\b)coordinate(kL);
+\draw[name path=ka](0,0)--(\a,0)--++(\angB:\b)--++(90-\angA:\a)--++(\angB:-\b)--++(90-\angA:-\a);
+\path[name path=kb](0,0)--++(\angB:\b);
+\draw[name intersections={of=ka and kb}](0,0)--(intersection-2);
+\path[name path=kc] (kL)--++(90+\angA:-\a);
+\draw[name intersections={of=ka and kc}](kL)--(intersection-1);
+\end{tikzpicture}
+\end{subfigure}%
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{1}
+\pgfmathsetmacro{\angA}{40}
+\draw(0,0)--++(\a,0)--++(90-\angA:\a);
+\draw(0,0)--++(90+\angA:\a);
+\draw[dashed](0,0)--(0,\a);
+\draw[dashed](\a,0)--++(0,\a);
+\draw(90+\angA/2:0.5)node[]{$\theta$};
+\draw(\a,0)++(90-\angA/2:0.5)node[]{$\theta$};
+\draw[stealth-stealth](0,-0.3)--++(\a,0)node[pos=0.5,fill=white]{$x$};
+\draw[stealth-stealth](180+\angA:0.3)--++(90+\angA:\a)node[pos=0.5,fill=white]{$x$};
+\draw[stealth-stealth](\a,0)++(-\angA:0.3)--++(90-\angA:\a)node[pos=0.5,fill=white]{$x$};
+\end{tikzpicture}
+\end{subfigure}%
+\caption{پانی کی نالی (سوال \حوالہ{سوال_استعمال_پانی_نالی})}
+\label{شکل_سوال_استعمال_پانی_نالی}
+\end{minipage}\hfill
+\end{figure}
+%
+\ابتدا{سوال}\شناخت{سوال_استعمال_کاغذ}
+ایک مستطیل \عددی{\SI{8.5}{\centi\meter}\times \SI{11}{\centi\meter}} کاغذ  کو مستوی پر رکھا جاتا ہے (شکل \حوالہ{شکل_سوال_استعمال_کاغذ})۔ کونا \عددی{A} کو مخالف لمبے ضلع پر رکھ کر کاغذ کو چپٹا کیا جاتا ہے۔ لمبائی \عددی{RP} کو کم سے کم کرنا مقصود ہے۔
+\begin{enumerate}[a.]
+\item
+کاغذ استعمال کرتے ہوئے اس لمبائی کو کم سے کم کریں۔
+\item
+دکھائیں \عددی{L^2=\tfrac{2x^3}{2x-8.5}}
+\item
+\عددی{x} کی کون سی قیمت \عددی{L^2} کو کم سے کم بناتی ہے؟
+\item
+\عددی{x} کی کم سے کم قیمت کیا ہے؟
+\item
+\عددی{x} بالمقابل \عددی{L} ترسیم کریں اور جزو-ب کے جواب کے ساتھ موازنہ کریں۔
+\end{enumerate}
+\انتہا{سوال}
+%=========================
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{2}
+\pgfmathsetmacro{\b}{2.5}
+\pgfmathsetmacro{\x}{1.5}
+\pgfmathsetmacro{\ang}{acos((\a-\x)/\x)}
+\draw[name path=a](0,0)node[left]{$A$}--++(\a,0)node[right]{$B$}--++(0,\b)node[right]{$C$}--++(-\a,0)node[left]{$D$}--++(0,-\b);
+\draw(\x,0)node[below]{$P$}--++(\ang:\x)coordinate(k)node[right]{$A'$}node[pos=0.5,above left]{$x$};
+\path[name path=b](k)--++(\ang+90:2.75);
+\draw[name intersections={of={a and b}}](k)--(intersection-2)node[left]{$R$}--(\x,0)node[pos=0.5,below left]{$L$};
+\draw(\x/2,0)node[above]{$x$};
+\RightAngle{(\x,0)}{(k)}{(intersection-2)}
+\end{tikzpicture}
+\caption{کاغذ برائے سوال \حوالہ{سوال_استعمال_کاغذ}}
+\label{شکل_سوال_استعمال_کاغذ}
+\end{figure}
+\موٹا{طبعی استعمال}\\
+\ابتدا{سوال}
+انتصابی حرکت کرتی ایک جسم کی اونچائی  \عددی{s=-\tfrac{1}{2}gt^2+v_0t+s_0,\, g>0} ہے جہاں \عددی{t} سیکنڈوں اور \عددی{s} میٹروں میں ہے۔جسم کی زیادہ سے زیادہ اونچائی کیا ہو گی؟\\
+جواب:\quad
+$\tfrac{v_0^2}{2g}+s_0$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+ایک عمارت سے \عددی{\SI{9}{\meter}} کے فاصلے پر \عددی{\SI{2.5}{\meter}} اونچی دیوار ہے۔دیوار کی دوسری طرف سے عمارت تک سیڑھی لگائی جاتی ہے۔ سیڑھی کی کم سے کم لمبائی کیا ہو گی؟ 
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\ترچھا{شہتیر کہ مضبوطی}\quad
+لکڑی کی شہتیر کی مضبوطی \عددی{M} اس کی چوڑائی \عددی{w} ضرب مربع گہرائی \عددی{d} کے راست تناسب ہوتی ہے یعنی \عددی{M=kwd^2} جہاں \عددی{k} تناسبی مستقل ہے۔
+\begin{enumerate}[a.]
+\item
+\عددی{\SI{30}{\centi\meter}} قطر کے لکڑ سے  کس جسامت کی مضبوط سے مضبوط شہتیر حاصل کی جا سکتی ہے؟  
+\item
+تناسبی مستقل کو \عددی{k=1} لیتے ہوئے \عددی{M} بالمقابل \عددی{w} ترسیم کریں۔ جزو-الف کے جواب کے ساتھ موازنہ کریں۔
+\item
+تناسبی مستقل کو \عددی{k=1} لیتے ہوئے \عددی{M} بالمقابل \عددی{d} ترسیم کریں۔ جزو-الف کے جواب کے ساتھ موازنہ کریں۔  \عددی{k} تبدیل کرنے سے جواب پر کیا اثر ہو گا؟
+\end{enumerate}
+جواب:\quad
+(ا) \عددی{\tfrac{30}{\sqrt{3}}\,\si{\centi\meter}\times \tfrac{30\sqrt{2}}{\sqrt{3}}\,\si{\centi\meter}}
+\انتہا{سوال}
+%============
+\ابتدا{سوال}\ترچھا{شہتیر کی سختی}\quad
+شہتیر کی سختی \عددی{S} اس کی چوڑائی \عددی{w} ضرب مکعب گہرائی \عددی{d} کے راست تناسب ہوتی ہے یعنی \عددی{S=kwd^3} جہاں \عددی{k} تناسبی مستقل ہے۔ 
+\begin{enumerate}[a.]
+\item
+\عددی{\SI{30}{\centi\meter}} قطر کی لکڑ سے سخت سے سخت شہتیر حاصل کریں۔ شہتیر کی جسامت کیا ہو گی؟
+\item
+\عددی{k=1} لیتے ہوئے \عددی{S} بالمقابل \عددی{w} ترسیم کریں۔جزو-الف میں حاصل جواب کے ساتھ موازنہ کریں۔
+\item
+\عددی{k=1} لیتے ہوئے \عددی{S} بالمقابل \عددی{d} ترسیم کریں۔جزو-الف میں حاصل جواب کے ساتھ موازنہ کریں۔ \عددی{k} تبدیل کرنے سے جواب پر کیا اثر ہو گا؟
+\end{enumerate}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+لمحہ \عددی{t} پر ایک بلب میں برقی رو \عددی{i=2\cos t+2\sin t} ہے۔ رو کی زیادہ سے زیادہ لمحاتی قیمت کیا ہو گی؟\\
+جواب:\quad
+$2\sqrt{2}\,\si{\ampere}$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+بے رگڑ ریڑھی کو افقی مستوی پر رکھ کر اسپرنگ کے ذریعہ قریبی دیوار کے ساتھ باندھا جاتا ہے۔لمحہ \عددی{t=0} پر ساکن مقام سے اس کو \عددی{\SI{10}{\centi\meter}} دور کھینچ کر چھوڑا جاتا ہے تا کہ یہ \عددی{4} سیکنڈوں کے لئے مستوی پر آگے پیچھے حرکت کر سکے۔لمحہ \عددی{t} پر اس کا مقام \عددی{s=10\cos \pi t} ہے۔
+\begin{enumerate}[a.]
+\item
+ریڑھی کی زیادہ سے زیادہ رفتار کب اور  کتنی ہو گی؟ تب ریڑھی کا مقام اور اس کی اسراع  کیا ہو گی؟
+\item
+جس لمحہ ریڑھی کی اسراع زیادہ سے زیادہ ہو اس لمحہ ریڑھی کا مقام کیا ہو گا؟ تب اس کی رفتار کیا ہو گی؟ 
+\end{enumerate}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+علیحدہ علیحدہ اسپرنگ کے ذریعہ چھت سے دو کمیتوں کو قریب قریب لٹکایا جاتا ہے۔ان کے مقام بالترتیب  \عددی{s_1=2\sin t}اور \عددی{s_2=\sin 2t} ہیں۔
+\begin{enumerate}[a.]
+\item
+کس لمحہ کمیت ایک دوسرے کے قریب سے گزرتے ہیں؟ (اشارہ: \عددی{\sin 2t=2\sin t\cos t})
+\item
+وقفہ \عددی{0\le t\le 2\pi} کے دوران ان کے درمیان انتصابی فاصلہ زیادہ سے زیادہ کب اور کتنا ہو گی؟ \\(اشارہ: \عددی{\cos 2t=2\cos^2t-1}) 
+\end{enumerate} 
+جواب:\quad
+(ا) جب \عددی{\pi} کا عدد صحیح مضرب \عددی{t} ہو۔  (ب) \عددی{t=\tfrac{2\pi}{3}}، \عددی{t=\tfrac{4\pi}{3}}، \عددی{t=3\tfrac{\sqrt{3}}{2}}
+\انتہا{سوال}
+%============
+\ابتدا{سوال}
+\عددی{s} محور پر دو ذرات کے مقام \عددی{s_1=\sin t} اور \عددی{s_2=\sin(t+\tfrac{\pi}{3})} ہیں۔
+\begin{enumerate}[a.]
+\item
+وقفہ \عددی{0\le t\le 2\pi} میں دونوں ذرات ایک دوسرے سے کم ملتے ہیں؟
+\item
+ذرات ایک دوسرے سے کب دور ترین ہوتے ہیں؟
+\item
+وقفہ \عددی{0\le t\le 2\pi} میں ان کے بیچ فاصلہ کی تبدیلی تیز ترین ہو گی؟
+\end{enumerate}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+لمحہ \عددی{t} پر \عددی{x} محور پر ایک ذرے کا مقام \عددی{x=(t-1)(t-4)^4} ہے۔
+\begin{enumerate}[a.]
+\item
+ذرہ ساکن کب ہو گا؟
+\item
+کس وقفے کے دوران ذرہ بائیں رخ حرکت کرتا ہے؟
+\item
+بائیں رخ حرکت کرتے ہوئے ذرے کی تیز سے تیز رفتار کیا ہو گی؟
+\item
+وقفہ \عددی{0\le t\le 6} کے لئے \عددی{x} بالمقابل \عددی{t} ترسیم کریں۔اسی وقفہ کے لئے \عددی{\tfrac{\dif x}{\dif t}} بالمقابل \عددی{t} کو بھی ترسیم کریں۔ ترسیمات کا ایک دوسرے کے ساتھ اور حاصل جوابات کے ساتھ موازنہ کریں۔
+\end{enumerate}
+جواب:\quad
+(ا) \عددی{t=\tfrac{8}{5}}، \عددی{t=4}؛ (ب) \عددی{ \tfrac{8}{5}<t<4}؛ (ج) \عددی{\tfrac{2187}{125}} اکائی فی وقت
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+دوپہر کے وقت \عددی{t=0}  بحری جہاز ب کے عین شمال میں بحری جہاز الف موجود ہے۔بحری جہاز الف \عددی{\SI{24}{\kilo\meter\per\hour}} کی رفتار سے جنوب کی طرف رواں ہے جبکہ بحری جہاز ب مشرق کی طرف \عددی{\SI{16}{\kilo\meter\per\hour}} کی رفتار سے رواں ہے۔
+\begin{enumerate}[a.]
+\item
+ان کے بیچ فاصلہ \عددی{s} کو \عددی{t} کی صورت میں لکھیں جہاں \عددی{s} کلومیٹر اور \عددی{t} گھنٹوں میں ہے۔
+\item
+دوپہر کے وقت ان کے بیچ فاصلہ کس شرح سے تبدیل ہو گا؟ ایک گھنٹہ بعد یہ شرح کیا ہو گی؟
+\item
+اس دن حد نظر \عددی{\SI{10}{\kilo\meter}} تھی۔ کیا ان بحری جہازوں نے ایک دوسرے کو دیکھا ہو گا؟ 
+\item
+\عددی{0\le t\le 3} کے لئے \عددی{s} بالمقابل \عددی{t} اور \عددی{\tfrac{\dif s}{\dif t}} بالمقابل \عددی{t} ترسیم کریں۔ ترسیمات کا حاصل جوابات کے ساتھ موازنہ کریں۔
+\item
+ایسا معلوم ہوتا ہے کہ ربع اول میں \عددی{\tfrac{\dif s}{\dif t}} کی ترسیم کا افقی متقارب پایا جاتا ہے۔اس کا مطلب ہے  کہ \عددی{t\to \infty} کرنے سے \عددی{\tfrac{\dif s}{\dif t}} کی تحدیدی قیمت پائی جائے گی۔ اس حد کو تلاش کریں۔ اس حد کا انفرادی رفتاروں کے ساتھ کیا تعلق ہے؟
+\end{enumerate}
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}\شناخت{سوال_استعمال_زاویہ_آمد_اور_انعکاس}
+بصریات میں \اصطلاح{اصول فغما} کہتا ہے کہ ایک نقطہ سے دوسرے نقطہ تک  روشنی اس راستے سے پہنچتی ہے جس پر کم سے کم وقت درکار ہو۔ شکل \حوالہ{شکل_سوال_استعمال_زاویہ_آمد_اور_انعکاس} میں نقطہ الف سے شعاع خارج ہو کر  آئینہ سے انعکاس کرتے ہوئے نقطہ ب تک پہنچتی ہے۔ دکھائیں کہ اگر شعاع اصول فغما کو مطمئن کرتا ہو تب زاویہ آمد اور زاویہ انعکاس ایک دوسرے کے برابر ہوں گے۔ (یہ نتیجہ بغیر احصاء کے خالصتاً جیومیٹری کی مدد سے حاصل کیا جا سکتا ہے۔)
+\انتہا{سوال}
+%=======================
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\ang}{60}
+\pgfmathsetmacro{\len}{2}
+\draw(-2,0)--(2,0)node[pos=0.5,below]{\RL{مستوی آئینہ}};
+\draw[->-=0.5](0,0)--++(90-\ang:\len)node[right]{ب};
+\draw[-<-=0.5](0,0)--++(90+\ang:\len)node[left]{الف};
+\draw(0,0)--++(0,1.5)node[above]{عمود};
+\draw([shift={(90:0.5)}]0,0) arc (90:90-\ang:0.5);
+\draw(90-\ang/2:0.8)node[]{$\theta_2$};
+\draw(90-\ang/2:1.5)node[]{\RL{زاویہ انعکاس}};
+\draw([shift={(90:0.5)}]0,0) arc (90:90+\ang:0.5);
+\draw(90+\ang/2:0.8)node[]{$\theta_1$};
+\draw(90+\ang/2:1.5)node[]{\RL{زاویہ آمد}};
+\end{tikzpicture}
+\caption{زاویہ آمد اور زاویہ انعکاس ایک دوسرے کے برابر ہوں گے (سوال \حوالہ{سوال_استعمال_زاویہ_آمد_اور_انعکاس})}
+\label{شکل_سوال_استعمال_زاویہ_آمد_اور_انعکاس}
+\end{figure}
+%
+\ابتدا{سوال}\ترچھا{عمل انگیز:}\quad
+\اصطلاح{عمل انگیز}\فرہنگ{عمل انگیز}\حاشیہب{catalyst}\فرہنگ{catalyst} اس مادہ کو کہتے ہیں جس کی موجودگی کیمیائی تعامل کی شرح پر اثر انداز ہوتی ہے اور جو خود جوں کا توں رہتا ہے۔ \اصطلاح{خود عمل انگیز}\فرہنگ{عمل انگیز!خود}\حاشیہب{autocatalyst}\فرہنگ{autocatalyst} کیمیائی تعامل اس کو کہتے ہیں جس میں حاصل کیمیا خود اس تعامل کے عمل انگیز ہوں۔خود عمل انگیز کیمیائی تعامل کی ایک مثال  \عددی{\SI{13}{\celsius}} سے کم درجہ پر پڑا ہوا دھاتی ٹین کا کچھ عرصہ میں سفید برادہ میں تبدیل ہونا ہے۔یہ برادہ خود اس کیمیائی تعامل کا عمل انگیز ہے۔اس  قسم کے تعامل کی شرح شروع میں کم ہوتی ہے جو عمل انگیز پیدا ہونے کے بعد رفتار پکڑتی ہے اور آخر میں ابتدائی کیمیا کم ہونے کی بنا دوبارہ آہستہ ہوتی ہے۔
+ 
+اس قسم کے تعامل کی رفتار \عددی{v=\tfrac{\dif x}{\dif t}} ابتدائی مواد اور پیدا مواد کے حاصل ضرب کے راست متناسب ہو گی، یعنی
+\begin{align*}
+v=kx(a-x)=kax-kx^2
+\end{align*} 
+جہاں \عددی{a} مواد کی ابتدائی مقدار، \عددی{x} پیدا مواد کی مقدار اور \عددی{k} تناسبی مستقل ہے۔\عددی{x} کی وہ قیمت تلاش کریں جو زیادہ سے زیادہ  \عددی{v} دیگا؟ \عددی{v} کی زیادہ سے زیادہ قیمت کیا ہو گی؟
+\انتہا{سوال}
+%===========================
+\موٹا{ریاضیاتی استعمال}\\
+\ابتدا{سوال}
+کیا تفاعل \عددی{f(x)=x^2-x+1} کبھی منفی بھی ہوتا ہے؟ تفصیل پیش کریں۔\\
+جواب:\quad
+نہیں۔ تفاعل کی مطلق کم سے کم قیمت \عددی{\tfrac{3}{4}} ہے۔ 
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+آپ سے پوچھا گیا ہے کہ آیا تفاعل \عددی{f(x)=3+4\cos x+\cos 2x} کبھی منفی بھی ہوتا ہے۔
+\begin{enumerate}[a.]
+\item
+سمجھائیں کہ آپ کو  کیوں وقفہ \عددی{[0,2\pi]} میں \عددی{x} کی قیمتوں کے لئے تفاعل پر غور کرنا ہو گا۔
+\item
+کیا \عددی{f} کبھی منفی ہو گا؟ سمجھائیں۔
+\end{enumerate}
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+منحنی \عددی{y=\sqrt{x}} پر نقطہ \عددی{(c,0)} کا قریب ترین نقطہ تلاش کریں۔ (ا) \عددی{c\ge \tfrac{1}{2}} ہے، (ب) \عددی{c<\tfrac{1}{2}} ہے۔\\
+جواب:\quad
+(ا) \عددی{(c-\tfrac{1}{2},\sqrt{c-\tfrac{1}{2}})}؛ (ب) \عددی{(0,0)}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+\عددی{a} کی کس قیمت کے لئے \عددی{f(x)=x^2+\tfrac{a}{x}} کا (ا) \عددی{x=2} پر مقامی کم سے کم قیمت ہو گی، (ب) \عددی{x=1} پر نقطہ تصریف ہو گا۔
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+\عددی{a} اور \عددی{b} کی کون سی قیمتوں کے لئے \عددی{f(x)=x^3+ax^2+bx} کی (ا) \عددی{x=-1} پر مقامی زیادہ سے زیادہ اور \عددی{x=3} پر مقامی کم سے کم قیمت ہو گی، (ب) \عددی{x=4} پر مقامی کم سے کم اور \عددی{x=1} پر نقطہ تصریف ہو گا۔\\
+جواب:\quad
+(ا) \عددی{a=-3, b=-9}؛ (ب) \عددی{a=-3,b=-24}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+دکھائیں کہ \عددی{a} کی کسی بھی قیمت کے لئے \عددی{f(x)=x^2+\tfrac{a}{x}} کی مقامی کم سے کم قیمت نہیں پائی جاتی ہے۔
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+\begin{enumerate}[a.]
+\item
+وقفہ \عددی{0<x<\pi} پر تفاعل \عددی{y=\cos x-\sqrt{2}\csc x} کی مطلق زیادہ سے زیادہ قیمت پائی جاتی ہے۔ اس کو تلاش کریں۔
+\item
+تفاعل کو ترسیم کرتے ہوئے حاصل جواب کے ساتھ موازنہ کریں۔
+\end{enumerate}
+جواب:\quad
+(ا) \عددی{y=-1}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+\begin{enumerate}[a.]
+\item
+وقفہ \عددی{0<x<\tfrac{\pi}{2}} پر تفاعل \عددی{y=\tan x +3\cot x} کی مطلق کم سے کم  قیمت پائی جاتی ہے۔ اس کو تلاش کریں۔
+\item
+تفاعل کو ترسیم کرتے ہوئے حاصل جواب کے ساتھ موازنہ کریں۔
+\end{enumerate}
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+منحنی \عددی{y=\sqrt{x}} نقطہ \عددی{(\tfrac{1}{2},16)} کے کتنا نزدیک آتی ہے؟\\
+جواب:\quad
+$\tfrac{7\sqrt{17}}{2}$
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}\شناخت{سوال_استعمال_مماس_اور_فرق}
+فرض کریں کہ \عددی{f(x)} اور \عددی{g(x)} قابل تفرق ہیں جنہیں شکل \حوالہ{شکل_سوال_استعمال_مماس_اور_فرق} میں دکھایا گیا ہے۔ ان کے بیچ زیادہ سے زیادہ فاصلہ نقطہ \عددی{x=c} پر پایا جاتا ہے۔کیا اس نقطے پر ان تفاعل کے مماس میں کوئی خاص بات پائی جاتی ہے؟ اپنے جواب کی وجہ پیش کریں۔
+\انتہا{سوال}
+%===================
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw[-latex](0,0)--++(4.25,0)node[right]{$x$};
+\draw[name path=a](0.25,0.25)node[left]{$y=f(x)$} to [out=80,in=-170]coordinate[pos=0.5](kT)++(4,1.8);
+\draw[name path=b](0.25,0.75) to [out=-10,in=-100]++(4,2)node[left]{$y=g(x)$};
+\draw[dashed,name intersections={of={a and b}}] (intersection-1)--($(0,0)!(intersection-1)!(4,0)$)node[below]{$a$}  (intersection-2)--($(0,0)!(intersection-2)!(4,0)$)node[below]{$b$};
+\draw[dashed](kT)--($(0,0)!(kT)!(4,0)$)node[below]{$c$};
+\end{tikzpicture}
+\caption{ترسیمات برائے سوال \حوالہ{سوال_استعمال_مماس_اور_فرق}}
+\label{شکل_سوال_استعمال_مماس_اور_فرق}
+\end{figure}
+%
+\ابتدا{سوال}
+دکھائیں کہ مثبت عدد صحیح \عددی{a}، \عددی{b}، \عددی{c} اور \عددی{d} کی صورت میں \عددی{\tfrac{(a^2+1)(b^2+1)(c^2+1)(d^2+1)}{abcd}\ge 16} ہو گا۔
+\انتہا{سوال}
+%===============================
+\ابتدا{سوال}\شناخت{سوال_استعمال_مسئلہ_فغما} (مثال \حوالہ{مثال_استعمال_مسئلہ_فغما} کا \عددی{\tfrac{\dif t}{\dif x}})\\
+\begin{enumerate}[a.]
+\item
+دکھائیں کہ \عددی{f(x)=\tfrac{x}{\sqrt{a^2+x^2}}} متغیر \عددی{x} کا بڑھتا تفاعل ہے۔
+\item
+دکھائیں کہ \عددی{g(x)=\tfrac{d-x}{\sqrt{b^2+(d-x)^2}}} متغیر \عددی{x} کا گھٹتا تفاعل ہے۔
+\item
+دکھائیں کہ \عددی{\tfrac{\dif t}{\dif x}=\tfrac{x}{c_1\sqrt{a^2+x^2}}-\tfrac{d-x}{c_2\sqrt{b^2+(d-x)^2}}} متغیر \عددی{x} کا بڑھتا تفاعل ہے۔
+\end{enumerate}
+\انتہا{سوال}
+%=============================
+\موٹا{دوا}\\
+\ابتدا{سوال}\شناخت{سوال_استعمال_حساسیت}\ترچھا{حساسیت دوا۔ (سوال \حوالہ{سوال_تفرق_دوا_رد_عمل} دیکھیں)}\\
+دوا کی وہ مقدار جس کو جسم زیادہ سے زیادہ حساس ہو معلوم کرنے کی خاطر \عددی{M} کی وہ قیمت تلاش کریں جس پر تفرق \عددی{\tfrac{\dif R}{\dif M}} کی قیمت زیادہ سے زیادہ ہو گی جہاں \عددی{R=M^2(\tfrac{C}{2}-\tfrac{M}{3})} اور \عددی{C} مستقل ہے۔\\
+جواب:\quad
+$M=\tfrac{c}{2}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\ترچھا{کھانسی}
+\begin{enumerate}[a.]
+\item
+کھانسی کے دوران سانس کی نالی سکڑ کر ہوا کی رفتار کو تیز کرتی ہے۔کیا سانس کی نالی اتنی سکڑتی ہے کہ ہوا کی رفتار زیادہ سے زیادہ ہو؟
+
+سانس کی نالی کی لچک اور اس کی دیوار کا ہوا کی بہاو کو مزاحمت کی  مناسب قیمتیں لیتے ہوئے ہوا کی اوسط رفتار \عددی{v} کو درج ذیل مساوات سے ظاہر کیا جا سکتا ہے
+\begin{align*}
+v=c(r_0-r)r^2\,\si{\centi\meter\per\second},\quad \frac{r_0}{2}\le r\le r_0
+\end{align*}
+جہاں آرام کی صورت میں سانس کی نالی کا رداس \عددی{r_0} سنٹی میٹر ہے اور \عددی{c} مثبت مستقل جس کی قیمت سانس کی لمبائی پر (بھی) منحصر ہے۔
+
+دکھائیں کہ \عددی{v} کی زیادہ سے زیادہ قیمت \عددی{r=\tfrac{2}{3}r_0} پر حاصل ہو گی یعنی جب سانس کی نالی \عددی{\SI{33}{\percent}} سکڑے۔ کھانسی کے دوران سانس کی نالی کی  ایکس رے ثابت کرتی ہے کہ کھانسی کے دوران سانس  کی نالی اتنی ہی سکڑتی ہے۔ 
+\item
+\عددی{r_0=0.5} اور \عددی{c=1} لیتے ہوئے وقفہ \عددی{0\le r\le 0.5} پر \عددی{v} ترسیم کریں۔ دیکھیں کہ آیا زیادہ سے زیادہ رفتار \عددی{r=\tfrac{2}{3}r_0} پر نظر آتی ہے۔
+\end{enumerate}
+\انتہا{سوال}
+%==================
+\موٹا{اقتصادیات اور کاروبار}\\
+\ابتدا{سوال}
+ایک قمیض تیار کرنے پر \عددی{c} روپیہ لاگت آتی ہے اور اس کی قیمت فروخت \عددی{x} روپیہ ہے۔ فروخت قمیضوں کی تعداد  \عددی{n=\tfrac{a}{x-c}+\tfrac{b}{100-x}} ہے جہاں \عددی{a} اور \عددی{b} مثبت مستقل ہیں۔ زیادہ سے زیادہ منافع کس قیمت فروخت پر ہو گا؟\\
+جواب:\quad
+$\tfrac{c}{2}+50$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+آپ سیر و سیاحت کا کاروبار کرتے ہیں۔ آپ کی قیمتیں درج ذیل ہیں۔
+\begin{enumerate}[a.]
+\item
+اگر \عددی{50} افراد (جو کم سے کم تعداد ہے) سیر و سیاحت پر جائیں تب ہر فرد \عددی{200} روپیہ ادا کرے گا۔  
+\item
+\عددی{80} افراد کی حد تک ہر اضافی فرد کی صورت میں تمام افراد کو \عددی{2} روپیہ کم ادا کرنے ہوں گے۔ 
+\end{enumerate}
+کل لاگت  \عددی{6000} روپیہ کی مستقل مقدار اور فی فرد \عددی{32} روپیہ ہے۔زیادہ سے زیادہ منافع کے لئے کتنے افراد درکار ہیں؟   
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_انتظام_تجارت_مال_الف}
+انتظام تجارت مال کا ایک کلیہ کہتا ہے کہ مال کی فرمائش، ادائیگی اور رکھوالی پر  فی ہفتہ \عددی{A(q)=\tfrac{km}{q}+cm+\tfrac{hq}{2}} لاگت آتی ہے جہاں \عددی{q} کھیپ میں اشیاء کی تعداد ہے، \عددی{k} لمحہ فرمائش پر ادائیگی ہے (جو ہر فرمائش پر ادا کرنی ہو گی)، \عددی{c} فی رکن قیمت ہے، \عددی{m} ایک ہفتہ میں فروخت اشیاء کی تعداد ہے، اور \عددی{h} فی رکن ہفتہ وار رکھوالی کا خرچ ہے جس میں کرایہ وغیرہ شامل ہے ۔ \عددی{q} کی وہ قیمت تلاش کریں جس پر  \عددی{A(q)} کی قیمت کم سے کم ہو گی۔\\
+جواب:\quad
+$\sqrt{\tfrac{2km}{h}}$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\ترچھا{(تسلسل سوال \حوالہ{سوال_استعمال_انتظام_تجارت_مال_الف})}\\
+خرچ ترسیل بعض اوقات کھیپ کی تعداد پر منحصر ہوتی ہے۔جب ایسا ہو تب \عددی{k} کی جگہ \عددی{k+bq} استعمال کیا جاتا ہے جہاں \عددی{b} مستقل ہے۔ اب کھیپ کی بہترین جسامت کیا ہو گی؟
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+اگر تفاعل لاگت \عددی{c(x)=x^3-6x^2+15x} اور  تفاعل آمدنی \عددی{r(x)=6x} ہوں تب دکھائیں کہ  آپ نا منافع نا نقصان سے زیادہ بہتر صورت حاصل نہیں  کر سکتے ہیں۔  
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+فرض کریں \عددی{x} اشیاء کی پیداوار  میں لاگت \عددی{c(x)=x^3-20x^2+20000x} ہے۔ کتنی پیداوار اوسط لاگت پیداوار کو کم سے کم کرے گی؟
+\انتہا{سوال}
+%===================
