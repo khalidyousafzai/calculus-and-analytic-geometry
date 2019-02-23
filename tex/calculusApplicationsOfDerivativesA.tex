@@ -906,7 +906,7 @@ W&=a+\frac{b}{g}&&(a,b \text{مستقل})
 جیسا شکل \حوالہ{شکل_مثال_استعمال_خطی_تخمین_کوسائن} سے واضح ہے، نقطہ تصریف پر خط بندی مزید بہتر بیٹھتی ہے۔اس کی وضاحت  بعد میں اس کتاب میں کی جائے گی۔ترسیم سے \عددی{x=0} اور \عددی{x=\sqrt{3}} پر \عددی{f(x)=\tfrac{4x}{x^2+1}} کی ڈھلوان حاصل کریں۔
 \انتہا{سوال}
 %======================
-\ابتدا{سوال}\ترچھا{خط بندی بہترین خطی تخمین ہے۔} (ہم خط بندی کو یوں استعمال کرتے ہیں۔)\quad
+\ابتدا{سوال}\ترچھا{خط بندی بہترین خطی تخمین ہے۔} (خط بندی استعمال کرنے کی وجہ۔)\quad
 فرض کریں \عددی{x=a} پر \عددی{y=f(x)} قابل تفرق ہے اور \عددی{g(x)=m(x-a)+c} ایک خطی تفاعل ہے جہاں \عددی{m} اور \عددی{c} مستقل ہیں۔ اگر \عددی{x=a} کے نزدیک خلل \عددی{E(x)=f(x)-g(x)} بہت کم ہو تب ہم خط بندی \عددی{L(x)=f(a)+f'(a)(x-a)} کی بجائے \عددی{g} کو بطور خطی تخمین استعمال کر سکتے ہیں۔ دکھائیں کہ  \عددی{g} پر درج ذیل شرائط لاگو کرنے سے \عددی{g(x)=f(a)+f'(a)(x-a)} حاصل ہو گا۔
 \begin{enumerate}[a.]
 \item
@@ -963,7 +963,74 @@ $f(x)=\sqrt{x}-\sin x,\quad [0,2\pi],\quad a=2$
 جب \عددی{f(x)=0} طرز کی مساوات کا بالکل درست حل حاصل کرنا ممکن نہ ہو تب ہم احصاء کے اعدادی طریقوں کو استعمال کرتے ہوئے حل کی تخمین حاصل کرتے ہیں۔ترکیب نیوٹن ایسی ایک ترکیب ہے۔اس ترکیب میں، جن نقطوں پر \عددی{f(x)} صفر ہو ان نقطوں کے نزدیک \عددی{y=f(x)} کو مماس سے ظاہر کیا جاتا ہے۔ یہاں بھی خط بندی کے ذریعہ مسائل حل کیے جاتے ہیں۔
 
 \جزوحصہء{نظریہ}
-ترکیب نیوٹن مساوات \عددی{f(x)=0} کے حل کی تخمینی قیمتوں کی ترتیب حاصل کرتا ہے جو اصل حل تک پہنچنے کی کوشش کرتا ہے۔ہم اس ترتیب کا پہلا عدد \عددی{x_0} منتخب کرتے ہیں۔ موزوں صورتوں میں یہ ترتیب قدم با قدم آگے بڑھتے ہوئے دیگر نقطے دیتا ہے۔  \عددی{x_0} پر \عددی{f} کا مماس   \عددی{x} محور کو ترتیب کے اگلے نقطہ \عددی{x_1} پر قطع کرتا ہے۔
+ترکیب نیوٹن مساوات \عددی{f(x)=0} کے حل کی تخمینی قیمتوں کی ترتیب حاصل کرتا ہے جو اصل حل تک پہنچنے کی کوشش کرتا ہے۔ہم اس ترتیب کا پہلا عدد \عددی{x_0} منتخب کرتے ہیں۔ موزوں صورتوں میں یہ ترتیب قدم با قدم آگے بڑھتے ہوئے دیگر نقطے دیتا ہے۔  \عددی{x_0} پر \عددی{f} کا مماس   \عددی{x} محور کو ترتیب کے اگلے نقطہ \عددی{x_1} پر قطع کرتا ہے (شکل \حوالہ{شکل_استعمال_نیوٹن_ترکیب})۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=\x*\x-0.5;df(\x)=2*\x;}]
+\pgfmathsetmacro{\rt}{sqrt(0.5)}
+\pgfmathsetmacro{\xa}{4}
+\pgfmathsetmacro{\xaa}{\xa+0.5}
+\pgfmathsetmacro{\ya}{f(\xa)}
+\pgfmathsetmacro{\ma}{df(\xa)}
+\pgfmathsetmacro{\xb}{\xa-\ya/\ma}
+\pgfmathsetmacro{\xbb}{\xb+0.5}
+\pgfmathsetmacro{\yb}{f(\xb)}
+\pgfmathsetmacro{\mb}{df(\xb)}
+\pgfmathsetmacro{\xc}{\xb-\yb/\mb}
+\pgfmathsetmacro{\xcc}{\xc+0.4}
+\pgfmathsetmacro{\yc}{f(\xc)}
+\pgfmathsetmacro{\mc}{df(\xc)}
+\pgfmathsetmacro{\xd}{\xc-\yc/\mc}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\xa,\xb,\xc},xticklabels={$x_0$,$x_1$,$x_2$},ytick={\empty},xmin=0]
+\addplot[domain=0.1:\xaa]{f(x)}node[left]{$y=f(x)$};
+\addplot[domain=\xb:\xaa]{\ya+\ma*(x-\xa)};
+\addplot[domain=\xc:\xbb]{\yb+\mb*(x-\xb)};
+\addplot[domain=\xd:\xcc]{\yc+\mc*(x-\xc)};
+\draw[dashed](axis cs:\xa,\ya)node[circ]{}node[left]{$(x_0,f(x_0))$}--(axis cs:\xa,0)node[osquare]{};
+\draw[dashed](axis cs:\xb,\yb)node[circ]{}--(axis cs:\xb,0)node[osquare]{};
+\draw(axis cs:\xb,\yb)node[pin=110:{$(x_1,f(x_1))$}]{};
+\draw[dashed](axis cs:\xc,\yc)node[circ]{}--(axis cs:\xc,0)node[osquare]{};
+\draw(axis cs:\xc,\yc)node[pin=135:{$(x_2,f(x_2))$}]{};
+\draw(axis cs:\xa,0)++(0,-1.8)node[below]{پہلا};
+\draw(axis cs:\xb,0)++(0,-1.8)node[below]{دوسرا};
+\draw(axis cs:\xc,0)++(0,-1.8)node[below]{تیسرا};
+\draw(axis cs:\rt,0)node[circ]{}node[pin=-135:{\RL{درکار جذر}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{ترکیب نیوٹن ابتدائی قیاس $x_0$ سے شروع ہو کر (موزوں صورت میں) بتدریج بہتر جواب دیتی ہے۔}
+\label{شکل_استعمال_نیوٹن_ترکیب}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=\x*\x-0.5;df(\x)=2*\x;}]
+\pgfmathsetmacro{\rt}{sqrt(0.5)}
+\pgfmathsetmacro{\xa}{4}
+\pgfmathsetmacro{\xaa}{\xa+0.5}
+\pgfmathsetmacro{\ya}{f(\xa)}
+\pgfmathsetmacro{\ma}{df(\xa)}
+\pgfmathsetmacro{\xb}{\xa-\ya/\ma}
+\pgfmathsetmacro{\xbb}{\xb+0.5}
+\pgfmathsetmacro{\yb}{f(\xb)}
+\pgfmathsetmacro{\mb}{df(\xb)}
+\pgfmathsetmacro{\xc}{\xb-\yb/\mb}
+\pgfmathsetmacro{\xcc}{\xc+0.4}
+\pgfmathsetmacro{\yc}{f(\xc)}
+\pgfmathsetmacro{\mc}{df(\xc)}
+\pgfmathsetmacro{\xd}{\xc-\yc/\mc}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)}, anchor=west}, ylabel style={at={(current axis.above origin)}, anchor=south}, xtick={\xa}, xticklabels={$x_n$}, ytick={\empty},xmin=0]
+\addplot[domain=0.1:\xaa]{f(x)}node[left]{$y=f(x)$};
+\addplot[domain=\xb-0.5:\xaa]{\ya+\ma*(x-\xa)};
+\draw[dashed](axis cs:\xa,\ya)node[circ]{}node[left]{$(x_n,f(x_n))$}--(axis cs:\xa,0)node[osquare]{};
+\draw(axis cs:\rt,0)node[circ]{}node[pin=70:{\RL{درکار جذر}}]{};
+\draw(axis cs:\xb,0)node[osquare]{}node[pin={[pin distance=0.25cm]-70:{$x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}$}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{$x_n$ سے منحنی تک جا کر مماس کے ساتھ ساتھ چلتے ہوئے $x_{n+1}$ تک پہنچتے ہیں۔}
+\label{شکل_استعمال_نیوٹن_ترکیب_الف}
+\end{minipage}
+\end{figure}
 
 ابتدائی نقطہ \عددی{x_0} کو ترسیم دیکھ کر یا قیاساً منتخب کیا جا سکتا ہے۔یہ ترکیب نقطہ \عددی{(x_0,f(x_0))} پر تفاعل کے مماس کو تفاعل کا تخمین لیتے ہوئے مماس اور \عددی{x} محور کے مقطع کو \عددی{x_1} کہتا ہے جو ترتیب کا دوسرا عدد ہو گا۔\عددی{x_1} عموماً \عددی{x_0} سے بہتر حل ہو گا۔ اسی طرح  نقطہ \عددی{(x_1,f(x_1))} پر تفاعل کا مماس \عددی{x} محور  کو \عددی{x_2}  پر قطع کرے گا جو ترتیب کا تیسرا عدد ہو گا۔\عددی{x_2} عموماً \عددی{x_1} سے بہتر حل ہو گا۔اسی طرح قدم با قدم چلتے ہوئے بہتر سے بہتر حل کی ترتیب حاصل کی جاتی ہے۔یہ ترتیب اصل حل کے نزدیک سے نزدیک ہوتی چلی جاتی ہے۔ قابل قبول حل تک پہنچ کر ہم رک جاتے ہیں۔ 
 
@@ -975,7 +1042,7 @@ y-f(x_n)=f'(x_n)(x-x_n)
 \begin{align*}
 0-f(x_n)=f'(x_n)(x-x_n)\quad \implies x=x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}
 \end{align*}
- جہاں \عددی{f'(x_n)\ne 0} فرض کیا گیا ہے۔
+ جہاں \عددی{f'(x_n)\ne 0} فرض کیا گیا ہے  (شکل \حوالہ{شکل_استعمال_نیوٹن_ترکیب_الف})۔
 
 \موٹا{ترکیب نیوٹن کا لائحہ عمل}\\
 \begin{enumerate}[a.]
@@ -1022,3 +1089,178 @@ x_3=1.41422&0.00001&5
 \انتہا{مثال}
 
 چونکہ ترکیب نیوٹن کی مرکوزیت بہت تیز ہے (جس پر جلد بات کی جائے گی) لہٰذا  عموماً  کیلکولیٹر جذر کا حصول ترکیب نیوٹن سے تلاش کرتے ہیں۔اگر درج بالا جدول میں \عددی{5} کی بجائے \عددی{13} اعشاریہ درست ہندسے  لیے جاتے تب اگلے قدم میں \عددی{\sqrt{2}} کی قیمت \عددی{10} اعشاریہ درست حاصل ہوتی۔ 
+
+\ابتدا{مثال}\شناخت{مثال_استعمال_قطع_محور_الف}
+اس نقطے کا \عددی{x} محدد تلاش کریں جس پر منحنی \عددی{y=x^3-x} افقی خط \عددی{y=1} کو قطع کرتی ہے۔\\
+حل:\quad
+منحنی اس خط کو اس نقطے پر قطع کرتی ہے جہاں \عددی{x^3-x=1} یعنی \عددی{x^3-x-1=0} ہو۔ کہاں \عددی{f(x)=x^3-x-1} صفر ہو گا؟ شکل \حوالہ{شکل_مثال_استعمال_قطع_محور_الف} میں ترسیم کا ایک جذر \عددی{x=1} اور \عددی{x=2} کے بیچ دیکھا جا سکتا ہے۔ہم \عددی{x_0=1} منتخب کرتے ہوئے ترکیب نیوٹن کو \عددی{f} پر لاگو کرتے ہیں۔ نتائج جدول \حوالہ{جدول_استعمال_مثال_افقی_خط} اور شکل \حوالہ{شکل_مثال_استعمال_قطع_محور_الف_دوم} میں دیے گئے ہیں۔
+\begin{table}
+\caption{ابتدائی قیمت $x_0=1$ لیتے ہوئے $f(x)=x^3-x-1$ پر ترکیب نیوٹن کی اطلاق کے نتائج۔}
+\label{جدول_استعمال_مثال_افقی_خط}
+\begin{otherlanguage}{english}
+\begin{tabular}{LLLLL}
+n&x_n&f(x_n)&f'(x_n)&x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}\\
+\hline
+0&1&-1&2&1.5\\
+1&1.5&\phantom{-}0.875&5.75&\num{1.347826087}\\
+2&\num{1.347826087}&\phantom{-}\num{0.100682173}&\num{4.449905482}&\num{1.325200399}\\
+3&\num{1.325200399}&\phantom{-}\num{0.002058362}&\num{4.268468293}&\num{1.324718174}\\
+4&\num{1.324718174}&\phantom{-}\num{0.000000924}&\num{4.264634722}&\num{1.324717957}\\
+5&\num{1.324717957}&-1.0437\times 10^{-9}&\num{4.264632997}&\num{1.324717957}
+\end{tabular}
+\end{otherlanguage}
+\end{table}
+%
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}]
+\addplot[domain=-1.2:3.2]{x^3-x-1}node[pos=0.75,left]{$y=x^3-x-1$};
+\end{axis}
+\end{tikzpicture}
+\caption{
+منحنی \عددی{f(x)=x^3-x-1} محور \عددی{x} کو \عددی{x=1} اور \عددی{x=2} کے بیچ قطع کرتی ہے۔
+}
+\label{شکل_مثال_استعمال_قطع_محور_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=\x^3-\x-1;df(\x)=3*\x^2-1;xnn(\x)=\x-f(\x)/df(\x);}]
+\pgfmathsetmacro{\xa}{1}
+\pgfmathsetmacro{\ya}{f(\xa)}
+\pgfmathsetmacro{\ma}{df(\xa)}
+\pgfmathsetmacro{\xb}{xnn(\xa)}
+\pgfmathsetmacro{\yb}{f(\xb)}
+\pgfmathsetmacro{\mb}{df(\xb)}
+\pgfmathsetmacro{\xc}{xnn(\xb)}
+\begin{axis}[clip=false,small,axis lines=middle,axis y line=none,xtick={1,1.5}]
+\addplot[domain=0.8:1.7]{f(x)}node[left]{$y=x^3-x-1$};
+\addplot[domain=0.8:1.7]{\ya+\ma*(x-\xa)};
+\addplot[domain=1.3:1.7]{\yb+\mb*(x-\xb)};
+\draw[dashed](axis cs:\xa,0)node[osquare]{}node[above]{$x_0$}--(axis cs:\xa,\ya)node[below right]{$(1,-1)$};
+\draw[dashed](axis cs:\xb,0)node[osquare]{}node[pin={[pin edge=solid]45:{$x_1$}}]{}--(axis cs:\xb,\yb)node[above left]{$(1.5,0.875)$};
+\draw(axis cs:\xc,0)node[osquare]{}node[pin=100:{$x_2$}]{};
+\draw(axis cs:1.325,0)node[circ]{}node[pin=140:{\RL{درکار جذر}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{جدول \حوالہ{جدول_استعمال_مثال_افقی_خط} کی پہلی تین قیمتیں۔}
+\label{شکل_مثال_استعمال_قطع_محور_الف_دوم}
+\end{minipage}
+\end{figure}
+\انتہا{مثال}
+%==========================
+\begin{figure}
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=\x^3-\x-1;df(\x)=3*\x^2-1;xnn(\x)=\x-f(\x)/df(\x);}]
+\pgfmathsetmacro{\xa}{3}
+\pgfmathsetmacro{\ya}{f(\xa)}
+\pgfmathsetmacro{\ma}{df(\xa)}
+\pgfmathsetmacro{\xb}{xnn(\xa)}
+\pgfmathsetmacro{\yb}{f(\xb)}
+\pgfmathsetmacro{\mb}{df(\xb)}
+\pgfmathsetmacro{\xc}{xnn(\xb)}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south} ,xtick={-1,0.577,1,1.6,2.11,3},xticklabels={$-1$,$\tfrac{1}{\sqrt{3}}$,$1$,$1.6$,$2.11$,$3$},xmax=3.5]
+\addplot[domain=-1.2:3.1]{f(x)}node[left]{$y=x^3-x-1$};
+\addplot[domain=\xb:\xa]{\ya+\ma*(x-\xa)};
+\addplot[domain=\xc:\xb]{\yb+\mb*(x-\xb)};
+\draw[dashed](axis cs:\xa,0)node[osquare]{}node[above right]{$x_0$}--(axis cs:\xa,\ya)node[left]{$B_0(3,23)$};
+\draw[dashed](axis cs:\xb,0)node[osquare]{}node[above right]{$x_1$}--(axis cs:\xb,\yb)node[pin={[pin edge=solid,pin distance=0.25cm]100:{$B_1(2.11,6.28)$}}]{};
+\draw(axis cs:\xc,0)node[osquare]{}node[above right]{$x_2$};
+\draw(axis cs:1.325,0)node[circ]{}node[pin=110:{\RL{درکار جذر}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{
+جذر حاصل کرنے کی خاطر \عددی{x=\tfrac{1}{\sqrt{3}}} کے دائیں جانب کسی بھی نقطہ \عددی{x_0} سے شروع کیا جا سکتا ہے۔
+}
+\label{شکل_مثال_استعمال_قطع_محور_الف_سوم}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\ang}{10}
+\draw[-latex](0,0)--(3.5,0)node[right]{$x$};
+\draw(1.5,0)node[below]{$r$} to [out=\ang,in=-110]coordinate[pos=0.75](kA) node[pos=1,left]{$y=f(x)$}(3,1)  (1.5,0) to [out=-180+\ang,in=80] coordinate[pos=0.6](kB)(0,-1);
+\draw[dashed](kA)--($(0,0)!(kA)!(3,0)$)node[below]{$x_0'$};
+\draw[dashed](kB)--($(0,0)!(kB)!(3,0)$)node[above]{$x_0$};
+\end{tikzpicture}
+\end{minipage}
+\caption{
+جذر \عددی{r} کے دونوں اطراف ابتدائی نقطہ لیتے ہوئے ترکیب نیوٹن \عددی{r} کو مرکوز ہو گا۔
+}
+\label{شکل_استعمال_نیوٹن_مرکوزیت}
+\end{figure}
+جیسا شکل \حوالہ{شکل_مثال_استعمال_قطع_محور_الف_سوم} میں دکھایا گیا ہے ہم \عددی{B_0(3,23)} کو ابتدائی نقطہ منتخب کر سکتے تھے جہاں \عددی{x_0=3} ہو گا۔اگرچہ \عددی{B_0} افقی محور سے بہت دور ہے لیکن \عددی{x_0=3} پر منحنی کا مماس افقی محور کو \عددی{x_1=2.11} پر قطع کرتا ہے جو  \عددی{x_0} سے بہتر نقطہ ہے۔ اب \عددی{f(x)=x^3-x-1} اور \عددی{f'(x)=3x^2-1} لیتے ہوئے  پہلے کی طرح مساوات \حوالہ{مساوات_استعمال_نیوٹن_ب} کی بار بار استعمال سے چھٹے قدم پر \عددی{9} اعشاریہ جواب \عددی{x_6=x_5=\num{1.324717957}} حاصل ہو گا۔
+
+شکل \حوالہ{شکل_مثال_استعمال_قطع_محور_الف_سوم} میں منحنی کا مقامی زیادہ سے زیادہ \عددی{x=-\tfrac{1}{\sqrt{3}}} اور مقامی کم سے کم \عددی{x=\tfrac{1}{\sqrt{3}}} پر پایا جاتا ہے۔ اگر ہم ان نقطوں کے بیچ ابتدائی نقطہ منتخب کرتے ہوئے ترکیب نیوٹن استعمال کریں تب ہمیں اچھے نتائج حاصل نہیں ہوں گے۔البتہ ہم \عددی{x=\tfrac{1}{\sqrt{3}}} کے دائیں جانب کسی بھی نقطہ سے شروع کر سکتے ہیں۔ اگرچہ ایسا کرنا بہتر نہیں ہو گا لیکن ہم \عددی{B_0} سے بھی زیادہ دور، مثلاً \عددی{x_0=10} کو، ابتدائی نقطہ منتخب کر سکتے ہیں۔یوں زیادہ قدموں کے بعد اصل جواب حاصل ہو گا۔
+
+\جزوحصہء{ارتکاز عموماً یقینی ہو گا}
+ترکیب نیوٹن بہت تیزی سے مرکوز ہوتا ہے، لیکن چونکہ مرکوزیت لازمی نہیں ہوتی لہٰذا یہ دیکھنا لازمی ہو گا کہ آیا ترکیب مرتکز ہے یا نہیں۔ مرکوزیت یقینی بنانے کی خاطر ہم تفاعل ترسیم کر کے موزوں ابتدائی نقطہ \عددی{x_0} منتخب کر سکتے ہیں۔ صفر کے قریب ہونے کو \عددی{\abs{f(x_n)}} کی قیمت سے دیکھا جا سکتا ہے جبکہ مرکوزیت کو \عددی{\abs{x_n-x_{n+1}}} سے پرکھا جا سکتا ہے۔
+
+اس زمرے میں نظریہ بھی کچھ مدد مہیا کرتا ہے۔ اعلٰی احصاء کا ایک مسئلہ کہتا ہے کہ جذر \عددی{r} پر وقفہ (جس میں \عددی{r} پایا جاتا ہو) میں تمام \عددی{x} کے لئے
+\begin{align}\label{مساوات_استعمال_مرکوزیت_نیوٹن_الف}
+\abs{\frac{f(x)f''(x)}{[f'(x)]^2}}<1
+\end{align}
+کی صورت میں اس وقفہ کے اندر کسی بھی ابتدائی نقطہ \عددی{x_0} کے لئے ترکیب مرتکز ہو گی۔حقیقتاً اس مسئلے کا اطلاق مشکل ثابت ہوتا ہے لہٰذا \عددی{f(x_n)} اور \عددی{\abs{x_n-x_{n+1}}} کی قیمتوں سے مرکوزیت دیکھی جاتی ہے۔
+
+عدم مساوات \حوالہ{مساوات_استعمال_مرکوزیت_نیوٹن_الف} مرکوزیت کے لئے \اصطلاح{کافی} نا کہ لازمی شرط ہے۔ایسی مثالیں پائی جاتی ہیں جہاں جذر \عددی{r} پر ایسا کوئی وقفہ نہیں پایا جاتا ہے جس پر عدم مساوات \حوالہ{مساوات_استعمال_مرکوزیت_نیوٹن_الف} مطمئن ہوتی ہو لیکن ترکیب نیوٹن مرتکز ہوتی ہے۔ ایسے تمام وقفے پر ترکیب نیوٹن مرتکز ہو گی جس میں \عددی{x_0} اور درکار جذر کے بیچ وقفے پر منحنی \عددی{y=f(x)} محور \عددی{x} کی طرف محدب (جھکا) ہو (شکل \حوالہ{شکل_استعمال_نیوٹن_مرکوزیت})۔
+
+سازگار حالات میں ترکیب نیوٹن کی جذر \عددی{r} کو ارتکاز کی رفتار درج ذیل اعلٰی احصاء کا کلیہ دیتا ہے
+\begin{align}\label{مساوات_استعمال_مرکوزیت_نیوٹن_ب}
+\underbrace{\abs{x_{n+1}-r}}_{e_{n+1}\text{خلل}}\le \frac{\abs{f''}\text{\RL{زیادہ سے زیادہ}}}{\abs{f'}\text{\RL{کم سے کم}}} \abs{x_n-r}^2 =c\cdot \underbrace{\abs{x_n-r}^2}_{e_n \text{خلل}}
+\end{align} 
+جہاں \عددی{c} مستقل ہے، اور زیادہ سے زیادہ قیمت اور کم سے کم قیمت \عددی{r} پر وقفہ میں پائی جاتی زیادہ سے زیادہ اور کم سے کم  قیمتیں ہیں۔ درج بالا کلیہ کہتا ہے کہ قدم \عددی{n+1} میں خلل کی قیمت قدم \عددی{n} میں خلل کی قیمت کے مربع ضرب مستقل سے زیادہ نہیں ہو گی۔ اس بات کی گہرائی سمجھنے کی خاطر فرض کریں کہ \عددی{c\le 1} ہے اور \عددی{\abs{x_n-r}<10^{-3}} ہے تب \عددی{\abs{x_{n+1}-r}<10^{-6}} ہو گا۔یوں ایک ہی قدم میں درستگی \عددی{3} اعشاریہ سے \عددی{6} اعشاریہ ہو گئی ہے۔ 
+عدم مساوات \حوالہ{مساوات_استعمال_مرکوزیت_نیوٹن_الف} اور عدم مساوات \حوالہ{مساوات_استعمال_مرکوزیت_نیوٹن_ب} میں ہم فرض کرتے ہیں کہ \عددی{f} "اچھا" تفاعل ہے۔ عدم مساوات \حوالہ{مساوات_استعمال_مرکوزیت_نیوٹن_ب} میں اس سے مراد ایسا تفاعل ہے جس کا \عددی{r} پر  واحد ایک جذر پایا جاتا ہو لہٰذا \عددی{f'(r)\ne 0} ہو گا۔ اگر \عددی{r} پر ایک سے زیادہ جذر پائے جاتے ہوں تب ارتکاز کی رفتار کم ہو سکتی ہے۔
+
+\جزوحصہء{لیکن چیزیں غلطی کی طرف جا سکتی ہیں}
+اگر \عددی{f'(x_n)=0} ہو تب \عددی{x_n} پر منحنی کا مماس \عددی{x} محور کو قطع نہیں کرے گا لہٰذا \عددی{x_{n+1}} نا قابل معلوم ہو گا اور ترکیب نیوٹن رک جائے گا (شکل \حوالہ{شکل_استعمال_نیوٹن_رک_گیا})۔ ایسی صورت میں نئے ابتدائی نقطہ سے شروع کریں۔ اب عین ممکن ہے کہ \عددی{f} اور \عددی{f'} دونوں کا مشترک جذر پایا جاتا ہو۔یہ جاننے کے لئے کہ آیا ایسا ہے آپ \عددی{f'(x)=0} کا حل تلاش کر کے ان قیمتوں پر \عددی{f} کی قیمتیں دیکھ سکتے ہیں یا \عددی{f} اور \عددی{f'} کو ایک ساتھ ترسیم کر سکتے ہیں۔
+
+ترکیب نیوٹن بعض اوقات غیر مرتکز ہوتا ہے۔مثال کے طور پر
+\begin{align*}
+f(x)=
+\begin{cases}
+-\sqrt{r-x},&x<r\\
+\phantom{-}\sqrt{x-r},&x\ge r
+\end{cases}
+\end{align*}
+جس کو شکل \حوالہ{شکل_استعمال-نیوٹن_عدم_مرکوزیت}  میں دکھایا گیا ہے لیتے ہیں۔ اگر ہم \عددی{x_0=r-h} سے شروع کریں تب \عددی{x_1=r+h} ہو گا اور ہر قدم پر یہی دو قیمتیں دہرائی جاتی ہیں۔ ہم جتنے قدم بھی لیں، حاصل تخمین ابتدائی قیاس سے زیادہ بہتر نہیں ہو گا۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](0,0)--(3.5,0)node[right]{$x$};
+\draw(3,1.5)node[circ]{}node[above]{$(x_n,f(x_n))$}to [out=180,in=10](0,-0.25)  (3,1.5)to[out=0,in=140](3.5,1.25);
+\draw(0,1.5)--(3.5,1.5);
+\draw[dashed](3,1.5)--($(0,0)!(3,1.5)!(3.5,0)$)node[below]{$x_n$};
+\end{tikzpicture}
+\caption{
+اگر \عددی{f'(x_n)=0} ہو تب نقطہ قطع نہیں پایا جاتا ہے لہٰذا ترکیب نیوٹن رک جاتی ہے اور \عددی{x_{n+1}} نا قابل معلوم ہو گا۔
+}
+\label{شکل_استعمال_نیوٹن_رک_گیا}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-2,0)--(2,0)node[right]{$x$};
+\draw(0,0)node[above right]{$r$} to [out=90,in=-135]++(0.7,1.5)node[circ]{} to [out=45,in=-155]++(0.75,0.5)node[below right]{$y=f(x)$};
+\draw(0,0) to [out=-90,in=45]++(-0.7,-1.5)node[circ]{} to [out=-135,in=25]++(-0.75,-0.5);
+\draw[shorten <=-0.5cm, shorten >=-0.5cm](0.7,1.5)--(-0.7,0);
+\draw[shorten <=-0.5cm, shorten >=-0.5cm](-0.7,-1.5)--(0.7,0);
+\draw[dashed](-0.7,-1.5)--(-0.7,0)node[below right]{$x_0$};
+\draw[dashed](0.7,1.5)--(0.7,0)node[below,xshift={1mm}]{$x_1$};
+\end{tikzpicture}
+\caption{ترکیب نیوٹن کی عدم مرکوزیت۔}
+\label{شکل_استعمال-نیوٹن_عدم_مرکوزیت}
+\end{minipage}
+\end{figure}
+
+اگر ترکیب نیوٹن مرتکز ہو تب ہم توقع کرتے ہیں کہ یہ جذر پر مرکوز ہو گا۔حقیقت میں عموماً ایسا ہی ہو گا البتہ بعض اوقات یہ کسی ایسے نقطے پر مرکوز ہو گا جہاں کوئی جذر نہ پایا جائے گا۔ہماری خوش قسمتی سے ایسے مواقع بہت کم پائے جاتے ہیں۔
+
+بعض اوقات آپ ایک جذر کو تلاش کرنا چاہیں گے جبکہ ترکیب نیوٹن کسی دوسرے جذر پر مرکوز ہو گا۔ شکل میں ایسے دو مثالیں دی گئی ہیں۔ 
+
+ایسی صورت میں، کمپیوٹر پر تفاعل کی ترسیم یا احصاء کے تراکیب استعمال کرتے ہوئے درکار جذر کے قریب ابتدائی نقطہ تلاش کرتے ہوئے حل کریں۔ امید کی جاتی ہے کہ اس سے مسئلہ حل ہو جائے گا۔  
+
+\جزوحصہء{ترکیب نیوٹن میں ابتری}
