@@ -122,3 +122,23 @@ expand(%);
 factor(%);
 solve(yd=0,x);
 
+Print("======================================");
+kill(all);
+print("sec 3.6, ex2");
+
+r:(500/%pi)^(1/3);
+h:1000/(%pi*r^2);
+trigsimp(h);
+
+
+Print("======================================");
+kill(all);
+print("sec Chaos in Newton's Method");
+
+load("mnewton");
+
+xa:-sqrt(21)/7;
+xb:-sqrt(2)/2;
+
+x0:xa+0.1000000001*(xb-xa);
+mnewton(4*x^4-4*x^2,x,x0);
