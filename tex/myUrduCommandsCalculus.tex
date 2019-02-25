@@ -177,25 +177,25 @@
 
 %--------------------
 
-%defining a COROLLARY   نتیجہ صریح
+%defining a COROLLARY   ضمنی نتیجہ
 
 
 \newcounter{kcocounter}[chapter]
 \renewcommand{\thekcocounter}{\arabic{kcocounter}.\thechapter}
 
-\newenvironment*{نتیجہ صریح}				
-{\par\noindent\ignorespaces  نتیجہ صریح \refstepcounter{kcocounter} \thekcocounter :\quad}%
+\newenvironment*{ضمنی نتیجہ}				
+{\par\noindent\ignorespaces  ضمنی نتیجہ \refstepcounter{kcocounter} \thekcocounter :\quad}%
 {\par\noindent }
 %--------------------
 %--------------------
 
-%defining a Proof   ثبوت نتیجہ صریح
+%defining a Proof   ثبوت ضمنی نتیجہ
 
 %\newcounter{kprcocounter}[chapter]
 %\renewcommand{\thekprcocounter}{\arabic{kprcocounter}.\thechapter}
 
-\newenvironment*{ثبوت نتیجہ صریح}				
-{\noindent\ignorespaces  ثبوت نتیجہ صریح :\quad}%
+\newenvironment*{ثبوت ضمنی نتیجہ}				
+{\noindent\ignorespaces  ثبوت ضمنی نتیجہ :\quad}%
 {\par\hfill\qedsymbol  \vspace{\baselineskip}\par }
 %{\par\noindent\qedsymbol  \vspace{\baselineskip} }
 %--------------------

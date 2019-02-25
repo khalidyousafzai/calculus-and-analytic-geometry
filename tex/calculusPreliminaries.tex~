@@ -1174,7 +1174,7 @@ y=b+m(x-0)\quad \implies \quad y=mx+b
 \begin{align*}
 y=b+m(x-0)\quad \implies \quad y=mx+b
 \end{align*}
-کو خط  کی \اصطلاح{ڈھلوان-قطع مساوات}\فرہنگ{مساوات_ڈھلوان-قطع}\حاشیہب{slope-intercept equation}\فرہنگ{equation!slope-intercept} کہتے ہیں۔اس خط کی ڈھلوان \عددی{m} ہے اور یہ \عددی{y} محور کو \عددی{b} پر قطع کرتا ہے۔
+کو خط  کی \اصطلاح{ڈھلوان-قطع مساوات}\فرہنگ{مساوات!ڈھلوان-قطع}\حاشیہب{slope-intercept equation}\فرہنگ{equation!slope-intercept} کہتے ہیں۔اس خط کی ڈھلوان \عددی{m} ہے اور یہ \عددی{y} محور کو \عددی{b} پر قطع کرتا ہے۔
 \انتہا{تعریف}
 
 %======================
@@ -4947,14 +4947,17 @@ x=r\cos\theta,\quad y=r\sin\theta
 درج بالا دو مثالوں کی طرح حل کرتے ہوئے جدول میں دیے قیمتیں حاصل کی جا سکتی ہیں۔
 \begin{table}
 \centering
+\renewcommand{\arraystretch}{1.5} 
 \begin{otherlanguage}{english}
-\begin{tabular}{C|RRRRRRRRRRR}
+\begin{tabular}{@{}C|RRRRRRRRRRR@{}}
+\toprule
 \text{\urdufont{درجہ}} &-180^{\circ}&-135^{\circ}&-90^{\circ}&-45^{\circ}& 0^{\circ} &30^{\circ}&45^{\circ}&60^{\circ}&90^{\circ}&135^{\circ}&180^{\circ}\\
 \text{\urdufont{ریڈیئن}}&-\pi&-\frac{3\pi}{4}&-\frac{\pi}{2}&-\frac{\pi}{4}&0&\frac{\pi}{6}&\frac{\pi}{4}&\frac{\pi}{3}&\frac{\pi}{2}&\frac{3\pi}{4}&\pi\Bstrut\\ 
-\hline
+\midrule
 \sin \theta&0&-\tfrac{\sqrt{2}}{2}&-1&-\tfrac{\sqrt{2}}{2}&0&\tfrac{1}{2}&\frac{\sqrt{2}}{2}&\frac{\sqrt{3}}{2}&1&\tfrac{\sqrt{2}}{2}&0\Bstrut\\
 \cos\theta&-1&-\tfrac{\sqrt{2}}{2}&0&\tfrac{\sqrt{2}}{2}&1&\frac{\sqrt{3}}{2}&\frac{\sqrt{2}}{2}&\tfrac{1}{2}&0&-\tfrac{\sqrt{2}}{2}&-1\Bstrut\\
-\tan\theta&0&1&&-1&0&\frac{1}{\sqrt{3}}&1&\sqrt{3}&&-1&0
+\tan\theta&0&1&&-1&0&\frac{1}{\sqrt{3}}&1&\sqrt{3}&&-1&0\\
+\bottomrule
 \end{tabular}
 \end{otherlanguage}
 \end{table}

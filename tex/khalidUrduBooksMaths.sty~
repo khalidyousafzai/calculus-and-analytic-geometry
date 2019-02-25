@@ -40,7 +40,7 @@
 \usepackage{color}
 \usepackage{caption}                               %must be placed before bidi
 \usepackage{subcaption}
-
+\usepackage{booktabs}
 %\usepackage{hyperref}                   %loaded second last just before polyglossia. still giving problems
 \usepackage{polyglossia}                %is loaded the last
 
@@ -49,10 +49,7 @@
 %\linenumbers												%for line numbers in pdf
 
 \setmainlanguage[numerals=maghrib]{arabic}     %for english numbers use numerals=maghrib, for arabic numerals=arabicdigits
-\csname @Latintrue\endcsname
 \setotherlanguages{english}
-
-
 
 \newfontfamily\arabicfont[Scale=1.0,Script=Arabic]{Jameel Noori Nastaleeq}
 \newfontfamily\urduTechTermsfont[Scale=1.0,Script=Arabic]{XB Tabriz}
