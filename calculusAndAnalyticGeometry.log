@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.1.26)  25 FEB 2019 16:17
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.1.26)  26 FEB 2019 15:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3397,13 +3397,24 @@ ot available
 on input line 69.
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/it' will be
 (Font)              scaled to size 10.0pt on input line 69.
- [476]) [477]
+ [476] [477] [478]
+Overfull \hbox (5.58916pt too wide) in paragraph at lines 118--127
+ [][][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
+[][]
+ []
+
+[479] [480] [481] [482] [483] [484] [485] [486]) [487]
 \openout2 = `./tex/questions.aux'.
 
  (./tex/questions.tex)
 \openout2 = `./tex/calculusAppendixB.aux'.
 
- (./tex/calculusAppendixB.tex [478
+
+(./tex/calculusAppendixB.tex [488
 
 
 
@@ -3412,7 +3423,7 @@ LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/it' will be
 
 ]
 ضمیمہ ا.
-) [479] [480
+) [489] [490
 
 
 
@@ -3422,16 +3433,20 @@ LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/it' will be
 (./tex/calculusApplicationsOfDerivatives.aux) (./tex/calculusIntegration.aux)
 (./tex/questions.aux) (./tex/calculusAppendixB.aux))
 
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.43996pt have occurred.
+
+
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 54165 strings out of 493007
- 1352041 string characters out of 6136719
- 1679604 words of memory out of 5000000
- 57200 multiletter control sequences out of 15000+600000
- 559727 words of font info for 142 fonts, out of 8000000 for 9000
+ 54202 strings out of 493007
+ 1352813 string characters out of 6136719
+ 1679888 words of memory out of 5000000
+ 57237 multiletter control sequences out of 15000+600000
+ 564323 words of font info for 156 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 74i,17n,128p,10536b,733s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 74i,17n,128p,10536b,739s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on calculusAndAnalyticGeometry.pdf (13 pages).
+Output written on calculusAndAnalyticGeometry.pdf (23 pages).

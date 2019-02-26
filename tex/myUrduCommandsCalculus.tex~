@@ -23,7 +23,9 @@
 
 %\newcommand*{\اصطلاح}[1]{{\color{red}{#1}}}   %colours spills to next word when there is index or footnote entry with the word
 %\newcommand{\اصطلاح}[1]{{\urdufontBig{#1}}}
-\newcommand{\اصطلاح}[1]{{\urduTechTermsfont{#1}}}
+
+%\newcommand{\اصطلاح}[1]{{\urduTechTermsfont{#1}}}
+\newcommand{\اصطلاح}[1]{{\color{red}{#1}}}
 
 
 %end commands cannot be redefined and as such these two are not usable
@@ -177,25 +179,25 @@
 
 %--------------------
 
-%defining a COROLLARY   نتیجہ صریح
+%defining a COROLLARY   ضمنی نتیجہ
 
 
 \newcounter{kcocounter}[chapter]
 \renewcommand{\thekcocounter}{\arabic{kcocounter}.\thechapter}
 
-\newenvironment*{نتیجہ صریح}				
-{\par\noindent\ignorespaces  نتیجہ صریح \refstepcounter{kcocounter} \thekcocounter :\quad}%
+\newenvironment*{ضمنی نتیجہ}				
+{\par\noindent\ignorespaces  ضمنی نتیجہ \refstepcounter{kcocounter} \thekcocounter :\quad}%
 {\par\noindent }
 %--------------------
 %--------------------
 
-%defining a Proof   ثبوت نتیجہ صریح
+%defining a Proof   ثبوت ضمنی نتیجہ
 
 %\newcounter{kprcocounter}[chapter]
 %\renewcommand{\thekprcocounter}{\arabic{kprcocounter}.\thechapter}
 
-\newenvironment*{ثبوت نتیجہ صریح}				
-{\noindent\ignorespaces  ثبوت نتیجہ صریح :\quad}%
+\newenvironment*{ثبوت ضمنی نتیجہ}				
+{\noindent\ignorespaces  ثبوت ضمنی نتیجہ :\quad}%
 {\par\hfill\qedsymbol  \vspace{\baselineskip}\par }
 %{\par\noindent\qedsymbol  \vspace{\baselineskip} }
 %--------------------
