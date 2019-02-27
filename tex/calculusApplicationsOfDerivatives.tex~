@@ -8240,7 +8240,7 @@ x_3=1.41422&0.00001&5
 \centering
 \renewcommand{\arraystretch}{1.2} 
 \begin{otherlanguage}{english}
-\begin{tabular}{LLLLL}
+\begin{tabular}{@{}LLLLL@{}}
 \toprule
 n&x_n&f(x_n)&f'(x_n)&x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}\\
 \midrule
