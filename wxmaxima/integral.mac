@@ -1,0 +1,8 @@
+Print("======================================");
+kill(all);
+print("sec 4.2, Q33");
+load("mnewton");
+
+f:1-4/3*x^(1/3);
+g:integrate(f,x);
+plot2d(g,[x,-0.5,2]);
