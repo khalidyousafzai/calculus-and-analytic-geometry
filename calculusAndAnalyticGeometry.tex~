@@ -52,6 +52,7 @@
 
 \input longdiv.tex
 \usepackage{polynom}
+\usepgfplotslibrary{fillbetween}
 
 
 \input{./tex/myUrduCommandsCalculus.tex}                  %turning latex into urdu
@@ -68,11 +69,11 @@
 \graphicspath{{./fig/figFrontPage/}{./fig/figCalculusLimits/}{./fig/figCalculusDerivatives/}}%paths to figures
 
 
-%\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusIntegrationA,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB}
+\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusIntegration,./tex/calculusIntegrationA,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB}
 %
 %\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusAppendixA,./tex/calculusAppendixB}
 %
-\includeonly{./tex/cktSymbols,./tex/cktPreface,./tex/prefaceFirstBook,./tex/calculusIntegrationA,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB}%
+%\includeonly{./tex/cktSymbols,./tex/cktPreface,./tex/prefaceFirstBook,./tex/calculusIntegrationA,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB}%
 
 
 \author{

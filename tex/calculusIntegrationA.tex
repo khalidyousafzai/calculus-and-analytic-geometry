@@ -673,7 +673,7 @@ $y=\tfrac{x}{2}+1$
 %======================
 \ابتدا{سوال}\شناخت{سوال_تکمل_بالائی_زیریں_رقبہ_الف}\ترچھا{بڑھتے تفاعل کے بالائی اور زیریں مجموعے}\\
 (ا) \quad
-فرض کریں کہ جیسے جیسے \عددی{x}  وقفہ \عددی{[a,b]} پر بائیں سے دائیں چلتا ہے، تفاعل \عددی{f(x)} کی ترسیم بتدریج اوپر اٹھتی ہے۔ فرض کریں وقفہ \عددی{[a,b]} کی \عددی{n} عدد ذیلی وقفوں میں خانہ بندی \عددی{P} ہے جہاں ایک خانے کی لمبائی \عددی{\Delta x=\tfrac{b-a}{n}} ہے۔ شکل کو استعمال کرتے ہوئے دکھائیں کہ اس خانہ بندی پر \عددی{f} کے بالائی اور زیریں مجموعوں میں فرق کو ترسیمی طور پر مستطیل \عددی{R} سے ظاہر کیا جا سکتا ہے جس کی جسامت \عددی{[f(b)-f(a)]} ضرب \عددی{\Delta x} ہے۔ (اشارہ: فرق \عددی{H-L} ان رقبوں کا مجموعہ ہے جن کے وتر \عددی{Q_0Q_1, Q_1Q_2,\cdots,Q_{n-1}Q_n} اس ترسیم پر پائے جاتے ہیں۔انہیں افقی مستطیل \عددی{R} پر منتقل کیا جا سکتا ہے۔)\\
+فرض کریں کہ جیسے جیسے \عددی{x}  وقفہ \عددی{[a,b]} پر بائیں سے دائیں چلتا ہے، تفاعل \عددی{f(x)} کی ترسیم بتدریج اوپر اٹھتی ہے۔ فرض کریں وقفہ \عددی{[a,b]} کی \عددی{n} عدد یکساں لمبائیوں کے ذیلی وقفوں میں خانہ بندی \عددی{P} ہے جہاں ایک خانے کی لمبائی \عددی{\Delta x=\tfrac{b-a}{n}} ہے۔ شکل \حوالہ{شکل_تکمل_بتدریج_بڑھتا_تفاعل} کو استعمال کرتے ہوئے دکھائیں کہ اس خانہ بندی پر \عددی{f} کے بالائی اور زیریں مجموعوں میں فرق کو ترسیمی طور پر مستطیل \عددی{R} سے ظاہر کیا جا سکتا ہے جس کی جسامت \عددی{[f(b)-f(a)]} ضرب \عددی{\Delta x} ہے۔ (اشارہ: فرق \عددی{H-L} ان رقبوں کا مجموعہ ہے جن کے وتر \عددی{Q_0Q_1, Q_1Q_2,\cdots,Q_{n-1}Q_n} اس ترسیم پر پائے جاتے ہیں۔انہیں افقی مستطیل \عددی{R} پر منتقل کیا جا سکتا ہے۔)\\
 (ب) \quad
 فرض کریں ذیلی وقفوں کی لمبائیاں ایک دوسرے کے برابر نہیں ہیں بلکہ خانہ بندی \عددی{[a,b]} پر مختلف ذیلی وقفوں کی لمبائی \عددی{\Delta x_k} مختلف ہے۔ اگر \عددی{\Delta x_H} خانہ بندی \عددی{P} کا معیار ہو تب دکھائیں کہ
 \begin{align*}
@@ -693,10 +693,65 @@ H-L\le \abs{f(b)-f(a)}\Delta x_H
 اب بھی کار آمد ہے  لہٰذا \عددی{\lim_{\norm{P}\to 0} (H-L)=0} ہو گا۔
 \انتہا{سوال}
 %=======================
-\ابتدا{سوال}
-تکمل \عددی{\int_0^b x^2\dif x,\,b>0} کی قیمت مثال \حوالہ{مثال_تکمل_قطع_مکافی_رقبہ} کی طرز پر حاصل کریں البتہ اب ہر خانے کا بائیں سر نقطی قیمت استعمال کریں۔
+\ابتدا{سوال}\شناخت{سوال_تکمل_ریمان_مجموعہ_مربع}
+تکمل \عددی{\int_0^b x^2\dif x,\,b>0} کی قیمت مثال \حوالہ{مثال_تکمل_قطع_مکافی_رقبہ} کی طرز پر حاصل کریں البتہ اب ہر خانے کا بائیں سر نقطی قیمت استعمال کریں (شکل \حوالہ{شکل_سوال_تکمل_ریمان_مجموعہ_مربع})۔
 \انتہا{سوال}
 %======================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=1.5-cos(deg(\x));}]
+\begin{axis}[clip=false,small,axis lines=middle,ytick={\empty},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}, xlabel={$x$},ylabel={$y$},xtick={0.25,0.8,1.35,1.9,2.45,3}, xticklabels={$x_0$,$x_1$,,,$x_{n-1}$,$x_n$},xmin=0,xmax=4.5,ymin=0,domain=0.25:3]
+\addplot [fill=lgray,const plot mark right, samples=6]
+    {f(x)}\closedcycle;
+\addplot [fill=white, ybar interval, samples=6]
+    {f(x)}\closedcycle;
+\addplot[smooth, thick]{f(x)};
+\draw(axis cs:0.25,{f(0.25)})node[pin=135:{$Q_0$}]{};
+\draw(axis cs:0.8,{f(0.8)})node[pin=135:{$Q_1$}]{};
+\draw(axis cs:2.45,{f(2.45)})node[pin=135:{$Q_{n-1}$}]{};
+\draw(axis cs:3,{f(3)})node[pin=45:{$Q_n$}]{};
+\draw[fill=lgray](axis cs:3.5,{f(0.25)})--(axis cs:3.5,{f(3)})--(axis cs:4,{f(3)})--(axis cs:4,{f(0.25)})--(axis cs:3.5,{f(0.25)});
+\draw(axis cs:3.5,{f(0.8)})--(axis cs:4,{f(0.8)});
+\draw(axis cs:3.5,{f(1.35)})--(axis cs:4,{f(1.35)});
+\draw(axis cs:3.5,{f(1.9)})--(axis cs:4,{f(1.9)});
+\draw(axis cs:3.5,{f(2.45)})--(axis cs:4,{f(2.45)});
+\draw[dashed](axis cs:0.8,{f(0.25)})--(axis cs:3.5,{f(0.25)});
+\draw[dashed](axis cs:1.35,{f(0.8)})--(axis cs:3.5,{f(0.8)});
+\draw[dashed](axis cs:3,{f(2.45)})--(axis cs:3.5,{f(2.45)});
+\draw[dashed](axis cs:3,{f(3)})--(axis cs:3.5,{f(3)});
+\draw(axis cs:3.5,{f(0.25)})++(0,-2mm)coordinate(kA);
+\draw(axis cs:4,{f(0.25)})++(0,-2mm)coordinate(kB);
+\draw[stealth-stealth](kA)--(kB)node[pos=0.5,below]{$\Delta x$};
+\draw(kA)++(0,1mm)--++(0,-2mm);
+\draw(kB)++(0,1mm)--++(0,-2mm);
+\draw(axis cs:4,{f(0.25)})++(2mm,0)coordinate(kC);
+\draw(axis cs:4,{f(3)})++(2mm,0)coordinate(kD);
+\draw[stealth-stealth](kC)--(kD)node[pos=0.5,right]{$f(b)-f(a)$};
+\draw(kC)++(-1mm,0)--++(2mm,0);
+\draw(kD)++(-1mm,0)--++(2mm,0);
+\draw(axis cs:3.75,{f(3)})node[above]{$R$};
+\end{axis}
+\end{tikzpicture}
+\caption{بالائی اور زیریں مجموعوں میں\\ فرق $[f(b)-f(a)]\Delta x$ ہو گا۔}
+\label{شکل_تکمل_بتدریج_بڑھتا_تفاعل}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=(\x)^2;}]
+\begin{axis}[clip=false,small,axis lines=middle,xmax=7,ytick={\empty},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}, xlabel={$x$},ylabel={$y$},xtick={1,2,5,6},xticklabels={$x_1$,$x_2$,$x_{n-1}$,$x_n$},]
+\addplot[thick,domain=0:6]{f(x)}node[pos=0.9,left]{$y=x^2$};
+\draw(axis cs:6,0)--(axis cs:6,{f(6)});
+\addplot [domain=0:6,fill=lgray,const plot mark left,ybar interval, samples=7]
+    {f(x)}\closedcycle;
+\draw(axis cs:0,0)node[pin=-70:{$x_0=a$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{ریمان مستطیل برائے سوال \حوالہ{سوال_تکمل_ریمان_مجموعہ_مربع}}
+\label{شکل_سوال_تکمل_ریمان_مجموعہ_مربع}
+\end{minipage}
+\end{figure}
 \ابتدا{سوال}\شناخت{سوال_تکمل_درکار_مجموعہ_الف}
 دکھائیں کہ مجموعہ
 \begin{align*}
@@ -851,8 +906,22 @@ f_L\cdot (b-a)\le \int_a^b f(x)\dif x\le f_H\cdot (b-a)
 \end{align*}  
 جس کا ثبوت، جو ریاضی ماخوذ سے حاصل کیا جا سکتا ہے، کو یہاں پیش نہیں کیا جائے گا۔
 
-شکل میں مثبت تفاعل کے لئے قاعدہ \عددی{5} دکھایا گیا ہے اگرچہ یہ قاعدہ کسی بھی تفاعل کے لئے درست ہے۔
+شکل \حوالہ{شکل_تکمل_جمع_پذیری} میں مثبت تفاعل کے لئے قاعدہ \عددی{5} دکھایا گیا ہے جو کسی بھی تفاعل کے لئے درست ہے۔
 
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\scriptsize]
+\draw[-latex](-0.25,0)--(4.5,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,1.5)node[above]{$y$};
+\draw(-0.2,0.5) to [out=10, in=150] coordinate[pos=0.2](kA)coordinate[pos=0.55](kB)coordinate[pos=0.85](kC)node[pos=0.75,above]{$y=f(x)$}(4.5,1.4);
+\draw(kA)--($(0,0)!(kA)!(4.5,0)$)node[below]{$a$}node[pos=0.5,right]{$\int_a^bf(x)\dif x$};
+\draw(kB)--($(0,0)!(kB)!(4.5,0)$)coordinate(kBB)node[below]{$b$}node[pos=0.5,right]{$\int_b^cf(x)\dif x$};
+\draw(kC)--($(0,0)!(kC)!(4.5,0)$)coordinate(kCC)node[below]{$c$};
+\draw(-3,0.75)node[]{$\begin{aligned}\int_a^bf(x)\dif x+\int_b^cf(x)\dif x&=\int_a^cf(x)\dif x\\  \int_b^cf(x)\dif x=\int_a^cf(x)\dif x&-\int_a^bf(x)\dif x  \end{aligned}$};
+\end{tikzpicture}
+\caption{قطعی تکمل کی جمع پذیری}
+\label{شکل_تکمل_جمع_پذیری}
+\end{figure}
 \ابتدا{ثبوت} \موٹا{قاعدہ \عددی{3}}\\
 قاعدہ \عددی{3} کے تحت تفاعل ضرب \عددی{k} کا تکمل تفاعل کا تکمل ضرب \عددی{k} ہو گا۔ یہ درج ذیل کی بنا پر درست ہے۔
 \begin{align*}
@@ -972,15 +1041,68 @@ $\int_2^3x^2\dif x$
 %=====================
 
 \جزوحصہء{تکمل اور کل رقبہ}
-اگر وقفہ \عددی{[a,b]} پر \عددی{y=f(x)} قابل تکمل تفاعل ہو جس کی قیمتیں مثبت بھی  اور منفی بھی ہوں تب \عددی{[a,b]} پر \عددی{f} کا ریمان مجموعہ \عددی{x} محور کے بالائی جانب مستطیلوں کا مثبت رقبوں اور \عددی{x} محور کے نیچے جانب مستطیلوں کا منفی رقبوں کا مجموعہ ہو گا۔ چونکہ مثبت اور منفی مقداریں ایک دوسرے کو کاٹتی ہیں لہٰذا اس مجموعے کی تحدیدی قیمت تفاعل اور \عددی{x} محور کے بیچ کل رقبہ سے کم ہو گی۔ تکمل کی قیمت محور سے اوپر جانب رقبہ منفی محور سے نیچے جانب رقبہ کے برابر ہو گی۔ 
+اگر وقفہ \عددی{[a,b]} پر \عددی{y=f(x)} قابل تکمل تفاعل ہو جس کی قیمت کہیں مثبت اور کہیں منفی  ہو تب \عددی{[a,b]} پر \عددی{f} کا ریمان مجموعہ \عددی{x} محور کے بالائی جانب مستطیلوں کے رقبوں اور \عددی{x} محور کے نیچے جانب مستطیلوں کے رقبوں کی منفی قیمتوں کا مجموعہ ہو گا (شکل \حوالہ{شکل_تکمل_رقبہ_تکمل_تعلق})۔ چونکہ مثبت اور منفی مقداریں ایک دوسرے کو کاٹتی ہیں لہٰذا اس مجموعے کی تحدیدی قیمت تفاعل اور \عددی{x} محور کے بیچ کل رقبہ سے کم ہو گی۔ تکمل کی قیمت محور سے اوپر جانب رقبہ منفی محور سے نیچے جانب رقبہ کے برابر ہو گی۔ 
 
 اس کا مطلب ہے کہ رقبہ کو تکمل سے حاصل کرتے ہوئے دھیان رکھنا ہو گا۔
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=e^(-\x/10)*sin(deg(\x));}]
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xmin=0,xmax=8.5,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty}]
+\addplot[domain=0.5:8,smooth]{f(x)};
+\draw(axis cs:0.5,0)node[below]{$a$}--(axis cs:0.5,{f(0.7)})--(axis cs:1,{f(0.7)});
+\draw(axis cs:1,0)--(axis cs:1,{f(1.3)})--(axis cs:1.5,{f(1.3)})--(axis cs:1.5,{f(1.8)});
+\draw(axis cs:1.5,0)--(axis cs:1.5,{f(1.8)})--(axis cs:2,{f(1.8)})--(axis cs:2,0);
+\draw(axis cs:2,{f(2.2)})--(axis cs:2.5,{f(2.2)})--(axis cs:2.5,0);
+\draw(axis cs:2.5,{f(2.7)})--(axis cs:3,{f(2.7)})--(axis cs:3,0);
+\draw(axis cs:3,0)--(axis cs:3,{f(3.4)})--(axis cs:3.5,{f(3.4)});
+\draw(axis cs:3.5,0)--(axis cs:3.5,{f(3.7)})--(axis cs:4,{f(3.7)});
+\draw(axis cs:4,0)--(axis cs:4,{f(4.2)})--(axis cs:4.5,{f(4.2)});
+\draw(axis cs:4.5,0)--(axis cs:4.5,{f(4.3)})--(axis cs:5,{f(4.3)})--(axis cs:5,0);
+\draw(axis cs:5,{f(5.2)})--(axis cs:5.5,{f(5.2)})--(axis cs:5.5,0);
+\draw(axis cs:5.5,{f(5.7)})--(axis cs:6,{f(5.7)})--(axis cs:6,0);
+\draw(axis cs:6,{f(6.2)})--(axis cs:6.5,{f(6.2)})--(axis cs:6.5,0);
+\draw(axis cs:6.5,0)--(axis cs:6.5,{f(6.8)})--(axis cs:7,{f(6.8)});
+\draw(axis cs:7,0)--(axis cs:7,{f(7.2)})--(axis cs:7.5,{f(7.2)});
+\draw(axis cs:7.5,0)--(axis cs:7.5,{f(7.8)})--(axis cs:8,{f(7.8)})--(axis cs:8,0)node[below]{$b$};
+\draw(axis cs:5,0.25)node[]{$y=f(x)$};
+\draw(axis cs:5,1)node[align=right]{\RL{اگر $f(c_k)>0$ ہو تب}\\   \RL{$f(c_k)\Delta x_k$ رقبہ ہو گا \نقطے}};
+\draw(axis cs:5,-0.75)node[align=right]{\RL{\نقطے  اور اگر $f(c_k)<0$ ہو تب}\\   \RL{$f(c_k)\Delta x_k$ رقبے کا منفی ہو گا۔}};
+\end{axis}
+\end{tikzpicture}
+\caption{ریمان مجموعہ رقبوں کا الجبرائی مجموعہ ہے اور دونوں کی تحدیدی قیمت تکمل ہے۔}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=e^(-\x/10)*sin(deg(\x));}]
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xmin=0,xmax=8.5,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty}]
+\addplot[domain=0.5:8,smooth]{f(x)};
+\draw(axis cs:0.5,0)node[below]{$a$}--(axis cs:0.5,{f(0.5)});
+\draw(axis cs:8,0)node[below]{$b$}--(axis cs:8,{f(8)});
+\draw(axis cs:3,0)node[below]{$x_1$};
+\draw(axis cs:6.5,0)node[below]{$x_2$};
+\draw(axis cs:1.75,0.4)node[]{$S_1$};
+\draw(axis cs:4.5,-0.25)node[]{$S_2$};
+\draw(axis cs:7.5,0.2)node[]{$S_3$};
+\draw(5,0.6)node[font=\scriptsize]{$\begin{aligned}\int_a^{x_1}f(x)\dif x=S_1\\ \int_{x_2}^{b}f(x)\dif x=S_3 \end{aligned}$};
+\draw(axis cs:2,-0.5)node[font=\scriptsize]{$\int_{x_1}^{x_2}f(x)\dif x=-S_2$};
+\end{axis}
+\end{tikzpicture}
+\caption{
+\عددی{a} تا \عددی{b} تفاعل \عددی{f} کا تکمل درج ذیل ہو گا۔\\
+$\int_a^b=\int_a^{x_1}+\int_{x_1}^{x_2}+\int_{x_2}^b=S_1-S_2+S_3$
+}
+\end{subfigure}%
+\caption{تکمل اور کل رقبہ کا تعلق۔}
+\label{شکل_تکمل_رقبہ_تکمل_تعلق}
+\end{figure}
 
-\ابتدا{مثال}
+\ابتدا{مثال}\شناخت{مثال_تکمل_مثبت_منفی_رقبوں_کا_مجموعہ}
 وقفہ \عددی{0\le x\le 3} پر منحنی \عددی{y=4-x^2} اور \عددی{x} محور کے بیچ رقبہ تلاش کریں۔
 
 حل:\quad
-\عددی{x} پر وقفہ \عددی{[0,3]} کو منحنی دو خانوں میں تقسیم کرتی ہے۔ایک خانے میں  \عددی{f(x)=4-x^2} کی قیمت  مثبت اور دوسرے خانے میں  منفی ہے۔منحنی اور \عددی{x} محور کے بیچ رقبہ تلاش کرنے کی خاطر ہم ان خانوں پر تکمل لے کر جوابات کی مطلق قیمتوں کو جمع کرتے ہیں۔
+\عددی{x} پر وقفہ \عددی{[0,3]} کو منحنی دو خانوں میں تقسیم کرتی ہے۔ایک خانے میں  \عددی{f(x)=4-x^2} کی قیمت  مثبت اور دوسرے خانے میں  منفی ہے (شکل \حوالہ{شکل_مثال_تکمل_مثبت_منفی_رقبوں_کا_مجموعہ})۔منحنی اور \عددی{x} محور کے بیچ رقبہ تلاش کرنے کی خاطر ہم ان خانوں پر تکمل لے کر جوابات کی مطلق قیمتوں کو جمع کرتے ہیں۔
 
 وقفہ \عددی{[0,2]} پر تکمل:
 \begin{align*}
@@ -996,17 +1118,83 @@ $\int_2^3x^2\dif x$
 \end{align*}
 کل رقبہ \عددی{\tfrac{16}{3}+\abs{-\tfrac{7}{3}}=\tfrac{23}{3}} ہو گا۔
 \انتہا{مثال}
+%===================
+\begin{figure}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=4-\x^2;}]
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xmax=3.75,ymin=-5.2,ymax=5,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1,2,3},ytick={-5,4}]
+\addplot[name path=f,domain=0:3]{f(x)}node[pos=0.25,above right]{$y=4-x^2$};
+\path[name path=axis](axis cs:0,0)--(axis cs:3,0);
+\draw(axis cs:3,{f(3)})--(axis cs:3,0);
+\addplot[fill=lgray,fill opacity=0.5] fill between [of=axis and f];
+\end{axis}
+\end{tikzpicture}
+\caption{کچھ رقبہ $x$ محور سے اور اور کچھ اس سے نیچے پایا جاتا ہے (مثال \حوالہ{مثال_تکمل_مثبت_منفی_رقبوں_کا_مجموعہ})۔}
+\label{شکل_مثال_تکمل_مثبت_منفی_رقبوں_کا_مجموعہ}
+\end{figure}
 %=====================
 \جزوحصہء{اختیاری استمراری تفاعل کی اوسط قیمت}
 ہم نے مثال \حوالہ{مثال_تکمل_استمراری_اوسط} میں غیر منفی استمراری تفاعل کی اوسط قیمت پر تبصرہ کیا۔ ہم اب \عددی{f} کا غیر منفی ہونے کی شرط کو ختم  کرتے ہوئے تفاعل کی اوسط قیمت کی تعریف پیش کرنے کے قابل ہیں۔ ہم دیکھیں گے کہ ہر استمراری تفاعل کم از کم ایک بار اپنی اوسط قیمت اختیار کرتا ہے۔
 
-ہم دوبارہ ریاضیات سے اوسط قیمت کا تصور لیتے ہیں جہاں \عددی{n} اعداد کی  انفرادی قیمتوں کے مجموعہ کو \عددی{n} سے  تقسیم کرنے سے اعداد کی اوسط قیمت حاصل ہوتی ہے۔بند وقفہ \عددی{[a,b]} پر استمراری تفاعل \عددی{f} کے لئے لامتناہی تعداد کے اعداد کو لینا ہو گا لیکن ہم یکساں وقفوں پر تفاعل سے نمونہ حاصل کر سکتے ہیں۔ ہم \عددی{[a,b]}  کو برابر لمبائیوں کے \عددی{n} ذیلی وقفوں میں تقسیم کرتے ہیں۔یوں ایک ذیلی وقفے کی لمبائی \عددی{\Delta x=\tfrac{b-a}{n}} ہو گی۔ ہم ہر ذیلی وقفے پر \عددی{f} کی قیمت نقطہ \عددی{c_k} پر حاصل کرتے ہیں۔ ان \عددی{n} نمونوں کی اوسط قیمت درج ذیل ہو گی۔
+ہم دوبارہ ریاضیات سے اوسط قیمت کا تصور لیتے ہیں جہاں \عددی{n} اعداد کی  انفرادی قیمتوں کے مجموعہ کو \عددی{n} سے  تقسیم کرنے سے اعداد کی اوسط قیمت حاصل ہوتی ہے۔بند وقفہ \عددی{[a,b]} پر استمراری تفاعل \عددی{f} کے لئے لامتناہی تعداد کے اعداد کو لینا ہو گا لیکن ہم یکساں وقفوں پر تفاعل سے نمونہ حاصل کر سکتے ہیں۔ ہم \عددی{[a,b]}  کو برابر لمبائیوں کے \عددی{n} ذیلی وقفوں میں تقسیم کرتے ہیں۔یوں ایک ذیلی وقفے کی لمبائی \عددی{\Delta x=\tfrac{b-a}{n}} ہو گی۔ ہم ہر ذیلی وقفے پر \عددی{f} کی قیمت نقطہ \عددی{c_k} پر حاصل کرتے ہیں (شکل \حوالہ{شکل_تکمل_نمونی_قیمتیں})۔ ان \عددی{n} نمونوں کی اوسط قیمت درج ذیل ہو گی۔
 \begin{align*}
 \frac{f(c_1)+f(c_2)+\cdots+f(c_n)}{n}&=\frac{1}{n}\cdot\sum_{k=1}^n f(c_k)&&\text{\RL{مجموعہ کی سگما روپ}}\\
 &=\frac{\Delta x}{b-a}\cdot \sum_{k=1}^nf(c_k)&&\Delta x=\frac{b-a}{n}\\
 &=\frac{1}{b-a}\cdot \underbrace{\sum_{k=1}^n f(c_k)\Delta x}_{\text{\RL{$[a,b]$ پر $f$ کا ریمان مجموعہ}}}
 \end{align*}
 یوں نمونی قیمتوں کی اوسط قیمت ہر صورت \عددی{[a,b]} پر \عددی{f} کا ریمان مجموعہ ضرب \عددی{\tfrac{1}{b-1}} ہو گی۔ ہم جیسے جیسے نمونہ کی جسامت  (تعداد) بڑھاتے جائیں اور خانہ بندی کے معیار کو صفر کے قریب تر کریں، یہ اوسط قیمت \عددی{\tfrac{1}{b-a}\int_a^bf(x)\dif x} تک پہنچے گی۔ اس نتیجہ سے ہمیں درج ذیل تعریف ملتی ہے۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=-sin(deg(\x))-1/6*(\x/pi)^2*sin(deg(3*\x));}]
+\pgfmathsetmacro{\a}{0.2}
+\pgfmathsetmacro{\k}{6.2}
+\pgfmathsetmacro{\fa}{f(0.7)}
+\pgfmathsetmacro{\fb}{f(1.2)}
+\pgfmathsetmacro{\fc}{f(1.65)}
+\pgfmathsetmacro{\fd}{f(2.35)}
+\pgfmathsetmacro{\fe}{f(2.75)}
+\pgfmathsetmacro{\ff}{f(3.4)}
+\pgfmathsetmacro{\fg}{f(3.7)}
+\pgfmathsetmacro{\fh}{f(4.3)}
+\begin{axis}[axis on top,clip=false,small, axis lines=middle,ytick={\empty},xmin=0, ,xmax=6.5,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}, xtick={0.5,1,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6},xticklabels={,,,,,,,,,,,}]
+\addplot[name path=cur,domain=\a:\k,smooth]{f(x)}node[pos=0.85,above left]{$y=f(x)$};
+\draw(axis cs:0.7,\fa)--(axis cs:0.7,0)node[circ]{};
+\draw(axis cs:1.2,\fb)--(axis cs:1.2,0)node[circ]{};
+\draw(axis cs:1.65,\fc)--(axis cs:1.65,0)node[circ]{};
+\draw(axis cs:2.35,\fd)--(axis cs:2.35,0)node[circ]{};
+\draw(axis cs:2.75,\fe)--(axis cs:2.75,0)node[circ]{};
+\draw(axis cs:3.4,\ff)--(axis cs:3.4,0)node[circ]{};
+\draw(axis cs:3.7,\fg)node[circ]{}node[left]{$(c_k,f(c_k))$}--(axis cs:3.7,0)node[circ]{}node[below]{$c_k$};
+\draw(axis cs:4.3,\fh)--(axis cs:4.3,0)node[circ]{};
+\path[name path=fi](axis cs:4.7,0)--(axis cs:4.7,1);
+\path[name path=fj](axis cs:5.2,0)--(axis cs:5.2,1);
+\path[name path=fk](axis cs:5.7,0)--(axis cs:5.7,1.15);
+\draw[name intersections={of=cur and fi}] (intersection-1)--(4.7,0)node[circ]{};
+\draw[name intersections={of=cur and fj}] (intersection-1)--(5.2,0)node[circ]{};
+\draw[name intersections={of=cur and fk}] (intersection-1)--(5.7,0)node[circ]{};
+\draw(axis cs:0.5,0)node[pin=90:{$x_0=a$}]{};
+\draw(axis cs:1,0)node[above]{$x_1$};
+\draw(axis cs:6,0)node[pin=-45:{$x_n=b$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{وقفہ $[a,b]$ پر تفاعل کی نمونی قیمتیں۔}
+\label{شکل_تکمل_نمونی_قیمتیں}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\c}{sqrt(3)}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},ymin=-5.25,ymax=5,xmax=3.5,xtick={\c,3},xticklabels={$\sqrt{3}$,$3$},ytick={-5,1,4},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=0:3]{4-x^2}node[pos=0.2,above right]{$y=4-x^2$}node[pos=1,circ]{};
+\draw[dashed](axis cs:\c,0)--(axis cs:\c,1)--(axis cs:0,1);
+\end{axis}
+\end{tikzpicture}
+\caption{وقفہ $[0,3]$ پر تفاعل $f=4-x^2$ کی اوسط قیمت $1$ کو تفاعل $x=\sqrt{3}$ پر اختیار کرتا ہے (مثال \حوالہ{مثال_تکمل_تفاعل_کی_اوسط_قیمت})۔}
+\label{شکل_مثال_تکمل_تفاعل_کی_اوسط_قیمت}
+\end{minipage}
+\end{figure}
 
 \ابتدا{تعریف}
 اگر \عددی{[a,b]} پر \عددی{f} قابل تکمل تفاعل ہو تب \عددی{[a,b]} پر \عددی{f} کی \اصطلاح{اوسط قیمت}\فرہنگ{اوسط قیمت}\حاشیہب{average (mean) value}\فرہنگ{average}\فرہنگ{mean} درج ذیل ہو گی۔
@@ -1025,7 +1213,7 @@ f_{\text{اوسط}}&=\frac{1}{b-a}\int_a^bf(x)\dif x\\
 &=\frac{1}{3-0}\int_0^3(4-x^2)\dif x=\frac{1}{3}\big(\int_0^34\dif x-\int_0^3x^2\dif x\big)\\
 &=\frac{1}{3}\big(4(3-0)-\frac{(3)^3}{3}\big)=\frac{1}{3}(12-9)=1
 \end{align*}
-وقفہ \عددی{[0,3]} پر \عددی{f} کی اوسط قیمت \عددی{1} ہے۔ تفاعل کی قیمت یہی تب ہو گی جب \عددی{4-x^2=1} ہو گا جس سے \عددی{x=\mp\sqrt{3}} ملتے ہیں۔ چونکہ ان دو نقطوں میں سے صرف \عددی{x=\sqrt{3}} وقفہ \عددی{[0,3]} پر پایا جاتا ہے لہٰذا دیے گئے وقفے میں  \عددی{x=\sqrt{3}} پر  \عددی{f} کی قیمت  اوسط قیمت \عددی{1} کے برابر ہو گی۔
+وقفہ \عددی{[0,3]} پر \عددی{f} کی اوسط قیمت \عددی{1} ہے۔ تفاعل کی قیمت یہی تب ہو گی جب \عددی{4-x^2=1} ہو گا جس سے \عددی{x=\mp\sqrt{3}} ملتے ہیں۔ چونکہ ان دو نقطوں میں سے صرف \عددی{x=\sqrt{3}} وقفہ \عددی{[0,3]} پر پایا جاتا ہے لہٰذا دیے گئے وقفے میں  \عددی{x=\sqrt{3}} پر  \عددی{f} کی قیمت  اوسط قیمت \عددی{1} کے برابر ہو گی (شکل \حوالہ{شکل_مثال_تکمل_تفاعل_کی_اوسط_قیمت})۔
 \انتہا{مثال}
 %==========================
 
@@ -1033,7 +1221,7 @@ f_{\text{اوسط}}&=\frac{1}{b-a}\int_a^bf(x)\dif x\\
 بند وقفہ پر استمراری تفاعل کی قیمت، بند وقفہ پر  کم از کم ایک بار، تفاعل کی اوسط قیمت کے برابر ہو گی۔ اس فقرے کو قطعی تکملات کا اوسط قیمت مسئلہ کہتے ہیں۔
 
 \ابتدا{مسئلہ}\شناخت{مسئلہ_تکمل_اوسط_قیمت_قطعی_تکملات}\موٹا{مسئلہ اوسط قیمت برائے قطعی تکملات}\\
-اگر \عددی{[a,b]} پر \عددی{f} قابل تکمل ہو تب \عددی{[a,b]} میں کسی نقطہ \عددی{c} پر درج ذیل ہو گا۔
+اگر \عددی{[a,b]} پر \عددی{f} قابل تکمل ہو تب \عددی{[a,b]} میں کسی نقطہ \عددی{c} پر درج ذیل ہو گا (شکل \حوالہ{شکل_مسئلہ_تکمل_اوسط_قیمت_قطعی_تکملات})۔
 \begin{align*}
 f(c)=\frac{1}{b-a}\int_a^bf(x)\dif x
 \end{align*}
@@ -1050,8 +1238,38 @@ f_L\le \frac{1}{b-a}\int_a^bf(x)\dif x\le f_H
 چونکہ \عددی{f} استمراری ہے  لہٰذا استمراری تفاعل کے مسئلہ \حوالہ{مسئلہ_حد_متوسط_قیمت} کے تحت تفاعل  \عددی{f_L} اور \عددی{f_H} کے بیچ تمام قیمتیں اختیار کرے گا۔ اس طرح \عددی{f} ہر صورت وقفہ \عددی{[a,b]} میں کسی نقطہ \عددی{c} پر \عددی{\tfrac{1}{b-a}\int_a^bf(x)\dif x} قیمت بھی اختیار کرے گا۔  
 \انتہا{ثبوت}
 %===================
-
-تفاعل کا استمراری ہونا یہاں ضروری ہے۔ غیر استمراری تفاعل اپنی اوسط قیمت کے اوپر سے گزر سکتا ہے۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{pi/4}
+\pgfmathsetmacro{\b}{2*pi-pi/4}
+\pgfmathsetmacro{\c}{pi}
+\begin{axis}[small,axis lines=middle, xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ymin=0,xmin=0,xtick={\a,\b,\c}, xticklabels={$a$,$b$,$c$}, ytick={\empty},xmax=\b+1]
+\addplot[name path=f,domain=\a:\b]{2+sin(deg(x))}node[pos=0.45,above right]{$y=f(x)$};
+\draw[dashed](axis cs:\a,0)--(axis cs:\a,2)--(axis cs:\b,2)--(axis cs:\b,0)  (axis cs:\c,0)--(axis cs:\c,2);
+\path[name path=axis](axis cs:\a,0)--(axis cs:\b,0);
+\addplot[fill=lgray,fill opacity=0.5] fill between[of=f and axis];
+\end{axis}
+\end{tikzpicture}
+\caption{وقفہ $[a,b]$ کے کسی نقطہ $c$ پر\\ $f(c)\cdot (b-1)=\int_a^bf(x)\dif x$ ہو گا۔}
+\label{شکل_مسئلہ_تکمل_اوسط_قیمت_قطعی_تکملات}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\begin{axis}[small, axis lines=middle, xlabel={$x$},ylabel={$y$}, xmin=-0.2,xmax=3,ymin=-0.2,ymax=1.5, xtick={1,2},ytick={0.5,1},yticklabels={$\tfrac{1}{2}$,$1$}]
+\draw[thick](axis cs:0,0)node[circ]{}--(axis cs:1,0)node[circ]{};
+\draw[thick](axis cs:1,1)node[ocirc]{}--(axis cs:2,1)node[circ]{}node[pos=0.5,above]{$y=f(x)$};
+\draw[dashed](axis cs:0,0.5)--(2,0.5)node[right,align=right]{\RL{اوسط قیمت $\tfrac{1}{2}$}\\ \RL{اختیار نہیں کی جاتی}};
+\end{axis}
+\end{tikzpicture}
+\caption{غیر استمراری تفاعل ضروری نہیں کہ اوسط قیمت اختیار کرے۔}
+\label{شکل_تکمل_غیر_استمراری_اوسط_نہیں_اختیار}
+\end{minipage}
+\end{figure}
+تفاعل کا استمراری ہونا یہاں ضروری ہے۔ غیر استمراری تفاعل اپنی اوسط قیمت کے اوپر سے چھلانگ لگا کر گزر سکتا ہے (شکل \حوالہ{شکل_تکمل_غیر_استمراری_اوسط_نہیں_اختیار})۔
 
 ہم مسئلہ \حوالہ{مسئلہ_تکمل_اوسط_قیمت_قطعی_تکملات} سے مزید کیا جان سکتے ہیں؟ ایک مثال دیکھتے ہیں۔
 
@@ -1229,23 +1447,80 @@ $\int_1^0(3x^2+x-5)\dif x$
 \انتہا{سوال}
 %=========================
 \موٹا{رقبے}\\
-سوال \حوالہ{سوال_تکمل_سایہ_رقبہ_الف} تا سوال \حوالہ{سوال_تکمل_سایہ_رقبہ_ب} میں سایہ دار رقبہ تلاش کریں۔
+سوال \حوالہ{سوال_تکمل_سایہ_رقبہ_الف} تا سوال \حوالہ{سوال_تکمل_سایہ_رقبہ_ت} میں سایہ دار رقبہ تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_تکمل_سایہ_رقبہ_الف}
-
-\انتہا{سوال}
-%==============================
-\ابتدا{سوال}
-\انتہا{سوال}
-%==============================
-\ابتدا{سوال}
+\عددی{x=0} تا \عددی{x=2} کے مابین منحنی \عددی{y=x^2-1} اور \عددی{y} محور کے بیچ رقبہ (شکل \حوالہ{شکل_سوال_تکمل_سایہ_رقبہ_الف})۔
 
 \انتہا{سوال}
 %==============================
 \ابتدا{سوال}\شناخت{سوال_تکمل_سایہ_رقبہ_ب}
-
+رقبہ شکل \حوالہ{شکل_سوال_تکمل_سایہ_رقبہ_ب} میں دکھایا گیا ہے۔
 \انتہا{سوال}
 %==============================
+\ابتدا{سوال}\شناخت{سوال_تکمل_سایہ_رقبہ_پ}
+رقبہ شکل \حوالہ{شکل_سوال_تکمل_سایہ_رقبہ_پ} میں دکھایا گیا ہے۔
+\انتہا{سوال}
+%==============================
+\ابتدا{سوال}\شناخت{سوال_تکمل_سایہ_رقبہ_ت}
+رقبہ شکل \حوالہ{شکل_سوال_تکمل_سایہ_رقبہ_ت} میں دکھایا گیا ہے۔
+\انتہا{سوال}
+%==============================
+\begin{figure}
+\centering
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,width=3.5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xmax=2.5,ymax=3.5,ytick={-1,3},xtick={1,2},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[name path=f,domain=0:2]{x^2-1}node[pos=0.75,left]{$y=x^2-1$};
+\draw[](axis cs:0,3)--(axis cs:2,3);
+\path[name path=axis](current axis.below origin)--(current axis.above origin);
+\addplot[fill=lgray,fill opacity=0.5] fill between[of=f and axis,reverse=false,soft clip={domain y=-1:3}];
+\end{axis}
+\end{tikzpicture}
+\caption{رقبہ سوال \حوالہ{سوال_تکمل_سایہ_رقبہ_الف}}
+\label{شکل_سوال_تکمل_سایہ_رقبہ_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,width=3.5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xmax=2.5,ymin=-10,ymax=4,ytick={-9,3},xtick={1,2},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},restrict y to domain=-9:3]
+\addplot[name path=f,domain=0:2]{3-3*x^2}node[pos=0.75,left]{$y=3-3x^2$};
+\draw[](axis cs:0,-9)--(axis cs:2,-9);
+\path[name path=axis](0,-9)--(2,-9);
+\addplot[fill=lgray,fill opacity=0.5] fill between[of=f and axis,];
+\end{axis}
+\end{tikzpicture}
+\caption{رقبہ سوال \حوالہ{سوال_تکمل_سایہ_رقبہ_ب}}
+\label{شکل_سوال_تکمل_سایہ_رقبہ_ب}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,width=3.5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xmax=4.5,ymin=-4.5,ymax=3,ytick={-4,2.25},xtick={1,2,3,4},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[name path=f,domain=0:4]{3*x-x^2}node[pos=0.75,below left]{$y=3x-x^2$};
+\draw[](axis cs:4,-4)--(axis cs:4,0);
+\path[name path=axis](axis cs:0,0)--(axis cs:4,0);
+\addplot[fill=lgray,fill opacity=0.5] fill between[of=f and axis,];
+\end{axis}
+\end{tikzpicture}
+\caption{رقبہ سوال \حوالہ{سوال_تکمل_سایہ_رقبہ_پ}}
+\label{شکل_سوال_تکمل_سایہ_رقبہ_پ}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[font=\tiny,width=3.5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xmax=3.5,ymin=-1.5,ymax=3,ytick={-4,2.25},xtick={1,2,3},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[name path=f,domain=0:3]{x^2-2*x}node[pos=0.75,left]{$y=x^2-2x$};
+\draw[](axis cs:3,0)--(axis cs:3,3);
+\path[name path=axis](axis cs:0,0)--(axis cs:3,0);
+\addplot[fill=lgray,fill opacity=0.5] fill between[of=f and axis,];
+\end{axis}
+\end{tikzpicture}
+\caption{رقبہ سوال \حوالہ{سوال_تکمل_سایہ_رقبہ_ت}}
+\label{شکل_سوال_تکمل_سایہ_رقبہ_ت}
+\end{minipage}
+\end{figure}
 
 سوال \حوالہ{سوال_تکمل_وقفہ_ترسیم_رقبہ_الف} تا سوال \حوالہ{سوال_تکمل_وقفہ_ترسیم_رقبہ_ب} میں دیے گئے وقفہ پر تفاعل ترسیم کریں۔ اس کے بعد (ا) دیے وقفے پر تفاعل تکمل کریں، اور (ب) تفاعل اور \عددی{x} محور کے بیچ رقبہ تلاش کریں۔
 
@@ -1309,14 +1584,41 @@ f(x)=
 x+4,&-4\le x\le -1\\
 -x+2,&-1< x\le 2
 \end{cases}\quad\quad
-[-4,2]
+[-4,2]\quad \quad \text{\RL{شکل \حوالہ{شکل_سوال_تکمل_اوسط_قیمت_ترسیم_الف}}}
 \end{align*}
 \انتہا{سوال}
 %======================
-\ابتدا{سوال}
-وقفہ \عددی{[-1,1]} پر تفاعل \عددی{f(t)=1-\sqrt{1-t^2}} دیا گیا ہے۔
+\ابتدا{سوال}\شناخت{سوال_تکمل_اوسط_قیمت_ترسیم_پ}
+وقفہ \عددی{[-1,1]} پر تفاعل \عددی{f(t)=1-\sqrt{1-t^2}} جس کو شکل \حوالہ{شکل_سوال_تکمل_اوسط_قیمت_ترسیم_پ} میں دکھایا گیا ہے۔
 \انتہا{سوال}
 %=========================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\footnotesize]
+\draw[-latex](-2.25,0)--(1.25,0)node[right]{$x$};
+\draw[-latex](0,0)node[below]{$0$}--(0,1.25)node[above]{$y$};
+\draw(-2,0)node[below]{$-4$}--(-0.5,1)node[pos=0.5,above left]{$y=x+4$};
+\draw(1,0)node[below]{$2$}--(-0.5,1)node[pos=0.5,above right]{$y=-x+2$};
+\draw(0,1)node[left]{$3$}--++(0.1,0);
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_اوسط_قیمت_ترسیم_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\footnotesize]
+\draw[-latex](-1.25,0)--(1.25,0)node[right]{$t$};
+\draw[-latex](0,0)node[below]{$0$}--(0,1.25)node[above]{$s$};
+\draw([shift={(180:1)}]0,1) arc (180:360:1);
+\draw(-1,0)node[below]{$-1$}--++(0,0.1)  (1,0)node[below]{$1$}--++(0,0.1)  (0,1)node[left]{$1$}--++(0.1,0);
+\draw(1,1)node[above,xshift=2mm]{$s=1-\sqrt{1-t^2}$};
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_اوسط_قیمت_ترسیم_پ}
+\end{minipage}
+\end{figure}
 \ابتدا{سوال}
 وقفہ \عددی{[0,2\pi]} پر تفاعل \عددی{f(t)=\sin t} دیا گیا ہے۔
 \انتہا{سوال}
@@ -1482,8 +1784,26 @@ F(x+h)-F(x)=\int_a^{x+h}f(t)\dif t-\int_a^xf(t)\dif t
 \begin{align*}
 \frac{\dif}{\dif x}\int_a^xf(t)\dif t=f(x)
 \end{align*}
-کی ایک خوبصورت جیومیٹریائی معنی اخذ کی جا سکتی ہے۔چونکہ تب \عددی{a} تا \عددی{x} تفاعل \عددی{f} کا تکمل \عددی{a} تا \عددی{x} محور \عددی{x}  اور \عددی{f} کے بیچ رقبہ ہو گا۔فرض کریں کہ آپ اس رقبہ پر بائیں سے دائیں چلتے ہوئے ایک قالین  بچھاتے ہیں جس کی متغیر چوڑائی \عددی{f(t)} ہو۔ جب قالین نقطہ \عددی{x} سے گزرتا ہے اس لمحہ زمین ڈھانپنے کی شرح \عددی{f(x)} ہو گی۔ 
-
+کی ایک خوبصورت جیومیٹریائی معنی اخذ کی جا سکتی ہے۔چونکہ تب \عددی{a} تا \عددی{x} تفاعل \عددی{f} کا تکمل \عددی{a} تا \عددی{x} محور \عددی{x}  اور \عددی{f} کے بیچ رقبہ ہو گا۔فرض کریں کہ آپ اس رقبہ پر بائیں سے دائیں چلتے ہوئے ایک قالین  بچھاتے ہیں جس کی متغیر چوڑائی \عددی{f(t)} ہو۔ جب قالین نقطہ \عددی{x} سے گزرتا ہے اس لمحہ زمین ڈھانپنے کی شرح \عددی{f(x)} ہو گی (شکل \حوالہ{شکل_تکمل_قالین})۔ 
+\begin{figure}
+\centering
+\begin{tikzpicture}[]
+\draw[-latex](-0.25,0)--(4.5,0)node[right]{$t$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
+\draw[name path=kc](0.25,1.25) to [out=-20,in=-145] node[pos=0.4,above]{$y=f(t)$}(4.5,2);
+\path[name path=kya](0.5,0)--++(0,2);
+\path[name path=ky](3.5,0)--++(0,2);
+\draw[name intersections={of=kc and ky}] (intersection-1)++([shift={(-90:0.25)}]0,0.25) arc (-90:160:0.25)coordinate[pos=1](kB);
+\draw([shift={(-90:0.25)}]3.5,0.25) arc (-90:160:0.25)coordinate[pos=1](kA);
+\fill[white]($(intersection-1)+(0.25,0.25)$)coordinate(kkB)--(kB)--++(0,-1)--++(0.5,0)--(kkB);
+\draw(3.5+0.25,0.25)coordinate(kkC)--($(intersection-1)+(0.25,0.25)$)coordinate(kkD);
+\draw(3.5,0)node[below]{$x$};
+\draw(kA)--(kB);
+\draw[name intersections={of=kya and kc}](0.5,0)node[below]{$a$}--(intersection-1);
+\end{tikzpicture}
+\caption{نقطہ $x$ پر زمین کو قالین شرح $\tfrac{\dif A}{\dif x}=f(x)$ سے ڈھانپتا ہے۔}
+\label{شکل_تکمل_قالین}
+\end{figure}
 \ابتدا{مثال}
 \begin{align*}
 \frac{\dif}{\dif x}\int_{-\pi}^x\cos t\dif t&=\cos x&&\text{\RL{مساوات \حوالہ{مساوات_تکمل_بنیادی_مسئلہ_ب} میں $f(t)=\cos t$}}\\
