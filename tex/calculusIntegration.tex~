@@ -493,7 +493,7 @@ $\int\tfrac{\csc\theta}{\csc\theta-\sin\theta}\dif\theta$
 \انتہا{سوال}
 %============================
 \موٹا{تکملی کلیہ کی تصدیق}\\
-سوال \حوالہ{سوال_تکمل_کلیات_تصدیق_الف} تا سوال \حوالہ{سوال_تکمل_کلیات_تصدیق_ب} میں دیے تکملی کلیات کی تصدیق بذریعہ تفرق کریں۔ ان کلیات کا حصول جلد دکھایا جائے گا۔
+سوال \حوالہ{سوال_تکمل_کلیات_تصدیق_الف} تا سوال \حوالہ{سوال_تکمل_کلیات_تصدیق_ب} میں دیے تکملی کلیات کی تصدیق بذریعہ تفرق کریں۔ ہم حصہ \حوالہ{حصہ_تکمل_بذریعہ_ترکیب_بدل_الٹ_زنجیری_قاعدہ} میں دیکھیں گے کہ ایسے کلیات کہاں سے آتے ہیں۔
 
 \ابتدا{سوال}\شناخت{سوال_تکمل_کلیات_تصدیق_الف}
 $\int(7x-2)^3\dif x=\tfrac{(7x-2)^4}{28}+C$
@@ -6194,3 +6194,400 @@ $a=0,\quad u(x)=1-x^2,\quad f(x)=x^2-2x-3$
 %====================
 
 \حصہ{قطعی تکمل میں بدل}
+قطع تکمل کو بدل کی مدد سے حل کرنے کے دو طریقے پائے جاتے ہیں اور دونوں بہترین کام کرتے ہیں۔ ایک طریقہ میں بدل کے ذریعہ مطابقتی غیر قطعی تکمل حاصل کرتے ہوئے اس کا کوئی ایک الٹ تفرق استعمال کرتے ہوئے قطعی تکمل کو بنیادی مسئلہ سے حل کیا جاتا ہے۔ دوسری ترکیب میں درج ذیل کلیہ استعمال کیا جاتا ہے۔
+
+\موٹا{قطعی تکمل میں بدل کا کلیہ}
+\begin{align}\label{مساوات_تکمل_کلیہ_بدل}
+\int_a^bf(g(x))\cdot g'(x)\dif x=\int_{g(a)}^{g(b)}f(u)\dif u
+\end{align}
+اس کلیہ میں \عددی{u=g(x)} پر کرتے ہوئے \عددی{\dif u=g'(x)\dif x} لکھ کر \عددی{g(a)} تا \عددی{g(b)} تکمل لیں۔
+
+قطعی تکمل حل کرنے کی خاطر وہی \عددی{u} تفاعل پر کریں جو آپ غیر قطعی تکمل کے حل میں استعمال کریں گے۔ اس کے بعد \عددی{x=a} پر \عددی{u} کی قیمت سے \عددی{x=b} پر \عددی{u} کی قیمت تک تکمل لیں۔
+
+\ابتدا{مثال}
+قطعی تکمل \عددی{\int_{-1}^13x^2\sqrt{x^3-1}\dif x} حل کریں۔
+
+حل:\quad
+ہمارے پاس دو راستے ہیں۔\\
+\موٹا{پہلی ترکیب:}\quad
+دیے گئے تکمل کو غیر قطعی تکمل میں بدلیں جس کو حل کرنے کے بعد متغیر کو واپس \عددی{x} صورت میں لکھیں اور \عددی{x} کے بالائی اور زیریں حدود استعمال کریں۔
+\begin{align*}
+\int3x^2\sqrt{x^3+1}\dif x&=\int \sqrt{u}\dif u&&u=x^3+1,\, \dif y=3x^2\dif x\\
+&=\frac{2}{3}u^{3/2}+C&&\text{\RL{$u$ کے لحاظ سے تکمل لیں}}\\
+&=\frac{2}{3}(x^3+1)^{3/2}+C&&\text{\RL{واپس $u=x^3+1$ پر کریں}}\\
+\int_{-1}^1 3x^2\sqrt{x^3+1}\dif x&=\left.\frac{2}{3}(x^3+1)^{3/2}\right\vert_{-1}^1&&\text{\RL{حاصل تکمل استعمال کریں}}\\
+&=\frac{2}{3}[((1)^3+1)^{3/2}-((-1)^3+1)^{3/2}]\\
+&=\frac{2}{3}[2^{3/2}-0^{3/2}]=\frac{2}{3}[2\sqrt{2}]=\frac{4\sqrt{2}}{3}
+\end{align*}
+\موٹا{دوسری ترکیب:}\quad
+تکمل کو بدل کر مساوات \حوالہ{مساوات_تکمل_کلیہ_بدل} میں دیے گئے نئے حدود استعمال کریں۔ ہم \عددی{u=x^3+1} لیتے ہیں۔ یوں \عددی{\dif u=3x^2\dif x}ہو گا جبکہ حدود \عددی{u(x=-1)=0} اور \عددی{u(x=1)=2} ہوں گے۔
+\begin{align*}
+\int_{-1}^13x^2\sqrt{x^3+1}\dif x&=\int_0^1\sqrt{u}\dif u&&u=x^3+1,\,\dif u=3x^2\dif x\\
+&=\left. \frac{2}{3}u^{3/2}\right\vert_0^2&&\text{\RL{نئے قطعی تکمل کی قیمت حاصل کریں}}\\
+&=\frac{2}{3}[2^{2/3}-0^{2/3}]=\frac{2}{3}[2\sqrt{2}]=\frac{4\sqrt{2}}{3}
+\end{align*}
+\انتہا{مثال}
+%=========================
+ اس مثال میں دوسری ترکیب زیادہ آسان معلوم ہوتی ہے اگرچہ ایسا ہر بار نہیں ہو گا۔ آپ کو دونوں تراکیب آنے چاہیے۔
+
+آئیں ایک اور مثال دیکھیں۔
+
+\ابتدا{مثال}
+\begin{align*}
+\int_{\pi/4}^{\pi/2}\cot\theta\csc^2\theta\dif\theta&=\int_1^0 u\cdot(-\dif u)&&u=\cot \theta, \,\dif u=-\csc^2\theta\dif \theta\\
+&=-\int_1^0u\dif u\\
+&=-\big[\frac{u^2}{2}\big]_1^0\\
+&=-\big[\frac{(0)^2}{2}-\frac{(1)^2}{2}\big]=\frac{1}{2}
+\end{align*}
+\انتہا{مثال}
+%=====================
+
+\جزوحصہء{کمپیوٹر کا استعمال}
+بعض اوقات الٹ تفرق کا حصول مشکل ہوتا ہے۔ بہت سارے قابل تکمل تفاعل مثلاً
+\begin{align*}
+f(x)=e^{-x^2}
+\end{align*}
+جو  نظریہ احتمال میں اہم کردار ادا کرتا ہے کے الٹ تفرق کو بنیادی تفاعل کی صورت میں نہیں لکھا جا سکتا ہے، اگرچہ بنیادی مسئلہ کے جزو اول سے ہم جانتے ہیں کہ \عددی{f} کا الٹ تفرق موجود ہے۔ کمپیوٹر پر درج ذیل تکملی تفاعل
+\begin{align*}
+F(x)=\int_0^xe^{-t^2}\dif t
+\end{align*}
+ترسیم کریں۔ آپ \عددی{F(x)} کے بارے میں کیا کہہ سکتے ہیں؟ یہ کہاں بڑھتا اور کہاں گھٹتا ہے؟ اس کے انتہا (اگر ہوں) کہاں پائے جاتے ہی؟ اس کے ترسیم کے مقعر کے بارے میں کیا کہا جا سکتا ہے؟
+
+\حصہء{سوالات}
+\موٹا{قطعی تکمل کی قیمت کا حصول}\\
+سوال \حوالہ{سوال_تکمل_قطعی_تکمل_دو_تراکیب_الف} تا سوال \حوالہ{سوال_تکمل_قطعی_تکمل_دو_تراکیب_ب} کو حل کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_تکمل_قطعی_تکمل_دو_تراکیب_الف}
+(ا) \quad
+$\int_0^3\sqrt{y+1}\dif yy$\quad
+(ب)\quad
+$\int_{-1}^0\sqrt{y+1}\dif y$\\
+جوابات:\quad
+(ا) \عددی{\tfrac{14}{3}}، (ب) \عددی{\tfrac{2}{3}}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+(ا)\quad
+$\int_0^1r\sqrt{1-r^2}\dif r$\quad
+(ب) \quad
+$\int_{-1}^1r\sqrt{1-r^2}\dif r$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+(ا)\quad
+$\int_0^{\pi/4}\tan x\sec^2x\dif x$\quad
+(ب) \quad
+$\int_{-\pi/4}^0\tan x\sec^2x\dif x$\\
+جوابات:\quad
+(ا) \عددی{\tfrac{1}{2}}، (ب) \عددی{-\tfrac{1}{2}}
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+(ا)\quad
+$\int_0^{\pi}3\cos^2x\sin x\dif x$\quad
+(ب) \quad
+$\int_{2\pi}^{3\pi}3\cos^2x\sin x\dif x$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+(ا)\quad
+$\int_0^1t^3(1+t^4)^3\dif t$\quad
+(ب) \quad
+$\int_{-1}^1t^3(1+t^4)^3\dif t$\\
+جوابات:\quad
+(ا) \عددی{\tfrac{15}{16}}، (ب) \عددی{0}
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+(ا)\quad
+$\int_0^{\sqrt{7}}t(t^2+1)^{1/3}\dif t$\quad
+(ب) \quad
+$\int_{-\sqrt{7}}^0t(t^2+1)^{1/3}\dif t$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+(ا)\quad
+$\int_{-1}^1\tfrac{5r}{(4+r^2)^2}\dif r$\quad
+(ب) \quad
+$\int_0^1\tfrac{5r}{(4+r^2)^2}\dif r$\\
+جوابات:\quad
+(ا) \عددی{0}، (ب) \عددی{\tfrac{1}{8}}
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+(ا)\quad
+$\int_0^1\tfrac{10\sqrt{v}}{(1+v^{3/2})^2}\dif v$\quad
+(ب) \quad
+$\int_1^4\tfrac{10\sqrt{v}}{1+v^{3/2}}\dif v$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+(ا)\quad
+$\int_0^{\sqrt{3}}\tfrac{4x}{\sqrt{x^2+1}}\dif x$\quad
+(ب) \quad
+$\int_{-\sqrt{3}}^{\sqrt{3}}\tfrac{4x}{\sqrt{x^2+1}}\dif x$\\
+جوابات:\quad
+(ا) \عددی{4}، (ب) \عددی{0}
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+(ا)\quad
+$\int_0^1\tfrac{x^3}{\sqrt{x^4+9}}\dif x$\quad
+(ب) \quad
+$\int_{-1}^0\tfrac{x^3}{\sqrt{x^4+9}}\dif x$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+(ا)\quad
+$\int_0^{\pi/6}(1-\cos 3t)\sin 3t\dif t$\quad
+(ب) \quad
+$\int_{\pi/6}^{\pi/3}(1-\cos 3t)\sin 3t\dif t$\\
+جوابات:\quad
+(ا) \عددی{\tfrac{1}{6}}، (ب) \عددی{\tfrac{1}{2}}
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+(ا)\quad
+$\int_{-\pi/2}^0(2+\tan\tfrac{t}{2})\sec^2\tfrac{t}{2}\dif t$\quad
+(ب) \quad
+$\int_{-\pi/2}^{\pi/2}(2+\tan\tfrac{t}{2})\sec^2\tfrac{t}{2}\dif t$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+(ا)\quad
+$\int_0^{2\pi}\tfrac{\cos z}{\sqrt{4+3\sin z}}\dif z$\quad
+(ب) \quad
+$\int_{-\pi}^{\pi}\tfrac{\cos z}{\sqrt{4+3\sin z}}\dif z$\\
+جوابات:\quad
+(ا) \عددی{0}، (ب) \عددی{0}
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+(ا)\quad
+$\int_{-\pi/2}^0\tfrac{\sin w}{(3+2\cos w)^2}\dif w$\quad
+(ب) \quad
+$\int_0^{\pi/2}\tfrac{\sin w}{3+2\cos w}\dif w$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$\int_0^1\sqrt{t^5+2t}(5t^4+2)\dif t$\\
+جواب:\quad
+$2\sqrt{3}$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$\int_1^4\tfrac{\dif y}{2\sqrt{y}(1+\sqrt{y})^2}$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$\int_0^{\pi/6}\cos^{-3}2\theta\sin2\theta\dif\theta$\\
+جواب:\quad
+$\tfrac{3}{4}$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$\int_{\pi}^{3\pi/2}\cot^5\tfrac{\theta}{6}\sec^2\tfrac{\theta}{6}\dif\theta$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$\int_0^{\pi}5(5-4\cot t)^{1/4}\sin t\dif t$\\
+جواب:\quad
+$9^{5/4}-1$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$\int_0^{\pi/4}(1-\sin 2t)^{3/2}\cos 2t\dif t$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$\int_0^1(4y-y^2+4y^3+1)^{-2/3}(12y^2-2y+4)\dif y$\\
+جواب:\quad
+$3$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$\int_0^1(y^3+6y^2-12y+9)^{-1/2}(y^2+4y-4)\dif y$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$\int_0^{\sqrt[3]{\pi^2}}\sqrt{\theta}\cos^2(\theta^{3/2})\dif\theta$\\
+جواب:\quad
+$\tfrac{\pi}{3}$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}\شناخت{سوال_تکمل_قطعی_تکمل_دو_تراکیب_ب}
+$\int_{-1}^{-1/2}t^{-2}\sin^2(1+\tfrac{1}{t})\dif t$
+\انتہا{سوال}
+%=========================
+\begin{figure}
+\centering
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=\x*sqrt(4-\x^2);}]
+\begin{axis}[axis on top,clip=false,width=4cm,font=\tiny,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-2,2},ytick={\empty},xmin=-2.2,xmax=2.2]
+\addplot[name path=fa,domain=-2:-1.5]{f(x)};
+\addplot[name path=fb,domain=-1.5:1.5]{f(x)};
+\addplot[name path=fc,domain=1.5:2]{f(x)};
+\draw(axis cs:0,1)node[left]{$y=x\sqrt{4-x^2}$};
+\path[name path=axisa](axis cs:-2,0)--(axis cs:-1.5,0);
+\path[name path=axisb](axis cs:-1.5,0)--(axis cs:1.5,0);
+\path[name path=axisc](axis cs:1.5,0)--(axis cs:2,0);
+\addplot[fill=lgray] fill between[of=fa and axisa];
+\addplot[fill=lgray] fill between[of=fb and axisb];
+\addplot[fill=lgray] fill between[of=fc and axisc];
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_سایہ_دار_تلاش_رقبہ_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=(1-cos(deg(\x)))*sin(deg(\x));}]
+\begin{axis}[axis on top,clip=false,width=4cm,font=\tiny,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={3.142},xticklabels={$\pi$},ytick={\empty},xmin=0,xmax=4]
+\addplot[name path=f,domain=0:pi]{f(x)}node[pos=0.4,sloped,above]{$y=(1-\cos x)\sin x$};
+\path[name path=axis](axis cs:0,0)--(axis cs:pi,0);
+\addplot[fill=lgray] fill between [of= axis and f];
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_سایہ_دار_تلاش_رقبہ_ب}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=3*sin(deg(\x))*sqrt(1+cos(deg(\x)));}]
+\begin{axis}[axis on top,clip=false,width=4cm,font=\tiny,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}, xtick={-3.142},xticklabels={$-\pi$}, ytick={\empty},xmin=-4,xmax=1,ymax=1]
+\addplot[name path=f,domain=-pi:0]{f(x)};
+\path[name path=axis](axis cs:0,0)--(axis cs:-pi,0);
+\addplot[fill=lgray] fill between [of= axis and f];
+\draw(axis cs:0,-3.5)node[below left]{$y=3\sin x\sqrt{1+\cos x}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_سایہ_دار_تلاش_رقبہ_پ}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=pi/2*(cos(deg(\x)))*(sin(deg(pi+pi*sin(deg(\x)))));}]
+\begin{axis}[axis on top,clip=false,width=4cm,font=\tiny,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}, xtick={-1.571,-3.142},xticklabels={$-\tfrac{\pi}{2}$,$-\pi$}, ytick={\empty},xmin=-4,xmax=1,ymax=2]
+\addplot[name path=f,domain=-pi:0,smooth]{f(x)};
+\path[name path=axis](axis cs:0,0)--(axis cs:-pi,0);
+\addplot[fill=lgray] fill between [of= axis and f];
+\draw(axis cs:0,2)node[below left]{$y=\tfrac{\pi}{2}\cos x\sin(\pi+\pi\sin x)$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_سایہ_دار_تلاش_رقبہ_ت}
+\end{minipage}
+\end{figure}
+\موٹا{رقبہ}\\
+سوال \حوالہ{سوال_تکمل_سایہ_دار_تلاش_رقبہ_الف} تا سوال \حوالہ{سوال_تکمل_سایہ_دار_تلاش_رقبہ_ت} میں سایہ دار رقبہ تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_تکمل_سایہ_دار_تلاش_رقبہ_الف}
+ترسیم شکل \حوالہ{شکل_سوال_تکمل_سایہ_دار_تلاش_رقبہ_الف} میں دی گئی ہے۔\\
+جواب:\quad
+$\tfrac{16}{3}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_تکمل_سایہ_دار_تلاش_رقبہ_ب}
+ترسیم شکل \حوالہ{شکل_سوال_تکمل_سایہ_دار_تلاش_رقبہ_ب} میں دی گئی ہے۔
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_تکمل_سایہ_دار_تلاش_رقبہ_پ}
+ترسیم شکل \حوالہ{شکل_سوال_تکمل_سایہ_دار_تلاش_رقبہ_پ} میں دی گئی ہے۔\\
+جواب:\quad
+$2^{5/2}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_تکمل_سایہ_دار_تلاش_رقبہ_ت}
+ترسیم شکل \حوالہ{شکل_سوال_تکمل_سایہ_دار_تلاش_رقبہ_ت} میں دی گئی ہے۔
+\انتہا{سوال}
+%========================
+\موٹا{نظریہ اور مثالیں}\\
+\ابتدا{سوال}
+اگر \عددی{f(x)=\tfrac{\sin x}{x},\, x>0} کا الٹ تفرق \عددی{F(x)} ہو تب \عددی{\int_1^3\tfrac{\sin 2x}{x}\dif x} کو \عددی{F} کی روپ میں لکھیں۔\\
+جواب:\quad
+$F(6)-F(2)$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+دکھائیں کہ استمراری \عددی{f} کی صورت میں \عددی{\int_0^1f(x)\dif x=\int_0^1f(1-x)\dif x} ہو گا۔
+\انتہا{سوال}
+%===============
+\ابتدا{سوال}
+اگر \عددی{\int_0^1f(x)\dif x=3} ہو تب (ا) طاق \عددی{f}، (ب) جفت \عددی{f} کی صورت میں \عددی{\int_{-1}^0f(x)\dif x} کتنا ہو گا؟\\
+جواب:\quad
+(ا) \عددی{-3}، (ب) \عددی{3}
+\انتہا{سوال}
+%=================
+\ابتدا{سوال}
+(ا) درج ذیل دکھائیں۔
+\begin{align*}
+\int_{-a}^ah(x)\dif x=
+\begin{cases}
+0,& \text{\RL{طاق $h$}}\\
+2\int_0^ah(x)\dif x,&\text{\RL{جفت $h$}}
+\end{cases}
+\end{align*}
+(ب) \عددی{a=\tfrac{\pi}{2}} لیتے ہوئے \عددی{h(x)=\sin x} اور \عددی{h(x)=\cos x} کے لئے جزو-ا کی تصدیق کریں۔ 
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}
+استمراری \عددی{f} کے لئے  درج ذیل تکمل حل کرنے کی خاطر  بدل \عددی{u=a-x} پر کر کے حاصل تکمل کے نتیجہ کو \عددی{I} کے ساتھ جمع کریں۔
+\begin{align*}
+I=\int_0^a\frac{f(x)\dif x}{f(x)+f(a-x)}
+\end{align*}\\
+جواب:\quad
+$I=\tfrac{a}{2}$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+موزوں بدل استعمال کر کے تمام مثبت \عددی{x} اور \عددی{y} اعداد کے لئے درج ذیل ثابت کریں۔
+\begin{align*}
+\int_x^{xy}\frac{\dif t}{t}=\int_1^y\frac{\dif t}{t}
+\end{align*} 
+\انتہا{سوال}
+%==================
+\موٹا{قطعی تکمل کی خاصیت انتقال}\\
+خطی انتقال کی صورت میں قطعی تکمل کی عدم تبدیلی جسے درج ذیل مساوات پیش کرتی ہے قطعی تکمل کی بنیادی خاصیت ہے۔
+\begin{align}\label{مساوات_تکمل_عدم_تبدیلی_انتقال-الف}
+\int_a^bf(x)\dif x=\int_{a-c}^{b-c}f(x+c)\dif x
+\end{align}
+یہ مساوات درکار \عددی{x} پر معین اور قابل تکمل \عددی{f} کے لئے مطمئن ہوتی ہے، مثلاً (شکل \حوالہ{شکل_تکمل_عدم_تبدیلی_انتقال}):
+\begin{align} \label{مساوات_تکمل_عدم_تبدیلی_انتقال-ب}
+\int_{-2}^{-1}(x+2)^3\dif x=\int_0^1x^3\dif x
+\end{align}
+%
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\tiny,declare function={f(\x)=\x^3;}]
+\begin{axis}[clip=false,height=4cm, axis lines=middle, xlabel={$x$}, ylabel={$y$}, xtick={-2,-1,1}, ytick={\empty}, xmax=1.2,ymax=1.5,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-0.5:1.1]{f(x)}node[left]{$y=x^3$};
+\addplot[domain=-2.5:-0.9]{f(x+2)}node[left]{$y=(x+2)^3$};
+\addplot[name path=f,draw=none,domain=0:1]{f(x)};
+\draw[name path=axis](axis cs:0,0)--(axis cs:1,0);
+\addplot[fill=lgray]fill between [of= axis and f];
+\addplot[name path=f,draw=none,domain=-2:-1]{f(x+2)};
+\draw[name path=axis](axis cs:-2,0)--(axis cs:-1,0);
+\addplot[fill=lgray]fill between [of= axis and f];
+\draw(axis cs:1,{f(1)})--(axis cs:1,0);
+\draw(axis cs:-1,{f(1)})--(axis cs:-1,0);
+\end{axis}
+\end{tikzpicture}
+\caption{قطعی تکمل کی عدم تبدیلی بصورت خطی انتقال۔}
+\label{شکل_تکمل_عدم_تبدیلی_انتقال}
+\end{figure}
+
+\ابتدا{سوال}
+کوئی بدل استعمال کرتے ہوئے مساوات \حوالہ{مساوات_تکمل_عدم_تبدیلی_انتقال-الف} کی تصدیق کریں۔
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+درج ذیل تمام تفاعل کے لئے \عددی{[a,b]} پر \عددی{f(x)} اور \عددی{[a-c,b-c]} پر \عددی{f(x+c)} کو ترسیم کرتے ہوئے اپنی یقین دہانی کریں کہ مساوات \حوالہ{مساوات_تکمل_عدم_تبدیلی_انتقال-الف} مطمئن ہوتی ہے۔
+\begin{align*}
+f(x)&=x^2,\, a=0,\, b=1,\, c=1&&\text{(ا)}\\
+f(x)&=\sin x,\, a=0,\, b=\pi,\, c=\tfrac{\pi}{2}&&\text{(ب)}\\
+f(x)&=\sqrt{x-4},\,a=4,\, b=8,\, c=5&&\text{(ج)}
+\end{align*}
+\انتہا{سوال}
+%=====================
+
