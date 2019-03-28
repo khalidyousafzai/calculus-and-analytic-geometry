@@ -38,8 +38,6 @@
 \usepackage{multirow}   %for multiple row cells in a table column
 \usepackage[misc]{ifsym} 
 
-\newtagform{brackets}{)}{(}   			%mathtools command to correct braces around equation numbers
-\usetagform{brackets}				%had to do this after ubuntu upgrade messed up braces around eq numbers.
  
 \newcommand*{\kStrokeOne}{|}                                      %tally marks (statistics)
 \newcommand*{\kStrokeTwo}{|\!|}
@@ -62,18 +60,18 @@
 \input{./tex/myCircuitDimensionsAndMathematicalSymbols.tex} % resistor sizes and Laplace, Fourier, Complex, Phasor, etc  symbols
 \input{./tex/myTikzCommandsCircuitAnalysis.tex}
 
-
+\pgfplotsset{set layers=standard}
 
 %\input{./tex/myElectronicsVariablesBetter.tex}         %these are all tested. to use at the very end when book is finished
 
 \graphicspath{{./fig/figFrontPage/}{./fig/figCalculusLimits/}{./fig/figCalculusDerivatives/}}%paths to figures
 
 
-\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusIntegration,./tex/calculusIntegrationA,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB}
+%\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusIntegration,./tex/calculusIntegrationA,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB}
 %
 %\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusIntegration,./tex/calculusAppendixA,./tex/calculusAppendixB}
 %
-%\includeonly{./tex/cktSymbols,./tex/cktPreface,./tex/prefaceFirstBook,./tex/calculusIntegrationA,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB}%
+\includeonly{./tex/cktSymbols,./tex/cktPreface,./tex/prefaceFirstBook,./tex/calculusIntegrationA,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB}%
 
 
 \author{
