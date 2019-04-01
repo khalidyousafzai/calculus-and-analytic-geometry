@@ -1,0 +1,38 @@
+% Airfoil profiles from the UIUC Airfoil Coordinates Database
+% http://www.ae.uiuc.edu/m-selig/ads/coord_database.html
+% Data is released under the GNU General Public Licence. See
+% http://www.ae.uiuc.edu/m-selig/pd/gpl.html for more details. 
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{intersections,decorations.markings}
+\usepackage{verbatim}
+
+\begin{comment}
+:Title: Airfoil profiles
+:Tags: Plots, External file, Foreach
+
+A few airfoil profiles from the extensive `UIUC Airfoil Coordinates Database`_. The data
+is provided in a convenient x,y coordinate format suitable for plotting using PGF/TikZ's
+``plot file`` construct.
+
+Note that the data is released under the `GNU General Public License`_. To use the
+data files with PGF/TikZ, you have to comment out the lines not containing coordinates.
+
+Download the airfoils used in the example: `airfoildata.zip`_
+
+.. _UIUC Airfoil Coordinates Database: http://www.ae.uiuc.edu/m-selig/ads/coord_database.html
+.. _GNU General Public License: http://www.ae.uiuc.edu/m-selig/pd/gpl.html
+.. _airfoildata.zip: http://www.fauskes.net/media/pgftikzexamples/data/airfoildata.zip
+\end{comment}
+
+\begin{document}
+
+\begin{tikzpicture}[font=\tiny,xscale=6,yscale=10]
+\begin{scope}
+\clip(0.2,-0.04) rectangle (0.5,0.1);
+\fill[name path=airfoil,gray]plot file{clarcy.dat} -- cycle;
+\end{scope}
+\draw[name path=airfoil]plot file{clarcy.dat} -- cycle;
+\foreach \x/\l in {0.2/6,0.25/5,0.3/4,0.35/3,0.4/2,0.45/1,0.5/0}{\path[name path=ver](\x,-0.031)--(\x,0.092);\draw[name intersections={of=airfoil and ver}] (intersection-1)--(intersection-2)node[pos=0.5,xshift={-2mm}]{$y_{\l}$};}
+\end{tikzpicture}
+\end{document}
