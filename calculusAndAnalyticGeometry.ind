@@ -2,12 +2,14 @@
 \begin{otherlanguage}{english}
   \item absolute value, 6
   \item acceleration, 243
+  \item aerofoil, 617
   \item alaska, 291
   \item angioplasty, 451
   \item angle of inclination, 21
   \item aspect ratio, 16
   \item asymptote, 397
   \item autocatalyst, 438
+  \item average, 522, 567
   \item axis, 59
     \subitem negative-x, 16
     \subitem positive-x, 16
@@ -28,11 +30,16 @@
     \subitem down, 368
     \subitem up, 368
   \item conjugate expression, 117
+  \item constant
+    \subitem arbitrary, 476
+  \item continuity
+    \subitem uniform, 539
   \item continuous
     \subitem left, 168
     \subitem on interval, 174
     \subitem right, 168
   \item continuous extension, 173
+  \item converges, 538
   \item coordinate
     \subitem axis, 15
     \subitem pair, 16
@@ -41,6 +48,8 @@
   \item cosines
     \subitem law, 86
   \item critical point, 332
+  \item curve
+    \subitem integral, 492
 
   \indexspace
 
@@ -56,6 +65,8 @@
   \item difference quotient, 189
     \subitem Fermat's, 275
   \item differentiable, 200
+  \item differential
+    \subitem equation, 488
   \item discontinuity
     \subitem infinite, 166
     \subitem jump, 166
@@ -80,6 +91,7 @@
   \indexspace
 
   \item Fermat's principle, 424
+  \item finite sum, 514
   \item fixed point, 183
   \item free fall, 243
   \item function
@@ -111,8 +123,20 @@
   \item increasing, 348
   \item increments, 16
   \item independent variable, 32
+  \item index
+    \subitem summation, 532
+  \item initial value
+    \subitem problem, 488
   \item instantaneous
     \subitem rate of change, 99
+  \item integrable, 538
+  \item integral
+    \subitem definite, 538
+    \subitem indefinite, 476
+  \item integrand, 476
+  \item integration
+    \subitem constant of, 476
+    \subitem variable, 476
   \item intercept
     \subitem x, 24
     \subitem y, 24
@@ -144,12 +168,13 @@
   \item marginal
     \subitem cost of production, 248
   \item marginals, 247
-  \item mean
+  \item mean, 567
     \subitem arithmetic, 353
     \subitem geometric, 353
 
   \indexspace
 
+  \item norm, 537
   \item normal, 298
   \item numbers
     \subitem irrational, 3
@@ -169,6 +194,7 @@
   \item parametric
     \subitem curve, 241
     \subitem representation, 242
+  \item partition, 536
   \item period, 83
   \item periodic, 83
   \item piston, 291
@@ -195,6 +221,8 @@
     \subitem variables, 34
   \item recessive, 247
   \item removabel, 166
+  \item Riemann
+    \subitem sum, 536
   \item root, 176
   \item rule
     \subitem constant multiple, 223
@@ -209,17 +237,34 @@
 
   \item secant, 97
   \item sensitive, 246
-  \item sensitivity, 246
+  \item sensitivity, 238, 246
   \item sets, 3
+  \item Simpson
+    \subitem rule, 610
+  \item simulation, 495
   \item slope, 20
+  \item solution
+    \subitem general, 489
+    \subitem particular, 489
   \item speed, 243
   \item standard
     \subitem position, 75
+  \item step
+    \subitem size, 604
+  \item steps, 604
+  \item subintervals, 536
+  \item sum
+    \subitem lower, 539
+  \item summation
+    \subitem lower limit, 532
+    \subitem upper limit, 532
 
   \indexspace
 
   \item tangent, 98
+  \item terms, 532
   \item theorem
+    \subitem mean value, 343
     \subitem Rolle's, 340
     \subitem sandwich, 117
   \item TNT, trinitrotoluene, 455
@@ -233,18 +278,25 @@
 
   \indexspace
 
+  \item variable
+    \subitem dummy, 542
   \item velocity
     \subitem average, 241
   \item vertex, 59
+  \item voltage
+    \subitem peak, 583
 
   \indexspace
 
   \item zero, 176
-
 \end{otherlanguage}
   \newpage
 \item آزادانہ گرنا، 243
 \indexspace
+\item ابتدائی قیمت
+   \subitem مسئلہ، 488
+\item استمرار
+   \subitem یکساں، 539
 \item استمراری
    \subitem بائیں، 168
    \subitem دائیں، 168
@@ -265,9 +317,10 @@
 \item انجیوپلاسٹی، 451
 \item اندرون، 4، 58
 \item اندرونی نقطے، 4
-\item اوسط
+\item اوسط، 522
    \subitem حسابی، 353
    \subitem ہندسی، 353
+\item اوسط قیمت، 567
 \item ایلاسکا، 291
 \indexspace
 \item بارودی مواد، 455
@@ -299,9 +352,17 @@
    \subitem رتبہ دوم، 233
    \subitem قابل، 200
    \subitem یک رتبی، 233
+\item تفرقی
+   \subitem مساوات، 488
 \item تفریقی
    \subitem وسطی حاصل تقسیم، 275
 \item تقاطع، 10
+\item تکمل
+   \subitem غیر قطعی، 476
+   \subitem قابل، 538
+   \subitem قطعی، 538
+   \subitem کا مستقل، 476
+   \subitem متغیر، 476
 \item تکونی عدم مساوات، 7
 \item تناسب پہلو، 16
 \indexspace
@@ -316,13 +377,16 @@
    \subitem بائیں ہاتھ، 146
    \subitem دائیں ہاتھ، 146
    \subitem دو طرفہ، 146
+\item حل
+   \subitem عمومی، 489
+   \subitem مخصوص، 489
 \item حاشیہ ، 247
 \item حاشیہ لاگت، 248
 \item حاشیہ لاگت پیداوار، 248
 \item حاصل تقسیم
    \subitem تفریقی، 189
 \item حساس، 246
-\item حساسیت، 246
+\item حساسیت، 238، 246
 \item حقیقی
    \subitem اعداد، 1
    \subitem خط، 1
@@ -331,6 +395,7 @@
 \indexspace
 \item خاصیت
    \subitem متوسط قیمت، 174
+\item خانہ بندی، 536
 \item خطی
    \subitem مساوات، 25
    \subitem معیاری تخمین، 442
@@ -340,6 +405,8 @@
 \indexspace
 \item دائرہ کار، 32
    \subitem قدرتی، 35
+\item دباو
+   \subitem چوٹی، 583
 \item دوری، 83
 \item دوری عرصہ، 83
 \indexspace
@@ -349,6 +416,8 @@
 \item ربعات، 16
 \item رداس، 56
 \item رفتار، 243
+\item ریمان
+   \subitem مجموعہ، 536
 \indexspace
 \item زاویہ میلان، 21
 \item زنجیری قاعدہ، 277
@@ -357,9 +426,12 @@
    \subitem نقطے، 4
 \item سرحد، 4
 \item سعت، 32
+\item سگما علامتی اظہار، 532
 \item سلسلہ، 3
 \item سمتی رفتار
    \subitem اوسط، 241
+\item سمسن
+   \subitem قاعدہ، 610
 \item سیکنٹ، 97
 \indexspace
 \item صفر، 176
@@ -392,9 +464,13 @@
    \subitem مستقل مضرب، 223
 \item قانون انعطاف
    \subitem ابن سھل، 425
+\item قدم، 604
+   \subitem لمبائی، 604
 \item قطع
    \subitem ایکس، 24
    \subitem وائے، 24
+\item قطعی
+   \subitem تکمل، 538
 \item قطع مکافی، 20، 59
 \indexspace
 \item کوسائن
@@ -407,7 +483,18 @@
    \subitem شرح تبدیلی، 99
 \indexspace
 \item مبدا، 15
+\item متغیر
+   \subitem نقلی، 542
 \item متقارب، 397
+\item متکمل، 476
+\item متناہی مجموعہ، 514
+\item مجموعہ
+   \subitem ارکان، 532
+   \subitem زیریں، 539
+\item مجموعی سلسلہ
+   \subitem اشاری، 532
+   \subitem بالائی حد، 532
+   \subitem زیریں حد، 532
 \item محدد
    \subitem ایکس، 15
    \subitem وائے، 15
@@ -417,14 +504,19 @@
    \subitem مثبت ایکس، 16
    \subitem منفی ایکس، 16
 \item مرکز، 56
+\item مرکوز، 538
 \item مساوات
    \subitem ڈھلوان-قطع، 25
    \subitem عمومی خطی، 25
    \subitem نقطہ-ڈھلوان، 23
+\item مستقل
+   \subitem اختیاری، 476
 \item مسئلہ
+   \subitem اوسط قیمت، 343
    \subitem بیچ، 117
    \subitem رول، 340
 \item مطلق قیمت، 6
+\item معیار، 537
 \item معیاری
    \subitem مقام، 75
 \item مغلوب، 247
@@ -436,6 +528,9 @@
    \subitem اوپر، 368
    \subitem نیچے، 368
 \item مماس، 98، 187
+\item منحنی
+   \subitem تکمل، 492
+   \subitem حل، 492
 \indexspace
 \item نصف زاویہ
    \subitem کلیات، 85
@@ -448,14 +543,17 @@
    \subitem تصریف، 370
    \subitem دائیں سر، 166
 \item نقطہ فاصل، 332
+\item نقل اتارنا، 495
 \indexspace
 \item وسط، 442
 \item وسیع تفاعل، 173
 \item وقفہ، 4
+   \subitem ذیلی، 536
    \subitem لا متناہی، 4
    \subitem متناہی، 4
 \indexspace
 \item ہٹاو، 241
+\item ہوائی پترا، 617
 \item ہیلیم، 320
 
 \end{theindex}
