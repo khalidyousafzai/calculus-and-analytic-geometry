@@ -341,3 +341,397 @@ S&=\int_0^2\sqrt{x}\dif x+\int_2^4(\sqrt{x}-x+2)\dif x\\
 \label{شکل_مثال_استعمال_تکمل_تبدیل_کلیہ}
 \end{figure}
 \جزوحصہء{تکمل بلحاظ $y$}
+اگر سرحد کی مساواتیں \عددی{y} کی تفاعل ہوں تب تخمینی مستطیل کو انتصابی کی بجائے افقی بنایا جاتا ہے اور بنیادی کلیہ میں \عددی{x} کی جگہ \عددی{y} پایا جائے گا (شکل \حوالہ{شکل_استعمال_تکمل_وائے_سرحد}):
+\begin{align}\label{مساوات_تکمل_استعمال_رقبہ_تعریف_دوم}
+S=\int_c^d[f(y)-g(y)]\dif y
+\end{align}
+%
+\begin{figure}
+\centering
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={g(\x)=-1+\x^3-\x;f(\x)=1+0.5*\x^3-\x;}]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits=true]
+\addplot[domain=-1.2:1.2]({f(x)},{\x})node[pos=0.82,right]{$x=f(y)$};
+\addplot[domain=-1.2:1.1]({g(x)},{\x})node[pos=0.35,left]{$x=g(y)$};
+\draw(axis cs:{f(1)},1)--(axis cs:{g(1)},1)node[pos=0.6,above]{$d$};
+\draw(axis cs:{f(-1)},-1)--(axis cs:{g(-1)},-1)node[pos=0.25,below]{$c$};
+\draw(axis cs:{f(0.5)},0.5)--(axis cs:{g(0.5)},0.5);
+\draw(axis cs:{f(0.4)},0.4)--(axis cs:{g(0.4)},0.4);
+\addplot[name path=funf,domain=0.4:0.5,draw=none]({f(x)},{\x});
+\addplot[name path=fung,domain=0.4:0.5,draw=none]({g(x)},{\x});
+\addplot[fill=lgray]fill between [of = funf and fung];
+\end{axis}
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={g(\x)=1+\x^2-3*\x+2;f(\x)=1-\x^2+4*\x-3;}]
+\begin{axis}[width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={1,1.8},yticklabels={$c$,$d$},xmin=0,ymin=0,enlargelimits=true]
+\addplot[domain=0.9:2]({f(x)},{\x})node[pos=0.3,right,yshift=-0.5ex]{$x=f(y)$};
+\addplot[domain=0.9:2]({g(x)},{\x})node[pos=0.35,left]{$x=g(y)$};
+\draw(axis cs:{f(1.8)},1.8)--(axis cs:{g(1.8)},1.8);
+\draw(axis cs:{f(1.5)},1.5)--(axis cs:{g(1.5)},1.5);
+\draw(axis cs:{f(1.6)},1.6)--(axis cs:{g(1.6)},1.6);
+\addplot[name path=funf,domain=1.5:1.6,draw=none]({f(x)},{\x});
+\addplot[name path=fung,domain=1.5:1.6,draw=none]({g(x)},{\x});
+\addplot[fill=lgray]fill between [of = funf and fung];
+\end{axis}
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={g(\x)=1+\x^2-3*\x+2;f(\x)=1-\x^2+4*\x-3;}]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={1,2.5},yticklabels={$c$,$d$},xmin=0,ymin=0,enlargelimits=true]
+\addplot[domain=0.9:2.6]({f(x)},{\x})node[pos=0.3,below right]{$x=f(y)$};
+\addplot[domain=0.9:2.6]({g(x)},{\x})node[pos=0.65,above left]{$x=g(y)$};
+\draw(axis cs:{f(1.5)},1.5)--(axis cs:{g(1.5)},1.5);
+\draw(axis cs:{f(1.6)},1.6)--(axis cs:{g(1.6)},1.6);
+\addplot[name path=funf,domain=1.5:1.6,draw=none]({f(x)},{\x});
+\addplot[name path=fung,domain=1.5:1.6,draw=none]({g(x)},{\x});
+\addplot[fill=lgray]fill between [of = funf and fung];
+\end{axis}
+\end{tikzpicture}
+\end{minipage}
+\caption{ان اشکال میں دایاں سرحد $f$ اور بایاں سرحد $g$ ہو گا لہٰذا $f(y)-g(y)$ غیر منفی ہو گا۔}
+\label{شکل_استعمال_تکمل_وائے_سرحد}
+\end{figure}
+
+\ابتدا{مثال}\شناخت{مثال_استعمال_تکمل_تبدیل_کلیہ_دوم}
+درج بالا مثال \حوالہ{مثال_استعمال_تکمل_تبدیل_کلیہ} کو اس بار مساوات \حوالہ{مساوات_تکمل_استعمال_رقبہ_تعریف_دوم} کی مدد سے حل کریں۔
+
+حل:\quad
+\موٹا{پہلا قدم:}\quad
+ہم خطہ ترسیم کر کے نمائندہ افقی مستطیل بناتے ہیں (شکل \حوالہ{شکل_استعمال_تکمل_وائے_سرحد})۔ خطے کا دایاں سرحد لکیر \عددی{x=y+2} ہے لہٰذا \عددی{f(y)=y+2} ہو گا۔خطے کا بایاں سرحد \عددی{x=y^2} ہے لہٰذا \عددی{g(y)=y^2} ہو گا۔\\
+\موٹا{دوسرا قدم:}\quad
+تکمل کا زیریں حد \عددی{y=0} ہے۔ تکمل کا بالائی حد جاننے کے لئے ہم \عددی{x=y+2} اور \عددی{x=y^2} کو \عددی{y} کے لئے حل کرتے ہیں:
+\begin{align*}
+y+2&=y^2&&\text{\RL{$f$ کو $g$ کے برابر پر کرتے ہیں}}\\
+y^2-y-2&=0\text{\RL{ایک ہاتھ منتقلی}}\\
+(y+1)(y-2)&=0\text{\RL{تجزی}}\\
+y=-1,\quad y&=2\text{\RL{حل}}
+\end{align*}
+تکمل کا بالائی حد \عددی{y=2} ہے (چونکہ \عددی{y=-1} افقی محور سے نیچے تفاعل کا نقطہ قطع دیتا ہے)۔\\
+\موٹا{تیسرا قدم:}\quad
+\begin{align*}
+f(y)-g(y)=y+2-y^2=2+y-y^2
+\end{align*}
+\موٹا{چوتھا قدم:}\quad
+\begin{align*}
+S=\int_a^b[f(y)-g(y)]\dif y&=\int_0^2[2+y-y^2]\dif y\\
+&=\big[2y+\frac{y^2}{2}-\frac{y^3}{3}\big]_0^2\\
+&=4+\frac{4}{2}-\frac{8}{3}=\frac{10}{3}
+\end{align*}
+یہ وہی جواب ہے جو مثال \حوالہ{مثال_استعمال_تکمل_تبدیل_کلیہ} میں حاصل کی گیا۔ مثال \حوالہ{مثال_استعمال_تکمل_تبدیل_کلیہ} میں دو تکمل حل کرنے کی ضرورت پیش آئی جبکہ یہاں ایک ہی تکمل سے رقبہ معلوم کرنا ممکن تھا۔
+\انتہا{مثال}
+%======================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=\x+2;g(\x)=\x^2;}]
+\begin{axis}[clip=false,axis on top,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={2,4},ytick={2,4},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=0:2]({f(x)},x)node[pos=0.75,right]{$x=y+2$};
+\addplot[domain=0:2]({g(x)},x)node[pos=0.75,above]{$x=y^2$};
+\pgfmathsetmacro{\k}{0.9}
+\pgfmathsetmacro{\w}{0.5}
+\draw(axis cs:{g(\k)},\k+\w/2)--(axis cs:{f(\k)},\k+\w/2)coordinate(kTR)--(axis cs:{f(\k)},\k-\w/2)coordinate(kBR)--(axis cs:{g(\k)},\k-\w/2)coordinate(kBL)--(axis cs:{g(\k)},\k+\w/2)coordinate(kTL);
+\draw[stealth-stealth]($(kBL)!0.75!(kBR)$)--($(kTL)!0.75!(kTR)$)node[pos=0.5,left]{$\Delta y$};
+\draw(axis cs:1,0)node[below]{$y=0$};
+\draw[stealth-stealth] (axis cs:{g(\k)},\k-0.75*\w)--(axis cs:{f(\k)},\k-0.75*\w)node[pos=0.5,below]{$f(y)-g(y)$};
+\draw(axis cs:{f(\k)},\k)node[circ]{}node[right]{$(f(y),y)$};
+\draw(axis cs:{g(\k)},\k)node[circ]{}node[left]{$(g(y),y)$};
+\draw(axis cs:4,2)node[right]{$(4,2)$};
+\draw(axis cs:0,0)node[below left,font=\footnotesize]{$0$};
+\end{axis}
+\end{tikzpicture}
+\caption{خطہ برائے مثال \حوالہ{مثال_استعمال_تکمل_تبدیل_کلیہ_دوم}}
+\label{شکل_مثال_استعمال_تکمل_تبدیل_کلیہ_دوم}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=sqrt(\x);g(\x)=\x-2;}]
+\begin{axis}[clip=false,axis on top,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={2,4},ytick={2,4},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=0.5:4]{f(x)}node[pos=0.5,above left]{$y=\sqrt{x}$};
+\addplot[domain=0:0.5]{f(x)};
+\addplot[name path=fung,domain=2:4]{g(x)}node[pos=0.3,above left]{$y=x-2$};
+\draw(axis cs:1,0)node[below]{$y=0$};
+\draw(axis cs:4,2)node[right]{$(4,2)$};
+\draw(axis cs:0,0)node[below left,font=\footnotesize]{$0$};
+\addplot[name path=funf,domain=2:4,draw=none]{g(x)};
+\path[name path=kaxis](axis cs:2,0)--(axis cs:4,0);
+\addplot[fill=llgray]fill between[of=kaxis and funf];
+\draw(axis cs:3,0)node[above]{$2$}  (axis cs:4,1)node[left]{$2$};
+\end{axis}
+\end{tikzpicture}
+\caption{بالائی منحنی کے نیچے خطہ سے تکون منفی کرنے سے رقبہ حاصل ہو گا۔}
+\label{شکل_مثال_استعمال_تکمل_تبدیل_کلیہ_سوم}
+\end{minipage}\hfill
+\end{figure}
+
+\جزوحصہء{تکمل کے ساتھ جیومیٹریائی کلیات کا استعمال}
+تکمل اور جیومیٹریائی کلیات کو ملا کر رقبہ نسبتاً زیادہ جلد حاصل ہوتا ہے۔
+
+\ابتدا{مثال}\شناخت{مثال_استعمال_تکمل_تبدیل_کلیہ_سوم}
+مزید ایک بار مثال \حوالہ{مثال_استعمال_تکمل_تبدیل_کلیہ} میں دیے گئے خطے کا رقبہ تلاش کریں۔
+
+حل:\quad
+ہم \عددی{0\le x\le 4} محور \عددی{x}  اور \عددی{y=\sqrt{x}} کے بیچ رقبہ سے قاعدہ \عددی{2} اور قد \عددی{2} کے تکون کا رقبہ منفی کرتے ہوئے درکار خطے کا رقبہ تلاش کر سکتے ہیں۔ 
+\begin{align*}
+S&=\int_0^4\sqrt{x}\dif x-\frac{1}{2}(2)(2)\\
+&=\left. \frac{2}{3}x^{3/2}\right]_0^4-2\\
+&=\frac{2}{3}(8)-0-2=\frac{10}{3}
+\end{align*}
+\انتہا{مثال}
+%===================================
+
+گزشتہ تین مثالوں میں آپ نے دیکھا کہ دو منحنیات کے بیچ رقبہ بعض اوقات \عددی{x} کی بجائے \عددی{y} کے ساتھ تکمل لے کر نسبتاً آسانی سے حاصل ہوتا ہے۔ اسی طرح بعض اوقات تکمل اور جیومیٹری کے کلیات کو ملا کر جلد جواب حاصل ہوتا ہے۔ یوں تکمل لکھنے سے پہلے مسئلے پر غور کرنا بہتر ہو گا۔
+
+\حصہء{سوالات}
+سوال \حوالہ{سوال_استعمال_تکمل_سایہ_دار_الف} تا سوال \حوالہ{سوال_استعمال_تکمل_سایہ_دار_ب} میں سایہ دار رقبہ تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_سایہ_دار_الف}
+سایہ دار خطہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_سایہ_دار_الف} جہاں سرحد \عددی{y=1} اور \عددی{y=\cos^2x} ہیں۔
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_سایہ_دار_پ}
+سایہ دار خطہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_سایہ_دار_پ} جہاں سرحد \عددی{y=\tfrac{1}{2}\sec^2t}، \عددی{y=-4\sin^2t}، \عددی{y=-\tfrac{\pi}{3}} اور \عددی{y=\tfrac{\pi}{3}} ہیں۔
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_سایہ_دار_ت}
+سایہ دار خطہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_سایہ_دار_ت} جہاں سرحد \عددی{x=y^3} اور \عددی{x=y^2} ہیں۔
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_سایہ_دار_ٹ}
+سایہ دار خطہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_سایہ_دار_ٹ} جہاں سرحد \عددی{x=12y^2-12y^3} اور \عددی{x=2y^2-2y} ہیں۔
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_سایہ_دار_ث}
+سایہ دار خطہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_سایہ_دار_ث} جہاں سرحد \عددی{y=2x^2} اور \عددی{y=x^4-2x^2} ہیں۔
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_سایہ_دار_ج}
+سایہ دار خطہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_سایہ_دار_ج} جہاں سرحد \عددی{y=x^2}، \عددی{y=-2x^4}، \عددی{x=-1} اور \عددی{x=1} ہیں۔
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_سایہ_دار_چ}
+سایہ دار خطہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_سایہ_دار_چ} جہاں سرحد \عددی{y=1}، \عددی{y=x} اور \عددی{y=\tfrac{x^2}{4}} ہیں۔
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_سایہ_دار_ب}
+سایہ دار خطہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_سایہ_دار_ب} جہاں سرحد \عددی{y=x^2}، \عددی{y=2-x} اور \عددی{y=0} ہیں۔
+\انتہا{سوال}
+%========================
+\begin{figure}
+\centering
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny,declare function={f(\x)=(cos(deg(\x)))^2;g(\x)=1;}]
+\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1.571,3.142},xticklabels={$\tfrac{\pi}{2}$,$\pi$},ytick={1},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-0.25:3.2,smooth]{f(x)}node[pos=0.75,right]{$y=\cos^2x$};
+\addplot[domain=-0.25:3.2]{g(x)}node[pos=0.5,above]{$y=1$};
+\addplot[name path=funf,domain=0:3.142,draw=none]{f(x)};
+\addplot[name path=fung,domain=0:3.142,draw=none]{g(x)};
+\addplot[fill=lgray]fill between[of=funf and fung];
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_استعمال_تکمل_سایہ_دار_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny,declare function={f(\x)=1/2*(sec(deg(\x)))^2;g(\x)=-4*(sin(deg(\x)))^2;}]
+\pgfmathsetmacro{\k}{pi/3}
+\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$t$},ylabel={$y$},xtick={-1.047,1.047},xticklabels={$-\tfrac{\pi}{3}$,$\tfrac{\pi}{3}$},ytick={-2,1,2},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[name path=funf,domain=-\k:\k,smooth]{f(x)}node[pos=0.75,sloped,above,xshift=0.5ex]{$y=\tfrac{1}{2}\sec^2t$};
+\addplot[name path=fung,domain=-\k:\k]{g(x)}node[pos=0.75,sloped,below]{$y=-4\sin^2t$};
+\addplot[fill=lgray]fill between[of=funf and fung];
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_استعمال_تکمل_سایہ_دار_پ}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny,declare function={f(\x)=(\x)^(1/3);g(\x)=(\x)^(1/2);}]
+\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1},ytick={1},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=0:0.5]{f(x)};
+\addplot[domain=0.5:1.25]{f(x)}node[pos=0.25,above]{$x=y^3$};
+\addplot[domain=0:0.5]{g(x)};
+\addplot[domain=0.5:1.25]{g(x)}node[pos=0.25,below]{$x=y^2$};
+\addplot[name path=funf,domain=0:1,draw=none]{f(x)};
+\addplot[name path=fung,domain=0:1,draw=none]{g(x)};
+\addplot[fill=lgray]fill between[of=funf and fung];
+\draw(axis cs:1,1)node[circ]{}node[below]{$(1,1)$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_استعمال_تکمل_سایہ_دار_ت}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny,declare function={f(\x)=12*\x^2-12*\x^3;g(\x)=2*\x^2-2*\x;}]
+\pgfmathsetmacro{\k}{pi/3}
+\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$t$},ylabel={$y$},xtick={1} ,ytick={1},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-0.2:1.02]({f(x)},{x})node[pos=0.65,above]{$x=12y^2-12y^3$};
+\addplot[domain=-0.1:1.2]({g(x)},{x})node[pos=0.45,sloped,above]{$x=2y^2-2y$};
+\addplot[name path=funf,domain=0:1,draw=none]({f(x)},{x});
+\addplot[name path=fung,domain=0:1,draw=none]({g(x)},{x});
+\addplot[fill=lgray]fill between[of=funf and fung];
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_استعمال_تکمل_سایہ_دار_ٹ}
+\end{minipage}
+\end{figure}
+%
+\begin{figure}
+\centering
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny,declare function={f(\x)=2*\x^2;g(\x)=\x^4-2*\x^2;}]
+\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-2,2}, xticklabels={$2$,$2$},ytick={-1,8},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[name path=funf,domain=-2:2]{f(x)}node[pos=0.85,left]{$y=2x^2$};
+\addplot[name path=fung,domain=-2:2]{g(x)}node[pos=0.85,sloped,below]{$y=x^4-2x^2$};
+%\addplot[name path=funf,domain=0:3.142,draw=none]{f(x)};
+%\addplot[name path=fung,domain=0:3.142,draw=none]{g(x)};
+\addplot[fill=lgray]fill between[of=funf and fung];
+\draw(axis cs:-2,8)node[circ]{}node[above]{$(-2,8)$}  (axis cs:2,8)node[circ]{}node[above]{$(2,8)$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_استعمال_تکمل_سایہ_دار_ث}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny,declare function={f(\x)=\x^2;g(\x)=-2*\x^4;}]
+\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-1,1}, xticklabels={$-1$,$1$},ytick={-2,1},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[name path=funf,domain=-1:1]{f(x)}node[pos=0.85,left]{$y=x^2$};
+\addplot[name path=fung,domain=-1:1]{g(x)}node[pos=0.85,left]{$y=-2x^4$};
+%\addplot[name path=funf,domain=0:3.142,draw=none]{f(x)};
+%\addplot[name path=fung,domain=0:3.142,draw=none]{g(x)};
+\addplot[fill=lgray]fill between[of=funf and fung];
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_استعمال_تکمل_سایہ_دار_ج}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny,declare function={f(\x)=\x;g(\x)=1/4*\x^2;}]
+\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1,2}, xticklabels={$1$,$2$},ytick={1},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=0:1.5]{f(x)}node[pos=0.9,left]{$y=x$};
+\addplot[domain=0:2.2]{g(x)}node[pos=0.7,below right]{$y=\frac{1}{4}x^2$};
+\addplot[name path=funf,domain=0:1,draw=none]{f(x)};
+\addplot[name path=fung,domain=0:2,draw=none]{g(x)};
+\addplot[fill=lgray]fill between[of=funf and fung];
+\draw(axis cs:0.75,1)--(axis cs:2.25,1)node[pos=0.55,above]{$y=1$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_استعمال_تکمل_سایہ_دار_چ}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny,declare function={f(\x)=2-\x;g(\x)=\x^2;}]
+\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1,2}, xticklabels={$1$,$2$},ytick={1},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=0.75:2]{f(x)}node[pos=0.5,right]{$y=2-x$};
+\addplot[domain=0:1.1]{g(x)}node[pos=0.6,left]{$y=x^2$};
+\addplot[name path=funf,domain=1:2,draw=none]{f(x)};
+\addplot[name path=fung,domain=0:1,draw=none]{g(x)};
+\draw[name path=axisf](axis cs:1,0)--(axis cs:2,0);
+\draw[name path=axisg](axis cs:0,0)--(axis cs:1,0);
+\addplot[fill=lgray]fill between[of=funf and axisf];
+\addplot[fill=lgray]fill between[of=fung and axisg];
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_استعمال_تکمل_سایہ_دار_ب}
+\end{minipage}
+\end{figure}
+
+سوال \حوالہ{سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_الف} تا سوال \حوالہ{سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_ب} میں کل سایہ دار رقبہ تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_الف}
+سایہ دار رقبہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_الف} جہاں سرحد \عددی{y=x^2-4} اور \عددی{y=-x^2-2x} ہیں۔
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_پ}
+سایہ دار رقبہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_پ} جہاں سرحد \عددی{y=-x^2+3x} اور \عددی{y=2x^3-x^2-5x} ہیں۔
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_ت}
+سایہ دار رقبہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_ت} جہاں سرحد \عددی{y=4-x^2} اور \عددی{y=2-x} ہیں۔
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_ب}
+سایہ دار رقبہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_ب} جہاں سرحد \عددی{y=\tfrac{x^3}{3}-x} اور \عددی{y=\tfrac{x}{3}} ہیں۔
+\انتہا{سوال}
+%=======================
+\begin{figure}
+\centering
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny,declare function={f(\x)=\x^2-4;g(\x)=-\x^2-2*\x;}]
+\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-3,1},ytick={-4,5}, enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-3:1.1,smooth]{f(x)}node[pos=0.15,right]{$y=x^2-4$};
+\addplot[domain=-3:1.1]{g(x)}node[pos=0.5,pin=30:{$y=-x^2-2x$}]{};
+\addplot[name path=funf,domain=-3:1,draw=none]{f(x)};
+\addplot[name path=fung,domain=-3:1,draw=none]{g(x)};
+\addplot[fill=lgray]fill between[of=funf and fung];
+\draw(axis cs:-3,-3)--(axis cs:-3,5);
+\draw(axis cs:1,-3)node[right]{$(1,-3)$}  (axis cs:-3,5)node[above]{$(-3,5)$} (axis cs:-3,-3)node[below]{$(-3,-3)$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny,declare function={f(\x)=-\x^2+3*\x;g(\x)=2*\x^3-\x^2-5*\x;}]
+\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-2,2},ytick={2}, enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-2.02:2.02]{f(x)}node[pos=0.25,right,yshift=-0.5ex]{$y=-x^2+3$};
+\addplot[domain=-2.02:2.02]{g(x)}node[pos=0.75,below,yshift=0.5ex]{$y=2x^3-x^2-5x$};
+\addplot[name path=funf,domain=-2:2,draw=none]{f(x)};
+\addplot[name path=fung,domain=-2:2,draw=none]{g(x)};
+\addplot[fill=lgray]fill between[of=funf and fung];
+\draw(axis cs:-2,-10)node[right]{$(-2,-10)$}  (axis cs:2,2)node[above]{$(2,2)$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_پ}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny,declare function={f(\x)=4-\x^2;g(\x)=2-\x;}]
+\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-2,-1,1,2,3},ytick={-5,4}, enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-2.2:3.2]{f(x)}node[pos=0.35,above]{$y=4-x^2$};
+\addplot[domain=-2.2:4]{g(x)}node[below,xshift=1ex]{$y=2-x$};
+\addplot[name path=funf,domain=-2:3,draw=none]{f(x)};
+\addplot[name path=fung,domain=-2:3,draw=none]{g(x)};
+\addplot[fill=lgray]fill between[of=funf and fung];
+\draw(axis cs:-2,4)node[left]{$(-2,4)$}  (axis cs:3,-5)node[left]{$(3,-5)$};
+\draw(axis cs:-2,4)--(axis cs:-2,0);
+\draw(axis cs:3,-5)--(axis cs:3,-1);
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_ت}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny,declare function={f(\x)=1/3*\x^3-\x;g(\x)=1/3*\x;}]
+\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-2,3},xticklabels={,$3$},ytick={1,6}, enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-2.2:3]{f(x)}node[pos=0.75,left]{$y=\tfrac{x^3}{3}-x$};
+\addplot[domain=-2.3:4]{g(x)}node[above]{$y=\tfrac{x}{3}$};
+\addplot[name path=funf,domain=-2:3,draw=none]{f(x)};
+\addplot[name path=fung,domain=-2:3,draw=none]{g(x)};
+\addplot[fill=lgray]fill between[of=funf and fung];
+\draw(axis cs:-2,-0.667)node[circ]{}node[below left]{$(-2,-\tfrac{2}{3})$} (axis cs:3,6)node[circ]{}node[above]{$(3,6)$};
+\draw(axis cs:3,6)--(axis cs:3,1);
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_ب}
+\end{minipage}
+\end{figure}
