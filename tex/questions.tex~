@@ -1,29 +1,36 @@
-
 \begin{figure}
 \centering
 \begin{tikzpicture}
-\begin{axis}[axis equal image, axis lines=middle,enlargelimits=true,
-    clip=false,
-    colormap/blackwhite,
-%shader=flat,
-shader=interp,
-view={10}{90}{-30},
-    %y dir=reverse,
-    %axis on top, 
-axis z line=none,
-xlabel={$x$},ylabel={$y$},xmax=5,xlabel style={at={(current axis.right of origin)},anchor=west}
-    ]
-    % sym. Torus:
-            \addplot3[domain=0:4,y domain=0:360, samples=50,
-            surf,z buffer=sort
-            ]
-            ({x} ,
-            {sqrt(x)*sin(y)},
-            {sqrt(x)*cos(y)});
-\end{axis}
-\end{tikzpicture} 
-%
-
+\pgfmathsetmacro{\len}{3}
+\pgfmathsetmacro{\la}{1.5}
+\pgfmathsetmacro{\lb}{3.25}
+\pgfmathsetmacro{\anga}{20}
+\pgfmathsetmacro{\angb}{70}
+\fill[llgray,fill opacity=0.5](0,-1.5)--++(\anga:-\la)--++(70:\lb)--++(\anga:\la)--++(70:-\lb);
+\fill[white] (\len,1)--(0,1) ([shift={(90:0.25cm and 1cm)}]0,0) arc (90:270:0.25cm and 1cm)--(\len,-1)--(\len,1);
+\draw([shift={(90:0.25cm and 1cm)}]0,0) arc (90:270:0.25cm and 1cm);
+\draw(\len,0) circle (0.25cm and 1cm);
+\draw[name path=up](0,1)--(\len,1)coordinate[pos=0.5](kcyln);
+\draw[name path=lo](0,-1)--(\len,-1);
+\draw([shift={(90:0.25cm and 0.75cm)}]0.25,0) arc (90:270:0.25cm and 0.75cm);
+\draw(0.25,0.75)to [out=0,in=180](\len,1)  (0.25,-0.75) to [out=0,in=180](\len,-1);
+\draw[name path=leftS](0,-1.5)coordinate(LB)--++(\anga:-\la)--++(\angb:\lb)coordinate(kSa)--++(\anga:\la)coordinate(LT);
+\path[name path=aa](LT)--++(\angb:-\lb);
+\path[name path=bb](LB)--++(\angb:\lb);
+\draw[name intersections={of=aa and up}](LT)--(intersection-1);
+\draw[name intersections={of=bb and lo}](LB)--(intersection-1);
+\draw[name path=rightS,fill=llgray,fill opacity=0.5](\len,-1.5)--++(\anga:-\la)--++(\angb:\lb)--++(\anga:\la)coordinate(kSb)--++(\angb:-\lb);
+\draw(kSa)node[left]{\RL{$x_{k-1}$ پر سطح}};
+\draw(kSb)node[right]{\RL{$x_{k}$ پر سطح}};
+\draw(kcyln)--++(45:0.5)node[above]{\RL{تخمینی بیلن}};
+\path[name path=axisa](0,-1.5)++(\anga:-\la/2)coordinate(ksolid)node[below]{$x_{k-1}$}++(-0.1,0)--++(-1,0);
+\path[name path=axisb](\len,-1.5)++(\anga:-\la/2)coordinate(ksolida)node[below]{$x_k$}++(-0.1,0)--++(-1,0);
+\draw[dashed,name intersections={of=axisa and leftS}] (0,-1.5)++(\anga:-\la/2)--(intersection-1);
+\draw(intersection-1)--++(-1,0);
+\draw[dashed,name intersections={of=axisb and rightS}] (\len,-1.5)++(\anga:-\la/2)--(intersection-1);
+\draw(intersection-1)--(ksolid);
+\draw[-stealth](ksolida)--++(1,0)node[right]{$x$};
+\draw[fill=lgray](\len,0) circle (0.25cm and 1cm);
+\draw(\len,0.75)--++(-20:1.5cm)node[right]{\RL{بیلن کا قاعدہ خطہ $R(x_k)$ ہے}};
+\end{tikzpicture}
 \end{figure}
-
-
