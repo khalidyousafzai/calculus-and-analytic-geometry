@@ -1106,13 +1106,13 @@ H=\int_a^b S(x)\dif x
 حجم معلوم کرنے کی خاطر \عددی{S(x)} کا تکمل حل کریں۔
 \end{enumerate}
 
-\ابتدا{مثال}
+\ابتدا{مثال}\شناخت{مثال_تکمل_استعمال_اہرام_چکور_قاعدہ}
 ایک اہرام کا قد \عددی{\SI{3}{\meter}} اور اس کے چکور بنیاد کا ضلع \عددی{\SI{3}{\meter}} ہے۔ اہرام کی چوٹی سے \عددی{x} میٹر نیچے اہرام کا رقبہ عمودی تراش چکور ہو گا جس کا ضلع \عددی{x} میٹر ہو گا۔ اس اہرام کا حجم تلاش کریں۔
 
 حل:\quad
 \موٹا{پہلا قدم:}\quad
 \ترچھا{خاکہ۔}\quad
-ہم اہرام کی چوٹی کو مبدا پر رکھ کر اہرام کو \عددی{x} محور پر لیٹا ہوا بنا کر نمائندہ رقبہ عمودی تراش بناتے ہیں۔\\
+ہم اہرام کی چوٹی کو مبدا پر رکھ کر اہرام کو \عددی{x} محور پر لیٹا ہوا بنا کر نمائندہ رقبہ عمودی تراش بناتے ہیں (شکل \حوالہ{شکل_مثال_تکمل_استعمال_اہرام_چکور_قاعدہ})۔\\
 \موٹا{دوسرا قدم:}\quad
 \ترچھا{کلیہ برائے \عددی{S(x)}۔}
 \quad
@@ -1127,12 +1127,56 @@ H=\int_a^bS(x)\dif x=\int_0^3x^2\dif x=\left.\tfrac{x^3}{3}\right\vert_0^3=9
 یوں اہرام کا حجم \عددی{\SI{9}{\meter\cubed}} ہو گا۔
 \انتہا{مثال}
 %==========================
-\ابتدا{مثال}
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,x={(0.75cm,-0.2cm)},y={(0cm,1cm)},z={(-0.5cm,-0.5cm)}]
+\pgfmathsetmacro{\la}{2/3}
+\pgfmathsetmacro{\lb}{2}
+\draw(0,0,0)--(1,0,0);
+\draw[fill=white](1,\la/2,\la/2)--++(0,-\la,0)node[pos=0.5,xshift=-0.5ex]{$x$}--++(0,0,-\la)--++(0,\la,0)--++(0,0,\la);
+\draw(1,0,0)node[below]{$x$}--(3,0,0);
+\draw[fill=white](3,\lb/2,\lb/2)--++(0,-\lb,0)--++(0,0,-\lb)node[pos=0.5,below]{$3$}--++(0,\lb,0)node[pos=0.5,right]{$3$}--++(0,0,\lb);
+\draw[-stealth](3,0,0)node[above]{$3$}--(4.5,0,0)node[right]{$x$};
+\draw(0,0,0)--(3,-\lb/2,\lb/2);
+\draw(0,0,0)--(3,\lb/2,\lb/2);
+\draw(0,0,0)--(3,\lb/2,-\lb/2);
+%\draw(0,0,0)--(3,-\lb/2,-\lb/2);
+\end{tikzpicture}
+\caption{اہرام (مثال \حوالہ{مثال_تکمل_استعمال_اہرام_چکور_قاعدہ}) }
+\label{شکل_مثال_تکمل_استعمال_اہرام_چکور_قاعدہ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[scale=1.5,x={(0.75cm,0.2cm)},y={(-0.5cm,0.5cm)},z={(0,1cm)},font=\scriptsize]
+\pgfmathsetmacro{\la}{1.5}
+\draw([shift={(-90:\la)}]0,0,0) arc (-90:90:\la)coordinate[pos=0.3](ka)coordinate[pos=0.15](kSa)coordinate[pos=0.85](kEa);
+\begin{scope}[x={(0.75cm,0.75cm)},y={(-0.5cm,0.5cm)},z={(0,1cm)}]
+\draw(0,-1.25*\la)--(0,1.25*\la);
+\draw([shift={(-90:\la)}]0,0,0) arc (-90:90:\la)coordinate[pos=0.3](kb)coordinate[pos=0.15](kSb)coordinate[pos=0.85](kEb);
+\end{scope}
+\draw[name path=edgeR](ka)--(kb);
+\draw(kSa)--(kSb)--(kEb)coordinate[pos=0.5](kC)--(kEa)--(kSa)coordinate[pos=0.5](kCC);
+\draw(0,0)--(kC)--(kCC)node[pos=0.5,shift={(0.1cm,0)}]{$x$};
+\draw($(0,0)!0.5!(kCC)$)node[below]{$x$};
+\draw(kSa)++(0,-0.1)--++(-45:0.5)node[right]{$(x,\sqrt{9-x^2})$};
+\draw[dashed](0,0)--(kEa)node[pos=0.6,left]{$3$};
+\path[name path=xaxis](-0.2*\la,0)--(1.75*\la,0);
+\draw(0,0)--(kCC);
+\draw[-stealth,name intersections={of=edgeR and xaxis}] (intersection-1)node[below right]{$3$}--(1.75*\la,0)node[right]{$x$};
+\draw[-stealth](0,-1.25*\la)--(0,1.5*\la)node[above]{$y$};
+\end{tikzpicture}
+\caption{قوسی پچر (مثال \حوالہ{مثال_تکمل_استعمال_قوسی_پچر})}
+\label{شکل_مثال_تکمل_استعمال_قوسی_پچر}
+\end{minipage}
+\end{figure}
+\ابتدا{مثال}\شناخت{مثال_تکمل_استعمال_قوسی_پچر}
 رداس \عددی{3} کے بیلن کو دو مستوی سے کاٹ کر قوسی پچر بنایا جاتا ہے۔ایک مستوی بیلن کے محور کا عمودی ہے جبکہ دوسرا مستوی پہلے مستوی کو بیلن کے وسط پر \عددی{45^{\circ}} سے قطع کرتا ہے۔ پچر کا حجم تلاش کریں۔
 
 حل:\quad
 \موٹا{پہلا قدم:} \quad \ترچھا{خاکہ۔}\quad
-ہم پچر اور نمائندہ عمودی تراش کا خاکہ بناتے ہیں۔ عمودی تراش \عددی{x} محور کے عمودی ہے۔\\
+ہم پچر اور نمائندہ عمودی تراش کا خاکہ بناتے ہیں (شکل \حوالہ{شکل_مثال_تکمل_استعمال_قوسی_پچر})۔ عمودی تراش \عددی{x} محور کے عمودی ہے۔\\
 \موٹا{دوسرا قدم:}\quad \ترچھا{کلیہ برائے \عددی{S(x)}۔}
 \quad
 نقطہ \عددی{x} پر مستطیل عمودی تراش کا رقبہ درج ذیل ہو گا۔
@@ -1152,36 +1196,196 @@ H=\int_a^bS(x)\dif x&=\int_0^32x\sqrt{9-x^2}\dif x\\
 \end{align*}
 \انتہا{مثال}
 %========================
-\ابتدا{مثال}\ترچھا{مسئلہ کوالئیرے}\حاشیہد{اطالوی ریاضی دان بوناونتورا کوالئیرے [1598-1647]}
-محور \عددی{x} پر پڑے ہوئے ایسے دو اجسام جن کا ہر \عددی{x} پر رقبہ عمودی تراش ایک دوسرے جیسا ہو کا حجم بھی ایک دوسرے جیسا ہو گا۔ یہ حقیقت  مساوات \حوالہ{مساوات_تکمل_استعمال_تعریف_حجم_الف} سے صاف ظاہر ہے چونکہ دونوں اجسام کا رقبہ عمودی تراش تفاعل \عددی{S(x)} ایک دوسرے جیسا ہے۔
+
+\ابتدا{مثال}\شناخت{مثال_تکمل_استعمال_مسئلہ_کولئیرے_ٹھوس}\ترچھا{مسئلہ کوالئیرے}\حاشیہد{اطالوی ریاضی دان بوناونتورا کوالئیرے [1598-1647]}
+محور \عددی{x} پر پڑے ہوئے ایسے دو اجسام جن کا ہر \عددی{x} پر رقبہ عمودی تراش ایک دوسرے جیسا ہو کا حجم بھی ایک دوسرے جیسا ہو گا۔ یہ حقیقت  مساوات \حوالہ{مساوات_تکمل_استعمال_تعریف_حجم_الف} سے صاف ظاہر ہے چونکہ دونوں اجسام کا رقبہ عمودی تراش تفاعل \عددی{S(x)} ایک دوسرے جیسا ہے (شکل \حوالہ{شکل_مثال_تکمل_استعمال_مسئلہ_کولئیرے_ٹھوس})۔
 \انتہا{مثال}
 %===========================
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\la}{1}
+\pgfmathsetmacro{\lb}{0.25}
+\pgfmathsetmacro{\xx}{0.75}
+\pgfmathsetmacro{\h}{2}
+\pgfmathsetmacro{\xb}{7.5*\la}
+\pgfmathsetmacro{\yb}{1*\la}
+\pgfmathsetmacro{\ang}{40}
+\draw(0,0) circle (\la cm and \lb cm);
+\draw([shift={(-180:\la cm and \lb cm)}]\xx,-\h) arc (-180:0:\la cm and \lb cm);
+\draw[name path=Lr](\la,0) to [out=-90,in=90] coordinate[pos=0.5](Lmr)(\xx+1,-\h);
+\draw[name path=Ll](-\la,0) to [out=-90,in=90] coordinate[pos=0.5](Lml)(\xx-1,-\h);
+\fill[white](-2.5*\la,-2/3*\h)--++(\xb,0)--++(\ang:0.5*\yb)--++(-\xb,0)--++(\ang:-0.5*\yb);
+\draw([shift={(-180:\la cm and \lb cm)}]$(Lml)!0.5!(Lmr)$) arc (-180:0:\la cm and \lb cm);
+\draw[dashed]([shift={(0:\la cm and \lb cm)}]$(Lml)!0.5!(Lmr)$) arc (0:180:\la cm and \lb cm);
+\begin{scope}[xshift={3.5*\la cm}]
+\draw(0,0) circle (\la cm and \lb cm);
+\draw([shift={(-180:\la cm and \lb cm)}]0,-\h) arc (-180:0:\la cm and \lb cm);
+\draw[name path=Rr](\la,0)--(\la,-\h)coordinate[pos=0.5](Rmr);
+\draw[name path=Rl](-\la,0)--(-\la,-\h)coordinate[pos=0.5](Rml);
+\fill[white](-2.5*\la,-2/3*\h)--++(\xb,0)--++(\ang:0.5*\yb)--++(-\xb,0)--++(\ang:-0.5*\yb);
+\draw([shift={(-180:\la cm and \lb cm)}]$(Rml)!0.5!(Rmr)$) arc (-180:0:\la cm and \lb cm);
+\draw[dashed]([shift={(0:\la cm and \lb cm)}]$(Rml)!0.5!(Rmr)$) arc (0:180:\la cm and \lb cm);
+\path[name path=back](-2*\la,-2/3*\h)++(\ang:\yb)--++(\xb,0);
+\draw[name intersections={of=back and Rr,by=aa}] (aa)--++(1.75,0);
+\end{scope}
+\path[name path=back](-2*\la,-2/3*\h)++(\ang:\yb)--++(\xb,0);
+\draw(-2*\la,-2/3*\h)--++(\xb,0)--++(\ang:\yb);
+\draw(-2*\la,-2/3*\h)--++(\ang:\yb);
+\draw(-2*\la,-1.3*\h)++(\ang:\yb/2)--++(0,1.5*\h);
+\draw(-2*\la,-1.2*\h)++(\ang:\yb/2)node[left]{$a$}--++(0.1,0);
+\draw(-2*\la,-0.2*\h)++(\ang:\yb/2)node[left]{$b$}--++(0.1,0);
+\fill[white](-2*\la,-2/3*\h)++(\ang:\yb)--++(\ang:-\yb)--++(1,0)--cycle;
+\draw[name intersections={of=back and Ll,by=aa},name intersections={of=back and Lr,by=bb}] (-2*\la,-2/3*\h)++(\ang:\yb)--(aa) (bb)--++(1.32,0);
+\end{tikzpicture}
+\caption{ان اجسام کا حجم ایک دوسرے جیسا ہے۔ آپ سکوں کو ایک دوسرے کے اوپر رکھ کر اس کو ثابت کر سکتے ہیں۔}
+\label{شکل_مثال_تکمل_استعمال_مسئلہ_کولئیرے_ٹھوس}
+\end{figure}
 
 \حصہء{سوالات}
 \موٹا{رقبہ عمودی تراش}\\
 سوال \حوالہ{سوال_تکمل_استعمال_رقبہ_عمودی_تراش_الف} اور سوال \حوالہ{سوال_تکمل_استعمال_رقبہ_عمودی_تراش_ب} میں \عددی{x} محور کے عمودی، ٹھوس جسم کے، رقبہ عمودی تراش \عددی{S(x)} کا کلیہ اخذ کریں۔ 
 
 \ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_رقبہ_عمودی_تراش_الف}
-ایک ٹھوس جسم  \عددی{x=-1} اور \عددی{x=1} پر \عددی{x} محور  کے عمودی سطحوں کے بیچ پایا جاتا ہے۔  \عددی{x} محور کے عمودی جسم  کے رقبہ عمودی تراش نصف دائرہ \عددی{y=-\sqrt{1-x^2}} اور نصف دائرہ \عددی{y=\sqrt{1-x^2}} کے بیچ پائے جاتے ہیں۔ 
+ایک ٹھوس جسم  \عددی{x=-1} اور \عددی{x=1} پر \عددی{x} محور  کے عمودی سطحوں کے بیچ پایا جاتا ہے۔  \عددی{x} محور کے عمودی جسم  کے رقبہ عمودی تراش نصف دائرہ \عددی{y=-\sqrt{1-x^2}} اور نصف دائرہ \عددی{y=\sqrt{1-x^2}} کے بیچ پائے جاتے ہیں ۔ 
 \begin{enumerate}[a.]
 \item
-عمودی تراش دائری اقراص ہیں جن کے قطر \عددی{xy} مستوی میں ہیں۔
+عمودی تراش دائری اقراص ہیں جن کے قطر \عددی{xy} مستوی میں ہیں (شکل \حوالہ{شکل_سوال_تکمل_استعمال_رقبہ_عمودی_تراش_الف}-ا)۔
 \item
-عمودی تراش چکور ہیں جن کے قاعدے \عددی{xy} مستوی میں ہیں۔
+عمودی تراش چکور ہیں جن کے قاعدے \عددی{xy} مستوی میں ہیں (شکل \حوالہ{شکل_سوال_تکمل_استعمال_رقبہ_عمودی_تراش_الف}-ب)۔
 \item
-عمودی تراش چکور ہیں جن کے وتر \عددی{xy} مستوی میں ہیں۔ چکور کے وتر کی لمبائی چکور کے ضلع کے \عددی{\sqrt{2}} گنّا ہوتی ہے۔
+عمودی تراش چکور ہیں جن کے وتر \عددی{xy} مستوی میں ہیں۔ چکور کے وتر کی لمبائی چکور کے ضلع کے \عددی{\sqrt{2}} گنّا ہوتی ہے (شکل \حوالہ{شکل_سوال_تکمل_استعمال_رقبہ_عمودی_تراش_الف}-ج)۔
 \item
-عمودی تراش مساوی الاضلاع مثلث ہیں جن کے قاعدے \عددی{xy} مستوی میں ہیں۔
+عمودی تراش مساوی الاضلاع مثلث ہیں جن کے قاعدے \عددی{xy} مستوی میں ہیں (شکل \حوالہ{شکل_سوال_تکمل_استعمال_رقبہ_عمودی_تراش_الف}-د)۔
 \end{enumerate}
 \انتہا{سوال}
 %======================
+\begin{figure}
+\centering
+\begin{subfigure}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\ang}{120}
+\pgfmathsetmacro{\la}{0.4}
+\pgfmathsetmacro{\lb}{0.8}
+\draw[-latex] (1,0)--++(0.5,0)node[right]{$x$};
+\draw[-latex](0,0.5)--++(0,0.5)node[above]{$y$};
+\draw([shift={(0:1cm and 0.5cm)}]0,0) arc (0:360:1cm and 0.5cm)coordinate[pos=0.1](ka)coordinate[pos=0.9](kb);
+\draw([shift={(90:0.15cm and 0.35cm)}]0.75,0) arc (90:270:0.15 cm and 0.35cm);
+\draw[dashed]([shift={(-90:0.15cm and 0.35cm)}]0.75,0) arc (-90:90:0.15 cm and 0.35cm);
+\draw([shift={(90:0.15cm and 0.5cm)}]0,0) arc (90:270:0.15 cm and 0.5cm);
+\draw[dashed]([shift={(-90:0.15cm and 0.5cm)}]0,0) arc (-90:90:0.15 cm and 0.5cm);
+\draw(55:1cm and 0.5cm)++(0,0.1)--++(45:0.75)node[above,xshift=3ex]{$x^2+y^2=1$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\ang}{120}
+\pgfmathsetmacro{\la}{0.4}
+\pgfmathsetmacro{\lb}{0.8}
+\draw[-latex] (1,0)--++(0.5,0)node[right]{$x$};
+\draw[-latex](0,0.5)--++(0,0.5)node[above]{$y$};
+\draw([shift={(0:1cm and 0.5cm)}]0,0) arc (0:360:1cm and 0.5cm)coordinate[pos=0.1](ka)coordinate[pos=0.9](kb)node[pos=0.75,below]{$x^2+y^2=1$};
+\draw[fill=white](ka)--(kb)--++(\ang:\la)coordinate(ta) (ka)--++(\ang:\la)coordinate(tb)--(ta);
+\path([shift={(0:1cm and 0.5cm)}]0,0) arc (0:360:1cm and 0.5cm)coordinate[pos=0.25](ka)coordinate[pos=0.75](kb);
+\draw[fill=white](ka)--(kb)--++(\ang:\lb)coordinate(ta) (ka)--++(\ang:\lb)coordinate(tb)--(ta);
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\ang}{120}
+\pgfmathsetmacro{\la}{0.65}
+\pgfmathsetmacro{\lb}{0.8}
+\draw[-latex] (1,0)--++(0.5,0)node[right]{$x$};
+\draw[-latex](0,0.5)--++(0,0.5)node[above]{$y$};
+\draw([shift={(0:1cm and 0.5cm)}]0,0) arc (0:360:1cm and 0.5cm)coordinate[pos=0.2](ka)coordinate[pos=0.8](kb)node[pos=0.75,below]{$x^2+y^2=1$};
+\draw[](kb)--++(\ang:\lb)--(ka);
+\draw[dashed](ka)--++(\ang:-\lb)--(kb);
+\path([shift={(0:1cm and 0.5cm)}]0,0) arc (0:360:1cm and 0.5cm)coordinate[pos=0.4](ka)coordinate[pos=0.6](kb);
+\fill[white](kb)--++(\ang:\la)--(ka)--(kb);
+\draw[](kb)--++(\ang:\la)--(ka);
+\draw[dashed](ka)--++(\ang:-\la)--(kb);
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\ang}{120}
+\pgfmathsetmacro{\la}{0.6}
+\pgfmathsetmacro{\lb}{1}
+\draw[-latex] (1,0)--++(0.5,0)node[right]{$x$};
+\draw[-latex](0,0.5)--++(0,0.5)node[above]{$y$};
+\draw([shift={(0:1cm and 0.5cm)}]0,0) arc (0:360:1cm and 0.5cm)coordinate[pos=0.1](ka)coordinate[pos=0.9](kb)node[pos=0.75,below]{$x^2+y^2=1$};
+\draw[fill=white](ka)--(kb)--++(\ang:\la)--(ka);
+\path([shift={(0:1cm and 0.5cm)}]0,0) arc (0:360:1cm and 0.5cm)coordinate[pos=0.25](ka)coordinate[pos=0.75](kb);
+\draw[fill=white](ka)--(kb)--++(\ang:\lb)--(ka);
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\caption{عمودی تراش برائے سوال \حوالہ{سوال_تکمل_استعمال_رقبہ_عمودی_تراش_الف}}
+\label{شکل_سوال_تکمل_استعمال_رقبہ_عمودی_تراش_الف}
+\end{figure}
+%
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[y={0.5cm}]
+\pgfmathsetmacro{\ra}{sqrt(2)/2}
+\pgfmathsetmacro{\rb}{sqrt(1)/2}
+\pgfmathsetmacro{\rc}{sqrt(1.5)/2}
+\draw[-latex](2,0)node[below]{$4$}--(2.75,0)node[right]{$x$};
+\draw[domain=0:0.5]plot({\x},{sqrt(\x)});
+\draw[domain=0:0.5]plot({\x},{-sqrt(\x)});
+\draw[domain=0.5:2]plot({\x},{sqrt(\x)});
+\draw[domain=0.5:2]plot({\x},{-sqrt(\x)});
+\draw[name path=Sr](2,0) circle (0.25cm and \ra cm);
+\draw[name path=Sl](1,0) circle (0.2cm and \rb cm);
+\path[name path=kaxis](0,0)--(2,0);
+\draw[name intersections={of=kaxis and Sr, by=k},name intersections={of=kaxis and Sl}](1,0)--(k)  (-0.2,0)--(intersection-2);
+\draw[-latex](0,-0.5)--(0,1)node[above]{$y$};
+\draw(1.5,\rc)node[above,yshift=2ex]{$x=y^2$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[y={0.5cm}]
+\pgfmathsetmacro{\ang}{120}
+\pgfmathsetmacro{\la}{0.8}
+\pgfmathsetmacro{\lb}{0.4}
+\pgfmathsetmacro{\ra}{sqrt(2)/2}
+\pgfmathsetmacro{\rb}{sqrt(1)/2}
+\pgfmathsetmacro{\rc}{sqrt(1.5)/2}
+\draw[-latex](-0.25,0)--(2.75,0)node[right]{$x$};
+\draw(2,0)node[above right]{$4$};
+\draw[-latex](0,-0.5)--(0,1)node[above]{$y$};
+\draw[domain=0:0.5]plot({\x},{sqrt(\x)});
+\draw[domain=0:0.5]plot({\x},{-sqrt(\x)});
+\draw[domain=0.5:2]plot({\x},{sqrt(\x)});
+\draw[domain=0.5:2]plot({\x},{-sqrt(\x)});
+\draw[fill=white](2,{-sqrt(2)})--(2,{sqrt(2)})--++(\ang:\la)coordinate(t)  (2,{-sqrt(2)})--++(\ang:\la)--(t);
+\draw[fill=white](1,{-sqrt(1)})--(1,{sqrt(1)})--++(\ang:\lb)coordinate(t)  (1,{-sqrt(1)})--++(\ang:\lb)--(t);
+\draw(0.5,{-sqrt(0.5)})node[below,yshift=-0.5ex]{$x=y^2$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\caption{عمودی تراش برائے سوال \حوالہ{سوال_تکمل_استعمال_رقبہ_عمودی_تراش_ب}}
+\label{شکل_سوال_تکمل_استعمال_رقبہ_عمودی_تراش_ب}
+\end{figure}
+
 \ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_رقبہ_عمودی_تراش_ب}
 ایک ٹھوس جسم  \عددی{x=0} اور \عددی{x=4} پر  \عددی{x} محور  کے عمودی  سطحوں کے بیچ پایا جاتا ہے۔ \عددی{x} محور کے عمودی جسم  کے رقبہ عمودی تراش، قطع مکافی  \عددی{y=-\sqrt{x}} اور قطع مکافی \عددی{y=\sqrt{x}} کے بیچ پائے جاتے ہیں۔ 
 \begin{enumerate}[a.]
 \item
-عمودی تراش دائری اقراص ہیں جن کے قطر \عددی{xy} مستوی میں ہیں۔
+عمودی تراش دائری اقراص ہیں جن کے قطر \عددی{xy} مستوی میں ہیں (شکل \حوالہ{شکل_سوال_تکمل_استعمال_رقبہ_عمودی_تراش_ب}-ا)۔
 \item
-عمودی تراش چکور ہیں جن کے قاعدے \عددی{xy} مستوی میں ہیں۔
+عمودی تراش چکور ہیں جن کے قاعدے \عددی{xy} مستوی میں ہیں (شکل \حوالہ{سوال_تکمل_استعمال_رقبہ_عمودی_تراش_ب}-ب)۔
 \item
 عمودی تراش چکور ہیں جن کے وتر \عددی{xy} مستوی میں ہیں۔
 \item
@@ -1209,16 +1413,62 @@ H=\int_a^bS(x)\dif x&=\int_0^32x\sqrt{9-x^2}\dif x\\
 ایک ٹھوس جسم \عددی{x=-1} اور \عددی{x=1} پر  \عددی{x} محور کے عمودی سطحوں کے بیچ پایا جاتا ہے۔ جسم کے چکور عمودی تراش \عددی{x} محور کے عمودی ہیں جن کے وتر نصف دائرہ \عددی{y=-\sqrt{1-x^2}} سے نصف دائرہ \عددی{y=\sqrt{1-x^2}} تک ہیں۔ چکور کے وتر کی لمبائی چکور کے ضلع کے \عددی{\sqrt{2}} گنّا ہوتی ہے۔
 \انتہا{سوال}
 %======================
-\ابتدا{سوال}
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_شکل_دیا_گیا_ہے_الف}
 ایک ٹھوس جسم کا قاعدہ منحنی \عددی{y=2\sqrt{\sin x}} اور \عددی{x} محور پر وقفہ \عددی{[0,\pi]}  کے بیچ پایا جاتا ہے۔ \عددی{x} محور کے عمودی عمودی تراش درج ذیل ہیں۔
 \begin{enumerate}[a.]
 \item
-مساوی الاضلاع  مثلث جن کے قاعدے \عددی{x} محور سے منحنی تک ہیں۔
+مساوی الاضلاع  مثلث جن کے قاعدے \عددی{x} محور سے منحنی تک ہیں (شکل \حوالہ{شکل_سوال_تکمل_استعمال_شکل_دیا_گیا_ہے_الف})۔
 \item
 انتصابی چکور جن کے قاعدے \عددی{x} محور سے منحنی تک ہیں۔
 \end{enumerate}
 \انتہا{سوال}
 %=====================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[yscale=0.5]
+\pgfmathsetmacro{\ang}{195}
+\pgfmathsetmacro{\la}{0.4}
+\pgfmathsetmacro{\lb}{0.8}
+\draw[-latex](-0.25,0)--(1.2*pi,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2.5)node[above]{$y$};
+\draw(pi,0)node[below]{$\pi$};
+\draw[domain=0:pi/10] plot({\x},{2*sqrt(sin(deg(\x)))});
+\draw[domain=0.9*pi:pi] plot({\x},{2*sqrt(sin(deg(\x)))});
+\draw[domain=0.1*pi:0.9*pi] plot({\x},{2*sqrt(sin(deg(\x)))});
+\draw[fill=white] (0.8*pi,{2*sqrt(sin(deg(0.8*pi)))})--++(\ang:\la)--(0.8*pi,0)--cycle;
+\draw[fill=white] (0.5*pi,{2*sqrt(sin(deg(0.5*pi)))})--++(\ang:\lb)--(0.5*pi,0)--cycle;
+\draw[fill=white] (0.2*pi,{2*sqrt(sin(deg(0.2*pi)))})--++(\ang:\la)--(0.2*pi,0)--cycle;
+\draw(pi/2,{2*sqrt(sin(deg(0.5*pi)))})node[above right]{$y=2\sqrt{\sin x}$};
+\end{tikzpicture}
+\caption{عمودی تراش (سوال \حوالہ{سوال_تکمل_استعمال_شکل_دیا_گیا_ہے_الف})}
+\label{شکل_سوال_تکمل_استعمال_شکل_دیا_گیا_ہے_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[xscale=2]
+\pgfmathsetmacro{\ang}{195}
+\pgfmathsetmacro{\la}{1}
+\pgfmathsetmacro{\lb}{0.7}
+\pgfmathsetmacro{\lc}{0.5}
+\pgfmathsetmacro{\aa}{sqrt(1-0^2)};
+\pgfmathsetmacro{\bb}{sqrt(1-0.5^2)};
+\pgfmathsetmacro{\cc}{sqrt(1-0.75^2)};
+\draw[-latex](-1.25,0)--(1.25,0)node[right]{$x$};
+\draw[-latex](0,-1.25)--(0,1.5)node[above]{$y$};
+\draw(0,0) circle (1);
+\draw[fill=white](\cc,0.75)--++(-2*\cc,0)--++(0,\lc)--cycle;
+\draw[fill=white](\bb,0.5)--++(-2*\bb,0)--++(0,\lb)--cycle;
+\draw[fill=white](\aa,0)--++(-2*\aa,0)--++(0,\la)--cycle;
+\draw[fill=white](\bb,-0.5)--++(-2*\bb,0)--++(0,\lb)--cycle;
+\draw[fill=white](\cc,-0.75)--++(-2*\cc,0)--++(0,\lc)--cycle;
+\draw(0.5,1)node[above right]{$x^2+y^2=1$};
+\end{tikzpicture}
+\caption{عمودی تراش (سوال \حوالہ{سوال_تکمل_استعمال_شکل_دیا_گیا_ہے_ب})}
+\label{شکل_سوال_تکمل_استعمال_شکل_دیا_گیا_ہے_ب}
+\end{minipage}
+\end{figure}
 \ابتدا{سوال}
 ایک ٹھوس جسم \عددی{x=-\tfrac{\pi}{3}} اور \عددی{x=\tfrac{\pi}{3}} پر  \عددی{x} محور کے عمودی سطحوں کے بیچ پایا جاتا ہے۔ جسم کے  عمودی تراش \عددی{x} محور کے عمودی ہیں جن کی خواص درج ذیل ہیں۔
 \begin{enumerate}[a.]
@@ -1233,8 +1483,8 @@ H=\int_a^bS(x)\dif x&=\int_0^32x\sqrt{9-x^2}\dif x\\
 ایک ٹھوس جسم \عددی{y=0} اور \عددی{y=2} پر  \عددی{y} محور کے عمودی سطحوں کے بیچ پایا جاتا ہے۔ جسم کے دائری عمودی تراش \عددی{y} محور کے عمودی ہیں جن کے قطر \عددی{y} محور سے قطع مکافی \عددی{x=\sqrt{5}y^2} تک ہیں۔
 \انتہا{سوال}
 %======================
-\ابتدا{سوال}
-ایک ٹھوس جسم کا قاعدہ قرص \عددی{x^2+y^2\le 1} ہے۔ عمودی تراش    \عددی{y=-1} اور \عددی{y=1} کے بیچ \عددی{y} محور کے عمودی ہیں جو مساوی الساقین مثلث ہیں جن کا ایک ضلع قرص میں پایا جاتا ہے۔
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_شکل_دیا_گیا_ہے_ب}
+ایک ٹھوس جسم کا قاعدہ قرص \عددی{x^2+y^2\le 1} ہے۔ عمودی تراش    \عددی{y=-1} اور \عددی{y=1} کے بیچ \عددی{y} محور کے عمودی ہیں جو مساوی الساقین مثلث ہیں جن کا ایک ضلع قرص میں پایا جاتا ہے (شکل \حوالہ{شکل_سوال_تکمل_استعمال_شکل_دیا_گیا_ہے_ب})۔
 \انتہا{سوال}
 %=====================
 \موٹا{مسئلہ کوالئیرے}\\
@@ -1250,15 +1500,27 @@ H=\int_a^bS(x)\dif x&=\int_0^32x\sqrt{9-x^2}\dif x\\
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ٹھوس_جسم_حجم_ب}
-ایک ٹھوس جسم \عددی{x=01} اور \عددی{x=12} پر  \عددی{x} محور کے عمودی سطحوں کے بیچ پایا جاتا ہے۔ جسم کے عمودی تراش \عددی{x} محور کے عمودی ہیں جن کے  قطر لکیر \عددی{y=\tfrac{x}{2}} سے لکیر \عددی{y=x} تک ہیں۔ اس جسم کا حجم کیوں اس قائمہ مخروط جتنا ہو گا جس کا قد \عددی{12} اور جس کے قاعدہ کا رداس \عددی{3} ہو؟ 
-\انتہا{سوال}
-%======================
-\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_چوڑائی_برابر}\ترچھا{مسئلہ کوالئیرے کی ابتدائی صورت}\\
-کوالئیرے نے طالب علمی کے دوران دریافت کیا کہ اگر دو مستوی خطوں کو \عددی{x} محور کے یکساں وقفہ پر یوں رکھنا ممکن ہو کہ کسی بھی \عددی{x} پر دونوں خطوں کی چوڑائی ایک دوسرے جیسی ہو تب دونوں خطوں کا رقبہ ایک دوسرے جیسا ہو گا (شکل \حوالہ{شکل_سوال_تکمل_استعمال_چوڑائی_برابر})۔ ٹھوس اجسام کے لئے یہی مسئلہ کوالئیرے نے کبھی ثابت نہیں کیا۔ اگر شکل \حوالہ{سوال_تکمل_استعمال_چوڑائی_برابر} میں بالائی اور زیریں سرحدیں استمراری تفاعل ہوں تب اس مسئلے کو ثابت کریں۔
-
+ایک ٹھوس جسم \عددی{x=01} اور \عددی{x=12} پر  \عددی{x} محور کے عمودی سطحوں کے بیچ پایا جاتا ہے۔ جسم کے عمودی تراش \عددی{x} محور کے عمودی ہیں جن کے  قطر لکیر \عددی{y=\tfrac{x}{2}} سے لکیر \عددی{y=x} تک ہیں (شکل \حوالہ{شکل_سوال_تکمل_استعمال_ٹھوس_جسم_حجم_ب})۔ اس جسم کا حجم کیوں اس قائمہ مخروط جتنا ہو گا جس کا قد \عددی{12} اور جس کے قاعدہ کا رداس \عددی{3} ہو؟ 
 \انتہا{سوال}
 %======================
 \begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-0.2,0)--(3,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--++(0,1.75)node[above]{$y$};
+\draw(2.5,0)node[below]{$12$}--++(0,0.1);
+\draw plot[domain=0:2.5] ({\x},{\x/2});
+\draw plot[domain=0:2.5] ({\x},{\x});
+\draw(2.5,1.845) circle (0.25cm and 0.625cm);
+\draw(1.5,{1.5/2})node[below right,yshift=1ex]{$y=\frac{x}{2}$};
+\draw(1.5,1.5)node[above left,xshift=1ex]{$y=x$};
+\end{tikzpicture}
+\caption{عمودی تراش (سوال \حوالہ{سوال_تکمل_استعمال_ٹھوس_جسم_حجم_ب})}
+\label{شکل_سوال_تکمل_استعمال_ٹھوس_جسم_حجم_ب}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[declare function={fa(\x)=1.25+\x^3-3*\x^2+2*\x;fb(\x)=1.25+\x^2-2*\x;fc(\x)=4+\x^2-3*\x;fd(\x)=fa(\x)-fb(\x)+fc(\x);}]
 \begin{axis}[small,axis lines=middle,xmin=0,ymin=0,xtick={0,0.5,2},xticklabels={$a$,$x$,$b$},ytick={\empty},axis y line=none,enlargelimits=true]
@@ -1270,18 +1532,120 @@ H=\int_a^bS(x)\dif x&=\int_0^32x\sqrt{9-x^2}\dif x\\
 \draw[stealth-stealth](axis cs:0.5,{fc(0.5)})--(axis cs:0.5,{fd(0.5)});
 \end{axis}
 \end{tikzpicture}
-\caption{وقفہ $[a,b]$ پر کسی بھی $x$ پر دونوں خطوں کی چوڑائی ایک دوسرے جتنی ہے۔}
+\caption{وقفہ $[a,b]$ پر کسی بھی $x$ پر دونوں خطوں کی چوڑائی ایک دوسرے جتنی ہے (مسئلہ کوالئیرے)۔}
 \label{شکل_سوال_تکمل_استعمال_چوڑائی_برابر}
+\end{minipage}
 \end{figure}
-\ابتدا{سوال}\ترچھا{نصف کرہ کا حجم بذریعہ مسئلہ کوالئیرے}\\
-نصف کرہ کا حجم \عددی{H=\tfrac{2}{3}\pi R^3} ہے جہاں \عددی{R} رداس ہے۔رداس \عددی{R} اور قد \عددی{R} کے قائمہ بیلن سے  رداس \عددی{R} اور قد \عددی{R} کا قائمہ مخروط ہٹا کر نصف کرہ کا عمودی تراش حاصل ہوتا ہے۔ مخروط کو نوک کے بل رکھا تصور کریں۔اس حقیقت کو استعمال کرتے ہوئے نصف کرہ کا حجم تلاش کریں۔  
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize]
+\pgfmathsetmacro{\la}{1.25}
+\pgfmathsetmacro{\laa}{\la/2}
+\pgfmathsetmacro{\h}{4/3*\la}
+\draw[-stealth](0,0)--++(\la,0)node[pos=0.5,fill=white]{$R$};
+\draw(0,-0.1)--++(0,0.2);
+\draw[stealth-stealth](-\la-0.3,0)--++(0,-\h)node[pos=0.5,left]{$R$};
+\draw(0,0) circle (\la cm and 0.25*\la cm);
+\draw[dashed]([shift={(0:\la cm and 0.25*\la cm)}]0,-\h) arc (0:180:\la cm and 0.25*\la cm);
+\draw([shift={(180:\la cm and 0.25*\la cm)}]0,-\h) arc (180:360:\la cm and 0.25*\la cm);
+\draw(-\la,0)--++(0,-\h) (\la,0)--++(0,-\h);
+\draw(-\la,0)--(0,-\h)--(\la,0);
+\draw(0,-\h/2) circle (\laa cm and 0.25*\laa cm);
+\draw(0,-\h)--(0,-\h/2)node[pos=0.6,left]{$h$}--++(\laa,0)node[pos=0.5,above,fill=white]{$h$};
+\begin{scope}[xshift=-3.5cm,yscale=1.5]
+\draw([shift={(180:\la cm and 0.25*\la cm)}]0,-2/3*\h) arc (180:360:\la cm and 0.25*\la cm);
+\draw[dashed]([shift={(0:\la cm and 0.25*\la cm)}]0,-2/3*\h) arc (0:180:\la cm and 0.25*\la cm);
+\draw([shift={(0:\la cm)}]0,-2/3*\h) arc (0:180:\la)node[pos=0.75,left]{\RL{نصف کرہ}};
+\draw(0,-2/3*\h)--++(0,\h/3)node[pos=0.35,left]{$h$}--++({sqrt(\la^2-(\h/3)^2)},0)node[pos=0.5,above,xshift=-1ex]{$\sqrt{R^2-h^2}$}--(0,-2/3*\h)node[pos=0.6,below right]{$R$};
+\end{scope}
+\end{tikzpicture}
+\caption{کرہ اور بیلن سے مخروط منفی کر کے ایک جیسا حجم ملتا ہے (سوال \حوالہ{سوال_تکمل_استعمال_نصف_کرہ_حجم})۔}
+\label{شکل_سوال_تکمل_استعمال_نصف_کرہ_حجم}
+\end{minipage}
+\end{figure}
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_چوڑائی_برابر}\ترچھا{مسئلہ کوالئیرے کی ابتدائی صورت}\\
+کوالئیرے نے طالب علمی کے دوران دریافت کیا کہ اگر دو مستوی خطوں کو \عددی{x} محور کے یکساں وقفہ پر یوں رکھنا ممکن ہو کہ کسی بھی \عددی{x} پر دونوں خطوں کی چوڑائی ایک دوسرے جیسی ہو تب دونوں خطوں کا رقبہ ایک دوسرے جیسا ہو گا (شکل \حوالہ{شکل_سوال_تکمل_استعمال_چوڑائی_برابر})۔ ٹھوس اجسام کے لئے یہی مسئلہ کوالئیرے نے کبھی ثابت نہیں کیا۔ اگر شکل \حوالہ{سوال_تکمل_استعمال_چوڑائی_برابر} میں بالائی اور زیریں سرحدیں استمراری تفاعل ہوں تب اس مسئلے کو ثابت کریں۔
+
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_نصف_کرہ_حجم}\ترچھا{نصف کرہ کا حجم بذریعہ مسئلہ کوالئیرے}\\
+نصف کرہ کا حجم \عددی{H=\tfrac{2}{3}\pi R^3} ہے جہاں \عددی{R} رداس ہے۔رداس \عددی{R} اور قد \عددی{R} کے قائمہ بیلن سے  رداس \عددی{R} اور قد \عددی{R} کا قائمہ مخروط ہٹا کر نصف کرہ کا عمودی تراش حاصل ہوتا ہے۔ مخروط کو نوک کے بل رکھا تصور کریں (شکل \حوالہ{شکل_سوال_تکمل_استعمال_نصف_کرہ_حجم})۔اس حقیقت کو استعمال کرتے ہوئے نصف کرہ کا حجم تلاش کریں۔  
 \انتہا{سوال}
 %===========================
 
 \حصہ{اجسام طواف کے حجم۔ قرص اور چھلا}
-مستوی خطے کو کسی محور کے گرد گمانے سے \اصطلاح{جسم طواف}\فرہنگ{جسم طواف}\حاشیہب{solid of revolution}\فرہنگ{solid of revolution} پیدا کا جاتا ہے۔ جسم طواف کا حجم ٹکیوں کی ترکیب سے نہایت خوش اسلوبی سے حاصل ہوتا ہے۔
+مستوی خطے کو کسی محور کے گرد گمانے سے \اصطلاح{جسم طواف}\فرہنگ{جسم طواف}\حاشیہب{solid of revolution}\فرہنگ{solid of revolution} پیدا کیا جاتا ہے (شکل \حوالہ{شکل_تکمل_استعمال_جسم_طواف})۔ جسم طواف پیدا کرنے کے لئے گھمائے جانے والے مستوی خطے کو \اصطلاح{پیدا کار خطہ}\فرہنگ{پیداکار خطہ}\حاشیہب{generating region}\فرہنگ{generating!region} کہتے ہیں۔ جسم طواف کا حجم ٹکیوں کی ترکیب سے نہایت خوش اسلوبی سے حاصل ہوتا ہے۔
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\la}{1}
+\pgfmathsetmacro{\lb}{\la/2}
+\pgfmathsetmacro{\lc}{2/3*\la}
+\pgfmathsetmacro{\ld}{\lc/2}
+\pgfmathsetmacro{\le}{2/3*\ld}
+\pgfmathsetmacro{\lf}{\le/2}
+\pgfmathsetmacro{\w}{0.3}
+\pgfmathsetmacro{\len}{4}
+\pgfmathsetmacro{\ang}{135}
+\draw(0,0)circle (\lb cm and \la cm);
+\draw(0,\la)--++(-\w,0)  (0,-\la)--++(-\w,0);
+\draw([shift={(90:\lb cm and \la cm)}]-\w,0) arc (90:270:\lb cm and \la cm); 
+\draw[fill=white]([shift={(90:\ld cm and \lc cm)}]0,0) arc (90:270:\ld cm and \lc cm) (0,\lc)--++(\len,0)--++(0,-2*\lc)--++(-\len,0);
+\draw[fill=white]([shift={(-90:\lb cm and \la cm)}]\len,0) arc (-90:90:\lb cm and \la cm)--++(-\w,0) arc (90:270:\lb cm and \la cm)--++(\w,0);
+\draw[shift={(90:\lb cm and \la cm)}](\len,0) arc (90:270:\lb cm and \la cm);
+\draw(\len,0) circle (\lf cm and \le cm);
+\draw[dashed](-1,0)--(\len,0);
+\draw(\len,0)--++(1.5,0);
+\path(-\w,0)++(\ang:\lf cm and \le cm)coordinate(ka);
+\path(\ang:\lb cm and \la cm)coordinate(kc)++(-\w,0)coordinate(kb);
+\path(\ang:\ld cm and \lc cm)coordinate(kd);
+\path(\len-\w,0)++(\ang:\ld cm and \lc cm)coordinate(ke);
+\path(\len-\w,0)++(\ang:\lb cm and \la cm)coordinate(kf)++(\w,0)coordinate(kg);
+\path(\len,0)++(\ang:\lf cm and \le cm)coordinate(kh);
+\draw[fill=lgray,opacity=0.5](ka)--(kb)--(kc)--(kd)--(ke)coordinate[pos=0.5](kgen)--(kf)--(kg)--(kh)--cycle;
+\draw(kgen)--++(45:1)node[above]{\RL{پیداکار خطہ}};
+\draw[-stealth,thick,gray] ([shift={(-100:0.25cm and 0.5cm)}]\len+1,0) arc (-100:220:0.25cm and 0.5cm)node[pos=0.5,above]{\RL{محور طواف}};
+\end{tikzpicture}
+\caption{مستوی خطہ کو کسی محور کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔}
+\label{شکل_تکمل_استعمال_جسم_طواف}
+\end{figure}
+%
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\angA}{20}
+\pgfmathsetmacro{\angB}{170}
+\pgfmathsetmacro{\len}{2}
+\pgfmathsetmacro{\ra}{0.75}
+\pgfmathsetmacro{\rb}{1.25}
+\pgfmathsetmacro{\rc}{0.92*\rb}
+\pgfmathsetmacro{\angS}{-140}
+\pgfmathsetmacro{\angE}{140}
+\draw(0,\ra)coordinate(uL) to [out=\angA,in=\angB] coordinate[pos=0.5](kA)(\len,\rb);
+\draw(0,-\ra)coordinate(lL) to [out=-\angA,in=-\angB] coordinate[pos=0.5](kB)(\len,-\rb);
+\draw([shift={(\angS:0.5*\rb cm and \rb cm)}]\len,0) arc( \angS:\angE:0.5*\rb cm and \rb cm)coordinate[pos=0](kSb)coordinate[pos=1](kEb);
+\draw(kSb)--(\len,0)--(kEb);
+\draw([shift={(\angS:0.5*\ra cm and \ra cm)}]0,0) arc( \angS:\angE:0.5*\ra cm and \ra cm)coordinate[pos=0](kSa)coordinate[pos=1](kEa);
+\draw(kSa)--(0,0)--(kEa);
+\fill[white](uL) to [out=0,in=0](lL)--cycle;
+\draw[-latex](-1,0)--(\len+2,0)node[right]{$x$};
+\draw[-latex](-0.75,-0.2)--++(0,2)node[above]{$y$};
+\draw([shift={(0:0.5*\rc cm and \rc cm)}]1/2*\len,0) arc (0:360:0.5*\rc cm and \rc cm)coordinate[pos=0.2](kname);
+\draw[-stealth](1/2*\len,0)--++(-155:0.5*\rc cm and \rc cm)node[pos=0.75,right,font=\footnotesize]{$R(x)$};
+\draw(kname) to [out=70,in=-155]++(0.5,1)node[right,align=center]{\RL{رقبہ عمودی تراش}\\  $S(x)=\pi (R(x))^2$};
+\draw(kSa) to [out=\angA,in=\angB](kSb);
+\draw[thick](kEa) to[out=-\angA,in=-\angB] coordinate[pos=0.35](kfun)(kEb);
+\draw(0,0)node[above left,xshift=-0.5ex]{$a$} (\len,0)node[above right]{$b$};
+\draw(kfun)--++(120:1)node[above,xshift=3ex]{$y=R(x)$};
+\draw(\len+1,0)++(0,-0.1)--++(-45:0.5)node[below]{\RL{محور طواف}};
+\end{tikzpicture}
+\caption{استمراری تفاعل $y=R(x)$ کو $x=a$ تا $x=b$ محور $x$ کے گرد گھمایا گیا ہے۔}
+\label{شکل_تکمل_استعمال_استمراری_مستوی_پیداکار}
+\end{figure}
 
-اگر ہم مستوی خطہ کو استمراری تفاعل \عددی{y=R(x),\, a\le x\le b}  اور \عددی{x} کے بیچ خطہ سے ظاہر کر سکیں اور اگر \عددی{x} محور گھومنے کا محور (\اصطلاح{محور طواف}\فرہنگ{محور!طواف}\حاشیہب{axis of revolution}\فرہنگ{axis!of revolution}) بھی ہو تب ٹھوس جسم کا حجم درج ذیل طریقہ سے حاصل کیا جا سکتا ہے۔
+اگر ہم مستوی خطہ کو استمراری تفاعل \عددی{y=R(x),\, a\le x\le b}  اور \عددی{x} کے بیچ خطہ سے ظاہر کر سکیں اور اگر \عددی{x} محور گھومنے کا محور (\اصطلاح{محور طواف}\فرہنگ{محور!طواف}\حاشیہب{axis of revolution}\فرہنگ{axis!of revolution}) بھی ہو تب ٹھوس جسم کا حجم درج ذیل طریقہ سے حاصل کیا جا سکتا ہے (شکل \حوالہ{شکل_تکمل_استعمال_استمراری_مستوی_پیداکار})۔
 
 محور طواف کے لحاظ سے عمودی تراش کا رداس \عددی{R(x)} اور رقبہ درج ذیل ہو گا۔
 \begin{align*}
@@ -1471,25 +1835,6 @@ H&=\int_c^d\pi([R(y)]^2-[r(y)]^2)\dif y\\
 \موٹا{حجم بذریعہ ترکیب ٹکیا}\\
 سوال \حوالہ{سوال_تکمل_استعمال_جسم_طواف_الف} تا سوال \حوالہ{سوال_تکمل_استعمال_جسم_طواف_ب} میں سایہ دار خطے کو دیے گئے محور کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔ اس جسم کا حجم دریافت کریں۔
 
-\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_جسم_طواف_الف}
-سایہ دار خطہ شکل \حوالہ{شکل_سوال_تکمل_استعمال_جسم_طواف_الف} میں دیا گیا ہے جہاں تفاعل \عددی{x+2y=2} ہے۔
-\انتہا{سوال}
-%=========================
-
-\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_جسم_طواف_پ}
-سایہ دار خطہ شکل \حوالہ{شکل_سوال_تکمل_استعمال_جسم_طواف_پ} میں دیا گیا ہے جہاں تفاعل \عددی{x=\tfrac{3y}{2}} ہے۔
-\انتہا{سوال}
-%=========================
-
-\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_جسم_طواف_ت}
-سایہ دار خطہ شکل \حوالہ{شکل_سوال_تکمل_استعمال_جسم_طواف_ت} میں دیا گیا ہے جہاں تفاعل \عددی{x=\tan(\tfrac{\pi y}{4})} ہے۔
-\انتہا{سوال}
-%=========================
-
-\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_جسم_طواف_ب}
-سایہ دار خطہ شکل \حوالہ{شکل_سوال_تکمل_استعمال_جسم_طواف_ب} میں دیا گیا ہے جہاں تفاعل \عددی{y=\sin x\cos x} ہے۔
-\انتہا{سوال}
-%=========================
 \begin{figure}
 \centering
 \begin{minipage}{0.2\textwidth}
@@ -1550,6 +1895,25 @@ H&=\int_c^d\pi([R(y)]^2-[r(y)]^2)\dif y\\
 \end{minipage}
 \end{figure}
 
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_جسم_طواف_الف}
+سایہ دار خطہ شکل \حوالہ{شکل_سوال_تکمل_استعمال_جسم_طواف_الف} میں دیا گیا ہے جہاں تفاعل \عددی{x+2y=2} ہے۔
+\انتہا{سوال}
+%=========================
+
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_جسم_طواف_پ}
+سایہ دار خطہ شکل \حوالہ{شکل_سوال_تکمل_استعمال_جسم_طواف_پ} میں دیا گیا ہے جہاں تفاعل \عددی{x=\tfrac{3y}{2}} ہے۔
+\انتہا{سوال}
+%=========================
+
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_جسم_طواف_ت}
+سایہ دار خطہ شکل \حوالہ{شکل_سوال_تکمل_استعمال_جسم_طواف_ت} میں دیا گیا ہے جہاں تفاعل \عددی{x=\tan(\tfrac{\pi y}{4})} ہے۔
+\انتہا{سوال}
+%=========================
+
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_جسم_طواف_ب}
+سایہ دار خطہ شکل \حوالہ{شکل_سوال_تکمل_استعمال_جسم_طواف_ب} میں دیا گیا ہے جہاں تفاعل \عددی{y=\sin x\cos x} ہے۔
+\انتہا{سوال}
+%=========================
 سوال \حوالہ{سوال_تکمل_استعمال_منحنیات_لکیریں_جسم_الف} تا سوال \حوالہ{سوال_تکمل_استعمال_منحنیات_لکیریں_جسم_ب} میں منحنیات اور لکیروں کے بیچ خطے کو \عددی{x} محور کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔ جسم کا حجم تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_منحنیات_لکیریں_جسم_الف}
