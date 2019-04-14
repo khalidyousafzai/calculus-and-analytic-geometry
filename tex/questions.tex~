@@ -1,32 +1,49 @@
 \begin{figure}
 \centering
-\begin{tikzpicture}
-\pgfmathsetmacro{\angA}{20}
-\pgfmathsetmacro{\angB}{170}
-\pgfmathsetmacro{\len}{2}
-\pgfmathsetmacro{\ra}{0.75}
-\pgfmathsetmacro{\rb}{1.25}
-\pgfmathsetmacro{\rc}{0.92*\rb}
-\pgfmathsetmacro{\angS}{-140}
-\pgfmathsetmacro{\angE}{140}
-\draw(0,\ra)coordinate(uL) to [out=\angA,in=\angB] coordinate[pos=0.5](kA)(\len,\rb);
-\draw(0,-\ra)coordinate(lL) to [out=-\angA,in=-\angB] coordinate[pos=0.5](kB)(\len,-\rb);
-\draw([shift={(\angS:0.5*\rb cm and \rb cm)}]\len,0) arc( \angS:\angE:0.5*\rb cm and \rb cm)coordinate[pos=0](kSb)coordinate[pos=1](kEb);
-\draw(kSb)--(\len,0)--(kEb);
-\draw([shift={(\angS:0.5*\ra cm and \ra cm)}]0,0) arc( \angS:\angE:0.5*\ra cm and \ra cm)coordinate[pos=0](kSa)coordinate[pos=1](kEa);
-\draw(kSa)--(0,0)--(kEa);
-\fill[white](uL) to [out=0,in=0](lL)--cycle;
-\draw[-latex](-1,0)--(\len+2,0)node[right]{$x$};
-\draw[-latex](-0.75,-0.2)--++(0,2)node[above]{$y$};
-\draw([shift={(0:0.5*\rc cm and \rc cm)}]1/2*\len,0) arc (0:360:0.5*\rc cm and \rc cm)coordinate[pos=0.2](kname);
-\draw[-stealth](1/2*\len,0)--++(-155:0.5*\rc cm and \rc cm)node[pos=0.75,right,font=\footnotesize]{$R(x)$};
-\draw(kname) to [out=90,in=-135]++(0.5,0.5)node[right]{\RL{رقبہ عمودی تراش=$\pi (R(x))^2$}};
-\draw(kSa) to [out=\angA,in=\angB](kSb);
-\draw[thick](kEa) to[out=-\angA,in=-\angB] coordinate[pos=0.35](kfun)(kEb);
-\draw(0,0)node[above left,xshift=-0.5ex]{$a$} (\len,0)node[above right]{$b$};
-\draw(kfun)--++(120:1)node[above,xshift=3ex]{$y=R(x)$};
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[xscale=2,yscale=2,font=\small,declare function={fa(\x)=\x^2;}]
+\pgfmathsetmacro{\c}{0.7}
+\draw[-latex](-0.2,0)--(2,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,1.5)node[above]{$y$};
+\draw[]plot[domain=0:1]({\x},{fa(\x)});
+\draw(0,1)node[left]{$1$}--(1,1);
+\draw[thick,gray]([shift={(-50:0.3cm and 0.1cm)}]1.5,1) arc (-50:120:0.3cm and 0.1cm);
+\draw(1,0)node[below]{$1$}--++(0,0.1)  (1.5,0)node[below]{$\tfrac{3}{2}$}--++(0,1.5)node[pos=0.9,right]{$x=\tfrac{3}{2}$};
+\draw[thick,gray,-stealth]([shift={(120:0.3cm and 0.1cm)}]1.5,1) arc (120:240:0.3cm and 0.1cm);
+\draw(0.5,{fa(0.5)})node[right]{$x=\sqrt{y}$};
+\draw[stealth-stealth](0,1.25)--(1.5,1.25)node[pos=0.5,fill=white]{$R(x)$};
+\draw(\c,{fa(\c)})node[circ]{}--(0,{fa(\c)})node[circ]{}node[pos=0.5,above,font=\footnotesize]{$R(x)-r(x)$};
+\draw[stealth-stealth](\c,{fa(\c)})--(1.5,{fa(\c)})node[pos=0.5,fill=white]{$r(x)$};
 \end{tikzpicture}
-\caption{استمراری تفاعل $y=R(x)$ کو $x=a$ تا $x=b$ محور $x$ کے گرد گھمایا گیا ہے۔}
-\label{شکل_تکمل_استعمال_استمراری_مستوی_پیداکار}
+\end{subfigure}\hfill
+\begin{subfigure}{0.6\textwidth}
+\centering
+\begin{tikzpicture}[xscale=2,yscale=2,font=\small,declare function={fa(\x)=\x^2;}]
+\pgfmathsetmacro{\c}{0.7}
+\pgfmathsetmacro{\R}{1.5}
+\pgfmathsetmacro{\Rt}{\R-1}
+\pgfmathsetmacro{\r}{1.5-sqrt(fa(\c))}
+\draw[-latex](3,0)--(3.25,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,1.5)node[above]{$y$};
+\draw[dashed]plot[domain=0:1]({\x},{fa(\x)});
+\draw[dashed]plot[domain=0:1]({3-\x},{fa(\x)});
+\draw(1.5,1)circle (\Rt cm and 0.1cm);
+\draw(1.5,1)circle (\R cm and 0.2cm);
+\draw(3,1)--(3,0);
+\draw([shift={(180:\R cm and 0.15 cm)}]1.5,0) arc (180:360:\R cm and 0.15cm);
+\draw(1.5,1-0.1)--++(0,0.6)node[above]{$x=\tfrac{3}{2}$};
+\draw(1.5,{fa(\c)}) circle (\R cm and 0.15cm);
+\draw(1.5,{fa(\c)}) circle (\r cm and 0.1cm);
+\draw([shift={(180:\R cm and 0.15 cm)}]1.5,{fa(\c)-0.05}) arc (180:360:\R cm and 0.15cm);
+\begin{scope}
+\clip(1.5,{fa(\c)}) circle (\r cm and 0.1cm);
+\draw(1.5,{fa(\c)-0.05}) circle (\r cm and 0.1cm);
+\end{scope}
+\draw(0,{fa(\c)})++(-0.1,0)--++(-0.2,0)coordinate[pos=0.5](kt);
+\draw(0,{fa(\c)-0.05})++(-0.1,0)--++(-0.2,0)coordinate[pos=0.5](kb);
+\draw[stealth-] (kt)--++(0,0.2)--++(-0.2,0)node[left]{$\dif y$};
+\draw[stealth-](kb)--++(0,-0.2);
+\end{tikzpicture}
+\end{subfigure}
 \end{figure}
-
