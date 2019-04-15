@@ -1,0 +1,293 @@
+\حصہ{نلکی چھلے}
+اجسام طواف کا حجم تلاش کرتے ہوئے بعض اوقات چھلا کی بجائے نلکی خول استعمال کرنا زیادہ بہتر ثابت ہوتا ہے (شکل \حوالہ{شکل_تکمل_استعمال_جسم_طواف_نلکی_الف})۔
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[x={(-10:1)}]
+\pgfmathsetmacro{\h}{0.5}
+\pgfmathsetmacro{\hh}{0}
+\pgfmathsetmacro{\ra}{1.5}
+\pgfmathsetmacro{\dr}{0.25}
+\draw[-latex](-0.2,0)--(2,0)node[right]{$x$};
+\draw[-latex](0,0)--(0,2.5)node[above]{$y$};
+\draw[thick,gray,-stealth] ([shift={(-40:0.4cm and 0.2cm)}]0,2.4) arc (-40:260:0.4cm and 0.2cm);
+\draw(\ra,0)--++(0,\h)--++(-\dr,0)--++(0,\h)--++(-\dr,0)--++(0,\h)--++(-\dr,0)--++(0,\h)--++(-\ra+3*\dr,0);
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\h}{0.5}
+\pgfmathsetmacro{\hh}{0}
+\pgfmathsetmacro{\ra}{1.5}
+\draw[fill=white]([shift={(0:\ra cm and 1/4*\ra cm)}]0,\hh) arc (0:180:\ra cm and 1/4*\ra cm)--++(0,-\h) arc (180:360:\ra cm and 1/4*\ra cm)--++(0,\h);
+\draw([shift={(180:\ra cm and 1/4*\ra cm)}]0,\hh) arc (180:360:\ra cm and 1/4*\ra cm);
+\pgfmathsetmacro{\hh}{\h}
+\pgfmathsetmacro{\ra}{1.25}
+\draw[fill=white]([shift={(0:\ra cm and 1/4*\ra cm)}]0,\hh) arc (0:180:\ra cm and 1/4*\ra cm)--++(0,-\h) arc (180:360:\ra cm and 1/4*\ra cm)--++(0,\h);
+\draw([shift={(180:\ra cm and 1/4*\ra cm)}]0,\hh) arc (180:360:\ra cm and 1/4*\ra cm);
+\pgfmathsetmacro{\hh}{2*\h}
+\pgfmathsetmacro{\ra}{1}
+\draw[fill=white]([shift={(0:\ra cm and 1/4*\ra cm)}]0,\hh) arc (0:180:\ra cm and 1/4*\ra cm)--++(0,-\h) arc (180:360:\ra cm and 1/4*\ra cm)--++(0,\h);
+\draw([shift={(180:\ra cm and 1/4*\ra cm)}]0,\hh) arc (180:360:\ra cm and 1/4*\ra cm);
+\pgfmathsetmacro{\hh}{3*\h}
+\pgfmathsetmacro{\ra}{0.75}
+\draw[fill=white]([shift={(0:\ra cm and 1/4*\ra cm)}]0,\hh) arc (0:180:\ra cm and 1/4*\ra cm)--++(0,-\h) arc (180:360:\ra cm and 1/4*\ra cm)--++(0,\h);
+\draw([shift={(180:\ra cm and 1/4*\ra cm)}]0,\hh) arc (180:360:\ra cm and 1/4*\ra cm);
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{نلکی جسم طواف}
+\label{شکل_تکمل_استعمال_جسم_طواف_نلکی_الف}
+\end{figure}
+\جزوحصہء{نلکی کلیہ}
+فرض کریں ہم \عددی{x} محور اور   وقفہ \عددی{[a,b]} پر تفاعل \عددی{y=f(x)} کے بیچ خطے  کو \عددی{y} محور کے گرد گھما کر جسم طواف حاصل کرتے ہیں۔ہمیں جسم طواف کا حجم درکار ہے۔  ہم وقفہ \عددی{[a,b]} کی خانہ بندی \عددی{P} پر منحصر مستطیلوں کو خطے کا تخمینی رقبہ لے سکتے ہیں۔ ایک نمائندہ مستطیل کی چوڑائی \عددی{\Delta x_k} اور قد \عددی{f(c_k)} ہو گا، جہاں نمائندہ مستطیل کے قاعدے کا وسط \عددی{c_k} ہے (شکل \حوالہ{شکل_تکمل_استعمال_کے_ویں_مستطیل_کا_خول})۔ہم جیومیٹری سے جانتے ہیں کہ ایسے مستطیل کو \عددی{y} محور کے گرد گھمانے سے حاصل جسم طواف کا حجم
+\begin{align*}
+\Delta H_k=2\pi\times \text{\RL{خول کا اوسط رداس}}\times \text{\RL{خول کا قد}}\times \text{\RL{موٹائی}}
+\end{align*}  
+ہو گا جو موجودہ صورت میں درج ذیل ہو گا۔
+\begin{align*}
+\Delta H_k=2\pi c_k f(c_k)\Delta x_k
+\end{align*}
+ہم \عددی{P} پر منحصر \عددی{n} مستطیلوں کو \عددی{y} محور کے گرد گھمانے سے حاصل حجم کے مجموعہ کو تخمیناً جسم طواف کا حجم لیتے ہیں۔
+\begin{align*} 
+H\approx \sum_{k=1}^n\Delta H_k=\sum_{k=1}^n2\pi c_kf(c_k)\Delta x_k\quad\quad \text{\RL{ریمان مجموعہ}}
+\end{align*}
+\عددی{\norm{P}\to 0} کرتے ہوئے اس مجموعہ کا حد ٹھوس جسم کا حجم  ہو گا:
+\begin{align*}
+H=\lim_{\norm{P}\to 0}\sum_{k=1}^n2\pi c_kf(c_k)\Delta x_k=\int_a^b2\pi xf(x)\dif x
+\end{align*}
+%
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=2-sqrt(\x);}]
+\pgfmathsetmacro{\c}{1.5}
+\pgfmathsetmacro{\w}{0.2}
+\pgfmathsetmacro{\ra}{\c-\w}
+\pgfmathsetmacro{\rb}{\c+\w}
+\pgfmathsetmacro{\angS}{0}
+\pgfmathsetmacro{\angE}{240}
+\pgfmathsetmacro{\d}{0.5}
+\draw[-latex](0,0)--++(2.5,0)node[right]{$x$};
+\draw[-latex](0,0)--++(0,2.5)node[above]{$y$};
+\draw[thick,gray,-stealth]([shift={(-20:0.4cm and 0.2cm)}]0,2) arc (-20:240:0.4cm and 0.2cm);
+\draw[thick]plot[domain=0.2:2]({\x},{f(\x)});
+\draw[thick](0.2,0)--++(0,{f(0.2)})  (2,0)--++(0,{f(2)});
+\draw(\d,{f(\d)})--++(45:0.5)node[right]{$y=f(x)$};
+\draw([shift={(\angS:\ra cm and 1/4*\ra cm)}]0,{f(\c)}) arc (\angS:\angE:\ra cm and 1/4*\ra cm);
+\draw([shift={(\angS:\rb cm and 1/4*\rb cm)}]0,{f(\c)}) arc (\angS:\angE:\rb cm and 1/4*\rb cm);
+\draw([shift={(\angS:\ra cm and 1/4*\ra cm)}]0,0) arc (\angS:\angE:\ra cm and 1/4*\ra cm);
+\draw(\ra,{f(\c)})coordinate(sI)--(\rb,{f(\c)})coordinate(sO);
+\draw(sI)--++(0,-{f(\c)})  (sO)--++(0,{-f(\c)});
+\path(0,{f(\c)})++(\angE:\ra cm and 1/4*\ra cm)coordinate(eI)++(0,{-f(\c)})coordinate(eIL);
+\path(0,{f(\c)})++(\angE:\rb cm and 1/4*\rb cm)coordinate(eO)++(0,{-f(\c)})coordinate(eOL);
+\fill[white](eO)--(eOL)--++(-1/2*\ra,0)--++(0,{f(\c)})--cycle;
+\draw[fill=white](eI)--(eO)--(eOL)--(eIL)--(eI);
+\draw([shift={(180:\rb cm and 1/4*\rb cm)}]0,0) arc (180:\angE:\rb cm and 1/4*\rb cm);
+\draw(-\rb,0)--++(0,{f(\c)});
+\draw(\c,0)node[below]{$c_k$}--++(0,0.1);
+\draw(\c-\w,-0.4)--++(0,-0.3)coordinate[pos=0.5](kL);
+\draw(\c+\w,-0.4)--++(0,-0.3)coordinate[pos=0.5](kR);
+\draw[stealth-](kL)--++(-0.2,0);
+\draw[stealth-](kR)--++(0.2,0)--++(0,-0.3)node[below]{$\Delta x_k$};
+\draw(\c+\w,0)++(0,-0.1)--++(-55:0.7)--++(0.2,0)node[right]{$x_k$}  (\c-\w,0)++(0,-0.1)--++(-135:0.7)node[left]{$x_{k-1}$};
+\draw[fill=lgray,opacity=0.5](\c-\w,0)--++(0,{f(\c)})--++(2*\w,0)--++(0,{-f(\c)})--cycle;
+\draw[stealth-stealth](2.2,0)--++(0,{f(\c)})node[pos=0.75,right]{\text{\RL{قد مستطیل}}};
+\draw(2.1,{f(\c)})--++(0.2,0);
+\draw(0.2,0)node[below]{$a$}--++(0,0.1);
+\draw(2,0)node[below]{$b$}--++(0,0.1);
+\end{tikzpicture}
+\caption{$k$ ویں مستطیل کو گھمانے سے حاصل نلکی خول۔}
+\label{شکل_تکمل_استعمال_کے_ویں_مستطیل_کا_خول}
+\end{figure}
+
+\موٹا{کلیہ خول برائے $y$ محور کے گرد طواف}\\
+استمراری تفاعل \عددی{y=f(x),\, 0\le a\le x\le b} اور محور \عددی{x} کے بیچ خطے کو \عددی{y} محور کے گرد گھمانے سے حاصل جسم طواف کا حجم درج ذیل ہو گا۔
+\begin{align}\label{مساوات_تکمل_استعمال_کلیہ_خول_وائے_محور}
+H=\int_a^b2\pi(\text{\RL{رداس خول}})(\text{\RL{قد خول}})\dif x=\int_a^b2\pi xf(x)\dif x
+\end{align}
+
+\ابتدا{مثال}\شناخت{مثال_تکمل_استعمال_نلکی_پہلی}
+منحنی \عددی{y=\sqrt{x}}، لکیر \عددی{x=4} اور \عددی{x} محور کے بیچ خطے کو \عددی{y} محور کے گرد گھما کر جسم طواف حاصل کیا جاتا ہے۔ اس جسم کا حجم تلاش کریں۔
+\begin{figure}
+\centering
+\begin{subfigure}{0.30\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=sqrt(\x);}]
+\pgfmathsetmacro{\c}{1.7}
+\draw[-latex](-0.25,0)--(4.25,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2.6)node[above]{$y$};
+\draw[gray,thick,-stealth]([shift={(-20:0.4cm and 0.2cm)}]0,2.45) arc (-20:240:0.4cm and 0.2cm);
+\draw[]plot[domain=0:0.5]({\x},{f(\x)});
+\draw[]plot[domain=0.5:4]({\x},{f(\x)});
+\draw[](4,0)node[below]{$4$}--(4,{f(4)})node[above left,yshift=-1ex]{$y=\sqrt{x}$};
+\draw(0,2)node[left]{$2$}--++(0.1,0);
+\draw[thick](\c,0)node[circ]{}node[below]{$x$}--++(0,{f(\c)})node[circ]{}coordinate(kT);
+\draw[stealth-stealth] (\c+0.4,0)--++(0,{f(\c)})node[pos=0.5,right]{$f(x)=\sqrt{x}$}coordinate[pos=0.5](kH);
+\draw(\c+0.3,{f(\c)})--++(0.2,0);
+\draw[stealth-stealth](\c,{f(\c)+0.2})--++(-\c,0)node[pos=0.5,fill=white]{$x$}coordinate[pos=0.5](kR);
+\draw(\c,{f(\c)+0.1})--++(0,0.2);
+\draw(kR)node[above]{\RL{رداس خول}};
+\draw(kH)++(0.3,0.2)node[above right]{\RL{قد خول}};
+\draw(kT)++(0.1,0.1)--++(60:1.25)node[above]{\text{\RL{$\dif x$= موٹائی خول}}};
+\draw [decorate,decoration={brace,amplitude=10pt,mirror,raise=4pt},yshift=0pt]
+(0,-0.3) -- (4,-0.3) node [black,midway,yshift=-0.8cm] {\footnotesize \RL{وقفہ تکمل}};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.60\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=sqrt(\x);}]
+\pgfmathsetmacro{\c}{1.7}
+\pgfmathsetmacro{\w}{0.2}
+\pgfmathsetmacro{\ra}{\c-\w}
+\pgfmathsetmacro{\rb}{\c+\w}
+\pgfmathsetmacro{\hy}{f(\c)-1/4*\ra}
+\draw[dashed](-0.25,0)--(\rb,0);
+\draw[-latex](\rb,0)--(4.25,0)node[right]{$x$};
+\draw[dashed](0,-0.2)--(0,\hy);
+\draw[-latex](0,\hy)--(0,2.6)node[above]{$y$};
+\draw[dashed]plot[domain=0:0.5]({\x},{f(\x)});
+\draw[dashed]plot[domain=0.5:\rb]({\x},{f(\x)});
+\draw[]plot[domain=\rb:4]({\x},{f(\x)});
+\draw(4,{f(4)})node[above left]{$y=\sqrt{x}$};
+\draw(0,{f(\c)}) circle (\ra cm and 1/4*\ra cm);
+\draw(0,{f(\c)}) circle (\rb cm and 1/4*\rb cm);
+\draw([shift={(180:\rb cm and 1/4*\rb cm)}]0,0)arc (180:360:\rb cm and 1/4*\rb cm);
+\draw(\rb,0)--(\rb,{f(\c)})  (-\rb,0)--(-\rb,{f(\c)});
+\draw[thick,gray](\c,0)node[circ]{}node[above left,black]{$x$}--(\c,{f(\c)})node[circ]{};
+\draw(4,0)node[below]{$4$}--++(0,0.1);
+\draw[stealth-stealth](\rb+0.3,{f(\c)})--(\rb+0.3,0)node[pos=0.5,right]{$\sqrt{x}$};
+\draw(\rb+0.2,{f(\c)})--++(0.2,0);
+\draw[stealth-](\ra,-0.5)--++(-0.2,0);
+\draw[stealth-](\rb,-0.5)--++(0.2,0)node[right]{$\dif x$};
+\draw(\ra,-0.4)--++(0,-0.2)  (\rb,-0.4)--++(0,-0.2);
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{نلکی خول (مثال \حوالہ{مثال_تکمل_استعمال_نلکی_پہلی})}
+\label{شکل_مثال_تکمل_استعمال_نلکی_پہلی}
+\end{figure}
+
+حل:\quad
+\موٹا{پہلا قدم:}\quad
+خطے کا خاکہ بنا کر محور گردش کے متوازی اس پر قطع دکھائیں۔ قطع کا قد (خول کا قد) اور محور گردش سے قطع کے فاصلہ (رداس خول) کی نشاندہی کریں۔ قطع کی چوڑائی \عددی{\dif x} خول کی چوڑائی ہو گی۔ ہم نے شکل \حوالہ{شکل_مثال_تکمل_استعمال_نلکی_پہلی} میں خول دکھایا ہے۔ آپ کو ایسا کرنے کی ضرورت نہیں ہے۔\\
+\موٹا{دوسرا قدم:}\quad
+تکمل کے حد معلوم کریں۔ خطہ میں \عددی{x} کی قیمت \عددی{a} تا \عددی{b} تبدیل ہوتی ہے لہٰذا تکمل کے حد \عددی{a} اور \عددی{b} ہوں گے۔
+\begin{align*}
+H&=\int_a^b2\pi(\text{\RL{رداس خول}})(\text{\RL{قد خول}})\dif x
+&&\text{\RL{مساوات \حوالہ{مساوات_تکمل_استعمال_کلیہ_خول_وائے_محور}}}\\
+&=\int_0^4 2\pi(x)(\sqrt{x})\dif x&&\text{\RL{جزو-ا اور جزو-ب میں حاصل قیمتیں}}\\
+&=2\pi\int_0^4x^{3/2}\dif x=2\pi\big[\frac{2}{5}x^{5/2}\big]_0^4=\frac{128\pi}{5}
+\end{align*} 
+\انتہا{مثال}
+%=====================
+محور \عددی{y} کے گرد خطہ گھمانے سے حاصل جسم طواف کا حجم مساوات \حوالہ{مساوات_تکمل_استعمال_کلیہ_خول_وائے_محور} سے حاصل کیا جا سکتا ہے۔اگر ہم خطے کو \عددی{x} محور کے گرد گھما کر جسم طواف حاصل کریں تب حجم تلاش کرنے کی خاطر مساوات \حوالہ{مساوات_تکمل_استعمال_کلیہ_خول_وائے_محور} میں \عددی{x} کی جگہ \عددی{y} استعمال کیا جائے گا۔
+
+\موٹا{کلیہ خول برائے $x$ محور کے گرد طواف}\\
+\begin{align}\label{مساوات_تکمل_استعمال_کلیہ_خول_ایکس_محور}
+H=\int_c^d2\pi(\text{\RL{رداس خول}})(\text{\RL{قد خول}})\dif y=\int_c^d2\pi yf(y)\dif y
+\end{align}
+درج بالا مساوات میں \عددی{f(y)>0} اور \عددی{0\le c\le y\le d} ہیں۔ 
+
+\ابتدا{مثال}\شناخت{مثال_تکمل_استعمال_پہلے_بھی-حل}
+منحنی \عددی{y=\sqrt{x}}، لکیر \عددی{x=4} اور \عددی{x} محور کے بیچ خطے کو \عددی{x} محور کے گرد گھما کر جسم طواف حاصل کیا جاتا ہے۔ اس جسم کا حجم تلاش کریں۔
+
+حل:\quad
+\موٹا{پہلا قدم:}\quad
+خطے کا خاکہ بنائیں اور اس پر محور گردش کے متوازی قطع دکھائیں۔ قطع کی لمبائی (قد خول) اور محور طواف سے اس کا فاصلہ (رداس خول) کی نشاندہی کریں۔ قطع کی موٹائی، خول کی چوڑائی \عددی{\dif y} ہو گی۔ ہم نے شکل \حوالہ{شکل_مثال_تکمل_استعمال_پہلے_بھی-حل} میں \عددی{y} محور کے گرد بیلن دکھایا ہے۔ آپ کو ایسا بنانے کی ضرورت نہیں ہے۔\\
+\موٹا{دوسرا قدم:}\quad
+تکمل کے حد معلوم کریں۔چونکہ خطہ میں \عددی{y} کی قیمت \عددی{c=0} تا \عددی{d=2} ہو سکتی ہے لہٰذا یہی اس کے حد ہیں۔\\
+\موٹا{تیسرا قدم:}\quad
+\begin{align*}
+H&=\int_c^d2\pi(رداس خول)(قد خول)\dif y&&\text{\RL{مساوات \حوالہ{مساوات_تکمل_استعمال_کلیہ_خول_ایکس_محور}}}\\
+&=\int_0^22\pi(y)(4-y^2)\dif y&&\text{\RL{جزو-ا اور جزو-ب میں حاصل قیمتیں}}\\
+&=2\pi\big[2y^2-\frac{y^4}{4}\big]_0^2=8\pi
+\end{align*}
+یہ نتیجہ مثال \حوالہ{مثال_تکمل_استعمال_جسم_طواف_جذر} میں  ترکیب قرص سے حاصل جواب کے عین مطابق ہے۔ 
+\انتہا{مثال}
+%====================
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=sqrt(\x);}]
+\pgfmathsetmacro{\c}{1.25}
+\draw[-latex](-0.25,0)--(4.5,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2.25)node[above]{$y$};
+\draw[gray,thick,-stealth] ([shift={(-100:0.2cm and 0.4cm)}]4.4,0) arc (-100:160:0.2cm and 0.4cm);
+\draw[]plot[domain=0:0.5]({\x},{f(\x)});
+\draw[]plot[domain=0.5:4]({\x},{f(\x)});
+\draw(4,0)node[below]{$4$}--(4,2);
+\draw(4,{f(4)})node[above left]{$y=\sqrt{x}$};
+\draw[thick](\c,{f(\c)})node[circ]{}--(4,{f(\c)})node[circ]{}node[pos=0.6,above]{\RL{قد خول}}node[pos=0.6,below]{$4-y^2$};
+\draw[stealth-stealth](\c-0.3,0)--++(0,{f(\c)})node[pos=0.5,left]{$y$}node[pos=0.5,right]{\RL{رداس خول}};
+\draw(\c-0.2,{f(\c)})--++(-0.2,0);
+\draw[stealth-](4.2,{f(\c)})++(0,0.01)--++(0,0.2)--++(0.2,0)node[right]{$\dif y$};
+\draw[stealth-](4.2,{f(\c)})++(0,-0.01)--++(0,-0.2);
+\draw(0,2)node[left]{$2$}--++(0.1,0);
+\draw(0,{f(\c)})node[left]{$y$}--++(0.1,0);
+\draw [decorate,decoration={brace,amplitude=10pt,mirror},yshift=0pt]
+(-0.4,2) -- (-0.4,0) node [black,midway,xshift=-0.8cm] {\footnotesize \RL{وقفہ تکمل}};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=sqrt(\x);}]
+\pgfmathsetmacro{\c}{1.25}
+\pgfmathsetmacro{\w}{0.2}
+\pgfmathsetmacro{\ra}{f(\c)+\w}
+\pgfmathsetmacro{\rb}{f(\c)-\w}
+\pgfmathsetmacro{\xx}{(\w+f(\c))^2}
+\draw(-0.25,0)--(\c+1/4*\ra,0);
+\draw[dashed](\c+1/4*\rb,0)--(4+1/4*\rb,0);
+\draw[-latex](4+1/4*\ra,0)--(5,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2.5)node[above]{$y$};
+\draw[]plot[domain=0:0.5]({\x},{f(\x)});
+\draw[]plot[domain=0.5:\c]({\x},{f(\x)});
+\draw[dashed]plot[domain=\c:\xx]({\x},{f(\x)});
+\draw[]plot[domain=\xx:4]({\x},{f(\x)});
+\draw(4,{f(4)})--(4,{f(\c)+\w});
+\draw(2.5,{f(2.5)})node[left,yshift=1ex]{$y=\sqrt{x}$};
+\draw[dashed](4,{f(\c)+\w})--(4,0)node[below]{$4$};
+\draw[stealth-stealth](\c,0)--(\c,{f(\c)})node[pos=0.45,fill=white]{$y$};
+\draw(\c,0) circle (1/4*\ra cm and \ra cm);
+\draw(\c,0) circle (1/4*\rb cm and \rb cm);
+\draw([shift={(-90:1/4*\ra cm and \ra cm)}]4,0) arc (-90:90:1/4*\ra cm and \ra cm);
+\draw[dashed]([shift={(90:1/4*\ra cm and \ra cm)}]4,0) arc (90:270:1/4*\ra cm and \ra cm);
+\draw[dashed]([shift={(0:1/4*\rb cm and \rb cm)}]4,0) arc (0:360:1/4*\rb cm and \rb cm);
+\draw(\c,{f(\c)+\w})--(4,{f(\c)+\w})   (\c,{-f(\c)-\w})--(4,{-f(\c)-\w});
+\draw[gray,thick](\c,{f(\c)})node[circ]{}--(4,{f(\c)})node[circ]{};
+\draw[stealth-stealth](\c,2.2)--(4,2.2)node[pos=0.5,above]{$4-y^2$};
+\draw(\c,2.1)--++(0,0.2)  (4,2.1)--++(0,0.2);
+\draw(4.3,{f(\c)+\w})--++(0.2,0)coordinate[pos=0.5](kt);
+\draw(4.3,{f(\c)-\w})--++(0.2,0)coordinate[pos=0.5](kb);
+\draw[stealth-](kb)--++(0,-0.2);
+\draw[stealth-](kt)--++(0,0.2)--++(0.2,0)node[right]{$\dif y$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{محور \عددی{} کے گرد طواف (مثال \حوالہ{مثال_تکمل_استعمال_پہلے_بھی-حل})}
+\label{شکل_مثال_تکمل_استعمال_پہلے_بھی-حل}
+\end{figure}
+
+\جزوحصہء{ترکیب خول کا استعمال}
+محور طواف (افقی یا انتصابی) جیسا بھی ہو ترکیب خول کے اقدام درج ذیل ہوں گے۔
+\begin{enumerate}[a.]
+\item
+خطے کا خاکہ بنا کر اس میں محور طواف کے متوازی قطع بنائیں۔ قطع کا قد یا لمبائی (قد خول)،  محور طواف سے قطع کا فاصلہ (رداس خول) اور قطع کی موٹائی (چوڑائی خول) کی نشاندہی کریں۔
+\item
+تکمل کے حد معلوم کریں
+\item
+متکمل (\عددی{2\pi}) ( رداس خول ) ( قد خول )  کا موزوں متغیر (\عددی{x} یا \عددی{y}) کے ساتھ تکمل کی قیمت حاصل کرتے ہوئے حجم دریافت کریں۔
+\end{enumerate} 
+
+اگلی مثال میں محور طواف افقی لکیر \عددی{x=2} ہے۔
+
+\ابتدا{مثال}
+ربع اول میں قطع مکافی \عددی{y=x^2}، لکیر \عددی{y=1} اور \عددی{y} محور کے بیچ خطے کو محور طواف \عددی{x=2} کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔اس جسم کا حجم تلاش کریں۔
+\انتہا{مثال}
+%=======================
