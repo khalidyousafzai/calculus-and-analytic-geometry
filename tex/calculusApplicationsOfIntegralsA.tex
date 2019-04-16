@@ -287,7 +287,192 @@ H&=\int_c^d2\pi(رداس خول)(قد خول)\dif y&&\text{\RL{مساوات \ح�
 
 اگلی مثال میں محور طواف افقی لکیر \عددی{x=2} ہے۔
 
-\ابتدا{مثال}
+\ابتدا{مثال}\شناخت{مثال_تکمل_استعمال_خول_آخری}
 ربع اول میں قطع مکافی \عددی{y=x^2}، لکیر \عددی{y=1} اور \عددی{y} محور کے بیچ خطے کو محور طواف \عددی{x=2} کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔اس جسم کا حجم تلاش کریں۔
+
+حل:\quad
+\موٹا{پہلا قدم:}\quad
+خطے پر محور طواف کے متوازی قطع بنائیں۔ قطع کا قد (قد خول)، محور طواف سے قطع کا فاصلہ (رداس خول) اور قطع کی موٹائی (چوڑائی خول \عددی{\dif x}) کی نشاندہی کریں (شکل \حوالہ{شکل_مثال_تکمل_استعمال_خول_آخری})۔ہم نے خول بھی بنایا ہے۔ آپ کو ایسا کرنے کی ضرورت نہیں ہے۔\\
+\موٹا{دوسرا قدم:}\quad
+تکمل کے حد \عددی{a=0} اور \عددی{b=1} ہیں۔\\
+\موٹا{تیسرا قدم:}
+\begin{align*}
+H&=\int_a^b2\pi(\text{\RL{رداس خول}})(\text{\RL{قد خول}})\dif x&&\text{\RL{مساوات \حوالہ{مساوات_تکمل_استعمال_کلیہ_خول_وائے_محور}}}\\
+&=\int_0^12\pi(2-x)(1-x^2)\dif x&&\text{\RL{جزو-ا اور جزو-ب میں حاصل قیمتیں}}\\
+&=2\pi\int_0^1(2-x-2x^2+x^3)\dif x\\
+&=\frac{13\pi}{6}
+\end{align*}
 \انتہا{مثال}
 %=======================
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[scale=2,font=\small,declare function={f(\x)=\x^2;}]
+\pgfmathsetmacro{\c}{0.7}
+\draw[-latex](-0.25,0)--(2.25,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,1.25)node[above]{$y$};
+\draw[]plot[domain=0:1]({\x},{f(\x)});
+\draw(0.6,{f(0.6)})node[left]{$y=x^2$};
+\draw(1,{f(1)})--(0,{f(1)})node[left]{$1$}node[pos=0.6,above]{$y=1$};
+\draw(\c,{f(\c)})node[circ]{}--(\c,1)node[circ]{};
+\draw(\c,0)node[below]{$x$}--++(0,0.1);
+\draw(1,0)node[below]{$1$}--++(0,0.1);
+\draw [decorate,decoration={brace,amplitude=10pt,mirror,raise=4pt},yshift=0pt]
+(0,-0.2) -- (1,-0.2) node [black,midway,yshift=-0.8cm] {\footnotesize \RL{وقفہ تکمل}};
+\draw(2,0)node[below]{$2$}--(2,1.25);
+\draw[gray,thick,-stealth]([shift={(-40:0.2cm and 0.1cm)}]2,1.2) arc (-40:240:0.2cm and 0.1cm);
+\draw[stealth-stealth](1.2,{f(\c)})--(1.2,1)node[pos=0.7,right]{\text{\RL{قد خول}}} node[pos=0.4,right]{$1-x^2$};
+\draw(1.1,{f(\c)})--++(0.2,0)   (1.1,1)--++(0.2,0);
+\draw(\c,1)++(0,0.1)--++(45:0.25)node[above]{\text{\RL{موٹائی خول=$\dif x$}}};
+\draw[stealth-stealth](\c,{f(\c)-0.2})--(2,{f(\c)-0.2})node[pos=0.7,yshift=1ex]{$2-x$}node[pos=0.7,yshift=-1.25ex]{\text{\RL{رداس خول}}};
+\draw(\c,{f(\c)-0.15})--++(0,-0.1);
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=\x^2;}]
+\pgfmathsetmacro{\c}{0.7}
+\pgfmathsetmacro{\w}{0.1}
+\pgfmathsetmacro{\ra}{2-\c+\w}
+\pgfmathsetmacro{\rb}{2-\c-\w}
+\draw[-latex](-0.25,0)--(4,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,1.5)node[above]{$y$};
+\draw[]plot[domain=0:1]({\x},{f(\x)});
+\draw(1,{f(1)})--(0,{f(1)});
+\draw(\c,{f(\c)})node[circ]{}--(\c,1)node[circ]{};
+\draw(2,1) circle (\ra cm and 1/4*\ra cm);
+\draw(2,1) circle (\rb cm and 1/4*\rb cm);
+\draw([shift={(180:\ra cm and 1/4*\ra cm)}]2,{f(\c)}) arc (180:360:\ra cm and 1/4*\ra cm);
+\draw(\c-\w,{f(\c)})--(\c-\w,1)  (2+\ra,{f(\c)})--(2+\ra,1);
+\draw(2,{f(\c)-1/4*\ra})--(2,0)node[below]{$2$};
+\draw(2,{1-1/4*\rb})--++(0,1);
+\draw[stealth-stealth](\c,1.5)--(2,1.5)node[pos=0.5,above]{$1-x^2$};
+\draw(\c,1.3)--++(0,0.3);
+\draw[stealth-stealth](2+\ra+0.3,{f(\c)})--(2+\ra+0.3,1)node[pos=0.5,right]{$1-x^2$};
+\draw(2+\ra+0.2,{f(\c)})--++(0.2,0)  (2+\ra+0.2,1)--++(0.2,0);
+\draw[stealth-](2+\rb,1.5)--++(-0.3,0);
+\draw[stealth-](2+\ra,1.5)--++(0.3,0)node[right]{$\dif x$};
+\draw(2+\rb,1.4)--++(0,0.2) (2+\ra,1.4)--++(0,0.2);
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\caption{خطہ اور خول (مثال \حوالہ{مثال_تکمل_استعمال_خول_آخری})}
+\label{شکل_مثال_تکمل_استعمال_خول_آخری}
+\end{figure}
+%
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\begin{tikzpicture}[scale=2,font=\small,declare function={f(\x)=\x^2;g(\x)=\x;}]
+\pgfmathsetmacro{\c}{0.4}
+\pgfmathsetmacro{\ra}{\c}
+\pgfmathsetmacro{\rb}{sqrt(\c)}
+\draw[gray,thick,-stealth]([shift={(-40:0.2cm and 0.1cm)}]0,1.2) arc (-40:240:0.2cm and 0.1cm);
+\draw[]plot[domain=0:1]({\x},{f(\x)});
+\draw[]plot[domain=0:1]({\x},{g(\x)});
+\draw(1,0)node[below]{$1$}--++(0,0.1);
+\draw(0,1)node[left]{$1$}--++(0.1,0);
+\draw(0.8,{g(0.8)})node[left]{$x=y$};
+\draw(0.8,{f(0.8)})node[right]{$x=\sqrt{y}$};
+\draw[thick](\ra,\c)node[circ]{}--(\rb,\c)node[circ]{};
+\draw[fill=lgray,opacity=0.5](0,\c) circle (\rb cm and 1/4*\rb cm);
+\draw[fill=white](0,\c) circle (\ra cm and 1/4*\ra cm);
+\draw[-latex](-0.25,0)--(1.25,0)node[right]{$x$};
+\draw(0,-0.5)--(0,\c-1/4*\rb);
+\draw[-latex](0,\c-1/4*\ra)--(0,1.25)node[above]{$y$};
+\draw[stealth-stealth](0,-0.3)--++(\ra,0)node[pos=0.5,above]{$r=y$};
+\draw[stealth-stealth](0,-0.5)--++(\rb,0)node[pos=0.5,below]{$R=\sqrt{y}$};
+\draw(\ra,-0.2)--++(0,-0.2)  (\rb,-0.4)--++(0,-0.2);
+\draw(0.5,-1)node[font=\footnotesize]{$\begin{aligned}H&=\int_{y=0}^{y=1}\pi[(\sqrt{y})^2-(y)^2]\dif y=\tfrac{\pi}{6}  \end{aligned}$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\begin{tikzpicture}[scale=2,font=\small,declare function={f(\x)=\x^2;g(\x)=\x;}]
+\pgfmathsetmacro{\c}{0.6}
+\draw[gray,thick,-stealth]([shift={(-40:0.2cm and 0.1cm)}]0,1.2) arc (-40:240:0.2cm and 0.1cm);
+\draw[]plot[domain=0:1]({\x},{f(\x)});
+\draw[]plot[domain=0:1]({\x},{g(\x)});
+\draw(1,0)node[below]{$1$}--++(0,0.1);
+\draw(0,1)node[left]{$1$}--++(0.1,0);
+\draw(0.9,{g(0.9)})node[left]{$y=x$};
+\draw(0.9,{f(0.9)})node[right,xshift=1ex]{$y=x^2$};
+\draw[thick](\c,{f(\c)})node[circ]{}--(\c,\c)node[circ]{};
+\draw[-latex](-0.25,0)--(1.25,0)node[right]{$x$};
+\draw[-latex](0,-0.5)--(0,1.25)node[above]{$y$};
+\draw[fill=lgray,opacity=0.5]([shift={(180:\c cm and 1/4*\c cm)}]0,{f(\c)}) arc (180:360:\c cm and 1/4*\c cm)--(\c,\c) arc (0:-180:\c cm and 1/4*\c cm)--(-\c,{f(\c)});
+\draw([shift={(0:\c cm and 1/4*\c cm)}]0,\c) arc (0:180:\c cm and 1/4*\c cm);
+\draw[stealth-stealth](\c+0.1,0)--(\c+0.1,{f(\c)})node[pos=0.4,left]{$x^2$};
+\draw(\c+0.05,{f(\c)})--+(0.1,0);
+\draw[stealth-stealth](\c+0.3,0)--(\c+0.3,{g(\c)})node[pos=0.5,right]{$x$};
+\draw(\c+0.25,{g(\c)})--+(0.1,0);
+\draw[stealth-stealth](0,{g(\c)})--(\c,{g(\c)})node[pos=0.5,fill=white]{$x$};
+\draw(0.5,-1)node[font=\footnotesize]{$\begin{aligned}H&=\int_{x=0}^{x=1}2\pi(x)(x-x^2)\dif x=\frac{\pi}{6} \end{aligned}$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\begin{tikzpicture}[scale=2,font=\small,declare function={f(\x)=\x^2;g(\x)=\x;}]
+\pgfmathsetmacro{\c}{0.6}
+\pgfmathsetmacro{\ra}{f(\c)}
+\pgfmathsetmacro{\rb}{g(\c)}
+\draw[gray,thick,-stealth]([shift={(-40:0.05cm and 0.15cm)}]1.2,0) arc (-40:240:0.05cm and 0.15cm);
+\draw[]plot[domain=0:1]({\x},{f(\x)});
+\draw[]plot[domain=0:1]({\x},{g(\x)});
+\draw(1,0)node[below]{$1$}--++(0,0.1);
+\draw(0,1)node[left]{$1$}--++(0.1,0);
+\draw(0.9,{g(0.9)})node[left]{$y=x$};
+\draw(0.9,{f(0.9)})node[right]{$y=x^2$};
+\draw[fill=lgray,opacity=0.5](\c,0) circle (1/4*\rb cm and \rb cm);
+\draw[fill=white](\c,0) circle (1/4*\ra cm and \ra cm);
+\draw(-0.25,0)--(\c-1/4*\rb,0);
+\draw[-latex](\c-1/4*\ra,0)--(1.25,0)node[right]{$x$};
+\draw[-latex](0,-0.5)--(0,1.25)node[above]{$y$};
+\draw(\c,{f(\c)})node[circ]{}--(\c,{g(\c)})node[circ]{};
+\draw[stealth-stealth](\c+0.2,0)--++(0,{f(\c)})node[pos=0.8,right]{$r=x^2$};
+\draw(\c+0.15,{f(\c)})--++(0.1,0);
+\draw[stealth-stealth](-0.2,0)--++(0,{g(\c)})node[pos=0.5,left]{$R=x$};
+\draw(-0.25,{g(\c)})--++(0.1,0);
+\draw(0.5,-1)node[font=\footnotesize]{$\begin{aligned}H&=\int_{x=0}^{x=1}\pi[(x)^2-(x^2)^2]\dif x=\tfrac{2\pi}{15}  \end{aligned}$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\begin{tikzpicture}[scale=2,font=\small,declare function={f(\x)=\x^2;g(\x)=\x;}]
+\pgfmathsetmacro{\c}{0.4}
+\pgfmathsetmacro{\ra}{\c}
+\pgfmathsetmacro{\rb}{sqrt(\c)}
+\draw[gray,thick,-stealth]([shift={(-40:0.05cm and 0.15cm)}]1.2,0) arc (-40:240:0.05cm and 0.15cm);
+\draw[]plot[domain=0:1]({\x},{f(\x)});
+\draw[]plot[domain=0:1]({\x},{g(\x)});
+\draw(1,0)node[below]{$1$}--++(0,0.1);
+\draw(0,1)node[left]{$1$}--++(0.1,0);
+\draw(0.9,{g(0.9)})node[left]{$x=y$};
+\draw(0.9,{f(0.9)})node[right]{$x=\sqrt{y}$};
+\draw(\ra,\c)node[circ]{}--(\rb,\c)node[circ]{};
+\draw[fill=lgray,opacity=0.5](\rb,\c)--(\ra,\c) arc (90:270:1/4*\c cm and \c cm)--(\rb,-\c) arc (-90:-270:1/4*\c cm and \c cm);
+\draw([shift={(-90:1/4*\c cm and \c cm)}]\rb,0) arc (-90:90:1/4*\c cm and \c cm);
+\draw[stealth-stealth](0,\c+0.1)--++(\c,0)node[pos=0.5,above]{$y$};
+\draw(\c,\c+0.05)--++(0,0.1);
+\draw[stealth-stealth](0,-\c-0.1)--++(\rb,0)node[pos=0.5,below]{$\sqrt{y}$};
+\draw(\rb,-\c-0.05)--++(0,-0.1);
+\draw(-0.25,0)--(\c-1/4*\c,0);
+\draw[-latex](\rb-1/4*\c,0)--(1.25,0)node[right]{$x$};
+\draw[-latex](0,-0.6)--(0,1.25)node[above]{$y$};
+\draw(0,\c)node[left]{$y$}--++(0.1,0);
+\draw(0.5,-1)node[font=\footnotesize]{$\begin{aligned}H&=\int_{y=0}^{y=1}2\pi(y)(\sqrt{y}-y)\dif y=\tfrac{2\pi}{15}  \end{aligned}$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{}
+\label{شکل_تکمل_استعمال_چھلا_خول}
+\end{figure}
+
+تفاعل \عددی{y=x^2} اور لکیر \عددی{y=x} کے بیچ خطہ کو مثال بناتے ہوئے شکل \حوالہ{شکل_تکمل_استعمال_چھلا_خول} میں ترکیب چھلا اور ترکیب خول دونوں دکھائے گئے ہیں۔شکل-\حوالہ{شکل_تکمل_استعمال_چھلا_خول}-ا اور ب میں \عددی{y} محور کے گرد خطہ گھمایا گیا ہے جبکہ شکل-ج اور د میں \عددی{x} محور کے گرد خطہ گھمایا گیا ہے۔ دونوں صورتوں میں حجم کو ترکیب چھلا اور ترکیب خول سے حل کیا گیا ہے۔ اس مخصوص خطے کے لئے دونوں محور طواف کے لئے دونوں تراکیب کارآمد ہیں لیکن ایسا ہر صورت میں نہیں ہو گا۔مثال کے طور پر \عددی{y} محور کے گرد گھماتے ہوئے ترکیب چھلا میں ہمیں \عددی{y} کے لحاظ سے تکمل حل کرنا ہو گا۔البتہ عین ممکن ہے کہ متکمل کو \عددی{y} کی صورت میں لکھنا ممکن نہ ہو۔ایسی صورت میں ہمیں ترکیب خول استعمال کرنی ہو گی جو ہمیں \عددی{x} کے لحاظ سے تکمل لینے کی اجازت دیگا۔
+
+ترکیب چھلا اور ترکیب خول سے ہر صورت ایک جیسے حجم حاصل ہوں گے۔
+
+\حصہء{سوالات}
+
