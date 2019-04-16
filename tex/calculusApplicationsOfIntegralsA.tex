@@ -475,4 +475,280 @@ H&=\int_a^b2\pi(\text{\RL{رداس خول}})(\text{\RL{قد خول}})\dif x&&\te
 ترکیب چھلا اور ترکیب خول سے ہر صورت ایک جیسے حجم حاصل ہوں گے۔
 
 \حصہء{سوالات}
+سوال \حوالہ{سوال_تکمل_استعمال_ترکیب_چھلا_الف} تا سوال \حوالہ{سوال_تکمل_استعمال_ترکیب_چھلا_ث} میں خطے کو دکھائے گئے محور کے گرد گھمایا جاتا ہے۔حاصل جسم طواف کا حجم ترکیب خول سے دریافت کریں۔
 
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ترکیب_چھلا_الف}
+خطہ شکل \حوالہ{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_الف} میں دکھایا گیا ہے۔
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ترکیب_چھلا_ب}
+خطہ شکل \حوالہ{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_ب} میں دکھایا گیا ہے۔
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ترکیب_چھلا_پ}
+خطہ شکل \حوالہ{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_پ} میں دکھایا گیا ہے۔
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ترکیب_چھلا_ت}
+خطہ شکل \حوالہ{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_ت} میں دکھایا گیا ہے۔
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ترکیب_چھلا_ٹ}
+خطہ شکل \حوالہ{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_ٹ} میں دکھایا گیا ہے۔
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ترکیب_چھلا_ث}
+خطہ شکل \حوالہ{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_ث} میں دکھایا گیا ہے۔
+\انتہا{سوال}
+%=======================
+\begin{figure}
+\centering
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\footnotesize,declare function={f(\x)=1+1/4*\x^2;}]
+\pgfmathsetmacro{\c}{1.2}
+\begin{axis}[clip=false,width=4.5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={2},ytick={1},enlargelimits=true,ymin=0]
+\addplot[domain=0:2]{f(x)}node[pos=0.9,above left]{$y=1+\tfrac{x^2}{4}$};
+\draw[gray,thick,-stealth]([shift={(-40:0.2cm and 0.1cm)}]0,2.2) arc (-40:240:0.2cm and 0.1cm);
+\draw(axis cs:2,{f(2)})--(axis cs:2,0);
+\draw[thick](axis cs:\c,{f(\c)})--(axis cs:\c,0);
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\footnotesize,declare function={f(\x)=2-1/4*\x^2;}]
+\pgfmathsetmacro{\c}{1.2}
+\begin{axis}[clip=false,width=4.5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={2},ytick={2},enlargelimits=true,ymin=0,ymax=2.5]
+\addplot[domain=0:2]{f(x)}node[pos=0.5,above right]{$y=2-\tfrac{x^2}{4}$};
+\draw[gray,thick,-stealth]([shift={(-40:0.2cm and 0.1cm)}]0,2.7) arc (-40:240:0.2cm and 0.1cm);
+\draw(axis cs:2,{f(2)})--(axis cs:2,0);
+\draw[thick](axis cs:\c,{f(\c)})--(axis cs:\c,0);
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_ب}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\footnotesize,declare function={f(\x)=\x^2;}]
+\pgfmathsetmacro{\c}{0.75}
+\begin{axis}[clip=false,width=4.5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={2},ytick={1.4142}, yticklabels={$\sqrt{2}$},enlargelimits=true,ymin=0,xmax=2.3]
+\addplot[domain=0:sqrt(2)]({f(x)},{x})node[pos=0.5,below right]{$x=y^2$};
+\draw[gray,thick,-stealth]([shift={(-40:0.1cm and 0.2cm)}]2.3,0) arc (-40:240:0.1cm and 0.2cm);
+\draw[thick](axis cs:{f(\c)},\c)--(axis cs:0,\c);
+\draw[](axis cs:{f(sqrt(2))},{sqrt(2)})--(axis cs:0,{sqrt(2)});
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_پ}
+\end{minipage}
+\end{figure}
+%
+\begin{figure}
+\centering
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\footnotesize,declare function={f(\x)=3-\x^2;}]
+\pgfmathsetmacro{\c}{0.9}
+\pgfmathsetmacro{\ky}{sqrt(3)}
+\begin{axis}[clip=false,width=4.5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={3},ytick={\ky}, yticklabels={$\sqrt{3}$},enlargelimits=true,xmax=3.5]
+\addplot[domain=0:sqrt(3)]({f(x)},{x})node[pos=0.25,left,yshift=-1ex,font=\footnotesize]{$x=3-y^2$};
+\draw[gray,thick,-stealth]([shift={(-40:0.1cm and 0.2cm)}]3.7,0) arc (-40:240:0.1cm and 0.2cm);
+\draw[thick](axis cs:{f(\c)},\c)--(axis cs:3,\c);
+\draw[](axis cs:0,{sqrt(3)})--(axis cs:3,{sqrt(3)})node[pos=0.5,above]{$y=\sqrt{3}$};
+\draw(3,{sqrt(3)})--(3,0);
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_ت}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\footnotesize,declare function={f(\x)=sqrt(\x^2+1);}]
+\pgfmathsetmacro{\k}{sqrt(3)}
+\begin{axis}[clip=false,width=4.5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\k},xticklabels={$\sqrt{3}$}, ytick={1,2},enlargelimits=true,ymin=0]
+\addplot[domain=0:\k]{f(x)}node[pos=0.75,above left]{$y=\sqrt{x^2+1}$};
+\draw(axis cs:\k,{f(\k)})--(axis cs:\k,0)node[pos=0.5,right]{$x=\sqrt{3}$};
+\draw({1/2*sqrt(3)},0.5)node[]{\RL{$y$ محور}};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_ٹ}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\footnotesize,declare function={f(\x)=9*\x/sqrt(\x^3+9);}]
+\begin{axis}[clip=false,width=4.5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={3}, ytick={5},ymax=5.5,enlargelimits=true,ymin=0]
+\addplot[domain=0:3]{f(x)}node[pos=0.95,above left]{$y=\tfrac{9x}{\sqrt{x^3+9}}$};
+\draw(axis cs:3,{f(3)})--(axis cs:3,0);
+\draw(1.5,1.5)node[above]{\RL{$y$ محور}};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_ث}
+\end{minipage}
+\end{figure}
+
+سوال \حوالہ{سوال_تکمل_استعمال_ترکیب_خول_سے_تلاش_الف} تا سوال \حوالہ{سوال_تکمل_استعمال_ترکیب_خول_سے_تلاش_ب} میں دیے منحنیات اور لکیروں میں محیط خطے کو \عددی{y} محور کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔ اس جسم کا حجم ترکیب خول سے تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ترکیب_خول_سے_تلاش_الف}
+$y=x,\quad y=-\tfrac{x}{2},\quad x=2$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$y=2x,\quad y=\tfrac{x}{2},\quad x=1$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$y=x^2,\quad y=2-x,\quad x=0, (x\ge 0)$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$y=2-x^2,\quad y=x^2,\quad x=0$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$y=\sqrt{x},\quad y=0,\quad x=4$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$y=2x-1,\quad y=\sqrt{x},\quad x=0$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$y=\tfrac{1}{x},\quad y=0,\quad x=\tfrac{1}{2},\quad x=2$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ترکیب_خول_سے_تلاش_ب}
+$y=\tfrac{3}{2\sqrt{x}},\quad y=0,\quad x=1,\quad x=4$
+\انتہا{سوال}
+%=====================
+سوال \حوالہ{سوال_تکمل_استعمال_محور_طواف_وائے_الف} تا سوال \حوالہ{سوال_تکمل_استعمال_محور_طواف_وائے_ب} میں طواف جسم کا حجم ترکیب خول سے معلوم کریں۔ منحنیات اور لکیروں میں محیط رقبہ کو \عددی{y} محور کے گرد گھمایا گیا ہے۔
+
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_محور_طواف_وائے_الف}
+$x=\sqrt{y},\quad x=-y,\quad y=2$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$x=y^2,\quad x=-y,\quad y=2$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$x=2y-y^2,\quad x=0$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$x=2y-y^2,\quad x=y$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$y=\abs{x},\quad y=1$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$y=x,\quad y=2x,\quad y=2$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$y=\sqrt{x},\quad y=0,\quad y=x-2$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_محور_طواف_وائے_ب}
+$y=\sqrt{x},\quad y=0,\quad y=2-x$
+\انتہا{سوال}
+%=========================
+
+سوال \حوالہ{سوال_تکمل_استعمال_کئی_محور_الف} اور سوال \حوالہ{سوال_تکمل_استعمال_کئی_محور_ب} میں سایہ دار خطے کو  دیے گئے محور کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔ اس جسم کا حجم ترکیب خول سے معلوم کریں۔ 
+
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_کئی_محور_الف}
+خطے کو شکل \حوالہ{شکل_سوال_تکمل_استعمال_کئی_محور_الف} میں دکھایا گیا ہے۔
+\begin{enumerate}[a.]
+\item
+محور \عددی{x} کے گرد،
+\item
+محور طواف لکیر \عددی{y=1} ہے،
+\item
+محور طواف لکیر \عددی{y=\tfrac{8}{5}} ہے،
+\item
+لکیر \عددی{y=-\tfrac{2}{5}} کے گرد گھمایا جاتا ہے۔
+\end{enumerate}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_کئی_محور_ب}
+خطے کو شکل \حوالہ{شکل_سوال_تکمل_استعمال_کئی_محور_ب} میں دکھایا گیا ہے۔
+\begin{enumerate}[a.]
+\item
+محور \عددی{x} کے گرد،
+\item
+محور طواف لکیر \عددی{y=2} ہے،
+\item
+محور طواف لکیر \عددی{y=5} ہے،
+\item
+لکیر \عددی{y=-\tfrac{5}{8}} کے گرد گھمایا جاتا ہے۔
+\end{enumerate}
+\انتہا{سوال}
+%====================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\footnotesize,declare function={f(\x)=12*(\x^2-\x^3);}]
+\begin{axis}[axis on top,clip=false,width=4.5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1},ytick={1},enlargelimits=true]
+\addplot[domain=-0.2:1]({f(x)},x)node[pos=0.75,above]{$x=12(y^2-y^3)$};
+\addplot[name path=fun,domain=0:1,draw=none]({f(x)},x);
+\draw[name path=axis](0,0)--(0,1);
+\addplot[fill=lgray]fill between[of=fun and axis];
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_کئی_محور_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\footnotesize,declare function={f(\x)=1/4*\x^4-1/2*\x^2;g(\x)=1/2*\x^2;}]
+\begin{axis}[axis on top,clip=false,width=4.5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1,2},ytick={2},enlargelimits=true]
+\addplot[name path=funf,domain=0:2]({f(x)},x)node[pos=0.75,above,yshift=0.5ex]{$x=\tfrac{y^4}{4}-\tfrac{y^2}{2}$};
+\addplot[name path=fung,domain=0:2]({g(x)},x)node[pos=0.5,right]{$x=\tfrac{y^2}{2}$};
+\draw[name path=axis](2,0)--(2,2);
+\addplot[fill=lgray]fill between[of=funf and axis];
+\addplot[fill=white]fill between[of=fung and axis];
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_کئی_محور_ب}
+\end{minipage}
+\end{figure}
+
+سوال \حوالہ{سوال_تکمل_استعمال_چھلا_خول_الف} تا سوال \حوالہ{سوال_تکمل_استعمال_چھلا_خول_الف} میں خطوں کو محور طواف کے گرد گھما کر حاصل جسم طواف کا حجم معلوم کریں۔ آپ ترکیب چھلا یا ترکیب خول استعمال کر سکتے ہیں۔
+
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_چھلا_خول_الف}
+تکون جس کے راس \عددی{(1,1)}، \عددی{(1,2)} اور \عددی{(2,2)} ہیں۔ (ا) \عددی{x} محور کے گرد، (ب) \عددی{y} محور کے گرد، (ج) لکیر \عددی{x=\tfrac{10}{3}} کے گرد، اور (د) لکیر \عددی{y=1} کے گرد۔
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+ربع اول میں منحنی \عددی{x=y-y^3} اور \عددی{y} محور میں محیط خطہ کو (ا) محور \عددی{x}، (ب) لکیر \عددی{y=1} کے گرد گھمایا جاتا ہے 
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+ربع اول میں \عددی{x=y-y^3}، \عددی{x=1} اور \عددی{y=1} میں محیط خطہ کو (ا) محور \عددی{x}، (ب) محور \عددی{y}، (ج) لکیر \عددی{x=1}، اور (د) لکیر \عددی{y=1} کے گرد گھمایا جاتا ہے۔
+\انتہا{سوال}
+%=============================
+\ابتدا{سوال}
+تکونی خطہ جس کے سرحد لکیر \عددی{2y=x+4}، \عددی{y=x}، اور \عددی{x=0} ہیں کو (ا) محور \عددی{x}، (ب) محور \عددی{y}، (ج) لکیر \عددی{x=4}، اور (د) لکیر \عددی{y=8} کے گرد گھمایا جاتا ہے۔
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+ربع اول میں \عددی{y=x^3}، \عددی{y=4x} کے بیچ خطہ کو (ا) محور \عددی{x}، اور (ب) لکیر \عددی{y=8} کے گرد گھمایا جاتا ہے۔
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+سرحد \عددی{y=\sqrt{x}} اور \عددی{y=\tfrac{x^2}{8}} میں محیط خطہ کو (ا) محور \عددی{x} اور (ب) محور \عددی{y} کے گرد گھمایا جاتا ہے۔
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+سرحد \عددی{y=2x-x^2} اور \عددی{y=x} میں محیط خطہ کو (ا) محور \عددی{y} اور (ب) لکیر \عددی{x=1} کے گرد گھمایا جاتا ہے۔
+\انتہا{سوال}
+%========================
