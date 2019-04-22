@@ -1,0 +1,8 @@
+Print("======================================");
+kill(all);
+print("sec 5.5, Q23");
+load ("antid")$
+
+f:sin(3*%pi*x/20);
+ff:sqrt(1+(diff(f,x))^2);
+quad_qag(ff,x,0,20,3, 'epsrel=5d-8);

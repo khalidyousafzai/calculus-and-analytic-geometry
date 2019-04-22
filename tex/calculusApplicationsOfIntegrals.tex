@@ -2783,5 +2783,1524 @@ $H=2a^2b\pi^2$
 \انتہا{سوال}
 %==========================
 
+\حصہ{نلکی چھلے}
+اجسام طواف کا حجم تلاش کرتے ہوئے بعض اوقات چھلا کی بجائے نلکی خول استعمال کرنا زیادہ بہتر ثابت ہوتا ہے (شکل \حوالہ{شکل_تکمل_استعمال_جسم_طواف_نلکی_الف})۔
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[x={(-10:1)}]
+\pgfmathsetmacro{\h}{0.5}
+\pgfmathsetmacro{\hh}{0}
+\pgfmathsetmacro{\ra}{1.5}
+\pgfmathsetmacro{\dr}{0.25}
+\draw[-latex](-0.2,0)--(2,0)node[right]{$x$};
+\draw[-latex](0,0)--(0,2.5)node[above]{$y$};
+\draw[thick,gray,-stealth] ([shift={(-40:0.4cm and 0.2cm)}]0,2.4) arc (-40:260:0.4cm and 0.2cm);
+\draw(\ra,0)--++(0,\h)--++(-\dr,0)--++(0,\h)--++(-\dr,0)--++(0,\h)--++(-\dr,0)--++(0,\h)--++(-\ra+3*\dr,0);
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\h}{0.5}
+\pgfmathsetmacro{\hh}{0}
+\pgfmathsetmacro{\ra}{1.5}
+\draw[fill=white]([shift={(0:\ra cm and 1/4*\ra cm)}]0,\hh) arc (0:180:\ra cm and 1/4*\ra cm)--++(0,-\h) arc (180:360:\ra cm and 1/4*\ra cm)--++(0,\h);
+\draw([shift={(180:\ra cm and 1/4*\ra cm)}]0,\hh) arc (180:360:\ra cm and 1/4*\ra cm);
+\pgfmathsetmacro{\hh}{\h}
+\pgfmathsetmacro{\ra}{1.25}
+\draw[fill=white]([shift={(0:\ra cm and 1/4*\ra cm)}]0,\hh) arc (0:180:\ra cm and 1/4*\ra cm)--++(0,-\h) arc (180:360:\ra cm and 1/4*\ra cm)--++(0,\h);
+\draw([shift={(180:\ra cm and 1/4*\ra cm)}]0,\hh) arc (180:360:\ra cm and 1/4*\ra cm);
+\pgfmathsetmacro{\hh}{2*\h}
+\pgfmathsetmacro{\ra}{1}
+\draw[fill=white]([shift={(0:\ra cm and 1/4*\ra cm)}]0,\hh) arc (0:180:\ra cm and 1/4*\ra cm)--++(0,-\h) arc (180:360:\ra cm and 1/4*\ra cm)--++(0,\h);
+\draw([shift={(180:\ra cm and 1/4*\ra cm)}]0,\hh) arc (180:360:\ra cm and 1/4*\ra cm);
+\pgfmathsetmacro{\hh}{3*\h}
+\pgfmathsetmacro{\ra}{0.75}
+\draw[fill=white]([shift={(0:\ra cm and 1/4*\ra cm)}]0,\hh) arc (0:180:\ra cm and 1/4*\ra cm)--++(0,-\h) arc (180:360:\ra cm and 1/4*\ra cm)--++(0,\h);
+\draw([shift={(180:\ra cm and 1/4*\ra cm)}]0,\hh) arc (180:360:\ra cm and 1/4*\ra cm);
+\draw[-latex](0,\hh)--(0,\hh+\h)node[left]{$y$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{نلکی جسم طواف}
+\label{شکل_تکمل_استعمال_جسم_طواف_نلکی_الف}
+\end{figure}
+\جزوحصہء{نلکی کلیہ}
+فرض کریں ہم \عددی{x} محور اور   وقفہ \عددی{[a,b]} پر تفاعل \عددی{y=f(x)} کے بیچ خطے  کو \عددی{y} محور کے گرد گھما کر جسم طواف حاصل کرتے ہیں۔ہمیں جسم طواف کا حجم درکار ہے۔  ہم وقفہ \عددی{[a,b]} کی خانہ بندی \عددی{P} پر منحصر مستطیلوں کو خطے کا تخمینی رقبہ لے سکتے ہیں۔ ایک نمائندہ مستطیل کی چوڑائی \عددی{\Delta x_k} اور قد \عددی{f(c_k)} ہو گا، جہاں نمائندہ مستطیل کے قاعدے کا وسط \عددی{c_k} ہے (شکل \حوالہ{شکل_تکمل_استعمال_کے_ویں_مستطیل_کا_خول})۔ہم جیومیٹری سے جانتے ہیں کہ ایسے مستطیل کو \عددی{y} محور کے گرد گھمانے سے حاصل جسم طواف کا حجم
+\begin{align*}
+\Delta H_k=2\pi\times \text{\RL{خول کا اوسط رداس}}\times \text{\RL{خول کا قد}}\times \text{\RL{موٹائی}}
+\end{align*}  
+ہو گا جو موجودہ صورت میں درج ذیل ہو گا۔
+\begin{align*}
+\Delta H_k=2\pi c_k f(c_k)\Delta x_k
+\end{align*}
+ہم \عددی{P} پر منحصر \عددی{n} مستطیلوں کو \عددی{y} محور کے گرد گھمانے سے حاصل حجم کے مجموعہ کو تخمیناً جسم طواف کا حجم لیتے ہیں۔
+\begin{align*} 
+H\approx \sum_{k=1}^n\Delta H_k=\sum_{k=1}^n2\pi c_kf(c_k)\Delta x_k\quad\quad \text{\RL{ریمان مجموعہ}}
+\end{align*}
+\عددی{\norm{P}\to 0} کرتے ہوئے اس مجموعہ کا حد ٹھوس جسم کا حجم  ہو گا:
+\begin{align*}
+H=\lim_{\norm{P}\to 0}\sum_{k=1}^n2\pi c_kf(c_k)\Delta x_k=\int_a^b2\pi xf(x)\dif x
+\end{align*}
+%
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=2-sqrt(\x);}]
+\pgfmathsetmacro{\c}{1.5}
+\pgfmathsetmacro{\w}{0.2}
+\pgfmathsetmacro{\ra}{\c-\w}
+\pgfmathsetmacro{\rb}{\c+\w}
+\pgfmathsetmacro{\angS}{0}
+\pgfmathsetmacro{\angE}{240}
+\pgfmathsetmacro{\d}{0.5}
+\draw[-latex](0,0)--++(2.5,0)node[right]{$x$};
+\draw[-latex](0,0)--++(0,2.5)node[above]{$y$};
+\draw[thick,gray,-stealth]([shift={(-20:0.4cm and 0.2cm)}]0,2) arc (-20:240:0.4cm and 0.2cm);
+\draw[thick]plot[domain=0.2:2]({\x},{f(\x)});
+\draw[thick](0.2,0)--++(0,{f(0.2)})  (2,0)--++(0,{f(2)});
+\draw(\d,{f(\d)})--++(45:0.5)node[right]{$y=f(x)$};
+\draw([shift={(\angS:\ra cm and 1/4*\ra cm)}]0,{f(\c)}) arc (\angS:\angE:\ra cm and 1/4*\ra cm);
+\draw([shift={(\angS:\rb cm and 1/4*\rb cm)}]0,{f(\c)}) arc (\angS:\angE:\rb cm and 1/4*\rb cm);
+\draw([shift={(\angS:\ra cm and 1/4*\ra cm)}]0,0) arc (\angS:\angE:\ra cm and 1/4*\ra cm);
+\draw(\ra,{f(\c)})coordinate(sI)--(\rb,{f(\c)})coordinate(sO);
+\draw(sI)--++(0,-{f(\c)})  (sO)--++(0,{-f(\c)});
+\path(0,{f(\c)})++(\angE:\ra cm and 1/4*\ra cm)coordinate(eI)++(0,{-f(\c)})coordinate(eIL);
+\path(0,{f(\c)})++(\angE:\rb cm and 1/4*\rb cm)coordinate(eO)++(0,{-f(\c)})coordinate(eOL);
+\fill[white](eO)--(eOL)--++(-1/2*\ra,0)--++(0,{f(\c)})--cycle;
+\draw[fill=white](eI)--(eO)--(eOL)--(eIL)--(eI);
+\draw([shift={(180:\rb cm and 1/4*\rb cm)}]0,0) arc (180:\angE:\rb cm and 1/4*\rb cm);
+\draw(-\rb,0)--++(0,{f(\c)});
+\draw(\c,0)node[below]{$c_k$}--++(0,0.1);
+\draw(\c-\w,-0.4)--++(0,-0.3)coordinate[pos=0.5](kL);
+\draw(\c+\w,-0.4)--++(0,-0.3)coordinate[pos=0.5](kR);
+\draw[stealth-](kL)--++(-0.2,0);
+\draw[stealth-](kR)--++(0.2,0)--++(0,-0.3)node[below]{$\Delta x_k$};
+\draw(\c+\w,0)++(0,-0.1)--++(-55:0.7)--++(0.2,0)node[right]{$x_k$}  (\c-\w,0)++(0,-0.1)--++(-135:0.7)node[left]{$x_{k-1}$};
+\draw[fill=lgray,opacity=0.5](\c-\w,0)--++(0,{f(\c)})--++(2*\w,0)--++(0,{-f(\c)})--cycle;
+\draw[stealth-stealth](2.2,0)--++(0,{f(\c)})node[pos=0.75,right]{\text{\RL{قد مستطیل}}};
+\draw(2.1,{f(\c)})--++(0.2,0);
+\draw(0.2,0)node[below]{$a$}--++(0,0.1);
+\draw(2,0)node[below]{$b$}--++(0,0.1);
+\end{tikzpicture}
+\caption{$k$ ویں مستطیل کو گھمانے سے حاصل نلکی خول۔}
+\label{شکل_تکمل_استعمال_کے_ویں_مستطیل_کا_خول}
+\end{figure}
+
+\موٹا{کلیہ خول برائے $y$ محور کے گرد طواف}\\
+استمراری تفاعل \عددی{y=f(x),\, 0\le a\le x\le b} اور محور \عددی{x} کے بیچ خطے کو \عددی{y} محور کے گرد گھمانے سے حاصل جسم طواف کا حجم درج ذیل ہو گا۔
+\begin{align}\label{مساوات_تکمل_استعمال_کلیہ_خول_وائے_محور}
+H=\int_a^b2\pi(\text{\RL{رداس خول}})(\text{\RL{قد خول}})\dif x=\int_a^b2\pi xf(x)\dif x
+\end{align}
 
 
+\ابتدا{مثال}\شناخت{مثال_تکمل_استعمال_نلکی_پہلی}
+منحنی \عددی{y=\sqrt{x}}، لکیر \عددی{x=4} اور \عددی{x} محور کے بیچ خطے کو \عددی{y} محور کے گرد گھما کر جسم طواف حاصل کیا جاتا ہے۔ اس جسم کا حجم تلاش کریں۔
+\begin{figure}
+\centering
+\begin{subfigure}{0.30\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=sqrt(\x);}]
+\pgfmathsetmacro{\c}{1.7}
+\draw[-latex](-0.25,0)--(4.25,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2.6)node[above]{$y$};
+\draw[gray,thick,-stealth]([shift={(-20:0.4cm and 0.2cm)}]0,2.45) arc (-20:240:0.4cm and 0.2cm);
+\draw[]plot[domain=0:0.5]({\x},{f(\x)});
+\draw[]plot[domain=0.5:4]({\x},{f(\x)});
+\draw[](4,0)node[below]{$4$}--(4,{f(4)})node[above left,yshift=-1ex]{$y=\sqrt{x}$};
+\draw(0,2)node[left]{$2$}--++(0.1,0);
+\draw[thick](\c,0)node[circ]{}node[below]{$x$}--++(0,{f(\c)})node[circ]{}coordinate(kT);
+\draw[stealth-stealth] (\c+0.4,0)--++(0,{f(\c)})node[pos=0.5,right]{$f(x)=\sqrt{x}$}coordinate[pos=0.5](kH);
+\draw(\c+0.3,{f(\c)})--++(0.2,0);
+\draw[stealth-stealth](\c,{f(\c)+0.2})--++(-\c,0)node[pos=0.5,fill=white]{$x$}coordinate[pos=0.5](kR);
+\draw(\c,{f(\c)+0.1})--++(0,0.2);
+\draw(kR)node[above]{\RL{رداس خول}};
+\draw(kH)++(0.3,0.2)node[above right]{\RL{قد خول}};
+\draw(kT)++(0.1,0.1)--++(60:1.25)node[above]{\text{\RL{$\dif x$= موٹائی خول}}};
+\draw [decorate,decoration={brace,amplitude=10pt,mirror,raise=4pt},yshift=0pt]
+(0,-0.3) -- (4,-0.3) node [black,midway,yshift=-0.8cm] {\footnotesize \RL{وقفہ تکمل}};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.60\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=sqrt(\x);}]
+\pgfmathsetmacro{\c}{1.7}
+\pgfmathsetmacro{\w}{0.2}
+\pgfmathsetmacro{\ra}{\c-\w}
+\pgfmathsetmacro{\rb}{\c+\w}
+\pgfmathsetmacro{\hy}{f(\c)-1/4*\ra}
+\draw[dashed](-0.25,0)--(\rb,0);
+\draw[-latex](\rb,0)--(4.25,0)node[right]{$x$};
+\draw[dashed](0,-0.2)--(0,\hy);
+\draw[-latex](0,\hy)--(0,2.6)node[above]{$y$};
+\draw[dashed]plot[domain=0:0.5]({\x},{f(\x)});
+\draw[dashed]plot[domain=0.5:\rb]({\x},{f(\x)});
+\draw[]plot[domain=\rb:4]({\x},{f(\x)});
+\draw(4,{f(4)})node[above left]{$y=\sqrt{x}$};
+\draw(0,{f(\c)}) circle (\ra cm and 1/4*\ra cm);
+\draw(0,{f(\c)}) circle (\rb cm and 1/4*\rb cm);
+\draw([shift={(180:\rb cm and 1/4*\rb cm)}]0,0)arc (180:360:\rb cm and 1/4*\rb cm);
+\draw(\rb,0)--(\rb,{f(\c)})  (-\rb,0)--(-\rb,{f(\c)});
+\draw[thick,gray](\c,0)node[circ]{}node[above left,black]{$x$}--(\c,{f(\c)})node[circ]{};
+\draw(4,0)node[below]{$4$}--++(0,0.1);
+\draw[stealth-stealth](\rb+0.3,{f(\c)})--(\rb+0.3,0)node[pos=0.5,right]{$\sqrt{x}$};
+\draw(\rb+0.2,{f(\c)})--++(0.2,0);
+\draw[stealth-](\ra,-0.5)--++(-0.2,0);
+\draw[stealth-](\rb,-0.5)--++(0.2,0)node[right]{$\dif x$};
+\draw(\ra,-0.4)--++(0,-0.2)  (\rb,-0.4)--++(0,-0.2);
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{نلکی خول (مثال \حوالہ{مثال_تکمل_استعمال_نلکی_پہلی})}
+\label{شکل_مثال_تکمل_استعمال_نلکی_پہلی}
+\end{figure}
+
+حل:\quad
+\موٹا{پہلا قدم:}\quad
+خطے کا خاکہ بنا کر محور گردش کے متوازی اس پر قطع دکھائیں۔ قطع کا قد (خول کا قد) اور محور گردش سے قطع کے فاصلہ (رداس خول) کی نشاندہی کریں۔ قطع کی چوڑائی \عددی{\dif x} خول کی چوڑائی ہو گی۔ ہم نے شکل \حوالہ{شکل_مثال_تکمل_استعمال_نلکی_پہلی} میں خول دکھایا ہے۔ آپ کو ایسا کرنے کی ضرورت نہیں ہے۔\\
+\موٹا{دوسرا قدم:}\quad
+تکمل کے حد معلوم کریں۔ خطہ میں \عددی{x} کی قیمت \عددی{a} تا \عددی{b} تبدیل ہوتی ہے لہٰذا تکمل کے حد \عددی{a} اور \عددی{b} ہوں گے۔
+\begin{align*}
+H&=\int_a^b2\pi(\text{\RL{رداس خول}})(\text{\RL{قد خول}})\dif x
+&&\text{\RL{مساوات \حوالہ{مساوات_تکمل_استعمال_کلیہ_خول_وائے_محور}}}\\
+&=\int_0^4 2\pi(x)(\sqrt{x})\dif x&&\text{\RL{جزو-ا اور جزو-ب میں حاصل قیمتیں}}\\
+&=2\pi\int_0^4x^{3/2}\dif x=2\pi\big[\frac{2}{5}x^{5/2}\big]_0^4=\frac{128\pi}{5}
+\end{align*} 
+\انتہا{مثال}
+%=====================
+محور \عددی{y} کے گرد خطہ گھمانے سے حاصل جسم طواف کا حجم مساوات \حوالہ{مساوات_تکمل_استعمال_کلیہ_خول_وائے_محور} سے حاصل کیا جا سکتا ہے۔اگر ہم خطے کو \عددی{x} محور کے گرد گھما کر جسم طواف حاصل کریں تب حجم تلاش کرنے کی خاطر مساوات \حوالہ{مساوات_تکمل_استعمال_کلیہ_خول_وائے_محور} میں \عددی{x} کی جگہ \عددی{y} استعمال کیا جائے گا۔
+
+\موٹا{کلیہ خول برائے $x$ محور کے گرد طواف}\\
+\begin{align}\label{مساوات_تکمل_استعمال_کلیہ_خول_ایکس_محور}
+H=\int_c^d2\pi(\text{\RL{رداس خول}})(\text{\RL{قد خول}})\dif y=\int_c^d2\pi yf(y)\dif y
+\end{align}
+درج بالا مساوات میں \عددی{f(y)>0} اور \عددی{0\le c\le y\le d} ہیں۔ 
+
+
+\جزوحصہء{خول کا جیومیٹریائی حجم}
+ایک ٹھوس بیلن جس کا رداس \عددی{R_2} اور قد \عددی{h} ہو کا حجم \عددی{\pi R_2^2h} ہو گا۔اگر اس جسم سے رداس \عددی{R_1} کا ٹھوس بیلن کاٹا جائے تب حاصل خول کا حجم \عددی{\pi R_2^2 h-\pi R_1^2 h} ہو گا (شکل \حوالہ{شکل_تکمل_استعمال_حجم_خول_پہچان}-ا) جس کو درج ذیل لکھا جا سکتا ہے
+\begin{align*}
+\text{\RL{حجم خول}}&=\pi R_2^2h-\pi R_1^2h\\
+&=\pi (R_2^2-R_1^2)h\\
+&=\pi(R_2+R_1)(R_2-R_1)h&&R_2^2-R_1^2=(R_2-R_1)(R_2+R_1)\\
+&=2\pi(\tfrac{R_2+R_1}{2})(R_2-R_1)h&&\text{\RL{$2$ سے ضرب اور تقسیم}}\\
+&=2\pi(\text{\RL{رداس خول}})(\text{\RL{موٹائی خول}})(\text{\RL{قد خول}})
+\end{align*} 
+جہاں خول کا اوسط رداس \عددی{\tfrac{R_2+R_1}{2}} ہے، خول کی موٹائی \عددی{R_2-R_1r} ہے اور خول کا قد \عددی{h} ہے۔
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\rr}{1.25}
+\pgfmathsetmacro{\r}{1}
+\pgfmathsetmacro{\rrr}{1/2*(\rr+\r)}
+\pgfmathsetmacro{\h}{0.75}
+\draw(0,\h) circle (\rr cm and 1/4*\rr cm);
+\draw(0,\h) circle (\r cm and 1/4*\r cm);
+\draw([shift={(180:\rr cm and 1/4*\rr cm)}]0,0) arc (180:360:\rr cm and 1/4*\rr cm);
+\draw(-\rr,0)--++(0,\h)  (\rr,0)--++(0,\h);
+\draw([shift={(180:\r cm and 1/4*\r cm)}]0,2*\h) arc (180:360:\r cm and 1/4*\r cm);
+\draw(0,3*\h) circle (\r cm and 1/4*\r cm);
+\draw(-\r,2*\h)--++(0,\h)  (\r,2*\h)--++(0,\h);
+\draw[-stealth](0,-3ex)--++(\rr,0)node[pos=0.5,below]{$R_2$};
+\draw(0,-2ex)--++(0,-2ex)  (\rr,-2ex)--++(0,-2ex);
+\draw[-stealth](0,4*\h)--++(\r,0)node[pos=0.5,above]{$R_1$};
+\draw(0,4*\h)++(0,-1ex)--++(0,2ex)  (\r,4*\h)++(0,-1ex)--++(0,2ex);
+\draw[stealth-stealth](-\rr,0)++(-1ex,0)--++(0,\h)node[pos=0.5,left]{$h$};
+\draw[stealth-](\r,\h)--++(-1/4*\r,0);
+\draw[stealth-](\rr,\h)--++(1/4*\rr,0)node[right]{$R_2-R_1$};
+\draw[dashed](0,\h) circle (\rrr cm and 1/4*\rrr cm);
+\draw[-stealth](0,\h)--++(-\rrr,0);
+\draw(0,\h)++(0,-1ex)--++(0,2ex);
+\path(0,\h)--++(-\rrr,0)coordinate[pos=0.4](ka);
+\draw(ka)--++(145:1)node[left]{$\tfrac{R_2+R_1}{2}$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\rr}{1.25}
+\pgfmathsetmacro{\r}{1}
+\pgfmathsetmacro{\rrr}{1/2*(\rr+\r)}
+\pgfmathsetmacro{\h}{0.75}
+\pgfmathsetmacro{\len}{2*pi*\rr/2}
+\pgfmathsetmacro{\t}{\rr-\r}
+\draw[-stealth](0,\h)--++(-\rrr,0)node[pos=0.5,fill=white]{$x$};
+\draw(0,\h)++(0,-0.5ex)--++(0,1ex);
+\draw[stealth-](\r,\h)--++(-1/4*\r,0);
+\draw[stealth-](\rr,\h)--++(1/4*\rr,0)node[right]{$\dif x$};
+\draw(0,\h) circle (\rr cm and 1/4*\rr cm);
+\draw(0,\h) circle (\r cm and 1/4*\r cm);
+\draw([shift={(180:\rr cm and 1/4*\rr cm)}]0,0) arc (180:360:\rr cm and 1/4*\rr cm);
+\draw(-\rr,0)--++(0,\h)  (\rr,0)--++(0,\h);
+\draw[stealth-stealth](-\rr,0)++(-2ex,0)--++(0,\h)node[pos=0.5,left]{$f(x)$};
+\begin{scope}[yshift=3*\h cm]
+\draw(-\len/2,0) rectangle++(\len,\h);
+\draw(-\len/2,\h)--++(45:\t)--++(\len,0)--++(45:-\t);
+\draw(\len/2,0)--++(45:\t)--++(0,\h);
+\draw[stealth-stealth](-\len/2,0)++(-2ex,0)--++(0,\h)node[pos=0.5,left]{$f(x)$};
+\draw[stealth-stealth](-\len/2,0)++(0,-2ex)--++(0\len,0)node[pos=0.5,below]{$2\pi x$};
+\draw(\len/2,\h)++(3ex,0)--++(2ex,0)coordinate[pos=0.5](kB);
+\draw(\len/2,\h)++(45:\t)++(3ex,0)--++(2ex,0)coordinate[pos=0.5](kT);
+\draw[stealth-](kB)--++(45:-\t);
+\draw[stealth-](kT)--++(45:\t)node[above]{$\dif x$};
+\end{scope}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{خول کا حجم۔}
+\label{شکل_تکمل_استعمال_حجم_خول_پہچان}
+\end{figure}
+
+ایک خول جس کا اوسط رداس \عددی{x}، موٹائی \عددی{\dif x} اور قد \عددی{f(x)} ہو کو شکل \حوالہ{شکل_تکمل_استعمال_حجم_خول_پہچان}-ب میں  کھول کر پٹی کی شکل دی گئی ہے۔ اس پٹی کا حجم درج ذیل ہو گا جو خول کے حجم کا کلیہ ہے (مساوات \حوالہ{مساوات_تکمل_استعمال_کلیہ_خول_وائے_محور} اور مساوات \حوالہ{مساوات_تکمل_استعمال_کلیہ_خول_ایکس_محور} کو یاد رکھنے کا یہ بہترین طریقہ ہے)۔
+\begin{align*}
+H=2\pi x f(x)\dif x
+\end{align*}
+
+%=======================
+\ابتدا{مثال}\شناخت{مثال_تکمل_استعمال_پہلے_بھی-حل}
+منحنی \عددی{y=\sqrt{x}}، لکیر \عددی{x=4} اور \عددی{x} محور کے بیچ خطے کو \عددی{x} محور کے گرد گھما کر جسم طواف حاصل کیا جاتا ہے۔ اس جسم کا حجم تلاش کریں۔
+
+حل:\quad
+\موٹا{پہلا قدم:}\quad
+خطے کا خاکہ بنائیں اور اس پر محور گردش کے متوازی قطع دکھائیں۔ قطع کی لمبائی (قد خول) اور محور طواف سے اس کا فاصلہ (رداس خول) کی نشاندہی کریں۔ قطع کی موٹائی، خول کی چوڑائی \عددی{\dif y} ہو گی۔ ہم نے شکل \حوالہ{شکل_مثال_تکمل_استعمال_پہلے_بھی-حل} میں \عددی{y} محور کے گرد بیلن دکھایا ہے۔ آپ کو ایسا بنانے کی ضرورت نہیں ہے۔\\
+\موٹا{دوسرا قدم:}\quad
+تکمل کے حد معلوم کریں۔چونکہ خطہ میں \عددی{y} کی قیمت \عددی{c=0} تا \عددی{d=2} ہو سکتی ہے لہٰذا یہی اس کے حد ہیں۔\\
+\موٹا{تیسرا قدم:}\quad
+\begin{align*}
+H&=\int_c^d2\pi(رداس خول)(قد خول)\dif y&&\text{\RL{مساوات \حوالہ{مساوات_تکمل_استعمال_کلیہ_خول_ایکس_محور}}}\\
+&=\int_0^22\pi(y)(4-y^2)\dif y&&\text{\RL{جزو-ا اور جزو-ب میں حاصل قیمتیں}}\\
+&=2\pi\big[2y^2-\frac{y^4}{4}\big]_0^2=8\pi
+\end{align*}
+یہ نتیجہ مثال \حوالہ{مثال_تکمل_استعمال_جسم_طواف_جذر} میں  ترکیب قرص سے حاصل جواب کے عین مطابق ہے۔ 
+\انتہا{مثال}
+%====================
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=sqrt(\x);}]
+\pgfmathsetmacro{\c}{1.25}
+\draw[-latex](-0.25,0)--(4.5,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2.25)node[above]{$y$};
+\draw[gray,thick,-stealth] ([shift={(-100:0.2cm and 0.4cm)}]4.4,0) arc (-100:160:0.2cm and 0.4cm);
+\draw[]plot[domain=0:0.5]({\x},{f(\x)});
+\draw[]plot[domain=0.5:4]({\x},{f(\x)});
+\draw(4,0)node[below]{$4$}--(4,2);
+\draw(4,{f(4)})node[above left]{$y=\sqrt{x}$};
+\draw[thick](\c,{f(\c)})node[circ]{}--(4,{f(\c)})node[circ]{}node[pos=0.6,above]{\RL{قد خول}}node[pos=0.6,below]{$4-y^2$};
+\draw[stealth-stealth](\c-0.3,0)--++(0,{f(\c)})node[pos=0.5,left]{$y$}node[pos=0.5,right]{\RL{رداس خول}};
+\draw(\c-0.2,{f(\c)})--++(-0.2,0);
+\draw[stealth-](4.2,{f(\c)})++(0,0.01)--++(0,0.2)--++(0.2,0)node[right]{$\dif y$};
+\draw[stealth-](4.2,{f(\c)})++(0,-0.01)--++(0,-0.2);
+\draw(0,2)node[left]{$2$}--++(0.1,0);
+\draw(0,{f(\c)})node[left]{$y$}--++(0.1,0);
+\draw [decorate,decoration={brace,amplitude=10pt,mirror},yshift=0pt]
+(-0.4,2) -- (-0.4,0) node [black,midway,xshift=-0.8cm] {\footnotesize \RL{وقفہ تکمل}};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=sqrt(\x);}]
+\pgfmathsetmacro{\c}{1.25}
+\pgfmathsetmacro{\w}{0.2}
+\pgfmathsetmacro{\ra}{f(\c)+\w}
+\pgfmathsetmacro{\rb}{f(\c)-\w}
+\pgfmathsetmacro{\xx}{(\w+f(\c))^2}
+\draw(-0.25,0)--(\c+1/4*\ra,0);
+\draw[dashed](\c+1/4*\rb,0)--(4+1/4*\rb,0);
+\draw[-latex](4+1/4*\ra,0)--(5,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2.5)node[above]{$y$};
+\draw[]plot[domain=0:0.5]({\x},{f(\x)});
+\draw[]plot[domain=0.5:\c]({\x},{f(\x)});
+\draw[dashed]plot[domain=\c:\xx]({\x},{f(\x)});
+\draw[]plot[domain=\xx:4]({\x},{f(\x)});
+\draw(4,{f(4)})--(4,{f(\c)+\w});
+\draw(2.5,{f(2.5)})node[left,yshift=1ex]{$y=\sqrt{x}$};
+\draw[dashed](4,{f(\c)+\w})--(4,0)node[below]{$4$};
+\draw[stealth-stealth](\c,0)--(\c,{f(\c)})node[pos=0.45,fill=white]{$y$};
+\draw(\c,0) circle (1/4*\ra cm and \ra cm);
+\draw(\c,0) circle (1/4*\rb cm and \rb cm);
+\draw([shift={(-90:1/4*\ra cm and \ra cm)}]4,0) arc (-90:90:1/4*\ra cm and \ra cm);
+\draw[dashed]([shift={(90:1/4*\ra cm and \ra cm)}]4,0) arc (90:270:1/4*\ra cm and \ra cm);
+\draw[dashed]([shift={(0:1/4*\rb cm and \rb cm)}]4,0) arc (0:360:1/4*\rb cm and \rb cm);
+\draw(\c,{f(\c)+\w})--(4,{f(\c)+\w})   (\c,{-f(\c)-\w})--(4,{-f(\c)-\w});
+\draw[gray,thick](\c,{f(\c)})node[circ]{}--(4,{f(\c)})node[circ]{};
+\draw[stealth-stealth](\c,2.2)--(4,2.2)node[pos=0.5,above]{$4-y^2$};
+\draw(\c,2.1)--++(0,0.2)  (4,2.1)--++(0,0.2);
+\draw(4.3,{f(\c)+\w})--++(0.2,0)coordinate[pos=0.5](kt);
+\draw(4.3,{f(\c)-\w})--++(0.2,0)coordinate[pos=0.5](kb);
+\draw[stealth-](kb)--++(0,-0.2);
+\draw[stealth-](kt)--++(0,0.2)--++(0.2,0)node[right]{$\dif y$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{محور \عددی{x} کے گرد طواف (مثال \حوالہ{مثال_تکمل_استعمال_پہلے_بھی-حل})}
+\label{شکل_مثال_تکمل_استعمال_پہلے_بھی-حل}
+\end{figure}
+
+\جزوحصہء{ترکیب خول کا استعمال}
+محور طواف (افقی یا انتصابی) جیسا بھی ہو ترکیب خول کے اقدام درج ذیل ہوں گے۔
+\begin{enumerate}[a.]
+\item
+خطے کا خاکہ بنا کر اس میں محور طواف کے متوازی قطع بنائیں۔ قطع کا قد یا لمبائی (قد خول)،  محور طواف سے قطع کا فاصلہ (رداس خول) اور قطع کی موٹائی (چوڑائی خول) کی نشاندہی کریں۔
+\item
+تکمل کے حد معلوم کریں
+\item
+متکمل (\عددی{2\pi}) ( رداس خول ) ( قد خول )  کا موزوں متغیر (\عددی{x} یا \عددی{y}) کے ساتھ تکمل کی قیمت حاصل کرتے ہوئے حجم دریافت کریں۔
+\end{enumerate} 
+
+اگلی مثال میں محور طواف افقی لکیر \عددی{x=2} ہے۔
+
+\ابتدا{مثال}\شناخت{مثال_تکمل_استعمال_خول_آخری}
+ربع اول میں قطع مکافی \عددی{y=x^2}، لکیر \عددی{y=1} اور \عددی{y} محور کے بیچ خطے کو محور طواف \عددی{x=2} کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔اس جسم کا حجم تلاش کریں۔
+
+حل:\quad
+\موٹا{پہلا قدم:}\quad
+خطے پر محور طواف کے متوازی قطع بنائیں۔ قطع کا قد (قد خول)، محور طواف سے قطع کا فاصلہ (رداس خول) اور قطع کی موٹائی (چوڑائی خول \عددی{\dif x}) کی نشاندہی کریں (شکل \حوالہ{شکل_مثال_تکمل_استعمال_خول_آخری})۔ہم نے خول بھی بنایا ہے۔ آپ کو ایسا کرنے کی ضرورت نہیں ہے۔\\
+\موٹا{دوسرا قدم:}\quad
+تکمل کے حد \عددی{a=0} اور \عددی{b=1} ہیں۔\\
+\موٹا{تیسرا قدم:}
+\begin{align*}
+H&=\int_a^b2\pi(\text{\RL{رداس خول}})(\text{\RL{قد خول}})\dif x&&\text{\RL{مساوات \حوالہ{مساوات_تکمل_استعمال_کلیہ_خول_وائے_محور}}}\\
+&=\int_0^12\pi(2-x)(1-x^2)\dif x&&\text{\RL{جزو-ا اور جزو-ب میں حاصل قیمتیں}}\\
+&=2\pi\int_0^1(2-x-2x^2+x^3)\dif x\\
+&=\frac{13\pi}{6}
+\end{align*}
+\انتہا{مثال}
+%=======================
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[scale=2,font=\small,declare function={f(\x)=\x^2;}]
+\pgfmathsetmacro{\c}{0.7}
+\draw[-latex](-0.25,0)--(2.25,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,1.25)node[above]{$y$};
+\draw[]plot[domain=0:1]({\x},{f(\x)});
+\draw(0.6,{f(0.6)})node[left]{$y=x^2$};
+\draw(1,{f(1)})--(0,{f(1)})node[left]{$1$}node[pos=0.6,above]{$y=1$};
+\draw(\c,{f(\c)})node[circ]{}--(\c,1)node[circ]{};
+\draw(\c,0)node[below]{$x$}--++(0,0.1);
+\draw(1,0)node[below]{$1$}--++(0,0.1);
+\draw [decorate,decoration={brace,amplitude=10pt,mirror,raise=4pt},yshift=0pt]
+(0,-0.2) -- (1,-0.2) node [black,midway,yshift=-0.8cm] {\footnotesize \RL{وقفہ تکمل}};
+\draw(2,0)node[below]{$2$}--(2,1.25);
+\draw[gray,thick,-stealth]([shift={(-40:0.2cm and 0.1cm)}]2,1.2) arc (-40:240:0.2cm and 0.1cm);
+\draw[stealth-stealth](1.2,{f(\c)})--(1.2,1)node[pos=0.7,right]{\text{\RL{قد خول}}} node[pos=0.4,right]{$1-x^2$};
+\draw(1.1,{f(\c)})--++(0.2,0)   (1.1,1)--++(0.2,0);
+\draw(\c,1)++(0,0.1)--++(45:0.25)node[above]{\text{\RL{موٹائی خول=$\dif x$}}};
+\draw[stealth-stealth](\c,{f(\c)-0.2})--(2,{f(\c)-0.2})node[pos=0.7,yshift=1ex]{$2-x$}node[pos=0.7,yshift=-1.25ex]{\text{\RL{رداس خول}}};
+\draw(\c,{f(\c)-0.15})--++(0,-0.1);
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=\x^2;}]
+\pgfmathsetmacro{\c}{0.7}
+\pgfmathsetmacro{\w}{0.1}
+\pgfmathsetmacro{\ra}{2-\c+\w}
+\pgfmathsetmacro{\rb}{2-\c-\w}
+\draw[-latex](-0.25,0)--(4,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,1.5)node[above]{$y$};
+\draw[]plot[domain=0:1]({\x},{f(\x)});
+\draw(1,{f(1)})--(0,{f(1)});
+\draw(\c,{f(\c)})node[circ]{}--(\c,1)node[circ]{};
+\draw(2,1) circle (\ra cm and 1/4*\ra cm);
+\draw(2,1) circle (\rb cm and 1/4*\rb cm);
+\draw([shift={(180:\ra cm and 1/4*\ra cm)}]2,{f(\c)}) arc (180:360:\ra cm and 1/4*\ra cm);
+\draw(\c-\w,{f(\c)})--(\c-\w,1)  (2+\ra,{f(\c)})--(2+\ra,1);
+\draw(2,{f(\c)-1/4*\ra})--(2,0)node[below]{$2$};
+\draw(2,{1-1/4*\rb})--++(0,1);
+\draw[stealth-stealth](\c,1.5)--(2,1.5)node[pos=0.5,above]{$1-x^2$};
+\draw(\c,1.3)--++(0,0.3);
+\draw[stealth-stealth](2+\ra+0.3,{f(\c)})--(2+\ra+0.3,1)node[pos=0.5,right]{$1-x^2$};
+\draw(2+\ra+0.2,{f(\c)})--++(0.2,0)  (2+\ra+0.2,1)--++(0.2,0);
+\draw[stealth-](2+\rb,1.5)--++(-0.3,0);
+\draw[stealth-](2+\ra,1.5)--++(0.3,0)node[right]{$\dif x$};
+\draw(2+\rb,1.4)--++(0,0.2) (2+\ra,1.4)--++(0,0.2);
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\caption{خطہ اور خول (مثال \حوالہ{مثال_تکمل_استعمال_خول_آخری})}
+\label{شکل_مثال_تکمل_استعمال_خول_آخری}
+\end{figure}
+%
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\begin{tikzpicture}[scale=2,font=\small,declare function={f(\x)=\x^2;g(\x)=\x;}]
+\pgfmathsetmacro{\c}{0.4}
+\pgfmathsetmacro{\ra}{\c}
+\pgfmathsetmacro{\rb}{sqrt(\c)}
+\draw[gray,thick,-stealth]([shift={(-40:0.2cm and 0.1cm)}]0,1.2) arc (-40:240:0.2cm and 0.1cm);
+\draw[]plot[domain=0:1]({\x},{f(\x)});
+\draw[]plot[domain=0:1]({\x},{g(\x)});
+\draw(1,0)node[below]{$1$}--++(0,0.1);
+\draw(0,1)node[left]{$1$}--++(0.1,0);
+\draw(0.8,{g(0.8)})node[left]{$x=y$};
+\draw(0.8,{f(0.8)})node[right]{$x=\sqrt{y}$};
+\draw[thick](\ra,\c)node[circ]{}--(\rb,\c)node[circ]{};
+\draw[fill=lgray,opacity=0.5](0,\c) circle (\rb cm and 1/4*\rb cm);
+\draw[fill=white](0,\c) circle (\ra cm and 1/4*\ra cm);
+\draw[-latex](-0.25,0)--(1.25,0)node[right]{$x$};
+\draw(0,-0.5)--(0,\c-1/4*\rb);
+\draw[-latex](0,\c-1/4*\ra)--(0,1.25)node[above]{$y$};
+\draw[stealth-stealth](0,-0.3)--++(\ra,0)node[pos=0.5,above]{$r=y$};
+\draw[stealth-stealth](0,-0.5)--++(\rb,0)node[pos=0.5,below]{$R=\sqrt{y}$};
+\draw(\ra,-0.2)--++(0,-0.2)  (\rb,-0.4)--++(0,-0.2);
+\draw(0.5,-1)node[font=\footnotesize]{$\begin{aligned}H&=\int_{y=0}^{y=1}\pi[(\sqrt{y})^2-(y)^2]\dif y=\tfrac{\pi}{6}  \end{aligned}$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\begin{tikzpicture}[scale=2,font=\small,declare function={f(\x)=\x^2;g(\x)=\x;}]
+\pgfmathsetmacro{\c}{0.6}
+\draw[gray,thick,-stealth]([shift={(-40:0.2cm and 0.1cm)}]0,1.2) arc (-40:240:0.2cm and 0.1cm);
+\draw[]plot[domain=0:1]({\x},{f(\x)});
+\draw[]plot[domain=0:1]({\x},{g(\x)});
+\draw(1,0)node[below]{$1$}--++(0,0.1);
+\draw(0,1)node[left]{$1$}--++(0.1,0);
+\draw(0.9,{g(0.9)})node[left]{$y=x$};
+\draw(0.9,{f(0.9)})node[right,xshift=1ex]{$y=x^2$};
+\draw[thick](\c,{f(\c)})node[circ]{}--(\c,\c)node[circ]{};
+\draw[-latex](-0.25,0)--(1.25,0)node[right]{$x$};
+\draw[-latex](0,-0.5)--(0,1.25)node[above]{$y$};
+\draw[fill=lgray,opacity=0.5]([shift={(180:\c cm and 1/4*\c cm)}]0,{f(\c)}) arc (180:360:\c cm and 1/4*\c cm)--(\c,\c) arc (0:-180:\c cm and 1/4*\c cm)--(-\c,{f(\c)});
+\draw([shift={(0:\c cm and 1/4*\c cm)}]0,\c) arc (0:180:\c cm and 1/4*\c cm);
+\draw[stealth-stealth](\c+0.1,0)--(\c+0.1,{f(\c)})node[pos=0.4,left]{$x^2$};
+\draw(\c+0.05,{f(\c)})--+(0.1,0);
+\draw[stealth-stealth](\c+0.3,0)--(\c+0.3,{g(\c)})node[pos=0.5,right]{$x$};
+\draw(\c+0.25,{g(\c)})--+(0.1,0);
+\draw[stealth-stealth](0,{g(\c)})--(\c,{g(\c)})node[pos=0.5,fill=white]{$x$};
+\draw(0.5,-1)node[font=\footnotesize]{$\begin{aligned}H&=\int_{x=0}^{x=1}2\pi(x)(x-x^2)\dif x=\frac{\pi}{6} \end{aligned}$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\begin{tikzpicture}[scale=2,font=\small,declare function={f(\x)=\x^2;g(\x)=\x;}]
+\pgfmathsetmacro{\c}{0.6}
+\pgfmathsetmacro{\ra}{f(\c)}
+\pgfmathsetmacro{\rb}{g(\c)}
+\draw[gray,thick,-stealth]([shift={(-40:0.05cm and 0.15cm)}]1.2,0) arc (-40:240:0.05cm and 0.15cm);
+\draw[]plot[domain=0:1]({\x},{f(\x)});
+\draw[]plot[domain=0:1]({\x},{g(\x)});
+\draw(1,0)node[below]{$1$}--++(0,0.1);
+\draw(0,1)node[left]{$1$}--++(0.1,0);
+\draw(0.9,{g(0.9)})node[left]{$y=x$};
+\draw(0.9,{f(0.9)})node[right]{$y=x^2$};
+\draw[fill=lgray,opacity=0.5](\c,0) circle (1/4*\rb cm and \rb cm);
+\draw[fill=white](\c,0) circle (1/4*\ra cm and \ra cm);
+\draw(-0.25,0)--(\c-1/4*\rb,0);
+\draw[-latex](\c-1/4*\ra,0)--(1.25,0)node[right]{$x$};
+\draw[-latex](0,-0.5)--(0,1.25)node[above]{$y$};
+\draw(\c,{f(\c)})node[circ]{}--(\c,{g(\c)})node[circ]{};
+\draw[stealth-stealth](\c+0.2,0)--++(0,{f(\c)})node[pos=0.8,right]{$r=x^2$};
+\draw(\c+0.15,{f(\c)})--++(0.1,0);
+\draw[stealth-stealth](-0.2,0)--++(0,{g(\c)})node[pos=0.5,left]{$R=x$};
+\draw(-0.25,{g(\c)})--++(0.1,0);
+\draw(0.5,-1)node[font=\footnotesize]{$\begin{aligned}H&=\int_{x=0}^{x=1}\pi[(x)^2-(x^2)^2]\dif x=\tfrac{2\pi}{15}  \end{aligned}$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\begin{tikzpicture}[scale=2,font=\small,declare function={f(\x)=\x^2;g(\x)=\x;}]
+\pgfmathsetmacro{\c}{0.4}
+\pgfmathsetmacro{\ra}{\c}
+\pgfmathsetmacro{\rb}{sqrt(\c)}
+\draw[gray,thick,-stealth]([shift={(-40:0.05cm and 0.15cm)}]1.2,0) arc (-40:240:0.05cm and 0.15cm);
+\draw[]plot[domain=0:1]({\x},{f(\x)});
+\draw[]plot[domain=0:1]({\x},{g(\x)});
+\draw(1,0)node[below]{$1$}--++(0,0.1);
+\draw(0,1)node[left]{$1$}--++(0.1,0);
+\draw(0.9,{g(0.9)})node[left]{$x=y$};
+\draw(0.9,{f(0.9)})node[right]{$x=\sqrt{y}$};
+\draw(\ra,\c)node[circ]{}--(\rb,\c)node[circ]{};
+\draw[fill=lgray,opacity=0.5](\rb,\c)--(\ra,\c) arc (90:270:1/4*\c cm and \c cm)--(\rb,-\c) arc (-90:-270:1/4*\c cm and \c cm);
+\draw([shift={(-90:1/4*\c cm and \c cm)}]\rb,0) arc (-90:90:1/4*\c cm and \c cm);
+\draw[stealth-stealth](0,\c+0.1)--++(\c,0)node[pos=0.5,above]{$y$};
+\draw(\c,\c+0.05)--++(0,0.1);
+\draw[stealth-stealth](0,-\c-0.1)--++(\rb,0)node[pos=0.5,below]{$\sqrt{y}$};
+\draw(\rb,-\c-0.05)--++(0,-0.1);
+\draw(-0.25,0)--(\c-1/4*\c,0);
+\draw[-latex](\rb-1/4*\c,0)--(1.25,0)node[right]{$x$};
+\draw[-latex](0,-0.6)--(0,1.25)node[above]{$y$};
+\draw(0,\c)node[left]{$y$}--++(0.1,0);
+\draw(0.5,-1)node[font=\footnotesize]{$\begin{aligned}H&=\int_{y=0}^{y=1}2\pi(y)(\sqrt{y}-y)\dif y=\tfrac{2\pi}{15}  \end{aligned}$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{}
+\label{شکل_تکمل_استعمال_چھلا_خول}
+\end{figure}
+
+تفاعل \عددی{y=x^2} اور لکیر \عددی{y=x} کے بیچ خطہ کو مثال بناتے ہوئے شکل \حوالہ{شکل_تکمل_استعمال_چھلا_خول} میں ترکیب چھلا اور ترکیب خول دونوں دکھائے گئے ہیں۔شکل-\حوالہ{شکل_تکمل_استعمال_چھلا_خول}-ا اور ب میں \عددی{y} محور کے گرد خطہ گھمایا گیا ہے جبکہ شکل-ج اور د میں \عددی{x} محور کے گرد خطہ گھمایا گیا ہے۔ دونوں صورتوں میں حجم کو ترکیب چھلا اور ترکیب خول سے حل کیا گیا ہے۔ اس مخصوص خطے کے لئے دونوں محور طواف کے لئے دونوں تراکیب کارآمد ہیں لیکن ایسا ہر صورت میں نہیں ہو گا۔مثال کے طور پر \عددی{y} محور کے گرد گھماتے ہوئے ترکیب چھلا میں ہمیں \عددی{y} کے لحاظ سے تکمل حل کرنا ہو گا۔البتہ عین ممکن ہے کہ متکمل کو \عددی{y} کی صورت میں لکھنا ممکن نہ ہو۔ایسی صورت میں ہمیں ترکیب خول استعمال کرنی ہو گی جو ہمیں \عددی{x} کے لحاظ سے تکمل لینے کی اجازت دیگا۔
+
+ترکیب چھلا اور ترکیب خول سے ہر صورت ایک جیسے حجم حاصل ہوں گے۔
+
+\حصہء{سوالات}
+سوال \حوالہ{سوال_تکمل_استعمال_ترکیب_چھلا_الف} تا سوال \حوالہ{سوال_تکمل_استعمال_ترکیب_چھلا_ث} میں خطے کو دکھائے گئے محور کے گرد گھمایا جاتا ہے۔حاصل جسم طواف کا حجم ترکیب خول سے دریافت کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ترکیب_چھلا_الف}
+خطہ شکل \حوالہ{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_الف} میں دکھایا گیا ہے۔\\
+جواب:\quad
+$6\pi$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ترکیب_چھلا_ب}
+خطہ شکل \حوالہ{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_ب} میں دکھایا گیا ہے۔
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ترکیب_چھلا_پ}
+خطہ شکل \حوالہ{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_پ} میں دکھایا گیا ہے۔\\
+جواب:\quad
+$2\pi$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ترکیب_چھلا_ت}
+خطہ شکل \حوالہ{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_ت} میں دکھایا گیا ہے۔
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ترکیب_چھلا_ٹ}
+خطہ شکل \حوالہ{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_ٹ} میں دکھایا گیا ہے۔\\
+جواب:\quad
+$\tfrac{14\pi}{3}$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ترکیب_چھلا_ث}
+خطہ شکل \حوالہ{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_ث} میں دکھایا گیا ہے۔
+\انتہا{سوال}
+%=======================
+\begin{figure}
+\centering
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\footnotesize,declare function={f(\x)=1+1/4*\x^2;}]
+\pgfmathsetmacro{\c}{1.2}
+\begin{axis}[clip=false,width=4.5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={2},ytick={1},enlargelimits=true,ymin=0]
+\addplot[domain=0:2]{f(x)}node[pos=0.9,above left]{$y=1+\tfrac{x^2}{4}$};
+\draw[gray,thick,-stealth]([shift={(-40:0.2cm and 0.1cm)}]0,2.2) arc (-40:240:0.2cm and 0.1cm);
+\draw(axis cs:2,{f(2)})--(axis cs:2,0);
+\draw[thick](axis cs:\c,{f(\c)})--(axis cs:\c,0);
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\footnotesize,declare function={f(\x)=2-1/4*\x^2;}]
+\pgfmathsetmacro{\c}{1.2}
+\begin{axis}[clip=false,width=4.5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={2},ytick={2},enlargelimits=true,ymin=0,ymax=2.5]
+\addplot[domain=0:2]{f(x)}node[pos=0.5,above right]{$y=2-\tfrac{x^2}{4}$};
+\draw[gray,thick,-stealth]([shift={(-40:0.2cm and 0.1cm)}]0,2.7) arc (-40:240:0.2cm and 0.1cm);
+\draw(axis cs:2,{f(2)})--(axis cs:2,0);
+\draw[thick](axis cs:\c,{f(\c)})--(axis cs:\c,0);
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_ب}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\footnotesize,declare function={f(\x)=\x^2;}]
+\pgfmathsetmacro{\c}{0.75}
+\begin{axis}[clip=false,width=4.5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={2},ytick={1.4142}, yticklabels={$\sqrt{2}$},enlargelimits=true,ymin=0,xmax=2.3]
+\addplot[domain=0:sqrt(2)]({f(x)},{x})node[pos=0.5,below right]{$x=y^2$};
+\draw[gray,thick,-stealth]([shift={(-40:0.1cm and 0.2cm)}]2.3,0) arc (-40:240:0.1cm and 0.2cm);
+\draw[thick](axis cs:{f(\c)},\c)--(axis cs:0,\c);
+\draw[](axis cs:{f(sqrt(2))},{sqrt(2)})--(axis cs:0,{sqrt(2)});
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_پ}
+\end{minipage}
+\end{figure}
+%
+\begin{figure}
+\centering
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\footnotesize,declare function={f(\x)=3-\x^2;}]
+\pgfmathsetmacro{\c}{0.9}
+\pgfmathsetmacro{\ky}{sqrt(3)}
+\begin{axis}[clip=false,width=4.5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={3},ytick={\ky}, yticklabels={$\sqrt{3}$},enlargelimits=true,xmax=3.5]
+\addplot[domain=0:sqrt(3)]({f(x)},{x})node[pos=0.25,left,yshift=-1ex,font=\footnotesize]{$x=3-y^2$};
+\draw[gray,thick,-stealth]([shift={(-40:0.1cm and 0.2cm)}]3.7,0) arc (-40:240:0.1cm and 0.2cm);
+\draw[thick](axis cs:{f(\c)},\c)--(axis cs:3,\c);
+\draw[](axis cs:0,{sqrt(3)})--(axis cs:3,{sqrt(3)})node[pos=0.5,above]{$y=\sqrt{3}$};
+\draw(3,{sqrt(3)})--(3,0);
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_ت}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\footnotesize,declare function={f(\x)=sqrt(\x^2+1);}]
+\pgfmathsetmacro{\k}{sqrt(3)}
+\begin{axis}[clip=false,width=4.5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\k},xticklabels={$\sqrt{3}$}, ytick={1,2},enlargelimits=true,ymin=0]
+\addplot[domain=0:\k]{f(x)}node[pos=0.75,above left]{$y=\sqrt{x^2+1}$};
+\draw(axis cs:\k,{f(\k)})--(axis cs:\k,0)node[pos=0.5,right]{$x=\sqrt{3}$};
+\draw({1/2*sqrt(3)},0.5)node[]{\RL{$y$ محور}};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_ٹ}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\footnotesize,declare function={f(\x)=9*\x/sqrt(\x^3+9);}]
+\begin{axis}[clip=false,width=4.5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={3}, ytick={5},ymax=5.5,enlargelimits=true,ymin=0]
+\addplot[domain=0:3]{f(x)}node[pos=0.95,above left]{$y=\tfrac{9x}{\sqrt{x^3+9}}$};
+\draw(axis cs:3,{f(3)})--(axis cs:3,0);
+\draw(1.5,1.5)node[above]{\RL{$y$ محور}};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_ترکیب_چھلا_ث}
+\end{minipage}
+\end{figure}
+
+سوال \حوالہ{سوال_تکمل_استعمال_ترکیب_خول_سے_تلاش_الف} تا سوال \حوالہ{سوال_تکمل_استعمال_ترکیب_خول_سے_تلاش_ب} میں دیے منحنیات اور لکیروں میں محیط خطے کو \عددی{y} محور کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔ اس جسم کا حجم ترکیب خول سے تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ترکیب_خول_سے_تلاش_الف}
+$y=x,\quad y=-\tfrac{x}{2},\quad x=2$\\
+جواب:\quad
+$8\pi$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$y=2x,\quad y=\tfrac{x}{2},\quad x=1$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$y=x^2,\quad y=2-x,\quad x=0, (x\ge 0)$\\
+جواب:\quad
+$\tfrac{5\pi}{6}$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$y=2-x^2,\quad y=x^2,\quad x=0$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$y=\sqrt{x},\quad y=0,\quad x=4$\\
+جواب:\quad
+$\tfrac{128\pi}{5}$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$y=2x-1,\quad y=\sqrt{x},\quad x=0$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$y=\tfrac{1}{x},\quad y=0,\quad x=\tfrac{1}{2},\quad x=2$\\
+جواب:\quad
+$3\pi$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ترکیب_خول_سے_تلاش_ب}
+$y=\tfrac{3}{2\sqrt{x}},\quad y=0,\quad x=1,\quad x=4$
+\انتہا{سوال}
+%=====================
+سوال \حوالہ{سوال_تکمل_استعمال_محور_طواف_وائے_الف} تا سوال \حوالہ{سوال_تکمل_استعمال_محور_طواف_وائے_ب} میں طواف جسم کا حجم ترکیب خول سے معلوم کریں۔ منحنیات اور لکیروں میں محیط رقبہ کو \عددی{y} محور کے گرد گھمایا گیا ہے۔
+
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_محور_طواف_وائے_الف}
+$x=\sqrt{y},\quad x=-y,\quad y=2$\\
+جواب:\quad
+$\tfrac{16\pi}{15}(3\sqrt{2}+5)$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$x=y^2,\quad x=-y,\quad y=2$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$x=2y-y^2,\quad x=0$\\
+جواب:\quad
+$\tfrac{8\pi}{3}$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$x=2y-y^2,\quad x=y$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$y=\abs{x},\quad y=1$\\
+جواب:\quad
+$\tfrac{4\pi}{3}$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$y=x,\quad y=2x,\quad y=2$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+$y=\sqrt{x},\quad y=0,\quad y=x-2$\\
+جواب:\quad
+$\tfrac{16\pi}{3}$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_محور_طواف_وائے_ب}
+$y=\sqrt{x},\quad y=0,\quad y=2-x$
+\انتہا{سوال}
+%=========================
+
+سوال \حوالہ{سوال_تکمل_استعمال_کئی_محور_الف} اور سوال \حوالہ{سوال_تکمل_استعمال_کئی_محور_ب} میں سایہ دار خطے کو  دیے گئے محور کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔ اس جسم کا حجم ترکیب خول سے معلوم کریں۔ 
+
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_کئی_محور_الف}
+خطے کو شکل \حوالہ{شکل_سوال_تکمل_استعمال_کئی_محور_الف} میں دکھایا گیا ہے۔
+\begin{enumerate}[a.]
+\item
+محور \عددی{x} کے گرد،
+\item
+محور طواف لکیر \عددی{y=1} ہے،
+\item
+محور طواف لکیر \عددی{y=\tfrac{8}{5}} ہے،
+\item
+لکیر \عددی{y=-\tfrac{2}{5}} کے گرد گھمایا جاتا ہے۔
+\end{enumerate}
+جواب:\quad
+(ا) \عددی{\tfrac{6\pi}{5}}، (ب) \عددی{\tfrac{4\pi}{5}}، (ج) \عددی{2\pi}، (د) \عددی{2\pi}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_کئی_محور_ب}
+خطے کو شکل \حوالہ{شکل_سوال_تکمل_استعمال_کئی_محور_ب} میں دکھایا گیا ہے۔
+\begin{enumerate}[a.]
+\item
+محور \عددی{x} کے گرد،
+\item
+محور طواف لکیر \عددی{y=2} ہے،
+\item
+محور طواف لکیر \عددی{y=5} ہے،
+\item
+لکیر \عددی{y=-\tfrac{5}{8}} کے گرد گھمایا جاتا ہے۔
+\end{enumerate}
+\انتہا{سوال}
+%====================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\footnotesize,declare function={f(\x)=12*(\x^2-\x^3);}]
+\begin{axis}[axis on top,clip=false,width=4.5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1},ytick={1},enlargelimits=true]
+\addplot[domain=-0.2:1]({f(x)},x)node[pos=0.75,above]{$x=12(y^2-y^3)$};
+\addplot[name path=fun,domain=0:1,draw=none]({f(x)},x);
+\draw[name path=axis](0,0)--(0,1);
+\addplot[fill=lgray]fill between[of=fun and axis];
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_کئی_محور_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\footnotesize,declare function={f(\x)=1/4*\x^4-1/2*\x^2;g(\x)=1/2*\x^2;}]
+\begin{axis}[axis on top,clip=false,width=4.5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1,2},ytick={2},enlargelimits=true]
+\addplot[name path=funf,domain=0:2]({f(x)},x)node[pos=0.75,above,yshift=0.5ex]{$x=\tfrac{y^4}{4}-\tfrac{y^2}{2}$};
+\addplot[name path=fung,domain=0:2]({g(x)},x)node[pos=0.5,right]{$x=\tfrac{y^2}{2}$};
+\draw[name path=axis](2,0)--(2,2);
+\addplot[fill=lgray]fill between[of=funf and axis];
+\addplot[fill=white]fill between[of=fung and axis];
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_کئی_محور_ب}
+\end{minipage}
+\end{figure}
+
+سوال \حوالہ{سوال_تکمل_استعمال_چھلا_خول_الف} تا سوال \حوالہ{سوال_تکمل_استعمال_چھلا_خول_الف} میں خطوں کو محور طواف کے گرد گھما کر حاصل جسم طواف کا حجم معلوم کریں۔ آپ ترکیب چھلا یا ترکیب خول استعمال کر سکتے ہیں۔
+
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_چھلا_خول_الف}
+تکون جس کے راس \عددی{(1,1)}، \عددی{(1,2)} اور \عددی{(2,2)} ہیں۔ (ا) \عددی{x} محور کے گرد، (ب) \عددی{y} محور کے گرد، (ج) لکیر \عددی{x=\tfrac{10}{3}} کے گرد، اور (د) لکیر \عددی{y=1} کے گرد۔\\
+جواب:\quad
+(ا) \عددی{\tfrac{5\pi}{3}}، (ب) \عددی{\tfrac{4\pi}{3}}، (ج) \عددی{2\pi}، (د) \عددی{\tfrac{2\pi}{3}}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+ربع اول میں منحنی \عددی{x=y-y^3} اور \عددی{y} محور میں محیط خطہ کو (ا) محور \عددی{x}، (ب) لکیر \عددی{y=1} کے گرد گھمایا جاتا ہے 
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+ربع اول میں \عددی{x=y-y^3}، \عددی{x=1} اور \عددی{y=1} میں محیط خطہ کو (ا) محور \عددی{x}، (ب) محور \عددی{y}، (ج) لکیر \عددی{x=1}، اور (د) لکیر \عددی{y=1} کے گرد گھمایا جاتا ہے۔\\
+جواب:\quad
+(ا) \عددی{\tfrac{11\pi}{15}}، (ب) \عددی{\tfrac{97\pi}{105}}، (ج) \عددی{\tfrac{121\pi}{210}}، (د) \عددی{\tfrac{23\pi}{30}}
+\انتہا{سوال}
+%=============================
+\ابتدا{سوال}
+تکونی خطہ جس کے سرحد لکیر \عددی{2y=x+4}، \عددی{y=x}، اور \عددی{x=0} ہیں کو (ا) محور \عددی{x}، (ب) محور \عددی{y}، (ج) لکیر \عددی{x=4}، اور (د) لکیر \عددی{y=8} کے گرد گھمایا جاتا ہے۔
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+ربع اول میں \عددی{y=x^3}، \عددی{y=4x} کے بیچ خطہ کو (ا) محور \عددی{x}، اور (ب) لکیر \عددی{y=8} کے گرد گھمایا جاتا ہے۔\\
+جواب:\quad
+(ا) \عددی{\tfrac{512\pi}{21}}، (ب) \عددی{\tfrac{832\pi}{21}}
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+سرحد \عددی{y=\sqrt{x}} اور \عددی{y=\tfrac{x^2}{8}} میں محیط خطہ کو (ا) محور \عددی{x} اور (ب) محور \عددی{y} کے گرد گھمایا جاتا ہے۔
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+سرحد \عددی{y=2x-x^2} اور \عددی{y=x} میں محیط خطہ کو (ا) محور \عددی{y} اور (ب) لکیر \عددی{x=1} کے گرد گھمایا جاتا ہے۔\\
+جواب:\quad
+(ا) \عددی{\tfrac{\pi}{6}}، (ب) \عددی{\tfrac{\pi}{6}}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+منحنی \عددی{y=\sqrt{x}}، لکیر \عددی{y=2} اور \عددی{x=0} کے بیچ خطہ کو (ا) \عددی{x} محور، (ب) \عددی{y} محور، (ج) لکیر \عددی{x=4}، (د) لکیر \عددی{y=2} کے گرد گھمایا جاتا ہے۔
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+ربع اول میں بالائی جانب منحنی \عددی{y=x^{-1/4}}، بائیں جانب لکیر \عددی{x=\tfrac{1}{16}}، اور نیچے جانب لکیر \عددی{y=1} سے گھیرے گئے خطے کو \عددی{x} محور کے گرد گھما کو جسم طواف پیدا کیا جاتا ہے۔ اس جسم کا حجم (ا) ترکیب چھلا، (ب) ترکیب خول سے معلوم کریں۔\\
+جواب:\quad
+\عددی{\tfrac{9\pi}{16}}
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+ربع اول میں بالائی جانب منحنی \عددی{y=\sqrt{x}}، بائیں جانب لکیر \عددی{x=\tfrac{1}{4}}، اور نیچے جانب لکیر \عددی{y=1} سے گھیرے گئے خطے کو \عددی{y} محور کے گرد گھما کو جسم طواف پیدا کیا جاتا ہے۔ اس جسم کا حجم (ا) ترکیب چھلا، (ب) ترکیب خول سے معلوم کریں۔
+\انتہا{سوال}
+%============================
+\begin{figure}
+\centering
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny,declare function={f(\x)=sin(deg(\x))/(\x);}]
+\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={3.124},xticklabels={$\pi$},ytick={1},enlargelimits=true]
+\addplot[domain=0.1:pi]{f(x)};
+\draw(0.5,1)node[above right]{$\begin{aligned}y=\begin{cases}\tfrac{\sin x}{x},&0<x\le \pi\\ 1&x=0 \end{cases} \end{aligned}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_خطہ_تراکیب_مختلف_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny,declare function={f(\x)=(tan(deg(\x)))^2/(\x);}]
+\pgfmathsetmacro{\k}{pi/4}
+\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\k}, xticklabels={$\tfrac{\pi}{4}$}, ytick={\k},yticklabels={$\tfrac{\pi}{4}$},enlargelimits=true]
+\addplot[domain=0:pi/4]{f(x)};
+\draw({pi/4},{f(pi/4)})--({pi/4},0);
+\draw(0,\k)node[above right,yshift={1ex}]{$\begin{aligned}y=\begin{cases}\tfrac{\tan^2 x}{x},&0<x\le \tfrac{\pi}{4}\\ 0&x=0 \end{cases} \end{aligned}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_خطہ_تراکیب_مختلف_ب}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt((\x+2)/3);g(\x)=sqrt(\x);}]
+\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-2,1}, ytick={1},enlargelimits=true]
+\addplot[domain=-2:-1.5]{f(x)};
+\addplot[domain=-1.5:1]{f(x)}node[pos=0.35,above left]{$x=3y^2-2$};
+\addplot[domain=0:1]{g(x)}node[pos=0.5,below right]{$x=y^2$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_خطہ_تراکیب_مختلف_ج}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny,declare function={f(\x)=\x^2;g(\x)=-\x^4;}]
+\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty}, ytick={-1,1},enlargelimits=true]
+\addplot[domain=0:1]{f(x)}node[pos=0.5,above left]{$y=x^2$};
+\addplot[domain=0:1]{g(x)}node[pos=0.5,below left]{$y=-x^4$};
+\draw(1,{f(1)})--(1,{g(1)});
+\draw(1,0)node[below left]{$1$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_خطہ_تراکیب_مختلف_د}
+\end{minipage}
+\end{figure}
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_خطہ_تراکیب_مختلف_الف}
+درج ذیل تفاعل فرض کریں (شکل \حوالہ{شکل_سوال_تکمل_استعمال_خطہ_تراکیب_مختلف_الف})۔
+\begin{align*}
+f(x)&=\begin{cases}
+\frac{\sin x}{x},& 0<x\le \pi\\
+1,& x=0
+\end{cases}
+\end{align*}
+\begin{enumerate}[a.]
+\item
+دکھائیں کہ \عددی{xf(x)=\sin x,\,0\le x\le \pi} ہو گا۔
+\item
+اس تفاعل کو \عددی{y} محور کے گرد گھمانے سے حاصل جسم طواف کا حجم تلاش کریں۔
+\end{enumerate}
+جواب:\quad
+(ب) \عددی{4\pi}
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_خطہ_تراکیب_مختلف_ب}
+درج ذیل تفاعل فرض کریں (شکل \حوالہ{شکل_سوال_تکمل_استعمال_خطہ_تراکیب_مختلف_ب})۔
+\begin{align*}
+G(x)&=\begin{cases}
+\frac{\tan^2 x}{x},& 0<x\le \frac{\pi}{4}\\
+0,\& x=0
+\end{cases}
+\end{align*}
+\begin{enumerate}[a.]
+\item
+دکھائیں کہ \عددی{xf(x)=\tan x,\,0\le x\le \tfrac{\pi}{4}} ہو گا۔
+\item
+اس تفاعل کو \عددی{y} محور کے گرد گھمانے سے حاصل جسم طواف کا حجم تلاش کریں۔
+\end{enumerate}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_خطہ_تراکیب_مختلف_ج}
+محور \عددی{x} کے گرد شکل \حوالہ{شکل_سوال_تکمل_استعمال_خطہ_تراکیب_مختلف_ج} میں دکھایا گیا خطہ گھما کر جسم طواف پیدا کیا جاتا ہے۔ کس ترکیب (قرص، چھلا، خول) کو استعمال کرتے ہوئے جسم طواف کا حجم تلاش کیا جا سکتا ہے؟ ہر ترکیب میں کتنے تکمل حل کرنے ہوں گے؟
+ اپنے جواب کی وجہ پیش کریں۔\\
+جواب:\quad
+قرص: دو تکمل؛ چھلا: دو تکمل؛ خول: ایک تکمل
+\انتہا{سوال}
+%=============================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_خطہ_تراکیب_مختلف_د}
+محور \عددی{y} کے گرد شکل \حوالہ{شکل_سوال_تکمل_استعمال_خطہ_تراکیب_مختلف_د} میں دکھایا گیا خطہ گھما کر جسم طواف پیدا کیا جاتا ہے۔ کس ترکیب (قرص، چھلا، خول) کو استعمال کرتے ہوئے جسم طواف کا حجم تلاش کیا جا سکتا ہے؟ ہر ترکیب میں کتنے تکمل حل کرنے ہوں گے؟ اپنے جواب کی وجہ پیش کریں۔
+\انتہا{سوال}
+%=============================
+\ابتدا{سوال}
+فرض کریں وقفہ \عددی{x\ge 0} پر  تفاعل \عددی{f(x)} غیر منفی اور استمراری ہے۔ منحنی \عددی{f}، لکیر \عددی{x=b} اور کارتیسی محدد کے بیچ خطہ کو \عددی{y} محور کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے جہاں \عددی{b} کوئی مثبت عدد ہے۔ اس جسم طواف کا حجم \عددی{2\pi b^3} ہے۔تفاعل \عددی{f(x)} دریافت کریں۔\\
+جواب:\quad
+$3x$
+\انتہا{سوال}
+%==========================
+
+
+\حصہ{مستوی منحنیات کی لمبائیاں}
+نقشہ پر سڑک کی لمبائی جاننے کی خاطر ہم فیتہ استعمال کرتے ہوئے نقشہ پر سڑک کی منحنی پر قریب قریب نقطوں کے مابین قطعات کو سیدھا تصور کرتے ہوئے ان کی لمبائیوں کا مجموعہ لیتے ہیں۔ اس طرح اندازاً لمبائی کی درستگی کی حد قطعات کی تعداد اور ناپنے کی درستگی پر منحصر ہو گی۔ 
+
+احصاء کو استعمال کرتے ہوئے ہم نقطوں کو قریب سے قریب رکھ کر بہتر نتائج حاصل کرتے ہیں۔ ان نقطوں کو سیدھے قطعات سے  جوڑ کر کثیر الاضلاع حاصل ہو گا۔ زیادہ سے زیادہ قطعات لینے سے کثیر الاضلاع کی لمبائی،  اصل منحنی کی لمبائی کے زیادہ قریب ہو گی۔کثیر الاضلاع کی لمبائی کی حد کو تکمل سے حاصل کیا جا سکتا ہے۔
+
+\جزوحصہء{بنیادی کلیہ}
+فرض کریں ہم \عددی{x=a} سے \عددی{x=b} تک منحنی \عددی{y=f(x)} کی لمبائی جاننا چاہتے ہیں۔ہم \عددی{[a,b]} کی خانہ بندی عام طریقہ سے کر کے منحنی پر مطابقتی نقطوں کو سیدھے قطعات سے جوڑ کر کثیر الاضلاع بناتے ہیں جو اصل منحنی کو تخمیناً ظاہر کرتا ہے (شکل \حوالہ{شکل_تکمل_استعمال_کثیر-الاضلاع})۔ اگر ہم کثیر الاضلاع کی لمبائی کا کلیہ تلاش کر سکیں ہم اسی کلیہ کو منحنی کی لمبائی کے لئے استعمال کر سکتے ہیں۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=0.25+\x*(\x-1)*(\x-1.5);}]
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={0.2,0.4,0.7,0.9,1.3,1.6},xticklabels={$a$,,,$x_{k-1}$,$x_k$,$b$},ytick={\empty},ymin=0]
+\addplot[domain=0.2:1.6,smooth]{f(x)}node[pos=0,left]{$A$}node[pos=1,right]{$B$}node[pos=0.25,above right]{$y=f(x)$};
+\draw(0.2,{f(0.2)})--(0.4,{f(0.4)})--(0.7,{f(0.7)})--(0.9,{f(0.9)})--(1.3,{f(1.3)})--(1.6,{f(1.6)});
+\draw[dashed](0.9,{f(0.9)})node[left,xshift={-1ex}]{$P$}--(0.9,{f(1.3)})node[pos=0.6,left]{$\Delta y_k$}--(1.3,{f(1.3)})node[pos=0.4,below]{$\Delta x_x$}node[below right]{$Q$};
+\draw($(0.9,{f(0.9)})!0.5!(1.3,{f(1.3)})$)node[pin={[font=\footnotesize,xshift={1ex},yshift={1ex}]90:{$\sqrt{(\Delta x_k)^2+(\Delta y_k)^2}$}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{منحنی $AB$ کے قطع $PQ$ کی لمبائی $\sqrt{\Delta x^2+\Delta y^2}$ ہو گی۔}
+\label{شکل_تکمل_استعمال_کثیر-الاضلاع}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=0.25+\x*(\x-1)*(\x-1.5);}]
+\pgfmathsetmacro{\c}{1.15}
+\pgfmathsetmacro{\m}{(f(0.9)-f(1.3))/(0.9-1.3)}
+\pgfmathsetmacro{\yc}{f(0.9)+\m*(\c-0.9)}
+\pgfmathsetmacro{\dy}{\yc-f(\c)}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={0.9,1.3,\c},xticklabels={$x_{k-1}$,$x_k$,$c_k$},ytick={\empty},ymin=0,axis y line=none]
+\addplot[domain=0.85:1.4,smooth]{f(x)}node[pos=1,above,xshift={2ex}]{$y=f(x)$};
+\draw(0.9,{f(0.9)})node[above]{$P$}--(1.3,{f(1.3)})node[above]{$Q$};
+\draw($(0.9,{f(0.9)})!0.5!(1.3,{f(1.3)})$);
+\draw[dashed](0.9,{f(0.9)})--(0.9,0)  (1.3,{f(1.3)})--(1.3,0) (\c,{f(\c)})--(\c,0);
+\draw(0.9,{f(0.9)-\dy})coordinate(kL)  (1.3,{f(1.3)-\dy})coordinate(kR);
+\draw[shorten <=-0.5cm,shorten >=-0.5cm](kL)--(kR)node[pos=0.25,sloped,below]{مماس};
+\draw(\c,{f(\c)})node[pin={[font=\small,pin distance=0.25cm]-135:{$(c_k,f(c_k))$}}]{};
+\draw[stealth-stealth](0.9,-4ex)--(1.3,-4ex)node[pos=0.5,below]{$\Delta x_k$};
+\draw(0.9,-3ex)--(0.9,-5ex)  (1.3,-3ex)--(1.3,-5ex);
+\end{axis}
+\end{tikzpicture}
+\caption{نقطہ $(c_k,f(c_k))$ پر ماس اور قطع متوازی ہیں۔}
+\label{شکل_تکمل_استعمال_قطع_کثیر-الاضلاع}
+\end{minipage}
+\end{figure} 
+
+علامتی قطع \عددی{PQ} کی لمبائی \عددی{\sqrt{(\Delta x_k)^2+(\Delta y_k)^2}} ہو گی (شکل \حوالہ{شکل_تکمل_استعمال_کثیر-الاضلاع})۔ یوں منحنی کی لمبائی تخمیناً درج ذیل  مجموعہ ہو گا۔
+\begin{align}\label{مساوات_تکمل_استعمال_لمبائی_قوس_الف}
+\sum_{k=1}^n \sqrt{(\Delta x_k)^2+(\Delta y_k)^2}
+\end{align}
+وقفہ \عددی{[a,b]} کی خانہ بندی باریک کرنے  سے حاصل مجموعہ تخمیناً زیادہ بہتر ہو گا۔ ہم دکھانا چاہیں گے کہ خانہ بندی کا معیار صفر تک پہنچانے سے مساوات \حوالہ{مساوات_تکمل_استعمال_لمبائی_قوس_الف} کا مجموعہ قابل معلوم حد دیگا۔ ایسا کرنے کی خاطر ہم مساوات \حوالہ{مساوات_تکمل_استعمال_لمبائی_قوس_الف} کو ایسی روپ میں لکھتے ہیں کہ اس پر مسئلہ \حوالہ{مسئلہ_تکمل_قطعی_تکمل_کی_موجودگی} (صفحہ \حوالہصفحہ{مسئلہ_تکمل_قطعی_تکمل_کی_موجودگی}) کا اطلاق ممکن ہو۔ ہم تفرق کے مسئلہ اوسط قیمت سے شروع کرتے ہیں۔ 
+
+\ابتدا{تعریف}
+ایسا تفاعل جس کا پہلا تفرق استمراری ہو \اصطلاح{ہموار}\فرہنگ{ہموار!منحنی}\حاشیہب{smooth}\فرہنگ{smooth!curve} کہلاتا ہے اور اس کی منحنی کو \اصطلاح{ہموار منحنی}\فرہنگ{ہموار!منحنی}\حاشیہب{smooth curve}\فرہنگ{smooth!curve} کہتے ہیں۔
+\انتہا{تعریف}
+
+اگر \عددی{f} ہموار ہو تب مسئلہ اوسط قیمت کے تحت \عددی{P} اور \عددی{Q} کے بیچ منحنی پر ایک ایسا نقطہ \عددی{(c_k,f(c_k))} پایا جائے گا جہاں منحنی کا مماس قطع \عددی{PQ} کا متوازی ہو گا (شکل \حوالہ{شکل_تکمل_استعمال_قطع_کثیر-الاضلاع})۔ اس نقطہ پر درج ذیل ہو گا۔
+\begin{align*}
+f'(c_k)=\frac{\Delta y_k}{\Delta x_k},\quad \implies \Delta y_k=f'(c_k)\Delta x_k
+\end{align*}
+
+مساوات \حوالہ{مساوات_تکمل_استعمال_لمبائی_قوس_الف} میں \عددی{\Delta y_k} کی اس قیمت کو پر کرنے سے درج ذیل روپ ملتا ہے۔
+\begin{align*}
+\sum_{k=1}^n \sqrt{(\Delta x_k)^2+(f'(c_k)\Delta x_k)^2}&=\sum_{k=1}^n\sqrt{1+(f'(c_k))^2}\Delta x_k&&\text{\RL{ریمان مجموعہ}}
+\end{align*}
+چونکہ \عددی{[a,b]} پر \عددی{\sqrt{1+(f'(x))^2}} استمراری ہے لہٰذا خانہ بندی کا معیار صفر  کے قریب تر کرنے سے دائیں ہاتھ مجموعے کا حد 
+\عددی{\int_a^b\sqrt{a+(f'(x))^2}\dif x} ہو گا۔ منحنی کی لمبائی کی تعریف اس قطعی تکمل کی قیمت ہے۔
+
+\ابتدا{تعریف}
+اگر \عددی{[a,b]} پر \عددی{f}ہموار ہو تب \عددی{a} سے \عددی{b} تک منحنی \عددی{y=f(x)}کی لمبائی درج ذیل ہو گی۔
+\begin{align}\label{مساوات_تکمل_استعمال_لمبائی_قوس_ب}
+L=\int_a^b\sqrt{1+\big(\frac{\dif y}{\dif x}\big)^2}\dif x=\int_a^b\sqrt{1+(f'(x))^2}\dif x
+\end{align}
+\انتہا{تعریف}
+
+
+\ابتدا{مثال}
+درج ذیل منحنی کی لمبائی تلاش کریں۔
+\begin{align*}
+y=\frac{4\sqrt{2}}{3}x^{3/2}-1,\quad 0\le x\le 1
+\end{align*}
+حل:\quad
+ہم \عددی{a=0}، \عددی{b=1} اور
+\begin{align*}
+y&=\frac{4\sqrt{2}}{3}x^{3/2}-1\\
+\frac{\dif y}{\dif x}&=\frac{4\sqrt{2}}{3}\cdot \frac{3}{2}x^{1/2}=2\sqrt{2}x^{1/2}\\
+\big(\frac{\dif y}{\dif x}\big)^2&=\big(2\sqrt{2}x^{1/2}\big)^2=8x
+\end{align*}
+ لیتے ہوئے مساوات \حوالہ{مساوات_تکمل_استعمال_لمبائی_قوس_ب} استعمال کرتے ہیں۔
+\begin{align*}
+L&=\int_0^1\sqrt{1+\big(\frac{\dif y}{\dif x}\big)^2}=\int_0^1\sqrt{1+8x}\dif x\\
+&=\left.\frac{2}{3}\cdot\frac{1}{8}(1+8x)^{3/2}\right]_0^1=\frac{13}{6}
+\end{align*}
+\انتہا{مثال}
+%=======================
+
+\جزوحصہء{تفرق \عددی{\frac{\dif y}{\dif x}} میں عدم استمرار}
+کبھی کبھار منحنی پر \عددی{\frac{\dif y}{\dif x}} غیر موجود لیکن \عددی{\frac{\dif x}{\dif y}} موجود ہو گا اور ہم \عددی{x} کو \عددی{y} کا تفاعل لکھ کر منحنی کی لمبائی مساوات \حوالہ{مساوات_تکمل_استعمال_لمبائی_قوس_ب} کی درج ذیل مشابہ سے حاصل کر پاتے ہیں۔
+
+\موٹا{منحنی \عددی{x=g(y),\, c\le y\le d} کی لمبائی کا کلیہ:}
+\begin{align}\label{مساوات_تکمل_استعمال_لمبائی_قوس_پ}
+L=\int_c^d\sqrt{1+\big(\frac{\dif x}{\dif y}\big)^2}\dif y=\int_c^d\sqrt{1+(g'(y))^2}\dif y
+\end{align}
+
+\ابتدا{مثال}\شناخت{مثال_تکمل_استعمال_مماس_غیر_معین}
+منحنی \عددی{y=(\tfrac{x}{2})^{2/3}} کی لمبائی \عددی{x=0} تا \عددی{x=2} معلوم کریں۔
+
+حل:\quad
+منحنی کا تفرق
+\begin{align*}
+\frac{\dif y}{\dif x}=\frac{2}{3}\big(\frac{x}{2}\big)^{-1/3}\big(\frac{1}{2}\big)=\frac{1}{3}\big(\frac{2}{x}\big)^{1/3}
+\end{align*}
+نقطہ \عددی{x=0} پر غیر معین یعنی غیر موجود ہے لہٰذا منحنی کی لمبائی حاصل کرنے کے لئے  مساوات \حوالہ{مساوات_تکمل_استعمال_لمبائی_قوس_ب} نا قابل استعمال ہے۔
+
+ہمیں \عددی{x} کو \عددی{y} کی صورت میں لکھنا ہو گا (شکل \حوالہ{شکل_مثال_تکمل_استعمال_مماس_غیر_معین}):
+\begin{align*}
+y&=\big(\frac{x}{2}\big)^{2/3}\\
+y^{3/2}&=\frac{x}{2}\\
+x&=2y^{3/2}
+\end{align*}
+یوں ہم دیکھتے ہیں کہ درکار منحنی کو تفاعل \عددی{x=2y^{3/2}} سے بھی ظاہر کیا جا سکتا ہے جہاں منحنی کے سر \عددی{y=0} اور \عددی{y=1} پر ہوں گے۔
+
+اس کا تفرق
+\begin{align*}
+\frac{\dif x}{\dif y}&=2\big(\frac{3}{2}\big)y^{1/2}=3y^{1/2}
+\end{align*}
+وقفہ \عددی{[0,1]} پر استمراری ہے لہٰذا منحنی کی لمبائی کی خاطر مساوات \حوالہ{مساوات_تکمل_استعمال_لمبائی_قوس_پ} قابل استعمال کیا جا سکتا ہے۔
+\begin{align*}
+L&=\int_c^d\sqrt{1+\big(\frac{\dif x}{\dif y}\big)^2}\dif y=\int_0^1\sqrt{1+9y}\dif y\\
+&=\left.\frac{1}{9}\cdot\frac{2}{3}(1+9y)^{3/2}\right]_0^1\\
+&=\frac{2}{27}(10\sqrt{10}-1)\approx 2.27
+\end{align*}
+\انتہا{مثال}
+%===============================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=(\x/2)^(2/3);}]
+\begin{axis}[clip=false,small,axis lines=middle, xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1,2},ytick={1},enlargelimits=true]
+\addplot[domain=0:0.5]{f(x)};
+\addplot[domain=0.5:2]{f(x)}node[pos=0.7,above left]{$\begin{aligned}y&=\big(\frac{x}{2}\big)^{2/3}\\ 0&\le x\le 2  \end{aligned}$}node[pos=0.2, below right]{$\begin{aligned}x&=2y^{3/2}\\ 0&\le y\le 1  \end{aligned}$}node[pos=1,circ]{}node[pos=1,right]{$(2,1)$};
+\end{axis}
+\end{tikzpicture}
+\caption{منحنی برائے مثال \حوالہ{مثال_تکمل_استعمال_مماس_غیر_معین}}
+\label{شکل_مثال_تکمل_استعمال_مماس_غیر_معین}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=\x^2;}]
+\begin{axis}[clip=false,small,axis lines=middle, xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits=true,xmin=0,ymin=0]
+\addplot[domain=0.5:2]{f(x)};
+\draw(1,{f(1)})--(1.75,{f(1.75)})node[pos=0.5,above left]{$\dif s$}--(1.75,{f(1)})node[pos=0.5,right]{$\Delta y$}--(1,{f(1)})node[pos=0.5,below]{$\Delta x$};
+\end{axis}
+\end{tikzpicture}
+\caption{تعلق $\dif s=\sqrt{\dif x^2+\dif y^2}$ کا حصول۔}
+\label{شکل_مثال_تکمل_فیثا_غورث}
+\end{minipage}
+\end{figure}
+
+\جزوحصہء{مختصر تفریقی کلیہ}
+لمبائی معلوم کرنے کی مساوات
+\begin{align}\label{مساوات_تکمل_استعمال_لمبائی_قوس_ت}
+L=\int_a^b\sqrt{1+\big(\frac{\dif  y}{\dif x}\big)^2}\dif x, \quad L=\int_c^d\sqrt{1+\big(\frac{\dif x}{\dif y}\big)^2}\dif y
+\end{align} 
+کو عموماً تفرقی روپ کی بجائے تفریقی روپ میں لکھا جاتا ہے۔ ایسا با ضابطہ طور پر کرنے کے لئے  تفرق کو تفریقوں کا حاصل تقسیم تصور کریں۔یوں پہلے تکمل میں درج ذیل لکھا جا سکتا ہے۔
+\begin{align*}
+\sqrt{1+\big(\frac{\dif y}{\dif x}\big)^2}\dif x=\sqrt{1+\frac{\dif y^2}{\dif x^2}}\dif x=\sqrt{\dif x^2+\frac{\dif y^2}{\dif x^2}\dif x^2}=\sqrt{\dif x^2+\dif y^2}
+\end{align*}
+دوسرے تکمل میں درج ذیل لکھا جا سکتا ہے۔
+\begin{align*}
+\sqrt{1+\big(\frac{\dif x}{\dif y}\big)^2}\dif y=\sqrt{1+\frac{\dif x^2}{\dif y^2}}\dif y=\sqrt{\dif y^2+\frac{\dif x^2}{\dif y^2}\dif y^2}=\sqrt{\dif x^2+\dif y^2}
+\end{align*} 
+اس طرح مساوات \حوالہ{مساوات_تکمل_استعمال_لمبائی_قوس_ت} میں دیے دونوں تکمل درج ذیل ایک تفریقی کلیہ کی صورت اختیار کرتے ہیں۔
+\begin{align}\label{مساوات_تکمل_استعمال_لمبائی_قوس_ٹ}
+L=\sqrt{\dif x^2+\dif y^2}
+\end{align} 
+ظاہر ہے کہ \عددی{\dif x} اور \عددی{\dif y} کو ایک جیسا متغیر کی صورت میں لکھنا ضروری ہے اور مساوات \حوالہ{مساوات_تکمل_استعمال_لمبائی_قوس_ٹ} میں دیا تکمل حل کرنے کے لئے تکمل کے موزوں حد بھی جاننا ضروری ہیں۔
+
+ہم مساوات \حوالہ{مساوات_تکمل_استعمال_لمبائی_قوس_ٹ} کو مزید چھوٹا کر سکتے ہیں۔\عددی{\dif x^2} اور \عددی{\dif y^2} کو ایک چھوٹے مثلث کے اضلاع تصور کریں۔مسئلہ فیثا غورث سے اس مثلث کا وتر \عددی{\dif s=\sqrt{\dif x^2+\dif y^2}} ہو گا (شکل \حوالہ{شکل_مثال_تکمل_فیثا_غورث})۔ تفریق \عددی{\dif s} کو اب قوس کی تفریقی لمبائی تصور کیا جا سکتا ہے جس کا موزوں حدود کے بیچ تکمل لے کر قوس کی لمبائی دریافت کی جا سکتی ہے۔  مساوات \حوالہ{مساوات_تکمل_استعمال_لمبائی_قوس_ٹ} میں \عددی{\sqrt{\dif x^2+\dif y^2}} کو \عددی{\dif s} لکھنے سے مساوات کو \عددی{\dif s} کا تکمل لکھا جا سکتا ہے۔
+
+\ابتدا{تعریف}
+تفریقی لمبائی قوس اور لمبائی قوس کا تفریقی کلیہ درج ذیل ہیں۔
+\begin{align*}
+\dif s&=\sqrt{\dif x^2+\dif y^2}&&\text{\RL{تفریقی لمبائی قوس}}\\
+L&=\int \dif s&&\text{\RL{لمبائی قوس کا تفریقی کلیہ}}
+\end{align*}
+\انتہا{تعریف}
+
+\جزوحصہء{لا متناہی لمبائی کے قوسین}\شناخت{حصہ_تکمل_استعمال_برف_کی_روئی}
+برف کی روئی پر صفحہ \حوالہصفحہ{حصہ_تفرق_برف_کی_روئی} پر غور کیا گیا۔ لامتناہی تکونی کثیر الاضلاع کی ترتیب \عددی{C_1,\, C_2,\,\cdots,C_n,\,\cdots} کی تحدیدی صورت کو برف کی روئی \عددی{K} کہتے ہیں۔  شکل \حوالہ{شکل_تکمل_استعمال_روئی_برف} میں اس ترتیب کی پہلی تین صورتیں دکھائی گئی ہیں۔ بناوٹ کے دوران ہر نیا متعارف کردہ راس بعد کے تمام منحنیات میں بطور راس پایا جاتا ہے اور تحدیدی منحنی \عددی{K} میں بطور نقطہ نظر آتا ہے۔ یوں ہر منحنی  \عددی{C} از خود منحنی \عددی{K} کی تخمینی صورت ہو گی۔ یوں \عددی{K} کی لمبائی منحنیات \عددی{C_n} کی تحدیدی لمبائی کے برابر ہو گی۔ ہموار منحنیات کی لمبائی کی تعریف کے تحت کم از کم ایسا ہی ہونا چاہیے۔ 
+\begin{figure}
+\centering
+\begin{subfigure}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\s}{2}
+\pgfmathsetmacro{\a}{120}
+\draw(0,0)
+\foreach \n in {0,1,2}{--++(\n*\a:\s)};
+\end{tikzpicture}
+\caption{منحنی $C_1$}
+\end{subfigure}\hfill
+\begin{subfigure}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\s}{2/3}
+\pgfmathsetmacro{\a}{120}
+\pgfmathsetmacro{\b}{60}
+\draw(0,0)
+\foreach \n in {0,1,2}{--++(\n*\a:\s)--++(\n*\a-\b:\s)--++(\n*\a+\b:\s)--++(\n*\a:\s)};
+\end{tikzpicture}
+\caption{منحنی $C_2$}
+\end{subfigure}\hfill
+\begin{subfigure}{0.22\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\s}{2/9}
+\pgfmathsetmacro{\a}{120}
+\pgfmathsetmacro{\b}{60}
+\pgfmathsetmacro{\n}{0}
+\draw(0,0)
+\foreach \n in {0,1,2}{--++(\n*\a:\s)--++(\n*\a-\b:\s)--++(\n*\a+\b:\s)--++(\n*\a:\s)--++(\n*\a-\b:\s)--++(\n*\a-2*\b:\s)--++(\n*\a:\s)--++(\n*\a-\b:\s)
+--++(\n*\a-\b+\a:\s)--++(\n*\a-2*\b+\a:\s)--++(\n*\a-2*\b+\a+\a:\s)--++(\n*\a-\b+\a:\s)--++(\n*\a:\s)--++(\n*\a-\b:\s)--++(\n*\a+\b:\s)--++(\n*\a:\s)};
+\end{tikzpicture}
+\caption{منحنی $C_3$}
+\end{subfigure}
+\caption{برف کی روئی۔}
+\label{شکل_تکمل_استعمال_روئی_برف}
+\end{figure}
+
+آئیں \عددی{C_n} کی تحدیدی لمبائی تلاش کریں۔ اگر ابتدائی مثلث الاضلاع کے ضلع کی لمبائی \عددی{1} ہو تب \عددی{C_1} کی کل لمبائی \عددی{3} ہو گی۔\عددی{C_1} سے \عددی{C_2} حاصل کرتے ہوئے ہم \عددی{C_1} کے ہر ضلع کی جگہ چار اضلاع بناتے ہیں جہاں ہر ضلع ابتدائی ضلع کا \عددی{\tfrac{1}{3}} واں حصہ ہے۔یوں \عددی{C_2} کی کل لمبائی \عددی{3\times 4\times \tfrac{1}{3}=3(\tfrac{4}{3})} ہو گی۔ اسی طرح \عددی{C_3} کی لمبائی حاصل کرنے کی خاطر ہمیں \عددی{C_2} کی لمبائی کو \عددی{\tfrac{4}{3}} سے ضرب دینا ہو گا۔یہی عمل دہراتے ہوئے \عددی{C_n} کی کل لمبائی \عددی{3(\tfrac{4}{3})^{n-1}} حاصل ہوتی ہے۔  ان نتائج کو یہاں پیش کرتے ہیں۔
+\begin{align*}
+\renewcommand{\arraystretch}{1.5} 
+\begin{array}{c|cccccc}
+\text{\RL{شمار منحنی}}&1&2&3&\cdots&n&\cdots\\
+\text{\RL{کل لمبائی}}&3&3(\tfrac{4}{3})&3(\tfrac{4}{3})^2&\cdots&3(\tfrac{4}{3})^{n-1}&\cdots
+\end{array}
+\end{align*}
+منحنی \عددی{C_{10}} کی لمبائی تقریباً \عددی{40} ہے جبکہ \عددی{C_{100}} کی لمبائی \عددی{\num{7000000000000}} سے زیادہ ہے۔ لمبائی اتنی تیزی سے بڑھتی ہے کہ اس کی تحدیدی قیمت متناہی نہیں ہو سکتی ہے۔ یوں برف کی روئی کی لمبائی نہیں پائی جاتی ہے، یعنی، اس کی لمبائی لامتناہی ہے۔
+
+لمبائی کی تعریف ہموار منحنیات کے لئے پیش کی گئی تھی جن کا ہر نقطہ پر مماس استمراری مڑتا ہے۔ برف کی روئی اتنی نا ہموار ہے کہ لمبائی کا کلیے کا اس پر اطلاق کرنا ممکن نہیں ہے۔
+
+بنوا منڈلبرا کا نظریہ \اصطلاح{گنج غیر ہموار منحنیات}\فرہنگ{گنج غیر ہموار منحنیات}\حاشیہب{fractals}\فرہنگ{fractals} ایسے متعدد منحنیات پیش کرتا ہے جن کی لمبائی لامتناہی ہے۔ایسی منحنیات کو بڑا کر کے دیکھنے سے  یہ اتنی ہی غیر ہموار نظر آتی ہیں جتنی بغیر بڑا کئے نظر آتی ہیں۔ سمندر کے ساحل کی طرح، ان منحنیات کو بڑا کر کے ہموار نہیں بنایا جا سکتا ہے۔
+
+\حصہء{سوالات}
+\موٹا{لمبائی قوس کے تکمل کا حصول}\\
+سوال \حوالہ{سوال_تکمل_استعمال_اعدادی_حل_الف} تا سوال \حوالہ{سوال_تکمل_استعمال_اعدادی_حل_ب} میں
+\begin{enumerate}[a.]
+\item
+لمبائی قوس کا تکمل لکھیں۔
+\item
+منحنی ترسیم کر کے دیکھیں کیسی لگتی ہے۔
+\item
+کمپیوٹر کی مدد سے تکمل کو اعدادی طریقہ سے حل کریں۔
+\end{enumerate}
+
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_اعدادی_حل_الف}
+$y=x^2,\quad -1\le x\le 2$\\
+جواب:\quad
+(ا) \عددی{\int_{-1}^2\sqrt{1+4x^2}\dif x}،  (ج) \عددی{\approx 6.13}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$y=\tan x,\quad -\tfrac{\pi}{3}\le x\le 0$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$x=\sin y,\quad 0\le y\le \pi$\\
+جواب:\quad
+(ا) \عددی{\int_0^{\pi}\sqrt{1+\cos^2y}\dif y}، (ج) \عددی{\approx 3.82}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$x=\sqrt{1-y^2},\quad -\tfrac{1}{2}\le y\le \tfrac{1}{2}$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$y^2+2y=2x+1$
+\quad\quad
+نقطہ \عددی{(-1,-1)} سے \عددی{(7,3)} تک۔\\
+جواب:\quad
+(ا) \عددی{\int_{-1}^3\sqrt{1+(y+1)^2}\dif y}، (ج) \عددی{\approx 9.29}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$y=\sin x-x\cos x,\quad 0\le x\le \pi$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$y=\int_0^x \tan t\dif t,\quad 0\le x\le \tfrac{\pi}{6}$\\
+جواب:\quad
+(ا) \عددی{\int_0^{\pi/6}\sec x\dif x}، (ج) \عددی{\approx 0.55}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_اعدادی_حل_ب}
+$x=\int_0^y\sqrt{\sec^2t-1}\dif t,\quad -\tfrac{\pi}{3}\le y\le \tfrac{\pi}{4}$
+\انتہا{سوال}
+%=======================
+\موٹا{لمبائی قوس کا حصول}\\
+سوال \حوالہ{سوال_تکمل_استعمال_لمبائی_الف} تا سوال \حوالہ{سوال_تکمل_استعمال_لمبائی_ب} میں قوس کی لمبائی تلاش کریں۔ بہتر ہو گا کہ منحنیات کو ترسیم کر کے دیکھیں۔
+
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_لمبائی_الف}
+\عددی{x=0} سے \عددی{x=3} تک،
+$y=\tfrac{1}{3}(x^2+2)^{3/2}\quad$\\
+جواب:\quad
+$12$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+\عددی{x=0} سے \عددی{x=4}تک،
+$y=x^{3/2}\quad$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+\عددی{y=1} سے \عددی{y=3} تک،
+$\quad x=\tfrac{y^3}{3}+\tfrac{1}{4y}\quad$
+  (اشارہ۔ \عددی{1+(\tfrac{\dif x}{\dif y})^2} مکمل مربع ہے۔)\\
+جواب:\quad
+$\tfrac{53}{6}$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+\عددی{y=1} سے \عددی{y=9} تک،
+$\quad x=\tfrac{y^{3/2}}{3}-y^{1/2}\quad$
+(اشارہ۔ \عددی{1+(\tfrac{\dif x}{\dif y})^2} مکمل مربع ہے۔)
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+\عددی{y=1} سے \عددی{y=2} تک،
+$\quad x=\tfrac{y^4}{4}+\tfrac{1}{8y^2}\quad$
+(اشارہ۔ \عددی{1+(\tfrac{\dif x}{\dif y})^2} مکمل مربع ہے۔)\\
+جواب:\quad
+$\tfrac{123}{32}$
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+\عددی{y=2} سے \عددی{y=3} تک،
+$\quad x=\tfrac{y^3}{6}+\tfrac{1}{2y}\quad$
+(اشارہ۔ \عددی{1+(\tfrac{\dif x}{\dif y})^2} مکمل مربع ہے۔)
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+$y=\tfrac{3}{4}x^{4/3}-\tfrac{3}{8}x^{2/3}+5,\quad 1\le x\le 8$\\
+جواب:\quad
+$\tfrac{99}{8}$
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+$y=\tfrac{x^3}{3}+x^2+x+\tfrac{1}{4x+4},\quad 0\le x\le 2$
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+$x=\int_0^y\sqrt{\sec^4t-1}\dif t,\quad -\tfrac{\pi}{4}\le y\le \tfrac{\pi}{4}$\\
+جواب:\quad
+$2$
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_لمبائی_ب}
+$y=\int_{-2}^x\sqrt{3t^4-1}\dif t,\quad -2\le x\le-1$
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+(ا) نقطہ \عددی{(1,1)} میں سے گزرتی ہوئی ایسی منحنی تلاش کریں جس کی لمبائی درج ذیل ہو (مساوات \حوالہ{مساوات_تکمل_استعمال_لمبائی_قوس_ب})۔
+\begin{align*}
+L=\int_1^4\sqrt{1+\tfrac{1}{4x}}\dif x
+\end{align*}
+(ب) ایسی کتنی منحنیات ہوں گی؟ اپنے جواب کی وجہ پیش کریں۔ \\
+جواب:\quad
+(ا) \عددی{y=\sqrt{x}} یا \عددی{y=-\sqrt{x}+2}، (ب) دو
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+(ا) نقطہ \عددی{(0,1)} میں سے گزرتی ہوئی ایسی منحنی تلاش کریں جس کی لمبائی درج ذیل ہو (مساوات \حوالہ{مساوات_تکمل_استعمال_لمبائی_قوس_پ})۔
+\begin{align*}
+L=\int_1^2\sqrt{1+\tfrac{1}{y^4}}\dif y
+\end{align*}
+ (ب) ایسی کتنی منحنیات ہوں گی؟ اپنے جواب کی وجہ پیش کریں۔ 
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}
+\عددی{x=0} سے \عددی{x=\tfrac{\pi}{4}} تک درج ذیل منحنی کی لمبائی تلاش کریں۔
+\begin{align*}
+y=\int_0^x\sqrt{\cos 2t}\dif t
+\end{align*}
+جواب:\quad
+$1$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ستارہ_نما}\ترچھا{ستارہ نما کی لمبائی}\\
+مساوات \عددی{x^{2/3}+y^{2/3}=1} خطوط کی ایک ایسی نسل کو ظاہر کرتی ہے جس کو ستارہ نما کہتے ہیں (شکل \حوالہ{شکل_سوال_تکمل_استعمال_ستارہ_نما})۔نصف ربع اول میں قوس کی لمبائی حاصل کر کے \عددی{8} سے ضرب دے کر کل لمبائی حاصل ہو گی۔یوں \عددی{\tfrac{\sqrt{2}}{4}\le x\le 1} پر منحنی \عددی{y=(1-x^{2/3})^{3/2}} کی لمبائی حاصل کر کے \عددی{8} سے ضرب دیں۔
+\انتہا{سوال}
+%==========================
+\begin{figure}
+\centering
+\begin{minipage}{0.30\textwidth}
+\centering
+\begin{tikzpicture}[font=\footnotesize,declare function={f(\x)=(1-\x^(2/3))^(3/2);}]
+\begin{axis}[width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},enlargelimits=true,xtick={-1,1},ytick={-1,1},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=0:1,smooth]{f(x)}node[pos=0.25,above right]{$x^{2/3}+y^{2/3}=1$};
+\addplot[domain=0:1]{-f(x)};
+\addplot[domain=0:1]({-x},{f(x)});
+\addplot[domain=0:1]({-x},{-f(x)});
+\end{axis}
+\end{tikzpicture}
+\caption{ستارہ نما۔}
+\label{شکل_سوال_تکمل_استعمال_ستارہ_نما}
+\end{minipage}\hfill
+\begin{minipage}{0.30\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=0.2*sin(deg(10*\x));}]
+\pgfmathsetmacro{\l}{2}
+\pgfmathsetmacro{\ang}{70}
+\draw[]plot[domain=0:3.142,smooth]({\x+\l*cos(\ang)},{f(\x)+\l*sin(\ang)});
+\draw(\ang:\l)plot[domain=0:3.142,smooth]({\x},{f(\x)})coordinate[pos=1](kR);
+\draw(0,0)--++({\l*cos(\ang)},{\l*sin(\ang)});
+\draw(3.142,0)--++({\l*cos(\ang)},{\l*sin(\ang)});
+\end{tikzpicture}
+\caption{نالیدار چادر۔}
+\label{شکل_سوال_تکمل_استعمال_اعدادی_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.30\textwidth}
+\centering
+\begin{tikzpicture}[]
+\pgfmathsetmacro{\l}{2}
+\pgfmathsetmacro{\ang}{50}
+\pgfmathsetmacro{\angE}{140}
+\draw[name path=front]([shift={(0:1)}]0,0) arc (0:180:1)coordinate[pos=0.85](kL);
+\draw(kL)++(0,0.1)--++(-0.3,0.5)node[above,font=\footnotesize]{$y=8\cos(\tfrac{\pi x}{20})$};
+\draw([shift={(0:1)}]\ang:\l) arc (0:\angE:1)coordinate(kA);
+\draw(\angE:1)--(kA);
+\draw(1,0)--++(\ang:\l)node[pos=0.5,right]{$\SI{100}{\meter}$};
+\path[name path=left](-1,0)--++(\ang:\l);
+\draw[name intersections={of=left and front}](-1,0)--(intersection-1);
+\draw[-latex](-1.25,0)--(1.25,0)node[right]{$x$};
+\draw[-latex](0,0)--(0,1.75)node[above]{$y$};
+\draw(-1,0)node[below]{$\SI{-10}{\meter}$}  (1,0)node[below]{$\SI{10}{\meter}$};
+\end{tikzpicture}
+\caption{سرنگ۔}
+\label{شکل_سوال_تکمل_استعمال_سرنگ}
+\end{minipage}
+\end{figure}
+
+\موٹا{اعدادی تکمل}\\
+آپ سوچ رہے ہوں گے کہ کیوں اب تک لمبائی قوس میں زیادہ تر منحنیات کی مساواتیں پیچیدہ تھیں۔ اس کی وجہ لمبائی قوس کے تکمل میں \عددی{\sqrt{1+(\tfrac{\dif y}{\dif x})^2}} ہے جو عموماً مکمل مربع نہیں ہوتا ہے اور جس کی بنا متکمل کا الٹ تفرق ہم حاصل نہیں کر پاتے ہیں۔ حقیقت میں عموماً یہی جذر غیر بنیادی تکمل کا باعث بنتا ہے۔ اسی لئے، سوال \حوالہ{سوال_تکمل_استعمال_اعدادی_الف} اور سوال \حوالہ{سوال_تکمل_استعمال_اعدادی_ب}  کی طرح،  لمبائی قوس اور سطحی رقبہ کے تکمل  عموماً اعدادی طریقوں سے حل کئے جاتے ہیں۔ 
+
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_اعدادی_الف}
+آپ کا ادارہ چھتوں کے لئے لوہے کی  نالیدار چادریں بناتا ہے۔نالیدار چادروں کا عمودی تراش درج ذیل کے مطابق درکار ہے (شکل \حوالہ{شکل_سوال_تکمل_استعمال_اعدادی_الف})۔
+\begin{align*}
+y=\sin\frac{3\pi}{50}x,\quad0\le x\le \SI{50}{\centi\meter}
+\end{align*}
+مستوی چادر سے نالیدار چادر بناتے ہوئے چادر کی چوڑائی یا لمبائی تبدیل نہیں ہوتی ہے۔ درکار مستوی چادر کی چوڑائی معلوم کریں۔ اعدادی تراکیب استعمال کرتے ہوئے سائن نما چادر کی  لمبائی تین اعشاریہ تک تلاش کریں۔\\
+جواب:\quad
+$\SI{50.44}{\centi\meter}$ 
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_اعدادی_ب}
+آپ کے انجینئری ادارے کو سرنگ بنانے کا کام ملا ہے۔ سرنگ کی لمبائی \عددی{\SI{100}{\meter}} جبکہ اس کی چوڑائی \عددی{\SI{20}{\meter}} ہے (شکل \حوالہ{شکل_سوال_تکمل_استعمال_سرنگ})۔ سرنگ کا عمودی تراش \عددی{y=8\cos (\tfrac{\pi x}{20})} کے مطابق ہے۔مکمل ہونے کے بعد سرنگ کو اندر سے  پن روک مسالہ کیا جائے گا جس پر \عددی{2000} روپیہ فی مربع میٹر لاگت متوقع ہے۔ مسالہ کرنے پر کل کتنا لاگت آئے گا؟ (اشارہ۔ اعدادی طریقہ سے کوسائن تفاعل کی لمبائی دریافت کریں۔)
+\انتہا{سوال}
+%===============================
+
+\موٹا{نظریہ اور مثالیں}\\
+\ابتدا{سوال}
+کیا  ایسی ہموار منحنی \عددی{y=f(x)} ہو سکتی ہے جس کی وقفہ \عددی{0\le x\le a} پر لمبائی \عددی{\sqrt{2}a} ہو۔  اپنے جواب کی وجہ پیش کریں۔
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\ترچھا{مماسی تیلیوں سے لمبائی قوس کے کلیہ کا حصول۔}\\
+فرض کریں \عددی{[a,b]} پر \عددی{f} ہموار ہے۔وقفہ \عددی{[a,b]} کی خانہ بندی کریں۔ ہر ذیلی وقفہ \عددی{[x_{k-1},x_k]} میں
+ نقطہ \عددی{(x_{k-1},f(x_{k-1}))} پر مماسی تیلی بنائیں (نیچے شکل دیکھیں)۔
+\begin{enumerate}[a.]
+\item
+دکھائیں کہ ذیلی وقفہ \عددی{[x_{k-1},x_k]} پر \عددی{k} ویں مماسی تیلی کی لمبائی \عددی{\sqrt{(\Delta x_k)^2+(f'(x_{k-1})\Delta x_k)^2}} ہے۔
+\item
+دکھائیں کہ \عددی{a} تا \عددی{b} منحنی \عددی{y=f(x)} کی لمبائی \عددی{L} درج ذیل ہے۔
+\begin{align*}
+\lim_{n\to \infty}\sum_{k=1}^n(\text{\RL{$k$ویں تیلی کی لمبائی}})=\int_a^b\sqrt{1+(f'(x))^2}\dif x
+\end{align*}
+\end{enumerate}
+\انتہا{سوال}
+%=======================
+\begin{center}
+\begin{tikzpicture}[font=\small]
+\draw[-latex](0,0)--(3,0)node[right]{$x$};
+\draw[thick](0,0.5) to [out=-10,in=-130]coordinate[pos=0.25](kA)coordinate[pos=0.75](kB) (3,2);
+\draw(3,2)node[left]{$y=f(x)$};
+\draw[dashed](kA)node[above left]{$(x_{k-1},f(x_{k-1}))$}--($(0,0)!(kA)!(3,0)$)node[below]{$x_{k-1}$};
+\draw[dashed,name path=kR](kB)--($(0,0)!(kB)!(3,0)$)node[below]{$x_{k}$};
+\path[name path=tang](kA)--++(15:2);
+\draw[name intersections={of=tang and kR}](kA)--(intersection-1)coordinate[pos=0.75](kT);
+\path[name path=bot](kA)--++(2,0);
+\draw[name intersections={of=bot and kR}](kA)--(intersection-1)node[pos=0.5,below]{$\Delta x_k$};
+\draw(kT)++(0,-0.05) to [out=-30,in=180]++(0.75,-0.1)node[right]{\RL{مماسی تیلی کی ڈھلوان $f'(x_{k-1})$ ہے}};
+\end{tikzpicture}
+\end{center}
+
+\موٹا{کمپیوٹر کا استعمال}\\
+سوال \حوالہ{سوال_تکمل_استعمال_کمپیوٹر_لمبائی_قوس_الف} تا سوال \حوالہ{سوال_تکمل_استعمال_کمپیوٹر_لمبائی_قوس_ب} میں کمپیوٹر استعمال کرتے ہوئے درج ذیل اقدام کریں۔
+\begin{enumerate}[a.]
+\item
+منحنی ترسیم کریں۔ خانہ بندی کے نقطے \عددی{n=2,4,8} لیتے ہوتے تخمینی کثیر الاضلاع ترسیم کریں۔
+\item
+مطابقتی قطعات کی لمبائیوں کا مجموعہ لے کر قوس کی تخمینی لمبائی معلوم کریں۔
+\item
+تکمل سے قوس کی اصل لمبائی تلاش کریں۔ اصل لمبائی اور \عددی{n=2,4,8} لے کر حاصل تخمینی لمبائیوں کا موازنہ کریں۔ \عددی{n} بڑھانے سے تخمینی لمبائی اور اصل لمبائی کا مقابلہ کریں۔ اپنے جواب کی وضاحت کریں۔
+\end{enumerate}
+
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_کمپیوٹر_لمبائی_قوس_الف}
+$f(x)=\sqrt{1-x^2},\quad -1\le x\le 1$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$f(x)=x^{1/3}+x^{2/3},\quad 0\le x\le 2$
+\انتہا{سوال}
+%=============================
+\ابتدا{سوال}
+$f(x)=\sin(\pi x^2),\quad 0\le x\le \sqrt{2}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$f(x)=x^2\cos x,\quad 0\le x\le \pi$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$f(x)=\tfrac{x-1}{4x^2+1},\quad -\tfrac{1}{2}\le x\le 1$
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_کمپیوٹر_لمبائی_قوس_ب}
+$f(x)=x^3-x^2,\quad -1\le x\le 1$
+\انتہا{سوال}
+%==========================
