@@ -255,14 +255,59 @@ $\tfrac{\pi(\sqrt{8}-1)}{9}$
 $x=\tfrac{1}{3}y^{3/2}-y^{1/2},\quad 1\le y\le 3,\quad y\,\text{محور}$
 \انتہا{سوال}
 %=====================
-\ابتدا{سوال}
-$x=2\sqrt{4-y},\quad 0\le y\le \tfrac{15}{4},\quad y\,\text{محور}$\\
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ترسیم_موجود_الف}
+$x=2\sqrt{4-y},\quad 0\le y\le \tfrac{15}{4},\quad y\,\text{محور}$ 
+\quad
+(شکل \حوالہ{شکل_سوال_تکمل_استعمال_ترسیم_موجود_الف})\\
 جواب:\quad
 $\tfrac{35\pi\sqrt{5}}{3}$
 \انتہا{سوال}
 %=====================
-\ابتدا{سوال}
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,scale=0.5,declare function={f(\x)=2*sqrt(4-\x);}]
+\pgfmathsetmacro{\ra}{f(1)}
+\draw[-latex](-4.25,0)--(5,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,4.5)node[above]{$y$};
+\draw[thick] plot[domain=0:15/4]({f(\x)},\x);
+\draw[] plot[domain=0:15/4]({-f(\x)},\x);
+\draw(2,{f(2)})node[right,yshift=1ex]{$x=2\sqrt{4-y}$};
+\draw(0,15/4) circle (1cm and 0.25cm);
+\draw([shift={(180:4cm and 1cm)}]0,0) arc (180:360:4cm and 1cm);
+\draw[dashed]([shift={(0:4cm and 1cm)}]0,0) arc (0:180:4cm and 1cm);
+\draw(4,0)node[below right]{$4$};
+\draw(1,15/4)node[circ]{}++(0,0.1) to [out=45,in=180]++(0.5,0.5)node[right]{$(1,\tfrac{15}{4})$};
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_ترسیم_موجود_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,scale=2,declare function={f(\x)=sqrt(2*\x-1);}]
+\pgfmathsetmacro{\ra}{f(1)}
+\draw[-latex](-1.15,0)--(1.25,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,1.25)node[above]{$y$};
+\draw[thick] plot[domain=5/8:1]({f(\x)},\x);
+\draw[] plot[domain=5/8:1]({-f(\x)},\x);
+\draw(1/2,0)node[below]{$\tfrac{1}{2}$}--++(0,0.1);
+\draw(1,0)node[below]{$1$}--++(0,0.1);
+\draw(0,1) circle (1cm and 0.15cm);
+\draw([shift={(180:0.5cm and 0.15*0.5 cm)}]0,5/8) arc (180:360:0.5cm and 0.15*0.5 cm);
+\draw[dashed]([shift={(0:0.5cm and 0.15*0.5 cm)}]0,5/8) arc (0:180:0.5cm and 0.15*0.5 cm);
+\draw({f(0.75)},0.75)node[right]{$x=\sqrt{2y-1}$};
+\draw({f(1)},1)node[circ]{}node[above,yshift=0.5ex]{$(1,1)$};
+\draw({f(5/8)},5/8)node[circ]{}node[below,yshift=-0.5ex]{$(\tfrac{1}{2},\tfrac{5}{8})$};
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_ترسیم_موجود_ب}
+\end{minipage}
+\end{figure}
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ترسیم_موجود_ب}
 $x=\sqrt{2y-1},\quad \tfrac{5}{8}\le y\le 1,\quad y\,\text{محور}$
+\quad
+(شکل \حوالہ{شکل_سوال_تکمل_استعمال_ترسیم_موجود_ب})
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
@@ -293,24 +338,109 @@ $y=\tfrac{1}{3}(x^2+2)^{3/2},\quad 0\le x\le \sqrt{2},\quad y\,\text{محور}$
 (ا) \عددی{2\pi\int_{-\pi/2}^{\pi/2}(\cos x)\sqrt{1+\sin^2x}\dif x}، (ب) \عددی{\approx 14.4236}
 \انتہا{سوال}
 %===============
-\ابتدا{سوال}\ترچھا{ستارہ نما کا سطحی رقبہ}\\
-ستارہ نما \عددی{x^{2/3}+y^{2/3}=1} کا وہ حصہ جو \عددی{x} محور سے اوپر پایا جاتا ہے کو \عددی{x} محور کے گرد گھما کر سطح طواف پیدا کیا جاتا ہے۔ اس سطح طواف کا رقبہ معلوم کریں۔ (اشارہ۔ ربع اول میں منحنی کے حصہ \عددی{y=(1-x^{2/3})^{3/2},\, 0\le x\le 1}) کو \عددی{x} محور کے گرد گھما کر نتیجہ  کو دگنا کریں۔)
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_دوبارہ_ستارہ_نما}\ترچھا{ستارہ نما کا سطحی رقبہ}\\
+ستارہ نما \عددی{x^{2/3}+y^{2/3}=1} کا وہ حصہ جو \عددی{x} محور سے اوپر پایا جاتا ہے کو \عددی{x} محور کے گرد گھما کر سطح طواف پیدا کیا جاتا ہے (شکل \حوالہ{شکل_سوال_تکمل_استعمال_دوبارہ_ستارہ_نما})۔ اس سطح طواف کا رقبہ معلوم کریں۔ (اشارہ۔ ربع اول میں منحنی کے حصہ \عددی{y=(1-x^{2/3})^{3/2},\, 0\le x\le 1}) کو \عددی{x} محور کے گرد گھما کر نتیجہ  کو دگنا کریں۔)
 \انتہا{سوال}
 %================
-\ابتدا{سوال}\ترچھا{رنگ}\\
-ایک برتن کو رداس \عددی{\SI{16}{\centi\meter}} کے کرہ کا حصہ تصور کیا جا سکتا ہے۔برتن کی گہرائی \عددی{\SI{9}{\centi\meter}} ہے۔برتن کو اندر اور باہر سے رنگ کرنا مطلوب ہے۔ کچے رنگ کی \عددی{\SI{0.5}{\milli\meter}} موٹی تہہ برتن پر چھڑک کر پکائی جاتی ہے۔ پانچ ہزار برتن کے لئے درکار کچے رنگ کا حجم معلوم کریں۔ رنگ کے ضیاع کو نظر انداز کریں۔\\
+\begin{figure}
+\centering
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[scale=4/3,font=\small,declare function={f(\x)=(1-\x^(2/3))^(3/2);}]
+\draw[-latex](-1.25,0)--(1.5,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,1.25)node[above]{$y$};
+\draw(1,0)node[below]{$1$}--++(0,0.1);
+\draw(-1,0)node[below]{$-1$}--++(0,0.1);
+\draw(0,1)node[left]{$1$}--++(0.1,0);
+\draw[]plot[domain=0:1](\x,{f(\x)});
+\draw[]plot[domain=0:1](-\x,{f(\x)});
+\draw(0.25,{f(0.25)})node[right]{$x^{2/3}+y^{2/3}=1$};
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_دوبارہ_ستارہ_نما}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\begin{tikzpicture}[scale=2/3,font=\small]
+\centering
+\pgfmathsetmacro{\rr}{1.5}
+\pgfmathsetmacro{\h}{2*\rr/3}
+\pgfmathsetmacro{\r}{sqrt(2*\rr*\h-\h^2)}
+\pgfmathsetmacro{\ang}{90-asin(\r/\rr)}
+\draw[-latex](-\rr-0.2,0)--(\rr+0.25,0)node[right]{$x\,(\si{\centi\meter})$};
+\draw(0,-\rr)--(0,-\rr-0.4);
+\draw[-latex](0,-\rr+\h-0.2)--(0,\rr+0.25)node[above]{$y\,(\si{\centi\meter})$};
+\draw[dashed]([shift={(-\ang:\rr)}]0,0) arc (-\ang:180+\ang:\rr);
+\draw(0,-\rr+\h) circle (\r cm and 0.2 cm);
+\draw([shift={(180+\ang:\rr)}]0,0) arc (180+\ang:360-\ang:\rr);
+\draw(45:\rr)node[above right]{$x^2+y^2=16^2$};
+\draw[stealth-stealth](\r+0.4,-\rr+\h)--++(0,-\h)node[pos=0.5,right]{$\SI{9}{\centi\meter}$};
+\draw(\r+0.3,-\rr+\h)--++(0.2,0);
+\draw(\r+0.3,-\rr)--++(0.2,0);
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_رنگ}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\begin{tikzpicture}[scale=1,font=\small,declare function={f(\x)=sqrt(1-\x^2);}]
+\pgfmathsetmacro{\k}{0.3}
+\pgfmathsetmacro{\t}{0.3}
+\draw[-latex](-1.25,0)--(1.5,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,1.5)node[above]{$y$};
+\draw[-stealth]([shift={(-40:0.2cm and 0.25cm)}]1.4,0) arc (-40:230:0.2cm and 0.25cm);
+\draw([shift={(0:1)}]0,0) arc (0:180:1);
+\draw(-1,0)node[above left]{$-r$} (1,0)node[above right]{$r$};
+\draw(-0.1,{f(0.1)})node[left,yshift=1ex]{$y=\sqrt{r^2-x^2}$};
+\draw(\k,0)node[below]{$a$}--(\k,{f(\k)})node[above]{$A$};
+\draw(\k+\t,0)--(\k+\t,{f(\k+\t)})node[above]{$B$};
+\draw(\k+\t,-0.1)--++(0.5,-0.5)node[below]{$a+h$};
+\draw(\k,-3ex)--++(0,-0.2)coordinate[pos=0.5](ka);
+\draw(\k+\t,-3ex)--++(0,-0.2)coordinate[pos=0.5](kb);
+\draw[stealth-](kb)--++(0.2,0);
+\draw[stealth-](ka)--++(-0.3,0)node[left]{$h$};
+\draw[fill=lgray]plot[domain=\k:\k+\t](\x,{f(\x)})--(\k+\t,0)--(\k,0)--(\k,{f(\k)});
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_ڈبل_روٹی}
+\end{minipage}
+\end{figure}
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_رنگ}\ترچھا{رنگ}\\
+ایک برتن کو رداس \عددی{\SI{16}{\centi\meter}} کے کرہ کا حصہ تصور کیا جا سکتا ہے (شکل \حوالہ{شکل_سوال_تکمل_استعمال_رنگ})۔برتن کی گہرائی \عددی{\SI{9}{\centi\meter}} ہے۔برتن کو اندر اور باہر سے رنگ کرنا مطلوب ہے۔ کچے رنگ کی \عددی{\SI{0.5}{\milli\meter}} موٹی تہہ برتن پر چھڑک کر پکائی جاتی ہے۔ پانچ ہزار برتن کے لئے درکار کچے رنگ کا حجم معلوم کریں۔ رنگ کے ضیاع کو نظر انداز کریں۔\\
 جواب:\quad
 $\SI{452.4}{\liter}$
 \انتہا{سوال}
 %======================
-\ابتدا{سوال}\ترچھا{ڈبل روٹی کا کرارا حصہ}\\
-ڈبل روٹی اندر سے نرم اور باہر سے کرارا ہوتی ہے۔کیا آپ جانتے ہیں کہ کروی ڈبل روٹی کے ایک جتنی موٹے ٹکڑوں میں  ایک جتنا کرارا حصہ پایا جاتا ہے؟ یہ دیکھنے کی خاطر نصف دائرہ \عددی{y=\sqrt{r^2-x^2}} کو \عددی{x} محور کے گرد گھما کر کرہ بنائیں۔فرض کریں محور \عددی{x} پر وقفہ \عددی{h} کے اوپر نصف دائرے کا قوس \عددی{AB} ہے۔ دکھائیں کہ نصف دائرے کو \عددی{x} محور کے گرد گھمانے سے \عددی{AB} سے حاصل رقبہ  کی قیمت \عددی{h} کے مقام پر منحصر نہیں ہے۔ (کرارا رقبہ کی قیمت \عددی{h} پر منحصر ہو گی۔)
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ڈبل_روٹی}\ترچھا{ڈبل روٹی کا کرارا حصہ}\\
+ڈبل روٹی اندر سے نرم اور باہر سے کرارا ہوتی ہے۔کیا آپ جانتے ہیں کہ کروی ڈبل روٹی کے ایک جتنی موٹے ٹکڑوں میں  ایک جتنا کرارا حصہ پایا جاتا ہے (شکل \حوالہ{شکل_سوال_تکمل_استعمال_ڈبل_روٹی})؟ یہ دیکھنے کی خاطر نصف دائرہ \عددی{y=\sqrt{r^2-x^2}} کو \عددی{x} محور کے گرد گھما کر کرہ بنائیں۔فرض کریں محور \عددی{x} پر وقفہ \عددی{h} کے اوپر نصف دائرے کا قوس \عددی{AB} ہے۔ دکھائیں کہ نصف دائرے کو \عددی{x} محور کے گرد گھمانے سے \عددی{AB} سے حاصل رقبہ  کی قیمت \عددی{h} کے مقام پر منحصر نہیں ہے۔ (کرارا رقبہ کی قیمت \عددی{h} پر منحصر ہو گی۔)
 \انتہا{سوال}
 %==================
-\ابتدا{سوال}
-دو متوازی سطحیں جن کے مابین فاصلہ \عددی{h} ہے رداس \عددی{R} کے کروی سطح سے ایک پٹی کاٹتے ہیں۔ دکھائیں کہ اس پٹی کا رقبہ \عددی{2\pi Rh} ہو گا۔   
+\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_کرہ_سے_پٹی}
+دو متوازی سطحیں جن کے مابین فاصلہ \عددی{h} ہے رداس \عددی{R} کے کروی سطح سے ایک پٹی کاٹتے ہیں (شکل \حوالہ{شکل_سوال_تکمل_استعمال_کرہ_سے_پٹی})۔ دکھائیں کہ اس پٹی کا رقبہ \عددی{2\pi Rh} ہو گا۔   
 \انتہا{سوال}
 %===================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,]
+\pgfmathsetmacro{\rr}{1.25}
+\pgfmathsetmacro{\ka}{0.5}
+\pgfmathsetmacro{\ra}{sqrt(\rr^2-\ka^2)}
+\pgfmathsetmacro{\kb}{0.6}
+\pgfmathsetmacro{\rb}{sqrt(\rr^2-\kb^2)}
+\draw(0,0) circle (\rr);
+\draw[-latex](0,\rr)node[circ]{}--++(0,0.5)node[above]{$y$};
+\draw([shift={(180:\ra cm and 1/4*\ra cm)}]0,\ka) arc (180:360:\ra cm and 1/4*\ra cm);
+\draw([shift={(180:\rb cm and 1/4*\rb cm)}]0,\kb) arc (180:360:\rb cm and 1/4*\rb cm);
+\draw(\ra,\ka)++(0.1,0)--(\ra+0.3,\ka)coordinate[pos=0.5](aa);
+\draw(\rb,\kb)++(0.1,0)--(\ra+0.3,\kb)coordinate[pos=0.5](bb)node[above]{$h$};
+\draw[stealth-](aa)--++(0,-0.2);
+\draw[stealth-](bb)--++(0,0.2);
+\draw[-stealth](0,0)node[circ]{}--++(-45:\rr)node[pos=0.6,fill=white]{$R$};
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_تکمل_استعمال_کرہ_سے_پٹی}
+\end{minipage}\hfill
+\end{figure}
 \ابتدا{سوال}
 موسمیاتی ریڈار کو شکل میں دکھائے گنبد میں رکھا گیا ہے۔گنبد کا بیرونی رقبہ کتنا ہو گا؟ (قاعدہ کو شامل نہ کریں۔)
 \انتہا{سوال}
@@ -379,7 +509,21 @@ r_1=f(m_k)-f'(m_k)\frac{\Delta x_k}{2},\quad r_2=f(m_k)+f'(m_k)\frac{\Delta x_k}
 \جزوحصہء{لکیر پر کمیت}
 ہم اپنا ریاضی نمونہ بتدریج تیار کرتے ہیں۔ ابتدائی منزل میں ہم  محور \عددی{x} جس کا مبدا اس کا چول ہو، پر کمیت \عددی{m_1}، \عددی{m_2} اور \عددی{m_3} تصور کرتے ہیں۔یہ نظام متوازن یا غیر متوازن ہو گا۔ توازن کا دارومدار کمیتوں کی مقدار اور ان کے مقامات پر منحصر ہے۔ 
 
-ہر کمیت \عددی{m_k} پر نیچے رخ قوت \عددی{m_kg} عمل کرتا ہے جہاں \عددی{g} ثقلی اسراع ہے۔ہر ایسی قوت محور کو مبدا کے گرد گھمانے کی کوشش کرتی ہے۔ گھومنے کے اس اثر کو \اصطلاح{قوت مروڑ}\فرہنگ{قوت مروڑ}\حاشیہب{torque}\فرہنگ{torque} کہتے ہیں۔ قوت \عددی{m_kg} کو مبدا سے فاصلہ \عددی{x_k} سے ضرب دینے سے قوت مروڑ کی مقدار حاصل ہوتی ہے جہاں فاصلہ مثبت یا منفی ممکن ہے۔مبدا سے بائیں جانب کمیت منفی (گھڑی مخالف) قوت مروڑ پیدا کرتا ہے جبکہ مبدا سے دائیں جانب کمیت مثبت (گھڑی رخ) قوت مروڑ پیدا کرتا ہے۔
+\begin{center}
+\begin{tikzpicture}
+\pgfmathsetmacro{\fa}{0.8}
+\pgfmathsetmacro{\fb}{3}
+\pgfmathsetmacro{\a}{0}
+\pgfmathsetmacro{\b}{1.5}
+\pgfmathsetmacro{\c}{5}
+\pgfmathsetmacro{\t}{0.25}
+\draw[-latex](-0.25,0)--(6.5,0)node[right]{$x$};
+\draw(\a,0)node[circ]{}node[below]{$x_1$}node[above]{$m_1$}  (\b,0)node[circ]{}node[below]{$x_2$}node[above]{$m_2$}
+   (\c,0)node[circ]{}node[below]{$x_3$}node[above]{$m_3$}; 
+\draw[fill=lgray](\fa,0)--++(-\t,-2*\t)--++(2*\t,0)node[pos=0.5,below]{\RL{مبدا پر چول}}--++(-\t,2*\t); 
+\end{tikzpicture}
+\end{center}
+ہر کمیت \عددی{m_k} پر نیچے رخ قوت \عددی{m_kg} عمل کرتا ہے جہاں \عددی{g} ثقلی اسراع ہے (قوت \عددی{m_kg} کو کمیت \عددی{k_k} کا وزن کہتے ہیں)۔ہر ایسی قوت محور کو مبدا کے گرد گھمانے کی کوشش کرتی ہے۔ گھومنے کے اس اثر کو \اصطلاح{قوت مروڑ}\فرہنگ{قوت مروڑ}\حاشیہب{torque}\فرہنگ{torque} کہتے ہیں۔ قوت \عددی{m_kg} کو مبدا سے فاصلہ \عددی{x_k} سے ضرب دینے سے قوت مروڑ کی مقدار حاصل ہوتی ہے جہاں فاصلہ مثبت یا منفی ممکن ہے۔مبدا سے بائیں جانب کمیت منفی (گھڑی مخالف) قوت مروڑ پیدا کرتا ہے جبکہ مبدا سے دائیں جانب کمیت مثبت (گھڑی رخ) قوت مروڑ پیدا کرتا ہے۔
 
 قوت مروڑ کا مجموعہ، مبدا کے گرد نظام گھومنے کے رجحان کا ناپ ہے۔ اس مجموعہ کو \اصطلاح{نظام کی قوت مروڑ}\فرہنگ{قوت مروڑ!نظام}\حاشیہب{system torque}\فرہنگ{torque!system} کہتے ہیں۔
 \begin{align}
@@ -399,7 +543,21 @@ M_0=\text{\RL{مبدا کے لحاظ سے نظام کا معیار اثر}}=\sum
 \end{align*}
 
 ہم نظام کو متوازن بنانے کی خاطر نظام کے چول کا مقام جاننا چاہتے ہیں، یعنی چول کو کس نقطہ \عددی{\bar{x}} پر رکھنے سے نظام کا قوت مروڑ صفر ہو گا۔
-
+\begin{center}
+\begin{tikzpicture}
+\pgfmathsetmacro{\fa}{0.8}
+\pgfmathsetmacro{\fb}{3}
+\pgfmathsetmacro{\a}{0}
+\pgfmathsetmacro{\b}{1.5}
+\pgfmathsetmacro{\c}{5}
+\pgfmathsetmacro{\t}{0.25}
+\draw[-latex](-0.25,0)--(6.5,0)node[right]{$x$};
+\draw(\a,0)node[circ]{}node[below]{$x_1$}node[above]{$m_1$}  (\b,0)node[circ]{}node[below]{$x_2$}node[above]{$m_2$}
+   (\c,0)node[circ]{}node[below]{$x_3$}node[above]{$m_3$}; 
+\draw[dashed](\fa,0)--++(-\t,-2*\t)--++(2*\t,0)node[pos=0.5,below]{مبدا}--++(-\t,2*\t); 
+\draw[fill=lgray](\fb,0)node[above]{$\bar{x}$}--++(-\t,-2*\t)--++(2*\t,0)node[pos=0.5,below]{\RL{نقطہ توازن}}--++(-\t,2*\t); 
+\end{tikzpicture}
+\end{center}
 اس مخصوص مقام پر چول رکھنے سے ہر کمیت کا قوت مروڑ درج ذیل لکھا جا سکتا ہے جہاں فاصلہ مثبت یا منفی ہو سکتا ہے۔
 \begin{align*}
 \text{\RL{$\bar{x}$کے لحاظ سے $m_k$ کا معیار اثر}}&=(\text{\RL{$\bar{x}$ سے $m_k$ کا فاصلہ}})(\text{\RL{نیچے رخ قوت}})\\
@@ -425,6 +583,24 @@ g\sum(x_k-\bar{x})m_k&=0&&\text{\RL{مجموعہ کا قاعدہ مستقل مض
 
 فرض کریں ایک لمبی پٹی \عددی{x=a} تا \عددی{x=b} محور \عددی{x} پر پڑی ہے۔ ہم \عددی{[a,b]} اس پٹی کی خانہ بندی کرتے ہوئے اس کو \عددی{\Delta m_k} کمیت کے چھوٹے چھوٹے  ٹکڑوں میں تقسیم کرتے ہیں۔ \عددی{k} ویں ٹکڑے کی لمبائی \عددی{\Delta x_k} ہے اور یہ مبدا سے تقریباً \عددی{x_k} فاصلے پر پایا جاتا ہے۔اب تین چیزوں کا مشاہدہ کریں۔
 
+\begin{center}
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\l}{4.25}
+\pgfmathsetmacro{\t}{0.2}
+\pgfmathsetmacro{\k}{2.5}
+\draw(0,-\t) rectangle (\l,\t);
+\draw(-0.1,0)--++(-0.5,0);
+\draw[-latex](\l+0.1,0)--++(0.5,0)node[right]{$x$};
+\draw[fill=lgray](\k,-\t) rectangle (\k+0.5,\t);
+\draw(0,-\t)node[below]{$a$} (\l,-\t)node[below]{$b$};
+\draw(\k+0.25,-\t)node[below]{$x_k$};
+\draw(\k+0.25,\t)node[above]{$\Delta m_k$};
+\draw(\k,-\t-4ex)--++(0,-0.2)coordinate[pos=0.5](ka);
+\draw(\k+0.5,-\t-4ex)--++(0,-0.2)coordinate[pos=0.5](kb);
+\draw[stealth-](ka)--++(-0.5,0);
+\draw[stealth-](kb)--++(0.5,0)--++(0,-0.2)node[below]{$\Delta x_k$};
+\end{tikzpicture}
+\end{center}
 اول، پٹی کا مرکز کمیت \عددی{\bar{x}} اور نقطہ \عددی{x_k} پر کمیت \عددی{\Delta m_k} رکھنے سے حاصل نظام کا مرکز کمیت  تقریباً ایک ہی مقام پر ہوں گے:
 \begin{align*}
 \bar{x}\approx \frac{\text{\RL{نظام کا معیار اثر}}}{\text{\RL{نظام کی کمیت}}}
@@ -465,7 +641,7 @@ M&=\int_a^b\delta(x)\dif x&&\text{\RL{کمیت}}\\
 مستقل کثافت والے سلاخ یا پٹی کا مرکز کمیت تلاش کریں۔
 
 حل:\quad
-ہم محور \عددی{x} پر \عددی{x=a} سے \عددی{x=b}  کو سلاخ تصور کرتے ہیں۔ چونکہ کثافت مستقل ہے لہٰذا اس کو تکمل کے باہر منتقل کیا جا سکتا ہے۔یوں درج ذیل حاصل ہوتا ہے۔
+ہم محور \عددی{x} پر \عددی{x=a} سے \عددی{x=b}  کو سلاخ تصور کرتے ہیں (شکل \حوالہ{شکل_تکمل_استعمال_پتلا_سلاخ})۔ چونکہ کثافت مستقل ہے لہٰذا اس کو تکمل کے باہر منتقل کیا جا سکتا ہے۔یوں درج ذیل حاصل ہوتا ہے۔
 \begin{align*}
 M_0&=\int_a^b\delta x\dif x=\delta \int_a^bx\dif x=\delta[\frac{x^2}{2}]_a^b=\frac{\delta}{2}(b^2-a^2)\\
 M&=\int_a^b\delta \dif x=\delta\int_a^b\dif x=\delta[x]_a^b=\delta(b-a)\\
@@ -474,8 +650,43 @@ M&=\int_a^b\delta \dif x=\delta\int_a^b\dif x=\delta[x]_a^b=\delta(b-a)\\
 مستقل کثافت کی صورت میں مرکز کمیت سلاخ یا پٹی کے عین وسطی نقطہ پر ہو گا۔
 \انتہا{مثال}
 %===============
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\r}{0.15}
+\pgfmathsetmacro{\l}{2.5}
+\draw(0,0)circle (1/4*\r cm and \r cm);
+\draw(0,\r)--++(\l,0);
+\draw(0,-\r)node[below]{$a$}--++(\l,0)node[below]{$b$};
+\draw([shift={(-90:1/4*\r cm and \r cm)}]\l,0) arc (-90:90:1/4*\r cm and \r cm);
+\draw(-0.1,0)--++(-0.5,0);
+\draw[-latex](\l+0.1,0)--++(0.5,0)node[right]{$x$};
+\draw(1/2*\l,0)node[circ]{}node[above,yshift=1ex]{\RL{مرکز کمیت}}node[below,yshift=-1ex]{$\tfrac{a+b}{2}$};
+\end{tikzpicture}
+\caption{مستقل کثافت کے پتلے سیدھے سلاخ کا مرکز کمیت دونوں سروں کے وسطی نقطہ پر ہو گا۔}
+\label{شکل_تکمل_استعمال_پتلا_سلاخ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\r}{0.15}
+\pgfmathsetmacro{\rr}{0.25}
+\pgfmathsetmacro{\l}{2.5}
+\draw(0,0)circle (1/4*\r cm and \r cm);
+\draw(0,\r)--(\l,\rr);
+\draw(0,-\r)node[below]{$0$}--(\l,-\rr)node[below]{$10$};
+\draw([shift={(-90:1/4*\rr cm and \rr cm)}]\l,0) arc (-90:90:1/4*\rr cm and \rr cm);
+\draw(-0.1,0)--++(-0.5,0);
+\draw[-latex](\l+0.1,0)--++(0.5,0)node[right]{$x$};
+\end{tikzpicture}
+\caption{متغیر موٹائی کے سیدھے سلاخ کو متغیر کثافت کا سیدھا سلاخ تصور کیا جا سکتا ہے۔}
+\label{شکل_تکمل_استعمال_متغیر_پتلا_سلاخ}
+\end{minipage}
+\end{figure}
 \ابتدا{مثال}\ترچھا{متغیر کثافت}\\
-ایک سلاخ جس کی لمبائی \عددی{\SI{10}{\meter}} ہے بائیں سے دائیں چلتے ہوئے موٹی ہوتی ہے لہٰذا اس کی کثافت مستقل ہونے کی بجائے \عددی{\delta(x)=1+\tfrac{x}{10}\,\si{\kilo\gram\per\meter}} ہے۔ سلاخ کا مرکز کمیت معلوم کریں۔
+ایک سلاخ جس کی لمبائی \عددی{\SI{10}{\meter}} ہے بائیں سے دائیں چلتے ہوئے موٹا ہوتا ہے (شکل \حوالہ{شکل_تکمل_استعمال_متغیر_پتلا_سلاخ}) لہٰذا اس کی کثافت مستقل ہونے کی بجائے \عددی{\delta(x)=1+\tfrac{x}{10}\,\si{\kilo\gram\per\meter}} ہے۔ سلاخ کا مرکز کمیت معلوم کریں۔
 
 حل:\quad
 ہم مساوات \حوالہ{مساوات_تکمل_استعمال_مرکز_کمیت_ب} استعمال کریں گے۔مبدا کے لحاظ سے سلاخ کا معیار اثر درج ذیل ہو گا۔
@@ -494,9 +705,49 @@ M&=\int_0^{10}\delta(x)\dif x=\int_0^{10}\big(1+\frac{x}{10}\big)\dif x=\big[x+\
 \end{align*}
 \انتہا{مثال}
 %======================
-
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-0.25,0)--(3.5,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
+\draw(2.5,1.25)node[circ]{}node[above]{$m_k$}node[right,yshift=-1ex]{$(x_k,y_k)$};
+\draw(2.5,1.25)--($(0,0)!(2.5,1.25)!(3.5,0)$)coordinate(kB)node[below]{$x_k$}node[pos=0.5,left]{$y_k$};
+\draw(2.5,1.25)--($(0,0)!(2.5,1.25)!(0,2)$)coordinate(kL)node[left]{$y_k$}node[pos=0.5,above]{$x_k$};
+\RightAngle{(2.5,1.25)}{(kB)}{(0,0)}
+\RightAngle{(2.5,1.25)}{(kL)}{(0,0)}
+\end{tikzpicture}
+\caption{ہر کمیت \عددی{m_k} کا ہر انفرادی محور کے لحاظ سے معیار اثر ہو گا۔}
+\label{شکل_تکمل_استعمال_معیار_اثر_تعریف_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-0.25,0)--(3.5,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
+\draw(1.75,0)--++(0,2)node[above,align=center]{\RL{لکیر توازن}\\   $x=\bar{x}$};
+\draw(0,1)--++(3.5,0)node[right,align=center]{\RL{لکیر توازن}\\ $y=\bar{y}$};
+\draw(0.25,0.75)node[circ]{}coordinate(a);
+\draw(1,1.75)node[circ]{}coordinate(b);
+\draw(2,0.5)node[circ]{}coordinate(c);
+\draw(3,1.25)node[circ]{}coordinate(d);
+\draw[](a)--($(1.75,0)!(a)!(1.75,2)$);
+\draw[](a)--($(0,1)!(a)!(3.5,1)$);
+\draw[](b)--($(1.75,0)!(b)!(1.75,2)$);
+\draw[](b)--($(0,1)!(b)!(3.5,1)$);
+\draw[](c)--($(1.75,0)!(c)!(1.75,2)$);
+\draw[](c)--($(0,1)!(c)!(3.5,1)$);
+\draw[](d)--($(1.75,0)!(d)!(1.75,2)$);
+\draw[](d)--($(0,1)!(d)!(3.5,1)$);
+\draw(1.75,1)++(0.05,0.05) to [out=45,in=180]++(0.75,0.75)node[right]{\RL{مرکز کمیت}};
+\end{tikzpicture}
+\caption{دو بعدی کمیتوں کا جھرمٹ اپنے مرکز کمیت پر متوازن ہو گا۔}
+\label{شکل_تکمل_استعمال_معیار_اثر_تعریف_ب}
+\end{minipage}
+\end{figure}
 \جزوحصہء{مستوی پر تقسیم کمیت}
-فرض کریں ایک مستوی میں متناہی تعداد میں کمیت پائے جاتے ہیں۔یوں نقطہ \عددی{(x_k,y_k)} پر کمیت \عددی{m_k} ہو گا۔اس نظام کی کمیت درج ذیل ہو گی۔
+فرض کریں ایک مستوی میں متناہی تعداد میں کمیت پائے جاتے ہیں۔یوں نقطہ \عددی{(x_k,y_k)} پر کمیت \عددی{m_k} ہو گا (شکل \حوالہ{شکل_تکمل_استعمال_معیار_اثر_تعریف_الف})۔اس نظام کی کمیت درج ذیل ہو گی۔
 \begin{align*}
 M&=\sum m_k&&\text{\RL{نظام کی کمیت}}
 \end{align*} 
@@ -509,7 +760,7 @@ M_y&=\sum m_kx_k&&\text{\RL{محور $y$ کے لحاظ سے معیار اثر}}
 \begin{align}\label{مساوات_تکمل_استعمال_مرکز_کمیت_ایکس}
 \bar{x}=\frac{M_y}{M}=\frac{\sum m_kx_k}{\sum m_k}
 \end{align}
-یک بعدی صورت کی طرح \عددی{\bar{x}} کی اس قیمت کے لئے نظام لکیر \عددی{x=\bar{x}} پر توازن میں ہو گا۔
+یک بعدی صورت کی طرح \عددی{\bar{x}} کی اس قیمت کے لئے نظام لکیر \عددی{x=\bar{x}} پر توازن میں ہو گا (شکل \حوالہ{شکل_تکمل_استعمال_معیار_اثر_تعریف_ب})۔
 
 
 نظام کے مرکز کمیت کا \عددی{y} محدد درج ذیل ہو گا۔
@@ -520,8 +771,30 @@ M_y&=\sum m_kx_k&&\text{\RL{محور $y$ کے لحاظ سے معیار اثر}}
 
 \جزوحصہء{پتلی مستوی چادر}
 کئی بار ہمیں پتلی مستوی چادر کا مرکز کمیت درکار ہوتا ہے۔ ایسی صورت میں ہم فرض کرتے ہیں کہ کمیت کی تقسیم استمراری ہے لہٰذا \عددی{\bar{x}} اور \عددی{\bar{y}} کے کلیات میں متناہی مجموعوں کی بجائے تکمل پائے جاتے ہیں۔آئیں اس پر غور کرتے ہیں۔
-
-فرض کریں \عددی{xy} مستوی میں ایک پتلی چادر پائی جاتی ہے۔ چادر کو کسی ایک محور کے متوازی باریک پٹیوں میں تقسیم کریں۔ کسی ایک نمائندہ پٹی کی کمیت کا مرکز \عددی{(\tilde{x},\tilde{y})} ہو گا۔ ہم پٹی کی کمیت \عددی{\Delta m} کو نقطہ \عددی{(\tilde{x},\tilde{y})} پر منجمد تصور کرتے ہیں۔یوں محور \عددی{y} کے لحاظ سے پٹی کا معیار اثر \عددی{\tilde{x}\Delta m} ہو گا جبکہ محور \عددی{x} کے لحاظ سے پٹی کا معیار اثر \عددی{\tilde{y}\Delta m} ہو گا۔ اس طرح مساوات \حوالہ{مساوات_تکمل_استعمال_مرکز_کمیت_ایکس} اور مساوات \حوالہ{مساوات_تکمل_استعمال_مرکز_کمیت_وائے} درج ذیل صورت اختیار کرتے ہیں۔
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\k}{1.75}
+\pgfmathsetmacro{\kk}{\k+0.2}
+\draw[-latex](-0.25,0)--(3,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
+\path[name path=obj] plot [smooth cycle]coordinates {(0.5,0.5)(1.5,0.7) (2.5,1.5) (2,2) (1,1.5)};
+\path[name path=kL](\k,0)--++(0,2.1);
+\path[name path=kR](\kk,0)--++(0,2.1);
+\draw[name intersections={of=kL and obj,by={a,b}}];
+\draw[name intersections={of=kR and obj,by={c,d}}];
+\fill[lgray](a)--(b)--(d)--(c)--(a);
+\draw(a)--(b)  (c)--(d);
+\draw plot [smooth cycle]coordinates {(0.5,0.5)(1.5,0.7) (2.5,1.5) (2,2) (1,1.5)};
+\draw($(a)!0.5!(d)$)node[circ]{}node[below left]{$(\tilde{x},\tilde{y})$}++(0.2,0)to[out=0,in=180]++(0.45,-0.25)node[right]{\RL{پٹی کا مرکز کمیت}};
+\draw[dashed]($(a)!0.5!(c)$)coordinate(kx)--($(0,0)!(kx)!(2,0)$)node[below]{$\tilde{x}$};
+\draw[dashed]($(a)!0.5!(d)$)coordinate(ky)--($(0,0)!(ky)!(0,2)$)node[left]{$\tilde{y}$};
+\draw($(b)!0.5!(d)$)++(0,-0.1) to [out=90,in=-90]++(-0.25,0.25)node[above]{\RL{پٹی کی کمیت $\dif m$ ہے}};
+\end{tikzpicture}
+\caption{چادر کو انتصابی پتلی پٹیوں میں تقسیم کیا گیا ہے۔ نمائندہ پٹی کا کسی ایک انفرادی محور کے لحاظ سے معیار اثر وہی ہو گا جو پٹی کی کمیت \عددی{\dif m} کو پٹی کی مرکز کمیت پر منجمد کرنے سے حاصل ہو گا۔}
+\label{شکل_تکمل_استعمال_چادر_انتصابی_پٹی_مرکز_کمیت}
+\end{figure}
+فرض کریں \عددی{xy} مستوی میں ایک پتلی چادر پائی جاتی ہے۔ چادر کو کسی ایک محور کے متوازی باریک پٹیوں میں تقسیم کریں (شکل \حوالہ{شکل_تکمل_استعمال_چادر_انتصابی_پٹی_مرکز_کمیت} میں پٹیاں محور \عددی{y} کے متوازی ہیں)۔ کسی ایک نمائندہ پٹی کی کمیت کا مرکز \عددی{(\tilde{x},\tilde{y})} ہو گا۔ ہم پٹی کی کمیت \عددی{\Delta m} کو نقطہ \عددی{(\tilde{x},\tilde{y})} پر منجمد تصور کرتے ہیں۔یوں محور \عددی{y} کے لحاظ سے پٹی کا معیار اثر \عددی{\tilde{x}\Delta m} ہو گا جبکہ محور \عددی{x} کے لحاظ سے پٹی کا معیار اثر \عددی{\tilde{y}\Delta m} ہو گا۔ اس طرح مساوات \حوالہ{مساوات_تکمل_استعمال_مرکز_کمیت_ایکس} اور مساوات \حوالہ{مساوات_تکمل_استعمال_مرکز_کمیت_وائے} درج ذیل صورت اختیار کرتے ہیں۔
 \begin{align*}
 \bar{x}=\frac{M_y}{M}=\frac{\sum \tilde{x}\Delta m}{\sum \Delta m},\quad \bar{y}=\frac{M_x}{M}=\frac{\sum \tilde{y}\Delta m}{\sum \Delta m}
 \end{align*}
@@ -542,11 +815,11 @@ M&=\int \dif m&&\text{\RL{کمیت}}\\
 
 ان تکملات کی حصول کے لئے ہم چادر کو محددی مستوی میں رکھ کر کسی ایک محدد کے متوازی  ایک نمائندہ پٹی کا خاکہ بناتے ہیں۔ اس پٹی کی کمیت اور مرکز کمیت کے محدد \عددی{ (\tilde{x},\tilde{y})} کو \عددی{x} اور \عددی{y} کی صورت میں لکھا جاتا ہے۔ اس کے بعد محددی مستوی میں چادر کے مقام کے اعتبار سے موزوں حدود کے بیچ  \عددی{\tilde{y}\dif m}، \عددی{\tilde{x}\dif m} اور \عددی{\dif m} کے تکملات  لیتے ہیں۔
 
-\ابتدا{مثال}
-ایک تکونی چادر کی مستقل کثافت \عددی{\delta =\SI{3}{\gram\per\centi\meter\cubed}} ہے۔ (ا) محور \عددی{y} کے لحاظ سے چادر کا معیار اثر \عددی{M_y} معلوم کریں۔ (ب) چادر کی کمیت \عددی{M} معلوم کریں۔ (ج) چادر کی کمیت کے مرکز کا \عددی{\bar{x}} محدد معلوم کریں۔
+\ابتدا{مثال}\شناخت{مثال_تکمل_استعمال_چادر_کثافت}
+ایک تکونی چادر جس کو شکل \حوالہ{شکل_مثال_تکمل_استعمال_چادر_کثافت}-ا میں دکھایا گیا ہے کی مستقل کثافت \عددی{\delta =\SI{3}{\gram\per\centi\meter\cubed}} ہے۔ (ا) محور \عددی{y} کے لحاظ سے چادر کا معیار اثر \عددی{M_y} معلوم کریں۔ (ب) چادر کی کمیت \عددی{M} معلوم کریں۔ (ج) چادر کی کمیت کے مرکز کا \عددی{\bar{x}} محدد معلوم کریں۔
 
 حل:\quad
-\موٹا{پہلی ترکیب:} \ترچھا{افقی پٹیاں}\\
+\موٹا{پہلی ترکیب:} \ترچھا{انتصابی پٹیاں} (شکل \حوالہ{شکل_مثال_تکمل_استعمال_چادر_کثافت}-ب)\\
 (ا) نمائندہ پٹی کے لئے درج ذیل لکھا جا سکتا ہے۔
 \begin{multicols}{2}
 \begin{enumerate}[]
@@ -586,7 +859,7 @@ M=\int \dif m=\int_0^16x\dif x=\left.3x^2\right]_0^1=\SI{3}{\gram}
 \begin{align*}
 \bar{x}=\frac{M_y}{M}=\frac{\SI{2}{\gram\centi\meter}}{\SI{3}{\gram}}=\frac{2}{3},\si{\centi\meter}
 \end{align*}
-\موٹا{دوسری ترکیب:} \ترچھا{انتصابی پٹیاں}\\
+\موٹا{دوسری ترکیب:} \ترچھا{افقی پٹیاں}  (شکل \حوالہ{شکل_مثال_تکمل_استعمال_چادر_کثافت}-ج)\\
 (ا) نمائندہ انتصابی پٹی کے مرکز کمیت کا \عددی{y} محدد \عددی{y} ہو گا:
 \begin{align*}
 \tilde{y}=y
@@ -634,11 +907,70 @@ M=\int\dif m=\int_0^2\frac{3}{2}(2-y)\dif y=\frac{3}{2}\left[2y-\frac{y^2}{2}\ri
 ہم اسی طرح \عددی{M_x} اور \عددی{\bar{y}} بھی تلاش کر سکتے ہیں۔
 \انتہا{مثال}
 %=========================
+\begin{figure}
+\centering
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,xscale=2]
+\draw[-latex](-0.25,0)--(1.25,0)node[right]{$x\,(\si{\centi\meter})$};
+\draw[-latex](0,-0.2)--(0,2.25)node[above]{$y\,(\si{\centi\meter})$};
+\draw[fill=lgray](0,0)--(1,2)node[pos=0.75,above left]{$y=2x$}--(1,0)node[pos=0.5,right]{$x=1$}node[below]{$1$}--(0,0);
+\draw(0.5,0)node[below]{$y=0$} (0,2)node[left]{$2$}--++(0.1,0);
+\end{tikzpicture}
+\caption{تکونی چادر۔}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,xscale=2,declare function={f(\x)=2*\x;}]
+\pgfmathsetmacro{\k}{0.6}
+\pgfmathsetmacro{\t}{0.05}
+\draw[-latex](-0.25,0)--(1.25,0)node[right]{$x\,(\si{\centi\meter})$};
+\draw[-latex](0,-0.2)--(0,2.25)node[above]{$y\,(\si{\centi\meter})$};
+\draw[](0,0)--(1,2)node[pos=0.9,left]{$y=2x$}node[right]{$(1,2)$}--(1,0)node[below]{$1$};
+\draw(0,2)node[left]{$2$}--++(0.1,0);
+\draw[fill=lgray,opacity=0.5](\k-\t,0)rectangle(\k+\t,{f(\k)});
+\draw(\k,{1/2*f(\k)})node[circ]{}node[right,fill=white,xshift=1ex]{$(\tilde{x},\tilde{y})=(x,x)$};
+\draw(\k-\t,-0.1)--++(0,-0.2)coordinate[pos=0.7](kL);
+\draw(\k+\t,-0.1)--++(0,-0.2)coordinate[pos=0.7](kR);
+\draw[stealth-](kL)--++(-0.1,0);
+\draw[stealth-](kR)--++(0.1,0)--++(0,-0.1)node[below]{$\dif x$};
+\draw(\k,{f(\k)})node[left]{$(x,2x)$};
+\draw[stealth-stealth](0,{1/2*f(\k)})--(\k,{1/2*f(\k)})node[pos=0.25,above]{$x$};
+\end{tikzpicture}
+\caption{انتصابی پٹیاں۔}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,xscale=2,declare function={f(\x)=2*\x;}]
+\pgfmathsetmacro{\k}{0.6}
+\pgfmathsetmacro{\t}{0.05}
+\draw[-latex](-0.25,0)--(1.25,0)node[right]{$x\,(\si{\centi\meter})$};
+\draw[-latex](0,-0.2)--(0,2.25)node[above]{$y\,(\si{\centi\meter})$};
+\draw[](0,0)--(1,2)node[right]{$(1,2)$}--(1,0)node[below]{$1$};
+\draw(0,2)node[left]{$2$}--++(0.1,0);
+\draw[fill=lgray,opacity=0.5](1,{f(\k-\t)})rectangle(\k,{f(\k+\t)});
+\draw({\k+1/2*(1-\k)},{f(\k)})node[circ]{}coordinate(cm);
+\draw[dashed](\k,{f(\k)})--(0,{f(\k)})node[left]{$y$};
+\draw(cm)++(0,-0.2)--++(0,-0.2)coordinate[pos=0.5](kR);
+\draw[stealth-stealth](kR)--($(0,0)!(kR)!(0,2)$)node[pos=0.25,below]{$\tfrac{1+\tfrac{y}{2}}{2}$};
+\draw(1.1,{f(\k-\t)})--++(0.2,0)coordinate[pos=0.5](kkB);
+\draw(1.1,{f(\k+\t)})--++(0.2,0)coordinate[pos=0.5](kkT);
+\draw[stealth-](kkB)--++(0,-0.2);
+\draw[stealth-](kkT)--++(0,0.2)--++(0.1,0)node[right]{$\dif y$};
+\draw(\k,{f(\k+\t)})++(0,0.1)--++(0,0.2)coordinate[pos=0.5](kkC);
+\draw[stealth-stealth](kkC)--($(1,0)!(kkC)!(1,2)$)coordinate[pos=0.2](kL);
+\draw(kL) to [out=90,in=-90]++(-0.1,0.25)node[yshift=1ex]{$1-\tfrac{y}{2}$};
+\end{tikzpicture}
+\caption{افقی پٹیاں۔}
+\end{subfigure}
+\caption{چادر برائے مثال \حوالہ{مثال_تکمل_استعمال_چادر_کثافت}}
+\label{شکل_مثال_تکمل_استعمال_چادر_کثافت}
+\end{figure}
 
 اگر پتلی چادر میں کمیت کی تقسیم تشاکلی ہو تب کمیت کا مرکز محور تشاکل پر پایا جائے گا۔ اگر تشاکل کے دو محور پائے جاتے ہوں تب مرکز کمیت دونوں محور کے نقطہ تقاطع پر پایا جائے گا۔ یہ دو حقائق عموماً مدد گار ثابت ہوتے ہیں۔
 
 \ابتدا{مثال}\شناخت{مثال_تکمل_استعمال_مستقل_کثافت}\ترچھا{مستقل کثافت}
-ایک پتلا مستوی خطہ جس کی کثافت مستقل \عددی{\delta} ہے کو بالائی طرف سے قطع مکافی \عددی{y=4-x^2} اور زیریں طرف سے محور \عددی{x}  گھیرتا ہے۔ اس خطے کا مرکز کمیت تلاش کریں۔
+ایک پتلا مستوی خطہ جس کی کثافت مستقل \عددی{\delta} ہے کو بالائی طرف سے قطع مکافی \عددی{y=4-x^2} اور زیریں طرف سے محور \عددی{x}  گھیرتا ہے (شکل \حوالہ{شکل_مثال_تکمل_استعمال_مستقل_کثافت})۔ اس خطے کا مرکز کمیت تلاش کریں۔
 
 حل:\quad
 چونکہ  خطے کی کثافت مستقل ہے اور تقسیم کمیت محور \عددی{y} کے لحاظ سے تشاکلی ہے لہٰذا مرکز کمیت محور \عددی{y} پر پایا جائے گا۔ یوں \عددی{\bar{x}=0} ہو گا۔ ہمیں صرف \عددی{\bar{y}=\tfrac{M_x}{M}} معلوم کرنا ہے۔
@@ -693,6 +1025,53 @@ M=\int \dif m=\int_{-2}^2\delta(4-x^2)\dif x=\frac{32}{3}\delta
 \end{align*}
 \انتہا{مثال}
 %=====================
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=4-\x^2;}]
+\pgfmathsetmacro{\k}{1.25}
+\pgfmathsetmacro{\t}{0.05}
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-2,2},ytick={4}]
+\addplot[domain=-2:2]{f(x)}node[pos=0.55,right,yshift=2mm]{$y=4-x^2$};
+\draw[fill=lgray,opacity=0.5](-\k,{f(\k-\t)}) rectangle (\k,{f(\k+\t)});
+\draw(0,{f(\k)})node[circ]{}node[above left]{$(0,y)$}node[above right]{\RL{مرکز کمیت}};
+\draw(-\k-0.2,{f(\k-\t)})--(-\k-0.4,{f(\k-\t)});
+\draw(-\k-0.2,{f(\k+\t)})--(-\k-0.4,{f(\k+\t)});
+\draw[stealth-](-\k-0.3,{f(\k+\t)})--(-\k-0.3,{f(\k+0.2)});
+\draw[stealth-](-\k-0.3,{f(\k-\t)})--(-\k-0.3,{f(\k-0.2)})node[above]{$\dif y$};
+\draw(-\k,{f(\k+0.1)})--(-\k,{f(\k+0.2)})coordinate[pos=0.5](kL);
+\draw(\k,{f(\k+0.1)})--(\k,{f(\k+0.2)})coordinate[pos=0.5](kR);
+\draw[stealth-stealth](kL)--(kR)node[pos=0.5,below,fill=white]{$2\sqrt{4-y}$};
+\end{axis}
+\end{tikzpicture}
+\caption{افقی پٹیوں سے حاصل تکمل مشکل ثابت ہوتا ہے۔}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=4-\x^2;}]
+\pgfmathsetmacro{\k}{1}
+\pgfmathsetmacro{\t}{0.1}
+\begin{axis}[clip=false,axis on top,small,axis lines=middle,xlabel={$x$},ylabel={$y$},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-2,2,\k},xticklabels={$-2$,$2$,$x$},ytick={4}]
+\addplot[domain=-2:2]{f(x)}node[pos=0.55,right,yshift=2mm]{$y=4-x^2$};
+\draw[fill=lgray,opacity=0.5](\k-\t,{f(\k)}) rectangle (\k+\t,0);
+\draw(\k,{1/2*f(\k)})node[circ]{}node[right,xshift=4ex]{$\begin{aligned} &(\tilde{x},\tilde{y})=\\  &\big(x,\tfrac{4-x^2}{2}\big) \end{aligned}$};
+\draw(\k,{1/2*f(\k)+0.1}) to [out=45,in=180](\k+1,{f(\k)})node[right]{\RL{مرکز کمیت}};
+\draw(\k+0.2,{1/2*f(\k)})--(\k+0.4,{1/2*f(\k)})coordinate[pos=0.7](ka);
+\draw[stealth-stealth](ka)--($(0,0)!(ka)!(2,0)$)node[pos=0.5,fill=white]{$\tfrac{y}{2}$};
+\draw(\k-0.2,{f(\k)})--(\k-0.4,{f(\k)})coordinate[pos=0.7](kb);
+\draw[stealth-stealth](kb)--($(0,0)!(kb)!(2,0)$)node[pos=0.5,sloped,below]{$4-x^2$};
+\draw(\k-\t,-0.5)--(\k-\t,-0.9);
+\draw(\k+\t,-0.5)--(\k+\t,-0.9);
+\draw[stealth-](\k-\t,-0.7)--(\k-\t-0.2,-0.7);
+\draw[stealth-](\k+\t,-0.7)--(\k+\t+0.2,-0.7)node[right]{$\dif x$};
+\end{axis}
+\end{tikzpicture}
+\caption{انتصابی پٹیاں۔}
+\end{subfigure}
+\caption{چادر برائے مثال \حوالہ{مثال_تکمل_استعمال_مستقل_کثافت}}
+\label{شکل_مثال_تکمل_استعمال_مستقل_کثافت}
+\end{figure}
 \ابتدا{مثال}\ترچھا{متغیر کثافت}
 نقطہ \عددی{(x,y)} پر مثال \حوالہ{مثال_تکمل_استعمال_مستقل_کثافت} کی چادر کی کثافت \عددی{\delta=2x^2} لیتے ہوئے چادر کی کمیت کا مرکز تلاش کریں۔
 
@@ -718,7 +1097,7 @@ M&=\int\dif m=\int_{-2}^2\delta(4-x^2)\dif x=\int_{-2}^22x^2(4-x^2)\dif x\\
 ایک تار جس کی کثافت \عددی{\delta} مستقل ہے سے  رداس \عددی{a} کا نصف دائرہ بنایا جاتا ہے۔ اس کی کمیت کا مرکز تلاش کریں۔
 
 حل:\quad
-ہم نصف دائرے کا تفاعل \عددی{y=\sqrt{a^2-x^2}} سے ظاہر کرتے ہیں۔کمیت کی تقسیم محور \عددی{y} کے لحاظ سے تشاکلی ہے لہٰذا  \عددی{\bar{x}=0} ہو گا۔ہم تصور میں تار کو چھوٹے قطعات میں تقسیم کر کے \عددی{\bar{y}} تلاش کرتے ہیں۔ نمائندہ قطع کے لئے درج ذیل ہو گا۔
+ہم نصف دائرے کو تفاعل \عددی{y=\sqrt{a^2-x^2}} سے ظاہر کرتے ہیں (شکل \حوالہ{شکل_مثال_تکمل_استعمال_تار_نصف_دائرہ})۔کمیت کی تقسیم محور \عددی{y} کے لحاظ سے تشاکلی ہے لہٰذا  \عددی{\bar{x}=0} ہو گا۔ہم تصور میں تار کو چھوٹے قطعات میں تقسیم کر کے \عددی{\bar{y}} تلاش کرتے ہیں۔ نمائندہ قطع کے لئے درج ذیل ہو گا۔
 \begin{multicols}{2}
 \begin{enumerate}[]
 \item
@@ -739,6 +1118,48 @@ $\tilde{y}=a\sin\theta$
 مرکز کمیت \عددی{(0,2a/{\pi})} ہو گا جو مبدا سے تقریباً \عددی{\tfrac{2}{3}} اوپر ہے۔
 \انتہا{مثال}
 %======================
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\len}{1.5}
+\pgfmathsetmacro{\ang}{30}
+\pgfmathsetmacro{\angA}{\ang+20}
+\draw[-latex](-2,0)--(2,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,1.75)node[above]{$y$};
+\draw([shift={(0:\len)}]0,0) arc (0:180:\len);
+\draw[very thick]([shift={(\ang:\len)}]0,0) arc (\ang:\angA:\len);
+\draw(-\len,0)node[below]{$-a$}  (\len,0)node[below]{$a$};
+\draw(100:\len)node[left,yshift=1mm]{$y=\sqrt{a^2-x^2}$};
+\draw(0,0)--(\ang:\len);
+\draw(0,0)--(\angA:\len);
+\draw(0,0)--({1/2*(\ang+\angA)}:\len)node[circ]{}node[right,xshift=1mm]{$\begin{aligned} &(\tilde{x},\tilde{y})=\\&(a\cos \theta,a\sin\theta)\end{aligned}$};
+\draw[stealth-]([shift={(\ang:1)}]0,0) arc (\ang:{\ang-15}:1);
+\draw[stealth-]([shift={(\angA:1)}]0,0) arc (\angA:{\angA+20}:1)node[above]{$\dif \theta$};
+\draw[stealth-stealth]([shift={(0:0.6)}]0,0) arc (0:{1/2*(\ang+\angA)}:0.6);
+\draw({\ang/2}:0.75)node[]{$\theta$};
+\draw({\angA-2.5}:\len)++(0.1,0) to[out=55,in=-90]++(0.5,0.75)node[above,xshift=1ex]{$\dif m=\delta \dif s=\delta a\dif \theta$};
+\end{tikzpicture}
+\caption{مرکز کمیت کے حصول میں مستعمل متغیرات ۔}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\len}{1.5}
+\pgfmathsetmacro{\ang}{30}
+\pgfmathsetmacro{\angA}{\ang+20}
+\draw[-latex](-2,0)--(2,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,1.75)node[above]{$y$};
+\draw([shift={(0:\len)}]0,0) arc (0:180:\len);
+\draw(-\len,0)node[below]{$-a$}  (\len,0)node[below]{$a$} (0,\len)node[left,yshift=1mm]{$a$};
+\draw(0,{2/(pi)*(\len)})node[circ]{}node[right,yshift=-0.5mm]{$(0,\tfrac{2}{\pi}a)$}node[left]{\RL{مرکز کمیت}};
+\end{tikzpicture}
+\caption{مرکز کمیت تار پر نہیں پایا جاتا ہے۔}
+\end{subfigure}
+\caption{نصف دائری تار (مثال \حوالہ{مثال_تکمل_استعمال_تار_نصف_دائرہ})}
+\label{شکل_مثال_تکمل_استعمال_تار_نصف_دائرہ}
+\end{figure}
 
 \جزوحصہ{وسطانی مرکز}
 مستقل کثافت کی صورت میں \عددی{\bar{x}} اور \عددی{\bar{y}} کی کلیات میں  نسب نما اور شمار کنندہ میں پائے جانے والے \عددی{\delta} ایک دوسرے کو منسوخ کرتے ہیں۔یوں \عددی{\bar{x}} اور \عددی{\bar{y}} کی نقطہ نظر سے \عددی{\delta} کو شروع سے اکائی تصور کیا جا سکتا ہے۔ مستقل کثافت کی صورت میں کسی چیز کی کمیت کا مرکز اس چیز کی شکل و صورت پر منحصر ہو گا نا کہ اس مادے پر جس سے یہ چیز بنی ہو۔ایسی صورت میں مرکز کمیت کو عموماً \اصطلاح{وسطانی مرکز}\فرہنگ{وسطانی مرکز}\حاشیہب{centroid}\فرہنگ{centroid} کہتے ہیں۔ یوں اگر آپ سے کہا جائے کہ تکون، مخروط یا کرہ کا وسطانی مرکز تلاش کریں۔ آپ \عددی{\bar{x}} اور \عددی{\bar{y}} کو معیار اثر تقسیم کمیت سے  معلوم کرتے ہوئے \عددی{\delta=1} لیں۔
