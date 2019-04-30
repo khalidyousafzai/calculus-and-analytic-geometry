@@ -3820,7 +3820,7 @@ $3x$
 \end{minipage}
 \end{figure} 
 
-علامتی قطع \عددی{PQ} کی لمبائی \عددی{\sqrt{(\Delta x_k)^2+(\Delta y_k)^2}} ہو گی (شکل \حوالہ{شکل_تکمل_استعمال_کثیر-الاضلاع})۔ یوں منحنی کی لمبائی تخمیناً درج ذیل  مجموعہ ہو گا۔
+قطع \عددی{PQ} کی لمبائی \عددی{\sqrt{(\Delta x_k)^2+(\Delta y_k)^2}} ہو گی (شکل \حوالہ{شکل_تکمل_استعمال_کثیر-الاضلاع})۔ یوں منحنی کی لمبائی تخمیناً درج ذیل  مجموعہ ہو گا۔
 \begin{align}\label{مساوات_تکمل_استعمال_لمبائی_قوس_الف}
 \sum_{k=1}^n \sqrt{(\Delta x_k)^2+(\Delta y_k)^2}
 \end{align}
@@ -4184,7 +4184,7 @@ $1$
 \end{minipage}\hfill
 \begin{minipage}{0.30\textwidth}
 \centering
-\begin{tikzpicture}[declare function={f(\x)=0.2*sin(deg(10*\x));}]
+\begin{tikzpicture}[xscale=0.75,declare function={f(\x)=0.2*sin(deg(10*\x));}]
 \pgfmathsetmacro{\l}{2}
 \pgfmathsetmacro{\ang}{70}
 \draw[]plot[domain=0:3.142,smooth]({\x+\l*cos(\ang)},{f(\x)+\l*sin(\ang)});
@@ -4197,7 +4197,7 @@ $1$
 \end{minipage}\hfill
 \begin{minipage}{0.30\textwidth}
 \centering
-\begin{tikzpicture}[]
+\begin{tikzpicture}[font=\small]
 \pgfmathsetmacro{\l}{2}
 \pgfmathsetmacro{\ang}{50}
 \pgfmathsetmacro{\angE}{140}
@@ -4205,7 +4205,7 @@ $1$
 \draw(kL)++(0,0.1)--++(-0.3,0.5)node[above,font=\footnotesize]{$y=8\cos(\tfrac{\pi x}{20})$};
 \draw([shift={(0:1)}]\ang:\l) arc (0:\angE:1)coordinate(kA);
 \draw(\angE:1)--(kA);
-\draw(1,0)--++(\ang:\l)node[pos=0.5,right]{$\SI{100}{\meter}$};
+\draw(1,0)--++(\ang:\l)node[pos=0.6,sloped,below]{$\SI{100}{\meter}$};
 \path[name path=left](-1,0)--++(\ang:\l);
 \draw[name intersections={of=left and front}](-1,0)--(intersection-1);
 \draw[-latex](-1.25,0)--(1.25,0)node[right]{$x$};

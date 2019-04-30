@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.3.27)  29 APR 2019 14:35
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.3.27)  30 APR 2019 11:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -9,22 +9,32 @@ tegralsA.tex $
 egralsA.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
-! Undefined control sequence.
-l.1 \حصہ
-           {سطح طواف کا رقبہ}
+
+! LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{figure}
+                  
 ? 
 ! Emergency stop.
-l.1 \حصہ
-           {سطح طواف کا رقبہ}
-End of file on the terminal!
+ ...                                              
+                                                  
+l.1 \begin{figure}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
  
 Here is how much of TeX's memory you used:
- 5 strings out of 493007
- 299 string characters out of 6136719
+ 7 strings out of 493007
+ 442 string characters out of 6136719
  61819 words of memory out of 5000000
- 4075 multiletter control sequences out of 15000+600000
+ 4076 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 5i,0n,1p,116b,8s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 5i,0n,4p,115b,16s stack positions out of 5000i,500n,10000p,200000b,80000s
 No pages of output.
