@@ -1,228 +1,146 @@
-\begin{figure}
-\centering
-\begin{subfigure}{0.3\textwidth}
-\centering
-\begin{tikzpicture}[declare function={f(\x)=2-1/9*\x^2;}]
-\pgfmathsetmacro{\ka}{0.75}
-\pgfmathsetmacro{\kb}{3}
-\pgfmathsetmacro{\kc}{2.2}
-\pgfmathsetmacro{\kd}{2.5}
-\pgfmathsetmacro{\ra}{f(\ka)}
-\pgfmathsetmacro{\rb}{f(\kb)}
-\pgfmathsetmacro{\rc}{f(\kc)}
-\pgfmathsetmacro{\rd}{f(\kd)}
-\draw(-0.25,0)--(\ka-1/4*\ra,0);
-\draw[-latex](\kb-1/4*\rb,0)--(3.5,0)node[right]{$x$};
-\draw[-latex](0,-0.2)--(0,2.2)node[above]{$y$};
-\draw[]plot[domain=\ka:\kb](\x,{f(\x)});
-\draw[very thick]plot[domain=\kc:\kd](\x,{f(\x)});
-\draw[]plot[domain=\ka:\kb](\x,{-f(\x)});
-\draw(\kb,0) circle (1/4*\rb cm and \rb cm);
-\draw([shift={(90:1/4*\ra cm and \ra cm)}]\ka,0) arc (90:270:1/4*\ra cm and \ra cm);
-\draw([shift={(90:1/4*\rc cm and \rc cm)}]\kc,0) arc (90:270:1/4*\rc cm and \rc cm);
-\draw([shift={(90:1/4*\rd cm and \rd cm)}]\kd,0) arc (90:270:1/4*\rd cm and \rd cm);
-\draw[gray](\ka,0)node[circ]{}node[below]{$a$};
-\draw(\kb,0)node[circ]{}node[below]{$b$};
-\draw(\kc,{f(\kc)})node[above]{$P$};
-\draw(\kd,{f(\kd)})node[above,xshift=1mm]{$Q$};
-\draw(\ka,{f(\ka)})node[above right]{$y=f(x)$};
-\end{tikzpicture}
-\caption{}
-\end{subfigure}\hfill
-\begin{subfigure}{0.3\textwidth}
-\centering
-\begin{tikzpicture}[xscale=3,declare function={f(\x)=2-1/9*\x^2;}]
-\pgfmathsetmacro{\ka}{0.75}
-\pgfmathsetmacro{\kb}{3}
-\pgfmathsetmacro{\kc}{2.2}
-\pgfmathsetmacro{\kd}{2.5}
-\pgfmathsetmacro{\ra}{f(\ka)}
-\pgfmathsetmacro{\rb}{f(\kb)}
-\pgfmathsetmacro{\rc}{f(\kc)}
-\pgfmathsetmacro{\rd}{f(\kd)}
-\draw(-1/6*\rc,0)--++(-0.15,0);
-\draw[-latex](\kd-\kc-1/6*\rd,0)--++(0.55,0)node[right]{$x$};
-\draw[very thick]plot[domain=\kc:\kd](\x-\kc,{f(\x)});
-\draw[]plot[domain=\kc-0.25:\kd+0.25](\x-\kc,{f(\x)});
-\draw[]plot[domain=\kc:\kd](\x-\kc,{-f(\x)});
-\draw([shift={(90:1/6*\rc cm and \rc cm)}]0,0) arc (90:270:1/6*\rc cm and \rc cm);
-\draw(\kd-\kc,0) circle (1/6*\rd cm and \rd cm);
-\draw(0,{f(\kc)})node[above]{$P$};
-\draw(\kd-\kc,{f(\kd)})node[above,xshift=1mm]{$Q$};
-\draw[dashed](\kd-\kc,0)node[below]{$x_k$}--++(0,{f(\kd)});
-\end{tikzpicture}
-\caption{}
-\end{subfigure}\hfill
-\begin{subfigure}{0.3\textwidth}
-\centering
-\begin{tikzpicture}[xscale=0.5,yscale=1.5,declare function={f(\x)=1-1/4*\x;}]
-\pgfmathsetmacro{\ka}{0}
-\pgfmathsetmacro{\kb}{1.5}
-\pgfmathsetmacro{\ra}{f(\ka)}
-\pgfmathsetmacro{\rb}{f(\kb)}
-\draw[dashed](-0.5,0)--(\kb-1/4*\rb,0);
-\draw[-latex](\kb-1/4*\rb,0)--(5,0)node[right]{$x$};
-\draw[]plot[domain=0:\kb](\x,{f(\x)});
-\draw[]plot[domain=0:\kb](\x,{-f(\x)});
-\draw[dashed]plot[domain=\kb:4](\x,{f(\x)});
-\draw[dashed]plot[domain=\kb:4](\x,{-f(\x)});
-\draw([shift={(90:1/2*\ra cm and \ra cm)}]\ka,0) arc (90:270:1/2*\ra cm and \ra cm);
-\draw(\kb,0) circle (1/2*\rb cm and \rb cm);
-\draw(0,0)--(0,{f(0)})node[pos=0.5,right]{$r_1$};
-\draw(\kb,0)--(\kb,{f(\kb)})node[pos=0.4,right,fill=white]{$r_2$};
-\draw[stealth-stealth](0,{f(0)+0.1})--(\kb,{f(\kb)+0.1})node[pos=0.25,above right]{\RL{ترچھی لمبائی $L$}};
-\end{tikzpicture}
-\caption{}
-\end{subfigure}
-\end{figure}
+\حصہ{کام}
+روزمرہ زندگی میں کام سے مراد وہ عمل ہے جو جسمانی یا ذہنی قوت سے سر انجام دیا جائے۔ سائنس میں کام کی تعریف اس سے مختلف ہے۔ اس حصہ میں کام کی سائنسی  تعریف پیش کی جائے گی اور کام کی قیمت کا حصول سکھایا جائے گا۔
 
-\begin{figure}
-\centering
-\begin{minipage}{0.45\textwidth}
-\centering
-\begin{tikzpicture}[font=\small,declare function={f(\x)=2-\x^2;}]
-\begin{axis}[clip=false,small,axis lines=middle,axis y line=none,ymin=0,xtick={\a,\c},xticklabels={$x_{k-1}$,$x_k$},enlargelimits=true,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west}]
-\pgfmathsetmacro{\a}{0}
-\pgfmathsetmacro{\b}{1.1}
-\pgfmathsetmacro{\c}{1}
-\addplot[thick,domain=0:\b]{f(x)};
-\addplot[thick,domain=0:0.5]({-x},{f(x)})node[pos=1,left]{$y=f(x)$};
-\draw(\a,{f(\a)})node[above]{$P$}--(\c,{f(\c)})node[above]{$Q$}node[pos=0.25,pin=60:{$L=\sqrt{(\Delta x_k)^2+(\Delta y_k)^2}$}]{};
-\draw[dashed](0,{f(\c)})--(0,0);
-\draw[dashed](\c,{f(\c)})--(\c,0);
-\draw(\c,{f(\c)})--(0,{f(\c)})--(0,{f(0)});
-\RightAngle{(\c,{f(\c)})}{(0,{f(\c)})}{(0,{f(0)})}
-\draw[stealth-stealth](\c-0.1,0)--(\c-0.1,{f(\c)})node[pos=0.5,left]{$r_2=f(x_k)$};
-\draw[stealth-stealth](-0.1,0)--(-0.1,{f(0)})node[pos=0.25,left]{$r_1=f(x_{k-1})$};
-\draw[stealth-stealth](-0.2,{f(\c)})--(-0.2,{f(0)})node[pos=0.5,left]{$\Delta y_k$};
-\draw(-0.15,{f(\c)})--(-0.25,{f(\c)});
-\draw(-0.05,{f(0)})--(-0.25,{f(0)});
-\draw[stealth-stealth](0,-4ex)--(\c,-4ex)node[pos=0.5,fill=white]{$\Delta x_k$};
-\draw(0,-3ex)--(0,-5ex);
-\draw(\c,-3ex)--(\c,-5ex);
-\end{axis}
-\end{tikzpicture}
-\caption{قطع $PQ$ کی لمبائی کے ساتھ وابستہ متغیرات۔}
-\end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
-\centering
-\begin{tikzpicture}[font=\small,declare function={f(\x)=2-\x^2;g(\x)=7/4-(\x-1/2);}]
-\begin{axis}[clip=false,small,axis lines=middle,axis y line=none,ymin=0,xtick={\a,\c,0.5},xticklabels={$x_{k-1}$,$x_k$,$c_k$},enlargelimits=true,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west}]
-\pgfmathsetmacro{\a}{0}
-\pgfmathsetmacro{\b}{1.1}
-\pgfmathsetmacro{\c}{1}
-\addplot[thick,domain=0:\b]{f(x)};
-\addplot[thick,domain=0:0.5]({-x},{f(x)})node[pos=1,left]{$y=f(x)$};
-\addplot[domain=-0.1:\b]{g(x)};
-\draw(\a,{f(\a)})node[above left]{$P$}--(\c,{f(\c)})node[right]{$Q$};
-\draw[dashed](0,{f(\c)})--(0,0);
-\draw[dashed](\c,{f(\c)})--(\c,0);
-\draw(\c,{f(\c)})--(0,{f(\c)})--(0,{f(0)});
-\RightAngle{(\c,{f(\c)})}{(0,{f(\c)})}{(0,{f(0)})}
-\draw[stealth-stealth](-0.2,{f(\c)})--(-0.2,{f(0)})node[pos=0.5,left]{$\Delta y_k$};
-\draw(-0.15,{f(\c)})--(-0.25,{f(\c)});
-\draw(-0.15,{f(0)})--(-0.25,{f(0)});
-\draw[stealth-stealth](0,-4ex)--(\c,-4ex)node[pos=0.5,fill=white]{$\Delta x_k$};
-\draw(0,-3ex)--(0,-5ex);
-\draw(\c,-3ex)--(\c,-5ex);
-\draw(1/2,{f(1/2)})node[circ]{}node[above right]{$(c_k,f(c_k))$}--(1/2,0);
-\end{axis}
-\end{tikzpicture}
-\caption{خط مستقیم $PQ$ اور نقطہ $c_k$ پر مماس متوازی ہیں۔}
-\end{minipage}\hfill
-\end{figure}
+\جزوحصہء{مستقل قوت اور کام}
+جب کوئی جسم جس پر مستقل قوت \عددی{F} عمل کرتی ہو، قوت کی سمت میں سیدھی لکیر پر فاصل \عددی{d} حرکت کرے تب ہم (سائنسی طور پر) کہتے ہیں کہ قوت \عددی{F} اس جسم پر کام \عددی{W} کرتی ہے:
+\begin{align}\label{مساوات_تکمل_استعمال_کام_مستقل_قوت}
+W=Fd
+\end{align}
+آپ دیکھ سکتے ہیں کہ سائنس میں لفظ کام کی معنی روزمرہ زندگی میں استعمال معنی سے مختلف ہے۔ اگر آپ کسی گاڑی کو سڑک پر دکھا لگا کر ایک جگہ سے دوسری جگہ منتقل کریں تب آپ کی روزمرہ خیال کے مطابق آپ نے کام کیا اور مساوات \حوالہ{مساوات_تکمل_استعمال_کام_مستقل_قوت} کے تحت بھی آپ نے کام کیا۔ اس کے برعکس اگر آپ پورا دن گاڑی کو دکھا لگاتے رہیں لیکن گاڑی اپنی جگہ سے حرکت نہ کرے تب اگرچہ آپ کا خیال ہو گا کہ آپ نے بہت کام کیا لیکن مساوات \حوالہ{مساوات_تکمل_استعمال_کام_مستقل_قوت} کے تحت آپ نے کوئی کام نہیں کیا۔
 
-\begin{figure}
-\centering
-\begin{minipage}{0.45\textwidth}
-\centering
-\begin{tikzpicture}[font=\small,yscale=0.5,declare function={f(\x)=2*sqrt(\x);}]
-\pgfmathsetmacro{\a}{1}
-\pgfmathsetmacro{\b}{2}
-\pgfmathsetmacro{\ra}{f(\a)}
-\pgfmathsetmacro{\rb}{f(\b)}
-\draw(\a-1/6*\ra,0)--(-0.25,0);
-\draw[gray](\a-1/6*\ra,0)--(\b-1/6*\rb,0);
-\draw[-latex](\b-1/6*\rb,0)--(3,0)node[right]{$x$};
-\draw[-latex](0,-0.2)--(0,3)node[above]{$y$};
-\draw[]plot[domain=0:0.5](\x,{f(\x)});
-\draw[]plot[domain=0.5:3](\x,{f(\x)});
-\draw[]plot[domain=1:2](\x,{-f(\x)});
-\draw([shift={(90:1/6*\ra cm and \ra cm)}]\a,0) arc (90:270:1/6*\ra cm and \ra cm);
-\draw(\b,0) circle (1/6*\rb cm and \rb cm);
-\draw(\a,{f(\a)})node[above,xshift=-1ex]{$(1,2)$};
-\draw(\b,{f(\b)})node[above,yshift=1ex]{$(2,2\sqrt{2})$};
-\draw(3,{f(3)})node[below]{$y=2\sqrt{x}$};
-\draw(2,0)node[below]{$2$}--(2,0.2);
-\draw[gray](1,0)node[below]{$1$}--(1,0.2);
-\end{tikzpicture}
-\end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
-\centering
-\begin{tikzpicture}[scale=2,font=\small,declare function={f(\x)=1-\x;}]
-\draw[dashed](-1,0)--(1,0);
-\draw(-1,0)--(-1.25,0);
-\draw[-latex](1,0)node[above,xshift=2ex]{$B(1,0)$}--(1.5,0)node[right]{$x$};
-\draw[dashed](0,-0.2)--(0,1)node[left]{$A(0,1)$};
-\draw[-latex](0,1)--(0,1.25)node[above]{$y$};
-\draw[]plot[domain=0:1](\x,{f(\x)});
-\draw[]plot[domain=0:1](-\x,{f(\x)});
-\draw([shift={(180:1cm and 0.25 cm)}]0,0) arc (180:360:1cm and 0.25 cm);
-\draw(0.25,{f(0.25)})++(0.1,0)--++(0.25,0.25)node[right]{$x+y=1$};
-\end{tikzpicture}
-\end{minipage}\hfill
-\end{figure}
+مساوات \حوالہ{مساوات_تکمل_استعمال_کام_مستقل_قوت} سے واضح ہے کہ قوت کی اکائی کو فاصلہ کی اکائی سے ضرب دینے سے کام کی اکائی حاصل ہو گی۔ بین الاقوامی نظام اکائی میں قوت کی اکائی نیوٹن \عددی{\si{\newton}} اور فاصلہ کی اکائی میٹر \عددی{\si{\meter}} ہے لہٰذا اس نظام میں کام کی اکائی نیوٹن میٹر  \عددی{\si{\newton}\cdot\si{\meter}} ہو گی جس کو خصوصی نام \اصطلاح{جاول}\فرہنگ{جاول}\حاشیہب{joule}\فرہنگ{joule} دیا گیا ہے اور جس کو \عددی{\si{\joule}} سے ظاہر کیا جاتا ہے۔
 
+\ابتدا{مثال}
+فرض کریں  آپ  \عددی{\SI{80}{\kilo\gram}} کمیت کو \عددی{\SI{30}{\centi\meter}} بلندی تک اٹھاتے ہیں۔ایسا کرتے ہوئے آپ درج ذیل کام کرتے ہیں۔
+\begin{align*}
+W=Fd=(80)(9.8)(0.3)=\SI{235.2}{\joule}
+\end{align*}
+\انتہا{مثال}
+%======================
+\جزوحصہء{متغیر قوت اور کام}
+اگر آپ پانی کی ایسی بالٹی کو اٹھائیں جس سے پانی ٹپکتا ہو تب لاگو قوت کی قیمت بلندی کے ساتھ تبدیل ہو گی۔ایسی صورت میں قوت کا کلیہ \عددی{W=Fd} تبدیل کرتے ہوئے تکمل کا استعمال ضروری ہو گا جو قوت  کی تبدیلی کا حساب رکھ سکے۔ 
 
-\begin{figure}
-\centering
-\begin{minipage}{0.45\textwidth}
-\centering
-\begin{tikzpicture}[font=\small,declare function={f(\x)=(\x-1)*(\x-1.75)*(\x-2.5)+1;}]
-\pgfmathsetmacro{\a}{0.75}
-\pgfmathsetmacro{\b}{2.5}
-\pgfmathsetmacro{\c}{1.8}
-\pgfmathsetmacro{\d}{2}
-\pgfmathsetmacro{\e}{1/2*(\c+\d)}
-\pgfmathsetmacro{\ra}{f(\a)}
-\pgfmathsetmacro{\rb}{f(\b)}
-\pgfmathsetmacro{\rc}{f(\c)}
-\pgfmathsetmacro{\rd}{f(\d)}
-\draw[-latex](0,-0.2)--(0,1.5);
-\draw[-latex](-0.25,0)--(3.5,0)node[right]{\RL{محور طواف}};
-\draw[thick]plot[domain=0.75:2.5](\x,{f(\x)});
-\draw[]plot[domain=0.75:2.5](\x,{-f(\x)});
-\draw([shift={(90:1/4*\ra cm and \ra cm)}]\a,0) arc (90:270:1/4*\ra cm and \ra cm);
-\draw(\b,0) circle (1/4*\rb cm and \rb cm);
-\draw([shift={(90:1/4*\rc cm and \rc cm)}]\c,0) arc (90:270:1/4*\rc cm and \rc cm);
-\draw([shift={(90:1/4*\rd cm and \rd cm)}]\d,0) arc (90:270:1/4*\rd cm and \rd cm);
-\draw(\a,{f(\a)})node[left]{$A$};
-\draw(\b,{f(\b)})node[right]{$B$};
-\draw(\b,0)node[below]{$b$}--(\b,{f(\b)});
-\draw[gray](\a,0)node[below]{$a$}--(\a,{f(\a)});
-\draw[gray](\e,0)--(\e,{f(\e)})node[pos=0.5,right]{$\rho$};
-\draw(\c,{f(\c)+0.1})--++(0,0.2)coordinate[pos=0.5](L);
-\draw(\d,{f(\c)+0.1})--++(0,0.2)coordinate[pos=0.5](R);
-\draw[stealth-](L)--++(-0.2,0);
-\draw[stealth-](R)--++(0.3,0)--++(0,0.2)node[above]{$\dif s$};
-\draw(\b+0.25,{f(\c)+0.5})node[right]{$S=\int\limits_a^b2\pi \rho \dif s$};
-\end{tikzpicture}
-\end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
-\centering
-\begin{tikzpicture}[xscale=4,yscale=10,font=\small,declare function={f(\x)=\x^3;}]
-\pgfmathsetmacro{\a}{1/2}
-\pgfmathsetmacro{\ra}{f(\a)}
-\draw[-latex](0,-0.175)--(0,0.175)node[above]{$y$};
-\draw[]plot[domain=0:\a](\x,{f(\x)});
-\draw[]plot[domain=0:\a](\x,{-f(\x)});
-\draw(\a,0) circle (1/3*\ra cm and \ra cm);
-\draw[-latex](\a-1/3*\ra,0)--(0.7,0)node[right]{$x$};
-\draw(\a,0)node[below]{$\tfrac{1}{2}$}--++(0,0.01);
-\draw(0.35,{f(0.35)})node[above left]{$y=x^3$};
-\draw(\a,{f(\a)})node[above]{$\big(\tfrac{1}{2},\tfrac{1}{8}\big)$};
-\draw(0,\ra)node[left]{$\tfrac{1}{8}$}--++(0.01,0);
-\draw(0,-\ra)node[left]{$-\tfrac{1}{8}$}--++(0.01,0);
-\end{tikzpicture}
-\end{minipage}
-\end{figure}
+فرض کریں  کہ محور \عددی{x} سے اس لکیر کو ظاہر کرنا ممکن ہے جس پر قوت عمل کرتی ہے اور قوت کی مقدار \عددی{F} کو  فاصلہ \عددی{x} کا استمراری تفاعل تصور کیا جا سکتا ہے۔ ہم وقفہ \عددی{x=a} تا \عددی{x=b} پر قوت کے کام کو معلوم کرنا چاہتے ہیں۔  ہم وقفہ \عددی{[a,b]} کی خانہ بندی کرتے ہوئے ہر ذیلی وقفہ \عددی{[x_{k-1},x_k]} میں کوئی نقطہ \عددی{c_k} منتخب کرتے ہیں۔ اگر ذیلی وقفہ چھوٹا ہو تب \عددی{x_{k-1}} سے \عددی{x_k} تک کے  فاصلہ میں  استمراری  قوت \عددی{F} کی تبدیلی (استمراری ہونے کی بنا) بہت کم ہو گی جس کو رد کیا جا سکتا ہے۔یوں \عددی{x_{k-1}} سے \عددی{x_k} تک حرکت کے دوران کام کی قیمت تخمیناً \عددی{F(c_k)\Delta x_k} ہو گی۔یوں درج ذیل ریمان مجموعہ \عددی{x=a} سے \عددی{x=b} تک قوت \عددی{F} کا کام دے گا۔
+\begin{align}
+\sum_{k=1}^n F(c_k)\Delta x_k
+\end{align}
+ہم توقع کرتے ہیں کہ  جیسے جیسے خانہ بندی کا معیار صفر تک پہنچتا ہو ویسے ویسے یہ تخمین مزید بہتر ہو گی لہٰذا ہم \عددی{x=a} سے \عددی{x=b} تک \عددی{F} کے تکمل کو \عددی{a} سے \عددی{b} تک قوت \عددی{F} کے کام کی تعریف لیتے ہیں۔ 
+
+\ابتدا{تعریف}
+محور \عددی{x} پر \عددی{x=a} سے \عددی{x=b} تک لاگو متغیر قوت \عددی{F(x)} درج ذیل \اصطلاح{کام} کرتی ہے۔
+\begin{align}
+W=\int_a^bF(x)\dif x
+\end{align}
+\انتہا{تعریف}
+%=====================
+
+کام کی اکائی \اصطلاح{جاول} \عددی{\si{\joule}} ہے۔
+
+\ابتدا{مثال}
+قوت \عددی{F(x)=\tfrac{1}{x^2}\,\si{\newton}} محور \عددی{x} پر \عددی{x=\SI{1}{\meter}} تا \عددی{x=\SI{10}{\meter}} عمل کرتی ہے۔ یہ قوت درج ذیل کام کرتی ہے۔
+\begin{align*}
+W=\int_1^{10}\frac{1}{x^2}\dif x=\left.-\frac{1}{x}\right]_1^{10}=-\frac{1}{10}+1=\SI{0.9}{\joule}
+\end{align*}
+\انتہا{مثال}
+%===================
+\ابتدا{مثال}
+گاؤں میں کنواں سے پانی نکالنے کے لئے بوکا استعمال کیا جاتا ہے۔ کھوہ کی گہرائی \عددی{\SI{20}{\meter}}، خالی بوکا کی کمیت \عددی{\SI{2}{\kilo\gram}} اور رسی کی کمیت \عددی{\SI{0.1}{\kilo\gram\per\meter}} ہے۔ بوکا میں ابتدائی طور پر \عددی{\SI{10}{\liter}} پانی ہوتا ہے۔چونکہ بوکا سے پانی رستا ہے لہٰذا جتنی دیر میں بوکے کو نیچے سے اوپر کھینچا جاتا ہے اتنی دیر میں بوکا خالی ہو جاتا ہے۔ بوکا سے پانی کے اخراج کو مستقل تصور کریں۔ درج ذیل کام معلوم کریں۔ 
+\begin{enumerate}[a.]
+\item
+صرف پانی بلند کرنے کا کام۔
+\item
+پانی اور بوکا بلند کرنے کا کام۔
+\item
+پانی، بوکا اور رسی بلند کرنا کا کام۔
+\end{enumerate}
+حل:\quad
+\begin{enumerate}[a.]
+\item
+\ترچھا{صرف پانی:}\quad
+پانی اٹھانے کے لئے درکار قوت پانی کے وزن جتنا ہو گا جو ابتدا میں \عددی{(10)(9.8)=\SI{98}{\newton}} اور آخر میں صفر ہے۔یوں مبدا کو کنواں کی تہہ میں رکھتے ہوئے قوت کو
+\begin{align*}
+F(x)=98\big(\frac{20-x}{20}\big)=98\big(1-\frac{x}{20}\big)=98-4.9x\,\si{\newton}
+\end{align*}
+لکھا جا سکتا ہے لہٰذا  کام درج ذیل ہو گا۔
+\begin{align*}
+W&=\int_a^bF(x)\dif x\\
+&=\int_0^{20}(98-4.9x)\dif x=\big[98x-\frac{4.9x^2}{2}\big]_0^{20}=1960-980=\SI{980}{\joule}
+\end{align*}
+\item
+\ترچھا{صرف بوکا:}\quad
+صرف بوکا اٹھانے کے لئے درکار کام مساوات \حوالہ{مساوات_تکمل_استعمال_کام_مستقل_قوت} کے تحت \عددی{(2)(9.8)(20)=\SI{392}{\joule}} ہو گا۔یوں پانی اور بوکا دونوں کے لئے درکار کام درج ذیل ہو گا۔
+\begin{align*}
+W=980+392=\SI{1372}{\joule}
+\end{align*}
+\item
+\ترچھا{پانی، بوکا اور رسی:}\quad
+مبدا سے \عددی{x} بلندی پر پانی، بوکا اور رسی کی کمیت کو \عددی{g=\SI{9.8}{\meter\per\second\squared}} سے ضرب دینے سے درج ذیل درکار قوت حاصل ہوتی ہے۔
+\begin{align*}
+F(x)=\underbrace{(98-4.9x)}_{\text{\RL{پانی کا متغیر وزن}}}+\underbrace{(19.6)}_{\text{\RL{بوکا کا مستقل وزن}}}+\underbrace{(0.1)(9.8)(20-x)}_{\text{\RL{رسی کا متغیر وزن}}}
+\end{align*}
+صرف رسی کو اوپر کھینچنے کا کام درج ذیل ہو گا۔
+\begin{align*}
+W&=\int_0^{20}(0.1)(9.8)(20-x)\dif x=\int_0^{20}(19.6-0.98x)\dif x\\
+&=\big[19.6x-\frac{0.98x^2}{2}\big]_0^{20}=392-196=\SI{196}{\joule}
+\end{align*}
+یوں پانی، بوکا اور رسی تینوں کو کھینچنے کے لئے درکار کام درج ذیل ہو گا۔
+\begin{align*}
+W=980+392+196=\SI{1568}{\joule}
+\end{align*}
+\end{enumerate}
+\انتہا{مثال}
+%===================
+
+\جزوحصہء{قانون ہک برائے اسپرنگ}
+\اصطلاح{قانون ہک}\فرہنگ{قانون!ہک}\حاشیہب{Hooke's law}\فرہنگ{law!Hooke's} کے تحت کسی بھی اسپرنگ کی قدرتی لمبائی کو تان کر یا دبا کر \عددی{x}اکائیاں تبدیل کرنے کے لئے درکار قوت لمبائی \عددی{x} کے راست متناسب ہو گی:
+\begin{align}\label{مساوات_تکمل_استعمال_قانون_ہک}
+F=kx
+\end{align} 
+\اصطلاح{مستقلہ اسپرنگ}\فرہنگ{مستقلہ اسپرنگ} \عددی{k} جو اسپرنگ کی خاصیت ہے کو \اصطلاح{مقیاس لچک}\فرہنگ{مقیاس لچک}\حاشیہب{spring constant}\فرہنگ{spring constant} کہتے ہیں۔ مقیاس لچک کو قوت فی اکائی لمبائی میں ناپا جاتا ہے۔ جب تک لاگو قوت اسپرنگ کی دھاتی تار کو بگاڑ نہ دے قانون ہک (مساوات \حوالہ{مساوات_تکمل_استعمال_قانون_ہک}) بہترین نتائج دیتا ہے۔ اس حصہ میں ہم فرض کرتے ہیں کہ لاگو قوت اسپرنگ کو خراب نہیں کرتی ہے۔
+
+\ابتدا{مثال}
+ایک اسپرنگ کس کا مقیاس لچک \عددی{k=\SI{8}{\newton\per\meter}} ہے کی لمبائی کو \عددی{\SI{1}{\meter}} سے تبدیل کر کے  \عددی{\SI{0.8}{\meter}}  کیا جاتا ہے۔ درکار کام تلاش کریں۔
+
+حل:\quad
+ہم اسپرنگ کو محور \عددی{x} پر پڑا ہوا تصور کرتے ہیں۔ اسپرنگ کا ایک سر مبدا پر ہے جبکہ اس کا دوسرا سر \عددی{x=1} پر  باندھا ہوا ہے۔ یوں ہم قوت کو \عددی{F=8x} لکھ سکتے ہیں جہاں \عددی{x} کی قیمت \عددی{0} تا \عددی{\SI{0.2}{\meter}} ہو گی۔درکار کام درج ذیل ہو گا۔
+\begin{align*}
+W=\int_0^{0.2}8x\dif x=\big[\frac{8x^2}{2}\big]_0^{0.2}=\SI{0.16}{\joule}
+\end{align*}
+\انتہا{مثال}
+%========================
+\ابتدا{مثال}
+ایک اسپرنگ جس کی قدرتی لمبائی \عددی{\SI{1}{\meter}} ہے کو \عددی{\SI{24}{\newton}} قوت سے تان کر \عددی{\SI{1.8}{\meter}} لمبا کیا جاتا ہے۔
+\begin{enumerate}[a.]
+\item
+مقیاس لچک \عددی{k} تلاش کریں۔
+\item
+اسپرنگ کی لمبائی کو \عددی{\SI{2}{\meter}} تبدیل کرنے کے لئے درکار کام تلاش کریں۔
+\item
+اسپرنگ کی لمبائی میں \عددی{\SI{45}{\newton}} کی قوت کتنی تبدیلی پیدا کرے گی؟ 
+\end{enumerate}
+حل:
+\begin{enumerate}[a.]
+\item
+\ترچھا{مقیاس لچک:}\quad
+قیاس لچک کو مساوات \حوالہ{مساوات_تکمل_استعمال_قانون_ہک} سے حاصل کرتے ہیں۔ اسپرنگ کی لمبائی میں تبدیلی \عددی{\SI{0.8}{\meter}} ہے۔
+\begin{align*}
+24&=k(0.8)\quad \implies k=\frac{24}{0.8}=\SI{30}{\newton\per\meter}
+\end{align*}
+\item
+\ترچھا{کام:}\quad
+ہم اسپرنگ کو چھت سے یوں آویزاں تصور کرتے ہیں کہ اس کا آزاد سر \عددی{x=0} پر ہو۔اسپرنگ کی لمبائی کو اس کی  قدرتی لمبائی سے \عددی{x} میٹر زیادہ کرنے کے لئے درکار قوت \عددی{F=kx} ہو گی جو اسپرنگ کو نیچے رخ کھنچے گی۔یوں \عددی{x=0} سے \عددی{x=\SI{2}{\meter}} تک کھینچنے کے لئے کام درج ذیل ہو گا۔
+\begin{align*}
+W=\int_0^2 30x\dif x=\left.\frac{30x^2}{2}\right]_0^2=\SI{60}{\joule}
+\end{align*}
+\item
+\ترچھا{لمبائی میں تبدیلی:}\quad
+ہم مساوات \عددی{F=30x} میں \عددی{F=45} ڈال کر \عددی{x} تلاش کرتے ہیں۔
+\begin{align*}
+45=30x\quad\implies x=\frac{45}{30}=\SI{1.5}{\meter} 
+\end{align*}
+یوں اسپرنگ کی کل لمبائی \عددی{1+1.5=\SI{2.5}{\meter}} ہو گی۔
+\end{enumerate}
+\انتہا{مثال}
+%================
+
+\جزوحصہء{ٹینکی سے پانی کی نکاسی}
