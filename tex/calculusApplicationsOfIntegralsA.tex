@@ -98,17 +98,57 @@ F=kx
 \end{align} 
 \اصطلاح{مستقلہ اسپرنگ}\فرہنگ{مستقلہ اسپرنگ} \عددی{k} جو اسپرنگ کی خاصیت ہے کو \اصطلاح{مقیاس لچک}\فرہنگ{مقیاس لچک}\حاشیہب{spring constant}\فرہنگ{spring constant} کہتے ہیں۔ مقیاس لچک کو قوت فی اکائی لمبائی میں ناپا جاتا ہے۔ جب تک لاگو قوت اسپرنگ کی دھاتی تار کو بگاڑ نہ دے قانون ہک (مساوات \حوالہ{مساوات_تکمل_استعمال_قانون_ہک}) بہترین نتائج دیتا ہے۔ اس حصہ میں ہم فرض کرتے ہیں کہ لاگو قوت اسپرنگ کو خراب نہیں کرتی ہے۔
 
-\ابتدا{مثال}
-ایک اسپرنگ کس کا مقیاس لچک \عددی{k=\SI{8}{\newton\per\meter}} ہے کی لمبائی کو \عددی{\SI{1}{\meter}} سے تبدیل کر کے  \عددی{\SI{0.8}{\meter}}  کیا جاتا ہے۔ درکار کام تلاش کریں۔
+\ابتدا{مثال}\شناخت{مثال_تکمل_استعمال_تان_اسپرنگ_الف}
+ایک اسپرنگ جس کا مقیاس لچک \عددی{k=\SI{8}{\newton\per\meter}} ہے کی لمبائی کو \عددی{\SI{1}{\meter}} سے تبدیل کر کے  \عددی{\SI{0.8}{\meter}}  کیا جاتا ہے۔ درکار کام تلاش کریں۔
 
 حل:\quad
-ہم اسپرنگ کو محور \عددی{x} پر پڑا ہوا تصور کرتے ہیں۔ اسپرنگ کا ایک سر مبدا پر ہے جبکہ اس کا دوسرا سر \عددی{x=1} پر  باندھا ہوا ہے۔ یوں ہم قوت کو \عددی{F=8x} لکھ سکتے ہیں جہاں \عددی{x} کی قیمت \عددی{0} تا \عددی{\SI{0.2}{\meter}} ہو گی۔درکار کام درج ذیل ہو گا۔
+ہم اسپرنگ کو محور \عددی{x} پر پڑا ہوا تصور کرتے ہیں (شکل \حوالہ{شکل_مثال_تکمل_استعمال_تان_اسپرنگ_الف})۔ اسپرنگ کا ایک سر مبدا پر ہے جبکہ اس کا دوسرا سر \عددی{x=1} پر  باندھا ہوا ہے۔ یوں ہم قوت کو \عددی{F=8x} لکھ سکتے ہیں جہاں \عددی{x} کی قیمت \عددی{0} تا \عددی{\SI{0.2}{\meter}} ہو گی۔درکار کام درج ذیل ہو گا۔
 \begin{align*}
 W=\int_0^{0.2}8x\dif x=\big[\frac{8x^2}{2}\big]_0^{0.2}=\SI{0.16}{\joule}
 \end{align*}
 \انتہا{مثال}
 %========================
-\ابتدا{مثال}
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\coordinate (a) at (-4,0.5) {};
+\coordinate (b) at (-3,1.75) {};
+\draw(-3,1)--(-3,2.2);
+\draw[-stealth](-4,1.25)--(-3,1.25)node[pos=0.5,fill=white]{$x$};
+\draw[thick,stealth-](b)--++(-0.25,0)node[left]{$F$};
+\draw[decoration={aspect=0.3, segment length=3mm, amplitude=3mm,coil},decorate] (0,0.5) -- (a); 
+\draw[decoration={aspect=0.3, segment length=1.5mm, amplitude=3mm,coil},decorate] (0,1.75) -- (b); 
+\fill [pattern = north east lines] (0,0) rectangle (0.25,2.2);
+\draw[thick] (0,0) -- (0,2.2);
+\draw(0,0)--(-4.5,0);
+\draw(-4,0)node[below]{$0$}--++(0,0.1);
+\draw(-3,0)node[below]{$0.2$}--++(0,0.1);
+\draw[-latex](-4,0)--++(0,2.2);
+\draw[-latex](0,0)--(0.75,0)node[right]{$x$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[]
+\path[name path=fun](0,0)--(4,2);
+\path[name path=k](2.5,0)--++(0,2);
+\fill[lgray,name intersections={of=fun and k}](2.5,0)node[below,black]{$0.2$}--(intersection-1)--(0,0)--(2.5,0);
+\path(intersection-1)--($(0,0)!(intersection-1)!(0,2)$)coordinate(ka);
+\draw(ka)node[left]{$1.6$}--++(0.1,0);
+\draw[-latex](-0.25,0)--(4,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$F$};
+\draw[name path=fun](0,0)--(4,2)node[left,xshift=-1ex]{$F=8x$};
+\draw(1.75,0.5)node[]{کام};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{اسپرنگ کی لمبائی میں تبدیلی اور قوت راست تناسب ہیں۔}
+\label{شکل_مثال_تکمل_استعمال_تان_اسپرنگ_الف}
+\end{figure}
+\ابتدا{مثال}\شناخت{مثال_تکمل_استعمال_تان_اسپرنگ_ب}
 ایک اسپرنگ جس کی قدرتی لمبائی \عددی{\SI{1}{\meter}} ہے کو \عددی{\SI{24}{\newton}} قوت سے تان کر \عددی{\SI{1.8}{\meter}} لمبا کیا جاتا ہے۔
 \begin{enumerate}[a.]
 \item
@@ -128,7 +168,7 @@ W=\int_0^{0.2}8x\dif x=\big[\frac{8x^2}{2}\big]_0^{0.2}=\SI{0.16}{\joule}
 \end{align*}
 \item
 \ترچھا{کام:}\quad
-ہم اسپرنگ کو چھت سے یوں آویزاں تصور کرتے ہیں کہ اس کا آزاد سر \عددی{x=0} پر ہو۔اسپرنگ کی لمبائی کو اس کی  قدرتی لمبائی سے \عددی{x} میٹر زیادہ کرنے کے لئے درکار قوت \عددی{F=kx} ہو گی جو اسپرنگ کو نیچے رخ کھنچے گی۔یوں \عددی{x=0} سے \عددی{x=\SI{2}{\meter}} تک کھینچنے کے لئے کام درج ذیل ہو گا۔
+ہم اسپرنگ کو چھت سے یوں آویزاں تصور کرتے ہیں کہ اس کا آزاد سر \عددی{x=0} پر ہو (\حوالہ{شکل_مثال_تکمل_استعمال_تان_اسپرنگ_ب})۔اسپرنگ کی لمبائی کو اس کی  قدرتی لمبائی سے \عددی{x} میٹر زیادہ کرنے کے لئے درکار قوت \عددی{F=kx} ہو گی جو اسپرنگ کو نیچے رخ کھنچے گی۔یوں \عددی{x=0} سے \عددی{x=\SI{2}{\meter}} تک کھینچنے کے لئے کام درج ذیل ہو گا۔
 \begin{align*}
 W=\int_0^2 30x\dif x=\left.\frac{30x^2}{2}\right]_0^2=\SI{60}{\joule}
 \end{align*}
@@ -142,5 +182,143 @@ W=\int_0^2 30x\dif x=\left.\frac{30x^2}{2}\right]_0^2=\SI{60}{\joule}
 \end{enumerate}
 \انتہا{مثال}
 %================
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\node[circle,fill=lgray,inner sep=2mm] (a) at (1.75,0) {};
+\node[inner sep=2.5mm] (b) at (0,0.8) {};
+\draw[decoration={aspect=0.3, segment length=3mm, amplitude=3mm,coil},decorate] (1.75,2) -- (a)node[right,xshift=2ex]{$\SI{24}{\newton}$}; 
+\draw[decoration={aspect=0.3, segment length=1.5mm, amplitude=3mm,coil},decorate] (0,2) -- (b); 
+\fill [pattern = north east lines] (-1,2) rectangle (2.5,2.2);
+\draw[thick] (-1,2) -- (2.5,2);
+\draw(-1,2)--(-1,-0.2);
+\draw(-1,1.05)node[left]{$x=\SI{0}{\meter}$}--++(0.1,0);
+\draw(-1,0.25)node[left]{$x=\SI{0.8}{\meter}$}--++(0.1,0);
+\end{tikzpicture}
+\caption{قوت نے اسپرنگ کی لمبائی کو بڑھایا ہے۔}
+\label{شکل_مثال_تکمل_استعمال_تان_اسپرنگ_ب}
+\end{figure}
 
 \جزوحصہء{پانی کی نکاسی}
+کسی برتن یا ٹینکی سے پانی کی نکاسی کے لئے کتنا کام درکار ہو گا؟ ہم پانی کو افقی تہوں میں تقسیم کرتے ہوئے ایک ایک تہہ کو برتن سے باہر نکالتے ہیں۔یوں اگر تہہ کی موٹائی \عددی{\dif y} اور اس کے سطحی رقبہ \عددی{S} ہو تب اس کی کمیت \عددی{\rho S\dif y} اور وزن \عددی{\rho S g \dif y} ہو گا جہاں پانی کی کثافت کو \عددی{\rho} اور کشش ثقل کو \عددی{g} سے ظاہر کیا گیا ہے۔ اس تہہ کو بلندی \عددی{h} تک منتقل کرنے کے لئے \عددی{\dif W=Fh=\rho S g  h \dif y} کام کرنا ہو گا۔یوں تمام تہوں کو نکالنے کے لئے تکمل حل کرنا ہو گا۔  اگلے مثال میں ایک ٹھوس مثال پیش کی گئی ہے۔
+
+\ابتدا{مثال}\شناخت{مثال_تکمل_استعمال_نکاسی_پانی}
+پانی سے بھری ہوئی ایک بیلنی ٹینکی کا رداس \عددی{\SI{5}{\meter}} اور قد \عددی{h=\SI{10}{\meter}} ہے۔ پانی کو \عددی{\SI{14}{\meter}} بلندی پر منتقل کرنے کے لئے کتنا کام کرنا ہو گا؟
+
+حل:\quad
+ہم ٹینکی کو کارتیسی محدد پر تصور کرتے ہوئے وقفہ \عددی{[0,10]} کی خانہ بندی کر کے  پانی کو تہہ در تہہ تقسیم کرتے ہیں (شکل \حوالہ{شکل_مثال_تکمل_استعمال_نکاسی_پانی})۔ سطح \عددی{y} اور سطح \عددی{y+\dif y} کے بیچ پانی کا حجم 
+\begin{align*}
+\Delta H=\pi(\text{رداس})^2(\text{موٹائی})=\pi (5)^2\Delta y=25\pi\Delta y\,\si{\meter\cubed}
+\end{align*}
+اور کمیت
+\begin{align*}
+\dif M=(\rho) (\Delta H)=(1000)(25\pi\Delta y)=\num{25000}\pi \Delta y\,\si{\kilo\gram}
+\end{align*}
+ہو گی جہاں پانی کی کثافت \عددی{\rho=\SI{1000}{\kilo\gram\per\meter\cubed}} ہے۔ اس تہہ پر کشش ثقل کی وجہ سے نیچے رخ  قوت عمل کرے گی لہٰذا اس تہہ کو اٹھانے کی خاطر تہہ کی وزن کے برابر قوت \عددی{F} درکار ہو گی:
+\begin{align*}
+F=(g)(\dif M) =(9.8)(\num{25000}\pi \Delta y)=\num{245000}\pi\Delta y \,\si{\newton}
+\end{align*}
+یوں اس تہہ کو \عددی{y} کی بلندی سے \عددی{\SI{14}{\meter}} کی بلندی تک اٹھانے کے لئے درج ذیل کام کرنا ہو گا۔
+\begin{align*}
+\dif W=(\text{قوت})(\text{فاصلہ})=(\num{245000}\pi)(14-y)\Delta y\,\si{\joule}
+\end{align*}
+تمام پانی کو اس بلندی تک اٹھانے کے لئے تخمیناً 
+\begin{align*}
+W\approx \sum_0^{10}\Delta W=\sum_0^{10}\Delta y\,\si{\joule}
+\end{align*}
+کام کرنا ہو گا جو وقفہ \عددی{0\le y\le 10} پر تفاعل \عددی{\num{245000}\pi(14-y)} کا ریمان مجموعہ ہے۔ ٹینکی خالی کرنے کے لئے درکار کام  \عددی{\norm{P}\to 0} کی صورت میں اس ریمان مجموعے کا حد ہو گا:
+\begin{align*}
+W&=\int_0^{10}\num{245000}\pi(14-y)\dif y=\num{245000}\pi\int_0^{10}(14-y)\dif y\\
+&=\num{245000}\pi\big[14y-\frac{y^2}{2}\big]_0^{10}=\num{245000}\pi[90]\approx \SI{69.3e6}{\joule}
+\end{align*}
+ایک کلو واٹ طاقت کا بجلی کا پمپ ایک سیکنڈ میں \عددی{\SI{1000}{\joule}} کام کرتا ہے۔اس پمپ کو یہ ٹینکی خالی کرنے کے لئے تقریباً \عددی{19} گھنٹے اور \عددی{15} منٹ کا وقت درکار ہو گا۔
+\انتہا{مثال}
+%========================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\h}{2}
+\pgfmathsetmacro{\r}{1.25}
+\pgfmathsetmacro{\dh}{1}
+\draw[-latex](\r,0)++(0.1,0)--++(0.5,0)node[right]{$x$};
+\draw[-latex](0,\h)node[circ]{}node[left]{$10$}--++(0,\dh)node[above]{$y$};
+\draw([shift={(180:\r cm and 1/4*\r cm)}]0,0) arc (180:360:\r cm and 1/4*\r cm);
+\draw(0,\h) circle (\r cm and 1/4*\r cm);
+\draw(-\r,0)--(-\r,\h)  (\r,0)--(\r,\h);
+\draw[gray](0,1/2*\h) circle (\r cm and 1/4*\r cm);
+\draw(0,1/2*\h)node[left]{$y$}--++(\r,0)node[pos=0.5,above]{$5$};
+\draw(0,\h+3/4*\dh)node[left]{$14$}--++(1.25*\r,0);
+\draw(\r,1/2*\h)++(0.2,0)--++(0.2,0)coordinate[pos=0.5](ka);
+\draw(\r,1/2*\h)++(0.2,0.1)--++(0.2,0)coordinate[pos=0.5](kka);
+\draw[stealth-](ka)--++(0,-0.2);
+\draw[stealth-](kka)--++(0,0.2)--++(0.2,0)node[right]{$\dif y$};
+\draw(\r,\h)++(0.1,0)--++(0.2,0)coordinate[pos=0.5](kb);
+\draw[stealth-stealth](kb)--++(0,3/4*\dh)node[pos=0.5,right]{$\SI{4}{\meter}$};
+\draw(0,\h+3/4*\dh)++(-4ex,0)--(-\r-0.3,\h+3/4*\dh);
+\draw(-\r-0.1,1/2*\h)--++(-0.2,0)coordinate[pos=0.5](kc);
+\draw[stealth-stealth](kc)--++(0,1/2*\h+3/4*\dh)node[pos=0.5,left]{$14-y$};
+\end{tikzpicture}
+\caption{بیلنی ٹینکی (مثال \حوالہ{مثال_تکمل_استعمال_نکاسی_پانی})}
+\label{شکل_مثال_تکمل_استعمال_نکاسی_پانی}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\r}{1}
+\pgfmathsetmacro{\ra}{\r-0.25}
+\pgfmathsetmacro{\rb}{3/4*(\r-0.25)}
+\draw[-latex](-0.25,0)--(2.5,0)node[right]{$x$};
+\draw(0,0)--(1.25,2.5)node[above]{$x=\tfrac{y}{2}$};
+\draw(0,2*\r) circle (\r cm and 1/4*\r cm);
+\draw[gray](0,2*\ra) circle (\ra cm and 1/4*\ra cm);
+\draw(0,0)--(-1,2);
+\draw[-latex](0,2)-++(0,1)node[above]{$y$};
+\draw(0,2)node[left]{$3.5$} (1,2)node[circ]{}node[right]{$(1.75,3.5)$};
+\draw[gray](0,2*\ra)node[circ]{}node[left]{$3$};
+\draw[gray](0,2*\rb) circle (\rb cm and 1/4*\rb cm);
+\draw[gray](0,2*\rb)node[left]{$y$}--++(\rb,0);
+\draw(\rb,2*\rb)++(0.2,0)--++(0.2,0)coordinate[pos=0.5](ka);
+\draw(\rb,2*\rb)++(0.2,0)++(0.2,0.1)--++(-0.2,0)coordinate[pos=0.5](kb);
+\draw[stealth-](ka)--++(0,-0.2)--++(0.2,0)node[right]{$\Delta y$};
+\draw[stealth-](kb)--++(0,0.2);
+\draw(-\r,2*\r)++(-0.1,0)--++(-0.4,0)coordinate[pos=0.75](ka);
+\draw(-\r,2*\rb)++(-0.1,0)--++(-0.4,0)coordinate[pos=0.75](kb);
+\draw[stealth-stealth](ka)--(kb)node[pos=0.5,left]{$3.5-y$};
+\end{tikzpicture}
+\caption{زیتون تیل کی مخروط ٹینکی (مثال \حوالہ{مثال_تکمل_استعمال_مخروط_ٹینکی})}
+\label{شکل_مثال_تکمل_استعمال_مخروط_ٹینکی}
+\end{minipage}
+\end{figure}
+\ابتدا{مثال}\شناخت{مثال_تکمل_استعمال_مخروط_ٹینکی}
+ایک مخروط ٹینکی جس کو شکل \حوالہ{شکل_مثال_تکمل_استعمال_مخروط_ٹینکی} میں دکھایا گیا ہے کنارے سے \عددی{\SI{0.5}{\meter}} نیچے تک  زیتون کی تیل  سے بھری ہے۔ زیتون کی تیل کی کثافت \عددی{\rho=\SI{930}{\kilo\gram\per\meter\cubed}} ہے۔ تیل کو ٹینکی کے کنارے تک پمپ کرنے کے لئے کتنا کام درکار ہو گا؟
+
+حل:\quad
+ہم وقفہ \عددی{[0,3]} کی خانہ بندی کرتے ہوئے خانہ بندی کے نقطوں پر افقی سطحیں تصور کرتے ہوئے تیل کو باریک تہوں میں تقسیم کرتے ہیں۔ سطح \عددی{y} اور سطح \عددی{y+\Delta y} کے بیچ تہہ کا حجم درج ذیل ہو گا۔
+\begin{align*}
+\Delta H=\pi(\text{رداس})^2(\text{موٹائی})=\pi\big(\frac{y}{2}\big)^2\Delta y=\frac{\pi}{4}y^2\Delta y\,\si{\meter\cubed}
+\end{align*}
+اس تہہ کو اٹھانے کے لئے اس تہہ کی وزن کے برابر قوت \عددی{F(y)} درکار ہو گا:
+\begin{align*}
+F(y)=\rho g \Delta H=(930)(9.8)\big(\frac{\pi}{4}y^2\Delta y\big)=\frac{9114\pi}{4}y^2\Delta y\,\si{\newton}
+\end{align*}
+ٹینکی کے کنارے سے اس تہہ تک کا فاصلہ \عددی{3.5-y} ہے  لہٰذا اس تہہ کو ٹینکی کے کنارے تک اٹھانے کے لئے درج ذیل کام درکار ہو گا۔
+\begin{align*}
+\Delta W=\frac{9114\pi}{4}(3.5-y)y^2\Delta y\si{\joule}
+\end{align*}
+\عددی{y=0} سے \عددی{y=3} تک تمام تہوں کو ٹینکی کے کنارے تک اٹھانے کے لئے تخمیناً
+\begin{align*}
+W\approx\sum_0^{3}\frac{9114\pi}{4}(3.5-y)y^2\Delta y\si{\joule}
+\end{align*}
+کام درکار ہو گا جو وقفہ \عددی{[0,3]} پر تفاعل \عددی{\frac{9114\pi}{4}(3.5-y)y^2} کا ریمان مجموعہ ہے۔ تیل کو ٹینکی کے کنارے تک پمپ کرنے کے لئے درکار کام، خانہ بندی کا معیار صفر تک کرنے سے حاصل، ریمان مجموعے کا حد ہو گا:
+\begin{align*}
+W&=\int_0^{3}\frac{9114\pi}{4}(3.5-y)y^2\dif y\\
+&=\frac{9114\pi}{4}\int_0^{3}(3.5y^2-y^3)\dif y\\
+&=\frac{9114\pi}{4}\big[\frac{3.5y^3}{3}-\frac{y^4}{4}\big]_0^3\approx \SI{80529}{\joule}
+\end{align*}
+\انتہا{مثال}
+%==========================
+
+\حصہء{سوالات}
+
