@@ -3,6 +3,6 @@ kill(all);
 print("sec 5.5, Q23");
 load ("antid")$
 
-f:sin(3*%pi*x/20);
+f:sin(3*%pi*x/50);
 ff:sqrt(1+(diff(f,x))^2);
-quad_qag(ff,x,0,20,3, 'epsrel=5d-8);
+quad_qag(ff,x,0,50,3, 'epsrel=5d-8);

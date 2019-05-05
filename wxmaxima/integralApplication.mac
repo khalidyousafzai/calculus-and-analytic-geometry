@@ -6,3 +6,16 @@ load ("antid")$
 f:sin(3*%pi*x/50);
 ff:sqrt(1+(diff(f,x))^2);
 quad_qag(ff,x,0,50,3, 'epsrel=5d-8);
+
+Print("======================================");
+kill(all);
+print("sec 5.8, Q15");
+
+L:15;
+W:10;
+H:5;
+g:9.8;
+den:1000;
+
+M:L*W;
+
