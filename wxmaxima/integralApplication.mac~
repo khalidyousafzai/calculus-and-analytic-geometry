@@ -6,3 +6,23 @@ load ("antid")$
 f:sin(3*%pi*x/50);
 ff:sqrt(1+(diff(f,x))^2);
 quad_qag(ff,x,0,50,3, 'epsrel=5d-8);
+
+Print("======================================");
+kill(all);
+print("sec 5.8, Q21");
+
+g:9.8;
+d:769;
+f:%pi*y*((y+0.3)/10)^2*d*g;
+float(integrate(f,y,0,0.15));
+
+
+Print("======================================");
+kill(all);
+print("sec 5.8, Q25");
+
+r:4;
+g:9.8;
+d:876;
+f:d*g*%pi*(r^2-y^2)*(r-y+1);
+float(integrate(f,y,0,r));

@@ -3948,6 +3948,75 @@ $\big(\sum\limits_{k=1}^7 k\big)^2-\sum\limits_{k=1}^7 \tfrac{k^3}{4}$
 \caption{ریمان مجموعے برائے سوال \حوالہ{سوال_تکمل_ریمان_مستطیل_شمول_الف}}
 \label{شکل_سوال_تکمل_ریمان_مستطیل_شمول_الف}
 \end{figure}
+%
+\begin{figure}
+\centering
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=sin(deg(\x));},font=\tiny]
+\begin{axis}[clip=false,width=5cm,axis on top,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-3.142,-1.571,0,1.571,3.142},xticklabels={\llap{$c_1=-\pi$},$c_2$,\llap{$c_3=0}$,$c_4$,$\pi$}]
+\addplot [ fill=lgray, ybar interval, samples=5, domain=-pi:pi,dashed]{f(x)}\closedcycle;
+\addplot[domain=-pi:pi]{f(x)};
+\draw(axis cs:1.571,0)--(axis cs:1.571,{f(1.571)});
+\draw(axis cs:-1.571,0)--(axis cs:-1.571,{f(-1.571)});
+\draw(axis cs:0,0)node[above left,font=\tiny]{$c_3=0$};
+\draw(axis cs:-1.571,0.75)node[font=\scriptsize]{\RL{بایاں ہاتھ}};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=sin(deg(\x));},font=\tiny]
+\begin{axis}[clip=false,width=5cm,axis on top,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-3.142,-1.571,0,1.571,3.142},xticklabels={$-\pi$,$c_1$,$c_2=0$,$c_3$,$c_4=\pi$}]
+\addplot [fill=lgray, const plot mark right, samples=5, domain=-pi:pi,dashed]{f(x)}\closedcycle;
+\addplot[domain=-pi:pi]{f(x)};
+\draw(axis cs:-1.571,{f(-1.571)})--(axis cs:-1.571,0);
+\draw(axis cs:1.571,{f(1.571)})--(axis cs:1.571,0);
+\draw(axis cs:0,0)node[above left,font=\tiny]{$c_2=0$};
+\draw(axis cs:-1.571,0.75)node[font=\scriptsize]{\RL{دایاں ہاتھ}};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=sin(deg(\x));},font=\tiny]
+\begin{axis}[clip=false,width=5cm,axis on top,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={0.79,2.36,3.142},xticklabels={$c_3$,$c_4$,$\pi$},
+            extra x ticks={-3.142,-2.36,-0.79},
+            extra x tick style={
+                xticklabel style={yshift=0.5ex, anchor=south}
+            }, extra x tick labels={$-\pi$,$c_1$,$c_2$}]
+\addplot[domain=-pi:pi]{f(x)};
+\draw[name path=fa,dashed](axis cs:-pi,{f(-3/4*pi)})--(axis cs:-1.571,{f(-3/4*pi)});
+\draw[name path=fb,dashed](axis cs:-1.571,{f(-0.79)})--(axis cs:0,{f(-0.79)});
+\draw[name path=fc,dashed](axis cs:0,{f(0.79)})--(axis cs:1.571,{f(0.79)});
+\draw[name path=fd,dashed](axis cs:1.571,{f(3/4*pi)})--(axis cs:pi,{f(3/4*pi)});
+\path[name path=xa](axis cs:-pi,0)--(axis cs:-1.571,0);
+\path[name path=xb](axis cs:-1.571,0)--(axis cs:0,0);
+\path[name path=xc](axis cs:0,0)--(axis cs:1.571,0);
+\path[name path=xd](axis cs:1.571,0)--(axis cs:pi,0);
+\addplot[fill=lgray]fill between [of=fa and xa];
+\addplot[fill=lgray]fill between [of=fb and xb];
+\addplot[fill=lgray]fill between [of=fc and xc];
+\addplot[fill=lgray]fill between [of=fd and xd];
+\draw(axis cs:-2.36,0)--(axis cs:-2.36,{f(-2.36)});
+\draw(axis cs:-0.79,0)--(axis cs:-0.79,{f(-0.79)});
+\draw(axis cs:2.36,0)--(axis cs:2.36,{f(2.36)});
+\draw(axis cs:0.79,0)--(axis cs:0.79,{f(0.79)});
+\draw[dashed](axis cs:-3.142,0)--(axis cs:-3.142,{f(-02.36)});
+\draw[dashed](axis cs:-1.571,0)--(axis cs:-1.571,{f(-0.79)});
+\draw[dashed](axis cs:3.142,0)--(axis cs:3.142,{f(02.36)});
+\draw[dashed](axis cs:1.571,0)--(axis cs:1.571,{f(0.79)});
+\draw[dashed](axis cs:0,{f(-0.79)})--(axis cs:0,{f(0.79)});
+\draw(axis cs:-1.571,0.75)node[font=\scriptsize]{\RL{وسطی نقطہ}};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{ریمان مجموعے برائے سوال \حوالہ{سوال_تکمل_ریمان_مستطیل_شمول_پ}}
+\label{شکل_سوال_تکمل_ریمان_مستطیل_شمول_پ}
+\end{figure}
 
 \ابتدا{سوال}\شناخت{سوال_تکمل_ریمان_مستطیل_شمول_الف}
 $f(x)=x^2-1,\quad [0,2]$\\
@@ -3959,8 +4028,10 @@ $f(x)=x^2-1,\quad [0,2]$\\
 $f(x)=-x^2,\quad [0,1]$
 \انتہا{سوال}
 %========================
-\ابتدا{سوال}
-$f(x)=\sin x,\quad [-\pi,\pi]$
+\ابتدا{سوال}\شناخت{سوال_تکمل_ریمان_مستطیل_شمول_پ}
+$f(x)=\sin x,\quad [-\pi,\pi]$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_تکمل_ریمان_مستطیل_شمول_پ}
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}\شناخت{سوال_تکمل_ریمان_مستطیل_شمول_ب}
