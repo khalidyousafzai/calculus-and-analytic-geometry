@@ -34,3 +34,16 @@ g:9.8;
 d:876;
 f:d*g*%pi*(r^2-y^2)*(r-y+1);
 float(integrate(f,y,0,r));
+
+Print("======================================");
+kill(all);
+print("sec 5.8, ex 6.38");
+
+r:1000;
+g:9.8;
+L:2*y;
+h:3.5-y;
+f:r*g*h*L;
+
+float(integrate(f,y,0,2));
+

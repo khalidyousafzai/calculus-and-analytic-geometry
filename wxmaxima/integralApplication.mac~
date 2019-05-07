@@ -9,6 +9,14 @@ quad_qag(ff,x,0,50,3, 'epsrel=5d-8);
 
 Print("======================================");
 kill(all);
+print("sec 5.8, Q19");
+
+g:9.8;
+d:810;
+f:d*g*%pi*4^2*(10-y);
+float(integrate(f,y,0,10));
+Print("======================================");
+kill(all);
 print("sec 5.8, Q21");
 
 g:9.8;
@@ -26,3 +34,9 @@ g:9.8;
 d:876;
 f:d*g*%pi*(r^2-y^2)*(r-y+1);
 float(integrate(f,y,0,r));
+
+Print("======================================");
+kill(all);
+print("sec 5.8, ex 6.38");
+
+
