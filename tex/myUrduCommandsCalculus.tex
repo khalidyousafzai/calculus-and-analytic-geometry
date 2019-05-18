@@ -106,7 +106,7 @@
 \renewcommand{\theexamplecounter}{\arabic{examplecounter}.\thechapter}
 
 \newenvironment*{مثال}
-{\par\noindent\ignorespaces    مثال \refstepcounter{examplecounter} \theexamplecounter :\quad\nopagebreak}%
+{\par\noindent\ignorespaces    مثال \refstepcounter{examplecounter} \theexamplecounter :\quad}%
 {\hfill\qedsymbol  \vspace{\baselineskip}\par}
 %{\noindent\ignorespaces \vspace{\baselineskip} \hrule \vspace{\baselineskip}  مثال \refstepcounter{examplecounter} \theexamplecounter :}%
 %{\par\noindent \hrule  \vspace{\baselineskip}}
@@ -120,7 +120,7 @@
 \renewcommand{\thepracticecounter}{\arabic{practicecounter}.\thechapter}
 
 \newenvironment*{مشق}
-{\par\noindent\ignorespaces \vspace{\baselineskip} \hrule \vspace{\baselineskip} مشق \refstepcounter{practicecounter} \thepracticecounter :\quad\nopagebreak}%
+{\par\noindent\ignorespaces \vspace{\baselineskip} \hrule \vspace{\baselineskip} مشق \refstepcounter{practicecounter} \thepracticecounter :\quad}%
 {\par\noindent \hrule  \vspace{\baselineskip}}
 %---------
 
@@ -132,7 +132,7 @@
 %\renewcommand{\thequestioncounter}{\arabic{questioncounter}.\thechapter}
 
 \newenvironment*{سوال}				
-{\noindent\ignorespaces  سوال \refstepcounter{questioncounter} \thequestioncounter :\quad\nopagebreak}%
+{\noindent\ignorespaces  سوال \refstepcounter{questioncounter} \thequestioncounter :\quad}%
 {\par\noindent }
 %--------------------
 
@@ -144,7 +144,7 @@
 \renewcommand{\thelawcounter}{\arabic{lawcounter}.\thechapter}
 
 \newenvironment*{قانون}				
-{\par\medskip \refstepcounter{lawcounter} \nopagebreak}%
+{\par\medskip \refstepcounter{lawcounter} \quad\nopagebreak}%
 {\par\hfill\qedsymbol  \vspace{\baselineskip}\par }
 %{\par\medskip }
 %--------------------
@@ -158,7 +158,7 @@
 \renewcommand{\thekthcounter}{\arabic{kthcounter}.\thechapter}
 
 \newenvironment*{مسئلہ}				
-{\par\noindent\ignorespaces  مسئلہ \refstepcounter{kthcounter} \thekthcounter :\quad\nopagebreak}%
+{\par\noindent\ignorespaces  مسئلہ \refstepcounter{kthcounter} \thekthcounter :\quad}%
 {\par\noindent }
 %--------------------
 %--------------------
@@ -169,7 +169,7 @@
 %\renewcommand{\thekprcounter}{\arabic{kprcounter}.\thechapter}
 
 \newenvironment*{ثبوت}				
-{\noindent\ignorespaces  ثبوت :\quad\nopagebreak}%
+{\noindent\ignorespaces  ثبوت :\quad}%
 {\par\hfill\qedsymbol  \vspace{\baselineskip}\par }
 %{\par\noindent\qedsymbol  \vspace{\baselineskip} }
 %--------------------
@@ -185,7 +185,7 @@
 \renewcommand{\thekcocounter}{\arabic{kcocounter}.\thechapter}
 
 \newenvironment*{ضمنی نتیجہ}				
-{\par\noindent\ignorespaces  ضمنی نتیجہ \refstepcounter{kcocounter} \thekcocounter :\quad\nopagebreak}%
+{\par\noindent\ignorespaces  ضمنی نتیجہ \refstepcounter{kcocounter} \thekcocounter :\quad}%
 {\par\noindent }
 %--------------------
 %--------------------
@@ -196,7 +196,7 @@
 %\renewcommand{\thekprcocounter}{\arabic{kprcocounter}.\thechapter}
 
 \newenvironment*{ثبوت ضمنی نتیجہ}				
-{\noindent\ignorespaces  ثبوت ضمنی نتیجہ :\quad\nopagebreak}%
+{\noindent\ignorespaces  ثبوت ضمنی نتیجہ :\quad}%
 {\par\hfill\qedsymbol  \vspace{\baselineskip}\par }
 %{\par\noindent\qedsymbol  \vspace{\baselineskip} }
 %--------------------
@@ -209,7 +209,7 @@
 %\renewcommand{\thedfrcounter}{\arabic{kdfcounter}.\thechapter}
 
 \newenvironment*{تعریف}				
-{\par\noindent\ignorespaces  تعریف :\quad\nopagebreak}%
+{\par\noindent\ignorespaces  تعریف :\quad}%
 {\par\hfill\qedsymbol  \vspace{\baselineskip}\par }
 %{\par\noindent }
 %--------------------
@@ -221,7 +221,7 @@
 %\renewcommand{\theAsrcounter}{\arabic{kAscounter}.\thechapter}
 
 \newenvironment*{مفروضہ}				
-{\par\noindent\ignorespaces  مفروضہ \quad\nopagebreak}%
+{\par\noindent\ignorespaces  مفروضہ \quad}%
 {\par\hfill\qedsymbol  \vspace{\baselineskip}\par }
 %{\par\noindent }
 %--------------------
@@ -236,7 +236,7 @@
 \renewcommand{\thekrucounter}{\arabic{krucounter}.\thechapter}
 
 \newenvironment*{قاعدہ}				
-{\par\noindent\ignorespaces  قاعدہ \refstepcounter{krucounter} \thekrucounter :\quad\nopagebreak}%
+{\par\noindent\ignorespaces  قاعدہ \refstepcounter{krucounter} \thekrucounter :\quad}%
 {\par\noindent }
 %--------------------
 %--------------------
@@ -247,7 +247,7 @@
 %\renewcommand{\thekprRcounter}{\arabic{kprRcounter}.\thechapter}
 
 \newenvironment*{ثبوت قاعدہ}				
-{\noindent\ignorespaces  ثبوت قاعدہ :\quad\nopagebreak}%
+{\noindent\ignorespaces  ثبوت قاعدہ :\quad}%
 {\par\hfill\qedsymbol  \vspace{\baselineskip}\par }
 %{\par\noindent\qedsymbol  \vspace{\baselineskip} }
 %--------------------
