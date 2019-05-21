@@ -1,576 +1,477 @@
 
-سوال \حوالہ{سوال_استعمال_تکمل_سایہ_دار_الف} تا سوال \حوالہ{سوال_استعمال_تکمل_سایہ_دار_ب} میں سایہ دار رقبہ تلاش کریں۔
+\حصہء{سوالات}
+\موٹا{الجبرائی حساب}
 
-\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_سایہ_دار_الف}
-سایہ دار خطہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_سایہ_دار_الف} جہاں سرحد \عددی{y=1} اور \عددی{y=\cos^2x} ہیں۔\\
-جواب:\quad
-$\tfrac{\pi}{2}$
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_سایہ_دار_پ}
-سایہ دار خطہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_سایہ_دار_پ} جہاں سرحد \عددی{y=\tfrac{1}{2}\sec^2t}، \عددی{y=-4\sin^2t}، \عددی{y=-\tfrac{\pi}{3}} اور \عددی{y=\tfrac{\pi}{3}} ہیں۔
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_سایہ_دار_ت}
-سایہ دار خطہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_سایہ_دار_ت} جہاں سرحد \عددی{x=y^3} اور \عددی{x=y^2} ہیں۔\\
-جواب:\quad
-$\tfrac{1}{12}$
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_سایہ_دار_ٹ}
-سایہ دار خطہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_سایہ_دار_ٹ} جہاں سرحد \عددی{x=12y^2-12y^3} اور \عددی{x=2y^2-2y} ہیں۔
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_سایہ_دار_ث}
-سایہ دار خطہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_سایہ_دار_ث} جہاں سرحد \عددی{y=2x^2} اور \عددی{y=x^4-2x^2} ہیں۔\\
-جواب:\quad
-$\tfrac{128}{15}$
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_سایہ_دار_ج}
-سایہ دار خطہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_سایہ_دار_ج} جہاں سرحد \عددی{y=x^2}، \عددی{y=-2x^4}، \عددی{x=-1} اور \عددی{x=1} ہیں۔
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_سایہ_دار_چ}
-سایہ دار خطہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_سایہ_دار_چ} جہاں سرحد \عددی{y=1}، \عددی{y=x} اور \عددی{y=\tfrac{x^2}{4}} ہیں۔\\
-جواب:\quad
-$\tfrac{5}{6}$
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_سایہ_دار_ب}
-سایہ دار خطہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_سایہ_دار_ب} جہاں سرحد \عددی{y=x^2}، \عددی{y=2-x} اور \عددی{y=0} ہیں۔
-\انتہا{سوال}
-%========================
-\begin{figure}
-\centering
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=(cos(deg(\x)))^2;g(\x)=1;}]
-\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1.571,3.142},xticklabels={$\tfrac{\pi}{2}$,$\pi$},ytick={1},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
-\addplot[domain=-0.25:3.2,smooth]{f(x)}node[pos=0.75,right]{$y=\cos^2x$};
-\addplot[domain=-0.25:3.2]{g(x)}node[pos=0.5,above]{$y=1$};
-\addplot[name path=funf,domain=0:3.142,draw=none]{f(x)};
-\addplot[name path=fung,domain=0:3.142,draw=none]{g(x)};
-\addplot[fill=lgray]fill between[of=funf and fung];
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_استعمال_تکمل_سایہ_دار_الف}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=1/2*(sec(deg(\x)))^2;g(\x)=-4*(sin(deg(\x)))^2;}]
-\pgfmathsetmacro{\k}{pi/3}
-\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$t$},ylabel={$y$},xtick={-1.047,1.047},xticklabels={$-\tfrac{\pi}{3}$,$\tfrac{\pi}{3}$},ytick={-2,1,2},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
-\addplot[name path=funf,domain=-\k:\k,smooth]{f(x)}node[pos=0.75,sloped,above,xshift=0.5ex]{$y=\tfrac{1}{2}\sec^2t$};
-\addplot[name path=fung,domain=-\k:\k]{g(x)}node[pos=0.75,sloped,below]{$y=-4\sin^2t$};
-\addplot[fill=lgray]fill between[of=funf and fung];
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_استعمال_تکمل_سایہ_دار_پ}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=(\x)^(1/3);g(\x)=(\x)^(1/2);}]
-\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1},ytick={1},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
-\addplot[domain=0:0.5]{f(x)};
-\addplot[domain=0.5:1.25]{f(x)}node[pos=0.25,above]{$x=y^3$};
-\addplot[domain=0:0.5]{g(x)};
-\addplot[domain=0.5:1.25]{g(x)}node[pos=0.25,below]{$x=y^2$};
-\addplot[name path=funf,domain=0:1,draw=none]{f(x)};
-\addplot[name path=fung,domain=0:1,draw=none]{g(x)};
-\addplot[fill=lgray]fill between[of=funf and fung];
-\draw(axis cs:1,1)node[circ]{}node[below]{$(1,1)$};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_استعمال_تکمل_سایہ_دار_ت}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=12*\x^2-12*\x^3;g(\x)=2*\x^2-2*\x;}]
-\pgfmathsetmacro{\k}{pi/3}
-\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$t$},ylabel={$y$},xtick={1} ,ytick={1},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
-\addplot[domain=-0.2:1.02]({f(x)},{x})node[pos=0.65,above]{$x=12y^2-12y^3$};
-\addplot[domain=-0.1:1.2]({g(x)},{x})node[pos=0.45,sloped,above]{$x=2y^2-2y$};
-\addplot[name path=funf,domain=0:1,draw=none]({f(x)},{x});
-\addplot[name path=fung,domain=0:1,draw=none]({g(x)},{x});
-\addplot[fill=lgray]fill between[of=funf and fung];
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_استعمال_تکمل_سایہ_دار_ٹ}
-\end{minipage}
-\end{figure}
-%
-\begin{figure}
-\centering
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=2*\x^2;g(\x)=\x^4-2*\x^2;}]
-\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-2,2}, xticklabels={$2$,$2$},ytick={-1,8},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
-\addplot[name path=funf,domain=-2:2]{f(x)}node[pos=0.85,left]{$y=2x^2$};
-\addplot[name path=fung,domain=-2:2]{g(x)}node[pos=0.85,sloped,below]{$y=x^4-2x^2$};
-%\addplot[name path=funf,domain=0:3.142,draw=none]{f(x)};
-%\addplot[name path=fung,domain=0:3.142,draw=none]{g(x)};
-\addplot[fill=lgray]fill between[of=funf and fung];
-\draw(axis cs:-2,8)node[circ]{}node[above]{$(-2,8)$}  (axis cs:2,8)node[circ]{}node[above]{$(2,8)$};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_استعمال_تکمل_سایہ_دار_ث}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=\x^2;g(\x)=-2*\x^4;}]
-\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-1,1}, xticklabels={$-1$,$1$},ytick={-2,1},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
-\addplot[name path=funf,domain=-1:1]{f(x)}node[pos=0.85,left]{$y=x^2$};
-\addplot[name path=fung,domain=-1:1]{g(x)}node[pos=0.85,left]{$y=-2x^4$};
-%\addplot[name path=funf,domain=0:3.142,draw=none]{f(x)};
-%\addplot[name path=fung,domain=0:3.142,draw=none]{g(x)};
-\addplot[fill=lgray]fill between[of=funf and fung];
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_استعمال_تکمل_سایہ_دار_ج}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=\x;g(\x)=1/4*\x^2;}]
-\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1,2}, xticklabels={$1$,$2$},ytick={1},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
-\addplot[domain=0:1.5]{f(x)}node[pos=0.9,left]{$y=x$};
-\addplot[domain=0:2.2]{g(x)}node[pos=0.7,below right]{$y=\frac{1}{4}x^2$};
-\addplot[name path=funf,domain=0:1,draw=none]{f(x)};
-\addplot[name path=fung,domain=0:2,draw=none]{g(x)};
-\addplot[fill=lgray]fill between[of=funf and fung];
-\draw(axis cs:0.75,1)--(axis cs:2.25,1)node[pos=0.55,above]{$y=1$};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_استعمال_تکمل_سایہ_دار_چ}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=2-\x;g(\x)=\x^2;}]
-\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1,2}, xticklabels={$1$,$2$},ytick={1},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
-\addplot[domain=0.75:2]{f(x)}node[pos=0.5,right]{$y=2-x$};
-\addplot[domain=0:1.1]{g(x)}node[pos=0.6,left]{$y=x^2$};
-\addplot[name path=funf,domain=1:2,draw=none]{f(x)};
-\addplot[name path=fung,domain=0:1,draw=none]{g(x)};
-\draw[name path=axisf](axis cs:1,0)--(axis cs:2,0);
-\draw[name path=axisg](axis cs:0,0)--(axis cs:1,0);
-\addplot[fill=lgray]fill between[of=funf and axisf];
-\addplot[fill=lgray]fill between[of=fung and axisg];
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_استعمال_تکمل_سایہ_دار_ب}
-\end{minipage}
-\end{figure}
+سوال \حوالہ{سوال_ماورائی_سادہ_صورت_فقرہ_الف} تا سوال \حوالہ{سوال_ماورائی_سادہ_صورت_فقرہ_ب} میں ریاضی فقرے کی سادہ صورت تلاش کریں۔
 
-سوال \حوالہ{سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_الف} تا سوال \حوالہ{سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_ب} میں کل سایہ دار رقبہ تلاش کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_الف}
-سایہ دار رقبہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_الف} جہاں سرحد \عددی{y=x^2-4}، \عددی{y=-x^2-2x} اور \عددی{x=-3} ہیں۔\\
-جواب:\quad
-$\tfrac{38}{3}$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_پ}
-سایہ دار رقبہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_پ} جہاں سرحد \عددی{y=-x^2+3x} اور \عددی{y=2x^3-x^2-5x} ہیں۔
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_ت}
-سایہ دار رقبہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_ت} جہاں سرحد \عددی{y=4-x^2}، \عددی{y=2-x}، \عددی{x=-2} اور \عددی{x=3} ہیں۔\\
-جواب:\quad
-$\tfrac{49}{6}$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_ب}
-سایہ دار رقبہ شکل \حوالہ{شکل_سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_ب} جہاں سرحد \عددی{y=\tfrac{x^3}{3}-x}، \عددی{y=\tfrac{x}{3}} اور \عددی{x=3} ہیں۔
-\انتہا{سوال}
-%=======================
-\begin{figure}
-\centering
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=\x^2-4;g(\x)=-\x^2-2*\x;}]
-\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-3,1},ytick={-4,5}, enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
-\addplot[domain=-3:1.1,smooth]{f(x)}node[pos=0.15,right]{$y=x^2-4$};
-\addplot[domain=-3:1.1]{g(x)}node[pos=0.5,pin=30:{$y=-x^2-2x$}]{};
-\addplot[name path=funf,domain=-3:1,draw=none]{f(x)};
-\addplot[name path=fung,domain=-3:1,draw=none]{g(x)};
-\addplot[fill=lgray]fill between[of=funf and fung];
-\draw(axis cs:-3,-3)--(axis cs:-3,5);
-\draw(axis cs:1,-3)node[right]{$(1,-3)$}  (axis cs:-3,5)node[above]{$(-3,5)$} (axis cs:-3,-3)node[below]{$(-3,-3)$};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_الف}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=-\x^2+3*\x;g(\x)=2*\x^3-\x^2-5*\x;}]
-\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-2,2},ytick={2}, enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
-\addplot[domain=-2.02:2.02]{f(x)}node[pos=0.25,right,yshift=-0.5ex]{$y=-x^2+3$};
-\addplot[domain=-2.02:2.02]{g(x)}node[pos=0.75,below,yshift=0.5ex]{$y=2x^3-x^2-5x$};
-\addplot[name path=funf,domain=-2:2,draw=none]{f(x)};
-\addplot[name path=fung,domain=-2:2,draw=none]{g(x)};
-\addplot[fill=lgray]fill between[of=funf and fung];
-\draw(axis cs:-2,-10)node[right]{$(-2,-10)$}  (axis cs:2,2)node[above]{$(2,2)$};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_پ}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=4-\x^2;g(\x)=2-\x;}]
-\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-2,-1,1,2,3},ytick={-5,4}, enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
-\addplot[domain=-2.2:3.2]{f(x)}node[pos=0.35,above]{$y=4-x^2$};
-\addplot[domain=-2.2:4]{g(x)}node[below,xshift=1ex]{$y=2-x$};
-\addplot[name path=funf,domain=-2:3,draw=none]{f(x)};
-\addplot[name path=fung,domain=-2:3,draw=none]{g(x)};
-\addplot[fill=lgray]fill between[of=funf and fung];
-\draw(axis cs:-2,4)node[left]{$(-2,4)$}  (axis cs:3,-5)node[left]{$(3,-5)$};
-\draw(axis cs:-2,4)--(axis cs:-2,0);
-\draw(axis cs:3,-5)--(axis cs:3,-1);
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_ت}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=1/3*\x^3-\x;g(\x)=1/3*\x;}]
-\begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-2,3},xticklabels={,$3$},ytick={1,6}, enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
-\addplot[domain=-2.2:3]{f(x)}node[pos=0.75,left]{$y=\tfrac{x^3}{3}-x$};
-\addplot[domain=-2.3:4]{g(x)}node[above]{$y=\tfrac{x}{3}$};
-\addplot[name path=funf,domain=-2:3,draw=none]{f(x)};
-\addplot[name path=fung,domain=-2:3,draw=none]{g(x)};
-\addplot[fill=lgray]fill between[of=funf and fung];
-\draw(axis cs:-2,-0.667)node[circ]{}node[below left]{$(-2,-\tfrac{2}{3})$} (axis cs:3,6)node[circ]{}node[above]{$(3,6)$};
-\draw(axis cs:3,6)--(axis cs:3,1);
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_استعمال_تکمل_کل_سایہ_دار_رقبہ_ب}
-\end{minipage}
-\end{figure}
-
-سوال \حوالہ{سوال_استعمال_تکمل_منحنیات_لکیریں_الف} تا سوال \حوالہ{سوال_استعمال_تکمل_منحنیات_لکیریں_ب} میں محیط خطے کی سرحدی منحنیات اور لکیریں دی گئی ہیں۔ خطے کا رقبہ دریافت کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_منحنیات_لکیریں_الف}
-$y=x^2-2,\quad y=2$\\
-جواب:\quad
-$\tfrac{32}{3}$
-\انتہا{سوال}
-%=========================
-\ابتدا{سوال}
-$y=2x-x^2,\quad y=-3$
-\انتہا{سوال}
-%=========================
-\ابتدا{سوال}
-$y=x^4,\quad y=8x$\\
-جواب:\quad
-$\tfrac{48}{5}$
-\انتہا{سوال}
-%=========================
-\ابتدا{سوال}
-$y=x^2-2x,\quad y=x$
-\انتہا{سوال}
-%=========================
-\ابتدا{سوال}
-$y=x^2,\quad y=-x^2+4x$\\
-جواب:\quad
-$\tfrac{8}{3}$
-\انتہا{سوال}
-%=========================
-\ابتدا{سوال}
-$y=7-2x^2,\quad y=x^2+4$
-\انتہا{سوال}
-%=========================
-\ابتدا{سوال}
-$y=x^4-4x^2+4,\quad y=x^2$\\
-جواب:\quad
-$8$
-\انتہا{سوال}
-%=========================
-\ابتدا{سوال}
-$y=x\sqrt{a^2-x^2},\quad a>0,\quad y=0$
-\انتہا{سوال}
-%=========================
-\ابتدا{سوال}
-$y=\sqrt{\abs{x}},\quad 5y=x+6$\,
-کتنے نقاط تقاطع پائے جاتے ہیں؟\\
-جواب:\quad
-$\tfrac{5}{3}$
-تین نقاط تقاطع پائے جاتے ہیں۔
-\انتہا{سوال}
-%=========================
-\ابتدا{سوال}\شناخت{سوال_استعمال_تکمل_منحنیات_لکیریں_ب}
-$y=\abs{x^2-4},\quad y=\tfrac{x^2}{2}+4$
-\انتہا{سوال}
-%=========================
-
-سوال \حوالہ{سوال_تکمل_استعمال_محیط_رقبہ_الف} تا سوال \حوالہ{سوال_تکمل_استعمال_محیط_رقبہ_ب} میں دی گئی منحنیات اور لکیروں کے بیچ رقبہ تلاش کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_محیط_رقبہ_الف}
-$x=2y^2,\quad x=0,\quad y=3$\\
-جواب:\quad
-$18$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$x=y^2,\quad x=y+2$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$y^2-4x=4,\quad 4x-y=16$\\
-جواب:\quad
-$\tfrac{243}{8}$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$x-y^2=0,\quad x+2y^2=3$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$x+y^2=0,\quad x+3y^2=2$\\
-جواب:\quad
-$\tfrac{8}{3}$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$x-y^{2/3}=0,\quad x+y^4=2$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$x=y^2-1,\quad x=\abs{y}\sqrt{1-y^2}$\\
-جواب:\quad
-$2$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_محیط_رقبہ_ب}
-$x=y^3-y^2,\quad x=2y$
-\انتہا{سوال}
-%=======================
-
-سوال \حوالہ{سوال_تکمل_استعمال_رقبہ_سرحد_الف} تا سوال \حوالہ{سوال_تکمل_استعمال_رقبہ_سرحد_ب} میں محیط رقبہ تلاش کریں۔ رقبے کی سرحدی منحنیات اور لکیریں دی گئی ہیں۔
-
-\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_رقبہ_سرحد_الف}
-$4x^2+y=4,\quad x^4-y=1$\\
-جواب:\quad
-$\tfrac{104}{15}$
-\انتہا{سوال}
-%======================
-\ابتدا{سوال}
-$x^3-y=0,\quad 3x^2-y=4$
-\انتہا{سوال}
-%======================
-\ابتدا{سوال}
-$x+4y^2=4\quad x+y^4=1,\quad x\ge 0$\\
-جواب:\quad
-$\tfrac{56}{15}$
-\انتہا{سوال}
-%======================
-\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_رقبہ_سرحد_ب}
-$x+y^2=3,\quad 4x+y^2=0$
-\انتہا{سوال}
-%======================
-
-سوال \حوالہ{سوال_تکمل_استعمال_رقبہ_معلوم_منحنیات_الف} تا سوال \حوالہ{سوال_تکمل_استعمال_رقبہ_معلوم_منحنیات_ب} میں محیط رقبے کی سرحدی منحنیات اور لکیریں دی گئی ہیں۔ رقبہ معلوم کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_رقبہ_معلوم_منحنیات_الف}
-$y=2\sin x,\quad y=\sin 2x,\quad 0\le x\le \pi$\\
-جواب:\quad
-$4$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$y=8\cos x,\quad y=\sec^2x,\quad -\tfrac{\pi}{3}\le x\le \tfrac{\pi}{3}$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$y=\cos(\tfrac{\pi x}{2}),\quad y=1-x^2$\\
-جواب:\quad
-$\tfrac{4}{3}-\tfrac{4}{\pi}$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$y=\sin(\tfrac{\pi x}{2}),\quad y=x$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$y=\sec^2x,\quad y=\tan^2x,\quad x=-\tfrac{\pi}{4},\quad x=\tfrac{\pi}{4}$\\
-جواب:\quad
-$\tfrac{\pi}{2}$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$x=\tan^2y,\quad x=-\tan^2y,\quad -\tfrac{\pi}{4}\le y\le \tfrac{\pi}{4}$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$x=3\sin y\sqrt{\cos y},\quad x=0,\quad 0\le y\le \tfrac{\pi}{2}$\\
-جواب:\quad
-$2$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_رقبہ_معلوم_منحنیات_ب}
-$y=\sec^2(\tfrac{\pi x}{3}),\quad y=x^{1/3},\quad -1\le x\le 1$
-\انتہا{سوال}
-%=====================
-
-\ابتدا{سوال}
-ہوائی جہاز کے پنکھے کی طرح کا خطہ \عددی{x-y^3=0} اور \عددی{x-y=0} گھیرتے ہیں۔ اس خطے کا رقبہ دریافت کریں۔\\
-جواب:\quad
-$\tfrac{1}{2}$
-\انتہا{سوال}
-%===================
-\ابتدا{سوال}
-پنکھا نما خطہ \عددی{x-y^{1/3}=0} اور \عددی{x-y^{1/5}=0} کے بیچ پایا جاتا ہے۔ اس خطے کا رقبہ معلوم کریں۔
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-ربع اول میں لکیر \عددی{y=x}، لکیر \عددی{x=2}، منحنی \عددی{y=\tfrac{1}{x^2}} اور \عددی{x}  محور کے بیچ رقبہ تلاش کریں۔\\
-جواب:\quad
-$1$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-ربع اول میں بائیں جانب \عددی{y} محور اور دائیں جانب منحنیات \عددی{y=\sin x} اور \عددی{y=\cos x} تکون نما خطہ گھیرتے ہیں۔ اس کا رقبہ معلوم کریں۔
-\انتہا{سوال}
-%======================
-\ابتدا{سوال}
-بالائی جانب لکیر \عددی{y=4} اور نیچے سے قطع مکافی  \عددی{y=x^2} میں محیط رقبہ کو افقی خط \عددی{y=c} دو برابر ذیلی خطوں میں تقسیم کرتا ہے۔
+\ابتدا{سوال}\شناخت{سوال_ماورائی_سادہ_صورت_فقرہ_الف}
+\begin{multicols}{3}
 \begin{enumerate}[a.]
 \item
-خطے کا خاکہ کھینچیں اور اس پر افقی لکیر \عددی{y=c} اندازاً درست مقام پر بنائیں۔ قطع مکافی اور افقی لکیر جن نقطوں پر متقاطع ہیں، ان نقطوں کو \عددی{c} کی روپ میں دریافت کر کے خاکے پر دکھائیں۔
+$5^{\log_57}$
 \item
-\عددی{y} کے لحاظ سے تکمل لے کر \عددی{c} کی قیمت معلوم کریں۔ (تکمل کے حد میں \عددی{c} پایا جائے گا۔)
+$8^{\log_8\sqrt{2}}$
 \item
-\عددی{x} کے لحاظ سے تکمل لے کر \عددی{c} کی قیمت معلوم کریں۔ (اس بار بھی تکمل کے حد میں \عددی{c} پایا جائے گا۔)
+$1.3^{\log_{1.3}75}$
+\item
+$\log_416$
+\item
+$\log_3\sqrt{3}$
+\item
+$\log_4\big(\frac{1}{4}\big)$
 \end{enumerate}
-جواب:\quad
-(ا) \عددی{(\mp\sqrt{c},c)}، (ب) \عددی{c=4^{2/3}}، ج \عددی{c=4^{2/3}}
+\end{multicols}
 \انتہا{سوال}
-%===================
+%========================
 \ابتدا{سوال}
-منحنی \عددی{y=3-x^2} اور لکیر \عددی{y=-1} کے بیچ رقبہ (ا) \عددی{x} کے لحاظ سے، (ب) \عددی{y} کے لحاظ سے تکمل لے کر معلوم کریں۔
+\begin{multicols}{3}
+\begin{enumerate}[a.]
+\item
+$2^{\log_2 3}$
+\item
+$10^{\log_{10}(1/2)}$
+\item
+$\pi^{\log_{\pi}7}$
+\item
+$\log_{11}121$
+\item
+$\log_{121}11$
+\item
+$\log_3\big(\frac{1}{9}\big)$
+\end{enumerate}
+\end{multicols}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+\begin{multicols}{3}
+\begin{enumerate}[a.]
+\item
+$2^{\log_4 x}$
+\item
+$9^{\log 3 x}$
+\item
+$\log_2(e^{(\ln 2)(\sin x)})$
+\end{enumerate}
+\end{multicols}
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_ماورائی_سادہ_صورت_فقرہ_ب}
+\begin{multicols}{3}
+\begin{enumerate}[a.]
+\item
+$25^{\log_5(3x^2)}$
+\item
+$\log_e(e^x)$
+\item
+$\log_4(2^{e^x\sin x})$
+\end{enumerate}
+\end{multicols}
+\انتہا{سوال}
+%========================
+سوال \حوالہ{سوال_ماورائی_قدرتی_لوگاتمی_سادہ_الف} اور سوال \حوالہ{سوال_ماورائی_قدرتی_لوگاتمی_سادہ_ب} میں نسبت کو قدرتی لوگارتھمی صورت میں لکھ کر سادہ صورت حاصل کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_ماورائی_قدرتی_لوگاتمی_سادہ_الف}
+\begin{multicols}{3}
+\begin{enumerate}[a.]
+\item
+$\tfrac{\log_2x}{\log_3x}$
+\item
+$\tfrac{\log_2x}{\log_8x}$
+\item
+$\tfrac{\log_xa}{\log_{x^2}a}$
+\end{enumerate}
+\end{multicols}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}\شناخت{سوال_ماورائی_قدرتی_لوگاتمی_سادہ_ب}
+\begin{multicols}{3}
+\begin{enumerate}[a.]
+\item
+$\tfrac{\log_9x}{\log_3x}$
+\item
+$\tfrac{\log_{\sqrt{10}}x}{\log_{\sqrt{2}}x}$
+\item
+$\tfrac{\log_ab}{\log_ba}$
+\end{enumerate}
+\end{multicols}
+\انتہا{سوال}
+%====================
+سوال \حوالہ{سوال_ماورائی_مساوات_حل_الف} تا سوال \حوالہ{سوال_ماورائی_مساوات_حل_ب} میں دی گئی مساوات حل کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_ماورائی_مساوات_حل_الف}
+$3^{\log_3(7)+2^{\log_2(5)}}=5^{\log_5(x)}$
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}
+$8^{\log_8(3)}-e^{\ln 5}=x^2-7^{\log_7(3x)}$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$3^{\log_3(x^2)=5e^{\ln x}}-3\cdot 10^{\log_{10}(2)}$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}\شناخت{سوال_ماورائی_مساوات_حل_ب}
+ $\ln e+4^{-2\log_4(x)}=\frac{1}{x}\log_{10}(100)$
+\انتہا{سوال}
+%==================
+سوال \حوالہ{سوال_ماورائی_تفرق_بالحظ_تلاش_الف} تا سوال \حوالہ{سوال_ماورائی_تفرق_بالحظ_تلاش_ب} میں دیے گئے غیر تابع متغیر کے لحاظ سے \عددی{y} کا تفرق تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_ماورائی_تفرق_بالحظ_تلاش_الف}
+$y=2^x$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=3^{-x}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=5^{\sqrt{s}}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=2^{s^2}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=x^{\pi}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=t^{1-e}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=(\cos\theta)^{\sqrt{2}}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=(\ln\theta)^{\pi}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=7{\sec\theta}\ln 7$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=3^{\tan\theta}\ln 3$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=2^{\sin 3t}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=5^{-\cos 2t}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=\log_25\theta$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=\log_3(1+\theta\ln 3)$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=\log_4x+\log_4x^2$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=\log_{25}e^x-\log_5\sqrt{x}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=\log_2r\cdot\log_4r$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=\log_3r\cdot\log_9r$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=\log_3\big((\tfrac{x+1}{x-1})^{\ln 3}\big)$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=\log_5\sqrt{(\tfrac{7x}{3x+2})^{\ln 5}}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=\theta\sin(\log_7\theta)$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=\log_7(\tfrac{\sin\theta\cos\theta}{e^{\theta}2^{\theta}})$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=\log_5e^x$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=\log_2(\tfrac{x^2e^2}{2\sqrt{x+1}})$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=3^{\log_2 t}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=3\log_8(\log_2t)$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$y=\log_2(8t^{\ln 2})$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}\شناخت{سوال_ماورائی_تفرق_بالحظ_تلاش_ب}
+$y=t\log_3(e^{(\sin t)(\ln 3)})$
+\انتہا{سوال}
+%==========================
+\موٹا{لوگارتھمی تفرق}
+
+سوال \حوالہ{سوال_ماورائی_لوگارتھمی_تفرق_الف} تا سوال \حوالہ{سوال_ماورائی_لوگارتھمی_تفرق_ب} میں \عددی{y} کا لوگارتھمی تفرق دیے گئے غیر تابع متغیر کے لحاظ سے معلوم کریں۔ 
+
+\ابتدا{سوال}\شناخت{سوال_ماورائی_لوگارتھمی_تفرق_الف}
+$y=(x+1)^x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$y=x^{(x+1)}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$y=(\sqrt{t})^t$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$y=t^{\sqrt{t}}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$y=(\sin x)^x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$y=x^{\sin x}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$y=x^{\ln x}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\شناخت{سوال_ماورائی_لوگارتھمی_تفرق_ب}
+$y=(\ln x)^{\ln x}$
+\انتہا{سوال}
+%======================
+\موٹا{تکمل}\\
+سوال \حوالہ{سوال_ماورائی_تکمل_تلاش_کریں-الف} تا سوال \حوالہ{سوال_ماورائی_تکمل_تلاش_کریں-ب} میں تکمل تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_ماورائی_تکمل_تلاش_کریں-الف}
+$\int5^x\dif x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int(1.3)^x\dif x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int_0^12^{-\theta}\dif \theta$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int_{-2}^05^{-\theta}\dif \theta$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int_1^{\sqrt{2}}x2^{(x^2)}\dif x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int_1^4 \frac{2^{\sqrt{x}}}{\sqrt{x}}\dif x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int_0^{\pi/2}7^{\cos t}\sin t\dif t$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int_0^{\pi/4}\big(\frac{1}{3}\big)^{\tan t}\sec^2t\dif t$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int_2^4x^{2x}(1+\ln x)\dif x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\شناخت{سوال_ماورائی_تکمل_تلاش_کریں-ب}
+$\int_1^2\frac{2^{\ln x}}{x}\dif x$
+\انتہا{سوال}
+%======================
+سوال \حوالہ{سوال_ماورائی_تکمل_حل_کریں_الف} تا سوال \حوالہ{سوال_ماورائی_تکمل_حل_کریں_ب} میں دیے گئے تکمل حل کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_ماورائی_تکمل_حل_کریں_الف}
+$\int 3x^{\sqrt{3}}\dif x$
 \انتہا{سوال}
 %====================
 \ابتدا{سوال}
-ربع اول میں بائیں جانب \عددی{y} محور، نیچے لکیر \عددی{y=\tfrac{x}{4}}، بالائی بائیں منحنی \عددی{y=1+\sqrt{x}} اور بالائی دائیں منحنی \عددی{y=\tfrac{2}{\sqrt{x}}} ایک رقبہ گھیرتے ہیں۔ اس رقبہ کو تلاش کریں۔\\
-جواب:\quad
-$\tfrac{11}{3}$
+$\int x^{\sqrt{2}-1}\dif x$
 \انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_رقبہ_محیط_خاکہ_الف}
-ربع اول میں بائیں جانب \عددی{y} محور، نیچے لکیر \عددی{x=2\sqrt{y}}، بالائی بائیں منحنی \عددی{x=(y-1)^2} اور بالائی دائیں
- منحنی \عددی{x=3-y} ایک رقبہ گھیرتے ہیں۔ اس رقبہ کو تلاش کریں (شکل \حوالہ{شکل_سوال_تکمل_استعمال_رقبہ_محیط_خاکہ_الف})۔
+%====================
+\ابتدا{سوال}
+$\int_0^3(\sqrt{2}+1)x^{\sqrt{2}}\dif x$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}\شناخت{سوال_ماورائی_تکمل_حل_کریں_ب}
+$\int_1^ex^{(\ln 2)-1}$
+\انتہا{سوال}
+%====================
+سوال \حوالہ{سوال_ماورائی_دیا_تکمل_الف} تا سوال \حوالہ{سوال_ماورائی_دیا_تکمل_ب} میں دیے تکمل کو حل کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_ماورائی_دیا_تکمل_الف}
+$\int\frac{\log_{10}x}{x}\dif x$
 \انتہا{سوال}
 %=======================
-\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_رقبہ_محیط_خاکہ_ب}
-قطع مکافی \عددی{y=x^2} میں محصور تکون \عددی{AOB} شکل \حوالہ{شکل_سوال_تکمل_استعمال_رقبہ_محیط_خاکہ_ب} میں دکھایا گیا ہے۔تکون کا بالائی ضلع لکیر \عددی{y=a^2} ہے۔ تکون اور قطع مکافی کے رقبوں کی  نسبت کی حد \عددی{a\to 0} کر کے  تلاش کریں۔\\
-جواب:\quad
-$\tfrac{3}{4}$
-\انتہا{سوال}
-%======================
-\begin{figure}
-\centering
-\begin{minipage}{0.3\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={fa(\x)=1+sqrt(\x); fb(\x)=3-\x; fc(\x)=x^2/4;}]
-\begin{axis}[width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1,2},ytick={1,2}]
-\addplot[domain=0:0.2]{fa(x)};
-\addplot[domain=0.2:2.5]{fa(x)}node[pos=0.75,below]{$x=(y-1)^2$};
-\addplot[domain=0.5:2.5]{fb(x)}node[pos=0.5,right]{$x=3-y$};
-\addplot[domain=0:2.5]{fc(x)}node[pos=0.5,below,xshift=-0.5ex]{$x=2\sqrt{y}$};
-\end{axis}
-\end{tikzpicture}
-\caption{خطہ برائے سوال \حوالہ{سوال_تکمل_استعمال_رقبہ_محیط_خاکہ_الف}}
-\label{شکل_سوال_تکمل_استعمال_رقبہ_محیط_خاکہ_الف}
-\end{minipage}\hfill
-\begin{minipage}{0.3\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={fa(\x)=\x^2; fb(\x)=4;}]
-\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-2,2},xticklabels={$-a$,$a$},ytick={\empty}]
-\addplot[domain=-3:3]{fa(x)}node[pos=0.9,left]{$y=x^2$};
-\addplot[domain=-3:3]{fb(x)}node[pos=0.5,above right]{$y=a^2$};
-\draw(axis cs:-2,4)node[below left]{$(-a,a^2)$}node[above right]{$A$}--(axis cs:0,0)node[below right]{$O$}--(axis cs:2,4)node[below right]{$(a,a^2)$}node[above left]{$C$};
-\end{axis}
-\end{tikzpicture}
-\caption{خطہ برائے سوال \حوالہ{سوال_تکمل_استعمال_رقبہ_محیط_خاکہ_ب}}
-\label{شکل_سوال_تکمل_استعمال_رقبہ_محیط_خاکہ_ب}
-\end{minipage}\hfill
-\begin{minipage}{0.3\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={fa(\x)=\x; fb(\x)=-\x;}]
-\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-1,1},xticklabels={,},ytick={-1,1}]
-\addplot[domain=-1.5:1.5]{fa(x)}node[pos=0.9,left]{$y=x$};
-\addplot[domain=-1.5:1.5]{fb(x)}node[pos=0.1,right]{$y=-x$};
-\draw(axis cs:-1,-1)--(axis cs:-1,1)  (axis cs:1,-1)--(axis cs:1,1);
-\draw(axis cs:-1,0)node[below left,font=\tiny]{$-1$};
-\draw(axis cs:1,0)node[below right,font=\tiny]{$1$};
-\end{axis}
-\end{tikzpicture}
-\caption{خطہ برائے سوال \حوالہ{سوال_تکمل_استعمال_رقبہ_محیط_خاکہ_پ}}
-\label{شکل_سوال_تکمل_استعمال_رقبہ_محیط_خاکہ_پ}
-\end{minipage}
-\end{figure}
-%
 \ابتدا{سوال}
-مثبت استمراری تفاعل \عددی{f} اور \عددی{a\le x\le b} پر \عددی{x} محور کے بیچ رقبہ \عددی{4} ہے۔ منحنی \عددی{y=f(x)} اور \عددی{y=2f(x)} کے بیچ رقبہ  \عددی{x=a} تا \عددی{x=b} رقبہ تلاش کریں۔
+$\int_1^4\frac{\log_2 x}{x}\dif x$
 \انتہا{سوال}
-%============================
-\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_رقبہ_محیط_خاکہ_پ}
-درج ذیل میں سے کونسا تکمل شکل \حوالہ{شکل_سوال_تکمل_استعمال_رقبہ_محیط_خاکہ_پ} میں دکھایا گیا رقبہ دیتا ہے؟ اپنے جواب کی وجہ پیش کریں۔
+%=====================
+\ابتدا{سوال}
+$\int_1^4\frac{\ln 2\log_2 x}{x}\dif x$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$\int_1^e\frac{2\ln 10 \log_{10}x}{x}\dif x$
+\انتہا{سوال}
+%=================
+\ابتدا{سوال}
+$\int_0^2\frac{\log_2(x+2)}{x+2}\dif x$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$\int_{1/10}^{10}\frac{\log_{10}(10x)}{x}\dif x$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$\int_0^9\frac{2\log_{10}(x+1)}{x+1}\dif x$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$\int_2^3\frac{2\log_2(x-1)}{x-1}\dif x$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$\int\frac{\dif x}{x\log_{10}x}$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\شناخت{سوال_ماورائی_دیا_تکمل_ب}
+$\int\frac{\dif x}{x(\log_8x)^2}$
+\انتہا{سوال}
+%===================
+سوال \حوالہ{سوال_ماورائی_تکمل_کی_قیمت_الف} تا سوال \حوالہ{سوال_ماورائی_تکمل_کی_قیمت_ب} میں تکمل کی قیمت تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_ماورائی_تکمل_کی_قیمت_الف}
+$\int_1^{\ln x}\frac{1}{t}\dif t,\quad x>1$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$\int_1^{e^x}\frac{1}{t}\dif t$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$\int_1^{1/x}\frac{1}{t}\dif t,\quad x>0$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_ماورائی_تکمل_کی_قیمت_ب}
+$\frac{1}{\ln a}\int_1^x\frac{1}{t}\dif t,\quad x>0$
+\انتہا{سوال}
+%=====================
+\موٹا{نظریہ اور استعمال}
+
+\ابتدا{سوال}
+منحنی \عددی{y=\tfrac{2x}{1+x^2}} اور محور \عددی{x} پر \عددی{-2\le x\le 2}  کے بیچ خطے کا رقبہ معلوم کریں۔
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+منحنی \عددی{y=2^{1-x}} اور محور \عددی{x} پر \عددی{-1\le x\le 1}  کے بیچ خطے کا رقبہ معلوم کریں۔
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}\ترچھا{انسانی خون کا $\pH$}\\
+انسانی خون کے \عددی{\pH} کی قیمت \عددی{7.37} سے \عددی{7.44} تک ہوتی ہے۔ انسانی خون میں برق پارہ \عددی{[\ce{H3O^+}]} کے مطابقتی حدود تلاش کریں۔ 
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\ترچھا{دماغی سیال کا $\pH$}\\
+دماغی سیال میں \عددی{[\ce{H3O^+}]} کا گھنا پن تقریباً \عددی{\SI{4.8e-8}{\mole\per\liter}} ہے۔ اس سیال کا \عددی{\pH} تلاش کریں۔
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+افزائش کار (ایمپلی فائر) سے حاصل صدا کو جزو \عددی{k} سے ضرب دے کر اس سطح صدا کو \عددی{\SI{10}{\deci\bel}} مزید بلن کیا جاتا ہے۔ جزو \عددی{k} کی قیمت تلاش کریں۔
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+ایک افزائش کار صدا کی شدت کو \عددی{10} سے ضرب دیتا ہے۔ صدا میں کتنے \عددی{\si{\deci\bel}} کا اضافہ پیدا ہو گا؟ 
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+کسی بھی محلول میں \عددی{[\ce{H3O^+}]}  اور \عددی{[OH^-]} کی گھنا پن کا حاصل ضرب \عددی{10^{-14}} ہوتا ہے۔
 \begin{enumerate}[a.]
 \item
-$\int_{-1}^1(x-(-x))\dif x=\int_{-1}^12x\dif x$
+\عددی{[\ce{H3O^+}]} کی کیا قیمت گھنا پن کی مجموعی \عددی{S=[\ce{H3O^+}]+[\ce{OH^-}]} کو کم سے کم  کرتی ہے؟
 \item
-$\int_{-1}^1(-x-(x))\dif x=\int_{-1}^1-2x\dif x$
+اس محلول کی \عددی{\pH} تلاش کریں  جس میں \عددی{S} کی قیمت کم سے کم ہو۔
+\item
+\عددی{[\ce{H3O^+}]} اور \عددی{[OH^-]} کی کون سی نسبت \عددی{S} کو کم سے کم بناتی ہے؟
 \end{enumerate}
-جواب:\quad
-کوئی نہیں
 \انتہا{سوال}
-%===========================
+%==================
 \ابتدا{سوال}
-کیا استمراری تفاعل \عددی{y=f(x)} اور \عددی{y=g(x)} اور انتصابی لکیروں \عددی{x=a} اور \عددی{x=b} جہاں \عددی{a<b} ہے کے بیچ رقبہ درج ذیل دیتا ہے؟ درست، کبھی کبھار درست یا کبھی نہیں؟ اپنے جواب کی وجہ پیش کریں۔
+کیا \عددی{\log_ab} کی قیمت \عددی{\tfrac{1}{\log_ba}} کے برابر ہو سکتی ہے؟ اپنے جواب کی وجہ   پیش کریں۔
+\انتہا{سوال}
+%===================
+\موٹا{کمپیوٹر کا استعمال}
+
+\ابتدا{سوال}
+مساوات \عددی{x^2=2^x} کے دو حل \عددی{x=2} اور  \عددی{x=4} ہیں جبکہ اس کا تیسرا حل بھی پایا جاتا ہے۔ ترسیم کی مدد سے تیسرا حل تلاش کریں۔
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+کیا \عددی{x>0} کے لئے  \عددی{x^{\ln 2}} اور \عددی{2^{\ln x}} ایک دوسرے کے برابر ہو سکتے ہیں؟دونوں تفاعل ترسیم کرتے ہوئے بتائیں کیا ہوتا ہے۔
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}\ترچھا{$2^x$ کی خط بندی}\\
+(ا) نقطہ \عددی{x=0} پر \عددی{f(x)=2^x} کی خط بندی دریافت کریں۔ اس کے بعد عددی سروں کو \عددی{2} اعشاریہ  پور و پور کریں۔ (ب) وقفہ \عددی{-3\le x\le 3} اور وقفہ \عددی{-1\le x\le 1} کے لئے تفاعل اور خط بندی کو ایک ساتھ ترسیم کریں۔
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\ترچھا{$f(x)=\log_3 x$ کی خط بندی}\\
+(ا) نقطہ \عددی{x=3} پر \عددی{f(x)=\log_3 x} کی خط بندی تلاش کریں۔ اس کے بعد عددی سروں کو \عددی{2} اعشاریہ تک پور و پور کریں۔    (ب) وقفہ \عددی{0\le x\le 8} اور \عددی{2\le x\le} کے لئے تفاعل اور خط بندی کو ایک ساتھ ترسیم کریں۔
+\انتہا{سوال}
+%====================
+\موٹا{دیگر اساس کے ساتھ حساب کتاب}
+
+\ابتدا{سوال}
+عموماً کیلکولیٹروں میں \عددی{\log_{10}x} اور \عددی{\ln x} پائے جاتے ہیں۔ دیگر اساس کے لوگارتھم تلاش کرنے کی خاطر ہم درج ذیل مساوات استعمال کرتے ہیں۔
 \begin{align*}
-\int_a^b[f(x)-g(x)]\dif x
+\log_ax=\frac{\ln x}{\ln a}
+\end{align*}
+یوں درج ذیل ہو گا۔
+\begin{align*}
+\log_25=\frac{\ln 5}{\ln 2}\approx 2.3219
+\end{align*}
+کیلکولیٹر استعمال کرتے ہوئے  \عددی{5} اعشاریہ درستگی تک 
+(ا) \عددی{\log_38}، (ب) \عددی{\log_70.5}، (ج) \عددی{\log_{2-}17}، (د) \عددی{\log_{0.5}7} تلاش کریں۔ درج ذیل معلومات استعمال کرتے ہوئے \عددی{\ln x} تلاش کریں۔
+(ہ) \عددی{\log_{10}x=2.3}،  (و) \عددی{\log_2x=1.4}،  (ز) \عددی{\log_2x=-1.5}،  (ح) \عددی{\log_{10}x=-0.7}
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\ترچھا{تبدیلی پیمانہ}\\
+(ا) دکھائیں کہ اساس \عددی{10} لوگارتھم کو اساس \عددی{2} لوگارتھم میں تبدیل کرنے کی مساوات درج ذیل ہے۔
+\begin{align*}
+\log_2x=\frac{\ln 10}{\ln 2}\log_{10}x
+\end{align*}
+(ب) دکھائیں کہ اساس  \عددی{a} لوگارتھم کو اساس \عددی{b} لوگارتھم میں تبدیل کرنے  کی مساوات درج ذیل ہے۔
+\begin{align*}
+\log_bx=\frac{\ln a}{\ln b}\log_ax
 \end{align*}
 \انتہا{سوال}
-%====================
-\موٹا{کمپیوٹر کا استعمال}\\
-سوال \حوالہ{سوال_تکمل_استعمال_کمپیوٹر_الف} تا سوال \حوالہ{سوال_تکمل_استعمال_کمپیوٹر_ب} میں مستوی میں منحنیات کے بیچ رقبہ تلاش کریں۔ جہاں منحنیات کے نقاط تقاطع تلاش کرنا دشوار ہو وہاں کمپیوٹر کا سہارا لیتے ہوئے درج ذیل اقدام سرانجام دیں۔
-\begin{enumerate}[a.]
-\item
-منحنیات کو ایک ساتھ ترسیم کرتے ہوئے خطہ کی عمومی صورت دیکھیں اور نقاط تقاطع کی تعداد جانیں۔
-\item
-نقاط تقاطع کو اعدادی تراکیب سے تلاش کریں۔
-\item
-یک بعد دیگرے جوڑی نقاط تقاطع کے بیچ \عددی{\abs{f(x)-g(x)}} کا تکمل حل کریں۔
-\item
-جزو-ج میں تکمل کی حاصل قیمتوں کا مجموعہ لیں۔
-\end{enumerate}
+%=======================
 
-\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_کمپیوٹر_الف}
-$f(x)=\tfrac{x^3}{3}-\tfrac{x^2}{2}-2x+\tfrac{1}{3},\quad g(x)=x-1$
-\انتہا{سوال}
-%======================
-\ابتدا{سوال}
-$f(x)=\tfrac{x^4}{2}-3x^3+10,\quad g(x)=8-12x$
-\انتہا{سوال}
-%===========================
-\ابتدا{سوال}
-$f(x)=x+\sin(2x),\quad g(x)=x^3$
-\انتہا{سوال}
-%===========================
-\ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_کمپیوٹر_ب}
-$f(x)=x^2\cos x,\quad g(x)=x^3-x$
-\انتہا{سوال}
-%===========================
+\حصہ{افزائش اور نزول}
 
