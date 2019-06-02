@@ -15,3 +15,12 @@ Ad:m*(1-r)^4;
 Ae:m*(1-r)^5;
 
 AA:Am+Aa+Ab+Ac+Ad+Ae;
+
+
+Print("======================================");
+kill(all);
+print("sec 7.10,Q89");
+
+eq:5*a=sinh(4.5*a);
+find_root(eq,a,0.0001,2);
+
