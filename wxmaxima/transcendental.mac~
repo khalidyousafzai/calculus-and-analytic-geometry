@@ -22,4 +22,8 @@ kill(all);
 print("sec 7.10,Q89");
 
 eq:5*a=sinh(4.5*a);
-solve(eq,a);
+find_root(eq,a,0.0001,2);
+Print("======================================");
+kill(all);
+print("sec 7.11,Q55");
+
