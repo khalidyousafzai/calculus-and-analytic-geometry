@@ -23,7 +23,53 @@ print("sec 7.10,Q89");
 
 eq:5*a=sinh(4.5*a);
 find_root(eq,a,0.0001,2);
+
+
 Print("======================================");
 kill(all);
-print("sec 7.11,Q55");
+print("sec 7.12,Q11");
 
+eq:'diff(y,x)=x*y;
+ode2(eq,y,x);
+
+Print("======================================");
+kill(all);
+print("sec 7.12,Q12");
+
+eq:'diff(y,x)=x+y;
+ode2(eq,y,x);
+
+Print("======================================");
+kill(all);
+print("sec 7.12,Q13");
+
+eq:'diff(y,x)=x;
+ode2(eq,y,x);
+
+Print("======================================");
+kill(all);
+print("sec 7.12,Q14");
+
+eq:'diff(y,x)=x-y;
+ode2(eq,y,x);
+
+
+Print("======================================");
+kill(all);
+print("sec 7.12,Q15");
+
+eq:'diff(y,x)=(y+2)*(y-2);
+ode2(eq,y,x);
+
+Print("======================================");
+kill(all);
+print("sec 7.12");
+
+eq:'diff(y,x)=y-x^2;
+ode2(eq,y,x);
+
+Print("======================================");
+kill(all);
+print("sec 7.12");
+eq:'diff(y,x)=(1-x)*y+1/2*x;
+ode2(eq,y,x);

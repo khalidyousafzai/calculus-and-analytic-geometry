@@ -2,7 +2,7 @@
 %\documentclass[leqno]{book} %the geometry package defines the paper size
 %===================
 %testing tikz inside book
-\usepackage[]{circuitikz}
+\usepackage[oldvoltagedirection]{circuitikz}
 \usepackage{pgfplotstable}
 \usepackage{pgfplots}
 
@@ -69,11 +69,11 @@
 \graphicspath{{./fig/figFrontPage/}{./fig/figCalculusLimits/}{./fig/figCalculusDerivatives/}{./fig/figCalculusIntegration/}{./fig/figCalculusApplicationsOfIntegrals}}%paths to figures
 
 
-%\includeonly{./tex/mathPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusIntegration,./tex/calculusApplicationsOfIntegrals,./tex/calculusTranscendentalFunctions,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB}
+\includeonly{./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusIntegration,./tex/calculusApplicationsOfIntegrals,./tex/calculusTranscendentalFunctions,./tex/calculusAppendixA,./tex/calculusAppendixB}
 %
-\includeonly{./tex/cktSymbols,./tex/cktPreface,./tex/prefaceFirstBook,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB}%
+%\includeonly{./tex/cktSymbols,./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusAppendixA,./tex/calculusAppendixB}%
 %
-%\includeonly{./tex/cktSymbols,./tex/cktPreface,./tex/prefaceFirstBook,./tex/calculusApplicationsOfIntegrals,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB}%
+%\includeonly{./tex/cktSymbols,./calculusPreface,./tex/prefaceFirstBook,./tex/calculusApplicationsOfIntegrals,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB}%
 
 
 \author{
@@ -103,7 +103,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\linenumbers
-\makeindex
+%\makeindex
 
 %==========
 \begin{document}
@@ -123,7 +123,7 @@
 \tableofcontents
 \pagestyle{empty}
 \newpage
-\include{./tex/mathPreface}
+\include{./tex/calculusPreface}
 \newpage
 \include{./tex/prefaceFirstBook}
 %\newpage
@@ -189,7 +189,7 @@
 \renewcommand*{\indexname}{فرہنگ}      %this command has to be placed right here just before printindex command
 \cleardoublepage
 \addcontentsline{toc}{chapter}{فرہنگ}
-%\printindex
+\printindex
 
 
 \end{urdufont}

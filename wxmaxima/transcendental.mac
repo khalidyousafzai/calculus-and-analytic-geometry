@@ -27,8 +27,45 @@ find_root(eq,a,0.0001,2);
 
 Print("======================================");
 kill(all);
-print("sec 7.11,Q55");
+print("sec 7.12,Q11");
 
-eq:'diff(y,x)=10-4*y/(100+x);
+eq:'diff(y,x)=x*y;
 ode2(eq,y,x);
-ic1(%,x=0,y=50);
+
+Print("======================================");
+kill(all);
+print("sec 7.12,Q12");
+
+eq:'diff(y,x)=x+y;
+ode2(eq,y,x);
+
+Print("======================================");
+kill(all);
+print("sec 7.12,Q13");
+
+eq:'diff(y,x)=x;
+ode2(eq,y,x);
+
+Print("======================================");
+kill(all);
+print("sec 7.12,Q14");
+
+eq:'diff(y,x)=x-y;
+ode2(eq,y,x);
+
+
+Print("======================================");
+kill(all);
+print("sec 7.12,Q15");
+
+eq:'diff(y,x)=(y+2)*(y-2);
+ode2(eq,y,x);
+
+Print("======================================");
+kill(all);
+print("sec 7.12");
+
+eq:'diff(y,x)=y-x^2;
+ode2(eq,y,x);
+
+
