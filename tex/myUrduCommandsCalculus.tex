@@ -126,10 +126,10 @@
 
 %end of chapter questions environment سوال
 
-%\newcounter{questioncounter}[section]                                                %for reseting at every section
-%\renewcommand{\thequestioncounter}{\arabic{questioncounter}}
-\newcounter{questioncounter}[chapter]
-\renewcommand{\thequestioncounter}{\arabic{questioncounter}.\thechapter}
+\newcounter{questioncounter}[section]                                           %for reseting at every section. to be used only during writing stage
+\renewcommand{\thequestioncounter}{\arabic{questioncounter}}
+%\newcounter{questioncounter}[chapter]						%when book is finished, use this instead of the above
+%\renewcommand{\thequestioncounter}{\arabic{questioncounter}.\thechapter}
 
 \newenvironment*{سوال}				
 {\noindent\ignorespaces  سوال \refstepcounter{questioncounter} \thequestioncounter :\quad}%

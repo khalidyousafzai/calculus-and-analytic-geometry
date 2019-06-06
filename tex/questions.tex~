@@ -1,26 +1,34 @@
-\begin{figure}
-\centering
-\begin{minipage}{0.45\textwidth}
-\centering
-\begin{tikzpicture}[font=\small]
-\pgfmathsetmacro{\k}{1.5}
-\draw(0,0) circle (\k);
-\draw[stealth-stealth](0,0)node[circ]{}node[left]{\text{\RL{مرکز چاند}}}--(60:\k)node[pos=0.5,fill=white]{$R$};
-\draw[stealth-stealth](0,0)--(0,\k+0.5)node[circ]{}node[right]{$m$}node[pos=0.5,fill=white]{$s$};
-\draw[-stealth](-0.3,\k+0.5)--++(0,-0.25)node[left]{$F=-\tfrac{gmR^2}{s^2}$};
-\end{tikzpicture}
-\caption{چاند پر قوت کشش}
-\label{شکل_سوال_ماورائی_چاند_پر_کشش_کا_رخ}
-\end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
-\centering
-\begin{tikzpicture}[font=\small,declare function={f(\x)=e^(-\x);}]
-\begin{axis}[small,axis lines=middle, xtick={1,2,3},xticklabels={$\tfrac{L}{R}$,$2\tfrac{L}{R}$,$3\tfrac{L}{R}$},ytick={1}, yticklabels={$\tfrac{V}{R}$}, xlabel={$t$},ylabel={$i$}, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true]
-\addplot[domain=0:4]{f(x)};
-\end{axis}
-\end{tikzpicture}
-\caption{تنزل برقی رو (سوال \حوالہ{سوال_ماورائی_تنزل_رو})}
-\label{شکل_سوال_ماورائی_تنزل_رو}
-\end{minipage}
-\end{figure}
+\حصہ{تکمل بالحصص}
+تکمل بالحصص کی ترکیب سے تکمل
+\begin{align}
+\int f(x)g(x)\dif x
+\end{align}
+جس میں \عددی{f} بار بار قابل تفرق اور \عددی{g} بار بار قابل تکمل ہو کو کی سادہ روپ حاصل کی جا سکتی ہے۔ درج ذیل تکمل
+\begin{align*}
+\int xe^x\dif x
+\end{align*}
+اس قسم کا ایک تکمل ہے جہاں \عددی{f(x)=x}  دو بار تفرق کے بعد صفر ہو جاتا ہے  جبکہ \عددی{g(x)=e^x} کا تکمل بار بار لیا جا سکتا ہے۔ تکمل بالحصص کی ترکیب درج ذیل قسم کے تکمل پر بھی قابل اطلاق ہے
+\begin{align*}
+\int e^x\sin x\dif x
+\end{align*}  
+جس میں ہر دو بار تفرق اور ہر دو بار تکمل کے بعد وہی \عددی{f} اور \عددی{g} دوبارہ حاصل ہوتے ہیں۔
 
+اس حصہ میں تکمل بالحصص پر غور کیا جائے گا اور اس کا استعمال سکھایا جائے گا۔
+
+\جزوحصہء{تکمل بالحصص کا کلیہ}
+\اصطلاح{تکمل بالحصص}\فرہنگ{تکمل!بالحصص}\حاشیہب{integration by parts}\فرہنگ{integration!by parts} کا کلیہ قاعدہ ضرب
+\begin{align*}
+\frac{\dif}{\dif x}(uv)=u\frac{\dif v}{\dif x}+v\frac{\dif u}{\dif x}
+\end{align*}
+سے حاصل ہوتا ہے جس کو تفریقی روپ
+\begin{align*}
+\dif(uv)=u\dif v+v\dif u
+\end{align*}
+یا
+\begin{align*}
+u\dif v=\dif(uv)-v\dif u
+\end{align*}
+میں لکھ کر تکمل  لینے سے درج ذیل کلیہ اخذ ہوتا ہے۔
+\begin{align}
+\int u\dif v&=uv-\int v\dif u&&\text{\RL{کلیہ تکمل بالحصص}}
+\end{align}

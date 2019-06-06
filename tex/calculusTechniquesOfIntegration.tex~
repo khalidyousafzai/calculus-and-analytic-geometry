@@ -1,0 +1,198 @@
+\باب{تکمل کے طریقے}
+ہم نے دیکھا کہ چیزوں کی ناپ اور روز مرہ زندگی کے اعمال کی نمونہ کشی تکمل کو جنم دیتے ہیں۔ ہم جانتے ہیں کہ الٹ تفرق سے تکمل کو حل کیا جا سکتا ہے۔کسی عمل کی نمونہ کشی میں زیادہ گہرائی تک جانے سے زیادہ پیچیدہ تکمل حاصل ہوتا ہے۔ ہم جاننا چاہتے ہیں کہ اس طرح کے پیچیدہ تکمل کو کس طرح سادہ صورت دی جا سکتی ہے جن کے ساتھ کام کرنا آسان ہو۔ اس باب میں ہم انجانے تکمل سے جانے پہچانے تکمل کا حصول سیکھیں گے جنہیں جدول سے دیکھا جا سکتا ہے یا جس کو کمپیوٹر سے حل کیا جا سکتا ہے۔
+
+\حصہ{تکمل کے بنیادی کلیات}   
+ہم نے حصہ \حوالہ{حصہ_تکمل_غیر_قطعی_تکمل} میں دیکھا کہ غیر قطعی تکمل کو حل کرنے کے لئے اس کے الٹ تفرق کے ساتھ مستقل جمع کرنا ہو گا۔ جدول \حوالہ{جدول_طریقے_تکمل_بنیادی_کلیات} میں ان  تکمل کی بنیادی روپ درج کی گئی ہے جنہیں اب تک ہم حل کرتے آ رہے ہیں۔ زیادہ تکملات کا جدول کتاب کی آخر میں پیش کیا گیا ہے جس پر حصہ میں غور کیا جائے گا۔
+
+\begin{table}
+\caption{تکمل کے بنیادی کلیات}
+\label{جدول_طریقے_تکمل_بنیادی_کلیات}
+\renewcommand{\arraystretch}{2}
+\centering
+\begin{tabular}{L|L}
+\toprule
+\text{شمار}&\text{کلیہ}\\
+\midrule
+1&\int \dif u=u+C\\
+2&\int k\dif u=ku+C \quad \text{\RL{($k$ عدد ہے)}}\\
+3&\int(\dif u+\dif v)=\int \dif u+\int \dif v\\
+4&\int u^n\dif u=\frac{u^{n+1}}{n+1}+C\quad (n\ne -1)\\
+5&\int\frac{\dif u}{u}=\ln \abs{u}+C\\
+6&\int\sin u\dif u=-\cos u+C\\
+7&\int\cos u\dif u=\sin u+C\\
+8&\int \sec^2u\dif u=\tan u +C\\
+9&\int \csc^2u\dif u=-\cot u+C\\
+10&\int\sec u\tan u\dif u=\sec u+C\\
+11&\int \csc u\cot u\dif u=-\csc u+C\\
+12&\int \tan u\dif u=-\ln\abs{\cos u}+C=\ln\abs{\sec u}+C\\
+13&\int \cot u\dif u=\ln \abs{\sin u}+C=-\ln\abs{\csc u}+C\\
+14&\int e^u\dif u=e^u+C\\
+15&\int a^u\dif u=\frac{a^u}{\ln a}+C\quad (a>0,\, a\ne 1)\\
+16&\int \frac{\dif u}{\sqrt{a^2-u^2}}=\sin^{-1}(\tfrac{u}{a})+C\\
+17&\int \frac{\dif u}{a^2+u^2}=\frac{1}{a}\tan^{-1}(\tfrac{u}{a})+C\\
+18&\int\frac{\dif u}{u\sqrt{u^2-a^2}}=\frac{1}{a}\sec^{-1}\abs{\tfrac{u}{a}}+C\\
+\bottomrule
+\end{tabular}
+\end{table}
+\جزوحصہء{الجبرائی طریقہ}
+ہمیں عموماً تکمل کو جانی پہچانی معیاری روپ میں لکھنا ہو گا۔
+
+\ابتدا{مثال}\ترچھا{سادہ روپ حاصل کرنے کا بدل}\\
+تکمل \عددی{\int\tfrac{2x-9}{\sqrt{x^2-9x+1}}\dif x} حل کریں۔
+
+حل:
+\begin{align*}
+\int\frac{2x-9}{\sqrt{x^2-9x+1}}\dif x&=\int\frac{\dif u}{\sqrt{u}}&&u=x^2-9x+1\\
+&=\int u^{-1/2}\dif u\\
+&=\frac{u^{(-1/2)+1}}{(-1/2)+1}+C&&\text{\RL{جدول \حوالہ{جدول_طریقے_تکمل_بنیادی_کلیات} کلیہ $4$ میں $n=-1/2$}}\\
+&=2u^{1/2}+C\\
+&=2\sqrt{x^2-9x+1}+C
+\end{align*}
+\انتہا{مثال}
+%================
+\ابتدا{مثال}\ترچھا{تکمیل مربع}\\
+تکمل \عددی{\int\tfrac{\dif x}{\sqrt{8x-x^2}}} حل کریں۔
+
+حل:\quad
+ہم مربع مکمل کرتے ہوئے زیر جذر کو لکھتے ہیں:
+\begin{align*}
+8x-x^2&=-(x^2-8x)=-(x^2-8x+16-16)\\
+&=-(x^2-8x+16)+16=16-(x-4)^2
+\end{align*}
+\begin{align*}
+\int\frac{\dif x}{\sqrt{8x-x^2}}&=\int\frac{\dif x}{\sqrt{16-(x-4)^2}}\\
+&=\int\frac{\dif u}{\sqrt{a^2-u^2}}&&a=4,u=(x-4)\\
+&=\sin^{-1}(\tfrac{u}{a})+C&&\text{\RL{جدول \حوالہ{جدول_طریقے_تکمل_بنیادی_کلیات} کلیہ $16$}}\\
+&=\sin^{-1}(\tfrac{x-4}{4})+C
+\end{align*}
+\انتہا{مثال}
+%================
+\ابتدا{مثال}\ترچھا{طاقت پھیلا کر تماثل کا استعمال}\\
+تکمل \عددی{\int(\sec x\tan x)^2\dif x} حل کریں۔
+
+حل:\quad
+ہم متکمل کو پھیلاتے ہیں۔
+\begin{align*}
+(\sec x+\tan x)^2=\sec^2x+2\sec x\tan x+\tan^2x
+\end{align*}
+بائیں ہاتھ پہلے دو اجزاء کا تکمل ہم جانتے ہیں البتہ \عددی{\tan^2x} کا کچھ کرنا ہو گا۔ ہم درج ذیل تماثل کے ذریعہ اس کو جانی پہچانی روپ میں تبدیل کرتے ہیں۔
+\begin{align*}
+\tan^2x+1=\sec^2x\quad \implies\quad \tan^2x=\sec^2x-1
+\end{align*}
+یوں درج ذیل ہو گا۔
+\begin{align*}
+\int (\sec x+\tan x)^2\dif x&=\int(\sec^2x+2\sec x\tan x+\sec^2x-1)\dif x\\
+&=2\int \sec^2\dif x+2\int\sec x\tan x\dif x-\int 1\dif x\\
+&=2\tan x+2\sec x-x+C
+\end{align*}
+\انتہا{مثال}
+%=================
+\ابتدا{مثال}\ترچھا{جذر سے چھٹکارا}\\
+تکمل \عددی{\int_0^{\pi/4}\sqrt{1+\cos 4x}\dif x} حل کریں۔
+
+حل:\quad
+ہم تماثل
+\begin{align*}
+\cos^2\theta=\frac{1+\cos 2\theta}{2}\quad \implies 1+\cos 2\theta=2\cos^2\theta
+\end{align*}
+میں \عددی{\theta=2x} پر کر کے 
+\begin{align*}
+1+\cos 4x=2\cos^22x
+\end{align*}
+لکھتے ہیں۔یوں درج ذیل ہو گا جہاں تیسرے قدم پر وقفہ \عددی{[0,\tfrac{\pi}{4}]} پر \عددی{\cos 2x\ge 0} کی بنا \عددی{\abs{\cos 2x}=\cos 2x} ہو گا۔
+\begin{align*}
+\int_0^{\pi/4}\sqrt{1+\cos 4x}\dif x&=\int_0^{\pi/4}\sqrt{2}\sqrt{\cos^22x}\dif x\\
+&=\sqrt{2}\int_0^{\pi/4}\abs{\cos 2x}\dif x&&\sqrt{u^2}=\abs{u}\\
+&=\sqrt{2}\int_0^{\pi/4}\cos 2x\dif x\\
+&=\sqrt{2}\left.\frac{\sin 2x}{2}\right\vert_0^{\pi/4}\\
+&=\sqrt{2}\big[\frac{1}{2}-0\big]=\frac{\sqrt{2}}{2}
+\end{align*}
+\انتہا{مثال}
+%================
+\ابتدا{مثال}\ترچھا{غیر مناسب کسر کی مناسب کسر میں تبدیلی}\\
+تکمل \عددی{\int\tfrac{3x^2-7x}{3x+2}\dif x} حل کریں۔
+
+حل:\quad 
+متکمل غیر مناسب کسر (نسب نما کی طاقت، شمار کنندہ کی طاقت سے زیادہ یا اس کے برابر ہے)  ہے۔ اس کا تکمل لینے سے پہلے ہم پہلے تقسیم کر کے حاصل تقسیم اور باقی حاصل کرتے ہیں جو مناسب کسر ہو گا:
+\begin{align*}
+\frac{3x^2-7x}{3x+2}=x-3+\frac{6}{3x+2}
+\end{align*}
+یوں درج ذیل ہو گا۔
+\begin{align*}
+\int\frac{3x^2-7x}{3x+2}\dif x=\int\big(x-3+\frac{6}{3x+2}\big)\dif x=\frac{x^2}{2}-3x+2\ln\abs{3x+2}+C
+\end{align*}
+\انتہا{مثال}
+%=================
+یہ ضروری نہیں ہے کہ غیر مناسب کسر کو بذریعہ تقسیم مناسب  کسر میں تبدیل کرنے سے  ہمیں ایسا تکمل حاصل ہو جسے ہم سیدھا تکمل کر سکیں۔ ایسی صورت پر حصہ میں غور کیا جائے گا۔
+
+\ابتدا{مثال}\ترچھا{ایک کسر کی علیحدگی}\\
+تکمل \عددی{\int\tfrac{3x+2}{\sqrt{1-x^2}}\dif x} حل کریں۔
+
+حل:\quad
+ہم متکمل کو دو علیحدہ کسر لکھتے ہیں۔
+\begin{align*}
+\int\frac{3x+2}{\sqrt{1-x^2}}\dif x=3\int\frac{x\dif x}{\sqrt{1-x^2}}+2\int\frac{\dif x}{\sqrt{1-x^2}}
+\end{align*}
+بائیں ہاتھ پہلے نئے تکمل میں ہم \عددی{u=1-x^2}، \عددی{\dif u=-2x\dif x} اور \عددی{x\dif x=-\frac{1}{2}\dif u} پر کرتے ہیں۔
+\begin{align*}
+3\int\frac{x\dif x}{\sqrt{1-x^2}}&=3\int\frac{(-1/2)\dif u}{\sqrt{u}}=-\frac{3}{2}\int u^{-1/2}\dif u\\
+&=-\frac{3}{2}\cdot \frac{u^{1/2}}{1/2}+C_1=-3\sqrt{1-x^2}+C_1
+\end{align*}
+دوسرا نیا تکمل معیاری روپ میں ہے لہٰذا
+\begin{align*}
+2\int\frac{\dif x}{\sqrt{1-x^2}}=2\sin^{-1}x+C_2
+\end{align*} 
+ہو گا۔یوں پورا تکمل درج ذیل ہو گا جہاں \عددی{C_1+C_2=C} لکھا گیا ہے۔
+\begin{align*}
+\int\frac{3x+2}{\sqrt{1-x^2}}\dif x=-3\sqrt{1-x^2}+2\sin^{-1}x+C
+\end{align*}
+
+\انتہا{مثال}
+%================
+\ابتدا{مثال}\شناخت{مثال_طریقے_سیکنٹ_کلیہ_تکمل}\ترچھا{اکائی (\عددی{1}) کی ایک روپ سے ضرب}\\
+تکمل \عددی{\int\sec x\dif x} حل کریں۔
+
+حل:
+\begin{align*}
+\int\sec x\dif x&=\int (\sec x)(1)\dif x\\
+&=\int \sec x \cdot \frac{\sec x+\tan x}{\sec x+\tan x}\dif x\\
+&=\int \frac{\sec^2x+\sec x\tan x}{\sec x+\tan x}\dif x\\
+&=\int\frac{\dif u}{u}&&u=\tan x+\sec x\\
+&=\ln \abs{u}+C=\ln\abs{\sec x+\tan x}+C
+\end{align*}
+\انتہا{مثال}
+%===================
+\begin{table}
+\caption{سیکنٹ اور کوسیکنٹ کے کلیات تکمل}
+\label{جدول_طریقے_سیکنٹ_کوسیکنٹ_کلیات}
+\centering
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{L|L}
+\toprule
+\text{شمار}&\text{کلیہ}\\
+\midrule
+1&\int \sec u\dif u=\ln \abs{\sec u+\tan u}+C\\
+2&\int\csc u\dif u=-\ln\abs{\csc u+\cot u}+C\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+ہم مثال \حوالہ{مثال_طریقے_سیکنٹ_کلیہ_تکمل} کی ترکیب استعمال کرتے ہوئے سیکنٹ اور ٹینجنٹ کی جگہ کوسیکنٹ اور کوٹینجنٹ لیتے ہوئے   کوسیکنٹ کے تکمل کا کلیہ معلوم کر سکتے ہیں (سوال \حوالہ{سوال_طریقے_کوسیکنٹ_تکمل})۔
+
+\موٹا{تکمل کو بنیادی کلیہ کی روپ میں لکھنے کا طریقے}
+\begin{align*}
+\text{مثال}&&\text{طریقہ}\\
+\hline
+\frac{2x-9}{\sqrt{x^2-9x+1}}\dif x&=\frac{\dif u}{u}&&\text{\RL{سادہ روپ بذریعہ بدل}}\\
+\sqrt{8x-x^2}\dif x&=\sqrt{16-(x-4)^2}&&\text{\RL{تکمیل مربع}}\\
+(\sec x+\tan x)^2&=\sec^2x+2\sec x\tan x+\tan^2x&&\text{\RL{تکونیاتی تماثل}}\\
+&=\sec^2x+2\sec x\tan x+(\sec^2x-1)\\
+&=2\sec^2x+2\sec x\tan x-1\\
+\sqrt{1+\cos 4x}&=\sqrt{2\cos^22x}=\sqrt{2}\abs{\cos 2x}&&\text{\RL{جذر سے چھٹکارا}}\\
+\frac{3x^2-7x}{3x+2}&=x-3+\frac{6}{3x+2}&&\text{\RL{غیر مناسب سے مناسب کسر کا حصول}}\\
+\frac{3x+2}{\sqrt{1-x^2}}&=\frac{3x}{\sqrt{1-x^2}}+\frac{2}{\sqrt{1-x^2}}&&\text{\RL{کسر کی علیحدگی}}\\
+\sec x&=\sec x\cdot \frac{\sec x+\tan x}{\sec x+\tan x}&&\text{\RL{اکائی ($1$) کی ایک روپ سے ضرب}}\\
+&=\frac{\sec^2x+\sec x\tan x}{\sec x+\tan x}
+\end{align*}
+
+
