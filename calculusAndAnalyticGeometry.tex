@@ -40,6 +40,9 @@
 \usepackage{multirow}   %for multiple row cells in a table column
 \usepackage[misc]{ifsym} 
 
+\newcommand{\tikzmark}[1]{%
+  \tikz[overlay,remember picture] \node (#1) {};}
+
  
 \newcommand*{\kStrokeOne}{|}                                      %tally marks (statistics)
 \newcommand*{\kStrokeTwo}{|\!|}

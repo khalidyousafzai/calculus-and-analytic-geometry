@@ -6879,8 +6879,8 @@ $\tfrac{v_0^2}{2g}+s_0$
 $2\sqrt{2}\,\si{\ampere}$
 \انتہا{سوال}
 %=====================
-\ابتدا{سوال}
-بے رگڑ ریڑھی کو افقی مستوی پر رکھ کر اسپرنگ کے ذریعہ قریبی دیوار کے ساتھ باندھا جاتا ہے۔لمحہ \عددی{t=0} پر ساکن مقام سے اس کو \عددی{\SI{10}{\centi\meter}} دور کھینچ کر چھوڑا جاتا ہے تا کہ یہ \عددی{4} سیکنڈوں کے لئے مستوی پر آگے پیچھے حرکت کر سکے۔لمحہ \عددی{t} پر اس کا مقام \عددی{s=10\cos \pi t} ہے۔
+\ابتدا{سوال}\شناخت{سوال_استعمال_ریڑھی_اور_اسپرنگ}
+بے رگڑ ریڑھی کو افقی مستوی پر رکھ کر اسپرنگ کے ذریعہ قریبی دیوار کے ساتھ باندھا جاتا ہے (شکل \حوالہ{شکل_سوال_استعمال_ریڑھی_اور_اسپرنگ})۔لمحہ \عددی{t=0} پر ساکن مقام سے اس کو \عددی{\SI{10}{\centi\meter}} دور کھینچ کر چھوڑا جاتا ہے تا کہ یہ \عددی{4} سیکنڈوں کے لئے مستوی پر آگے پیچھے حرکت کر سکے۔لمحہ \عددی{t} پر اس کا مقام \عددی{s=10\cos \pi t} ہے۔
 \begin{enumerate}[a.]
 \item
 ریڑھی کی زیادہ سے زیادہ رفتار کب اور  کتنی ہو گی؟ تب ریڑھی کا مقام اور اس کی اسراع  کیا ہو گی؟
@@ -6889,8 +6889,48 @@ $2\sqrt{2}\,\si{\ampere}$
 \end{enumerate}
 \انتہا{سوال}
 %========================
-\ابتدا{سوال}
-علیحدہ علیحدہ اسپرنگ کے ذریعہ چھت سے دو کمیتوں کو قریب قریب لٹکایا جاتا ہے۔ان کے مقام بالترتیب  \عددی{s_1=2\sin t}اور \عددی{s_2=\sin 2t} ہیں۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-stealth](0,1.5)--(0,0)--(5,0)node[right]{$s$};
+\draw[decoration={aspect=0.3, segment length=3mm, amplitude=3mm,coil},decorate] (0.25,0.5) --++(3,0); 
+\draw(0,0.5)--++(0.25,0);
+\draw(2,0,0)node[below]{$0$}--++(0,0.1);
+\draw(3.25,0)node[below]{$10$}--++(0,0.1);
+\draw(3.25,0.25) rectangle ++(1,0.5);
+\draw[fill=white](3.5,0.14) circle (0.14);
+\draw[fill=white](4,0.14) circle (0.14);
+\end{tikzpicture}
+\caption{افقی سطح پر ریڑھی کو دیوار کے ساتھ باندھا گیا ہے (سوال \حوالہ{سوال_استعمال_ریڑھی_اور_اسپرنگ})}
+\label{شکل_سوال_استعمال_ریڑھی_اور_اسپرنگ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\node[circle,fill=gray,inner sep=2.5mm] (a) at (0,0) {};
+\node[circle,fill=gray,inner sep=2.5mm] (b) at (3,2) {};
+\draw[decoration={aspect=0.3, segment length=3mm, amplitude=3mm,coil},decorate] (0,5) -- (a); 
+\draw[decoration={aspect=0.3, segment length=1.7mm, amplitude=3mm,coil},decorate] (3,5) -- (b);  
+\fill [pattern = north east lines] (-1,5) rectangle (4,5.2);
+\draw[thick] (-1,5) -- (4,5);
+%dashed lines
+\draw  (b)++(0,-0.37) node[below]{$m_1$};
+\draw[dashed] (b)++(0,0.37)--++(-1.5,0)coordinate(kT){}node[circ]{}node[left]{$s_1$};
+\draw  (a)++(0,-0.37) node[below]{$m_2$};
+\draw[dashed] (a)++(0,0.37)--++(1.5,0)coordinate(kB){}node[circ]{}node[right]{$s_2$};
+\draw($(kT)!0.5!(kB)$)node[left]{$0$}--++(0.1,0);
+%dimensions
+\draw[stealth-](1.5,-0.5)node[below]{$s$}--(1.5,5);
+\end{tikzpicture}
+\caption{چھت سے آویزاں دو اسپرنگ (سوال \حوالہ{سوال_استعمال_دو_اسپرنگ_چھت})}
+\label{شکل_سوال_استعمال_دو_اسپرنگ_چھت}
+\end{minipage}
+\end{figure}
+
+\ابتدا{سوال}\شناخت{سوال_استعمال_دو_اسپرنگ_چھت}
+علیحدہ علیحدہ اسپرنگ کے ذریعہ چھت سے دو کمیتوں کو قریب قریب لٹکایا جاتا ہے (شکل \حوالہ{شکل_سوال_استعمال_دو_اسپرنگ_چھت})۔ان کے مقام بالترتیب  \عددی{s_1=2\sin t}اور \عددی{s_2=\sin 2t} ہیں۔
 \begin{enumerate}[a.]
 \item
 کس لمحہ کمیت ایک دوسرے کے قریب سے گزرتے ہیں؟ (اشارہ: \عددی{\sin 2t=2\sin t\cos t})
