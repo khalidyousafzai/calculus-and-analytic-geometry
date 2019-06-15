@@ -2107,3 +2107,1521 @@ $1.10$
 \انتہا{سوال}
 %==============
 
+\حصہ{تکونیاتی بدل}
+ہم \عددی{a^2+x^2}، \عددی{a^2-x^2} اور \عددی{x^2-a^2} میں تکونیاتی بدل پر کر کے  ایک مربع جزو حاصل کرتے ہیں جو ایسے تکمل، جن میں ان کا جذر پایا جاتا ہو، کو سادہ صورت میں بدل دیتا ہے۔ ان سادہ تکمل کا حل نسبتاً آسان  ہوتا ہے۔
+
+\جزوحصہء{تین بنیادی بدل}
+تین عمومی بدل \عددی{x=a\tan \theta}، \عددی{x=a\sin\theta} اور \عددی{x=a\sec\theta} ہیں جو شکل \حوالہ{شکل_طریقہ_حوالہ_مثلث} میں قائمہ مثلثوں سے حاصل ہوتے ہیں۔
+
+\عددی{x=a\tan\theta} لیتے ہوئے درج ذیل حاصل ہوتا ہے۔
+\begin{align}
+a^2+x^2=a^2+a^2\tan^2\theta=a^2(1+\tan^2\theta)=a^2\sec^2\theta
+\end{align}
+
+\عددی{x=a\sin\theta} لیتے ہوئے درج ذیل حاصل ہوتا ہے۔
+\begin{align}
+a^2-x^2=a^2-a^2\sin^2\theta=a^2(1-\sin^2\theta)=a^2\cos^2\theta
+\end{align}
+
+\عددی{x=a\sec\theta} لیتے ہوئے درج ذیل حاصل ہوتا ہے۔
+\begin{align}
+x^2-a^2=a^2\sec^2\theta-a^2=a^2(\sec^2\theta-1)=a^2\tan^2\theta
+\end{align}
+\موٹا{تکونیاتی بدل}\\
+\begin{enumerate}[a.]
+\item
+\عددی{x=a\tan\theta} لے کر \عددی{a^2+x^2} کی جگہ \عددی{a^2\sec^2\theta} پر کریں۔
+\item
+\عددی{x=a\sin\theta} لے کر \عددی{a^2-x^2} کی جگہ \عددی{a^2\cos^2\theta} پر کریں۔
+\item
+\عددی{x=a\sec\theta} لے کر \عددی{x^2-a^2} کی جگہ \عددی{a^2\tan^2\theta} پر کریں۔
+\end{enumerate}
+
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\len}{2}
+\pgfmathsetmacro{\ang}{30}
+\pgfmathsetmacro{\kx}{\len*cos(\ang)}
+\pgfmathsetmacro{\ky}{\len*sin(\ang)}
+\draw(0,0)--++(\ang:\len)node[pos=0.7,left,yshift=0.5ex]{$\sqrt{a^2+x^2}$}--(\kx,0)node[pos=0.5,right]{$x$}--(0,0)node[pos=0.5,below]{$a$};
+\draw([shift={(0:0.5)}]0,0) arc (0:\ang:0.5);
+\draw(1/2*\ang:0.7)node[]{$\theta$};
+\draw(\x/2,\ky+0.25)node[above]{$\begin{aligned} x&=a\tan\theta\\ \sqrt{a^2+x^2}&=a\abs{\sec\theta} \end{aligned}$};
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\len}{2}
+\pgfmathsetmacro{\ang}{30}
+\pgfmathsetmacro{\kx}{\len*cos(\ang)}
+\pgfmathsetmacro{\ky}{\len*sin(\ang)}
+\draw(0,0)--++(\ang:\len)node[pos=0.7,left,yshift=0.5ex]{$a$}--(\kx,0)node[pos=0.5,right]{$x$}--(0,0)node[pos=0.5,below]{$\sqrt{a^2-x^2}$};
+\draw([shift={(0:0.5)}]0,0) arc (0:\ang:0.5);
+\draw(1/2*\ang:0.7)node[]{$\theta$};
+\draw(\x/2,\ky+0.25)node[above]{$\begin{aligned} x&=a\sin\theta\\ \sqrt{a^2-x^2}&=a\abs{\cos\theta} \end{aligned}$};
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\len}{2}
+\pgfmathsetmacro{\ang}{30}
+\pgfmathsetmacro{\kx}{\len*cos(\ang)}
+\pgfmathsetmacro{\ky}{\len*sin(\ang)}
+\draw(0,0)--++(\ang:\len)node[pos=0.7,left,yshift=0.5ex]{$x$}--(\kx,0)node[pos=0.5,right]{$\sqrt{x^2-a^2}$}--(0,0)node[pos=0.5,below]{$a$};
+\draw([shift={(0:0.5)}]0,0) arc (0:\ang:0.5);
+\draw(1/2*\ang:0.7)node[]{$\theta$};
+\draw(\x/2,\ky+0.25)node[above]{$\begin{aligned} x&=a\sec\theta\\ \sqrt{x^2-a^2}&=a\abs{\tan\theta} \end{aligned}$};
+\end{tikzpicture}
+\end{subfigure}
+\caption{تکونیاتی بدل کو حوالہ مثلث۔}
+\label{شکل_طریقہ_حوالہ_مثلث}
+\end{figure}
+
+ہم ایسا بدل استعمال کرنا چاہیں گے جو قابل واپسی ہو تا کہ آخری قدم پر اس کو واپس کرتے ہوئے اصل متغیرات میں نتیجہ لکھ سکیں۔ مثال کے طور پر اگر \عددی{x=a\tan\theta} کی صورت میں ہم چاہیں گے کہ تکمل لینے کے بعد آخری قدم پر \عددی{\theta=\tan^{-1}\tfrac{x}{a}} لکھنا ممکن ہو۔ اسی طرح \عددی{x=a\sin\theta} کی صورت میں ہم تکمل کے بعد \عددی{\theta=\sin^{-1}\tfrac{x}{a}}  اور \عددی{x=a\sec\theta} کے لئے \عددی{\theta=\sec^{-1}\tfrac{x}{a}} پر کرنا چاہیں گے۔
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=tan(deg(\x));}]
+\pgfmathsetmacro{\k}{pi/2}
+\begin{axis}[clip=false,width=4.5cm, axis lines=middle, xlabel={$\tfrac{x}{a}$},ylabel={$\theta$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={-\k,\k},yticklabels={$-\tfrac{\pi}{2}$,$\tfrac{\pi}{2}$},enlargelimits={0.2}]
+\addplot[domain=-\k+0.2:\k-0.2]({f(x)},x);
+\draw({f(-\k+0.2)},-\k)--({f(\k-0.2)},-\k);
+\draw({f(-\k+0.2)},\k)--({f(\k-0.2)},\k);
+\draw(0,{1/2*\k})node[left]{$\theta=\tan^{-1}\frac{x}{a}$};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=sin(deg(\x));}]
+\pgfmathsetmacro{\k}{pi/2}
+\begin{axis}[clip=false,width=4.5cm, axis lines=middle, xlabel={$\tfrac{x}{a}$},ylabel={$\theta$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-1,1},ytick={-\k,\k},yticklabels={$-\tfrac{\pi}{2}$,$\tfrac{\pi}{2}$},enlargelimits={0.2}]
+\addplot[domain=-\k+0.2:\k-0.2]({f(x)},x);
+\draw(0,{1/2*\k})node[left]{$\theta=\sin^{-1}\frac{x}{a}$};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=sec(deg(\x));}]
+\pgfmathsetmacro{\k}{pi/2}
+\pgfmathsetmacro{\kk}{pi}
+\begin{axis}[clip=false,width=4.5cm, axis lines=middle, xlabel={$\tfrac{x}{a}$},ylabel={$\theta$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-1,1},ytick={\k,\kk},yticklabels={$\tfrac{\pi}{2}$,$\pi$},enlargelimits={0.2}]
+\addplot[domain=0:\k-0.4]({f(x)},x);
+\addplot[domain=\k+0.4:2*\k]({f(x)},x);
+\draw({f(\k+0.4)},\k)--({f(\k-0.4)},\k);
+\draw(0,{6/4*\k})node[right]{$\theta=\sec^{-1}\frac{x}{a}$};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+\caption{الٹ تکونیاتی تفاعل کے ترسیمات۔}
+\label{شکل_طریقے_الٹ_کے_وقفے}
+\end{figure}
+جیسا ہم حصہ \حوالہ{حصہ_ماورائی_الٹ_تکونیاتی_تفاعل} سے جانتے ہیں ان تفاعل کے الٹ صرف مخصوص وقفہ پر پائے جاتے ہیں (شکل \حوالہ{شکل_طریقے_الٹ_کے_وقفے})۔ الٹ کے لئے درج ذیل ضروری ہے۔
+\begin{enumerate}[a.]
+\item
+\عددی{x=a\tan\theta} کا الٹ \عددی{\theta=\tan^{-1}\tfrac{x}{a}} وقفہ \عددی{-\frac{\pi}{2}<\theta<\frac{\pi}{2}} پر ہو گا۔ 
+\item
+\عددی{x=a\sin\theta} کا الٹ \عددی{\theta=\sin^{-1}\tfrac{x}{a}} وقفہ \عددی{-\frac{\pi}{2}<\theta<\frac{\pi}{2}} پر ہو گا۔ 
+\item
+\عددی{x=a\sec\theta} کا الٹ \عددی{\theta=\sec^{-1}\tfrac{x}{a}} وقفہ
+ \عددی{0\le \theta<\frac{\pi}{2}} پر  \عددی{\frac{x}{a}\ge 1} کی صورت میں  اور وقفہ \عددی{\tfrac{\pi}{2}<\theta\le \pi} پر \عددی{\tfrac{x}{a}\le -1} کی صورت میں  ہو گا۔ 
+\end{enumerate}
+
+حساب کتاب آسان بنانے کی خاطر ہم  بدل \عددی{x=a\sec\theta} کے استعمال کو ان تکمل تک پابند کرتے ہیں جن میں   \عددی{\tfrac{x}{a}\ge 1} ہو۔اس طرح  \عددی{\theta} وقفہ \عددی{[0,\tfrac{\pi}{2})} میں ہو گا جہاں \عددی{\tan\theta\ge 0} ہو گا۔ یوں \عددی{a>0} کی صورت میں 
+\begin{align*}
+\sqrt{x^2-a^2}=\sqrt{a^2\tan^2\theta}=\abs{a\tan\theta}=a\tan\theta
+\end{align*}
+ ہو گا جو مطلق کی علامت سے آزاد ہے۔
+
+
+\ابتدا{مثال}\شناخت{مثال_طریقہ_حوالہ_مثلث_الف}
+تکمل \عددی{\int\tfrac{\dif x}{\sqrt{4+x^2}}} حل کریں۔
+
+حل:\quad
+ہم درج ذیل لیتے ہیں۔
+\begin{align*}
+x=2\tan\theta,\quad \dif x=2\sec^2\theta\dif\theta,\quad -\frac{\pi}{2}<\theta<\frac{\pi}{2}\\
+4+x^2=4+4\tan^2\theta=4(1+\tan^2\theta)=4\sec^2\theta
+\end{align*}
+یوں
+\begin{align*}
+\int\frac{\dif x}{\sqrt{4+x^2}}&=\int \frac{2\sec^2\theta\dif\theta}{\sqrt{4\sec^2\theta}}=\int\frac{\sec^2\theta\dif \theta}{\abs{\sec\theta}}&& \sqrt{\sec^2\theta}=\abs{\sec\theta}\\
+&=\int \sec\theta\dif \theta\\
+&=\ln\abs{\sec\theta+\tan\theta}+C\\
+&=\ln\abs{\frac{\sqrt{4+x^2}}{2}+\frac{x}{2}}+C&&\text{\RL{شکل \حوالہ{شکل_مثال_طریقہ_حوالہ_مثلث_الف}}}\\
+&=\ln\abs{\sqrt{4+x^2}+x}+C'&&C'=C-\ln 2
+\end{align*}
+ہو گا۔ آپ اس پر دوبارہ نظر ڈالیں کہ ہم نے \عددی{\ln\abs{\sec\theta+\tan\theta}} کو \عددی{x} کی صورت میں کس طرح لکھا۔ ہم نے ابتدائی بدل \عددی{x=2\tan\theta} کے لئے حوالہ مثلث (شکل \حوالہ{شکل_مثال_طریقہ_حوالہ_مثلث_الف}) کا خاکہ بنایا اور اسی سے نسبتیں \عددی{\tan\theta=\tfrac{x}{2}} اور \عددی{\sec\theta=\tfrac{\sqrt{4+x^2}}{2}} پڑھیں۔
+\انتہا{مثال}
+%======================
+\begin{figure}
+\centering
+\begin{minipage}{0.30\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\r}{2}
+\pgfmathsetmacro{\ang}{30}
+\draw(0,0)--++(\ang:\r)coordinate(ka)node[pos=0.7,left,yshift=0.5ex]{$\sqrt{4+x^2}$}--($(0,0)!(ka)!(2,0)$)node[pos=0.5,right]{$x$}--(0,0)node[pos=0.5,below]{$2$};
+\draw([shift={(0:0.5)}]0,0) arc (0:\ang:0.5);
+\draw(1/2*\ang:0.7)node[]{$\theta$};
+\draw(\r/2,{\r*sin(\ang)})node[above,yshift=1ex]{$\tan\theta=\frac{x}{2}$};
+\end{tikzpicture}
+\caption{حوالہ مثلث برائے مثال \حوالہ{مثال_طریقہ_حوالہ_مثلث_الف}}
+\label{شکل_مثال_طریقہ_حوالہ_مثلث_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.30\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\r}{2}
+\pgfmathsetmacro{\ang}{30}
+\draw(0,0)--++(\ang:\r)coordinate(ka)node[pos=0.7,left,yshift=0.5ex]{$3$}--($(0,0)!(ka)!(2,0)$)node[pos=0.5,right]{$x$}--(0,0)node[pos=0.5,below]{$\sqrt{9-x^2}$};
+\draw([shift={(0:0.5)}]0,0) arc (0:\ang:0.5);
+\draw(1/2*\ang:0.7)node[]{$\theta$};
+\draw(\r/2,{\r*sin(\ang)})node[above,yshift=1ex]{$\tan\sin=\frac{x}{3}$};
+\end{tikzpicture}
+\caption{حوالہ مثلث برائے مثال \حوالہ{مثال_طریقہ_حوالہ_مثلث_ب}}
+\label{شکل_مثال_طریقہ_حوالہ_مثلث_ب}
+\end{minipage}\hfill
+\begin{minipage}{0.30\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\r}{2}
+\pgfmathsetmacro{\ang}{30}
+\draw(0,0)--++(\ang:\r)coordinate(ka)node[pos=0.7,left,yshift=0.5ex]{$5x$}--($(0,0)!(ka)!(2,0)$)node[pos=0.5,right]{$\sqrt{25x^2-4}$}--(0,0)node[pos=0.5,below]{$2$};
+\draw([shift={(0:0.5)}]0,0) arc (0:\ang:0.5);
+\draw(1/2*\ang:0.7)node[]{$\theta$};
+\draw(\r/2,{\r*sin(\ang)})node[above,yshift=1ex]{$\sec\theta=\frac{5x}{2}$};
+\end{tikzpicture}
+\caption{حوالہ مثلث برائے مثال \حوالہ{مثال_طریقہ_حوالہ_مثلث_پ}}
+\label{شکل_مثال_طریقہ_حوالہ_مثلث_پ}
+\end{minipage}
+\end{figure}
+
+\ابتدا{مثال}\شناخت{مثال_طریقہ_حوالہ_مثلث_ب}
+تکمل \عددی{\int\tfrac{x^2\dif x}{\sqrt{9-x^2}}} حل کریں۔
+
+حل:\quad
+جزو \عددی{9-x^2} کی جگہ ایک مربع جزو پر کرنے کی خاطر ہم درج ذیل لیتے ہیں۔
+\begin{align*}
+x=3\sin\theta,\quad &\dif x=3\cos\theta\dif\theta,\quad -\frac{\pi}{2}<\theta<\frac{\pi}{2}\\
+9-x^2&=9(1-\sin^2\theta)=9\cos^2\theta
+\end{align*}
+یوں
+\begin{align*}
+\int\frac{x^2\dif x}{\sqrt{9-x^2}}&=\int\frac{9\sin^2\theta\cdot3\cos\theta\dif\theta}{\abs{3\cos\theta}}\\
+&=9\int \sin^2\theta\dif \theta\\
+&=9\int \frac{1-\cos2\theta}{2}\dif\theta\\
+&=\frac{9}{2}\big(\theta-\frac{\sin2\theta}{2}\big)+C\\
+&=\frac{9}{2}(\theta-\sin\theta\cos\theta)+C\\
+&=\frac{9}{2}\big(\sin^{-1}\frac{x}{3}-\frac{x}{3}\cdot\frac{\sqrt{9-x^2}}{3}\big)+C&&\text{\RL{شکل \حوالہ{شکل_مثال_طریقہ_حوالہ_مثلث_ب}}}\\
+&=\frac{9}{2}\sin^{-1}\frac{x}{3}-\frac{x}{2}\sqrt{9-x^2}+C
+\end{align*}
+ہو گا۔ ہم نے   بدل \عددی{\sin\theta=\tfrac{x}{3}} کے حوالہ مثلث (شکل \حوالہ{شکل_مثال_طریقہ_حوالہ_مثلث_ب}) سے نسبتیں \عددی{\sin\theta=\tfrac{x}{3}} اور \عددی{\cos\theta=\tfrac{\sqrt{9-x^2}}{3}} پڑھیں۔
+\انتہا{مثال}
+%===============
+\ابتدا{مثال}\شناخت{مثال_طریقہ_حوالہ_مثلث_پ}
+تکمل \عددی{\int\tfrac{\dif x}{\sqrt{25x^2-4}},\, x>\tfrac{2}{5}} حل کریں۔
+
+حل:\quad
+ہم جذر کو
+\begin{align*}
+\sqrt{25x^2-4}=\sqrt{25\big(x^2-\frac{4}{25}\big)}=5\sqrt{x^2-\big(\tfrac{2}{5}\big)^2}
+\end{align*}
+صورت میں لکھتے ہیں تا کہ یہ \عددی{x^2-a^2} روپ میں ہو۔ اس کے بعد درج ذیل بدل استعمال کرتے ہیں۔
+\begin{align*}
+x&=\frac{2}{5}\sec\theta,\quad \dif x=\frac{2}{5}\sec\theta\tan\theta\dif\theta,\quad 0<\theta<\frac{\pi}{2}\\
+x^2-\big(\frac{2}{5}\big)^2&=\frac{4}{25}\sec^2\theta-\frac{4}{25}=\frac{4}{25}(\sec^2\theta-1)=\frac{4}{25}\tan^2\theta\\
+\sqrt{x^2-\big(\frac{2}{5}\big)^2}&=\frac{2}{5}\abs{\tan \theta}=\frac{2}{5}\tan\theta&&\tan\theta>0,\, 0<\theta<\frac{\pi}{2}
+\end{align*}
+یوں
+\begin{align*}
+\int\frac{\dif x}{\sqrt{25x^2-4}}&=\int\frac{\dif x}{5\sqrt{x^2-(4/25)}}=\int\frac{(2/5)\sec\theta\tan\theta\dif\theta}{5\cdot(2/5)\tan\theta}\\
+&=\frac{1}{5}\int \sec\theta\dif\theta=\frac{1}{5}\ln\abs{\sec\theta+\tan\theta}+C\\
+&=\frac{1}{5}\ln\abs{\frac{5x}{2}+\frac{\sqrt{25x^2-4}}{2}}+C
+\end{align*}
+ہو گا۔ ہم نے بدل \عددی{\sec\theta=\tfrac{5x}{2}} کے حوالہ مثلث (شکل \حوالہ{مثال_طریقہ_حوالہ_مثلث_پ}) سے تکونیاتی نسبتیں پڑھیں۔ 
+\انتہا{مثال}
+%=======================
+بعض اوقات دو درجی جزو کے طاقت کا تکمل تکونیاتی بدل سے ممکن ہوتا ہے۔ آئیں اگلی مثال میں اس عمل کو دیکھیں۔
+
+\ابتدا{مثال}\شناخت{مثال_طریقہ_جسم_طواف_حوالہ_مثلث}
+منحنی \عددی{y=\tfrac{4}{x^2+4}}، محور \عددی{x}، لکیر \عددی{x=0} اور \عددی{x=2} کے بیچ خطہ کو محور \عددی{x} کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے (شکل \حوالہ{شکل_مثال_طریقہ_جسم_طواف_حوالہ_مثلث})۔ اس جسم کا حجم تلاش کریں۔
+
+حل:\quad
+ہم اس خطہ کو ترسیم کر کے ترکیب قرص (حصہ \حوالہ{حصہ_استعمال_تکمل_قرص_اور_چھلا}) سے حجم تلاش کرتے ہیں۔
+\begin{align*}
+H&=\int_0^2\pi[R(x)]^2\dif x=16\pi\int_0^2\frac{\dif x}{(x^2+4)^2}&&R(x)=\frac{4}{x^2+4}
+\end{align*}
+اس تکمل کو حل کرنے کی خاطر ہم درج ذیل لیتے ہیں۔
+\begin{align*}
+x&=2\tan\theta,\quad \dif x=2\sec^2\theta\dif\theta,\quad \theta=\tan^{-1}\frac{x}{2}\\
+x^2+4&=4\tan^2\theta+4,\quad 4(\tan^2\theta+1)=4\sec^2\theta 
+\end{align*}
+یوں درج ذیل حاصل ہو گا۔
+\begin{align*}
+H&=16\pi\int_0^2\frac{\dif x}{(x^2+4)^2}\\
+&=16\pi\int_0^{\pi/4}\frac{2\sec^2\theta\dif\theta}{(4\sec^2\theta)^2}\\
+&=16\pi\int_0^{\pi/4}\frac{2\sec^2\theta\dif\theta}{16\sec^4\theta}=\pi\int_0^{\pi/4}2\cos^2\theta\dif\theta\\
+&=\pi\int_0^{\pi/4}(1+\cos 2\theta)\dif \theta=\pi\left[\theta+\frac{\sin2\theta}{2}\right]_0^{\pi/4}\\
+&=\pi\big[\frac{\pi}{4}+\frac{1}{2}\big]\approx 4.04
+\end{align*}
+\انتہا{مثال}
+%=================
+\begin{figure}
+\centering
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=4/(\x^2+4);}]
+\draw[-latex](-0.25,0)--(3,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,1.5)node[above]{$y$};
+\draw[-stealth] ([shift={(-40:1/3*0.3 cm and 0.3 cm)}]2.9,0) arc (-40:240:1/3*0.3 cm and 0.3 cm);
+\draw[fill=lgray,domain=0:2] plot({\x},{f(\x)})--(2,0)node[below]{$2$}--(0,0)--(0,1)node[left]{$1$};
+\draw(1,1)node[above]{$y=\frac{4}{x^2+4}$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=4/(\x^2+4);}]
+\pgfmathsetmacro{\ra}{f(0)}
+\pgfmathsetmacro{\rb}{f(2)}
+\draw[-latex](-0.25,0)--(3,0)node[right]{$x$};
+\draw[-latex](0,-1.1)--(0,1.5)node[above]{$y$};
+\draw[-stealth] ([shift={(-40:1/3*0.3 cm and 0.3 cm)}]2.9,0) arc (-40:240:1/3*0.3 cm and 0.3 cm);
+\draw[thick,domain=0:2] plot({\x},{f(\x)});
+\draw[domain=0:2] plot({\x},{-f(\x)});
+\draw([shift={(90:1/4*\ra cm and \ra cm)}]0,0) arc (90:270:1/4*\ra cm and \ra cm);
+\draw[dashed]([shift={(-90:1/4*\ra cm and \ra cm)}]0,0) arc (-90:90:1/4*\ra cm and \ra cm);
+\draw(2,0) circle (1/4*\rb cm and \rb cm);
+\draw(1,1)node[above]{$y=\frac{4}{x^2+4}$};
+\draw(2,0)node[below,font=\scriptsize]{$2$}--++(0,0.1);
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.30\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\r}{2}
+\pgfmathsetmacro{\ang}{30}
+\draw(0,0)--++(\ang:\r)coordinate(ka)node[pos=0.7,left,yshift=1ex]{$\sqrt{x^2+4}$}--($(0,0)!(ka)!(2,0)$)node[pos=0.5,right]{$x$}--(0,0)node[pos=0.5,below]{$2$};
+\draw([shift={(0:0.5)}]0,0) arc (0:\ang:0.5);
+\draw(1/2*\ang:0.7)node[]{$\theta$};
+\draw(\r/2,{\r*sin(\ang)})node[above,yshift=1ex]{$\tan\theta=\frac{x}{2}$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{خطہ، جسم طواف اور حوالہ مثلث برائے مثال \حوالہ{مثال_طریقہ_جسم_طواف_حوالہ_مثلث}}
+\label{شکل_مثال_طریقہ_جسم_طواف_حوالہ_مثلث}
+\end{figure}
+
+%==========================
+
+\موٹا{بدل $z=\tan(\tfrac{x}{2})$}\\
+\عددی{\sin x} اور \عددی{\cos x} کے ناطق تفاعل کے تکمل کو درج ذیل بدل
+\begin{align}\label{مساوات_طریقہ_ٹینجنٹ_بدل}
+z=\tan\frac{x}{2}
+\end{align}
+متغیر \عددی{z} کے ناطق تفاعل کے تکمل میں بدلتا ہے جس کو جزوی کسری مجموعہ لکھ کر حل کیا جا سکتا ہے۔ یوں مساوات \حوالہ{مساوات_طریقہ_ٹینجنٹ_بدل} کا بدل انتہائی طاقتور ثابت ہوتا ہے اگرچہ اس کا استعمال زیادہ آسان نہیں ہے اور صرف وہاں استعمال کیا جاتا ہے جب باقی تراکیب مددگار ثابت نہ ہوں۔
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\r}{1.25}
+\pgfmathsetmacro{\ang}{60}
+\draw[-latex](-\r-0.5,0)--(\r+0.5,0);
+\draw(0,0) circle (\r);
+\draw(0,0)--++(\ang:\r)node[above right]{$N(\cos x,\sin x)$}node[pos=0.5,left]{$1$}coordinate(kt){}--($(0,0)!(kt)!(\r,0)$)node[pos=0.6,above,sloped]{$\sin x$}--(0,0)node[pos=0.5,below]{$\cos x$};
+\draw(kt)--(-\r,0)node[below left] {$A$};
+\draw([shift={(0:0.3)}]0,0) arc (0:\ang:0.3);
+\draw([shift={(0:0.6)}]-\r,0) arc (0:1/2*\ang:0.6);
+\draw(1/2*\ang:0.45)node[]{$x$};
+\draw(-\r,0)++(1/4*\ang:0.8)node[]{$\tfrac{x}{2}$};
+\end{tikzpicture}
+\caption{ہم شکل سے $\tan\tfrac{x}{2}=\tfrac{\sin x}{1+\cos x}$ پڑھ سکتے ہیں۔}
+\label{شکل_طریقہ_سوال_بدل_ٹینجنٹ}
+\end{figure}
+\عددی{\sin x} اور \عددی{\cos x} کے ناطق تفاعل کو \عددی{\tan\tfrac{x}{2}} کی صورت میں لکھنا شکل \حوالہ{شکل_طریقہ_سوال_بدل_ٹینجنٹ} میں دکھایا گیا ہے۔ درج ذیل کی مدد سے ہم بدل کے اثر کو دیکھتے ہیں۔
+\begin{gather}
+\begin{aligned}\label{مساوات_طریقہ_ٹینجنٹ_بدل_الف}
+\cos x&=2\cos^2\frac{x}{2}-1=\frac{2}{\sec^2\frac{x}{2}}-1\\
+&=\frac{2}{1+\tan^2\frac{x}{2}}-1=\frac{2}{1+z^2}-1\\
+\cos x&=\frac{1-z^2}{1+z^2}
+\end{aligned}
+\end{gather}
+اور
+\begin{gather}
+\begin{aligned}\label{مساوات_طریقہ_ٹینجنٹ_بدل_ب}
+\sin x&=2\sin\frac{x}{2}\cos\frac{x}{2}=2\frac{\sin\frac{x}{2}}{\cos\frac{x}{2}}\cdot\cos^2\frac{x}{2}\\
+&=2\tan\frac{x}{2}\cdot\frac{1}{\sec^2\frac{x}{2}}=\frac{2\tan\frac{x}{2}}{1+\tan^2\frac{x}{2}}\\
+\sin x&=\frac{2z}{1+z^2}
+\end{aligned}
+\end{gather}
+اور
+\begin{align}\label{مساوات_طریقہ_ٹینجنٹ_بدل_پ}
+\dif x=\frac{2\dif z}{1+z^2}
+\end{align}
+
+\ابتدا{مثال}
+\begin{align*}
+\text{\RL{(الف)}}\quad \int\frac{\dif x}{1+\cos x}&=\int\frac{1+z^2}{2}\frac{2\dif z}{1+z^2}\\
+&=\int \dif z=z+C\\
+&=\tan\frac{x}{2}+C\\
+\text{\RL{(ب)}}\quad \int\frac{\dif x}{2+\sin x}&=\int\frac{1+z^2}{2+2z+2z^2}\frac{2\dif z}{1+z^2}\\
+&=\int\frac{\dif z}{z^2+z+1}=\int\frac{\dif z}{(z+1/2)^2+3/4}\\
+&=\int\frac{\dif u}{u^2+a^2}\\
+&=\frac{1}{a}\tan^{-1}\frac{u}{a}+C\\
+&=\frac{2}{\sqrt{3}}\tan^{-1}\frac{2z+1}{\sqrt{3}}+C\\
+&=\frac{2}{\sqrt{3}}\tan^{-1}\frac{1+2\tan(x/2)}{\sqrt{3}}+C
+\end{align*}
+\انتہا{مثال}
+%======================
+\حصہء{سوالات}
+\موٹا{بنیادی تکونیاتی بدل}\\
+سوال \حوالہ{سوال_طریقہ_بنیادی_تکونیاتی_تکمل_الف} تا سوال \حوالہ{سوال_طریقہ_بنیادی_تکونیاتی_تکمل_ب} میں تکمل حل کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_طریقہ_بنیادی_تکونیاتی_تکمل_الف}
+$\int\frac{\dif y}{\sqrt{9+y^2}}$\\
+جواب:\quad
+$\ln\abs{\sqrt{9+y^2}+y}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{3\dif y}{\sqrt{1+9y^2}}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int_{-2}^2\frac{\dif x}{4+x^2}$\\
+جواب:\quad
+$\tfrac{\pi}{4}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int_0^2\frac{\dif x}{8+2x^2}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int_0^{3/2}\frac{\dif x}{\sqrt{9-x^2}}$\\
+جواب:\quad
+$\tfrac{\pi}{6}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int_0^{1/2\sqrt{2}}\frac{2\dif x}{\sqrt{1-4x^2}}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\sqrt{25-t^2}\dif t$\\
+جواب:\quad
+$\tfrac{25}{2}\sin^{-1}\tfrac{t}{5}+\tfrac{t\sqrt{25-t^2}}{2}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\sqrt{1-9t^2}\dif t$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{\dif x}{\sqrt{4x^2-49}},\quad x>\frac{7}{2}$\\
+جواب:\quad
+$\tfrac{1}{2}\ln\abs{\tfrac{2x}{7}+\tfrac{\sqrt{4x^2-49}}{7}}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{5\dif x}{\sqrt{25x^2-9}},\quad x>\frac{3}{5}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{\sqrt{y^2-49}}{y}\dif y,\quad y>7$\\
+جواب:\quad
+$7[\tfrac{\sqrt{y^2-49}}{7}-\sec^{-1}\tfrac{y}{7}]+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{\sqrt{y^2-25}}{y^3}\dif y,\quad y>5$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{\dif x}{x^2\sqrt{x^2-1}},\quad x>1$\\
+جواب:\quad
+$\tfrac{\sqrt{x^2-1}}{x}+C$ 
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{2\dif x}{x^3\sqrt{x^2-1}},\quad x>1$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{x^3\dif x}{\sqrt{x^2+4}}$\\
+جواب:\quad
+$\tfrac{1}{3}(x^2+4)^{3/2}-4\sqrt{x^2+4}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{\dif x}{x^2\sqrt{x^2+1}}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{8\dif w}{w^2\sqrt{4-w^2}}$\\
+جواب:\quad
+$\tfrac{-2\sqrt{4-w^2}}{w}+C$ 
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{\sqrt{9-w^2}}{w^2}\dif w$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int_0^{\sqrt{3}/2}\frac{4x^2\dif x}{(1-x^2)^{3/2}}$\\
+جواب:\quad
+$4\sqrt{3}-\tfrac{4\pi}{3}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int_0^1\frac{\dif x}{(4-x^2)^{3/2}}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{\dif x}{(x^2-1)^{3/2}},\quad x>1$\\
+جواب:\quad
+$\tfrac{-x}{\sqrt{x^2-1}}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{x^2\dif x}{(x^2-1)^{5/2}},\quad x>1$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{(1-x^2)^{3/2}}{x^6}\dif x$\\
+جواب:\quad
+$-\tfrac{1}{5}\big(\tfrac{\sqrt{1-x^2}}{x}\big)^5+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{(1-x^2)^{1/2}}{x^4}\dif x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{8\dif x}{(4x^2+1)^2}$\\
+جواب:\quad
+$2\tan^{-1}2x+\tfrac{4x}{4x^2+1}+C$ 
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{6\dif t}{(9t^2+1)^2}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{v^2\dif v}{(1-v^2)^{5/2}}$\\
+جواب:\quad
+$\tfrac{1}{3}\big(\tfrac{v}{\sqrt{1-v^2}}\big)^3+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\شناخت{سوال_طریقہ_بنیادی_تکونیاتی_تکمل_ب}
+$\int\frac{(1-r^2)^{5/2}}{r^8}\dif r$
+\انتہا{سوال}
+%======================
+\موٹا{موزوں بدل کے بعد تکونیاتی بدل استعمال کرتے ہوئے سوال \حوالہ{سوال_بدل_تکونیاتی_حل_تکمل_الف} تا سوال \حوالہ{سوال_بدل_تکونیاتی_حل_تکمل_ب}  میں تکمل حل کریں۔}
+
+\ابتدا{سوال}\شناخت{سوال_بدل_تکونیاتی_حل_تکمل_الف}
+ $\int_0^{\ln 4}\frac{e^t\dif t}{\sqrt{e^{2t}+9}}$\\
+جواب:\quad
+$\ln 9-\ln(1+\sqrt{10})$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+ $\int_{\ln(3/4)}^{\ln(4/3)}\frac{e^t\dif t}{(1+e^{2t})^{3/2}}$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+ $\int_{1/12}^{1/4}\frac{2\dif t}{\sqrt{t}+4t\sqrt{t}}$\\
+جواب:\quad
+$\tfrac{\pi}{6}$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+ $\int_1^e\frac{\dif y}{y\sqrt{1+(\ln y)^2}}$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+ $\int\frac{\dif x}{x\sqrt{x^2-1}}$\\
+جواب:\quad
+$\sec^{-1}\abs{x}+C$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+ $\int\frac{\dif x}{1+x^2}$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+ $\int\frac{x\dif x}{\sqrt{x^2-1}}$\\
+جواب:\quad
+$\sqrt{x^2-1}+C$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_بدل_تکونیاتی_حل_تکمل_ب}
+ $\int\frac{\dif x}{\sqrt{1-x^2}}$
+\انتہا{سوال}
+%=======================
+\موٹا{ابتدائی قیمت مسائل}\\
+سوال \حوالہ{سوال_طریقہ_ابتدائی_قیمت_بدل_الف} تا سوال \حوالہ{سوال_طریقہ_ابتدائی_قیمت_بدل_ب} کے ابتدائی قیمت مسائل حل کرتے ہوئے \عددی{y} حاصل کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_طریقہ_ابتدائی_قیمت_بدل_الف}
+$x\frac{\dif y}{\dif x}=\sqrt{x^2-4},\quad x\ge 2,\quad y(2)=0$\\
+جواب:\quad
+$y=2[\tfrac{\sqrt{x^2-4}}{2}-\sec^{-1}\tfrac{x}{2}]$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$\sqrt{x^2-9}\frac{\dif y}{\dif x}=1,\quad x>3,\quad y(5)=\ln 3$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$(x^2+4)\frac{\dif y}{\dif x}=3,\quad y(2)=0$\\
+جواب:\quad
+$y=\tfrac{3}{2}\tan^{-1}\tfrac{x}{2}-\tfrac{3\pi}{8}$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_طریقہ_ابتدائی_قیمت_بدل_ب}
+$(x^2+1)^2\frac{\dif y}{\dif x}=\sqrt{x^2+1},\quad y(0)=1$
+\انتہا{سوال}
+%=====================
+\موٹا{استعمال}
+
+\ابتدا{سوال}
+ربع اول میں محددی محور اور منحنی \عددی{y=\tfrac{\sqrt{9-x^2}}{3}} کے بیچ رقبہ تلاش کریں۔\\
+جواب:\quad
+$\tfrac{3\pi}{4}$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+ربع اول میں محددی محور، لکیر \عددی{x=1} اور منحنی \عددی{y=\tfrac{2}{1+x^2}} کے بیچ خطہ کو محور \عددی{x} کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔ اس جسم کا حجم تلاش کریں۔
+\انتہا{سوال}
+%========================
+\موٹا{بدل $z=\tan(x/2)$}\\
+سوال \حوالہ{سوال_طریقہ_ٹینجنٹ_بدل_الف} تا سوال \حوالہ{سوال_طریقہ_ٹینجنٹ_بدل_ب} کو  مساوات \حوالہ{مساوات_طریقہ_ٹینجنٹ_بدل_الف} تا مساوات \حوالہ{مساوات_طریقہ_ٹینجنٹ_بدل_پ} کی مدد سے حل کریں۔ 
+
+\ابتدا{سوال}\شناخت{سوال_طریقہ_ٹینجنٹ_بدل_الف}
+$\int\frac{\dif x}{1-\sin x}$\\
+جواب:\quad
+$\tfrac{2}{1-\tan\tfrac{x}{2}}+C$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$\int\frac{\dif x}{1+\sin x+\cos x}$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$\int_0^{\pi/2}\frac{\dif x}{1+\sin x}$\\
+جواب:\quad
+$1$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$\int_{\pi/3}^{\pi/2}\frac{\dif x}{1-\cos x}$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$\int_0^{\pi/2}\frac{\dif\theta}{2+\cos\theta}$\\
+جواب:\quad
+$\tfrac{\sqrt{3}\pi}{9}$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$\int_{\pi/2}^{2\pi/3}\frac{\cos\theta\dif\theta}{\sin\theta\cos\theta+\sin\theta}$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$\int\frac{\dif t}{\sin t-\cos t}$\\
+جواب:\quad
+$\tfrac{1}{\sqrt{2}}\ln\abs{\tfrac{\tan(t/2)+1-\sqrt{2}}{\tan(t/2)+1+\sqrt{2}}}+C$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_طریقہ_ٹینجنٹ_بدل_ب}
+$\int\frac{\cos t\dif t}{1-\cos t}$
+\انتہا{سوال}
+%=====================
+درج ذیل دو سوالات میں \عددی{z=\tan(\theta/2)} پر کر کے حل کریں۔\\
+\ابتدا{سوال}
+$\int\sec\theta\dif\theta$\\
+جواب:\quad
+$\ln\abs{\tfrac{1+\tan(\theta/2)}{1-\tan(\theta/2)}}+C$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$\int\csc\theta\dif\theta$
+\انتہا{سوال}
+%=====================
+
+\حصہ{جدول تکمل اور کمپیوٹر}
+جیسا آپ جانتے ہیں تکمل کے بنیادی طریقے بدل اور تکمل بالحصص ہیں۔ان طریقوں سے  ہم انجانے تکمل کو جانے پہچانے تکمل میں بدلتے ہیں جس کو ہم حل کرنا جانتے ہیں یا جس کو جدول سے دیکھا جا سکتا ہے۔ ان جدول میں تکمل کہاں سے آتے ہیں؟ جدول میں تکمل بھی بدل یا تکمل بالحصص سے حاصل کیے گئے ہوتے ہیں۔ ہم ان تمام کو خود حاصل کر سکتے ہیں لیکن جدول کی موجودگی ہمیں بار بار ایک ہی طرز کے تکمل حاصل کرنے سے چھٹکارا فراہم کرتے ہیں۔ جب کوئی تکمل جدول میں پایا جاتا ہو یا الجبرا، تکونیات، بدل اور احصاء کی استعمال سے اس کو جدول میں درج کسی تکمل کی صورت میں لانا ممکن ہو، تب ہم تکمل کا حل جدول سے پڑھ سکتے ہیں۔ اس حصہ کی مثالوں اور سوالات میں جدول میں درج کلیات کو اخذ کرنا اور ان کا استعمال سکھایا جائے گا۔ یہاں استعمال پر زور دیا جائے گا۔ کتاب کے آخر میں کلیات کو مستقل \عددی{a,b,c,m,n}  وغیرہ کی صورت میں لکھ گیا ہے۔ یہ مستقل عموماً حقیقی اعداد ہوں گے جو غیر عدد صحیح ہو سکتے ہیں۔ جہاں ان مستقل پر شرائط مسلط ہو، وہاں اس کا ذکر کیا گیا ہے۔ مثال کے طور پر کلیہ \عددی{5} میں \عددی{n\ne -1} ہونا ضروری ہے جبکہ کلیہ \عددی{11} میں \عددی{n\ne -2} ہونا ضروری ہے۔ 
+
+ان کلیات میں  مستقل وہ قیمت اختیار نہیں کر سکتے ہیں جن کی بنا صفر سے تقسیم کرنا پڑے یا منفی اعداد کا جفت جذر لینا پڑے۔ مثال کے طور پر کلیہ \عددی{8} میں \عددی{a\ne 0} ہو گا جبکہ کلیہ \عددی{13}-الف صرف اس صورت قابل استعمال ہو گا جب \عددی{b} منفی ہو۔ 
+
+بہت سارے غیر قطعی تکمل کو کمپیوٹر کی مدد سے بھی حل کیا جا سکتا ہے جہاں تکمل کو کسی خاص صورت میں لکھنے کی ضرورت پیش نہیں آتی ہے۔ کمپیوٹر الجبرا پر اس حصہ کے آخر میں غور کیا جائے گا۔
+
+\جزوحصہء{جدول کی مدد سے تکمل}
+\ابتدا{مثال}
+تکمل \عددی{\int x(2x+5)^{-1}\dif x} حل کریں۔
+
+حل:\quad
+ہم کلیہ \عددی{8} استعمال کرتے ہیں (نا کہ کلیہ \عددی{7} جہاں \عددی{n\ne -1} ہونا ضروری ہے۔)
+\begin{align*}
+\int x(ax+b)^{-1}\dif x=\frac{x}{a}-\frac{b}{a^2}\ln\abs{ax+b}+C
+\end{align*}
+یوں \عددی{a=2} اور \عددی{b=5} کی صورت میں درج ذیل ہو گا۔
+\begin{align*}
+\int x(2x+5)^{-1}\dif x=\frac{x}{2}-\frac{5}{4}\ln\abs{2x+5}+C
+\end{align*}
+\انتہا{مثال}
+%===============
+\ابتدا{مثال}
+تکمل \عددی{\int\frac{\dif x}{x\sqrt{2x+4}}} حل کریں۔
+
+حل:\quad
+ہم کلیہ \عددی{13}-ب استعمال کرتے ہیں۔
+\begin{align*}
+\int\frac{\dif x}{x\sqrt{ax+b}}&=\frac{1}{\sqrt{b}}\ln\abs{\frac{\sqrt{ax+b}-\sqrt{b}}{\sqrt{ax+b}+\sqrt{b}}}+C&&\text{\RL{اگر $b>0$ ہو}}
+\end{align*}
+یوں \عددی{a=2} اور \عددی{b=4} کی صورت میں درج ذیل ہو گا۔
+\begin{align*}
+\int\frac{\dif x}{x\sqrt{2x+4}}&=\frac{1}{\sqrt{4}}\ln\abs{\frac{\sqrt{2x+4}-\sqrt{4}}{\sqrt{2x+4}+\sqrt{4}}}+C\\
+&=\frac{1}{2}\ln\abs{\frac{\sqrt{2x+4}-2}{\sqrt{2x+4}+2}}+C
+\end{align*}
+کلیہ \عددی{13}-الف یہاں قابل استعمال نہیں ہو گا چونکہ اس میں \عددی{b<0} ضروری ہے، البتہ اگلی مثال میں یہ کارآمد ہو گا۔
+\انتہا{مثال}
+%====================
+\ابتدا{مثال}\شناخت{مثال_طریقہ_تکمل_استعمال_کلیات_تیسرا}
+تکمل \عددی{\int\frac{\dif x}{x\sqrt{2x-4}}} حل کریں۔
+
+حل:\quad
+ہم کلیہ \عددی{13}-الف استعمال کرتے ہیں۔
+\begin{align*}
+\int\frac{\dif x}{x\sqrt{ax-b}}=\frac{2}{\sqrt{b}}\tan^{-1}\sqrt{\frac{ax-b}{b}}+C
+\end{align*}
+یوں \عددی{a=2} اور \عددی{b=4} لیتے ہوئے درج ذیل ہو گا۔
+\begin{align*}
+\int \frac{\dif x}{x\sqrt{2x-4}}=\frac{2}{\sqrt{4}}\tan^{-1}\sqrt{\frac{2x-4}{4}}+C=\tan^{-1}\sqrt{\frac{x-2}{2}}+C
+\end{align*}
+\انتہا{مثال}
+%=============
+\ابتدا{مثال}
+تکمل \عددی{\int \frac{\dif x}{x^2\sqrt{2x-4}}} حل کریں۔
+
+حل:\quad
+ہم کلیہ \عددی{15} سے شروع کرتے ہیں۔
+\begin{align*}
+\int\frac{\dif x}{x^2\sqrt{ax+b}}=-\frac{\sqrt{ax+b}}{bx}-\frac{a}{2b}\int\frac{\dif x}{x\sqrt{ax+b}}+C
+\end{align*}
+یوں \عددی{a=2} اور \عددی{b=-4} لیتے ہوئے
+\begin{align*}
+\int\frac{\dif x}{x^2\sqrt{2x-4}}=-\frac{\sqrt{2x-4}}{-4x}+\frac{2}{2\cdot 4}\int\frac{\dif x}{x\sqrt{2x-4}}+C
+\end{align*}
+ملتا ہے۔ اب ہم کلیہ \عددی{13}-الف استعمال کرتے ہوئے دائیں ہاتھ تکمل حل کرتے ہیں (مثال \حوالہ{مثال_طریقہ_تکمل_استعمال_کلیات_تیسرا} سے رجوع کریں):
+\begin{align*}
+\int\frac{\dif x}{x^2\sqrt{2x-4}}=\frac{\sqrt{2x-4}}{4x}+\frac{1}{4}\tan^{-1}\sqrt{\frac{x-2}{2}}+C
+\end{align*}
+\انتہا{مثال}
+%=================
+\ابتدا{مثال}
+تکمل \عددی{\int x\sin^{-1}x\dif x} حل کریں۔
+
+حل:\quad
+ہم کلیہ \عددی{99} استعمال کرتے ہیں۔
+\begin{align*}
+\int x^n\sin^{-1}ax\dif x=\frac{x^{n+1}}{n+1}\sin^{-1}ax-\frac{a}{n+1}\int\frac{x^{n+1}\dif x}{\sqrt{1-a^2x^2}},\quad n\ne -1
+\end{align*}
+یوں \عددی{n=1} اور \عددی{a=1} لے کر
+\begin{align*}
+\int x\sin^{-1}x\dif x=\frac{x^2}{2}\sin^{-1}x-\frac{1}{2}\int\frac{x^2\dif x}{\sqrt{1-x^2}}
+\end{align*}
+ہو گا۔ دائیں ہاتھ تکمل جدول میں کلیہ \عددی{33} ہے:
+\begin{align*}
+\int \frac{x^2}{\sqrt{a^2-x^2}}\dif x=\frac{a^2}{2}\sin^{-1}\frac{x}{a}-\frac{1}{2}x\sqrt{a^2-x^2}+C
+\end{align*}
+اب \عددی{a=1} کے لئے درج ذیل ہو گا۔
+\begin{align*}
+\int \frac{x^2}{\sqrt{1-x^2}}\dif x=\frac{1}{2}\sin^{-1}x-\frac{1}{2}x\sqrt{1-x^2}+C
+\end{align*}
+یوں مجموعی حل درج ذیل ہو گا۔
+\begin{align*}
+\int x\sin^{-1}x\dif x&=\frac{x^2}{2}\sin^{-1}x-\frac{1}{2}\big(\frac{1}{2}\sin^{-1}x-\frac{1}{2}x\sqrt{1-x^2}\big)+C'\\
+&=\big(\frac{x^2}{2}-\frac{1}{4}\big)\sin^{-1}x+\frac{1}{4}x\sqrt{1-x^2}+C'
+\end{align*}
+\انتہا{مثال}
+%=======================
+
+\جزوحصہء{کلیات تخفیف}
+دہراتے ہوئے تکمل بالحصص میں درج ذیل صورت کے کلیات مددگار ثابت ہوتے ہیں جنہیں \اصطلاح{کلیات تخفیف}\فرہنگ{کلیات!تخفیف}\فرہنگ{تخفیف!کلیات}\حاشیہب{reduction formulae}\فرہنگ{reduction formulae} کہتے ہیں۔
+\begin{align}
+\int \tan^n x\dif x&=\frac{1}{n-1}\tan^{n-1}x-\int \tan^{n-2}x\dif x\label{مساوات_طریقہ_کلیات_تخفیف_الف}\\
+\int(\ln x)^n\dif x&=x(\ln x)^n-n\int(\ln x)^{n-1}\label{مساوات_طریقہ_کلیات_تخفیف_ب}\\
+\int\sin^nx\cos^mx\dif x&=-\frac{\sin^{n-1}x\cos^{m+1}x}{m+n}\dif x\nonumber\\
+&\phantom{=}+\frac{n-1}{m+n}\int\sin^{n-2}x\cos^mx\dif x,\quad (n\ne -m)\label{مساوات_طریقہ_کلیات_تخفیف_پ}
+\end{align}
+کلیات تخفیف کسی تفاعل کے طاقت کے تکمل کو اسی طرز کے تکمل جس میں تفاعل کی طاقت کم ہو سے تبدیل کرتا ہے۔ طاقت کی تخفیف کی بنا انہیں کلیات تخفیف کہتے ہیں۔ کلیات تخفیف بار بار استعمال کرتے ہوئے آخر کار تکمل میں تفاعل کی طاقت اتنی کم ہو جاتی ہے کہ تکمل با آسانی حل ہوتا ہے۔
+
+\ابتدا{مثال}
+تکمل \عددی{\int \tan^5x\dif x} حل کریں۔
+
+حل:\quad
+ہم \عددی{n=5} لیتے ہوئے کلیہ \عددی{1} استعمال کرتے ہیں۔
+\begin{align*}
+\int\tan^5x\dif x=\frac{1}{4}\tan^4x-\int\tan^3x\dif x
+\end{align*}
+ہم \عددی{n=3} لیتے ہوئے  کلیہ \عددی{1} دوبارہ استعمال کرتے ہیں۔
+\begin{align*}
+\int\tan^3x\dif x=\frac{1}{2}\tan^2x-\int \tan x\dif x=\frac{1}{2}\tan^2x+\ln\abs{\cos x}+C
+\end{align*}
+یوں مکمل نتیجہ درج ذیل ہو گا۔
+\begin{align*}
+\int^5x \dif x=\frac{1}{4}\tan^4x-\frac{1}{2}\tan^2x-\ln\abs{\cos x}+C
+\end{align*}
+\انتہا{مثال}
+%==========
+کلیات تخفیف کو تکمل بالحصص سے حاصل کیا جاتا ہے۔
+
+\ابتدا{مثال}\ترچھا{کلیات تخفیف کا حصول}\\
+کسی بھی مثبت عدد صحیح \عددی{n} کے لئے درج ذیل کی تصدیق کریں۔
+\begin{align*}
+\int (\ln x)^n\dif x=x(\ln x)^n-n\int (\ln x)^{n-1}\dif x
+\end{align*}
+حل:\quad
+ہم تکمل بالحصص کے کلیہ
+\begin{align*}
+\int u\dif v=uv-\int v\dif u
+\end{align*}
+میں
+\begin{align*}
+u=(\ln x)^n,\quad \dif u=n(\ln x)^{n-1}\frac{\dif x}{x},\quad \dif v=\dif x,\quad v=x
+\end{align*}
+لے کر درج ذیل حاصل کرتے ہیں۔
+\begin{align*}
+\int (\ln x)^n\dif x=x(\ln x)^n-n\int (\ln x)^{n-1}\dif x
+\end{align*}
+\انتہا{مثال}
+%===================
+بعض اوقات دو کلیات تخفیف کا استعمال ضروری ہو گا۔
+
+\ابتدا{مثال}
+تکمل \عددی{\int\sin^2x\cos^3x\dif x} حل کریں۔
+
+حل الف:\quad
+ہم کلیہ \عددی{3} میں \عددی{n=2} اور \عددی{m=3} لے کر درج ذیل حاصل کرتے ہیں۔
+\begin{align*}
+\int \sin^2x\cos^3x\dif x&=-\frac{\sin x\cos^4x}{2+3}+\frac{1}{2+3}\int\sin^0x\cos^3x\dif x\\
+&=-\frac{\sin x\cos^4x}{5}+\frac{1}{5}\int\cos^3x\dif x
+\end{align*}
+ہم باقی تکمل کو کلیہ \عددی{61} سے حل کر سکتے ہیں۔
+\begin{align*}
+\int\cos^nax\dif x=\frac{\cos^{n-1}ax\sin ax}{na}+\frac{n-1}{n}\int\cos^{n-2}ax\dif x
+\end{align*}
+یوں \عددی{n=3} اور \عددی{a=1} لیتے ہوئے
+ \begin{align*}
+\int\cos^3x\dif x&=\frac{\cos^2x\sin x}{3}+\frac{2}{3}\int\cos x\dif x\\
+&=\frac{\cos^2x\sin x}{3}+\frac{2}{3}\sin x+C
+\end{align*}
+حاصل ہو گا۔مجموعی نتیجہ درج ذیل ہو گا۔
+\begin{align*}
+\int\sin^2x\cos^3x\dif x &=-\frac{\sin x\cos^4x}{5}+\frac{1}{5}\big(\frac{\cos^2x\sin x}{3}+\frac{2}{3}\sin x+C\big)\\
+&=-\frac{\sin x\cos^4 x}{5}+\frac{\cos^2x\sin x}{15}+\frac{2}{15}\sin x+C'
+\end{align*}
+
+حل ب:\quad
+مساوات \حوالہ{مساوات_طریقہ_کلیات_تخفیف_پ} جدول میں کلیہ \عددی{68} ہے ، مگر ہم کلیہ \عددی{69} بھی استعمال کر سکتے ہیں جس میں \عددی{a=1} لیتے ہوئے
+\begin{align*}
+\int \sin^nx\cos^mx\dif x=\frac{\sin^{n+1}x\cos^{m-1}x}{m+n}+\frac{m-1}{m+n}\int \sin^nx\cos^{m-2}x\dif x
+\end{align*}
+لکھا جائے گا۔ اب \عددی{n=2} اور \عددی{m=3} لیتے ہوئے درج ذیل ملتا ہے۔
+\begin{align*}
+\int\sin^2x\cos^3x\dif x&=\frac{\sin^3x\cos^2x}{5}+\frac{2}{5}\int\sin^2x\cos x\dif x\\
+&=\frac{\sin^3x\cos^2x}{5}+\frac{2}{5}\big(\frac{\sin^3x}{3}\big)+C\\
+&=\frac{\sin^3x\cos^2x}{5}+\frac{2}{15}\sin^3x+C
+\end{align*} 
+آپ نے دیکھا کہ کلیہ \عددی{69} زیادہ جلدی نتیجہ فراہم کرتا ہے۔ عموماً قبل از وقت یہ جاننا ممکن نہیں ہوتا ہے کہ کونسا کلیہ زیادہ جلدی نتیجہ دیگا گا۔ اس پر وقت ضائع نہ کریں۔ جو بھی کلیہ قابل استعمال نظر آئے، اس کو فوراً استعمال کریں۔
+
+آپ نے یہ بھی دیکھا ہو گا کہ کلیہ \عددی{68} اور کلیہ \عددی{69} کے نتائج مختلف نظر آتے ہیں۔ تکونیاتی تکمل میں عموماً ایسا ہی ہو گا۔ آپ فکر نہ کریں چونکہ ایسے نتائج درحقیقت بالکل ایک دوسرے جیسے ہوں گے۔
+\انتہا{مثال}
+%=============== 
+
+\جزوحصہء{غیر بنیادی تکمل}
+وہ الٹ تفرق جنہیں بنیادی تفاعل (وہ تفاعل جن پر اب تک غور کیا گیا) کی صورت میں لکھنا ممکن نہ ہو \اصطلاح{غیر بنیادی}\فرہنگ{تکمل!غیر بنیادی}\فرہنگ{غیر بنیادی تکمل}\حاشیہب{nonelementary}\فرہنگ{nonelementary} تکمل کہلاتے ہیں۔ غیر بنیادی تکمل کا حل لامتناہی سلسلہ  یا اعدادی تراکیب سے حاصل ہو گا۔ اعدادی تراکیب سے حل ہونے والے تکمل میں تفاعل خلل
+\begin{align*}
+\erf(x)=\frac{2}{\pi}\int_0^x e^{-t^2}\dif t
+\end{align*}
+اور درج ذیل قسم کے تکمل شامل ہیں جو انجینئری اور طبیعیات میں پائے جاتے ہیں۔
+\begin{align*}
+\int\sin x^2\dif x,\quad \int \sqrt{1+x^4}\dif x
+\end{align*}
+ان کے علاوہ
+\begin{align*}
+\int\frac{e^x}{x}\dif x,\quad &\int e^{(e^x)}\dif x,\quad \int\frac{1}{\ln x}\dif x,\quad \int \ln(\ln x)\dif x,\quad \int\frac{\sin x}{x}\dif x\\
+&\int \sqrt{1-k^2\sin^2x}\dif x,\quad 0<k<1
+\end{align*}
+بھی غیر بنیادی تکمل ہیں جو بظاہر سادہ نظر آتے ہیں۔ انہیں حل کرنے کی کشش کر کے دیکھیں۔ یہ ثابت کیا جا سکتا ہے کہ مختلف بنیادی تفاعل کو کسی طرح بھی آپس میں جوڑ کر غیر بنیادی تکمل کا حل نہیں لکھا جا سکتا ہے۔وہ تکمل جن میں بدل پر کر کے غیر بنیادی تکمل میں تبدیل کرنا ممکن ہو کے لئے بھی یہی کچھ درست ہو گا۔ چونکہ یہ تمام متکمل استمراری ہیں لہٰذا ان کا الٹ تفرق ضرور پایا جائے گا، لیکن یہ الٹ تفرق غیر بنیادی ہوں گے۔ 
+
+اس باب میں آپ کو کہیں پر بھی غیر بنیادی تکمل حل کرنے کو نہیں کہا جائے گا البتہ حقیقی دنیا میں آپ کو ان سے واسطہ ضرور پڑے گا۔
+
+\حصہء{سوالات}
+\موٹا{جدول تکمل کا استعمال}\\
+کتاب کے آخر میں دیا گیا جدول تکمل استعمال کرتے ہوئے سوال \حوالہ{سوال_طریقہ_جدول_الف} تا سوال \حوالہ{سوال_طریقہ_جدول_ب} حل کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_طریقہ_جدول_الف}
+$\int\frac{\dif x}{x\sqrt{x-3}}$\\
+جواب:\quad
+$\tfrac{2}{\sqrt{3}}(\tan^{-1}\sqrt{\tfrac{x-3}{3}})+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{\dif x}{x\sqrt{x+4}}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{x\dif x}{\sqrt{x-2}}$\\
+جواب:\quad
+$\sqrt{x-2}(\tfrac{2(x-2)}{3}+4)+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{x\dif x}{(2x+3)^{3/2}}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int x\sqrt{2x-3}\dif x$\\
+جواب:\quad
+$\tfrac{(2x-3)^{3/2}(x+1)}{5}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int x(7x+5)^{3/2}\dif x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int \frac{\sqrt{9-4x}}{x^2}\dif x$\\
+جواب:\quad
+$\tfrac{-\sqrt{9-4x}}{x}-\tfrac{2}{3}\ln\abs{\tfrac{\sqrt{9-4x}-3}{\sqrt{9-4x}+3}}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{\dif x}{x^2\sqrt{4x-9}}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int x\sqrt{4x-x^2}\dif x$\\
+جواب:\quad
+$\tfrac{(x+2)(2x-6)\sqrt{4x-x^2}}{6}+4\sin^{-1}(\tfrac{x-2}{2})+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{\sqrt{x-x^2}}{x}\dif x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{\dif x}{x\sqrt{7+x^2}}$\\
+جواب:\quad
+$-\tfrac{1}{\sqrt{7}}\ln\abs{\tfrac{\sqrt{7}+\sqrt{7+x^2}}{x}}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{\dif x}{x\sqrt{7-x^2}}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{\sqrt{4-x^2}}{x}\dif x$\\
+جواب:\quad
+$\sqrt{4-x^2}-2\ln\abs{\tfrac{2+\sqrt{4-x^2}}{x}}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{\sqrt{x^2-4}}{x}\dif x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\sqrt{25-p^2}\dif x$\\
+جواب:\quad
+$\tfrac{p}{2}\sqrt{25-p^2}+\tfrac{25}{2}\sin^{-1}\tfrac{p}{5}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int q^2\sqrt{25-q^2}\dif x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int \frac{r^2}{\sqrt{4-r^2}}\dif r$\\
+جواب:\quad
+$2\sin^{-1}\tfrac{r}{2}-\tfrac{1}{2}r\sqrt{4-r^2}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int \frac{\dif s}{\sqrt{s^2-2}}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{\dif \theta}{5+4\sin 2\theta}$\\
+جواب:\quad
+$-\tfrac{1}{3}\tan^{-1}[\tfrac{1}{3}\tan(\tfrac{\pi}{4}-\theta)]+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int \frac{\dif \theta}{4+5\sin 2\theta}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int e^{2t}\cos 3t \dif t$\\
+جواب:\quad
+$\tfrac{e^{2t}}{13}(2\cos 3t+3\sin 3t)+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int e^{-3t}\sin 4t\dif t$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int x \cos^{-1} x\dif x$\\
+جواب:\quad
+$\tfrac{x^2}{2}\cos^{-1}x+\tfrac{1}{4}\sin^{-1}x-\tfrac{1}{4}x\sqrt{1-x^2}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int x\sin^{-1}x\dif x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{\dif s}{(9-s^2)^2}$\\
+جواب:\quad
+$\tfrac{s}{18(9-s^2)}+\tfrac{1}{108}\ln\abs{\tfrac{s+3}{s-3}}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int \frac{\dif \theta}{(2-\theta^2)^2}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int \frac{\sqrt{4x+9}}{x^2}\dif x$\\
+جواب:\quad
+$-\tfrac{\sqrt{4x+9}}{x}+\tfrac{2}{3}\ln\abs{\tfrac{\sqrt{4x+9}-3}{\sqrt{4x+9}+3}}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{\sqrt{9x-4}}{x^2}\dif x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{\sqrt{3t-4}}{t}\dif t$\\
+جواب:\quad
+$2\sqrt{3t-4}-4\tan^{-1}\sqrt{\tfrac{3t-4}{4}}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{\sqrt{3t+9}}{t}\dif t$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int x^2\tan^{-1}x\dif x$\\
+جواب:\quad
+$\tfrac{x^3}{3}\tan^{-1}x-\tfrac{x^2}{6}+\tfrac{1}{6}\ln(1+x^2)+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int \frac{\tan^{-1}x}{x^2}\dif x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int \sin 3x\cos 2x\dif x$\\
+جواب:\quad
+$-\tfrac{\cos5x}{10}-\tfrac{\cos x}{2}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int \sin 2x\cos 3x\dif x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int 8\sin 4t\sin\frac{t}{2}\dif t$\\
+جواب:\quad
+$8[\tfrac{\sin(7t/2)}{7}-\tfrac{\sin(9t/2)}{9}]+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int \sin\frac{t}{3}\sin \frac{t}{6}\dif t$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int \cos\frac{\theta}{3}\cos\frac{\theta}{4}\dif \theta$\\
+جواب:\quad
+$6\sin(\theta/12)+\tfrac{6}{7}\sin(7\theta/12)+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\شناخت{سوال_طریقہ_جدول_ب}
+$\int \cos\frac{\theta}{2}\cos 7\theta \dif \theta$
+\انتہا{سوال}
+%======================
+
+\موٹا{بدل اور جدول}\\
+سوال \حوالہ{سوال_طریقہ_بدل_جدول_الف} تا سوال \حوالہ{سوال_طریقہ_بدل_جدول_ب} میں بدل استعمال کر کے ایسا تکمل حاصل کریں جو جدول میں پایا جاتا ہو۔ اس نئے تکمل کو جدول کی مدد سے حل کریں۔ 
+
+\ابتدا{سوال}\شناخت{سوال_طریقہ_بدل_جدول_الف}
+$\int\frac{x^3+x+1}{(x^2+1)^2}\dif x$\\
+جواب:\quad
+$\tfrac{1}{2}\ln\abs{x^2+1}+\tfrac{x}{2(1+x^2)}+\tfrac{1}{2}\tan^{-1}x+C$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$\int\frac{x^2+6x}{(x^2+3)^2}\dif x$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$\int\sin^{-1}\sqrt{x}\dif x$\\
+جواب:\quad
+$(x-\tfrac{1}{2})\sin^{-1}\sqrt{x}+\tfrac{1}{2}\sqrt{x-x^2}+C$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$\int\frac{\cos^{-1}\sqrt{x}}{\sqrt{x}}\dif x$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$\int\frac{\sqrt{x}}{\sqrt{1-x}}\dif x$\\
+جواب:\quad
+$\sin^{-1}\sqrt{x}-\sqrt{x-x^2}+C$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$\int\frac{\sqrt{2-x}}{\sqrt{x}}\dif x$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$\int \cot t\sqrt{1-\sin^2t}\dif t,\quad 0<t<\frac{\pi}{2}$\\
+جواب:\quad
+$\sqrt{1-\sin^2t}-\ln\abs{\tfrac{1+\sqrt{1-\sin^2t}}{\sin t}}+C$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$\int\frac{\dif t}{\tan t\sqrt{4-\sin^2t}}$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$\int\frac{\dif y}{y\sqrt{3+(\ln y)^2}}$\\
+جواب:\quad
+$\ln\abs{\ln y+\sqrt{3+(\ln y)^2}}+C$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$\int\frac{\cos\theta\dif\theta}{\sqrt{5+\sin^2\theta}}$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$\int\frac{3\dif r}{\sqrt{9r^2-1}}$\\
+جواب:\quad
+$\ln\abs{3r+\sqrt{9r^2-1}}+C$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$\int\frac{3\dif y}{\sqrt{1+9y^2}}$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$\int\cos^{-1}\sqrt{x}\dif x$\\
+جواب:\quad
+$x\cos^{-1}\sqrt{x}+\tfrac{1}{2}\sin^{-1}\sqrt{x}-\tfrac{1}{2}\sqrt{x-x^2}+C$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\شناخت{سوال_طریقہ_بدل_جدول_ب}
+$\int\tan^{-1}\sqrt{y}\dif y$
+\انتہا{سوال}
+%===================
+
+\موٹا{کلیات تخفیف کا استعمال}\\
+سوال \حوالہ{سوال_طریقہ_کلیات_تخفیف_الف} تا سوال \حوالہ{سوال_طریقہ_کلیات_تخفیف_ب} کو کلیات تخفیف کی مدد سے حل کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_طریقہ_کلیات_تخفیف_الف}
+$\int\sin^52x\dif x$\\
+جواب:\quad
+$-\tfrac{\sin^42x\cos 2x}{10}-\tfrac{2\sin^22x\cos 2x}{15}-\tfrac{4\cos 2x}{15}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\sin^5\frac{\theta}{2}\dif\theta$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int 8\cos^42\pi t\dif t$\\
+جواب:\quad
+$\tfrac{\cos^32\pi t\sin2\pi t}{\pi}+\tfrac{3}{2}\tfrac{\cos 2\pi t\sin 2\pi t}{\pi}+3t+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int 3\cos^53y\dif y$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int \sin^22\theta\cos^32\theta\dif\theta$\\
+جواب:\quad
+$\tfrac{\sin^32\theta\cos^22\theta}{10}+\tfrac{\sin^32\theta}{15}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int 9\sin^3\theta\cos^{3/2}\theta\dif \theta$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int 2\sin^2t\sec^4t\dif t$\\
+جواب:\quad
+$\tfrac{2}{3}\tan^3t+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\csc^2y\cos^5y\dif y$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int 4\tan^32x\dif x$\\
+جواب:\quad
+$\tan^22x-2\ln\abs{\sec 2x}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int \tan^4(x/2)\dif x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int 8\cot^4t\dif t$\\
+جواب:\quad
+$8[-\tfrac{1}{3}\cot^3t+\cot t+t]+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int 4\cot^32t\dif t$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int 2\sec^3\pi x\dif x$\\
+جواب:\quad
+$\tfrac{(\sec \pi x)(\tan \pi x)}{\pi}+\tfrac{1}{\pi}\ln\abs{\sec \pi x+\tan \pi x}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\frac{1}{2}\csc^3\frac{x}{2}\dif x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int 3\sec^43x\dif x$\\
+جواب:\quad
+$\tfrac{\sec^23x\tan 3x}{3}+\tfrac{2}{3}\tan 3x+C$
+\انتہا{سوال}
+%================
+\ابتدا{سوال}
+$\csc^4\frac{\theta}{3}\dif \theta$
+\انتہا{سوال}
+%===========================
+\ابتدا{سوال}
+$\int\csc^5x\dif x$\\
+جواب:\quad
+$-\tfrac{\csc^3x\cot x}{4}-\tfrac{3\csc x\cot x}{8}-\tfrac{3}{8}\ln\abs{\csc x+\cot x}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int\sec^5x\dif x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int 16x^3(\ln x)^2\dif x$\\
+جواب:\quad
+$4x^4(\ln x)^2-2x^4(\ln x)+\tfrac{x^2}{2}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\شناخت{سوال_طریقہ_کلیات_تخفیف_ب}
+$\int (\ln x)^3\dif x$
+\انتہا{سوال}
+%======================
+
+\موٹا{قوت نما ضرب $x$ کے طاقت}\\
+سوال\حوالہ{سوال_طریقہ_کلیات_جدول_کی_مدد_الف} تا سوال \حوالہ{سوال_طریقہ_کلیات_جدول_کی_مدد_ب} کو جدول کے کلیات \عددی{103} تا \عددی{106} کی مدد سے حل کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_طریقہ_کلیات_جدول_کی_مدد_الف}
+$\int xe^{3x}\dif x$\\
+جواب:\quad
+$\tfrac{e^{3x}}{9}(3x-1)+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int xe^{-2x}\dif x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int x^3e^{x/2}\dif x$\\
+جواب:\quad
+$2x^3e^{x/2}-12x^2e^{x/2}+96e^{x/2}(\tfrac{x}{2}-1)+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int x^2e^{\pi x}\dif x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int x^22^x\dif x$\\
+جواب:\quad
+$\tfrac{x^22^x}{\ln 2}-\tfrac{2}{\ln 2}[\tfrac{x2^x}{\ln 2}-\tfrac{2^x}{(\ln 2)^2}]+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int x^22^{-x}\dif x$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int x\pi^x\dif x$\\
+جواب:\quad
+$\tfrac{x\pi^x}{\ln \pi}-\tfrac{\pi^x}{(\ln \pi)^2}+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\شناخت{سوال_طریقہ_کلیات_جدول_کی_مدد_ب}
+$\int x2^{\sqrt{2}x}\dif x$
+\انتہا{سوال}
+%======================
+\موٹا{بدل اور کلیات تخفیف}\\
+سوال \حوالہ{سوال_طریقہ_بدل_تخفیف_حل_الف} تا سوال \حوالہ{سوال_طریقہ_بدل_تخفیف_حل_ب}  میں بدل (ممکنہ تکونیاتی) کے بعد کلیات تخفیف استعمال کرتے ہوئے تکمل حل کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_طریقہ_بدل_تخفیف_حل_الف}
+$\int e^t\sec^3(e^t-1)\dif t$\\
+جواب:\quad
+$\tfrac{1}{2}[\sec(e^t-1)\tan(e^t-1)+\ln\abs{\sec(e^t-1)+\tan(e^t-1)}]+C$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int \frac{\csc^3\sqrt{\theta}}{\sqrt{\theta}}\dif \theta$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int_0^12\sqrt{x^2+1}\dif x$\\
+جواب:\quad
+$\sqrt{2}+\ln(\sqrt{2}+1)$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int_0^{\sqrt{3}/2}\frac{\dif y}{(1-y^2)^{5/2}}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\int_1^2\frac{(r^2-1)^{3/2}}{r}\dif r$\\
+جواب:\quad
+$\tfrac{\pi}{3}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\شناخت{سوال_طریقہ_بدل_تخفیف_حل_ب}
+$\int_0^{1/\sqrt{3}}\frac{\dif t}{(t^2+1)^{7/2}}$
+\انتہا{سوال}
+%======================
+\موٹا{ہذلولی تفاعل}\\
+سوال \حوالہ{سوال_طریقہ_جدول_تکمل_الف} تا سوال \حوالہ{سوال_طریقہ_جدول_تکمل_ب} کو جدول تکمل کی مدد سے حل کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_طریقہ_جدول_تکمل_الف}
+$\int\frac{1}{8}\sinh^53x\dif x$\\
+جواب:\quad
+$\tfrac{1}{120}\sinh^43x\cosh3x-\tfrac{1}{90}\sinh^23x\cosh3x+\tfrac{2}{90}\cosh3x+C$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$\int\frac{\cosh^4\sqrt{x}}{\sqrt{x}}\dif x$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$\int x^2\cosh 3x\dif x$\\
+جواب:\quad
+$\tfrac{x^2}{3}\sinh 3x-\tfrac{2x}{9}\cosh 3x+\tfrac{2}{27}\sinh 3x+C$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$\int x\sinh 5x \dif x$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+$\int \sech^7x\tanh x\dif x$\\
+جواب:\quad
+$-\tfrac{\sinh^7x}{7}+C$
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_طریقہ_جدول_تکمل_ب}
+$\int \csch^32x\coth 2x \dif x$
+\انتہا{سوال}
+%=======================
+\موٹا{نظریہ اور مثالیں}\\
+سوال \حوالہ{سوال_طریقہ_کلیات_اخذ_الف} تا سوال \حوالہ{سوال_طریقہ_کلیات_اخذ_ب} میں کتاب کے آخر میں جدول تکمل کے کلیات اخذ کرنے کو کہا گیا ہے۔
+
+\ابتدا{سوال}\شناخت{سوال_طریقہ_کلیات_اخذ_الف}
+بدل \عددی{u=ax+b} پر کرتے ہوئے کلیہ \عددی{9} اخذ کرتے ہوئے درج ذیل تکمل حل کریں۔
+\begin{align*}
+\int\frac{x}{(ax+b)^2}\dif x
+\end{align*}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+تکونیاتی بدل پر کرتے ہوئے کلیہ \عددی{17} اخذ کرتے ہوئے درج ذیل تکمل حل کریں۔
+\begin{align*}
+\int\frac{\dif x}{(a^2+x^2)^2}
+\end{align*}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+تکونیاتی بدل  پر کرتے ہوئے کلیہ \عددی{29} اخذ کرتے ہوئے درج ذیل تکمل حل کریں۔
+\begin{align*}
+\int\sqrt{a^2-x^2}\dif x
+\end{align*}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+تکونیاتی بدل  پر کرتے ہوئے کلیہ \عددی{46} اخذ کرتے ہوئے درج ذیل تکمل حل کریں۔
+\begin{align*}
+\int\frac{\dif x}{x^2\sqrt{x^2-a^2}}
+\end{align*}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+درج ذیل کو تکمل بالحصص کی مدد سے حل کرتے ہوئے کلیہ \عددی{80} اخذ کریں۔
+\begin{align*}
+\int x^n \sin ax \dif x
+\end{align*}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+تکونیاتی بدل  پر کرتے ہوئے کلیہ \عددی{110} اخذ کرتے ہوئے درج ذیل تکمل حل کریں۔
+\begin{align*}
+\int\ x^n (\ln ax)^m\dif x
+\end{align*}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+تکونیاتی بدل  پر کرتے ہوئے کلیہ \عددی{99} اخذ کرتے ہوئے درج ذیل تکمل حل کریں۔
+\begin{align*}
+\int x^n\sin^{-1}ax\dif x
+\end{align*}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\شناخت{سوال_طریقہ_کلیات_اخذ_ب}
+تکونیاتی بدل  پر کرتے ہوئے کلیہ \عددی{101} اخذ کرتے ہوئے درج ذیل تکمل حل کریں۔
+\begin{align*}
+\int x^n\tan^{-1} ax\dif x
+\end{align*}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+منحنی \عددی{y=\sqrt{x^2+2},\,\, 0\le x\le \sqrt{2}} کو محور \عددی{x} کے گرد گھما کر سطح طواف پیدا کیا جاتا ہے۔ اس سطح کا رقبہ تلاش کریں۔\\
+جواب:\quad
+$\pi(2\sqrt{3}+\sqrt{2})\ln(\sqrt{2}+\sqrt{3})$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+منحنی \عددی{y=x^2,\, 0\le x\le \tfrac{\sqrt{3}}{2}} کی لمبائی تلاش کریں۔
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+ربع اول میں لکیر \عددی{x=3} اور منحنی \عددی{y=\tfrac{1}{\sqrt{x+1}}} ایک خطہ گھیرتے ہیں۔ اس خطے کا وسطانی مرکز تلاش کریں۔ \\
+جواب:\quad
+$\bar{x}=\tfrac{4}{3},\,\bar{y}=\ln\sqrt{2}$
+\انتہا{سوال}
+%================
+\ابتدا{سوال}
+ربع اول میں لکیر \عددی{x=3} اور منحنی \عددی{y=\tfrac{36}{2x+3}} کے بیچ مستقل کثافت \عددی{\delta=1} کی چادر پائی جاتی ہے۔ محور \عددی{y} کے لحاظ سے اس خطے کا معیار اثر تلاش کریں۔
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+محور \عددی{x} کے گرد منحنی \عددی{y=x^2,\, -1\le x\le 1} گھما کر سطح طواف پیدا کیا جاتا ہے۔جدول تکمل اور کیلکولیٹر کی مدد سے اس کا رقبہ \عددی{2} اعشاریہ درستگی تک تلاش کریں۔\\
+جواب:\quad
+$7.62$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_طریقہ_حوض_تیل}
+ایک افقی دائری حوض کا رداس \عددی{r} سنٹی میٹر اور لمبائی \عددی{L} سنٹی میٹر ہے۔ اس میں تیل کی گہرائی \عددی{d} سنٹی میٹر ہے (شکل \حوالہ{شکل_سوال_طریقہ_حوض_تیل})۔ (ا) دکھائیں کہ تیل کا حجم درج ذیل ہے۔
+\begin{align*}
+H=2L\int_{-r}^{-r+d}\sqrt{r^2-y^2}\dif y
+\end{align*}
+(ب) اس تکمل کو حل کریں۔
+\انتہا{سوال}
+%===================
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\r}{0.75}
+\pgfmathsetmacro{\L}{3}
+\draw[-latex](0,-\r-0.25)--(0,\r+0.5)node[above]{$y$};
+\draw([shift={(90:1/4*\r cm and \r cm)}]0,0) arc (90:270:1/4*\r cm and \r cm);
+\draw(\L,0) circle (1/4*\r cm and \r cm);
+\draw(0,-\r)node[left]{$-r$}--++(\L,0);
+\draw(0,\r)node[left]{$r$}--++(\L,0);
+\draw[stealth-stealth](0,-\r-0.2)--++(\L,0)node[pos=0.5,below]{$L$};
+\draw(\L,-\r-0.1)--++(0,-0.2);
+\draw[stealth-stealth](\L+0.4,-\r)--++(0,3/4*\r)node[pos=0.5,right]{$d$};
+\end{tikzpicture}
+\caption{تیل کا حوض (سوال \حوالہ{سوال_طریقہ_حوض_تیل})}
+\label{شکل_سوال_طریقہ_حوض_تیل}
+\end{figure}
+
+\ابتدا{سوال}
+کسی بھی \عددی{a} اور \عددی{b} کے لئے \عددی{\int_a^b\sqrt{x-x^2}\dif x} کی زیادہ سے زیادہ قیمت کیا ممکن ہے؟ اپنے جواب کی وجہ پیش کریں۔\\
+جواب:\quad
+$\tfrac{\pi}{8}$
+\انتہا{سوال}
+%==============
+\ابتدا{سوال}
+کسی بھی \عددی{a} اور \عددی{b} کے لئے \عددی{\int_a^b x\sqrt{x-x^2}\dif x} کی زیادہ سے زیادہ قیمت کیا ممکن ہے؟ اپنے جواب کی وجہ پیش کریں۔
+\انتہا{سوال}
+%==============
+\موٹا{کمپیوٹر الجبرائی نظام}\\
+ کمپیوٹر میں الجبرا کے کئی پروگرام پائے جاتے ہیں۔ان میں سے ایک پروگرام \اصطلاح{میکسما}\فرہنگ{میکسما}\حاشیہب{maxima}\فرہنگ{maxima} کہلاتا ہے جو نہایت طاقتور پروگرام ہے۔ متغیر \عددی{x} کے تفاعل \عددی{f(x)} کا غیر قطعی تکمل حاصل کرنے کے لئے میکسما میں \عددی{integrate(f,x)} لکھنا ہو گا۔اسی طرح \عددی{a} تا \عددی{b} قطعی تکمل کے لئے \عددی{integrate(f,x,a,b)} لکھنا ہو گا۔ میکسما یا الجبرا کے کسی دوسرے پروگرام کو سیکھ کسےر اس کی مدد  سوال \حوالہ{سوال_طریقہ_کمپیوٹر_تکمل_الف} اور سوال \حوالہ{سوال_طریقہ_کمپیوٹر_تکمل_ب} کو حل کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_طریقہ_کمپیوٹر_تکمل_الف}
+\begin{multicols}{3}
+\begin{enumerate}[a.]
+\item
+$\int x\ln x\dif x$
+\item
+$\int x^2\ln x\dif x$
+\item
+$\int x^3\ln x\dif x$
+\item
+آپ کو کیا نقش نظر آتا ہے؟ تکمل \عددی{\int x^4\ln x\dif x} کے کلیہ کی پیش گوئی کریں۔ کمپیوٹر سے اس کی تصدیق کریں۔
+\item
+تکمل \عددی{\int x^n\ln x\dif x,\, n\ge 1} کا کلیہ کیا ہو گا؟ کمپیوٹر سے اس کی تصدیق کریں۔
+\end{enumerate}
+\end{multicols}
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_طریقہ_کمپیوٹر_تکمل_ب}
+\begin{multicols}{3}
+\begin{enumerate}[a.]
+\item
+$\int \frac{\ln x}{x^2}\dif x$
+\item
+$\int \frac{\ln x}{x^3}\dif x$
+\item
+$\int \frac{\ln x}{x^4}\dif x$
+\item
+آپ کو کیا نقش نظر آتا ہے؟ تکمل \عددی{\int \frac{\ln x}{x^5}\dif x} کے کلیہ کی پیش گوئی کریں۔ کمپیوٹر سے اس کی تصدیق کریں۔
+\item
+تکمل \عددی{\int\tfrac{\ln x}{x^n}\dif x,\, n\ge 2} کا کلیہ کیا ہو گا؟ کمپیوٹر سے اس کی تصدیق کریں۔
+\end{enumerate}
+\end{multicols}
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+(ا) درج ذیل تکمل کو کمپیوٹر کی مدد سے حل کریں، جہاں \عددی{n} اختیاری مستقل ہے۔
+\begin{align*}
+\int_0^{\pi/2}\frac{\sin^n x}{\sin^n x+\cos^n x}\dif x
+\end{align*}
+کیا آپ کا کمپیوٹر پروگرام اس کو حل کر پاتا ہے؟   (ب) اختیاری مستقل \عددی{n=1,2,3,5,7} لیتے ہوئے تکمل کی قیمت تلاش کریں۔ نتائج کی پیچیدگی پر تبصرہ کریں۔ (ج) اب \عددی{x=\tfrac{\pi}{2}-u} پر کر کے نئے اور پرانے تکمل کا مجموعہ لیں۔ اب درج ذیل تکمل کی  قیمت کیا ہے؟
+\begin{align*}
+\int_0^{\pi/2}\frac{\sin^nx}{\sin^nx+\cos^nx}\dif x
+\end{align*}
+آپ دیکھ سکتے ہیں کہ معمولی سی ریاضیاتی عمل سے تکمل کتنا آسان ہو سکتا ہے۔\\
+جواب:\quad
+$\tfrac{\pi}{4}$
+\انتہا{سوال}
+%=====================
+
+
