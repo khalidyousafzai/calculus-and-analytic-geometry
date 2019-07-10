@@ -1,0 +1,46 @@
+\documentclass{standalone}
+\usepackage{fontspec}
+\usepackage{commath}   %differential symbol   \dif
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+\usepackage[europeanresistors]{circuitikz}
+\usetikzlibrary{intersections,decorations.markings,calc}
+\usepackage{polyglossia}                %is loaded the last
+\usepackage{siunitx}
+\usepackage{amsmath}
+\input{../../tex/myEMTvectors.tex}
+
+\setmainlanguage[numerals=maghrib]{arabic}     %for english numbers use numerals=maghrib, for arabic numerals=arabicdigits
+\setotherlanguages{english}
+
+
+\newfontfamily\arabicfont[Scale=1.0,Script=Arabic]{Jameel Noori Nastaleeq}
+%\newfontfamily\urdufont[Scale=1.0,Script=Arabic]{XB Tabriz}
+\newfontfamily\urdufont[Scale=1.25,WordSpace=6.0,,Script=Arabic]{Jameel Noori Nastaleeq}
+
+\pgfmathsetmacro{\A}{0.75}
+\pgfmathdeclarefunction{Ey}{2}{\pgfmathparse{\A*cos(#1)*sin(#2)}}
+%
+
+\begin{document}
+\begin{urdufont}
+\begin{tikzpicture}
+%
+\begin{axis}[small,axis lines=middle,ymin=-6,ymax=6.4,xmax=5.5,ylabel={$y$},ylabel style={at={(current axis.above origin)},anchor=south},xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west}]
+\addplot[black] table {figOctaveGammaFunctionA.dat};
+\addplot[black] table {figOctaveGammaFunctionB.dat};
+\addplot[black] table {figOctaveGammaFunctionC.dat};
+\addplot[black] table {figOctaveGammaFunctionD.dat};
+\addplot[black] table {figOctaveGammaFunctionE.dat};
+%
+\addplot[dashed] plot coordinates {(-4,0) (-4,4)};
+\addplot[dashed] plot coordinates {(-3,-6) (-3,6)};
+\addplot[dashed] plot coordinates {(-2,-6) (-2,6)};
+\addplot[dashed] plot coordinates {(-1,-6) (-1,6)};
+\addplot[] plot coordinates {(2,3)}node[]{$y=\Gamma(x)$};
+\end{axis}
+%
+\end{tikzpicture}%
+\end{urdufont}
+\end{document} 

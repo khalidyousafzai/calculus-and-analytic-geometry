@@ -1,0 +1,28 @@
+diffBessel=@(x) 0.5.*(besselj(0,x)-besselj(2,x));
+
+#=========
+
+kread=fopen("figOctaveBesselZeroFunction.dat","w");
+
+for x=[0:0.1:13.5];
+fprintf(kread,"%i %s %i",x,"    ",besselj(0,x)); fprintf(kread,"\n")
+endfor
+
+fclose(kread)
+#=======================
+
+kread=fopen("figOctaveGammaFunction.dat","w");
+
+for x=[0:0.01:4];
+fprintf(kread,"%i %s %i",x,"    ",gamma(x)); fprintf(kread,"\n")
+endfor
+
+for x=[-1:0.01:0];
+fprintf(kread,"%i %s %i",x,"    ",gamma(x)); fprintf(kread,"\n")
+endfor
+
+fclose(kread)
+
+
+
+
