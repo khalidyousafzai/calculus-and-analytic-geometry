@@ -225,7 +225,6 @@
 {\par\hfill\qedsymbol  \vspace{\baselineskip}\par }
 %{\par\noindent }
 %--------------------
-%???????????????????????????
 %--------------------
 
 %defining a RULE   قاعدہ
@@ -253,5 +252,20 @@
 %--------------------
 %--------------------
 
+%defining a TEST   پرکھ
 
+%\newcounter{kttcounter}[section]
+%\renewcommand{\thekttcounter}{\arabic{kttcounter}}
+\newcounter{kttcounter}[chapter]
+\renewcommand{\thekttcounter}{\arabic{kttcounter}.\thechapter}
+
+\newenvironment*{پرکھ}				
+{\par\noindent\ignorespaces  \refstepcounter{kttcounter} \quad \nopagebreak}%
+{\par\hfill\qedsymbol  \vspace{\baselineskip}\par }
+%--------------------
+
+\newenvironment*{ثبوت پرکھ}				
+{\noindent\ignorespaces  ثبوت پرکھ :\quad}%
+{\par\hfill\qedsymbol  \vspace{\baselineskip}\par }
+%{\par\noindent\qedsymbol  \vspace{\baselineskip} }
 
