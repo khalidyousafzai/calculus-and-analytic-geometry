@@ -1,0 +1,227 @@
+\باب{مخروطی حصے، منحنی مقدار معلوم اور قطبی محدد}
+
+\جزوحصہء{جائزہ}
+حرکت پر غور احصاء کی مدد سے کیا جا سکتا ہے۔ اس حصہ میں ہم وقت کے ساتھ ایک ذرے کے بدلتے مقام پر غور کریں گے۔ ہم  مخروطی حصوں کی مساوات سے شروع کرتے ہیں چونکہ بالعکس مربع قوت کی بنا سیارے، مصنوعی سیارے، اور دیگر اجسام  مخروطی راہ پر حرکت کرتے ہیں۔ اگر ہمیں معلوم ہو کہ ایک جسم مخروطی راہ پر حرکت کر رہا ہے  تب ہم اس کی رفتار اور اس پر عمل کرنے والی قوت دریافت کر سکتے ہیں۔  قطبی محدد سیاروں کی حرکت پر غور کو بہت آسان بناتا ہے لہٰذا ہم اس نئے محدد میں منحنیات، تفرق اور تکمل پر بھی غور کریں گے۔
+
+\حصہ{مخروطی حصے اور دو قدری مساواتیں}
+اس حصہ میں دکھایا جائے گا کہ مخروطی حصوں کو کس  طرح محددی سطح پر بطور دو قدری مساوات پیش کیا جاتا ہے۔ دوہرے مخروط کو سطح سے کاٹ کر مخروطی منحنیات پیدا کی جاتی ہیں اور اسی کی بنا مخروطی حصہ کی اصطلاح پیدا ہوئی۔
+
+\جزوحصہء{دائرہ}
+\ابتدا{تعریف}
+ایک مستوی میں رہتے ہوئے اس مستوی میں کسی مقررہ نقطہ سے مستقل فاصلے پر تمام نقطوں کے سلسلہ کو \اصطلاح{دائرہ}\فرہنگ{دائرہ}\حاشیہب{circle}\فرہنگ{circle} کہتے ہیں۔ اس مقررہ نقطہ کو دائرے کا \اصطلاح{مرکز}\فرہنگ{مرکز}\حاشیہب{center}\فرہنگ{center} کہتے ہیں جبکہ اس مستقل فاصلہ کو \اصطلاح{رداس}\فرہنگ{رداس}\حاشیہب{radius}\فرہنگ{radius} کہتے ہیں۔ 
+\انتہا{تعریف}
+ 
+ دائرے کے معیاری مساوات جنہیں حصہ \حوالہ{حصہ_ابتدا_ترسیم_کی_منتقلی} میں فاصلہ کی مساوات \عددی{d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}} سے اخذ کیا گیا درج ذیل ہیں۔
+\begin{align*}
+x^2+y^2&=a^2&&\text{\RL{رداس \عددی{a} اور مرکز \عددی{(0,0)}}}\\
+(x-h)^2+(y-k)^2&=a^2&&\text{\RL{رداس \عددی{a} اور مرکز \عددی{(h,k)}}}
+\end{align*}
+
+\جزوحصہء{قطع مکافی}
+\ابتدا{تعریف}
+ایک سطح میں رہتے ہوئے کسی مقررہ سیدھی لکیر اور مقررہ نقطہ (جو اس مقررہ سیدھی لکیر پر نہیں پایا جاتا ہو) سے مستقل فاصلہ پر پائے جانے والے تمام نقطوں کے سلسلہ کو \اصطلاح{قطع مکافی}\فرہنگ{قطع مکافی}\حاشیہب{parabola}\فرہنگ{parabola} کہتے ہیں۔مقررہ نقطے کو قطع مکافی کا \عددی{ماسکہ}\فرہنگ{ماسکہ}\حاشیہب{focus}\فرہنگ{focus} کہتے ہیں جبکہ مقررہ لکیر کو \اصطلاح{ناظمہ}\فرہنگ{ناظمہ}\حاشیہب{directrix}\فرہنگ{directrix} کہتے ہیں۔ 
+\انتہا{تعریف}
+%==============
+
+جب ماسکہ کسی محددی محور پر ہو اور ناظمہ اس محددی محور کے متوازی ہو تب قطع مکافی کی مساوات سادہ ترین ہوتی ہے۔مثال کے طور پر، فرض کریں کہ ماسکہ \عددی{y} محور پر نقطہ \عددی{F(0,p)} پر پایا جاتا ہے اور لکیر \عددی{y=-p} ناظمہ (شکل \حوالہ{شکل_مخروط_قطع_مکافی_الف})  ہے۔ یوں شکل \حوالہ{شکل_مخروط_قطع_مکافی_الف} میں نقطہ \عددی{N(x,y)} صرف اور صرف اس صورت اس قطع مکافی پر پایا جائے گا جب \عددی{NF=NQ} ہو۔ فاصلہ کے کلیہ سے
+\begin{align*}
+NF&=\sqrt{(x-0)^2+(y-p)^2}=\sqrt{x^2+(y-p)^2}\\
+NQ&=\sqrt{(x-x)^2+(y-(-p))^2}=\sqrt{(y+p)^2}
+\end{align*}
+لکھا جا سکتا ہے۔ ان مساوات کو ایک دوسرے کے برابر پر کر کے حل کرتے ہوئے درج ذیل حاصل ہو گا۔
+\begin{align}\label{مساوات_مخروط_قطع_مکافی_معیاری_الف}
+y&=\frac{x^2}{4p}\quad \implies \quad x^2=4py&&\text{\RL{معیاری روپ}}
+\end{align}
+اس مساوات سے قطع مکافی کی \عددی{y} محور کے لحاظ سے تشاکلی واضح ہے۔ ہم کہتے ہیں کہ محور \عددی{y} اس قطع مکافی کا محور تشاکلی ہے جس کو عموماً چھوٹا کر کے صرف \اصطلاح{محور}\فرہنگ{محور}\حاشیہب{axis}\فرہنگ{axis} پکارا جاتا ہے۔
+
+وہ نقطہ جس پر قطع مکافی اپنے محور کو قطع کرتا ہو \اصطلاح{راس}\فرہنگ{راس}\حاشیہب{vertex}\فرہنگ{vertex} کہلاتا ہے۔ قطع مکافی \عددی{x^2=4py} کا راس مبدا پر پایا جاتا ہے (شکل \حوالہ{شکل_مخروط_قطع_مکافی_الف})۔ مثبت عدد \عددی{p} کو قطع مکافی کا \اصطلاح{طول ماسکہ}\فرہنگ{ماسکہ!طول}\حاشیہب{focal length}\فرہنگ{focal!length} کہتے ہیں۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=1/4*\x^2;}]
+\pgfmathsetmacro{\a}{1.5}
+\pgfmathsetmacro{\b}{f(\a)}
+\begin{axis}[clip=false,small,axis lines=middle, xtick={\empty},ytick={\empty}, enlargelimits=true,ymin=-1.25, xlabel={$x$},ylabel={$y$}, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-2.5:2.5]{f(x)}node[pos=0.1,left]{$x^2=4py$};
+\addplot[]plot coordinates {(0,1)}node[circ]{}node[left]{ماسکہ}node[above right]{$F(0,p)$};
+\addplot[]plot coordinates {(0,1)(\a,\b)}node[circ]{}node[right]{$N(x,y)$};
+\addplot[]plot coordinates {(-2.5,-1)(2.5,-1)}node[right]{$L$}node[pos=0.25,above]{ناظمہ}node[pos=0.25,yshift={-0.5ex},below]{$y=-p$};
+\addplot[dashed] plot coordinates {(\a,\b)(\a,-1)}node[circ]{}node[below]{$Q(x,-p)$};
+\addplot[]plot coordinates {(0,0.5)}node[left]{$p$};
+\addplot[]plot coordinates {(0,-0.5)}node[left]{$p$};
+\addplot[]plot coordinates {(0,0)}node[circ]{}node[below right]{راس};
+\end{axis}
+\end{tikzpicture}
+\caption{قطع مکافی \عددی{x^2=4py}؛ راس کا فاصل ماسکہ اور ناظمہ سے ایک جیسا ہے۔}
+\label{شکل_مخروط_قطع_مکافی_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=-1/4*\x^2;}]
+\pgfmathsetmacro{\a}{1.5}
+\pgfmathsetmacro{\b}{f(\a)}
+\begin{axis}[clip=false,small,axis lines=middle,xtick={\empty},ytick={\empty},enlargelimits=true,ymin=-1.25,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-2.5:2.5]{f(x)}node[pos=0.2,left]{$x^2=-4py$};
+\addplot[]plot coordinates {(0,-1)}node[circ]{}node[left]{ماسکہ}node[right]{$F(0,-p)$};
+\addplot[]plot coordinates {(-2.5,1)(2.5,1)}node[right]{$L$}node[pos=0.25,above]{ناظمہ}node[pos=0.25,yshift={-0.5ex},below]{$y=p$};
+\addplot[]plot coordinates {(0,0)}node[circ]{}node[above left]{\RL{راس مبدا پر ہے}};
+\end{axis}
+\end{tikzpicture}
+\caption{قطع مکافی \عددی{x^2=-4py}}
+\label{شکل_مخروط_قطع_مکافی_ب}
+\end{minipage}
+\end{figure}
+
+اگر قطع مکافی نیچے رخ کھلتا ہو اور اس کا ماسکہ \عددی{(0,-p)} جبکہ ناظمہ لکیر \عددی{y=p} ہو تب مساوات \حوالہ{مساوات_مخروط_قطع_مکافی_معیاری_الف} درج ذیل روپ اختیار کرے گی (شکل \حوالہ{شکل_مخروط_قطع_مکافی_ب})۔
+\begin{align*}
+y=-\frac{x^2}{4p}\quad \implies \quad x^2=-4py
+\end{align*}
+ہم اسی طرح کے مساوات ہم دائیں اور بائیں کھلنے والے قطع مکافی کے لئے حاصل کر سکتے ہیں (جدول \حوالہ{جدول_مخروط_کھلنے_کی_سمت} اور شکل \حوالہ{شکل_مخروط_قطع+مکافی_بائیں_دائیں})۔
+
+\begin{table}
+\caption{مبدا پر راس والے قطع مکافی کے معیاری مساوات (\عددی{p>0})}
+\label{جدول_مخروط_کھلنے_کی_سمت}
+\centering
+\begin{tabular}{LCLCC}
+\text{مساوات}&\text{ماسکہ}&\text{ناظمہ}&\text{محور}&\text{\RL{کھلنے کا رخ}}\\
+\toprule
+x^2=4py&(0,p)&y=-p&\text{\عددی{y} محور}&\text{اوپر}\\
+x^2=-4py&(0,-p)&y=p&\text{\عددی{y} محور}&\text{نیچے}\\
+y^2=4px&(p,0)&x=-p&\text{\عددی{x} محور}&\text{دائیں}\\
+y^2=-4px&(-p,0)&x=p&\text{\عددی{x} محور}&\text{بائیں}
+\end{tabular}
+\end{table}
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={fp(\x)=sqrt(4*\x);fn(\x)=-sqrt(4*\x);}]
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xmin=-1.25]
+\addplot[domain=0:0.2]{fp(x)};
+\addplot[domain=0:0.2]{fn(x)};
+\addplot[domain=0.2:2]{fp(x)}node[pos=0.75,above left]{$y^2=4px$};
+\addplot[domain=0.2:2]{fn(x)};
+\addplot[]plot coordinates {(1,0)}node[circ]{}node[above]{ماسکہ}node[below]{$F(p,0)$};
+\addplot[]plot coordinates {(0,0)}node[circ]{}node[above left]{راس};
+\addplot[]plot coordinates {(-1,-3)(-1,3)}node[pos=0.8,left]{ناظمہ}node[pos=0.8,below]{\scriptsize{$x=-p$}};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={fp(\x)=sqrt(4*\x);fn(\x)=-sqrt(4*\x);}]
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xmax=1.25]
+\addplot[domain=0:0.2]({-x},{fp(x)});
+\addplot[domain=0:0.2]({-x},{fn(x)});
+\addplot[domain=0.2:2]({-x},{fp(x)})node[pos=0.75,above right]{$y^2=-4px$};
+\addplot[domain=0.2:2]({-x},{fn(x)});
+\addplot[]plot coordinates {(-1,0)}node[circ]{}node[above]{ماسکہ}node[below]{$F(-p,0)$};
+\addplot[]plot coordinates {(0,0)}node[circ]{}node[above right]{راس};
+\addplot[]plot coordinates {(1,-3)(1,3)}node[pos=0.8,right]{ناظمہ}node[pos=0.8,below right]{\scriptsize{$x=p$}};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+\caption{قطع مکافی \عددی{y^2=4px} اور \عددی{y^2=-4px} کے ترسیمات۔}
+\label{شکل_مخروط_قطع+مکافی_بائیں_دائیں}
+\end{figure}
+
+\ابتدا{مثال}
+قطع مکافی \عددی{y^2=10x} کا ماسکہ اور ناظمہ تلاش کریں۔
+
+حل:\quad
+ہم معیاری مساوات \عددی{y^2=4px} میں \عددی{p} کی قیمت تلاش کرتے ہیں:
+\begin{align*}
+4p=10\quad \implies \quad p=\frac{10}{4}=\frac{5}{2}
+\end{align*}
+اس کے بعد ہم حاصل کردہ \عددی{p} کے لئے ماسکہ اور ناظمہ تلاش کرتے ہیں۔
+\begin{align*}
+(p,0)&=\big(\frac{5}{2},0\big)&&\text{ماسکہ}\\
+x&=-p, \quad \quad x=-\frac{5}{2}&&\text{ناظمہ}
+\end{align*}
+\انتہا{مثال}
+%=======================
+
+جدول \حوالہ{جدول_مخروط_کھلنے_کی_سمت} کے کلیات پر حصہ \حوالہ{حصہ_ابتدا_ترسیم_کی_منتقلی} میں دیے گئے منتقلی کے کلیات لاگو کرتے ہوئے دیگر مقامات پر واقع قطع مکافی کے مساوات حاصل کئے جا سکتے ہیں۔
+
+\جزوحصہء{ترخیم}
+\ابتدا{تعریف}
+ایک مستوی پر رہتے ہوئے، مستوی پر دو مقررہ نقطوں سے جن نقطوں کے فاصلوں کا مجموعہ مستقل ہو، ان کے سلسلہ کو \اصطلاح{ترخیم}\فرہنگ{ترخیم}\حاشیہب{ellipse}\فرہنگ{ellipse} کہتے ہیں۔ ان دو مقررہ نقطوں کو ترخیم کے \اصطلاح{ماسکے} کہتے ہیں (شکل \حوالہ{شکل_مخروط_ترخیم_کی_تعریف} اور شکل \حوالہ{شکل_مخروط_ترخیم_اہم_نقطے})۔
+\انتہا{تعریف}
+%================
+
+ترخیم کو اس کی تعریف استعمال کرتے ہوئے بہت جلد ترسیم کیا جا سکتا ہے۔ مقررہ نقطوں \عددی{F_1} اور \عددی{F_2} پر ڈوری باندھیں۔ ڈوری کو قلم سے کھینچ کر رکھتے ہوئے قلم کو بند دائری حرکت دیں۔ چونکہ ڈوری کی لمبائی مستقل ہے لہٰذا قلم ترخیم کو ترسیم کرے گا (شکل \حوالہ{شکل_مخروط_ترخیم_کی_تعریف})۔
+
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw ([shift={(0:2cm and 1cm)}]0,0)arc  (0:360:2cm and 1cm)coordinate[pos=0.2](a)coordinate[pos=0.55](b); 
+\draw(1.25,0)node[circ]{}node[below]{$F_2$};
+\draw(-1.25,0)node[circ]{}node[below]{$F_1$};
+\draw[dashed](1.25,0)--(a)node[above]{$N$}--(-1.25,0);
+\end{tikzpicture}
+\caption{دونوں ماسکوں (\عددی{F_1} اور \عددی{F_2}) سے کسی بھی نقطہ \عددی{N} تک فاصلوں کا مجموعہ (نقطہ دار لکیر) ایک مستقل ہے۔}
+\label{شکل_مخروط_ترخیم_کی_تعریف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw(-2.5,0)--(2.5,0)node[pos=0.5,below]{\RL{محور ماسکہ}};
+\draw (0,0)circle (2cm and 1cm); 
+\draw(0,0)node[circ]{}node[above]{مرکز};
+\draw(1.25,0)node[circ]{}node[above]{ماسکہ};
+\draw(-1.25,0)node[circ]{}node[above]{ماسکہ};
+\draw(2,0)node[circ]{}node[above right]{راس};
+\draw(-2,0)node[circ]{}node[above left]{راس};
+\end{tikzpicture}
+\caption{ترخیم پر اہم نقطے۔}
+\label{شکل_مخروط_ترخیم_اہم_نقطے}
+\end{minipage}
+\end{figure}
+
+اگر ماسکے \عددی{F_1(-c,0)} اور \عددی{F_2(c,0)} ہوں (شکل \حوالہ{شکل_مخروط_مساوات_ترخیم}) اور فاصلہ \عددی{NF_1+NF_2} کو \عددی{2a} سے ظاہر کیا جائے تب ترخیم پر نقطہ \عددی{N(x,y)} درج ذیل مساوات کو مطمئن کرے گا۔
+\begin{align*}
+\sqrt{(x+c)^2+y^2}+\sqrt{(x-c)^2+y^2}=2a
+\end{align*}
+اس مساوات کی سادہ صورت حاصل کرنے کی خاطر ہم دوسرے جذری جزو کو دائیں منتقل کر کے دونوں اطراف کا مربع لے کر حاصل واحد جذری جزو کو ایک ہاتھ رکھتے ہوئے دوبارہ مربع لیتے ہیں۔ نتیجتاً درج ذیل حاصل ہو گا۔ 
+\begin{align}\label{مساوات_مخروط_ترخیم_الف}
+\frac{x^2}{a^2}+\frac{y^2}{a^2-c^2}=1
+\end{align} 
+چونکہ \عددی{NF_1+NF_2} کی لمبائی \عددی{F_1F_2} کی لمبائی سے زیادہ ہے (تکون \عددی{NF_1F_2} کے لئے تکونی عدم مساوات) لہٰذا عدد \عددی{2a}  عدد \عددی{2c} سے بڑا ہو گا۔ یوں \عددی{a>c} ہو گا لہٰذا  مساوات \حوالہ{مساوات_مخروط_ترخیم_الف} میں \عددی{a^2-c^2} ایک مثبت عدد ہو گا۔
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-2.5,0)--(2.75,0)node[right]{$x$};
+\draw[-latex](0,-1.25)--(0,1.75)node[left]{$y$};
+\draw([shift={(0:2cm and 1cm)}]0,0) arc (0:360:2cm and 1cm)coordinate[pos=0.15](a);
+\draw(2,0)node[below right]{$a$};
+\draw(0,1)node[above right]{$b$};
+\draw(-1.25,0)node[circ]{}node[below]{\small {$F_1(-c,0)$}}  (1.25,0)node[circ]{}node[below]{\small{$F_2(c,0)$}};
+\draw(-1.25,0)--(a)node[circ]{}node[above]{\small{$N(x,y)$}}--(1.25,0);
+\end{tikzpicture}
+\caption{ترخیم کی تعریف سے اس کی مساوات کا حصول۔}
+\label{شکل_مخروط_مساوات_ترخیم}
+\end{figure}
+
+ہم مساوات \حوالہ{مساوات_مخروط_ترخیم_الف} حاصل کرنے کے اقدام کو الٹ کرتے ہوئے دکھا سکتے ہیں کہ ہر وہ نقطہ جو مساوات \حوالہ{مساوات_مخروط_ترخیم_الف}  کو \عددی{0<c<a} کے لئے مطمئن کرتا ہو \عددی{NF_1+NF_2=2a} کو بھی مطمئن کرے گا۔ یوں ایک نقطہ صرف اور صرف اس صورت ترخیم پر پایا جائے گا اگر وہ مساوات \حوالہ{مساوات_مخروط_ترخیم_الف} کو مطمئن کرتا ہو۔
+
+اگر
+\begin{align}\label{مساوات_مخروط_ترخیم_ب}
+b\sqrt{a^2-c^2}
+\end{align}
+ہو تب \عددی{a^2-c^2=b^2} ہو گا اور مساوات \حوالہ{مساوات_مخروط_ترخیم_الف} درج ذیل صورت اختیار کرے گی۔
+\begin{align}\label{مساوات_مخروط_ترخیم_پ}
+\frac{x^2}{a^2}+\frac{y^2}{b^2}=1
+\end{align}
+
+مساوات \حوالہ{مساوات_مخروط_ترخیم_پ} کے تحت  مبدا اور دونوں محوروں کے لحاظ سے تشاکلی ہے۔ یہ \عددی{x=\pm a} اور \عددی{y=\pm b} لکیروں میں بند مستطیل کے اندر پایا جاتا ہے۔ یہ محوروں کو نقطہ \عددی{(\pm a,0)} اور \عددی{(0,\pm b)} پر قطع کرتا ہے۔ چونکہ
+\begin{align*}
+\frac{\dif y}{\dif x}&=-\frac{b^2x}{a^2y}
+\end{align*}
+کی قیمت \عددی{x=0} پر صفر اور \عددی{y=0} پر لامتناہی ہے  لہٰذا \عددی{(\pm a,0)} اور \عددی{(0,\pm b)} پر  مماثل محوروں کو عمودی ہوں گے۔
+
+\جزوحصہء{ترخیم کے اکبر اور اصغر محور}
