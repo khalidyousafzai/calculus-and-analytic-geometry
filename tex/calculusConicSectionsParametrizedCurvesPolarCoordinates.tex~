@@ -203,7 +203,7 @@ x&=-p, \quad \quad x=-\frac{5}{2}&&\text{ناظمہ}
 \draw(-1.25,0)node[circ]{}node[below]{\small {$F_1(-c,0)$}}  (1.25,0)node[circ]{}node[below]{\small{$F_2(c,0)$}};
 \draw(-1.25,0)--(a)node[circ]{}node[above]{\small{$N(x,y)$}}--(1.25,0);
 \end{tikzpicture}
-\caption{ترخیم کی تعریف سے اس کی مساوات کا حصول۔}
+\caption{ترخیم کی تعریف\عددی{NF_1+NF_2=2a} اور اس کی مساوات \عددی{\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}=1}  ہے۔}
 \label{شکل_مخروط_مساوات_ترخیم}
 \end{figure}
 
@@ -211,7 +211,7 @@ x&=-p, \quad \quad x=-\frac{5}{2}&&\text{ناظمہ}
 
 اگر
 \begin{align}\label{مساوات_مخروط_ترخیم_ب}
-b\sqrt{a^2-c^2}
+b=\sqrt{a^2-c^2}
 \end{align}
 ہو تب \عددی{a^2-c^2=b^2} ہو گا اور مساوات \حوالہ{مساوات_مخروط_ترخیم_الف} درج ذیل صورت اختیار کرے گی۔
 \begin{align}\label{مساوات_مخروط_ترخیم_پ}
@@ -220,8 +220,399 @@ b\sqrt{a^2-c^2}
 
 مساوات \حوالہ{مساوات_مخروط_ترخیم_پ} کے تحت  مبدا اور دونوں محوروں کے لحاظ سے تشاکلی ہے۔ یہ \عددی{x=\pm a} اور \عددی{y=\pm b} لکیروں میں بند مستطیل کے اندر پایا جاتا ہے۔ یہ محوروں کو نقطہ \عددی{(\pm a,0)} اور \عددی{(0,\pm b)} پر قطع کرتا ہے۔ چونکہ
 \begin{align*}
-\frac{\dif y}{\dif x}&=-\frac{b^2x}{a^2y}
+\frac{\dif y}{\dif x}&=-\frac{b^2x}{a^2y}&&\text{\RL{مساوات \حوالہ{مساوات_مخروط_ترخیم_پ} سے حاصل کیا گیا}}
 \end{align*}
 کی قیمت \عددی{x=0} پر صفر اور \عددی{y=0} پر لامتناہی ہے  لہٰذا \عددی{(\pm a,0)} اور \عددی{(0,\pm b)} پر  مماثل محوروں کو عمودی ہوں گے۔
 
-\جزوحصہء{ترخیم کے اکبر اور اصغر محور}
+\جزوحصہء{ترخیم کا اکبر اور اصغر محور}
+مساوات \حوالہ{مساوات_مخروط_ترخیم_پ} کی ترخیم کا \اصطلاح{اکبر محور}\فرہنگ{محور!اکبر}\حاشیہب{major axis}\فرہنگ{axis!major} نقاط \عددی{(\pm 2,0)} کو جوڑنا والی لکیر ہے جس کی لمبائی \عددی{2a} ہے۔ اس کے \اصطلاح{اصغر محور}\فرہنگ{محور!اصغر}\حاشیہب{minor axis}\فرہنگ{axis!minor} کی لمبائی \عددی{2b} ہے جو نقاط \عددی{(0,\pm b)} کے بیچ لکیر ہے۔ عدد \عددی{a} از خود  نصف اکبر محور جبکہ عدد \عددی{ب} نصف اصغر محور کہلاتے ہیں۔ مساوات \حوالہ{مساوات_مخروط_ترخیم_ب} سے عدد \عددی{c}
+\begin{align*}
+c=\sqrt{a^2-b^2}
+\end{align*}
+حاصل ہوتا ہے جو مرکز تا ماسکہ فاصلہ ہے۔
+
+\ابتدا{مثال}\شناخت{مثال_مخروط_اکبر_محور_الف}\ترچھا{افقی اکبر محور}\\
+درج ذیل ترخیم
+\begin{align}\label{مساوات_مخروط_افقی_اکبر_محور}
+\frac{x^2}{16}+\frac{y^2}{9}=1
+\end{align}
+ جس کو شکل \حوالہ{شکل_مثال_مخروط_اکبر_محور_الف} میں دکھایا گیا ہے کے لئے درج ذیل ہوں گے۔
+\begin{align*}
+a&=\sqrt{16}=4&&\text{\RL{نصف اکبر محور}}\\
+b&=\sqrt{9}=3&&\text{\RL{نصف اصغر محور}}\\
+c&=\sqrt{16-9}=\sqrt{7}&&\text{\RL{ماسکہ سے مرکز تک فاصلہ}}\\
+(\pm c,0)&=(\pm 7,0)&&\text{ماسکے}\\
+(\pm a,0)&=(\pm 4,0)&&\text{راس}\\
+&(0,0)&&\text{مرکز}
+\end{align*}
+\انتہا{مثال}
+%======================
+%======================
+\begin{figure}
+\centering
+\begin{minipage}{0.5\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=3/4*sqrt(16-\x^2);}]
+\pgfmathsetmacro{\c}{sqrt(7)}
+\begin{axis}[width=7cm,clip=false,axis equal,font=\scriptsize,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true, xtick={-\c,\c},xticklabels={${(-\sqrt{7},0)}$,${(\sqrt{7},0)}$},ytick={\empty}]
+\addplot[domain=-4:-3.5]{f(x)};
+\addplot[domain=-3.5:3.5]{f(x)};
+\addplot[domain=3.5:4]{f(x)};
+\addplot[domain=-4:-3.5]({x},{-f(x)});
+\addplot[domain=-3.5:3.5]({x},{-f(x)});
+\addplot[domain=3.5:4]({x},{-f(x)});
+\addplot[]plot coordinates {(0,-3)}node[below right]{$(0,-3)$};
+\addplot[]plot coordinates {(0,3)}node[above right]{$(0,3)$};
+\addplot[]plot coordinates {(-\c,0)}node[circ]{}node[above]{ماسکہ};
+\addplot[]plot coordinates {(\c,0)}node[circ]{}node[above]{ماسکہ};
+\addplot[]plot coordinates {(-4,0)}node[circ]{}node[above left]{$(-4,0)$}node[pin=45:{راس}]{};
+\addplot[]plot coordinates {(4,0)}node[circ]{}node[above right]{$(4,0)$}node[pin=135:{راس}]{};
+\addplot[]plot coordinates {(-1.25,1.5)}node[]{$\tfrac{x^2}{4^2}+\tfrac{y^2}{3^2}=1$};
+\addplot[]plot coordinates{(0,0)}node[circ]{}node[below right]{مرکز};
+\end{axis}
+\end{tikzpicture}
+\caption{اکبر محور افقی ہے۔ (مثال \حوالہ{مثال_مخروط_اکبر_محور_الف})}
+\label{شکل_مثال_مخروط_اکبر_محور_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.35\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=4/3*sqrt(9-\x^2);}]
+\pgfmathsetmacro{\c}{sqrt(7)}
+\begin{axis}[width=7cm,axis equal,font=\scriptsize,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}, ytick={\empty},xtick={\empty},ymin=-4.75,ymax=4.75]
+\addplot[domain=-3:-2.5]{f(x)};
+\addplot[domain=-2.5:2.5]{f(x)};
+\addplot[domain=2.5:3]{f(x)};
+\addplot[domain=-3:-2.5]({x},{-f(x)});
+\addplot[domain=-2.5:2.5]({x},{-f(x)});
+\addplot[domain=2.5:3]({x},{-f(x)});
+\addplot[]plot coordinates {(3,0)}node[above right]{$(3,0)$};
+\addplot[]plot coordinates {(-3,0)}node[above left]{$(-3,0)$};
+\addplot[]plot coordinates {(0,-\c)}node[circ]{}node[left]{$(0,-\sqrt{7})$}node[right]{ماسکہ};
+\addplot[]plot coordinates {(0,\c)}node[circ]{}node[left]{$(0,\sqrt{7})$}node[right]{ماسکہ};
+\addplot[]plot coordinates {(0,-4)}node[circ]{}node[below right]{$(0,-4)$}node[below left]{راس};
+\addplot[]plot coordinates {(0,4)}node[circ]{}node[above right]{$(0,4)$}node[above left]{راس};
+\addplot[]plot coordinates {(-0.75,1.5)}node[fill=white]{$\tfrac{x^2}{3^2}+\tfrac{y^2}{4^2}=1$};
+\addplot[]plot coordinates{(0,0)}node[circ]{}node[below right]{مرکز};
+\end{axis}
+\end{tikzpicture}
+\caption{اکبر محور عمودی ہے۔ (مثال \حوالہ{مثال_مخروط_اکبر_محور_ب})}
+\label{شکل_مثال_مخروط_اکبر_محور_ب}
+\end{minipage}
+\end{figure}
+
+\ابتدا{مثال}\شناخت{مثال_مخروط_اکبر_محور_ب}\ترچھا{عمودی اکبر محور}\\
+مساوات \حوالہ{مساوات_مخروط_افقی_اکبر_محور} میں \عددی{x} اور \عددی{y} کو ایک دوسرے کے ساتھ بدل کر درج ذیل ترخیم حاصل ہوتا ہے
+\begin{align}\label{مساوات_مخروط_عمودی_اکبر_محور}
+\frac{x^2}{9}+\frac{y^2}{16}=1
+\end{align}
+ جس کو شکل \حوالہ{شکل_مثال_مخروط_اکبر_محور_ب} میں دکھایا گیا ہے۔ اس کے لئے درج ذیل ہوں گے۔
+\begin{align*}
+a&=\sqrt{16}=4&&\text{\RL{نصف اکبر محور}}\\
+b&=\sqrt{9}=3&&\text{\RL{نصف اصغر محور}}\\
+c&=\sqrt{16-9}=\sqrt{7}&&\text{\RL{ماسکہ سے مرکز تک فاصلہ}}\\
+(0,\pm c)&=(0,\pm 7)&&\text{ماسکے}\\
+(0,\pm a)&=(0,\pm 4)&&\text{راس}\\
+&(0,0)&&\text{مرکز}
+\end{align*}
+\انتہا{مثال}
+%=========================
+
+مساوات \حوالہ{مساوات_مخروط_افقی_اکبر_محور} اور مساوات \حوالہ{مساوات_مخروط_عمودی_اکبر_محور} کو سمجھنے میں کبھی دشواری پیش نہیں آتی ہے۔ ہم محددی محور پر نقطہ قطع معلوم کر کے لمبی محور کو اکبر محور چنتے ہیں۔مرکز ان صورتوں میں مبدا پر ہو گا اور ماسکہ اکبر محور پر پائے جائیں گے۔
+
+\موٹا{مبدا پر مرکز والے ترخیم کے معیاری مساوات}\\
+\begin{align*}
+\frac{x^2}{a^2}+\frac{y^2}{b^2}&=1\quad (a>b)&&\text{\RL{\عددی{x} محور پر ماسکہ}}\\
+c&=\sqrt{a^2-b^2}&&\text{\RL{مرکز سے ماسکہ تک فاصلہ}}\\
+&(\pm c,0)  &&\text{ماسکے}\\
+&(\pm a,0)  &&\text{راس}\\
+\\
+\frac{x^2}{b^2}+\frac{y^2}{a^2}&=1\quad (a>b)&&\text{\RL{\عددی{y} محور پر ماسکہ}}\\
+c&=\sqrt{a^2-b^2}&&\text{\RL{مرکز سے ماسکہ تک فاصلہ}}\\
+&(0,\pm c)  &&\text{ماسکے}\\
+&(0,\pm a)  &&\text{راس}
+\end{align*}
+دونوں صورتوں میں نصف اکبر محور \عددی{a} اور نصف اصغر محور \عددی{b} ہیں۔
+
+\جزوحصہء{قطع زائد}
+\ابتدا{تعریف}
+ایک مستوی میں رہتے ہوئے مستوی میں دو مقررہ نقطوں سے جن نقطوں کے فاصلوں کا فرق ایک مستقل ہو، ان تمام نقطوں کے سلسلہ کو \اصطلاح{قطع زائد}\فرہنگ{قطع زائد}\حاشیہب{hyperbola}\فرہنگ{hyperbola} کہتے ہیں۔ یہ دو مقررہ نقطے قطع زائد کے \اصطلاح{ماسکہ}\فرہنگ{ماسکہ} کہلاتے ہیں۔  
+\انتہا{تعریف}
+%==================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(5)/2*sqrt(\x^2-4);}]
+\pgfmathsetmacro{\a}{sqrt(5)/2*sqrt(16-4)}
+\pgfmathsetmacro{\n}{sqrt(5)/2*sqrt(3.5*3.5-4)}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty}]
+\addplot[thick,domain=2:2.25]{f(x)};
+\addplot[thick,domain=2.25:4]{f(x)};
+\addplot[thick,domain=2:2.25]{-f(x)};
+\addplot[thick,domain=2.25:4]{-f(x)};
+\addplot[thick,domain=2:2.25](-x,{f(x)});
+\addplot[thick,domain=2.25:4](-x,{f(x)});
+\addplot[thick,domain=2:2.25](-x,{-f(x)});
+\addplot[thick,domain=2.25:4](-x,{-f(x)});
+\addplot[]plot coordinates{(2,-\a)(2,\a-0.4)}node[above]{$y=a$};
+\addplot[]plot coordinates{(-2,-\a)(-2,\a-0.4)}node[above]{$y=-a$};
+\addplot[]plot coordinates{(3,0)(3.5,\n)(-3,0)};
+\addplot[]plot coordinates{(3,0)}node[circ]{}node[below]{$F_2(c,0)$};
+\addplot[]plot coordinates{(-3,0)}node[circ]{}node[below]{$F_1(-c,0)$};
+\addplot[]plot coordinates{(3.5,\n)}node[circ]{}node[right]{$N(x,y)$};
+\addplot[]plot coordinates{(0,0)}node[below left]{M};
+\end{axis}
+\end{tikzpicture}
+\caption{قطع زائد کے دائیں بازو کے لئے\\ \عددی{NF_1-NF_2=2a} جبکہ بائیں بازو کے لئے \عددی{NF_2-NF_1=2a} ہو گا۔}
+\label{شکل_مخروط_قطع_زائد}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(5)/2*sqrt(\x^2-4);}]
+\pgfmathsetmacro{\a}{sqrt(5)/2*sqrt(16-4)}
+\pgfmathsetmacro{\n}{sqrt(5)/2*sqrt(3.5*3.5-4)}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty}]
+\addplot[thick,domain=2:2.25]{f(x)};
+\addplot[thick,domain=2.25:4]{f(x)};
+\addplot[thick,domain=2:2.25]{-f(x)};
+\addplot[thick,domain=2.25:4]{-f(x)};
+\addplot[thick,domain=2:2.25](-x,{f(x)});
+\addplot[thick,domain=2.25:4](-x,{f(x)});
+\addplot[thick,domain=2:2.25](-x,{-f(x)});
+\addplot[thick,domain=2.25:4](-x,{-f(x)});
+\addplot[]plot coordinates{(3,0)}node[circ]{}node[below]{ماسکہ};
+\addplot[]plot coordinates{(-3,0)}node[circ]{}node[below]{ماسکہ};
+\addplot[]plot coordinates{(0,0)}node[circ]{}node[below left]{مرکز};
+\addplot[]plot coordinates{(2,0)}node[circ]{}node[pin=135:{راس}]{};
+\addplot[]plot coordinates{(-2,0)}node[circ]{}node[pin=45:{راس}]{};
+\addplot[]plot coordinates{(1,0)}node[below]{\RL{محور ماسکہ}};
+\end{axis}
+\end{tikzpicture}
+\caption{قطع مکافی کے محور ماسکہ پر نقطے۔}
+\label{شکل_مخروط_قطع_زائد_ب}
+\end{minipage}
+\end{figure}
+
+اگر ماسکے \عددی{F_1(-c,0)} اور \عددی{(F_2(c,0))} ہوں  (شکل \حوالہ{شکل_مخروط_قطع_زائد}) اور مستقل فرق \عددی{2a} ہو تب نقطہ \عددی{(x,y)} صرف اور صرف اس صورت قطع زائد پر پایا جائے گا جب درج ذیل مطمئن ہو۔
+\begin{align}\label{مساوات_مخروط_قطع_مکافی_الف}
+\sqrt{(x+c)^2+y^2}-\sqrt{(x-c)^2+y^2}=\pm 2a
+\end{align} 
+اس مساوات کی سادہ روپ حاصل کرنے کی خاطر ہم دوسرے جذر کو دائیں ہاتھ منتقل کر کے دونوں ہاتھ کا مربع لے کر جذر کو ایک ہاتھ رکھ کر دوبارہ دونوں ہاتھ کا مربع لیتے ہیں۔ یوں درج ذیل حاصل ہو گا۔
+\begin{align}\label{مساوات_مخروط_قطع_مکافی_ب}
+\frac{x^2}{a^2}+\frac{y^2}{a^2-c^2}=1
+\end{align}
+اب تک یہ مساوات بالکل ترخیم کی مساوات کی طرح ہے۔ البتہ اب چونکہ تکون \عددی{NF_1F_2} کے دو اضلاع کا فرق \عددی{2a} ہے جو تیسرے ضلع \عددی{2c} سے کم ہو گا لہٰذا \عددی{a^2-c^2} منفی قیمت ہے۔
+
+ہم مساوات \حوالہ{مساوات_مخروط_قطع_مکافی_ب} کے حصول کے اقدام کو الٹ کرتے ہوئے دکھا سکتے ہیں کہ ہر وہ نقطہ \عددی{N} جو \عددی{0<a<c} کے لئے اس طرز کی مساوات کو مطمئن کرتا ہو، مساوات \حوالہ{مساوات_مخروط_قطع_مکافی_الف} کو بھی مطمئن کرے گا۔ یوں ایک نقطہ صرف اور صرف اس صورت قطع زائد پر پایا جائے گا اگر اس کے محدد مساوات \حوالہ{مساوات_مخروط_قطع_مکافی_ب} کو مطمئن کرتے ہوں۔
+
+اگر ہم \عددی{c^2-a^2} کے مثبت جذر کو \عددی{b} سے ظاہر کریں،
+\begin{align}\label{مساوات_مخروط_قطع_مکافی_پ}
+b=\sqrt{c^2-a^2}
+\end{align}
+تب \عددی{a^2-c^2=-b^2} ہو گا اور مساوات \حوالہ{مساوات_مخروط_قطع_مکافی_ب} درج ذیل روپ اختیار کرے گی۔
+\begin{align}\label{مساوات_مخروط_قطع_زائد}
+\frac{x^2}{a^2}-\frac{y^2}{b^2}=1
+\end{align}
+قطع زائد کی مساوات \حوالہ{مساوات_مخروط_قطع_زائد} اور ترخیم کی مساوات \حوالہ{مساوات_مخروط_ترخیم_پ} میں فرق منفی علامت کا اور درج ذیل نئے تعلق کا ہے۔
+\begin{align*}
+c^2&=a^2+b^2&&\text{\RL{مساوات \حوالہ{مساوات_مخروط_قطع_مکافی_پ} سے حاصل کیا گیا}}
+\end{align*}
+
+ترخیم کی طرح قطع زائد بھی مبدا اور محددی محوروں  کے لحاظ سے تشاکلی ہے۔ یہ \عددی{x} محور کو نقطہ \عددی{(\pm a,0)} پر قطع کرتا ہے اور ان نقطوں پر چونکہ
+\begin{align*}
+\frac{\dif y}{\dif x}&=\frac{b^2x}{a^2y}&&\text{\RL{مساوات \حوالہ{مساوات_مخروط_قطع_زائد} سے حاصل کیا گیا}}
+\end{align*}
+ہے لہٰذا یہاں مماس عمودی ہوں گے۔
+
+\ابتدا{تعریف}
+قطع زائد کے ماسکوں کے بیچ لکیر کو \اصطلاح{محور ماسکہ}\فرہنگ{محور!ماسکہ}\حاشیہب{focal axis}\فرہنگ{axis!focal} کہتے ہیں جس کے وسطی نقطہ کو قطع مکافی کا \اصطلاح{مرکز}\فرہنگ{قطع زائد!مرکز}\حاشیہب{center}\فرہنگ{hyperbola!center}  کہتے ہیں۔ جن نقطوں پر محور ماسکہ اور قطع مکافی ایک دوسرے کو قطع کرتے ہوں، انہیں \اصطلاح{راس}\فرہنگ{راس}\حاشیہب{vertices}\فرہنگ{vertices} کہتے ہیں (شکل \حوالہ{شکل_مخروط_قطع_زائد_ب})۔
+\انتہا{تعریف}
+%==========================
+
+\جزوحصہء{قطع زائد کے متقارب؛ ترسیم کا عمل}
+قطع زائد
+\begin{align}\label{مساوات_مخروط_قطع_زائد_مساوات_الف}
+\frac{x^2}{a^2}-\frac{y^2}{b^2}=1
+\end{align}
+کے دو \اصطلاح{متقارب}\فرہنگ{متقارب}\حاشیہب{asymptotes}\فرہنگ{asymptotes} درج ذیل لکیریں ہیں۔
+\begin{align*}
+y=\pm \frac{b}{a}x
+\end{align*}
+متقارب کی مدد سے ہم قطع زائد کو جلدی ترسیم کر پاتے ہیں۔ متقارب کی مساوات حاصل کرنے کا آسان ترین طریقہ مساوات \حوالہ{مساوات_مخروط_قطع_زائد_مساوات_الف} میں دائیں ہاتھ \عددی{1} کی جگہ \عددی{0} پر کر کے \عددی{y} کے لئے حل کرنا ہے:
+\begin{align*}
+\underbrace{\frac{x^2}{a^2}-\frac{y^2}{b^2}=1}_{\text{\RL{قطع زائد}}}\implies \underbrace{\frac{x^2}{a^2}-\frac{y^2}{b^2}=0}_{\text{\RL{\عددی{1} کی جگہ \عددی{0}}}}\implies \underbrace{y=\pm \frac{b}{a}x}_{\text{متقارب}} 
+\end{align*}
+
+\موٹا{مرکز پر مبدا والے قطع زائد کی معیاری مساواتیں}
+\begin{align*}
+\frac{x^2}{a^2}-\frac{y^2}{b^2}&=1&&\text{\RL{محور \عددی{x} پر ماسکے ہیں}}\\
+c&=\sqrt{a^2+b^2}&&\text{\RL{مرکز سے ماسکہ تک فاصلہ}}\\
+&(\pm c,0)&&\text{ماسکے}\\
+&(\pm a,0)&&\text{راس}\\
+y&=\pm\frac{b}{a}x&&\text{متقارب}\\
+\\
+\frac{y^2}{a^2}-\frac{x^2}{b^2}&=1&&\text{\RL{محور \عددی{y} پر ماسکے ہیں}}\\
+c&=\sqrt{a^2+b^2}&&\text{\RL{مرکز سے ماسکہ تک فاصلہ}}\\
+&(0,\pm c)&&\text{ماسکے}\\
+&(0,\pm a)&&\text{راس}\\
+y&=\pm\frac{a}{b}x&&\text{متقارب}
+\end{align*}
+
+دھیان رہے کہ پہلی صورت میں متقارب کی مساوات میں \عددی{\tfrac{b}{a}} اور دوسری صورت میں \عددی{\tfrac{a}{b}} ہیں۔ 
+
+\جزوحصہء{قطع زائد ترسیم کرنے کا عمل}
+قطع زائد \عددی{\tfrac{y^2}{a^2}-\tfrac{x^2}{b^2}=1} ترسیم کرنے کے لئے درج ذیل اقدام کریں (شکل \حوالہ{شکل_مخروط_متقارب_سے_قطع_زائد})۔
+\begin{enumerate}[a.]
+\item
+نقاط \عددی{(\pm a,0)} اور \عددی{0,\pm b} کو ترسیم کرتے ہوئے اس مستطیل کو مکمل کریں جن کے اضلاع میں یہ نقطے پائے جاتے ہوں۔ 
+\item
+مستطیل کے وتر کو بڑھا کر متقارب  ترسیم کریں۔
+\item
+مستطیل اور متقارب کو راہ بر لیتے ہوئے قطع زائد ترسیم کریں۔
+\end{enumerate}
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(5)/2*sqrt(\x^2-4);}]
+\pgfmathsetmacro{\b}{sqrt(5)}
+\pgfmathsetmacro{\a}{2}
+\pgfmathsetmacro{\n}{\b/2*sqrt(3.5*3.5-4)}
+\begin{axis}[width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty}, ytick={\empty}, enlargelimits=true, xmin={-5},xmax={5}, ymin={-5.123}, ymax={5.123}]
+\addplot[]plot coordinates {(-\a,-\b)(-\a,\b)(\a,\b)(\a,-\b)(-\a,-\b)};
+\addplot[]plot coordinates{(-\a,0)}node[above left]{$-a$};
+\addplot[]plot coordinates{(\a,0)}node[above right]{$a$};
+\addplot[]plot coordinates{(0,\b)}node[above right]{$b$}  {(0,-\b)}node[below right]{$-b$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(5)/2*sqrt(\x^2-4);fda(\x)=sqrt(5)/2*\x;fdb(\x)=-sqrt(5)/2*\x;}]
+\pgfmathsetmacro{\b}{sqrt(5)}
+\pgfmathsetmacro{\a}{2}
+\pgfmathsetmacro{\n}{\b/2*sqrt(3.5*3.5-4)}
+\begin{axis}[width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits=true, xmin=-5, xmax=5, ymin=-5.123,ymax=5.123]
+\addplot[]plot coordinates {(-\a,-\b)(-\a,\b)(\a,\b)(\a,-\b)(-\a,-\b)};
+\addplot[]plot coordinates{(-\a,0)}node[above left]{$-a$};
+\addplot[]plot coordinates{(\a,0)}node[above right]{$a$};
+\addplot[]plot coordinates{(0,\b)}node[above right]{$b$}  {(0,-\b)}node[below right]{$-b$};
+\addplot[domain=-5:5]{fda(x)}node[left]{$y=\frac{b}{a}x$};
+\addplot[domain=-5:5]{fdb(x)}node[pos=0,right,xshift=0.5ex]{$y=-\frac{b}{a}x$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(5)/2*sqrt(\x^2-4);fda(\x)=sqrt(5)/2*\x;fdb(\x)=-sqrt(5)/2*\x;}]
+\pgfmathsetmacro{\a}{2}
+\pgfmathsetmacro{\c}{3}
+\pgfmathsetmacro{\b}{sqrt(\c^2-\a^2)}
+\pgfmathsetmacro{\n}{\b/2*sqrt(3.5*3.5-4)}
+\begin{axis}[width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits=true]
+\addplot[]plot coordinates {(-\a,-\b)(-\a,\b)(\a,\b)(\a,-\b)(-\a,-\b)};
+\addplot[]plot coordinates{(-\a,0)}node[above left]{$-a$};
+\addplot[]plot coordinates{(\a,0)}node[above right]{$a$};
+\addplot[]plot coordinates{(0,\b)}node[above right]{$b$}  {(0,-\b)}node[below right]{$-b$};
+\addplot[domain=-5:5]{fda(x)};
+\addplot[domain=-5:5]{fdb(x)};
+\addplot[thick,domain=2:2.25]{f(x)};
+\addplot[thick,domain=2.25:5]{f(x)};
+\addplot[thick,domain=2:2.25]{-f(x)};
+\addplot[thick,domain=2.25:5]{-f(x)};
+\addplot[thick,domain=2:2.25](-x,{f(x)});
+\addplot[thick,domain=2.25:5](-x,{f(x)});
+\addplot[thick,domain=2:2.25](-x,{-f(x)});
+\addplot[thick,domain=2.25:5](-x,{-f(x)});
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{متقارب کی مدد سے قطع زائد کی ترسیم۔}
+\label{شکل_مخروط_متقارب_سے_قطع_زائد}
+\end{figure}
+
+\ابتدا{مثال}\شناخت{مثال_مخروط_ماسکہ_افقی_محور_پر}\ترچھا{محور \عددی{x} پر ماسکے}\\
+درج ذیل قطع زائد کی مساوات ہے (شکل \حوالہ{شکل_مثال_مخروط_ماسکہ_افقی_محور_پر})
+\begin{align*}
+\frac{x^2}{4}-\frac{y^2}{5}=1
+\end{align*}
+جس میں \عددی{a^2=4} اور \عددی{b^2=5} ہیں (مساوات \حوالہ{مساوات_مخروط_قطع_زائد})۔ یوں درج ذیل ہوں گے۔
+\begin{align*}
+c&=\sqrt{a^2+b^2}=\sqrt{4+5}=3&&\text{\RL{مرکز سے ماسکہ تک فاصلہ}}\\
+(\pm c,0)&=(\pm 3,0)&&\text{ماسکے}\\
+(\pm a,0)&=(\pm 2,0)&&\text{راس}\\
+y&=\pm \frac{\sqrt{5}}{2}x&&\text{متقارب}
+\end{align*}
+\انتہا{مثال}
+%================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=sqrt(5)/2*sqrt(\x^2-4);fd(\x)=sqrt(5/4)*\x;}]
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty}]
+\addplot[domain=2:2.5]{f(x)};
+\addplot[domain=2.5:8]{f(x)};
+\addplot[domain=2:2.5]{-f(x)};
+\addplot[domain=2.5:8]{-f(x)};
+\addplot[domain=2:2.5](-x,{f(x)});
+\addplot[domain=2.5:8](-x,{f(x)});
+\addplot[domain=2:2.5](-x,{-f(x)});
+\addplot[domain=2.5:8](-x,{-f(x)});
+\addplot[domain=-8:8]{fd(x)}node[left,yshift=1ex]{$y=\frac{\sqrt{5}}{2}x$};
+\addplot[domain=-8:8]{-fd(x)}node[pos=0,right,yshift=1ex]{$y=-\frac{\sqrt{5}}{2}x$};
+\addplot[]plot coordinates {(3,0)}node[circ]{}node[above right]{$F(3,0)$}   {(-3,0)}node[circ]{}node[above left]{$F(-3,0)$};
+\addplot[]plot coordinates {(2,0)}node[circ]{}node[pin=-40:{$2$}]{}  {(-2,0)}node[circ]{}node[pin=-140:{$-2$}]{};
+\addplot[]plot coordinates {(4,4)}node[right,font=\scriptsize]{$\frac{x^2}{4}-\frac{y^2}{5}=1$};
+\end{axis}
+\end{tikzpicture}
+\caption{قطع زائد (مثال \حوالہ{مثال_مخروط_ماسکہ_افقی_محور_پر})}
+\label{شکل_مثال_مخروط_ماسکہ_افقی_محور_پر}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=2/sqrt(5)*sqrt(\x^2+5);fd(\x)=sqrt(4/5)*\x;}]
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty}]
+\addplot[domain=-6:6]{f(x)};
+\addplot[domain=-6:6]{-f(x)};
+\addplot[domain=-6:6]{fd(x)}node[pos=0.75,right,yshift=-0.5ex]{$y=\frac{2}{\sqrt{5}}x$};
+\addplot[domain=-6:6]{-fd(x)}node[pos=0.25,left,yshift=-0.5ex]{$y=-\frac{2}{\sqrt{5}}x$};
+\addplot[]plot coordinates {(0,3)}node[circ]{}node[above right]{$F(0,3)$}   {(0,-3)}node[circ]{}node[below right]{$F(0,-3)$};
+\addplot[]plot coordinates {(0,2)}node[circ]{}node[below left]{$2$}  {(0,-2)}node[circ]{}node[above left]{$-2$};
+\addplot[]plot coordinates {(1,5)}node[above right]{$\frac{y^2}{4}-\frac{x^2}{5}=1$};
+\end{axis}
+\end{tikzpicture}
+\caption{قطع زائد (مثال \حوالہ{مثال_مخروط_ماسکہ_عمودی_محور_پر})}
+\label{شکل_مثال_مخروط_ماسکہ_عمودی_محور_پر}
+\end{minipage}
+\end{figure}
+
+\ابتدا{مثال}\شناخت{مثال_مخروط_ماسکہ_عمودی_محور_پر}
+درج ذیل قطع زائد کو  مثال \حوالہ{مثال_مخروط_ماسکہ_افقی_محور_پر} کے قطع زائد میں \عددی{x} اور \عددی{y} کو ایک دوسرے کے ساتھ بدل کر حاصل کیا گیا ہے۔ 
+\begin{align*}
+\frac{y^2}{4}-\frac{x^2}{5}=1
+\end{align*}
+اس قطع زائد کے راس عمودی محور پر پائے جائیں گے (شکل \حوالہ{شکل_مثال_مخروط_ماسکہ_عمودی_محور_پر})۔ اب بھی \عددی{a^2=4} اور \عددی{b^2=5} ہوں گے۔یوں درج ذیل ہو گا۔
+\begin{align*}
+c&=\sqrt{a^2+b^2}=\sqrt{4+5}=3&&\text{\RL{مرکز سے ماسکہ تک فاصلہ}}\\
+(0,\pm c)&=(0,\pm 3)&&\text{ماسکے}\\
+(0,\pm a)&=(0,\pm 2)&&\text{راس}\\
+&(0,0)&&\text{مرکز}\\
+y&=\pm \frac{2}{\sqrt{5}}x&&\text{متقارب}
+\end{align*}
+\انتہا{مثال}
+%==================
+
+\جزوحصہء{عکسی خواص}
+قطع مکافی کا اہم ترین استعمال بطور  شعاع اور ریڈیو امواج کا عاکس ہے۔ قطع مکافی کے ماسکہ سے خارج شعاع، قطع مکافی کے محور کے متوازی منعکس ہوتا ہے۔ یہ خاصیت ہاتھ بتی اور گاڑیوں کی اگلی بتیوں میں بروئے کار لایا جاتا ہے۔ اس کے علاوہ خرد امواج نشر کرنے کے لئے بھی قطع مکافی اینٹینا استعمال کیا جاتا ہے جو نقطہ منبع سے خارج برقناطیسی امواج کو ایک محدود شعاع  کی صورت میں خارج کرتا ہے۔ اس کے برعکس قطع مکافی عاکس کے محور کے متوازی آمد  برقناطیسی امواج عاکس کے ماسکہ پر مرکوز کیے جاتے ہیں۔اس خاصیت کی بنا ٹیلی وژن کا ڈش اینٹینا یا ریڈیو دوربین  کمزور اشارات کو اکٹھے کر کے زیادہ طاقتور اشارہ حاصل کرتا ہے۔
+اسی طرح سورج کی روشنی کو ایک نقطہ پر مرتکز کیا جا سکتا ہے۔
+
+ایک ترخیم کو اس کے محور کے گرد گھما کر سطح طواف پیدا کیا جا سکتا ہے جو \اصطلاح{ترخیمی سطح}\فرہنگ{ترخیمی سطح}\حاشیہب{ellipsoid}\فرہنگ{ellipsoid} کہلاتا ہے۔اس کی اندرونی سطح پر چاندی کی تہہ لگا کر آئینہ بنایا جا سکتا ہے۔ ایک ماسکہ سے خارج شعاع دوسرے ماسکہ پر منعکس ہو گا۔ ترخیمی سطح اسی طرح آواز کو بھی ایک ماسکہ سے دوسرے ماسکہ منتقل کرتا ہے۔ اس خاصیت کو استعمال کرتے ہوئے کمرہ سرگوشی بنایا جا سکتا ہے جس میں ایک ماسکہ پر بیٹھا شخص دوسرے ماسکہ پر بیٹھے شخص کے ساتھ سرگوشی سے باتیں کر سکتا ہے۔ کمرہ سرگوشی میں موجود باقی لوگ ان کی باتیں سننے  سے قاصر ہوں گے۔ ہوائی جہازوں کی کارکردگی پر ہوائی سرنگ میں غور کیا جاتا ہے۔ جہاز کے شور پر غور کرتے ہوئے نقطہ غور کو ترخیمی سطح کے ایک ماسکہ پر رکھا جاتا ہے جبکہ مائکروفون  کو  اس کی دوسرے ماسکہ پر رکھا جاتا ہے۔ دیگر نقطوں سے پیدا شور کے اثر کو یوں بہت کم کرنا ممکن ہوتا ہے۔
+
+قطع زائد آئینہ کے ایک ماسکہ پر آمد شعاع کو آئینہ دوسرے ماسکہ پر بھیجتا ہے۔ قطع مکافی سطح، ترخیمی سطح اور قطع مکافی سطحوں کے خواص کو استعمال کرتے ہوئے جدید دور بین تیار کیے جاتے ہیں۔   
+
+

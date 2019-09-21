@@ -1,0 +1,231 @@
+\جزوحصہء{سوالات}
+\موٹا{ترسیم کی پہچان}\\
+سوال \حوالہ{سوال_مخروط_ہم_پلہ_الف} تا سوال \حوالہ{سوال_مخروط_ہم_پلہ_الف} میں دیے قطع مکافی کا ہم پلہ درج ذیل میں تلاش کریں۔
+\begin{align*}
+x^2=2y,\quad x^2=-6y,\quad y^2=8x,\quad y^2=-4x
+\end{align*}
+اس کے بعد قطع مکافی کے ماسکہ اور ناظمہ دریافت کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_مخروط_ہم_پلہ_الف}
+شکل \حوالہ{شکل_مخروط_ترخیم_بائیں_دائیں}-ا
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+شکل \حوالہ{شکل_مخروط_ترخیم_بائیں_دائیں}-ب
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+شکل \حوالہ{شکل_مخروط_ترخیم_بائیں_دائیں}-ج
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\شناخت{سوال_مخروط_ہم_پلہ_ب}
+شکل \حوالہ{شکل_مخروط_ترخیم_بائیں_دائیں}-د
+\انتہا{سوال}
+%===================
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=2*sqrt(\x);}]
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits]
+\addplot[domain=0:0.2]{f(x)};
+\addplot[domain=0.2:2]{f(x)};
+\addplot[domain=0:0.2]{-f(x)};
+\addplot[domain=0.2:2]{-f(x)};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=2*sqrt(-\x);}]
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits=true]
+\addplot[domain=0:-0.2]{f(x)};
+\addplot[domain=-0.2:-2]{f(x)};
+\addplot[domain=0:-0.2]{-f(x)};
+\addplot[domain=-0.2:-2]{-f(x)};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=-1/4*\x^2;}]
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits]
+\addplot[domain=0:0.2]{f(x)};
+\addplot[domain=0.2:2]{f(x)};
+\addplot[domain=0:0.2](-x,{f(x)});
+\addplot[domain=0.2:2](-x,{f(x)});
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=1/4*\x^2;}]
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits=true]
+\addplot[domain=0:0.2]{f(x)};
+\addplot[domain=0.2:2]{f(x)};
+\addplot[domain=0:0.2](-x,{f(x)});
+\addplot[domain=0.2:2](-x,{f(x)});
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{ترسیم برائے سوال \حوالہ{سوال_مخروط_ہم_پلہ_الف} تا سوال \حوالہ{سوال_مخروط_ہم_پلہ_ب}}
+\label{شکل_مخروط_ترخیم_بائیں_دائیں}
+\end{figure}
+
+سوال \حوالہ{سوال_مخروط_ہم_پلہ_تلاش_الف} تا سوال \حوالہ{سوال_مخروط_ہم_پلہ_تلاش_ب} میں دیے مخروط کا درج ذیل میں ہم پلہ مساوات تلاش کریں۔
+\begin{align*}
+\frac{x^2}{4}+\frac{y^2}{9}=1,\quad \frac{x^2}{2}+y^2=1,\quad \frac{y^2}{4}-x^2=1,\quad \frac{x^2}{4}-\frac{y^2}{9}=1
+\end{align*}
+دیے گئے مخروط کا ماسکہ اور راس تلاش کریں۔ اگر قطع زائد دیا گیا ہو تب اس کے متقارب بھی دریافت کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_مخروط_ہم_پلہ_تلاش_الف}
+ترسیم شکل \حوالہ{شکل_مخروط_کئی_الف}-ا میں دیا گیا ہے
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+ترسیم شکل \حوالہ{شکل_مخروط_کئی_الف}-ب میں دیا گیا ہے
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+ترسیم شکل \حوالہ{شکل_مخروط_کئی_الف}-ج میں دیا گیا ہے
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_مخروط_ہم_پلہ_تلاش_ب}
+ترسیم شکل \حوالہ{شکل_مخروط_کئی_الف}-د میں دیا گیا ہے
+\انتہا{سوال}
+%========================
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=sqrt(5)/2*sqrt(\x^2-4);}]
+\begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits]
+\addplot[domain=2:2.2]{f(x)};
+\addplot[domain=2.2:6]{f(x)};
+\addplot[domain=2:2.2]{-f(x)};
+\addplot[domain=2.2:6]{-f(x)};
+\addplot[domain=2:2.2](-x,{f(x)});
+\addplot[domain=2.2:6](-x,{f(x)});
+\addplot[domain=2:2.2](-x,{-f(x)});
+\addplot[domain=2.2:6](-x,{-f(x)});
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=4/3*sqrt(9-\x^2);}]
+\begin{axis}[axis equal,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits]
+\addplot[domain=-3:-2.8]{f(x)};
+\addplot[domain=-2.8:2.8]{f(x)};
+\addplot[domain=2.8:3]{f(x)};
+\addplot[domain=-3:-2.8]{-f(x)};
+\addplot[domain=-2.8:2.8]{-f(x)};
+\addplot[domain=2.8:3]{-f(x)};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=3/4*sqrt(16-\x^2);}]
+\begin{axis}[axis equal,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits]
+\addplot[domain=-4:-3.8]{f(x)};
+\addplot[domain=-3.8:3.8]{f(x)};
+\addplot[domain=3.8:4]{f(x)};
+\addplot[domain=-4:-3.8]{-f(x)};
+\addplot[domain=-3.8:3.8]{-f(x)};
+\addplot[domain=3.8:4]{-f(x)};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=2/sqrt(5)*sqrt(5+\x^2);}]
+\begin{axis}[axis equal,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits]
+\addplot[domain=-4:4]{f(x)};
+\addplot[domain=-4:4]{-f(x)};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{ترسیمات برائے سوال \حوالہ{سوال_مخروط_ہم_پلہ_تلاش_الف} تا سوال \حوالہ{سوال_مخروط_ہم_پلہ_تلاش_ب}}
+\label{شکل_مخروط_کئی_الف}
+\end{figure}
+
+\موٹا{قطع مکافی}\\
+سوال \حوالہ{سوال_مخروط_قطع_مکافی_دیا_الف} تا سوال \حوالہ{سوال_مخروط_قطع_مکافی_دیا_ب} میں دیے گئے قطع مکافی کا ماسکہ اور ناظمہ تلاش کرنے کے بعد  اس کو ترسیم کریں۔ ماسکہ اور ناظمہ کو بھی ترسیم میں شامل کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_مکافی_دیا_الف}
+$y^2=12x$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$x^2=6y$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$x^2=-8y$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$y^2=-2x$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$y=4x^2$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$y=-8x^2$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$x=-3y^2$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_مکافی_دیا_ب}
+$x=2y^2$
+\انتہا{سوال}
+%=====================
+
+\موٹا{ترخیم}\\
+سوال \حوالہ{سوال_مخروط_ترخیم_دیا_الف} تا سوال \حوالہ{سوال_مخروط_ترخیم_دیا_ب} میں دیے گئے ترخیم کی مساوات کو معیاری روپ میں لکھ کر ترسیم کر کے ترسیم پر ماسکہ دکھائیں۔ 
+
+\ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_دیا_الف}
+$16x^2+25y^2=400$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$7x^2+16y^2=112$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$2x^2+y^2=2$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$2x^2+y^2=4$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$3x^2+2y^2=6$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$9x^2+10y^2=90$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$6x^2+9y^2=54$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_دیا_ب}
+$169x^2+25y^2=4225$
+\انتہا{سوال}
+%=====================
