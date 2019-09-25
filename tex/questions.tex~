@@ -1,1052 +1,152 @@
-\جزوحصہء{سوالات}
-\موٹا{ترسیم کی پہچان}\\
-سوال \حوالہ{سوال_مخروط_ہم_پلہ_الف} تا سوال \حوالہ{سوال_مخروط_ہم_پلہ_ب} میں دی  گئی قطع مکافی کی مساوات درج ذیل میں تلاش کریں۔
+\حصہ{سنک لے لحاظ سے مخروط حصوں کی جماعت بندی}ہم ہر مخروط حصہ کے ساتھ ایک عدد منسلک کر سکتے ہیں جس کو مخروط حصے کا سنک کہتے ہیں۔ سنک سے مخروط حصے کی قسم (دائرہ، ترخیم، قطع مکافی یا قطع زائد) معلوم کی جا سکتی ہے۔ ترخیم اور قطع زائد کی صورت میں یہ عدد مخروط کی عمومی جسامت کی معلومات بھی فراہم کرتا ہے۔
+
+\جزوحصہء{سنک}
+اگرچہ مرکز سے ماسکہ تک فاصلہ \عددی{c} درج ذیل مساوات میں نہیں پایا جاتا ہے
 \begin{align*}
-x^2=2y,\quad x^2=-6y,\quad y^2=8x,\quad y^2=-4x
+\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\quad (a>b)
 \end{align*}
-اس کے بعد قطع مکافی کے ماسکہ اور ناظمہ دریافت کریں۔
+ترخیم کے لئے ہم \عددی{c} کو \عددی{c=\sqrt{a^2-b^2}} سے معلوم کر سکتے ہیں۔ اگر \عددی{a} کو مستقل رکھ کر \عددی{c} کو وقفہ \عددی{0\le c\le a} پر تبدیل کیا جائے تب حاصل ترخیم کی صورت  بھی تبدیل ہو گی (شکل \حوالہ{شکل_مخروط_تبدیلی_صورت_ترخیم})۔ اگر \عددی{c=0} (یعنی \عددی{a=b}) ہو تب یہ دائرہ ہو گا جبکہ \عددی{c} بڑھانے سے یہ چپٹا ہو گا۔ اگر \عددی{c=a} ہو تب راس اور ماسکے ایک دوسرے کے اوپر ہوں گے اور ترخیم ایک سیدھی لکیر کی صورت اختیار کرے گا۔
 
-%=============================
-\ابتدا{سوال}\شناخت{سوال_مخروط_ہم_پلہ_الف}
-شکل \حوالہ{شکل_مخروط_ترخیم_بائیں_دائیں}-ا\\
-جواب:\quad
-\عددی{y^2=8x}، ماسکہ \عددی{F(2,0)} اور ناظمہ \عددی{x=-2}
-\انتہا{سوال}
-%===================
-\ابتدا{سوال}
-شکل \حوالہ{شکل_مخروط_ترخیم_بائیں_دائیں}-ب
-\انتہا{سوال}
-%===================
-\ابتدا{سوال}
-شکل \حوالہ{شکل_مخروط_ترخیم_بائیں_دائیں}-ج\\
-جواب:\quad
-\عددی{x^2=-6y}، ماسکہ \عددی{F(0,-\tfrac{3}{2})} اور ناظمہ \عددی{y=\tfrac{3}{2}}
-\انتہا{سوال}
-%===================
-\ابتدا{سوال}\شناخت{سوال_مخروط_ہم_پلہ_ب}
-شکل \حوالہ{شکل_مخروط_ترخیم_بائیں_دائیں}-د
-\انتہا{سوال}
-%===================
+ہم \عددی{c} اور \عددی{a} کی نسبت سے ترخیم کی صورت بیان کرتے ہیں۔ یہ نسبت ترخیم کی \اصطلاح{سنک} کہلاتی ہے۔
 \begin{figure}
 \centering
-\begin{subfigure}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=2*sqrt(\x);}]
-\begin{axis}[width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits]
-\addplot[domain=0:0.2]{f(x)};
-\addplot[domain=0.2:2]{f(x)};
-\addplot[domain=0:0.2]{-f(x)};
-\addplot[domain=0.2:2]{-f(x)};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\end{subfigure}\hfill
-\begin{subfigure}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=2*sqrt(-\x);}]
-\begin{axis}[width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits=true]
-\addplot[domain=0:-0.2]{f(x)};
-\addplot[domain=-0.2:-2]{f(x)};
-\addplot[domain=0:-0.2]{-f(x)};
-\addplot[domain=-0.2:-2]{-f(x)};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\end{subfigure}\hfill
-\begin{subfigure}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=-1/4*\x^2;}]
-\begin{axis}[width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits]
-\addplot[domain=0:0.2]{f(x)};
-\addplot[domain=0.2:2]{f(x)};
-\addplot[domain=0:0.2](-x,{f(x)});
-\addplot[domain=0.2:2](-x,{f(x)});
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\end{subfigure}\hfill
-\begin{subfigure}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=1/4*\x^2;}]
-\begin{axis}[width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits=true]
-\addplot[domain=0:0.2]{f(x)};
-\addplot[domain=0.2:2]{f(x)};
-\addplot[domain=0:0.2](-x,{f(x)});
-\addplot[domain=0.2:2](-x,{f(x)});
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\end{subfigure}
-\caption{ترسیم برائے سوال \حوالہ{سوال_مخروط_ہم_پلہ_الف} تا سوال \حوالہ{سوال_مخروط_ہم_پلہ_ب}}
-\label{شکل_مخروط_ترخیم_بائیں_دائیں}
-\end{figure}
-
-سوال \حوالہ{سوال_مخروط_ہم_پلہ_تلاش_الف} تا سوال \حوالہ{سوال_مخروط_ہم_پلہ_تلاش_ب} میں دیے گئے مخروط کی مساوات درج ذیل میں تلاش کریں۔
-\begin{align*}
-\frac{x^2}{4}+\frac{y^2}{9}=1,\quad \frac{x^2}{2}+y^2=1,\quad \frac{y^2}{4}-x^2=1,\quad \frac{x^2}{4}-\frac{y^2}{9}=1
-\end{align*}
-دیے گئے مخروط کا ماسکہ اور راس تلاش کریں۔ اگر قطع زائد دیا گیا ہو تب اس کے متقارب بھی دریافت کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_ہم_پلہ_تلاش_الف}
-ترسیم شکل \حوالہ{شکل_مخروط_کئی_الف}-ا میں دیا گیا ہے۔\\
-جواب:\quad
-\عددی{\tfrac{x^2}{4}-\tfrac{y^2}{9}=1}، ماسکے \عددی{F(\pm\sqrt{13},0)}، راس \عددی{V(\pm 2,0)} اور متقارب \عددی{y=\pm\tfrac{3}{2}x}
-\انتہا{سوال}
-%===================
-\ابتدا{سوال}
-ترسیم شکل \حوالہ{شکل_مخروط_کئی_الف}-ب میں دیا گیا ہے۔
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}
-ترسیم شکل \حوالہ{شکل_مخروط_کئی_الف}-ج میں دیا گیا ہے۔\\
-جواب:\quad
-\عددی{\tfrac{x^2}{2}+y^2=1}، ماسکے \عددی{F(\pm 1,0)}، راس \عددی{V(\pm\sqrt{2},0)}
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}\شناخت{سوال_مخروط_ہم_پلہ_تلاش_ب}
-ترسیم شکل \حوالہ{شکل_مخروط_کئی_الف}-د میں دیا گیا ہے۔
-\انتہا{سوال}
-%========================
-\begin{figure}
-\centering
-\begin{subfigure}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt(5)/2*sqrt(\x^2-4);}]
-\begin{axis}[width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits]
-\addplot[domain=2:2.2]{f(x)};
-\addplot[domain=2.2:6]{f(x)};
-\addplot[domain=2:2.2]{-f(x)};
-\addplot[domain=2.2:6]{-f(x)};
-\addplot[domain=2:2.2](-x,{f(x)});
-\addplot[domain=2.2:6](-x,{f(x)});
-\addplot[domain=2:2.2](-x,{-f(x)});
-\addplot[domain=2.2:6](-x,{-f(x)});
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\end{subfigure}\hfill
-\begin{subfigure}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=4/3*sqrt(9-\x^2);}]
-\begin{axis}[width=4cm,axis equal,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits]
-\addplot[domain=-3:-2.8]{f(x)};
-\addplot[domain=-2.8:2.8]{f(x)};
-\addplot[domain=2.8:3]{f(x)};
-\addplot[domain=-3:-2.8]{-f(x)};
-\addplot[domain=-2.8:2.8]{-f(x)};
-\addplot[domain=2.8:3]{-f(x)};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\end{subfigure}\hfill
-\begin{subfigure}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=3/4*sqrt(16-\x^2);}]
-\begin{axis}[width=4cm,axis equal,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits]
-\addplot[domain=-4:-3.8]{f(x)};
-\addplot[domain=-3.8:3.8]{f(x)};
-\addplot[domain=3.8:4]{f(x)};
-\addplot[domain=-4:-3.8]{-f(x)};
-\addplot[domain=-3.8:3.8]{-f(x)};
-\addplot[domain=3.8:4]{-f(x)};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\end{subfigure}\hfill
-\begin{subfigure}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=2/sqrt(5)*sqrt(5+\x^2);}]
-\begin{axis}[width=4cm,axis equal,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits]
-\addplot[domain=-4:4]{f(x)};
-\addplot[domain=-4:4]{-f(x)};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\end{subfigure}
-\caption{ترسیمات برائے سوال \حوالہ{سوال_مخروط_ہم_پلہ_تلاش_الف} تا سوال \حوالہ{سوال_مخروط_ہم_پلہ_تلاش_ب}}
-\label{شکل_مخروط_کئی_الف}
-\end{figure}
-
-\موٹا{قطع مکافی}\\
-سوال \حوالہ{سوال_مخروط_قطع_مکافی_دیا_الف} تا سوال \حوالہ{سوال_مخروط_قطع_مکافی_دیا_ٹ} میں دیے گئے قطع مکافی کا ماسکہ اور ناظمہ تلاش کرنے کے بعد  اس کو ترسیم کریں۔ ماسکہ اور ناظمہ کو بھی ترسیم میں شامل کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_مکافی_دیا_الف}
-$y^2=12x$\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_قطع_مکافی_دیا_الف}
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$x^2=6y$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_مکافی_دیا_ب}
-$x^2=-8y$\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_قطع_مکافی_دیا_ب}
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$y^2=-2x$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_مکافی_دیا_پ}
-$y=4x^2$\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_قطع_مکافی_دیا_پ}
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$y=-8x^2$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_مکافی_دیا_ت}
-$x=-3y^2$\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_قطع_مکافی_دیا_ت}
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_مکافی_دیا_ٹ}
-$x=2y^2$
-\انتہا{سوال}
-%=====================
-\begin{figure}
-\centering
-\begin{minipage}{0.22\textwidth}
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt(12*\x);}]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-3},ytick={3}]
-\addplot[domain=0:0.2]{f(x)};
-\addplot[domain=0.2:4]{f(x)}node[pos=0.75,below right]{$y^2=12x$};
-\addplot[domain=0:0.2]{-f(x)};
-\addplot[domain=0.2:4]{-f(x)};
-\addplot[]plot coordinates {(-3,-7)(-3,7)}node[pos=0.85,right]{$x=-3$};
-\addplot[]plot coordinates {(3,0)}node[circ]{}node[below]{$F(3,0)$};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_قطع_مکافی_دیا_الف}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=-1/8*(\x)^2;}]
-\begin{axis}[width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={2},ytick={2},y tick label style={yshift=0.5ex}]
-\addplot[domain=-3:3]{f(x)}node[pos=0.25,below,yshift=-0.5ex]{$x^2=-8y$};
-\addplot[]plot coordinates {(-3,2)(3,2)}node[pos=0.85,below]{$y=2$};
-\addplot[]plot coordinates {(0,-2)}node[circ]{}node[right]{$F(0,-2)$};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_قطع_مکافی_دیا_ب}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=4*(\x)^2;}]
-\pgfmathsetmacro{\d}{1/16}
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={0.25},ytick={0.25},xticklabels={$\tfrac{1}{4}$},yticklabels={$\tfrac{1}{4}$}]
-\addplot[domain=-0.3:0.3]{f(x)}node[left]{$y=4x^2$};
-\addplot[]plot coordinates {(-0.3,-\d)(0.3,-\d)}node[pos=0.15,below]{$y=-\tfrac{1}{16}$};
-\addplot[]plot coordinates {(0,\d)}node[circ]{}node[right]{$F(0,\tfrac{1}{16})$};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_قطع_مکافی_دیا_پ}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt(-1/3*\x);}]
-\pgfmathsetmacro{\d}{1/12}
-\pgfmathsetmacro{\yt}{1/6}
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={\d},ytick={-\yt,\yt},xticklabels={\hspace*{2ex}$\tfrac{1}{12}$},yticklabels={$-\tfrac{1}{6}$,$\tfrac{1}{6}$}]
-\addplot[domain=-0.15:0]{f(x)}node[pos=0,below]{$x=-3y^2$};
-\addplot[domain=-0.15:0]{-f(x)};
-\addplot[]plot coordinates {(\d,-0.2)(\d,0.2)}node[above]{$x=\tfrac{1}{12}$};
-\addplot[]plot coordinates {(-\d,0)}node[circ]{}node[below]{$F(-\tfrac{1}{12},0)$};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_قطع_مکافی_دیا_ت}
-\end{minipage}
-\end{figure}
-\موٹا{ترخیم}\\
-سوال \حوالہ{سوال_مخروط_ترخیم_دیا_الف} تا سوال \حوالہ{سوال_مخروط_ترخیم_دیا_ٹ} میں دیے گئے ترخیم کی مساوات کو معیاری روپ میں لکھ کر ترسیم کریں۔ ترسیم پر ماسکے  دکھائیں۔ 
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_دیا_الف}
-$16x^2+25y^2=400$\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_ترخیم_دیا_الف}
-\انتہا{سوال}
-%===================
-\ابتدا{سوال}
-$7x^2+16y^2=112$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_دیا_ب}
-$2x^2+y^2=2$\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_ترخیم_دیا_ب}
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$2x^2+y^2=4$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_دیا_پ}
-$3x^2+2y^2=6$\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_ترخیم_دیا_پ}
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$9x^2+10y^2=90$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_دیا_ت}
-$6x^2+9y^2=54$\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_ترخیم_دیا_ت}
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_دیا_ٹ}
-$169x^2+25y^2=4225$
-\انتہا{سوال}
-%=====================
-\begin{figure}
-\centering
-\begin{minipage}{0.22\textwidth}
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=4/5*sqrt(25-(\x)^2);}]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-3,3},ytick={-4,4}]
-\addplot[domain=-4.8:4.8]{f(x)}node[pos=0.8,above,xshift=1ex]{$\tfrac{x^2}{25}+\tfrac{y^2}{16}=1$};
-\addplot[domain=-4.8:4.8]{-f(x)};
-\addplot[domain=-5:-4.8]{f(x)};
-\addplot[domain=-5:-4.8]{-f(x)};
-\addplot[domain=4.8:5]{f(x)};
-\addplot[domain=4.8:5]{-f(x)};
-\addplot[]plot coordinates {(-3,0)}node[above]{$F_1$}  {(3,0)}node[above]{$F_2$};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_ترخیم_دیا_الف}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt(2-2*(\x)^2);}]
-\pgfmathsetmacro{\k}{sqrt(2)}
-\begin{axis}[axis equal,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-1,1},ytick={-1,1}]
-\addplot[domain=-0.8:0.8]{f(x)}node[pos=0.75,above,xshift=3ex]{$x^2+\tfrac{y^2}{2}=1$};
-\addplot[domain=-0.8:0.8]{-f(x)};
-\addplot[domain=-1:-0.8]{f(x)};
-\addplot[domain=0.8:1]{f(x)};
-\addplot[domain=-1:-0.8]{-f(x)};
-\addplot[domain=0.8:1]{-f(x)};
-\addplot[]plot coordinates {(0,1)}node[right]{$F_1$}  {(0,-1)}node[right]{$F_2$};
-\addplot[]plot coordinates {(0,\k)}node[shift={(-2ex,0.25ex)}]{$\sqrt{2}$};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_ترخیم_دیا_ب}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt(3/2)*sqrt(2-(\x)^2);}]
-\pgfmathsetmacro{\k}{sqrt(2)}
-\pgfmathsetmacro{\kk}{sqrt(3)}
-\begin{axis}[axis equal,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={\empty},ytick={-1,1}]
-\addplot[domain=-\k+0.2:\k-0.2]{f(x)}node[pos=0.75,above,xshift=3ex]{$\tfrac{x^2}{2}+\tfrac{y^2}{3}=1$};
-\addplot[domain=-\k+0.2:\k-0.2]{-f(x)};
-\addplot[domain=-\k:-\k+0.2]{f(x)};
-\addplot[domain=\k-0.2:\k]{f(x)};
-\addplot[domain=-\k:-\k+0.2]{-f(x)};
-\addplot[domain=\k-0.2:\k]{-f(x)};
-\addplot[]plot coordinates {(0,1)}node[right]{$F_1$}  {(0,-1)}node[right]{$F_2$};
-\addplot[]plot coordinates {(\k,0)}node[shift={(1ex,-1ex)}]{$\sqrt{2}$}  {(0,\kk)}node[shift={(-2ex,0.25ex)}]{$\sqrt{3}$};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_ترخیم_دیا_پ}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt(6/9)*sqrt(9-(\x)^2);}]
-\pgfmathsetmacro{\k}{sqrt(9)}
-\pgfmathsetmacro{\kk}{sqrt(6)}
-\pgfmathsetmacro{\kkk}{sqrt(3)}
-\begin{axis}[axis equal,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-\kkk,\kkk},xticklabels={$-\sqrt{3}$,$\sqrt{3}$},ytick={\empty}]
-\addplot[domain=-\k+0.2:\k-0.2]{f(x)}node[pos=0.75,above,xshift=3ex]{$\tfrac{x^2}{9}+\tfrac{y^2}{6}=1$};
-\addplot[domain=-\k+0.2:\k-0.2]{-f(x)};
-\addplot[domain=-\k:-\k+0.2]{f(x)};
-\addplot[domain=\k-0.2:\k]{f(x)};
-\addplot[domain=-\k:-\k+0.2]{-f(x)};
-\addplot[domain=\k-0.2:\k]{-f(x)};
-\addplot[]plot coordinates {(-\kkk,0)}node[above]{$F_1$}  {(\kkk,0)}node[above]{$F_2$};
-\addplot[]plot coordinates {(0,\kk)}node[shift={(-2ex,0.25ex)}]{$\sqrt{6}$};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_ترخیم_دیا_ت}
-\end{minipage}
-\end{figure}
-
-سوال \حوالہ{سوال_مخروط_ترسیم_معلومات_الف} اور سوال \حوالہ{سوال_مخروط_ترسیم_معلومات_ب} میں \عددی{xy} مستوی میں پائے جانے والے  ترخیم کے ماسکہ اور راس  دیے  گئے ہیں۔ ترخیم کا مرکز  \عددی{xy} مستوی کے مبدا پر ہے۔ ترخیم کی معیاری مساوات تلاش کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_ترسیم_معلومات_الف}
-ماسکے \عددی{(\pm \sqrt{2},0)} اور راس \عددی{(\pm 2,0)}\\
-جواب:\quad
-$\tfrac{x^2}{4}+\tfrac{y^2}{2}=1$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}\شناخت{سوال_مخروط_ترسیم_معلومات_ب}
-ماسکے \عددی{(0,\pm 4)} اور راس \عددی{(0,\pm 5)}
-\انتہا{سوال}
-%========================
-
-\موٹا{قطع زائد}\\
-سوال \حوالہ{سوال_مخروط_قطع_زائد_معلومات_الف} تا سوال \حوالہ{سوال_مخروط_قطع_زائد_معلومات_ٹ} میں قطع زائد کی مساواتیں دی گئی ہیں۔ مساوات کو معیاری روپ میں لکھیں اور قطع زائد کا متقارب دریافت کریں۔ قطع زائد کا خاکہ کھینچ کر متقارب اور ماسکہ بھی دکھائیں۔ 
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_زائد_معلومات_الف}
-$x^2-y^2=1$\\
-جواب:\quad
-متقارب \عددی{y=\pm x} اور شکل \حوالہ{شکل_سوال_مخروط_قطع_زائد_معلومات_الف}
-\انتہا{سوال}
-%=========================
-\ابتدا{سوال}
-$9x^2-16y^2=144$
-\انتہا{سوال}
-%=================================
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_زائد_معلومات_ب}
-$y^2-x^2=8$\\
-جواب:\quad
-متقارب \عددی{y=\pm x} اور شکل \حوالہ{شکل_سوال_مخروط_قطع_زائد_معلومات_ب}
-\انتہا{سوال}
-%=================================
-\ابتدا{سوال}
-$y^2-x^2=4$
-\انتہا{سوال}
-%=================================
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_زائد_معلومات_پ}
-$8x^2-2y^2=16$\\
-جواب:\quad
-متقارب \عددی{y=\pm 2x} اور شکل \حوالہ{شکل_سوال_مخروط_قطع_زائد_معلومات_پ}
-\انتہا{سوال}
-%=================================
-\ابتدا{سوال}
-$y^2-3x^2=3$
-\انتہا{سوال}
-%=================================
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_زائد_معلومات_ت}
-$8y^2-2x^2=16$\\
-جواب:\quad
-متقارب \عددی{y=\pm \tfrac{x}{2}} اور شکل \حوالہ{شکل_سوال_مخروط_قطع_زائد_معلومات_ت}
-\انتہا{سوال}
-%=================================
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_زائد_معلومات_ٹ}
-$64x^2-36y^2=2304$
-\انتہا{سوال}
-%=================================
-%=====================
-\begin{figure}
-\centering
-\begin{minipage}{0.22\textwidth}
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt((\x)^2-1);fa(\x)=\x;}]
-\pgfmathsetmacro{\f}{sqrt(2)}
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-\f,\f,1,-1},xticklabels={\llap{$-\sqrt{2}$},\rlap{$\sqrt{2}$},\llap{$1$},},ytick={\empty}]
-\addplot[domain=-3:1]{f(x)};
-\addplot[domain=-3:1]{-f(x)};
-\addplot[domain=1:3]{f(x)}node[pos=0.9,below,xshift=2ex]{$x^2-y^2=1$};
-\addplot[domain=1:3]{-f(x)};
-\addplot[dashed,domain=-3:3]{fa(x)};
-\addplot[dashed,domain=-3:3]{-fa(x)};
-\addplot[]plot coordinates {(-\f,0)}node[above,xshift=-1ex]{$F_1$}  {(\f,0)}node[above,xshift=1ex]{$F_2$};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_قطع_زائد_معلومات_الف}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt((\x)^2+8);fa(\x)=\x;}]
-\pgfmathsetmacro{\f}{4}
-\pgfmathsetmacro{\k}{sqrt(8)}
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ytick={-\f,\f},xtick={\empty}]
-\addplot[domain=-4:4]{f(x)}node[above]{$\tfrac{y^2}{8}-\tfrac{x^2}{8}=1$};
-\addplot[domain=-4:4]{-f(x)};
-\addplot[dashed,domain=-4:4]{fa(x)};
-\addplot[dashed,domain=-4:4]{-fa(x)};
-\addplot[]plot coordinates {(0,-\f)}node[right]{$F_2$}  {(0,\f)}node[right]{$F_1$};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_قطع_زائد_معلومات_ب}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=1/2*sqrt((\x)^2+8);fa(\x)=2*\x;}]
-\pgfmathsetmacro{\f}{sqrt(10)}
-\pgfmathsetmacro{\k}{sqrt(2)}
-\pgfmathsetmacro{\kk}{sqrt(8)}
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-\f,\f},xticklabels={$-\sqrt{10}$,$\sqrt{10}$},xmax=3,ytick={\empty}]
-\addplot[domain=-3:3]({f(x)},x)node[above,xshift={2ex}]{$\tfrac{x^2}{2}-\tfrac{y^2}{8}=1$};
-\addplot[domain=-3:3]({-f(x)},x);
-\addplot[dashed,domain=-\k:\k]{fa(x)};
-\addplot[dashed,domain=-\k:\k]{-fa(x)};
-\addplot[]plot coordinates {(-\f,0)}node[above]{$F_1$}  {(\f,0)}node[above]{$F_2$};
-\addplot[]plot coordinates {(\k,0)}node[shift={(-1ex,1ex)}]{$\sqrt{2}$};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_قطع_زائد_معلومات_پ}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=1/2*sqrt((\x)^2+8);fa(\x)=1/2*\x;}]
-\pgfmathsetmacro{\f}{sqrt(10)}
-\pgfmathsetmacro{\k}{sqrt(2)}
-\pgfmathsetmacro{\kk}{sqrt(8)}
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ytick={-\f,\f},yticklabels={$-\sqrt{10}$,$\sqrt{10}$},ymin=-3,ymax=3,xtick={\empty}]
-\addplot[domain=-3:3]{f(x)}node[above,xshift={2ex}]{$\tfrac{y^2}{2}-\tfrac{x^2}{8}=1$};
-\addplot[domain=-3:3]{-f(x)};
-\addplot[dashed,domain=-3:3]{fa(x)};
-\addplot[dashed,domain=-3:3]{-fa(x)};
-\addplot[]plot coordinates {(0,-\f)}node[right]{$F_2$}  {(0,\f)}node[right]{$F_1$};
-\addplot[]plot coordinates {(0,\k)}node[shift={(-1ex,-1ex)}]{$\sqrt{2}$};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_قطع_زائد_معلومات_ت}
-\end{minipage}
-\end{figure}
-سوال \حوالہ{سوال_مخروط_قطع_زائد_معلومات_سے_مساوات_الف} تا سوال \حوالہ{سوال_مخروط_قطع_زائد_معلومات_سے_مساوات_ب} میں \عددی{xy} مستوی پر پائے جانے والے قطع زائد کے ماسکہ، راس اور متقارب کی معلومات دی گئی ہے۔ قطع زائد کا مرکز \عددی{xy} مستوی کے مبدا پر ہے۔قطع زائد کی معیاری مساوات حاصل کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_زائد_معلومات_سے_مساوات_الف}
-ماسکے \عددی{(0,\pm \sqrt{2})} اور متقارب \عددی{y=\pm x}\\
-جواب:\quad
-$y^2-x^2=1$
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}
-ماسکے \عددی{(\pm 2,0)} اور متقارب \عددی{y=\pm\tfrac{1}{\sqrt{3}}x}
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}
-راس \عددی{(\pm 3,0)} اور متقارب \عددی{y=\pm\tfrac{4}{3}x}\\
-جواب:\quad
-$\tfrac{x^2}{9}-\tfrac{y^2}{16}=1$
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_زائد_معلومات_سے_مساوات_ب}
-راس \عددی{(0,\pm 2)} اور متقارب \عددی{y=\pm\tfrac{1}{2}x}
-\انتہا{سوال}
-%========================
-\begin{figure}
-\centering
-\begin{minipage}{0.22\textwidth}
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=1+1/8*(\x+2)^2;}]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={1,2,3},ytick={-4,-2,2}]
-\addplot[domain=-4:4]({f(x)},x)node[above left]{$(y+2)^2=8(x-1)$};
-\addplot[]plot coordinates {(1,-2)}node[circ]{}node[pin=-45:{$V(1,-2)$}]{}  {(3,-2)}node[circ]{}node[right]{$F(3,-2)$};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_ہر_قسم_الف}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\begin{tikzpicture}[font=\tiny,declare function={fp(\x)=3+3/4*sqrt(16-(\x-4)^2);fn(\x)=3-3/4*sqrt(16-(\x-4)^2);}]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={4,8},ytick={6}]
-\addplot[domain=0.2:8-0.2]{fp(x)}node[pos=0.6,above]{$\tfrac{(x-4)^2}{16}+\tfrac{(y-3)^2}{9}=1$};
-\addplot[domain=0.2:8-0.2]{fn(x)};
-\addplot[domain=0:0.2]{fp(x)};
-\addplot[domain=7.8:8]{fp(x)};
-\addplot[domain=0:0.2]{fn(x)};
-\addplot[domain=7.8:8]{fn(x)};
-\addplot[]plot coordinates {(4-sqrt(7),3)}node[circ]{}node[pin={[pin distance=0.15cm]80:{$F_1(4-\sqrt{7},3)$}}]{};
-\addplot[]plot coordinates {(4+sqrt(7),3)}node[circ]{}node[pin={[pin distance=0.15cm]-110:{$F_2(4+\sqrt{7},3)$}}]{};
-\addplot[]plot coordinates {(4,3)}node[circ]{}node[above,xshift=2ex]{$C(4,3)$};
-\addplot[]plot coordinates {(0,3)}node[circ]{}node[left]{$(0,3)$};
-\addplot[]plot coordinates {(8,3)}node[circ]{}node[right]{$(8,3)$};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_ہر_قسم_ب}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\begin{tikzpicture}[font=\tiny,declare function={fp(\x)=2+4/3*sqrt(9+(\x)^2);fn(\x)=2-4/3*sqrt(9+(\x)^2);fa(\x)=3/4*(\x-2);}]
-\pgfmathsetmacro{\k}{5}
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={\empty},ytick={\empty}]
-\addplot[domain=-\k:\k]({fp(x)},x)node[above]{$\tfrac{(x-2)^2}{16}-\tfrac{y^2}{9}=1$};
-\addplot[domain=-\k:\k]({fn(x)},x);
-\addplot[dashed,domain=-5:9]{fa(x)};
-\addplot[dashed,domain=-5:9]{-fa(x)}node[pos=0,above,xshift={-1ex}]{$y=-\tfrac{3}{4}(x-2)$};
-\addplot[]plot coordinates {(-3,0)}node[circ]{}node[above left]{$(-3,0)$};
-\addplot[]plot coordinates {(7,0)}node[circ]{}node[above right]{$(7,0)$};
-\addplot[]plot coordinates {(-2,0)}node[circ]{}node[pin=-135:{$(-2,0)$}]{};
-\addplot[]plot coordinates {(6,0)}node[circ]{}node[pin=-45:{$(6,0)$}]{};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_ہر_قسم_پ}
-\end{minipage}
-\end{figure}
-%=====================
-\موٹا{مخروطی حصوں کا انتقال}\\
-\ابتدا{سوال}\شناخت{سوال_مخروط_ہر_قسم_الف}
-قطع مکافی \عددی{y^2=8x} کو \عددی{2} اکائیاں نیچے اور \عددی{1} اکائی دائیں منتقل کر کے قطع مکافی  \عددی{(y+2)^2=8(x-1)} پیدا کیا جاتا ہے۔ (الف) نئے قطع مکافی کے راس، ماسکہ اور ناظمہ دریافت کریں۔ (ب) نئے راس، ماسکہ اور ناظمہ کو ترسیم کرتے ہوئے نئے قطع مکافی کا خاکہ بنائیں۔\\
-جواب:\quad
-(الف) راس \عددی{(1,-2)}، ماسکہ \عددی{(3,-2)}، ناظمہ \عددی{x=-1}؛ (ب) شکل \حوالہ{شکل_سوال_مخروط_ہر_قسم_الف}
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-قطع مکافی \عددی{x^2=-4y} کو \عددی{1} اکائی بائیں اور \عددی{3} اکائیاں اوپر منتقل کر کے قطع مکافی \عددی{(x+1)^2=-4(y-3)} پیدا کیا جاتا ہے۔   (الف) نئے قطع مکافی کا راس، ماسکہ اور ناظمہ دریافت کریں۔ (ب) نئے راس، ماسکہ اور ناظمہ کو ترسیم کرتے ہوئے نئے قطع مکافی کا خاکہ بنائیں۔
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_ہر_قسم_ب}
-ترخیم \عددی{\tfrac{x^2}{16}+\tfrac{y^2}{9}=1} کو \عددی{4} اکائیاں دائیں اور \عددی{3} اکائیاں اوپر منتقل کر کے ترخیم \عددی{\tfrac{(x-4)^2}{16}+\tfrac{(y-3)^2}{9}=1} پیدا کیا جاتا ہے۔ (الف) نئے ترخیم کے ماسکے، راس اور مرکز دریافت کریں۔ (ب) نئے ماسکے، راس اور مرکز ترسیم کرتے ہوئے نئے ترخیم کا خاکہ بنائیں۔\\
-جواب:\quad
-(الف) ماسکے \عددی{(4\pm\sqrt{7},3)}، راس \عددی{(8,3)} اور \عددی{(0,3)}، مرکز \عددی{(4,3)}؛ (ب) شکل \حوالہ{شکل_سوال_مخروط_ہر_قسم_ب}
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-ترخیم \عددی{\tfrac{x^2}{9}+\tfrac{y^2}{25}=1} کو \عددی{3} اکائیاں بائیں اور \عددی{2} اکائیاں نیچے منتقل کر کے
- ترخیم \عددی{\tfrac{(x+3)^2}{9}+\tfrac{(y+2)^2}{25}=1} پیدا کیا جاتا ہے۔ (الف) نئے ترخیم کے ماسکے، راس اور مرکز دریافت کریں۔ (ب) نئے ماسکے، راس اور مرکز ترسیم کرتے ہوئے نئے ترخیم کا خاکہ بنائیں۔
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_ہر_قسم_پ}
-قطع زائد \عددی{\tfrac{x^2}{16}-\tfrac{y^2}{9}=1} کو \عددی{2} اکائیاں دائیں منتقل کر کے قطع زائد
- \عددی{\tfrac{(x-2)^2}{16}-\tfrac{y^2}{9}=1} پیدا کیا جاتا ہے۔ (الف) نئے قطع زائد کا مرکز، ماسکے، راس اور متقارب دریافت کریں۔ (ب) نئے مرکز، ماسکے، راس اور متقارب ترسیم کرتے ہوئے نئے قطع زائد کا خاکہ بنائیں۔\\
-جواب:\quad
-(الف) مرکز \عددی{(2,0)}، ماسکے \عددی{(7,0)} اور \عددی{(-3,0)}، راس \عددی{(6,0)} اور \عددی{(-2,0)}،\\
- متقارب \عددی{y=\pm\tfrac{3}{4}(x-2)}؛  (ب) شکل \حوالہ{شکل_سوال_مخروط_ہر_قسم_پ}
-\انتہا{سوال}
-%======================
-\ابتدا{سوال}
-قطع زائد \عددی{\tfrac{y^2}{4}-\tfrac{x^2}{5}=1} کو \عددی{2} اکائیاں نیچے منتقل کرتے ہوئے قطع زائد \عددی{\tfrac{(y+2)^2}{4}-\tfrac{x^2}{5}=1} پیدا کیا جاتا ہے۔ (الف) نئے قطع زائد کا مرکز، ماسکے اور متقارب دریافت کریں۔ (ب) نیا مرکز، ماسکے اور متقارب ترسیم کر کے نئے قطع زائد کا خاکہ بنائیں۔
-\انتہا{سوال}
-%===================
-
-سوال \حوالہ{سوال_مخروط_قطع_مکافی_منتقل_الف} تا سوال \حوالہ{سوال_مخروط_قطع_مکافی_منتقل_ب} میں قطع مکافی کی مساوات اور اس کی منتقلی کی معلومات دی گئی ہے۔ نئے قطع مکافی کی مساوات تلاش کر کے نئے قطع مکافی کا راس، ماسکہ اور ناظمہ معلوم کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_مکافی_منتقل_الف}
-\عددی{y^2=4x}، 
-\quad
-\عددی{2} اکائیاں بائیں اور \عددی{3} اکائیاں  نیچے۔\\
-جواب:\quad
-\عددی{(y+3)^2=4(x+2)}، راس \عددی{V(-2,-3)}، ماسکہ \عددی{F(-1,-3)}، ناظمہ \عددی{x=-3}
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-\عددی{y^2=-12x}، 
-\quad
-\عددی{4} اکائیاں دائیں اور \عددی{3} اکائیاں  اوپر۔
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-\عددی{x^2=8y}، 
-\quad
-\عددی{1} اکائی دائیں اور \عددی{7} اکائیاں  نیچے۔\\
-جواب:\quad
-\عددی{(x-1)^2=8(y+7)}، راس \عددی{V(1,-7)}، ماسکہ \عددی{F(1,-5)}، ناظمہ \عددی{y=-9}
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_مکافی_منتقل_ب}
-\عددی{x^2=6y}، 
-\quad
-\عددی{3} اکائیاں بائیں اور \عددی{2} اکائیاں  نیچے۔
-\انتہا{سوال}
-%=====================
-
-سوال \حوالہ{سوال_مخروط_ترخیم_منتقل_الف} تا سوال \حوالہ{سوال_مخروط_ترخیم_منتقل_ب} میں ترخیم کی مساوات اور اس کی منتقلی کی معلومات دی گئی ہے۔ نئے ترخیم کی مساوات تلاش کر کے نئے ترخیم کے ماسکے، راس اور مرکز معلوم کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_منتقل_الف}
-\عددی{\tfrac{x^2}{6}+\tfrac{y^2}{9}=1}، 
-\quad
-\عددی{2} اکائیاں بائیں اور \عددی{1} اکائی نیچے۔\\
-جواب:\quad
-\عددی{\tfrac{(x+2)^2}{6}+\tfrac{(y+1)^2}{9}=1}، \عددی{F(-2,\pm\sqrt{3}-1)}، \عددی{V(-2,\pm 3-1)}، \عددی{C(-2,-1)}
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-\عددی{\tfrac{x^2}{2}+y^2=1}، 
-\quad
-\عددی{3} اکائیاں دائیں اور \عددی{4} اکائیاں اوپر۔
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-\عددی{\tfrac{x^2}{3}+\tfrac{y^2}{2}=1}، 
-\quad
-\عددی{2} اکائیاں دائیں اور \عددی{3} اکائیاں اوپر۔\\
-جواب:\quad
-\عددی{\tfrac{(x-2)^2}{3}+\tfrac{(y-3)^2}{2}=1}، \عددی{F(3,3)} اور \عددی{F(1,3)}، \عددی{V(\pm\sqrt{3}+2,3)}، \عددی{C(2,3)}
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_منتقل_ب}
-\عددی{\tfrac{x^2}{16}+\tfrac{y^2}{25}=1}، 
-\quad
-\عددی{43} اکائیاں بائیں اور \عددی{5} اکائیاں نیچے۔
-\انتہا{سوال}
-%=====================
-
-
-سوال \حوالہ{سوال_مخروط_قطع_زائد_منتقل_الف} تا سوال \حوالہ{سوال_مخروط_قطع_زائد_منتقل_ب} میں قطع زائد کی مساوات اور اس کی منتقلی کی معلومات دی گئی ہے۔ نئے قطع زائد کی مساوات تلاش کر کے نئے قطع زائد کا مرکز، ماسکے، راس اور متقارب معلوم کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_زائد_منتقل_الف}
-$\tfrac{x^2}{4}-\tfrac{y^2}{5}=1$\quad
-دائیں \عددی{2} اکائیاں اور اوپر \عددی{2} اکائیاں۔\\
-جواب:\quad
-\عددی{\tfrac{(x-2)^2}{4}-\tfrac{(y-2)^2}{5}=1}، \عددی{C(2,2)}، \عددی{F(5,2)} اور \عددی{F(-1,2)}، \عددی{V(4,2)} اور \عددی{V(0,2)}، متقارب \عددی{y-2=\pm\tfrac{\sqrt{5}}{2}(x-2)}
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$\tfrac{x^2}{16}-\tfrac{y^2}{9}=1$\quad
-بائیں \عددی{5} اکائیاں اور نیچے \عددی{1} اکائی۔
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$y^2-x^2=1$\quad
-بائیں \عددی{1} اکائی اور نیچے \عددی{1} اکائی۔\\
-جواب:\quad
-\عددی{(y+1)^2-(x+1)^2=1}، \عددی{C(-1,-1)}، \عددی{F(-1,\sqrt{2}-1)} اور \عددی{F(-1,-\sqrt{2}-1)}، \عددی{V(-1,0)}، \عددی{V(-1,-2)}، متقارب \عددی{y+1=\pm(x+1)}
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_زائد_منتقل_ب}
-$\tfrac{y^2}{3}-x^2=1$\quad
-دائیں \عددی{1} اکائی اور اوپر \عددی{3} اکائیاں۔
-\انتہا{سوال}
-%=======================
-
-سوال \حوالہ{سوال_مخروط_مساوات_منتقلی_الف} تا سوال \حوالہ{سوال_مخروط_مساوات_منتقلی_ب} میں دیے گئے مخروط حصوں کا (جیسا مناسب ہو) مرکز، ماسکے، راس، متقارب اور رداس دریافت کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_مساوات_منتقلی_الف}
-$x^2+4x+y^2=12$\\
-جواب:\quad 
-\عددی{C(-2,0)}، \عددی{a=4}
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-$2x^2+2y^2-28x+12y+144$
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-$x^2+2x+4y-3=0$\\
-جواب:\quad
-\عددی{V(-1,1)}، \عددی{F(-1,0)}
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-$y^2-4y-8x-12=0$
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-$x^2+5y^2+4x=1$\\
-جواب:\quad
-ترخیم \عددی{\tfrac{(x+2)^2}{5}+y^2=1}، \عددی{C(-2,0)}، \عددی{F(0,0)} اور \عددی{F(-4,0)}، \عددی{V(\sqrt{5}-2,0)} اور \عددی{V(-\sqrt{5}-2,0)}
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-$9x^2+6y^2+36y=0$
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-$x^2+2y^2-2x-4y=-1$\\
-جواب:\quad
-ترخیم \عددی{\tfrac{(x-1)^2}{5}+(y-1)^2=1}، \عددی{C(1,1)}، \عددی{F(2,1)} اور \عددی{F(0,1)}، \عددی{V(\sqrt{2}+1,1)} اور 
-\عددی{V(-\sqrt{2}+1,1)}
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-$4x^2+y^2+8x-2y=-1$
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-$x^2-y^2-2x+4y=4$\\
-جواب:\quad
-قطع زائد \عددی{(x-1)^2-(y-2)^2=1}، \عددی{C(1,2)}، \عددی{F(1+\sqrt{2},2)} اور \عددی{F(1-\sqrt{2},2)}، \عددی{V(2,2)} اور \عددی{V(0,2)}، متقارب \عددی{y-2=\pm(x-1)}
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-$x^2-y^2+4x-6y=6$
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-$2x^2-y^2+6y=3$\\
-جواب:\quad
-قطع زائد، \عددی{\tfrac{(y-3)^2}{6}-\tfrac{x^2}{3}=1}، \عددی{C(0,3)}، \عددی{F(0,6)} اور \عددی{F(0,0)}، \عددی{V(0,\sqrt{6}+3)} اور \عددی{V(0,-\sqrt{6}+3)}، متقارب \عددی{y=\sqrt{2}x+3} اور \عددی{y=-\sqrt{2}x+3}
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_مساوات_منتقلی_ب}
-$y^2-4x^2+16x=24$
-\انتہا{سوال}
-%====================
-
-\موٹا{عدم مساوات}\\
-سوال \حوالہ{سوال_مخروط_خطے_الف} تا سوال \حوالہ{سوال_مخروط_خطے_ت} میں ایک خطہ کو مطمئن کرنے والی  عدم مساوات یا عدم مساوات کی جوڑی  دی گئی ہے۔ \عددی{xy} مستوی میں اس خطہ کو ترسیم کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_خطے_الف}
-$9x^2+16y^2\le 144$\\
-جواب:\quad
-ترسیم شکل \حوالہ{شکل_سوال_مخروط_خطے_الف} میں دی گئی ہے۔
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}
-$x^2+y^2\ge 1\quad\text{اور}\quad  4x^2+y^2\le 4$
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}\شناخت{سوال_مخروط_خطے_ب}
-$x^2+4y^2\ge 4\quad\text{اور}\quad 4x^2+9y^2\le 36$\\
-جواب:\quad
-ترسیم شکل \حوالہ{شکل_سوال_مخروط_خطے_ب} میں دی گئی ہے۔
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}
-$(x^2+y^2-4)(x^2+9y^2-9)\le 0$
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}\شناخت{سوال_مخروط_خطے_پ}
-$4y^2-x^2\ge 4$\\
-جواب:\quad
-ترسیم شکل \حوالہ{شکل_سوال_مخروط_خطے_پ} میں دی گئی ہے۔
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}\شناخت{سوال_مخروط_خطے_ت}
-$\abs{x^2-y^2}\le 1$
-\انتہا{سوال}
-%========================
-%========================
-\begin{figure}
-\centering
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=1/4*sqrt(144-9*(\x)^2);}]
-\begin{axis}[axis on top=true,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={4},ytick={3}]
-\addplot[name path=a,domain=-4+0.2:4-0.2]{f(x)}node[pos=0.75,above right]{$9x^2+16y^2\le 144$};
-\addplot[name path=aa,domain=-4+0.2:4-0.2]{-f(x)};
-\addplot[name path=b,domain=-4:-4+0.2]{f(x)};
-\addplot[name path=c,domain=4-0.2:4]{f(x)};
-\addplot[name path=bb,domain=-4:-4+0.2]{-f(x)};
-\addplot[name path=cc,domain=4-0.2:4]{-f(x)};
-\addplot[llgray] fill between [of={a and aa}];
-\addplot[llgray] fill between [of={b and bb}];
-\addplot[llgray] fill between [of={c and cc}];
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_خطے_الف}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={fa(\x)=1/4*sqrt(4-(\x)^2);fb(\x)=1/3*sqrt(36-4*(\x)^2);}]
-\pgfmathsetmacro{\k}{2}
-\pgfmathsetmacro{\kk}{3}
-\begin{axis}[axis on top=true,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={3},ytick={3}]
-\addplot[name path=a,domain=-\kk+0.2:\kk-0.2]{fb(x)}node[pos=0.75,above right]{$4x^2+9y^2\le 36$}node[pos=0.25,above left]{$x^2+4y^2\ge 4$};
-\addplot[name path=aa,domain=-\kk+0.2:\kk-0.2]{-fb(x)};
-\addplot[name path=b,domain=-\kk:-\kk+0.2]{fb(x)};
-\addplot[name path=c,domain=\kk-0.2:\kk]{fb(x)};
-\addplot[name path=bb,domain=-\kk:-\kk+0.2]{-fb(x)};
-\addplot[name path=cc,domain=\kk-0.2:\kk]{-fb(x)};
-\addplot[llgray] fill between [of={a and aa}];
-\addplot[llgray] fill between [of={b and bb}];
-\addplot[llgray] fill between [of={c and cc}];
-\addplot[name path=a,domain=-\k+0.2:\k-0.2]{fa(x)};
-\addplot[name path=aa,domain=-\k+0.2:\k-0.2]{-fa(x)};
-\addplot[name path=b,domain=-\k:-\k+0.2]{fa(x)};
-\addplot[name path=c,domain=\k-0.2:\k]{fa(x)};
-\addplot[name path=bb,domain=-\k:-\k+0.2]{-fa(x)};
-\addplot[name path=cc,domain=\k-0.2:\k]{-fa(x)};
-\addplot[white] fill between [of={a and aa}];
-\addplot[white] fill between [of={b and bb}];
-\addplot[white] fill between [of={c and cc}];
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_خطے_ب}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=1/2*sqrt(4+(\x)^2);}]
-\begin{axis}[axis on top=true,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true]
-\addplot[name path=a,domain=-4:4]{f(x)}node[pos=0.85,below]{$4y^2-x^2\ge 4$};
-\addplot[name path=aa,domain=-4:4]{-f(x)};
-\addplot[name path=t,draw=none] plot coordinates {(-4,3)(4,3)};
-\addplot[name path=b,draw=none] plot coordinates {(-4,-3)(4,-3)};
-\addplot[llgray] fill between [of={t and b}];
-\addplot[white] fill between [of={a and aa}];
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_خطے_پ}
-\end{minipage}
-\end{figure}
-
-\موٹا{نظریہ اور مثالیں}
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_مکافی_حجم}\ترچھا{قطع مکافی ٹھوس جسم کے حجم کا کلیہ آرشمیدسی }\\
-قطع مکافی \عددی{y=\tfrac{4h}{b^2}x^2} اور لکیر \عددی{y=h} میں  گھیرے ہوئے خطے کو \عددی{y} محور کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔ دکھائیں کہ اس جسم کا حجم مطابقتی مخروط کے حجم کا\عددی{\tfrac{3}{2}} گنّا ہو گا (شکل \حوالہ{شکل_سوال_مخروط_قطع_مکافی_حجم})۔ 
-\انتہا{سوال}
-%=======================
-
-
-\begin{figure}
-\centering
-\begin{minipage}{0.45\textwidth}
-\centering
-\begin{tikzpicture}[yscale=0.75,declare function={f(\x)=\x^2;}]
-\draw[-latex](0,0)--(2.5,0)node[right]{$x$};
-\draw[-latex](0,{f(2)})--++(0,0.75)node[above]{$y$};
-\draw[thick,domain=0:2]plot ({\x},{f(\x)});
-\draw[domain=0:2]plot ({-\x},{f(\x)});
-\draw (0,4)circle (2cm and 0.25cm);
-\draw(-2,4)--(0,0)--(2,4)coordinate[pos=0.5](ka);
-\draw(ka)node[pin={[pin distance=1cm]30:{مخروط}}]{};
-\draw(1.25,{f(1.25)})node[right]{$y=\frac{4h}{b^2}x^2$};
-\draw(2,{f(2)})node[right]{$(\tfrac{b}{2},h)$};
-\end{tikzpicture}
-\caption{جسم طواف برائے سوال \حوالہ{سوال_مخروط_قطع_مکافی_حجم}}
-\label{شکل_سوال_مخروط_قطع_مکافی_حجم}
-\end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
-\centering
-\begin{tikzpicture}[declare function={f(\x)=sqrt(\x);}]
-\begin{axis}[clip=false,small, axis lines=middle,xtick={\empty},ytick={\empty},xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel={$y$},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true]
-\addplot[domain=0:0.5]{f(x)};
-\addplot[domain=0.5:4]{f(x)}node[pos=0.5,below right]{$y^2=kx$};
-\addplot[]plot coordinates {(3.75,{f(3.75)})}node[circ]{}node[below right]{$N$};
-\addplot[]plot coordinates {(3.75,{f(3.75)})(3.75,0)};
-\addplot[]plot coordinates {(3.75,{f(3.75)})(0,{f(3.75)})};
-\addplot[]plot coordinates {(2,0.75)}node[]{$B$}  {(1,1.5)}node[]{$A$};
-\end{axis}
-\end{tikzpicture}
-\caption{خطے برائے سوال \حوالہ{سوال_مخلوط_قطع_مکافی_خطے}}
-\label{شکل_سوال_مخلوط_قطع_مکافی_خطے}
-\end{minipage}
-\end{figure}
-
-\ابتدا{سوال}\ترچھا{معلق پل کی رسیاں قطع مکافی کی صورت میں لٹکی ہوتی ہیں۔}\\
-ایک معلق پل کی کمیت \عددی{m} کلو گرام فی میٹر ہے۔ اس پل کو رسیوں سے لٹکایا گیا ہے۔ اگر مبدا پر رسی کا افقی تناو \عددی{H} ہو تب رسی کی منحنی درج ذیل مساوات کو مطمئن کرتی ہے جہاں \عددی{g=\SI{9.8}{\meter\per\second\squared}} ہے۔
-\begin{align*}
-\frac{\dif y}{\dif x}=\frac{mg}{H}x
-\end{align*}
-اس تفرقی مساوات کو حل کرتے ہوئے دکھائیں کہ رسی کی منحنی کی مساوات ایک قطع مکافی ہے۔ \عددی{x=0} پر \عددی{y=0} ابتدائی معلومات ہے۔
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}
-نقاط \عددی{(1,0)}، \عددی{(0,1)} اور \عددی{(2,2)} سے گزرتے دائرے کی مساوات دریافت کریں۔\\
-جواب:\quad
-$3x^2+3y^2-7x-7y+4=0$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-نقاط \عددی{(2,3)}، \عددی{(3,2)} اور \عددی{(-4,3)} سے گزرتے دائرے کی مساوات دریافت کریں۔
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-ایک دائرہ جس کا مرکز \عددی{(-2,1)} پر ہے نقطہ \عددی{(1,3)} سے گزرتا ہے۔  کیا نقطہ \عددی{(1.1,2.8)} اس دائرے پر، اس کے اندر یا اس کے باہر پایا جاتا ہے؟\\
-جواب:\quad
-$(x+2)^2+(y-1)^2=13$\quad
-نقطہ دائرے کے اندر ہے۔ 
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-جہاں دائرہ \عددی{(x-2)^2+(y-1)^2=5} محددی محوروں کو قطع کرتا ہے وہاں اس دائرے کے مماس معلوم کریں۔ 
-\انتہا{سوال}
-%===================
-\ابتدا{سوال}\شناخت{سوال_مخلوط_قطع_مکافی_خطے}
-قطع مکافی \عددی{y^2=kx,\, k>0} پر نقطہ \عددی{N} سے محددی محور کے متوازی لکیریں کھینچی جاتی ہیں۔ ان لکیروں اور محددی محوروں کے کے بیچ مستطیل خطہ کو قطع مکافی دو حصوں \عددی{A} اور \عددی{B} میں تقسیم کرتا ہے (شکل \حوالہ{شکل_سوال_مخلوط_قطع_مکافی_خطے})۔ (الف) دکھائیں کہ ان خطوں کو \عددی{y} محور کے گرد گھما کر حاصل اجسام طواف کے حجم کی نسبت \عددی{4:1} ہے۔ (ب) ان خطوں کو \عددی{x} محور کے گرد گھما کر حاصل اجسام طواف کے حجم کی نسبت کیا ہو گی؟\\
-جواب:\quad
-(ب)\عددی{1:1}
-\انتہا{سوال}
-%===================
-\ابتدا{سوال}
-دکھائیں کہ لکیر \عددی{x=-p} پر  کسی بھی نقطہ سے منحنی \عددی{y^2=4px} پر دو مماس، آپس میں عمودی ہوں گے۔  
-\انتہا{سوال}
-%=================
-\ابتدا{سوال}
-ترخیم \عددی{x^2+4y^2=4} میں محصور زیادہ سے زیادہ رقبے کے مستطیل کے اضلاع معلوم کریں۔مستطیل کے اضلاع محددی محور کے متوازی ہیں۔ \\
-جواب:\quad
-لمبائی \عددی{2\sqrt{2}}، چوڑائی \عددی{\sqrt{2}}، رقبہ \عددی{4}
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-ترخیم \عددی{9x^2+4y^2=36} کو (الف) \عددی{x} محور، (ب) \عددی{y} محور کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔ اس کا حجم معلوم کریں۔
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-ربع اول میں \عددی{x} محور، لکیر \عددی{x=4} اور قطع زائد \عددی{9x^2-4y^2=36} کے بیچ تکونی خطہ کو \عددی{x} محور کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔  اس جسم کا حجم تلاش کریں۔\\
-جواب:\quad
-\عددی{24\pi}
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-ایک خطہ کا بایاں سرحد محور \عددی{y}، دایاں سرحد قطع زائد \عددی{x^2-y^2=1}  جبکہ اس کا نچلا اور بالائی سرحد لکیر \عددی{y=\pm 3} ہیں۔ اس خطہ کو \عددی{y} محور کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔ اس جسم کا حجم تلاش کریں۔ 
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-محور \عددی{x} کے بالائی اور ترخیم \عددی{\tfrac{x^2}{9}+\tfrac{y^2}{16}=1} کے نیچے  خطے کا وسطانی مرکز تلاش کریں۔\\
-جواب:\quad
-\عددی{(0,\tfrac{16}{3\pi})}
-\انتہا{سوال}
-%================
-\ابتدا{سوال}
-قطع زائد \عددی{y^2-x^2=1} کے بالائی شاخ \عددی{y=\sqrt{x^2+1},\, 0\le x\le \sqrt{2}} کو \عددی{x} محور کر گرد گھما کر سطح طواف پیدا کیا جاتا ہے۔ اس سطح کا رقبہ تلاش کریں۔
-\انتہا{سوال}
-%==================
-\ابتدا{سوال}\شناخت{سوال_مخروط_امواج}
-پانی کی سطح کو پہلے \عددی{A} اور بعد میں \عددی{B} پر چھو کر شکل \حوالہ{شکل_سوال_مخروط_امواج} میں دکھائے گئے امواج پیدا کئے گئے۔ جیسے جیسے یہ امواج پھیلتے ہیں، ان کا نقطہ قطع ایک منحنی بناتا ہے جو قطع زائد کی طرح معلوم ہوتا ہے۔ کیا ایسا حقیقتاً ہو گا؟  یہ جاننے کے کئے ہم \عددی{A} اور \عددی{B} پر مرکز دائروں کو امواج کا نمونہ لے سکتے ہیں۔
-
-لمحہ \عددی{t} پر نقطہ \عددی{N} مرکز \عددی{A} سے \عددی{r_A(t)}  اور \عددی{B} سے \عددی{r_B(t)} فاصلہ پر ہو گا۔ چونکہ دائروں کے رداس ایک مستقل رفتار (موج کی رفتار) سے بڑھتے ہیں لہٰذا \عددی{\tfrac{\dif r_A}{\dif t}=\tfrac{\dif r_B}{\dif t}} ہو گا۔ اس سے اخذ کریں کہ
- \عددی{r_A-r_B} ایک مستقل ہو گا لہٰذا \عددی{N} اس قطع زائد پر پایا جائے گا جس کے ماسکہ \عددی{A} اور \عددی{B} ہیں۔
-\انتہا{سوال}
-%============
-\begin{figure}
-\centering
-\begin{minipage}{0.45\textwidth}
+\begin{subfigure}{0.3\textwidth}
 \centering
 \begin{tikzpicture}
-\draw[name path=a] (0,0)node[circ]{}node[below]{$A$} circle (1.5);
-\draw[name path=b] (0.75,0)node[circ]{}node[below]{$B$} circle (1.25);
-\draw[name intersections={of={a and b}}](0,0)--(intersection-1)node[circ]{}node[above]{$N(t)$}node[pos=0.5,shift={(-1ex,1ex)},font=\scriptsize]{$r_A(t)$};
-\draw(0.75,0)--(intersection-1)node[pos=0.4,xshift=1ex,,fill=white,font=\scriptsize]{$r_B(t)$};
+\draw(-2,0)--(2,0);
+\draw(0,0)node[circ]{}node[below]{$F_1=F_2$} circle (1.5cm);
+\draw(1.5,0)node[circ]{}  (-1.5,0)node[circ]{};
+\draw(0,0.5)node[left,xshift=-2ex]{$c=0$}node[right,xshift=2ex]{$e=0$};
 \end{tikzpicture}
-\caption{امواج برائے سوال \حوالہ{سوال_مخروط_امواج}}
-\label{شکل_سوال_مخروط_امواج}
-\end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
 \centering
-\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(\x);ft(\x)=1/2*(\x+1);}]
-\pgfmathsetmacro{\B}{atan(0.5)}
-\pgfmathsetmacro{\P}{atan(1/0.75)}
-\pgfmathsetmacro{\D}{\P-\B}
-\draw[-latex](0,0)--(2,0)node[right]{$x$};
-\draw[-latex](0,0)--(0,1.5)node[above]{$y$};
-\draw[domain=0:2]plot (\x,{ft(\x)});
-\draw[domain=0.2:2]plot (\x,{f(\x)});
-\draw[domain=0:0.2]plot(\x,{f(\x)});
-\draw[domain=0:0.2]plot(\x,{-f(\x)});
-\draw[domain=0.2:2]plot (\x,{-f(\x)});
-\draw[]plot coordinates {(0.25,0)(1,{f(1)})};
-\draw[]plot coordinates {(0,{f(1)})(2,{f(1)})}node[right]{$L'$};
-\draw([shift={(0:0.7)}]1,1) arc (0:\B:0.7);
-\draw(1,1)++(0.9,0.15)node[]{$\beta$};
-\draw(1.75,{-f(1.25)})node[above]{$y^2=4px$};
-\draw(0.25,0)node[circ]{}node[below,xshift=2ex]{$F(p,0)$};
-\draw(1,1)node[above,xshift=-2ex]{$N(x_0,y_0)$};
-\draw(2,{ft(2)})node[above]{$L$};
-\draw(1,1)--(1,0)node[pos=0.5,right]{$y_0$};
-\draw([shift={(0:0.3)}]0.25,0) arc (0:\P:0.3);
-\draw(20:0.7)node[]{$\phi$};
-\draw([shift={(180:0.5)}]1,1) arc (180:180+\D:0.5);
-\draw(1,1)++(-0.6,-0.15)node[]{$\beta$};
-\draw([shift={(180+\B:0.7)}]1,1) arc (180+\B:180+2*\B:0.7);
-\draw(1,1)++(-0.6,-0.6)node[]{$\alpha$};
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{1.5}
+\pgfmathsetmacro{\b}{3/5*\a}
+\pgfmathsetmacro{\c}{sqrt(\a^2-\b^2)}
+\draw(-2,0)--(2,0);
+\draw(0,0)node[circ]{} circle (\a cm and \b cm);
+\draw(-\c,0)node[circ]{}node[below]{$F_1$};
+\draw(\c,0)node[circ]{}node[below,xshift={-0.25ex}]{$F_2$};
+\draw(1.5,0)node[circ]{}  (-1.5,0)node[circ]{};
+\draw(0,0.4)node[left,xshift=-0.5ex]{$c=\tfrac{4a}{5}$}node[right,xshift=0.5ex]{$e=\tfrac{4}{5}$};
 \end{tikzpicture}
-\caption{قطع مکافی میں انعکاس (سوال \حوالہ{سوال_مخروط_قطع_مکافی_انعکاس})}
-\label{شکل_سوال_مخروط_قطع_مکافی_انعکاس}
-\end{minipage}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{1.5}
+\pgfmathsetmacro{\b}{3/5*\a}
+\pgfmathsetmacro{\c}{sqrt(\a^2-\b^2)}
+\draw(-2,0)--(2,0);
+\draw(0,0)node[circ]{};
+\draw(-\a,0)node[circ]{}node[below]{$F_1$};
+\draw(\a,0)node[circ]{}node[below,xshift={-0.25ex}]{$F_2$};
+\draw(1.5,0)node[circ]{}  (-1.5,0)node[circ]{};
+\draw(0,0.4)node[left,xshift=-0.5ex]{$c=a$}node[right,xshift=0.5ex]{$e=1$};
+\end{tikzpicture}
+\end{subfigure}
+\caption{اگر \عددی{c} کو \عددی{0} سے بڑھا کر \عددی{a} کیا جائے تب ترخیم کی صورت دائرہ سے لکیر کی ہو جاتی ہے۔}
+\label{شکل_مخروط_تبدیلی_صورت_ترخیم}
 \end{figure}
 
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_مکافی_انعکاس}\ترچھا{قطع مکافی کے خواص انعکاس}\\
-قطع مکافی \عددی{y^2=4px} پر عمومی نقطہ \عددی{N(x_0,y_0)} کو شکل \حوالہ{شکل_سوال_مخروط_قطع_مکافی_انعکاس} میں دکھایا گیا ہے۔ نقطہ \عددی{N} پر لکیر \عددی{L} اس قطع مکافی کا مماس ہے۔ قطع مکافی کا ماسکہ \عددی{F(p,0)} ہے۔نقطہ \عددی{N} سے دائیں منعکس شعاع \عددی{L'}، محور \عددی{x} کے متوازی  ہے۔ ہم دکھاتے ہیں کہ \عددی{F} سے خارج، \عددی{N} پر پہنچتا شعاع انعکاس کے بعد \عددی{L'} کا ہم مکان ہو گا۔ یہ دکھانے کی خاطر ہم دکھاتے ہیں کہ \عددی{\beta=\alpha} ہو گا۔ اس مساوات کی تصدیق درج ذیل اقدام کے ذریعہ کریں۔
-\begin{enumerate}[a.]
-\item
-دکھائیں کہ \عددی{\tan \beta=\tfrac{2p}{y_0}} ہو گا۔
-\item
-دکھائیں کہ \عددی{\tan \phi=\tfrac{y_0}{x_0-p}} ہو گا۔
-\item
-درج ذیل مماثل
+\ابتدا{تعریف}
+ترخیم \عددی{\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}=1,\,\, (a>b)} کی \اصطلاح{سنک}\فرہنگ{سنک}\حاشیہب{eccentricity}\فرہنگ{eccentricity} درج ذیل ہے۔
 \begin{align*}
-\tan \alpha=\frac{\tan \phi-\tan\beta}{1+\tan\phi\tan\beta}
+e=\frac{c}{a}=\frac{\sqrt{a^2-b^2}}{a}
 \end{align*}
-استعمال کرتے ہوئے دکھائیں کہ \عددی{\tan\alpha=\tfrac{2p}{y_0}} ہو گا۔چونکہ \عددی{\alpha} اور \عددی{\beta} دونوں زاویہ حادہ ہیں لہٰذا
- \عددی{\tan\beta=\tan\alpha} یعنی \عددی{\beta=\alpha} ہو گا۔ 
-\end{enumerate}  
-\انتہا{سوال}
+\انتہا{تعریف}
+%==========
+
+نظام شمسی میں سورج کے گرد سیاروں کا مدار ترخیمی ہے۔  جیسا جدول \حوالہ{جدول_مخروط_سنک} میں ان مدار کی سنک سے دیکھا جا سکتا ہے  یہ زیادہ تر تقریباً دائری ہیں۔ پلوٹو کا مدار بہت سنکی ہے اور اس  کی سنک \عددی{e=0.21} ہے۔اسی طرح عطارہ کی سنک \عددی{0.21} ہے۔ نظام شمسی کے دیگر ارکان کے مدار مزید زیادہ سنکی ہیں۔مثال کے طور پر سیارچہ آئکارس  جو تقریباً \عددی{1.4} کلومیٹر چوڑا  اور سورج کے گرد \عددی{409} زمینی دنوں میں ایک چکر کاٹتا ہے کی سنک \عددی{0.83} ہے۔
+
+\begin{table}
+\caption{سورج کے گرد سیاروں کے مداروں کی سنک}
+\label{جدول_مخروط_سنک}
+\centering
+\begin{tabular}{lllllllll}
+\toprule
+عطارہ&زھرہ&زمین&مریخ&مشتری&زحل&یورانس&نیپچون&پلوٹو\\
+ $0.21$&$0.01$&$0.02$&$0.09$&$0.05$&$0.06$&$0.05$&$0.01$&$0.25$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\ابتدا{مثال}
+دم دار ستارہ ہالی کا مدار \عددی{36.18} فلکیاتی اکائیاں لمبا اور \عددی{9.12} فلکیاتی اکائیاں چوڑا ہے۔ فلکیاتی اکائی سے مراد زمین کے مدار کے نصف  اکبر محور کی لمبائی ہے جو \عددی{\num{149597870}} کلومیٹر ہے۔ اس کی سنک
+\begin{align*}
+e=\frac{\sqrt{a^2-b^2}}{a}=\frac{\sqrt{(36.18/2)^2+(9.12/2)^2}}{36.18/2}\approx 0.97
+\end{align*}
+\انتہا{مثال}
 %======================
+
+قطع مکافی کا ایک ماسکہ اور ایک ناظمہ ہوتے ہیں جبکہ ترخیم کے دو ماسکے اور دو ناظمہ ہوتے ہیں جو محور اکبر کے متوازی، مرکز سے \عددی{\tfrac{a}{e}} فاصلے پر ہوتے ہیں۔ قطع مکافی کی ایک خاصیت درج ذیل ہے
+\begin{align}\label{مساوات_مخروط_قطع_مکافی_خاصیت_الف}
+NF=1\cdot ND
+\end{align}
+یعنی ترخیم پر کسی بھی نقطہ \عددی{N} کا ماسکہ سے فاصلہ  اور \عددی{N} کا ناظمہ پر قریبی نقطہ \عددی{  D} سے  فاصلہ ایک جیسا ہو گا۔  ترخیم کے لئے یہ دکھایا جا سکتا ہے کہ  مساوات \حوالہ{مساوات_مخروط_قطع_مکافی_خاصیت_الف} کی جگہ درج ذیل ہو گا۔
+\begin{align}\label{مساوات_مخروط_ترخیم_خاصیت_الف}
+NF_1=e\cdot ND_1,\quad \quad NF_2=e\cdot ND_2
+\end{align}
+یہاں \عددی{e} سنک ہے، \عددی{N} ترخیم پر کوئی نقطہ ہے، \عددی{F_1} اور \عددی{F_2} ماسکے ہیں اور ناظمہ پر \عددی{N} کے قریب ترین نقطے   \عددی{D_1} اور \عددی{D_2}  ہیں۔
+
+مساوات \حوالہ{مساوات_مخروط_ترخیم_خاصیت_الف} کے دونوں اجزاء میں ماسکہ اور ناظمہ میں مطابقت لازمی ہے، یعنی، اگر ہم \عددی{N} سے \عددی{F_1} تک فاصلہ لیں تب ہم \عددی{N} سے ناظمہ تک فاصلہ لیتے ہوئے ترخیم کا وہ ناظمہ لیں گے جو ترخیم کے اسی ہاتھ ہو۔ ناظمہ \عددی{x=-\tfrac{a}{e}} اور ماسکہ \عددی{F_1(-c,0)} مطابقت رکھتے ہیں جبکہ ناظمہ \عددی{x=\tfrac{a}{e}} اور ناظمہ \عددی{F_2(c,0)} مطابقت رکھتے ہیں۔ 
+
+قطع زائد کی سنک بھی \عددی{e=\tfrac{c}{a}} ہے، البتہ اب \عددی{c} کی قیمت  \عددی{\sqrt{a^2+b^2}}  نا کہ \عددی{\sqrt{a^2-b^2}} ہو گی۔ مزید ترخیم کی سنک کے برعکس،  قطع زائد کی سنک ہر صورت \عددی{1} سے زیادہ ہو گی۔
+
+\ابتدا{تعریف}
+قطع زائد \عددی{\tfrac{x^2}{a^2}-\tfrac{y^2}{b^2}=1} کی سنک درج ذیل ہو گی۔
+\begin{align*}
+e=\frac{c}{a}=\frac{\sqrt{a^2+b^2}}{a}
+\end{align*}
+\انتہا{تعریف}
+%================
+
+ترخیم اور قطع زائد دونوں میں ماسکوں کے بیچ فاصلہ اور راس کے بیچ فاصلہ کا نسبت، سنک کے برابر ہو گا۔
+\begin{align*}
+\text{سنک}=\frac{\text{ماسکوں کے بیچ فاصلہ}}{\text{راس کے بیچ فاصلہ}}
+\end{align*}  
+
+ترخیم میں راس دور اور ماسکے قریب ہوتے ہیں اور ان کی نسبت \عددی{1} سے کم ہوتی ہے۔ قطع مکافی میں ماسکے دور اور راس قریب ہوتے ہیں لہٰذا سنک \عددی{1} سے زیادہ ہوتا ہے۔ 
+
+\ابتدا{مثال}
+ایک ترخیم کی سنک \عددی{0.8} اور ماسکے \عددی{(0,\pm 7)} ہیں۔ اس کے راس تلاش کریں۔
+
+حل:\quad
+چونکہ \عددی{e=\tfrac{c}{a}} ہے لہٰذا راس \عددی{(0,\pm a)} پر ہوں گے جہاں
+\begin{align*}
+a=\frac{c}{e}=\frac{7}{0.8}=8.75
+\end{align*}
+یعنی \عددی{(0,\pm 8.75)} ہو گا۔
+\انتہا{مثال}
+%==================
+\ابتدا{مثال}
+قطع زائد \عددی{9x^2-16y^2=144} کی سنک معلوم کریں۔
+
+حل:\quad
+ہم قطع زائد کی مساوات کے دونوں اطراف کو \عددی{144} سے تقسیم کر کے معیاری مساوات حاصل کرتے ہیں۔
+\begin{align*}
+\frac{9x^2}{144}-\frac{16y^2}{144}=1,\quad \implies \quad \frac{x^2}{16}-\frac{y^2}{9}=1
+\end{align*}
+یوں \عددی{a^2=16} اور \عددی{b^2=9} ہیں  لہٰذا \عددی{c=\sqrt{a^2+b^2}=\sqrt{16+9}=5} ہو گا جس سے درج ذیل ملتا ہے۔
+\begin{align*}
+e=\frac{c}{a}=\frac{5}{4}
+\end{align*}
+\انتہا{مثال}
+%=========================
+
+ترخیم کی طرح یہاں بھی دکھایا جا سکتا ہے کہ لکیریں \عددی{x=\pm \tfrac{a}{e}} قطع زائد کے ناظمہ ہوں گے، یعنی:
+\begin{align}\label{مساوات_مخروط_قطع_زائد_ناظمہ_ماسکہ_خاصیت}
+NF_1=e\cdot ND_1,\quad NF_2=e\cdot ND_2
+\end{align}
+یہاں قطع زائد پر \عددی{N} کوئی نقطہ ہے، \عددی{F_1} اور \عددی{F_2} ماسکے ہیں جبکہ  ناظمہ پر \عددی{N} کے قریب ترین نقطے  \عددی{D_1} اور \عددی{D_2} ہیں۔ 
+
+تصویر مکمل کرنے کی خاطر ہم قطع مکافی کی سنک کی تعریف \عددی{e=1} لیتے ہیں۔ مساوات \حوالہ{مساوات_مخروط_قطع_مکافی_خاصیت_الف} تا مساوات \حوالہ{مساوات_مخروط_قطع_زائد_ناظمہ_ماسکہ_خاصیت} کو یوں ایک ہی روپ \عددی{NF=e\cdot ND} میں لکھا جا سکتا ہے۔
+
+\ابتدا{تعریف}
+قطع مکافی کی سنک \عددی{e=1} ہے۔
+\انتہا{تعریف}
+%======================
+
+ماسکہ اور ناظمہ کی مساوات \عددی{NF=e\cdot ND}، قطع مکافی، ترخیم اور قطع زائد کو ایک دوسرے کے ساتھ ملاتا ہے۔ 
