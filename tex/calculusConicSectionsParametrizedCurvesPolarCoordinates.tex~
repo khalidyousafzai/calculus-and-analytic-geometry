@@ -637,7 +637,7 @@ y&=\pm \frac{2}{\sqrt{5}}x&&\text{متقارب}
 \addplot[->-=0.75]plot coordinates  {({f(\c)},-\c)(1.5,-\c)};
 \end{axis}
 \end{tikzpicture}
-\caption{قطع مکافی آئینہ کے ماسکہ سے نکلتا شعاع، انعکاس کے بعد محور کے متوازی ہو گا۔}
+\caption{قطع مکافی آئینہ کے ماسکہ سے نکلتا شعاع انعکاس کے بعد محور کے متوازی ہو گا۔}
 \label{شکل_مخروط_قطع_مکافی_آئینہ_خاصیت}
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}
@@ -1747,3 +1747,280 @@ $(x+2)^2+(y-1)^2=13$\quad
 \end{enumerate}  
 \انتہا{سوال}
 %======================
+
+\حصہ{سنک لے لحاظ سے مخروط حصوں کی جماعت بندی}ہم ہر مخروط حصہ کے ساتھ ایک عدد منسلک کر سکتے ہیں جس کو مخروط حصے کا سنک کہتے ہیں۔ سنک سے مخروط حصے کی قسم (دائرہ، ترخیم، قطع مکافی یا قطع زائد) معلوم کی جا سکتی ہے۔ ترخیم اور قطع زائد کی صورت میں یہ عدد مخروط کی عمومی جسامت کی معلومات بھی فراہم کرتا ہے۔
+
+\جزوحصہء{سنک}
+اگرچہ مرکز سے ماسکہ تک فاصلہ \عددی{c} درج ذیل مساوات میں نہیں پایا جاتا ہے
+\begin{align*}
+\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\quad (a>b)
+\end{align*}
+ترخیم کے لئے ہم \عددی{c} کو \عددی{c=\sqrt{a^2-b^2}} سے معلوم کر سکتے ہیں۔ اگر \عددی{a} کو مستقل رکھ کر \عددی{c} کو وقفہ \عددی{0\le c\le a} پر تبدیل کیا جائے تب حاصل ترخیم کی صورت  بھی تبدیل ہو گی (شکل \حوالہ{شکل_مخروط_تبدیلی_صورت_ترخیم})۔ اگر \عددی{c=0} (یعنی \عددی{a=b}) ہو تب یہ دائرہ ہو گا جبکہ \عددی{c} بڑھانے سے یہ چپٹا ہو گا۔ اگر \عددی{c=a} ہو تب راس اور ماسکے ایک دوسرے کے اوپر ہوں گے اور ترخیم ایک سیدھی لکیر کی صورت اختیار کرے گا۔
+
+ہم \عددی{c} اور \عددی{a} کی نسبت سے ترخیم کی صورت بیان کرتے ہیں۔ یہ نسبت ترخیم کی \اصطلاح{سنک} کہلاتی ہے۔
+\begin{figure}
+\centering
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\draw(-2,0)--(2,0);
+\draw(0,0)node[circ]{}node[below]{$F_1=F_2$} circle (1.5cm);
+\draw(1.5,0)node[circ]{}  (-1.5,0)node[circ]{};
+\draw(0,0.5)node[left,xshift=-2ex]{$c=0$}node[right,xshift=2ex]{$e=0$};
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{1.5}
+\pgfmathsetmacro{\b}{3/5*\a}
+\pgfmathsetmacro{\c}{sqrt(\a^2-\b^2)}
+\draw(-2,0)--(2,0);
+\draw(0,0)node[circ]{} circle (\a cm and \b cm);
+\draw(-\c,0)node[circ]{}node[below]{$F_1$};
+\draw(\c,0)node[circ]{}node[below,xshift={-0.25ex}]{$F_2$};
+\draw(1.5,0)node[circ]{}  (-1.5,0)node[circ]{};
+\draw(0,0.4)node[left,xshift=-0.5ex]{$c=\tfrac{4a}{5}$}node[right,xshift=0.5ex]{$e=\tfrac{4}{5}$};
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{1.5}
+\pgfmathsetmacro{\b}{3/5*\a}
+\pgfmathsetmacro{\c}{sqrt(\a^2-\b^2)}
+\draw(-2,0)--(2,0);
+\draw(0,0)node[circ]{};
+\draw(-\a,0)node[circ]{}node[below]{$F_1$};
+\draw(\a,0)node[circ]{}node[below,xshift={-0.25ex}]{$F_2$};
+\draw(1.5,0)node[circ]{}  (-1.5,0)node[circ]{};
+\draw(0,0.4)node[left,xshift=-0.5ex]{$c=a$}node[right,xshift=0.5ex]{$e=1$};
+\end{tikzpicture}
+\end{subfigure}
+\caption{اگر \عددی{c} کو \عددی{0} سے بڑھا کر \عددی{a} کیا جائے تب ترخیم کی صورت دائرہ سے لکیر کی ہو جاتی ہے۔}
+\label{شکل_مخروط_تبدیلی_صورت_ترخیم}
+\end{figure}
+
+\ابتدا{تعریف}
+ترخیم \عددی{\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}=1,\,\, (a>b)} کی \اصطلاح{سنک}\فرہنگ{سنک}\حاشیہب{eccentricity}\فرہنگ{eccentricity} درج ذیل ہے۔
+\begin{align*}
+e=\frac{c}{a}=\frac{\sqrt{a^2-b^2}}{a}
+\end{align*}
+\انتہا{تعریف}
+%==========
+
+نظام شمسی میں سورج کے گرد سیاروں کا مدار ترخیمی ہے۔  جیسا جدول \حوالہ{جدول_مخروط_سنک} میں ان مدار کی سنک سے دیکھا جا سکتا ہے  یہ زیادہ تر تقریباً دائری ہیں۔ پلوٹو کا مدار بہت سنکی ہے اور اس  کی سنک \عددی{e=0.21} ہے۔اسی طرح عطارہ کی سنک \عددی{0.21} ہے۔ نظام شمسی کے دیگر ارکان کے مدار مزید زیادہ سنکی ہیں۔مثال کے طور پر سیارچہ آئکارس  جو تقریباً \عددی{1.4} کلومیٹر چوڑا  اور سورج کے گرد \عددی{409} زمینی دنوں میں ایک چکر کاٹتا ہے کی سنک \عددی{0.83} ہے۔
+
+\begin{table}
+\caption{سورج کے گرد سیاروں کے مداروں کی سنک}
+\label{جدول_مخروط_سنک}
+\centering
+\begin{tabular}{lllllllll}
+\toprule
+عطارہ&زھرہ&زمین&مریخ&مشتری&زحل&یورانس&نیپچون&پلوٹو\\
+ $0.21$&$0.01$&$0.02$&$0.09$&$0.05$&$0.06$&$0.05$&$0.01$&$0.25$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\ابتدا{مثال}
+دم دار ستارہ ہالی کا مدار \عددی{36.18} فلکیاتی اکائیاں لمبا اور \عددی{9.12} فلکیاتی اکائیاں چوڑا ہے۔ فلکیاتی اکائی سے مراد زمین کے مدار کے نصف  اکبر محور کی لمبائی ہے جو \عددی{\num{149597870}} کلومیٹر ہے۔ اس کی سنک
+\begin{align*}
+e=\frac{\sqrt{a^2-b^2}}{a}=\frac{\sqrt{(36.18/2)^2+(9.12/2)^2}}{36.18/2}\approx 0.97
+\end{align*}
+\انتہا{مثال}
+%======================
+
+قطع مکافی کا ایک ماسکہ اور ایک ناظمہ ہوتے ہیں جبکہ ترخیم کے دو ماسکے اور دو ناظمہ ہوتے ہیں جو محور اکبر کے متوازی، مرکز سے \عددی{\tfrac{a}{e}} فاصلے پر ہوتے ہیں۔ قطع مکافی کی ایک خاصیت درج ذیل ہے
+\begin{align}\label{مساوات_مخروط_قطع_مکافی_خاصیت_الف}
+NF=1\cdot ND
+\end{align}
+یعنی ترخیم پر کسی بھی نقطہ \عددی{N} کا ماسکہ سے فاصلہ  اور \عددی{N} کا ناظمہ پر قریبی نقطہ \عددی{  D} سے  فاصلہ ایک جیسا ہو گا۔  ترخیم کے لئے یہ دکھایا جا سکتا ہے کہ  مساوات \حوالہ{مساوات_مخروط_قطع_مکافی_خاصیت_الف} کی جگہ درج ذیل ہو گا۔
+\begin{align}\label{مساوات_مخروط_ترخیم_خاصیت_الف}
+NF_1=e\cdot ND_1,\quad \quad NF_2=e\cdot ND_2
+\end{align}
+یہاں \عددی{e} سنک ہے، \عددی{N} ترخیم پر کوئی نقطہ ہے، \عددی{F_1} اور \عددی{F_2} ماسکے ہیں اور ناظمہ پر \عددی{N} کے قریب ترین نقطے   \عددی{D_1} اور \عددی{D_2}  ہیں (شکل \حوالہ{شکل_مخروط_مطابقتی_ناظمہ_ماسکہ})۔
+
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=1/2*sqrt(4-(\x)^2);}]
+\pgfmathsetmacro{\a}{2}
+\pgfmathsetmacro{\b}{1}
+\pgfmathsetmacro{\c}{sqrt(\a^2-\b^2)}
+\pgfmathsetmacro{\e}{\c/\a}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={\empty},ytick={\empty}]
+\addplot[domain=-2+0.2:2-0.2]{f(x)};
+\addplot[domain=-2+0.2:2-0.2]{-f(x)};
+\addplot[domain=-2:-2+0.2]{f(x)};
+\addplot[domain=2-0.2:2]{f(x)};
+\addplot[domain=-2:-2+0.2]{-f(x)};
+\addplot[domain=2-0.2:2]{-f(x)};
+\addplot[]plot coordinates {(-\c,0)}node[circ]{}node[shift={(3.5ex,1.5ex)},font=\scriptsize]{$F_1(-c,0)$};
+\addplot[]plot coordinates {(\c,0)}node[circ]{}node[shift={(-3ex,1.5ex)},font=\scriptsize]{$F_2(c,0)$};
+\addplot[]plot coordinates {(0,\b)}node[above left]{$b$} {(0,-\b)}node[below left]{$-b$};
+\addplot[]plot coordinates {({-\a/\e},-3.2)({-\a/\e},2)}node[above]{$x=-\frac{a}{e}$}node[above,yshift=4ex]{\RL{ناظمہ 1}};
+\addplot[]plot coordinates {({\a/\e},-3.2)({\a/\e},2)}node[above]{$x=\frac{a}{e}$}node[above, yshift=4ex]{\RL{ناظمہ 2}};
+\addplot[]plot coordinates {(-\c,0) (-1.5,{-f(-1.5)})}node[circ]{}node[below]{$N(x,y)$};
+\addplot[thick]plot coordinates {(-1.5,{-f(-1.5)})({-\a/\e},{-f(-1.5)})}node[circ]{}node[left]{$D_1$};
+\addplot[]plot coordinates {(-1.5,{-f(-1.5)})({\a/\e},{-f(-1.5)})}node[circ]{}node[right]{$D_2$};
+\addplot[]plot coordinates {(\c,-0.25)(\c,-2)};
+\addplot[latex-latex]plot coordinates {(0,-1.75)(\c,-1.75)}node[pos=0.5,fill=white]{$c=ae$};
+\addplot[]plot coordinates {(\a,-0.25)(\a,-2.5)};
+\addplot[latex-latex]plot coordinates {(0,-2.25)(\a,-2.25)}node[pos=0.5,fill=white]{$a$};
+\addplot[latex-latex]plot coordinates {(0,-2.9)({\a/\e},-2.9)}node[pos=0.5,fill=white]{$\frac{a}{e}$};
+\end{axis}
+\end{tikzpicture}
+\caption{ترخیم \عددی{\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}=1} کے ناظمہ اور ماسکے۔ ناظمہ 1 کا مطابقتی ماسکہ \عددی {F_1} ہے جبکہ ناظمہ 2 کا مطابقتی ماسکہ \عددی{F_2} ہے۔}
+\label{شکل_مخروط_مطابقتی_ناظمہ_ماسکہ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=sqrt(4+(\x)^2);}]
+\pgfmathsetmacro{\a}{2}
+\pgfmathsetmacro{\b}{2}
+\pgfmathsetmacro{\c}{sqrt(\a^2+\b^2)}
+\pgfmathsetmacro{\e}{\c/\a}
+\pgfmathsetmacro{\k}{\c-0.25}
+\pgfmathsetmacro{\kk}{4}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={\empty},ytick={\empty}]
+\addplot[domain=-\kk:\kk]({f(x)},x);
+\addplot[domain=-\kk:\kk]({-f(x)},x);
+\addplot[]plot coordinates {(-\c,0)}node[circ]{}node[below,xshift=-2ex,font=\scriptsize]{$F_1(-c,0)$};
+\addplot[]plot coordinates {(\c,0)}node[circ]{}node[below,xshift=3ex,font=\scriptsize]{$F_2(c,0)$};
+\addplot[]plot coordinates {({-\a/\e},-3.2)({-\a/\e},5)}node[left]{$x=-\frac{a}{e}$}node[left, yshift=4ex]{\RL{ناظمہ 1}};
+\addplot[]plot coordinates {({\a/\e},-1.5)({\a/\e},5)}node[right]{$x=\frac{a}{e}$}node[right,yshift=4ex]{\RL{ناظمہ 2}};
+\addplot[]plot coordinates {(\c,0) ({f(\k)},\k)}node[circ]{}node[right]{$N(x,y)$};
+\addplot[thick]plot coordinates {({f(\k)},\k)({\a/\e},\k)}node[circ]{}node[above,xshift=1.5ex]{$D_2$};
+\addplot[]plot coordinates {({f(\k)},\k)({-\a/\e},\k)}node[circ]{}node[above,xshift=-1.5ex]{$D_1$};
+\addplot[]plot coordinates {(\c,-0.5)(\c,-4)};
+\addplot[latex-latex]plot coordinates {(0,-3.75)(\c,-3.75)}node[pos=0.5,fill=white,font=\scriptsize]{$c=ae$};
+\addplot[]plot coordinates {(\a,-0.25)(\a,-2.75)};
+\addplot[latex-latex]plot coordinates {(0,-2.5)(\a,-2.5)}node[pos=0.5,fill=white]{$a$};
+\addplot[latex-latex]plot coordinates {(0,-1.25)({\a/\e},-1.25)}node[pos=0.5,fill=white]{$\frac{a}{e}$};
+\end{axis}
+\end{tikzpicture}
+\caption{قطع زائد \عددی{\tfrac{x^2}{a^2}-\tfrac{y^2}{b^2}=1} کے ماسکے اور ناظمہ۔ قطع زائد پر ہر \عددی{N} کے لئے \عددی{NF_1=e\cdot ND_1} اور \عددی{NF_2=e\cdot ND_2} ہوں گے۔}
+\label{شکل_قطع_مکافی_ناظمہ_ماسکہ}
+\end{minipage}
+\end{figure}
+
+مساوات \حوالہ{مساوات_مخروط_ترخیم_خاصیت_الف} کے دونوں اجزاء میں ماسکہ اور ناظمہ میں مطابقت لازمی ہے، یعنی، اگر ہم \عددی{N} سے \عددی{F_1} تک فاصلہ لیں تب ہم \عددی{N} سے ناظمہ تک فاصلہ لیتے ہوئے ترخیم کا وہ ناظمہ لیں گے جو ترخیم کے اسی ہاتھ ہو۔ ناظمہ \عددی{x=-\tfrac{a}{e}} اور ماسکہ \عددی{F_1(-c,0)} مطابقت رکھتے ہیں جبکہ ناظمہ \عددی{x=\tfrac{a}{e}} اور ناظمہ \عددی{F_2(c,0)} مطابقت رکھتے ہیں۔ 
+
+قطع زائد کی سنک بھی \عددی{e=\tfrac{c}{a}} ہے، البتہ اب \عددی{c} کی قیمت  \عددی{\sqrt{a^2+b^2}}  نا کہ \عددی{\sqrt{a^2-b^2}} ہو گی۔ مزید ترخیم کی سنک کے برعکس،  قطع زائد کی سنک ہر صورت \عددی{1} سے زیادہ ہو گی۔
+
+\ابتدا{تعریف}
+قطع زائد \عددی{\tfrac{x^2}{a^2}-\tfrac{y^2}{b^2}=1} کی سنک درج ذیل ہو گی۔
+\begin{align*}
+e=\frac{c}{a}=\frac{\sqrt{a^2+b^2}}{a}
+\end{align*}
+\انتہا{تعریف}
+%================
+
+ترخیم اور قطع زائد دونوں میں ماسکوں کے بیچ فاصلہ اور راس کے بیچ فاصلہ کا نسبت، سنک کے برابر ہو گا۔
+\begin{align*}
+\text{سنک}=\frac{\text{ماسکوں کے بیچ فاصلہ}}{\text{راس کے بیچ فاصلہ}}
+\end{align*}  
+
+ترخیم میں راس دور اور ماسکے قریب ہوتے ہیں اور ان کی نسبت \عددی{1} سے کم ہوتی ہے۔ قطع مکافی میں ماسکے دور اور راس قریب ہوتے ہیں لہٰذا سنک \عددی{1} سے زیادہ ہوتا ہے۔ 
+
+\ابتدا{مثال}
+ایک ترخیم کی سنک \عددی{0.8} اور ماسکے \عددی{(0,\pm 7)} ہیں۔ اس کے راس تلاش کریں۔
+
+حل:\quad
+چونکہ \عددی{e=\tfrac{c}{a}} ہے لہٰذا راس \عددی{(0,\pm a)} پر ہوں گے جہاں
+\begin{align*}
+a=\frac{c}{e}=\frac{7}{0.8}=8.75
+\end{align*}
+یعنی \عددی{(0,\pm 8.75)} ہو گا۔
+\انتہا{مثال}
+%==================
+\ابتدا{مثال}
+قطع زائد \عددی{9x^2-16y^2=144} کی سنک معلوم کریں۔
+
+حل:\quad
+ہم قطع زائد کی مساوات کے دونوں اطراف کو \عددی{144} سے تقسیم کر کے معیاری مساوات حاصل کرتے ہیں۔
+\begin{align*}
+\frac{9x^2}{144}-\frac{16y^2}{144}=1,\quad \implies \quad \frac{x^2}{16}-\frac{y^2}{9}=1
+\end{align*}
+یوں \عددی{a^2=16} اور \عددی{b^2=9} ہیں  لہٰذا \عددی{c=\sqrt{a^2+b^2}=\sqrt{16+9}=5} ہو گا جس سے درج ذیل ملتا ہے۔
+\begin{align*}
+e=\frac{c}{a}=\frac{5}{4}
+\end{align*}
+\انتہا{مثال}
+%=========================
+
+ترخیم کی طرح یہاں بھی دکھایا جا سکتا ہے کہ لکیریں \عددی{x=\pm \tfrac{a}{e}} قطع زائد کے ناظمہ ہوں گے، یعنی:
+\begin{align}\label{مساوات_مخروط_قطع_زائد_ناظمہ_ماسکہ_خاصیت}
+NF_1=e\cdot ND_1,\quad NF_2=e\cdot ND_2
+\end{align}
+یہاں قطع زائد پر \عددی{N} کوئی نقطہ ہے، \عددی{F_1} اور \عددی{F_2} ماسکے ہیں جبکہ  ناظمہ پر \عددی{N} کے قریب ترین نقطے  \عددی{D_1} اور \عددی{D_2} ہیں (شکل \حوالہ{شکل_قطع_مکافی_ناظمہ_ماسکہ})۔ 
+
+تصویر مکمل کرنے کی خاطر ہم قطع مکافی کی سنک کی تعریف \عددی{e=1} لیتے ہیں۔ مساوات \حوالہ{مساوات_مخروط_قطع_مکافی_خاصیت_الف} تا مساوات \حوالہ{مساوات_مخروط_قطع_زائد_ناظمہ_ماسکہ_خاصیت} کو یوں ایک ہی روپ \عددی{NF=e\cdot ND} میں لکھا جا سکتا ہے۔
+
+\ابتدا{تعریف}
+قطع مکافی کی سنک \عددی{e=1} ہے۔
+\انتہا{تعریف}
+%======================
+
+ماسکہ اور ناظمہ کی مساوات \عددی{NF=e\cdot ND}، قطع مکافی، ترخیم اور قطع زائد کو ایک دوسرے کے ساتھ درج ذیل طریقہ سے ملاتی ہے۔ فرض کریں نقطہ \عددی{N} سے کسی مقررہ لکیر (ناظمہ) تک فاصلہ ضرب \عددی{e} اس نقطے  سے کسی مقررہ نقطہ \عددی{F} (ماسکہ) کے فاصلہ کے برابر ہو یعنی:
+\begin{align}\label{مساوات_مخروط_سنکی_تعلق} 
+NF=e\cdot ND
+\end{align}
+جہاں \عددی{e} ایک مستقل ہے۔ تب \عددی{N} درج ذیل راہ کھینچے گا۔
+\begin{enumerate}[a.]
+\item
+قطع مکافی اگر \عددی{e=1} ہو،
+\item
+ترخیم اگر \عددی{<1} ہو،
+\item
+قطع زائد اگر \عددی{e>1} ہو۔
+\end{enumerate} 
+
+مساوات \حوالہ{مساوات_مخروط_سنکی_تعلق} ظاہری طور پر زیادہ دلچسپ نظر نہیں آتی ہے۔ اس میں کوئی محدد نہیں پائے جاتے ہیں اور اس کو کارتیسی محدد میں لکھنے سے، \عددی{e} کی قیمت پر منحصر، مختلف مساوات حاصل ہوتے ہیں۔ البتہ، قطبی محدد میں، \عددی{e} کی قیمت سے قطع نظر، مساوات \عددی{NF=e\cdot ND} کی ترجمانی ایک ہی انتہائی سادہ مساوات کرتی ہے جو تقریباً \عددی{300} سالوں سے  فلکی سائنسدانوں  کی پسندیدہ مساوات رہی ہے۔
+
+ایک قطع مکافی جس کا مرکز مبدا پر ہو کا \عددی{x} محور پر ماسکہ اور مطابقتی ناظمہ جانتے ہوئے ہم شکل سے \عددی{e} کی قیمت معلوم کر سکتے ہیں۔ سنک \عددی{e} کی قیمت جانتے ہوئے ہم کارتیسی نظام میں  قطع زائد کی مساوات کو، اگلی مثال کی طرح، مساوات \عددی{NF=e\cdot ND} سے  حاصل کر سکتے ہیں۔ ہم اسی طرح شکل \حوالہ{شکل_مخروط_مطابقتی_ناظمہ_ماسکہ} کی مدد سے  اس ترخیم کی مساوات بھی کارتیسی محدد میں حاصل کر سکتے ہیں جس کا مرکز مبدا پر اور ماسکے \عددی{x} محور پر ہوں۔
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(3/6)*sqrt(6+(\x)^2);}]
+\pgfmathsetmacro{\a}{sqrt(3)}
+\pgfmathsetmacro{\b}{sqrt(6)}
+\pgfmathsetmacro{\c}{sqrt(\a^2+\b^2)}
+\pgfmathsetmacro{\e}{\c/\a}
+\pgfmathsetmacro{\k}{1}
+\pgfmathsetmacro{\kk}{2}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={1},xticklabels={\llap{$1$}},ytick={\empty}]
+\addplot[thick,domain=-\kk:\kk]({f(x)},x);
+\addplot[thick,domain=-\kk:\kk]({-f(x)},x)node[above]{$\tfrac{x^2}{3}-\tfrac{y^2}{6}=1$};;
+\addplot[]plot coordinates {(\c,0)}node[circ]{}node[below,xshift=3ex,font=\scriptsize]{$F(3,0)$};
+\addplot[]plot coordinates {({\a/\e},-1.5)({\a/\e},2)}node[pos=0,below]{$x=1$};
+\addplot[]plot coordinates {(\c,0) ({f(\k)},\k)}node[circ]{}node[right]{$N(x,y)$};
+\addplot[thick]plot coordinates {({f(\k)},\k)({\a/\e},\k)}node[circ]{}node[pin={[xshift=-1ex]80:{$D(1,y)$}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{قطع زائد برائے مثال \حوالہ{مثال_مخروط_قطع_زائد_سنک_سے_حصول_مساوات}}
+\label{شکل_مثال_مخروط_قطع_زائد_سنک_سے_حصول_مساوات}
+\end{figure}
+
+%========================
+\ابتدا{مثال}\شناخت{مثال_مخروط_قطع_زائد_سنک_سے_حصول_مساوات}
+ایک قطع زائد جس کا مرکز مبدا پر ہے کا ماسکہ \عددی{(3,0)} اور مطابقتی ناظمہ \عددی{x=1} ہے۔ اس قطع زائد کی مساوات تلاش کریں۔
+
+حل:\quad
+ہم شکل \حوالہ{شکل_قطع_مکافی_ناظمہ_ماسکہ} کو دیکھ کر اس کی سنک معلوم کرتے ہیں۔ چونکہ ماسکہ \عددی{(c,0)=(3,0)} ہے لہٰذا \عددی{c=3} ہو گا۔ناظمہ درج ذیل لکیر ہو گی
+\begin{align*}
+x=\frac{a}{e}=1
+\end{align*}
+لہٰذا \عددی{a=e} ہو گا۔ سنک کی مساوات \عددی{e=\tfrac{c}{a}} کے ساتھ ملا کر  \عددی{e=\tfrac{c}{a}=\tfrac{3}{e}} لہٰذا \عددی{e^2=3} یعنی \عددی{e=\sqrt{3}} حاصل ہوتا ہے۔ سنک \عددی{e} جانتے ہوئے ہم شکل \حوالہ{شکل_مثال_مخروط_قطع_زائد_سنک_سے_حصول_مساوات} کو دیکھ کر  \عددی{NF=e\cdot ND} سے مساوات حاصل کرتے ہیں۔
+\begin{align*}
+NF&=e\cdot ND&&\text{\RL{مساوات \حوالہ{مساوات_مخروط_سنکی_تعلق}}}\\
+\sqrt{(x-3)^2+(y-0)^2}&=\sqrt{3}\abs{x-1}&&e=\sqrt{3}\\
+x^2-6x+9+y^2&=3(x^2-2x+1)\\
+2x^2-y^2&=6\\
+\frac{x^2}{3}-\frac{y^2}{6}&=1
+\end{align*}
+\انتہا{مثال}
+%======================
+
