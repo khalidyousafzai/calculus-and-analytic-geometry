@@ -1,0 +1,387 @@
+\حصہ{مستوی منحنیات کے مقدار معلوم روپ کا حصول}
+جب ایک ذرہ شکل \حوالہ{شکل_مخروط_غیر_تفاعل_راہ} میں دکھائی گئی راہ پر چلتا ہو، ہم اس کی حرکت کو کارتیسی کلیہ کی صورت میں لکھنے کی توقع نہیں کر سکتے ہیں جو \عددی{y} کو بلا واسطہ \عددی{x} کی صورت میں یا \عددی{x} کو بلا واسطہ \عددی{y} کی صورت میں پیش کرتا ہو۔ ایسی صورت میں ہم ذرے کی راہ کے ہر محدد کو وقت \عددی{t} کا تفاعل لکھ کر اس راہ کو ایک جوڑی مساوات \عددی{x=f(x)}، \عددی{y=g(t)} کی صورت میں لکھتے ہیں۔چونکہ یہ مساوات ہر لمحہ \عددی{t} پر ذرے کا مقام دیتے ہیں لہٰذا حرکت پر غور کے لئے یہ مساوات زیادہ مفید ثابت ہوتے ہیں۔
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw[->-=0.9]plot[smooth] coordinates{(0,0)(0.5,0.5)(1,1.5)(2,1.25)(1.25,0.5)(2,0.7)(3,1)(3.5,0.5)(4,1)(3,1.5)(1.5,2)};
+\draw(1,1.5)node[circ]{}node[left]{$(f(t),g(t))$};
+\end{tikzpicture}
+\caption{مستوی \عددی{xy} میں ضروری نہیں کہ ذرے کی راہ \عددی{x} یا \عددی{y} کا تفاعل ہو۔}
+\label{شکل_مخروط_غیر_تفاعل_راہ}
+\end{figure}
+\ابتدا{تعریف}
+اگر \عددی{t} کے ایک وقفہ  پر \عددی{x} اور \عددی{y} استمراری تفاعل
+\begin{align*}
+x=f(t),\quad y=g(t)
+\end{align*}
+ہوں تب نقاط \عددی{(x,y)=(f(t),g(t))} کا سلسلہ، جن کی تعریف مذکورہ بالا مساوات پیش کرتی ہیں، محددی مستوی میں ایک منحنی ہو گی۔ ان مساوات کو اس منحنی کی \اصطلاح{مقدار معلوم مساوات}\فرہنگ{مقدار معلوم!مساوات}\حاشیہب{parametric equations}\فرہنگ{parametric!equations} کہتے ہیں۔ متغیر \عددی{t} منحنی کا \اصطلاح{مقدار معلوم}\فرہنگ{مقدار معلوم}\حاشیہب{parameter}\فرہنگ{parameter} ہے اور اس کا وقفہ \عددی{I} \اصطلاح{مقدار معلوم وقفہ}\فرہنگ{مقدار معلوم!وقفہ}\حاشیہب{parameter interval}\فرہنگ{parameter!interval} کہلاتا ہے۔ اگر \عددی{I} بند وقفہ \عددی{a\le t\le b}  ہو تب نقطہ \عددی{(f(a),g(a))} منحنی کا \اصطلاح{ابتدائی نقطہ}\فرہنگ{ابتدائی نقطہ}\حاشیہب{initial point}\فرہنگ{initial point} اور نقطہ \عددی{(f(b),g(b))} اس کا \اصطلاح{اختتامی نقطہ}\فرہنگ{اختتامی نقطہ}\حاشیہب{terminal point}\فرہنگ{terminal point} ہو گا۔ منحنی کو \اصطلاح{مقدار معلوم روپ دینے}\فرہنگ{مقدار معلوم!روپ دینا}\حاشیہب{parametrization}\فرہنگ{parametrization} سے مراد مستوی میں منحنی کی مقدار معلوم مساوات اور مقدار معلوم وقفہ بیان کرنا ہے۔  
+\انتہا{تعریف}
+%==========================
+
+بہت سارے مواقع پر \عددی{t} وقت کو ظاہر کرتا ہے جبکہ دیگر مواقع پر یہ کسی اور متغیر مثلاً زاویہ (اگلی مثال) کو ظاہر کر سکتا ہے۔
+
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\r}{1.25}
+\draw[-latex](-1.25*\r,0)--(\r+1,0)node[right]{$x$};
+\draw[-latex](0,-1.25*\r)--(0,\r+0.75)node[above]{$y$};
+\draw[thick](0,0) circle (\r);
+\draw(\r,0)node[circ]{}node[below right]{$(1,0)$}node[above right]{$t=0$};
+\draw(0,\r)node[above left]{$t=\tfrac{\pi}{2}$};
+\draw(-\r,0)node[above right]{$t=\pi$};
+\draw(0,-\r)node[left,yshift=-1ex]{$t=\tfrac{3}{2}\pi$};
+\draw(0,0)node[below left]{$O$}--++(30:\r)node[circ]{}node[right]{$N(\cos t,\sin t)$};
+\draw[-stealth]([shift={(0:0.5)}]0,0) arc (0:30:0.5);
+\draw(15:0.8)node[]{$t$};
+\draw[-stealth]([shift={(140:\r)}]0,0) arc (140:142:\r);
+\end{tikzpicture}
+\caption{گھڑی کے الٹ رخ حرکت (مثال \حوالہ{مثال_مخروط_گھڑی_کے_الٹ_رخ})}
+\label{شکل_مثال_مخروط_گھڑی_کے_الٹ_رخ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\r}{1.25}
+\draw[-latex](-1.25*\r,0)--(\r+1,0)node[right]{$x$};
+\draw[-latex](0,-1.25*\r)--(0,\r+0.75)node[above]{$y$};
+\draw[](0,0)node[below left]{$O$} circle (\r);
+\draw[thick]([shift={(0:\r)}]0,0)arc(0:-180:\r);
+\draw(\r,0)node[circ]{}node[above right]{$t=0$}node[above left]{ابتدا};
+\draw(0,-\r)node[below right]{$t=\tfrac{\pi}{2}$}node[below left]{$(0,-1)$};
+\draw(-\r,0)node[circ]{}node[above right]{$t=\pi$}node[above left]{اختتام};
+\draw(-30:\r)node[circ]{}node[right]{$N(\cos t,-\sin t)$};
+\draw[-stealth]([shift={(-140:\r)}]0,0) arc (-140:-142:\r);
+\end{tikzpicture}
+\caption{گھڑی کے  رخ حرکت (مثال \حوالہ{مثال_مخروط_گھڑی_کے_رخ})}
+\label{شکل_مثال_مخروط_گھڑی_کے_رخ}
+\end{minipage}
+\end{figure}
+\ابتدا{مثال}\شناخت{مثال_مخروط_گھڑی_کے_الٹ_رخ}\ترچھا{دائرہ \عددی{x^2+y^2=1}}\\
+درج ذیل مقدار معلوم مساوات اور مقدار معلوم وقفہ
+\begin{align*}
+x=\cos t,\quad y=\sin t,\quad 0\le t\le 2\pi
+\end{align*}
+بڑھتے \عددی{t} کے لئے دائرہ \عددی{x^2+y^2=1} پر  گھڑی کی الٹ رخ ایک ذرہ کا مقام \عددی{N(x,y)} ظاہر کرتے ہیں (شکل \حوالہ{شکل_مثال_مخروط_گھڑی_کے_الٹ_رخ})۔ 
+
+چونکہ ہر \عددی{t} کے لئے
+\begin{align*}
+x^2+y^2=\cos^2t+\sin^2t=1
+\end{align*}
+ہوتا ہے لہٰذا ہم جانتے ہیں کہ یہ ذرہ اس دائرے پر حرکت کرتا ہے۔ ہم جاننا چاہتے ہیں کہ دائرے کے کتنے حصہ پر ذرہ حرکت کرتا ہے۔
+
+یہ جاننے کے لئے ہم \عددی{t} کو \عددی{0} تا \عددی{2\pi} کر کے ذرے کی مقام پر نظر رکھتے ہیں۔ مقدار معلوم \عددی{t} کی ناپ ریڈیئن میں ہے  جو \عددی{ON} اور مثبت \عددی{x} محور کے بیچ  زاویہ ہے۔ یہ ذرہ \عددی{t=0} پر نقطہ \عددی{(x,y)=(\cos 0,\sin 0)=(1,0)} سے شروع  کر کے اوپر اور بائیں چلتے ہوئے \عددی{t=\tfrac{\pi}{2}} پر  \عددی{(x,y)=(\cos \tfrac{\pi}{2},\sin\tfrac{\pi}{2})=(0,1)} پہنچتا ہے۔یہاں سے یہ بائیں اور نیچے چلتے ہوئے \عددی{t=\pi} پر  \عددی{(x,y)=(\cos \pi,\sin\pi)=(-1,0)} پہنچتا ہے۔ اس کے بعد ذرہ نیچے اور دائیں چل کر \عددی{(0,-1)} پہنچ کر یہاں سے اوپر اور دائیں چل کر آخر کار \عددی{t=2\pi} پر نقطہ \عددی{(x,y)=(\cos2\pi,\sin 2\pi)=(1,0)} پر واپس آن پہنچتا ہے۔ یوں \عددی{0\le t\le 2\pi} کرنے سے یہ ذرہ ٹھیک ایک بار دائرہ پر گھڑی کے الٹ رخ چلتا ہے۔
+\انتہا{مثال}
+%================
+\ابتدا{مثال}\شناخت{مثال_مخروط_گھڑی_کے_رخ}\ترچھا{نصف دائرہ}\\
+درج ذیل مقدار معلوم مساوات اور مقدار معلوم وقفہ
+\begin{align*}
+x=\cos t,\quad y=-\sin t,\quad 0\le t\le \pi
+\end{align*}
+ایک ذرے کا مقام دیتے ہیں جو \عددی{t} کو \عددی{0} سے بڑھا کر \عددی{\pi} کرنے سے بڑھانے سے  گھڑی کے رخ دائرہ \عددی{x^2+y^2=1} پر حرکت کرتا ہے (شکل \حوالہ{شکل_مثال_مخروط_گھڑی_کے_رخ})۔
+
+چونکہ مذکورہ بالا مقدار معلوم مساوات سے حاصل محدد دائرہ کی مساوات کو مطمئن کرتے ہیں لہٰذا یہ ذرہ دائرے پر حرکت کرتا ہے۔ یہ جاننے کے لئے کہ دائرے کے کتنے حصے پر ذرہ حرکت کرتا ہے، ہم \عددی{t} کو \عددی{0} تا \عددی{\pi} کرتے ہوئے ذرہ کے مقام پر نظر رکھتے ہیں۔ لمحہ \عددی{t=0} پر مذکورہ بالا مساوات سے \عددی{(x,y)=(1,0)} ملتا ہے جو ذرے کا ابتدائی مقام ہے۔ البتہ اب \عددی{ t} بڑھانے سے \عددی{x} کی قیمت گھٹتی ہے جبکہ \عددی{y} کی قیمت منفی ہو کر \عددی{-1} تک پہنچ کر \عددی{t=\pi} پر واپس \عددی{0} ہوتی ہے۔ چونکہ \عددی{t=\pi} وقفے کا اختتامی نقطہ ہے لہٰذا ذرہ یہیں رہتا ہے۔ یوں ذرہ دائرے کے نچلے نصف حصے پر سفر کرتا ہے۔ 
+\انتہا{مثال}                           
+%============
+\ابتدا{مثال}\شناخت{مثال_مخروط_نصف_قطع_مکافی_راہ}\ترچھا{نصف قطع مکافی}\\
+مستوی \عددی{xy} میں ایک ذرے کا مقام \عددی{N(x,y)} درج ذیل مقدار مساوات اور مقدار معلوم وقفہ دیتے ہیں۔
+\begin{align*}
+x=\sqrt{t},\quad y=t,\quad t\ge 0
+\end{align*}
+اس ذرے کی راہ کو پہچان کر اس کو بیان کریں۔
+
+حل:\quad
+ہم مساوات \عددی{x=\sqrt{t}} اور \عددی{y=t} سے \عددی{t} خارج کرتے ہوئے راہ کی مساوات تلاش کرتے ہیں۔ اگر ہماری قسمت اچھی ہو، ایسا کرنے سے کوئی جانی پہچانی مساوات حاصل ہو سکتی ہے۔
+\begin{align*}
+y=t=(\sqrt{t})^2=x^2
+\end{align*}
+اس سے ظاہر ہے کہ ذرے کے مقام کے محدد مساوات \عددی{y=x^2} کو مطمئن کرتے ہیں لہٰذا ذرہ قطع مکافی \عددی{y=x^2} پر حرکت کرتا ہے۔
+
+البتہ یہ کہنا غلط ہو گا کہ یہ ذرہ پورے قطع مکافی \عددی{y=x^2} پر حرکت کرتا ہے۔ یہ ذرہ حقیقت میں نصف قطع مکافی پر حرکت کرتا ہے۔ ذرے کے مقام کا \عددی{x} محدد کبھی بھی منفی نہیں ہوتا ہے۔ لمحہ \عددی{t=0} پر ذرہ \عددی{(0,0)} سے شروع کرتے ہوئے \عددی{t} بڑھنے سے  ربع اول میں رہ کر اوپر بڑھتا جاتا ہے (شکل \حوالہ{شکل_مثال_مخروط_نصف_قطع_مکافی_راہ})۔ 
+\انتہا{مثال}
+%===================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=(\x)^2;}]
+\begin{axis}[clip=false,small,axis lines=middle,xtick={\empty},ytick={\empty},xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=-3:3]{f(x)};
+\addplot[->-=0.85,thick,domain=0:3]{f(x)}node[above]{$y=x^2,\, x\ge 0$};
+\addplot[]plot coordinates {(0,0)}node[circ]{}node[below]{\begin{minipage}{1cm}$t=0$\\ ابتدا  \end{minipage}};
+\addplot[]plot coordinates {(1,1)}node[circ]{}node[right]{$(1,1)$}node[left]{$t=1$};
+\addplot[]plot coordinates {(1.5,{f(1.5)})}node[circ]{}node[right]{$N(\sqrt{t},t)$};
+\end{axis}
+\end{tikzpicture}
+\caption{نصف قطع مکافی راہ (مثال \حوالہ{مثال_مخروط_نصف_قطع_مکافی_راہ})}
+\label{شکل_مثال_مخروط_نصف_قطع_مکافی_راہ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=(\x)^2;}]
+\begin{axis}[clip=false,small,axis lines=middle,xtick={\empty},ytick={\empty},xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[->-=0.1,->-=0.9,thick,domain=-3:3]{f(x)}node[above]{$y=x^2$};
+\addplot[]plot coordinates {(0,0)}node[circ]{}node[below left]{$O$};
+\addplot[]plot coordinates {(1,1)}node[circ]{}node[right]{$(1,1)$}node[left]{$t=1$};
+\addplot[]plot coordinates {(1.5,{f(1.5)})}node[circ]{}node[right]{$N(t,t^2)$};
+\addplot[]plot coordinates {(-2,f{-2})}node[circ]{}node[left]{$(-2,4)$}node[pin=60:{$t=-2$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{مکمل قطع مکافی راہ (مثال \حوالہ{مثال_مخروط_مکمل_قطع_مکافی_راہ})}
+\label{شکل_مثال_مخروط_مکمل_قطع_مکافی_راہ}
+\end{minipage}
+\end{figure}
+%================
+\ابتدا{مثال}\شناخت{مثال_مخروط_مکمل_قطع_مکافی_راہ}\ترچھا{مکمل قطع مکافی راہ}\\
+مستوی \عددی{xy} میں ایک ذرے کا مقام \عددی{N(x,y)} درج ذیل مساوات اور مقدار معلوم وقفہ دیتے ہیں۔
+\begin{align*}
+x=t,\quad y=t^2,\quad -\infty <t< \infty
+\end{align*}
+اس ذرے کی راہ کو پہچان کر اس کو بیان کریں۔
+
+حل:\quad
+ہم مساوات \عددی{x=t} اور \عددی{y=t^2} سے \عددی{t} خارج کر کے \عددی{x} اور \عددی{y} کے بیچ مساوات حاصل کرتے ہیں۔
+\begin{align*}
+y=(t)^2=x^2
+\end{align*}
+ذرے کا مقام مساوات \عددی{y=x^2} کو مطمئن کرتی ہے لہٰذا ذرہ قطع مکافی \عددی{y=x^2} پر حرکت کرتا ہے۔
+
+البتہ اب مثال \حوالہ{مثال_مخروط_نصف_قطع_مکافی_راہ} کے برعکس ذرہ مکمل قطع مکافی پر حرکت کرتا ہے۔ جیسے جیسے \عددی{t} کی قیمت \عددی{-\infty} سے بڑھ کر \عددی{\infty}  پہنچتی ہے، ذرہ بائیں سے نیچے آتے ہوئے مبدا سے گزر کر اوپر دائیں حرکت کرتا ہے (شکل \حوالہ{شکل_مثال_مخروط_مکمل_قطع_مکافی_راہ})۔
+\انتہا{مثال}
+%=================
+
+جیسا ہم نے مثال \حوالہ{مثال_مخروط_مکمل_قطع_مکافی_راہ} میں دیکھا، کسی بھی منحنی \عددی{y=f(x)} کی مقدار معلوم روپ \عددی{x=t,\, y=f(t)} ہو گی۔ یہ اتنی سادہ صورت ہے کہ اس کو ہم حقیقت میں استعمال نہیں کرتے ہیں لیکن اس سے نظریہ با آسانی سمجھ آتا ہے۔
+
+\ابتدا{مثال}\شناخت{مثال_مخروط_ترخیم_راہ}
+ایک ذرے کا مقام لمحہ \عددی{t} پر  \عددی{N(x,y)} درج ذیل  دیتے ہیں۔
+\begin{align*}
+x=a\cos t,\quad y=b\sin t,\quad 0\le t\le 2\pi
+\end{align*}
+اس ذرے کی حرکت کو بیان کریں۔
+
+حل:\quad
+ہم مساوات \عددی{\cos t=\tfrac{x}{a}} اور \عددی{\sin t=\tfrac{y}{b}} سے \عددی{t} خارج کر کے کارتیسی مساوات حاصل کرتے ہیں۔
+\begin{align*}
+\big(\frac{x}{a}\big)^2+\big(\frac{y}{b}\big)^2=1,\quad \implies\quad \frac{x^2}{a^2}+\frac{y^2}{b^2}=1
+\end{align*}
+ذرے کا مقام مساوات ترخیم \عددی{\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}=1} کو مطمئن کرتا ہے لہٰذا یہ ذرہ ترخیم پر حرکت کرتا ہے۔ لمحہ \عددی{t=0} پر ذرے کے مقام کے محدد
+\begin{align*}
+x=a\cos (0)=a,\quad y=b\sin(0)=0
+\end{align*}
+ہوں گے لہٰذا یہ ابتدائی نقطہ \عددی{(a,0)} سے حرکت شروع کرتا ہے۔ \عددی{t} بڑھانے سے ذرہ اوپر اور بائیں گھڑی کے الٹ رخ حرکت کرتا ہے۔ یہ قطع مکافی کے گرد ایک بار چل کر لمحہ \عددی{t=2\pi} پر واپس نقطہ \عددی{(a,0)} پہنچ کر رک جاتا ہے (شکل \حوالہ{شکل_مثال_مخروط_ترخیم_راہ})۔ 
+\انتہا{مثال}
+%=======================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=1/2*sqrt(2^2-(\x)^2);}]
+\pgfmathsetmacro{\ang}{50}
+\pgfmathsetmacro{\kx}{2*cos(\ang)}
+\pgfmathsetmacro{\ky}{2*sin(\ang)}
+\begin{axis}[axis equal,clip=false,small,axis lines=middle,xtick={1,2},xticklabels={$b$,$a$},ytick={\empty}, xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,yticklabel style={yshift=1ex},xticklabel style={xshift=2pt},xmax=2.5,ymax=2.5]
+\draw (axis cs: 0, 0) circle [radius=2];
+\draw (axis cs: 0, 0) circle [radius=1];
+\addplot[-<-=0.25,thick,domain=-2+0.2:2-0.2]{f(x)};
+\addplot[thick,domain=-2:-2+0.2]{f(x)};
+\addplot[thick,domain=2-0.2:2]{f(x)};
+\addplot[thick,domain=-2+0.2:2-0.2]{-f(x)};
+\addplot[thick,domain=-2:-2+0.2]{-f(x)};
+\addplot[thick,domain=2-0.2:2]{-f(x)};
+\draw(axis cs:0,0)node[below left]{$O$}--(axis cs:\kx,\ky);
+\draw(axis cs:{cos(\ang)},{sin(\ang)})--(axis cs:\kx,{sin(\ang)})node[circ]{}node[shift={(1.2ex,1.2ex)}]{$N$}--(2.3,{sin(\ang)});
+\draw(axis cs:\kx,{sin(\ang)})--(axis cs:\kx,2.5);
+\draw[stealth-stealth](axis cs:0,2.25)--(axis cs:\kx,2.25)node[pos=0.5,above]{$a\cos t$};
+\draw[stealth-stealth](axis cs:2.2,0)--(axis cs:2.2,{sin(\ang)})node[pos=0.5,right]{$b\sin t$};
+\addplot[-stealth,domain=0:\ang] ({0.4*cos(x)},{0.4*sin(x)})node[pos=0.6,right]{$t$};
+\addplot[]plot coordinates {(-0.75,{f(-0.75)})}node[pin={[pin distance=1.0cm,xshift=3ex]100:{$\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}=1$}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{ترخیمی راہ (مثال \حوالہ{مثال_مخروط_ترخیم_راہ})}
+\label{شکل_مثال_مخروط_ترخیم_راہ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=sqrt(1+(\x)^2);}]
+\begin{axis}[axis equal,clip=false,small,axis lines=middle,xtick={1},ytick={\empty}, xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true]
+\addplot[->-=0.25,->-=0.75,thick,domain=-2:2]({f(x)},x)node[above]{$x^2-y^2=1$};
+\addplot[domain=-2:2]({-f(x)},x);
+\addplot[]plot coordinates {({f(1.5)},1.5)}node[circ]{}node[right]{$N(\sec t,\tan t)$};
+\addplot[]plot coordinates {(1,0)}node[pin={[xshift=2ex]110:{$t=0$}}]{};
+\addplot[]plot coordinates {(1.5,-0.75)}node[right]{$-\frac{\pi}{2}<t<0$};
+\addplot[]plot coordinates {(1.5,0.75)}node[right]{$0<t<\tfrac{\pi}{2}$};
+\end{axis}
+\end{tikzpicture}
+\caption{قطع زائد راہ (مثال \حوالہ{مثال_مخروط_قطع_زائد_راہ})}
+\label{شکل_مثال_مخروط_قطع_زائد_راہ}
+\end{minipage}
+\end{figure}
+\ابتدا{مثال}
+درج ذیل مقدار معلوم مساوات اور مقدار معلوم وقفہ، جو مثال \حوالہ{مثال_مخروط_ترخیم_راہ} میں \عددی{b=a} پر کرنے سے حاصل ہوتے ہیں،
+\begin{align*}
+x=a\cos t,\quad y=a\sin t,\quad 0\le t\le 2\pi
+\end{align*}
+دائرہ \عددی{x^2+y^2=a^2} کو ظاہر کرتے ہیں۔
+\انتہا{مثال}
+%======================
+\ابتدا{مثال}\شناخت{مثال_مخروط_قطع_زائد_راہ}
+ایک ذرے کا مقام لمحہ \عددی{t} پر درج ذیل مقدار معلوم مساوات دیتے ہیں۔
+\begin{align*}
+x=\sec t,\quad y=\tan t,\quad -\frac{\pi}{2}<t<\frac{\pi}{2}
+\end{align*}
+حل:\quad
+ہم درج ذیل مساوات
+\begin{align*}
+\sec t=x,\quad \tan t=y
+\end{align*}
+ سے \عددی{t} خارج کر کے کارتیسی مساوات حاصل کرتے ہیں۔ ایسا مماثل \عددی{\sec^2t-\tan^2t=1} کی مدد سے کیا جائے گا۔
+\begin{align*}
+\sec^2t-\tan^2t=x^2-y^2=1
+\end{align*}
+چونکہ ذرے کے مقام کے محدد \عددی{(x,y)} مساوات \عددی{x^2-y^2=1} کو مطمئن کرتے ہیں لہٰذا یہ ذرہ قطع زائد پر حرکت کرتا ہے۔ متغیر \عددی{t} کی قیمت \عددی{-\tfrac{\pi}{2}} سے بڑھ کر \عددی{\tfrac{\pi}{2}} تک پہنچنے سے \عددی{x=\sec t} کی قیمت مثبت اور \عددی{y=\tan t} کی قیمت \عددی{-\infty} سے \عددی{\infty} پہنچتی ہے لہٰذا \عددی{N} قطع زائد کے دایاں نصف حصہ پر رہے گا (شکل \حوالہ{شکل_مثال_مخروط_قطع_زائد_راہ})۔  
+\انتہا{مثال}
+%===================
+\ابتدا{مثال}\شناخت{مثال_مخروط_مستدیر}\ترچھا{مستدیر}\\
+ایک پہیا جس کا رداس \عددی{a} ہے افقی لکیر پر چل رہا ہے۔ اس کے محیط پر نقطہ \عددی{N} کی راہ کے مقدار معلوم مساوات معلوم کریں۔ اس راہ کو \اصطلاح{مستدیر}\فرہنگ{مستدیر}\حاشیہب{cycloid}\فرہنگ{cycloid} کہتے ہیں۔
+
+حل:\quad
+ہم \عددی{x} محور کو وہ لکیر لیتے ہیں جس پر پہیا چل رہا ہے اور لمحہ \عددی{t=0} پر نقطہ \عددی{N} کو مبدا پر لیتے ہیں۔ ہم زاویہ \عددی{t} کو مقدار معلوم لیتے ہیں جو پہیا  گھومنے کا زاویہ ہے اور اس کو ریڈیئن میں ناپا جاتا ہے۔شکل \حوالہ{شکل_مثال_مخروط_مستدیر} میں پہیے کو کچھ دیر بعد دکھایا گیا ہے جہاں اس کا قاعدہ، مبدا سے \عددی{at} فاصلہ پر ہے۔ پہیے کا مرکز \عددی{(at,a)} ہر ہو گا اور \عددی{N} کے محدد درج ذیل ہوں گے۔
+\begin{align*}
+x=at+a\cos \theta,\quad y=a+a\sin \theta 
+\end{align*}
+زاویہ \عددی{\theta} کو \عددی{t} کی صورت میں ظاہر کرنے کے لئے ہم شکل سے 
+\begin{align*}
+\theta=\frac{3\pi}{2}-t
+\end{align*}
+لکھ سکتے ہیں۔یوں
+\begin{align*}
+\cos\theta=\cos\big(\frac{3\pi}{2}-t\big)=-\sin t,\quad \sin\theta=\sin\big(\frac{3\pi}{2}-t\big)=-\cos t
+\end{align*}
+ہوں گے۔درکار مساوات 
+\begin{align*}
+x=at-a\sin t,\quad y=a-a\cos t
+\end{align*}
+ہیں جنہیں عموماً
+\begin{align}\label{مساوات_مخروط_مستدیر_الف}
+x=a(t-\sin t),\quad y=a(1-\cos t)
+\end{align}
+لکھا جاتا ہے۔شکل \حوالہ{شکل_مثال_مخروط_مستدیر} میں اس مستدیر کا کچھ حصہ دکھایا گیا ہے۔
+\انتہا{مثال}
+%=======================
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\r}{1.2}
+\pgfmathsetmacro{\kx}{\r*cos(30)}
+\pgfmathsetmacro{\ky}{\r*sin(30)}
+\draw[-latex](0,0)--(3,0)node[right]{$x$};
+\draw[-latex](0,0)node[below left]{$O$}--(0,2)node[above]{$y$};
+\draw(2,\r)node[below right]{$C(at,a)$}node[shift={(3.5ex,1ex)}]{$\theta$} circle (\r); 
+\draw(2,\r)node[circ]{}--++(30:\r)node[circ]{}node[right]{$N(x,y)$}node[pos=0.6,above]{$a$};
+\draw[stealth-stealth](0,-0.3)--++(2,0)node[pos=0.5,below]{$at$};
+\draw(0,-0.1)--++(0,-0.3)  (2,-0.1)--++(0,-0.3);
+\draw(2,0)node[below right]{$M$}--++(0,\r);
+\draw[stealth-]([shift={(30:0.3)}]2,\r) arc (30:270:0.3);
+\draw(2,\r)++(120:0.5)node[]{$t$};
+\draw[dashed](2,\r)--++(\kx,0)--++(0,\ky);
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=\x-sin(deg(\x));g(\x)=1-cos(deg(\x));}]
+\pgfmathsetmacro{\k}{2*pi}
+\pgfmathsetmacro{\r}{1.2}
+\pgfmathsetmacro{\kx}{\r*cos(30)}
+\pgfmathsetmacro{\ky}{\r*sin(30)}
+\begin{axis}[axis equal,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={\k},xticklabels={$2\pi a$},ytick={\empty}, axis y line=none]
+\addplot[->-=0.25,smooth,domain=0:8]({f(x)},{g(x)})node[pos=0,below]{$O$};
+\draw(axis cs:3.3,\r) circle [radius=\r];
+\draw(axis cs:3.3,\r)++(axis cs:\kx,\ky)node[circ]{}node[above right]{$N$};
+\draw(axis cs:3.3,0)--(axis cs:3.3,\r)node[circ]{}--++(axis cs:\kx,\ky);
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+\caption{پہیے کے محیط پر نقطے کا مقام اور مستدیر۔}
+\label{شکل_مثال_مخروط_مستدیر}
+\end{figure}
+
+\جزوحصہء{کمتر وقتی منحنی اور یکساں وقتی منحنی}
+اگر ہم شکل \حوالہ{شکل_مثال_مخروط_مستدیر} کی مستدیر کو الٹ کریں، مساوات \حوالہ{مساوات_مخروط_مستدیر_الف} اس پر بھی لاگو ہو گا۔ حاصل منحنی کے دو اہم خواص ہیں۔پہلی خاصیت مبدا \عددی{O} اور پہلی قوس میں سب سے گہرا نقطہ \عددی{B} سے تعلق رکھتا ہے۔ ایک بلا رگڑ گیند جس پر صرف کشش ثقل عمل کرتا ہو، ان دو نقطوں کو جوڑنے والی تمام منحنیات میں سب سے جلد اس مستدیر پر چلتے ہوئے \عددی{O} سے \عددی{B} پہنچتا ہے۔ یوں اس مستدیر کو \اصطلاح{کمتر وقتی منحنی}\فرہنگ{منحنی!کمتر وقتی} کہتے ہیں۔ اس کی دوسری خاصیت یہ ہے کہ اگر گیند کو \عددی{O} کی بجائے کسی دوسرے نقطہ سے چلنے دیا جائے یہ گیند \عددی{B} تک پہنچتے ہوئے اتنا ہی وقت لے گا جو یہ \عددی{O} سے \عددی{B} تک پہنچتے ہوئے لیتا ہے۔ یوں اس کو \اصطلاح{یکساں وقتی منحنی}\فرہنگ{منحنی!یکساں وقتی} بھی کہتے ہیں۔
+
+کیا \عددی{O} اور \عددی{B} کے بیچ اس کے علاوہ بھی کوئی  کمتر وقت کی منحنی پائی جاتی ہے؟ ہم اس کو بطور ریاضیاتی پیش کر سکتے ہیں: ابتدا میں چونکہ گیند کی رفتار صفر ہے لہٰذا اس کی حرکی توانائی صفر ہو گی۔ مبدا \عددی{(0,0)} سے کسی بھی نقطہ \عددی{(x,y)} تک گیند کو پہنچانے کی خاطر \عددی{mgy} کام ثقلی کشش کو کرنا ہو گا اور یہ توانائی لازماً حرکی توانائی میں تبدیلی کے برابر ہو گی، یعنی:
+\begin{align*}
+mgy=\frac{1}{2}mv^2-\frac{1}{2}m(0)^2
+\end{align*}
+یوں \عددی{(x,y)} پر پہنچ کر گیند کی سمتی رفتار
+\begin{align*}
+v=\sqrt{2gy}
+\end{align*}
+ہو گی جس کو 
+\begin{align*}
+\frac{\dif s}{\dif t}&=\sqrt{2gy}&& \text{\small{\RL{\begin{minipage}{2cm} گیند کی راہ پر چلتے ہوئے \عددی{\dif s} تفرقی فاصلہ ہے \end{minipage}}}}
+\end{align*}
+بھی لکھا جا سکتا ہے۔ کسی بھی مخصوص راہ \عددی{y=f(x)} پر \عددی{O} سے \عددی{B(a\pi,2a)} تک چلتے ہوئے درکار وقت \عددی{T_f} درج ذیل ہو گا۔
+\begin{align}\label{مساوات_مخروط_یکساں_وقتی}
+T_f=\int_{x=0}^{x=a\pi} \sqrt{\frac{1+\big(\tfrac{\dif y}{\dif x}\big)^2}{2gy}}\dif x
+\end{align}
+اس وقت (تکمل کی قیمت) کو کونسی منحنی \عددی{y=f(x)} کمتر کرتی ہے؟
+
+پہلی نظر میں یوں معلوم ہوتا ہے جیسا \عددی{O} سے \عددی{B} تک سیدھی لکیر (جو یقیناً کمتر فاصلہ ہے) پر گیند کمتر وقت میں \عددی{O} سے \عددی{B} تک پہنچے گا لیکن کیا ایسا ہوتا ہے۔ عین ممکن ہے کہ شروع میں  گیند کو سیدھا نیچے گرنے دینے سے جلد زیادہ رفتار حاصل کیا جا سکتا ہے  جس کی بنا نسبتاً لمبی راہ بھی کم قوت میں طے کی جا سکتی ہو۔ حقیقت میں یہی درست جواب ہے۔ یہ ثابت کیا جا سکتا ہے (ثبوت کو پیش نہیں کیا جائے گا) کہ \عددی{O} سے \عددی{B} تک مستدیر  \عددی{O} اور \عددی{B} کے بیچ  واحد کمتر وقتی منحنی ہے۔
+
+اگرچہ مستدیر کو \عددی{O} اور \عددی{B} کے بیچ واحد کم وقتی منحنی ثابت کرنا اس کتاب میں پیش نہیں کیا جائے گا، ہم دکھا سکتے ہیں کہ یہ مستدیر یکساں وقتی منحنی ہے۔ مستدیر کے لئے مساوات \حوالہ{مساوات_مخروط_یکساں_وقتی} درج ذیل صورت اختیار کرتی ہے۔
+\begin{align*}
+T_{\text{مستدیر}}&=\int_{x=0}^{x=a\pi}\sqrt{\frac{\dif x^2+\dif y^2}{2gy}}\\
+&=\int_{t=0}^{t=\pi}\sqrt{\frac{a^2(2-2\cos t)}{2ga(1-\cos t)}}\dif t&&\text{\RL{\begin{minipage}{4cm}  
+مساوات\حوالہ{مساوات_مخروط_مستدیر_الف} سے\\ \عددی{\dif x=a(1-\cos t)\dif t}،\\
+ \عددی{\dif y=a\sin t\dif t} اور \\
+\عددی{y=a(1-\cos t)} ہوں گے
+\end{minipage}}}\\
+&=\int_0^{\pi}\sqrt{\frac{a}{g}}\dif t=\pi\sqrt{\frac{a}{g}}
+\end{align*}
+یوں بے رگڑ گیند کو مستدیر پر چلتے ہوئے \عددی{O} سے \عددی{B} تک پہنچنے کے لئے \عددی{\pi\sqrt{\tfrac{a}{g}}} وقت درکار ہو گا۔
+
+فرض کریں ہم \عددی{O} کی بجائے مستدیر پر نقطہ \عددی{(x_0,y_0)} سے گیند کو چلنے دیں جس کی مطابقتی مقدار معلوم قیمت \عددی{t_0>0} ہے۔ مستدیر پر اس کے بعد کسی نقطہ \عددی{(x,y)} پر گیند کی سمتی رفتار 
+\begin{align*}
+v&=\sqrt{2g(y-y_0)}=\sqrt{2ga(\cos t_0-\cos t)}&&(y=(1-\cos t))
+\end{align*}
+ہو گی۔ یوں \عددی{(x_0,y_0)} سے \عددی{B} تک پہنچنے کے لئے درکار وقت درج ذیل ہو گا۔
+\begin{align*}
+T&=\int_{t_0}^{\pi}\sqrt{\frac{a^2(2-2\cos t)}{2ga(\cos t_0-\cos t)}}\dif t=\sqrt{\frac{a}{g}}\int_{t_0}^{\pi}\sqrt{\frac{1-\cos t}{\cos t_0-\cos t}}\dif t\\
+&=\sqrt{\frac{a}{g}}\int_{t_0}^{\pi}\sqrt{\frac{2\sin^2\tfrac{t}{2}}{(2\cos^2\tfrac{t_0}{2}-1)-(2\cos^2\tfrac{t}{2}-1)}}\dif t\\
+&=\sqrt{\frac{a}{g}}\int_{t_0}^{\pi}\frac{\sin\tfrac{t}{2}\dif t}{\sqrt{\cos^2\tfrac{t_0}{2}-\cos^2\tfrac{t}{2}}}\\
+&=\sqrt{\frac{a}{g}}\int_{t=t_0}^{t=\pi}\frac{-2\dif u}{\sqrt{a^2-u^2}}\quad \quad \quad [
+u=\cos(t/2),\, c=\cos(t_0/2)]\\
+&=2\sqrt{\frac{a}{g}}\left[-\sin^{-1}\frac{u}{c}\right]_{t=t_0}^{t=\pi}\\
+&=2\sqrt{\frac{a}{g}}\big[-\sin^{-1}\frac{\cos(t/2)}{\cos(t_0/2)}\big]_{t_0}^{\pi}\\
+&=2\sqrt{\frac{a}{g}}(-\sin^{-1}0+\sin^{-1}1)=\pi\sqrt{\frac{a}{g}}
+\end{align*}
+یہ ٹھیک اتنا ہی وقت ہے جو گیند کو \عددی{O} سے \عددی{B} تک پہنچتے ہوئے درکار ہوتا ہے۔ نقطہ \عددی{B} تک پہنچنے کے لئے درکار وقت پر ابتدائی نقطے کا کوئی اثر نہیں پایا جاتا ہے۔ یوں شکل میں \عددی{O}، \عددی{A} اور \عددی{C} سے ابتدا کرتے ہوئے تینوں گیند \عددی{B} تک ایک جتنے وقت میں پہنچیں گے۔ 
+
+\موٹا{معیاری مقدار معلوم روپ}\\
+\begin{gather*}
+\begin{aligned}
+\text{دائرہ}&\\
+x^2+y^2&=a^2\\
+x&=a\cos t\\
+y&=a\sin t\\
+0&\le t\le 2\pi
+\end{aligned}\quad \quad \quad 
+\begin{aligned} 
+\text{ترخیم}&\\
+\frac{x^2}{a^2}+\frac{y^2}{b^2}&=1\\
+ x&=a\cos t\\
+y&=b\sin t\\
+0&\le t\le 2\pi
+\end{aligned}
+\end{gather*}
+%
+\begin{align*}
+\text{\RL{
+رداس \عددی{a} کے دائرہ کا مستدیر
+}}\\
+x=a(t-\sin t),\quad y=a(1-\cos t)
+\end{align*}
