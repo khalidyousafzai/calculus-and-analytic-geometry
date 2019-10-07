@@ -1,276 +1,512 @@
 \حصہء{سوالات}
-\موٹا{مقدار معلوم منحنیات کے مماس}\\
-سوال \حوالہ{سوال_مخروط_مقدار_معلوم_مماس_الف} تا سوال \حوالہ{سوال_مخروط_مقدار_معلوم_مماس_ب} میں \عددی{t}  پر مقدار معلوم منحنی کے مماس کی مساوات  دریافت کریں گے۔ اس نقطہ پر \عددی{\tfrac{\dif^{\,2}y}{\dif x^2}} بھی معلوم کریں۔
+\موٹا{قطبی محددی جوڑیاں}\\
+\ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_کارتیسی_الف}
+کون سی محددی جوڑیاں ایک ہی نقطہ کو ظاہر کرتی ہیں۔\\
+\begin{multicols}{4}
+\begin{enumerate}[a.]
+\item
+$(3,0)$
+\item
+$(-3,0)$
+\item
+$(2,\tfrac{2\pi}{3})$
+\item
+$(2,\tfrac{7\pi}{3})$
+\item
+$(-3,\pi)$
+\item
+$(2,\tfrac{\pi}{3})$
+\item
+$(-3,2\pi)$
+\item
+$(-2,-\tfrac{\pi}{3})$
+\end{enumerate}
+\end{multicols}
+جواب:\quad
+ا اور ہ؛  ب اور ز؛ ج اور ح؛ د اور و 
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+کون سی محددی جوڑیاں ایک ہی نقطہ کو ظاہر کرتی ہیں۔\\
+\begin{multicols}{4}
+\begin{enumerate}[a.]
+\item
+$(-2,\tfrac{\pi}{3})$
+\item
+$(2,-\tfrac{\pi}{3})$
+\item
+$(r,\theta)$
+\item
+$(r,\theta+\pi)$
+\item
+$(-r,\theta)$
+\item
+$(2,-\tfrac{2\pi}{3})$
+\item
+$(-r,\theta+\pi)$
+\item
+$(-2,\tfrac{2\pi}{3})$
+\end{enumerate}
+\end{multicols}
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_نقطے}
+درج ذیل قطبی محدد میں دیے گئے نقطے ترسیم کریں۔ ان نقطوں کے تمام قطبی محدد تلاش کریں۔ 
+\begin{multicols}{4}
+\begin{enumerate}[a.]
+\item
+$(2,\tfrac{\pi}{2})$
+\item
+$(2,0)$
+\item
+$(-2,\tfrac{\pi}{2})$
+\item
+$(-2,0)$
+\end{enumerate}
+\end{multicols}
+جواب:\quad
+شکل \حوالہ{شکل_سوال_مخروط_قطبی_نقطے}\\
+(ا) \عددی{(2,\tfrac{\pi}{2}+2n\pi)} اور \عددی{(-2,\tfrac{\pi}{2}+(2n+1)\pi)} جہاں \عددی{n} عدد صحیح ہے۔\\
+(ب) \عددی{(2,2n\pi)} اور \عددی{(-2,(2n+1)\pi)} جہاں \عددی{n} عدد صحیح ہے۔\\
+(ج) \عددی{(2,\tfrac{3\pi}{2}+2n\pi)} اور \عددی{(-2,\tfrac{3\pi}{2}+(2n+1)\pi)} جہاں \عددی{n} عدد صحیح ہے۔\\
+(د) \عددی{(2,(2n+1)\pi)} اور \عددی{(-2,2n\pi)} جہاں \عددی{n} عدد صحیح ہے۔
+\انتہا{سوال}
+%=================
+\ابتدا{سوال}
+درج ذیل قطبی محدد میں دیے گئے نقطے ترسیم کریں۔ ان نقطوں کے تمام قطبی محدد تلاش کریں۔ 
+\begin{multicols}{4}
+\begin{enumerate}[a.]
+\item
+$(3,\tfrac{\pi}{4})$
+\item
+$(-3,\tfrac{\pi}{4})$
+\item
+$(3,-\tfrac{\pi}{4})$
+\item
+$(-3,-\tfrac{\pi}{4})$
+\end{enumerate}
+\end{multicols}
+\انتہا{سوال}
+%=================
+\موٹا{قطبی سے کارتیسی محدد}\\
+\ابتدا{سوال}
+ان نقطوں کے کارتیسی محدد معلوم کریں جنہیں سوال \حوالہ{سوال_مخروط_قطبی_کارتیسی_الف} میں پیش کیا گیا ہے۔\\
+جواب:\quad
+(ا) \عددی{(3,0)}، (ب) \عددی{(-3,0)}، (ج) \عددی{(-1,\sqrt{3})}، (د) \عددی{(1,\sqrt{3})}، (ہ) \عددی{(3,0)}، (و) \عددی{(1,\sqrt{3})}، (ز) \عددی{(-3,0)}، (ح) \عددی{(-1,\sqrt{3})}
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}
+درج ذیل نقطے قطبی محدد میں دیے گئے ہیں۔ ان کی کارتیسی محدد تلاش کریں۔
+\begin{multicols}{4}
+\begin{enumerate}[a.]
+\item
+$(\sqrt{2},\tfrac{\pi}{4})$
+\item
+$(1,0)$
+\item
+$(0,\tfrac{\pi}{2})$
+\item
+$(-\sqrt{2},\tfrac{\pi}{4})$
+\item
+$(-3,\tfrac{5\pi}{6})$
+\item
+$(5,\tan^{-1}(\tfrac{4}{3}))$
+\item
+$(-1,7\pi)$
+\item
+$(2\sqrt{3},\tfrac{2\pi}{3})$
+\end{enumerate}
+\end{multicols}
+\انتہا{سوال}
+%======================
+\موٹا{قطبی مساوات اور عدم مساوات کی ترسیم}\\
+سوال \حوالہ{سوال_مخروط_عدم_مساوات_الف} تا سوال \حوالہ{سوال_مخروط_عدم_مساوات_ب} میں دیے مساوات اور عدم مساوات کو مطمئن کرنے والے نقطوں کے سلسلہ کو ترسیم کریں۔ 
 
-\ابتدا{سوال}\شناخت{سوال_مخروط_مقدار_معلوم_مماس_الف}
-$x=2\cos t,\quad y=2\sin t,\quad t=\tfrac{\pi}{4}$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$x=\sin 2\pi t,\quad y=\cos 2\pi t,\quad t=-\frac{1}{6}$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$x=4\sin t,\quad y=2\cos t,\quad t=\frac{\pi}{4}$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$x=\cos t,\quad y=\sqrt{3}\cos t,\quad t=\frac{2\pi}{3}$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$x=t,\quad y=\sqrt{t},\quad t=\frac{1}{4}$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$x=\sec^2t,\quad y=\tan t,\quad t=-\frac{\pi}{4}$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$x=\sec t,\quad y=\tan t,\quad t=\frac{\pi}{6}$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$x=-\sqrt{t+1},\quad y=\sqrt{3t},\quad t=3$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$x=2t^2+3,\quad y=t^4,\quad t=-1$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$x=\frac{1}{t},\quad y=-2+\ln t,\quad t=1$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$x=t-\sin t,\quad y=1-\cos t,\quad t=\frac{\pi}{3}$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}\شناخت{سوال_مخروط_مقدار_معلوم_مماس_ب}
-$x=\cos t,\quad y=1+\sin t,\quad t=\frac{\pi}{2}$
-\انتہا{سوال}
-%=======================
-
-\موٹا{خفی مقدار معلوم مساوات}\\
-سوال \حوالہ{سوال_مخروط_خفی_مقدار_معلوم_ڈھلوان_الف} تا سوال \حوالہ{سوال_مخروط_خفی_مقدار_معلوم_ڈھلوان_ب} میں \عددی{x} اور \عددی{y} بطور قابل تفرق خفی مقدار معلوم  تفاعل \عددی{x=f(t)}، \عددی{y=g(t)} دیے گئے ہیں۔  دیے گئے \عددی{t} پر منحنی \عددی{x=f(t),\, t=g(t)} کی ڈھلوان تلاش کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_خفی_مقدار_معلوم_ڈھلوان_الف}
-$x^2-2tx+2t^2=4,\quad 2y^3-3t^2=4,\quad t=2$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$x=\sqrt{5-\sqrt{t}},\quad y(t-1)=\ln y,\quad t=1$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$x+2x^{3/2}=t^2+t,\quad y\sqrt{t+1}+2t\sqrt{y}=4,\quad t=0$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_خفی_مقدار_معلوم_ڈھلوان_ب}
-$x\sin t+2x=t,\quad t\sin t-2t=y,\quad t=\pi$
-\انتہا{سوال}
-%=====================
-
-\موٹا{منحنیات کی لمبائیاں}\\
-سوال \حوالہ{سوال-مخروط_منحنی_لمبائی_درکار_الف} تا سوال \حوالہ{سوال-مخروط_منحنی_لمبائی_درکار_ب} میں منحنیات کی لمبائیاں تلاش کریں۔
-
-\ابتدا{سوال}\شناخت{سوال-مخروط_منحنی_لمبائی_درکار_الف}
-$x=\cos t,\quad y=t+\sin t,\quad 0\le t\le \pi$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$x=t^3,\quad y=\frac{3t^2}{2},\quad 0\le t\le \sqrt{3}$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$x=\frac{t^2}{2},\quad y=\frac{(2t+1)^{3/2}}{3},\quad 0\le t\le 4$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$x=\frac{(2t+3)^{3/2}}{3},\quad y=t+\frac{t^2}{2},\quad 0\le t\le 3$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$x=8\cos t+8t\sin t,\, y=8\sin t-8t\cos t,\, 0\le t\le \frac{\pi}{2}$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال-مخروط_منحنی_لمبائی_درکار_ب}
-$x=\ln(\sec t+\tan t),\, y=\cos t,\, 0\le t\le \frac{\pi}{3}$
-\انتہا{سوال}
-%=====================
-
-\موٹا{سطحی رقبے}\\
-سوال \حوالہ{سوال_مخروط_سطح_طواف_الف} تا سوال \حوالہ{سوال_مخروط_سطح_طواف_ب} میں دیے گئے محور کے گرد منحنی گھما کر سطح طواف پیدا کیا جاتا ہے۔ اس سطح کا رقبہ معلوم کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_سطح_طواف_الف}
-محور \عددی{x}؛ \quad
-$x=\cos t,\quad y=2+\sin t,\quad 0\le t\le 2\pi$
+\ابتدا{سوال}\شناخت{سوال_مخروط_عدم_مساوات_الف}
+$r=2$\\
+جواب:\quad 
+شکل \حوالہ{شکل_سوال_مخروط_عدم_مساوات_الف}
 \انتہا{سوال}
 %======================
 \ابتدا{سوال}
-محور\عددی{y}؛ \quad
-$x=\frac{3}{2}t^{3/2},\quad y=2\sqrt{t},\quad 0\le t\le \sqrt{3}$
+$0\le r\le 2$
 \انتہا{سوال}
 %======================
 \ابتدا{سوال}
-محور \عددی{y}؛ \quad
-$x=t+\sqrt{2},\quad y=\frac{t^2}{2}+\sqrt{2}t,\quad -\sqrt{2}\le t\le \sqrt{2}$
+$r\ge 1$\\
+جواب:\quad 
+شکل \حوالہ{شکل_سوال_مخروط_قطبی_نقطے_پ}
 \انتہا{سوال}
 %======================
-\ابتدا{سوال}\شناخت{سوال_مخروط_سطح_طواف_ب}
-محور \عددی{x}؛ \quad
-$x=\ln(\sec t+\tan t)-\sin t,\quad y=\cos t,\quad 0\le t\le \frac{\pi}{3}$
+\ابتدا{سوال}
+$1\le rle 2$
 \انتہا{سوال}
 %======================
-\ابتدا{سوال}\ترچھا{مخروط مقطوع}\\
-نقطہ \عددی{(0,1)} اور \عددی{(2,2)} کے بیچ لکیر کو محور \عددی{x} کے گرد گھما کر مخروط مقطوع کا سطح طواف پیدا کیا جاتا ہے۔مقدار معلوم مساوات \عددی{x=2t,\, y=t+1,\, 0\le t\le 1} استعمال کرتے ہوئے سطح طواف کا رقبہ معلوم کریں۔ نتیجہ کا جیومیٹری کے کلیہ \عددی{S=\pi(r_1+r_2)(\text{\RL{ترچھا قد}})} کے ساتھ موازنہ کریں۔
+\ابتدا{سوال}
+$0\le \theta\le \tfrac{\pi}{6},\quad r\ge 0$\\
+جواب:\quad 
+شکل \حوالہ{شکل_سوال_مخروط_قطبی_نقطے_ت}
 \انتہا{سوال}
-%====================
-\ابتدا{سوال}\ترچھا{مخروط}\\
-مبدا اور نقطہ \عددی{(h,r)} کے بیچ قطع کو محور \عددی{x} کے گرد گھما کر مخروط سطح طواف پیدا کیا جاتا ہے جس کے قاعدے کا رداس \عددی{r} اور  قد \عددی{h} ہوں گے۔ مقدار معلوم مساوات \عددی{x=ht,\, y=rt,\, 0\le t\le 1} استعمال کرتے ہوئے سطح طواف کا رقبہ تلاش کریں۔  نتیجے کا موازنہ جیومیٹری کے کلیہ \عددی{S=\pi r(\text{\RL{ترچھا قد}})} کے ساتھ کریں۔
+%======================
+\ابتدا{سوال}
+$\theta=\tfrac{2\pi}{3},\quad r\le -2$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\theta=\tfrac{\pi}{3},\quad -1\le r\le 3$\\
+جواب:\quad 
+شکل \حوالہ{شکل_سوال_مخروط_قطبی_نقطے_ٹ}
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\theta=\tfrac{11\pi}{4},\quad r\ge -1$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\theta=\tfrac{\pi}{2},\quad r\ge 0$\\
+جواب:\quad 
+شکل \حوالہ{شکل_سوال_مخروط_قطبی_نقطے_ث}
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\theta=\tfrac{\pi}{2},\quad r\le 0$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$0\le \theta\le \pi,\quad r=1$\\
+جواب:\quad 
+شکل \حوالہ{شکل_سوال_مخروط_قطبی_نقطے_ج}
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$0\le \theta\le \pi,\quad r=-1$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$\tfrac{\pi}{4}\le \theta \le \tfrac{3\pi}{4},\quad 0\le r\le 1$\\
+جواب:\quad 
+شکل \حوالہ{شکل_سوال_مخروط_قطبی_نقطے_چ}
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$-\tfrac{\pi}{4}\le \theta \le \tfrac{\pi}{4},\quad -1\le r\le 1$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$-\tfrac{\pi}{2}\le \theta \le \tfrac{\pi}{2},\quad 1\le r\le 2$\\
+جواب:\quad 
+شکل \حوالہ{شکل_سوال_مخروط_قطبی_نقطے_ح}
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\شناخت{سوال_مخروط_عدم_مساوات_ب}
+$0\le \theta \le \tfrac{\pi}{2},\quad 1\le \abs{r}\le 2$
+\انتہا{سوال}
+%======================
+\begin{figure}
+\centering
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize]
+\pgfmathsetmacro{\k}{pi/2}
+\begin{axis}[clip=false,width=4cm, axis lines=middle,xlabel={$x$},ylabel={$y$},enlargelimits=true,xtick={\empty},ytick={\empty}, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[]plot coordinates {(-2,0)}node[circ]{}node[below]{$(-2,0)$};
+\addplot[]plot coordinates {(2,0)}node[circ]{}node[below]{$(2,0)$};
+\addplot[]plot coordinates {(0,-2)}node[circ]{}node[right]{$(-2,\tfrac{\pi}{2})$};
+\addplot[]plot coordinates {(0,2)}node[circ]{}node[right]{$(2,\tfrac{\pi}{2})$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_مخروط_قطبی_نقطے}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=2*cos(\x);g(\x)=2*sin(\x);}]
+\pgfmathsetmacro{\k}{360}
+\begin{axis}[axis equal,clip=false,width=4cm, axis lines=middle,xlabel={$x$},ylabel={$y$},enlargelimits=true,xtick={2},ytick={2}, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[domain=0:\k]({f(x)},{g(x)})node[pos=0.15,above right]{$r=2$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_مخروط_عدم_مساوات_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=cos(\x);g(\x)=sin(\x);}]
+\pgfmathsetmacro{\k}{1.5}
+\begin{axis}[axis on top,axis equal,clip=false,width=4cm, axis lines=middle,xlabel={$x$},ylabel={$y$},enlargelimits=true,xtick={1},ytick={\empty}, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[fill=lgray,draw=none]plot coordinates {(-\k,-\k)(\k,-\k)(\k,\k)(-\k,\k)(-\k,-\k)};
+\addplot[fill=white,domain=0:360]({f(x)},{g(x)});
+\addplot[] plot coordinates {(1.25,0.25)}node[pin=45:{$r\ge 1$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_مخروط_قطبی_نقطے_پ}
+\end{minipage}
+\end{figure}
+%==================
+\begin{figure}
+\centering
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize]
+\pgfmathsetmacro{\kx}{cos(30)}
+\pgfmathsetmacro{\ky}{sin(30)}
+\begin{axis}[axis on top,clip=false,width=4cm, axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty}, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\addplot[-latex,name path=a]plot coordinates {(0,0) (\kx,\ky)}node[pos=0.7,left]{$\begin{aligned}  0\le &\theta\le \tfrac{\pi}{6} \\ r&\ge 0 \end{aligned}$};
+\path[name path=xaxis](axis cs:0,0)--(axis cs:\kx,0);
+\addplot[lgray] fill between [of=a and xaxis];
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_مخروط_قطبی_نقطے_ت}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=0.6*cos(\x);g(\x)=0.6*sin(\x);}]
+\pgfmathsetmacro{\kxa}{-1*cos(60)}
+\pgfmathsetmacro{\kya}{-1*sin(60)}
+\pgfmathsetmacro{\kxb}{3*cos(60)}
+\pgfmathsetmacro{\kyb}{3*sin(60)}
+\begin{axis}[axis on top,clip=false,width=4cm, axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-1,2},ytick={-1,3}, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xmin=-1.1,xmax=2.2,ymax=3.2]
+\addplot[]plot coordinates {(\kxa,\kya)(\kxb,\kyb)}node[pos=0,circ]{}node[pos=1,circ]{}node[pos=1,above]{$\begin{aligned} \theta&=\tfrac{\pi}{3}\\ -1&\le r\le 3 \end{aligned}$};
+\addplot[-stealth,domain=0:60]({f(x)},{g(x)})node[pos=0.75,right]{$\theta$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_مخروط_قطبی_نقطے_ٹ}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=0.6*cos(\x);g(\x)=0.6*sin(\x);}]
+\pgfmathsetmacro{\kxa}{-1*cos(60)}
+\pgfmathsetmacro{\kya}{-1*sin(60)}
+\pgfmathsetmacro{\kxb}{3*cos(60)}
+\pgfmathsetmacro{\kyb}{3*sin(60)}
+\begin{axis}[axis on top,clip=false,width=4cm, axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty}, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ymax=1.25]
+\addplot[-stealth,thick]plot coordinates {(0,0)(0,1)}node[pos=0,circ]{}node[pos=0.5,right]{$\begin{aligned} \theta&=\tfrac{\pi}{2}\\ r&\ge 0\end{aligned}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_مخروط_قطبی_نقطے_ث}
+\end{minipage}
+\end{figure}
+%==============================
+\begin{figure}
+\centering
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=cos(\x);g(\x)=sin(\x);}]
+\begin{axis}[axis equal,axis on top,clip=false,width=4cm, axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1},ytick={\empty}, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true]
+\addplot[domain=0:180]({f(x)},{g(x)})node[pos=0.25,above right]{$\begin{aligned}r&=1\\ 0&\le \theta\le \pi   \end{aligned}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_مخروط_قطبی_نقطے_ج}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=cos(\x);g(\x)=sin(\x);}]
+\begin{axis}[axis equal,axis on top,clip=false,width=4cm, axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={1}, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true]
+\addplot[name path=c,domain=45:135]({f(x)},{g(x)})node[pos=0.25,above right]{$\begin{aligned}\tfrac{\pi}{4}&\le\theta\le\tfrac{3\pi}{4}\\  0&\le r\le 1  \end{aligned}$};
+\addplot[name path=b]plot coordinates {({cos(135)},{sin(135)})(0,0) ({cos(45)},{sin(45)})};
+\addplot[lgray]fill between[of=b and c];
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_مخروط_قطبی_نقطے_چ}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=cos(\x);g(\x)=sin(\x);}]
+\begin{axis}[axis equal,axis on top,clip=false,width=4cm, axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={1,2}, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true]
+\addplot[name path=b,domain=-90:90]({2*f(x)},{2*g(x)})node[pos=0.75,above right]{$\begin{aligned}-\tfrac{\pi}{2}&\le\theta\le\tfrac{\pi}{2}\\  1&\le r\le 2  \end{aligned}$};
+\addplot[name path=c,domain=-90:90]({f(x)},{g(x)});
+\addplot[lgray]fill between[of=b and c];
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_مخروط_قطبی_نقطے_ح}
+\end{minipage}
+\end{figure}
+\موٹا{قطبی سے کارتیسی مساوات}\\
+سوال \حوالہ{سوال_مخروط_قطبی_سے_کارتیسی_الف} تا سوال \حوالہ{سوال_مخروط_قطبی_سے_کارتیسی_ب} میں مطابقتی کارتیسی مساوات دریافت کریں۔ اس کے بعد ترسیم کو پہچانئے۔
+
+\ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_سے_کارتیسی_الف}
+$r\cos\theta=2$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r\sin\theta=-1$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r\sin\theta=0$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r\cos\theta=0$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r=4\csc \theta$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r=-3\sec\theta$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r\cos\theta+r\sin\theta=1$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r\sin\theta=r\cos\theta$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r^2=1$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r^2=4r\sin\theta$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r=\tfrac{5}{\sin\theta-2\cos\theta}$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r^2\sin2\theta=2$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r=\cot\theta\csc\theta$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r=4\tan\theta\sec\theta$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r=\csc\theta e^{r\cos\theta}$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r\sin\theta=\ln r+\ln\cos\theta$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r^2+2r^2\cos\theta\sin\theta=1$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$\cos^2\theta=\sin^2\theta$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r^2=-4r\cos\theta$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r62=-6r\sin\theta$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r=8\sin\theta$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r=3\cos\theta$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r=2\cos\theta+2\sin\theta$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r=2\cos\theta-\sin\theta$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r\sin(\theta+\tfrac{\pi}{6})=2$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_سے_کارتیسی_ب}
+$r=r\sin(\tfrac{2\pi}{3}-\theta)=5$
+\انتہا{سوال}
+%===================
+
+\موٹا{کارتیسی سے قطبی مساوات}\\
+سوال \حوالہ{سوال_مخروط_کارتیسی_سے_قطبی_الف} تا سوال \حوالہ{سوال_مخروط_کارتیسی_سے_قطبی_ب} میں کارتیسی مساوات سے قطبی مساوات حاصل کریں۔ 
+
+\ابتدا{سوال}\شناخت{سوال_مخروط_کارتیسی_سے_قطبی_الف}
+$x=7$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$y=1$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$x=y$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$x-y=3$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$x^2+y^2=4$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$x^2-y^2=1$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$\tfrac{x^2}{9}+\tfrac{y^2}{4}=1$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$xy=2$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$y^2=4x$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$x^2+xy+y^2=1$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$x^2+(y-2)^2=4$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$(x-5)^2+y^2=25$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$(x-3)^2+(y+1)^2=4$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}\شناخت{سوال_مخروط_کارتیسی_سے_قطبی_ب}
+$(x+2)^2+(y-5)^2=16$
 \انتہا{سوال}
 %========================
 
-\موٹا{وسطانی مراکز}\\
-\ابتدا{سوال}
-(ا) درج ذیل منحنی کے وسطانی مرکز کے محدد تلاش کریں۔
-\begin{align*}
-x=\cos t+t\sin t,\quad y=\sin t-t\cos t,\quad 0\le t\le\frac{\pi}{2}
-\end{align*}
-(ب) یہ منحنی شکل \حوالہ{شکل_سوال_دائرے_کا_در_پیچیدہ} میں دکھائی گئی در پیچیدہ کا حصہ ہے۔ اس منحنی کو  ترسیم کریں۔ منحنی کا وسطانی مرکز \عددی{1} اعشاریہ تک تلاش کر کے ترسیم  پر دکھائیں۔
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-(ا) درج ذیل منحنی کے وسطانی مرکز کے محدد تلاش کریں۔
-\begin{align*}
-x=e^t\cos t,\quad y=e^t\sin t,\quad 0\le t\le\pi
-\end{align*}
-(ب) اس منحنی کو  ترسیم کریں۔ منحنی کا وسطانی مرکز  \عددی{1} اعشاریہ تک تلاش کر کے ترسیم  پر دکھائیں۔
-\انتہا{سوال}
-%==================
-\ابتدا{سوال}
-(ا) درج ذیل منحنی کے وسطانی مرکز کے محدد تلاش کریں۔
-\begin{align*}
-x=\cos t,\quad y=t+\sin t,\quad 0\le t\le\pi
-\end{align*}
-(ب) اس منحنی کو  ترسیم کریں۔ منحنی کا وسطانی مرکز  \عددی{1} اعشاریہ تک تلاش کر کے ترسیم  پر دکھائیں۔
-\انتہا{سوال}
-%==================
-\ابتدا{سوال}\ترچھا{تکمل کی قیمت}\\
-وسطانی مراکز کے مسائل کو عموماً کیلکولیٹر یا کمپیوٹر کی مدد سے حل کیا جاتا ہے۔درج ذیل منحنی کا وسطانی مرکز \عددی{2} اعشاریہ تک کیلکولیٹر یا کمپیوٹر کی مدد سے تلاش کریں۔
-\انتہا{سوال}
-%===================
-
 \موٹا{نظریہ اور مثالیں}\\
-\ابتدا{سوال}\ترچھا{لمبائی کا دارومدار مقدار معلوم مساوات پر نہیں ہوتا ہے۔}\\
-نصف دائرہ \عددی{y=\sqrt{1-x^2}} کی لمبائی درج ذیل مقدار معلوم مساوات استعمال کرتے ہوئے تلاش کریں۔
+\ابتدا{سوال}
+مبدا کے تمام قطبی محدد تلاش کریں۔
+\انتہا{سوال}
+%=============
+\ابتدا{سوال}\ترچھا{افقی اور انتصابی خط}\\
 \begin{enumerate}[a.]
 \item
-$x=\cos 2t,\, y=\sin 2t,\, 0\le t\le \tfrac{\pi}{2}$
+دکھائیں کہ \عددی{xy} مستوی میں ہر انتصابی خط کی قطبی مساوات کو \عددی{r=a\sec\theta} لکھا جا سکتا ہے۔
 \item
-$x=\sin \pi t,\, y=\cos \pi t,\, -\frac{1}{2}\le t\le \frac{1}{2}$
-\end{enumerate}
-آپ دیکھیں گے کہ دونوں جوابات یکساں ہیں۔
-\انتہا{سوال}
-%=================
-\ابتدا{سوال}\ترچھا{ترخیمی تکمل}\\
-ترخیم \عددی{x=a\cos t,\, y=b\sin t,\, 0\le t\le 2\pi} کی لمبائی درج ذیل ہے
-\begin{align*}
-L=4a\int_0^{\pi/2}\sqrt{1-e^2\cos^2t}\dif t
-\end{align*}
-جہاں \عددی{e} ترخیم کی سنک ہے۔ ماسوائے \عددی{e=0} یا \عددی{e=1} یہ تکمل، جو \اصطلاح{ترخیمی تکمل}\فرہنگ{تکمل!ترخیمی}\فرہنگ{ترخیمی!تکمل}\حاشیہب{elliptic integral}\فرہنگ{elliptic!integral} کہلاتا ہے، غیر بنیادی ہے۔ 
-\begin{enumerate}[a.]
-\item
-قاعدہ ذوزنقہ میں \عددی{n=10} لے کر \عددی{a=1} اور \عددی{e=\tfrac{1}{2}} کے لئے  اس ترخیم کی لمبائی کا اندازہ لگائیں۔
-\item
-تفاعل \عددی{f(t)=\sqrt{1-e^2\cos^2t}} کے دو گنّا تفرق کی قیمت \عددی{1} سے کم ہے۔ اس حقیقت کو استعمال کرتے ہوئے جزو-ا میں حاصل قیمت میں خلل کا بالائی حد تلاش کریں۔
+\عددی{xy} مستوی میں ہر افقی خط کی  قطبی مساوات کس صورت کی ہو گی؟
 \end{enumerate}
 \انتہا{سوال}
-%======================
-\ابتدا{سوال}\شناخت{سوال_مخروط_مقدار_معلوم_لمبائی_کلیہ_الف}
-جیسا حصہ \حوالہ{حصہ_مخروط_مستوی_منحنیات_کے_مقدار_معلوم_روپ} میں ذکر کیا گیا، وقفہ \عددی{[a,b]} پر تفاعل \عددی{y=f(x)} کے ترسیم کی مقدار معلوم روپ درج ذیل ہو گی۔
-\begin{align*}
-x=x,\quad y=f(x),\quad a\le x\le b
-\end{align*} 
-یہاں \عددی{x} از خود مقدار معلوم ہے۔
-
-اس مقدار معلوم روپ کے لئے دکھائیں کہ مقدار معلوم لمبائی
-\begin{align*}
-L=\int_a^b\sqrt{\big(\frac{\dif x}{\dif t}\big)^2+\big(\frac{\dif y}{\dif t}\big)^2}\dif t
-\end{align*}
-درج ذیل کارتیسی صورت اختیار کرتی ہے جس کو حصہ \حوالہ{حصہ_استعمال_تکمل_لمبائی_منحنی} میں حاصل کیا گیا۔
-\begin{align*}
-L=\int_a^b\sqrt{1+\big(\frac{\dif y}{\dif x}\big)^2}\dif x
-\end{align*}
-یوں کارتیسی کلیہ در حقیقت مقدار معلوم کلیہ کی ایک مخصوص صورت ہے۔
-\انتہا{سوال}
-%================
-\ابتدا{سوال}\شناخت{سوال_مخروط_مقدار_معلوم_لمبائی_کلیہ_ب}
-دکھائیں کہ منحنی \عددی{x=g(y),\, c\le y\le d} کی لمبائی کا کارتیسی کلیہ (مساوات \حوالہ{مساوات_تکمل_استعمال_لمبائی_قوس_پ})
-\begin{align*}
-L=\int_c^d\sqrt{1+\big(\frac{\dif x}{\dif y}\big)^2}\dif y
-\end{align*}
-در حقیقت درج ذیل مقدار  معلوم کلیہ کی مخصوص صورت ہے۔
-\begin{align*}
-L=\int_a^b\sqrt{\big(\frac{\dif x}{\dif t}\big)^2+\big(\frac{\dif y}{\dif t}\big)^2}\dif t
-\end{align*}
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-درج ذیل تدویر کی ایک محراب کے نیچے رقبہ تلاش کریں۔
-\begin{align*}
-x=a(\theta-\sin\theta),\quad y=a(1-\cos\theta)
-\end{align*} \quad
-(اشارہ:\عددی{\dif x=\tfrac{\dif x}{\dif \theta}\dif \theta} استعمال کریں۔)
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-درج ذیل تدویر کی ایک محراب کی لمبائی معلوم کریں۔
-\begin{align*}
-x=a(\theta-\sin\theta),\quad y=a(1-\cos\theta)
-\end{align*}
-\انتہا{سوال}
-%===================
-\ابتدا{سوال}
-تدویر \عددی{x=\theta-\sin\theta,\, y=1-\cos\theta} کی ایک محراب کو محور \عددی{x} کے گرد گھما کر سطح طواف پیدا کیا جاتا ہے۔ اس سطح کا رقبہ تلاش کریں۔
-\انتہا{سوال}
-%======================
-\ابتدا{سوال}
-محور \عددی{x} اور تدویر \عددی{x=\theta-\sin\theta,\, y=1-\cos\theta} کے ایک محراب کے بیچ خطہ کو محور \عددی{x} کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔ اس ٹھوس جسم کا حجم تلاش کریں۔ (اشارہ: \عددی{\dif H=\pi y^2\dif x=\pi y^2\tfrac{\dif x}{\dif \theta}\dif \theta})
-\انتہا{سوال}
-%======================
-
-\موٹا{کمپیوٹر کا استعمال}\\
-سوال \حوالہ{سوال_مخروط_لساجس_الف} اور سوال \حوالہ{سوال_مخروط_لساجس_الف} میں \اصطلاح{لساجس اشکال}\فرہنگ{لساجس اشکال}\حاشیہب{Lissajous figures}\فرہنگ{Lissajous figures} دکھائی گئی ہیں۔  دونوں سوالات میں ربع اول میں وہ نقطہ تلاش کریں جہاں منحنی کا مماس افقی ہو۔ مبدا پر دو مماس کی مساوات تلاش کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_لساجس_الف}
-ترسیم شکل \حوالہ{شکل_سوال_مخروط_لساجس_الف} میں دی گئی ہے۔
-\انتہا{سوال}
-%===================
-\ابتدا{سوال}\شناخت{سوال_مخروط_لساجس_ب}
-ترسیم شکل \حوالہ{شکل_سوال_مخروط_لساجس_ب} میں دی گئی ہے۔
-\انتہا{سوال}
-%===================
-\begin{figure}
-\centering
-\begin{minipage}{0.45\textwidth}
-\centering
-\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sin(deg(\x)); g(\x)=sin(deg(2*\x));}]
-\pgfmathsetmacro{\k}{2*pi}
-\begin{axis}[clip=false,width=4cm,axis lines=middle, xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ytick={\empty}]
-\addplot[smooth,domain=0:\k]({f(x)},{g(x)});
-\addplot[]plot coordinates {(1,1)}node[right]{$\begin{aligned}x&=\sin t\\ y&=\sin 2t  \end{aligned}$};;
-\end{axis}
-\end{tikzpicture}
-\end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
-\centering
-\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sin(deg(2*\x)); g(\x)=sin(deg(3*\x));}]
-\pgfmathsetmacro{\k}{2*pi}
-\begin{axis}[clip=false,width=4cm,axis lines=middle, xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ytick={\empty}]
-\addplot[smooth,domain=0:\k]({f(x)},{g(x)});
-\addplot[]plot coordinates {(1,1)}node[right]{$\begin{aligned}x&=\sin 2t\\ y&=\sin 3t  \end{aligned}$};;
-\end{axis}
-\end{tikzpicture}
-\end{minipage}
-\end{figure}
+%==================
