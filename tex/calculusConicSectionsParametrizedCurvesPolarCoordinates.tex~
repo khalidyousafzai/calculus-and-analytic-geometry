@@ -4728,3 +4728,294 @@ $x^2-2tx+3t^2=4,\quad y^3-2t^2=7,\quad -1\le t\le 2,\quad t_0=1$
 $x^2\cos t+2x=t,\quad t\sin t+2\sqrt{y}=y,\quad -2\pi\le t\le 2\pi,\quad t_0=-\frac{\pi}{4}$
 \انتہا{سوال}
 %===========================
+
+\حصہ{قطبی محدد}
+اس حصہ میں ہم قطبی محدد اور کارتیسی محدد کے ساتھ ان کے تعلق پر غور کریں گے۔ اگرچہ مستوی پر ایک نقطہ کے صرف ایک جوڑی کارتیسی محدد ہوتے ہیں، اسی نقطہ کے قطبی محدد کی جوڑیوں کی تعداد لامتناہی ہوتی ہے۔ جیسا ہم اگلے حصہ میں دیکھیں گے، ترسیم پر اس کے دلچسپ اثرات مرتب ہوتے ہیں۔
+
+\جزوحصہء{قطبی محدد کی تعریف}
+قطبی محدد متعارف کرنے کی خاطر ہم ایک \اصطلاح{مبدا}\فرہنگ{مبدا}\حاشیہب{origin}\فرہنگ{origin} \عددی{O}  جو \اصطلاح{قطب}\فرہنگ{قطب}\حاشیہب{pole}\فرہنگ{pole} کہلائے گا اور  \عددی{O} سے ایک \اصطلاح{ابتدائی شعاع} مقرر کرتے ہیں (شکل \حوالہ{شکل_مخروط_قطبی_محدد_تعریف})۔ اب ہر نقطہ \عددی{N} کے مقام کو \اصطلاح{قطبی محددی جوڑی} \عددی{(r,\theta)} سے ظاہر کیا جا سکتا ہے جہاں \عددی{O} سے \عددی{N} تک فاصلہ \عددی{r} اور ابتدائی شعاع سے \عددی{ON} تک زاویہ \عددی{\theta} ہوں گے۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](0,0)node[below]{$O$}--(4,0)node[pos=0.85,below]{\RL{ابتدائی شعاع}};
+\draw(0,0)--++(30:3)node[circ]{}node[right]{$N(r,\theta)$}node[pos=0.5,above]{$r$};
+\draw[-stealth]([shift={(0:0.5)}]0,0) arc (0:30:0.5);
+\draw(15:0.8)node[]{$\theta$};
+\draw(0,0)node[left]{\RL{مبدا (قطب)}};
+\end{tikzpicture}
+\caption{قطبی محدد کی تعریف کے لئے ہم مبدا اور ابتدائی شعاع لیتے ہیں۔}
+\label{شکل_مخروط_قطبی_محدد_تعریف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](0,0)node[below]{$O$}--(4,0)node[below]{\begin{minipage}{2cm}\RL{ابتدائی شعاع} \\ $\theta=0$\end{minipage}};
+\draw(0,0)--++(30:3)node[circ]{}node[above]{$N(2,\tfrac{\pi}{6})=N(2,-\tfrac{11\pi}{6})$}node[pos=0.5,above]{$r$};
+\draw[-stealth]([shift={(0:0.9)}]0,0) arc (0:30:0.9);
+\draw(15:1)node[right]{$\theta=\frac{\pi}{6}$};
+\draw[-stealth]([shift={(0:0.7)}]0,0) arc (0:-330:0.7);
+\draw(135:0.8)node[left]{$-\frac{11\pi}{6}$};
+\end{tikzpicture}
+\caption{قطبی محدد یکتا نہیں ہیں۔}
+\label{شکل_مخروط_قطبی_محدد_غیر_یکتا}
+\end{minipage}
+\end{figure}
+
+تکونیات کی طرح یہاں بھی گھڑی کے الٹ رخ \عددی{\theta} کو مثبت جبکہ گھڑی کے رخ اس کو منفی تصور کیا جاتا ہے۔ کسی ایک نقطہ کے ساتھ منسلک زاویہ یکتا نہیں ہوتا ہے۔ مثال کے طور پر مبدا سے \عددی{2} اکائی دور شعاع \عددی{\theta=\tfrac{\pi}{6}} پر واقع نقطہ کے قطبی محدد \عددی{r=2}، \عددی{\theta=\tfrac{\pi}{6}} ہیں۔ اسی نقطہ کے قطبی محدد \عددی{r=2}، \عددی{\theta=-\tfrac{11\pi}{6}} بھی ہوں گے (شکل \حوالہ{شکل_مخروط_قطبی_محدد_غیر_یکتا})۔
+
+\جزوحصہء{\عددی{r} کی منفی قیمتیں}
+بعض اوقات ہم \عددی{r} کو منفی رکھنا چاہتے ہیں۔ مثال کے طور پر نقطہ \عددی{N(2,\tfrac{7\pi}{6})} تک پہنچنے کے لئے ہم ابتدائی شعاع سے گھڑی کے الٹ رخ \عددی{\tfrac{7\pi}{6}} گھوم کر آگے رخ \عددی{2} اکائیاں چلتے ہیں۔ اسی نقطہ تک پہنچنے کی خاطر ہم گھڑی کے الٹ رخ \عددی{\tfrac{\pi}{6}} گھوم کر پیچھے رخ \عددی{2} اکائیاں چلیں گے (شکل \حوالہ{شکل_مخروط_منفی_قطبی_رداس})۔ یوں اس نقطے کے قطبی محدد \عددی{r=-2}، \عددی{\theta=\tfrac{\pi}{6}} بھی ہوں گے۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](0,0)node[below]{$O$}--(4,0)node[below left]{$\theta=0$};
+\draw[-latex](0,0)--++(30:2)node[right]{$\theta=\frac{\pi}{6}$};
+\draw[-stealth]([shift={(0:1)}]0,0) arc (0:30:1);
+\draw(15:1.1)node[right]{$\theta=\frac{\pi}{6}$};
+\draw[-stealth]([shift={(0:0.7)}]0,0) arc (0:210:0.7);
+\draw(135:0.8)node[left]{$\frac{7\pi}{6}$};
+\draw[-latex](0,0)--(210:3)node[below]{$\theta=\tfrac{7\pi}{6}$};
+\draw[thick](0,0)--(210:2)node[circ]{}node[right,yshift=-1ex]{$N(2,\tfrac{7\pi}{6})=N(-2,\tfrac{\pi}{6})$};
+\end{tikzpicture}
+\caption{قطبی محدد میں \عددی{r} منفی ہو سکتا ہے۔}
+\label{شکل_مخروط_منفی_قطبی_رداس}
+\end{minipage}
+\end{figure}
+
+\ابتدا{مثال}
+نقطہ \عددی{N(2,\tfrac{\pi}{6})} کے قطبی محدد تلاش کریں۔
+
+حل:\quad
+ہم قطبی محدد کا مبدا اور ابتدائی شعاع ترسیم کرتے ہیں۔ ابتدائی شعاع  کے ساتھ \عددی{\tfrac{\pi}{6}} زاویے پر شعاع ترسیم کر کے اس پر مبدا سے \عددی{2} اکائیاں فاصلہ پر نقطہ \عددی{N(2,\tfrac{\pi}{6})} ہو گا۔ ہم اب \عددی{r=2} اور \عددی{r=-2} لیتے ہوئے اس نقطہ کے لئے  دیگر قطبی محدد تلاش کرتے ہیں۔
+
+\عددی{r=2} کے لئے درج ذیل زاویے ہوں گے۔
+\begin{align*}
+\frac{\pi}{6},\quad \frac{\pi}{6}\pm 2\pi,\quad \frac{\pi}{6}\pm 4\pi,\quad \frac{\pi}{6}\pm 6\pi,\quad \cdots
+\end{align*}
+
+\عددی{r=-2} کے لئے درج ذیل زاویے ہوں گے۔
+\begin{align*}
+-\frac{5\pi}{6},\quad -\frac{5\pi}{6}\pm 2\pi,\quad -\frac{5\pi}{6}\pm 4\pi,\quad -\frac{5\pi}{6}\pm 6\pi,\quad \cdots
+\end{align*}
+یوں \عددی{N} کے مطابقتی محددی جوڑیاں
+\begin{align*}
+(2,\tfrac{\pi}{6}+ 2n\pi),\quad n=0,\, \pm 1,\, \pm 2,\,\cdots
+\end{align*}
+اور
+\begin{align*}
+(-2,-\tfrac{5\pi}{6}+2n\pi),\quad n=0,\, \pm 1,\, \pm 2,\,\cdots
+\end{align*}
+ہوں گی۔ یہ کلیات \عددی{n=0} کے لئے \عددی{(2,\tfrac{\pi}{6})} اور \عددی{(-2,-\tfrac{5\pi}{6})} دیتے ہیں۔ اسی طرح \عددی{n=1} کے لئے یہ کلیات  \عددی{(2,\tfrac{13\pi}{6})} اور \عددی{(-2,\tfrac{7\pi}{6})}  دیتے ہیں، وغیرہ، وغیرہ۔ یوں نقطہ \عددی{N(2,\tfrac{\pi}{6})} کی لامتناہی قطبی محددی جوڑیاں پائی جاتی ہیں۔
+\انتہا{مثال}
+%==================
+
+\جزوحصہء{بنیادی محددی مساوات اور عدم مساوات}
+اگر ہم \عددی{r} کو کسی مقررہ قیمت \عددی{r=a\ne 0} پر رکھیں تب نقطہ \عددی{N(r,\theta)} مبدا سے \عددی{\abs{a}} فاصلہ پر ہو گا۔ زاویہ \عددی{\theta} کو وقفہ \عددی{0} تا \عددی{2\pi} پر تبدیل کرنے سے نقطہ \عددی{N(r,\theta)} مبدا سے رداس \عددی{\abs{a}} کے دائرہ پر چلے گا (شکل \حوالہ{شکل_مخروط_قطبی_محدد_دائرہ})۔   
+
+اگر ہم \عددی{\theta} کو مقررہ قیمت \عددی{\theta=\theta_0} پر رکھ کر \عددی{r} کو \عددی{-\infty} تا \عددی{\infty} کریں تب \عددی{N(r,\theta)} مبدا سے گزرتی ہوئی اس سیدھی لکیر پر حرکت کرے گا جو ابتدائی شعاع کے ساتھ زاویہ \عددی{\theta_0} بناتی ہے (شکل \حوالہ{شکل_مخروط_قطبی_محدد_لکیر})۔
+
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\r}{1.25}
+\draw[-latex](0,0)--(\r+0.5,0)node[right]{$x$};
+\draw(0,0)node[below]{$O$} circle (\r);
+\draw(0,0)--(45:\r)node[pos=0.4,above,yshift={0.5ex}]{$\abs{a}$};
+\draw(60:\r)node[above,xshift=1ex]{$r=a$};
+\end{tikzpicture}
+\caption{قطبی محدد پر \عددی{r=a} دائرہ ہو گا۔}
+\label{شکل_مخروط_قطبی_محدد_دائرہ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-1,0)--(1,0)node[right]{$x$};
+\draw(-0.5,-0.5)--(0.5,0.5);
+\draw[dashed](-1,-1)--(-0.5,-0.5);
+\draw[dashed](1,1)--(0.5,0.5);
+\draw[-stealth]([shift={(0:0.3)}]0,0) arc (0:45:0.3);
+\draw(25:0.5)node[xshift=1ex]{$\theta_0$};
+\end{tikzpicture}
+\caption{قطبی محدد پر \عددی{\theta=\theta_0} سیدھی لکیر ہے۔}
+\label{شکل_مخروط_قطبی_محدد_لکیر}
+\end{minipage}
+\end{figure}
+
+\begin{align*}
+&\text{مساوات}&&\text{ترسیم}\\
+r&=a&&\text{\RL{رداس \عددی{\abs{a}} کا دائرہ جس کا مرکز \عددی{O} ہے}}\\
+\theta&=\theta_0&&\text{\RL{ابتدائی شعاع کے ساتھ \عددی{\theta_0} زاویے کی لکیر}}
+\end{align*}
+
+\ابتدا{مثال}
+(ا)\عددی{r=1} اور \عددی{r=-1} رداس \عددی{1} کے دائرے کی مساوات ہے جس کا مرکز مبدا پر ہے۔\\
+(ب) \عددی{\theta=\tfrac{\pi}{6}}،  \عددی{\theta=\tfrac{7\pi}{6}} اور \عددی{\theta=-\tfrac{5\pi}{6}} اس سیدھی لکیر کی مساوات ہے جو مبدا سے گزرتی ہے اور ابتدائی شعاع کے ساتھ زاویہ \عددی{\tfrac{\pi}{6}} بناتی ہے۔
+\انتہا{مثال}
+%==============
+
+مساوات \عددی{r=a} اور \عددی{\theta=\theta_0} کو جوڑ کر دیگر قطعات، حصے اور شعاع بیان کیے جا سکتے ہیں۔
+
+\ابتدا{مثال}\شناخت{مثال_مخروط_قطبی_خطے}
+ان نقطوں کے سلسلہ کو ترسیم کریں جن کے قطبی محدد درج ذیل کو مطمئن کرتے ہوں۔ 
+\begin{enumerate}[a.]
+\item
+$1\le r\le 2\quad \text{اور}\quad  0\le \theta\le \frac{\pi}{2}$
+\item
+$-3\le r\le 2\quad \text{اور}\quad  \theta=\frac{\pi}{4}$
+\item
+$r\le  0\quad \text{اور}\quad  \theta=\frac{\pi}{4}$
+\item
+$\frac{2\pi}{3}\le \theta\le \frac{5\pi}{6}\quad \text{اور} -\infty<r<\infty$
+\end{enumerate}
+
+حل:\quad
+ترسیمات کو شکل \حوالہ{شکل_مثال_مخروط_قطبی_خطے} میں دکھایا گیا ہے۔
+\انتہا{مثال}
+%=======================
+\begin{figure}
+\centering
+\begin{subfigure}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=cos(\x);g(\x)=sin(\x);}]
+\begin{axis}[clip=false,axis equal,width=4cm,axis lines=middle, xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1,2},ytick={\empty},enlargelimits=true, axis on top]
+\addplot[name path =a,domain=0:90]({2*f(x)},{2*g(x)})node[above right,xshift=2ex]{$\begin{aligned} 1&\le r\le 2\\ 0&\le \theta\le \tfrac{\pi}{2} \end{aligned}$};
+\addplot[name path=b,domain=0:90]({f(x)},{g(x)});
+\addplot[lgray] fill between [of=a and b];
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=\x;fc(\x)=cos(\x);fs(\x)=sin(\x);}]
+\begin{axis}[clip=false,axis equal,width=4cm,axis lines=middle, xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits=true, axis on top]
+\addplot[domain=-3:2]{f(x)}node[pos=0,circ]{}node[circ]{}node[pos=0.4,left]{$3$}node[pos=0.9,left]{$2$};
+\addplot[-stealth,domain=0:45]({1*fc(x)},{1*fs(x)})node[pos=0.5,right,yshift=0.5ex]{$\tfrac{\pi}{4}$};
+\addplot[]plot coordinates {(0,1)}node[above left]{$\begin{aligned} \theta&=\tfrac{\pi}{4}\\ -3&\le r\le 2 \end{aligned}$};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=\x;fc(\x)=cos(\x);fs(\x)=sin(\x);}]
+\begin{axis}[clip=false,axis equal,width=4cm,axis lines=middle, xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits=true, axis on top]
+\addplot[latex-,domain=-3:0]{f(x)}node[pos=1,circ]{};
+\addplot[dashed,domain=0:2]{f(x)};
+\addplot[-stealth,domain=0:45]({1*fc(x)},{1*fs(x)})node[pos=0.5,right,yshift=0.5ex]{$\tfrac{\pi}{4}$};
+\draw(-0.5,0)node[above left]{$\begin{aligned} \theta&=\tfrac{\pi}{4}\\ r&\le 0 \end{aligned}$};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=-0.6*\x;g(\x)=-1.5*\x;}]
+\begin{axis}[clip=false,axis equal,width=4cm,axis lines=middle, xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits=true, axis on top]
+\addplot[name path=a,domain=-2:2]{f(x)}node[pos=0,left]{$\tfrac{5\pi}{6}$};
+\addplot[name path=b,domain=-2:2]{g(x)}node[pos=0,left]{$\tfrac{2\pi}{3}$};
+\addplot[lgray] fill between [of=a and b];
+\draw(0.5,0.5)node[above right,font=\scriptsize]{$\tfrac{2\pi}{3}\le \theta\le \tfrac{5\pi}{6}$};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+\caption{ترسیمات برائے مثال \حوالہ{مثال_مخروط_قطبی_خطے}}
+\label{شکل_مثال_مخروط_قطبی_خطے}
+\end{figure}
+
+\جزوحصہء{کارتیسی بالمقابل قطبی محدد}
+ایک مستوی میں بیک وقت کارتیسی اور قطبی محدد استعمال کرتے ہوئے ہم دونوں محدد کے مبدا ایک ہی نقطہ پر رکھتے ہیں اور ابتدائی شعاع کو مثبت \عددی{x} محور پر رکھتے ہیں۔ یوں شعاع \عددی{\theta=\tfrac{\pi}{2},\, r>0} مثبت \عددی{y} محور  ہو گا (شکل \حوالہ{شکل_مخروط_کارتیسی_قطبی_تعلق})۔ اب ان محددی نظام کے تعلقات درج ذیل ہوں گے۔
+\begin{align}\label{مساوات_مخروط_کارتیسی_قطبی_تعلق}
+x&=r\cos \theta,\quad y=r\sin \theta,\quad x^2+y^2=r^2,\quad \frac{y}{x}=\tan\theta
+\end{align}
+ہم مساوات \حوالہ{مساوات_مخروط_کارتیسی_قطبی_تعلق} استعمال کرتے ہوئے قطبی مساوات سے کارتیسی  مساوات اور کارتیسی مساوات سے قطبی مساوات حاصل کر سکتے ہیں۔
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\r}{1.5}
+\pgfmathsetmacro{\a}{50}
+\draw[-latex](-\r,0)--(\r+2,0)node[right]{$x$}node[above left]{$\theta=0,\, r\ge 0$}node[below left]{\RL{ابتدائی شعاع}};
+\draw[-latex](0,-\r-0.1)--(0,\r+0.5)node[above]{$y$}node[below left]{\RL{شعاع \عددی{\tfrac{\pi}{2}}}};
+\draw(0,0)node[pin={[pin distance=0.25cm]120:{\RL{مشترک مبدا}}}]{} circle (\r);
+\draw(0,0)node[below left]{$O$}--(\a:\r)coordinate(k)node[right]{$N(x,y)=N(r,\theta)$}node[pos=0.7,left]{$r$};
+\draw[-stealth]([shift={(0:0.5)}]0,0) arc (0:\a:0.5);
+\draw(0.5*\a:0.7)node[]{$\theta$};
+\draw(k)--($(0,0)!(k)!(\r,0)$)coordinate(kk)node[pos=0.6,right]{$y$};
+\RightAngle{(k)}{(kk)}{(0,0)}
+\draw($(0,0)!0.5!(kk)$)node[below]{$x$};
+\end{tikzpicture}
+\caption{کارتیسی اور قطبی محدد کے تعلقات معلوم کرنے کا عمومی طریقہ۔}
+\label{شکل_مخروط_کارتیسی_قطبی_تعلق}
+\end{figure}
+
+\ابتدا{مثال}
+\begin{align*}
+&\text{\RL{قطبی مساوات}}&&\text{\RL{کارتیسی مساوات}}\\
+\hline
+r\cos\theta&=2&&x=2\\
+r^2\cos\theta\sin\theta&=4&&xy=4\\
+r^2\cos^2\theta-r^2\sin^2\theta&=1&&x^2-y^2=1\\
+r=1+2r&\cos\theta&&y^2-3x^2-4x-1=0\\
+r=1-&\cos\theta&&x^4+y^4+2x^2y^2+2x^3+2xy^2-y^2=0
+\end{align*}
+آپ دیکھ سکتے ہیں کہ بعض اوقات کارتیسی اور بعض اوقات قطبی مساوات زیادہ سادہ ہوتے ہیں۔ 
+\انتہا{مثال}
+%================
+\ابتدا{مثال}
+دائرہ \عددی{x^2+(y-3)^2=9} کی قطبی مساوات معلوم کریں۔
+
+حل:
+\begin{align*}
+x^2+y^2-6y+9&=0 &&\text{\RL{مساوات کی سادہ صورت}}\\
+x^2+y^2-6y&=0\\
+r^2-6r\sin\theta&=0&&x^2+y^2=r^2\\
+r=0\quad \text{یا}\quad r-6\sin\theta&=0\\
+r&=6\sin\theta
+\end{align*}
+مخروط حصوں کی قطبی مساوات پر بعد میں غور کیا جائے گا۔
+\انتہا{مثال}
+%=================
+\ابتدا{مثال}
+دی گئی قطبی مساوات سے کارتیسی مساوات حاصل کر کے ترسیم کو پہچانئے۔ 
+\begin{enumerate}[a.]
+\item
+$r\cos\theta=-4$
+\item
+$r^2=4r\cos\theta$
+\item
+$r=\frac{4}{2\cos\theta-\sin\theta}$
+\end{enumerate}
+حل: \quad
+ہم \عددی{r\cos\theta=x}، \عددی{r\sin\theta=y} اور \عددی{r^2=x^2+y^2} استعمال کرتے ہیں۔
+\begin{enumerate}[a.]
+\item
+\begin{align*}
+\underbrace{r\cos\theta}_{x}&=-4\\
+x&=-4
+\end{align*}
+ترسیم:\quad
+انتصابی لکیر جو \عددی{x} محور کر \عددی{x=-4} پر قطع کرتی ہے۔
+\item
+\begin{align*}
+&r^2=4r\cos\theta\\
+&x^2+y^2=4x\\
+&x^2-4x+y^2=0\\
+&x^2-4x+4+y^2=4\\
+&(x-2)^2+y^2=4
+\end{align*}
+ترسیم:\quad
+ایک دائرہ جس کا مرکز \عددی{(2,0)} اور رداس \عددی{2} ہے۔
+\item
+\begin{align*}
+r(2\cos\theta-\sin\theta)&=4\\
+2r\cos\theta-r\sin\theta&=4\\
+2x-y&=4\\
+y&=2x-4
+\end{align*}
+ترسیم:\quad
+ایک سیدھی لکیر جس کی ڈھلوان \عددی{m=2} ہے اور جو \عددی{y} محور کو \عددی{y=-4} پر قطع کرتی ہے۔
+\end{enumerate}
+\انتہا{مثال}
