@@ -5574,3 +5574,877 @@ $(x+2)^2+(y-5)^2=16$
 \end{enumerate}
 \انتہا{سوال}
 %==================
+
+\حصہ{قطبی محدد میں ترسیم}
+اس حصہ میں مساوات کو قطبی محدد میں ترسیم کرنے کے تراکیب پر غور کیا جائے گا۔
+
+\جزوحصہء{تشاکلی}
+قطبی محدد میں تشاکلی کا معیاری پرکھ شکل \حوالہ{شکل_مخروط_تشاکلی_پرکھ_قطبی} میں دکھایا گیا ہے۔
+\begin{figure}
+\centering
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-1.5,0)--(1.5,0)node[right]{$x$};
+\draw[-latex](0,-1.25)--(0,1.5)node[above]{$y$};
+\draw(1,1)node[circ]{}node[right]{$(r,\theta)$}--(0,0)node[below left]{$O$}--(1,-1)node[circ]{}
+node[right]{$\begin{aligned}&(r,-\theta)\\ &(-r,\pi-\theta)\, \text{یا}\end{aligned}$}--(1,1);
+\end{tikzpicture}
+\caption{محور \عددی{x} کے لحاظ سے۔}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-1.5,0)--(1.5,0)node[right]{$x$};
+\draw[-latex](0,-1.25)--(0,1.5)node[above]{$y$};
+\draw(1,1)node[circ]{}node[above]{$(r,\theta)$}--(0,0)node[below left]{$O$}--(-1,1)node[circ]{}
+node[above]{$\begin{aligned} &(r,\pi-\theta)\\ &(-r,-\theta)\, \text{یا}  \end{aligned}$}--(1,1);
+\end{tikzpicture}
+\caption{محور \عددی{y} کے لحاظ سے۔}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-1.5,0)--(1.5,0)node[right]{$x$};
+\draw[-latex](0,-1.25)--(0,1.5)node[above]{$y$};
+\draw(1,1)node[circ]{}node[above]{$(r,\theta)$}--(-1,-1)node[circ]{}node[below]{$\begin{aligned}&(-r,\theta)\\  &(r,\theta+\pi)\,\text{یا}\end{aligned}$};
+\draw(0,0)node[below left]{$O$};
+\end{tikzpicture}
+\caption{مبدا کے لحاظ سے۔}
+\end{subfigure}
+\caption{تشاکلی کے تین پرکھ۔}
+\label{شکل_مخروط_تشاکلی_پرکھ_قطبی}
+\end{figure}
+
+\موٹا{قطبی ترسیمات کے پرکھ تشاکلی}\\
+\begin{enumerate}[a.]
+\item
+\ترچھا{محور \عددی{x} کے لحاظ سے تشاکلی:} اگر نقطہ \عددی{(r,\theta)} ترسیم پر پایا جاتا ہو تب نقطہ \عددی{(r,-\theta)} یا
+ \عددی{(-r,\pi-\theta)} بھی ترسیم پر پایا جائے گا (شکل \حوالہ{شکل_مخروط_تشاکلی_پرکھ_قطبی}-ا)۔
+\item
+\ترچھا{محور \عددی{y} کے لحاظ سے تشاکلی:}  اگر نقطہ \عددی{(r,\theta)} ترسیم پر پایا جاتا ہو تب نقطہ \عددی{(r,\pi-\theta)} یا 
+\عددی{(-r,-\theta)} بھی ترسیم پر پایا جائے گا (شکل \حوالہ{شکل_مخروط_تشاکلی_پرکھ_قطبی}-ب)۔
+\item
+\ترچھا{مبدا کے لحاظ سے تشاکلی:}  اگر نقطہ \عددی{(r,\theta)} ترسیم پر پایا جاتا ہو تب نقطہ \عددی{(-r,\theta)} یا 
+\عددی{(r,\theta+\pi)} بھی ترسیم پر پایا جائے گا (شکل \حوالہ{شکل_مخروط_تشاکلی_پرکھ_قطبی}-ج)۔
+\end{enumerate}
+
+\جزوحصہء{ڈھلوان}
+قطبی منحنی \عددی{r=f(\theta)} کی ڈھلوان \عددی{\tfrac{\dif y}{\dif x}} ہے نا کہ \عددی{r'=\tfrac{\dif f}{\dif \theta}}۔ اس کی وجہ سمجھنے کی خاطر \عددی{f} کی ترسیم کو درج ذیل مقدار معلوم مساوات کی ترسیم فرض کریں۔
+\begin{align*}
+x=r\cos\theta=f(\theta)\cos\theta,\quad y=r\sin\theta=f(\theta)\sin\theta
+\end{align*}
+اگر \عددی{f} متغیر \عددی{\theta} کا قابل تفرق تفاعل ہو تب \عددی{x} اور \عددی{y} بھی \عددی{\theta} کے قابل تفرق تفاعل ہوں گے اور جب \عددی{\tfrac{\dif x}{\dif\theta}\ne 0} ہو تب ہم \عددی{\tfrac{\dif y}{\dif x}}  کو درج ذیل مقدار معلوم کلیہ سے اخذ کر سکتے ہیں۔
+\begin{align*}
+\frac{\dif y}{\dif x}&=\frac{\dif y/\dif \theta}{\dif x/\dif \theta}&&\text{\RL{مساوات \حوالہ{مساوات_مخروط_زنجیری_قاعدہ_الف}}}\\
+&=\frac{\tfrac{\dif}{\dif\theta}(f(\theta)\cdot\sin\theta)}{\tfrac{\dif}{\dif\theta}(f(\theta)\cdot\cos\theta)}\\
+&=\frac{\tfrac{\dif f}{\dif \theta}\sin\theta+f(\theta)\cos\theta}{\tfrac{\dif f}{\dif \theta}\cos\theta-f(\theta)\sin\theta}&&\text{\RL{تفرق کا کلیہ ضرب}}
+\end{align*}
+
+\موٹا{منحنی \عددی{r=f(\theta)} کی ڈھلوان} جہاں \عددی{(r,\theta)} پر \عددی{\tfrac{\dif x}{\dif\theta}\ne 0} ہونا ضروری ہے۔
+\begin{align}\label{مساوات_مخروط_قطبی_ڈھلوان_الف}
+\left. \frac{\dif y}{\dif x}\right\vert_{(r,\theta)}=\frac{f'(\theta)\sin\theta+f(\theta)\cos\theta}{f'(\theta)\cos\theta-f(\theta)\sin\theta}
+\end{align}
+
+اگر مبدا پر منحنی \عددی{r=f(\theta)} کا زاویہ \عددی{\theta=\theta_0} ہو تب \عددی{f(\theta_0)=0} ہو گا اور مساوات \حوالہ{مساوات_مخروط_قطبی_ڈھلوان_الف} سے درج ذیل حاصل ہو گا۔
+\begin{align*}
+\left. \frac{\dif y}{\dif x}\right\vert_{(r,\theta)}=\frac{f'(\theta_0)\sin\theta_0}{f'(\theta_0)\cos\theta_0}=\tan\theta_0
+\end{align*}
+اگر مبدا پر \عددی{r=f(\theta)} کا زاویہ \عددی{\theta_0} ہو تب مبدا پر منحنی کی ڈھلوان \عددی{\tan\theta_0} ہو گی۔ مبدا پر ڈھلوان کی بات کرتے ہوئے ہم کہتے ہیں "\عددی{(0,\theta)} پر ڈھلوان" نا کہ "مبدا پر ڈھلوان" کیونکہ قطبی منحنی مبدا سے کئی بار گزر سکتی ہے اور \عددی{\theta} کی مختلف قیمتوں کے لئے یہاں ڈھلوان مختلف ہو گی۔
+
+\ابتدا{مثال}\شناخت{مثال_مخروط_قلب_نما_الف}\ترچھا{قلب نما}\فرہنگ{قطب نما}\حاشیہب{cardioid}\فرہنگ{cardioid}\\
+منحنی \عددی{r=1-\cos\theta} ترسیم کریں۔
+
+حل:\quad
+درج ذیل کی بنا یہ منحنی محور \عددی{x} کے لحاظ سے تشاکلی ہے۔
+\begin{align*}
+\text{\RL{\عددی{(r,\theta)} منحنی پر ہے}}  &\implies r=1-\cos\theta\\
+&\implies r=1-\cos(-\theta)&&\cos\theta=\cos(-\theta)\\
+&\implies \text{\RL{\عددی{(r,\theta)} بھی ترسیم پر ہے}} 
+\end{align*}
+جیسے جیسے \عددی{\theta} کی قیمت \عددی{0} سے \عددی{\pi} تک بڑھتی ہے، \عددی{\cos\theta} کی قیمت \عددی{1} سے \عددی{-1} تک گھٹتی ہے اور \عددی{r=1-\cos\theta} کی قیمت کم سے کم قیمت \عددی{0} سے بڑھ کر زیادہ سے زیادہ قیمت \عددی{2} تک پہنچتی ہے۔ \عددی{\theta} کی قیمت \عددی{\pi} سے \عددی{2\pi} تک بڑھانے سے \عددی{\cos\theta} کی قیمت \عددی{-1} سے واپس \عددی{1} تک پہنچتی ہے اور \عددی{r} کی قیمت \عددی{2} سے واپس \عددی{0} ہوتی ہے۔ چونکہ \عددی{\cos\theta} کا دوری عرصہ \عددی{2\pi} ہے لہٰذا \عددی{\theta=2\pi} کے بعد یہی منحنی دوبارہ حاصل ہو گی۔
+
+یہ منحنی مبدا سے \عددی{\tan(0)=0} ڈھلوان پر نکلتی ہے  اور مبدا پر \عددی{\tan(2\pi)=0} ڈھلوان پر پہنچتی ہے۔ 
+
+ہم \عددی{\theta=0} تا \عددی{\theta=\pi} کی مختلف قیمتوں کے لئے  \عددی{r} کی قیمتیں
+\begin{align*}
+\renewcommand{\arraystretch}{1.4}
+\begin{array}{c|ccccc}
+\theta&0&\tfrac{\pi}{3}&\tfrac{\pi}{2}&\tfrac{2\pi}{3}&\pi\\
+\hline
+r&0&\tfrac{1}{2}&1&\tfrac{3}{2}&2
+\end{array}
+\end{align*}
+ معلوم کر کے ان نقطوں کو ترسیم کرتے ہیں جس کا مماس مبدا پر افقی ہو گا۔ محور \عددی{x} میں اس کا عکس لیتے ہوئے ہم ترسیم مکمل کرتے ہیں (شکل \حوالہ{شکل_مثال_مخروط_قلب_نما_الف})۔ شکل \حوالہ{شکل_مثال_مخروط_قلب_نما_الف} میں تیر کا نشان بڑھتی \عددی{\theta} کے رخ کو ظاہر کرتا ہے۔ چونکہ اس منحنی کی شکل قلب کی مانند ہے لہٰذا اس منحنی کو \اصطلاح{قلب نما} کہتے ہیں۔ پھرکی اور چرخی پر تہہ در تہہ ہموار دھاگہ لپیٹنے کے لئے  قلب نما اشکال کے \اصطلاح{کیم}\فرہنگ{کیم}\حاشیہب{cam}\فرہنگ{cam} استعمال کئے جاتے ہیں۔ اس کے علاوہ کئی ریڈیو اینٹینا کی شعاع بھی قلب نما ہوتی ہے۔ 
+\انتہا{مثال}
+%=================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=1-cos(\x);g(\x)=1-cos(\x);}]
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-1,-2},xticklabels={$1$,$2$}, ytick={\empty}, enlargelimits=true]
+\addplot[->-=0.75,data cs=polar,smooth,domain=0:180]{f(x)};
+\addplot[data cs=polar,smooth,domain=180:360]{g(x)};
+\addplot[data cs=polar,]plot coordinates {(0,0)(60,1)};
+\addplot[data cs=polar,]plot coordinates{(60,{f(60)})}node[circ]{}node[right]{$\tfrac{\pi}{3}$};
+\addplot[data cs=polar,]plot coordinates{(90,1)}node[circ]{}node[right]{$\tfrac{\pi}{2}$};
+\addplot[data cs=polar,]plot coordinates {(0,0)(120,1.7)};
+\addplot[data cs=polar,]plot coordinates{(120,1.5)}node[circ]{}node[above right]{$\tfrac{2\pi}{3}$};
+\addplot[data cs=polar,]plot coordinates{(90,0.65)}node[left]{$1$};
+\addplot[data cs=polar,]plot coordinates{(120,0.75)}node[left]{$\tfrac{3}{2}$};
+\end{axis}
+\end{tikzpicture}
+\caption{قلب نما (مثال \حوالہ{مثال_مخروط_قلب_نما_الف})}
+\label{شکل_مثال_مخروط_قلب_نما_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(4*cos(\x));g(\x)=sqrt(4*cos(\x));}]
+\pgfmathsetmacro{\k}{15}
+\begin{axis}[small,axis lines=middle,xtick={2},yticklabels={\rlap{$2$}},xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true]
+\addplot[data cs=polar,->-=0.25,smooth,domain=-90+\k:90-\k]{f(x)};
+\addplot[data cs=polar,smooth,domain=90-\k:90]{f(x)};
+\addplot[data cs=polar,smooth,domain=-90+\k:-90]{f(x)};
+\addplot[data cs=polar,->-=0.25,smooth,domain=-90+\k:90-\k]({x+180},{g(x)});
+\addplot[data cs=polar,smooth,domain=90-\k:90]({x+180},{g(x)});
+\addplot[data cs=polar,smooth,domain=-90+\k:-90]({x+180},{g(x)});
+\addplot[]plot coordinates{(1,0)}node[above]{$\begin{aligned}r=&2\sqrt{\cos\theta}\\ -\tfrac{\pi}{2}&\le\theta\le\tfrac{\pi}{2}\end{aligned}$};
+\addplot[]plot coordinates{(-1,0)}node[above]{$\begin{aligned}r=&-2\sqrt{\cos\theta}\\ -\tfrac{\pi}{2}&\le\theta\le\tfrac{\pi}{2}\end{aligned}$};
+\addplot[mark=*,draw=none,data cs=polar]plot coordinates {(0,2)(0,-2)(30,{f(30)})(30,{-f(30)})(-30,{f(30)})(-30,{-f(30)})(45,{f(45)}) (-45,{f(45)})(45,{-f(45)})(-45,{-f(45)}) (60,{f(60)})(-60,{f(60)})(60,{-f(60)}) (-60,{-f(60)}) (90,0)};
+\end{axis}
+\end{tikzpicture}
+\caption{ترسیم برائے (مثال \حوالہ{مثال_مخروط_قلب_نما_ب})}
+\label{شکل_مثال_مخروط_قلب_نما_ب}
+\end{minipage}
+\end{figure}
+\ابتدا{مثال}\شناخت{مثال_مخروط_قلب_نما_ب}
+منحنی \عددی{r^2=4\cos\theta} ترسیم کریں۔
+
+حل:\quad
+مساوات \عددی{r^2=\cos\theta} کے لئے ضروری ہے کہ \عددی{\cos\theta\ge 0} ہو لہٰذا پورا ترسیم حاصل کرنے کی خاطر ہم \عددی{\theta} کو وقفہ \عددی{-\tfrac{\pi}{2}} تا \عددی{\tfrac{\pi}{2}} میں رکھتے ہیں۔ درج ذیل کی بنا یہ منحنی محور \عددی{x} کے لحاظ سے تشاکلی ہے۔ 
+\begin{align*}
+\text{\RL{\عددی{(r,\theta)} ترسیم پر ہے}} &\implies r^2=4\cos\theta\\
+&\implies  r^2=4\cos(-\theta)&&\cos\theta=\cos(-\theta)\\
+&\implies \text{\RL{نقطہ \عددی{(r,-\theta)} بھی ترسیم پر ہے}}
+\end{align*}
+یہ ترسیم مبدا کے لحاظ سے بھی تشاکلی ہے۔
+\begin{align*}
+\text{\RL{\عددی{(r,\theta)} ترسیم پر ہے}} &\implies r^2=4\cos\theta\\
+&\implies (- r)^2=4\cos\theta\\
+&\implies \text{\RL{نقطہ \عددی{(-r,\theta)} بھی ترسیم پر ہے}}
+\end{align*}
+مذکورہ بالا دو تشاکلی کو ملا کر ہم دیکھتے ہیں کہ یہ ترسیم محور \عددی{y} کے لحاظ سے بھی تشاکلی ہو گا۔
+
+یہ ترسیم \عددی{\theta=-\tfrac{\pi}{2}} اور \عددی{\theta=\tfrac{\pi}{2}} کے لئے مبدا سے گزرتی ہے۔چونکہ ان زاویوں پر \عددی{\tan\theta} کی قیمت لامتناہی ہے لہٰذا مبدا پر ترسیم کا مماس انتصابی ہو گا۔ وقفہ \عددی{-\tfrac{\pi}{2}} تا \عددی{\tfrac{\pi}{2}} میں ہر \عددی{\theta} کے لئے  کلیہ \عددی{r^2=4\cos \theta} متغیر \عددی{r} کی درج ذیل دو قیمتیں دیتا ہے۔
+\begin{align*}
+r=\pm 2\sqrt{\cos\theta}
+\end{align*}
+ہم اس وقفہ میں مختلف نقطے
+\begin{align*}
+\renewcommand{\arraystretch}{1.4}
+\begin{array}{c|ccccc}
+\theta&0&\pm\tfrac{\pi}{6}&\pm\tfrac{\pi}{4}&\pm\tfrac{\pi}{3}&\pm\tfrac{\pi}{2}\\
+\cos\theta&1&\tfrac{\sqrt{3}}{2}&\tfrac{1}{\sqrt{2}}&\tfrac{1}{2}&0\\
+r&\pm 2&\pm 1.9&\pm 1.7&\pm 1.4&0
+\end{array}
+\end{align*}
+ معلوم کر کر انہیں ترسیم کر کے ہموار منحنی سے آپس میں جوڑتے ہیں۔ مماس اور تشاکلی کی معلومات استعمال کرتے ہوئے مکمل منحنی حاصل کی جاتی ہے (شکل \حوالہ{شکل_مثال_مخروط_قلب_نما_ب})۔ 
+\انتہا{مثال}
+%==============================
+
+\جزوحصہء{تیزی سے ترسیم کا حصول}
+قطبی مساوات \عددی{r=f(\theta)} کو ترسیم کرنے کے لئے کہ ہم \عددی{(r,\theta)} کی قیمتوں کا جدول بنا کر ان نقطوں کو ترسیم کر کے بڑھتے \عددی{\theta} رخ انہیں ہموار لکیر سے ملاتے ہیں۔ اگر ہمارے پاس اتنے زیادہ نقطے ہوں کہ قطبی ترسیم کا ہر گھیرا اور جھکاو صاف نظر آتا ہو تب یوں ترسیم کرنا ٹھیک ہے۔درج ذیل اقدام ترسیم کی ایک دوسری ترکیب بیان کرتے ہیں جو نسبتاً آسان اور تیز ثابت ہوتا ہے۔
+\begin{enumerate}[a.]
+\item
+پہلے کارتیسی \عددی{r\theta} مستوی میں \عددی{r=f(\theta)} ترسیم کریں (یعنی \عددی{\theta} کی قیمتوں کو افقی اور مطابقتی \عددی{r} کی قیمتوں کو انتصابی محور پر رکھیں۔) 
+\item
+اب کارتیسی ترسیم کو بطور جدول اور رہبر  لیتے ہوئے قطبی ترسیم حاصل کریں۔ 
+\end{enumerate}
+
+صرف نقطے ترسیم کرنے سے کارتیسی ترسیم اس لئے بہتر ہے کہ کارتیسی ترسیم سے جلد دیکھا جا سکتا ہے کہاں قیمتیں مثبت، منفی یا غیر موجود ہوتی ہیں۔ اس کے علاوہ \عددی{r} کا بڑھنا اور گھٹنا بھی واضح ہوتا ہے۔ ہم \عددی{r=1+\cos(\tfrac{\theta}{2})} اور \عددی{r^2=\sin2\theta} کو مثال بنا کر اس ترکیب کو دیکھتے ہیں۔
+
+\ابتدا{مثال}\شناخت{مثال_مخروط_کارتیسی_قطبی_الف}
+درج ذیل منحنی ترسیم کریں۔
+\begin{align*}
+r=1+\cos\tfrac{\theta}{2}
+\end{align*}
+حل:\quad
+ہم پہلے \عددی{r} بالمقابل \عددی{\theta} کو کارتیسی \عددی{r\theta} مستوی میں ترسیم کرتے ہیں۔ چونکہ کوسائن کا دوری عرصہ \عددی{2\pi} ہے لہٰذا مکمل ترسیم حاصل کرنے کی خاطر  ہم \عددی{\theta} کا وقفہ \عددی{0} تا \عددی{2\pi} لیں گے۔کارتیسی مستوی پر محور \عددی{\theta} سے ترسیم تک لکیروں کی لمبائی (شکل \حوالہ{شکل_مثال_مخروط_کارتیسی_قطبی_الف}-ا) قطبی ترسیم کا  رداس \عددی{r} دیتی ہیں (شکل \حوالہ{شکل_مثال_مخروط_کارتیسی_قطبی_الف}-ب)۔
+\انتہا{مثال}
+%====================
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=1+cos(deg(1/2*\x));}]
+\pgfmathsetmacro{\ka}{pi}
+\pgfmathsetmacro{\kb}{2*pi}
+\pgfmathsetmacro{\kc}{3*pi}
+\pgfmathsetmacro{\kd}{4*pi}
+\pgfmathsetmacro{\a}{0.4*pi}
+\pgfmathsetmacro{\b}{0.7*pi}
+\pgfmathsetmacro{\c}{1.1*pi}
+\pgfmathsetmacro{\d}{3.75*pi}
+\begin{axis}[small,axis lines=middle,xlabel={$\theta$},ylabel={$r$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\ka,\kb,\kc,\kd},xticklabels={$\pi$,$2\pi$,$3\pi$,$4\pi$}, enlargelimits=true]
+\addplot[domain=0:4*pi]{f(x)};
+\addplot[stealth-]plot coordinates {(\a,{f(\a)})(\a,0)}node[pos=0.5,left]{a};
+\addplot[stealth-]plot coordinates {(\b,{f(\b)})(\b,0)}node[pos=0.5,right]{b};
+\addplot[stealth-]plot coordinates {(\c,{f(\c)})(\c,0)}node[pos=0.7,right]{c};
+\addplot[stealth-]plot coordinates {(\d,{f(\d)})(\d,0)}node[pos=0.5,right]{d};
+\addplot[]plot coordinates {({2*pi},1.5)}node[]{$t=1+\cos\tfrac{\theta}{2}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=1+cos(1/2*\x);g(\x)=1+cos(deg(1/2*\x));}]
+\pgfmathsetmacro{\ka}{pi}
+\pgfmathsetmacro{\kb}{2*pi}
+\pgfmathsetmacro{\kc}{3*pi}
+\pgfmathsetmacro{\kd}{4*pi}
+\pgfmathsetmacro{\a}{0.4*180}
+\pgfmathsetmacro{\b}{0.7*180}
+\pgfmathsetmacro{\c}{1.1*180}
+\pgfmathsetmacro{\d}{3.75*180}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true,xtick={\empty},ytick={\empty}]
+\addplot[data cs=polar,domain=-360:360,samples=100]{f(x)};
+\addplot[stealth-,data cs=polar,,]plot coordinates {(\a,{f(\a)})(\a,0)}node[pos=0.5,right]{a}node[pos=0,above right]{$r=1+\cos\tfrac{\theta}{2}$};
+\addplot[stealth-,data cs=polar,]plot coordinates {(\b,{f(\b)})(\b,0)}node[pos=0.25,right]{b};
+\addplot[stealth-,data cs=polar,]plot coordinates {(\c,{f(\c)})(\c,0)}node[pos=0.5,below,yshift=0.5ex]{c};
+\addplot[stealth-,data cs=polar,]plot coordinates {(\d,{f(\d)})(\d,0)}node[pos=0.5,right]{d};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{ترسیمات برائے مثال \حوالہ{مثال_مخروط_کارتیسی_قطبی_الف}}
+\label{شکل_مثال_مخروط_کارتیسی_قطبی_الف}
+\end{figure}
+
+\ابتدا{مثال}\شناخت{مثال_مخروط_کارتیسی_قطبی_ب}\ترچھا{دو چشمہ}\فرہنگ{دو چشمہ}\حاشیہب{lemniscate}\فرہنگ{lemniscate}\\
+منحنی \عددی{r^2=\sin2\theta} ترسیم کریں۔
+
+حل:\quad
+ہم \عددی{r} کی بجائے \عددی{r^2} بالمقابل \عددی{\theta} کو کارتیسی \عددی{r^2\theta} مستوی پر ترسیم کرتے ہیں (شکل \حوالہ{شکل_مثال_مخروط_کارتیسی_قطبی_ب}-ا) جہاں \عددی{r^2} کو متغیر تصور کیا گیا ہے جس کی قیمت مثبت کے ساتھ ساتھ منفی بھی ہو سکتی ہے۔ اس کے بعد ہم \عددی{r=\pm\sqrt{\sin2\theta}} کو کارتیسی \عددی{r\theta} مستوی پر ترسیم کرتے ہیں۔ آپ دیکھ سکتے ہیں کہ شکل \حوالہ{شکل_مثال_مخروط_کارتیسی_قطبی_ب}-ا کے نقطہ دار حصے کا جذر نہیں لیا جا سکتا ہے لہٰذا شکل \حوالہ{شکل_مثال_مخروط_کارتیسی_قطبی_ب}-ب میں یہ حصے خالی رہتے ہیں جبکہ جذر کی بنا باقی حصے کے مثبت اور منفی حصے پائے جاتے ہیں۔  آخر میں ہم قطبی ترسیم حاصل کرتے ہیں۔ کارتیسی ترسیم (شکل \حوالہ{شکل_مثال_مخروط_کارتیسی_قطبی_ب}-ب) دو بار قطبی ترسیم (شکل \حوالہ{شکل_مثال_مخروط_کارتیسی_قطبی_ب}-ج) کو ڈھانپتا  دیتا ہے۔ ہم کسی ایک گھیرا کو، یا دونوں گھیروں کے بالائی نصف یا دونوں کے گھیروں کے نچلے نصف  استعمال کر سکتے تھے۔ البتہ دو بار ڈھانپنے سے کوئی نقصان نہیں ہوتا ہے اور ہم تفاعل کے رویہ کو بہتر سمجھ پاتے ہیں۔
+\انتہا{مثال}
+%==========================
+\begin{figure}
+\centering
+\begin{subfigure}{0.30\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sin(deg(2*\x));}]
+\pgfmathsetmacro{\ka}{pi/4}
+\pgfmathsetmacro{\kb}{pi/2}
+\pgfmathsetmacro{\kc}{pi}
+\pgfmathsetmacro{\kd}{3/2*pi}
+\pgfmathsetmacro{\ke}{2*pi}
+\begin{axis}[width=5cm,axis lines=middle,xlabel={$\theta$},ylabel={$r^2$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\ka,\kb,\kc,\kd,\ke},xticklabels={$\tfrac{\pi}{4}$,\llap{$\tfrac{\pi}{2}$},\rlap{$\pi$},\llap{$\tfrac{3\pi}{2}$},\rlap{$2\pi$}},ytick={1,-1}, enlargelimits=true]
+\addplot[domain=0:1/2*pi]{f(x)};
+\addplot[domain=pi:3/2*pi]{f(x)};
+\addplot[dashed,domain=1/2*pi:pi]{f(x)};
+\addplot[dashed,domain=3/2*pi:2*pi]{f(x)};
+\addplot[]plot coordinates {(0.75*pi,1)}node[]{$r^2=\sin2\theta$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.30\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(sin(deg(2*\x)));}]
+\pgfmathsetmacro{\ka}{pi/2}
+\pgfmathsetmacro{\kb}{pi}
+\pgfmathsetmacro{\kc}{3/2*pi}
+\begin{axis}[width=5cm,axis lines=middle,xlabel={$\theta$},ylabel={$r$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\ka,\kb,\kc},xticklabels={\rlap{$\tfrac{\pi}{2}$},\llap{$\pi$},\rlap{$\tfrac{3\pi}{2}$}},ytick={1,-1}, enlargelimits=true]
+\addplot[domain=0:1/2*pi]{f(x)};
+\addplot[domain=0:1/2*pi]{-f(x)};
+\addplot[domain=pi:3/2*pi]{f(x)};
+\addplot[domain=pi:3/2*pi]{-f(x)};
+\addplot[]plot coordinates {(0.75*pi,1)}node[]{$r=+\sqrt{\sin2\theta}$};
+\addplot[]plot coordinates {(0.75*pi,-1)}node[]{$r=-\sqrt{\sin2\theta}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.30\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(sin(2*\x));}]
+\pgfmathsetmacro{\ka}{pi/2}
+\pgfmathsetmacro{\kb}{pi}
+\pgfmathsetmacro{\kc}{3/2*pi}
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\ka,\kb,\kc},xticklabels={\rlap{$\tfrac{\pi}{2}$},\llap{$\pi$},\rlap{$\tfrac{3\pi}{2}$}},ytick={1,-1}, enlargelimits=true]
+\addplot[data cs=polar,smooth,domain=0:90]{f(x)}node[pos=0.55,above]{$r^2=\sin2\theta$};
+\addplot[data cs=polar,smooth,domain=180:270]{f(x)};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{ترسیم برائے مثال \حوالہ{مثال_مخروط_کارتیسی_قطبی_ب}}
+\label{شکل_مثال_مخروط_کارتیسی_قطبی_ب}
+\end{figure}
+
+
+
+\جزوحصہء{قطبی قطب کے نقاط تقاطع کی تلاش}
+قطبی ترسیم میں ایک نقطہ کو مختلف طریقوں سے ظاہر کیا جا سکتا ہے لہٰذا یہ فیصلہ کرنے کے لئے خصوصی دھیان کرنا ہو گا کہ آیا کسی قطبی مساوات  کی ترسیم پر ایک  نقطہ پایا جاتا ہے۔ اسی طرح قطبی ترسیمات کے نقاط تقاطع معلوم کرتے ہوئے بھی دھیان رکھنا ضروری ہے۔  عین ممکن ہے کہ نقطہ تقاطع ایک ترسیم کو جن  قطبی محدد پر مطمئن کرتا ہو، وہ ان قطبی محدد سے مختلف ہوں جن پر یہی نقطہ تقاطع دوسری قطبی مساوات کو مطمئن کرتا ہو۔ یوں ضروری نہیں ہے کہ دونوں مساوات کو ایک ساتھ حل کرتے ہوئے تمام نقاط تقاطع دریافت ہوں۔  تمام نقاط تقاطع صرف مساوات  ترسیم کر کے معلوم کیے جا سکتے ہیں۔ 
+
+\ابتدا{مثال}\ترچھا{فریبی محدد}\\
+دکھائیں کہ نقطہ \عددی{(2,\tfrac{\pi}{2})} منحنی \عددی{r=2\cos2\theta} پر پایا جاتا ہے۔
+
+حل:\quad
+اس نقطہ کو دی گئی مساوات میں پر کرنے سے  درج ذیل عدم مساوات 
+\begin{align*}
+2=2\cos2(\tfrac{\pi}{2})=2\cos\pi=-2
+\end{align*}
+حاصل ہوتی ہے جس سے یوں معلوم ہوتا ہے کہ یہ نقطہ اس منحنی پر نہیں پایا جاتا ہے۔ یہاں مقدار درست ہے لیکن علامت غلط ہے  جس سے ہمیں خیال آتا ہے کہ اس نقطے کی ایسی محددی جوڑی، مثلاً \عددی{(-2,-\tfrac{\pi}{2})}،  تلاش کی جائے  جو منفی رداس دیتا ہے۔ اس جوڑی کو \عددی{r=2\cos2\theta} میں پر کر کے
+\begin{align*}
+-2=2\cos2(-\tfrac{\pi}{2})=2(-1)=-2
+\end{align*}         
+ملتا ہے لہٰذا مساوات مطمئن ہوتی ہے۔ اس طرح  نقطہ \عددی{(2,\tfrac{\pi}{2})} دی گئی منحنی پر پایا جاتا ہے۔
+\انتہا{مثال}
+%=====================
+\ابتدا{مثال}\شناخت{مثال_مخروط_مبہم_نقطہ_تقاطع}\ترچھا{مبہم نقطہ تقاطع}\\
+درج ذیل منحنیات کے نقاط تقاطع تلاش کریں۔
+\begin{align*}
+r^2=4\cos\theta,\quad r=1-\cos\theta
+\end{align*}
+حل:\quad
+کارتیسی محدد میں دو مساوات کو ایک ساتھ حل کر کے ان کے نقاط تقاطع حاصل کیے جا سکتے ہیں۔ قطبی محدد میں قصہ کچھ مختلف ہے۔ قطبی محدد میں دو منحنیات کی مساوات ایک ساتھ حل کرنے سے عین ممکن ہے کہ بعض نقاط تقاطع حاصل ہوں اور بعض حاصل نہ ہوں۔ اس مثال میں مساوات ایک ساتھ حل کر کے چار میں سے صرف دو نقاط تقاطع حاصل ہوتے ہیں۔ باقی دو ترسیم سے حاصل ہوں گے۔
+
+اگر ہم \عددی{\cos\theta=\tfrac{r^2}{4}} کو \عددی{r=1-\cos\theta} میں پر کریں تب درج ذیل ملتا ہے۔
+\begin{align*}
+r&=1-\cos\theta=1-\frac{r^2}{4}\\
+4r&=4-r^2\\
+r^2+4r-4&=0\\
+r&=-2\pm2\sqrt{2}
+\end{align*} 
+ان میں \عددی{r=-2-2\sqrt{2}} کی مطلق قیمت اتنی زیادہ ہے کہ یہ دونوں کو مطمئن نہیں کرتا ہے۔ دوسرے جواب \عددی{r=-2+2\sqrt{2}} سے \عددی{\theta} کی درج ذیل قیمت حاصل ہوتی ہے۔
+\begin{align*}
+\theta&=\cos^{-1}(1-r)&&(r=1-\cos\theta)\\
+&=\cos^{-1}(1-(2\sqrt{2}-2))&&(r=2\sqrt{2}-2)\\
+&=\cos^{-1}(3-2\sqrt{2})\\
+&=\pm 80^{\circ}&&\text{\RL{قریبی درجہ تک پورم پور}}
+\end{align*}
+اس طرح ہم دو نقاط تقاطع \عددی{(r,\theta)=(2\sqrt{2}-2,\pm80^{\circ})} تلاش کرنے میں کامیاب ہوتے ہیں۔
+
+ہم شکل \حوالہ{شکل_مثال_مخروط_قلب_نما_الف} اور شکل \حوالہ{شکل_مثال_مخروط_قلب_نما_ب} کی مدد سے  مساوات \عددی{r^2=4\cos\theta} اور \عددی{r=1-\cos\theta} کو ایک ساتھ ترسیم (شکل \حوالہ{شکل_مثال_مخروط_مبہم_نقطہ_تقاطع}) کر کے دیکھتے ہیں کہ یہ نقطہ  \عددی{(2,\pi)} اور مبدا پر بھی ایک دوسرے کو قطع کرتے ہیں۔ ان نقاط کے رداس  \عددی{r} کی قیمتیں کیوں مساوات ایک ساتھ حل کرنے سے حاصل نہیں ہوں پائی؟ اس کا جواب ہے کہ نقاط \عددی{(2,\pi)} اور \عددی{(0,0)} دونوں منحنیات پر بیک وقت نہیں پائے جاتے ہیں۔ ان نقطوں تک پہنچنے کے لئے  دنوں منحنیات پر  \عددی{\theta} کی مختلف قیمتیں درکار ہوتی ہیں۔ منحنی \عددی{r=1-\cos\theta} پر  نقطہ \عددی{(2,\pi)} تک \عددی{\theta=\pi} پر پہنچا جاتا ہے جبکہ منحنی \عددی{r^2=4\cos\theta} پر اسی نقطہ تک \عددی{\theta=0} پر پہنچا جاتا ہے جہاں اس نقطہ کو محدد \عددی{(2,\pi)} سے نہیں پہچانا جاتا جو اس مساوات کو مطمئن نہیں کرتے ہیں، بلکہ اس نقطہ کو محدد \عددی{(-2,0)} سے پہچانا جاتا ہے جو اس مساوات کو مطمئن کرتے ہیں۔ اسی طرح قلب نما منحنی مبدا تک \عددی{\theta=0} پر پہنچتی ہے جبکہ منحنی \عددی{r^2=4\cos\theta} مبدا تک \عددی{\theta=\tfrac{\pi}{2}} پر پہنچتی ہے۔
+\انتہا{مثال}
+%====================
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=1-cos(\x);g(\x)=1-cos(\x);ff(\x)=sqrt(4*cos(\x));}]
+\pgfmathsetmacro{\k}{15}
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},xticklabels={$1$,$2$}, ytick={\empty}, enlargelimits=true]
+\addplot[thick,data cs=polar,smooth,domain=0:180]{f(x)}node[pos=0.5,pin={[pin distance=1ex]110:{$r=1-\cos\theta$}}]{};
+\addplot[thick,data cs=polar,smooth,domain=180:360]{g(x)};
+%
+\addplot[data cs=polar,smooth,domain=-90+\k:90-\k]{ff(x)}node[pos=0.75,pin=30:{$r^2=4\cos\theta$}]{};
+\addplot[data cs=polar,smooth,domain=90-\k:90]{ff(x)};
+\addplot[data cs=polar,smooth,domain=-90+\k:-90]{ff(x)};
+\addplot[data cs=polar,smooth,domain=-90+\k:90-\k]({x+180},{ff(x)});
+\addplot[data cs=polar,smooth,domain=90-\k:90]({x+180},{ff(x)});
+\addplot[data cs=polar,smooth,domain=-90+\k:-90]({x+180},{ff(x)});
+\addplot[data cs=polar]plot coordinates {(180,2)}node[circ]{}node[pin={[pin distance=1ex]-135:{$(2,\pi)=(-2,0)$}}]{}node[above left]{$C$};
+\addplot[data cs=polar]plot coordinates {(0,0)}node[circ]{}node[pin={[pin distance=1ex]-135:{$(0,0)=(0,\tfrac{\pi}{2})$}}]{}node[above left]{$D$};
+\addplot[data cs=polar]plot coordinates {(80,{-2+2*sqrt(2)})}node[circ]{}node[right]{$A$};
+\addplot[data cs=polar]plot coordinates {(-80,{-2+2*sqrt(2)})}node[circ]{}node[right]{$B$};
+\end{axis}
+\end{tikzpicture}
+\caption{نقطہ تقاطع (مثال \حوالہ{مثال_مخروط_مبہم_نقطہ_تقاطع})}
+\label{شکل_مثال_مخروط_مبہم_نقطہ_تقاطع}
+\end{figure}
+
+
+
+\حصہء{سوالات}
+\موٹا{تشاکلی اور قطبی ترسیمات}\\
+سوال \حوالہ{سوال_مخروط_تشاکلی_پہچان_الف} تا سوال \حوالہ{سوال_مخروط_تشاکلی_پہچان_ج} میں منحنی کی تشاکلی پہچانئے۔ اس کے بعد منحنی ترسیم کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_مخروط_تشاکلی_پہچان_الف}
+$r=1+\cos\theta$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_مخروط_تشاکلی_پہچان_الف}
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$r=2-2\cos\theta$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_تشاکلی_پہچان_ب}
+$r=1-\sin\theta$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_مخروط_تشاکلی_پہچان_ب}
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$r=1+\sin\theta$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_تشاکلی_پہچان_پ}
+$r=2+\sin\theta$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_مخروط_تشاکلی_پہچان_پ}
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$r=1+2\sin\theta$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_تشاکلی_پہچان_ت}
+$r=\sin\tfrac{\theta}{2}$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_مخروط_تشاکلی_پہچان_ت}
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$r=\cos\tfrac{\theta}{2}$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_تشاکلی_پہچان_ٹ}
+$r^2=\cos\theta$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_مخروط_تشاکلی_پہچان_ٹ}
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$r^2=\sin\theta$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_تشاکلی_پہچان_ث}
+$r^2=-\sin\theta$\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_مخروط_تشاکلی_پہچان_ث}
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_تشاکلی_پہچان_ج}
+$r^2=-\cos\theta$
+\انتہا{سوال}
+%=====================
+\begin{figure}
+\centering
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=1+cos(\x);}]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true]
+\addplot[smooth,data cs=polar,domain=0:360]{f(x)}node[pos=0.25,above right]{$r=1+\cos\theta$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_مخروط_تشاکلی_پہچان_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=1-sin(\x);}]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true]
+\addplot[smooth,data cs=polar,domain=0:360]{f(x)};
+\addplot[data cs=polar]plot coordinates {(90,0.25)}node[above right]{$r=1-\sin\theta$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_مخروط_تشاکلی_پہچان_ب}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=2+sin(\x);}]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true]
+\addplot[smooth,data cs=polar,domain=0:360]{f(x)};
+\addplot[]plot coordinates {(0,1)}node[left]{$r=2+\sin\theta$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_مخروط_تشاکلی_پہچان_پ}
+\end{minipage}
+\end{figure}
+%====================================================
+\begin{figure}
+\centering
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sin(1/2*\x);}]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true]
+\addplot[samples=100,data cs=polar,domain=0:720]{f(x)};
+\addplot[]plot coordinates {(0,0.9)}node[right]{$r=\sin\tfrac{\theta}{2}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_مخروط_تشاکلی_پہچان_ت}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(cos(\x));}]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true]
+\addplot[smooth,data cs=polar,domain=-90:90]{f(x)};
+\addplot[smooth,data cs=polar,domain=90:270]{f(x-180)};
+\addplot[]plot coordinates {(0,0.75)}node[right]{$r^2=\cos\theta$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_مخروط_تشاکلی_پہچان_ٹ}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(-sin(\x));}]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true]
+\addplot[smooth,data cs=polar,domain=180:360]{f(x)};
+\addplot[smooth,data cs=polar,domain=0:180]{f(x-180)};
+\addplot[]plot coordinates {(0,1)}node[above right]{$r^2=-\sin\theta$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_مخروط_تشاکلی_پہچان_ث}
+\end{minipage}
+\end{figure}
+%======================================
+%========================================
+سوال \حوالہ{سوال_مخروط_دو+چشمہ_الف} تا سوال \حوالہ{سوال_مخروط_دو+چشمہ_ب}  میں دی گئی دو چشمہ ترسیم کریں۔ان منحنیات کی تشاکلی پہچانئے۔ 
+
+\ابتدا{سوال}\شناخت{سوال_مخروط_دو+چشمہ_الف}
+$r^2=4\cos2\theta$\\
+جواب:\quad
+محور \عددی{x}، محور \عددی{y}، مبدا
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}
+$r^2=4\sin2\theta$
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}
+$r^2=-\sin2\theta$\\
+جواب:\quad
+مبدا
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}\شناخت{سوال_مخروط_دو+چشمہ_ب}
+$r^2=-\cos2\theta$
+\انتہا{سوال}
+%==================
+
+\موٹا{قطبی منحنیات کی ڈھلوان}\\
+سوال \حوالہ{سوال_مخروط_قطبی_ڈھلوان_الف} تا سوال \حوالہ{سوال_مخروط_قطبی_ڈھلوان_پ} میں دیے گئے نقطوں پر منحنی کی ڈھلوان مساوات \حوالہ{مساوات_مخروط_قطبی_ڈھلوان_الف} کی مدد سے دریافت کریں۔ منحنی  کو ترسیم کر کے ان نقطوں پر مماس بھی کھینچیں۔
+
+\ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_ڈھلوان_الف}
+قطب نما: \عددی{r=-1+\cos\theta}؛  \عددی{\theta=\pm\tfrac{\pi}{2}}\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_مخروط_قطبی_ڈھلوان_الف}، \عددی{(-1,\tfrac{\pi}{2})} پر ڈھلوان \عددی{-1} اور \عددی{(-1,-\tfrac{\pi}{2})} پر \عددی{1} ہے۔
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+قطب نما: \عددی{r=-1+\sin\theta}؛  \عددی{\theta=0,\,\pi}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_ڈھلوان_ب}
+چار گل: \عددی{r=\sin2\theta}؛ \عددی{\theta=\pm \tfrac{\pi}{4},\, \pm\tfrac{3\pi}{4}}\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_مخروط_قطبی_ڈھلوان_ب}، \عددی{(1,\tfrac{\pi}{4})} پر \عددی{-1}، \عددی{(-1,-\tfrac{\pi}{4})} پر \عددی{1}، \عددی{(-1,\tfrac{3\pi}{4})} پر \عددی{1}، \عددی{(1,-\tfrac{3\pi}{4})} پر \عددی{-1}
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_ڈھلوان_پ}
+چار گل: \عددی{r=\cos2\theta}؛ \عددی{\theta=0,\,\pm\tfrac{\pi}{2},\,\pi}
+\انتہا{سوال}
+%================
+\begin{figure}
+\centering
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=-1+cos(\x);ma(\x)=\x+1;mb(\x)=-\x-1;}]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ytick={\empty}]
+\addplot[smooth,data cs=polar,domain=0:360]{f(x)};
+\addplot[]plot coordinates {(1,0.5)}node[]{$r=-1+\cos\theta$};
+\addplot[mark=*]plot coordinates {(0,1)}node[left]{$(-1,-\tfrac{\pi}{2})$};
+\addplot[mark=*]plot coordinates {(0,-1)}node[left]{$(-1,\tfrac{\pi}{2})$};
+\addplot[domain=-0.4:0.3]{ma(x)};
+\addplot[domain=-0.4:0.3]{mb(x)};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_مخروط_قطبی_ڈھلوان_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sin(2*\x);ma(\x)=0.7071-(\x-0.7071);mb(\x)=0.7071+(\x+0.7071); mc(\x)=-0.7071+(\x-0.7071);md(\x)=-0.7071-(\x+0.7071);}]
+\begin{axis}[axis equal,clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ytick={\empty}]
+\addplot[smooth,data cs=polar,domain=0:360]{f(x)};
+\addplot[]plot coordinates {(0.5,0)}node[above right]{$r=\sin 2\theta$};
+\addplot[mark=*]plot coordinates {(0.7071,0.7071)}node[right]{$(1,\tfrac{\pi}{4})$};
+\addplot[mark=*]plot coordinates {(0.7071,-0.7071)}node[right]{$(-1,\tfrac{3\pi}{4})$};
+\addplot[mark=*]plot coordinates {(-0.7071,0.7071)}node[left]{$(-1,-\tfrac{\pi}{4})$};
+\addplot[mark=*]plot coordinates {(-0.7071,-0.7071)}node[left]{$(1,-\tfrac{3\pi}{4})$};
+\addplot[domain=0.4:1]{ma(x)};
+\addplot[domain=-0.4:-1]{mb(x)};
+\addplot[domain=0.4:1]{mc(x)};
+\addplot[domain=-0.4:-1]{md(x)};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_مخروط_قطبی_ڈھلوان_ب}
+\end{minipage}
+\end{figure}
+%============================================
+%===========================================
+
+\موٹا{گھونگے}\\
+سوال \حوالہ{سوال_مخروط_گھونگے_الف} تا سوال \حوالہ{سوال_مخروط_گھونگے_ج} میں دیے گھونگے ترسیم کریں۔ آپ کو اس نام کی سمجھ سوال \حوالہ{سوال_مخروط_گھونگے_الف} ترسیم کر کے آئے گی۔ گھونوں کی مساوات کی عمومی صورت \عددی{r=a\pm b\cos\theta} یا \عددی{r=a\pm b\sin\theta} ہوتی ہے۔ ان کے چار بنیادی اشکال ہیں۔
+
+\ابتدا{سوال}\شناخت{سوال_مخروط_گھونگے_الف}
+اندرونی گھیرے والے گھونگے: (ا) \عددی{r=\tfrac{1}{2}+\cos\theta}، (ب) \عددی{r=\tfrac{1}{2}+\sin\theta}\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_مخروط_گھونگے_الف}
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+قلب نما: (ا) \عددی{r=1-\cos\theta}، (ب) \عددی{r=-1+\sin\theta}
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\شناخت{سوال_مخروط_گھونگے_ب}
+گھونگے: (ا) \عددی{r=\tfrac{3}{2}+\cos\theta}، (ب) \عددی{r=\tfrac{3}{2}-\sin\theta}\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_مخروط_گھونگے_ب}
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\شناخت{سوال_مخروط_گھونگے_ج}
+چپٹے گھونگے: (ا) \عددی{r=2+\cos\theta}، (ب) \عددی{r=-2+\sin\theta}
+\انتہا{سوال}
+%===================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=1/2+cos(\x);}]
+\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ytick={\empty}]
+\addplot[samples=100,data cs=polar,domain=0:360]{f(x)};
+\addplot[]plot coordinates{(0,0.5)}node[right]{$r=\tfrac{1}{2}+\cos\theta$};
+\end{axis}
+\end{tikzpicture}%
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=1/2+sin(\x);}]
+\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ytick={\empty}]
+\addplot[samples=100,data cs=polar,domain=0:360]{f(x)};
+\addplot[]plot coordinates{(0,0.75)}node[right,fill=white]{$r=\tfrac{1}{2}+\sin\theta$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_مخروط_گھونگے_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=3/2+cos(\x);}]
+\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ytick={\empty}]
+\addplot[samples=100,data cs=polar,domain=0:360]{f(x)};
+\addplot[]plot coordinates{(0,0.5)}node[right]{$r=\tfrac{3}{2}+\cos\theta$};
+\end{axis}
+\end{tikzpicture}%
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=3/2-sin(\x);}]
+\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ytick={\empty}]
+\addplot[samples=100,data cs=polar,domain=0:360]{f(x)};
+\addplot[]plot coordinates{(0,-1.5)}node[right,fill=white]{$r=\tfrac{3}{2}-\sin\theta$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_مخروط_گھونگے_ب}
+\end{minipage}
+\end{figure}
+
+%=====================================
+\موٹا{قطبی عدم مساوات کی ترسیم}\\
+\ابتدا{سوال}\شناخت{سوال_مخروط_عدم_قطبی_مساوات_الف}
+ایک خطہ جس کو عدم مساوات \عددی{-1\le r\le 2} اور \عددی{-\tfrac{\pi}{2}\le\theta\le\tfrac{\pi}{2}} بیان کرتی ہیں کا خاکہ بنائیں۔ \\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_مخروط_عدم_قطبی_مساوات_الف}
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+ایک خطہ جس کو عدم مساوات \عددی{0\le r\le 2\sec\theta} اور \عددی{-\tfrac{\pi}{4}\le\theta\le\tfrac{\pi}{4}} بیان کرتی ہیں کا خاکہ بنائیں۔ 
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_عدم_قطبی_مساوات_ب}
+ایک خطہ جس کو عدم مساوات \عددی{0\le r\le 2-2-\cos\theta} بیان کرتی ہے کا خاکہ بنائیں۔ \\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_مخروط_عدم_قطبی_مساوات_ب}
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+ایک خطہ جس کو عدم مساوات \عددی{0\le r^2\le\cos\theta} بیان کرتی ہے کا خاکہ بنائیں۔ 
+\انتہا{سوال}
+%=====================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=cos(\x);g(\x)=sin(\x);}]
+\begin{axis}[axis equal,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={\empty},ytick={\empty}, axis on top]
+\addplot[name path=a,smooth,domain=-90:90]({2*f(x)},{2*g(x)})node[pos=0.75,right]{$r=2$};
+\addplot[name path=b,smooth,domain=90:270]({f(x)},{g(x)})node[pos=0.25,left]{$r=-1$};
+\addplot[name path=c]plot coordinates {(0,-2)(0,2)};
+\addplot[name path=d]plot coordinates {(0,-1)(0,1)};
+\addplot[lgray]fill between [of={a and c}];
+\addplot[lgray]fill between [of={b and d}];
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_مخروط_عدم_قطبی_مساوات_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=2-2*cos(\x);}]
+\begin{axis}[axis equal,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true, axis on top]
+\addplot[fill=lgray,data cs=polar,smooth,domain=0:360]{f(x)}node[pos=0.25,above left]{$0\le r\le 2-2\cos\theta$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_مخروط_عدم_قطبی_مساوات_ب}
+\end{minipage}
+\end{figure}
+
+
+%===========================
+\موٹا{تقاطع}\\
+\ابتدا{سوال}
+دکھائیں کہ نقطہ \عددی{(2,\tfrac{3\pi}{4})} منحنی \عددی{r=2\sin2\theta} پر پایا جاتا ہے۔
+\انتہا{سوال}
+%=============
+\ابتدا{سوال}
+دکھائیں کہ نقطہ \عددی{(\tfrac{1}{2},\tfrac{3\pi}{2})} منحنی \عددی{r=-\sin(\tfrac{\theta}{3})} پر پایا جاتا ہے۔
+\انتہا{سوال}
+%=============
+
+سوال \حوالہ{سوال_مخروط_نقاط_تقاطع_الف} تا سوال \حوالہ{سوال_مخروط_نقاط_تقاطع_ب} میں نقاط تقاطع تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_مخروط_نقاط_تقاطع_الف}
+$r=1+\cos\theta,\quad r=1-\cos\theta$\\
+جواب:\quad 
+$(0,0),\, (1,\tfrac{\pi}{2}),\, (1,\tfrac{3\pi}{2})$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$r=1+\sin\theta,\quad r=1-\sin\theta$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$r=2\sin\theta,\quad r=2\sin2\theta$\\
+جواب:\quad 
+$(0,0),\, (\sqrt{3},\tfrac{\pi}{3}),\, (-\sqrt{3},-\tfrac{\pi}{3})$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$r=\cos\theta,\quad r=1-\cos\theta$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$r=\sqrt{2},\quad r^2=4\sin\theta$\\
+جواب:\quad 
+$(\sqrt{2},\pm \tfrac{\pi}{6}),\, (\sqrt{2},\pm \tfrac{5\pi}{6})$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$r^2=\sqrt{2}\sin\theta,\quad r^2=\sqrt{2}\cos\theta$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+$r=1,\quad r^2=2\sin2\theta$\\
+جواب:\quad 
+$(1,\tfrac{\pi}{12}),\, (1,\tfrac{5\pi}{12}),\, (1,\tfrac{13\pi}{12}),\,(1,\tfrac{17\pi}{12})$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_نقاط_تقاطع_ب}
+$r^2=\sqrt{2}\cos2\theta,\quad r^2=\sqrt{2}\sin2\theta$
+\انتہا{سوال}
+%=====================
+
+سوال \حوالہ{سوال_مخروط_کمپیوٹر_قطبی_منحنیات_ترسیم_الف} تا سوال \حوالہ{سوال_مخروط_کمپیوٹر_قطبی_منحنیات_ترسیم_ب} میں کمپیوٹر کی مدد سے منحنیات ترسیم کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_مخروط_کمپیوٹر_قطبی_منحنیات_ترسیم_الف}
+$r^2=\sin2\theta,\quad r^2=\cos2\theta$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r=1+\cos\tfrac{\theta}{2},\quad r=1-\sin\tfrac{\theta}{2}$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$r=1,\quad r=2\sin2\theta$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\شناخت{سوال_مخروط_کمپیوٹر_قطبی_منحنیات_ترسیم_ب}
+$r=1,\quad r^2=2\sin2\theta$
+\انتہا{سوال}
+%===================
+
+\موٹا{کمپیوٹر کا استعمال}\\
+\ابتدا{سوال}
+(ا) \عددی{r=-1-\cos\theta} اور (ب) \عددی{r=1+\cos\theta} میں کس کی ترسیم \عددی{r=1-\cos\theta} کی ترسیم کی طرح ہے؟\\
+جواب:\quad 
+الف
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}
+(ا) \عددی{r=-\sin(2\theta+\tfrac{\pi}{2})} اور (ب) \عددی{r=-\cos\tfrac{\theta}{2}} میں کس کی ترسیم \عددی{r=\cos2\theta} کی ترسیم کی طرح ہے؟
+\انتہا{سوال}
+%=======================
+\ابتدا{سوال}\ترچھا{پھول میں پھول}\\
+منحنی \عددی{r=1-2\sin3\theta} ترسیم کریں۔
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+منحنی \عددی{r=1+2\sin\tfrac{\theta}{2}} ترسیم کریں۔
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\ترچھا{گلاب}\\
+گلاب \عددی{r=\cos m\theta} جہاں \عددی{m=\tfrac{1}{3},\,2,3,7} ہے ترسیم کریں۔
+\انتہا{سوال}
+%=========================
+\ابتدا{سوال}\ترچھا{پیچ دار}\\
+قطبی محدد پیچ دار منحنیات کے لئے خصوصی طور پر بہتر ہے۔ درج ذیل پیچ دار منحنیات ترسیم کریں۔
+\begin{multicols}{3}
+\begin{enumerate}[a.]
+\item
+$r=\theta$
+\item
+$r=-\theta$
+\item
+$r=e^{\theta/10}$
+\item
+$r=\tfrac{8}{\theta}$
+\item
+$r=\pm\tfrac{10}{\sqrt{\theta}}$
+\end{enumerate}
+\end{multicols}
+\انتہا{سوال}
+%====================
+
+\موٹا{نظریہ اور مثالیں}\\
+\ابتدا{سوال} (مثال \حوالہ{مثال_مخروط_مبہم_نقطہ_تقاطع} جاری)
+ہم مثال \حوالہ{مثال_مخروط_مبہم_نقطہ_تقاطع} میں درج ذیل مساوات
+\begin{align}
+r^2&=4\cos\theta\label{مساوات_سوال_مخروط_معلوم_نہیں_الف}\\
+r&=1-\cos\theta\label{مساوات_سوال_مخروط_معلوم_نہیں_ب}
+\end{align}
+اکٹھے حل کر کے  نقاط \عددی{(0,0)} اور \عددی{(2,\pi)} کی نشاندہی نہیں کر پائے جہاں یہ منحنیات ایک دوسرے کو قطع کرتی ہیں۔
+\begin{enumerate}[a.]
+\item
+ہم \عددی{r^2=4\cos\theta} میں \عددی{(r,\theta)} کی جگہ مماثل \عددی{(-r,\theta+\pi)} پر کر کے نقطہ \عددی{(2,\pi)} حاصل کر سکتے تھے:
+\begin{gather}
+\begin{aligned}\label{مساوات_سوال_مخروط_معلوم_نہیں_پ}
+r^2&=4\cos\theta\\
+(-r)^2&=4\cos(\theta+\pi)\\
+r^2&=-4\cos\theta
+\end{aligned}
+\end{gather}
+مساوات \حوالہ{مساوات_سوال_مخروط_معلوم_نہیں_ب} اور مساوات \حوالہ{مساوات_سوال_مخروط_معلوم_نہیں_پ} اکٹھے حل کر کے دکھائیں کہ \عددی{(2,\pi)} دونوں کو مطمئن کرتا ہے۔ (ہم اب بھی یہ نہیں جان سکتے ہیں کہ ترسیمات \عددی{(0,0)} پر ایک دوسرے کو قطع کرتی ہیں۔)
+\item
+مبدا اب بھی خاص نقطہ ہے (جیسا یہ عموماً ہوتا ہے)۔ آئیں اس سے نپٹنے کا ایک طریقہ دیکھیں۔ مساوات \حوالہ{مساوات_سوال_مخروط_معلوم_نہیں_الف} اور مساوات \حوالہ{مساوات_سوال_مخروط_معلوم_نہیں_ب} میں \عددی{r=0} پر کر کے انہیں علیحدہ علیحدہ \عددی{\theta} کے لئے حل کریں۔ چونکہ کسی بھی \عددی{\theta} کے لئے \عددی{(0,\theta)} مبدا ہے لہٰذا اس طرح ہم جان پائیں گے کہ دونوں منحنیات مبدا سے گزرتی ہیں اگرچہ یہ ایک دوسرے سے مختلف \عددی{\theta} کے لئے مبدا سے گزرتی ہیں۔
+\end{enumerate}
+\انتہا{سوال}
+%=============
+\ابتدا{سوال}
+اگر اس حصہ کے شروع میں بتلائی گئی دو تشاکلی ایک منحنی میں پائی جاتی ہو تب کیا اس کی تیسری تشاکلی بھی ہو گی؟  اپنے جواب کی وجہ پیش کریں۔
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+چار گل \عددی{r=\cos2\theta} کی اس پھول کی پتی کی زیادہ سے زیادہ چوڑائی دریافت کریں جو \عددی{x} محور پر پایا جاتا ہے۔\\
+جواب:\quad 
+$2y=\tfrac{2\sqrt{6}}{9}$
+\انتہا{سوال}
+%=============
+\ابتدا{سوال}
+محور \عددی{x} سے قلب نما \عددی{r=2(1+\cos\theta)} کا زیادہ سے زیادہ قد دریافت کریں۔
+\انتہا{سوال}
+%==============
