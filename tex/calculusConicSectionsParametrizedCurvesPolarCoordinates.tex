@@ -6448,3 +6448,415 @@ $2y=\tfrac{2\sqrt{6}}{9}$
 محور \عددی{x} سے قلب نما \عددی{r=2(1+\cos\theta)} کا زیادہ سے زیادہ قد دریافت کریں۔
 \انتہا{سوال}
 %==============
+
+
+\حصہ{مخروط حصوں کے قطبی مساوات}
+چاند، سیارے، مصنوعی سیارے اور دم دار ستارے ترخیم، قطع مکافی اور قطع زائد پر حرکت کرتے ہیں۔ ان کی حرکت کو قطبی محدد میں ایک آسان مساوات سے ظاہر کیا جا سکتا ہے لہٰذا فلکیات اور فلکیاتی انجینئری میں قطبی محدد  اہمیت رکھتے ہیں۔ ہم اس مساوات کو یہاں حاصل کرتے ہیں۔
+
+\جزوحصہء{خطوط}
+فرض کریں مبدا \عددی{O} سے خط \عددی{L} تک عمودی لکیر، \عددی{L} پر  نقطہ \عددی{N_0(r_0,\theta_0)} پہنچتی ہے جہاں \عددی{ r\ge0} ہے (شکل \حوالہ{شکل_مخروط_خط_قطبی_مساوات})۔ اب اگر \عددی{L} پر \عددی{N(r,\theta)} کوئی دوسرا نقطہ ہو تب نقاط \عددی{O}، \عددی{N_0} اور \عددی{N} ایک قائمہ الزاویہ مثلث کے راس ہوں گے جس سے
+\begin{align*}
+\frac{r_0}{r}=\cos(\theta-\theta_0)
+\end{align*}
+یا
+\begin{align*}
+r\cos(\theta-\theta_0)=r_0
+\end{align*}
+لکھا جا سکتا ہے۔
+\begin{figure}
+\centering
+\begin{tikzpicture}[]
+\draw[-latex](-0.25,0)--(2.5,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2.5)node[above]{$y$};
+\draw(2,-0.2)--(0.5,2.5)coordinate[pos=0.85](kb)node[above]{$L$};
+\draw(0,0)--($(2,-0.2)!(0,0)!(0.5,2.5)$)coordinate(ka)node[circ]{}node[right]{$N_0(r_0,\theta_0)$}node[pos=0.6,above]{$r_0$};
+\RightAngle{(0,0)}{(ka)}{(0.5,2.5)}
+\draw(0,0)node[below left]{$O$}--(kb)node[circ]{}node[right]{$N(r,\theta)$}node[pos=0.7,left]{$r$};
+\draw[-stealth]([shift={(0:0.7)}]0,0)arc(0:30:0.7);
+\draw(13:1)node[]{$\theta_0$};
+\draw[-stealth]([shift={(0:0.5)}]0,0)arc(0:70:0.5);
+\draw(50:0.75)node[]{$\theta$};
+\end{tikzpicture}
+\caption{خط کی قطبی مساوات}
+\label{شکل_مخروط_خط_قطبی_مساوات}
+\end{figure}
+\موٹا{خط کی معیاری قطبی مساوات}\\
+اگر مبدا سے خط \عددی{L} تک عمود نقطہ \عددی{N_0(r_0,\theta_0)} پر بیٹھتا ہو اور \عددی{r_0\ge 0} ہو تب \عددی{L} کی مساوات درج ذیل ہو گی۔
+\begin{align*}
+r\cos(\theta-\theta_0)=r_0
+\end{align*}
+
+\ابتدا{مثال}\شناخت{مثال_مخروط_خط_قطبی_مساوات_الف}
+مماثل \عددی{\cos(A-B)=\cos A\cos B-\sin A\sin B} استعمال کر کے  شکل \حوالہ{شکل_مثال_مخروط_خط_قطبی_مساوات_الف} میں دیے خط کی مساوات تلاش کریں۔
+
+حل:\quad
+\begin{align*}
+r\cos\big(\theta-\frac{\pi}{3}\big)&=2\\
+r\big(\cos\theta\cos\frac{\pi}{3}-\sin\theta\sin\frac{\pi}{3}\big)&=2\\
+\frac{1}{2}r\cos\theta+\frac{\sqrt{3}}{2}r\sin\theta&=2\\
+\frac{1}{2}x+\frac{\sqrt{3}}{2}y&=2\\
+x+\sqrt{3}y&=4
+\end{align*}
+\انتہا{مثال}
+%=========================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[]
+\draw[-latex](-0.25,0)--(2.5,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2.5)node[above]{$y$};
+\draw(0,0)node[below left]{$O$}--++(60:1.5)node[pos=0.75,left]{$2$}node[circ]{}node[above right]{$(2,\tfrac{\pi}{3})$};
+\draw(60:1.5)++(-30:1)coordinate(ka)--++(150:2);
+\RightAngle{(0,0)}{(60:1.5)}{(ka)}
+\draw[-stealth]([shift={(0:0.5)}]0,0) arc (0:60:0.5);
+\draw(30:0.7)node[]{$\tfrac{\pi}{3}$};
+\end{tikzpicture}
+\caption{خط برائے مثال \حوالہ{مثال_مخروط_خط_قطبی_مساوات_الف}}
+\label{شکل_مثال_مخروط_خط_قطبی_مساوات_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\draw[-latex](-0.25,0)--(4,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,3)node[above]{$y$};
+\draw(3.75,1.5)coordinate(ka)node[circ]{}node[below,xshift=2ex]{$N_0(r_0,\theta_0)$} circle (1.25);
+\draw(0,0)node[below left]{$O$}--(ka)node[pos=0.6,below]{$r_0$};
+\draw(ka)--++(70:1.25)node[above]{$N(r,\theta)$}coordinate(kb)node[pos=0.5,right]{$a$};
+\draw(0,0)--(kb)node[pos=0.5,above left]{$r$};
+\draw[-stealth]([shift={(0:0.9)}]0,0) arc (0:20:0.9);
+\draw(10:1.2)node[]{$\theta_0$};
+\draw[-stealth]([shift={(0:1.5)}]0,0) arc (0:32:1.5);
+\draw(13:1.7)node[]{$\theta$};
+\end{tikzpicture}
+\caption{دائری کی قطبی مساوات۔}
+\label{شکل_مخروط_دائرہ_قطبی_مساوات}
+\end{minipage}
+\end{figure}
+
+\جزوحصہ{دائرے}
+ایک دائرہ جس کا مرکز \عددی{N_0(r_0,\theta_0)} اور رداس \عددی{a} ہو کی قطبی مساوات حاصل کرنے کی خاطر ہم مثلث \عددی{ON_0N} پر قاعدہ کوسائن لاگو کرتے ہیں (شکل \حوالہ{شکل_مخروط_دائرہ_قطبی_مساوات}) جس سے درج ذیل حاصل ہو گا۔
+\begin{align}\label{مساوات_مخروط_دائرہ_قطبی_الف}
+a^2=r_0^2+r^2-2r_0r\cos(\theta-\theta_0)
+\end{align}  
+اگر یہ دائرہ مبدا سے گزرتا ہو تب  \عددی{r_0=a} ہو گا جس سے مساوات \حوالہ{مساوات_مخروط_دائرہ_قطبی_الف} درج ذیل سادہ صورت اختیار کرتی ہے۔
+\begin{gather}
+\begin{aligned}\label{مساوات_مخروط_دائرہ_قطبی_ب}
+a^2&=a^2+r^2-2ar\cos(\theta-\theta_0)&&\text{\RL{(مساوات \حوالہ{مساوات_مخروط_دائرہ_قطبی_الف} میں \عددی{r_0=a})}}\\
+r^2&=2ar\cos(\theta-\theta_0)\\
+r&=2a\cos(\theta-\theta_0)
+\end{aligned}
+\end{gather}
+اگر دائرے کا مرکز مثبت \عددی{x} محور پر پایا جاتا ہو تب مساوات \حوالہ{مساوات_مخروط_دائرہ_قطبی_ب} درج ذیل دے گی۔
+\begin{align}\label{مساوات_مخروط_دائرہ_قطبی_پ}
+r=2a\cos\theta
+\end{align}
+اگر دائرے کا مرکز مثبت \عددی{y} محور پر پایا جاتا ہو تب \عددی{\theta_0=\tfrac{\pi}{2}} اور \عددی{\cos(\theta-\tfrac{\pi}{2})=\sin\theta} ہوں گے لہٰذا  مساوات \حوالہ{مساوات_مخروط_دائرہ_قطبی_ب} درج ذیل دے گی۔
+\begin{align}\label{مساوات_مخروط_دائرہ_قطبی_ت}
+r=2a\sin\theta
+\end{align}
+مساوات \حوالہ{مساوات_مخروط_دائرہ_قطبی_پ} اور مساوات \حوالہ{مساوات_مخروط_دائرہ_قطبی_ت} میں \عددی{r} کی جگہ \عددی{-r} پر کر کے ان دائروں کی مساواتیں حاصل ہوں گی جن کے مرکز منفی \عددی{x} محور یا منفی \عددی{y} محور پر ہوں (شکل \حوالہ{شکل_مخروط_محددی_مرکوز_دائرے})۔
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\r}{1}
+\draw[-latex](-0.2,0)--(2.25,0)node[right]{$x$};
+\draw[-latex](0,-1)--(0,1.5)node[above]{$y$};
+\draw(\r,0)node[circ]{}node[below]{$(a,0)$} circle(\r);
+\draw(\r,\r)node[above]{$r=2a\cos\theta$};
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\r}{1}
+\draw[-latex](-1,0)--(1.25,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2.25)node[above]{$y$};
+\draw(0,\r)node[circ]{}node[right]{$(a,\tfrac{\pi}{2})$} circle(\r);
+\draw(0,2*\r)node[above right]{$r=2a\sin\theta$};
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\r}{1}
+\draw[-latex](-2,0)--(0.25,0)node[right]{$x$};
+\draw[-latex](0,-1)--(0,1.25)node[above]{$y$};
+\draw(-\r,0)node[circ]{}node[below]{$(-a,0)$} circle(\r);
+\draw(-\r,\r)node[above,xshift=-1ex]{$r=-2a\cos\theta$};
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\r}{1}
+\draw[-latex](-1,0)--(1.25,0)node[right]{$x$};
+\draw[-latex](0,-2.25)--(0,0.25)node[above]{$y$};
+\draw(0,-\r)node[circ]{}node[right]{$(-a,\tfrac{\pi}{2})$} circle(\r);
+\draw(0,-2*\r)node[below right]{$r=-2a\sin\theta$};
+\end{tikzpicture}
+\end{subfigure}
+\caption{کارتیسی محور پر مرکز والے دائروں کے قطبی مساوات۔}
+\label{شکل_مخروط_محددی_مرکوز_دائرے}
+\end{figure}
+
+\ابتدا{مثال}\ترچھا{مبدا سے گزرتے ہوئے دائرے}\\
+\begin{align*}
+\begin{array}{ccc}
+\text{رداس}&\text{مرکز}&\text{مساوات}\\
+\midrule
+3&(3,0)&r=6\cos\theta\\
+2&(2,\tfrac{\pi}{2})&r=4\sin\theta\\
+\tfrac{1}{2}&(-\tfrac{1}{2},0)&r=-\cos\theta\\
+1&(-1,\tfrac{\pi}{2})&r=-2\sin\theta
+\end{array}
+\end{align*}
+\انتہا{مثال}
+%===========================
+
+\جزوحصہء{ترخیم، قطع مکافی اور قطع زائد یکجا}
+ترخیم، قطع مکافی اور قطع زائد کے قطبی مساوات معلوم کرنے کی خاطر ہم ایک ماسکہ کو مبدا پر رکھتے ہیں اور مطابقتی ناظمہ کو مبدا کے دائیں، انتصابی لکیر \عددی{x=k} پر رکھتے ہیں (شکل \حوالہ{شکل_مخروط_مخروط_حصہ_عمومی_قطبی})۔ یوں 
+\begin{align*}
+NF=r
+\end{align*}
+اور
+\begin{align*}
+ND=k-FB=k-r\cos\theta
+\end{align*}
+ہوں گے۔ یوں مخروط کی ماسکہ ناظمہ مساوات \عددی{NF=e\cdot ND} درج ذیل  صورت اختیار کرتی ہے
+\begin{align*}
+r=e(k-r\cos\theta)
+\end{align*}
+جس کو \عددی{r} کے لئے حل کرتے ہیں:
+\begin{align}\label{مساوات_مخروط_ترخیم_قطع_مکافی_قطع_زائد}
+r=\frac{ke}{1+e\cos\theta}
+\end{align}
+یہ مساوات \عددی{0<e<1} کے لئے ترخیم، \عددی{e=1} کے لئے قطع مکافی اور \عددی{e>1} کے لئے قطع زائد کو ظاہر کرتی ہے۔ اس طرح ترخیم، قطع مکافی اور قطع زائد کو ایک ہی مساوات ظاہر کرتی ہے۔
+\begin{figure}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=(\x)^2;}]
+\begin{axis}[clip=false,small, axis lines=middle, axis y line=none,xtick={\empty},ytick={\empty},enlargelimits=true,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west}]
+\pgfmathsetmacro{\k}{3}
+\addplot[domain=0:2] ({-f(x)},{x})node[pos=0.75,sloped, above]{\RL{مخروط حصہ}};
+\addplot[domain=0:2] ({-f(x)},{-x});
+\addplot[] plot coordinates {(\k,-2)(\k,2)}node[pos=0.15,left]{$x=k$}node[pos=0.95,sloped,below]{ناظمہ};
+\addplot[]plot coordinates {(-3,0)(-1,{f(-1)}) (\k, 1)}node[pos=0.25,left]{$r$}node[right]{$D$};
+\addplot[]plot coordinates {(-3,0)}node[circ]{}node[below]{$F$};
+\addplot[]plot coordinates {(-1,{f(-1)})}node[circ]{}node[above]{$N$};
+\addplot[dashed]plot coordinates {(-1,{f(-1)})(-1,0)}node[below]{$B$};
+\RightAngle{(-1,{f(-1)})}{(-1,0)}{(-2,0)}
+\addplot[]plot coordinates {(-1.75,0)}node[pin=-120:{$r\cos\theta$}]{};
+\addplot[-stealth,domain=0:25]({-3+0.7*cos(x)},{0.7*sin(x)})node[pos=0.6,right]{$\theta$};
+\addplot[]plot coordinates {(\k,0)}node[below left]{$k$};
+\addplot[]plot coordinates {(-3,0)}node[pin=135:{\RL{ماسکہ مبدا پر واقع ہے}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{اس مقام پر رکھے گئے مخروط حصے کا \عددی{NF=r} اور \عددی{ND=k-r\cos\theta} ہو گا۔}
+\label{شکل_مخروط_مخروط_حصہ_عمومی_قطبی}
+\end{figure}
+
+\ابتدا{مثال} \ترچھا{مخروط حصہ مساوات \حوالہ{مساوات_مخروط_ترخیم_قطع_مکافی_قطع_زائد}}\\
+\begin{align*}
+r&=\frac{k}{2+\cos\theta}&&e=\frac{1}{2}\quad \text{\RL{ ترخیم:}}\\
+r&=\frac{k}{1+\cos\theta}&& e=1\quad \text{\RL{قطع مکافی:}}\\
+r&=\frac{2k}{1+2\cos\theta}&&e=2\quad \text{\RL{قطع زائد:}}
+\end{align*}
+\انتہا{مثال}
+%==========================
+
+آپ مساوات \حوالہ{مساوات_مخروط_ترخیم_قطع_مکافی_قطع_زائد} کی مختلف صورتیں دیکھیں گے جن کا دارومدار ناظمہ کے مقام پر ہو گا۔ اگر مبدا کے بائیں جانب  لکیر \عددی{=-k} ناظمہ ہو (جبکہ ماسکہ اب بھی مبدا پر ہو) تب مساوات \حوالہ{مساوات_مخروط_ترخیم_قطع_مکافی_قطع_زائد} کی جگہ درج ذیل ہو گا۔
+\begin{align*}
+r=\frac{ke}{1-e\cos\theta}
+\end{align*}
+نسب نما میں اب \عددی{(+)} کی بجائے \عددی{(-)} ہو گا۔ اگر ناظمہ \عددی{y=k} یا \عددی{y=-k} ہو تب مساوات \حوالہ{مساوات_مخروط_ترخیم_قطع_مکافی_قطع_زائد} میں \عددی{\cos \theta} کی جگہ \عددی{\sin\theta} ہو گا (شکل \حوالہ{شکل_مخروط_قطبی_مخروط_عمومی})۔
+%=====================================
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=(\x)^2;}]
+\begin{axis}[clip=false,small, axis lines=middle, axis y line=none,xtick={\empty},ytick={\empty},enlargelimits=true,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west}]
+\pgfmathsetmacro{\k}{3}
+\addplot[domain=0:2] ({-f(x)},{x})node[pos=0.6,above right]{$r=\frac{ke}{1+e\cos\theta}$};
+\addplot[domain=0:2] ({-f(x)},{-x});
+\addplot[] plot coordinates {(\k,-2)(\k,2)}node[pos=0.25,left]{\RL{ناظمہ}};
+\addplot[draw=none] plot coordinates {(\k,-2)(\k,2)}node[pos=0.15,left]{$x=k$};
+\addplot[]plot coordinates {(-3,0)}node[circ]{}node[below]{مبدا}node[above]{ماسکہ};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=(\x)^2;}]
+\begin{axis}[clip=false,small, axis lines=middle, axis y line=none,xtick={\empty},ytick={\empty},enlargelimits=true,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west}]
+\pgfmathsetmacro{\k}{3}
+\addplot[domain=0:2] ({f(x)},{x})node[pos=0.6,above left]{$r=\frac{ke}{1-e\cos\theta}$};
+\addplot[domain=0:2] ({f(x)},{-x});
+\addplot[] plot coordinates {(-\k,-2)(-\k,2)}node[pos=0.25,right]{\RL{ناظمہ}};
+\addplot[draw=none] plot coordinates {(-\k,-2)(-\k,2)}node[pos=0.15,right]{$x=-k$};
+\addplot[]plot coordinates {(3,0)}node[circ]{}node[below]{مبدا}node[above]{ماسکہ};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=(\x)^2;}]
+\begin{axis}[clip=false,small, axis lines=middle,xtick={\empty},ytick={\empty},enlargelimits=true,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel={$y$},ylabel style={at={(current axis.above origin)},anchor=south}]
+\pgfmathsetmacro{\k}{3}
+\addplot[domain=0:2] (x,{-f(x)})node[pos=0.6,above right]{$r=\frac{ke}{1+e\sin\theta}$};
+\addplot[domain=0:2] (-x,{-f(x)});
+\addplot[] plot coordinates {(-2,\k)(2,\k)}node[pos=0.25,below]{\RL{ناظمہ}};
+\addplot[draw=none] plot coordinates {(-2,\k)(2,\k)}node[pos=0.25,above]{$y=k$};
+\addplot[]plot coordinates {(0,-3)}node[circ]{}node[left]{مبدا}node[right]{ماسکہ};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=(\x)^2;}]
+\begin{axis}[clip=false,small, axis lines=middle,xtick={\empty},ytick={\empty},enlargelimits=true,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel={$y$},ylabel style={at={(current axis.above origin)},anchor=south}]
+\pgfmathsetmacro{\k}{3}
+\addplot[domain=0:2] (x,{f(x)})node[pos=0.6,below right]{$r=\frac{ke}{1-e\sin\theta}$};
+\addplot[domain=0:2] (-x,{f(x)});
+\addplot[] plot coordinates {(-2,-\k)(2,-\k)}node[pos=0.25,below]{\RL{ناظمہ}};
+\addplot[draw=none] plot coordinates {(-2,-\k)(2,-\k)}node[pos=0.25,above]{$y=-k$};
+\addplot[]plot coordinates {(0,3)}node[circ]{}node[left]{مبدا}node[right]{ماسکہ};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{مخروط حصوں کی مساواتیں \عددی{(e>0)}}
+\label{شکل_مخروط_قطبی_مخروط_عمومی}
+\end{figure}
+
+%========================================
+\ابتدا{مثال}
+ایک قطع زائد جس کی سنک \عددی{\tfrac{3}{2}} اور ناظمہ \عددی{x=2} ہو کی مساوات  دریافت کریں۔
+
+حل:\quad
+ہم شکل \حوالہ{شکل_مخروط_قطبی_مخروط_عمومی}-الف کی مساوات میں \عددی{k=2} اور \عددی{e=\tfrac{3}{2}} لیتے ہیں۔
+\begin{align*}
+r=\frac{2(\tfrac{3}{2})}{1+\tfrac{3}{2}\cos\theta}\implies r=\frac{6}{2+3\cos\theta}
+\end{align*}
+\انتہا{مثال}
+%===================
+\ابتدا{مثال}
+ایک قطع مکافی جس کی مساوات درج ذیل ہے کی ناظمہ معلوم کریں۔
+\begin{align*}
+r=\frac{25}{10+10\cos\theta}
+\end{align*}
+حل:\quad
+ہم نسب نما اور شمار کنندہ کو \عددی{10} سے تقسیم کر کے مساوات کی معیاری روپ
+\begin{align*}
+r=\frac{5/2}{1+\cos\theta}
+\end{align*}
+حاصل کرتے ہیں۔ یہ درج ذیل مساوات ہے
+\begin{align*}
+r=\frac{ke}{1+e\cos\theta}
+\end{align*}
+جس میں \عددی{k=5/2} اور \عددی{e=1} ہیں۔ ناظمہ کی مساوات \عددی{x=\tfrac{5}{2}} ہو گی۔
+\انتہا{مثال}
+%=======================
+
+ہم شکل \حوالہ{شکل_مخروط_ترخیم_تعلق_متغیرات} سے دیکھتے ہیں کہ ترخیم کے لئے \عددی{k}، سنک \عددی{e} اور نصف محور اکبر  \عددی{a} کا تعلق
+\begin{align}\label{مساوات_مخروط_تعلق_کے}
+k=\frac{a}{e}-ea
+\end{align}
+ہے جس سے \عددی{ke=a(1-e^2)} ملتا ہے۔ مساوات \حوالہ{مساوات_مخروط_ترخیم_قطع_مکافی_قطع_زائد} میں \عددی{ke} کی جگہ \عددی{} پر کرنے سے ترخیم کی درج ذیل معیاری مساوات حاصل ہوتی ہے۔
+\begin{align}\label{مساوات_مخروط_ترخیم_معیاری_قطبی}
+r=\frac{a(1-e^2)}{1+e\cos\theta}&&\text{\RL{سنک \عددی{e} اور نصف اکبر محور \عددی{a}}}
+\end{align}
+
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=2/3*sqrt(9-(\x)^2);}]
+\pgfmathsetmacro{\k}{0.2}
+\begin{axis}[axis equal,clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}, axis y line=none,xtick={\empty}]
+\addplot[domain=-3+\k:3-\k]{f(x)};
+\addplot[domain=-3:-3+\k]{f(x)};
+\addplot[domain=3-\k:3]{f(x)};
+\addplot[domain=-3+\k:3-\k]{-f(x)};
+\addplot[domain=-3:-3+\k]{-f(x)};
+\addplot[domain=3-\k:3]{-f(x)};
+\addplot[]plot coordinates {(0,0)}node[circ]{}node[above]{مرکز};
+\addplot[]plot coordinates {(2,0)}node[circ]{}node[above]{\text{\RL{ماسکہ}}}node[below]{\text{\RL{مبدا}}};
+\addplot[]plot coordinates {(4.5,-4.5)(4.5,2.5)}node[pos=0.9,above right]{$x=k$}node[pos=0.9,below right]{\RL{ناظمہ}};
+\addplot[]plot coordinates {(0,-0.5)(0,-4.5)};
+\addplot[]plot coordinates {(3,-0.5)(3,-3.5)};
+\addplot[]plot coordinates {(2,-1)(2,-2.75)};
+\addplot[stealth-stealth]plot coordinates {(0,-2.5)(2,-2.5)}node[pos=0.5,fill=white]{$ea$};
+\addplot[stealth-stealth]plot coordinates {(0,-3.25)(3,-3.25)}node[pos=0.5,fill=white]{$a$};
+\draw[stealth-stealth] (axis cs:0,-4.2)--(axis cs:4.5,-4.2)node[pos=0.5,fill=white]{$\tfrac{a}{e}$};
+\end{axis}
+\end{tikzpicture}
+\caption{ایک ترخیم جس کا نصف محور اکبر \عددی{a} ہو، ماسکہ تا ناظمہ فاصلہ \عددی{} لہٰذا \عددی{k=\tfrac{a}{e}-ea} یعنی \عددی{ke=a(1-e^2)} ہو گا۔}
+\label{شکل_مخروط_ترخیم_تعلق_متغیرات}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=2/3*sqrt(9-(\x)^2);}]
+\pgfmathsetmacro{\k}{0.2}
+\begin{axis}[axis equal,clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}, axis lines=none]
+\addplot[-<-=0.25,domain=-3+\k:3-\k]{f(x)};
+\addplot[domain=-3:-3+\k]{f(x)};
+\addplot[domain=3-\k:3]{f(x)};
+\addplot[domain=-3+\k:3-\k]{-f(x)};
+\addplot[domain=-3:-3+\k]{-f(x)};
+\addplot[domain=3-\k:3]{-f(x)};
+\addplot[]plot coordinates {(0,0)}node[circ]{};
+\addplot[]plot coordinates {(2,0)}node[circ]{}node[below]{\text{\RL{شمس}}};
+\addplot[]plot coordinates {(-3,0)(3,0)};
+\draw [decorate,decoration={brace,amplitude=5pt},xshift=0pt,yshift=-4pt](axis cs:0,0) -- (axis cs:-3,0) node [black,midway,yshift=-0.6cm] {$a=39.44$};
+\addplot[]plot coordinates {(2,0)(2.5,{f(2.5)})}node[circ]{}node[above]{پلوٹو};
+\addplot[domain=0:68,-stealth] ({2+0.5*cos(x)},{0.5*sin(x)})node[pos=0.5,right]{$\theta$};
+\addplot[]plot coordinates {(3,0)}node[pin=80:{\RL{\begin{minipage}{1cm}حضیض شمسی\\ \عددی{29.58} \end{minipage}}}]{};
+\addplot[]plot coordinates {(-3,0)}node[pin=100:{\RL{\begin{minipage}{1cm}اوج شمسی\\ \عددی{49.3} \end{minipage}}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{مدار پلوٹو (مثال \حوالہ{مثال_مخروط_مدار_پلوٹو})}
+\label{شکل_مثال_مخروط_مدار_پلوٹو}
+\end{minipage}
+\end{figure}
+
+آپ دیکھ سکتے ہیں کہ مساوات \حوالہ{مساوات_مخروط_ترخیم_معیاری_قطبی} میں \عددی{e=0} پر کرنے سے \عددی{r=a} حاصل ہوتا ہے جو ایک دائرہ کو ظاہر کرتی ہے۔
+
+سیاروں کے مدار معلوم کرنے کے لئے  مساوات \حوالہ{مساوات_مخروط_ترخیم_معیاری_قطبی} ابتدائی مساوات ہے۔
+
+\ابتدا{مثال}\شناخت{مثال_مخروط_مدار_پلوٹو}
+ایک ترخیم کا نصف محور اکبر \عددی{39.44} فلکیاتی اکائی اور سنک \عددی{0.25} ہے۔ اس ترخیم کی قطبی مساوات تلاش کریں۔ یہ تخمیناً سیارہ پلوٹو کا مدار ہے۔
+
+حل:\quad
+ہم  مساوات \حوالہ{مساوات_مخروط_ترخیم_معیاری_قطبی} میں \عددی{a=39.44} اور \عددی{e=0.25} پر کرتے ہیں۔
+\begin{align*}
+r=\frac{39.44(1-(0.25)^2)}{1+0.25\cos\theta}=\frac{147.9}{4+\cos\theta}
+\end{align*}
+\اصطلاح{حضیض شمسی}\فرہنگ{حضیض شمسی}\حاشیہب{perihelion}\فرہنگ{perihelion} پر سورج سے پلوٹو
+\begin{align*}
+r=\frac{147.9}{4+1}=29.58
+\end{align*}
+فلکی اکائیاں دور ہو گا جبکہ اصطلاح{اوج شمسی}\فرہنگ{اوج شمسی}\حاشیہب{aphelion}\فرہنگ{aphelion} پر یہ سورج سے
+\begin{align*}
+r=\frac{147.9}{4-1}=49.3
+\end{align*}
+فلکی اکائیاں دور ہو گا (شکل \حوالہ{شکل_مثال_مخروط_مدار_پلوٹو})۔
+\انتہا{مثال}
+%===================
+\ابتدا{مثال}
+ایک ماسکہ سے مطابقتی ناظمہ تک فاصل مثال \حوالہ{مثال_مخروط_مدار_پلوٹو} میں معلوم کریں۔
+
+حل:\quad
+ہم مساوات \حوالہ{مساوات_مخروط_تعلق_کے} میں \عددی{a=39.44} اور \عددی{e=0.25} پر کر کے
+\begin{align*}
+k=39.44\big(\frac{1}{0.25}-0.25\big)=147.9
+\end{align*}
+فلکی اکائیاں حاصل کرتے ہیں۔
+\انتہا{مثال}
+%====================
