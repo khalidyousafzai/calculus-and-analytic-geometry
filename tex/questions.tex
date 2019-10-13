@@ -1,438 +1,376 @@
-\حصہء{سوالات}
-\موٹا{خطوط}\\
-سوال \حوالہ{سوال_مخروط_خط_قطبی_کارتیسی_الف}  تا سوال \حوالہ{سوال_مخروط_خط_قطبی_کارتیسی_ت} میں دیے خطوط کی قطبی اور کارتیسی مساوات تلاش کریں۔ 
+\حصہ{قطبی محدد میں تکمل}
+اس حصہ میں قطبی محدد استعمال کرتے ہوئے مستوی خطوں کا رقبہ، منحنیات کی لمبائی، اور سطح طواف کا رقبہ حاصل کرنا سکھایا جائے گا۔
 
-\ابتدا{سوال}\شناخت{سوال_مخروط_خط_قطبی_کارتیسی_الف}
-خط شکل \حوالہ{شکل_سوال_مخروط_خط_قطبی_کارتیسی_الف} میں ترسیم کیا گیا ہے۔
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}\شناخت{سوال_مخروط_خط_قطبی_کارتیسی_ب}
-خط شکل \حوالہ{شکل_سوال_مخروط_خط_قطبی_کارتیسی_ب} میں ترسیم کیا گیا ہے۔
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}\شناخت{سوال_مخروط_خط_قطبی_کارتیسی_پ}
-خط شکل \حوالہ{شکل_سوال_مخروط_خط_قطبی_کارتیسی_پ} میں ترسیم کیا گیا ہے۔
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}\شناخت{سوال_مخروط_خط_قطبی_کارتیسی_ت}
-خط شکل \حوالہ{شکل_سوال_مخروط_خط_قطبی_کارتیسی_ت} میں ترسیم کیا گیا ہے۔
-\انتہا{سوال}
-%========================
-\begin{figure}
-\centering
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\scriptsize]
-\pgfmathsetmacro{\a}{30}
-\pgfmathsetmacro{\d}{2}
-\draw[-latex](-0.15,0)--(3,0)node[right]{$x$};
-\draw[-latex](0,-0.15)--(0,2)node[above]{$y$};
-\draw(0,0)--++(\a:\d)coordinate(ka)node[pos=0.5,above]{$5$};
-\draw[thick](\a:\d)++(\a-90:1.5)coordinate(kb)--++(\a+90:2.5);
-\RightAngle{(0,0)}{(ka)}{(kb)}
-\draw[-stealth]([shift={(0:0.5)}]0,0) arc (0:\a:0.5)node[right,yshift=-1ex]{$\tfrac{\pi}{6}$};
-\end{tikzpicture}
-\caption{ترسیم سوال \حوالہ{سوال_مخروط_خط_قطبی_کارتیسی_الف}}
-\label{شکل_سوال_مخروط_خط_قطبی_کارتیسی_الف}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\scriptsize]
-\pgfmathsetmacro{\a}{135}
-\pgfmathsetmacro{\d}{2}
-\draw[-latex](-2.5,0)--(0.5,0)node[right]{$x$};
-\draw[-latex](0,-0.15)--(0,2)node[above]{$y$};
-\draw(0,0)--++(\a:\d)coordinate(ka)node[pos=0.5,above]{$2$};
-\draw[thick](\a:\d)++(\a-90:1.5)coordinate(kb)--++(\a+90:2.5);
-\RightAngle{(0,0)}{(ka)}{(kb)}
-\draw[-stealth]([shift={(0:0.3)}]0,0) arc (0:\a:0.3)node[pos=0.25,above]{$\tfrac{3\pi}{4}$};
-\end{tikzpicture}
-\caption{ترسیم سوال \حوالہ{سوال_مخروط_خط_قطبی_کارتیسی_ب}}
-\label{شکل_سوال_مخروط_خط_قطبی_کارتیسی_ب}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\scriptsize]
-\pgfmathsetmacro{\a}{240}
-\pgfmathsetmacro{\d}{2}
-\draw[-latex](-0.5,0)--(0.5,0)node[right]{$x$};
-\draw[-latex](0,-0.15)--(0,0.5)node[above]{$y$};
-\draw(0,0)--++(\a:\d)coordinate(ka)node[pos=0.5,above]{$3$};
-\draw[thick](\a:\d)++(\a-90:1.5)coordinate(kb)--++(\a+90:2.5);
-\RightAngle{(0,0)}{(ka)}{(kb)}
-\draw[-stealth]([shift={(0:0.3)}]0,0) arc (0:\a:0.3)node[pos=0.75,above left]{$\tfrac{4\pi}{3}$};
-\end{tikzpicture}
-\caption{ترسیم سوال \حوالہ{سوال_مخروط_خط_قطبی_کارتیسی_پ}}
-\label{شکل_سوال_مخروط_خط_قطبی_کارتیسی_پ}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\scriptsize]
-\pgfmathsetmacro{\a}{-45}
-\pgfmathsetmacro{\d}{2}
-\draw[-latex](-0.15,0)--(2,0)node[right]{$x$};
-\draw[-latex](0,-0.15)--(0,0.25)node[above]{$y$};
-\draw(0,0)--++(\a:\d)coordinate(ka)node[pos=0.5,below]{$4$};
-\draw[thick](\a:\d)++(\a-90:1.5)coordinate(kb)--++(\a+90:2.5);
-\RightAngle{(0,0)}{(ka)}{(kb)}
-\draw[-stealth]([shift={(0:0.3)}]0,0) arc (0:\a:0.3)node[pos=0.8,right]{$-\tfrac{\pi}{4}$};
-\end{tikzpicture}
-\caption{ترسیم سوال \حوالہ{سوال_مخروط_خط_قطبی_کارتیسی_ت}}
-\label{شکل_سوال_مخروط_خط_قطبی_کارتیسی_ت}
-\end{minipage}
-\end{figure}
-
-سوال \حوالہ{سوال_مخروط_قطبی_ترسیم_کارتیسی_معلوم_الف} تا سوال \حوالہ{سوال_مخروط_قطبی_ترسیم_کارتیسی_معلوم_ب} میں دی مساوات کو ترسیم کریں اور ان کی کارتیسی مساوات معلوم کریں۔ 
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_ترسیم_کارتیسی_معلوم_الف}
-$r\cos(\theta-\tfrac{\pi}{4})=\sqrt{2}$
-\انتہا{سوال}
-%======================
-\ابتدا{سوال}
-$r\cos(\theta+\tfrac{3\pi}{4})=1$
-\انتہا{سوال}
-%======================
-\ابتدا{سوال}
-$r\cos(\theta-\tfrac{2\pi}{3})=3$
-\انتہا{سوال}
-%======================
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_ترسیم_کارتیسی_معلوم_ب}
-$r\cos(\theta+\tfrac{\pi}{3})=2$
-\انتہا{سوال}
-%======================
-
-سوال \حوالہ{سوال_مخروط_کارتیسی_سے_قطبی_معلوم_الف} تا سوال \حوالہ{سوال_مخروط_کارتیسی_سے_قطبی_معلوم_ب} میں دی گئی کارتیسی مساوات کی قطبی روپ (\عددی{r\cos(\theta-\theta_0)=r_0}) تلاش کریں۔ 
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_کارتیسی_سے_قطبی_معلوم_الف}
-$\sqrt{2}x+\sqrt{2}y=6$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$\sqrt{3}x-y=1$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$y=-5$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}\شناخت{سوال_مخروط_کارتیسی_سے_قطبی_معلوم_ب}
-$x=-4$
-\انتہا{سوال}
-%=======================
-
-سوال \حوالہ{سوال_مخروط_دائرے_کی_قطبی_الف} تا سوال \حوالہ{سوال_مخروط_دائرے_کی_قطبی_ت} میں دی گئی دائروں کی قطبی مساوات دریافت کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_دائرے_کی_قطبی_الف}
-دائرہ شکل \حوالہ{شکل_سوال_مخروط_دائرے_کی_قطبی_الف}
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}\شناخت{سوال_مخروط_دائرے_کی_قطبی_ب}
-دائرہ شکل \حوالہ{شکل_سوال_مخروط_دائرے_کی_قطبی_ب}
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}\شناخت{سوال_مخروط_دائرے_کی_قطبی_پ}
-دائرہ شکل \حوالہ{شکل_سوال_مخروط_دائرے_کی_قطبی_پ}
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}\شناخت{سوال_مخروط_دائرے_کی_قطبی_ت}
-دائرہ شکل \حوالہ{شکل_سوال_مخروط_دائرے_کی_قطبی_ت}
-\انتہا{سوال}
-%========================
-\begin{figure}
-\centering
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\scriptsize]
-\draw[-latex](-0.15,0)--(2.5,0)node[right]{$x$};
-\draw[-latex](0,-1)--(0,1)node[above]{$y$};
-\draw(1,0)node[circ]{}  circle (1);
-\draw(1,1)node[above]{رداس $=4$};
-\end{tikzpicture}
-\caption{دائرہ سوال \حوالہ{سوال_مخروط_دائرے_کی_قطبی_الف}}
-\label{شکل_سوال_مخروط_دائرے_کی_قطبی_الف}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\scriptsize]
-\draw[-latex](-1,0)--(1,0)node[right]{$x$};
-\draw[-latex](0,-2.25)--(0,0.25)node[above]{$y$};
-\draw(0,-1)node[circ]{}  circle (1);
-\draw(0,0)node[above right]{رداس $=1$};
-\end{tikzpicture}
-\caption{دائرہ سوال \حوالہ{سوال_مخروط_دائرے_کی_قطبی_ب}}
-\label{شکل_سوال_مخروط_دائرے_کی_قطبی_ب}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\scriptsize]
-\draw[-latex](-1,0)--(1,0)node[right]{$x$};
-\draw[-latex](0,-0.15)--(0,2.25)node[above]{$y$};
-\draw(0,1)node[circ]{}  circle (1);
-\draw(0,2)node[above right]{رداس $=\sqrt{2}$};
-\end{tikzpicture}
-\caption{دائرہ سوال \حوالہ{سوال_مخروط_دائرے_کی_قطبی_پ}}
-\label{شکل_سوال_مخروط_دائرے_کی_قطبی_پ}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\scriptsize]
-\draw[-latex](-2.25,0)--(0.15,0)node[right]{$x$};
-\draw[-latex](0,-1)--(0,1)node[above]{$y$};
-\draw(-1,0)node[circ]{}  circle (1);
-\draw(-1,1)node[above]{رداس $=\tfrac{1}{2}$};
-\end{tikzpicture}
-\caption{دائرہ سوال \حوالہ{سوال_مخروط_دائرے_کی_قطبی_ت}}
-\label{شکل_سوال_مخروط_دائرے_کی_قطبی_ت}
-\end{minipage}
-\end{figure}
-
-سوال \حوالہ{سوال_مخروط_قطبی_دائرے_ترسیم_الف} تا سوال \حوالہ{سوال_مخروط_قطبی_دائرے_ترسیم_ب} میں دیے گئے دائرے ترسیم کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_دائرے_ترسیم_الف}
-$r=4\cos\theta$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$r=6\sin\theta$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$r=-2\cos\theta$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_دائرے_ترسیم_ب}
-$r=-8\sin\theta$
-\انتہا{سوال}
-%=====================
-
-سوال \حوالہ{سوال_مخروط_قطبی_پیچیدہ_الف} تا سوال \حوالہ{سوال_مخروط_قطبی_پیچیدہ_ب} کے قطبی مساوات معلوم کریں۔ 
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_پیچیدہ_الف}
-$(x-6)^2+y^2=36$
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}
-$(x+2)^2+y^2=4$
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}
-$x^2+(y-5)^2=25$
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}
-$x^2+(y+7)^2=49$
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}
-$x^2+2x+y^2=0$
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}
-$x^2-16x+y^2=0$
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}
-$x^2+y^2+y=0$
-\انتہا{سوال}
-%========================
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_پیچیدہ_ب}
-$x^2+y^2-\tfrac{4}{3}y=0$
-\انتہا{سوال}
-%========================
-
-\موٹا{سنک اور ناظمہ سے مخروط خطے}
-
-سوال \حوالہ{سوال_مخروط_سنک_ناظمہ_قطبی_الف} تا سوال \حوالہ{سوال_مخروط_سنک_ناظمہ_قطبی_ب} میں مخروط حصوں کی سنک دی گئی ہے۔ مخروط حصے کا ایک ماسکہ مبدا پر واقع ہے اور اس کا مطابقتی ناظمہ بھی دیا گیا ہے۔ اس مخروط حصے کی قطبی مساوات تلاش کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_سنک_ناظمہ_قطبی_الف}
-$e=1,\quad x=2$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$e=1,\quad y=2$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$e=5,\quad y=-6$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$e=2,\quad x=4$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$e=\tfrac{1}{2},\quad x=1$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$e=\tfrac{1}{4},\quad x=-2$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-$e=\tfrac{1}{5},\quad y=-10$
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}\شناخت{سوال_مخروط_سنک_ناظمہ_قطبی_ب}
-$e=\tfrac{1}{3},\quad y=6$
-\انتہا{سوال}
-%=======================
-
-\موٹا{قطع مکافی اور ترخیم}\\
-سوال \حوالہ{سوال_مخروط_ترخیم_قطع_مکافی_الف} تا سوال \حوالہ{سوال_مخروط_ترخیم_قطع_مکافی_ب} کے قطع مکافی اور ترخیمات کو ترسیم کریں۔ مبدا پر واقع ماسکہ کا مطابقتی ناظمہ بھی ترسیم کریں۔ ہر مخروط حصے کی قطبی مساوات تلاش کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_قطع_مکافی_الف}
-$r=\tfrac{1}{1+\cos\theta}$
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-$r=\tfrac{6}{2+\cos\theta}$
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-$r=\tfrac{25}{1-5\cos\theta}$
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-$r=\tfrac{4}{2-2\cos\theta}$
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-$r=\tfrac{400}{16+8\sin\theta}$
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-$r=\tfrac{12}{3+3\sin\theta}$
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-$r=\tfrac{8}{2-2\sin\theta}$
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_قطع_مکافی_ب}
-$r=\tfrac{4}{2-\sin\theta}$
-\انتہا{سوال}
-%====================
-
-\موٹا{عدم مساوات کی ترسیمات}\\
-
-سوال \حوالہ{سوال_مخروط_عدم_مساوات_ترسیم_الف} اور سوال \حوالہ{سوال_مخروط_عدم_مساوات_ترسیم_ب} میں عدم مساوات کو ترسیم کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_عدم_مساوات_ترسیم_الف}
-$0\le r\le 2\cos\theta$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_عدم_مساوات_ترسیم_ب}
-$-3\cos\theta\le r\le 0$
-\انتہا{سوال}
-%=====================
-
-\موٹا{کمپیوٹر کا استعمال}
-
-سوال \حوالہ{سوال_مخروط_کمپیوٹر_خط_مخروط_الف} تا سوال \حوالہ{سوال_مخروط_کمپیوٹر_خط_مخروط_ب} میں دیے گئے خط اور مخروط خطے ترسیم کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_مخروط_کمپیوٹر_خط_مخروط_الف}
-$r=3\sec(\theta-\tfrac{\pi}{3})$
-\انتہا{سوال}
-%=========================
-\ابتدا{سوال}
-$r=4\sec(\theta+\tfrac{\pi}{6})$
-\انتہا{سوال}
-%=========================
-\ابتدا{سوال}
-$r=4\sin\theta$
-\انتہا{سوال}
-%=========================
-\ابتدا{سوال}
-$r=-2\cos\theta$
-\انتہا{سوال}
-%=========================
-\ابتدا{سوال}
-$r=\tfrac{8}{4+\cos\theta}$
-\انتہا{سوال}
-%=========================
-\ابتدا{سوال}
-$r=\tfrac{8}{4+\sin\theta}$
-\انتہا{سوال}
-%=========================
-\ابتدا{سوال}
-$r=\tfrac{1}{1-\sin\theta}$
-\انتہا{سوال}
-%=========================
-\ابتدا{سوال}
-$r=\tfrac{1}{1+\cos\theta}$
-\انتہا{سوال}
-%=========================
-\ابتدا{سوال}
-$r=\tfrac{1}{1+2\sin\theta}$
-\انتہا{سوال}
-%=========================
-\ابتدا{سوال}\شناخت{سوال_مخروط_کمپیوٹر_خط_مخروط_ب}
-$r=\tfrac{1}{1+2\cos\theta}$
-\انتہا{سوال}
-%=========================
-
-\موٹا{نظریہ اور مثالیں}\\
-\ابتدا{سوال}\ترچھا{حضیض شمسی اور اوج شمسی}\\
-ایک سیارہ اپنے سورج کے گرد ایک ترخیم پر گھومتا ہے جس کے نصف محور اکبر کی لمبائی \عددی{a} ہے۔
-\begin{enumerate}[a.]
-\item
-دکھائیں کہ جب سیارہ سورج کے قریب تر ہو تب \عددی{r=a(1-e)} ہو گا اور جب یہ سورج سے دور تر ہو تب \عددی{r=a(1+e)} ہو گا۔
-\item
-جدول \حوالہ{جدول_مخروط_نظام_شمسی} کی مدد سے معلوم کریں کہ ہماری نظام شمسی میں ہر سیارہ سورج کے کتنے نزدیک اور اس سے کتنا دور ہو سکتا ہے۔
-\end{enumerate}
-\انتہا{سوال}
-%====================
-\begin{table}
-\caption{نظام شمسی میں سیاروں کی سنک اور نصف محور اکبر}
-\label{جدول_مخروط_نظام_شمسی}
-\centering
-\begin{tabular}{ccc}
-\toprule
-سیارہ& نصف محور اکبر (فلکی اکائیاں) & سنک\\
-\midrule
-عطارہ&$0.387$& $0.2056$\\
-زھرہ&$0.7233$  & $0.0068$\\
-زمین& $1.000$  &  $0.0167$\\
-مریخ&  $1.524$  &  $0.0934$  \\
-مشتری&  $5.203$   &  $0.0484$\\
-زحل&  $9.539$  &  $0.0543$\\
-یورانس&  $19.18$  &  $0.0460$\\
-نیپچون&  $30.06$  &  $0.0082$\\
-پلوٹو&  $39.44$   &  $0.2481$\\
-\bottomrule
-\end{tabular}
-\end{table}
-%===========================
-
-\ابتدا{سوال}\ترچھا{سیاروں کی مدار پر حرکت}\\
-ہم نے مثال \حوالہ{مثال_مخروط_مدار_پلوٹو} میں پلوٹو کے مدار کی قطبی مساوات معلوم کی۔ جدول \حوالہ{جدول_مخروط_نظام_شمسی} کی مدد سے دیگر سیاروں کے مدار کی مساوات تلاش کریں۔
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-(الف) منحنیات \عددی{r=4\sin\theta} اور \عددی{r=\sqrt{3}\sec\theta} کی کارتیسی مساواتیں تلاش کریں۔  (ب) ان دنوں منحنیات کو ایک ساتھ ترسیم کر کے ان کے نقطہ تقاطع کو کارتیسی اور قطبی محدد میں ظاہر کریں۔ 
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-(الف) منحنیات \عددی{r=8\cos\theta} اور \عددی{r=2\sec\theta} کی کارتیسی مساواتیں تلاش کریں۔  (ب) ان دنوں منحنیات کو ایک ساتھ ترسیم کر کے ان کے نقطہ تقاطع کو کارتیسی اور قطبی محدد میں ظاہر کریں۔ 
-\انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-ایک قطع مکافی کا ماسکہ \عددی{(0,0)} پر ہے جبکہ اس کا ناظمہ \عددی{r\cos\theta=4} ہے۔ اس کی قطبی مساوات تلاش کریں۔
-\انتہا{سوال}
-%============================
-\ابتدا{سوال}
-ایک قطع مکافی کا ماسکہ \عددی{(0,0)} پر ہے جبکہ اس کا ناظمہ \عددی{r\cos(\theta-\tfrac{\pi}{2})=4} ہے۔ اس کی قطبی مساوات تلاش کریں۔
-\انتہا{سوال}
-%===========================
-\ابتدا{سوال}\ترچھا{خلائی مہندس}\\
-ترخیمی مدار کی سنک کا کلیہ خلائی مہندس درج ذیل لکھے گا
+\جزوحصہء{مستوی میں رقبہ}
+شکل میں خطہ \عددی{OTS} کے حدود  شعاع \عددی{\theta=\alpha}، شعاع \عددی{\theta=\beta} اور منحنی \عددی{r=f(\theta)} ہیں۔  ہم اس خطہ کو \عددی{n} عدد پنکھا نما پٹیوں میں تقسیم کرتے ہیں جو زاویہ \عددی{TOS} کی خانہ بندی \عددی{P} پر مبنی ہے۔ ایک علامتی پٹی کا رداس \عددی{r_k=f(\theta_k)} اور وسطی زاویہ \عددی{\Delta \theta_k} ہو گا جبکہ اس کا رقبہ درج ذیل ہو گا۔
 \begin{align*}
-e=\frac{r_{\text{بلندتر}}-r_\text{\RL{کمتر}}}{r_{\text{بلندتر}}+r_\text{\RL{کمتر}}}
+S_k=\frac{1}{2}r_k^2\Delta \theta_k=\frac{1}{2}(f(\theta_k))^2\Delta \theta_k
 \end{align*}
-جہاں خلائی جہاز سے قوت کشش کے مرکز تک فاصلہ \عددی{r} ہے۔ یہ کلیہ کیوں قابل استعمال ہے؟
-\انتہا{سوال}
-%================
-\ابتدا{سوال}\ترچھا{ترخیم کی ترسیم بذریعہ دھاگہ}\\
+یوں مکمل خطے کا رقبہ تخمیناً
+\begin{align*}
+\sum_{k=1}^{n}S_k=\sum_{k=1}^{n}\frac{1}{2}(f(\theta_k))^2\Delta \theta_k
+\end{align*}
+ہو گا۔ اگر \عددی{f} استمراری ہو تب ہم توقع کرتے ہیں کہ \عددی{\norm{P}\to  0} کرنے سے یہ تخمین بہتر سے بہتر ہو گی لہٰذا خطے کا رقبہ درج ذیل ہو گا۔
+\begin{align*}
+S&=\lim_{\norm{P}\to 0}\sum_{k=1}^{n}\frac{1}{2}(f(\theta_k))^2\Delta\theta_k\\
+&=\int_{\alpha}^{\beta}\frac{1}{2}(f(\theta))^2\dif\theta
+\end{align*}
 
+\موٹا{مبدا اور منحنی \عددی{r=f(\theta),\, \alpha\le\theta\le\beta} کے بیچ پنکھا نما خطہ کا رقبہ}\\
+\begin{align*}
+S=\int_{\alpha}^{\beta}\frac{1}{2}r^2\dif\theta
+\end{align*}
+یہ درج ذیل تفرقی رقبے کا تکمل ہے۔
+\begin{align*}
+\dif S=\frac{1}{2}r^2\dif\theta
+\end{align*}
+
+\ابتدا{مثال}\شناخت{مثال_مخروط_قلب_نما_رقبہ}
+قلب نما \عددی{r=2(1+\cos\theta)} کا رقبہ تلاش کریں۔
+
+حل:\quad
+ہم قلب نما کو ترسیم (شکل \حوالہ{شکل_مثال_مخروط_قلب_نما_رقبہ}) کر کے رداس \عددی{OP}  کی نشاندہی کرتے ہیں جو \عددی{\theta=0} تا \عددی{\theta=2\pi} کرنے سے قلب نما پر ٹھیک ایک بار چلتا ہے۔ یہ رقبہ درج ذیل ہو گا۔
+\begin{align*}
+\int_{\theta=0}^{\theta=2\pi}\frac{1}{2}r^2\dif\theta&=\int_{0}^{2\pi}\frac{1}{2}\cdot 4(1+\cos\theta)^2\dif \theta\\
+&=\int_0^{2\pi}2(1+2\cos\theta+\cos^2\theta)\dif \theta\\
+&=\int_0^{2\pi}\big(2+4\cos\theta+2\frac{1+\cos2\theta}{2}\big)\dif\theta\\
+&=\int_0^{2\pi}(3+4\cos\theta+\cos2\theta)\dif\theta\\
+&=\big[3\theta+4\sin\theta+\frac{\sin2\theta}{2}\big]_0^{2\pi}=6\pi-0=6\pi
+\end{align*}
+\انتہا{مثال}
+%============
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=2*(1+cos(\x));}]
+\begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={4},xticklabels={\rlap{$4$}},ytick={2}]
+\addplot[->-=0.25,data cs=polar,samples=100,domain=0:360]{f(x)}node[pos=0.2,above]{$r=2(1+\cos\theta)$};
+\addplot[data cs=polar]plot coordinates {(0,0)(30,{f(30)})}node[pos=0,below right]{$O$}node[pos=0.5,above]{$r$}node[circ]{}node[right]{$N(r,\theta)$};
+\addplot[data cs=polar] plot coordinates {(0,4)}node[pin=-45:{$\theta=2\pi$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{قلب نما کی ترسیم برائے مثال \حوالہ{مثال_مخروط_قلب_نما_رقبہ}}
+\label{شکل_مثال_مخروط_قلب_نما_رقبہ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=1+2*cos(\x);}]
+\begin{axis}[axis on top,clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={4},xticklabels={\rlap{$4$}},ytick={2}]
+\addplot[data cs=polar,samples=100,domain=0:360]{f(x)}node[pos=0.2,above]{$r=1+2\cos\theta$};
+\addplot[data cs=polar,smooth,fill=lgray,domain=120:240]{f(x)};
+\addplot[data cs=polar]plot coordinates {(-60,1)(120,1.5)}node[above left]{$\theta=\tfrac{2}{3}\pi$};
+\addplot[data cs=polar]plot coordinates {(240,1.5)(60,1)}node[pos=0,below left]{$\theta=\tfrac{4}{3}\pi$};
+\addplot[data cs=polar]plot coordinates {(180,{f(180)})}node[pin=45:{$\theta=\pi$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{رقبہ گھونگا (مثال \حوالہ{مثال_مخروط_رقبہ_چھوٹا_گھیرا})}
+\label{شکل_مثال_مخروط_رقبہ_چھوٹا_گھیرا}
+\end{minipage}
+\end{figure}
+\ابتدا{مثال}\شناخت{مثال_مخروط_رقبہ_چھوٹا_گھیرا}
+درج ذیل گھونگا کے چھوٹے گھیرے کا رقبہ تلاش کریں۔
+\begin{align*}
+r=1+2\cos\theta
+\end{align*}
+حل:\quad
+ہم اس گھونگے کو ترسیم کرتے ہیں (شکل \حوالہ{شکل_مثال_مخروط_رقبہ_چھوٹا_گھیرا})۔ ہم دیکھتے ہیں کہ چھوٹے گھیرا \عددی{\theta=\tfrac{2}{3}\pi} اور \عددی{\theta=\tfrac{4}{3}\pi} کے بیچ پایا جاتا ہے۔ ہم نصف رقبہ  \عددی{\theta=\tfrac{2}{3}\pi} تا \عددی{\theta=\pi} تلاش کر کے  اس کو \عددی{2} سے ضرب دیتے ہیں۔
+\begin{align*}
+S=2\int\limits_{\tfrac{2}{3}\pi}^{\pi}\frac{1}{2}r^2\dif\theta=\int\limits_{\tfrac{2}{3}\pi}^{\pi}r^2\dif \theta
+\end{align*}
+متکمل \عددی{r^2} کی سادہ صورت حاصل کرتے ہیں۔ 
+\begin{align*}
+r^2&=(2\cos\theta+1)^2=4\cos^2\theta+4\cos\theta+1\\
+&=4\cdot\frac{1+\cos2\theta}{2}+4\cos\theta+1\\
+&=2+2\cos2\theta+4\cos\theta+1\\
+&=3+2\cos2\theta+4\cos\theta
+\end{align*}
+یوں رقبہ درج ذیل ہو گا۔
+\begin{align*}
+S&=\int_{\tfrac{2}{3}\pi}^{\pi} (3+2\cos2\theta+4\cos\theta)\dif \theta\\
+&=\big[3\theta+\sin2\theta+4\sin\theta\big]_{\tfrac{2}{3}\pi}^{\pi}\\
+&=(3\pi)-\big(2\pi-\frac{\sqrt{3}}{2}+4\cdot\frac{\sqrt{3}}{2}\big)\\
+&=\pi-\frac{3\sqrt{3}}{2}
+\end{align*}
+\انتہا{مثال}
+%=====================
+
+ہم شکل \حوالہ{شکل_مخروط_عمومی_رداس_بیچ_رقبہ} طرز خط جو منحنیات \عددی{r_1=r_1(\theta)} اور \عددی{r_2=r_2(\theta)} کے بیچ \عددی{\theta=\alpha} تا \عددی{\theta=\beta}  پایا جاتا ہو، کا رقبہ تلاش کرنے کی خاطر تکمل \عددی{\tfrac{1}{2}r_2^2\dif\theta} سے تکمل \عددی{\tfrac{1}{2}r_1^2\dif\theta} منفی کرتے ہیں۔ اس سے درج ذیل کلیہ حاصل ہوتا ہے۔
+
+\موٹا{خطہ \عددی{0\le r_1(\theta)\le r\le r_2(\theta),\quad \alpha\le\theta\le\beta} کا رقبہ}\\
+\begin{align}\label{مساوات_مخروط_رقبہ_قطبی_رداس_کے_بیچ}
+S=\int_{\alpha}^{\beta}\frac{1}{2}r_2^2\dif\theta-\int_{\alpha}^{\beta}\frac{1}{2}r_1^2\dif\theta=\int_{\alpha}^{\beta}\frac{1}{2}(r_2^2-r_1^2)\dif\theta
+\end{align}
+
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](-0.25,0)--(4,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,1.5)node[above]{$y$};
+\draw(0,0)node[below right]{$O$}--++(20:3.5)coordinate[pos=0.7](kaa)coordinate(ka)node[pos=0.95,below,yshift=-0.5ex]{$\theta=\alpha$};
+\draw(0,0)--++(50:3)coordinate[pos=0.6](kbb)coordinate(kb)node[pos=0.9,left]{$\theta=\beta$};
+\draw[thick](ka) to [out=60,in=-20] node[pos=0.5,right]{$r_2$}(kb);
+\draw[thick](kaa) to [out=110,in=-60] node[pos=0.5,below left]{$r_1$}(kbb);
+\draw[fill=lgray](kaa)--(ka)  to [out=60,in=-20](kb)--(kbb) to [out=-60,in=110](kaa);
+\end{tikzpicture}
+\caption{سایہ دار رقبہ تلاش کرنے کی خاطر \عددی{r_2} اور مبدا کے بیچ رقبہ سے \عددی{r_1} اور مبدا \عددی{O} کے بیچ رقبہ منفی کیا جاتا ہے۔}
+\label{شکل_مخروط_عمومی_رداس_بیچ_رقبہ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=1;g(\x)=1-cos(\x);}]
+\begin{axis}[clip=false,axis on top,small,axis lines=middle,xlabel={$x$},ylabel={$y$},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty}]
+\addplot[data cs=polar,smooth,domain=0:360]{f(x)};
+\addplot[data cs=polar,smooth,domain=0:360]{g(x)}node[pos=0.25,above,xshift=-2ex]{$r_1=1-\cos\theta$};
+\addplot[name path=a,data cs=polar,smooth,domain=-90:90]{f(x)}node[pos=0.85,right,yshift=0.5ex]{$r_2=1$};
+\addplot[name path=b,data cs=polar,smooth,domain=-90:90]{g(x)};
+\addplot[lgray] fill between [of=a and b];
+\addplot[data cs=polar]plot coordinates {(-90,1)}node[pin={[pin distance=0.15cm]-45:{$\theta=-\tfrac{\pi}{2}$\,\, \text{\RL{نچلی حد}}}}]{};
+\addplot[data cs=polar]plot coordinates {(90,1)}node[pin=45:{$\theta=\tfrac{\pi}{2}$\,\,\text{\RL{بالائی حد}}}]{};
+\addplot[data cs=polar]plot coordinates {(30,0)(30,1)};
+\addplot[-stealth,domain=0:30] ({0.4*cos(x)},{0.4*sin(x)})node[pos=0.6,right]{$\theta$};
+\end{axis}
+\end{tikzpicture}
+\caption{دائرہ اور قلب نما کے بیچ رقبہ (مثال \حوالہ{مثال_مخروط_دائرہ_قلب_نما_بیچ_رقبہ})}
+\label{شکل_مثال_مخروط_دائرہ_قلب_نما_بیچ_رقبہ}
+\end{minipage}
+\end{figure}
+
+\ابتدا{مثال}\شناخت{مثال_مخروط_دائرہ_قلب_نما_بیچ_رقبہ}
+اس خطے کا رقبہ تلاش کریں جو دائرہ \عددی{r=1} کے اندر اور قلب نما \عددی{r=1-\cos\theta} کے باہر پایا جاتا ہے۔
+
+حل:\quad
+ہم رقبہ ترسیم کر کے خطے کے حدود اور  تکمل کے حدود معلوم کرتے ہیں (شکل \حوالہ{شکل_مثال_مخروط_دائرہ_قلب_نما_بیچ_رقبہ})۔ بیرونی منحنی \عددی{r_2=1} جبکہ اندرونی منحنی \عددی{r_1=1-\cos\theta} ہے جبکہ \عددی{\theta} کی قیمت \عددی{-\tfrac{\pi}{2}} تا \عددی{\tfrac{\pi}{2}} ہے۔ مساوات \حوالہ{مساوات_مخروط_رقبہ_قطبی_رداس_کے_بیچ} سے درج ذیل رقبہ حاصل ہو گا۔
+\begin{align*}
+S&=\int\limits_{-\tfrac{\pi}{2}}^{\tfrac{\pi}{2}}\frac{1}{2}(r_2^2-r_1^2)\dif\theta\\
+&=2\int_0^{\pi/2}\frac{1}{2}(r_2^2-r_1^2)\dif\theta&&\text{تشاکلی}\\
+&=\int_0^{\pi/2}(1-(1-2\cos\theta)+\cos^2\theta)\dif\theta\\
+&=\int_0^{\pi/2}(2\cos\theta-\cos^2\theta)\dif\theta=\int_0^{\pi/2}\big(2\cos\theta-\frac{1+\cos2\theta}{2}\big)\\
+&=\big[2\sin\theta-\frac{\theta}{2}-\frac{\sin2\theta}{4}\big]_0^{\pi/2}=2-\frac{\pi}{4}
+\end{align*}
+\انتہا{مثال}
+%===================
+
+\جزوحصہء{منحنی کی لمبائی}
+ہم منحنی \عددی{r=f(\theta),\, \alpha\le\theta\le\beta} کی لمبائی کا قطبی کلیہ اخذ کرنے کی خاطر اس منحنی کی درج ذیل مقدار معلوم مساوات لکھتے ہیں۔
+\begin{align}\label{مساوات_مخروط_مقدار_معلوم_ایکس_وائے}
+x=r\cos\theta=f(\theta)\cos\theta,\quad y=r\sin\theta=f(\theta\sin\theta),\quad \alpha\le\theta\le\beta
+\end{align} 
+یوں مقدار معلوم لمبائی کے کلیہ (مساوات \حوالہ{مساوات_مخروط_لمبائی_منحنی})
+\begin{align*}
+L=\int_{\alpha}^{\beta}\sqrt{\big(\frac{\dif x}{\dif\theta}\big)^2+\big(\frac{\dif y}{\dif \theta}\big)^2}\dif\theta
+\end{align*}
+میں \عددی{x} اور \عددی{y} کی قیمتیں مساوات \حوالہ{مساوات_مخروط_مقدار_معلوم_ایکس_وائے} سے پر کر کے درج ذیل حاصل ہو گا ۔
+\begin{align*}
+L=\int_{\alpha}^{\beta}\sqrt{r^2+\big(\frac{\dif r}{\dif \theta}\big)^2}\dif\theta &&
+\end{align*}
+
+\موٹا{لمبائی قوس}\\
+اگر \عددی{\alpha\le\theta\le\beta} پر \عددی{r=f(\theta)} کا پہلا استمراری تفرق پایا جاتا ہو اور اگر \عددی{\theta} کی قیمت \عددی{\alpha} سے \عددی{\beta} کرنے سے  نقطہ \عددی{N(r,\theta)} پوری منحنی \عددی{r=f(\theta)} پر ٹھیک ایک بار چلتا ہو تب اس منحنی کی لمبائی درج ذیل ہو گی۔
+\begin{align}\label{مساوات_مخروط_لمبائی_قوس_قطبی_کلیہ}
+L=\int_{\alpha}^{\beta}\sqrt{r^2+\big(\frac{\dif r}{\dif \theta}\big)^2}\dif\theta
+\end{align} 
+
+\ابتدا{مثال}\شناخت{مثال_مخروط_لمبائی_قوس_قلب_نما}
+قلب نما \عددی{r=1-\cos\theta} کی لمبائی دریافت کریں۔
+
+حل:\quad
+ہم قلب نما کا خاکہ کھینچتے ہیں تا کہ تکمل کے حدود معلوم کر سکیں (شکل \حوالہ{شکل_مثال_مخروط_لمبائی_قوس_قلب_نما})۔ زاویہ \عددی{\theta} کو \عددی{0} سے \عددی{2\pi} کرنے سے نقطہ \عددی{N(r,\theta)} ٹھیک ایک بار پوری  قلب نما پر گھڑی کے الٹ رخ چلتا ہے لہٰذا \عددی{\alpha=0} اور \عددی{\beta=2\pi} ہوں گے۔ اب 
+\begin{align*}
+r=1-\cos\theta,\quad \frac{\dif r}{\dif \theta}=\sin\theta
+\end{align*}
+سے
+\begin{align*}
+r^2+\big(\frac{\dif r}{\dif \theta}\big)^2&=(1-\cos\theta)^2+(\sin\theta)^2\\
+&=1-2\cos\theta+\underbrace{\cos^2\theta+\sin^2\theta}_{1}=2-2\cos\theta
+\end{align*}
+حاصل ہو گا لہٰذا لمبائی قوس درج ذیل ہو گی۔
+\begin{align*}
+L&=\int_{\alpha}^{\beta}\sqrt{r^2+\big(\frac{\dif r}{\dif\theta}\big)^2}\dif\theta=\int_0^{2\pi}\sqrt{2-2\cos\theta}\dif\theta\\
+&=\int_0^{2\pi}\sqrt{4\sin^2\frac{\theta}{2}}\dif\theta\quad\quad (1-\cos\theta=2\sin^2\tfrac{\theta}{2})\\
+&=\int_0^{2\pi}2\abs{\sin\frac{\theta}{2}}\dif\theta\\
+&=\int_0^{2\pi}2\sin\frac{\theta}{2}\dif\theta\quad \quad (\text{\RL{\عددی{0\le\theta\le2\pi} کے لئے \عددی{\sin\tfrac{\theta}{2}\ge 0} ہو گا}})\\
+&=\big[-4\cos\frac{\theta}{2}\big]_0^{2\pi}=4+4=8
+\end{align*} 
+\انتہا{مثال}
+%====================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=1-cos(\x);}]
+\begin{axis}[axis equal,clip=false,axis on top,small,axis lines=middle,xlabel={$x$},ylabel={$y$},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-2},ytick={1}]
+\addplot[data cs=polar,smooth,domain=0:360]{f(x)}node[pos=0.25,above,xshift=-2ex,yshift=1ex]{$r=1-\cos\theta$};
+\addplot[data cs=polar] plot coordinates {(140,0)(140,{f(140)})}node[circ]{}node[pos=0.5,above]{$r$}node[left,yshift=1ex]{$N(r,\theta)$};
+\addplot[-stealth,domain=0:140] ({0.4*cos(x)},{0.4*sin(x)})node[pos=0.75,above left]{$\theta$};
+\end{axis}
+\end{tikzpicture}
+\caption{قلب نما کی لمبائی (مثال \حوالہ{مثال_مخروط_لمبائی_قوس_قلب_نما})}
+\label{شکل_مثال_مخروط_لمبائی_قوس_قلب_نما}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=sqrt(cos(2*\x));}]
+\begin{axis}[axis equal,clip=false,axis on top,small,axis lines=middle,xlabel={$x$},ylabel={$y$},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-2},ytick={1}]
+\addplot[data cs=polar,smooth,domain=0:90]{f(x)};
+\addplot[data cs=polar,smooth,domain=0:90](-x,{f(x)})node[pos=0.75,below right,xshift=4ex,yshift=-1ex]{$r^2=\cos2\theta$};
+\addplot[data cs=polar,smooth,domain=90:180]{f(x)};
+\addplot[data cs=polar,smooth,domain=90:180](-x,{f(x)});
+\addplot[data cs=polar]plot coordinates {(20,0)(20,{f(20)})}node[circ]{}node[right]{$N(r,\theta)$}node[pos=0.6,above]{$r$};
+\addplot[-stealth,domain=0:20]({0.3*cos(x)},{0.3*sin(x)})node[pos=0.6,right]{$\theta$};
+\addplot[data cs=polar]plot coordinates {(135,0.5)(-45,0.75)}node[below]{$\theta=-\tfrac{\pi}{4}$};
+\addplot[data cs=polar]plot coordinates {(-135,0.5)(45,0.75)}node[above]{$\theta=\tfrac{\pi}{4}$};
+\end{axis}
+\end{tikzpicture}
+\caption{قلب نما کی لمبائی (مثال \حوالہ{مثال_سطح_طواف_قطبی})}
+\label{شکل_مثال_سطح_طواف_قطبی}
+\end{minipage}
+\end{figure}
+
+
+\جزوحصہء{سطح طواف کا رقبہ}
+سطح طواف کے رقبہ کا قطبی کلیہ اخذ کرنے کی خاطر ہم مساوات \حوالہ{مساوات_مخروط_مقدار_معلوم_ایکس_وائے} کی مدد سے  منحنی \عددی{r=f(\theta),\,\alpha\le\theta\le\beta} کی مقدار معلوم مساوات  لکھ کر حصہ \حوالہ{حصہ_مخروط_مقدار_معلوم_منحنیات} میں دی گئی سطحی رقبے کا کلیہ استعمال کرتے ہیں۔
+
+\موٹا{سطح طواف کا رقبہ}\\
+اگر \عددی{\alpha\le\theta\le\beta} پر \عددی{r=f(\theta)} کا استمراری پہلا تفرق پایا جاتا ہو اور اگر \عددی{\theta} کی قیمت \عددی{\alpha} تا \عددی{\beta} کرنے سے نقطہ \عددی{N(r,\theta)}  منحنی \عددی{r=f(\theta)} پر ٹھیک ایک بار چلتا ہو تب اس منحنی کو محور \عددی{x} اور محور \عددی{y} کے گرد گھما کر حاصل سطح طواف کے رقبے درج ذیل کلیات دیں گے۔ 
+\begin{align}
+S&=\int_{\alpha}^{\beta}2\pi r\sin\theta\sqrt{r^2+\big(\frac{\dif r}{\dif \theta}\big)^2}\dif\theta&&\text{\RL{محور \عددی{x} کے گرد (\عددی{y\ge 0})}}\label{مساوات_مخروط_سطح_طواف_قطبی_الف}\\
+S&=\int_{\alpha}^{\beta}2\pi r\cos\theta\sqrt{r^2+\big(\frac{\dif r}{\dif \theta}\big)^2}\dif\theta&&\text{\RL{محور \عددی{y} کے گرد (\عددی{x\ge 0})}}\label{مساوات_مخروط_سطح_طواف_قطبی_ب}
+\end{align}
+
+\ابتدا{مثال}\شناخت{مثال_سطح_طواف_قطبی}
+گھونگا \عددی{r^2=\cos2\theta} کے دائیں گھیر کو محور \عددی{y} کے گرد گھما کر سطح طواف پیدا کیا جاتا ہے۔اس سطح کا رقبہ معلوم کریں۔
+
+حل:\quad
+ہم اس گھیر کا خاکہ بنا کر تکمل کے حد تلاش کرتے ہیں (شکل \حوالہ{شکل_مثال_سطح_طواف_قطبی})۔ زاویہ \عددی{\theta} کی قیمت \عددی{-\tfrac{\pi}{4}} تا \عددی{\tfrac{\pi}{4}} کرنے سے نقطہ \عددی{N(r,\theta)} منحنی پر ٹھیک ایک بار گھڑی کے الٹ رخ چلتا ہے لہٰذا \عددی{\alpha=-\tfrac{\pi}{4}} اور \عددی{\beta=\tfrac{\pi}{4}} ہوں گے۔
+
+ہم مساوات \حوالہ{مساوات_مخروط_سطح_طواف_قطبی_الف} کا تکمل مرحلوں میں حل کرتے ہیں۔ پہلے مرحلہ میں درج ذیل حاصل کرتے ہیں۔
+\begin{align}\label{مساوات_مخروط_ضمنی_سطحہ_طواف}
+2\pi r\cos\theta\sqrt{r^2+\big(\frac{\dif r}{\dif \theta}\big)^2}=2\pi \cos\theta\sqrt{r^4+\big(r\frac{\dif r}{\dif \theta}\big)^2}
+\end{align}
+اس کے بعد \عددی{r^2=\cos2\theta}  لیتے ہوئے درج ذیل حاصل کرتے ہیں۔
+\begin{align*}
+2r\frac{\dif r}{\dif\theta}&=-2\sin2\theta\\
+r\frac{\dif r}{\dif\theta}&=-\sin2\theta\\
+\big(r\frac{\dif r}{\dif\theta}\big)^2&=\sin^22\theta
+\end{align*}
+آخر میں \عددی{r^4=(r^2)^2=\cos^22\theta} کی بنا مساوات \حوالہ{مساوات_مخروط_ضمنی_سطحہ_طواف} میں دائیں ہاتھ جذر درج ذیل صورت اختیار کرے گا۔
+\begin{align*}
+\sqrt{r^4+\big(r\frac{\dif r}{\dif\theta}\big)^2}=\sqrt{\cos^22\theta+\sin^22\theta}=1
+\end{align*}
+ان تمام نتائج کو مل کر ہم رقبہ حاصل کرتے ہیں۔
+\begin{align*}
+S&=\int_{\alpha}^{\beta}2\pi r\cos\theta\sqrt{r^2+\big(\frac{\dif r}{\dif\theta}\big)^2}\dif\theta&&\text{\RL{مساوات \حوالہ{مساوات_مخروط_سطح_طواف_قطبی_الف}}}\\
+&=\int_{-\tfrac{\pi}{4}}^{\tfrac{\pi}{4}}2\pi\cos\theta\cdot(1)\dif \theta\\
+&=2\pi\big[\sin\theta\big]_{-\pi/4}^{\pi/4}\\
+&=2\pi\big[\frac{\sqrt{2}}{2}+\frac{\sqrt{2}}{2}\big]=2\pi\sqrt{2}
+\end{align*}
+\انتہا{مثال}
+%====================
+
+\حصہء{سوالات}
+\موٹا{قطبی منحنیات کے اندر رقبہ}\\
+سوال \حوالہ{سوال_مخروط_منحنیات_اندر_رقبہ_الف} تا سوال \حوالہ{سوال_مخروط_منحنیات_اندر_رقبہ_ب} میں منحنیات کے اندر رقبہ تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_مخروط_منحنیات_اندر_رقبہ_الف}
+چپٹا گھونگا\عددی{r=4+2\cos\theta} کے اندر۔
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+قلب نما \عددی{r=a(1+\cos\theta),\, a>0} کے اندر۔
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+چار  گل \عددی{r=\cos2\theta} کے ایک پتا کے اندر۔
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}
+دو چشمہ \عددی{r^2=2a^2\cos2\theta,\, a>0} کے اندر۔
+\انتہا{سوال}
+%=============
+\ابتدا{سوال}
+دو چشمہ \عددی{r^2=4\sin 2\theta} کے ایک گھیر کے اندر۔
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\شناخت{سوال_مخروط_منحنیات_اندر_رقبہ_ب}
+شش گل \عددی{r^2=2\sin3\theta} کے اندر۔
+\انتہا{سوال}
+%===================
+
+\موٹا{مشترکہ قطبی خطے کا رقبہ}\\
+سوال \حوالہ{سوال_مخروط_مشترک_قطبی_رقبہ_الف} تا سوال \حوالہ{سوال_مخروط_مشترک_قطبی_رقبہ_ب} میں مشترکہ قطبی خطے کا رقبہ تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_مخروط_مشترک_قطبی_رقبہ_الف}
+دائرہ \عددی{r=2\cos\theta} اور \عددی{r=2\sin\theta} کا مشترکہ رقبہ۔
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}
+دائرہ \عددی{r=1,} اور \عددی{ r=2\sin\theta} کا مشترکہ رقبہ۔
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}
+دائرہ \عددی{r=2} اور قلب نما \عددی{r=2(1-\cos\theta)} کا مشترکہ رقبہ۔
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}
+قلب نما \عددی{r=2(1+\cos\theta)} اور \عددی{r=2(1-\cos\theta)} کا مشترکہ رقبہ۔
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}
+دائرہ \عددی{r=\sqrt{3}} کے باہر اور \عددی{r^2=6\cos2\theta} کے اندر۔
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}
+دائرہ \عددی{r=3a\cos\theta} کے اندر اور قلب نما \عددی{r=a(1+\cos\theta),\, a>0} کے باہر رقبہ۔ 
 \انتہا{سوال}
 %=================
+\ابتدا{سوال}
+دائرہ \عددی{r=-2\cos\theta} کے اندر اور دائرہ \عددی{r=1} کے باہر رقبہ۔
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}
+(ا) گھونگا \عددی{r=2\cos\theta+1} کے بیرونی گھیر کا رقبہ (شکل \حوالہ{شکل_مثال_مخروط_رقبہ_چھوٹا_گھیرا})۔  (ب) گھونگا \عددی{r=2\cos\theta+1} کے اندرونی گھیر کے باہر اور بیرونی گھیر کے اندر رقبہ۔
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}
+دائرہ \عددی{r=6} کے اندر خط \عددی{r=3\csc\theta} سے اوپر  رقبہ۔
+\انتہا{سوال}
+%=================
+\ابتدا{سوال}\شناخت{سوال_مخروط_مشترک_قطبی_رقبہ_ب}
+گھونگا\عددی{r^2=6\cos2\theta} کے اندر اور خط \عددی{r=\tfrac{3}{2}\sec\theta} کے دائیں جانب رقبہ۔
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\شناخت{سوال_مخروط_سایہ_دار_خطہ_قطبی}
+(ا) سایہ دار خطہ شکل \حوالہ{شکل_سوال_مخروط_سایہ_دار_خطہ_قطبی} میں دکھایا گیا ہے۔ اس  کا رقبہ تلاش کریں۔ (ب) ایسا معلوم ہوتا ہے کہ \عددی{r=\tan\theta,\, -\tfrac{\pi}{2}<\theta<\tfrac{\pi}{2}} لکیر \عددی{x=1} اور لکیر \عددی{x=-1} کا متقاربی خط ہو سکتا ہے۔ کیا ایسا ہے؟ اپنے جواب کی وجہ پیش کریں۔
+\انتہا{سوال}
+%================
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=tan(\x);g(\x)=1/sqrt(2)*cosec(\x);}]
+\begin{axis}[small,axis on top,clip=false,axis lines=middle,xtick={-1,1},ytick={\empty},xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true]
+\addplot[data cs=polar,domain=-50:50]{f(x)}node[left]{$\begin{aligned} r&=\tan\theta\\ -\tfrac{\pi}{2}&<\theta<\tfrac{\pi}{2}\end{aligned}$};
+\addplot[data cs=polar,domain=40:90]{g(x)}node[pos=0.6,below]{$r=\tfrac{\sqrt{2}}{2}\csc\theta$};
+\addplot[data cs=polar,domain=-40:-90]{g(x)};
+\addplot[data cs=polar]plot coordinates {(45,1)}node[circ]{}node[pin=-70:{$(1,\tfrac{\pi}{4})$}]{};
+\addplot[name path=a,data cs=polar,draw=none,domain=-45:0]{f(x)};
+\addplot[name path=b,data cs=polar,draw=none,domain=0:45]{f(x)};
+\addplot[name path=c,data cs=polar,domain=45:90]{g(x)};
+\addplot[name path=d,data cs=polar,domain=-45:-90]{g(x)};
+\addplot[lgray] fill between [of ={b and c}];
+\addplot[lgray] fill between [of ={a and d}];
+\end{axis}
+\end{tikzpicture}
+\caption{خطہ سوال \حوالہ{سوال_مخروط_سایہ_دار_خطہ_قطبی}}
+\label{شکل_سوال_مخروط_سایہ_دار_خطہ_قطبی}
+\end{figure}
+
+\ابتدا{سوال}
+قلب نما \عددی{r=\cos\theta+1} کے اندر اور دائرہ \عددی{r=\cos\theta} کے باہر خطہ درج ذیل نہیں ہے۔
+\begin{align*}
+\frac{1}{2}\int_{0}^{2\pi}[(\cos\theta+1)^2-\cos^2\theta]\dif\theta=\pi
+\end{align*}
+ایسا کیوں ہے؟ اپنے جواب کی وجہ پیش کریں۔
+\انتہا{سوال}
+%=====================
