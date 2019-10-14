@@ -2,7 +2,7 @@
 اس حصہ میں قطبی محدد استعمال کرتے ہوئے مستوی خطوں کا رقبہ، منحنیات کی لمبائی، اور سطح طواف کا رقبہ حاصل کرنا سکھایا جائے گا۔
 
 \جزوحصہء{مستوی میں رقبہ}
-شکل میں خطہ \عددی{OTS} کے حدود  شعاع \عددی{\theta=\alpha}، شعاع \عددی{\theta=\beta} اور منحنی \عددی{r=f(\theta)} ہیں۔  ہم اس خطہ کو \عددی{n} عدد پنکھا نما پٹیوں میں تقسیم کرتے ہیں جو زاویہ \عددی{TOS} کی خانہ بندی \عددی{P} پر مبنی ہے۔ ایک علامتی پٹی کا رداس \عددی{r_k=f(\theta_k)} اور وسطی زاویہ \عددی{\Delta \theta_k} ہو گا جبکہ اس کا رقبہ درج ذیل ہو گا۔
+شکل \حوالہ{شکل_مخروط_قطبی_رقبہ_کا_کلیہ} میں خطہ \عددی{OTS} کے حدود  شعاع \عددی{\theta=\alpha}، شعاع \عددی{\theta=\beta} اور منحنی \عددی{r=f(\theta)} ہیں۔  ہم اس خطہ کو \عددی{n} عدد پنکھا نما پٹیوں میں تقسیم کرتے ہیں جو زاویہ \عددی{TOS} کی خانہ بندی \عددی{P} پر مبنی ہے۔ ایک علامتی پٹی کا رداس \عددی{r_k=f(\theta_k)} اور وسطی زاویہ \عددی{\Delta \theta_k} ہو گا جبکہ اس کا رقبہ درج ذیل ہو گا۔
 \begin{align*}
 S_k=\frac{1}{2}r_k^2\Delta \theta_k=\frac{1}{2}(f(\theta_k))^2\Delta \theta_k
 \end{align*}
@@ -15,12 +15,66 @@ S_k=\frac{1}{2}r_k^2\Delta \theta_k=\frac{1}{2}(f(\theta_k))^2\Delta \theta_k
 S&=\lim_{\norm{P}\to 0}\sum_{k=1}^{n}\frac{1}{2}(f(\theta_k))^2\Delta\theta_k\\
 &=\int_{\alpha}^{\beta}\frac{1}{2}(f(\theta))^2\dif\theta
 \end{align*}
-
+\begin{figure}
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=2*(1+cos(\x));}]
+\pgfmathsetmacro{\s}{19}
+\pgfmathsetmacro{\e}{69}
+\pgfmathsetmacro{\ra}{f(24)}
+\pgfmathsetmacro{\rb}{f(34)}
+\pgfmathsetmacro{\rc}{f(44)}
+\pgfmathsetmacro{\rd}{f(54)}
+\pgfmathsetmacro{\re}{f(64)}
+\draw[-latex](-0.25,0)--(4,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2.5)node[above]{$y$};
+\draw[thick,domain=\s-10:\e+10]plot ({\x}:{f(\x)});
+\draw[](\s:{f(\s})node[below,xshift=-1ex]{$T$};
+\draw[](\e:{f(\e})node[above left]{$S$};
+\draw(0,0)node[below left]{$O$}--(\s:4.5)node[right]{$\theta=\alpha$};
+\draw(0,0)--(\e:3.5)node[above]{$\theta=\beta$};
+\draw[dashed](0,0)--++(24:\ra)node[pos=0.75,fill=white]{$r_1$};
+\draw[dashed](0,0)--++(34:\rb)node[pos=0.75,fill=white]{$r_2$};
+\draw[dashed](0,0)--++(54:\rd)node[pos=0.75,fill=white]{$r_k$};
+\draw(49:{f(49)+0.4})--++(49:0.3);
+\draw(59:{f(49)+0.4})--++(59:0.3);
+\draw[stealth-stealth] ([shift={(49:{f(49)+0.4+0.15})}]0,0) arc (49:59:{f(49)+0.4+0.15})node[pos=0.75,right]{$\Delta \theta_k$};
+\draw(54:{f(54)})node[circ]{}node[shift={(54:0.3)}]{$f(\theta_k)$};
+\draw[](0,0)--++(19:\ra)([shift={(19:\ra)}]0,0) arc (19:29:\ra)--(0,0);
+\draw(0,0)--++(29:\rb)([shift={(29:\rb)}]0,0) arc (29:39:\rb)--(0,0);
+\draw(0,0)--++(39:\rc)([shift={(39:\rc)}]0,0) arc (39:49:\rc)--(0,0);
+\draw(0,0)--++(49:\rd)([shift={(49:\rd)}]0,0) arc (49:59:\rd)--(0,0);
+\draw(0,0)--++(59:\re)([shift={(59:\re)}]0,0) arc (59:69:\re)--(0,0);
+\end{tikzpicture}
+\caption{خطہ \عددی{OTS} کا رقبہ۔}
+\label{شکل_مخروط_قطبی_رقبہ_کا_کلیہ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=2*(1+cos(\x));}]
+\pgfmathsetmacro{\s}{19}
+\pgfmathsetmacro{\e}{69}
+\pgfmathsetmacro{\rd}{f(54)}
+\draw[-latex](-0.25,0)--(4,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2.5)node[above]{$y$};
+\draw[thick,domain=\s-10:\e+10]plot ({\x}:{f(\x)});
+\draw[](0,0)--++(54:\rd)node[pos=0.75,fill=white]{$r$};
+\draw(54:{f(54)})node[circ]{}node[shift={(54:0.3)}]{$N(r,\theta)$};
+\draw(0,0)--++(49:\rd)([shift={(49:\rd)}]0,0) arc (49:59:\rd)--(0,0);
+\draw[-stealth]([shift={(0:1)}]0,0) arc (0:54:1)node[pos=0.6,right]{$\theta$};
+\draw[-stealth]([shift={(39:1.5)}]0,0) arc (39:49:1.5);
+\draw[stealth-]([shift={(59:1.5)}]0,0) arc (59:69:1.5)node[above]{$\dif \theta$};
+\draw(20:{2/3*f(20)})node[]{$\dif S=\frac{1}{2}r^2\dif \theta$};
+\end{tikzpicture}
+\caption{تفرقی رقبہ \عددی{\dif S}}
+\label{شکل_مخروط_قطبی_تفرقی_رقبہ}
+\end{minipage}
+\end{figure}
 \موٹا{مبدا اور منحنی \عددی{r=f(\theta),\, \alpha\le\theta\le\beta} کے بیچ پنکھا نما خطہ کا رقبہ}\\
 \begin{align*}
 S=\int_{\alpha}^{\beta}\frac{1}{2}r^2\dif\theta
 \end{align*}
-یہ درج ذیل تفرقی رقبے کا تکمل ہے۔
+یہ درج ذیل تفرقی رقبے کا تکمل ہے (شکل \حوالہ{شکل_مخروط_قطبی_تفرقی_رقبہ})۔
 \begin{align*}
 \dif S=\frac{1}{2}r^2\dif\theta
 \end{align*}
@@ -272,10 +326,12 @@ S&=\int_{\alpha}^{\beta}2\pi r\cos\theta\sqrt{r^2+\big(\frac{\dif r}{\dif\theta}
 
 \حصہء{سوالات}
 \موٹا{قطبی منحنیات کے اندر رقبہ}\\
-سوال \حوالہ{سوال_مخروط_منحنیات_اندر_رقبہ_الف} تا سوال \حوالہ{سوال_مخروط_منحنیات_اندر_رقبہ_ب} میں منحنیات کے اندر رقبہ تلاش کریں۔
+سوال \حوالہ{سوال_مخروط_منحنیات_اندر_رقبہ_الف} تا سوال \حوالہ{سوال_مخروط_منحنیات_اندر_رقبہ_ب} میں خطوں کے  رقبے تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_منحنیات_اندر_رقبہ_الف}
-چپٹا گھونگا\عددی{r=4+2\cos\theta} کے اندر۔
+چپٹا گھونگا\عددی{r=4+2\cos\theta} کے اندر۔\\
+جواب:\quad
+$18\pi$
 \انتہا{سوال}
 %===================
 \ابتدا{سوال}
@@ -283,7 +339,9 @@ S&=\int_{\alpha}^{\beta}2\pi r\cos\theta\sqrt{r^2+\big(\frac{\dif r}{\dif\theta}
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
-چار  گل \عددی{r=\cos2\theta} کے ایک پتا کے اندر۔
+چار  گل \عددی{r=\cos2\theta} کے ایک پتا کے اندر۔\\
+جواب:\quad
+$\tfrac{\pi}{8}$
 \انتہا{سوال}
 %==================
 \ابتدا{سوال}
@@ -291,7 +349,9 @@ S&=\int_{\alpha}^{\beta}2\pi r\cos\theta\sqrt{r^2+\big(\frac{\dif r}{\dif\theta}
 \انتہا{سوال}
 %=============
 \ابتدا{سوال}
-دو چشمہ \عددی{r^2=4\sin 2\theta} کے ایک گھیر کے اندر۔
+دو چشمہ \عددی{r^2=4\sin 2\theta} کے ایک گھیر کے اندر۔\\
+جواب:\quad
+$2$
 \انتہا{سوال}
 %===================
 \ابتدا{سوال}\شناخت{سوال_مخروط_منحنیات_اندر_رقبہ_ب}
@@ -303,7 +363,9 @@ S&=\int_{\alpha}^{\beta}2\pi r\cos\theta\sqrt{r^2+\big(\frac{\dif r}{\dif\theta}
 سوال \حوالہ{سوال_مخروط_مشترک_قطبی_رقبہ_الف} تا سوال \حوالہ{سوال_مخروط_مشترک_قطبی_رقبہ_ب} میں مشترکہ قطبی خطے کا رقبہ تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_مشترک_قطبی_رقبہ_الف}
-دائرہ \عددی{r=2\cos\theta} اور \عددی{r=2\sin\theta} کا مشترکہ رقبہ۔
+دائرہ \عددی{r=2\cos\theta} اور \عددی{r=2\sin\theta} کا مشترکہ رقبہ۔\\
+جواب:\quad
+$\tfrac{\pi}{2}-1$
 \انتہا{سوال}
 %==================
 \ابتدا{سوال}
@@ -311,7 +373,9 @@ S&=\int_{\alpha}^{\beta}2\pi r\cos\theta\sqrt{r^2+\big(\frac{\dif r}{\dif\theta}
 \انتہا{سوال}
 %==================
 \ابتدا{سوال}
-دائرہ \عددی{r=2} اور قلب نما \عددی{r=2(1-\cos\theta)} کا مشترکہ رقبہ۔
+دائرہ \عددی{r=2} اور قلب نما \عددی{r=2(1-\cos\theta)} کا مشترکہ رقبہ۔\\
+جواب:\quad
+$5\pi-8$
 \انتہا{سوال}
 %==================
 \ابتدا{سوال}
@@ -319,7 +383,9 @@ S&=\int_{\alpha}^{\beta}2\pi r\cos\theta\sqrt{r^2+\big(\frac{\dif r}{\dif\theta}
 \انتہا{سوال}
 %==================
 \ابتدا{سوال}
-دائرہ \عددی{r=\sqrt{3}} کے باہر اور \عددی{r^2=6\cos2\theta} کے اندر۔
+دائرہ \عددی{r=\sqrt{3}} کے باہر اور \عددی{r^2=6\cos2\theta} کے اندر۔\\
+جواب:\quad
+$3\sqrt{3}-\pi$
 \انتہا{سوال}
 %==================
 \ابتدا{سوال}
@@ -327,7 +393,9 @@ S&=\int_{\alpha}^{\beta}2\pi r\cos\theta\sqrt{r^2+\big(\frac{\dif r}{\dif\theta}
 \انتہا{سوال}
 %=================
 \ابتدا{سوال}
-دائرہ \عددی{r=-2\cos\theta} کے اندر اور دائرہ \عددی{r=1} کے باہر رقبہ۔
+دائرہ \عددی{r=-2\cos\theta} کے اندر اور دائرہ \عددی{r=1} کے باہر رقبہ۔\\
+جواب:\quad
+$\tfrac{\pi}{3}+\tfrac{\sqrt{3}}{2}$
 \انتہا{سوال}
 %==================
 \ابتدا{سوال}
@@ -335,7 +403,9 @@ S&=\int_{\alpha}^{\beta}2\pi r\cos\theta\sqrt{r^2+\big(\frac{\dif r}{\dif\theta}
 \انتہا{سوال}
 %==================
 \ابتدا{سوال}
-دائرہ \عددی{r=6} کے اندر خط \عددی{r=3\csc\theta} سے اوپر  رقبہ۔
+دائرہ \عددی{r=6} کے اندر خط \عددی{r=3\csc\theta} سے اوپر  رقبہ۔\\
+جواب:\quad
+$12\pi-9\sqrt{3}$
 \انتہا{سوال}
 %=================
 \ابتدا{سوال}\شناخت{سوال_مخروط_مشترک_قطبی_رقبہ_ب}
@@ -343,10 +413,14 @@ S&=\int_{\alpha}^{\beta}2\pi r\cos\theta\sqrt{r^2+\big(\frac{\dif r}{\dif\theta}
 \انتہا{سوال}
 %======================
 \ابتدا{سوال}\شناخت{سوال_مخروط_سایہ_دار_خطہ_قطبی}
-(ا) سایہ دار خطہ شکل \حوالہ{شکل_سوال_مخروط_سایہ_دار_خطہ_قطبی} میں دکھایا گیا ہے۔ اس  کا رقبہ تلاش کریں۔ (ب) ایسا معلوم ہوتا ہے کہ \عددی{r=\tan\theta,\, -\tfrac{\pi}{2}<\theta<\tfrac{\pi}{2}} لکیر \عددی{x=1} اور لکیر \عددی{x=-1} کا متقاربی خط ہو سکتا ہے۔ کیا ایسا ہے؟ اپنے جواب کی وجہ پیش کریں۔
+(ا) سایہ دار خطہ شکل \حوالہ{شکل_سوال_مخروط_سایہ_دار_خطہ_قطبی} میں دکھایا گیا ہے۔ اس  کا رقبہ تلاش کریں۔ (ب) ایسا معلوم ہوتا ہے کہ \عددی{r=\tan\theta,\, -\tfrac{\pi}{2}<\theta<\tfrac{\pi}{2}} لکیر \عددی{x=1} اور لکیر \عددی{x=-1} کا متقاربی خط ہو سکتا ہے۔ کیا ایسا ہے؟ اپنے جواب کی وجہ پیش کریں۔\\
+جواب:\quad
+$\tfrac{3}{2}-\tfrac{\pi}{4}$
 \انتہا{سوال}
 %================
 \begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=tan(\x);g(\x)=1/sqrt(2)*cosec(\x);}]
 \begin{axis}[small,axis on top,clip=false,axis lines=middle,xtick={-1,1},ytick={\empty},xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true]
@@ -364,4 +438,189 @@ S&=\int_{\alpha}^{\beta}2\pi r\cos\theta\sqrt{r^2+\big(\frac{\dif r}{\dif\theta}
 \end{tikzpicture}
 \caption{خطہ سوال \حوالہ{سوال_مخروط_سایہ_دار_خطہ_قطبی}}
 \label{شکل_سوال_مخروط_سایہ_دار_خطہ_قطبی}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sin(2*\x);}]
+\draw[-latex](-0.25,0)--(4,0)node[right]{$x$};
+\draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
+\draw(0,0)--(2,-1)node[pos=0.6,below left]{$\theta=\alpha$}node[below]{$A$}  (3,2)node[above]{$B$}--(0,0)node[pos=0.3,above left]{$\theta=\beta$}node[below left]{$O$};
+ \draw[name path=f,thick] (2,-1)to [out=30,in=-20]coordinate[pos=0.6](ka)(3,2);
+\path[name path=ray](0,0)--++(18:4);
+\path[name path=rayA](0,0)--++(20:4);
+\path[name path=rayB](0,0)--++(16:4);
+\path[name intersections={of=rayA and f}] (intersection-1)coordinate(ab);
+\path[name intersections={of=rayB and f}] (intersection-1)coordinate(be);
+\fill[lgray,opacity=0.5](0,0)--(ab)--(be)--(0,0);
+\draw[name intersections={of=f and ray}](0,0)--(intersection-1)node[circ]{}coordinate[pos=2/3](kc)node[pos=2/3,circ]{}node[right]{$N(r,\theta)$};
+\draw(kc)--($(0,0)!(kc)!(4,0)$)node[pos=0.4,right]{$\tfrac{2}{3}r\sin\theta$};
+\draw(kc)--($(0,0)!(kc)!(0,2)$)node[pos=0.7,above]{$\tfrac{2}{3}r\cos\theta$};
+\draw[-stealth]([shift={(0:0.7)}]0,0) arc (0:18:0.7)node[pos=0.6,right]{$\theta$};
+ \draw[-stealth]([shift={(10:1.5)}]0,0) arc (10:16:1.5)node[pos=0,right]{$\Delta\theta$};
+\draw[stealth-]([shift={(20:1.5)}]0,0) arc (20:30:0.7);
+\end{tikzpicture}
+\caption{باریک سایہ دار خطے کے معیار اثر۔}
+\label{شکل_سوال_مخروط_قطبی_وسطانیہ}
+\end{minipage}
 \end{figure}
+
+\ابتدا{سوال}
+قلب نما \عددی{r=\cos\theta+1} کے اندر اور دائرہ \عددی{r=\cos\theta} کے باہر خطہ درج ذیل نہیں ہے۔
+\begin{align*}
+\frac{1}{2}\int_{0}^{2\pi}[(\cos\theta+1)^2-\cos^2\theta]\dif\theta=\pi
+\end{align*}
+ایسا کیوں ہے؟ اس کا رقبہ کتنا ہو گا؟  اپنے جواب کی وجہ پیش کریں۔
+\انتہا{سوال}
+%=====================
+
+\موٹا{قطبی منحنیات کی لمبائیاں}\\
+سوال \حوالہ{سوال_مخروط_قطبی_منحنی_لمبائی_الف} تا سوال \حوالہ{سوال_مخروط_قطبی_منحنی_لمبائی_ب} میں منحنی کی لمبائی تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_منحنی_لمبائی_الف}
+پیچ دار منحنی \عددی{r=\theta^2,\quad 0\le\theta\le \sqrt{5}}\\
+جواب:\quad
+$\tfrac{19}{3}$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+پیچ دار منحنی \عددی{r=\tfrac{e^{\theta}}{\sqrt{2}},\quad 0\le \theta\le \pi}
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+قلب نما \عددی{r=1+\cos\theta}\\
+جواب:\quad
+$8$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+منحنی \عددی{r=a\sin^2\tfrac{\theta}{2},\,0\le\theta\le\pi,\, a>0}
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}
+قطع مکافی \عددی{r=\tfrac{6}{1+\cos\theta},\,0\le\theta\le\tfrac{\pi}{2}}\\
+جواب:\quad
+$3(\sqrt{2}+\ln(1+\sqrt{2}))$
+\انتہا{سوال}
+%=================
+\ابتدا{سوال}
+قطع مکافی \عددی{r=\tfrac{2}{1-\cos\theta},\, \tfrac{\pi}{2}\le\theta\le\pi}
+\انتہا{سوال}
+%=================
+\ابتدا{سوال}
+منحنی \عددی{r=\cos^3\tfrac{\theta}{3},\, 0\le\theta\le\tfrac{\pi}{4}}\\
+جواب:\quad
+$\tfrac{\pi}{8}+\tfrac{3}{8}$
+\انتہا{سوال}
+%=================
+\ابتدا{سوال}
+منحنی \عددی{r=\sqrt{1+\sin2\theta},\,0\le\theta\le\sqrt{2}\pi}
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_منحنی_لمبائی_ب}
+منحنی \عددی{r=\sqrt{1+\cos2\theta},\, 0\le\theta\le\sqrt{2}\pi}\\
+جواب:\quad
+$2\pi$
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}\ترچھا{دائرے کا محیط}\\
+نیا کلیہ سیکھنے کے بعد بہتر ہوتا ہے کہ اس کو جانے پہچانے مسئلوں پر لاگو کیا جائے۔ قوس لمبائی کا کلیہ مساوات \حوالہ{مساوات_مخروط_لمبائی_قوس_قطبی_کلیہ} استعمال کرتے ہوئے درج ذیل دائروں کے محیط کی لمبائیاں تلاش کریں۔
+\begin{multicols}{3}
+\begin{enumerate}[a.]
+\item
+$r=a$
+\item
+$r=a\cos\theta$
+\item
+$r=a\sin\theta$
+\end{enumerate} 
+\end{multicols}
+\انتہا{سوال}
+%================
+\موٹا{سطحی رقبہ}\\
+سوال \حوالہ{سوال_مخروط_سطح_طواف_قطبی_الف} تا سوال \حوالہ{سوال_مخروط_سطح_طواف_قطبی_ب} میں منحنی کو دیے گئے محور کے گرد گھما کر سطح طواف پیدا کیا جاتا ہے۔ اس سطح طواف کا رقبہ معلوم کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_مخروط_سطح_طواف_قطبی_الف}
+محور \عددی{y}،
+$r=\sqrt{\cos2\theta},\, 0\le\theta\le\tfrac{\pi}{4}$\quad\\
+جواب:\quad
+$\pi\sqrt{2}$
+\انتہا{سوال}
+%=================
+\ابتدا{سوال}
+محور \عددی{x}،
+$r=\sqrt{2}e^{\theta/2},\, 0\le\theta\le\tfrac{\pi}{2}$\quad
+
+\انتہا{سوال}
+%=================
+\ابتدا{سوال}
+محور \عددی{x}،
+$r^2=\cos2\theta$\quad\\
+جواب:\quad
+$2\pi(2-\sqrt{2})$
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}\شناخت{سوال_مخروط_سطح_طواف_قطبی_ب}
+محور \عددی{y}،
+$r=2a\cos\theta,\, a>0$\quad
+\انتہا{سوال}
+%=================
+\موٹا{نظریہ اور مثالیں}\\
+\ابتدا{سوال}\ترچھا{منحنی \عددی{r=f(\theta),\, \alpha\le\theta\le\beta} کی لمبائی۔}\\
+فرض کریں کہ مطلوبہ تفرق استمراری ہیں۔ دکھائیں کہ مساوات \حوالہ{مساوات_مخروط_مقدار_معلوم_ایکس_وائے} میں
+\begin{align*}
+x=f(\theta)\cos\theta,\quad y=f(\theta)\sin\theta
+\end{align*}
+پر کرنے سے
+\begin{align*}
+L=\int_{\alpha}^{\beta}\sqrt{\big(\frac{\dif x}{\dif \theta}\big)^2+\big(\frac{\dif y}{\dif \theta}\big)^2}\dif\theta
+\end{align*}
+درج ذیل روپ اختیار کرتی ہے۔
+\begin{align*}
+L=\int_{\alpha}^{\beta}\sqrt{r^2+\big(\frac{\dif r}{\dif \theta}\big)^2}\dif\theta
+\end{align*}
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\ترچھا{اوسط قیمت}\\
+استمراری \عددی{f} کی صورت میں منحنی \عددی{r=f(\theta),\, \alpha\le\theta\le\beta} کے قطبی محدد \عددی{r} کی اوسط قیمت درج ذیل کلیہ دیتا ہے۔
+\begin{align*}
+r_{\text{اوسط}}=\frac{1}{\beta-\alpha}\int_{\alpha}^{\beta}f(\theta)\dif\theta
+\end{align*}
+اس کلیہ کو استعمال کرتے ہوئے درج ذیل میں \عددی{\theta} کے لحاظ سے  \عددی{r_{\text{اوسط}}} معلوم کریں جہاں \عددی{a>0} ہے۔
+\begin{enumerate}[a.]
+\item
+قلب نما \عددی{r=a(1-\cos\theta)}
+\item
+دائرہ \عددی{r=a}
+\item
+دائرہ \عددی{r=a\cos\theta,\, -\tfrac{\pi}{2}\le\theta\le\tfrac{\pi}{2}}
+\end{enumerate}
+\انتہا{سوال}
+%===================
+\ابتدا{سوال} 
+کیا \عددی{r=f(\theta),\, \alpha\le\theta\le\beta} اور \عددی{r=2f(\theta),\, \alpha\le\theta\le\beta} کی لمبائیوں کے تناسب  کے بارے میں کچھ کہنا ممکن ہے؟ اپنے جواب کی وجہ پیش کریں۔
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+منحنیات \عددی{r=f(\theta),\, \alpha\le\theta\le\beta} اور \عددی{r=2f(\theta),\, \alpha\le\theta\le\beta}  کو محور \عددی{x} کے گرد گھما کر سطح طواف پیدا کیا جاتا ہے۔ کیا ان سطح طواف کے رقبوں کی تناسب کے بارے میں کچھ کہنا ممکن ہو گا؟ اپنے جواب کی وجہ پیش کریں۔
+\انتہا{سوال}
+%======================
+\موٹا{پنکھا نما خطوں کے وسطانی مراکز}\\
+چونکہ مثلث کا وسطانی مرکز ہر ایک وسطانیہ پر، راس سے دو تہائی دور مخالف قاعدہ پر،  واقع ہوتا ہے لہٰذا شکل \حوالہ{شکل_سوال_مخروط_قطبی_وسطانیہ} میں محور \عددی{x} کے لحاظ سے باریک سایہ دور  تکونی بیرم کا بازو تقریباً \عددی{\tfrac{2}{3}r\sin\theta} ہو گا۔ اسی طرح محور \عددی{y} کے لحاظ سے  اس باریک تکونی خطہ کا بازو \عددی{\tfrac{2}{3}r\cos\theta} ہو گا۔ یہ تخمین \عددی{\Delta\theta\to0} سے بہتر ہو کر خطہ \عددی{AOB} کے وسطانیہ کے محدد کے لئے درج ذیل کلیات دیتی ہیں
+\begin{align*}
+\bar{x}&=\frac{\int\frac{2}{3}r\cos\theta\cdot\frac{1}{2}r^2\dif\theta}{\int\frac{1}{2}r^2\dif\theta}=\frac{\frac{2}{3}\int r^3\cos\theta\dif\theta}{\int r^2\dif\theta}\\
+\bar{y}&=\frac{\int\frac{2}{3}r\sin\theta\cdot\frac{1}{2}r^2\dif\theta}{\int\frac{1}{2}r^2\dif\theta}=\frac{\frac{2}{3}\int r^3\sin\theta\dif\theta}{\int r^2\dif\theta}
+\end{align*}
+جہاں تمام تکمل کے حدود \عددی{\alpha} اور \عددی{\beta} ہیں۔
+
+\ابتدا{سوال}
+قلب نما \عددی{r=a(1+\cos\theta)} کے اندر خطہ کا وسطانیہ دریافت کریں۔\\
+جواب:\quad
+$(\tfrac{5}{6}a,0)$
+\انتہا{سوال}
+%==============
+\ابتدا{سوال}
+نصف دائری خطہ \عددی{0\le r\le a,\, 0\le\theta\le \pi} کا وسطانیہ دریافت کریں۔ 
+\انتہا{سوال}
+%===================
+
+
