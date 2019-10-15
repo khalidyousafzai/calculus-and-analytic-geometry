@@ -52,6 +52,7 @@
 
 
 %\renewcommand{\arraystretch}{2}   %space in tables and arrays
+\newcommand{\krightharpoonup}[1]{\overset{\rightharpoonup}{\rule{0pt}{.9ex}\smash{#1}}}
 
 \sisetup{math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega}   %with mathpazo this is needed else must not be here. now micro is smaller
 \DeclareSIUnit \var {var}    %used in electric circuits volt-ampere-reactive
@@ -59,6 +60,7 @@
 \input longdiv.tex
 \usepackage{polynom}
 \usepgfplotslibrary{fillbetween}
+
 
 
 \input{./tex/myUrduCommandsCalculus.tex}                  %turning latex into urdu
@@ -75,9 +77,9 @@
 \graphicspath{{./fig/figFrontPage/}{./fig/figCalculusLimits/}{./fig/figCalculusDerivatives/}{./fig/figCalculusIntegration/}{./fig/figCalculusApplicationsOfIntegrals}{./fig/figCalculusTechniquesOfIntegration/}}%paths to figures
 
 
-%\includeonly{./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusIntegration,./tex/calculusApplicationsOfIntegrals,./tex/calculusTranscendentalFunctions,./tex/calculusTechniquesOfIntegration,./tex/calculusInfiniteSeries,./tex/calculusConicSectionsParametrizedCurvesPolarCoordinates,./tex/calculusVectorsAndAnalyticGeometryInSpace./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB}
+%\includeonly{./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusIntegration,./tex/calculusApplicationsOfIntegrals,./tex/calculusTranscendentalFunctions,./tex/calculusTechniquesOfIntegration,./tex/calculusInfiniteSeries,./tex/calculusConicSectionsParametrizedCurvesPolarCoordinates,./tex/calculusVectorsAndAnalyticGeometryInSpace,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB}
 %
-\includeonly{./tex/cktSymbols,./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusVectorsAndAnalyticGeometryInSpace./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB}%
+\includeonly{./tex/cktSymbols,./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusVectorsAndAnalyticGeometryInSpace,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB}%
 %
 %\includeonly{./tex/cktSymbols,./calculusPreface,./tex/prefaceFirstBook,./tex/calculusTechniquesOfIntegration,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB}%
 
