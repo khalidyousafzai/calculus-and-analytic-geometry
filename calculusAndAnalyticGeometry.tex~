@@ -52,7 +52,7 @@
 
 
 %\renewcommand{\arraystretch}{2}   %space in tables and arrays
-\newcommand{\krightharpoonup}[1]{\overset{\rightharpoonup}{\rule{0pt}{.9ex}\smash{#1}}}
+
 
 \sisetup{math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega}   %with mathpazo this is needed else must not be here. now micro is smaller
 \DeclareSIUnit \var {var}    %used in electric circuits volt-ampere-reactive
@@ -61,6 +61,8 @@
 \usepackage{polynom}
 \usepgfplotslibrary{fillbetween}
 
+%\usepackage[]{harpoon}
+\input{./tex/myHarpoons.tex}                       %testing harpoons
 
 
 \input{./tex/myUrduCommandsCalculus.tex}                  %turning latex into urdu

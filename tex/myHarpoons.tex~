@@ -1,0 +1,21 @@
+\newcommand{\koverleftharp}[1]{\overharp{\leftharpoonup}{#1}{.7}}
+\newcommand{\koverrightharp}[1]{\overharp{\rightharpoonup}{#1}{.7}}
+\newcommand{\koverleftharpdown}[1]{\overharp{\leftharpoondown}{#1}{.9}}
+\newcommand{\koverrightharpdown}[1]{\overharp{\rightharpoondown}{#1}{.9}}
+\newcommand{\kunderleftharp}[1]{\overharp{\leftharpoonup}{#1}{-1}}
+\newcommand{\kunderrightharp}[1]{\overharp{\rightharpoonup}{#1}{-1}}
+\newcommand{\kunderleftharpdown}[1]{\overharp{\leftharpoondown}{#1}{-.8}}
+\newcommand{\kunderrightharpdown}[1]{\overharp{\rightharpoondown}{#1}{-.8}}
+
+\newlength{\argwd}  \newlength{\arght}%-Two variables
+\newcommand{\overharp}[3]{%        -The command name
+  \settowidth{\argwd}{#2}\settoheight{\arght}{#2}%
+  %                                    -Set the variables
+  \raisebox{#3\arght}{%                -Put the harp 6/10 of a line higher
+    \makebox[0pt][r]{%                 -Put everything in a box ;           corrected by me for Flush Right
+      \resizebox{\argwd}{.8\arght}{\,$#1$}% 
+      %                                -Set harp to right length
+    }%
+  }%
+#2}%                                   -Print the argument
+
