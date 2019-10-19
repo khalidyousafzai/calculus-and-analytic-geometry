@@ -1,3 +1,8 @@
+%========================
+\newcommand{\krightharpoonup}[1]{\overset{\rightharpoonup}{\rule{0pt}{.9ex}\smash{#1}}}
+\newcommand{\kleftharpoonup}[1]{\overset{\leftharpoonup}{\rule{0pt}{.9ex}\smash{#1}}}
+
+
 \newcommand{\koverleftharp}[1]{\overharp{\leftharpoonup}{#1}{.7}}
 \newcommand{\koverrightharp}[1]{\overharp{\rightharpoonup}{#1}{.7}}
 \newcommand{\koverleftharpdown}[1]{\overharp{\leftharpoondown}{#1}{.9}}
@@ -13,7 +18,7 @@
   %                                    -Set the variables
   \raisebox{#3\arght}{%                -Put the harp 6/10 of a line higher
     \makebox[0pt][r]{%                 -Put everything in a box ;           corrected by me for Flush Right
-      \resizebox{\argwd}{.8\arght}{\,$#1$}% 
+      \resizebox{\argwd}{.8\arght}{\!$#1$}% 
       %                                -Set harp to right length
     }%
   }%

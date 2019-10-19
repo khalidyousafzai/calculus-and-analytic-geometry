@@ -552,8 +552,8 @@ y'=\left.\frac{3x^2}{2}\right\vert_{x=1}=\frac{3}{2}
 
 \حصہء{سوالات}
 \موٹا{جیومیٹری اور حساب}\\
-\ابتدا{سوال}
-مستوی میں پائے جانے والے سمتیات \عددی{\kvec{A}}، \عددی{\kvec{B}} اور \عددی{\kvec{C}} کو شکل میں دکھایا گیا ہے۔ انہیں کاغذ پر اتار کر سر کے ساتھ دم جوڑ کر درج ذیل ترسیم کریں۔
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_الف}
+مستوی میں پائے جانے والے سمتیات \عددی{\kvec{A}}، \عددی{\kvec{B}} اور \عددی{\kvec{C}} کو شکل \حوالہ{شکل_سوال_سمتیہ_الف} میں دکھایا گیا ہے۔ انہیں کاغذ پر اتار کر سر کے ساتھ دم جوڑ کر درج ذیل ترسیم کریں۔
 \begin{multicols}{4}
 \begin{enumerate}[a.]
 \item
@@ -566,10 +566,12 @@ $\kvec{A}-2\kvec{B}$
 $\frac{1}{2}\kvec{A}-\kvec{C}$
 \end{enumerate}
 \end{multicols}
+جوابات:\quad
+شکل \حوالہ{شکل_سوال_سمتیہ_جوابات_چند_جمع_منفی}
 \انتہا{سوال}
 %=======================
-\ابتدا{سوال}
-مستوی میں پائے جانے والے سمتیات \عددی{\kvec{A}}، \عددی{\kvec{B}} اور \عددی{\kvec{C}} کو شکل میں دکھایا گیا ہے۔ انہیں کاغذ پر اتار کر سر کے ساتھ دم جوڑ کر درج ذیل ترسیم کریں۔
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_ب}
+مستوی میں پائے جانے والے سمتیات \عددی{\kvec{A}}، \عددی{\kvec{B}} اور \عددی{\kvec{C}} کو شکل \حوالہ{شکل_سوال_سمتیہ_ب} میں دکھایا گیا ہے۔ انہیں کاغذ پر اتار کر سر کے ساتھ دم جوڑ کر درج ذیل ترسیم کریں۔
 \begin{multicols}{4}
 \begin{enumerate}[a.]
 \item
@@ -586,7 +588,7 @@ $\kvec{A}-(\kvec{B}-\kvec{C})$
 %=======================
 \begin{figure}
 \centering
-\begin{subfigure}{0.22\textwidth}
+\begin{minipage}{0.22\textwidth}
 \centering
 \begin{tikzpicture}
 \pgfmathsetmacro{\a}{135}
@@ -599,8 +601,10 @@ $\kvec{A}-(\kvec{B}-\kvec{C})$
 \draw[-latex](0,0)--(\aa:\bb)node[pos=0.5,below]{$B$};
 \draw[-latex](0,0)--(\aaa:\bbb)node[pos=0.5,right]{$C$};
 \end{tikzpicture}
-\end{subfigure}\hfill
-\begin{subfigure}{0.22\textwidth}
+\caption{}
+\label{شکل_سوال_سمتیہ_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
 \centering
 \begin{tikzpicture}
 \pgfmathsetmacro{\a}{0}
@@ -613,29 +617,104 @@ $\kvec{A}-(\kvec{B}-\kvec{C})$
 \draw[-latex](0,0)--(\aa:\bb)node[pos=0.5,right]{$B$};
 \draw[-latex](0,0)--(\aaa:\bbb)node[pos=0.5,left]{$C$};
 \end{tikzpicture}
-\end{subfigure}
-\begin{subfigure}{0.22\textwidth}
+\caption{}
+\label{شکل_سوال_سمتیہ_ب}
+\end{minipage}
+\begin{minipage}{0.22\textwidth}
 \centering
 \begin{tikzpicture}
 \draw[-latex](0,0)node[below]{$A$}--(1.5,0)node[pos=0.5,below]{$\kvec{w}$}node[below]{$C$};
 \draw[-latex](0,0)--(0.5,1)node[pos=0.5,left]{$\kvec{u}$}node[above]{$B$};
 \draw[-latex](0.5,1)--(1.5,0)node[pos=0.5,right]{$\kvec{v}$};
 \end{tikzpicture}
-\end{subfigure}
-\begin{subfigure}{0.22\textwidth}
+\caption{}
+\label{شکل_سوال_سمتیہ_پ}
+\end{minipage}
+\begin{minipage}{0.22\textwidth}
 \centering
 \begin{tikzpicture}
 \draw[-latex](0,0)node[left]{$A$}--(2,0)node[pos=0.5,below]{$\kvec{w}$}node[right]{$C$};
 \draw[-latex](0,0)--(0.5,1)node[pos=0.5,left]{$\kvec{u}$}node[above]{$B$};
 \draw[-latex](0.5,1)--(2,0);
-\draw[-latex](0,0)--(1.25,0.5)node[pos=0.5,above]{$a$}node[circ]{}node[right]{$N$};
+\draw[-latex](0,0)--(1.25,0.5)node[pos=0.5,above]{$\kvec{a}$}node[circ]{}node[right]{$N$};
 \end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتیہ_ت}
+\end{minipage}
+\end{figure}
+%==================================================
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize]
+\pgfmathsetmacro{\a}{135}
+\pgfmathsetmacro{\b}{1}
+\pgfmathsetmacro{\aa}{0}
+\pgfmathsetmacro{\bb}{2}
+\pgfmathsetmacro{\aaa}{90}
+\pgfmathsetmacro{\bbb}{1}
+\draw[-latex](0,0)--(\a:\b)node[pos=0.5,left]{$A$};
+\draw[-latex](\a:\b)--++(\aa:\bb)coordinate(khead)node[pos=0.5,above]{$B$};
+\draw[thick,-latex](0,0)--++(khead)node[pos=0.4,right]{$A+B$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize]
+\pgfmathsetmacro{\a}{135}
+\pgfmathsetmacro{\b}{1}
+\pgfmathsetmacro{\aa}{0}
+\pgfmathsetmacro{\bb}{2}
+\pgfmathsetmacro{\aaa}{90}
+\pgfmathsetmacro{\bbb}{1}
+\draw[-latex](0,0)--(\a:\b)node[pos=0.5,left]{$A$};
+\draw[-latex](\a:\b)--++(\aa:\bb)coordinate(ka)node[pos=0.3,above]{$B$};
+\draw[-latex](ka)--++(\aaa:\bbb)coordinate(kb)node[pos=0.5,right]{$C$};
+\draw[thick,-latex](0,0)--(kb)node[pos=0.8,left]{$A+B+C$};
+\end{tikzpicture}
+\caption{}
 \end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{135}
+\pgfmathsetmacro{\b}{1}
+\pgfmathsetmacro{\aa}{0}
+\pgfmathsetmacro{\bb}{2}
+\pgfmathsetmacro{\aaa}{90}
+\pgfmathsetmacro{\bbb}{1}
+\draw[-latex](0,0)--(\a:\b)node[pos=0.5,right]{$A$};
+\draw[-latex](\a:\b)--++(\aa:-2*\bb)coordinate(ka)node[pos=0.3,above]{$-2B$};
+\draw[thick,-latex](0,0)--(ka)coordinate(kb)node[pos=0.5,below]{$A-2B$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}%
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{135}
+\pgfmathsetmacro{\b}{1}
+\pgfmathsetmacro{\aa}{0}
+\pgfmathsetmacro{\bb}{2}
+\pgfmathsetmacro{\aaa}{90}
+\pgfmathsetmacro{\bbb}{1}
+\draw[-latex](0,0)--(\a:1/2*\b)node[pos=0.5,above right]{$\tfrac{1}{2}A$};
+\draw[-latex](\a:1/2*\b)--++(\aaa:-\bbb)coordinate(ka)node[pos=0.3,left]{$-C$};
+\draw[thick,-latex](0,0)--(ka)coordinate(kb)node[pos=0.5,right]{$\tfrac{1}{2}A-C$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{}
+\label{شکل_سوال_سمتیہ_جوابات_چند_جمع_منفی}
 \end{figure}
 سوال \حوالہ{سوال_سمتیہ_مجموعات_الف} تا سوال \حوالہ{سوال_سمتیہ_مجموعات_ب} میں \عددی{\kvec{A}=2\ai-7\aj}، \عددی{\kvec{B}=\ai+6\aj} اور \عددی{\kvec{C}=\sqrt{3}\ai-\pi\aj} لیں۔ نتائج کو \عددی{a\ai+b\aj} روپ میں لکھیں۔
 
 \ابتدا{سوال}\شناخت{سوال_سمتیہ_مجموعات_الف}
-$\kvec{A}+2\kvec{B}$
+$\kvec{A}+2\kvec{B}$\\
+جواب:\quad
+$4\ai+5\aj$
 \انتہا{سوال}
 %====================
 \ابتدا{سوال}
@@ -643,95 +722,218 @@ $\kvec{A}+\kvec{B}-\kvec{C}$
 \انتہا{سوال}
 %====================
 \ابتدا{سوال}
-$3\kvec{A}-\frac{1}{\pi}\kvec{C}$
+$3\kvec{A}-\frac{1}{\pi}\kvec{C}$\\
+جواب:\quad
+$(6-\tfrac{\sqrt{3}}{\pi})\ai-20\aj$
 \انتہا{سوال}
 %====================
 \ابتدا{سوال}\شناخت{سوال_سمتیہ_مجموعات_ب}
 $2\kvec{A}-3\kvec{B}+32\aj$
 \انتہا{سوال}
 %====================
-\ابتدا{سوال}
-مثلث \عددی{ABC}  کے اضلاع سمتیات \عددی{\kvec{u}}، \عددی{\kvec{v}} اور \عددی{\kvec{w}} دیتے ہیں۔
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_پ}
+مثلث \عددی{ABC}  کے اضلاع سمتیات \عددی{\kvec{u}}، \عددی{\kvec{v}} اور \عددی{\kvec{w}} دیتے ہیں (شکل \حوالہ{شکل_سوال_سمتیہ_پ})۔
 \begin{enumerate}[a.]
 \item
 \عددی{\kvec{w}} کو \عددی{\kvec{u}} اور \عددی{\kvec{v}} کی صورت میں لکھیں۔
 \item
 \عددی{\kvec{v}} کو \عددی{\kvec{u}} اور \عددی{\kvec{w}} کی صورت میں لکھیں۔
 \end{enumerate}
+جواب:\quad
+(ا) \عددی{\kvec{w}=\kvec{v}+\kvec{u}} (ب) \عددی{\kvec{v}=\kvec{w}-\kvec{u}}
 \انتہا{سوال}
 %===================
-\ابتدا{سوال}
-مثلث \عددی{ABC} کے اضلاع  سمتیات \عددی{\kvec{u}} اور \عددی{\kvec{w}} دیتے ہیں جبکہ \عددی{BC} کا وسطی نقطہ \عددی{N} ہے۔ سمتیہ \عددی{\kvec{a}} کو \عددی{\kvec{u}} اور \عددی{\kvec{w}} کی صورت میں لکھیں۔
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_ت}
+مثلث \عددی{ABC} کے اضلاع  سمتیات \عددی{\kvec{u}} اور \عددی{\kvec{w}} دیتے ہیں جبکہ \عددی{BC} کا وسطی نقطہ \عددی{N} ہے (شکل \حوالہ{شکل_سوال_سمتیہ_ت})۔ سمتیہ \عددی{\kvec{a}} کو \عددی{\kvec{u}} اور \عددی{\kvec{w}} کی صورت میں لکھیں۔
 \انتہا{سوال}
 %==================
 
-سوال \حوالہ{سوال_سمتیہ_خاکہ_الف} تا سوال \حوالہ{سوال_سمتیہ_خاکہ_ب} میں سمتیہ کو \عددی{a\ai+b\aj} روپ میں لکھیں۔ محددی سطح پر مبدا سے شروع کرتے ہوئے  انہیں ترسیم کریں۔
+سوال \حوالہ{سوال_سمتیہ_نقطہ_الف} تا سوال \حوالہ{سوال_سمتیہ_نقطہ_ٹ} میں سمتیہ کو \عددی{a\ai+b\aj} روپ میں لکھیں۔ محددی سطح پر مبدا سے شروع کرتے ہوئے  انہیں ترسیم کریں۔
 
-\ابتدا{سوال}\شناخت{سوال_سمتیہ_خاکہ_الف}
-نقاط \عددی{N_1(5,7)} اور \عددی{N_2(2,9)} کے بیچ قطع \عددی{\krightharpoonup{N_1N_2}} تلاش کریں۔
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_نقطہ_الف}
+نقاط \عددی{N_1(5,7)} اور \عددی{N_2(2,9)} کے بیچ قطع \عددی{\krightharpoonup{N_1N_2}} تلاش کریں۔\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_سمتیہ_نقطہ_الف}
 \انتہا{سوال}
 %======================
 \ابتدا{سوال}
 نقاط \عددی{N_1(1,2)} اور \عددی{N_2(-3,5)} کے بیچ قطع \عددی{\krightharpoonup{N_1N_2}}  تلاش کریں۔
 \انتہا{سوال}
 %======================
-\ابتدا{سوال}
-نقاط \عددی{A(-5,3)} اور \عددی{B(-10,8)} کے بیچ قطع \عددی{\krightharpoonup{AB}}  تلاش کریں۔
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_نقطہ_ب}
+نقاط \عددی{A(-5,3)} اور \عددی{B(-10,8)} کے بیچ قطع \عددی{\krightharpoonup{AB}}  تلاش کریں۔\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_سمتیہ_نقطہ_ب}
 \انتہا{سوال}
 %======================
 \ابتدا{سوال}
 نقاط \عددی{A(-7,-8)} اور \عددی{B(6,11)} کے بیچ قطع \عددی{\krightharpoonup{AB}}  تلاش کریں۔
 \انتہا{سوال}
 %======================
-\ابتدا{سوال}
-نقاط \عددی{N_1(1,3)} اور \عددی{N_2(2,-1)} کے بیچ قطع \عددی{\krightharpoonup{N_1N_2}}  تلاش کریں۔
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_نقطہ_پ}
+نقاط \عددی{N_1(1,3)} اور \عددی{N_2(2,-1)} کے بیچ قطع \عددی{\krightharpoonup{N_1N_2}}  تلاش کریں۔\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_سمتیہ_نقطہ_پ}
 \انتہا{سوال}
 %======================
 \ابتدا{سوال}
 نقاط \عددی{N_3(1,3)} اور \عددی{N_4} کے بیچ قطع \عددی{\krightharpoonup{N_3N_4}}  تلاش کریں جہاں \عددی{N_1(2,-1)} اور \عددی{N_2(-4,3)} کو ملانے والے قطع کا وسطی نقطہ \عددی{N_4} ہے۔
 \انتہا{سوال}
 %======================
-\ابتدا{سوال}
-نقاط \عددی{A(1,-1)}، \عددی{B(2,0)}، \عددی{C(-1,3)} اور \عددی{D(-2,2)} دیے گئے ہیں۔ سمتیات \عددی{\krightharpoonup{CD}} اور \عددی{\krightharpoonup{AB}} کا مجموعہ تلاش کریں۔
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_نقطہ_ت}
+نقاط \عددی{A(1,-1)}، \عددی{B(2,0)}، \عددی{C(-1,3)} اور \عددی{D(-2,2)} دیے گئے ہیں۔ سمتیات \عددی{\krightharpoonup{CD}} اور \عددی{\krightharpoonup{AB}} کا مجموعہ تلاش کریں۔\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_سمتیہ_نقطہ_ت}
 \انتہا{سوال}
 %==================
-\ابتدا{سوال}\شناخت{سوال_سمتیہ_خاکہ_ب}
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_نقطہ_ٹ}
 نقطہ \عددی{A} سے مبدا تک سمتیہ، جہاں \عددی{\krightharpoonup{AB}=4\ai-2\aj} اور \عددی{B(-2,5)} ہیں۔
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
-سمتیہ \عددی{\krightharpoonup{AB}=3\ai-\aj} اور نقطہ \عددی{A(2,9)} دیا گیا ہے۔نقطہ \عددی{B} تلاش کریں۔
+سمتیہ \عددی{\krightharpoonup{AB}=3\ai-\aj} اور نقطہ \عددی{A(2,9)} دیا گیا ہے۔نقطہ \عددی{B} تلاش کریں۔\\
+جواب:\quad
+$(5,8)$
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
 سمتیہ \عددی{\krightharpoonup{NQ}=-6\ai-4\aj} اور نقطہ \عددی{Q(3,3)} دیا گیا ہے۔نقطہ \عددی{N} تلاش کریں۔
 \انتہا{سوال}
 %====================
-
+\begin{figure}
+\centering
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize]
+\begin{axis}[width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-3},ytick={2},enlargelimits=true]
+\addplot[-latex] plot coordinates {(0,0)(-3,2)}node[pos=0.5,below left]{$-3\ai+2\aj$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتیہ_نقطہ_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize]
+\begin{axis}[width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-5},ytick={5},enlargelimits=true]
+\addplot[-latex] plot coordinates {(0,0)(-5,5)}node[pos=0.5,below left]{$-5\ai+5\aj$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتیہ_نقطہ_ب}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize]
+\begin{axis}[width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1},ytick={-4},enlargelimits=true]
+\addplot[-latex] plot coordinates {(0,0)(1,-4)}node[pos=0.5,below left]{$\ai-4\aj$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتیہ_نقطہ_پ}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize]
+\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-1,1},ytick={-1,1},enlargelimits=true]
+\addplot[-latex] plot coordinates {(0,0)(1,1)}node[above left]{$\krightharpoonup{AB}$};
+\addplot[-latex] plot coordinates {(0,0)(-1,-1)}node[below right]{$\krightharpoonup{CD}$};
+\addplot[]plot coordinates {(0,0)}node[circ]{}node[pin={[font=\tiny,pin distance=0.1cm]135:{$\krightharpoonup{AB}+\krightharpoonup{CD}=0$}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتیہ_نقطہ_ت}
+\end{minipage}
+\end{figure}
 \موٹا{اکائی سمتیات}\\
-سوال \حوالہ{سوال_سمتیہ_اکائی_الف} تا سوال \حوالہ{سوال_سمتیہ_اکائی_ب} میں دیے سمتیات ترسیم کریں۔ ان سمتیات کو \عددی{a\ai+b\aj} روپ میں لکھیں۔
+سوال \حوالہ{سوال_سمتیہ_اکائی_الف} تا سوال \حوالہ{سوال_سمتیہ_اکائی_پ} میں دیے سمتیات ترسیم کریں۔ ان سمتیات کو \عددی{a\ai+b\aj} روپ میں لکھیں۔
 
 \ابتدا{سوال}\شناخت{سوال_سمتیہ_اکائی_الف}
-زاویہ \عددی{\theta=\tfrac{\pi}{6}} اور \عددی{\theta=\tfrac{2\pi}{3}} کے لئے اکائی سمتیات \عددی{\kvec{u}=(\cos\theta)\ai+(\sin\theta)\aj} ترسیم کریں۔ دائرہ \عددی{x^2+y^2=1} کی ترسیم بھی شامل کریں۔
+زاویہ \عددی{\theta=\tfrac{\pi}{6}} اور \عددی{\theta=\tfrac{2\pi}{3}} کے لئے اکائی سمتیات \عددی{\kvec{u}=(\cos\theta)\ai+(\sin\theta)\aj} ترسیم کریں۔ دائرہ \عددی{x^2+y^2=1} کی ترسیم بھی شامل کریں۔\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_سمتیہ_اکائی_الف}
 \انتہا{سوال}
 %===================
 \ابتدا{سوال}
 زاویہ \عددی{\theta=-\tfrac{\pi}{4}} اور \عددی{\theta=-\tfrac{3\pi}{4}} کے لئے اکائی سمتیات \عددی{\kvec{u}=(\cos\theta)\ai+(\sin\theta)\aj} ترسیم کریں۔ دائرہ \عددی{x^2+y^2=1} کی ترسیم بھی شامل کریں۔
 \انتہا{سوال}
 %======================
-\ابتدا{سوال}
-سمتیہ \عددی{\aj} کو مبدا کے گرد گھڑی کے الٹ رخ \عددی{\tfrac{3\pi}{4}} ریڈیئن  گھما کر حاصل اکائی سمتیہ ترسیم کریں۔
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_اکائی_ب}
+سمتیہ \عددی{\aj} کو مبدا کے گرد گھڑی کے الٹ رخ \عددی{\tfrac{3\pi}{4}} ریڈیئن  گھما کر حاصل اکائی سمتیہ ترسیم کریں۔\\
+جواب:\quad
+شکل \حوالہ{شکل_سوال_سمتیہ_اکائی_ب}
 \انتہا{سوال}
 %===================
-\ابتدا{سوال}\شناخت{سوال_سمتیہ_اکائی_ب}
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_اکائی_پ}
 سمتیہ \عددی{\aj} کو مبدا کے گرد گھڑی کے رخ \عددی{\tfrac{2\pi}{3}} ریڈیئن  گھما کر حاصل اکائی سمتیہ ترسیم کریں۔
 \انتہا{سوال}
 %===================
-
+\begin{figure}
+\centering
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny]
+\begin{axis}[clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1},ytick={\empty},enlargelimits=true]
+\addplot[-latex,thick,data cs=polar]plot coordinates{(0,0)(30,1)}node[above,xshift=2ex,yshift=1ex]{$\kvec{u}=\tfrac{\sqrt{3}}{2}\ai+\tfrac{1}{2}\aj$};
+\addplot[-latex,thick,data cs=polar]plot coordinates{(0,0)(120,1)}node[above,xshift=-3ex]{$\kvec{u}=-\tfrac{1}{2}\ai+\tfrac{\sqrt{3}}{2}\aj$};
+\addplot[domain=0:360]({1*cos(x)},{1*sin(x)});
+\addplot[-stealth,domain=0:30]({0.5*cos(x)},{0.5*sin(x)})node[pos=0.6,right]{$\tfrac{\pi}{6}$};
+\addplot[-stealth,domain=0:120]({0.3*cos(x)},{0.3*sin(x)})node[pos=0.5,above]{$\tfrac{2\pi}{3}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتیہ_اکائی_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny]
+\pgfmathsetmacro{\k}{-1/sqrt(2)}
+\begin{axis}[clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\k},ytick={\k},xticklabels={$-\tfrac{\sqrt{2}}{2}$},yticklabels={$-\tfrac{\sqrt{2}}{2}$},enlargelimits=true]
+\addplot[-latex]plot coordinates {(0,0)(\k,\k)}node[pos=0.5,left]{$-\tfrac{\sqrt{2}}{2}\ai-\tfrac{\sqrt{2}}{2}\aj$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتیہ_اکائی_ب}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny,declare function={f(\x)=(\x)^2;}]
+\pgfmathsetmacro{\k}{1/sqrt(17)}
+\begin{axis}[clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true]
+\addplot[domain=-2.3:2.3]{f(x)};
+\draw[-latex] (axis cs:2,4)--(axis cs:2+\k,4+4*\k)node[above right]{$\kvec{u}$};
+\draw[-latex] (axis cs:2,4)--(axis cs:2-\k,4-4*\k)node[xshift=1.5ex]{$-\kvec{u}$};
+\draw[-latex] (axis cs:2,4)--(axis cs:2+4*\k,4-\k)node[right]{$\kvec{n}$};
+\draw[-latex] (axis cs:2,4)--(axis cs:2-4*\k,4+\k)node[yshift=1ex]{$-\kvec{n}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتیہ_عمودی_مماسی_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[font=\tiny,declare function={f(\x)=rad(atan(\x));}]
+\pgfmathsetmacro{\k}{2/sqrt(5)}
+\pgfmathsetmacro{\a}{pi/4}
+\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true, xtick={1},ytick={\a},yticklabels={$\tfrac{\pi}{4}$}]
+\addplot[smooth,samples=100,domain=-1:2.5]{f(x)}node[below]{$y=\tan^{-1}(x)$};
+\addplot[-latex] plot coordinates {(1,pi/4)(1+\k,pi/4+1/2*\k)}node[above]{$\kvec{u}$};
+\addplot[-latex] plot coordinates {(1,pi/4)(1-\k,pi/4-1/2*\k)}node[left]{$-\kvec{u}$};
+\addplot[-latex] plot coordinates {(1,pi/4)(1+1/2*\k,pi/4-\k)}node[below]{$\kvec{n}$};
+\addplot[-latex] plot coordinates {(1,pi/4)(1-1/2*\k,pi/4+\k)}node[above]{$-\kvec{n}$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتیہ_عمودی_مماسی_ب}
+\end{minipage}
+\end{figure}
+%==========================
 سوال \حوالہ{سوال_سمتیہ_اکائی_گھوم_الف} اور سوال \حوالہ{سوال_سمتیہ_اکائی_گھوم_ب} میں اکائی سمتیہ \عددی{\kvec{u}=(\cos\theta)\ai+(\sin\theta)\aj} اسی رخ تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_سمتیہ_اکائی_گھوم_الف}
-$6\ai-8\aj$
+$6\ai-8\aj$\\
+جواب:\quad
+$\tfrac{3}{5}\ai-\tfrac{4}{5}\aj$
 \انتہا{سوال}
 %==================
 \ابتدا{سوال}\شناخت{سوال_سمتیہ_اکائی_گھوم_ب}
@@ -739,28 +941,38 @@ $-\ai+3\aj$
 \انتہا{سوال}
 %=====================
 
-سوال \حوالہ{سوال_سمتیہ_عمودی_مماسی_الف} تا سوال \حوالہ{سوال_سمتیہ_عمودی_مماسی_ب} میں دیے گئے نقطہ پر منحنی کے مماسی اکائی سمتیات اور عمودی اکائی سمتیات تلاش کریں۔ منحنی اور سمتیات کو ایک ساتھ ترسیم کریں۔ (سمتیات کی تعداد چار ہو گی۔)
+سوال \حوالہ{سوال_سمتیہ_عمودی_مماسی_الف} تا سوال \حوالہ{سوال_سمتیہ_عمودی_مماسی_پ} میں دیے گئے نقطہ پر منحنی کے مماسی اکائی سمتیات اور عمودی اکائی سمتیات تلاش کریں۔ منحنی اور اکائی سمتیات کو ایک ساتھ ترسیم کریں۔ (سمتیات کی تعداد چار ہو گی۔)
 
 \ابتدا{سوال}\شناخت{سوال_سمتیہ_عمودی_مماسی_الف}
-$y=x^2,\quad (2,4)$
+$y=x^2,\quad (2,4)$\\
+جواب:\quad
+$\kvec{u}=\tfrac{1}{\sqrt{17}}\ai+\tfrac{4}{\sqrt{17}}\aj,\quad -\kvec{u}=-\tfrac{1}{\sqrt{17}}\ai-\tfrac{4}{\sqrt{17}}\aj,$\\
+$ \kvec{n}=\tfrac{4}{\sqrt{17}}\ai-\tfrac{1}{\sqrt{17}}\aj,\quad -\kvec{n}=-\tfrac{4}{\sqrt{17}}\ai+\tfrac{1}{\sqrt{17}}\aj$\quad
+شکل \حوالہ{شکل_سوال_سمتیہ_عمودی_مماسی_الف}
 \انتہا{سوال}
 %======================
 \ابتدا{سوال}
 $x^2+2y^2=6,\quad (2,1)$
 \انتہا{سوال}
 %======================
-\ابتدا{سوال}
-$y=\tan^{-1}x,\quad (1,\tfrac{\pi}{4})$
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_عمودی_مماسی_ب}
+$y=\tan^{-1}x,\quad (1,\tfrac{\pi}{4})$\\
+جواب:\quad
+$\kvec{u}=\tfrac{1}{\sqrt{5}}(2\ai+\aj),\quad -\kvec{u}=\tfrac{1}{\sqrt{5}}(-2\ai-\aj),$\\
+$\kvec{n}=\tfrac{1}{\sqrt{5}}(-\ai+2\aj),\quad -\kvec{n}=\tfrac{1}{\sqrt{5}}(\ai-2\aj),$\quad 
+شکل \حوالہ{شکل_سوال_سمتیہ_عمودی_مماسی_ب}
 \انتہا{سوال}
 %======================
-\ابتدا{سوال}\شناخت{سوال_سمتیہ_عمودی_مماسی_ب}
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_عمودی_مماسی_پ}
 $y=\sum_{n=0}^{\infty}\frac{x^n}{n!},\quad (0,1)$
 \انتہا{سوال}
 %======================
-سوال \حوالہ{سوال_سمتیہ_عمودی_مماسی_نقطہ_الف} تا سوال \حوالہ{سوال_سمتیہ_عمودی_مماسی_نقطہ_ب} میں دیے گئے نقطہ پر منحنی کے مماسی اور عمودی اکائی سمتیہ تلاش کریں۔ 
+سوال \حوالہ{سوال_سمتیہ_عمودی_مماسی_نقطہ_الف} تا سوال \حوالہ{سوال_سمتیہ_عمودی_مماسی_نقطہ_ب} میں دیے گئے نقطہ پر منحنی کے مماسی اور عمودی اکائی سمتیات تلاش کریں۔ 
 
 \ابتدا{سوال}\شناخت{سوال_سمتیہ_عمودی_مماسی_نقطہ_الف}
-$3x^2+8xy+2y^2-3=0,\quad (1,0)$
+$3x^2+8xy+2y^2-3=0,\quad (1,0)$\\
+جواب:\quad
+$\kvec{u}=\pm\tfrac{1}{5}(-4\ai+3\aj),\quad \kvec{v}=\pm\tfrac{1}{5}(3\ai+4\aj)$
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
@@ -768,7 +980,9 @@ $x^2-6xy+8y^2-2x-1=0,\quad (1,1)$
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
-$y=\int_{0}^{x}\sqrt{3+t^4}\dif t,\quad (0,0)$
+$y=\int_{0}^{x}\sqrt{3+t^4}\dif t,\quad (0,0)$\\
+جواب:\quad
+$\kvec{u}=\pm\tfrac{1}{2}(\ai+\sqrt{3}\aj),\quad \kvec{v}=\pm\tfrac{1}{2}(-\sqrt{3}\ai+\aj)$
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}\شناخت{سوال_سمتیہ_عمودی_مماسی_نقطہ_ب}
@@ -780,7 +994,9 @@ $y=\int_{e}^{x}\ln (\ln t)\dif t,\quad (e,0)$
 سوال \حوالہ{سوال_سمتیہ_لمبائی_رخ_الف} اور سوال \حوالہ{سوال_سمتیہ_لمبائی_رخ_ب} میں دیے سمتیہ کو لمبائی ضرب رخ کی صورت میں لکھیں۔
 
 \ابتدا{سوال}\شناخت{سوال_سمتیہ_لمبائی_رخ_الف}
-$5\ai+12\aj$ 
+$5\ai+12\aj$\\
+جواب:\quad
+$13(\tfrac{5}{13}\ai+\tfrac{12}{13}\aj)$
 \انتہا{سوال}
 %====================
 \ابتدا{سوال}\شناخت{سوال_سمتیہ_لمبائی_رخ_ب}
@@ -788,7 +1004,9 @@ $2\ai-3\aj$
 \انتہا{سوال}
 %====================
 \ابتدا{سوال}
-سمتیہ \عددی{3\ai-4\aj} کے متوازی دو اکائی سمتیات دریافت کریں۔
+سمتیہ \عددی{3\ai-4\aj} کے متوازی دو اکائی سمتیات دریافت کریں۔\\
+جواب:\quad
+$\tfrac{3}{5}\ai-\tfrac{4}{5}\aj,\quad -\tfrac{3}{5}\ai+\tfrac{4}{5}\aj$
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
@@ -806,7 +1024,9 @@ $2\ai-3\aj$
 
 \موٹا{نظریہ اور مثالیں}\\
 \ابتدا{سوال}
-آپ ایک ریڑھی کو قوت \عددی{\kvec{F}} سے کھینچ رہے ہیں جس کی مقدار \عددی{\abs{\kvec{F}}=\SI{10}{\newton}} ہے۔زمین کے ساتھ قوت کا زاویہ \عددی{30^{\circ}} ہے۔ اس قوت کے \عددی{x} اور \عددی{y} اجزاء تلاش کریں۔
+آپ ایک ریڑھی کو قوت \عددی{\kvec{F}} سے کھینچ رہے ہیں جس کی مقدار \عددی{\abs{\kvec{F}}=\SI{10}{\newton}} ہے۔زمین کے ساتھ قوت کا زاویہ \عددی{30^{\circ}} ہے۔ اس قوت کے \عددی{x} اور \عددی{y} اجزاء تلاش کریں۔\\
+جواب:\quad
+$5\sqrt{3}\ai,\quad 5\aj$
 \انتہا{سوال}
 %===================
 \ابتدا{سوال}
@@ -814,7 +1034,9 @@ $2\ai-3\aj$
 \انتہا{سوال}
 %===============
 \ابتدا{سوال}\شناخت{سوال_سمتیہ_سمتیات_دیگر}
-سمتیہ \عددی{\kvec{A}=2\ai+\aj}، \عددی{\kvec{B}=\ai+\aj} اور \عددی{\kvec{C}=\ai-\aj} دیے گئے ہیں۔ ایسے غیر سمتیات \عددی{\alpha} اور \عددی{\beta} کہ \عددی{\kvec{A}=\alpha\kvec{B}+\beta\kvec{C}} ہو۔
+سمتیہ \عددی{\kvec{A}=2\ai+\aj}، \عددی{\kvec{B}=\ai+\aj} اور \عددی{\kvec{C}=\ai-\aj} دیے گئے ہیں۔ ایسے غیر سمتیات \عددی{\alpha} اور \عددی{\beta} کہ \عددی{\kvec{A}=\alpha\kvec{B}+\beta\kvec{C}} ہو۔\\
+جواب:\quad
+$\alpha=\tfrac{3}{2},\quad \beta=\tfrac{1}{2}$
 \انتہا{سوال}
 %=================
 \ابتدا{سوال}
@@ -822,7 +1044,10 @@ $2\ai-3\aj$
 \انتہا{سوال}
 %====================
 \ابتدا{سوال}
- ایک پرندہ اپنے گھونسلے سے اڑ کر، مشرق سے شمال کی طرف \عددی{60^{\circ}} پر  \عددی{5} کلومیٹر دور ایک درخت پر آرام کے لئے بیٹھتا ہے۔ اس کے بعد یہ جنوب مشرق رخ \عددی{10} کلومیٹر دور ایک کھنبے پر اڑ کر  بیٹھتا ہے۔ مستوی \عددی{xy} کے مبدا پر گھونسلا، مثبت \عددی{x} محور پر مشرق اور مثبت \عددی{y} محور پر شمال  رکھ (ا) درخت کا مقام تلاش کریں۔ (ب) کھنبے کا مقام تلاش کریں۔
+ ایک پرندہ اپنے گھونسلے سے اڑ کر، مشرق سے شمال کی طرف \عددی{60^{\circ}} پر  \عددی{5} کلومیٹر دور ایک درخت پر آرام کے لئے بیٹھتا ہے۔ اس کے بعد یہ جنوب مشرق رخ \عددی{10} کلومیٹر دور ایک کھنبے پر اڑ کر  بیٹھتا ہے۔ مستوی \عددی{xy} کے مبدا پر گھونسلا، مثبت \عددی{x} محور پر مشرق اور مثبت \عددی{y} محور پر شمال  رکھ (ا) درخت کا مقام تلاش کریں۔ (ب) کھنبے کا مقام تلاش کریں۔\\
+جواب:\quad
+(ا) \عددی{(5\cos 60^{\circ},5\sin 60^{\circ})=(\tfrac{5}{2},\tfrac{5\sqrt{3}}{2}}،\\
+ (ب) \عددی{(5\cos 60^{}+10\cos 315^{},5\sin 60^{\circ}+10\sin 315^{\circ})=(\tfrac{5+\sqrt{2}}{2},\tfrac{5\sqrt{3}-10\sqrt{2}}{2})}
 \انتہا{سوال}
 %===================
 \ابتدا{سوال}
@@ -830,6 +1055,28 @@ $2\ai-3\aj$
 \انتہا{سوال}
 %===================
 \ابتدا{سوال}
-مستوی میں \عددی{\kvec{v}} ایک سمتیہ ہے جو \عددی{y} محور کے متوازی نہیں ہے۔ سمتیہ \عددی{\kvec{v}} کی ڈھلوان اور سمتیہ \عددی{-\kvec{v}} کی ڈھلوان کا آپس میں کیا تعلق ہو گا؟ اپنے جواب کی وجہ پیش کریں۔
+مستوی میں \عددی{\kvec{v}} ایک سمتیہ ہے جو \عددی{y} محور کے متوازی نہیں ہے۔ سمتیہ \عددی{\kvec{v}} کی ڈھلوان اور سمتیہ \عددی{-\kvec{v}} کی ڈھلوان کا آپس میں کیا تعلق ہو گا؟ اپنے جواب کی وجہ پیش کریں۔\\
+جواب:\quad
+\عددی{-\kvec{v}=-a\ai-b\aj} کی ڈھلوان \عددی{\tfrac{(-b)}{(-a)}} ہے۔ یہی \عددی{\kvec{v}} کی بھی ڈھلوان ہے۔
 \انتہا{سوال}
 %==============
+
+\حصہ{کارتیسی (مستطیل) محدد اور فضا میں سمتیات}
+ہم اب سہ بعدی کارتیسی محدد بیان کرتے ہیں اور فضا میں اپنا راستہ تلاش کرنا سیکھتے ہیں۔ ہم فاصلہ کی تعریف جانیں گے،  فضا میں سمتیات کے ساتھ کام کرنا (مستوی کے قواعد اب بھی لاگو ہوں گے، پس اب ایک محدد بڑھ جائے گا)، اور نقطوں کے سلسلہ کا مساوات اور عدم مساوات کے ساتھ تعلق سیکھیں گے۔
+
+\جزوحصہء{کارتیسی محدد} 
+فضا میں نقطہ کی تلاش کے لئے تین آپس میں عمودی محددی محور استعمال کیے جاتے ہیں۔  شکل میں محور \عددی{Ox}، \عددی{Oy} اور \عددی{Oz} دایاں ہاتھ محددی نظام دیتے ہیں۔ دائیں ہاتھ کے نظام میں، انگوٹھے کو باقی انگلیوں کے ساتھ زاویہ قائمہ پر رکھتے ہوئے، اگر آپ اپنے دائیں ہاتھ کی چار انگلیوں کو مثبت \عددی{x} محور پر رکھ کر انہیں مثبت \عددی{y} محور کی جانب موڑیں تب آپ کا انگوٹھا مثبت \عددی{z} محور پر ہو گا۔
+
+فضا میں نقطہ \عددی{N} سے گزرتی، محوروں کے قائمہ سطحیں ان محور کو اعداد  \عددی{(x,y,z)} پر قطع کریں گی۔ یہی اعداد نقطہ \عددی{N} کے کارتیسی محدد ہوں گے۔  
+
+محور \عددی{x} پر نقطوں کے \عددی{y} اور \عددی{z} محدد صفر ہوں گے لہٰذا ان کے محدد کی صورت \عددی{(x,0,0)} ہو گی۔ اسی طرح محور \عددی{y} پر نقطوں کے \عددی{x} اور \عددی{z} محدد صفر ہوں گے لہٰذا ان نقطوں کے محدد کی صورت \عددی{(0,y,0)} ہو گی۔ محور \عددی{z} پر نقطوں کے \عددی{x} اور \عددی{y} محدد صفر ہوں گے لہٰذا ان کے محددی کی صورت \عددی{(0,0,z)} ہو گی۔
+
+محور \عددی{x} کے عمودی سطح پر تمام نقطوں کا \عددی{x} محدد وہی ہو گا جس \عددی{x} محدد  پر یہ سطح \عددی{x} محور کو قطع کرتا ہے۔ اس سطح پر نقطوں کے \عددی{y} اور \عددی{z} محدد کچھ بھی ہو سکتے ہیں۔ اسی طرح محور \عددی{y} کے عمودی سطح پر تمام نقطوں کا مشترک \عددی{y} محدد ہو گا اور  محور \عددی{z} کے عمودی سطح پر تمام نقطوں کا مشترک \عددی{z} محدد ہو گا۔ ان سطحوں کی مساوات لکھتے ہوئے ہم اس مشترکہ محدد کی قیمت لکھتے ہیں۔ یوں مستوی \عددی{x=2} محور \عددی{x} کو عمودی ہے اور یہ مستوی محور \عددی{x} کو نقطہ \عددی{x=2} پر قطع کرتا ہے۔ مستوی \عددی{y=3} محور \عددی{y} کو عمودی ہے اور اس کو نقطہ \عددی{y=3} پر قطع کرتا ہے۔مستوی \عددی{z=5} محور \عددی{z} کو عمودی ہے اور اس محور کو نقطہ \عددی{z=5} پر قطع کرتا ہے۔ شکل میں مستوی \عددی{x=2}، \عددی{y=3} اور \عددی{z=5} دکھائے گئے ہیں۔ ان کا مشترک نقطہ بھی دکھایا گیا ہے جہاں یہ تینوں ایک دوسرے کو قطع کرتے ہیں۔
+
+مستوی \عددی{x=2} اور \عددی{y=3} ایک دوسرے کو ایک لکیر پر قطع کرتے ہیں جو محور \عددی{z} کے متوازی ہے۔ اس لکیر کو جوڑی مساوات \عددی{x=2}، \عددی{y=3} ظاہر کرتے ہیں۔ نقطہ \عددی{(x,y,z)} صرف اور صرف اس صورت اس لکیر پر پایا جائے گا جب \عددی{x=2} اور \عددی{y=3} ہوں۔ اسی طرح مستوی \عددی{y=3} اور \عددی{z=5} ایک لکیر پر ایک دوسرے کو قطع کرتے ہیں اور اس لکیر کو جوڑی مساوات \عددی{y=3}، \عددی{z=5} ظاہر کرتے ہیں۔ یہ لکیر محور \عددی{x} کے متوازی ہو گی۔ مستوی \عددی{x=2} اور \عددی{z=5} ایک لکیر پر ایک دوسرے کو قطع کرتے ہیں اور اس لکیر کو جوڑی مساوات \عددی{x=2}، \عددی{z=5} ظاہر کرتے ہیں۔ یہ لکیر محور \عددی{y} کے متوازی ہو گی۔
+
+محددی محوروں کے بیچ \اصطلاح{مستوی \عددی{xy}}\فرہنگ{مستوی!ایکس وائے}\حاشیہب{xy-plane}\فرہنگ{plane!xy} جس کی معیاری مساوات \عددی{z=0}؛ \اصطلاح{مستوی \عددی{yz}} جس کی معیاری مساوات \عددی{x=0}؛ اور \اصطلاح{مستوی \عددی{xz}} جس کی معیاری مساوات \عددی{y=0} ہے پائی جاتی ہیں۔ یہ تینوں مستوی مبدا \عددی{(0,0,0)} پر آپس میں ملتے ہیں۔
+
+تین \اصطلاح{محددی مستوی}\فرہنگ{مستوی!محددی}\حاشیہب{coordinate planes}\فرہنگ{planes!coordinate} \عددی{x=0}، \عددی{y=0} اور \عددی{z=0} فضا کو آٹھ حصوں میں تقسیم کرتے ہیں جنہیں \اصطلاح{ثُمن}\فرہنگ{ثمن}\حاشیہب{octant}\فرہنگ{octant} کہتے ہیں۔ وہ ثمن جس میں تمام محدد مثبت ہیں \اصطلاح{پہلا ثمن}\فرہنگ{ثمن!پہلا}\حاشیہب{first octant}\فرہنگ{octant!first} کہلاتا ہے۔ باقی سات ثمن کو نام دینے کا کوئی روایتی طریقہ نہیں پایا جاتا ہے۔
+
+چونکہ فضا کے کارتیسی محدد ایک دوسرے کو زاویہ قائمہ پر ملتے ہیں لہٰذا ان محدد  کو \اصطلاح{مستطیل محدد}\فرہنگ{محدد!مستطیل}\حاشیہب{rectangular coordinates}\فرہنگ{coordinates!rectangular} بھی کہتے ہیں۔  
