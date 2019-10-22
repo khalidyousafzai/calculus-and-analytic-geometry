@@ -2234,6 +2234,216 @@ $3x^2+3y^2+3z^2+2y-2z=9$
 \end{align*}
 \انتہا{مثال}
 %======================
-
+\begin{figure}
+\centering
+\begin{subfigure}{0.30\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[thin](-0.25,0)--(3,0);
+\draw[-latex](0,0)node[below]{$N$}--++(45:2)coordinate(k)node[pos=0.5,above left]{$\kvec{B}$}node[right]{$Q$};
+\draw[dashed](k)--($(0,0)!(k)!(2,0)$)coordinate(ka)node[below]{$R$};
+\RightAngle{(k)}{(ka)}{(2,0)}
+\draw[ultra thick,gray,-latex](0,0)--(ka);
+\draw[-latex](0,0)--(2.5,0)node[below]{$S$}node[pos=0.8,above]{$\kvec{A}$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.30\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[thin](-0.25,0)--(3,0);
+\draw[-latex](0,0)node[below]{$N$}--++(30:2.5)coordinate(k)node[pos=0.5,above left]{$\kvec{B}$}node[right]{$Q$};
+\draw[dashed](k)--($(0,0)!(k)!(2,0)$)coordinate(ka)node[below]{$R$};
+\RightAngle{(k)}{(ka)}{(3,0)}
+\draw[ultra thick,gray,-latex](0,0)--(ka);
+\draw[-latex](0,0)--(1.5,0)node[below]{$S$}node[pos=0.65,above]{$\kvec{A}$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\begin{subfigure}{0.30\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[thin](-1.75,0)--(1,0);
+\draw[-latex](0,0)node[below]{$N$}--++(135:1.75)coordinate(k)node[pos=0.5,above right]{$\kvec{B}$}node[left]{$Q$};
+\draw[dashed](k)--($(0,0)!(k)!(-1.5,0)$)coordinate(ka)node[below]{$R$};
+\RightAngle{(k)}{(ka)}{(-1.5,0)}
+\draw[ultra thick,gray,-latex](0,0)--(ka);
+\draw[-latex](0,0)--(0.75,0)node[below]{$S$}node[pos=0.65,above]{$\kvec{A}$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{\عددی{\kvec{B}} کا \عددی{\kvec{A}} پر سمتی تظلیل}
+\label{شکل_سمتیہ_تظلیل_تعریف}
+\end{figure}
 \جزوحصہء{تظلیل سمتیہ}
-سمتیہ \عددی{\kvec{B}=\krightharpoonup{NQ}} کا غیر صفر سمتیہ \عددی{\kvec{A}=\krightharpoonup{NS}} پر تظلیل سمتیہ \عددی{\krightharpoonup{NR}} تعین کرنے کی خاطر \عددی{Q} سے خط \عددی{NS} پر  عمود گرایا جاتا ہے۔  
+سمتیہ \عددی{\kvec{B}=\krightharpoonup{NQ}} کا غیر صفر سمتیہ \عددی{\kvec{A}=\krightharpoonup{NS}} پر تظلیل سمتیہ \عددی{\krightharpoonup{NR}} تعین کرنے کی خاطر \عددی{Q} سے (مبسوط) خط \عددی{NS}  پر  عمود گرایا جاتا ہے (شکل \حوالہ{شکل_سمتیہ_تظلیل_تعریف})۔   اس سمتیہ کو درج ذیل سے ظاہر کیا جاتا ہے۔
+\begin{align*}
+&\proj_{\kvec{A}}\,\,\kvec{B}&&\text{\RL{\عددی{\kvec{B}} کا \عددی{\kvec{A}} پر سمتی تظلیل}}
+\end{align*}
+
+اگر \عددی{\kvec{B}} قوت کو ظاہر کرتا ہو، تب 
+$\proj_{\kvec{A}}\,\,\kvec{B}$
+سمتیہ \عددی{\kvec{A}} کے رخ اثر انداز ہونے والی قوت ہو گی۔
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[thin](-0.25,0)--(4,0);
+\draw[-latex](0,0)--++(30:2.5)coordinate(k)node[pos=0.5,above left]{$\kvec{B}$};
+\draw[dashed](k)--($(0,0)!(k)!(4,0)$)coordinate(ka);
+\RightAngle{(k)}{(ka)}{(4,0)}
+\draw[ultra thick,gray,-latex](0,0)--(ka);
+\draw [decorate,decoration={brace,amplitude=5pt},yshift=0pt,xshift=0pt]($(ka)+(0,-0.15)$) -- ($(0,0)+(0,-0.15)$)node [black,midway,yshift=-11pt]{لمبائی$=\abs{\kvec{B}}\cos\theta$};
+\draw[-latex](0,0)--(3.5,0)node[pos=0.8,above]{$\kvec{A}$};
+\draw[-stealth] ([shift={(0:0.7)}]0,0) arc (0:30:0.7)node[pos=0.6,right]{$\theta$};
+\end{tikzpicture}
+\caption{زاویہ حادہ}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[thin](-3.5,0)--(2,0);
+\draw[-latex](0,0)--++(150:2.5)coordinate(k)node[pos=0.5,above right]{$\kvec{B}$};
+\draw[dashed](k)--($(0,0)!(k)!(-3.5,0)$)coordinate(ka);
+\RightAngle{(k)}{(ka)}{(-3.5,0)}
+\draw[ultra thick,gray,-latex](0,0)--(ka);
+\draw[-latex](0,0)--(1.5,0)node[pos=0.65,above]{$\kvec{A}$};
+\draw [decorate,decoration={brace,amplitude=5pt},yshift=0pt,xshift=0pt] ($(0,0)+(0,-0.15)$)--($(ka)+(0,-0.15)$)node [black,midway,yshift=-11pt]{لمبائی$=-\abs{\kvec{B}}\cos\theta$};
+\draw[-stealth] ([shift={(0:0.5)}]0,0) arc (0:150:0.5)node[pos=0.5,above right]{$\theta$};
+\end{tikzpicture}
+\caption{زاویہ منفرجہ}
+\end{subfigure}
+\caption{\عددی{\kvec{A}} پر \عددی{\kvec{B}} کے تظلیل کی لمبائی}
+\label{شکل_سمتیہ_تظلیل_لمبائی_اور_رخ}
+\end{figure}
+
+اگر \عددی{\kvec{A}} اور \عددی{\kvec{B}} کے بیچ زاویہ حادہ ہو تب \عددی{\kvec{A}} پر تظلیل \عددی{\kvec{B}} کی لمبائی \عددی{\abs{\kvec{B}}\cos\theta} اور رخ \عددی{\tfrac{\kvec{A}}{\abs{\kvec{A}}}} ہو گا (شکل \حوالہ{شکل_سمتیہ_تظلیل_لمبائی_اور_رخ})۔ اگر \عددی{\theta} زاویہ منفرجہ ہو  تب \عددی{\cos\theta<0} ہو گا اور \عددی{\kvec{A}} پر تظلیل \عددی{\kvec{B}} کی لمبائی \عددی{-\abs{\kvec{B}}\cos\theta} اور رخ \عددی{-\tfrac{\kvec{A}}{\abs{\kvec{A}}}} ہو گا۔ ان دونوں صورتوں میں درج ذیل ہو گا۔
+\begin{align*}
+\proj_{\kvec{A}}\,\,\kvec{B}&=(\abs{\kvec{B}}\cos\theta)\frac{\kvec{A}}{\abs{\kvec{A}}}\\
+&=\big(\frac{\kvec{A}\cdot\kvec{B}}{\abs{\kvec{A}}}\big)\frac{\kvec{A}}{\abs{\kvec{A}}}&&\mbox{\small $ \abs{\kvec{B}}\cos\theta=\frac{\abs{\kvec{A}}\abs{\kvec{B}}\cos\theta}{\abs{\kvec{A}}}=\frac{\kvec{A}\cdot\kvec{B}}{\abs{\kvec{A}}}$}\\
+&=\big(\kvec{B}\cdot\frac{\kvec{A}}{\abs{\kvec{A}}}\big)\frac{\kvec{A}}{\abs{\kvec{A}}}
+\end{align*}
+
+\begin{align}\label{مساوات_سمتیہ_تظلیل_الف}
+\proj_{\kvec{A}}\,\,\kvec{B}=\big(\kvec{B}\cdot\frac{\kvec{A}}{\abs{\kvec{A}}}\big)\frac{\kvec{A}}{\abs{\kvec{A}}}=\big(\frac{\kvec{B}\cdot\kvec{A}}{\kvec{A}\cdot\kvec{A}}\big)\kvec{A}
+\end{align}
+
+عدد \عددی{\abs{\kvec{B}}\cos\theta} کو \اصطلاح{\عددی{\kvec{B}} کا \عددی{\kvec{A}} کے رخ غیر سمتی جزو} کہتے ہیں۔ درج ذیل کی بنا
+\begin{align}\label{مساوات_سمتیہ_غیر_سمتی_جزو}
+\abs{\kvec{B}}\cos\theta=\kvec{B}\cdot\frac{\kvec{A}}{\abs{\kvec{A}}}
+\end{align}
+ہم غیر سمتی جزو حاصل کرنے کی خاطر \عددی{\kvec{B}} کا ضرب نقطہ \عددی{\kvec{A}} کے رخ کے ساتھ لیں گے۔ مساوات \حوالہ{مساوات_سمتیہ_تظلیل_الف} کہتی ہے کہ \عددی{\kvec{B}} کا \عددی{\kvec{A}} پر تظلیل، \عددی{\kvec{A}} کے رخ \عددی{\kvec{B}} کے غیر سمتی جزو ضرب رخ \عددی{\kvec{A}} کے برابر ہو گا۔ 
+
+جہاں مساوات \حوالہ{مساوات_سمتیہ_تظلیل_الف} کا پہلا حصہ \عددی{\kvec{A}} کے رخ \عددی{\kvec{B}} کے اثر کی بات کرتی ہے، اس کا دوسرا حصہ حساب کے لئے موزوں ہے چونکہ یہ جذر سے چھٹکارا دیتا ہے۔
+
+\ابتدا{مثال}
+سمتیہ \عددی{\kvec{B}=6\ai+3\aj+2\ak} کا \عددی{\kvec{A}=\ai-2\aj-2\ak} پر سمتی تظلیل تلاش کریں اور \عددی{\kvec{A}} کے رخ \عددی{\kvec{B}} کا غیر سمتی جزو تلاش کریں۔
+
+حل:\quad
+ہم مساوات \حوالہ{مساوات_سمتیہ_تظلیل_الف} استعمال کر کے سکتی تظلیل تلاش کرتے ہیں۔
+\begin{align*}
+\proj_{\kvec{A}}\,\kvec{B}&=\frac{\kvec{B}\cdot\kvec{A}}{\kvec{A}\cdot\kvec{A}}\kvec{A}=\frac{6-6-4}{1+4+4}(\ai-2\aj-2\ak)\\
+&=-\frac{4}{9}(\ai-2\aj-2\ak)=-\frac{4}{9}\ai+\frac{8}{9}\aj+\frac{8}{9}\ak
+\end{align*}
+ہم \عددی{\kvec{A}} کے رخ \عددی{\kvec{B}} کا غیر سمتی جزو مساوات \حوالہ{مساوات_سمتیہ_غیر_سمتی_جزو} کی مدد سے حاصل کرتے ہیں۔
+\begin{align*}
+\abs{\kvec{B}}\cos\theta&=\kvec{B}\cdot\frac{\kvec{A}}{\abs{\kvec{A}}}=(6\ai+3\aj+2\ak)\cdot\big(\frac{1}{3}\ai-\frac{2}{3}\aj-\frac{2}{3}\ak\big)\\
+&=2-2-\frac{4}{3}=-\frac{4}{3}
+\end{align*}
+\انتہا{مثال}
+%===========
+
+\جزوحصہء{سمتیہ کو عمودی سمتیات کا مجموعہ لکھنا}
+میکانیات میں ہمیں عموماً ایک سمتیہ \عددی{\kvec{B}} کو سمتیہ \عددی{\kvec{A}} کے متوازی سمتیہ  اور \عددی{\kvec{A}} کے عمودی سمتیہ کا مجموعہ کی صورت میں لکھنا ہوتا ہے۔ ہم ایسا درج ذیل مساوات کی مدد سے کر سکتے ہیں (شکل \حوالہ{شکل_سمتیہ_عمودی_متوازی_مجموعہ})۔
+\begin{gather}
+\begin{aligned}\label{مساوات_سمتیہ_متوازی_عمودی_مجموعہ}
+\kvec{B}&=\proj_{\kvec{A}}\,\kvec{B}+(\kvec{B}-\proj_{\kvec{A}}\,\kvec{B})\\
+&=\underbrace{\big(\frac{\kvec{B}\cdot\kvec{A}}{\kvec{A}\cdot\kvec{A}}\big)\kvec{A}}_{\text{\RL{\عددی{\kvec{A}} کا متوازی}}}+\underbrace{\big(\kvec{B}-\big(\frac{\kvec{B}\cdot\kvec{A}}{\kvec{A}\cdot\kvec{A}}\big)\kvec{A}\big)}_{\text{\RL{\عددی{\kvec{A}} کا عمودی}}}
+\end{aligned}
+\end{gather}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\ang}{40}
+\pgfmathsetmacro{\len}{3}
+\pgfmathsetmacro{\kx}{\len*cos(\ang)}
+\draw[-latex](0,0)--++(\ang:\len)coordinate(k)node[pos=0.6,above left]{$\kvec{B}$};
+\draw[-latex,ultra thick,gray](\kx,0)--(k)node[pos=0.5,right,black]{$\kvec{B}-\proj_{\kvec{A}}\,\kvec{B}$};
+\draw[-latex,ultra thick,gray](0,0)--(\kx,0)node[pos=0.5,below,black]{$\proj_{\kvec{A}}\,\kvec{B}$};
+\draw[-latex](0,0)--(4,0)node[pos=0.8,above]{$\kvec{A}$};
+\RightAngle{(k)}{(\kx,0)}{(4,0)}
+\end{tikzpicture}
+\caption{سمتیہ \عددی{\kvec{B}} کو سمتیہ \عددی{\kvec{A}} کے عمودی اور متوازی سمتیات کا مجموعہ لکھنا۔}
+\label{شکل_سمتیہ_عمودی_متوازی_مجموعہ}
+\end{figure}
+
+\ابتدا{مثال}
+سمتیہ \عددی{\kvec{B}=2\ai+\aj-3\ak} کو سمتیہ \عددی{\kvec{A}=3\ai-\aj} کے متوازی سمتیہ اور \عددی{\kvec{A}} کے عمودی سمتیہ کا مجموعہ لکھیں۔
+
+حل:\quad
+ہم درج ذیل 
+\begin{align*}
+\kvec{A}\cdot\kvec{B}=6-1=5,\quad \kvec{A}\cdot\kvec{A}=9+1=10
+\end{align*}
+کو مساوات \حوالہ{مساوات_سمتیہ_متوازی_عمودی_مجموعہ} میں پر کرتے ہیں۔
+\begin{align*}
+\kvec{B}=\frac{\kvec{B}\cdot\kvec{A}}{\kvec{A}\cdot\kvec{A}}\kvec{A}+\big(\kvec{B}-\frac{\kvec{B}\cdot\kvec{A}}{\kvec{A}\cdot\kvec{A}}\kvec{A}\big)&=\frac{5}{10}(3\ai-\aj)+\big(2\ai+\aj-3\ak-\frac{5}{10}(3\i-\aj)\big)\\
+&=\big(\frac{3}{2}\ai-\frac{1}{2}\aj\big)+\big(\frac{1}{2}\ai+\frac{3}{2}\aj-3\ak\big)
+\end{align*}
+آپ تسلی کر لیں کہ دائیں ہاتھ پہلا جزو \عددی{\tfrac{1}{2}\kvec{A}} کے برابر ہے۔دائیں ہاتھ دوسرا جزو درج ذیل کی بنا \عددی{\kvec{A}} کو عمودی ہے۔
+\begin{align*}
+\big(\frac{1}{2}\ai+\frac{3}{2}\aj-3\ak\big)\cdot (3\ai-\aj)=\frac{3}{2}-\frac{3}{2}=0
+\end{align*}
+\انتہا{مثال}
+%==============
+
+\جزوحصہء{کام}
+ہم نے حصہ \حوالہ{حصہ_تکمل_استعمال_کام} میں مستقل قوت \عددی{F} جو ایک جسم پر عمل کر کے اس کو قوت کے رخ  \عددی{d} فاصلہ منتقل کرتی  ہے کا کام کلیہ \عددی{W=Fd} سے دریافت کیا۔ یہ کلیہ صرف اس صورت درست ہو گا جب قوت کا رخ اور حرکت کا رخ ایک ہوں۔ اگر مستقل قوت \عددی{\kvec{F}} اور جسم کے ہٹاو \عددی{\kvec{D}=\krightharpoonup{NQ}} کے رخ مختلف ہوں تب \عددی{\kvec{D}} کے رخ،  \عددی{\kvec{F}} کا جزو کام کرے گا۔ اگر \عددی{\kvec{F}} اور \عددی{\kvec{D}} کے بیچ زاویہ \عددی{\theta} ہو تب  کام درج ذیل ہو گا (شکل \حوالہ{شکل_سمتیہ_کام_کی_تعریف})۔
+\begin{align*}
+\text{کام}&=(\text{\RL{\عددی{\kvec{D}} کے رخ \عددی{\kvec{F}} کا غیر سمتی جزو}})(\text{\RL{\عددی{\kvec{D}} کی لمبائی}})\\
+&=(\abs{\kvec{F}}\cos\theta)\abs{\kvec{D}}\\
+&=\kvec{F}\cdot\kvec{D}
+\end{align*} 
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\d}{1.5}
+\pgfmathsetmacro{\f}{2}
+\pgfmathsetmacro{\ang}{30}
+\draw[-latex](0,0)node[circ]{}node[above]{$N$}--(\d,0)node[above]{$Q$}node[pos=0.5,above]{$\kvec{D}$};
+\draw[-latex](\d,0)node[circ]{}--++(\ang:\f)node[pos=0.5,above]{$\kvec{F}$}coordinate(a);
+\draw[dashed](a)--($(0,0)!(a)!(3,0)$)coordinate(b)--(\d,0);
+\draw[stealth-stealth] ($(b)+(0,-0.3)$)--($(\d,0)+(0,-0.3)$)node[pos=0.5,below]{$\abs{\kvec{F}}\cos\theta$};
+\draw(b)++(0,-0.2)--++(0,-0.2);
+\draw(\d,-0.2)--++(0,-0.2);
+\draw([shift={(0:0.5)}]\d,0) arc (0:\ang:0.5)node[pos=0.7,right]{$\theta$};
+\end{tikzpicture}
+\caption{ہٹاو \عددی{\kvec{D}} کے دوران مستقل قوت \عددی{\kvec{F}} کا کام \عددی{(\abs{\kvec{F}}\cos\theta)\abs{\kvec{D}}} ہو گا۔}
+\label{شکل_سمتیہ_کام_کی_تعریف}
+\end{figure}
+
+\ابتدا{تعریف}
+ہٹاو \عددی{\kvec{D}=\krightharpoonup{NQ}} کے دوران مستقل قوت \عددی{\kvec{F}} کا کام
+\begin{align}\label{مساوات_سمتیہ_کام_کی_تعریف}
+W=\kvec{F}\cdot\kvec{D}=\abs{\kvec{F}}\abs{\kvec{D}}\cos\theta
+\end{align}
+ہو گا جہاں ہٹاو اور قوت کے بیچ زاویہ \عددی{\theta} ہے۔
+\انتہا{تعریف}
+%====================
+
+کام کی اکائی نیوٹن ضرب میٹر ہے جس کو عموماً \اصطلاح{جاول}\فرہنگ{جاول}\حاشیہب{joule}\فرہنگ{joule} کہتے ہیں۔
+
+\ابتدا{مثال}
+اگر \عددی{\abs{\kvec{F}}=\SI{40}{\newton}} اور \عددی{\abs{\kvec{D}}=\SI{3}{\meter}} ہوں اور \عددی{\theta=60^{\circ}} ہو تب کام درج ذیل ہو گا۔
+\begin{align*}
+\text{کام}&=\abs{\kvec{F}}\abs{\kvec{D}}\cos\theta\\
+&=(40)(3)\cos 60^{\circ}\\
+&=(120)(\tfrac{1}{2})\\
+&=\SI{60}{\joule}
+\end{align*}
+\انتہا{مثال}
+%===================
