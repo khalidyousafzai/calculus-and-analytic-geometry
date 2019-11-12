@@ -61,6 +61,13 @@
 \usepackage{polynom}
 \usepgfplotslibrary{fillbetween}
 
+%============================
+\usepackage{newfile}                                                                  %writing answers to the end of the book
+\newwrite\tempfile
+\immediate\openout\tempfile=answer.tex
+\newcommand*\wf[1]{\immediate\write\tempfile{#1}}
+%=================================
+
 \input{./tex/myHarpoons.tex}                       %testing harpoons
 
 
@@ -78,9 +85,9 @@
 \graphicspath{{./fig/figFrontPage/}{./fig/figCalculusLimits/}{./fig/figCalculusDerivatives/}{./fig/figCalculusIntegration/}{./fig/figCalculusApplicationsOfIntegrals}{./fig/figCalculusTechniquesOfIntegration/}}%paths to figures
 
 
-\includeonly{./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusIntegration,./tex/calculusApplicationsOfIntegrals,./tex/calculusTranscendentalFunctions,./tex/calculusTechniquesOfIntegration,./tex/calculusInfiniteSeries,./tex/calculusConicSectionsParametrizedCurvesPolarCoordinates,./tex/calculusVectorsAndAnalyticGeometryInSpace,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI}
+%\includeonly{./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusIntegration,./tex/calculusApplicationsOfIntegrals,./tex/calculusTranscendentalFunctions,./tex/calculusTechniquesOfIntegration,./tex/calculusInfiniteSeries,./tex/calculusConicSectionsParametrizedCurvesPolarCoordinates,./tex/calculusVectorsAndAnalyticGeometryInSpace,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI}
 %
-%\includeonly{./tex/cktSymbols,./tex/calculusPreface,./tex/prefaceFirstBook,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI}%
+\includeonly{./tex/cktSymbols,./tex/calculusPreface,./tex/prefaceFirstBook,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI}%
 %
 %\includeonly{./tex/cktSymbols,./calculusPreface,./tex/prefaceFirstBook,./tex/calculusTechniquesOfIntegration,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB}%
 
@@ -180,6 +187,13 @@
 %\end{otherlanguage}
 %\end{thebibliography}
 %============================================================
+
+\chapter*{جوابات}
+\addcontentsline{toc}{chapter}{جوابات}
+\immediate\closeout\tempfile
+\input{answer}
+
+%=======================
 \appendix
 \include{./tex/calculusAppendixA}
 \include{./tex/calculusAppendixB}
@@ -202,7 +216,6 @@
 %\include{./tex/emtLinearAlgebra}
 %\include{./tex/emtCoordinatesRelations}
 %================
-
 
 %=================
 

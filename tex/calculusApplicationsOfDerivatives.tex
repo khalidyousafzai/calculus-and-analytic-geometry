@@ -6775,9 +6775,11 @@ $\tfrac{\pi}{6}$
 \pgfmathsetmacro{\angA}{30}
 \pgfmathsetmacro{\angB}{20}
 \draw(0,0)--++(90+\angA:\a)--++(\angB:\b)coordinate(kL);
-\draw[name path=ka](0,0)--(\a,0)--++(\angB:\b)--++(90-\angA:\a)--++(\angB:-\b)--++(90-\angA:-\a);
+\draw(0,0)--(\a,0);
+\draw[name path=ka](\a,0)--++(\angB:\b)--++(90-\angA:\a)--++(\angB:-\b)--++(90-\angA:-\a);
+\path[name path=kaa](\a,0)--++(90-\angA:\a);
 \path[name path=kb](0,0)--++(\angB:\b);
-\draw[name intersections={of=ka and kb}](0,0)--(intersection-2);
+\draw[name intersections={of=kaa and kb}](0,0)--(intersection-1);
 \path[name path=kc] (kL)--++(90+\angA:-\a);
 \draw[name intersections={of=ka and kc}](kL)--(intersection-1);
 \end{tikzpicture}

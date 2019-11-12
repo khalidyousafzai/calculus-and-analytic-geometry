@@ -269,3 +269,16 @@
 {\par\hfill\qedsymbol  \vspace{\baselineskip}\par }
 %{\par\noindent\qedsymbol  \vspace{\baselineskip} }
 
+%---------
+
+%questions environment جواب
+
+%\newcounter{answercounter}[section]                                           %for reseting at every section. NOT NEEDED
+%\renewcommand{\theanswercounter}{\arabic{answercounter}}
+%\newcounter{answercounter}[chapter]						%when book is finished, use this instead of the above
+%\renewcommand{\theanswercounter}{\thechapter.\arabic{answercounter}}
+
+\newenvironment*{جواب}				
+{\noindent\ignorespaces\wf{\thequestioncounter)\noexpand\quad}}%
+{\noindent\wf{\noexpand\newline} }
+%--------------------
