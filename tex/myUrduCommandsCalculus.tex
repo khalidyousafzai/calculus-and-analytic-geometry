@@ -133,7 +133,7 @@
 
 \newenvironment*{سوال}				
 {\noindent\ignorespaces  سوال \refstepcounter{questioncounter} \thequestioncounter :\quad}%
-{\par\noindent }
+{\par\noindent\ignorespaces }
 %--------------------
 
 %defining a LAW   قانون
@@ -278,8 +278,29 @@
 %\newcounter{answercounter}[chapter]						%when book is finished, use this instead of the above
 %\renewcommand{\theanswercounter}{\thechapter.\arabic{answercounter}}
 
+%\newenvironment*{جواب}				
+%{\noindent\ignorespaces\wf{\thequestioncounter)\noexpand\quad}}%
+%{\par\noindent\ignorespacesafterend}
+%==================
+
+
+%\newenvironment*{جواب}				
+%{\noindent\ignorespaces\wf{\unexpanded{\begin{description}\item}}\wf{[\thequestioncounter)]\quad}}%
+%{\wf{\unexpanded{\end{description}}}\par\noindent\ignorespacesafterend}
+
+\newenvironment*{سوالات}				
+{\noindent\ignorespaces\wf{
+\موٹا{حصہ} 
+\thesection
+\quad
+\موٹا{صفحہ}
+\thepage}
+\wf{\unexpanded{\begin{description}}}
+}%
+{\wf{\unexpanded{\end{description}}}\par\noindent\ignorespacesafterend}
+%==================
 \newenvironment*{جواب}				
-{\noindent\ignorespaces\wf{\thequestioncounter)\noexpand\quad}}%
-{\par\noindent\ignorespacesafterend}
-%--------------------
+{\noindent\ignorespaces\wf{\unexpanded{\item[}}\wf{\thequestioncounter)}\wf{\unexpanded{]}}}%
+{\noindent\ignorespacesafterend}
+%==================
 

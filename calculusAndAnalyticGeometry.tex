@@ -66,6 +66,7 @@
 \newwrite\tempfile
 \immediate\openout\tempfile=answer.tex
 \newcommand*\wf[1]{\immediate\write\tempfile{#1}}
+
 %=================================
 
 \input{./tex/myHarpoons.tex}                       %testing harpoons
@@ -87,7 +88,7 @@
 
 %\includeonly{./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusIntegration,./tex/calculusApplicationsOfIntegrals,./tex/calculusTranscendentalFunctions,./tex/calculusTechniquesOfIntegration,./tex/calculusInfiniteSeries,./tex/calculusConicSectionsParametrizedCurvesPolarCoordinates,./tex/calculusVectorsAndAnalyticGeometryInSpace,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI}
 %
-\includeonly{./tex/cktSymbols,./tex/calculusPreface,./tex/prefaceFirstBook,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI}%
+\includeonly{./tex/cktSymbols,./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusVectorsAndAnalyticGeometryInSpace,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI}%
 %
 %\includeonly{./tex/cktSymbols,./calculusPreface,./tex/prefaceFirstBook,./tex/calculusTechniquesOfIntegration,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB}%
 
@@ -192,7 +193,9 @@
 \addcontentsline{toc}{chapter}{جوابات}
 \immediate\closeout\tempfile
 \begin{multicols}{2}
+{\small
 \input{answer}
+}
 \end{multicols}
 
 %=======================
