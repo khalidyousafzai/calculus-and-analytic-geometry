@@ -18,7 +18,6 @@
 %\newcommand*{\موٹا}[1]{\textbf{#1}}
 %\newcommand*{\ترچھا}[1]{{\textit{#1}}}
 \newcommand*{\موٹا}[1]{{\urduTechTermsfont{#1}}}
-%\newcommand*{\ترچھا}[1]{{\urduTechTermsfont{#1}}}
 \newcommand*{\ترچھا}[1]{{\small{#1}}}
 
 %\newcommand*{\اصطلاح}[1]{{\color{red}{#1}}}   %colours spills to next word when there is index or footnote entry with the word
@@ -283,11 +282,6 @@
 %{\par\noindent\ignorespacesafterend}
 %==================
 
-
-%\newenvironment*{جواب}				
-%{\noindent\ignorespaces\wf{\unexpanded{\begin{description}\item}}\wf{[\thequestioncounter)]\quad}}%
-%{\wf{\unexpanded{\end{description}}}\par\noindent\ignorespacesafterend}
-
 \newenvironment*{سوالات}				
 {\noindent\ignorespaces\wf{
 \موٹا{حصہ} 
@@ -295,7 +289,7 @@
 \quad
 \موٹا{صفحہ}
 \thepage}
-\wf{\unexpanded{\begin{description}}}
+\wf{\unexpanded{\begin{description}\setlength{\parskip}{0pt} \setlength{\itemsep}{0pt plus 1pt}}}
 }%
 {\wf{\unexpanded{\end{description}}}\par\noindent\ignorespacesafterend}
 %==================
