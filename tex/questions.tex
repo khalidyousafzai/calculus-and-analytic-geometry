@@ -1,81 +1,146 @@
 \begin{figure}
 \centering
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.6\textwidth}
 \centering
-\pgfmathsetmacro{\dm}{1/sqrt(5)}
-\pgfmathsetmacro{\a}{1}
+\pgfmathsetmacro{\a}{0.5}
 \pgfmathsetmacro{\b}{1}
-\pgfmathsetmacro{\c}{1.5}
-\pgfmathsetmacro{\aa}{sqrt(1-1/4)*\b}
-\begin{tikzpicture}[font=\small,x={(-2*\dm cm,-\dm cm)},y={(2*\dm cm,-\dm cm)},z={(0,1cm)},declare function={f(\x)=\b*sqrt(1-1/(\a^2)*\x*\x);fa(\x)=\b*sqrt(1-1/(\a^2)*\x*\x-1/4);g(\x)=\c*sqrt(1-1/(\b^2)*\x*\x);h(\x)=\c*sqrt(1-1/(\a^2)*\x*\x);}]
-\draw[-latex](0,0,0)--(\a+0.6,0,0)node[left]{$x$};
-\draw[-latex](0,0,0)--(0,\b+0.6,0)node[right]{$y$};
-\draw[-latex](0,0,0)--(0,0,\c+0.6)node[above]{$z$};
-\draw[domain=-\a:\a]plot ({\x},{f(\x)},{0}) plot ({\x},{-f(\x)},{0});
-\draw[domain=-\aa:\aa]plot ({\x},{fa(\x)},{\c/2}) plot ({\x},{-fa(\x)},{\c/2});
-\draw[domain=-\b:\b]plot (0,\x,{g(\x)}) plot (0,\x,{-g(\x)});
-\draw[domain=-\a:\a]plot (\x,0,{h(\x)}) plot (\x,0,{-h(\x)});
-\draw(-0.4,{f(-0.4)},0)--++(0,0.5,0.5)node[right,align=center]{\RL{\عددی{xy} مستوی میں ترخیم}\\ $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$};
-\draw(0,0.8,{-g(0.8)})--++(0,0.5,-0.25)node[right,align=center]{\RL{\عددی{yz} مستوی میں ترخیم}\\ $\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$};
-\draw({-0.7},{fa(-0.7)},{\c/2})--++(0,0.5,0.5)node[right,yshift=2ex,align=center]{\RL{مستوی \عددی{z=z_0} میں}\\   \RL{ترخیمی عمودی تراش}};
-\draw(0,0,{0.5*\c})node[circ]{}node[left]{$z_0$};
-\draw(\a,0,0)node[left,xshift=-0.5ex]{$a$};
-\draw(0,\b,0)node[below,xshift=1ex]{$b$};
-\draw(0,0,\c)node[above left]{$c$};
+\pgfmathsetmacro{\c}{sqrt(\a^2+\b^2)}
+\pgfmathsetmacro{\ka}{sqrt(2)*\a}
+\pgfmathsetmacro{\kb}{sqrt(2)*\b}
+\pgfmathsetmacro{\na}{0.35}
+\pgfmathsetmacro{\nb}{0.95*\ka}
+\pgfmathsetmacro{\nc}{1/2*(\b+\kb)}
+\pgfmathsetmacro{\nd}{1/2*(\a+\ka)}
+\begin{tikzpicture}[x= {(-0.7071 cm,-0.25cm)},y={(1cm,0cm)},z ={(0cm,1cm)},
+font=\small,declare function={f(\x)=\b*sqrt(1-1/\a^2*(\x)^2);fa(\x)=\b*sqrt(2-1/\a^2*(\x)^2);g(\x)=\c*sqrt(1/\b^2*(\x)^2-1);h(\x)=\c*sqrt(1/\a^2*(\x)^2-1);}]
+\begin{scope}[canvas is xy plane at z=\c]
+\draw[smooth,domain=-\ka:\ka] plot ({\x},{fa(\x)});
+\draw[smooth,domain=-\ka:\ka] plot ({\x},{-fa(\x)});
+\draw(-\nb,{fa(\nb)})--++(-0.75,0.25)node[above,align=center]{\RL{مستوی \عددی{z=c} میں ترخیم}\\ $\frac{x^2}{a^2}+\frac{y^2}{b^2}=2$};
+\end{scope}
+\begin{scope}[canvas is xy plane at z=0]
+\draw[-latex] (0,0)--(2,0)node[left]{$x$};
+\draw[-latex] (0,0)--(0,2)node[right]{$y$};
+\draw[smooth,domain=-\a:\a] plot ({\x},{f(\x)});
+\draw[smooth,domain=-\a:\a] plot ({\x},{-f(\x)});
+\draw(\na,{f(\na)})--++(1.5,3)node[below,xshift=2ex,align=center]{\RL{مستوی \عددی{xy} میں ترخیم}\\ $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$};
+\draw(\a,0)--++(0.75,0.75)node[shift={(0.5ex,-0.5ex)}]{$a$};
+\end{scope}
+\begin{scope}[canvas is xy plane at z=-\c]
+\draw[smooth,domain=-\ka:\ka] plot ({\x},{fa(\x)});
+\draw[smooth,domain=-\ka:\ka] plot ({\x},{-fa(\x)});
+\end{scope}
+\begin{scope}[canvas is yz plane at x=0]
+\draw[-latex] (0,0)--(0,2)node[left]{$z$};
+\draw[domain=\b:\kb] plot ({\x},{g(\x)});
+\draw[domain=\b:\kb] plot ({\x},{-g(\x)});
+\draw[domain=\b:\kb] plot ({-\x},{g(\x)});
+\draw[domain=\b:\kb] plot ({-\x},{-g(\x)});
+\draw(\b,0)node[above ,xshift={1ex}]{$b$};
+\draw(\kb,0.1)--++(0,-0.2)node[pos=0.5,pin=45:{$\sqrt{2}b$}]{};
+\draw(-\nc,{g(\nc)})--++(-0.5,-0.5)node[left,align=center]{\RL{مستوی \عددی{yz} میں قطع زائد}\\  $\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$};
+\draw(0.1,\c)--++(-0.2,0)node[left]{$c$};
+\end{scope}
+\begin{scope}[canvas is xz plane at y=0]
+\draw[domain=\a:\ka] plot ({\x},{h(\x)});
+\draw[domain=\a:\ka] plot ({\x},{-h(\x)});
+\draw[domain=\a:\ka] plot ({-\x},{h(\x)});
+\draw[domain=\a:\ka] plot ({-\x},{-h(\x)});
+\draw(\ka,0.1)--++(0,-0.2)node[below,shift={(-2mm,0mm)}]{$\sqrt{2}a$};
+\draw(\nd,{h(\nd)})--++(1.5,1.5)node[left,align=center]{\RL{مستوی \عددی{xz} میں قطع زائد}\\$\frac{x^2}{a^2}-\frac{z^2}{c^2}=1$};
+\end{scope}
 \end{tikzpicture}
 \end{subfigure}\hfill
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.4\textwidth}
 \centering
-\begin{tikzpicture}
-\pgfmathsetmacro{\a}{1}
+\pgfmathsetmacro{\a}{0.5}
 \pgfmathsetmacro{\b}{1}
-\pgfmathsetmacro{\c}{1.5}
-\begin{axis}
-[view={135}{20},%colormap/blackwhite,
-axis lines=center, axis on top,ticks=none,
-set layers=default,axis equal,
-xlabel={$x$}, ylabel={$y$}, zlabel={$z$},
-xlabel style={anchor=south east},
-ylabel style={anchor=south west},
-zlabel style={anchor=south west},
-enlargelimits,
-tick align=inside,
-domain=0:2.00,
-samples=20, 
-z buffer=sort,
-]
-\addplot3 [surf,opacity=0.4,domain=-1:0,
-domain y=0:360] ({sin(y)*sqrt(1-x^2)},{2*cos(y)*sqrt(1-x^2)},{x});
-\addplot3 [surf,opacity=0.4,domain=0:1,domain y=0:360,on layer=axis foreground] ({sin(y)*sqrt(1-x^2)},{2*cos(y)*sqrt(1-x^2)},{x});
+\pgfmathsetmacro{\c}{sqrt(\a^2+\b^2)}
+\pgfmathsetmacro{\ka}{sqrt(2)*\a}
+\pgfmathsetmacro{\kb}{sqrt(2)*\b}
+\pgfmathsetmacro{\na}{0.35}
+\pgfmathsetmacro{\nb}{0.95*\ka}
+\pgfmathsetmacro{\nc}{1/2*(\b+\kb)}
+\pgfmathsetmacro{\nd}{1/2*(\a+\ka)}
+\begin{tikzpicture}[x= {(-0.7071 cm,-0.25cm)},y={(1cm,0cm)},z ={(0cm,1cm)},
+font=\small,declare function={f(\x)=\b*sqrt(1-1/\a^2*(\x)^2);fa(\x)=\b*sqrt(2-1/\a^2*(\x)^2);g(\x)=\c*sqrt(1/\b^2*(\x)^2-1);h(\x)=\c*sqrt(1/\a^2*(\x)^2-1);}]
+\begin{scope}[canvas is xy plane at z=\c]
+\draw[smooth,domain=-\ka:\ka] plot ({\x},{fa(\x)});
+\draw[smooth,domain=-\ka:\ka] plot ({\x},{-fa(\x)});
+\end{scope}
+\begin{scope}[canvas is xy plane at z=0]
+\draw[-latex] (0,0)--(2,0)node[left]{$x$};
+\draw[-latex] (0,0)--(0,2)node[right]{$y$};
+\end{scope}
+\begin{scope}[canvas is xy plane at z=-\c]
+\draw[smooth,domain=-\ka:\ka] plot ({\x},{fa(\x)});
+\draw[smooth,domain=-\ka:\ka] plot ({\x},{-fa(\x)});
+\end{scope}
+\begin{scope}[canvas is yz plane at x=0]
+\draw[-latex] (0,0)--(0,2)node[left]{$z$};
+\draw[domain=\b:\kb] plot ({\x},{g(\x)});
+\draw[domain=\b:\kb] plot ({\x},{-g(\x)});
+\draw[domain=\b:\kb] plot ({-\x},{g(\x)});
+\draw[domain=\b:\kb] plot ({-\x},{-g(\x)});
+\end{scope}
+\end{tikzpicture}
+\end{subfigure}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.6\textwidth}
+\centering
+\pgfmathsetmacro{\a}{0.5}
+\pgfmathsetmacro{\b}{1}
+\pgfmathsetmacro{\c}{sqrt(\a^2+\b^2)}
+\pgfmathsetmacro{\ta}{0}
+\pgfmathsetmacro{\tb}{90}
+\pgfmathsetmacro{\tc}{180}
+\pgfmathsetmacro{\td}{270}
+\pgfmathsetmacro{\ra}{sqrt(2)}
+\pgfmathsetmacro{\rb}{1}
+\pgfmathsetmacro{\pa}{sqrt(2)*\a}
+\begin{tikzpicture}[font=\small,declare function={f(\x,\y)=\a*\x*cos(\y);g(\x,\y)=\b*\x*sin(\y);h(\x,\y)=\c*sqrt((\x)^2-1);}]
+\begin{axis}[clip=false,view/h=110,axis lines=center,colormap={}{gray(0cm)=(0.8);gray(1cm)=(0);},xlabel={$x$}, ylabel={$y$},zlabel={$z$},enlargelimits,ztick={\c},zticklabels={$c$},xtick={\empty},ytick={\empty}]
+%\addplot3[surf,domain=1:3,domain y=0:360]({f(x,y)},{g(x,y)},{h(x,y)});
+%\addplot3[surf,domain=1:3,domain y=0:360]({f(x,y)},{g(x,y)},{-h(x,y)});
+\addplot3[samples y=0,thick,domain=1:\ra]({f(x,\ta)},{g(x,\ta)},{h(x,\ta)});
+\addplot3[samples y=0,thick,domain=1:\ra]({f(x,\ta)},{g(x,\ta)},{-h(x,\ta)});
+\addplot3[samples y=0,thick,domain=1:\ra]({f(x,\tb)},{g(x,\tb)},{h(x,\tb)});
+\addplot3[samples y=0,thick,domain=1:\ra]({f(x,\tb)},{g(x,\tb)},{-h(x,\tb)});
+\addplot3[samples y=0,thick,domain=1:\ra]({f(x,\tc)},{g(x,\tc)},{h(x,\tc)})node[pos=0.85, pin={[align=center]135:{\RL{مستوی \عددی{xz} میں قطع زائد}\\$\frac{x^2}{a^2}-\frac{z^2}{c^2}=1$}}]{};
+\addplot3[samples y=0,thick,domain=1:\ra]({f(x,\tc)},{g(x,\tc)},{-h(x,\tc)});
+\addplot3[samples y=0,thick,domain=1:\ra]({f(x,\td)},{g(x,\td)},{h(x,\td)})node[pos=0.25,pin={[align=center]135:{\RL{مستوی \عددی{yz} میں قطع زائد}\\$\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$}}]{};
+\addplot3[samples y=0,thick,domain=1:\ra]({f(x,\td)},{g(x,\td)},{-h(x,\td)});
+\addplot3[thick,domain y=0:360]({f(\ra,y)},{g(\ra,y)},{h(\ra,y)})node[pos=0.45,pin={[align=center]45:\RL{مستوی \عددی{z=c} میں ترخیم}\\ $\frac{x^2}{a^2}+\frac{y^2}{b^2}=2$}]{};
+\addplot3[thick,domain y=0:360]({f(\ra,y)},{g(\ra,y)},{-h(\ra,y)});
+\addplot3[thick,domain y=0:360]({f(\rb,y)},{g(\rb,y)},{h(\rb,y)})node[pos=0.4,pin={[align=center,pin distance=1.25cm]30:\RL{مستوی \عددی{xy} میں ترخیم}\\ $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$}]{};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.4\textwidth}
+\centering
+\pgfmathsetmacro{\a}{0.5}
+\pgfmathsetmacro{\b}{1}
+\pgfmathsetmacro{\c}{sqrt(\a^2+\b^2)}
+\pgfmathsetmacro{\tb}{110}
+\pgfmathsetmacro{\td}{290}
+\pgfmathsetmacro{\ra}{sqrt(2)}
+\pgfmathsetmacro{\rb}{1}
+\pgfmathsetmacro{\pa}{sqrt(2)*\a}
+\begin{tikzpicture}[font=\small,declare function={f(\x,\y)=\a*\x*cos(\y);g(\x,\y)=\b*\x*sin(\y);h(\x,\y)=\c*sqrt((\x)^2-1);}]
+\begin{axis}[clip=false,view/h=110,axis lines=center,colormap={}{gray(0cm)=(0.8);gray(1cm)=(0);},xlabel={$x$}, ylabel={$y$},zlabel={$z$},enlargelimits,ztick={\empty},xtick={\empty},ytick={\empty},]
+%\addplot3[surf,domain=1:3,domain y=0:360]({f(x,y)},{g(x,y)},{h(x,y)});
+%\addplot3[surf,domain=1:3,domain y=0:360]({f(x,y)},{g(x,y)},{-h(x,y)});
+\addplot3[samples y=0,domain=1:\ra]({f(x,\tb)},{g(x,\tb)},{h(x,\tb)});
+\addplot3[samples y=0,domain=1:\ra]({f(x,\tb)},{g(x,\tb)},{-h(x,\tb)});
+\addplot3[samples y=0,domain=1:\ra]({f(x,\td)},{g(x,\td)},{h(x,\td)});
+\addplot3[samples y=0,domain=1:\ra]({f(x,\td)},{g(x,\td)},{-h(x,\td)});
+\addplot3[domain y=0:360]({f(\ra,y)},{g(\ra,y)},{h(\ra,y)});
+\addplot3[domain y=0:360]({f(\ra,y)},{g(\ra,y)},{-h(\ra,y)});
 \end{axis}
 \end{tikzpicture}
 \end{subfigure}
 \end{figure}
 
-
-\begin{figure}
-\centering
-\begin{tikzpicture}
-\pgfmathsetmacro{\a}{1}
-\pgfmathsetmacro{\b}{1}
-\pgfmathsetmacro{\c}{1}
-\begin{axis}
-[view={135}{20},%colormap/blackwhite,
-axis lines=center, axis on top,ticks=none,
-set layers=default,axis equal,
-xlabel={$x$}, ylabel={$y$}, zlabel={$z$},
-xlabel style={anchor=south east},
-ylabel style={anchor=south west},
-zlabel style={anchor=south west},
-enlargelimits,
-tick align=inside,
-domain=0:2.00,
-samples=20, 
-z buffer=sort,
-]
-\addplot3 [surf,opacity=0.4,domain=0:360,
-domain y=0:90] ({\a*sin(\x)*cos(\y)},{\b*sin(\x)*sin(\y)},{\c*cos(\y)});
-%\addplot3 [surf,opacity=0.4,domain=0:1,domain y=0:360,on layer=axis foreground] ({sin(y)*sqrt(1-x^2)},{2*cos(y)*sqrt(1-x^2)},{x});
-\end{axis}
-\end{tikzpicture}
-\end{figure}

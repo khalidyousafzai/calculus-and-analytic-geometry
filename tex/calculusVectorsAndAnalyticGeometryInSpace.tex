@@ -4792,7 +4792,11 @@ Ax^2+By^2+Cz^2+Dxy+Eyz+Fxz+Gx+Hy+Jz+K=0
 جہاں \عددی{A}، \عددی{B}، \عددی{C}، \عددی{D}، \عددی{E}، \عددی{F}، \عددی{G}، \عددی{H}، \عددی{J}  اور \عددی{K} مستقل ہیں۔ اس مساوات کی سادہ صورت  ، حصہ \حوالہ{حصہ_مخروط_دو_درجی_مساوات_گھمانا}  میں دو بعدی صورت کی طرح، گھمانے اور منتقلی سے حاصل کی جا سکتی ہے۔ مربع سطح کی مساوات میں ایک یا ایک سے زیادہ متغیرات کا مربع پایا جاتا ہے۔  ہم صرف سادہ مساوات پر غور کریں گے۔ اگرچہ نلکی کی تعریف   یہ نہیں کہتی ہے البتہ اشکال مربع سطحوں کی بھی مثالیں   ہیں۔ ہم اب  ترخیمی سطحوں (جن میں کرہ شامل ہے)،  قطع مکافی  سطحوں،  مخروطی  سطحوں اور قطع زائد سطحوں  پر غور کرتے ہیں۔
 
 \ابتدا{مثال}
-درج ذیل\اصطلاح{ ترخیمی  سطح}  محددی محوروں کو \عددی{(\mp a,0,0)}، \عددی{(0,\mp b,0)} اور \عددی{(0,0,\mp c)} پر مس کرتا ہے۔ یہ اس مستطیل ڈبہ \عددی{\abs{x}\le a} ،
+\اصطلاح{ ترخیمی  سطح}
+\begin{align}
+\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1
+\end{align}
+  محددی محوروں کو \عددی{(\mp a,0,0)}، \عددی{(0,\mp b,0)} اور \عددی{(0,0,\mp c)} پر مس کرتا ہے (شکل \حوالہ{شکل_سمتیہ_ترخیمی-سطح})۔ یہ اس مستطیل ڈبہ \عددی{\abs{x}\le a} ،
   \عددی{\abs{y}\le b}،  \عددی{\abs{z}\le c} کے اندر پایا جاتا ہے۔چونکہ اس سطح کی تعریفی مساوات میں متغیرات کا مربع پایا جاتا ہے لہٰذا   یہ سطح تینوں محددی سطحوں کے لحاظ سے تشاکلی  ہو گا۔
 
 تینوں محددی سطحوں کا اس سطح کے ساتھ منحنی تقاطع،   ترخیمات ہوں گی۔ مثال کے طور پر محددی مستوی \عددی{z=0}  اس سطح کو درج ذیل ترخیم پر قطع کرتا ہے۔
@@ -4806,17 +4810,43 @@ Ax^2+By^2+Cz^2+Dxy+Eyz+Fxz+Gx+Hy+Jz+K=0
 اگر نصف محور \عددی{a}، \عددی{b} اور \عددی{c} میں  کوئی دو ایک دوسرے کے برابر ہوں تب یہ\اصطلاح{    ترخیمی سطح    طواف} ہو گا ۔  اگر تینوں ایک دوسرے کے برابر ہوں تب یہ  سطح  کرہ ہو گا۔
 \انتہا{مثال}
 %===============
+\begin{figure}
+\centering
+\pgfmathsetmacro{\dm}{1/sqrt(5)}
+\pgfmathsetmacro{\a}{1}
+\pgfmathsetmacro{\b}{1}
+\pgfmathsetmacro{\c}{1.5}
+\pgfmathsetmacro{\aa}{sqrt(1-1/4)*\b}
+\begin{tikzpicture}[font=\small,x={(-2*\dm cm,-\dm cm)},y={(2*\dm cm,-\dm cm)},z={(0,1cm)},declare function={f(\x)=\b*sqrt(1-1/(\a^2)*\x*\x);fa(\x)=\b*sqrt(1-1/(\a^2)*\x*\x-1/4);g(\x)=\c*sqrt(1-1/(\b^2)*\x*\x);h(\x)=\c*sqrt(1-1/(\a^2)*\x*\x);}]
+\draw[-latex](0,0,0)--(\a+0.6,0,0)node[left]{$x$};
+\draw[-latex](0,0,0)--(0,\b+0.6,0)node[right]{$y$};
+\draw[-latex](0,0,0)--(0,0,\c+0.6)node[above]{$z$};
+\draw[domain=-\a:\a]plot ({\x},{f(\x)},{0}) plot ({\x},{-f(\x)},{0});
+\draw[domain=-\aa:\aa]plot ({\x},{fa(\x)},{\c/2}) plot ({\x},{-fa(\x)},{\c/2});
+\draw[domain=-\b:\b]plot (0,\x,{g(\x)}) plot (0,\x,{-g(\x)});
+\draw[domain=-\a:\a]plot (\x,0,{h(\x)}) plot (\x,0,{-h(\x)});
+\draw(-0.4,{f(-0.4)},0)--++(0,0.5,0.5)node[right,align=center]{\RL{\عددی{xy} مستوی میں ترخیم}\\ $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$};
+\draw(0,0.8,{-g(0.8)})--++(0,0.5,-0.25)node[right,align=center]{\RL{\عددی{yz} مستوی میں ترخیم}\\ $\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$};
+\draw({-0.7},{fa(-0.7)},{\c/2})--++(0,0.5,0.5)node[right,yshift=2ex,align=center]{\RL{مستوی \عددی{z=z_0} میں}\\   \RL{ترخیمی عمودی تراش}};
+\draw(0,0,{0.5*\c})node[circ]{}node[left]{$z_0$};
+\draw(\a,0,0)node[left,xshift=-0.5ex]{$a$};
+\draw(0,\b,0)node[below,xshift=1ex]{$b$};
+\draw(0,0,\c)node[above left]{$c$};
+\end{tikzpicture}
+\caption{ترخیمی سطح}
+\label{شکل_سمتیہ_ترخیمی-سطح}
+\end{figure}
 
 \موٹا{فنیات}\quad 
 \ترچھا{فضا میں ذہنی تصویر کشی}\\
 فضا میں سطحوں کی تصویر کشی کمپیوٹر کی مدد سے کی جا سکتی ہے۔ یہ مختلف دو بعدی سطحوں میں  لکیریں کھینچ سکتا ہے۔ کمپیوٹر اشکال کو فضا میں گھمانے کا  نظارہ پیش کر    سکتا ہے گویا   آپ  جسم کو ہاتھ میں گھما  رہے ہوں۔کمپیوٹر اس کا خیال رکھتا ہے کہ اجسام کا سامنے  حصہ نظر آئے جب کے اس کا پچھلا حصہ آنکھوں سے اوجھل رہے۔ عمومی طور پر کمپیوٹر کو    سطحوں کی مقدار معلوم    مساوات درکار ہوں گی۔
 
-\ابتدا{مثال}
+\ابتدا{مثال}\شناخت{مثال_سمتیہ_ترخیمی_سطح}
 سطح \عددی{x=0} اور سطح \عددی{y=0} کے لحاظ سے \اصطلاح{ترخیمی قطع مکافی سطح}
 \begin{align}\label{مساوات_ترخیمی_قطع_مکافی_سطح}
 \frac{x^2}{a^2}+\frac{y^2}{b^2}=\frac{z}{c}
 \end{align}
-تشاکلی ہو گا۔ صرف مبدا پر محور ی  تقاطع پایا جاتا ہے۔ مستقل \عددی{c}  کی علامت  تعین کرتی ہے کہ یہ  مکمل  سطح \عددی{xy} سے نیچے یا اس سے اوپر پایا جائے گا۔ محددی سطح اس سے درج ذیل حصے کاٹتے ہیں۔
+تشاکلی ہو گا (شکل \حوالہ{شکل_مثال_سمتیہ_ترخیمی_سطح})۔ صرف مبدا پر محور ی  تقاطع پایا جاتا ہے۔ مستقل \عددی{c}  کی علامت  تعین کرتی ہے کہ یہ  مکمل  سطح \عددی{xy} سے نیچے یا اس سے اوپر پایا جائے گا۔ محددی سطح اس سے درج ذیل حصے کاٹتے ہیں۔
 \begin{gather}
 \begin{aligned}
 x&=0:&& z=\frac{c}{b^2}y^2\,\,\text{قطع مکافی}\\
@@ -4830,22 +4860,131 @@ z&=0:&&(0,0,0)\,\,\text{نقطہ}
 \end{align*}
  \انتہا{مثال}
 %=======================
+\begin{figure}
+\centering
+\begin{subfigure}{0.6\textwidth}
+\centering
+\pgfmathsetmacro{\a}{1}
+\pgfmathsetmacro{\b}{0.25}
+\pgfmathsetmacro{\c}{1.5}
+\pgfmathsetmacro{\ka}{0.8}
+\pgfmathsetmacro{\kb}{\b+0.03}
+\pgfmathsetmacro{\kc}{-0.4*\a}
+\begin{tikzpicture}[font=\small,,declare function={f(\x)=\b*sqrt(1-1/\a^2*(\x)^2);g(\x)=\c/\b^2*(\x)^2;h(\x)=\c/\a^2*(\x)^2;}]
+\draw[-latex] (0,0)--(-0.5,-0.5)node[left]{$x$};
+\draw[-latex] (0,0)--(2,0)node[below]{$y$};
+\draw[-latex] (0,0)--(0,2.5)node[left]{$z$};
+\draw[thick,domain=-\a:\a] plot ({\x},{\c+f(\x)})coordinate(ka);
+\draw[thick,domain=-\a:\a] plot ({\x},{\c-f(\x)})coordinate(kb);
+\draw[thick](ka)--(kb);
+\draw[thick,domain=-\b:\b+0.05]plot ({\x},{g(\x)});
+\draw[thick,domain=-\a-0.1:\a+0.1]plot ({\x},{h(\x)});
+\draw({\ka},{h(\ka)})--++(0.5,-0.25)node[right,align=center]{\RL{سطح \عددی{yz} میں قطع مکافی}\\  $z=\frac{c}{b^2}y^2$};
+\draw({\kb},{g(\kb)})--++(0.75,0.25)node[right,align=center]{\RL{سطح \عددی{xz} میں قطع مکافی}\\  $z=\frac{c}{a^2}x^2$};
+\draw({\kc},{\c+f(\kc)})--++(-0.5,0.75)node[left,align=center]{\RL{سطح \عددی{z=c} میں ترخیم}\\  $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$};
+\draw(0.05,\c)--++(-0.1,0)node[xshift=-1ex]{$c$};
+\draw(\a+0.05,0)--++(0,-0.1)node[below]{$b$};
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.4\textwidth}
+\centering
+\pgfmathsetmacro{\a}{1}
+\pgfmathsetmacro{\b}{0.25}
+\pgfmathsetmacro{\c}{1.5}
+\pgfmathsetmacro{\ka}{0.8}
+\pgfmathsetmacro{\kb}{\b+0.03}
+\pgfmathsetmacro{\kc}{-0.4*\a}
+\begin{tikzpicture}[font=\small,,declare function={f(\x)=\b*sqrt(1-1/\a^2*(\x)^2);g(\x)=\c/\b^2*(\x)^2;h(\x)=\c/\a^2*(\x)^2;}]
+\draw[-latex] (0,0)--(-0.5,-0.5)node[left]{$x$};
+\draw[-latex] (0,0)--(1,0)node[below]{$y$};
+\draw[-latex] (0,\c-\b)--(0,2.5)node[left]{$z$};
+\draw[domain=-\a:\a] plot ({\x},{\c+f(\x)})coordinate(ka);
+\draw[domain=-\a:\a] plot ({\x},{\c-f(\x)})coordinate(kb);
+\draw[](ka)--(kb);
+%\draw[thick,domain=-\b:\b+0.05]plot ({\x},{g(\x)});
+\draw[domain=-\a:\a]plot ({\x},{h(\x)});
+\end{tikzpicture}
+\end{subfigure}
+\caption{ترخیمی سطح ( مثال \حوالہ{مثال_سمتیہ_ترخیمی_سطح})}
+\label{شکل_مثال_سمتیہ_ترخیمی_سطح}
+\end{figure}
+
 \ابتدا{مثال}
 \اصطلاح{دائری قطع مکافی سطح } یا \اصطلاح{قطع مکافی سطح طواف}
 \begin{align}
-\frac{x^2}{a^2}+\frac{y^2}{a^2}=\frac{z}{c}
+\frac{x^2}{a^2}+\frac{y^2}{a=b^2}=\frac{z}{c}
 \end{align}
 کو مساوات \حوالہ{مساوات_ترخیمی_قطع_مکافی_سطح} میں \عددی{b=a} پر کر کے حاصل کیا جاتا ہے۔ محور \عددی{z}  کے عمودی سطحوں  کی عمودی تراش  سے دائرے حاصل ہوں گے جن کا  مرکز محور \عددی{z} پر  ہو گا۔ان سطحوں کی عمودی تراش جن میں   محور \عددی{z} پایا جاتا ہو،  مماثل قطع مکافی ہوں گی  جن کا مشترک  ماسکہ \عددی{(0,0,\tfrac{a^2}{4c})} ہو گا۔
 
 دائری قطع مکافی سطحوں سے حصے تراش  کر بطور  ریڈیو دور بین،  مصنوعی سیارے  کے  تعاقب کار،  اور خورد امواج ریڈیو   کے اینٹینا  استعمال کئے جاتے ہیں۔
 \انتہا{مثال}
 %=================
-\ابتدا{مثال}
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\pgfmathsetmacro{\a}{1}
+\pgfmathsetmacro{\b}{0.25}
+\pgfmathsetmacro{\c}{1.5}
+\pgfmathsetmacro{\ka}{0.7*\a}
+\pgfmathsetmacro{\kb}{-\ka}
+\pgfmathsetmacro{\kaa}{-0.7*\a}
+\pgfmathsetmacro{\kbb}{-\kaa}
+\begin{tikzpicture}[font=\small,,declare function={f(\x)=\b*sqrt(1-1/\a^2*(\x)^2);g(\x)=\c/\b^2*(\x)^2;h(\x)=\c/\a^2*(\x)^2;}]
+\draw[-latex] (0,0)--(-0.75,-0.5)node[below]{$x$}coordinate[pos=0.5](kx);
+\draw[-latex] (0,0)--(1,-0.25)node[right]{$y$};
+\draw[-latex] (0,0)--(0,2.5)node[left]{$z$};
+\draw[thick,domain=-\a:\a] plot ({\x},{\c+f(\x)})coordinate(ka);
+\draw[thick,domain=-\a:\a] plot ({\x},{\c-f(\x)})coordinate(kb);
+\draw[thick](ka)--(kb);
+\draw[thick,domain=-\a:\a] plot ({\x},{-\c+f(\x)})coordinate(ka);
+\draw[thick,domain=-\a:\a] plot ({\x},{-\c-f(\x)})coordinate(kb);
+\draw[thick](ka)--(kb);
+\draw({\ka},{\c+f(\ka)})--({\kb},{-\c-f(\kb)});
+\draw({\kaa},{\c+f(\kaa)})--({\kbb},{-\c-f(\kbb)})coordinate[pos=0.07](pa);
+\draw({\ka},{\c-f(\ka)})--({\kb},{-\c+f(\kb)});
+\draw({\kaa},{\c-f(\kaa)})--({\kbb},{-\c+f(\kbb)})coordinate[pos=0.25](pb);
+\draw(pa)--++(-0.5,0.5)node[left,align=center]{\RL{سطح \عددی{yz} میں خط}\\  $z=-\frac{c}{b}y$};
+\draw(pb)--++(-0.5,-0.5)node[left,align=center]{\RL{سطح \عددی{xz} میں خط}\\  $z=\frac{c}{a}x$};
+\draw({\a},{\c+f(\a)})--++(0.5,0.5)node[right,align=center]{\RL{سطح \عددی{z=c} میں ترخیم}\\  $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$};
+\draw(0.1,\c)--++(-0.2,0)node[left]{$c$};
+\draw(0.6,-0.08)--++(0,-0.2)node[below]{$b$};
+\draw(kx)++(0.1,0)--++(-0.2,0)node[left]{$a$};
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\pgfmathsetmacro{\a}{1}
+\pgfmathsetmacro{\b}{0.25}
+\pgfmathsetmacro{\c}{1.5}
+\pgfmathsetmacro{\ka}{0.7*\a}
+\pgfmathsetmacro{\kb}{-\ka}
+\pgfmathsetmacro{\kaa}{-0.7*\a}
+\pgfmathsetmacro{\kbb}{-\kaa}
+\begin{tikzpicture}[font=\small,,declare function={f(\x)=\b*sqrt(1-1/\a^2*(\x)^2);g(\x)=\c/\b^2*(\x)^2;h(\x)=\c/\a^2*(\x)^2;}]
+\draw[-latex] (0,0)--(-0.75,-0.5)node[below]{$x$}coordinate[pos=0.5](kx);
+\draw[-latex] (0,0)--(1,-0.25)node[right]{$y$};
+\draw[-latex] (0,\c-\b)--(0,2.5)node[left]{$z$};
+\draw[domain=-\a:\a] plot ({\x},{\c+f(\x)})coordinate(ka);
+\draw[domain=-\a:\a] plot ({\x},{\c-f(\x)})coordinate(kb);
+\draw[](ka)--(kb);
+%\draw[thick,domain=-\a:\a] plot ({\x},{-\c+f(\x)})coordinate(ka);
+\draw[domain=-\a:\a] plot ({\x},{-\c-f(\x)})coordinate(kb);
+%\draw[thick](ka)--(kb);
+\draw(\a,\c)--(-\a,-\c);
+\draw(-\a,\c)--(\a,-\c);
+\end{tikzpicture}
+\end{subfigure}
+\caption{ترخیمی مخروط (مثال \حوالہ{مثال_سمتیہ_ترخیمی_مخروط})}
+\label{شکل_مثال_سمتیہ_ترخیمی_مخروط}
+\end{figure}
+
+\ابتدا{مثال}\شناخت{مثال_سمتیہ_ترخیمی_مخروط}
 \اصطلاح{ترخیمی  مخروط}
 \begin{align}\label{مساوات_سمتیہ_ترخیمی_مخروط}
 \frac{x^2}{a^2}+\frac{y^2}{b^2}=\frac{z^2}{c^2}
 \end{align}
-تینوں محددی سطحوں کے لحاظ سے تشاکلی ہے۔ محددی سطحیں اس سے درج ذیل حصے کاٹتے ہیں۔
+تینوں محددی سطحوں کے لحاظ سے تشاکلی ہے (شکل \حوالہ{شکل_مثال_سمتیہ_ترخیمی_مخروط})۔ محددی سطحیں اس سے درج ذیل حصے کاٹتے ہیں۔
 \begin{align}
 x&=0:&&z=\pm\frac{c}{b}y\,\,\text{خط}\label{مساوات_سمتیہ_ترخیمی_مخروط_الف}\\
 y&=0:&&z=\pm \frac{c}{a}x\,\,\text{خط}\label{مساوات_سمتیہ_ترخیمی_مخروط_ب}\\
@@ -4856,12 +4995,14 @@ z&=0:&&(0,0,0)\,\,\text{نقطہ}\nonumber
 اگر \عددی{a=b} ہو تب یہ   مخروط ایک قائمہ دائری مخروط ہو گا۔
 \انتہا{مثال}
 %===================
-\ابتدا{مثال}
+
+
+\ابتدا{مثال}\شناخت{مثال_سمتیہ_یک_چادری_قطع_زائد}
 \اصطلاح{یک چادری قطع زائد سطح}
  \begin{align}\label{مساوات_سمتیہ_یک_چادری_قطع_زائد}
 \frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1
 \end{align}
-تینوں محددی سطحوں کے لحاظ سے تشاکلی ہو گا۔ محددی سطحیں اس سے درج ذیل حصے کاٹتے  ہیں۔
+تینوں محددی سطحوں کے لحاظ سے تشاکلی ہو گا (شکل )۔ محددی سطحیں اس سے درج ذیل حصے کاٹتے  ہیں۔
 \begin{gather}
 \begin{aligned}\label{مساوات_سمتیہ_قطع_مکافی_سطح}
 x&=0:&&\frac{y^2}{b^2}-\frac{z^2}{c^2}=1\,\,\text{\RL{قطع زائد}}\\
