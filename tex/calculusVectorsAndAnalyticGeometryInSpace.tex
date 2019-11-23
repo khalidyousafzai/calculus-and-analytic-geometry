@@ -4791,12 +4791,12 @@ Ax^2+By^2+Cz^2+Dxy+Eyz+Fxz+Gx+Hy+Jz+K=0
 \end{align*}
 جہاں \عددی{A}، \عددی{B}، \عددی{C}، \عددی{D}، \عددی{E}، \عددی{F}، \عددی{G}، \عددی{H}، \عددی{J}  اور \عددی{K} مستقل ہیں۔ اس مساوات کی سادہ صورت  ، حصہ \حوالہ{حصہ_مخروط_دو_درجی_مساوات_گھمانا}  میں دو بعدی صورت کی طرح، گھمانے اور منتقلی سے حاصل کی جا سکتی ہے۔ مربع سطح کی مساوات میں ایک یا ایک سے زیادہ متغیرات کا مربع پایا جاتا ہے۔  ہم صرف سادہ مساوات پر غور کریں گے۔ اگرچہ نلکی کی تعریف   یہ نہیں کہتی ہے البتہ اشکال مربع سطحوں کی بھی مثالیں   ہیں۔ ہم اب  ترخیمی سطحوں (جن میں کرہ شامل ہے)،  قطع مکافی  سطحوں،  مخروطی  سطحوں اور قطع زائد سطحوں  پر غور کرتے ہیں۔
 
-\ابتدا{مثال}
+\ابتدا{مثال}\شناخت{مثال_سمتیہ_ترخیمی_سطح_کرہ}
 \اصطلاح{ ترخیمی  سطح}
 \begin{align}
 \frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1
 \end{align}
-  محددی محوروں کو \عددی{(\mp a,0,0)}، \عددی{(0,\mp b,0)} اور \عددی{(0,0,\mp c)} پر مس کرتا ہے (شکل \حوالہ{شکل_سمتیہ_ترخیمی-سطح})۔ یہ اس مستطیل ڈبہ \عددی{\abs{x}\le a} ،
+  محددی محوروں کو \عددی{(\mp a,0,0)}، \عددی{(0,\mp b,0)} اور \عددی{(0,0,\mp c)} پر مس کرتا ہے (شکل \حوالہ{شکل_مثال_سمتیہ_ترخیمی_سطح_کرہ})۔ یہ اس مستطیل ڈبہ \عددی{\abs{x}\le a} ،
   \عددی{\abs{y}\le b}،  \عددی{\abs{z}\le c} کے اندر پایا جاتا ہے۔چونکہ اس سطح کی تعریفی مساوات میں متغیرات کا مربع پایا جاتا ہے لہٰذا   یہ سطح تینوں محددی سطحوں کے لحاظ سے تشاکلی  ہو گا۔
 
 تینوں محددی سطحوں کا اس سطح کے ساتھ منحنی تقاطع،   ترخیمات ہوں گی۔ مثال کے طور پر محددی مستوی \عددی{z=0}  اس سطح کو درج ذیل ترخیم پر قطع کرتا ہے۔
@@ -4810,33 +4810,71 @@ Ax^2+By^2+Cz^2+Dxy+Eyz+Fxz+Gx+Hy+Jz+K=0
 اگر نصف محور \عددی{a}، \عددی{b} اور \عددی{c} میں  کوئی دو ایک دوسرے کے برابر ہوں تب یہ\اصطلاح{    ترخیمی سطح    طواف} ہو گا ۔  اگر تینوں ایک دوسرے کے برابر ہوں تب یہ  سطح  کرہ ہو گا۔
 \انتہا{مثال}
 %===============
+
 \begin{figure}
 \centering
-\pgfmathsetmacro{\dm}{1/sqrt(5)}
+\begin{subfigure}{0.4\textwidth}
 \pgfmathsetmacro{\a}{1}
 \pgfmathsetmacro{\b}{1}
-\pgfmathsetmacro{\c}{1.5}
-\pgfmathsetmacro{\aa}{sqrt(1-1/4)*\b}
-\begin{tikzpicture}[font=\small,x={(-2*\dm cm,-\dm cm)},y={(2*\dm cm,-\dm cm)},z={(0,1cm)},declare function={f(\x)=\b*sqrt(1-1/(\a^2)*\x*\x);fa(\x)=\b*sqrt(1-1/(\a^2)*\x*\x-1/4);g(\x)=\c*sqrt(1-1/(\b^2)*\x*\x);h(\x)=\c*sqrt(1-1/(\a^2)*\x*\x);}]
-\draw[-latex](0,0,0)--(\a+0.6,0,0)node[left]{$x$};
-\draw[-latex](0,0,0)--(0,\b+0.6,0)node[right]{$y$};
-\draw[-latex](0,0,0)--(0,0,\c+0.6)node[above]{$z$};
-\draw[domain=-\a:\a]plot ({\x},{f(\x)},{0}) plot ({\x},{-f(\x)},{0});
-\draw[domain=-\aa:\aa]plot ({\x},{fa(\x)},{\c/2}) plot ({\x},{-fa(\x)},{\c/2});
-\draw[domain=-\b:\b]plot (0,\x,{g(\x)}) plot (0,\x,{-g(\x)});
-\draw[domain=-\a:\a]plot (\x,0,{h(\x)}) plot (\x,0,{-h(\x)});
-\draw(-0.4,{f(-0.4)},0)--++(0,0.5,0.5)node[right,align=center]{\RL{\عددی{xy} مستوی میں ترخیم}\\ $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$};
-\draw(0,0.8,{-g(0.8)})--++(0,0.5,-0.25)node[right,align=center]{\RL{\عددی{yz} مستوی میں ترخیم}\\ $\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$};
-\draw({-0.7},{fa(-0.7)},{\c/2})--++(0,0.5,0.5)node[right,yshift=2ex,align=center]{\RL{مستوی \عددی{z=z_0} میں}\\   \RL{ترخیمی عمودی تراش}};
-\draw(0,0,{0.5*\c})node[circ]{}node[left]{$z_0$};
-\draw(\a,0,0)node[left,xshift=-0.5ex]{$a$};
-\draw(0,\b,0)node[below,xshift=1ex]{$b$};
-\draw(0,0,\c)node[above left]{$c$};
+\pgfmathsetmacro{\c}{1}
+\pgfmathsetmacro{\ta}{0}
+\pgfmathsetmacro{\tb}{90}
+\pgfmathsetmacro{\tc}{180}
+\pgfmathsetmacro{\td}{270}
+\pgfmathsetmacro{\ra}{1}
+\pgfmathsetmacro{\rb}{0.75}
+\begin{tikzpicture}[declare function={f(\x,\y)=\a*\x*cos(\y);g(\x,\y)=\b*\x*sin(\y);h(\x,\y)=\c*sqrt(1-(\x)^2);}]
+\begin{axis}[clip=false,axis equal,view/h=110,axis lines=center,xlabel={$x$},ylabel={$y$},zlabel={$z$},xtick={\empty},ytick={\empty},ztick={\empty},colormap={}{gray(0cm)=(0.2);gray(1cm)=(0.8);},xmin=0,xmax=\a+0.5,ymin=0,ymax=\b+0.25,zmin=0,,zmax=\c+0.5,xlabel style={anchor=east},ylabel style={anchor=north},zlabel style={anchor=south}, xtick={\a}, xticklabels={$a$}, ytick={\b},yticklabels={$b$},ztick={\rb},zticklabels={$z_0$},xticklabel style={shift={(0.5mm, -0.25mm)}},yticklabel style={xshift=2mm},zticklabel style={anchor=west}]
+%\addplot3[surf,shader=flat,domain=0:1,domain y=0:360]({f(x,y)},{g(x,y)},{h(x,y)});
+%\addplot3[surf,shader=flat,domain=0:1,domain y=0:360]({f(x,y)},{g(x,y)},{-h(x,y)});
+\addplot3[thick,samples y=0,domain=0:1]({f(x,\ta)},{g(x,\ta)},{h(x,\ta)});
+\addplot3[thick,samples y=0,domain=0:1]({f(x,\ta)},{g(x,\ta)},{-h(x,\ta)});
+\addplot3[thick,samples y=0,domain=0:1]({f(x,\tb)},{g(x,\tb)},{h(x,\tb)});
+\addplot3[thick,samples y=0,domain=0:1]({f(x,\tb)},{g(x,\tb)},{-h(x,\tb)})node[pos=0.35,pin={[align=center]-45:{\RL{مستوی \عددی{yz}}\\\RL{میں ترخیم}\\$\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$}}]{};
+\addplot3[thick,samples y=0,domain=0:1]({f(x,\tc)},{g(x,\tc)},{h(x,\tc)});
+\addplot3[thick,samples y=0,domain=0:1]({f(x,\tc)},{g(x,\tc)},{-h(x,\tc)});
+\addplot3[thick,samples y=0,domain=0:1]({f(x,\td)},{g(x,\td)},{h(x,\td)});
+\addplot3[thick,samples y=0,domain=0:1]({f(x,\td)},{g(x,\td)},{-h(x,\td)});
+\addplot3[thick,domain y=0:360]({f(\ra,y)},{g(\ra,y)},{h(\ra,y)})node[pos=0.35,pin={[right,align=center]45:{\RL{مستوی \عددی{xy}}\\\RL{میں ترخیم}\\$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$}}]{};
+\addplot3[thick,domain y=0:360]({f(\rb,y)},{g(\rb,y)},{h(\rb,y)})node[pos=0.35,pin={[above,align=center]45:{\RL{مستوی \عددی{z=z_0} میں}\\ \RL{ترخیمی عمودی تراش}}}]{};
+\draw[gray](axis cs:0,0,\c)--(axis cs:0,-0.25,\c+0.25)node[black,left]{$c$};
+\end{axis}
 \end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.4\textwidth}
+\pgfmathsetmacro{\a}{1}
+\pgfmathsetmacro{\b}{1}
+\pgfmathsetmacro{\c}{1}
+\pgfmathsetmacro{\ta}{0}
+\pgfmathsetmacro{\tb}{90}
+\pgfmathsetmacro{\tc}{180}
+\pgfmathsetmacro{\td}{270}
+\pgfmathsetmacro{\ra}{1}
+\pgfmathsetmacro{\rb}{0.75}
+\pgfmathsetmacro{\rrb}{0.75}
+\pgfmathsetmacro{\rrd}{0.75}
+\pgfmathsetmacro{\rra}{0.65}
+\pgfmathsetmacro{\rrc}{0.35}
+\begin{tikzpicture}[declare function={f(\x,\y)=\a*\x*cos(\y);g(\x,\y)=\b*\x*sin(\y);h(\x,\y)=\c*sqrt(1-(\x)^2);}]
+\begin{axis}[view/h=110,clip=false,axis equal,axis lines=center,xlabel={$x$},ylabel={$y$},zlabel={$z$},xtick={\empty},ytick={\empty},ztick={\empty},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.8);},xmin=0,xmax=\a+0.5,ymin=0,ymax=\b+0.25,zmin=0,,zmax=\c+0.5,xlabel style={anchor=east},ylabel style={anchor=north},zlabel style={anchor=south}, xtick={\empty}, ytick={\empty},ztick={\empty}]
+\addplot3[surf,shader=flat,opacity=0.5,domain=0:1,domain y=0:360]({f(x,y)},{g(x,y)},{h(x,y)});
+\addplot3[surf,shader=flat,opacity=0.5,domain=0:1,domain y=0:360]({f(x,y)},{g(x,y)},{-h(x,y)});
+\addplot3[thick,samples y=0,domain=0:1]({f(x,\ta)},{g(x,\ta)},{h(x,\ta)});
+\addplot3[thick,samples y=0,domain=\rra:1]({f(x,\ta)},{g(x,\ta)},{-h(x,\ta)});
+\addplot3[thick,samples y=0,domain=0:1]({f(x,\tb)},{g(x,\tb)},{h(x,\tb)});
+\addplot3[thick,samples y=0,domain=\rrb:1]({f(x,\tb)},{g(x,\tb)},{-h(x,\tb)});
+\addplot3[thick,samples y=0,domain=0:\rrc]({f(x,\tc)},{g(x,\tc)},{h(x,\tc)});
+%\addplot3[thick,samples y=0,domain=0:1]({f(x,\tc)},{g(x,\tc)},{-h(x,\tc)});
+\addplot3[thick,samples y=0,domain=0:\rrd]({f(x,\td)},{g(x,\td)},{h(x,\td)});
+%\addplot3[thick,samples y=0,domain=0:1]({f(x,\td)},{g(x,\td)},{-h(x,\td)});
+%\addplot3[thick,domain y=0:360]({f(\ra,y)},{g(\ra,y)},{h(\ra,y)});
+%\addplot3[thick,domain y=0:360]({f(\rb,y)},{g(\rb,y)},{h(\rb,y)});
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
 \caption{ترخیمی سطح}
-\label{شکل_سمتیہ_ترخیمی-سطح}
+\label{شکل_مثال_سمتیہ_ترخیمی_سطح_کرہ}
 \end{figure}
-
 \موٹا{فنیات}\quad 
 \ترچھا{فضا میں ذہنی تصویر کشی}\\
 فضا میں سطحوں کی تصویر کشی کمپیوٹر کی مدد سے کی جا سکتی ہے۔ یہ مختلف دو بعدی سطحوں میں  لکیریں کھینچ سکتا ہے۔ کمپیوٹر اشکال کو فضا میں گھمانے کا  نظارہ پیش کر    سکتا ہے گویا   آپ  جسم کو ہاتھ میں گھما  رہے ہوں۔کمپیوٹر اس کا خیال رکھتا ہے کہ اجسام کا سامنے  حصہ نظر آئے جب کے اس کا پچھلا حصہ آنکھوں سے اوجھل رہے۔ عمومی طور پر کمپیوٹر کو    سطحوں کی مقدار معلوم    مساوات درکار ہوں گی۔
@@ -4995,6 +5033,97 @@ z&=0:&&(0,0,0)\,\,\text{نقطہ}\nonumber
 اگر \عددی{a=b} ہو تب یہ   مخروط ایک قائمہ دائری مخروط ہو گا۔
 \انتہا{مثال}
 %===================
+\begin{figure}
+\centering
+\begin{subfigure}{0.6\textwidth}
+\centering
+\pgfmathsetmacro{\a}{0.5}
+\pgfmathsetmacro{\b}{1}
+\pgfmathsetmacro{\c}{sqrt(\a^2+\b^2)}
+\pgfmathsetmacro{\ka}{sqrt(2)*\a}
+\pgfmathsetmacro{\kb}{sqrt(2)*\b}
+\pgfmathsetmacro{\na}{0.35}
+\pgfmathsetmacro{\nb}{0.95*\ka}
+\pgfmathsetmacro{\nc}{1/2*(\b+\kb)}
+\pgfmathsetmacro{\nd}{1/2*(\a+\ka)}
+\begin{tikzpicture}[x= {(-0.7071 cm,-0.25cm)},y={(1cm,0cm)},z ={(0cm,1cm)},
+font=\small,declare function={f(\x)=\b*sqrt(1-1/\a^2*(\x)^2);fa(\x)=\b*sqrt(2-1/\a^2*(\x)^2);g(\x)=\c*sqrt(1/\b^2*(\x)^2-1);h(\x)=\c*sqrt(1/\a^2*(\x)^2-1);}]
+\begin{scope}[canvas is xy plane at z=\c]
+\draw[smooth,domain=-\ka:\ka] plot ({\x},{fa(\x)});
+\draw[smooth,domain=-\ka:\ka] plot ({\x},{-fa(\x)});
+\draw(-\nb,{fa(\nb)})--++(-0.75,0.25)node[above,align=center]{\RL{مستوی \عددی{z=c} میں ترخیم}\\ $\frac{x^2}{a^2}+\frac{y^2}{b^2}=2$};
+\end{scope}
+\begin{scope}[canvas is xy plane at z=0]
+\draw[-latex] (0,0)--(2,0)node[left]{$x$};
+\draw[-latex] (0,0)--(0,2)node[right]{$y$};
+\draw[smooth,domain=-\a:\a] plot ({\x},{f(\x)});
+\draw[smooth,domain=-\a:\a] plot ({\x},{-f(\x)});
+\draw(\na,{f(\na)})--++(1.5,3)node[below,xshift=2ex,align=center]{\RL{مستوی \عددی{xy} میں ترخیم}\\ $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$};
+\draw(\a,0)--++(0.75,0.75)node[shift={(0.5ex,-0.5ex)}]{$a$};
+\end{scope}
+\begin{scope}[canvas is xy plane at z=-\c]
+\draw[smooth,domain=-\ka:\ka] plot ({\x},{fa(\x)});
+\draw[smooth,domain=-\ka:\ka] plot ({\x},{-fa(\x)});
+\end{scope}
+\begin{scope}[canvas is yz plane at x=0]
+\draw[-latex] (0,0)--(0,2)node[left]{$z$};
+\draw[domain=\b:\kb] plot ({\x},{g(\x)});
+\draw[domain=\b:\kb] plot ({\x},{-g(\x)});
+\draw[domain=\b:\kb] plot ({-\x},{g(\x)});
+\draw[domain=\b:\kb] plot ({-\x},{-g(\x)});
+\draw(\b,0)node[above ,xshift={1ex}]{$b$};
+\draw(\kb,0.1)--++(0,-0.2)node[pos=0.5,pin=45:{$\sqrt{2}b$}]{};
+\draw(-\nc,{g(\nc)})--++(-0.5,-0.5)node[left,align=center]{\RL{مستوی \عددی{yz} میں قطع زائد}\\  $\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$};
+\draw(0.1,\c)--++(-0.2,0)node[left]{$c$};
+\end{scope}
+\begin{scope}[canvas is xz plane at y=0]
+\draw[domain=\a:\ka] plot ({\x},{h(\x)});
+\draw[domain=\a:\ka] plot ({\x},{-h(\x)});
+\draw[domain=\a:\ka] plot ({-\x},{h(\x)});
+\draw[domain=\a:\ka] plot ({-\x},{-h(\x)});
+\draw(\ka,0.1)--++(0,-0.2)node[below,shift={(-2mm,0mm)}]{$\sqrt{2}a$};
+\draw(\nd,{h(\nd)})--++(1.5,1.5)node[left,align=center]{\RL{مستوی \عددی{xz} میں قطع زائد}\\$\frac{x^2}{a^2}-\frac{z^2}{c^2}=1$};
+\end{scope}
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.4\textwidth}
+\centering
+\pgfmathsetmacro{\a}{0.5}
+\pgfmathsetmacro{\b}{1}
+\pgfmathsetmacro{\c}{sqrt(\a^2+\b^2)}
+\pgfmathsetmacro{\ka}{sqrt(2)*\a}
+\pgfmathsetmacro{\kb}{sqrt(2)*\b}
+\pgfmathsetmacro{\na}{0.35}
+\pgfmathsetmacro{\nb}{0.95*\ka}
+\pgfmathsetmacro{\nc}{1/2*(\b+\kb)}
+\pgfmathsetmacro{\nd}{1/2*(\a+\ka)}
+\begin{tikzpicture}[x= {(-0.7071 cm,-0.25cm)},y={(1cm,0cm)},z ={(0cm,1cm)},
+font=\small,declare function={f(\x)=\b*sqrt(1-1/\a^2*(\x)^2);fa(\x)=\b*sqrt(2-1/\a^2*(\x)^2);g(\x)=\c*sqrt(1/\b^2*(\x)^2-1);h(\x)=\c*sqrt(1/\a^2*(\x)^2-1);}]
+\begin{scope}[canvas is xy plane at z=\c]
+\draw[smooth,domain=-\ka:\ka] plot ({\x},{fa(\x)});
+\draw[smooth,domain=-\ka:\ka] plot ({\x},{-fa(\x)});
+\end{scope}
+\begin{scope}[canvas is xy plane at z=0]
+\draw[-latex] (\a,0)--(2,0)node[left]{$x$};
+\draw[-latex] (0,\b)--(0,2)node[right]{$y$};
+\end{scope}
+\begin{scope}[canvas is xy plane at z=-\c]
+\draw[smooth,domain=-\ka:\ka] plot ({\x},{fa(\x)});
+\draw[smooth,domain=-\ka:\ka] plot ({\x},{-fa(\x)});
+\end{scope}
+\begin{scope}[canvas is yz plane at x=0]
+\draw[-latex] (0,{\c-1/3*\a})--(0,2)node[left]{$z$};
+\draw[domain=\b:\kb] plot ({\x},{g(\x)});
+\draw[domain=\b:\kb] plot ({\x},{-g(\x)});
+\draw[domain=\b:\kb] plot ({-\x},{g(\x)});
+\draw[domain=\b:\kb] plot ({-\x},{-g(\x)});
+\end{scope}
+\end{tikzpicture}
+\end{subfigure}
+\caption{یک چادری قطع زشائد سطح}
+\label{شکل_مثال_سمتیہ_یک_چادری_قطع_زائد}
+\end{figure}
+
 
 
 \ابتدا{مثال}\شناخت{مثال_سمتیہ_یک_چادری_قطع_زائد}
@@ -5002,7 +5131,7 @@ z&=0:&&(0,0,0)\,\,\text{نقطہ}\nonumber
  \begin{align}\label{مساوات_سمتیہ_یک_چادری_قطع_زائد}
 \frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1
 \end{align}
-تینوں محددی سطحوں کے لحاظ سے تشاکلی ہو گا (شکل )۔ محددی سطحیں اس سے درج ذیل حصے کاٹتے  ہیں۔
+تینوں محددی سطحوں کے لحاظ سے تشاکلی ہو گا (شکل  \حوالہ{شکل_مثال_سمتیہ_یک_چادری_قطع_زائد} )۔ محددی سطحیں اس سے درج ذیل حصے کاٹتے  ہیں۔
 \begin{gather}
 \begin{aligned}\label{مساوات_سمتیہ_قطع_مکافی_سطح}
 x&=0:&&\frac{y^2}{b^2}-\frac{z^2}{c^2}=1\,\,\text{\RL{قطع زائد}}\\
@@ -5017,12 +5146,86 @@ z&=0:&&\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\,\,\text{\RL{قطع زائد}}
 اگر \عددی{a=b} ہو تب  یہ قطع زائد سطح  ایک سطح طواف ہو گا۔
 \انتہا{مثال}
 %=====================
-\ابتدا{مثال}
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.4\textwidth}
+\centering
+\pgfmathsetmacro{\a}{0.25}
+\pgfmathsetmacro{\b}{1}
+\pgfmathsetmacro{\c}{sqrt(\a^2+\b^2)}
+\pgfmathsetmacro{\ta}{0}
+\pgfmathsetmacro{\tb}{90}
+\pgfmathsetmacro{\tc}{180}
+\pgfmathsetmacro{\td}{270}
+\pgfmathsetmacro{\ra}{3}
+\pgfmathsetmacro{\cs}{sqrt(1+\ra^2)*\c}
+\begin{tikzpicture}[font=\small,declare function={f(\x,\y)=\a*\x*cos(\y);g(\x,\y)=\b*\x*sin(\y);h(\x,\y)=\c*sqrt((\x)^2+1);k(\x)=\b*sqrt(1-1/\a^2*\x^2);}]
+\begin{axis}[axis line style={draw=none},clip=false,view/h=110,axis lines=center,colormap={}{gray(0cm)=(0.8);gray(1cm)=(0.8);},enlargelimits,ztick={\empty},xtick={\empty},ytick={\empty}]
+%\addplot3[shader=interp,surf,domain=0:3,domain y=0:360]({f(x,y)},{g(x,y)},{h(x,y)});
+%\addplot3[shader=interp,surf,domain=0:3,domain y=0:360]({f(x,y)},{g(x,y)},{-h(x,y)});
+\addplot3[samples y=0,thick,domain=0:\ra]({f(x,\ta)},{g(x,\ta)},{h(x,\ta)});
+\addplot3[samples y=0,thick,domain=0:\ra]({f(x,\ta)},{g(x,\ta)},{-h(x,\ta)});
+\addplot3[samples y=0,thick,domain=0:\ra]({f(x,\tb)},{g(x,\tb)},{h(x,\tb)})node[pos=0.25,pin={[align=center,yshift=3ex]-10:{\RL{مستوی \عددی{yz}}\\\RL{میں قطع زائد}\\ $\frac{z^2}{c^2}-\frac{y^2}{b^2}=1$}}]{};
+\addplot3[samples y=0,thick,domain=0:\ra]({f(x,\tb)},{g(x,\tb)},{-h(x,\tb)})node[pos=0.45,pin=20:{}]{};
+\addplot3[samples y=0,thick,domain=0:\ra]({f(x,\tc)},{g(x,\tc)},{h(x,\tc)})node[pos=0.65,pin={[pin distance=1cm,align=center]130:{\RL{مستوی \عددی{xz} میں قطع زائد}\\ $\frac{z^2}{c^2}-\frac{x^2}{a^2}=1$}}]{};;
+\addplot3[samples y=0,thick,domain=0:\ra]({f(x,\tc)},{g(x,\tc)},{-h(x,\tc)});
+\addplot3[samples y=0,thick,domain=0:\ra]({f(x,\td)},{g(x,\td)},{h(x,\td)});
+\addplot3[samples y=0,thick,domain=0:\ra]({f(x,\td)},{g(x,\td)},{-h(x,\td)});
+\addplot3[thick,domain y=0:360]({f(\ra,y)},{g(\ra,y)},{h(\ra,y)})node[pos=0.45,pin={[align=center]80:{\RL{مستوی \عددی{z=\sqrt{2}c}}\\ \RL{میں ترخیم}\\ $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$}}]{};
+\addplot3[thick,domain y=0:360]({f(\ra,y)},{g(\ra,y)},{-h(\ra,y)});
+\draw[](axis cs:0,0,\c)node[pin={[left]-170:{\RL{$(0,0,c)$}راس }}]{};
+\draw[](axis cs:0,0,-\c)node[pin={[left]170:{\RL{$(0,0,-c)$}راس }}]{};
+\draw[-latex](axis cs:0,0,0)--(axis cs:0.25,0,0)node[above]{$x$};
+\draw[-latex](axis cs:0,0,0)--(axis cs:0,1,0)node[right]{$y$};
+\draw[-latex](axis cs:0,0,0)--(axis cs:0,0,0.75)node[right]{$z$};
+\addplot3 []coordinates {({f(\ra,\ta)},{g(\ra,\ta)},{h(\ra,\ta)}) ({f(\ra,\tc)},{g(\ra,\tc)},{h(\ra,\tc)})}node[pos=0.35,left]{$a$};
+\addplot3 []coordinates {({f(\ra,\tb)},{g(\ra,\tb)},{h(\ra,\tb)}) ({f(\ra,\td)},{g(\ra,\td)},{h(\ra,\td)})}node[pos=0.25,above]{$b$};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.4\textwidth}
+\centering
+\pgfmathsetmacro{\a}{0.25}
+\pgfmathsetmacro{\b}{1}
+\pgfmathsetmacro{\c}{sqrt(\a^2+\b^2)}
+\pgfmathsetmacro{\ta}{0}
+\pgfmathsetmacro{\tb}{90}
+\pgfmathsetmacro{\tc}{150}
+\pgfmathsetmacro{\td}{270}
+\pgfmathsetmacro{\ra}{3}
+\pgfmathsetmacro{\cs}{sqrt(1+\ra^2)*\c}
+\begin{tikzpicture}[font=\small,declare function={f(\x,\y)=\a*\x*cos(\y);g(\x,\y)=\b*\x*sin(\y);h(\x,\y)=\c*sqrt((\x)^2+1);k(\x)=\b*sqrt(1-1/\a^2*\x^2);}]
+\begin{axis}[axis line style={draw=none},clip=false,view/h=120,axis lines=center,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.8);},enlargelimits,ztick={\empty},xtick={\empty},ytick={\empty}]
+\addplot3[shader=interp,surf,domain=0:3,domain y=0:360]({f(x,y)},{g(x,y)},{h(x,y)});
+\addplot3[shader=interp,surf,domain=0:3,domain y=0:360]({f(x,y)},{g(x,y)},{-h(x,y)});
+%\addplot3[samples y=0,thick,domain=0:\ra]({f(x,\ta)},{g(x,\ta)},{h(x,\ta)});
+%\addplot3[samples y=0,thick,domain=0:\ra]({f(x,\ta)},{g(x,\ta)},{-h(x,\ta)});
+%\addplot3[samples y=0,thick,domain=0:\ra]({f(x,\tb)},{g(x,\tb)},{h(x,\tb)});
+%\addplot3[samples y=0,thick,domain=0:\ra]({f(x,\tb)},{g(x,\tb)},{-h(x,\tb)});
+%\addplot3[samples y=0,thick,domain=0:\ra]({f(x,\tc)},{g(x,\tc)},{h(x,\tc)});
+%\addplot3[samples y=0,thick,domain=0:\ra]({f(x,\tc)},{g(x,\tc)},{-h(x,\tc)});
+%\addplot3[samples y=0,thick,domain=0:\ra]({f(x,\td)},{g(x,\td)},{h(x,\td)});
+%\addplot3[samples y=0,thick,domain=0:\ra]({f(x,\td)},{g(x,\td)},{-h(x,\td)});
+\addplot3[fill=white,domain y=0:360]({f(\ra,y)},{g(\ra,y)},{h(\ra,y)});
+\addplot3[domain y=-90:\tc]({f(\ra,y)},{g(\ra,y)},{-h(\ra,y)});
+\draw[-latex](axis cs:0,0,0)--(axis cs:0.25,0,0)node[above]{$x$};
+\draw[-latex](axis cs:0,0,0)--(axis cs:0,1,0)node[right]{$y$};
+\draw[](axis cs:0,0,0)--(axis cs:0,0,0.75);
+\draw[-latex](axis cs:0,0,\cs-6*\a)--(axis cs:0,0,\cs+3)node[right]{$z$};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+\caption{دو چادری قطع مکافی}
+\label{شکل_مثال_سمتیہ_دو_چادری}
+\end{figure}
+
+\ابتدا{مثال}\شناخت{مثال_سمتیہ_دو_چادری}
 \اصطلاح{دو چادری قطع مکافی سطح }
 \begin{align}\label{مساوات_سمتیہ_دو_چادری_قطع_زائد}
 \frac{z^2}{c^2}-\frac{x^2}{a^2}-\frac{y^2}{b^2}=1
 \end{align}
-تینوں محددی سطحوں کے لحاظ سے تشاکلی ہے۔ سطح  \عددی{z=0} اس کو قطع  نہیں کرتا ہے۔ درحقیقت ایک افقی سطح اس صورت اس کو قطع کرتا ہے جب \عددی{\abs{z}\ge c} ہو۔ قطع زائد حصوں
+تینوں محددی سطحوں کے لحاظ سے تشاکلی ہے (شکل \حوالہ{شکل_مثال_سمتیہ_دو_چادری})۔ سطح  \عددی{z=0} اس کو قطع  نہیں کرتا ہے۔ درحقیقت ایک افقی سطح اس صورت اس کو قطع کرتا ہے جب \عددی{\abs{z}\ge c} ہو۔ قطع زائد حصوں
  \begin{align*}
 x&=0:\quad\frac{z^2}{c^2}-\frac{y^2}{b^2}=1,&& y=0:\quad \frac{z^2}{c^2}-\frac{x^2}{a^2}=1
 \end{align*}
@@ -5043,12 +5246,56 @@ x&=0:\quad\frac{z^2}{c^2}-\frac{y^2}{b^2}=1,&& y=0:\quad \frac{z^2}{c^2}-\frac{x
 کے متقارب ہیں۔
 \انتہا{مثال}
 %======================
-\ابتدا{مثال}
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.6\textwidth}
+\pgfmathsetmacro{\a}{1}
+\pgfmathsetmacro{\b}{1}
+\pgfmathsetmacro{\c}{1}
+\pgfmathsetmacro{\xa}{2}
+\pgfmathsetmacro{\ya}{2}
+\pgfmathsetmacro{\xaa}{1}
+\begin{tikzpicture}[font=\small,declare function={f(\x,\y)=(\y)^2-(\x)^2;g(\x)=sqrt(1+(\x)^2);}]
+\begin{axis}[small,clip=false,view/h=110,axis lines=center,xlabel={$x$},ylabel={$y$},zlabel={$z$},xtick={\empty},ytick={\empty},ztick={\empty},axis on top,colormap={}{gray(0cm)=(0.2);gray(1cm)=(0.8)},xlabel style={anchor=north},ylabel style={anchor=west}]
+%\addplot3[surf,shader=flat,domain=-\xa:\xa,domain y=-\ya:\ya]{y^2-x^2};
+\addplot3[thick,domain=-1.5:1.5,samples y=0](x,0,{f(x,0)})node[pin={[align=center]-135:{\RL{مستوی \عددی{xz} میں قطع مکافی}\\  $z=-\frac{c}{a^2}x^2$}}]{};
+\addplot3[thick,domain=-\xa-0.25:\xa+0.25,samples y=0](x,\ya,{f(x,\ya)});
+\addplot3[thick,domain=-\xa-0.25:\xa+0.25,samples y=0](x,-\ya,{f(x,-\ya)});
+\addplot3[thick,samples y=0,domain=1:2.5](x,{sqrt((x)^2-1)},-1)node[pin={[align=center,below]-120:{\RL{مستوی \عددی{z=-c} }\\  \RL{میں قطع زائد}\\$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$}}]{};
+\addplot3[thick,samples y=0,domain=1:2.5](x,{-sqrt((x)^2-1)},-1);
+\addplot3[thick,samples y=0,domain=1:2.5](-x,{sqrt((x)^2-1)},-1);
+\addplot3[thick,samples y=0,domain=1:2.5](-x,{-sqrt((x)^2-1)},-1);
+\addplot3[thick,domain y=-\ya-0.25:\ya+0.25](0,y,{f(0,y)})node[pin={[align=center]80:{\RL{مستوی  \عددی{yz}  میں قطع مکافی}\\$z=\frac{c}{b^2}y^2$}}]{};
+\addplot3[thick,domain y=-\ya-0.25:\ya+0.25](-\xa+0.25,y,{f(-\xa+0.25,y)});
+\addplot3[thick,samples y=0,domain=-\xa:\xa](x,{g(x)},1)node[pin={[align=center,right]-60:{\RL{مستوی \عددی{z=c}  میں قطع زائد}\\$\frac{y^2}{b^2}-\frac{x^2}{a^2}=1$}}]{};
+\addplot3[thick,samples y=0,domain=-\xa:\xa](x,{-g(x)},1);
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.4\textwidth}
+\pgfmathsetmacro{\a}{1}
+\pgfmathsetmacro{\b}{1}
+\pgfmathsetmacro{\c}{1}
+\pgfmathsetmacro{\xa}{2}
+\pgfmathsetmacro{\ya}{2}
+\pgfmathsetmacro{\xaa}{1}
+\begin{tikzpicture}[font=\small,declare function={f(\x,\y)=(\y)^2-(\x)^2;g(\x)=sqrt(1+(\x)^2);}]
+\begin{axis}[small,view/h=110,axis lines=center,xlabel={$x$},ylabel={$y$},zlabel={$z$},xtick={\empty},ytick={\empty},ztick={\empty},axis on top,colormap={}{gray(0cm)=(0.2);gray(1cm)=(0.8)},xlabel style={anchor=north},ylabel style={anchor=west}]
+\addplot3[surf,shader=flat,domain=-\xa:\xa,domain y=-\ya:\ya]{y^2-x^2};
+\addplot3[]coordinates {(0,0,0)}node[circ]{}node[pin=100:{\RL{نقطہ زین}}]{};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+\caption{قطع زائد قطع مکافی سطح}
+\label{شکل_مثال_سمتیہ_قطع_زائد_قطع_مکافی_سطح}
+\end{figure}
+\ابتدا{مثال}\شناخت{مثال_سمتیہ_قطع_زائد_قطع_مکافی_سطح}
 \اصطلاح{قطع زائد  قطع مکافی سطح}
 \begin{align}\label{مساوات_سمتیہ_قطع_زائد_قطع_مکافی_الف}
 \frac{y^2}{b^2}-\frac{x^2}{a^2}&=\frac{z}{c}&& c>0
 \end{align}
-سطح \عددی{x=0} اور سطح \عددی{y=0} کے لحاظ سے تشاکلی ہے۔ قطع زائد قطع مکافی کی ان سطحوں کے ساتھ تقاطع درج ذیل ہوں گے۔
+سطح \عددی{x=0} اور سطح \عددی{y=0} کے لحاظ سے تشاکلی ہے (شکل \حوالہ{شکل_مثال_سمتیہ_قطع_زائد_قطع_مکافی_سطح})۔ قطع زائد قطع مکافی کی ان سطحوں کے ساتھ تقاطع درج ذیل ہوں گے۔
 \begin{align}
 x&=0:&&z=\frac{c}{b^2}y^2\,\,\text{قطع مکافی}\label{مساوات_سمتیہ_قطع_زائد_قطع_مکافی_ب}\\
 y&=0:&&z=-\frac{c}{a^2}x^2\,\,\text{قطع مکافی}\label{مساوات_سمتیہ_قطع_زائد_قطع_مکافی_پ}
@@ -5071,4 +5318,1200 @@ y&=0:&&z=-\frac{c}{a^2}x^2\,\,\text{قطع مکافی}\label{مساوات_سمت
 انہیں تصورات کو استعمال کرتے ہوئے  مائع شیشہ  کو ایک رفتار پر گھومتے ہوئے  برتن میں آہستہ آہستہ ٹھنڈا ہونے دیا جاتا ہے حتٰی کہ وہ ٹھوس ہو جائے۔ اس طرح بڑے سے بڑا آئینہ بنایا جا سکتا ہے۔
 
 
+\جزوحصہء{سوالات}
+\ابتدا{سوالات}
+\موٹا{سطحوں کی مساوات  پہچانئے}\\
+سوال \حوالہ{سوال_سمتیہ_سطح_اور_مساوات_ملائیں_الف} تا سوال \حوالہ{سوال_سمتیہ_سطح_اور_مساوات_ملائیں_ڈ}   میں سطحوں کی   مساوات دی گئی ہیں۔  ان کے اشکال کو  (ا)  تا (ز) میں پہچانئے۔ سطح کی قسم (قطع مکافی سطح، قطع زائد سطح، وغیرہ) بھی پہچانئے۔
 
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_سطح_اور_مساوات_ملائیں_الف}
+$x^2+y^2+4z^2=10$
+\ابتدا{جواب}
+\wf{\unexpanded{
+شکل \حوالہ{شکل_سوال_سمتیہ_سطح_اور_مساوات_ملائیں_الف}}}
+\انتہا{جواب}
+\انتہا{سوال}
+%============
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_سطح_اور_مساوات_ملائیں_ب}
+$z^2+4y^2-4x^2=4$
+\انتہا{سوال}
+%============
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_سطح_اور_مساوات_ملائیں_پ}
+$9y^2+z^2=16$
+\ابتدا{جواب}
+\wf{\unexpanded{
+شکل \حوالہ{شکل_سوال_سمتیہ_سطح_اور_مساوات_ملائیں_پ}}}
+\انتہا{جواب}
+\انتہا{سوال}
+%============
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_سطح_اور_مساوات_ملائیں_ت}
+$y^2+z^2=x^2$
+\انتہا{سوال}
+%============
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_سطح_اور_مساوات_ملائیں_ٹ}
+$x=y^2-z^2$
+\ابتدا{جواب}
+\wf{\unexpanded{
+شکل \حوالہ{شکل_سوال_سمتیہ_سطح_اور_مساوات_ملائیں_ٹ}}}
+\انتہا{جواب}
+\انتہا{سوال}
+%============
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_سطح_اور_مساوات_ملائیں_ث}
+$x=-y^2-z^2$
+\انتہا{سوال}
+%============
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_سطح_اور_مساوات_ملائیں_ج}
+$x^2+2z^2=8$
+\ابتدا{جواب}
+\wf{\unexpanded{
+شکل \حوالہ{شکل_سوال_سمتیہ_سطح_اور_مساوات_ملائیں_ج}}}
+\انتہا{جواب}
+\انتہا{سوال}
+%============
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_سطح_اور_مساوات_ملائیں_چ}
+$z^2+x^2-y^2=1$
+\انتہا{سوال}
+%============
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_سطح_اور_مساوات_ملائیں_ح}
+$x=z^2-y^2$
+\ابتدا{جواب}
+\wf{\unexpanded{
+شکل \حوالہ{شکل_سوال_سمتیہ_سطح_اور_مساوات_ملائیں_ح}}}
+\انتہا{جواب}
+\انتہا{سوال}
+%============
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_سطح_اور_مساوات_ملائیں_خ}
+$z=-4x^2-y^2$
+\انتہا{سوال}
+%============
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_سطح_اور_مساوات_ملائیں_د}
+$x^2+4z^2=y^2$
+\ابتدا{جواب}
+\wf{\unexpanded{
+شکل \حوالہ{شکل_سوال_سمتیہ_سطح_اور_مساوات_ملائیں_د}}}
+\انتہا{جواب}
+\انتہا{سوال}
+%============
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_سطح_اور_مساوات_ملائیں_ڈ}
+$9x^2+4y^2+2z^2=36$
+\انتہا{سوال}
+%============
+\begin{figure}
+\centering
+\begin{subfigure}{0.3\textwidth}
+\centering
+%	y^2+z^2=x^2
+\begin{tikzpicture}[declare function={fx(\r,\t)=\r;fy(\r,\t)=\r*cos(\t);fz(\r,\t)=\r*sin(\t);}]
+\pgfmathsetmacro{\ra}{-3}
+\pgfmathsetmacro{\rb}{3}
+\pgfmathsetmacro{\ta}{0}
+\pgfmathsetmacro{\tb}{90}
+\pgfmathsetmacro{\tc}{180}
+\pgfmathsetmacro{\td}{270}
+\begin{axis}[view/h=150,axis on top,axis equal,axis lines=center,enlargelimits=true,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=east},zlabel style={anchor=south},
+ axis x line=none, axis y line=none,axis z line=none]
+\pgfplotsinvokeforeach{\ra,\rb}{
+\addplot3[domain=-\ra:\ra,domain y=0:360, variable=\x, variable y=\t]({fx(#1,\t)},{fy(#1,\t)},{fz(#1,\t)});}
+\pgfplotsinvokeforeach{\ta,\tb,\tc,\td}{
+\addplot3[domain=-\ra:\ra,domain y=0:360, variable=\x, variable y=\t]({fx(x,#1)},{fy(x,#1)},{fz(x,#1)});}
+\addplot3[-latex] coordinates {(0,0,0)(6,0,0)}node[left]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,2,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,6)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتیہ_سطح_اور_مساوات_ملائیں_ت}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+%	x^2+y^2+4z^2=10
+\begin{tikzpicture}[declare function={fx(\r,\t)=2*\r*cos(\t);fy(\r,\t)=2*\r*sin(\t);fz(\r,\t)=sqrt(5/2-(\r)^2);}]
+\pgfmathsetmacro{\ra}{sqrt(5/2)}
+\pgfmathsetmacro{\ta}{0}
+\pgfmathsetmacro{\tb}{90}
+\pgfmathsetmacro{\tc}{180}
+\pgfmathsetmacro{\td}{270}
+\begin{axis}[view/h=110,axis on top,axis equal,axis lines=center,enlargelimits=true,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},zmax=\ra+0.5,
+,xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south}, axis x line=none, axis y line=none,axis z line=none]
+\addplot3[domain=0:\ra,domain y=0:360, variable=\r, variable y=\t]({fx(\ra,t)},{fy(\ra,t)},{fz(\ra,t)});
+\pgfplotsinvokeforeach{\ta,\tb,\tc,\td}{
+\addplot3[domain=0:\ra,samples y=0,domain y=0:360, variable=\r, variable y=\t]({fx(r,#1)},{fy(r,#1)},{fz(r,#1)});
+\addplot3[domain=0:\ra,samples y=0,domain y=0:360, variable=\r, variable y=\t]({fx(r,#1)},{fy(r,#1)},{-fz(r,#1)});}
+\addplot3[-latex] coordinates {(0,0,0)(4,0,0)}node[left]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,3.75,0)}node[right]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,2.5)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتیہ_سطح_اور_مساوات_ملائیں_الف}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+%	x=y^2-z^2
+\begin{tikzpicture}[declare function={fx(\y,\z)=\y^2-\z^2;}]
+\pgfmathsetmacro{\ra}{2}
+\begin{axis}[view/h=110,axis on top,axis equal,axis lines=center,enlargelimits=true,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},
+%colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.8);},opacity=0.2,
+ axis x line=none, axis y line=none,axis z line=none
+]
+%\addplot3[z buffer=sort,surf,domain=-\ra:\ra,domain y=-\ra:\ra,variable=\y,variable y=\z]({fx(y,z)},{y},{z});   %zabardast
+\addplot3[domain=-\ra:\ra,domain y=-\ra:\ra,variable=\y,variable y=\z]({fx(2,z)},{2},{z});
+\addplot3[domain=-\ra:\ra,domain y=-\ra:\ra,variable=\y,variable y=\z]({fx(-2,z)},{-2},{z});
+\addplot3[samples y=0,domain=-2:2,domain y=0:\ra,variable=\y,variable y=\z]({fx(y,0)},{y},{0});
+\addplot3[samples y=0,domain=-2:2,domain y=0:\ra,variable=\y,variable y=\z]({fx(y,2)},{y},{2});
+\addplot3[samples y=0,domain=-2:-0.9,domain y=-\ra:\ra,variable=\y,variable y=\z]({fx(y,-2)},{y},{-2});
+\addplot3[samples y=0,domain=2:0,domain y=-\ra:\ra,variable=\y,variable y=\z]({fx(y,-2)},{y},{-2});
+\addplot3[-latex] coordinates {(0,0,0)(3,0,0)}node[left]{$x$};
+\addplot3[-latex] coordinates {(0,1.25,0)(0,3,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,2)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتیہ_سطح_اور_مساوات_ملائیں_ٹ}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+%	x=-y^2-z^2
+\begin{tikzpicture}[declare function={fx(\r,\t)=-(\r)^2;fy(\r,\t)=\r*cos(\t);fz(\r,\t)=\r*sin(\t);g(\x,\y)=sqrt((\x)^2-(\y)^2);}]
+\pgfmathsetmacro{\ra}{2}
+\pgfmathsetmacro{\ta}{0}
+\pgfmathsetmacro{\tb}{90}
+\pgfmathsetmacro{\tc}{180}
+\pgfmathsetmacro{\td}{270}
+\begin{axis}[view/h=110,axis on top,axis equal,axis lines=center,enlargelimits=true,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},
+colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.8);},opacity=1,
+ axis x line=none, axis y line=none,axis z line=none
+]
+%\addplot3[z buffer=sort,shader=flat,surf,domain=0:\ra,domain y=0:360,variable=\r,variable y=\t]({fx(r,t)},{fy(r,t)},{fz(r,t)});
+\addplot3[domain=0:\ra,domain y=0:360,variable=\r,variable y=\t]({fx(2,t)},{fy(2,t)},{fz(2,t)});
+\addplot3[domain=0:\ra,samples y=0,domain y=0:360,variable=\r,variable y=\t]({fx(r,\ta)},{fy(r,\ta)},{fz(r,\ta)});
+\addplot3[domain=0:\ra,samples y=0,domain y=0:360,variable=\r,variable y=\t]({fx(r,\tb)},{fy(r,\tb)},{fz(r,\tb)});
+\addplot3[domain=0:\ra,samples y=0,domain y=0:360,variable=\r,variable y=\t]({fx(r,\tc)},{fy(r,\tc)},{fz(r,\tc)});
+\addplot3[domain=0:\ra,samples y=0,domain y=0:360,variable=\r,variable y=\t]({fx(r,\td)},{fy(r,\td)},{fz(r,\td)});
+\addplot3[-latex] coordinates {(0,0,0)(3,0,0)}node[left]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,3,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,5)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتیہ_سطح_اور_مساوات_ملائیں_ث}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+%	x^2+2z^2=8
+\begin{tikzpicture}[declare function={fx(\y,\t)=sqrt(8)*cos(\t);fy(\y,\t)=\y;fz(\y,\t)=2*sin(\t);}]
+\pgfmathsetmacro{\ra}{2}
+\pgfmathsetmacro{\ya}{\ra}
+\pgfmathsetmacro{\yb}{-\ra}
+\pgfmathsetmacro{\yc}{0}
+\pgfmathsetmacro{\ta}{0}
+\pgfmathsetmacro{\tb}{90}
+\pgfmathsetmacro{\tc}{180}
+\pgfmathsetmacro{\td}{270}
+\begin{axis}[view/h=110,axis on top,axis equal,axis lines=center,enlargelimits=true,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},
+colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.8);},opacity=1,
+ axis x line=none, axis y line=none,axis z line=none
+]
+%\addplot3[z buffer=sort,shader=flat,surf,domain=0:\ra,domain y=0:360,variable=\r,variable y=\t]({fx(r,t)},{fy(r,t)},{fz(r,t)});
+\addplot3[domain=0:\ra,domain y=0:360,variable=\y,variable y=\t]({fx(\ya,t)},{fy(\ya,t)},{fz(\ya,t)});
+\addplot3[domain=0:\ra,domain y=0:360,variable=\y,variable y=\t]({fx(\yb,t)},{fy(\yb,t)},{fz(\yb,t)});
+\addplot3[domain=0:\ra,domain y=0:360,variable=\y,variable y=\t]({fx(\yc,t)},{fy(\yc,t)},{fz(\yc,t)});
+\addplot3[domain=-\ra:\ra,domain y=0:360,variable=\y,variable y=\t]({fx(y,\ta)},{fy(y,\ta)},{fz(y,\ta)});
+\addplot3[domain=-\ra:\ra,domain y=0:360,variable=\y,variable y=\t]({fx(y,\tb)},{fy(y,\tb)},{fz(y,\tb)});
+\addplot3[domain=-\ra:\ra,domain y=0:360,variable=\y,variable y=\t]({fx(y,\tc)},{fy(y,\tc)},{fz(y,\tc)});
+\addplot3[domain=-\ra:\ra,domain y=0:360,variable=\y,variable y=\t]({fx(y,\td)},{fy(y,\td)},{fz(y,\td)});
+\addplot3[-latex] coordinates {(0,0,0)(5,0,0)}node[left]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,4,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,3)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتیہ_سطح_اور_مساوات_ملائیں_ج}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+%	z=-4x^2-y^2	
+\begin{tikzpicture}[declare function={fz(\x,\y)=-4*\x^2-\y^2;g(\x)=sqrt(4-4*(\x)^2);h(\x)=-1*(\x)^2;j(\x)=-4*(\x)^2;}]
+\pgfmathsetmacro{\ra}{2}
+\begin{axis}[view/h=120,axis on top,axis equal,axis lines=center,enlargelimits=true,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},
+%colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.8);},opacity=0.2,
+ axis x line=none, axis y line=none,axis z line=none
+]
+%\addplot3[z buffer=sort,surf,domain=-\ra:\ra,domain y=-\ra:\ra](x,{y},{fz(x,y)});   %zabardast
+\addplot3[samples y=0,domain=0:\ra,domain y=-\ra:\ra](x,{g(x)},-4); 
+\addplot3[samples y=0,domain=0:\ra,domain y=-\ra:\ra](x,{-g(x)},-4); 
+\addplot3[samples y=0,domain=0:\ra,domain y=-\ra:\ra](-x,{-g(x)},-4); 
+\addplot3[samples y=0,domain=0:\ra,domain y=-\ra:\ra](-x,{g(x)},-4); 
+\addplot3[samples y=0,domain=-2:2,domain y=-\ra:\ra](0,{x},{h(x)}); 
+\addplot3[samples y=0,domain=-1:1,domain y=-\ra:\ra](x,{0},{j(x)}); 
+\addplot3[-latex] coordinates {(0,0,0)(4,0,0)}node[below]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,2,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,-4)(0,0,1)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتیہ_سطح_اور_مساوات_ملائیں_خ}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+%	z^2+x^2-y^2=1
+\begin{tikzpicture}[declare function={fx(\r,\t)=\r*cos(\t);fy(\r,\t)=sqrt((\r)^2-1);fz(\r,\t)=\r*sin(\t);}]
+\pgfmathsetmacro{\ra}{2}
+\pgfmathsetmacro{\ta}{0}
+\pgfmathsetmacro{\tb}{90}
+\pgfmathsetmacro{\tc}{180}
+\pgfmathsetmacro{\td}{270}
+\begin{axis}[view/h=110,axis on top,axis equal,axis lines=center,enlargelimits=true,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},
+colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.8);},opacity=1,
+ axis x line=none, axis y line=none,axis z line=none
+]
+%\addplot3[z buffer=sort,shader=flat,surf,domain=1:\rd,domain y=0:360,variable=\r,variable y=\t]({fx(r,t)},{fy(r,t)},{fz(r,t)});
+%\addplot3[z buffer=sort,shader=flat,surf,domain=1:\rd,domain y=0:360,variable=\r,variable y=\t]({fx(r,t)},{-fy(r,t)},{fz(r,t)});
+\addplot3[domain=1:\ra,domain y=0:360,variable=\y,variable y=\t]({fx(\ra,t)},{fy(\ra,t)},{fz(\ra,t)});
+\addplot3[domain=1:\ra,domain y=0:360,variable=\y,variable y=\t]({fx(1,t)},{fy(1,t)},{fz(1,t)});
+\addplot3[domain=1:\ra,domain y=0:360,variable=\y,variable y=\t]({fx(\ra,t)},{-fy(\ra,t)},{fz(\ra,t)});
+\addplot3[samples y=0,domain=1:\ra,domain y=0:360,variable=\y,variable y=\t]({fx(y,\ta)},{fy(y,\ta)},{fz(y,\ta)});
+\addplot3[samples y=0,domain=1:\ra,domain y=0:360,variable=\y,variable y=\t]({fx(y,\tb)},{fy(y,\tb)},{fz(y,\tb)});
+\addplot3[samples y=0,domain=1:\ra,domain y=0:360,variable=\y,variable y=\t]({fx(y,\tc)},{fy(y,\tc)},{fz(y,\tc)});
+\addplot3[samples y=0,domain=1:\ra,domain y=0:360,variable=\y,variable y=\t]({fx(y,\td)},{fy(y,\td)},{fz(y,\td)});
+\addplot3[samples y=0,domain=1:\ra,domain y=0:360,variable=\y,variable y=\t]({fx(y,\ta)},{-fy(y,\ta)},{fz(y,\ta)});
+\addplot3[samples y=0,domain=1:\ra,domain y=0:360,variable=\y,variable y=\t]({fx(y,\tb)},{-fy(y,\tb)},{fz(y,\tb)});
+\addplot3[samples y=0,domain=1:\ra,domain y=0:360,variable=\y,variable y=\t]({fx(y,\tc)},{-fy(y,\tc)},{fz(y,\tc)});
+\addplot3[samples y=0,domain=1:\ra,domain y=0:360,variable=\y,variable y=\t]({fx(y,\td)},{-fy(y,\td)},{fz(y,\td)});
+\addplot3[-latex] coordinates {(0,0,0)(5,0,0)}node[left]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,4,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,3)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتیہ_سطح_اور_مساوات_ملائیں_چ}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+%	x=z^2-y^2
+\begin{tikzpicture}[declare function={fx(\y,\z)=\z^2-\y^2;}]
+\pgfmathsetmacro{\ra}{2}
+\begin{axis}[view/h=120,axis on top,axis equal,axis lines=center,enlargelimits=true,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},
+%colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.8);},opacity=0.2,
+ axis x line=none, axis y line=none,axis z line=none
+]
+%\addplot3[z buffer=sort,surf,domain=-\ra:\ra,domain y=-\ra:\ra,variable=\y,variable y=\z]({fx(y,z)},{y},{z});   %zabardast
+\addplot3[samples y=0,domain=-\ra:\ra,domain y=-\ra:\ra,variable=\y,variable y=\z]({fx(y,2)},{y},{2});
+\addplot3[samples y=0,domain=-\ra:\ra,domain y=-\ra:\ra,variable=\y,variable y=\z]({fx(y,-2)},{y},{-2});
+\addplot3[domain=-2:2,domain y=-\ra:\ra,variable=\y,variable y=\z]({fx(0,z)},{0},{z});
+\addplot3[domain=-2:2,domain y=-\ra:\ra,variable=\y,variable y=\z]({fx(2,z)},{2},{z});
+\addplot3[domain=-2:-0.9,domain y=-\ra:-1.4,variable=\y,variable y=\z]({fx(-2,z)},{-2},{z});
+\addplot3[domain=2:0,domain y=-1.25:\ra,variable=\y,variable y=\z]({fx(-2,z)},{-2},{z});
+\addplot3[-latex] coordinates {(0,0,0)(2,0,0)}node[below]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,4,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,4)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتیہ_سطح_اور_مساوات_ملائیں_ح}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+%	x^2+4z^2=y^2
+\begin{tikzpicture}[declare function={fx(\r,\t)=2*\r*cos(t);fy(\r,\t)=2*\r;fz(\r,\t)=\r*sin(\t);g(\x)=2*\x;}]
+\pgfmathsetmacro{\ra}{2}
+\pgfmathsetmacro{\ta}{0}
+\pgfmathsetmacro{\tb}{90}
+\pgfmathsetmacro{\tc}{180}
+\pgfmathsetmacro{\td}{270}
+\begin{axis}[view/h=120,axis on top,axis equal,axis lines=center,enlargelimits=true,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},
+%colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.8);},opacity=0.2,
+ axis x line=none, axis y line=none,axis z line=none
+]
+%\addplot3[z buffer=sort,surf,domain=0:\ra,domain y=0:360,variable=\r,variable y=\t]({fx(r,t)},{fy(r,t)},{fz(r,t)});   %zabardast
+%\addplot3[z buffer=sort,surf,domain=0:\ra,domain y=0:360,variable=\r,variable y=\t]({fx(r,t)},{-fy(r,t)},{fz(r,t)});   %zabardast
+\addplot3[domain=0:\ra,domain y=0:360,variable=\r,variable y=\t]({fx(\ra,t)},{fy(\ra,t)},{fz(\ra,t)}); 
+\addplot3[domain=0:\ra,domain y=0:360,variable=\r,variable y=\t]({fx(\ra,t)},{-fy(\ra,t)},{fz(\ra,t)}); 
+\addplot3[samples y=0,domain=-2:2]({0},{g(x)},x); 
+\addplot3[samples y=0,domain=-2:2]({0},{-g(x)},x); 
+\addplot3[samples y=0,domain=-4:4](x,x,0); 
+\addplot3[samples y=0,domain=-4:4](x,-x,0); 
+\addplot3[-latex] coordinates {(0,0,0)(4,0,0)}node[below]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,6,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,2)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتیہ_سطح_اور_مساوات_ملائیں_د}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+%	9y^2+z^2=16
+\begin{tikzpicture}[declare function={fx(\x,\t)=\x;fy(\x,\t)=2/sqrt(3)*cos(\t);fz(\x,\t)=4*sin(\t);}]
+\pgfmathsetmacro{\xa}{0}
+\pgfmathsetmacro{\xb}{8}
+\pgfmathsetmacro{\xc}{-8}
+\pgfmathsetmacro{\ta}{0}
+\pgfmathsetmacro{\tb}{90}
+\pgfmathsetmacro{\tc}{180}
+\pgfmathsetmacro{\td}{270}
+\begin{axis}[view/h=110,axis on top,axis equal,axis lines=center,enlargelimits=true,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south}, axis x line=none, axis y line=none,axis z line=none]
+\pgfplotsinvokeforeach{\xa,\xb,\xc}{
+\addplot3[domain y=0:360, variable=\x, variable y=\t]({fx(#1,\t)},{fy(#1,\t)},{fz(#1,\t)});}
+\pgfplotsinvokeforeach{\ta,\tb,\tc,\td}{
+\addplot3[domain=\xb:\xc,domain y=0:360, variable=\x, variable y=\t]({fx(x,#1)},{fy(x,#1)},{fz(x,#1)});}
+\addplot3[-latex] coordinates {(0,0,0)(10,0,0)}node[left]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,4,0)}node[right]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,6)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتیہ_سطح_اور_مساوات_ملائیں_پ}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+%	9x^2+4y^2+2z^2=36
+\begin{tikzpicture}[declare function={fx(\r,\t)=2*\r*cos(t);fy(\r,\t)=3*\r*sin(\t);fz(\r,\t)=4*sqrt(1-(\r)^2);g(\x)=sqrt(18-2*(\x)^2);h(\x)=3/sqrt(2)*sqrt(4-(\x)^2);}]
+\pgfmathsetmacro{\ra}{1}
+\pgfmathsetmacro{\ta}{0}
+\pgfmathsetmacro{\tb}{90}
+\pgfmathsetmacro{\tc}{180}
+\pgfmathsetmacro{\td}{270}
+\begin{axis}[view/h=120,axis on top,axis equal,axis lines=center,enlargelimits=true,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},
+%colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.8);},opacity=0.2,
+ axis x line=none, axis y line=none,axis z line=none
+]
+%\addplot3[z buffer=sort,surf,domain=0:\ra,domain y=0:360,variable=\r,variable y=\t]({fx(r,t)},{fy(r,t)},{fz(r,t)});   %zabardast
+%\addplot3[z buffer=sort,surf,domain=0:\ra,domain y=0:360,variable=\r,variable y=\t]({fx(r,t)},{fy(r,t)},{-fz(r,t)});   %zabardast
+\addplot3[domain=0:\ra,domain y=0:360,variable=\r,variable y=\t]({fx(\ra,t)},{fy(\ra,t)},{fz(\ra,t)}); 
+\addplot3[samples y=0,domain=-3:3]({0},{\x},{g(\x)});
+\addplot3[samples y=0,domain=-3:3]({0},{\x},{-g(\x)});
+\addplot3[samples y=0,domain=-3:3]({\x},{0},{h(\x)});
+\addplot3[samples y=0,domain=-3:3]({\x},{0},{-h(\x)});
+\addplot3[-latex] coordinates {(0,0,0)(6,0,0)}node[below]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,5,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,6)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتیہ_سطح_اور_مساوات_ملائیں_ڈ}
+\end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+\centering
+%	z^2+4y^2-4x^2=4
+\begin{tikzpicture}[declare function={f(\x)=2*sqrt(1-(\x)^2);g(\x)=2*sqrt(1+(\x)^2);h(\x)=sqrt(1+(\x)^2);fx(\r,\t)=sqrt((\r)^2-1);fy(\r,\t)=\r*sin(\t);fz(\r,\t)=2*\r*cos(t);kk(\x,\y)=2*sqrt(1+\x^2-\y^2);m(\x)=2*sqrt(1+\ra^2-(\x)^2);}]
+\pgfmathsetmacro{\ra}{1}
+\pgfmathsetmacro{\rb}{sqrt(1+\ra^2)}
+\pgfmathsetmacro{\rna}{1}
+\pgfmathsetmacro{\rnb}{sqrt(1+\rna)}
+\pgfmathsetmacro{\ta}{0}
+\pgfmathsetmacro{\tb}{90}
+\pgfmathsetmacro{\tc}{180}
+\pgfmathsetmacro{\td}{270}
+\begin{axis}[view/h=135,axis on top,axis equal,axis lines=center,enlargelimits=true,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},
+, axis x line=none, axis y line=none,axis z line=none]
+%\addplot3[domain=1:\ra,domain y=0:90,variable=\r, variable y=\t]({fx(r,t)},{fy(r,t)},{fz(r,t)});
+%\addplot3[shader=flat,surf,z buffer=sort,domain=-1:1,domain y=-1:1](x,y,{kk(x,y)});
+%\addplot3[shader=flat,surf,z buffer=sort,domain=-1:1,domain y=-1:1](x,y,{-kk(x,y)});
+\addplot3[samples y=0,domain=-\ra:\ra]({0},{x},{f(x)});
+\addplot3[samples y=0,domain=-\ra:\ra]({0},{x},{-f(x)});
+\addplot3[samples y=0,domain=-\ra:\ra]({x},{0},{g(x)});
+\addplot3[samples y=0,domain=-\ra:\ra]({x},{0},{-g(x)});
+\addplot3[samples y=0,domain=-\ra:\ra]({x},{h(x)},0);
+\addplot3[samples y=0,domain=-\ra:\ra]({x},{-h(x)},0);
+\addplot3[samples y=0,domain=-\rb:\rb]({\ra},{x},{m(x)});
+\addplot3[samples y=0,domain=-\rb:\rb]({\ra},{x},{-m(x)});
+\addplot3[samples y=0,domain=-\rb:\rb]({-\ra},{x},{m(x)});
+\addplot3[samples y=0,domain=-\rb:\rb]({-\ra},{x},{-m(x)});
+\addplot3[-latex] coordinates {(0,0,0)(3,0,0)}node[left]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,3,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,5)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتیہ_سطح_اور_مساوات_ملائیں_ب}
+\end{subfigure}\hfill
+\end{figure}
+%=====================
+
+\موٹا{خاکہ}\\
+سوال \حوالہ{سوال_سمتیہ_خاکہ_کھینچیں_الف} تا سوال \حوالہ{سوال_سمتیہ_خاکہ_کھینچیں_ب} میں سطحوں کا خاکہ کھینچیں۔
+
+\موٹا{نلکیاں}\\
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_خاکہ_کھینچیں_الف}
+$x^2+y^2=4$
+\ابتدا{جواب}
+\wf{\unexpanded{$x^2+y^2=4$}}
+\wf{\unexpanded{
+\begin{center}
+% x^2+y^2=4
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);}]
+\begin{axis}[view/h=135,axis equal,axis lines=center,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},
+axis x line=none,axis y line=none,axis z line=none]
+\addplot3[domain y=0:360] ({fx(2,y)},{fy(2,y)},{3});
+\addplot3[domain y=0:360] ({fx(2,y)},{fy(2,y)},{0});
+\addplot3[domain y=0:360] ({fx(2,y)},{fy(2,y)},{-3});
+\addplot3[] coordinates {({fx(2,-30)},{fy(2,-30)},{-3})({fx(2,-30)},{fy(2,-30)},{3})};
+\addplot3[] coordinates {({fx(2,150)},{fy(2,150)},{-3})({fx(2,150)},{fy(2,150)},{3})};
+\addplot3[-latex] coordinates {(0,0,0)(6,0,0)}node[below]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,5,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,6)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$x^2+z^2=4$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$z=y^2-1$
+\ابتدا{جواب}
+\wf{\unexpanded{$z=y^2-1$}}
+\wf{\unexpanded{
+\begin{center}
+%   z=y^2-1
+\begin{tikzpicture}[font=\small,declare function={fz(\y)=(\y)^2-1;}]
+\begin{axis}[view/h=135,axis equal,axis lines=center,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},
+axis x line=none,axis y line=none,axis z line=none]
+\addplot3[samples y=0,domain=-1:1]({0},{x},{fz(x)}); 
+\addplot3[samples y=0,domain=-1:1]({-1},{x},{fz(x)}); 
+\addplot3[samples y=0,domain=-1:1]({1},{x},{fz(x)}); 
+\addplot3[] coordinates {({-1},{-1},{fz(-1)})({1},{-1},{fz(-1)})};
+\addplot3[] coordinates {({-1},{1},{fz(1)})({1},{1},{fz(1)})};
+\addplot3[-latex] coordinates {(0,0,0)(2,0,0)}node[below]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,2,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,1.5)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$x=y^2$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$x^2+4z^2=16$
+
+\ابتدا{جواب}
+\wf{\unexpanded{
+$x^2+4z^2=16$
+\begin{center}
+%	x^2+4z^2=16
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=4*\r*cos(\t);fz(\r,\t)=2*\r*sin(\t);}]
+\pgfmathsetmacro{\ta}{0}
+\pgfmathsetmacro{\tb}{90}
+\pgfmathsetmacro{\tc}{180}
+\pgfmathsetmacro{\td}{270}
+\pgfmathsetmacro{\ky}{12}
+\begin{axis}[view/h=135,axis equal,axis lines=center,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},
+axis x line=none,axis y line=none,axis z line=none]
+\addplot3[domain y=0:360] ({fx(2,y)},-\ky,{fz(2,y)});
+\addplot3[domain y=0:360] ({fx(2,y)},0,{fz(2,y)});
+\addplot3[domain y=0:360] ({fx(2,y)},\ky,{fz(2,y)});
+\addplot3[] coordinates {({fx(2,\ta)},-\ky,{fz(2,\ta)})({fx(2,\ta)},\ky,{fz(2,\ta)})};
+\addplot3[] coordinates {({fx(2,\tb)},-\ky,{fz(2,\tb)})({fx(2,\tb)},\ky,{fz(2,\tb)})};
+\addplot3[] coordinates {({fx(2,\tc)},-\ky,{fz(2,\tc)})({fx(2,\tc)},\ky,{fz(2,\tc)})};
+\addplot3[] coordinates {({fx(2,\td)},-\ky,{fz(2,\td)})({fx(2,\td)},\ky,{fz(2,\td)})};
+\addplot3[-latex] coordinates {(0,0,0)(2.5,0,0)}node[below]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,\ky+0.5,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,2.5)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$4x^2+y^2=36$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$z^2-y^2=1$
+
+\ابتدا{جواب}
+\wf{\unexpanded{
+$z^2-y^2=1$
+\begin{center}
+%	z^2-y^2=1
+\begin{tikzpicture}[font=\small,declare function={fz(\y)=sqrt((\y)^2+1);}]
+\pgfmathsetmacro{\kx}{2}
+\pgfmathsetmacro{\ky}{1}
+\begin{axis}[view/h=135,axis equal,axis lines=center,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},
+axis x line=none,axis y line=none,axis z line=none]
+\addplot3[samples y=0,domain=-\ky:\ky] (-\kx,x,{fz(x)});
+\addplot3[samples y=0,domain=-\ky:\ky] (\kx,x,{fz(x)});
+\addplot3[] coordinates{(-\kx,-\ky,{fz(-\ky)}) (\kx,-\ky,{fz(-\ky)})};
+\addplot3[] coordinates{(-\kx,\ky,{fz(-\ky)}) (\kx,\ky,{fz(-\ky)})};
+\addplot3[samples y=0,domain=-\ky:\ky] (-\kx,x,{-fz(x)});
+\addplot3[samples y=0,domain=-\ky:\ky] (\kx,x,{-fz(x)});
+\addplot3[] coordinates{(-\kx,-\ky,{-fz(-\ky)}) (\kx,-\ky,{-fz(-\ky)})};
+\addplot3[] coordinates{(-\kx,\ky,{-fz(-\ky)}) (\kx,\ky,{-fz(-\ky)})};
+\addplot3[-latex] coordinates {(0,0,0)(2.5,0,0)}node[below]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,\ky+0.5,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,2.5)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+}}
+\انتہا{جواب}
+%=============================
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$yz=1$
+\انتہا{سوال}
+%====================
+
+\موٹا{ترخیمی سطحیں}\\
+\ابتدا{سوال}
+$9x^2+y^2+z^2=9$
+
+\ابتدا{جواب}
+\wf{\unexpanded{
+$9x^2+y^2+z^2=9$
+\begin{center}
+%	9x^2+y^2+z^2=9
+\begin{tikzpicture}[font=\small,declare function={f(\y)=sqrt(9-(\y)^2);g(\x)=sqrt(9-9*(\x)^2);h(\x)=3*sqrt(1-(\x)^2);}]
+\begin{axis}[view/h=135,axis equal,axis lines=center,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},
+axis x line=none,axis y line=none,axis z line=none]
+\addplot3[samples y=0,domain=-3:3] (0,x,{f(x)});
+\addplot3[samples y=0,domain=-3:3] (0,x,{-f(x)});
+\addplot3[samples y=0,domain=-1:1] (x,0,{g(x)});
+\addplot3[samples y=0,domain=-1:1] (x,0,{-g(x)});
+\addplot3[samples y=0,domain=-1:1] (x,{h(x)},0);
+\addplot3[samples y=0,domain=-1:1] (x,{-h(x)},0);
+\addplot3[-latex] coordinates {(0,0,0)(2.5,0,0)}node[below]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,2+0.5,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,2.5)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$4x^2+4y^2+z^2=16$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$4x^2+9y^2+4z^2=36$
+
+\ابتدا{جواب}
+\wf{\unexpanded{
+$4x^2+9y^2+4z^2=36$
+\begin{center}
+%	4x^2+9y^2+4z^2=36
+\begin{tikzpicture}[font=\small,declare function={f(\y)=1/2*sqrt(36-9*(\y)^2);g(\x)=sqrt(9-(\x)^2);h(\x)=1/3*sqrt(36-4*(\x)^2);}]
+\begin{axis}[view/h=135,axis equal,axis lines=center,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},
+axis x line=none,axis y line=none,axis z line=none]
+\addplot3[samples y=0,domain=-2:2,smooth] (0,x,{f(x)});
+\addplot3[samples y=0,domain=-2:2,smooth] (0,x,{-f(x)});
+\addplot3[samples y=0,domain=-3:3,smooth] (x,0,{g(x)});
+\addplot3[samples y=0,domain=-3:3,smooth] (x,0,{-g(x)});
+\addplot3[samples y=0,domain=-3:3,smooth] (x,{h(x)},0);
+\addplot3[samples y=0,domain=-3:3,smooth] (x,{-h(x)},0);
+\addplot3[-latex] coordinates {(0,0,0)(4,0,0)}node[below]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,5,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,3.5)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$9x^2+4y^2+36z^2=36$
+\انتہا{سوال}
+%====================
+
+\موٹا{قطع مکافی سطحیں}\\
+\ابتدا{سوال}
+$z=x^2+4y^2$
+
+
+\ابتدا{جواب}
+\wf{\unexpanded{
+$z=x^2+4y^2$
+\begin{center}
+%	z=x^2+4y^2
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=2*\r*cos(\t);fy(\r,\t)=\r*sin(\t);hz(\x,\y)=(\x)^2+4*(\y)^2;}]
+\pgfmathsetmacro{\ra}{1}
+\pgfmathsetmacro{\rb}{4}
+\begin{axis}[view/h=135,axis equal,axis lines=center,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},
+axis x line=none,axis y line=none,axis z line=none]
+\addplot3[domain=-2:2,domain y=0:360,smooth,variable=\r,variable y=\t] ({fx(\ra,t)},{fy(\ra,t)},4);
+\addplot3[domain=-2:2,domain y=-1:1,smooth] (0,{y},{hz(0,y)});
+\addplot3[samples y=0,domain=-2:2,domain=-2:2,smooth] ({x},0,{hz(x,0)});
+\addplot3[-latex] coordinates {(0,0,0)(1,0,0)}node[below]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,1,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,5.5)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$z=x^2+9y^2$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$z=8-x^2-y^2$
+
+\ابتدا{جواب}
+\wf{\unexpanded{
+$z=8-x^2-y^2$
+\begin{center}
+%	z=8-x^2-y^2
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=sqrt(8)*\r*cos(\t);fy(\r,\t)=sqrt(8)*\r*sin(\t);hz(\x,\y)=8-(\x)^2-(\y)^2;}]
+\pgfmathsetmacro{\ra}{2*sqrt(2)}
+\begin{axis}[view/h=135,axis equal,axis lines=center,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},
+axis x line=none,axis y line=none,axis z line=none]
+\addplot3[domain=-\ra:\ra,domain y=0:360,smooth,variable=\r,variable y=\t] ({fx(1,t)},{fy(1,t)},0);
+\addplot3[domain=-\ra:\ra,domain y=-\ra:\ra,smooth] (0,{y},{hz(0,y)});
+\addplot3[samples y=0,domain=-\ra:\ra,domain=-\ra:\ra,smooth] ({x},0,{hz(x,0)});
+\addplot3[-latex] coordinates {(0,0,0)(4,0,0)}node[below]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,4,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,9)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$z=18-x^2-9y^2$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$x=4-4y^2-z^2$
+
+\ابتدا{جواب}
+\wf{\unexpanded{
+$x=4-4y^2-z^2$
+\begin{center}
+%	x=4-4y^2-z^2
+\begin{tikzpicture}[font=\small,declare function={fy(\r,\t)=\r*cos(\t);fz(\r,\t)=2*\r*sin(\t);hx(\y,\z)=4-4*(\y)^2-(\z)^2;}]
+\pgfmathsetmacro{\ra}{2}
+\begin{axis}[view/h=135,axis equal,axis lines=center,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},
+axis x line=none,axis y line=none,axis z line=none]
+\addplot3[domain=-\ra:\ra,domain y=0:360,smooth,variable=\r,variable y=\t] (0,{fy(1,t)},{fz(1,t)});
+\addplot3[domain=-2:2,domain y=-2:2,smooth] ({hx(0,y)},0,y);
+\addplot3[samples y=0,domain=-1:1,domain=-1:1,smooth] ({hx(x,0)},x,0);
+\addplot3[-latex] coordinates {(0,0,0)(5,0,0)}node[below]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,1.5,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,2.5)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$y=1-x62-z^2$
+\انتہا{سوال}
+%====================
+
+\موٹا{ترخیمات}\\
+\ابتدا{سوال}
+$x^2+y^2=z^2$
+
+\ابتدا{جواب}
+\wf{\unexpanded{
+$x^2+y^2=z^2$
+\begin{center}
+%	x^2+y^2=z^2
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);}]
+\pgfmathsetmacro{\ra}{2}
+\begin{axis}[view/h=135,axis equal,axis lines=center,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},
+axis x line=none,axis y line=none,axis z line=none]
+\addplot3[domain=-\ra:\ra,domain y=0:360,smooth,variable=\r,variable y=\t] ({fx(1,t)},{fy(1,t)},1);
+\addplot3[domain=-\ra:\ra,domain y=0:360,smooth,variable=\r,variable y=\t] ({fx(1,t)},{fy(1,t)},-1);
+\addplot3[domain=-1:1,domain y=-1:1,smooth] (0,y,y);
+\addplot3[domain=-1:1,domain y=-1:1,smooth] (0,y,-y);
+\addplot3[samples y=0,domain=-1:1,domain y=-1:1,smooth] (x,0,x);
+\addplot3[samples y=0,domain=-1:1,domain y=-1:1,smooth] (x,0,-x);
+\addplot3[-latex] coordinates {(0,0,0)(2,0,0)}node[below]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,2,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,2)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$y^2+z^2=x^2$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$4x^2+9z^2=9y^2$
+
+\ابتدا{جواب}
+\wf{\unexpanded{
+$4x^2+9z^2=9y^2$
+\begin{center}
+%	4x^2+9z^2=9y^2
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=3/2*\r*cos(\t);fz(\r,\t)=\r*sin(\t);}]
+\pgfmathsetmacro{\ra}{2}
+\begin{axis}[view/h=135,axis equal,axis lines=center,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},
+axis x line=none,axis y line=none,axis z line=none]
+\addplot3[domain=-\ra:\ra,domain y=0:360,smooth,variable=\r,variable y=\t] ({fx(1,t)},1,{fz(1,t)});
+\addplot3[domain=-\ra:\ra,domain y=0:360,smooth,variable=\r,variable y=\t] ({fx(1,t)},-1,{fz(1,t)});
+\addplot3[domain=-1:1,domain y=-1:1,smooth] (0,y,y);
+\addplot3[domain=-1:1,domain y=-1:1,smooth] (0,y,-y);
+\addplot3[-latex] coordinates {(0,0,0)(2,0,0)}node[below]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,2,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,2)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$9x^2+4y^2=36z^2$
+\انتہا{سوال}
+%====================
+
+\موٹا{قطع زائد سطحیں}\\
+\ابتدا{سوال}
+$x^2+y^2-z^2=1$
+
+\ابتدا{جواب}
+\wf{\unexpanded{
+$x^2+y^2-z^2=1$
+\begin{center}
+%	x^2+y^2-z^2=1
+\begin{tikzpicture}[font=\small,declare function={fy(\x)=sqrt(2-(\x)^2);hz(\x,\y)=sqrt((\x)^2+(\y)^2-1);}]
+\pgfmathsetmacro{\ra}{sqrt(2)}
+\begin{axis}[view/h=135,axis equal,axis lines=center,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},
+axis x line=none,axis y line=none,axis z line=none]
+\addplot3[samples y=0,domain=-sqrt(2):sqrt(2)] (x,{fy(x)},1);
+\addplot3[samples y=0,domain=-sqrt(2):sqrt(2)] (x,{-fy(x)},1);
+\addplot3[samples y=0,domain=-sqrt(2):sqrt(2)] (x,{fy(x)},-1);
+\addplot3[samples y=0,domain=-sqrt(2):sqrt(2)] (x,{-fy(x)},-1);
+\addplot3[domain=1:\ra,domain y=1:\ra,smooth] (0,y,{hz(0,y)});
+\addplot3[domain=1:\ra,domain y=1:\ra,smooth] (0,y,{-hz(0,y)});
+\addplot3[domain=1:\ra,domain y=1:\ra,smooth] (0,-y,{hz(0,y)});
+\addplot3[domain=1:\ra,domain y=1:\ra,smooth] (0,-y,{-hz(0,y)});
+\addplot3[samples y=0,domain=1:\ra,domain y=1:\ra,smooth] (x,0,{hz(x,0)});
+\addplot3[samples y=0,domain=1:\ra,domain y=1:\ra,smooth] (x,0,{-hz(x,0)});
+\addplot3[samples y=0,domain=1:\ra,domain y=1:\ra,smooth] (-x,0,{hz(x,0)});
+\addplot3[samples y=0,domain=1:\ra,domain y=1:\ra,smooth] (-x,0,{-hz(x,0)});
+\addplot3[-latex] coordinates {(0,0,0)(2.5,0,0)}node[below]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,2.5,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,2.5)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$y^2+z^2-x^2=1$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$\frac{y^2}{4}+\frac{z^2}{9}-\frac{x^2}{9}=1$
+
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{y^2}{4}+\tfrac{z^2}{9}-\tfrac{x^2}{4}=1$
+\begin{center}
+%	y^2/4+z^2/9-x^2/4=1
+\begin{tikzpicture}[font=\small,declare function={fz(\z)=3*sqrt(2-1/4*(\z)^2);hz(\x,\y)=3/2*sqrt(4+(\x)^2-(\y)^2);}]
+\pgfmathsetmacro{\ra}{sqrt(2)}
+\begin{axis}[view/h=135,axis equal,axis lines=center,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},
+axis x line=none,axis y line=none,axis z line=none]
+\addplot3[samples y=0,domain=-sqrt(8):sqrt(8)] (2,x,{fz(x)});
+\addplot3[samples y=0,domain=-sqrt(8):sqrt(8)] (2,x,{-fz(x)});
+\addplot3[samples y=0,domain=-sqrt(8):sqrt(8)] (-2,x,{fz(x)});
+\addplot3[samples y=0,domain=-sqrt(8):sqrt(8)] (-2,x,{-fz(x)});
+\addplot3[samples y=0,domain=-2:2,domain y=-2:2]({x},{0},{hz(x,0)});
+\addplot3[samples y=0,domain=-2:2,domain y=-2:2]({x},{0},{-hz(x,0)});
+\addplot3[domain=-2:2,domain y=-2:2]({0},{y},{hz(0,y)});
+\addplot3[domain=-2:2,domain y=-2:2]({0},{y},{-hz(0,y)});
+\addplot3[-latex] coordinates {(0,0,0)(5.5,0,0)}node[below]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,6,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,6)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$\frac{x^2}{4}+\frac{y^2}{4}-\frac{z^2}{9}=1$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$z^2-x^2-y^2=1$
+
+\ابتدا{جواب}
+\wf{\unexpanded{
+$z^2-x^2-y^2=1$
+\begin{center}
+%	z^2-x^2-y^2=1
+\begin{tikzpicture}[font=\small,declare function={fz(\x,\y)=sqrt(1+(\x)^2+(\y)^2);hy(\x)=sqrt(8-(\x)^2);}]
+\pgfmathsetmacro{\ra}{sqrt(2)}
+\begin{axis}[view/h=135,axis equal,axis lines=center,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},
+axis x line=none,axis y line=none,axis z line=none]
+\addplot3[samples y=0,domain=-sqrt(8):sqrt(8)] (x,{hy(x)},3);
+\addplot3[samples y=0,domain=-sqrt(8):sqrt(8)] (x,{-hy(x)},3);
+\addplot3[samples y=0,domain=-sqrt(8):sqrt(8)] (x,{hy(x)},-3);
+\addplot3[samples y=0,domain=-sqrt(8):sqrt(8)] (x,{-hy(x)},-3);
+\addplot3[samples y=0,domain=-sqrt(8):sqrt(8)] (x,0,{fz(x,0)});
+\addplot3[samples y=0,domain=-sqrt(8):sqrt(8)] (x,0,{-fz(x,0)});
+\addplot3[domain=-sqrt(8):sqrt(8)] (0,y,{fz(0,y)});
+\addplot3[domain=-sqrt(8):sqrt(8)] (0,y,{-fz(0,y)});
+\addplot3[-latex] coordinates {(0,0,0)(5.5,0,0)}node[below]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,6,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,6)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$\frac{y^2}{4}-\frac{x^2}{4}-z^2=1$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$x^2-y^2-\frac{z^2}{4}=1$
+
+\ابتدا{جواب}
+\wf{\unexpanded{
+$x^2-y^2-\tfrac{z^2}{4}=1$
+\begin{center}
+%	x^2-y^2-z^2/4=1
+\begin{tikzpicture}[font=\small,declare function={fx(\y,\z)=sqrt(1+(\y)^2+1/4*(\z)^2);hz(\y)=2*sqrt(8-(\y)^2);}]
+\pgfmathsetmacro{\ra}{sqrt(8)}
+\begin{axis}[view/h=135,axis equal,axis lines=center,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},
+axis x line=none,axis y line=none,axis z line=none]
+\addplot3[samples y=0,domain=-sqrt(8):sqrt(8)] (3,x,{hz(x)});
+\addplot3[samples y=0,domain=-sqrt(8):sqrt(8)] (3,x,{-hz(x)});
+\addplot3[samples y=0,domain=-sqrt(8):sqrt(8)] (-3,x,{hz(x)});
+\addplot3[samples y=0,domain=-sqrt(8):sqrt(8)] (-3,x,{-hz(x)});
+\addplot3[samples y=0,domain=-\ra:\ra]({fx(x,0)},{x},{0});
+\addplot3[samples y=0,domain=-\ra:\ra]({-fx(x,0)},{x},{0});
+\addplot3[domain y=-6:6]({fx(0,y)},{0},{y});
+\addplot3[domain y=-6:6]({-fx(0,y)},{0},{y});
+\addplot3[-latex] coordinates {(0,0,0)(5.5,0,0)}node[below]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,6,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,6)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$\frac{x^2}{4}-y^2-\frac{z^2}{4}=1$
+\انتہا{سوال}
+%====================
+
+\موٹا{قطع زائد قطع مکافی سطحیں}\\
+\ابتدا{سوال}
+$y^-x^2=z$
+
+\ابتدا{جواب}
+\wf{\unexpanded{
+$y^2-x^2=z$
+\begin{center}
+%	y^2-x^2=z
+\begin{tikzpicture}[font=\small,declare function={fz(\x,\y)=(\y)^2-(\x)^2;}]
+\pgfmathsetmacro{\ra}{1}
+\pgfmathsetmacro{\rb}{1}
+\begin{axis}[view/h=120,axis equal,axis lines=center,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},
+axis x line=none,axis y line=none,axis z line=none]
+\addplot3[samples y=0,domain=-\ra:\ra] (x,0,{fz(x,0)});
+\addplot3[samples y=0,domain=-\rb:\rb] (x,1,{fz(x,1)});
+\addplot3[samples y=0,domain=-\rb:\rb] (x,-1,{fz(x,-1)});
+\addplot3[domain y=-1:1] (0,y,{fz(0,y)});
+\addplot3[domain y=-1:1] (1,y,{fz(1,y)});
+\addplot3[domain y=-1:1] (-1,y,{fz(-1,y)});
+\addplot3[-latex] coordinates {(0,0,0)(2.5,0,0)}node[below]{$x$};
+\addplot3[-latex] coordinates {(0,0,0)(0,2,0)}node[below]{$y$};
+\addplot3[-latex] coordinates {(0,0,0)(0,0,1.5)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$x^2-y^2=z$
+\انتہا{سوال}
+%====================
+
+\موٹا{مختلف سطحیں}\\
+\ابتدا{سوال}
+$x^2+y^2+z^2=4$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$4x^2+4y^2=z^2$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$z=1+y^2-x^2$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$y^2-z^2=4$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$y=-(x^2+z^2)$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$z^2-4x^2-4y^2=4$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$16x^2+4y^2=1$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$z=x^2+y^2+1$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$x^2+y^2-z^2=4$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$x=4-y^2$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$x^2+z^2=y$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$z^2-\frac{x^2}{4}-y^2=1$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$x^2+z^2=1$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$4x^2+4y^2+z^2=4$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$16y^2+9z^2=4x^2$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$z=x^2-y^2-1$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$9x^2+4y^2+z^2=36$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$4x^2+9z^2=y^2$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$x^2+y^2-16z^2=16$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$z^2+4y^2=9$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$z=-(x^2+y^2)$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$y^2-x^2-z^2=1$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$x^2-4y^2=1$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$z=4x^2+y^2-4$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$4y^2+z^2-4x^2=4$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$z=1-x^2$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$x^2+y^2=z$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$\frac{x^2}{4}+y^2-z^2=1$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$yz=1$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$36x^2+9y^2+4z^2=36$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$9x^2+16y^2=4z^2$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_خاکہ_کھینچیں_ب}
+$4z^2-x^2-y^2=4$
+\انتہا{سوال}
+%====================
+
+\موٹا{نظریہ اور مثالیں}\\
+\ابتدا{سوال}
+(ا)  سطح \عددی{z=c}  ترخیمی سطح
+ \begin{align*}
+x^2+\tfrac{y^2}{4}+\tfrac{z^2}{9}=1
+\end{align*}
+ سے رقبہ \عددی{S} کاٹتا ہے۔ اس رقبہ کو متغیر \عددی{c} کا تفاعل لکھیں۔ (ایک ترخیم جس کے نصف محور \عددی{a} اور \عددی{b} ہوں کا رقبہ \عددی{\pi ab} ہوتا ہے۔)     (ب) محور \عددی{z} کے عمودی  ٹکیاں  لیتے ہوئے  جزو-ا میں ترخیمی سطح کا حجم تلاش کریں۔ (ج) اب ترخیم ی سطح 
+\begin{align*}
+\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}+\tfrac{z^2}{c^2}=1
+\end{align*}
+ کا حجم تلاش کریں۔ کیا آپ کا کلیہ \عددی{a=b=c} کی صورت میں کرہ کا حجم دیتا ہے۔ 
+\ابتدا{جواب}
+\wf{\unexpanded{
+(ا) \عددی{\tfrac{2\pi(9-c^2)}{9}}، (ب) \عددی{8\pi}، (ج) \عددی{\tfrac{4\pi a b c}{3}}
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+محور \عددی{z} کے عمودی سطحیں   ترخیمی  سطح کے دونوں سروں سے   برابر حصے کاٹ کر دکھایا گیا ا  ڈھول   پیدا کرتی ہیں۔ محور \عددی{} کے قائمہ عمودی تراش دائری ہیں۔  ڈھول کا قد \عددی{2h}،  وسطی رداس \عددی{R} اور سروں کے رداس \عددی{r} ہیں۔ ڈھول کے حجم کا کلیہ تلاش کریں۔ اب دو باتوں  کی تصدیق کریں۔  کیا  ڈھول کے اطراف سیدھا کرنے سے آپ کا کلیہ، قد \عددی{2h} اور رداس \عددی{R} کے  نلکی کا حجم دیتا ہے؟  کیا \عددی{r=0} اور \عددی{h=R}  کی صورت میں، جب   ڈھول    کی شکل ایک کرہ مانند ہو گی، آپ کا کلیہ کرہ کا حجم دیتا ہے؟
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+سطح \عددی{z=h}  قطع مکافی سطح
+\begin{align*}
+\frac{x^2}{a^2}+\frac{y^2}{b^2}=\frac{z}{c}
+\end{align*}
+سے ایک حصہ کاٹتا ہے۔دکھائیں کہ اس حصے کا حجم ، اس حصے کے قاعدہ کا نصف ضرب قد کے برابر ہو گا۔ (شکل \حوالہ{شکل_مثال_سمتیہ_ترخیمی_سطح} میں \عددی{h=c} کے لئے یہ حصہ دکھایا گیا ہے۔)
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+(ا) سطح \عددی{z=0} اور سطح \عددی{z=h,\,h>0} اور قطع زائد
+\begin{align*}
+\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1
+\end{align*}
+کے بیچ  ٹھوس جسم کا حجم تلاش کریں۔ (ب)  حاصل حجم کو \عددی{h}،  \عددی{S_0} اور \عددی{S_h}  کی صورت میں لکھیں۔  قطع زائد سے سطح \عددی{z=0} اور \عددی{z=h}  جن حصوں کو کاٹتے ہیں، ان کے رقبے \عددی{S_0} اور \عددی{S_h} ہیں۔ (ج) دکھائیں کہ اس حجم کو
+\begin{align*}
+H=\frac{h}{6}(S_0+4S_m+S_h)
+\end{align*}
+بھی لکھا جا سکتا ہے جہاں قطع زائد سے سطح \عددی{z=\tfrac{h}{2}}   جو حصہ کاٹتا ہے، اس کا رقبہ \عددی{S_m} ہے۔
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+سطح \عددی{y=y_1}   اور سطح \عددی{\tfrac{y^2}{b^2}-\tfrac{x^2}{a^2}=\tfrac{z}{c}} کا خط تقاطع،  قطع مکافی ہو گا۔ اس قطع مکافی کا راس اور ماسکہ  تلاش کریں۔
+\ابتدا{جواب}
+\wf{\unexpanded{
+راس \عددی{(0,y_1,cy_1^2/b^22)}،\\    ماسکہ \عددی{(0,y_1,cy_1^2/b^2-a^2/(4c))}
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+آپ درج ذیل مساوات میں \عددی{z=0} لے کر مستوی \عددی{xy} میں منحنی حاصل کرتے ہیں۔
+\begin{align*}
+Ax^2+By^2+Cz^2+Dxy+Eyz+Fxz+Gx+Hy+Jz+K=0
+\end{align*}
+یہ منحنی کیسی ہو گی؟ اپنے جواب کی وجہ پیش کریں۔
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}
+اب  تک  ہم دیکھتے آ رہے ہیں کہ کسی بھی محددی  سطح کے متوازی سطح اور مربع سطح کا خط تقاطع ،  ترخیمی ہوتا ہے۔ کیا یہ محض    اتفاق تھا؟ اپنے جواب  کی وجہ پیش کریں۔
+\انتہا{سوال}
+%===============
+\ابتدا{سوال}
+ایک سطح جو کسی بھی محددی  سطح کا متوازی نہیں ہے، مربع سطح کو قطع کرتا ہے۔  ان کا خط تقاطع کیسا ہو گا؟ اپنے جواب کی وجہ پیش کریں۔
+\انتہا{سوال}
+%====================
+
+\موٹا{کمپیوٹر کا استعمال}\\
+سوال \حوالہ{سوال_سمتیہ_سطحوں_کا_خاکہ_کمپیوٹر_الف} تا سوال \حوالہ{سوال_سمتیہ_سطحوں_کا_خاکہ_کمپیوٹر_ب} میں دی گئی وقفہ پر سطحوں کو ترسیم کریں۔ اگر ممکن ہو، سطحوں کے مختلف تظلیل پیش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_سطحوں_کا_خاکہ_کمپیوٹر_الف}
+$z=y^2,\quad -2\le x\le 2,\quad -0.5\le y\le 2$
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}
+$z=1-y^2,\quad -2\le x\le 2,\quad -2\le y\le 2$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$z=x^2+y^2,\quad -3\le x\le 3,\quad -3\le y\le 3$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_سطحوں_کا_خاکہ_کمپیوٹر_ب}
+$z=x^2+2y^2$
+کو درج ذیل وقفوں پر ترسیم کریں۔
+\begin{itemize}
+\item
+$-3\le x\le 3,\quad -3\le y\le 3$
+\item
+$-1\le x\le 1,\quad -2\le y\le 3$
+\item
+$-2\le x\le 2,\quad -2\le y\le 2$
+\item
+$-2\le x\le 2,\quad -1\le y\le 1$
+\end{itemize}
+\انتہا{سوال}
+%======================
+سوال \حوالہ{سوال_سمتیہ_صورت_سے_قسم_الف} تا سوال \حوالہ{سوال_سمتیہ_صورت_سے_قسم_ب} کو ترسیم کریں۔ سطح کی صورت  سے  اس کی قسم دریافت کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_صورت_سے_قسم_الف}
+$\frac{x^2}{9}+\frac{y^2}{36}=1-\frac{z^2}{25}$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$\frac{x^2}{9}-\frac{z^2}{9}=1-\frac{y^2}{16}$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$5x^2=z^2-3y^2$
+\انتہا{سوال}
+%========================
+\ابتدا{سوال}
+$\frac{y^2}{16}=1-\frac{x^2}{9}+z$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}
+$\frac{x^2}{9}-1=\frac{y^2}{16}+\frac{z^2}{2}$
+\انتہا{سوال}
+%==========================
+\ابتدا{سوال}\شناخت{سوال_سمتیہ_صورت_سے_قسم_ب}
+$y-\sqrt{4-z^2}=0$
+\انتہا{سوال}
+
+\انتہا{سوالات}
