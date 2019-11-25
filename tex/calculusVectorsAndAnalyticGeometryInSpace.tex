@@ -6822,7 +6822,7 @@ x^2+\tfrac{y^2}{4}+\tfrac{z^2}{9}=1
 \انتہا{سوال}
 %====================
 \ابتدا{سوال}
-محور \عددی{z} کے عمودی سطحیں   ترخیمی  سطح کے دونوں سروں سے   برابر حصے کاٹ کر دکھایا گیا ا  ڈھول   پیدا کرتی ہیں۔ محور \عددی{} کے قائمہ عمودی تراش دائری ہیں۔  ڈھول کا قد \عددی{2h}،  وسطی رداس \عددی{R} اور سروں کے رداس \عددی{r} ہیں۔ ڈھول کے حجم کا کلیہ تلاش کریں۔ اب دو باتوں  کی تصدیق کریں۔  کیا  ڈھول کے اطراف سیدھا کرنے سے آپ کا کلیہ، قد \عددی{2h} اور رداس \عددی{R} کے  نلکی کا حجم دیتا ہے؟  کیا \عددی{r=0} اور \عددی{h=R}  کی صورت میں، جب   ڈھول    کی شکل ایک کرہ مانند ہو گی، آپ کا کلیہ کرہ کا حجم دیتا ہے؟
+محور \عددی{z} کے عمودی سطحیں   ترخیمی  سطح کے دونوں سروں سے   برابر حصے کاٹ کر دکھائی  گئی  ڈرمی    پیدا کرتی ہیں۔ محور \عددی{} کے قائمہ عمودی تراش دائری ہیں۔  ڈرمی  کا قد \عددی{2h}،  وسطی رداس \عددی{R} اور سروں کے رداس \عددی{r} ہیں۔ ڈرمی کے حجم کا کلیہ تلاش کریں۔ اب دو باتوں  کی تصدیق کریں۔  کیا  ڈرمی کے اطراف سیدھا کرنے سے آپ کا کلیہ، قد \عددی{2h} اور رداس \عددی{R} کے  نلکی کا حجم دیتا ہے؟  کیا \عددی{r=0} اور \عددی{h=R}  کی صورت میں، جب   ڈرمی    کی شکل ایک کرہ مانند ہو گی، آپ کا کلیہ کرہ کا حجم دیتا ہے؟
 \begin{center}
 \begin{tikzpicture}[]
 \pgfmathsetmacro{\r}{0.5}
@@ -6945,4 +6945,429 @@ $y-\sqrt{4-z^2}=0$
 
 \انتہا{سوالات}
 %=====================================
+
+
+\حصہ{نلکی اور کروی محدد}
+اس حصہ میں فضا کے دو نئے محددی نظام متعارف کرائے جائیں گے جو نلکی محدد اور کروی محدد کہلاتے ہیں۔ نلکی محدد میں نلکی  کی مساوات سادہ صورت اختیار کرتی ہے۔ کروی محدد میں کرہ اور ترخیم کی مساوات سادہ صورت اختیار کرتی  ہیں۔ ہم   نلکی محدد میں سیاروں کی مدار پر اگلی باب میں غور کریں گے۔
+
+\جزوحصہء{نلکی محدد}
+ہم \عددی{xy} مستوی میں قطبی محدد   کے ساتھ  محور \عددی{z} شامل کر کے فضا کی  نلکی محدد حاصل کرتے ہیں۔ہم یہاں قطبی محدد کا  رداس  \عددی{\rho} اور زاویہ   \عددی{\phi} لکھیں  گے  \حاشیہد{تا کہ ہم  \عددی{r} اور \عددی{\theta} کو کروی محدد کے لئے استعمال کر سکیں}۔ یوں فضا میں ہر نقطہ  کو   ایک یا ایک سے زیادہ  تین اعداد کی جوڑی \عددی{(\rho,\phi,z)}مختص کی جا سکتی ہے (شکل \حوالہ{شکل_سمتیہ_نقطہ_کے_نلکی_محدد})۔
+\begin{figure}
+\centering
+\begin{tikzpicture}[x={(-0.7071cm,-0.7071cm)},y={(1cm,0)},z={(0,1cm)}]
+\pgfmathsetmacro{\r}{2.5}
+\pgfmathsetmacro{\ang}{55}
+\pgfmathsetmacro{\kx}{\r*cos(\ang)}
+\pgfmathsetmacro{\ky}{\r*sin(\ang)}
+\draw[-latex](0,0,0)node[left]{$O$}--(2,0,0)node[left]{$x$};
+\draw[-latex](0,0,0)--(0,2.5,0)node[right]{$y$};
+\draw[-latex](0,0,0)--(0,0,1.5)node[left]{$z$};
+\draw(0,0,0)--(\kx,\ky,0)node[pos=0.6,above]{$\rho$}coordinate(ka);
+\draw[thick](ka)--++(0,0,2)coordinate(kb)node[pos=0.75,left]{$z$}node[circ]{}node[above]{$N(\rho,\phi,z)$};
+\draw[-stealth]([shift={(0:0.5)}]0,0,0) arc (0:\ang:0.5)node[pos=0.6,below]{$\phi$};
+\draw[dashed](ka)--++(0,-\ky,0)coordinate(kc)node[pos=0.5,below]{$y$};
+\draw[dashed](ka)--++(-\kx,0,0)coordinate(kd);
+\RightAngle{(kb)}{(ka)}{(0,0,0)}
+\RightAngle{(ka)}{(kc)}{(0,0,0)}
+\RightAngle{(ka)}{(kd)}{(0,0,0)}
+\draw(\kx/2,0,0)node[left]{$x$};
+\end{tikzpicture}
+\caption{فضا میں  نقطہ کے نلکی محدد \عددی{\rho}، \عددی{\phi} اور \عددی{z} ہوں گے۔}
+\label{شکل_سمتیہ_نقطہ_کے_نلکی_محدد}
+\end{figure}
+
+\ابتدا{تعریف}
+\اصطلاح{نلکی محدد}\فرہنگ{نلکی محدد}\حاشیہب{cylindrical coordinates}\فرہنگ{cylindrical coordinates} فضا میں نقطہ \عددی{N} کو تین مرتب  اعداد   \عددی{(\rho,\phi,z)} سے ظاہر کرتا ہے جہاں
+\begin{enumerate}[1.]
+\item
+\عددی{\rho} اور \عددی{\phi} مستوی \عددی{xy} میں نقطہ \عددی{N} کے قائمہ تظلیل کے قطبی محدد ہیں،
+\item
+\عددی{z} اس نقطہ کا کارتیسی انتصابی محدد ہے۔
+\end{enumerate}
+\انتہا{تعریف}
+%==================
+
+کارتیسی  محدد \عددی{x}، \عددی{y}، \عددی{z}  اور نلکی محدد \عددی{\rho}، \عددی{\phi}، \عددی{z} کا تعلق درج  ذیل ہے۔
+\begin{gather}
+\begin{aligned}\label{مساوات_سمتیہ_نلکی_کارتیسی_تعلق}
+x=\rho\cos\phi,\quad y=\rho\sin\phi,\quad z=z\\
+\rho^2=x^2+y^2,\quad \tan\phi=\frac{y}{x}
+\end{aligned}
+\end{gather} 
+
+نلکی محدد میں مساوات \عددی{\rho=a} نا صرف \عددی{xy}  مستوی میں  ایک دائرہ کو ظاہر کرتی ہے بلکہ یہ ایک \عددی{z} محور  کے گرد ایک نلکی کو بھی ظاہر کرتی ہے (شکل \حوالہ{شکل_سمتیہ_نلکی_مستقل_محددی_مساوات}-ا)۔ محور \عددی{z} کو \عددی{\rho=0} ظاہر کرتی ہے۔ مساوات \عددی{\phi=\phi_0}  اس سطح کو ظاہر کرتی ہے جس میں محور \عددی{z} پایا جاتا ہے اور جو مثبت محور \عددی{x} کے ساتھ زاویہ \عددی{\phi_0} بناتا ہے۔ کارتیسی محدد کی طرح اب بھی مساوات \عددی{z=z_0} ایک سطح کو ظاہر کرتی ہے جو محور \عددی{z} کے ساتھ  قائمہ ہے۔ 
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[x={(-0.7071cm,-0.7071cm)},y={(1cm,0)},z={(0,1cm)}]
+\draw[-latex](1,0,0)--(2,0,0)node[left]{$x$};
+\draw[-latex](0,1,0)--(0,1.5,0)node[right]{$y$};
+\draw[-latex](0,0,0.6)--(0,0,2)node[left]{$z$};
+\draw(0,0,1)circle(1cm and 0.4cm);
+\draw([shift={(180:1cm and 0.4cm)}]0,0,-1) arc (180:360:1cm and 0.4cm);
+\draw(0,-1,-1)--++(0,0,2);
+\draw(0,1,-1)--++(0,0,2);
+\draw[-stealth](0,0,1)--++(20:1cm and 0.4cm)node[pos=0.5,fill=white]{$a$};
+\end{tikzpicture}
+\caption{
+نلکی \عددی{\rho=a} کی سطح   میں  \عددی{\phi} اور \عددی{z} تبدیل   ہوتے  ہیں۔ 
+}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[x={(-0.7071cm,-0.7071cm)},y={(1cm,0)},z={(0,1cm)}]
+\pgfmathsetmacro{\ang}{60}
+\pgfmathsetmacro{\h}{2}
+\draw[-latex](0,0,0)--(2,0,0)node[left]{$x$};
+%\draw[-latex](0,1,0)--(0,1.5,0)node[right]{$y$};
+\draw[-latex](0,0,0)--(0,0,2)node[left]{$z$};
+\draw(0,0,-1)++(\ang:-1)--++(\ang:2)--++(0,0,2)--++(\ang:-2)--++(0,0,-2);
+\path[name path=kr](0,0,-1)++(\ang:-1)++(\ang:2)--++(0,0,2);
+\path[name path=ky](0,0,0)--(0,1.5,0);
+\draw[-latex,name intersections={of={kr and ky}}](intersection-1)--(0,1.5,0)node[right]{$y$};
+\draw[dashed](0,0,0)--++(\ang:1);
+\draw[-stealth]([shift={(0:0.5)}]0,0,0) arc (0:\ang:0.5)node[pos=0.6,below]{$\phi$};
+\end{tikzpicture}
+\caption{
+مستوی \عددی{\phi=\phi_0} میں \عددی{\rho} اور \عددی{z} تبدیل ہوتے ہیں۔
+}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[x={(-0.7071cm,-0.7071cm)},y={(1cm,0)},z={(0,1cm)}]
+\pgfmathsetmacro{\h}{1}
+\pgfmathsetmacro{\w}{2}
+\pgfmathsetmacro{\len}{2.5}
+\draw[-latex](0,0,0)--(2,0,0)node[left]{$x$};
+\draw[-latex](0,0,0)--(0,1.5,0)node[right]{$y$};
+\draw[-latex](0,0,\h)node[right]{$z_0$}--(0,0,2)node[left]{$z$};
+\draw(\w/2,-\len/2,\h)--++(0,\len,0)--++(-\w,0,0)--++(0,-\len,0)--++(\w,0,0);
+\path[name path=h](\w/2,-\len/2,\h)--++(0,\len,0);
+\path[name path=kz](0,0,0)--(0,0,2);
+\draw[name intersections={of={h and kz}}](0,0,0)--(intersection-1);
+\end{tikzpicture}
+\caption{
+مستوی \عددی{z=z_0} میں \عددی{\rho} اور \عددی{\phi} تبدیل ہوتی ہیں۔
+}
+\end{subfigure}
+\caption{نلکی محدد میں مستقل محدد محددی مساواتیں نلکی اور سطح کو جنم دیتی ہیں۔}
+\label{شکل_سمتیہ_نلکی_مستقل_محددی_مساوات}
+\end{figure}
+
+
+%====================
+\ابتدا{مثال}\شناخت{مثال_سمتیہ_نلکی_مستوی_خط_تقاطع}
+کون سے نقاط درج ذیل مساوات کو مطمئن کرتے ہیں۔
+\begin{align*}
+\rho=2,\quad \phi=\frac{\pi}{4}
+\end{align*}
+حل:\quad
+یہ نقطے اس لکیر کو ظاہر کرتے ہیں جہاں نلکی \عددی{\rho=2} سطح \عددی{\phi=\tfrac{\pi}{4}} کو قطع کرتی ہے اور جہاں \عددی{\rho} مثبت ہے (شکل \حوالہ{شکل_مثال_سمتیہ_نلکی_مستوی_خط_تقاطع})۔ یہ لکیر نقطہ \عددی{(2,\tfrac{\pi}{4},0)} سے گزرتی ہے اور محور \عددی{ z} کے متوازی ہے۔
+\انتہا{مثال}
+%==========
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,x={(-0.7071cm,-0.7071cm)},y={(1cm,0)},z={(0,1cm)}]
+\pgfmathsetmacro{\ang}{60}
+\pgfmathsetmacro{\angS}{248}
+\pgfmathsetmacro{\angE}{\angS+53}
+\draw[dashed](0,0,0)--(1,0,0);
+\draw[dashed](0,0,0)--(0,0,0.6);
+\draw[dashed](0,0,0)--(0,1,0);
+\draw[-latex](1,0,0)--(1.7,0,0)node[left]{$x$};
+\draw[-latex](0,1,0)--(0,1.5,0)node[right]{$y$};
+\draw[-latex](0,0,0.6)--(0,0,2)node[left]{$z$};
+\draw(0,0,1)circle(1cm and 0.4cm);
+\draw[]([shift={(180:1cm and 0.4cm)}]0,0,-1) arc (180:360:1cm and 0.4cm);
+\draw(0,-1,-1)--++(0,0,2)node[pin=160:{\RL{نلکی \عددی{\rho=2}}}]{};
+\draw(0,1,-1)--++(0,0,2);
+\fill[white](0,0,1)++(\ang:1.5)coordinate(ka)--++(0,0,-2)--++(\ang:-0.5)--(ka);
+\draw[](0,0,1)--++(\ang:1.5)--++(0,0,-2)node[pin={[align=right]-20:{\RL{سطح \عددی{\phi=\tfrac{\pi}{4}} جس کے}\\   \RL{لئے \عددی{\rho>0}}}}]{}--++(\ang:-0.5)coordinate(kb);
+\draw[thick](kb)++(0,0,-0.5)node[pin={[align=center,left]-145:{\RL{اس لکیر پر \عددی{z} تبدیل ہوتا ہے}\\ \RL{جبکہ اس پر}\\  \RL{ \عددی{\rho=2} اور \عددی{\phi=\tfrac{\pi}{4}} ہیں}}}]{}--++(0,0,4)node[pos=0.9,circ]{}node[pos=0.9,right]{$(2,\tfrac{\pi}{4},z)$};
+\draw[-stealth]([shift={(\angS:1cm and 0.4cm)}]0,0,0) arc (\angS:\angE:1cm and 0.4cm)node[pos=0.5,below]{$\tfrac{\pi}{4}$};
+\draw[dashed](0,0,0)--++(\ang:1);
+\draw(\ang:1)--++(\ang:0.5);
+\end{tikzpicture}
+\caption{وہ نقطے جن کے پہلے دو نلکی محدد \عددی{\rho=2} اور \عددی{\phi=\tfrac{\pi}{4}} ہوں ایک لکیر کو ظاہر کرتے ہیں جو \عددی{z} محدد کے متوازی ہے۔}
+\label{شکل_مثال_سمتیہ_نلکی_مستوی_خط_تقاطع}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fr(\t)=1+cos(\t);}]
+\pgfmathsetmacro{\ta}{0}
+\pgfmathsetmacro{\tb}{90}
+\pgfmathsetmacro{\tc}{180}
+\pgfmathsetmacro{\td}{270}
+\pgfmathsetmacro{\h}{1.75}
+\begin{axis}[axis lines=center,view/h=135,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},enlargelimits=true, axis x line=none,axis y line=none, axis z line=none]
+\addplot3[smooth,thick,data cs=polar,domain=0:360](\x,{fr(\x)},0)node[pos=0.75,pin={[align=center]135:{\RL{پیدا کار منحنی}\\$\rho=1+\cos\phi$}}]{};
+\addplot3[smooth,data cs=polar,domain=0:360](\x,{fr(\x)},-\h);
+\addplot3[smooth,data cs=polar,domain=0:360](\x,{fr(\x)},\h);
+\addplot3[data cs=polar]coordinates {(\ta,{fr(\ta)},-\h)(\ta,{fr(\ta)},\h)};
+\addplot3[data cs=polar]coordinates {(\tb,{fr(\tb)},-\h)(\tb,{fr(\tb)},\h)};
+\addplot3[data cs=polar]coordinates {(\tc,{fr(\tc)},-\h)(\tc,{fr(\tc)},\h)};
+\addplot3[data cs=polar]coordinates {(\td,{fr(\td)},-\h)(\td,{fr(\td)},\h)};
+\addplot3[-latex]coordinates{(0,0,0)(3,0,0)}node[left]{$x$};
+\addplot3[-latex]coordinates{(0,0,0)(0,1.5,0)}node[right]{$y$};
+\addplot3[-latex]coordinates{(0,0,0)(0,0,2.5)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\caption{قلب نما مساوات \عددی{\rho=1+\cos\phi} فضا میں نلکی کو ظاہر کرتی ہے جس کا عمودی تراش محور \عددی{z} کو قائمہ ہے (مثال \حوالہ{مثال_سمتیہ-قلب_نما_نلکی})۔}
+\label{شکل_مثال_سمتیہ-قلب_نما_نلکی}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fr(\t)=6*sin(\t);}]
+\pgfmathsetmacro{\ta}{25}
+\pgfmathsetmacro{\tb}{115}
+\pgfmathsetmacro{\h}{3}
+\begin{axis}[axis lines=center,view/h=135,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},enlargelimits=true, axis x line=none,axis y line=none, axis z line=none]
+\addplot3[smooth,thick,data cs=polar,domain=0:180](\x,{fr(\x)},0);
+\addplot3[smooth,data cs=polar,domain=0:180](\x,{fr(\x)},\h);
+\addplot3[samples y=0,smooth,data cs=polar,domain=\ta:\tb](\x,{fr(\x)},-\h);
+\addplot3[data cs=polar]coordinates {(\ta,{fr(\ta)},-\h)(\ta,{fr(\ta)},\h)};
+\addplot3[data cs=polar]coordinates {(\tb,{fr(\tb)},-\h)(\tb,{fr(\tb)},\h)};
+\addplot3[]coordinates {(0,3,0)}node[circ]{}node[below]{$(0,3,0)$};
+\addplot3[-latex]coordinates{(0,0,0)(3,0,0)}node[left]{$x$};
+\addplot3[-latex]coordinates{(0,0,0)(0,9,0)}node[right]{$y$};
+\addplot3[-latex]coordinates{(0,0,0)(0,0,4)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\caption{نلکی نما برائے مثال \حوالہ{مثال_سمتیہ_نلکی_الف}}
+\label{شکل_مثال_سمتیہ_نلکی_الف}
+\end{minipage}
+\end{figure}
+
+\ابتدا{مثال}\شناخت{مثال_سمتیہ-قلب_نما_نلکی}
+سطح \عددی{\rho=1+\cos\phi} ترسیم کریں۔
+
+حل:\quad
+اس مساوات میں صرف \عددی{\rho} اور \عددی{\phi} متغیرات پائے جاتے ہیں جبکہ \عددی{z} متغیر   اس میں نہیں پایا جاتا ہے۔ یوں یہ مساوات ایک ایسی نلکی سطح کو ظاہر کرتی ہے جو ،مستوی \عددی{\rho\phi} میں  قلب نما منحنی،   \عددی{\rho=1+\cos\phi} سے گزرتی ہے  اور محور \عددی{z} کے متوازی ہے۔ ہم  کارتیسی \عددی{x}، \عددی{y}، \عددی{z} محور کھینچ کر ان کے  قائمہ چند  عمودی تراش ترسیم کرتے ہیں۔ ان عمودی تراش  کو متوازی لکیروں سے ملا کر سطح حاصل ہو گی (شکل \حوالہ{شکل_مثال_سمتیہ-قلب_نما_نلکی})۔
+\انتہا{مثال}
+%=====================
+\ابتدا{مثال}
+سطح \عددی{z=\rho^2} کی کارتیسی مساوات تلاش کر کے سطح کو پہچانئے۔
+
+حل:\quad
+مساوات \حوالہ{مساوات_سمتیہ_نلکی_کارتیسی_تعلق} سے \عددی{z=\rho^2=x^2+y^2}  حاصل ہوتا ہے جو دائری قطع مکافی \عددی{z=x^2+y^2} کی مساوات ہے۔
+\انتہا{مثال}
+%====================
+\ابتدا{سوال}
+دائری نلکی \عددی{4x^2+4y^2=9} کی مساوات نلکی محدد میں دریافت کریں۔
+
+حل:\quad
+یہ نلکی ان نقطوں پر مشتمل ہے جن کا محور \عددی{z} سے فاصلہ \عددی{\sqrt{x^2+y^2}=\tfrac{3}{2}} ہے لہٰذا  نلکی محدد میں اس سطح  کی مساوات \عددی{\rho=\tfrac{3}{2}} ہو گی۔آئیں اس کو باضابطہ حاصل کریں۔
+\begin{align*}
+4x^2+4y^2&=9\\
+4(\rho\cos\phi)^2+4(\rho\sin\phi)^2&=9&&\text{\RL{مساوات \حوالہ{مساوات_سمتیہ_نلکی_کارتیسی_تعلق}}}\\
+4\rho^2\cos^2\phi+4\rho^2\sin^2\phi&=9\\
+4\rho^2&=9&&\cos^2\phi+\sin^2\phi=1\\
+\rho^2&=\frac{9}{4}\\
+\rho&=\frac{3}{2}
+\end{align*}
+\انتہا{سوال}
+%==================
+\ابتدا{مثال}\شناخت{مثال_سمتیہ_نلکی_الف}
+نلکی \عددی{x^2+(y-3)^2=9} کی  مساوات نلکی  محدد میں معلوم کریں (شکل \حوالہ{شکل_مثال_سمتیہ_نلکی_الف})۔
+
+حل:\quad
+مساوات \حوالہ{مساوات_سمتیہ_نلکی_کارتیسی_تعلق} استعمال کرتے ہوئے نلکی محدد میں مساوات حاصل کرتے ہیں۔
+\begin{align*}
+x^2+(y-3)^2&=9\\
+(\rho\cos \phi)^2+(\rho\sin\phi-3)^2&=9&&\text{\RL{مساوات \حوالہ{مساوات_سمتیہ_نلکی_کارتیسی_تعلق}}}\\
+\rho^2\cos^2\phi+\rho^2\sin^2\phi+9-6\rho\sin\phi&=9\\
+\rho^2&=6\rho\sin\phi\\
+\rho&=6\sin\phi&&\text{\RL{درکار مساوات}}
+\end{align*}
+\انتہا{مثال}
+%===================
+
+\جزوحصہء{کروی محدد}
+کروی محدد میں نقطہ \عددی{N}کو   زاویوں اور لمبائی سے تعین کیا جاتا ہے (شکل \حوالہ{شکل_سمتیہ_نقطہ_کے_کروی_محدد})۔   نقطہ \عددی{N} کا پہلا محدد  \عددی{r=\abs{\krightharpoonup{ON}}} ہے جو مبدا \عددی{O} سے  \عددی{N} تک فاصلہ دیتا ہے۔نلکی محدد کے \عددی{\rho} کے برعکس \عددی{r} ہر صورت غیر منفی  ہو گا۔ دوسرا محدد \عددی{\theta} ہے جو \عددی{\krightharpoonup{ON}} کا  مثبت محور  \عددی{z} کے ساتھ  زاویہ ہے  جو  وقفہ \عددی{[0,\pi]} پر رہنے  کا پابند ہے۔تیسرا محدد \عددی{\phi} ہے جو عین نلکی محدد \عددی{\phi} ہے ۔ 
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[x={(-0.7071cm,-0.7071cm)},y={(1cm,0)},z={(0,1cm)}]
+\pgfmathsetmacro{\r}{2.5}
+\pgfmathsetmacro{\ang}{55}
+\pgfmathsetmacro{\kx}{\r*cos(\ang)}
+\pgfmathsetmacro{\ky}{\r*sin(\ang)}
+\pgfmathsetmacro{\a}{100}
+\pgfmathsetmacro{\b}{55}
+\draw[-latex](0,0,0)node[left]{$O$}--(2,0,0)node[left]{$x$};
+\draw[-latex](0,0,0)--(0,2.5,0)node[right]{$y$};
+\draw[-latex](0,0,0)--(0,0,2.5)node[left]{$z$};
+\draw(0,0,0)--(\kx,\ky,0)node[pos=0.6,above]{$\rho$}coordinate(ka);
+\draw[](ka)--++(0,0,2)coordinate(kb)node[circ]{}node[right]{$N(r,\theta,\phi)$};
+\draw[-stealth]([shift={(0:0.5)}]0,0,0) arc (0:\ang:0.5)node[pos=0.6,below]{$\phi$};
+\draw[dashed](ka)--++(0,-\ky,0)coordinate(kc)node[pos=0.5,below]{$y$};
+\draw[dashed](ka)--++(-\kx,0,0)coordinate(kd);
+\draw[dashed](kb)--++(-\kx,-\ky,0)coordinate(ke)node[pos=0.5,above]{$\rho$};
+\draw(0,0,1)node[left]{$z$};
+\RightAngle{(kb)}{(ka)}{(0,0,0)}
+\RightAngle{(ka)}{(kc)}{(0,0,0)}
+\RightAngle{(ka)}{(kd)}{(0,0,0)}
+\draw[gray](ke)++(0,0,-0.2)--++(\ang:0.3)--++(0,0,0.2);
+\draw(\kx/2,0,0)node[left]{$x$};
+\draw[thick](0,0,0)--(kb)node[pos=0.6,below]{$r$};
+\draw[-stealth](0,0,0.5) to [out=-30,in=120]node[pos=0.6,above]{$\theta$}(0,0.25,0.25);
+\end{tikzpicture}
+\caption{کروی محدد \عددی{r}، \عددی{\phi}، \عددی{\theta} اور   کارتیسی محدد \عددی{x}، \عددی{y}، \عددی{z} کا  تعلق۔}
+\label{شکل_سمتیہ_نقطہ_کے_کروی_محدد}
+\end{figure}
+
+\ابتدا{تعریف}
+\اصطلاح{کروی محدد}\فرہنگ{کروی محدد}\حاشیہب{spherical coordinates}\فرہنگ{spherical coordinates} فضا میں نقطہ \عددی{N} کو تین مرتب  اعداد   \عددی{(r,\theta,\phi)} سے ظاہر کرتا ہے جہاں
+\begin{enumerate}[1.]
+\item
+مبدا سے \عددی{N} تک فاصلہ \عددی{r} ہے،
+\item
+مثبت محور \عددی{z} کے ساتھ \عددی{\krightharpoonup{ON}} کا زاویہ \عددی{\theta} ہے  (\عددی{0\le\theta\le\pi})،
+\item
+\عددی{\phi} نلکی محدد کا زاویہ ہے۔    
+\end{enumerate}
+\انتہا{تعریف}
+%=======================
+\begin{figure}
+\centering
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[]
+\draw[-latex](-0.5,-0.5)--(-1,-1)node[left]{$x$};
+\draw[-latex](1,0)--(1.5,0)node[right]{$y$};
+\draw[-latex](0,1)--(0,1.5)node[left]{$z$};
+\draw(0,0,0) circle (1);
+\end{tikzpicture}
+\caption{مستقل رداس کرہ دیتا ہے۔}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[]
+\pgfmathsetmacro{\a}{60}
+\draw[-latex](0,0)--(-0.5,-0.5)node[left]{$x$};
+\draw[-latex](0,0)--(0.75,0)node[right]{$y$};
+\draw[-latex](0,0.8)--(0,2)node[left]{$z$};
+\draw(0,1) circle (1cm and 0.2 cm);
+\draw(0,0)--(1,1);
+\draw(0,0)--(-1,1);
+\draw[thick](0,0)--++(\a:0.95);
+\draw(60:1.1)--++(\a:0.5);
+\draw[-stealth]([shift={(90:1.5)}]0,0) arc (90:\a:1.5)node[pos=0.6,above]{$\theta$};
+\end{tikzpicture}
+\caption{مثبت محور \عددی{z} کے ساتھ مستقل زاویہ ترخیم دیتا ہے۔}
+\end{subfigure}\hfill
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[x={(-0.7071cm,-0.7071cm)},y={(1cm,0)},z={(0,1cm)}]
+\pgfmathsetmacro{\ang}{60}
+\pgfmathsetmacro{\h}{2}
+\draw[-latex](0,0,0)--(1,0,0)node[left]{$x$};
+\draw[-latex](0,0,0)--(0,0,1.5)node[left]{$z$};
+\draw[](0,0,-1)--++(\ang:2)--++(0,0,2)--++(\ang:-2)--++(0,0,-2);
+\path[name path=kr](0,0,-1)++(\ang:2)--++(0,0,2);
+\path[name path=ky](0,0.5)--(0,1.5,0);
+\draw[-latex,name intersections={of={kr and ky}}](intersection-1)--(0,1.5,0)node[right]{$y$};
+\draw[dashed](0,0,0)--++(\ang:1);
+\draw[-stealth]([shift={(0:0.5)}]0,0,0) arc (0:\ang:0.5)node[pos=0.3,below]{$\phi$};
+\end{tikzpicture}
+\caption{مثبت محور \عددی{x} کے ساتھ مستقل زاویہ انتصابی سطح دیتا ہے۔}
+\end{subfigure}
+\caption{مستقل کروی محدد سے حاصل سطحیں۔}
+\label{شکل_سمتیہ_مستقل_کروی_محدد}
+\end{figure}
+
+رداس \عددی{a} کے کرہ کی کروی محدد میں  مساوات \عددی{r=a} ہو گی  جہاں کرہ کا مرکز مبدا پر ہے (شکل \حوالہ{شکل_سمتیہ_مستقل_کروی_محدد}-ا)۔ مساوات \عددی{\theta=\theta_0} ایک ترخیم کو ظاہر کرتی ہے جس کا راس مبدا پر ہے اور جس کا محور \عددی{z} محور پر ہے۔(ہم ترخیم کے تصور کو وسعت دیتے ہوئے مستوی \عددی{xy} کو ترخیم \عددی{\theta=\tfrac{\pi}{2}} تصور کرتے ہیں۔) اگر \عددی{\theta} کی قیمت \عددی{\tfrac{\pi}{2}} سے زیادہ ہو تب ترخیم نیچے رخ کھلتا ہے۔کروی محدد میں بالکل نلکی محدد کی طرح \عددی{\phi=\phi_0}  اس سطح کو ظاہر کرتی ہے جس میں محور \عددی{z} شامل ہو اور  جو مثبت \عددی{x} محور کے ساتھ زاویہ \عددی{\phi_0} بناتا ہو۔
+
+کروی محدد کے کارتیسی اور نلکی محدد کے ساتھ تعلقات   درج ذیل ہیں۔
+\begin{gather}
+\begin{aligned}\label{مساوات_سمتیہ_کروی_محدد_تعلقات}
+\rho=r\sin\theta,\quad x=\rho\cos\phi=r\sin\theta\cos\phi,\\
+z=r\cos\theta,\quad y=\rho\sin\phi=r\sin\theta\sin\phi,\\
+r=\sqrt{x^2+y^2+z^2}=\sqrt{\rho^2+z^2}
+\end{aligned}
+\end{gather}
+
+\ابتدا{مثال}\شناخت{مثال_سمتیہ_کرہ_کروی_مساوات}
+درج ذیل کرہ کی کروی مساوات تلاش کریں (شکل \حوالہ{شکل_مثال_سمتیہ_کرہ_کروی_مساوات})۔
+\begin{align*}
+x^2+y^2+(z-1)^2=1
+\end{align*}
+حل:\quad
+ہم مساوات \حوالہ{مساوات_سمتیہ_کروی_محدد_تعلقات}استعمال کرتے ہوئے \عددی{x}، \عددی{y} اور \عددی{z} کی کروی قیمتیں پر کرتے ہیں۔
+\begin{align*}
+x^2+y^2+(z-1)^2&=1\\
+r^2\sin^2\theta\cos^2\phi+r^2\sin^2\theta\sin^2\phi+(r\cos\theta-1)^2&=1&&\text{\RL{مساوات \حوالہ{مساوات_سمتیہ_کروی_محدد_تعلقات}}}\\
+r^2\sin^2\theta(\underbrace{\cos^2\phi+\sin^2\phi}_{1})+r^2\cos^2\theta-2r\cos\theta+1&=1\\
+r^2(\underbrace{\sin^2\theta+\cos^2\theta}_{1})&=2r\cos\theta\\
+r^2&=2r\cos\theta\\
+r&=2\cos\theta
+\end{align*}
+\انتہا{مثال}
+%===================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\t,\p)=2*cos(\t)*sin(\t)*cos(\p);fy(\t,\p)=2*cos(\t)*sin(\t)*sin(\p);fz(\t,\p)=2*cos(\t)*cos(\t);}]
+\pgfmathsetmacro{\ta}{30}
+\pgfmathsetmacro{\pb}{90}
+\pgfmathsetmacro{\pc}{270}
+\pgfmathsetmacro{\pd}{60}
+\begin{axis}[axis equal,view/h=100,axis lines=center,enlargelimits=true, xtick={\empty},ytick={\empty},ztick={\empty},
+axis x line=none,axis y line=none,axis z line=none,]
+\addplot3[samples y=0,domain=0:90] ({fx(\x,\pb)},{fy(\x,\pb)},{fz(\x,\pb)});
+\addplot3[samples y=0,domain=0:90] ({fx(\x,\pc)},{fy(\x,\pc)},{fz(\x,\pc)});
+\addplot3[samples y=0,domain=0:\ta] ({fx(\x,\pd)},{fy(\x,\pd)},{fz(\x,\pd)});
+\addplot3[-latex]coordinates {(0,0,0)({fx(\ta,\pd)},{fy(\ta,\pd)},{fz(\ta,\pd)})}node[pos=0.5,right]{$r$};
+\addplot3[-latex]coordinates {(0,0,0)(1,0,0)}node[left]{$x$};
+\addplot3[-latex]coordinates {(0,0,0)(0,1,0)}node[right]{$y$};
+\addplot3[-latex]coordinates {(0,0,0)(0,0,2.5)}node[right]{$z$};
+\addplot3[-latex,samples y=0,domain=0:\ta] ({0.35*fx(\x,\pd)},{0.35*fy(\x,\pd)},{0.35*fz(\x,\pd)})node[pos=0.7,above]{$\theta$};
+\addplot3[]coordinates{(0,0,1)}node[circ]{}node[left]{$1$};
+\addplot3[]coordinates{(0,0,2)}node[circ]{}node[left,yshift=1ex]{$2$};
+\end{axis}
+\end{tikzpicture}
+\caption{کرہ برائے مثال \حوالہ{مثال_سمتیہ_کرہ_کروی_مساوات}}
+\label{شکل_مثال_سمتیہ_کرہ_کروی_مساوات}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\a}{60}
+\draw[-latex](0,0)--(-0.5,-0.5)node[left]{$x$};
+\draw[-latex](0,0)--(0.75,0)node[right]{$y$};
+\draw[-latex](0,0.8)--(0,2)node[left]{$z$};
+\draw(0,1) circle (1cm and 0.2 cm);
+\draw(0,0)--(1,1);
+\draw(0,0)--(-1,1);
+\draw[thick](0,0)--++(\a:0.95);
+\draw(60:1.1)--++(\a:0.5);
+\draw[-stealth]([shift={(90:1.5)}]0,0) arc (90:\a:1.5)node[pos=0.6,above]{$\theta=\frac{\pi}{4}$};
+\end{tikzpicture}
+\caption{ترخیم برائے مثال \حوالہ{مثال_سمتیہ_ترخیم_کروی_محدد}}
+\label{شکل_مثال_سمتیہ_ترخیم_کروی_محدد}
+\end{minipage}
+\end{figure}
+\ابتدا{مثال}\شناخت{مثال_سمتیہ_ترخیم_کروی_محدد}
+ترخیم \عددی{z=\sqrt{x^2+y^2}} کی کروی مساوات تلاش کریں (شکل \حوالہ{شکل_مثال_سمتیہ_ترخیم_کروی_محدد})۔
+
+حل:\quad
+پہلا حل جیومیٹری استعمال کرتے ہوئے حاصل کرتے ہیں۔ ترخیم محور \عددی{z} کے لحاض سے تشاکلی ہے اور مستوی \عددی{yz} کے ربع  اول  کو خط \عددی{z=y} میں قطع کرتا ہے۔یوں مثبت \عددی{z} محور  اور  ترخیم کے بیچ زاویہ \عددی{\tfrac{\pi}{4}} ہو گا۔ترخیم ان نقطوں پر مبنی ہے جن کے کروی محدد \عددی{\theta} کی قیمت \عددی{\tfrac{\pi}{4}} ہے لہٰذا اس کی مساوات \عددی{\theta=\tfrac{\pi}{4}} ہو گی۔
+
+دوسرا حل الجبرا استعمال کرتے ہوئے حاصل کرتے ہیں۔ہم مساوات  \حوالہ{مساوات_سمتیہ_کروی_محدد_تعلقات} استعمال کر کے یہی نتیجہ دوبارہ حاصل کرتے ہیں۔
+\begin{align*}
+z&=\sqrt{x^2+y^2}\\
+r\cos\theta&=\sqrt{r^2\sin^2\theta}&&\text{\RL{مثال \حوالہ{مثال_سمتیہ_کرہ_کروی_مساوات}}}\\
+r\cos\theta&=r\sin\theta&&r\ge 0, \sin\theta\ge 0\\
+\cos\theta&=\sin\theta\\
+\theta&=\frac{\pi}{4}&&0\le \theta\le \pi
+\end{align*}
+\انتہا{مثال}
+%======================
+
 
