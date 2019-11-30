@@ -7,8 +7,66 @@
 
 
 \حصہ{سمتی قیمت تفاعل اور فضائی منحنیات}
-فضا میں متحرک ذرہ    کی حرکت جاننے کی خاطر ہم  مبدا سے  اس ذرہ  تک سمتیہ \عددی{\kvec{r}} لے کر \عددی{\kvec{r}} میں تبدیلی پر غور کرتے ہیں۔اگر اس ذرہ  کے محدد مقام  وقت کے ساتھ دو بار قابل تفرق ہوں،  تب  \عددی{\kvec{r}} بھی ایسا ہو گا، اور ہم کسی بھی لمحہ پر وقت کے لحاظ سے  \عددی{\kvec{r}}   کے  تفرق لے کر اس ذرہ  کی سمتی رفتار اور اسراع جان سکتے ہیں۔اگر ہمیں اس ذرہ  کی سمتیہ  سمتی رفتار یا سمتیہ  اسراع   بطور  وقت کے استمراری تفاعل معلوم ہو اور ہمیں ذرے کی ابتدائی  مقام اور سمتیہ رفتار کے بارے میں معقول معلومات ہو، تب ہم تکمل کی مدد سے، وقت کا تفاعل  \عددی{\kvec{r}} جان سکتے ہیں۔
-
+فضا میں متحرک ذرہ    کی حرکت جاننے کی خاطر ہم  مبدا سے  اس ذرہ  تک سمتیہ \عددی{\kvec{r}} لے کر \عددی{\kvec{r}} میں تبدیلی پر غور کرتے ہیں (شکل \حوالہ{شکل_سمتی_تفاعل_تعین_گر_سمتیہ})۔اگر اس ذرہ  کے محدد مقام  وقت کے ساتھ دو بار قابل تفرق ہوں،  تب  \عددی{\kvec{r}} بھی ایسا ہو گا، اور ہم کسی بھی لمحہ پر وقت کے لحاظ سے  \عددی{\kvec{r}}   کے  تفرق لے کر اس ذرہ  کی سمتی رفتار اور اسراع جان سکتے ہیں۔اگر ہمیں اس ذرہ  کی سمتیہ  سمتی رفتار یا سمتیہ  اسراع   بطور  وقت کے استمراری تفاعل معلوم ہو اور ہمیں ذرے کی ابتدائی  مقام اور سمتیہ رفتار کے بارے میں معقول معلومات ہو، تب ہم تکمل کی مدد سے، وقت کا تفاعل  \عددی{\kvec{r}} جان سکتے ہیں۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\pgfmathsetmacro{\a}{-0.25/360}
+\pgfmathsetmacro{\ka}{1}
+\pgfmathsetmacro{\b}{0.5/360}
+\pgfmathsetmacro{\kb}{0.5}
+\pgfmathsetmacro{\c}{1/360}
+\pgfmathsetmacro{\d}{150}
+\begin{tikzpicture}[declare function={fx(\r,\t)=(\ka+\a*\t+\r*cos(\t));fy(\r,\t)=(\kb+\b*\t+\r*sin(\t));fz(\r,\t)=\c*\t;}]
+\begin{axis}[clip=false,small,axis lines =center,view/h=135,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=west},xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true,xmin=0,ymin=0,
+axis x line=none,axis y line=none,axis z line=none]
+\addplot3[smooth,domain y=0:460,variable=\r,variable y=\t,samples y=50]({fx(1,t)},{fy(1,t)},{fz(1,t)});
+\addplot3[-latex]coordinates {(0,0,0)({fx(1,\d)},{fy(1,\d)},{fz(1,\d)})}node[pos=0.5,yshift=1ex]{$\kvec{r}$}node[right]{$N(f(t),g(t),h(t))$}node[pos=0,left,yshift=1ex]{$O$};
+\addplot3[-latex]coordinates {(0,0,0)(2,0,0)}node[left]{$x$};
+\addplot3[-latex]coordinates {(0,0,0)(0,2,0)}node[right]{$y$};
+\addplot3[-latex]coordinates {(0,0,0)(0,0,1)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\caption{فضا میں متحرک ذرہ کا تعین گر سمتیہ \عددی{\kvec{r}=\krightharpoonup{ON}} متغیر \عددی{t} کا تفاعل  ہو گا۔}
+\label{شکل_سمتی_تفاعل_تعین_گر_سمتیہ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\ra,\t)=\ra*cos(\t);fy(\rb,\t)=\rb*sin(\t);fz(\rc,\t)=\rc*\t;}]
+\pgfmathsetmacro{\h}{2}
+\pgfmathsetmacro{\ra}{2}
+\pgfmathsetmacro{\rb}{0.25*\ra}
+\pgfmathsetmacro{\rc}{\h/470}
+\pgfmathsetmacro{\ta}{-110}
+\pgfmathsetmacro{\tb}{0}
+\pgfmathsetmacro{\tc}{180}
+\pgfmathsetmacro{\td}{360}
+\pgfmathsetmacro{\te}{-20}
+\pgfmathsetmacro{\tf}{360+\ta}
+\draw[-latex](0,0)--++(-145:2)node[left]{$x$};
+\draw[-latex](0,0)--++(0:2.5)node[right]{$y$};
+\draw[-latex](0,0)--++(0,3)node[left]{$z$};
+\draw[thick,-stealth]([shift={(\ta:0.75cm and 0.185cm)}]0,0) arc (\ta:-20:0.75cm and 0.185 cm)node[pos=0.5,fill=white]{$t$};
+ \draw[-latex](0,0,0)node[left,yshift=1ex]{$O$}--({fx(\ra,\te)},{fz(\rc,\te-\ta)+fy(\rb,\te)})node[circ]{}node[pos=0.4,above]{$\kvec{r}$};
+ \draw[dashed,thick](0,0,0)--({fx(\ra,\te)},{fy(\rb,\te)})--({fx(\ra,\te)},{fz(\rc,\te-\ta)+fy(\rb,\te)});
+\draw[dashed,domain=40:180,variable=\t]plot ({fx(\ra,\t)},{fy(\rb,\t)});
+\draw[domain=180:360,variable=\t]plot ({fx(\ra,\t)},{fy(\rb,\t)});
+\draw[domain=0:360,variable=\t]plot ({fx(\ra,\t)},{\h+fy(\rb,\t)});
+\draw  ({fx(\ra,300)},{fy(\rb,300)})node[below]{$x^2+y^2=1$};
+\draw(-\ra,0)--++(0,\h);
+\draw(\ra,0)--++(0,\h);
+\draw[domain=\ta:\tb,variable=\t]plot ({fx(\ra,\t)},{fz(\rc,\t-\ta)+fy(\rb,\t)});
+\draw[dashed,domain=\tb:\tc,variable=\t]plot ({fx(\ra,\t)},{fz(\rc,\t-\ta)+fy(\rb,\t)});
+\draw[domain=\tc:\td,variable=\t]plot ({fx(\ra,\t)},{fz(\rc,\t-\ta)+fy(\rb,\t)});
+\draw  ({fx(\ra,\ta)},{fz(\rc,\ta-\ta)+fy(\rb,\ta)})node[circ]{}node[below,xshift=1ex]{$t=0$}node[left,xshift=-2ex,yshift=-1ex]{$(1,0,0)$};
+\draw  ({fx(\ra,\tb)},{fz(\rc,\tb-\ta)+fy(\rb,\tb)})node[circ]{}node[right]{$t=\frac{\pi}{2}$};
+\draw  ({fx(\ra,\tf)},{fz(\rc,\tf-\ta)+fy(\rb,\tf)})node[circ]{}node[below]{$t=2\pi$};
+\end{tikzpicture}
+\caption{پیچدار منحنی \عددی{\kvec{r}(t)=(\cos t)\ai+(\sin t)\aj} کا بالائی نصف حصہ}
+\label{شکل_سمتی_تفاعل_پیچدار}
+\end{minipage}
+\end{figure}
 \جزوحصہء{تعریف}
 جب وقفہ \عددی{I} کے دوران ایک ذرہ فضا میں حرکت  کرتا ہو، ہم اس ذرہ کے محدد جو وقت کے تفاعل ہو گے کی تعریف درج ذیل کرتے ہیں۔
 \begin{align}\label{مساوات_سمتی_تفاعل_مقدار_معلوم_راہ}
@@ -31,7 +89,7 @@ x=f(t),\quad y=g(t),\quad z=h(t),\quad t\in I
 \begin{align*}
 \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj+t\ak
 \end{align*}
-معین ہے اور  \عددی{\kvec{r}}   دائری نلکی \عددی{x^2+y^2=1} کے گرد  لپٹ کر چلتا ہے۔  سمتی تفاعل \عددی{\kvec{r}} کے \عددی{\ai} اور \عددی{\aj} اجزاء  جو \عددی{\kvec{r}} کے سر  کے  \عددی{x} اور \عددی{y} محدد ہیں   دائری نلکی  کی مساوات
+معین ہے اور  \عددی{\kvec{r}}   دائری نلکی \عددی{x^2+y^2=1} کے گرد  لپٹ کر چلتا ہے (شکل \حوالہ{شکل_سمتی_تفاعل_پیچدار})۔  سمتی تفاعل \عددی{\kvec{r}} کے \عددی{\ai} اور \عددی{\aj} اجزاء  جو \عددی{\kvec{r}} کے سر  کے  \عددی{x} اور \عددی{y} محدد ہیں   دائری نلکی  کی مساوات
 \begin{align*}
 x^2+y^2=(\cos t)^2+(\sin t)^2=1
 \end{align*}
@@ -39,7 +97,6 @@ x^2+y^2=(\cos t)^2+(\sin t)^2=1
 \begin{align*}
 x=\cos t,\quad y=\sin t,\quad z=t
 \end{align*}
-شکل میں دیگر پیچ دار تفاعل دیے گئے ہیں۔
 \انتہا{مثال}
 %==============
 
@@ -107,7 +164,7 @@ x=\cos t,\quad y=\sin t,\quad z=t
 \begin{align*}
 \Delta \kvec{r}(t)=\kvec{r}(t+\Delta t)-\kvec{r}(t)
 \end{align*}
-ہو گا جس کو اجزاء کی صورت میں درج ذیل لکھا جا سکتا ہے۔
+ہو گا جس کو اجزاء کی صورت میں درج ذیل لکھا جا سکتا ہے (شکل \حوالہ{شکل_سمتی_تفاعل_فضا_میں_حرکت})۔
 \begin{align*}
 \Delta \kvec{r}&=\kvec{r}(t+\Delta t)-\kvec{r}(t)\\
 &=[f(t+\Delta t)\ai+g(t+\Delta t)\aj+h(t+\Delta t)\ak]-[f(t)\ai+g(t)\aj+h(t)\ak]\\
@@ -121,6 +178,29 @@ x=\cos t,\quad y=\sin t,\quad z=t
 \end{align*}
 یوں ماضی  کے تجربات ہمیں  درج ذیل تعریف تک پہنچاتے  ہیں۔
 
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[->-=0.95](0,0) to [out=20,in=-110]coordinate[pos=0.3](ka)coordinate[pos=0.7](kb)node[pos=0.95,right]{\RL{بڑھتے \عددی{t} کا رخ}}++(2,2);
+\draw[-latex](-1,1)node[left]{$O$}--(ka)node[pos=0.5,below]{$\kvec{r}(t)$}node[below]{$N$};
+\draw[-latex](-1,1)--(kb)node[pos=0.5,above]{$\kvec{r}(t+\Delta t)$}node[right]{$Q$};
+\draw[-latex](ka)--(kb)node[pos=0.3,right,xshift=1ex]{$\Delta \kvec{r}$\,\, \RL{سمتیہ ہٹاو}};
+\end{tikzpicture}
+\caption{لمحات \عددی{t} اور \عددی{t+\Delta t} کے بیچ ایک ذرے کا ہٹاو \عددی{\krightharpoonup{NQ}=\Delta \kvec{r}} ہو گا۔نیا سمتی مجموعہ \عددی{\kvec{r}(t)+\Delta \kvec{r}}، ذرے کا نیا مقام \عددی{\kvec{r}(t+\Delta t)} دے گا۔}
+\label{شکل_سمتی_تفاعل_فضا_میں_حرکت}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw(0,0)node[circ]{}to [out=70,in=-135]node[circ]{}node[pos=0.5,above left]{$C_1$} ++(1,1)to [out=-110,in=120]node[circ]{}node[pos=0.5,below left]{$C_2$}++(1,-0.75) to [out=30,in=-100]node[circ]{}node[pos=0.5,above left]{$C_3$}++(1,1)--++(1,-1)node[circ]{}node[pos=0.6,left]{$C_4$} to [out=45,in=60]node[circ]{}node[pos=0.5,above]{$C_5$}++(1,-0.5)node[circ]{};
+\end{tikzpicture}
+\caption{پانچ ہموار منحنیات کو ساتھ ساتھ جوڑ کر ٹکڑوں میں ہموار منحنی حاصل کی گئی ہے۔}
+\label{شکل_سمتی_تفاعل_ٹکڑوں_میں_ہموار}
+\end{minipage}
+\end{figure}
+
 \ابتدا{تعریف}
 نقطہ \عددی{t_0} پر سمتی تفاعل \عددی{\kvec{r}(t)=f(t)\ai+g(t)\aj+h(t)\ak}  اس صورت قابل تفرق ہو گا جب \عددی{t_0} پر \عددی{f}، \عددی{g} اور \عددی{h} قابل تفرق ہوں۔ اس طرح اگر \عددی{\kvec{r}} اپنے دائرہ کار میں ہر نقطہ پر قابل تفرق ہو تب \عددی{\kvec{r}} قابل تفرق ہو گا۔ کسی بھی نقطہ \عددی{t}  پر جہاں \عددی{\kvec{r}} قابل تفرق ہو، اس کا تفرق درج ذیل سمتیہ ہو گا۔
 \begin{align*}
@@ -133,9 +213,9 @@ x=\cos t,\quad y=\sin t,\quad z=t
 
 سمتیہ \عددی{\tfrac{\dif \kvec{r}}{\dif t}} جب \عددی{\kvec{0}} سے مختلف ہو، یہ منحنی کا مماسی سمتیہ ہو گا۔ نقطہ \عددی{(f(t_0),g(t_0),h(t_0))} پر ایک منحنی کے \اصطلاح{مماسی خط} سے مراد  وہ خط ہے جو اس نقطہ سے گزرتا ہو اور جو \عددی{t_0} پر \عددی{\tfrac{\dif \kvec{r}}{\dif t}}  کے متوازی ہو۔  ہم ہموار منحنی    پر   \عددی{\tfrac{\dif \kvec{r}}{\dif t}\ne \kvec{0}} کی شرط    رکھ    کر اس بات کو یقینی بناتے ہیں کہ ہر نقطہ پر منحنی کا مماس استمراری طور پر مڑے گا۔ ایک ہموار منحنی پر   سخت  موڑ نہیں پایا جاتا ہے اور نا ہی اس پر کوئی کنگرہ پایا جاتا ہے۔
 
-ایک منحنی  جو متناہی تعداد کی  ہموار  منحنیات کو (بغیر خالی فاصلہ چھوڑے)    ملا کر حاصل  کی گئی ہو  \اصطلاح{ٹکڑوں میں  ہموار}\فرہنگ{ہموار!ٹکڑوں میں}\حاشیہب{piecewise smooth}\فرہنگ{smooth!piecewise}   کہلاتی ہے۔
+ایک منحنی  جو متناہی تعداد کی  ہموار  منحنیات  (بغیر خالی فاصلہ چھوڑے، ساتھ ساتھ )    ملا کر حاصل  کی گئی ہو  \اصطلاح{ٹکڑوں میں  ہموار}\فرہنگ{ہموار!ٹکڑوں میں}\حاشیہب{piecewise smooth}\فرہنگ{smooth!piecewise}   کہلاتی ہے (شکل \حوالہ{شکل_سمتی_تفاعل_ٹکڑوں_میں_ہموار})۔
 
-شکل پر ایک بار دوبارہ نظر ڈالیں۔ ہم نے اس  شکل کو مثبت \عددی{\Delta t} کے لئے بنایا لہٰذا \عددی{\Delta \kvec{r}}   آگے چلنے  کی طرف    اشارہ کرے گا۔سمتیہ \عددی{\tfrac{\Delta \kvec{r}}{\Delta t}} (جسے دکھایا نہیں گیا ہے اور)  جس کا وہی رخ ہے جو \عددی{\Delta \kvec{r}} کا ہے  بھی آگے کی رخ اشارہ کرے گا۔ اگر \عددی{\Delta t} منفی ہوتا تب \عددی{\Delta \kvec{r}}  چلنے کے مخالف  رخ اشارہ کرے گا  البتہ حاصل تقسیم \عددی{\tfrac{\Delta \kvec{r}}{\Delta t}}  جو \عددی{\Delta \kvec{r}} کا منفی غیر سمتی مضرب  ہے اب بھی چلنے کے رخ اشارہ کرے  گا۔ ہم نے دیکھا کہ \عددی{\Delta \kvec{r}}  جس رخ بھی اشارہ کرتا ہو، \عددی{\tfrac{\Delta \kvec{r}}{\Delta t}}  ہر صورت چلنے کے رخ اشارہ کرتا ہے اور ہم توقع کرتے ہیں کہ سمتیہ \عددی{\tfrac{\dif \kvec{r}}{\dif t}=\lim_{\Delta t\to 0}\tfrac{\Delta \kvec{r}}{\Delta t}} جب \عددی{\kvec{0}} نہ ہو،  بھی ہر صورت  چلنے کے رخ اشارہ کرے گا۔ اس طرح ایک ذرہ کی سمتی رفتار کو ہم \عددی{\tfrac{\dif \kvec{r}}{\dif t}} سے ظاہر کر سکتے ہیں۔ یہ چلنے کی رخ دیتا ہے اور اس کی شرح، وقت کے لحاظ سے مقام  کی تبدیلی دیتا ہے۔ ایک ہموار منحنی  کے  لئے سمتی رفتار کبھی بھی صفر نہیں ہو گا؛   یہ ذرہ نا کبھی رکتا ہے اور نا ہی یہ واپسی اختیار کرتا ہے۔
+شکل \حوالہ{شکل_سمتی_تفاعل_ٹکڑوں_میں_ہموار}  پر ایک بار دوبارہ نظر ڈالیں۔ ہم نے اس  شکل کو مثبت \عددی{\Delta t} کے لئے بنایا لہٰذا \عددی{\Delta \kvec{r}}   آگے چلنے  کی طرف    اشارہ کرے گا۔سمتیہ \عددی{\tfrac{\Delta \kvec{r}}{\Delta t}} (جسے دکھایا نہیں گیا ہے اور)  جس کا وہی رخ ہے جو \عددی{\Delta \kvec{r}} کا ہے  بھی آگے کی رخ اشارہ کرے گا۔ اگر \عددی{\Delta t} منفی ہوتا تب \عددی{\Delta \kvec{r}}  چلنے کے مخالف  رخ اشارہ کرے گا  البتہ حاصل تقسیم \عددی{\tfrac{\Delta \kvec{r}}{\Delta t}}  جو \عددی{\Delta \kvec{r}} کا منفی غیر سمتی مضرب  ہے اب بھی چلنے کے رخ اشارہ کرے  گا۔ ہم نے دیکھا کہ \عددی{\Delta \kvec{r}}  جس رخ بھی اشارہ کرتا ہو، \عددی{\tfrac{\Delta \kvec{r}}{\Delta t}}  ہر صورت چلنے کے رخ اشارہ کرتا ہے اور ہم توقع کرتے ہیں کہ سمتیہ \عددی{\tfrac{\dif \kvec{r}}{\dif t}=\lim_{\Delta t\to 0}\tfrac{\Delta \kvec{r}}{\Delta t}} جب \عددی{\kvec{0}} نہ ہو،  بھی ہر صورت  چلنے کے رخ اشارہ کرے گا۔ اس طرح ایک ذرہ کی سمتی رفتار کو ہم \عددی{\tfrac{\dif \kvec{r}}{\dif t}} سے ظاہر کر سکتے ہیں۔ یہ چلنے کی رخ دیتا ہے اور اس کی شرح، وقت کے لحاظ سے مقام  کی تبدیلی دیتا ہے۔ ایک ہموار منحنی  کے  لئے سمتی رفتار کبھی بھی صفر نہیں ہو گا؛   یہ ذرہ نا کبھی رکتا ہے اور نا ہی یہ واپسی اختیار کرتا ہے۔
 
 \ابتدا{تعریف}
 اگر فضا میں ہموار منحنی پر  چلتے ہوئے ذرے کا  تعین گر سمتیہ \عددی{\kvec{r}} ہو تب
@@ -221,6 +301,8 @@ $\frac{\dif \kvec{r}}{\dif s}=\frac{\dif \kvec{r}}{\dif t}\frac{\dif t}{\dif s}$
 جہاں \عددی{\kvec{r}}  متغیر \عددی{t} کا قابل تفرق تفاعل ہے اور \عددی{t} متغیر \عددی{s} کا قابل تفرق تفرق ہے۔
 \end{description}
 
+صلیبی ضرب میں سمتیات کی ترتیب نہایت اہم ہے۔یوں اگر بائیں ہاتھ \عددی{\kvec{u}} کے بعد \عددی{\kvec{v}} آئے، تب دائیں ہاتھ بھی \عددی{\kvec{u}} کے بعد \عددی{\kvec{v}}ہو    گا۔ایسا نہ کرنے سے قیمت کی علامت تبدیل ہو گی۔
+
 ہم قاعدہ  ضرب اور زنجیری قاعدہ کو ثابت کرتے ہیں۔ باقی ثبوت  آپ کو مشق میں پیش کرنے ہوں گے۔
 
 \ابتدا{ثبوت}\ترچھا{قاعدہ ضرب نقطہ}\\
@@ -267,8 +349,28 @@ $\frac{\dif \kvec{r}}{\dif s}=\frac{\dif \kvec{r}}{\dif t}\frac{\dif t}{\dif s}$
 \انتہا{ثبوت}
 %===================
 
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\r}{1.5}
+\draw(0,0) circle (\r);
+\draw(-160:\r) to [out=85,in=-110]coordinate[pos=0.4](ka)coordinate[pos=0.41](kb)(60:\r);
+\draw[-latex](0,0)--(ka)node[pos=0.6,below]{$\kvec{r}(t)$}node[circ]{}node[left,yshift=0.5ex]{$N$};
+\RightAngle{(0,0)}{(ka)}{(kb)}
+\draw[-latex](ka)--++(20:1.5)node[pos=0.75,below right]{$\frac{\dif \kvec{r}}{\dif t}$};
+\draw[dashed](0,0)--(-0.5*\r,-0.5*\r);
+\draw[dashed](0,0)--++(-10:0.9*\r);
+\draw[dashed](0,0)--++(0,\r);
+\draw[-latex](-0.5*\r,-0.5*\r)--++(-0.5,-0.5)node[left]{$x$};
+\draw[-latex](-10:0.9*\r)--++(-10:0.5)node[right]{$y$};
+\draw[-latex](0,\r)--++(0,0.25)node[left]{$z$};
+\end{tikzpicture}
+\caption{اگر ایک ذرہ ایک کرہ پر یوں حرکت کرتا ہو کہ اس کی مقام \عددی{\kvec{r}} وقت کا قابل تفرق تفاعل ہو، تب \عددی{\kvec{r}\cdot (\tfrac{\dif \kvec{r}}{\dif t})=0} ہو گا۔}
+\label{شکل_سمتی_تفاعل_مستقل_لمبائی}
+\end{figure}
+
 \جزوحصہء{مستقل لمبائی کے سمتی تفاعل}  
-مبدا پر مرکز والے ایک کرہ پر  جو جسم حرکت کرتا ہے، اس جسم  کے  تعین گر سمتیہ کی لمبائی اس کرہ کے رداس جتنی ہو گی۔اس کی سمتی رفتار سمتیہ  \عددی{\tfrac{\dif \kvec{r}}{\dif t}}،  جو حرکت کی راہ کو مماسی ہو گا، اس کرہ کو مماسی   لہٰذا  \عددی{\kvec{r}}   کو قائمہ ہو گا۔ مستقل لمبائی والے قابل تفرق سمتی تفاعل کے لئے  ہر بار ایسا ہی ہو گا۔ ایسا سمتیہ اور اس کا پہلا تفرق ایک دوسرے کو عمودی  ہوں گے۔ لمبائی مستقل ہونے کی بدولت، سمتیہ میں تبدیلی درحقیقت سمتیہ کے رخ میں تبدیلی ہو گی اور رخ کی یہ تبدیلی سمتی تفاعل کے ساتھ  زاویہ قائمہ پر ہو گی۔
+ ایک کرہ   جس کا مرکز مبدا پر ہو، پر  جو جسم حرکت کرتا ہو، اس جسم  کے  تعین گر سمتیہ کی لمبائی اس کرہ کے رداس جتنی ہو گی  (شکل \حوالہ{شکل_سمتی_تفاعل_مستقل_لمبائی})۔اس کا سمتی رفتار سمتیہ  \عددی{\tfrac{\dif \kvec{r}}{\dif t}}،  جو حرکت کی راہ کو مماسی ہو گا، اس کرہ کو مماسی   لہٰذا  \عددی{\kvec{r}}   کو قائمہ ہو گا۔ مستقل لمبائی والے قابل تفرق سمتی تفاعل کے لئے  ہر بار ایسا ہی ہو گا۔ ایسا سمتیہ اور اس کا پہلا تفرق ایک دوسرے کو عمودی  ہوں گے۔ لمبائی مستقل ہونے کی بدولت، سمتیہ میں تبدیلی درحقیقت سمتیہ کے رخ میں تبدیلی ہو گی اور رخ کی یہ تبدیلی سمتی تفاعل کے ساتھ  زاویہ قائمہ پر ہو گی۔
 
 \ابتدا{قانون}
 اگر \عددی{\kvec{u}} متغیر \عددی{t} کا قابل تفرق سمتی تفاعل ہو اور اس کی لمبائی اٹل ہو تب درج ذیل ہو گا۔
@@ -277,6 +379,7 @@ $\frac{\dif \kvec{r}}{\dif s}=\frac{\dif \kvec{r}}{\dif t}\frac{\dif t}{\dif s}$
 \end{align}
 \انتہا{قانون}
 %=================== 
+
 
 یہ دیکھنے کی خاطر کہ مساوات \حوالہ{مساوات_سمتی_تفاعل_مستقل_لمبائی} کیوں درست ہے ہم فرض کرتے ہیں کہ سمتی تفاعل  \عددی{\kvec{u}} متغیر \عددی{t} کا قابل تفرق تفاعل ہے  اور \عددی{\abs{\kvec{u}}} ایک مستقل  قیمت ہے۔ یوں \عددی{\kvec{u}\cdot\kvec{u}=\abs{\kvec{u}}^2} ایک مستقل ہو گا اور ہم اس مساوات کی دونوں اطراف کا تفرق لے  کر درج ذیل حاصل کرتے ہیں۔
 \begin{align*}
@@ -303,3 +406,85 @@ $\frac{\dif \kvec{r}}{\dif s}=\frac{\dif \kvec{r}}{\dif t}\frac{\dif t}{\dif s}$
 
 \جزوحصہء{سمتی تفاعل کے تکملات}
 اگر وقفہ \عددی{I}کے ہر نقطہ  پر \عددی{\tfrac{\dif \kvec{R}}{\dif t}=\kvec{r}} ہو تب    قابل تفرق سمتی تفاعل \عددی{\kvec{R}(t)}،وقفہ \عددی{I}   پر  سمتی تفاعل \عددی{\kvec{r}(t)} کا الٹ تفرق ہو گا۔ اگر \عددی{I} پر \عددی{\kvec{r}} کا الٹ تفرق \عددی{\kvec{R}} ہو تب ،ایک  وقت میں ایک جزو  کے ساتھ کام کرتے ہوئے،  یہ دکھایا جا سکتا ہے کہ \عددی{I} پر \عددی{\kvec{r}} کے الٹ تفرق  کی صورت \عددی{\kvec{R}+\kvec{C}} ہو گی جہاں \عددی{\kvec{C}} کوئی مستقل سمتیہ ہو گا۔وقفہ \عددی{I} پر \عددی{\kvec{r}} کے الٹ تفرقات کا سلسلہ \عددی{I} پر \عددی{\kvec{r}} کا \اصطلاح{غیر قطعی تکمل}\فرہنگ{تکمل!غیر قطعی}\حاشیہب{indefinite integral}\فرہنگ{integral!indefinite} ہو گا۔ 
+
+\ابتدا{تعریف}
+متغیر \عددی{t} کے لحاض سے \عددی{\kvec{r}} کا غیر قطعی تکمل، \عددی{\kvec{r}} کے تمام الٹ تفرقات کا سلسلہ ہو گا، جس کو \عددی{\int\kvec{r}(t)\dif t} سے ظاہر کیا جاتا ہے۔ اگر \عددی{\kvec{r}} کا الٹ تفرق \عددی{\kvec{R}} ہو تب درج ذیل ہو گا۔
+\begin{align*}
+\int\kvec{r}(t)\dif t&=\kvec{R}(t)+\kvec{C}&&\text{\RL{\عددی{\kvec{C}} مستقل سمتیہ ہے}}
+\end{align*}
+\انتہا{تعریف}
+%=====================
+
+غیر قطعی تکملات کے تمام حسابی  اصول یہاں قابل اطلاق ہوں گے۔
+
+\ابتدا{مثال}
+\begin{align*}
+\int((\cos t)\ai&+\aj-2t\ak)\dif t=\big(\int \cos t\dif t\big)\ai+\big(\int \dif t\big)\aj-\big(\int 2t\dif t\big)\ak\\
+&=(\sin t+C_1)\ai+(t+C_2)\aj-(t^2+C_3)\ak\\
+&=(\sin t)\ai+t\aj-t^2\ak+\kvec{C}\quad\quad\quad\kvec{C}=C_1\ai+C_2\aj-C_3\ak
+\end{align*}
+غیر سمتی تفاعل کے  تکمل کی طرح یہاں بھی، درمیانے  دو  قدم کے بغیر،   آپ  بائیں ہاتھ سے   سیدھا نتیجہ لکھ سکتے ہیں۔
+\انتہا{مثال}
+%============
+
+سمتی تفاعل کے قطعی تکمل کی تعریف اس کے اجزاء کی صورت میں کی  جاتی ہے۔
+
+\ابتدا{تعریف}
+اگر وقفہ \عددی{[a,b]} پر \عددی{\kvec{r}(t)=f(t)\ai+g(t)\aj+h(t)\ak} کے اجزاء قابل تفرق ہوں تب اس وقفہ پر \عددی{\kvec{r}} بھی قابل تفرق ہو گا اور \عددی{a} تا \عددی{b}  سمتی تفاعل \عددی{\kvec{r}} کا قطعی تکمل درج ذیل ہو گا۔
+\begin{align*}
+\int_a^b\kvec{r}(t)\dif t=\big(\int_a^b f(t)\dif t\big)\ai+\big(\int_a^b g(t)\dif t\big)\aj+\big(\int_a^b h(t)\dif t\big)\ak
+\end{align*}
+\انتہا{تعریف}
+%==========
+
+قطعی تکملات کے تمام حسابی  اصول یہاں قابل اطلاق ہوں گے۔
+
+\ابتدا{مثال}
+\begin{align*}
+\int_0^{\pi}((\cos t)\ai+\aj-2t\ak)\dif t&=\big(\int_0^{\pi}\cos t\dif t \big)\ai+\big(\int_0^{\pi}\dif t \big)\aj-\big(\int_0^{\pi}2t\dif t \big)\ak\\
+&=\big[\sin t\big]_0^{\pi}\ai+\big[t\big]_0^{\pi}\aj-\big[t^2\big]_0^{\pi}\\
+&=[0-0]\ai+[\pi-0]\aj-[\pi^2-0^2]\ak\\
+&=\pi \aj-\pi^2\ak
+\end{align*}
+\انتہا{مثال}
+%=================
+\ابتدا{مثال}\ترچھا{ذرے کے ابتدائی مقام اور ابتدائی سمتی رفتار سے اس کے مقام کا حصول}\\
+فضا  میں حرکت کرتے ہوئے ایک  ذرے کا سمتی رفتار
+\begin{align*}
+\frac{\dif \kvec{r}}{\dif t}=(\cos t)\ai-(\sin t)\aj+\ak
+\end{align*}
+ہے۔اگر  لمحہ \عددی{t=0} پر اس ذرے کا مقام \عددی{\kvec{r}=2\ai+\ak} ہو تب لمحہ \عددی{t} پر اس کا مقام کیا ہو گا؟
+
+حل:\quad
+ہمیں  درج ذیل ابتدائی قیمت مسئلہ حل کرنا ہو گا۔
+\begin{align*}
+\frac{\dif \kvec{r}}{\dif t}&=(\cos t)\ai-(\sin t)\aj+\ak&&\text{\RL{تفرقی مساوات}}\\
+\kvec{r}(0)&=2\ai+\ak&&\text{\RL{ابتدائی معلومات}}
+\end{align*} 
+دونوں اطراف  کا  \عددی{t} کے لحاض سے تکمل  لے کر
+\begin{align*}
+\kvec{r}(t)=(\sin t)\ai+(\cos t)\aj+t\ak+\kvec{C}
+\end{align*}
+حاصل ہوتا ہے۔ہم ابتدائی معلومات استعمال کرتے ہوئے تکمل کا مستقل \عددی{\kvec{C}} معلوم کرتے ہیں۔
+\begin{align*}
+(\sin 0)\ai+(\cos 0)\aj+(0)\ak+\kvec{C}&=2\ai+\ak&&\kvec{r}(0)=2\ai+\ak\\
+\aj+\kvec{C}&=2\ai+\ak\\
+\kvec{C}&=2\ai-\aj+\ak
+\end{align*}
+وقت \عددی{t} کے لحاض سے ذرے کا مقام درج ذیل ہو گا۔
+\begin{align*}
+\kvec{r}(t)=(\sin t+2)\ai+(\cos t-1)\aj+(t+1)\ak
+\end{align*}
+حاصل نتیجہ کو پرکھنے کی خاطر  ہم اس سے
+\begin{align*}
+\frac{\dif \kvec{r}}{\dif t}&=(\cos t+0)\ai+(-\sin t-0)\aj+(1+0)\ak\\
+&=(\cos t)\ai-(\sin t)\aj+\ak
+\end{align*}
+اور
+\begin{align*}
+\kvec{r}(0)&=(\sin 0+2)\ai+(\cos 0-1)\aj+(0+1)\ak\\
+&=2\ai+\ak
+\end{align*}
+حاصل کرتے ہیں۔
+\انتہا{مثال}
+%=============
