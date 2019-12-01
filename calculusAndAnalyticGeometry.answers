@@ -1,0 +1,9 @@
+\medskip \noindent \جواب ~1
+{}{} $x=\sin t\cos t$
+\par 
+\medskip \noindent \جواب ~2
+{}{} \begin {center} \begin {tikzpicture}[font=\small ,declare function={fx(\r ,\t )=4*\r *cos(\t );fz(\r ,\t )=2*\r *sin(\t );}] \pgfmathsetmacro {\ta }{0} \pgfmathsetmacro {\tb }{90} \pgfmathsetmacro {\tc }{180} \pgfmathsetmacro {\td }{270} \pgfmathsetmacro {\ky }{12} \begin {axis}[view/h=135,axis equal,axis lines=center,xtick={\empty },ytick={\empty },ztick={\empty },xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east}, axis x line=none,axis y line=none,axis z line=none] \addplot 3[domain y=0:360] ({fx(2,y)},-\ky ,{fz(2,y)}); \addplot 3[domain y=0:360] ({fx(2,y)},0,{fz(2,y)}); \addplot 3[domain y=0:360] ({fx(2,y)},\ky ,{fz(2,y)}); \addplot 3[] coordinates {({fx(2,\ta )},-\ky ,{fz(2,\ta )})({fx(2,\ta )},\ky ,{fz(2,\ta )})}; \addplot 3[] coordinates {({fx(2,\tb )},-\ky ,{fz(2,\tb )})({fx(2,\tb )},\ky ,{fz(2,\tb )})}; \addplot 3[] coordinates {({fx(2,\tc )},-\ky ,{fz(2,\tc )})({fx(2,\tc )},\ky ,{fz(2,\tc )})}; \addplot 3[] coordinates {({fx(2,\td )},-\ky ,{fz(2,\td )})({fx(2,\td )},\ky ,{fz(2,\td )})}; \addplot 3[-latex] coordinates {(0,0,0)(2.5,0,0)}node[below]{$x$}; \addplot 3[-latex] coordinates {(0,0,0)(0,\ky +0.5,0)}node[below]{$y$}; \addplot 3[-latex] coordinates {(0,0,0)(0,0,2.5)}node[left]{$z$}; \end {axis} \end {tikzpicture} \end {center} \par 
+\par 
+\medskip \noindent \جواب ~3
+{}{} کیا حال ہے
+\par 

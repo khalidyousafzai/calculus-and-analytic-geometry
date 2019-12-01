@@ -1,0 +1,44 @@
+\documentclass{scrartcl}
+\usepackage{collect}
+
+\definecollection{answers}
+
+\newcommand\mycollect[1]{%
+  \collect{answers}
+    {\par\medskip\noindent\textbf{Answer to~#1}}
+    {\par}
+    {}{}%
+}
+
+\newenvironment{answer}
+  {\begingroup\edef\x{\endgroup\noexpand\mycollect{\theexercise}}\x}
+  {\endcollect}
+
+\newcounter{exercise}
+\newenvironment{ex}
+  {\refstepcounter{exercise}\par\noindent This is exercise~\theexercise}
+  {\par}
+
+\begin{document}
+
+\begin{ex}
+\end{ex}
+\begin{answer}
+This is the answer to exercise 1 but it is numbered 3.
+\end{answer}
+
+\begin{ex}
+\end{ex}
+\begin{answer}
+This is the answer to exercise 2 but it is numbered 3.
+\end{answer}
+
+\begin{ex}
+\end{ex}
+\begin{answer}
+This is the answer to exercise 3 and it is numbered 3.
+\end{answer}
+
+\includecollection{answers}
+
+\end{document}
