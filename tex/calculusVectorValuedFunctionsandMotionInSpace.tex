@@ -1121,3 +1121,199 @@ $\kvec{r}(t)=(\ln(t^2+2))\ai+(\tan^{-1}3t)\aj+\sqrt{t^2+1}\ak,\quad -3\le t\le 5
 
 \انتہا{سوالات}
 %=======================
+
+\حصہ{گولا کے حرکت کی نمونہ کشی}
+ایک گولا چلانے سے پہلے  ہم جاننا چاہیں گے کہ آیا وہ حدف کو مار سکے گا (کیا حدف تک پہنچے گا)؟   یہ گولا کس  بلندی  تک  پہنچے گا (کیا یہ  پہاڑی کو پار کر پائے گا)؟ اور  یہ حدف پر کتنی دیر میں پہنچے گا (نتائج   کب حاصل  ہوں گے)؟ یہ تمام معلومات  گولے کی ابتدائی سمتیہ رفتار سے نیوٹن کے دوسرے قانون کی مدد سے حاصل کی جا سکتی ہیں۔
+
+\جزوحصہء{گولا کی حرکت کی مقدار معلوم مثالی  مساوات}
+حرکت  گولا کی مثالی مساوات حاصل کرتے ہوئے ہم  فرض کرتے ہیں کہ یہ ایک ذرہ کی مانند مستوی میں حرکت کرتا ہے اور اس پر صرف  مستقل   قوت کشش   سیدھا نیچے رخ عمل   کرتی ہے۔ حقیقت میں یہ مفروضے  درست نہیں  ہیں۔ زمین گھومنے کی بنا گولے کے نیچے    زمین  حرکت میں ہوتی  ہے، ہوائی  رگڑ  جو  گولے کی رفتار اور بلندی پر منحصر ہے گولا    پر عمل کرتی ہے، اور قوت کشش ایک مستقل نہیں ہے بلکہ اس کی قیمت  گولا کی بلندی پر منحصر ہے۔اگرچہ ان تمام کے اثرات کو بھی دیکھنا ہو گا، ہم یہاں انہیں نظر انداز کرتے ہیں۔
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.35\textwidth}
+\centering
+\pgfmathsetmacro{\v}{7}
+\pgfmathsetmacro{\a}{45}
+\pgfmathsetmacro{\g}{9.8}
+\pgfmathsetmacro{\ta}{2/\g*\v*sin(\a)}
+\pgfmathsetmacro{\k}{1.5}
+\pgfmathsetmacro{\kx}{\k*cos(\a)}
+\begin{tikzpicture}[font=\small,declare function={fx(\t)=\v*cos(\a)*\t;fy(\t)=\v*sin(\a)*\t-1/2*\g*\t^2;}]
+\draw[smooth,domain=0:\ta/2,variable=\t]plot ({fx(\t)},{fy(\t)});
+\draw[-latex](0,0)--(3,0)node[right]{$x$};
+\draw[-latex](0,0)--(0,1.25)node[right]{$y$};
+\draw[thick,-latex](0,0)--++(\a:\k)node[pos=0.6,shift={(\a+90:0.2)}]{$\kvec{v}_0$};
+\draw[thick,latex-](\a:\k)--(\kx,0)node[pos=0.5,right]{$\abs{\kvec{v}_0}\sin\alpha\aj$};
+\draw[thick,-latex](0,0)--(\kx,0)node[pos=0.5,below,xshift=2ex]{$\abs{\kvec{v}_0}\cos\alpha\ai$};
+\draw[]([shift={(0:0.4)}]0,0) arc (0:\a:0.4)node[pos=0.6,right]{$\alpha$};
+\draw[thick,-latex](0,0)--++(0,-0.75)node[right]{$\kvec{a}=-g\aj$};
+\draw(0,0)node[pin={[align=center]135:{\RL{لمحہ \عددی{t=0}}\\  \RL{پر \عددی{\kvec{r}=\kvec{0}}}}}]{};
+\end{tikzpicture}
+\caption{لمحہ \عددی{t=0} پر مقام، سمتی رفتار اور اسراع۔}
+\end{subfigure}\hfill
+\begin{subfigure}{0.55\textwidth}
+\centering
+\pgfmathsetmacro{\v}{7}
+\pgfmathsetmacro{\a}{45}
+\pgfmathsetmacro{\g}{9.8}
+\pgfmathsetmacro{\ta}{2/\g*\v*sin(\a)}
+\pgfmathsetmacro{\k}{1.5}
+\pgfmathsetmacro{\kx}{\k*cos(\a)}
+\begin{tikzpicture}[font=\small,declare function={fx(\t)=\v*cos(\a)*\t;fy(\t)=\v*sin(\a)*\t-1/2*\g*\t^2;}]
+\draw[smooth,domain=0:\ta,variable=\t]plot ({fx(\t)},{fy(\t)});
+\draw[-latex](0,0)node[left]{$O$}--(5.5,0)node[right]{$x$};
+\draw[-latex](0,0)--(0,1.25)node[left]{$y$};
+\draw[-latex](0,0)--({fx(0.6*\ta)},{fy(0.6*\ta)})node[pos=0.6,sloped,below]{$\kvec{r}=x\ai+y\aj$}node[above]{$(x,y)$}coordinate(ka);
+\draw[-latex](ka)--++(-15:1)node[above]{$\kvec{v}$};
+\draw[-latex](ka)--++(0,-0.65)node[xshift=3ex,yshift=-1ex]{$\kvec{a}=-g\aj$};
+\draw(0,-0.1)--++(0,-0.2);
+\draw({fx(\ta)},-0.1)--++(0,-0.2);
+\draw[stealth-stealth](0,-0.2)--++({fx(\ta)},0)node[pos=0.5,below]{\RL{افقی مار}};
+\end{tikzpicture}
+\caption{کچھ دیر بعد لمحہ \عددی{t} پر مقام، سمتی رفتار اور اسراع۔}
+\end{subfigure}
+\caption{گولا کی مثالی پرواز۔}
+\label{شکل_سمتی_تفاعل_گولا_مثالی_پرواز}
+\end{figure}
+ہم فرض کرتے ہیں کہ لمحہ \عددی{t=0} پر ابتدائی سمتیہ رفتار \عددی{\kvec{v}_0} کے ساتھ  مبدا سے گولا      ربع اول میں مارا   جاتا ہے (شکل \حوالہ{شکل_سمتی_تفاعل_گولا_مثالی_پرواز})۔ اگر  افقی زمین کے ساتھ \عددی{\kvec{v}_0} کا زاویہ \عددی{\alpha} ہو تب
+\begin{align}\label{مساوات_سمتی_تفاعل_گولا_الف}
+\kvec{v}_0=(\abs{\kvec{v}_0}\cos\alpha)\ai+(\abs{\kvec{v}_0}\sin\alpha)\aj
+\end{align}
+ہو گا۔اس میں \عددی{\abs{\kvec{v}_0}} کو سادہ علامت   \عددی{v_0} سے ظاہر کرتے ہوئے درج ذیل لکھا جا سکتا ہے۔
+ \begin{align}\label{مساوات_سمتی_تفاعل_گولا_ب}
+\kvec{v}_0=(v_0\cos\alpha)\ai+(v_0\sin\alpha)\aj
+\end{align}
+گولا کا ابتدائی مقام  درج ذیل ہے۔
+\begin{align}\label{مساوات_سمتی_تفاعل_گولا_پ}
+\kvec{r}_0=0\ai+0\aj=\kvec{0}
+\end{align}
+
+نیوٹن کا دوسرا قانون برائے حرکت کے تحت کمیت ضرب اسراع   یعنی \عددی{m\tfrac{\dif^{\,2}\kvec{r}}{\dif t^2}}عامل   قوت کے برابر ہو گا جہاں لمحہ \عددی{t} پر گولے کا تعین گر سمتیہ  \عددی{\kvec{r}(t)} ہے۔ اگر صرف قوت کشش  \عددی{-mg\aj} عمل کرتی ہو تب
+\begin{align}\label{مساوات_سمتی_تفاعل_گولا_ت}
+\frac{\dif^{\,2}\kvec{r}}{\dif t^2}=-g\aj  \quad \text{یا}\quad  m\frac{\dif^{\,2}\kvec{r}}{\dif t^2}=-mg\aj
+\end{align}
+ہو گا۔ ہم  درج ذیل ابتدائی قیمت مسئلہ حل کر کے متغیر \عددی{t} کا تفاعل \عددی{\kvec{r}} حاصل کرتے ہیں۔
+\begin{align*}
+\frac{\dif^{\,2}\kvec{r}}{\dif t^2}&=-g\aj&&\text{\RL{اتفرقی مساوات}}\\
+\kvec{r}=\kvec{r}_0,\,\, \frac{\dif \kvec{r}}{\dif t}&=\kvec{v}_0\quad \text{پر}\quad t=0&&\text{\RL{ابتدائی معلومات}}
+\end{align*}
+پہلا تکمل
+\begin{align*}
+\frac{\dif \kvec{r}}{\dif t}=-(gt)\aj+\kvec{v}_0
+\end{align*}
+دیگا۔ دوسرا تکمل
+\begin{align*}
+\kvec{r}=-\frac{1}{2}gt^2\aj+\kvec{v}_0t+\kvec{r}_0
+\end{align*}
+دیگا۔ ہم مساوات \حوالہ{مساوات_سمتی_تفاعل_گولا_ب} اور مساوات \حوالہ{مساوات_سمتی_تفاعل_گولا_پ} سے  \عددی{\kvec{v}_0} اور \عددی{\kvec{r}_0} کی قیمتیں پر کر کے
+\begin{align*}
+\kvec{r}=-\frac{1}{2}gt^2\aj+\underbrace{(v_0\cos\alpha)t\ai+(v_0\sin\alpha)t\aj}_{\kvec{v}_0t}+\kvec{0}
+\end{align*}
+یعنی
+\begin{align}\label{مساوات_سمتی_تفاعل_گولا_ٹ}
+\kvec{r}=(v_0\cos\alpha)t\ai+\big((v_0\sin\alpha)t-\frac{1}{2}gt^2\big)\aj
+\end{align}
+حاصل کرتے ہیں۔
+
+مساوات  \حوالہ{مساوات_سمتی_تفاعل_گولا_ٹ}  گولے کی مثالی حرکت کی سمتی مساوات ہے۔ زاویہ \عددی{\alpha} گولا   \اصطلاح{چلانے  کا زاویہ} ہے  جبکہ \عددی{v_0} اس کی \اصطلاح{ابتدائی رفتار} ہے۔
+
+مساوات \حوالہ{مساوات_سمتی_تفاعل_گولا_ٹ} درج ذیل دو غیر سمتی مساواتوں کے برابر ہے۔
+\begin{align}\label{مساوات_سمتی_تفاعل_گولا_ث}
+x=(v_0\cos\alpha)t,\quad y=(v_0\sin\alpha)t-\frac{1}{2}gt^2
+\end{align}
+انہیں   گولا کی مثالی پرواز  کی مقدار معلوم مساوات کہتے ہیں۔اگر وقت کو سیکنڈوں میں اور فاصلہ کو میٹروں میں ناپا جائے تب \عددی{g=\SI{9.8}{\meter\per\second\squared}} ہو گا اور مساوات \حوالہ{مساوات_سمتی_تفاعل_گولا_ث} میں \عددی{x} اور \عددی{y} میٹر میں ہوں گے۔
+
+\ابتدا{مثال}\شناخت{مثال_سمتی_تفاعل_گولا_الف}
+افقی میدان میں  مبدا سے ایک گولا \عددی{\SI{500}{\meter\per\second}} کی رفتار سے \عددی{60^{\circ}}کے  زاویہ پر  داغا  جاتا ہے۔یہ گولا \عددی{10} سیکنڈ بعد کہاں  ہو گا؟
+
+حل:\quad
+ہم \عددی{v_0=500}،    \عددی{\alpha=60}، \عددی{g=9.8} لیتے ہوئے     مساوات \حوالہ{مساوات_سمتی_تفاعل_گولا_ث} استعمال کر کے لمحہ \عددی{t=10} پر گولے  کا مقام معلوم کرتے  ہیں۔
+\begin{align*}
+x&=(v_0\cos \alpha)t=500\cdot\frac{1}{2}\cdot 10=\SI{2500}{\meter}\\
+y&=(v_0\sin\alpha)t-\frac{1}{2}gt^2\\
+&=500\cdot\frac{\sqrt{3}}{2}\cdot 10-\frac{1}{2}\cdot 9.8\cdot(10)^2\\
+&=2500\sqrt{3}-490\\
+&\approx \SI{3840}{\meter}
+\end{align*}
+گولا چلانے کے دس سیکنڈ بعد \عددی{3840} میٹر کی بلندی پر حدف  کی طرف \عددی{2500} میٹر دور ہو گا۔
+\انتہا{مثال}
+%==================
+
+\جزوحصہء{بلندی، دورانیہ پرواز اور فاصلہ   مار}
+ہم مساوات \حوالہ{مساوات_سمتی_تفاعل_گولا_ث} سے  مثالی گولا کی پرواز کے بارے میں عموماً سوالات کے جوابات حاصل کر سکتے ہیں۔
+
+گولا اپنی بلند ترین مقام پر اس لمحہ پہنچتا ہے جب اس کی رفتار کا انتصابی  حصہ صفر ہو:
+\begin{align*}
+t=\frac{v_0\sin\alpha}{g}\quad \text{یعنی}\quad \frac{\dif y}{\dif t}=v_0\sin\alpha-gt=0
+\end{align*} 
+اس لمحہ پر \عددی{y} کی قیمت درج ذیل ہو گی۔
+\begin{align}\label{مساوات_سمتی_تفاعل_گولا_ج}
+y_{\text{بلندتر}}=(v_0\sin\alpha)\big(\frac{v_0\sin\alpha}{g}\big)-\frac{1}{2}g\big(\frac{v_0\sin\alpha}{g}\big)^2=\frac{(v_0\sin\alpha)^2}{2g}
+\end{align}
+افقی میدان میں داغے گئے گولا کی پرواز کا دورانیہ جاننے کی خاطر ہم  مساوات \حوالہ{مساوات_سمتی_تفاعل_گولا_ث} میں \عددی{y=0} پر کے \عددی{t} حاصل کرتے ہیں۔
+\begin{align}
+(v_0\sin\alpha)t-\frac{1}{2}gt^2&=0\nonumber\\
+t\big(v_0\sin\alpha-\frac{1}{2}gt\big)&=0\nonumber\\
+t=0,\quad t=\frac{2v_0\sin\alpha}{g}&\label{مساوات_سمتی_تفاعل_گولا_چ}
+\end{align}
+چونکہ \عددی{t=0} وہ لمحہ ہے جب گولا داغا  گیا لہٰذا \عددی{t=\tfrac{2v_0\sin\alpha}{g}} وہ لمحہ ہو گا جب گولا واپس زمین پر گرتا ہے۔
+
+گولے کی مار \عددی{R} جاننے کی خاطر ہم مبدا سے گولا گرنے کے مقام تک فاصلہ معلوم کرتے ہیں۔ ہم \عددی{t=\tfrac{2v_0\sin\alpha}{g}} پر \عددی{x} تلاش کرتے ہیں۔
+\begin{align}
+x&=(v_0\cos\alpha)t\nonumber\\
+R&=(v_0\cos\alpha)\big(\frac{2v_0\sin\alpha}{g}\big)\nonumber\\
+&=\frac{v_0^2}{g}(2\sin\alpha\cos\alpha)=\frac{v_0^2}{g}\sin2\alpha\label{مساوات_سمتی_تفاعل_گولا_ح}
+\end{align}
+زیادہ سے زیادہ فاصلہ مار \عددی{\sin 2\alpha=1} یعنی \عددی{\alpha=45^{\circ}} پر حاصل ہو گا۔
+
+\ابتدا{مثال}
+افقی میدان میں  مبدا سے ایک گولا \عددی{\SI{500}{\meter\per\second}} کی رفتار سے \عددی{60^{\circ}}کے  زاویہ پر چلایا جاتا ہے۔ گولا  کی زیادہ سے زیادہ بلندی، دورانیہ پرواز  اور فاصلہ مار تلاش کریں (مثال \حوالہ{مثال_سمتی_تفاعل_گولا_الف})۔
+
+حل:\quad
+\begin{align*}
+y_{\text{بلندتر}}&=\frac{(v_0\sin\alpha)^2}{2g}&&\text{\RL{زیادہ سے زیادہ بلندی  (مساوات \حوالہ{مساوات_سمتی_تفاعل_گولا_ج})}}\\
+&=\frac{(500\sin 60^{\circ})^2}{2(9.8)}\approx \SI{9566}{\meter}\\
+t&=\frac{2v_0\sin\alpha}{g}&&\text{\RL{دورانیہ پرواز (مساوات \حوالہ{مساوات_سمتی_تفاعل_گولا_چ})}}\\
+&=\frac{2(500)\sin 60^{\circ}}{9.8}\approx \SI{88}{\second}\\
+R&=\frac{v_0^2}{g}\sin2\alpha&&\text{\RL{فاصلہ مار (مساوات \حوالہ{مساوات_سمتی_تفاعل_گولا_ح})}}\\
+&=\frac{(500)^2\sin 120^{\circ}}{9.8}\approx \SI{22092}{\meter}
+\end{align*}
+\انتہا{مثال}
+%============
+\جزوحصہء{گولا کی مثالی پرواز قطع مکافی ہو گی}
+ہوائی رگڑ کو نظر انداز کرتے ہوئے ہم کہہ سکتے ہیں کہ مثالی پرواز، قطع مکافی راہ اپناتی ہے۔ مساوات \حوالہ{مساوات_سمتی_تفاعل_گولا_ث}  کی ایک   جزو  سے \عددی{t=\tfrac{x}{v_0\cos\alpha}} حاصل کر کے دوسرے جزو  میں پر کرتے ہوئے
+\begin{align*}
+y=-\big(\frac{g}{2v_0^2\cos^2\alpha}\big)x^2+(\tan\alpha)x
+\end{align*}
+حاصل ہوتا ہے جس کی روپ \عددی{y=ax^2+bx} ہے جو ایک قطع مکافی کو ظاہر کرتی ہے۔
+
+\جزوحصہء{نقطہ \عددی{(x_0,y_0)} سے گولا چلانا}
+مبدا کی بجائے نقطہ \عددی{(x_0,y_0)} سے گولا چلانے  سے مساوات \حوالہ{مساوات_سمتی_تفاعل_گولا_ث} کی جگہ درج ذیل مساوات حاصل ہوں  گی (شکل \حوالہ{شکل_سمتی_تفاعل_بلندی_سے_مار})۔
+\begin{align}\label{مساوات_سمتی_تفاعل_گولا_خ}
+x=x_0+(v_0\cos\alpha)t,\quad y=y_0+(v_0\sin\alpha)t-\frac{1}{2}gt^2
+\end{align}
+
+\begin{figure}
+\centering
+\pgfmathsetmacro{\xa}{1}
+\pgfmathsetmacro{\ya}{0.75}
+\pgfmathsetmacro{\v}{7}
+\pgfmathsetmacro{\a}{45}
+\pgfmathsetmacro{\g}{9.8}
+\pgfmathsetmacro{\ta}{2/\g*\v*sin(\a)+0.135}
+\pgfmathsetmacro{\k}{1.5}
+\pgfmathsetmacro{\kx}{\k*cos(\a)}
+\begin{tikzpicture}[font=\small,declare function={fx(\t)=\xa+\v*cos(\a)*\t;fy(\t)=\ya+\v*sin(\a)*\t-1/2*\g*\t^2;}]
+\draw[smooth,domain=0:\ta,variable=\t]plot ({fx(\t)},{fy(\t)});
+\draw[-latex](0,0)--(7,0)node[right]{$x$};
+\draw[-latex](0,0)--(0,2)node[right]{$y$};
+\draw[thick,-latex](\xa,\ya)--++(\a:\k)node[pos=0.6,shift={(\a+90:0.2)}]{$\kvec{v}_0$};
+\draw[]([shift={(0:0.4)}]\xa,\ya) arc (0:\a:0.4)node[pos=0.6,right]{$\alpha$};
+\draw(\xa,\ya)node[below]{$(x_0,y_0)$}--++(1,0);
+\draw(\xa,\ya)--++(0,0.5);
+\end{tikzpicture}
+\caption{نقطہ \عددی{(x_0,y_0)} سے ابتدائی سمتی رفتار \عددی{\kvec{v}_0} کے ساتھ مارے گئے گولا کی راہ۔}
+\label{شکل_سمتی_تفاعل_بلندی_سے_مار}
+\end{figure}
+
+%----------------------
