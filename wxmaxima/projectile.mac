@@ -39,7 +39,7 @@ g:9.8;
 eqa:0=y0+v0*sin(alpha)*t-1/2*g*t^2;
 eqb:x=x0+v0*cos(alpha)*t;
 solve(eqa,t);
-folat(%);
+float(%);
 
 tt:2.1257;
 x0+v0*cos(alpha)*tt;
@@ -62,9 +62,84 @@ vv:float(g/2*tt/sin(alpha));
 eqa:0=y0+v0*sin(alpha)*t-1/2*g*t^2;
 eqb:x=x0+v0*cos(alpha)*t;
 solve(eqa,t);
-folat(%);
+float(%);
 
 tt:2.1257;
 x0+v0*cos(alpha)*tt;
+
+Print("======================================");
+kill(all);
+print("Q-11 section 12.2");
+declare(v0,constant,alpha,constant,g,constant,x0,constant,y0,constant);
+v0:35;
+alpha:30/180*%pi;
+x0:0;
+y0:0;
+g:9.8;
+xx:45;
+
+
+eqa:xx=x0+v0*cos(alpha)*t;
+eqb:y=y0+v0*sin(alpha)*t-1/2*g*t^2;
+soln:solve(eqa,t);
+sol:map(rhs,soln);
+tt:sol[1];
+
+ev(eqb,t=tt);
+float(%);
+
+Print("======================================");
+kill(all);
+print("Q-13 section 12.2");
+declare(v0,constant,alpha,constant,g,constant,x0,constant,y0,constant);
+/* v0:3; */
+alpha:40/180*%pi;
+x0:0;
+y0:2.5;
+g:9.8;
+xx:65;
+
+
+eqa:xx=x0+v0t*cos(alpha);
+eqb:0=y0+v0t*sin(alpha)-1/2*g*t^2;
+soln:float(solve(eqa,v0t));
+sol:map(rhs,soln);
+vvtt:sol[1];
+
+eqc:ev(eqb,v0t=vvtt);
+solve(eqc,t);
+soln:float(%);
+sol:map(rhs,soln);
+tt:sol[2];
+v0=vvtt/tt;
+
+Print("======================================");
+kill(all);
+print("section 12.2 calculus and analytic geometry");
+declare(v0,constant,alpha,constant,g,constant,x0,constant,y0,constant);
+g:32;
+x0:0;
+y0:6;
+ymax:74;
+xmax:90;
+
+x:x0+v0*cos(alpha)*t;
+y:y0+v0*sin(alpha)*t-1/2*g*t^2;
+eqa:diff(y,t)=0;
+ksolnlst:solve(eqa,t);
+
+/* soln:ksolnlst[1];
+sol:map(rhs,soln);
+aaa:sol[1];
+*/
+
+tt:map(rhs,ksolnlst);
+tp:tt[1];
+
+ev(y,t=tp);
+
+
+atan(2*(ymax-y0)/(xmax-x0));
+float(180/%pi*%);
 
 
