@@ -142,4 +142,10 @@ ev(y,t=tp);
 atan(2*(ymax-y0)/(xmax-x0));
 float(180/%pi*%);
 
+Print("======================================");
+kill(all);
+print("Q-7 section 12.3");
+declare(v0,constant,alpha,constant,g,constant,x0,constant,y0,constant);
 
+y:sqrt((diff(t*cos(t),t,1))^2+(diff(t*sin(t),t,1))^2+2*t);
+integrate(y,t,0,%pi);
