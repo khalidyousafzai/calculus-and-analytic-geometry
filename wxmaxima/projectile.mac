@@ -149,3 +149,12 @@ declare(v0,constant,alpha,constant,g,constant,x0,constant,y0,constant);
 
 y:sqrt((diff(t*cos(t),t,1))^2+(diff(t*sin(t),t,1))^2+2*t);
 integrate(y,t,0,%pi);
+
+Print("======================================");
+kill(all);
+print("section 12.3");
+declare(v0,constant,alpha,constant,g,constant,x0,constant,y0,constant);
+
+y:expand((x-0)*(x-1)*(x-3)*(x-4));
+len:sqrt(1+diff(y,x,1)^2);
+k:integrate(len,x,0,3);
