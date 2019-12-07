@@ -18,7 +18,7 @@
 \pgfmathsetmacro{\kb}{0.5}
 \pgfmathsetmacro{\c}{1/360}
 \pgfmathsetmacro{\d}{150}
-\begin{tikzpicture}[declare function={fx(\r,\t)=(\ka+\a*\t+\r*cos(\t));fy(\r,\t)=(\kb+\b*\t+\r*sin(\t));fz(\r,\t)=\c*\t;}]
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=(\ka+\a*\t+\r*cos(\t));fy(\r,\t)=(\kb+\b*\t+\r*sin(\t));fz(\r,\t)=\c*\t;}]
 \begin{axis}[clip=false,small,axis lines =center,view/h=135,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=west},xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true,xmin=0,ymin=0,
 axis x line=none,axis y line=none,axis z line=none]
 \addplot3[smooth,domain y=0:460,variable=\r,variable y=\t,samples y=50]({fx(1,t)},{fy(1,t)},{fz(1,t)});
@@ -34,10 +34,10 @@ axis x line=none,axis y line=none,axis z line=none]
 \begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\small,declare function={fx(\ra,\t)=\ra*cos(\t);fy(\rb,\t)=\rb*sin(\t);fz(\rc,\t)=\rc*\t;}]
-\pgfmathsetmacro{\h}{2}
+\pgfmathsetmacro{\h}{2.25}
 \pgfmathsetmacro{\ra}{2}
 \pgfmathsetmacro{\rb}{0.25*\ra}
-\pgfmathsetmacro{\rc}{\h/470}
+\pgfmathsetmacro{\rc}{2/470}
 \pgfmathsetmacro{\ta}{-110}
 \pgfmathsetmacro{\tb}{0}
 \pgfmathsetmacro{\tc}{180}
@@ -62,6 +62,7 @@ axis x line=none,axis y line=none,axis z line=none]
 \draw  ({fx(\ra,\ta)},{fz(\rc,\ta-\ta)+fy(\rb,\ta)})node[circ]{}node[below,xshift=1ex]{$t=0$}node[left,xshift=-2ex,yshift=-1ex]{$(1,0,0)$};
 \draw  ({fx(\ra,\tb)},{fz(\rc,\tb-\ta)+fy(\rb,\tb)})node[circ]{}node[right]{$t=\frac{\pi}{2}$};
 \draw  ({fx(\ra,\tf)},{fz(\rc,\tf-\ta)+fy(\rb,\tf)})node[circ]{}node[below]{$t=2\pi$};
+\draw[dashed] ({fx(\ra,\tf)},{fz(\rc,\tf-\ta)+fy(\rb,\tf)})-- (0,{fz(\rc,\tf-\ta)})node[circ]{}node[right]{$2\pi$};
 \end{tikzpicture}
 \caption{پیچدار منحنی \عددی{\kvec{r}(t)=(\cos t)\ai+(\sin t)\aj} کا بالائی نصف حصہ}
 \label{شکل_سمتی_تفاعل_پیچدار}
@@ -1647,7 +1648,7 @@ L=\int_a^b\abs{\kvec{v}}\dif t
 \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj+t\ak
 \end{align*}
 حل:\quad
-پیچ دار منحنی \عددی{t=0} سے \عددی{t=2\pi} تک ایک چکر مکمل کرتی ہے۔اس حصہ کی لمبائی
+پیچ دار منحنی \عددی{t=0} سے \عددی{t=2\pi} تک ایک چکر مکمل کرتی ہے (شکل \حوالہ{شکل_مثال_سمتی_تفاعل_مقدار_معلوم_لمبائی_قوس_الف})۔اس حصہ کی لمبائی
 \begin{align*}
 L&=\int_a^b\abs{\kvec{v}}\dif t=\int_0^{2\pi}\sqrt{(-\sin t)^2+(\cos t)^2+(1)^2}\dif t\\
 &=\int_0^{2\pi}\sqrt{2}\dif t=2\pi\sqrt{2}
@@ -1655,12 +1656,72 @@ L&=\int_a^b\abs{\kvec{v}}\dif t=\int_0^{2\pi}\sqrt{(-\sin t)^2+(\cos t)^2+(1)^2}
 ہو گی جو مستوی \عددی{xy} میں اس دائرہ کے لمبائی کا \عددی{\sqrt{2}} گنّا ہے جس پر پیچ دار منحنی کھڑی ہے۔
 \انتہا{مثال}
 %===============
-
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\ra,\t)=\ra*cos(\t);fy(\rb,\t)=\rb*sin(\t);fz(\rc,\t)=\rc*\t;}]
+\pgfmathsetmacro{\h}{2}
+\pgfmathsetmacro{\ra}{2}
+\pgfmathsetmacro{\rb}{0.25*\ra}
+\pgfmathsetmacro{\rc}{\h/470}
+\pgfmathsetmacro{\ta}{-110}
+\pgfmathsetmacro{\tb}{0}
+\pgfmathsetmacro{\tc}{180}
+\pgfmathsetmacro{\td}{360}
+\pgfmathsetmacro{\te}{-20}
+\pgfmathsetmacro{\tf}{360+\ta}
+\draw[-latex](0,0)--++(-145:2)node[left]{$x$};
+\draw[-latex](0,0)--++(0:2.5)node[right]{$y$};
+\draw[-latex](0,0)--++(0,3)node[left]{$z$};
+\draw[thick,-stealth]([shift={(\ta:0.75cm and 0.185cm)}]0,0) arc (\ta:-20:0.75cm and 0.185 cm)node[pos=0.5,fill=white]{$t$};
+ \draw[-latex](0,0,0)node[left,yshift=1ex]{$O$}--({fx(\ra,\te)},{fz(\rc,\te-\ta)+fy(\rb,\te)})node[circ]{}node[pos=0.4,above]{$\kvec{r}$};
+ \draw[dashed,thick](0,0,0)--({fx(\ra,\te)},{fy(\rb,\te)})--({fx(\ra,\te)},{fz(\rc,\te-\ta)+fy(\rb,\te)});
+\draw[dashed,domain=40:180,variable=\t]plot ({fx(\ra,\t)},{fy(\rb,\t)});
+\draw[domain=180:360,variable=\t]plot ({fx(\ra,\t)},{fy(\rb,\t)});
+\draw[domain=0:360,variable=\t]plot ({fx(\ra,\t)},{\h+fy(\rb,\t)});
+\draw  ({fx(\ra,300)},{fy(\rb,300)})node[below]{$x^2+y^2=1$};
+\draw(-\ra,0)--++(0,\h);
+\draw(\ra,0)--++(0,\h);
+\draw[domain=\ta:\tb,variable=\t]plot ({fx(\ra,\t)},{fz(\rc,\t-\ta)+fy(\rb,\t)});
+\draw[dashed,domain=\tb:\tc,variable=\t]plot ({fx(\ra,\t)},{fz(\rc,\t-\ta)+fy(\rb,\t)});
+\draw[domain=\tc:\td,variable=\t]plot ({fx(\ra,\t)},{fz(\rc,\t-\ta)+fy(\rb,\t)});
+\draw  ({fx(\ra,\ta)},{fz(\rc,\ta-\ta)+fy(\rb,\ta)})node[circ]{}node[below,xshift=1ex]{$t=0$}node[left,xshift=-2ex,yshift=-1ex]{$(1,0,0)$};
+\draw  ({fx(\ra,\tb)},{fz(\rc,\tb-\ta)+fy(\rb,\tb)})node[circ]{}node[right]{$t=\frac{\pi}{2}$};
+\draw  ({fx(\ra,\tf)},{fz(\rc,\tf-\ta)+fy(\rb,\tf)})node[circ]{}node[below]{$t=2\pi$};
+\end{tikzpicture}
+\caption{پیچ دار منحنی برائے مثال \حوالہ{مثال_سمتی_تفاعل_مقدار_معلوم_لمبائی_قوس_الف}}
+\label{شکل_مثال_سمتی_تفاعل_مقدار_معلوم_لمبائی_قوس_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\pgfmathsetmacro{\a}{-0.25/360}
+\pgfmathsetmacro{\ka}{1}
+\pgfmathsetmacro{\b}{0.5/360}
+\pgfmathsetmacro{\kb}{0.5}
+\pgfmathsetmacro{\c}{1/360}
+\pgfmathsetmacro{\d}{150}
+\pgfmathsetmacro{\e}{30}
+\begin{tikzpicture}[declare function={fx(\r,\t)=(\ka+\a*\t+\r*cos(\t));fy(\r,\t)=(\kb+\b*\t+\r*sin(\t));fz(\r,\t)=\c*\t;}]
+\begin{axis}[clip=false,small,axis lines =center,view/h=135,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=west},xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true,xmin=0,ymin=0,
+axis x line=none,axis y line=none,axis z line=none]
+\addplot3[smooth,domain y=0:460,variable=\r,variable y=\t,samples y=50]({fx(1,t)},{fy(1,t)},{fz(1,t)})node[pos=0.15,shift={(-45:1.5ex)}]{$s(t)$};
+\addplot3[-latex]coordinates {(0,0,0)({fx(1,\d)},{fy(1,\d)},{fz(1,\d)})}node[pos=0.5,yshift=1ex]{$\kvec{r}$}node[right]{$N(t)$}node[pos=0,left,yshift=1ex]{$O$};
+\addplot3[-latex]coordinates {(0,0,0)({fx(1,\e)},{fy(1,\e)},{fz(1,\e)})}node[circ]{}node[below,align=center]{$N(t_0)$\\   \RL{بنیاد}};
+\addplot3[-latex]coordinates {(0,0,0)(2,0,0)}node[left]{$x$};
+\addplot3[-latex]coordinates {(0,0,0)(0,2,0)}node[right]{$y$};
+\addplot3[-latex]coordinates {(0,0,0)(0,0,1)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\caption{منحنی پر بنیاد \عددی{N(t_0)} سے کسی نقطہ \عددی{N(t)} تک فاصلہ \عددی{s(t)=\int_{t_0}^t\abs{\kvec{v}(\tau)}\dif\tau} ہو گا۔}
+\label{شکل_سمتی_تفاعل_سمت_بند_فاصلہ}
+\end{minipage}
+\end{figure}
 اگر ہم ہموار منحنی \عددی{C}، جس کی مقدار معلوم مساوات کا متغیر \عددی{t} ہو،     پر نقطہ \عددی{N_0} کو   بنیادی نقطہ   تصور کریں  تب \عددی{t} کی ہر قیمت  \عددی{C} پر ایک نقطہ \عددی{N(t)=(x(t),y(t),z(t))}  اور  \اصطلاح{سمت بند فاصلہ}
 \begin{align}\label{مساوات_سمتی_تفاعل_لمبائی_قوس_پ}
 s(t)=\int_{t_0}^t\abs{\kvec{v}(\tau)}\dif \tau
 \end{align}
-دے گی  جو \عددی{N_0} سے \عددی{C} پر چلتے ہوئے  ناپا جائے گا۔ اگر \عددی{t>t_0} ہو تب \عددی{N(t_0)} سے \عددی{N(t)} تک فاصلہ \عددی{s(t)} ہو گا۔ اگر \عددی{t<t_0} ہو تب \عددی{s(t)}،  فاصلہ کے نفی کا برابر ہو گا۔ \عددی{} کی ہر ایک قیمت  \عددی{} پر ایک نقطہ تعین کرتی ہے لہٰذا یوں \عددی{s} کے لحاض سے \عددی{C} کی مقدار معلوم روپ حاصل ہوتی ہے۔ ہم \عددی{} کو منحنی کا \اصطلاح{مقدار معلوم  لمبائی قوس} کہتے ہیں جس کی قیمت  بڑھتے \عددی{t} کے رخ بڑھتی ہے۔
+دے گی  جو \عددی{N_0} سے \عددی{C} پر چلتے ہوئے  ناپا جائے گا (شکل \حوالہ{شکل_سمتی_تفاعل_سمت_بند_فاصلہ})۔ اگر \عددی{t>t_0} ہو تب \عددی{N(t_0)} سے \عددی{N(t)} تک فاصلہ \عددی{s(t)} ہو گا۔ اگر \عددی{t<t_0} ہو تب \عددی{s(t)}،  فاصلہ کے نفی کا برابر ہو گا۔ \عددی{} کی ہر ایک قیمت  \عددی{} پر ایک نقطہ تعین کرتی ہے لہٰذا یوں \عددی{s} کے لحاض سے \عددی{C} کی مقدار معلوم روپ حاصل ہوتی ہے۔ ہم \عددی{} کو منحنی کا \اصطلاح{مقدار معلوم  لمبائی قوس} کہتے ہیں جس کی قیمت  بڑھتے \عددی{t} کے رخ بڑھتی ہے۔
 
 \موٹا{بنیاد  \عددی{N(t_0)} لیتے ہوئے مقدار معلوم لمبائی قوس}
 \begin{align}\label{مساوات_سمتی_تفاعل_لمبائی_قوس_ت}
@@ -1681,6 +1742,7 @@ s(t)&=\int_{t_0}^t\abs{\kvec{v}(\tau)}\dif \tau&&\text{\RL{مساوات \حوا�
 یوں \عددی{s(2\pi)=2\pi\sqrt{2}}، \عددی{s(-2\pi)=-2\pi\sqrt{2}}، وغیرہ،  ہوں گے۔
 \انتہا{مثال}
 %============
+
 \ابتدا{مثال}\ترچھا{ایک لکیر پر لمبائی}\\
 دکھائیں   اگر \عددی{\kvec{u}=u_1\ai+u_2\aj+u_3\ak}  اکائی سمتیہ ہو،  تب لکیر
 \begin{align*}
@@ -1720,7 +1782,57 @@ s(t)=\int_0^t \abs{\kvec{v}}\dif \tau=\int_0^t\abs{\kvec{u}}\dif \tau=\int_0^t 1
 \frac{\dif \kvec{r}}{\dif s}=\frac{\dif \kvec{r}}{\dif t}\frac{\dif t}{\dif s}=\kvec{v}\frac{1}{\abs{\kvec{v}}}=\frac{\kvec{v}}{\abs{\kvec{v}}}
 \end{align}
 
-مساوات \حوالہ{مساوات_سمتی_تفاعل_لمبائی_قوس_ج} کہتی ہے کہ \عددی{\tfrac{\dif \kvec{r}}{\dif t}}ایک  اکائی سمتیہ ہے جو   \عددی{\kvec{v}} کے رخ ہے۔ہم \عددی{\tfrac{\dif \kvec{r}}{\dif s}} کو \عددی{\kvec{r}} کی منحنی راہ کا اکائی مماسی سمتیہ کہتے ہیں اور اس کو \عددی{\kvec{T}} سے ظاہر کرتے ہیں۔
+مساوات \حوالہ{مساوات_سمتی_تفاعل_لمبائی_قوس_ج} کہتی ہے کہ \عددی{\tfrac{\dif \kvec{r}}{\dif t}}ایک  اکائی سمتیہ ہے جو   \عددی{\kvec{v}} کے رخ ہے۔ہم \عددی{\tfrac{\dif \kvec{r}}{\dif s}} کو \عددی{\kvec{r}} کی منحنی راہ کا اکائی مماسی سمتیہ کہتے ہیں اور اس کو \عددی{\kvec{T}} سے ظاہر کرتے ہیں (شکل \حوالہ{شکل_سمتی_تفاعل_اکائی_مماسی_سمتیہ_تعریف})۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\pgfmathsetmacro{\a}{-0.25/360}
+\pgfmathsetmacro{\ka}{1}
+\pgfmathsetmacro{\b}{0.5/360}
+\pgfmathsetmacro{\kb}{0.5}
+\pgfmathsetmacro{\c}{1/360}
+\pgfmathsetmacro{\d}{130}
+\pgfmathsetmacro{\e}{30}
+\begin{tikzpicture}[declare function={fx(\r,\t)=(\ka+\a*\t+\r*cos(\t));fy(\r,\t)=(\kb+\b*\t+\r*sin(\t));fz(\r,\t)=\c*\t;}]
+\begin{axis}[clip=false,small,axis lines =center,view/h=135,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=west},xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true,xmin=0,ymin=0,
+axis x line=none,axis y line=none,axis z line=none]
+\addplot3[smooth,domain y=0:400,variable=\r,variable y=\t,samples y=50]({fx(1,t)},{fy(1,t)},{fz(1,t)})node[pos=0.15,shift={(-45:1.5ex)}]{$s$};
+\addplot3[-latex]coordinates {(0,0,0)({fx(1,\d)},{fy(1,\d)},{fz(1,\d)})}coordinate(ka)node[pos=0.5,yshift=1ex]{$\kvec{r}$}node[pos=0,left,yshift=1ex]{$O$};
+\addplot3[]coordinates {({fx(1,\e)},{fy(1,\e)},{fz(1,\e)})}node[circ]{}node[below]{$N(t_0)$};
+\draw[-latex,thick,gray](ka)--++(220:2)node[right,pos=0.5,black]{$\kvec{T}=\frac{\kvec{v}}{\abs{\kvec{v}}}$};
+\draw[-latex](ka)--++(220:3)node[right]{$\kvec{v}$};
+\addplot3[-latex]coordinates {(0,0,0)(2,0,0)}node[left]{$x$};
+\addplot3[-latex]coordinates {(0,0,0)(0,2,0)}node[right]{$y$};
+\addplot3[-latex]coordinates {(0,0,0)(0,0,1)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\caption{ہم \عددی{\kvec{v}}  کو \عددی{\abs{\kvec{v}}} سے تقسیم کر کے مماسی اکائی سمتیہ \عددی{\kvec{T}} حاصل کرتے ہیں۔}
+\label{شکل_سمتی_تفاعل_اکائی_مماسی_سمتیہ_تعریف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\t)=cos(\t)+pi/180*\t*sin(\t);fy(\t)=sin(\t)-pi/180*\t*cos(\t);}]
+\draw[-latex](-1.25,0)--(2,0)node[right]{$x$};
+\draw[-latex](0,-1.25)--(0,2)node[left]{$y$};
+\draw(0,0) circle (1);
+\draw[smooth,domain=0:150,variable=\t]plot ({fx(\t)},{fy(\t)});
+\draw[-latex](0,0)--({fx(120)},{fy(120)})coordinate(ka)node[pos=0.75,below,yshift=-0.5ex]{$\kvec{r}$}node[circ]{}node[right]{$N(x,y)$};
+\draw(120:1)--({fx(120)},{fy(120)})node[pos=0,circ]{}node[pos=0,above]{$Q$}node[pos=0.65,sloped,above]{دھاگہ};
+\draw(1,0)node[pos=0,circ]{};
+\draw[-latex]({fx(60)},{fy(60)})--({fx(61)},{fy(61)});
+\draw(0,0)node[below left]{$O$};
+\draw(0.5,0)node[below]{$1$};
+\draw(0,0)--(120:1);
+\draw[-stealth]([shift={(0:0.3)}]0,0) arc (0:120:0.3)node[pos=0.3,right]{$t$};
+\draw(-45:1)node[right]{$x^2+y^2=1$};
+\draw[-latex](ka)--++(120:1)node[right]{$\kvec{T}$};
+\end{tikzpicture}
+\caption{دائرہ پر لپٹے دھاگہ کو کھولتے ہوئے اس کا سر جس راہ پر چلتا ہو، وہ اس دائرے کا  در پیچیدہ کہلاتا ہے۔یہاں اکائی دائرہ مستوی \عددی{xy} میں ہے۔}
+\label{شکل_سمتی_تفاعل_در_پیچیدہ}
+\end{minipage}
+\end{figure}
+
 
 \ابتدا{تعریف}
 قابل تفرق تفاعل \عددی{\kvec{r}(t)} کا اکائی مماسی سمتیہ درج ذیل ہو گا۔
@@ -1735,6 +1847,19 @@ s(t)=\int_0^t \abs{\kvec{v}}\dif \tau=\int_0^t\abs{\kvec{u}}\dif \tau=\int_0^t 1
 \ابتدا{مثال}
 درج ذیل پیچ دار منحنی کا اکائی مماسی سمتیہ تلاش کریں۔
 \begin{align*}
+\kvec{r}(t)=(\cos t)\ai+(\sin t)\aj+t\ak
+\end{align*}
+حل:\quad
+\begin{align*}
+\kvec{v}&=(-\sin t)\ai+(\cos t)\aj+\ak\\
+\abs{\kvec{v}}&=\sqrt{(-\sin t)^2+(\cos t)^2+(1)^2}=\sqrt{2}\\
+\kvec{T}&=\frac{\kvec{v}}{\abs{\kvec{v}}}=-\frac{\sin t}{\sqrt{2}}\ai+\frac{\cos t}{\sqrt{2}}\aj+\frac{1}{\sqrt{2}}\ak
+\end{align*}
+\انتہا{مثال}
+%====================
+\ابتدا{مثال}\ترچھا{دائرہ کا در پیچیدہ} (شکل \حوالہ{شکل_سمتی_تفاعل_در_پیچیدہ})\\
+درج ذیل پیچ دار منحنی کا اکائی مماسی سمتیہ تلاش کریں۔
+\begin{align*}
 \kvec{r}(t)&=(\cos t+t\sin t)\ai+(\sin t-t\cos t)\aj&&t>0
 \end{align*}
 حل:\quad
@@ -1746,7 +1871,7 @@ s(t)=\int_0^t \abs{\kvec{v}}\dif \tau=\int_0^t\abs{\kvec{u}}\dif \tau=\int_0^t 1
 \end{align*}
 \انتہا{مثال}
 %=================
-\ابتدا{مثال}
+\ابتدا{مثال}\شناخت{مثال_سمتی_تفاعل_اکائی_دائرہ_مماسی_سمتیہ}
 اکائی دائرہ 
 \begin{align*}
 \kvec{v}=(-\sin t)\ai+(\cos t)\aj
@@ -1755,9 +1880,24 @@ s(t)=\int_0^t \abs{\kvec{v}}\dif \tau=\int_0^t\abs{\kvec{u}}\dif \tau=\int_0^t 1
 \begin{align*}
 \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj
 \end{align*}
-کا اکائی مماسی سمتیہ \عددی{\kvec{T}=\kvec{v}} ہے۔
+کا اکائی مماسی سمتیہ \عددی{\kvec{T}=\kvec{v}} ہے (شکل \حوالہ{شکل_مثال_سمتی_تفاعل_اکائی_دائرہ_مماسی_سمتیہ})۔
 \انتہا{مثال}
 %============
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small]
+\draw[-latex](-1.25,0)--(2,0)node[right]{$x$};
+\draw[-latex](0,-1.25)--(0,1.5)node[left]{$y$};
+\draw(0,0) circle (1);
+\draw[-latex,thick](0,0)node[below left]{$O$}--++(40:1)node[pos=0.6,above]{$\kvec{r}$}node[right]{$N(x,y)$};
+\draw[-latex,thick](40:1)--++(130:0.75)node[right,xshift=0.5ex]{$\kvec{T}=\kvec{v}$};
+\draw[-stealth]([shift={(0:0.4)}]0,0) arc (0:40:0.4)node[pos=0.6,right]{$t$};
+\draw(1,0)node[below,xshift=2ex]{$(1,0)$};
+\draw(120:1)node[above left]{$x^2+y^2=1$};
+\end{tikzpicture}
+\caption{حرکت \عددی{\kvec{r}(t)=(\cos t)\ai+(\sin t)\aj} برائے مثال \حوالہ{مثال_سمتی_تفاعل_اکائی_دائرہ_مماسی_سمتیہ}}
+\label{شکل_مثال_سمتی_تفاعل_اکائی_دائرہ_مماسی_سمتیہ}
+\end{figure}
 
 \حصہء{سوالات}
 \ابتدا{سوالات}
