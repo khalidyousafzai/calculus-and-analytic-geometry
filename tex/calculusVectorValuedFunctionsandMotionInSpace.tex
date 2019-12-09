@@ -1816,8 +1816,9 @@ axis x line=none,axis y line=none,axis z line=none]
 \draw[-latex](-1.25,0)--(2,0)node[right]{$x$};
 \draw[-latex](0,-1.25)--(0,2)node[left]{$y$};
 \draw(0,0) circle (1);
+\draw(1,0)node[circ]{};
 \draw[smooth,domain=0:150,variable=\t]plot ({fx(\t)},{fy(\t)});
-\draw[-latex](0,0)--({fx(120)},{fy(120)})coordinate(ka)node[pos=0.75,below,yshift=-0.5ex]{$\kvec{r}$}node[circ]{}node[right]{$N(x,y)$};
+\draw[-latex,thick](0,0)--({fx(120)},{fy(120)})coordinate(ka)node[pos=0.75,below,yshift=-0.5ex]{$\kvec{r}$}node[circ]{}node[right]{$N(x,y)$};
 \draw(120:1)--({fx(120)},{fy(120)})node[pos=0,circ]{}node[pos=0,above]{$Q$}node[pos=0.65,sloped,above]{دھاگہ};
 \draw(1,0)node[pos=0,circ]{};
 \draw[-latex]({fx(60)},{fy(60)})--({fx(61)},{fy(61)});
@@ -1826,17 +1827,17 @@ axis x line=none,axis y line=none,axis z line=none]
 \draw(0,0)--(120:1);
 \draw[-stealth]([shift={(0:0.3)}]0,0) arc (0:120:0.3)node[pos=0.3,right]{$t$};
 \draw(-45:1)node[right]{$x^2+y^2=1$};
-\draw[-latex](ka)--++(120:1)node[right]{$\kvec{T}$};
+\draw[-latex,thick](ka)--++(120:1)node[right]{$\kvec{T}$};
 \end{tikzpicture}
-\caption{دائرہ پر لپٹے دھاگہ کو کھولتے ہوئے اس کا سر جس راہ پر چلتا ہو، وہ اس دائرے کا  در پیچیدہ کہلاتا ہے۔یہاں اکائی دائرہ مستوی \عددی{xy} میں ہے۔}
-\label{شکل_سمتی_تفاعل_در_پیچیدہ}
+\caption{دائرہ پر لپٹے  دھاگہ کو کھولتے ہوئے اس کا سر جس راہ پر چلتا ہو، وہ اس دائرے کا  در پیچیدہ کہلاتا ہے۔یہاں اکائی دائرہ مستوی \عددی{xy} میں ہے۔}
+\label{شکل_مثال_سمتی_تفاعل_در_پیچیدہ}
 \end{minipage}
 \end{figure}
 
 
 \ابتدا{تعریف}
 قابل تفرق تفاعل \عددی{\kvec{r}(t)} کا اکائی مماسی سمتیہ درج ذیل ہو گا۔
-\begin{align}
+\begin{align}\label{مساوات_سمتی_تفاعل_اکائی_مماسی_سمتی_رفتار}
 \kvec{T}=\frac{\dif \kvec{r}}{\dif s}=\frac{\dif \kvec{r}/\dif t}{\dif s/\dif t}=\frac{\kvec{v}}{\abs{\kvec{v}}}
 \end{align}
 \انتہا{تعریف}
@@ -1857,7 +1858,7 @@ axis x line=none,axis y line=none,axis z line=none]
 \end{align*}
 \انتہا{مثال}
 %====================
-\ابتدا{مثال}\ترچھا{دائرہ کا در پیچیدہ} (شکل \حوالہ{شکل_سمتی_تفاعل_در_پیچیدہ})\\
+\ابتدا{مثال}\شناخت{مثال_سمتی_تفاعل_در_پیچیدہ}\ترچھا{دائرہ کا در پیچیدہ} (شکل \حوالہ{شکل_مثال_سمتی_تفاعل_در_پیچیدہ})\\
 درج ذیل پیچ دار منحنی کا اکائی مماسی سمتیہ تلاش کریں۔
 \begin{align*}
 \kvec{r}(t)&=(\cos t+t\sin t)\ai+(\sin t-t\cos t)\aj&&t>0
@@ -2058,5 +2059,602 @@ $\kvec{r}(t)=(\cos t)\ai-(\sin t)\aj-t\ak,\quad -2\pi \le t\le 0$
 \end{enumerate}
 \انتہا{سوال}
 %===========
-
 \انتہا{سوالات}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\حصہ{انحنا، مروڑ اور \عددی{TNB} چھوکٹ}
+اس حصہ میں ہم   تین آپس میں عمودی اکائی سمتیات پر مبنی ایسا چھوکٹ متعارف کرتے ہیں جو  فضا میں منحنی پر جسم کے ساتھ ساتھ چلتا ہو (شکل \حوالہ{شکل_سمتی_تفاعل_چھوکٹ}) ۔ اس چھوکٹ کے تین سمتیات  ہیں۔ پہلا  اکائی مماسی سمتیہ \عددی{\kvec{T}} ہے۔ دوسرا \عددی{\kvec{N}} ہے جو  \عددی{\tfrac{\dif \kvec{R}}{\dif s}} کے رخ اکائی سمتیہ ہے۔تیسرا اکائی سمتیہ  \عددی{\kvec{B}=\kvec{T}\times\kvec{N}} ہے ۔ یہ سمتیات اور ان کے تفرقات  اگر معلوم ہوں، فضا  میں سواری  کی  سمت بندی اور اس کی راہ  میں موڑ  اور بل  کے بارے میں مفید معلومات   مہیا کرتے ہیں۔
+
+مثال کے طور پر  \عددی{\abs{\tfrac{\dif \kvec{R}}{\dif s}}} ہمیں بتاتا ہے  کہ راہ پر  آگے چلتے ہوئے، سواری  کی   راہ کتنی  دائیں یا بائیں  مڑتی  ہے؛ اسی لئے اس کو سواری کی راہ کی\اصطلاح{ انحنا}\فرہنگ{انحنا}\حاشیہب{curvature}\فرہنگ{curvature} کہتے ہیں۔ عدد \عددی{-(\dif \kvec{B}/\dif s)\cdot\kvec{N}} ہمیں بتاتا ہے کہ راہ پر آگے چلتے ہوئے،  سواری کی راہ مستوی حرکت سے کتنی باہر مڑتی ہے یا بل کھاتی ہے؛ اس کو سواری کی راہ کی \اصطلاح{مروڑ}\فرہنگ{مروڑ}\حاشیہب{torsion}\فرہنگ{torsion} کہتے ہیں۔ دوبارہ شکل \حوالہ{شکل_سمتی_تفاعل_چھوکٹ} پر نظر ڈالیں۔ اگر    قوسی راہ پر ایک  ریل گاڑی،   \عددی{P}،   اوپر    چڑھ رہی ہو تب فی اکائی فاصلہ اس   کی   سر بتی جتنی دائیں یا بائیں مڑتی ہو، یہ اس کی انحنا ہو گی۔سمتیات \عددی{\kvec{T}} اور \عددی{\kvec{N}} کے  مستوی سے ریل گاڑی  کا انجن  جس شرح سے باہر  نکلتا  ہو، یہ اس کی مروڑ ہو گی۔ 
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\pgfmathsetmacro{\ang}{20}
+\pgfmathsetmacro{\kang}{20}
+\pgfmathsetmacro{\s}{-120}
+\pgfmathsetmacro{\e}{65}
+\pgfmathsetmacro{\a}{2}
+\pgfmathsetmacro{\b}{1.3}
+\pgfmathsetmacro{\ka}{2.5}
+\pgfmathsetmacro{\kb}{0.5}
+\begin{tikzpicture}[font=\small,declare function={fp(\x)=(\x/\a)^2;fn(\x)=(\x/(1.2*\a))^2;}]
+\draw[rotate=\ang](0,0) circle (\a cm and \b cm);
+\draw[rotate=\ang,->-=0.9,domain=0:\a] plot (\x,{fp(\x)});
+\draw[rotate=\ang,domain=0:1.2*\a] plot (-\x,{fn(\x)});
+\draw[rotate=\ang](-0.9*1.2*\a,{(fn(0.9*1.2*\a)})++(0,0.1)--++(-90-\ang:0.2)node[below,xshift=-1ex]{$s=0$};
+\draw[-latex,thick](0,0)node[below,xshift=-0.5ex]{$P$}--++(\ang:\a)node[pos=0.75,below]{$\kvec{T}$};
+\draw[-latex,thick](0,0)--++(90+\ang:\b)node[pos=0.4,left]{$\kvec{N}$};
+\draw[rotate=90]([shift={(\s:\ka cm and \kb cm)}]0,0) arc (\s:\e:\ka cm and \kb cm);
+\draw(0,0)--++(-90+\ang:\b);
+\draw[-latex,thick](0,0)--++(0,\ka)node[pos=0.7,xshift=-1.25ex]{$\kvec{B}$};
+\draw[-latex,thick,gray](\ang:\a)--++(90+\ang:0.75)node[pos=0.5,pin={[black,align=center,pin edge=-]45:{\RL{\عددی{P} پر انحنا}\\  $\abs{\dif\kvec{T}/\dif s}$}}]{};
+\draw[-latex,thick,gray](0,\ka)--++(90+\ang:0.5)node[right,black]{$\tfrac{\dif \kvec{B}}{\dif s}$};
+\draw(90+\ang:2)node[left,align=center]{\RL{\عددی{P} پر مروڑ}\\  $-(\tfrac{\dif \kvec{B}}{\dif s})\cdot \kvec{N}$};
+\end{tikzpicture}
+\caption{ہر متحرک جسم کے ساتھ  ایک \عددی{\kvec{}}TNB چھوکٹ سفر کرتا ہے جو اس کی راہ کا کردار بیان کرتا ہے۔}
+\label{شکل_سمتی_تفاعل_چھوکٹ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=0.6+(\x/3)^2;}]
+\pgfmathsetmacro{\a}{20}
+\draw[-latex](0,0)--(3,0)node[right]{$x$};
+\draw[-latex](0,0)--(0,2)node[left]{$y$};
+\draw[->-=0.25,domain=0.2:3]plot ({\x},{f(\x)});
+\draw(0.3,{f(0.3)})++(0,0.1)--++(0,-0.2)node[below]{$P_0$};
+\draw[-latex](1.5,{f(1.5)})node[circ]{}node[above]{$P$}--++(\a:1.25)node[pos=0.75,below]{$\kvec{T}$};
+\draw(1,{f(1)})node[below]{$s$};
+\end{tikzpicture}
+\caption{بڑھتی لمبائی قوس کے رخ چلتے ہوئے اکائی مماسی سمتیہ \عددی{\kvec{T}} مڑتا ہے۔نقطہ \عددی{P} پر \عددی{\abs{\dif \kvec{T}/\dif s}} کی قیمت کو \عددی{P} پر منحنی کی انحنا کہتے ہیں۔}
+\label{شکل_سمتی_تفاعل_ریل_گاڑی}
+\end{minipage}
+\end{figure}
+
+\جزوحصہء{مستوی منحنی کی انحنا}
+جیسے جیسے ایک ذرہ مستوی منحنی  میں حرکت کرتا ہے، منحنی کے مڑنے سے  \عددی{\kvec{T}=\tfrac{\dif \kvec{r}}{\dif s}} بھی مڑتا ہے۔ چونکہ \عددی{\kvec{T}} اکائی سمتیہ ہے لہٰذا اس کی لمبائی تبدیل نہیں ہوتی  اور راہ پر چلتے ہوئے  صرف اس کا رخ تبدیل ہوتا ہے۔ منحنی پر چلتے ہوئے اکائی فاصلہ پر \عددی{\kvec{T}}   کی شرح تبدیلی کو انحنا کہتے ہیں (شکل \حوالہ{شکل_سمتی_تفاعل_ریل_گاڑی})۔ انحنا کو روایتی طور پر یونانی حرف  \عددی{\kappa} (کاہپا) سے ظاہر کیا جاتا ہے۔
+
+\ابتدا{تعریف}
+ ایک  ہموار منحنی جس  کا اکائی مماسی سمتیہ \عددی{\kvec{T}}  ہو، کا تفاعل انحنا درج ذیل ہو گا۔
+\begin{align*}
+\kappa=\abs{\frac{\dif \kvec{T}}{\dif s}}
+\end{align*}
+\انتہا{تعریف}
+%==========
+
+اگر \عددی{\abs{\dif\kvec{T}/\dif s}} بڑی قیمت ہو تب نقطہ \عددی{P} سے گزرتے ہوئے ذرہ بہت تیزی سے مڑے گا اور \عددی{P} پر انحنا زیادہ ہو گی۔ اگر \عددی{\abs{\dif\kvec{T}/\dif s}} صفر کے قریب ہو تب \عددی{\kvec{T}} کا رخ آہستہ تبدیل ہو گا اور \عددی{P} پر انحنا کم ہو گی۔ اس تعریف کو  پرکھتے ہوئے  ہم درج ذیل دو مثالوں میں دیکھتے ہیں کہ سیدھے خط اور دائروں کی انحنا  مستقل ہو گی۔
+
+\ابتدا{مثال}\ترچھا{سیدھے لکیر کی انحنا صفر ہو گی}\\
+سیدھے لکیر پر اکائی مماسی سمتیہ \عددی{\kvec{T}}  کا رخ تبدیل نہیں ہوتا ہے لہٰذا اس کے اجزاء مستقل ہوں گے۔یوں \عددی{\abs{\dif\kvec{T}/\dif s}=\abs{\kvec{0}}=0} ہو گا (شکل \حوالہ{شکل_مثال_سمتی_تفاعل_سیدھی_لکیر_مماسی_سمتیہ})۔
+\انتہا{مثال}
+%================= 
+\ابتدا{مثال}\شناخت{مثال_سمتی_تفاعل_دائرہ_انحنا}\ترچھا{رداس \عددی{a} کے دائرے کی انحنا \عددی{\tfrac{1}{a}} ہو گی}\\
+ہم دائرہ کی مقدار معلوم مساوات
+\begin{align*}
+\kvec{r}(\theta)=(a\cos\theta)\ai+(a\sin\theta)\aj
+\end{align*}
+میں \عددی{\theta=\tfrac{s}{a}} پر کر کے اس کی لمبائی قوس \عددی{s} کے لحاض سے مقدار معلوم روپ حاصل کرتے ہیں (شکل \حوالہ{شکل_مثال_سمتی_تفاعل_دائرہ_انحنا})۔
+\begin{align*}
+\kvec{r}=(a\cos\frac{s}{a})\ai+(a\sin\frac{s}{a})\aj
+\end{align*}
+یوں
+\begin{align*}
+\kvec{T}=\frac{\dif\kvec{r}}{\dif s}=(-\sin\frac{s}{a})\ai+(\cos\frac{s}{a})\aj
+\end{align*}
+اور
+\begin{align*}
+\frac{\dif \kvec{T}}{\dif s}=(-\frac{1}{a}\cos\frac{s}{a})\ai-(\frac{1}{a}\sin\frac{s}{a})\aj
+\end{align*}
+ہوں گے۔اس طرح کسی بھی \عددی{س} کے لئے درج ذیل ہو گا۔
+\begin{align*}
+\kappa&=\abs{\frac{\dif \kvec{T}}{\dif s}}\\
+&=\sqrt{\frac{1}{a^2}\cos^2\frac{s}{a}+\frac{1}{a^2}\sin^2\frac{s}{a}}\\
+&=\frac{1}{\sqrt{a^2}}=\frac{1}{\abs{a}}=\frac{1}{a}\quad\quad \text{\small\RL{\عددی{a>0} کی بنا \عددی{\abs{a}=a} ہو گا}}
+\end{align*}
+\انتہا{مثال}
+%================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{20}
+\pgfmathsetmacro{\b}{1}
+\draw[](0,0)--++(\a:0.25*\b);
+\draw[->-=0.5](\a:0.25*\b)node[circ]{}--++(\a:\b)node[pos=0.5,below]{$\kvec{T}$};
+\draw[->-=0.5](0,0)++(\a:1.25*\b)node[circ]{}--++(\a:\b);
+\draw[->-=0.5](0,0)++(\a:2.25*\b)node[circ]{}--++(\a:\b);
+\end{tikzpicture}
+\caption{سیدھے لکیر پر \عددی{\kvec{T}} کا رخ تبدیل نہیں ہوتا ہے لہٰذا اس کی انحنا \عددی{\abs{\dif\kvec{T}/\dif s}} صفر ہو گی۔}
+\label{شکل_مثال_سمتی_تفاعل_سیدھی_لکیر_مماسی_سمتیہ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-latex](0,0)--(2,0)node[right]{$x$};
+\draw[-latex](0,0)--(0,1.5)node[left]{$y$};
+\draw(0,0)node[left]{$O$} circle (1.25);
+\draw(0,0)--++(45:1.25)node[circ]{}node[right,yshift=1ex]{$P(a\cos\tfrac{s}{a},a\sin\tfrac{s}{a})$}node[pos=0.7,shift={(90+45:1ex)}]{$a$};
+\draw[-stealth]([shift={(0:0.5)}]0,0) arc (0:45:0.5)node[pos=0.6,right]{$\theta$};
+\draw(1.25,0)node[circ]{}node[pin={[align=center]-45:{\RL{بنیاد}}\\  $(a,0)$}]{};
+\draw[thick]([shift={(0:1.25)}]0,0) arc (0:45:1.25)node[pos=0.5,right]{$s=a\theta$};
+\end{tikzpicture}
+\caption{دائرہ برائے مثال \حوالہ{مثال_سمتی_تفاعل_دائرہ_انحنا}}
+\label{شکل_مثال_سمتی_تفاعل_دائرہ_انحنا}
+\end{minipage}
+\end{figure}
+
+\جزوحصہء{صدر  اکائی عمودی سمتیہ}
+چونکہ \عددی{\kvec{T}} کی لمبائی اکائی ہے لہٰذا \عددی{\tfrac{\dif \kvec{T}}{\dif s}} اور \عددی{\kvec{T}} آپس میں عمودی ہوں گے (حصہ \حوالہ{حصہ_سمتی_تفاعل_سمتی_قیمت_تفاعل_اور_فضائی_منحنیات})۔ یوں \عددی{\tfrac{\dif\kvec{T}}{\dif s}} کو لمبائی \عددی{\kappa} سے تقسیم کرنے سے ایسا اکائی  سمتیہ حاصل ہو گا جو   \عددی{\kvec{T}} کو عمودی  ہو گا (شکل \حوالہ{شکل_سمتی_تفاعل_اکائی_مماسی_اور_عمودی_سمتیات})۔ 
+\begin{figure}
+\centering
+\pgfmathsetmacro{\a}{0}
+\pgfmathsetmacro{\b}{1.5}
+\pgfmathsetmacro{\c}{2.75}
+\pgfmathsetmacro{\d}{0.65}
+\pgfmathsetmacro{\e}{2.3}
+\begin{tikzpicture}[scale=1.5,font=\small,declare function={f(\x)=(\x-\a)*(\x-\b)*(\x-\c);df(\x)=3*\x^2-2*(\b+\c)*\x+\b*\c;}]
+\draw[->-=0.2,domain=-0.1:3,smooth]plot ({\x},{f(\x)});
+\draw(0.1,{f(0.1)})++(-10:0.1)--++(170:0.2)node[left]{$P_0$};
+\draw(0.21,{f(0.21)})node[left]{$s$};
+\draw[-latex](\d,{f(\d)})node[circ]{}node[above]{$P_1$}--++(1,{df(\d)})node[above]{$\kvec{T}$};
+\draw[-latex](\d,{f(\d)})--++({df(\d)},-1)node[below,xshift=1ex]{$\kvec{N}=\frac{1}{\kappa}\frac{\dif \kvec{T}}{\dif s}$};
+\draw[-latex](\e,{f(\e)})node[circ]{}node[below]{$P_2$}--++(1,{df(\e)})node[above]{$\kvec{T}$};
+\draw[-latex](\e,{f(\e)})--++({-df(\e)},1)node[above,xshift=1ex]{$\kvec{N}=\frac{1}{\kappa}\frac{\dif\kvec{T}}{\dif s}$};
+\end{tikzpicture}
+\caption{منحنی کا عمودی سمتیہ \عددی{\tfrac{\dif\kvec{T}}{\dif s}} ہر وقت اس رخ ہوتا ہے جس رخ \عددی{\kvec{T}} مڑتا ہو۔ سمتیہ \عددی{\kvec{N}} کا رخ سمتیہ \عددی{\tfrac{\dif\kvec{T}}{\dif s}} کا رخ ہے۔}
+\label{شکل_سمتی_تفاعل_اکائی_مماسی_اور_عمودی_سمتیات}
+\end{figure}
+\ابتدا{تعریف}
+جس نقطہ پر \عددی{\kappa\ne 0} ہو وہاں مستوی میں منحنی کا صدر اکائی سمتیہ \عددی{\kvec{N}}  درج ذیل ہو گا۔
+\begin{align*}
+\kvec{N}=\frac{1}{\kappa}\frac{\dif\kvec{T}}{\dif s}
+\end{align*} 
+\انتہا{تعریف}
+%===========
+
+موڑ پر سمتیہ \عددی{\tfrac{\dif\kvec{T}}{\dif s}} کا رخ اس جانب ہو گا جس جانب منحنی مڑتی ہو۔یوں اگر بڑھتے فاصلہ کے رخ منہ کرتے ہوئے، اگر \عددی{\kvec{T}}  گھڑی کے رخ مڑے   تب سمتیہ  \عددی{\tfrac{\dif\kvec{T}}{\dif s}}  کا رخ دائیں  ہو گا اور اگر \عددی{\kvec{T}}  گھڑی کے مخالف رخ مڑتی ہو تب اس کا رخ بائیں ہو گا۔  دوسرے لفظوں میں صدر عمودی سمتیہ \عددی{\kvec{N}}منحنی کے   مقعر  رخ ہو گا (شکل \حوالہ{شکل_سمتی_تفاعل_اکائی_مماسی_اور_عمودی_سمتیات})۔  جس  نقطہ پر  \عددی{\kappa=0} ہو، وہاں کے بارے میں سوالات  میں غور کیا گیا ہے۔
+
+
+ تعریف کی رو سے  منحنی \عددی{\kvec{r}(t)=f(t)\ai+g(t)\aj}  کی لمبائی قوس،   مثبت \عددی{\tfrac{\dif s}{\dif t}} کے لئے ہو گی لہٰذا \عددی{\tfrac{\dif s}{\dif t}=\abs{\tfrac{\dif s}{\dif t}}} ہو گا   اور زنجیری قاعدہ درج ذیل دے گا۔
+\begin{align}
+\kvec{N}&=\frac{\dif\kvec{T}/\dif s}{\abs{\dif\kvec{T}/\dif s}}\nonumber\\
+&=\frac{(\dif\kvec{T}/\dif t)(\dif t/\dif s)}{\abs{\dif\kvec{T}/\dif t}\abs{\dif t/\dif s}}\nonumber\\
+&=\frac{\dif\kvec{T}/\dif t}{\abs{\dif\kvec{T}/\dif t}}
+\end{align}
+
+اس طرح ہم \عددی{\kappa} اور \عددی{s} حاصل کیے بغیر \عددی{\kvec{N}} حاصل کر سکتے ہیں۔
+
+
+\ابتدا{مثال}
+درج ذیل دائری حرکت کے لئے \عددی{\kvec{T}} اور \عددی{\kvec{N}} تلاش کریں۔
+\begin{align*}
+\kvec{r}(t)=(\cos 2t)\ai+(\sin 2t)\aj
+\end{align*}
+حل:\quad
+ہم پہلے \عددی{\kvec{T}} دریافت کرتے ہیں۔
+\begin{align*}
+\kvec{v}&=-(2\sin 2t)\ai+(2\cos 2t)\aj,\\
+\abs{\kvec{v}}&=\sqrt{4\sin^22t+4\cos^22t}=2,\\
+\kvec{T}&=\frac{\kvec{v}}{\abs{\kvec{v}}}\\
+&=-(\sin 2t)\ai+(\cos 2t)\aj
+\end{align*}
+یوں
+\begin{align*}
+\frac{\dif \kvec{T}}{\dif t}&=-(2\cos 2t)\ai-(2\sin 2t)\aj,\\
+\abs{\frac{\dif \kvec{T}}{\dif t}}&=\sqrt{4\cos^22t+4\sin^22t}=2
+\end{align*}
+اور درج ذیل ہو گا۔
+\begin{align*}
+\kvec{N}&=\frac{\dif \kvec{T}/\dif t}{\abs{\dif\kvec{T}/\dif t}}\\
+&=-(\cos 2t)\ai-(\sin 2t)\aj
+\end{align*}
+\انتہا{مثال}
+%===============
+
+\حصہء{انحنا کا دائرہ اور انحنا کا رداس}
+مستوی منحنی پر نقطہ \عددی{P}  جہاں \عددی{\kappa\ne 0} ہو،  \اصطلاح{دائرہ انحنا}\فرہنگ{دائرہ!انحنا}\حاشیہب{circle of curvature}\فرہنگ{circle!of curvature} سے مراد  اس مستوی میں وہ دائرہ ہے جو درج ذیل کو مطمئن کرتا ہو۔
+\begin{enumerate}[a.]
+\item
+نقطہ \عددی{P} پر یہ منحنی کا مماسی ہو (منحنی کا مماسی خط ہی اس کا مماسی خط ہے)؛
+\item
+نقطہ \عددی{P} پر اس کی انحنا اور منحنی کی انحنا ایک دوسرے کے برابر ہوں ؛
+\item
+یہ منحنی کے اندرونی یعنی مقعر رخ  پایا جائے (شکل \حوالہ{شکل_سمتی_تفاعل_دائرہ_انحنا})۔
+\end{enumerate}
+
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\r}{1.5}
+\pgfmathsetmacro{\ang}{-30}
+\draw(0,0) circle (\r);
+\draw[](0,0)node[circ]{}node[above,align=center]{\RL{انحنا کا}\\   \RL{مرکز}}--++(\ang:\r)node[right,yshift=-1ex]{$P(x,y)$}node[pos=0.75,above,yshift=0.5ex,align=center]{\RL{انحنا کا}\\  \RL{رداس}};
+\draw[-latex,thick](\ang:\r)--++(180+\ang:1)node[below,pos=0.5,xshift=-0.5ex]{$\kvec{N}$};
+\draw[-latex,thick](\ang:\r)--++(\ang+90:1)node[right,pos=0.75]{$\kvec{T}$};
+\draw(\ang:\r) to [out=\ang+90,in=-90]++(0.5,2)node[right]{منحنی};
+\draw(\ang:\r) to [out=\ang-90,in=-60](-1,0.5);
+\end{tikzpicture}
+\caption{نقطہ \عددی{P(x,y)} پر دائرہ انحنا منحنی کے اندرونی رخ ہو گا۔}
+\label{شکل_سمتی_تفاعل_دائرہ_انحنا}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\ra,\t)=\ra*cos(\t);fy(\rb,\t)=\rb*sin(\t);fz(\rc,\t)=\rc*\t;}]
+\pgfmathsetmacro{\h}{2.25}
+\pgfmathsetmacro{\ra}{2}
+\pgfmathsetmacro{\rb}{0.25*\ra}
+\pgfmathsetmacro{\rc}{2/470}
+\pgfmathsetmacro{\ta}{-110}
+\pgfmathsetmacro{\tb}{0}
+\pgfmathsetmacro{\tc}{180}
+\pgfmathsetmacro{\td}{360}
+\pgfmathsetmacro{\te}{-20}
+\pgfmathsetmacro{\tf}{360+\ta}
+\draw[-latex](0,0)--++(-145:2)node[left]{$x$};
+\draw[-latex](0,0)--++(0:2.5)node[right]{$y$};
+\draw[-latex](0,0)--++(0,3)node[left]{$z$};
+ \draw[-latex](0,0,0)node[left,yshift=1ex]{$O$}--({fx(\ra,\te)},{fz(\rc,\te-\ta)+fy(\rb,\te)})node[circ]{}node[pos=0.4,above]{$\kvec{r}$}node[right]{$P$};
+\draw[dashed,domain=40:180,variable=\t]plot ({fx(\ra,\t)},{fy(\rb,\t)});
+\draw[domain=180:360,variable=\t]plot ({fx(\ra,\t)},{fy(\rb,\t)});
+\draw[domain=0:360,variable=\t]plot ({fx(\ra,\t)},{\h+fy(\rb,\t)});
+\draw  ({fx(\ra,300)},{fy(\rb,300)})node[below,yshift=-1ex]{$x^2+y^2=a^2$};
+\draw(-\ra,0)--++(0,\h);
+\draw(\ra,0)--++(0,\h);
+\draw[domain=\ta:\tb,variable=\t]plot ({fx(\ra,\t)},{fz(\rc,\t-\ta)+fy(\rb,\t)});
+\draw[dashed,domain=\tb:\tc,variable=\t]plot ({fx(\ra,\t)},{fz(\rc,\t-\ta)+fy(\rb,\t)});
+\draw[domain=\tc:\td,variable=\t]plot ({fx(\ra,\t)},{fz(\rc,\t-\ta)+fy(\rb,\t)});
+\draw  ({fx(\ra,\ta)},{fz(\rc,\ta-\ta)+fy(\rb,\ta)})node[circ]{}node[below,xshift=1ex]{$t=0$}node[left,xshift=-2ex,yshift=-1ex]{$(a,0,0)$};
+\draw  ({fx(\ra,\tb)},{fz(\rc,\tb-\ta)+fy(\rb,\tb)})node[circ]{}node[right,yshift=1ex]{$t=\frac{\pi}{2}$};
+\draw  ({fx(\ra,\tf)},{fz(\rc,\tf-\ta)+fy(\rb,\tf)})node[circ]{}node[below]{$t=2\pi$};
+\draw[dashed] ({fx(\ra,\tf)},{fz(\rc,\tf-\ta)+fy(\rb,\tf)})-- (0,{fz(\rc,\tf-\ta)})node[circ]{}node[right]{$2\pi b$};
+\end{tikzpicture}
+\caption{مثبت \عددی{a}، \عددی{b} کے لئے \عددی{\kvec{r}(t)=(a\cos t)\ai+(a\sin t)\aj}}
+\label{شکل_مثال_سمتی_تفاعل_پیچ_دار_مثبت_الف_ب}
+\end{minipage}
+\end{figure}
+
+نقطہ \عددی{P} پر منحنی کے \اصطلاح{ رداس انحنا}\فرہنگ{رداس!انحنا}\حاشیہب{radius of curvature}\فرہنگ{radius!of curvature}  سے مراد اس نقطہ پر دائرہ انحنا کا رداس ہے، جو مثال \حوالہ{مثال_سمتی_تفاعل_دائرہ_انحنا} کے مطابق درج ذیل ہو گا۔
+\begin{align}
+\text{\RL{رداس انحنا}}=\rho=\frac{1}{\kappa}
+\end{align}
+رداس انحنا جاننے کے لئے ہم \عددی{\kappa} معلوم کر کے اس کا  بالعکس متناسب  لیتے ہیں۔ نقطہ \عددی{P} پر  \اصطلاح{مرکز انحنا}\فرہنگ{مرکز!انحنا}\حاشیہب{center of curvature}\فرہنگ{center!of curvature} سے مراد  یہاں کے دائرہ انحنا کا مرکز ہو گا۔
+
+\حصہء{فضائی منحنیات کی انحنا اور  عمودی سمتیات}
+مستوی منحنیات کی طرح  فضا میں ہموار منحنی کے لئے مقدار معلوم لمبائی قوس  \عددی{s}،   مماسی اکائی سمتیہ \عددی{\kvec{T}} دیتا ہے۔ ہم اب بھی انحنا سے مراد 
+\begin{align}\label{مساوات_سمتی_تفاعل_فضائی_انحنا}
+\kappa=\abs{\frac{\dif \kvec{T}}{\dif s}}
+\end{align}
+لیتے ہیں۔ سمتیہ \عددی{\tfrac{\dif\kvec{T}}{\dif s}}  سمتیہ \عددی{\kvec{T}} کو عمودی ہو گا  اور ہم صدر اکائی عمودی سمتیہ سے مراد درج ذیل لیتے ہیں۔
+\begin{align}\label{مساوات_سمتی_تفاعل_فضائی_اکائی_عمودی_سمتیہ}
+\kvec{N}=\frac{1}{\kappa}\frac{\dif\kvec{T}}{\dif s}=\frac{\dif\kvec{T}/\dif t}{\abs{\dif\kvec{T}/\dif t}}
+\end{align}
+
+\ابتدا{مثال}\شناخت{مثال_سمتی_تفاعل_پیچ_دار_مثبت_الف_ب}
+درج ذیل پیچ دار منحنی کی انحنا دریافت کریں (شکل \حوالہ{شکل_مثال_سمتی_تفاعل_پیچ_دار_مثبت_الف_ب})۔
+\begin{align*}
+\kvec{r}(t)=(a\cos t)\ai+(a\sin t)\aj+bt\ak,\quad a,b\ge 0,\, a^2+b^2\ne 0
+\end{align*}
+حل:\quad
+ہم سمتی رفتار \عددی{\kvec{v}} سے \عددی{\kvec{T}} حاصل کرتے ہیں۔
+\begin{align*}
+\kvec{v}(t)&=-(a\sin t)\ai+(a\cos t)\aj+b\ak\\
+\abs{\kvec{v}}&=\sqrt{a^2\sin^2t+a^2\cos^2t+b^2}=\sqrt{a^2+b^2}\\
+\kvec{T}&=\frac{\kvec{v}}{\abs{\kvec{v}}}=\frac{1}{\sqrt{a^2+b^2}}[-(a\sin t)\ai+(a\cos t)\aj+b\ak]
+\end{align*}
+اب زنجیری قاعدہ سے \عددی{\tfrac{\dif \kvec{T}}{\dif s}} حاصل کرتے ہیں۔
+\begin{align*}
+\frac{\dif \kvec{T}}{\dif s}&=\frac{\dif \kvec{T}}{\dif t}\frac{\dif t}{\dif s}&&\text{\RL{\small{زنجیری قاعدہ}}}\\
+&=\frac{\dif\kvec{T}}{\dif t}\cdot\frac{1}{\abs{\kvec{v}}}&&\frac{\dif s}{\dif t}=\abs{\kvec{v}}\implies \frac{\dif t}{\dif s}=\frac{1}{\abs{\kvec{v}}}\\
+&=\frac{1}{\sqrt{a^2+b^2}}[-(a\cos t)\ai-(a\sin t)\aj]\cdot\big(\frac{1}{\sqrt{a^2+b^2}}\big)\\
+&=\frac{a}{a^2+b^2}[-(\cos t)\ai-(\sin t)\aj]
+\end{align*}
+اس طرح درج ذیل ہو گا۔
+\begin{align}
+\kappa&=\abs{\frac{\dif \kvec{T}}{\dif s}}\nonumber\\
+&=\frac{a}{a^2+b^2}\abs{-(\cos t)\ai-(\sin t)\aj}\nonumber\\
+&=\frac{a}{a^2+b^2}\sqrt{(\cos t)^2+(\sin t)^2}=\frac{a}{a^2+b^2}\label{مساوات_مثال_انحنا}
+\end{align}
+ہم مساوات \حوالہ{مساوات_مثال_انحنا} سے دیکھتے ہیں کہ مستقل \عددی{a} کے لئے \عددی{b} بڑھانے سے انحنا کم ہوتی ہے۔ مستقل \عددی{b} کے لئے \عددی{a} کم کرنے  سے بھی  انحنا  آخر کار انحنا کم کرتی ہے۔ ایک اسپرنگ کھینچنے سے سیدھا ہوتا  ہے۔ 
+
+اگر \عددی{b=0} ہو  تب پیچ دار  منحنی ایک دائرہ ہو گا جس کا رداس \عددی{a}  اور انحنا \عددی{\tfrac{1}{a}} ہو گی۔ اگر \عددی{a=0} ہو تب پیچ دار منحنی،  محور \عددی{z} پر سیدھا خط ہو گا اور اس کی انحنا \عددی{0} ہو گی۔
+\انتہا{مثال}
+%=================
+
+\ابتدا{مثال}
+گزشتہ مثال میں منحنی کے لئے  \عددی{\kvec{N}} تلاش کریں۔
+
+حل:\quad
+\begin{align*}
+\frac{\dif \kvec{T}}{\dif t}&=-\frac{1}{\sqrt{a^2+b^2}}[(a\cos t)\ai+(a\sin t)\aj]&&\text{\RL{مثال \حوالہ{مثال_سمتی_تفاعل_پیچ_دار_مثبت_الف_ب}}}\\
+\abs{\frac{\dif \kvec{T}}{\dif t}}&=\frac{1}{\sqrt{a^2+b^2}}\sqrt{a^2\cos^2t+a^2\sin^2t}=\frac{a}{\sqrt{a^2+b^2}}\\
+\kvec{N}&=\frac{\dif \kvec{T}/\dif t}{\abs{\dif\kvec{T}/\dif t}}&&\text{\RL{مساوات \حوالہ{مساوات_سمتی_تفاعل_فضائی_اکائی_عمودی_سمتیہ}}}\\
+&=-\frac{\sqrt{a^2+b^2}}{a}\cdot\frac{1}{\sqrt{a^2+b^2}}[(a\cos t)\ai+(a\sin t)\aj]\\
+&=-(\cos t)\ai-(\sin t)\aj
+\end{align*}
+\انتہا{مثال}
+%===================
+
+\جزوحصہء{مروڑ اور  سہ عمودی سمتیہ}
+فضا میں منحنی کا  \اصطلاح{سہ عمودی سمتیہ}\فرہنگ{سمتیہ!سہ عمودی}\حاشیہب{binormal vector}\فرہنگ{vector!binormal} \عددی{\kvec{B}=\kvec{T}\times\kvec{N}} ہے جو \عددی{\kvec{T}} اور \عددی{\kvec{N}} دونوں کو عمودی ہو گا  (شکل \حوالہ{شکل_سمتی_تفاعل_اکائی_عمودی_سمتیات_چھوکٹ})۔ سمتیات \عددی{\kvec{T}}، \عددی{\kvec{N}} اور \عددی{\kvec{B}} مل  کر دایاں ہاتھ، متحرک،  سمتی چھوکٹ  دیتے ہیں جو فضا میں سواری کی حرکت  پر غور میں مدد گار  ثابت ہوتا ہے۔
+
+سمتیات \عددی{\kvec{T}}، \عددی{\kvec{N}} اور \عددی{\kvec{B}} کے لحاض سے \عددی{\tfrac{\dif\kvec{B}}{\dif s}} کا رویہ کیسا ہو گا؟ حاصل صلیبی ضرب کے قاعدہ تفرق سے
+\begin{align*}
+\frac{\dif \kvec{B}}{\dif s}&=\frac{\dif\kvec{T}}{\dif s}\times \kvec{N}+\kvec{T}\times\frac{\dif\kvec{N}}{\dif s}
+\end{align*}
+حاصل ہوتا ہے۔ چونکہ \عددی{\kvec{N}} کا رخ  \عددی{\tfrac{\dif \kvec{T}}{\dif s}}  کے رخ ہے لہٰذا \عددی{\tfrac{\dif\kvec{T}}{\dif s}\times\kvec{\kvec{N}}=\kvec{0}} ہو گا  اور یوں  درج ذیل ہو گا۔
+\begin{align}
+\frac{\dif \kvec{B}}{\dif s}=\kvec{0}+\kvec{T}\times\frac{\dif \kvec{N}}{\dif s}=\kvec{T}\times\frac{\dif\kvec{N}}{\dif s}
+\end{align}
+چونکہ حاصل صلیبی ضرب  دونوں اجزاء کو عمودی ہوتا ہے لہٰذا   \عددی{\tfrac{\dif\kvec{B}}{\dif s}} سمتیہ \عددی{\kvec{T}} کو عمودی ہو گا۔
+
+چونکہ \عددی{\tfrac{\dif\kvec{B}}{\dif s}} سمتیہ \عددی{\kvec{B}}  (جس کی لمبائی مستقل ہے)  کو بھی عمودی ہے لہٰذا \عددی{\kvec{B}} اور \عددی{\kvec{T}} کے مستوی کو  \عددی{\tfrac{\dif\kvec{B}}{\dif s}}  عمودی ہو گا۔دوسرے لفظوں میں  \عددی{\tfrac{\dif\kvec{B}}{\dif s}} سمتیہ \عددی{\kvec{N}} کے متوازی ہو گا اور یوں \عددی{\tfrac{\dif\kvec{B}}{\dif s}} سمتیہ \عددی{\kvec{N}} کا مستقل مضرب ہو گا۔اس حقیقت کو علامتی  طور پر
+\begin{align*}
+\frac{\dif\kvec{B}}{\dif s}=-\tau\kvec{N}
+\end{align*}
+لکھا جاتا ہے جہاں منفی کی علامت روایتی ہے۔ غیر سمتی \عددی{\tau}،  منحنی پر \اصطلاح{مروڑ}  کہلاتا ہے۔دھیان رہے  کہ
+\begin{align*}
+\frac{\dif\kvec{B}}{\dif s}\cdot\kvec{N}=-\tau\kvec{N}\cdot\kvec{N}=-\tau(1)=-\tau
+\end{align*} 
+کی بنا درج ذیل ہو گا۔
+\begin{align*}
+\tau=-\frac{\dif\kvec{B}}{\dif s}\cdot\kvec{N}
+\end{align*}
+
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[x={(-0.7071cm,-0.7071cm)},y={(1cm,0)},z={(0,1cm)},declare function={fx(\t)=sin(\t);fy(\t)=\t/90;fz(\t)=(\t/90)^2;}]
+\draw[-latex](0,0,0)--++(1,0,0)node[left]{$\kvec{T}$};
+\draw[-latex](0,0,0)--++(0,1,0)node[right]{$\kvec{N}$};
+\draw[-latex](0,0,0)node[circ]{}node[left]{$P$}--++(0,0,1)node[left]{$\kvec{B}$};
+\draw[thick,domain=0:100,variable=\t]plot ({fx(\t)},{fy(\t)},{fz(\t)});
+\end{tikzpicture}
+\caption{سمتیات \عددی{\kvec{T}}، \عددی{\kvec{N}} اور \عددی{\kvec{B}} (اسی ترتیب میں) فضا میں  آپس میں عمودی اکائی سمتیات کا    دایاں ہاتھ چھوکٹ دیتے  ہیں۔}
+\label{شکل_سمتی_تفاعل_اکائی_عمودی_سمتیات_چھوکٹ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[x={(-0.7071cm,-0.7071cm)},y={(1cm,0)},z={(0,1cm)},declare function={fx(\t)=sin(\t);fy(\t)=\t/90;fz(\t)=(\t/90)^2;}]
+\draw[-latex](0,0,0)--++(1,0,0)node[left]{\text{\RL{اکائی مماس}}$\,\,\kvec{T}$};
+\draw[-latex](0,0,0)--++(0,1,0)node[above right]{$\kvec{N}\,\,$\text{\RL{صدر عمودی}}};
+\draw[-latex](0,0,0)node[circ]{}node[left]{$P$}--++(0,0,1)node[left]{\text{\RL{سہ عمودی}}$\,\,\kvec{B}$};
+\draw[thick,domain=0:100,variable=\t]plot ({fx(\t)},{fy(\t)},{fz(\t)});
+\draw(1,0,0)--(1,0,1)node[pin={[left]-160:{\RL{سمت کار مستوی}}}]{}--(0,0,1);
+\draw(1,0,0)--(1,1,0)--(0,1,0)node[pos=0.5,pin=-45:{\RL{مستوی انحنا}}]{};
+\draw(0,1,0)--(0,1,1)--(0,0,1)node[pos=0.5,pin=45:{\RL{عمودی مستوی}}]{};
+\draw(1.2,0,0)--(2,0,0);
+\draw(0,1.2,0)--(0,2,0);
+\draw(0,0,1.2)--(0,0,2);
+\end{tikzpicture}
+\caption{سمتیات \عددی{\kvec{T}}، \عددی{\kvec{N}}، \عددی{\kvec{B}} کے پیدا تین مستوی کے نام۔}
+\label{شکل_سمتی_تفاعل_ٹی_این_بی_تین_مستوی}
+\end{minipage}
+\end{figure}
+\ابتدا{تعریف}
+فرض کریں \عددی{\kvec{B}=\kvec{T}\times\kvec{N}} ہے۔تب ہموار منحنی کا  تفاعل \اصطلاح{مروڑ}\فرہنگ{مروڑ}\حاشیہب{torsion}\فرہنگ{torsion}  درج ذیل ہو گا ۔
+\begin{align*}
+\tau=-\frac{\dif \kvec{B}}{\dif s}\cdot\kvec{N}
+\end{align*}
+\انتہا{تعریف}
+%===============
+
+انحنا \عددی{\kappa} کے برعکس جو کبھی منفی نہیں ہو سکتا ہے، مروڑ \عددی{\tau}  مثبت، منفی یا صفر ہو سکتا ہے۔
+
+
+منحنیات \عددی{\kvec{T}}، \عددی{\kvec{N}} اور \عددی{\kvec{B}}  مل کر تین  مستوی دیتے ہیں (شکل \حوالہ{شکل_سمتی_تفاعل_ٹی_این_بی_تین_مستوی})۔ منحنی پر چلتے ہوئے   نقطہ \عددی{P} پر عمودی مستوی کی  مڑنے کی شرح  کو   انحنا \عددی{\kappa=\abs{\tfrac{\dif\kvec{T}}{\dif s}}}  تصور کیا جا سکتا ہے۔اسی طرح  منحنی پر چلتے ہوئے نقطہ \عددی{P} پر \عددی{\kvec{T}} کے لحاض سے    سطح منحنی انحنا کی مڑنے کی شرح کو مروڑ \عددی{\tau=-\tfrac{\dif\kvec{B}}{\dif s}\cdot\kvec{N}} تصور کیا جا سکتا ہے۔  منحنی میں بل کی  پیمائش اس منحنی کی  مروڑ ہو گی۔
+
+
+\جزوحصہء{اسراع کے مماسی اور عمودی اجزاء}
+قوت کشش، بریک  یا انجن کی طاقت کی بنا کسی جسم کی اسراع کے مماسی جزو میں ہم عموماً دلچسپی رکھتے ہیں جو اس قوت کی بنا پیدا ہوتی ہے۔ہم زنجیری قاعدہ استعمال کرتے ہوئے \عددی{\kvec{v}} کے لئے
+\begin{align*}
+\kvec{v}=\frac{\dif\kvec{r}}{\dif t}=\frac{\dif\kvec{r}}{\dif s}\frac{\dif s}{\dif t}=\kvec{T}\frac{\dif s}{\dif t}
+\end{align*}
+لکھ   کر دونوں اطراف کا تفرق  لیتے ہیں۔
+\begin{align*}
+\kvec{a}&=\frac{\dif\kvec{v}}{\dif t}=\frac{\dif}{\dif t}\big(\kvec{T}\frac{\dif s}{\dif t}\big)=\frac{\dif^{\,2}s}{\dif t^2}\kvec{T}+\frac{\dif s}{\dif t}\frac{\dif \kvec{T}}{\dif t}\\
+&=\frac{\dif^{\,2}s}{\dif t^2}\kvec{T}+\frac{\dif s}{\dif t}\big(\frac{\dif\kvec{T}}{\dif s}\frac{\dif s}{\dif t}\big)=\frac{\dif^{\,2}s}{\dif t^2}\kvec{T}+\frac{\dif s}{\dif t}\big(\kappa \kvec{N}\frac{\dif s}{\dif t}\big)\\
+&=\frac{\dif^{\,2}s}{\dif t^2}\kvec{T}+\kappa\big(\frac{\dif s}{\dif t}\big)^2\kvec{N}
+\end{align*}
+اس کو
+\begin{align}\label{مساوات_سمتی_تفاعل_اسراع_الف}
+\kvec{a}=a_T\kvec{T}+a_N\kvec{T}
+\end{align}
+لکھا جا سکتا ہے جہاں اسراع کا غیر سمتی مماسی جزو  \عددی{a_T} اور غیر سمتی عمودی جزو  \عددی{a_N} درج ذیل ہوں گے۔
+\begin{align}\label{مساوات_سمتی_تفاعل_اسراع_ب}
+a_T=\frac{\dif^{\,2}s}{\dif t^2}=\frac{\dif}{\dif t}\abs{\kvec{v}},\quad\quad  a_N=\kappa\big(\frac{\dif s}{\dif t}\big)^2=\kappa\abs{\kvec{v}}^2
+\end{align}
+
+آپ نے دیکھا کہ مساوات \حوالہ{مساوات_سمتی_تفاعل_اسراع_الف} میں \عددی{\kvec{B}} نہیں پایا جاتا ہے۔ ایک راہ جس پر ایک جسم چل رہا ہو جتنا بھی گھومتا ہو، اس پر اسراع ہر صورت  \عددی{\kvec{T}} اور 
+ \عددی{\kvec{N}} کے مستوی میں \عددی{\kvec{B}} کی عمودی  پائی جائے گی۔یہ مساوات ہمیں یہ بھی بتاتی ہے کہ کتنی اسراع حرکت کے مماسی رخ \عددی{\tfrac{\dif^{\,2}s}{\dif t^2}}  اور کتنی اسراع حرکت کے عمودی رخ \عددی{\kappa(\dif s/\dif t)^2} ہو گی  (شکل \حوالہ{شکل_سمتی_تفاعل_اسراع_کے_اجزاء})۔ 
+
+ہم مساوات \حوالہ{مساوات_سمتی_تفاعل_اسراع_ب} سے کیا معلومات حاصل کر سکتے ہیں۔ تعریف کی رو سے،  اسراع \عددی{\kvec{a}} سمتی رفتار \عددی{\kvec{v}} کی  تبدیلی کی شرح ہو گی اور حرکت کے دوران سمتی رفتار کا رخ اور اس کی مقدار (لمبائی)  تبدیل ہو گی۔ اسراع کا مماسی جزو \عددی{a_T}  سمتی رفتار \عددی{\kvec{v}}  کی لمبائی کی شرح تبدیلی دیتا ہے (یعنی رفتار میں تبدیلی)۔ عمودی جزو \عددی{a_N} ہمیں \عددی{\kvec{v}} کے رخ کی تبدیلی کی شرح دیتا ہے۔
+
+دھیان رہے کہ \عددی{a_N}  انحنا ضرب رفتار کا مربع ہو گا۔اس سے ہمیں معلوم ہوتا ہے کہ جب  گاڑی تیز رفتار (زیادہ \عددی{\abs{\kvec{v}}}) سے چلتے ہوئے زیادہ جلدی  مڑے (بڑی \عددی {\kappa})   تب ہمیں  کیوں  سیدھا  بیٹھنے میں مشکل پیش آتی ہے۔ گاڑی کی رفتار دگنی کرنے سے آپ اسی انحنا کے لئے  چار گنّا  زیادہ عمودی اسراع محسوس کریں گے (شکل \حوالہ{شکل_سمتی_تفاعل_دائری_راہ_اسراع})۔
+
+اگر ایک جسم مستقل رفتار سے چل رہی ہو تب    \عددی{\tfrac{\dif^{\,2}s}{\dif t^2}} صفر ہو گا اور تمام اسراع \عددی{\kvec{N}} کے رخ، دائرے کے مرکز کے رخ ہو گا۔اگر ایک جسم کی رفتار بڑھ یا گھٹ رہی ہو تب \عددی{\kvec{a}} کا غیر صفر مماسی جزو ہو گا۔
+
+اسراع کا عمودی جزو \عددی{a_N} معلوم کرنے کی خاطر ہم عموماً کلیہ \عددی{a_N=\sqrt{\abs{\kvec{a}}^2-a_T^2}} استعمال کرتے ہیں جو \عددی{a_N} کے لئے 
+ مساوات \عددی{\abs{\kvec{a}}^2=\kvec{a}\cdot\kvec{a}=a_T^2+a_N^2} حل کرنے سے حاصل ہوتا ہے۔ اس کلیہ کو استعمال کرتے ہوئے  ہم بغیر \عددی{\kappa} معلوم کیے ، \عددی{a_N} معلوم کر سکتے ہیں۔
+
+\begin{align}\label{مساوات_سمتی_تفاعل_اسراع_پ}
+a_N=\sqrt{\abs{\kvec{a}}^2-a_T^2}
+\end{align}
+
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\draw[-<-=0.5](0,0) to [out=-150,in=90]node[pos=0.9,circ]{}node[pos=0.9,right]{$P_0$}node[pos=0.5,below right]{$s$}++(-2,-1);
+\draw(0,0) to [out=30,in=-120]++(0.75,0.75);
+\draw[-latex,thick](0,0)--++(30:1)coordinate(kb)node[pos=0.75,below]{$\kvec{T}$};
+\draw[-latex,thick](0,0)--++(120:1)coordinate(kc)node[pos=0.75,above,xshift=1.5ex]{$\kvec{N}$};
+\draw[-latex,thick](0,0)--++($(30:1.25)+(120:1.5)$)coordinate(ka)node[pos=0.75,left]{$\kvec{a}$};
+\draw(kc)--++(120:0.5)coordinate(kkc)--(ka);
+\draw(kb)--++(30:0.25)coordinate(kkb)--(ka);
+\draw[decorate,decoration={brace,amplitude=5pt,raise=10pt}](kkb)--(0,0)node[pos=0.75,below right,xshift=2ex]{$a_T=\frac{\dif^{\,2}s}{\dif t^2}$};
+\draw[decorate,decoration={brace,amplitude=5pt,raise=5pt}](0,0)--(kkc)node[pos=0.75,below left,xshift=-2.5ex]{$a_N=\kappa\big(\frac{\dif s}{\dif t}\big)^2$};
+\end{tikzpicture}
+\caption{اسراع کے مماسی اور عمودی اجزاء۔اسراع \عددی{\kvec{a}} ہر صورت \عددی{\kvec{T}} اور \عددی{\kvec{N}} کے مستوی میں \عددی{\kvec{B}} کے عمودی پایا جاتا ہے۔}
+\label{شکل_سمتی_تفاعل_اسراع_کے_اجزاء}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\r}{1.25}
+\pgfmathsetmacro{\ang}{45}
+\draw(0,0)node[circ]{}node[left]{$C$} circle (\r);
+\draw(0,0)--++(\ang:\r)node[circ]{}node[right]{$P$};
+\draw[-latex,thick](\ang:\r)--++(\ang+90:1)coordinate(ka)node[pos=0.5,above right]{$\tfrac{\dif^{\,2}s}{\dif t^2}\kvec{T}$};
+\draw[-latex,thick](\ang:\r)--++(\ang-180:0.75)coordinate(kb)node[pos=0.5,below right,fill=white]{$\kappa\abs{\kvec{v}}^2\kvec{N}=\tfrac{\abs{\kvec{v}}}{\rho}\kvec{N}$};
+\draw (ka)--++(\ang+180:0.75)coordinate(kc)--++(\ang-90:1);
+\draw[-latex,thick](\ang:\r)--(kc)node[pos=0.5,below]{$\kvec{a}$};
+\end{tikzpicture}
+\caption{ایک جسم جس کی رفتار ایک  دائری راہ پر گھڑی کے الٹ رخ چلتے ہوئے بڑھ  رہی ہو کے اسراع کے مماسی اور عمودی اجزاء۔ دائرہ کا رداس \عددی{\rho} ہے۔}
+\label{شکل_سمتی_تفاعل_دائری_راہ_اسراع}
+\end{minipage}
+\end{figure}
+
+\ابتدا{مثال}\شناخت{مثال_سمتی_تفاعل_در_پیچیدہ_اسراع}
+درج ذیل حرکت کے لئے \عددی{\kvec{T}} اور \عددی{\kvec{N}} حاصل کئے بغیر اسراع \عددی{\kvec{a}=a_T\kvec{T}+a_N\kvec{N}} روپ میں لکھیں۔
+\begin{align*}
+\kvec{r}(t)=(\cos t+t\sin t)\ai+(\sin t-t\cos t)\aj,\quad t>0
+\end{align*}
+یہ راہ  شکل \حوالہ{شکل_مثال_سمتی_تفاعل_در_پیچیدہ_اسراع}  میں دکھائے دائرہ کا در پیچیدہ  ہے۔
+
+حل:\quad
+ہم  پہلے مساوات \حوالہ{مساوات_سمتی_تفاعل_اسراع_ب} سے \عددی{a_T} حاصل کرتے ہیں۔
+\begin{align*}
+\kvec{v}&=(t\cos t)\ai+(t\sin t)\aj&&\text{\RL{مثال \حوالہ{مثال_سمتی_تفاعل_در_پیچیدہ}}}\\
+\abs{\kvec{v}}&=\sqrt{t^2\cos^2t+t^2\sin^2t}=\sqrt{t^2}=\abs{t}=t&&t>0\\
+a_T&=\frac{\dif}{\dif t}\abs{\kvec{v}}=\frac{\dif}{\dif t}(t)=1&&\text{\RL{مساوات \حوالہ{مساوات_سمتی_تفاعل_اسراع_ب}}}
+\end{align*}
+اب  مساوات \حوالہ{مساوات_سمتی_تفاعل_اسراع_پ} استعمال کرتے ہوئے \عددی{a_N} حاصل کرتے ہیں۔
+\begin{align*}
+\kvec{a}&=(\cos t-t\sin t)\ai+(\sin t+t\cos t)\aj\\
+\abs{\kvec{a}}^2&=t^2+1&&\text{\RL{کچھ الجبرا کے بعد}}\\
+a_N&=\sqrt{\abs{\kvec{a}}^2-a_T^2}\\
+&=\sqrt{(t^2+1)-(1)}=\sqrt{t^2}=t
+\end{align*}
+اس کے بعد ہم مساوات \حوالہ{مساوات_سمتی_تفاعل_اسراع_الف} سے \عددی{\kvec{a}} تلاش کرتے ہیں۔
+\begin{align*}
+\kvec{a}=a_T\kvec{T}+a_N\kvec{N}=(1)\kvec{T}+(t)\kvec{N}=\kvec{T}+t\kvec{N}
+\end{align*}
+\انتہا{مثال}
+%=========
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\t)=cos(\t)+pi/180*\t*sin(\t);fy(\t)=sin(\t)-pi/180*\t*cos(\t);}]
+\draw[-latex](-1.25,0)--(2,0)node[right]{$x$};
+\draw[-latex](0,-1.25)--(0,2)node[left]{$y$};
+\draw(0,0) circle (1);
+\draw(1,0)node[circ]{}node[below right]{$(1,0)$};
+\draw[smooth,domain=0:160,variable=\t]plot ({fx(\t)},{fy(\t)});
+\draw[-latex,thick](0,0)--({fx(120)},{fy(120)})coordinate(ka)node[pos=0.75,below,yshift=-0.5ex]{$\kvec{r}$}node[circ]{}node[right]{$P(x,y)$};
+\draw(120:1)--({fx(120)},{fy(120)})coordinate[pos=0.6](kN)node[pos=0,circ]{}node[pos=0,above]{$Q$}node[pos=0.45,sloped,above]{دھاگہ};
+\draw[latex-,thick](kN)--({fx(120)},{fy(120)})node[pos=0.45,shift={(120:1.25ex)}]{$t\kvec{N}$};
+\draw(kN)--++(120:1)coordinate(kacc);
+\draw(1,0)node[pos=0,circ]{};
+\draw[-latex]({fx(60)},{fy(60)})--({fx(61)},{fy(61)});
+\draw(0,0)node[below left]{$O$};
+\draw(0.5,0)node[below]{$1$};
+\draw(0,0)--(120:1);
+\draw[-stealth]([shift={(0:0.3)}]0,0) arc (0:120:0.3)node[pos=0.3,right]{$t$};
+\draw(-45:1)node[below right]{$x^2+y^2=1$};
+\draw[-latex,thick](ka)--++(120:1)coordinate(kTT)node[pos=0.75,right]{$\kvec{T}$};
+\draw(kTT)--(kacc);
+\draw[-latex,thick](ka)--(kacc)node[pos=0.75,shift={(45:1ex)}]{$\kvec{a}$};
+\end{tikzpicture}
+\caption{اسراع کے  مماسی اور عمودی  اجزاء  (مثال \حوالہ{مثال_سمتی_تفاعل_در_پیچیدہ_اسراع})}
+\label{شکل_مثال_سمتی_تفاعل_در_پیچیدہ_اسراع}
+\end{figure}
+
+\جزوحصہء{انحنا اور مروڑ کے کلیات}
+ہم اب ہموار  منحنیات کے انحنا اور مروڑ تلاش کرنے کے چند کلیات پیش کرتے ہیں جو استعمال میں آسان ثابت ہوتے ہیں۔  مساوات \حوالہ{مساوات_سمتی_تفاعل_اسراع_الف} سے درج ذیل لکھا جا سکتا ہے۔
+\begin{align*}
+\kvec{v}\times \kvec{a}&=\big(\frac{\dif s}{\dif t}\kvec{T}\big)\times \big[\frac{\dif^{\,2}s}{\dif t^2}\kvec{T}+\kappa\big(\frac{\dif s}{\dif t}\big)^2\kvec{N}\big]
+&&\text{\RL{مساوات \حوالہ{مساوات_سمتی_تفاعل_اکائی_مماسی_سمتی_رفتار} سے \عددی{\kvec{v}=\tfrac{\dif s}{\dif t}\kvec{T}}}}\\
+&=\big(\frac{\dif s}{\dif t}\frac{\dif^{\,2}s}{\dif t^2}\big)(\kvec{T}\times \kvec{T})+\kappa\big(\frac{\dif s}{\dif t}\big)^3(\kvec{T}\times \kvec{N})\\
+&=\kappa\big(\frac{\dif s}{\dif t}\big)^3\kvec{B}&&\kvec{T}\times\kvec{T}=\kvec{0},\, \kvec{T}\times\kvec{N}=\kvec{B}
+\end{align*}
+یوں
+\begin{align*}
+\abs{\kvec{v}\times\kvec{a}}=\kappa\abs{\frac{\dif s}{\dif t}}^3\abs{\kvec{B}}=\kappa\abs{\kvec{v}}^3&&\frac{\dif s}{\dif t}=\abs{\kvec{v}}\,\text{اور}\,\abs{\kvec{B}}=1
+\end{align*}
+ہو گا   جس کو \عددی{\kappa} کے لئے حل کر کے درج  ذیل  کلیہ حاصل ہو گا۔
+
+\موٹا{انحنا کا سمتی کلیہ}
+\begin{align}\label{مساوات_سمتی_تفاعل_انحنا_سمتی_کلیہ}
+\kappa=\frac{\abs{\kvec{v}\times \kvec{a}}}{\abs{\kvec{v}}^3}
+\end{align}
+
+مساوات \حوالہ{مساوات_سمتی_تفاعل_انحنا_سمتی_کلیہ} ہمیں منحنی    پر چلتے ہوئے  سمتی رفتار  جہاں \عددی{\kvec{v}} غیر صفر  ہو اور اسراع کی کسی بھی روپ  سے   انحنا ، جو منحنی کی جیومیٹریائی  خاصیت ہے، دیتی ہے ۔ ذرہ رک کر اس حیرت کن حقیقت پر غور کریں۔منحنی پر حرکت کے کسی بھی کلیہ سے، چاہے  حرکت کتنا بھی متغیر کیوں نہ ہو ( جب تک \عددی{\kvec{v}} صفر نہ  ہو) ، ہم منحنی کی طبعی خاصیت دریافت کر سکتے ہیں جس کا ظاہری طور  پر    منحنی پر چلنے سے کوئی تعلق نہیں ہے۔
+
+مروڑ کا ایک مقبول کلیہ جو اعلٰی  نصاب میں  حاصل کیا جاتا ہے درج ذیل ہے جہاں ایک نقطہ، \عددی{t} کے لحاض سے ایک تفرق کو ظاہر کرتا ہے۔ یوں \عددی{\dot{x}=\tfrac{\dif x}{\dif t}}، \عددی{\ddot{x}=\tfrac{\dif^{\,2}x}{\dif t^2}} اور \عددی{\dddot{x}=\tfrac{\dif^{\,3}x}{\dif t^3}} ہوں گے۔ 
+\begin{align}\label{مساوات_سمتی_تفاعل_مروڑ_سمتی_کلیہ}
+\renewcommand{\arraystretch}{1.4}
+\tau&=\frac{\begin{vmatrix} \dot{x}&\dot{y}&\dot{z}\\  \ddot{x}&\ddot{y}&\ddot{z}\\  \dddot{x}&\dddot{y}&\dddot{z}\\  \end{vmatrix}}{\abs{\kvec{v}\times \kvec{a}}^2}&&\text{\RL{جہاں \عددی{\kvec{v}\times\kvec{a}\ne\kvec{0}} ہو}}
+\end{align}
+یہ کلیہ  \عددی{\kvec{r}} کے تفاعل اجزاء \عددی{x=f(t)}، \عددی{y=g(t)} اور \عددی{z=h(t)} سے مروڑ دیتا ہے۔ مقطع کا پہلا صف \عددی{\kvec{v}} سے ،   دوسرا صف \عددی{\kvec{a}} سے اور تیسرا صف \عددی{\dot{\kvec{a}}=\tfrac{\dif\kvec{a}}{\dif t}} سے حاصل ہوتا ہے۔
+
+\ابتدا{مثال}
+درج  ذیل پیچ دار کا \عددی{\kappa} اور \عددی{\tau} مساوات \حوالہ{مساوات_سمتی_تفاعل_انحنا_سمتی_کلیہ} اور مساوات \حوالہ{مساوات_سمتی_تفاعل_مروڑ_سمتی_کلیہ} سے حاصل کریں۔
+\begin{align*}
+\kvec{r}(t)=(a\cos t)\ai+(a\sin t)\aj+bt\ak,\quad a,b\ge 0,\, a^2+b^2\ne 0
+\end{align*}
+حل:\quad
+ہم انحنا کو مساوات \حوالہ{مساوات_سمتی_تفاعل_انحنا_سمتی_کلیہ} کی مدد سے حاصل کرتے ہیں۔
+\begin{gather}
+\begin{aligned}\label{مساوات_مثال_سمتی_تفاعل_کاہپا}
+\kvec{v}&=-(a\sin t)\ai+(a\cos t)\aj+b\ak,\\
+\kvec{a}&=-(a\cos t)\ai-(a\sin t)\aj,\\
+\kvec{v}\times \kvec{a}&=\begin{vmatrix}
+\ai&\aj&\ak\\
+-a\sin t&a\cos t&b\\
+-a\cos t&-a\sin t&0
+\end{vmatrix}\\
+&=(ab\sin t)\ai-(ab\cos t)\aj+a^2\ak,\\
+\kappa&=\frac{\abs{\kvec{v}\times\kvec{a}}}{\abs{\kvec{v}}^3}=\frac{\sqrt{a^2b^2+a^4}}{(a^2+b^2)^{3/2}}=\frac{a\sqrt{a^2+b^2}}{(a^2+b^2)^{3/2}}=\frac{a}{a^2+b^2}
+\end{aligned}
+\end{gather}
+مساوات \حوالہ{مساوات_مثال_سمتی_تفاعل_کاہپا}  اور مساوات \حوالہ{مساوات_مثال_انحنا} جہاں ہم نے انحنا کو اس کی تعریف سے حاصل کیا،   ایک جیسا نتیجہ دیتی ہیں۔
+
+مروڑ کے لئے مساوات \حوالہ{مساوات_سمتی_تفاعل_مروڑ_سمتی_کلیہ} استعمال کرنے سے پہلے ہم مقطع  کے  اندراج تلاش کرتے ہیں۔ہم  \عددی{\kvec{v}}اور \عددی{\kvec{a}} جانتے   ہیں لہٰذا
+\begin{align*}
+\dot{\kvec{a}}=\frac{\dif\kvec{a}}{\dif t}=(a\sin t)\ai-(a\cos t)\aj
+\end{align*}
+ہو گا۔یوں مروڑ درج ذیل ہو گا۔
+\begin{gather}
+\begin{aligned}\label{مساوات_مثال_سمتی_تفاعل_مروڑ_کلیہ}
+\renewcommand{\arraystretch}{1.4}
+\tau&=\frac{\begin{vmatrix} \dot{x}&\dot{y}&\dot{z}\\  \ddot{x}&\ddot{y}&\ddot{z}\\  \dddot{x}&\dddot{y}&\dddot{z}\\  \end{vmatrix}}{\abs{\kvec{v}\times \kvec{a}}^2}=\frac{\begin{vmatrix}-a\sin t&a\cos t&b\\ -a\cos t&-a\sin t&0\\ a\sin t&-a\cos t&0  \end{vmatrix}}{(a\sqrt{a^2+b^2})^2}&&\text{\RL{مساوات \حوالہ{مساوات_مثال_سمتی_تفاعل_کاہپا} کی قیمتیں}}\\
+&=\frac{b(a^2\cos^2t+a^2\sin^2t)}{a^2(a^2+b^2)}\\
+&=\frac{b}{a^2+b^2}
+\end{aligned}
+\end{gather}
+\انتہا{مثال}
+%=================
+
+ہم مساوات \حوالہ{مساوات_مثال_سمتی_تفاعل_مروڑ_کلیہ} سے دیکھتے ہیں کہ  دائری  نلکی پر پیچ دار راہ کا مروڑ مستقل ہو گا۔درحقیقت فضا میں تمام منحنیات میں  پیچ دار منحنی کی نشانی اس کی  مستقل انحنا اور مستقل مروڑ ہیں۔ 
+
+
+ ڈی این اے\حاشیہب{DNA}    زندگی کا بنیادی سالمہ  ہے۔ یہ    دو پیچ دار حصوں پر مشتمل  ہوتی  ہے جو ایک دوسرے کے گرد لپٹے ہوتے ہیں۔ لپٹی صورت کی بنا   سالمہ بہت کم جگہ لیتی ہے اور   خرابی کی صورت  میں  (مستقل انحنا اور مروڑ کی بنا)   خراب حصہ کو سالماتی  قینچی سے  کاٹا جا سکتا ہے۔سالماتی قینچی   استعمال کرتے ہوئے سائنس دان  امید رکھتے ہیں کہ وہ انسانیت کو  ہر قسم کی بیماری سے نجات دے پائیں گے۔
+
+
+
+\موٹا{فضا میں منحنیات کے کلیات}\\
+\begin{align*}
+\kvec{T}&=\frac{\kvec{v}}{\abs{\kvec{v}}}&&\text{\RL{اکائی مماسی سمتیہ}}\\
+\kvec{N}&=\frac{\dif\kvec{T}/\dif t}{\abs{\dif\kvec{T}/\dif t}}&&\text{\RL{صدر اکائی عمودی سمتیہ}}\\
+\kvec{B}&=\kvec{T}\times\kvec{N}&&\text{\RL{سہ عمودی سمتیہ}}\\
+\kappa&=\abs{\frac{\dif\kvec{T}}{\dif s}}=\frac{\abs{\kvec{v\times\kvec{a}}}}{\abs{\kvec{v}}^3}&&\text{\RL{انحنا}}\\
+\tau&=-\frac{\dif\kvec{B}}{\dif s}\cdot\kvec{N}=\frac{\begin{vmatrix}\dot{x}&\dot{y}&\dot{z}\\  \ddot{x}&\ddot{y}&\ddot{z}\\  \dddot{x}&\dddot{y}&\dddot{z}  \end{vmatrix}}{\abs{\kvec{v}\times\kvec{a}}^2}&&\text{\RL{مروڑ}}\\
+\kvec{a}&=a_T\kvec{T}+a_N\kvec{N}&&\text{اسراع}\\
+a_T&=\frac{\dif}{\dif t}\abs{\kvec{v}}&&\text{\RL{اسراع کا مماسی جزو}}\\
+a_N&=\kappa\abs{\kvec{v}}^2=\sqrt{\abs{\kvec{a}}-a_T^2}&&\text{\RL{اسراع کا عمودی جزو}}
+\end{align*}

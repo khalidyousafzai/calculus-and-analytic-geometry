@@ -1,0 +1,18 @@
+\begin{figure}
+\centering
+\pgfmathsetmacro{\g}{9.8}
+\pgfmathsetmacro{\v}{10}
+\pgfmathsetmacro{\alphaA}{20}
+\pgfmathsetmacro{\alphaB}{35}
+\pgfmathsetmacro{\alphaC}{50}
+\pgfmathsetmacro{\ta}{\v/(2*\g)}
+\begin{tikzpicture}[declare function={fx(\alpha,\t)=\v*cos(\alpha)*\t;fy(\alpha,\t)=\v*sin(\alpha)*\t-1/2*\g*\t^2;ta(\alpha)=2*\v/\g*sin(\alpha);tmax(\alpha)=\v/\g*sin(\alpha);hx(\t)=\ta*cos(\t);hy(\t)=\v^2/(4*\g^2)+\ta/2*sin(\t);}]
+\draw[domain=0:{ta(\alphaA)},variable=\t]plot ({fx(\alphaA,\t)},{fy(\alphaA,\t)});
+\draw({fx(\alphaA,{tmax(\alphaA)})},{fy(\alphaA,{tmax(\alphaA)})})node[circ]{};
+\draw[domain=0:{ta(\alphaB)},variable=\t]plot ({fx(\alphaB,\t)},{fy(\alphaB,\t)});
+\draw({fx(\alphaB,{tmax(\alphaB)})},{fy(\alphaB,{tmax(\alphaB)})})node[circ]{};
+\draw[domain=0:{ta(\alphaC)},variable=\t]plot ({fx(\alphaC,\t)},{fy(\alphaC,\t)});
+\draw({fx(\alphaC,{tmax(\alphaC)})},{fy(\alphaC,{tmax(\alphaC)})})node[circ]{};
+\draw[scale=11,domain=0:360,variable=\t]plot ({hx(\t)},{hy(\t)});
+\end{tikzpicture}
+\end{figure}
