@@ -1123,7 +1123,7 @@ $\kvec{r}(t)=(\ln(t^2+2))\ai+(\tan^{-1}3t)\aj+\sqrt{t^2+1}\ak,\quad -3\le t\le 5
 \انتہا{سوالات}
 %=======================
 
-\حصہ{گولا کے حرکت کی نمونہ کشی}
+\حصہ{گولا کی حرکت کی نمونہ کشی}
 ایک گولا چلانے سے پہلے  ہم جاننا چاہیں گے کہ آیا وہ حدف کو مار سکے گا (کیا حدف تک پہنچے گا)؟   یہ گولا کس  بلندی  تک  پہنچے گا (کیا یہ  پہاڑی کو پار کر پائے گا)؟ اور  یہ حدف پر کتنی دیر میں پہنچے گا (نتائج   کب حاصل  ہوں گے)؟ یہ تمام معلومات  گولے کی ابتدائی سمتیہ رفتار سے نیوٹن کے دوسرے قانون کی مدد سے حاصل کی جا سکتی ہیں۔
 
 \جزوحصہء{گولا کی حرکت کی مقدار معلوم مثالی  مساوات}
@@ -1131,7 +1131,7 @@ $\kvec{r}(t)=(\ln(t^2+2))\ai+(\tan^{-1}3t)\aj+\sqrt{t^2+1}\ak,\quad -3\le t\le 5
 
 \begin{figure}
 \centering
-\begin{subfigure}{0.35\textwidth}
+\begin{subfigure}{0.45\textwidth}
 \centering
 \pgfmathsetmacro{\v}{7}
 \pgfmathsetmacro{\a}{45}
@@ -1141,7 +1141,7 @@ $\kvec{r}(t)=(\ln(t^2+2))\ai+(\tan^{-1}3t)\aj+\sqrt{t^2+1}\ak,\quad -3\le t\le 5
 \pgfmathsetmacro{\kx}{\k*cos(\a)}
 \begin{tikzpicture}[font=\small,declare function={fx(\t)=\v*cos(\a)*\t;fy(\t)=\v*sin(\a)*\t-1/2*\g*\t^2;}]
 \draw[smooth,domain=0:\ta/2,variable=\t]plot ({fx(\t)},{fy(\t)});
-\draw[-latex](0,0)--(3,0)node[right]{$x$};
+\draw[-latex](0,0)--(2.5,0)node[right]{$x$};
 \draw[-latex](0,0)--(0,1.25)node[right]{$y$};
 \draw[thick,-latex](0,0)--++(\a:\k)node[pos=0.6,shift={(\a+90:0.2)}]{$\kvec{v}_0$};
 \draw[thick,latex-](\a:\k)--(\kx,0)node[pos=0.5,right]{$\abs{\kvec{v}_0}\sin\alpha\aj$};
@@ -1152,21 +1152,21 @@ $\kvec{r}(t)=(\ln(t^2+2))\ai+(\tan^{-1}3t)\aj+\sqrt{t^2+1}\ak,\quad -3\le t\le 5
 \end{tikzpicture}
 \caption{لمحہ \عددی{t=0} پر مقام، سمتی رفتار اور اسراع۔}
 \end{subfigure}\hfill
-\begin{subfigure}{0.55\textwidth}
+\begin{subfigure}{0.45\textwidth}
 \centering
-\pgfmathsetmacro{\v}{7}
-\pgfmathsetmacro{\a}{45}
+\pgfmathsetmacro{\v}{6.6}
+\pgfmathsetmacro{\a}{55}
 \pgfmathsetmacro{\g}{9.8}
 \pgfmathsetmacro{\ta}{2/\g*\v*sin(\a)}
 \pgfmathsetmacro{\k}{1.5}
 \pgfmathsetmacro{\kx}{\k*cos(\a)}
 \begin{tikzpicture}[font=\small,declare function={fx(\t)=\v*cos(\a)*\t;fy(\t)=\v*sin(\a)*\t-1/2*\g*\t^2;}]
 \draw[smooth,domain=0:\ta,variable=\t]plot ({fx(\t)},{fy(\t)});
-\draw[-latex](0,0)node[left]{$O$}--(5.5,0)node[right]{$x$};
+\draw[-latex](0,0)node[left]{$O$}--(5,0)node[right]{$x$};
 \draw[-latex](0,0)--(0,1.25)node[left]{$y$};
 \draw[-latex](0,0)--({fx(0.6*\ta)},{fy(0.6*\ta)})node[pos=0.6,sloped,below]{$\kvec{r}=x\ai+y\aj$}node[above]{$(x,y)$}coordinate(ka);
 \draw[-latex](ka)--++(-15:1)node[above]{$\kvec{v}$};
-\draw[-latex](ka)--++(0,-0.65)node[xshift=3ex,yshift=-1ex]{$\kvec{a}=-g\aj$};
+\draw[-latex](ka)--++(0,-0.65)node[xshift=3ex,yshift=-1.5ex]{$\kvec{a}=-g\aj$};
 \draw(0,-0.1)--++(0,-0.2);
 \draw({fx(\ta)},-0.1)--++(0,-0.2);
 \draw[stealth-stealth](0,-0.2)--++({fx(\ta)},0)node[pos=0.5,below]{\RL{افقی مار}};
