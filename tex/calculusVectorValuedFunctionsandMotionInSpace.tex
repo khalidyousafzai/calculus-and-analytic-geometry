@@ -2378,8 +2378,8 @@ $\kvec{r}(t)=(\cos t)\ai-(\sin t)\aj-t\ak,\quad -2\pi \le t\le 0$
 \انتہا{مثال}
 %===================
 
-\جزوحصہء{مروڑ اور  سہ عمودی سمتیہ}
-فضا میں منحنی کا  \اصطلاح{سہ عمودی سمتیہ}\فرہنگ{سمتیہ!سہ عمودی}\حاشیہب{binormal vector}\فرہنگ{vector!binormal} \عددی{\kvec{B}=\kvec{T}\times\kvec{N}} ہے جو \عددی{\kvec{T}} اور \عددی{\kvec{N}} دونوں کو عمودی ہو گا  (شکل \حوالہ{شکل_سمتی_تفاعل_اکائی_عمودی_سمتیات_چھوکٹ})۔ سمتیات \عددی{\kvec{T}}، \عددی{\kvec{N}} اور \عددی{\kvec{B}} مل  کر دایاں ہاتھ، متحرک،  سمتی چھوکٹ  دیتے ہیں جو فضا میں سواری کی حرکت  پر غور میں مدد گار  ثابت ہوتا ہے۔
+\جزوحصہء{مروڑ اور  دوہری  عمودی سمتیہ}
+فضا میں منحنی کا  \اصطلاح{دوہری عمودی سمتیہ}\فرہنگ{سمتیہ!دوہری عمودی}\حاشیہب{binormal vector}\فرہنگ{vector!binormal} \عددی{\kvec{B}=\kvec{T}\times\kvec{N}} ہے جو \عددی{\kvec{T}} اور \عددی{\kvec{N}} دونوں کو عمودی ہو گا  (شکل \حوالہ{شکل_سمتی_تفاعل_اکائی_عمودی_سمتیات_چھوکٹ})۔ سمتیات \عددی{\kvec{T}}، \عددی{\kvec{N}} اور \عددی{\kvec{B}} مل  کر دایاں ہاتھ، متحرک،  سمتی چھوکٹ  دیتے ہیں جو فضا میں سواری کی حرکت  پر غور میں مدد گار  ثابت ہوتا ہے۔
 
 سمتیات \عددی{\kvec{T}}، \عددی{\kvec{N}} اور \عددی{\kvec{B}} کے لحاض سے \عددی{\tfrac{\dif\kvec{B}}{\dif s}} کا رویہ کیسا ہو گا؟ حاصل صلیبی ضرب کے قاعدہ تفرق سے
 \begin{align*}
@@ -2422,7 +2422,7 @@ $\kvec{r}(t)=(\cos t)\ai-(\sin t)\aj-t\ak,\quad -2\pi \le t\le 0$
 \begin{tikzpicture}[x={(-0.7071cm,-0.7071cm)},y={(1cm,0)},z={(0,1cm)},declare function={fx(\t)=sin(\t);fy(\t)=\t/90;fz(\t)=(\t/90)^2;}]
 \draw[-latex](0,0,0)--++(1,0,0)node[left]{\text{\RL{اکائی مماس}}$\,\,\kvec{T}$};
 \draw[-latex](0,0,0)--++(0,1,0)node[above right]{$\kvec{N}\,\,$\text{\RL{صدر عمودی}}};
-\draw[-latex](0,0,0)node[circ]{}node[left]{$P$}--++(0,0,1)node[left]{\text{\RL{سہ عمودی}}$\,\,\kvec{B}$};
+\draw[-latex](0,0,0)node[circ]{}node[left]{$P$}--++(0,0,1)node[left]{\text{\RL{دوہری عمودی}}$\,\,\kvec{B}$};
 \draw[thick,domain=0:100,variable=\t]plot ({fx(\t)},{fy(\t)},{fz(\t)});
 \draw(1,0,0)--(1,0,1)node[pin={[left]-160:{\RL{سمت کار مستوی}}}]{}--(0,0,1);
 \draw(1,0,0)--(1,1,0)--(0,1,0)node[pos=0.5,pin=-45:{\RL{مستوی انحنا}}]{};
@@ -2651,7 +2651,7 @@ a_N&=\sqrt{\abs{\kvec{a}}^2-a_T^2}\\
 \begin{align*}
 \kvec{T}&=\frac{\kvec{v}}{\abs{\kvec{v}}}&&\text{\RL{اکائی مماسی سمتیہ}}\\
 \kvec{N}&=\frac{\dif\kvec{T}/\dif t}{\abs{\dif\kvec{T}/\dif t}}&&\text{\RL{صدر اکائی عمودی سمتیہ}}\\
-\kvec{B}&=\kvec{T}\times\kvec{N}&&\text{\RL{سہ عمودی سمتیہ}}\\
+\kvec{B}&=\kvec{T}\times\kvec{N}&&\text{\RL{دوہری عمودی سمتیہ}}\\
 \kappa&=\abs{\frac{\dif\kvec{T}}{\dif s}}=\frac{\abs{\kvec{v\times\kvec{a}}}}{\abs{\kvec{v}}^3}&&\text{\RL{انحنا}}\\
 \tau&=-\frac{\dif\kvec{B}}{\dif s}\cdot\kvec{N}=\frac{\begin{vmatrix}\dot{x}&\dot{y}&\dot{z}\\  \ddot{x}&\ddot{y}&\ddot{z}\\  \dddot{x}&\dddot{y}&\dddot{z}  \end{vmatrix}}{\abs{\kvec{v}\times\kvec{a}}^2}&&\text{\RL{مروڑ}}\\
 \kvec{a}&=a_T\kvec{T}+a_N\kvec{N}&&\text{اسراع}\\

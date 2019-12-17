@@ -5198,7 +5198,7 @@ z&=0:&&\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\,\,\text{\RL{قطع زائد}}
 \begin{tikzpicture}[font=\small,declare function={f(\x,\y)=\a*\x*cos(\y);g(\x,\y)=\b*\x*sin(\y);h(\x,\y)=\c*sqrt((\x)^2+1);k(\x)=\b*sqrt(1-1/\a^2*\x^2);}]
 \begin{axis}[axis line style={draw=none},clip=false,view/h=120,axis lines=center,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.8);},enlargelimits,ztick={\empty},xtick={\empty},ytick={\empty}]
 \addplot3[shader=interp,surf,domain=0:3,domain y=0:360]({f(x,y)},{g(x,y)},{h(x,y)});
-\addplot3[shader=interp,surf,domain=0:3,domain y=0:360]({f(x,y)},{g(x,y)},{-h(x,y)});
+\addplot3[shader=interp,surf,domain=0:3,domain y=0:180]({f(x,y)},{g(x,y)},{-h(x,y)});
 %\addplot3[samples y=0,thick,domain=0:\ra]({f(x,\ta)},{g(x,\ta)},{h(x,\ta)});
 %\addplot3[samples y=0,thick,domain=0:\ra]({f(x,\ta)},{g(x,\ta)},{-h(x,\ta)});
 %\addplot3[samples y=0,thick,domain=0:\ra]({f(x,\tb)},{g(x,\tb)},{h(x,\tb)});
