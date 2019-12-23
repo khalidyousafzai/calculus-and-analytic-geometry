@@ -637,8 +637,8 @@ $f(x,y)=y^2$
 \begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[declare function={f(\x,\y)=(\y)^2;}]
-  \begin{axis}[view/h=135,small,axis lines=center,domain=-1:1,domain y=-1:1,colormap={kgray}{gray(0.2cm)=(0.6);gray(1cm)=(0.9);},xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true,hide z axis,,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north east},ylabel style={anchor=north west},zlabel style={anchor=south}]
-\addplot3[, contour gnuplot={output point meta=rawz,number=4,labels=false,},samples=41,z filter/.code=\def\pgfmathresult{0},]{f(x,y)};
+  \begin{axis}[view/h=135,small,axis lines=center,domain=-1:1,domain y=-1:1,colormap={kgray}{gray(0.2cm)=(0.6);gray(1cm)=(0.9);},xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true,hide z axis,,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north east},ylabel style={anchor=north west},zlabel style={anchor=south},colormap={kdark}{gray(0.2cm)=(0.2);gray(1cm)=(0.2);}]
+\addplot3[, contour gnuplot={output point meta=rawz,number=4,labels=true,},samples=41,z filter/.code=\def\pgfmathresult{0},]{f(x,y)};
  %\addplot3[mesh,samples=25]{f(x,y)};
 %\addplot3[, contour gnuplot={draw color = red,levels={0.1,0.2,0.4}}]{f(x,y)};
 \end{axis}
@@ -669,8 +669,8 @@ $f(x,y)=x^2+y^2$
 \begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[declare function={f(\x,\y)=(\x)^2+(\y)^2;}]
-  \begin{axis}[view/h=135,small,axis lines=center,domain=-1:1,domain y=-1:1,colormap={kgray}{gray(0.2cm)=(0.6);gray(1cm)=(0.9);},xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true,hide z axis,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north east},ylabel style={anchor=north west},zlabel style={anchor=south}]
-\addplot3[, contour gnuplot={output point meta=rawz,number=4,labels=false,},samples=41,z filter/.code=\def\pgfmathresult{0},]{f(x,y)};
+  \begin{axis}[view/h=135,small,axis lines=center,domain=-1:1,domain y=-1:1,colormap={kgray}{gray(0.2cm)=(0.6);gray(1cm)=(0.9);},xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true,hide z axis,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north east},ylabel style={anchor=north west},zlabel style={anchor=south},colormap={kdark}{gray(0.2cm)=(0.2);gray(1cm)=(0.2);}]
+\addplot3[, contour gnuplot={output point meta=rawz,number=4,labels=true,},samples=41,z filter/.code=\def\pgfmathresult{0},]{f(x,y)};
  %\addplot3[mesh,samples=25]{f(x,y)};
 %\addplot3[, contour gnuplot={draw color = red,levels={0.1,0.2,0.4}}]{f(x,y)};
 \end{axis}
@@ -701,8 +701,8 @@ $f(x,y)=-(x^2+y^2)$
 \begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[declare function={f(\x,\y)=-(\x)^2-(\y)^2;}]
-  \begin{axis}[view/h=135,width=6cm,axis lines=center,domain=-1:1,domain y=-1:1,colormap={kgray}{gray(0.2cm)=(0.6);gray(1cm)=(0.9);},xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true,hide z axis,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north east},ylabel style={anchor=north west},zlabel style={anchor=south}]
-\addplot3[, contour gnuplot={output point meta=rawz,number=4,labels=false,},samples=41,z filter/.code=\def\pgfmathresult{0},]{f(x,y)};
+  \begin{axis}[view/h=135,width=6cm,axis lines=center,domain=-1:1,domain y=-1:1,colormap={kgray}{gray(0.2cm)=(0.6);gray(1cm)=(0.9);},xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true,hide z axis,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north east},ylabel style={anchor=north west},zlabel style={anchor=south},colormap={kdark}{gray(0.2cm)=(0.2);gray(1cm)=(0.2);}]
+\addplot3[, contour gnuplot={output point meta=rawz,number=4,labels=true,},samples=41,z filter/.code=\def\pgfmathresult{0},]{f(x,y)};
  %\addplot3[mesh,samples=25]{f(x,y)};
 %\addplot3[, contour gnuplot={draw color = red,levels={0.1,0.2,0.4}}]{f(x,y)};
 \end{axis}
@@ -733,8 +733,8 @@ $f(x,y)=4x^2+y^2$
 \begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[declare function={f(\x,\y)=4*(\x)^2+(\y)^2;}]
-  \begin{axis}[view/h=135,small,axis lines=center,domain=-1:1,domain y=-1:1,colormap={kgray}{gray(0.2cm)=(0.6);gray(1cm)=(0.9);},xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true,hide z axis,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north east},ylabel style={anchor=north west},zlabel style={anchor=south}]
-\addplot3[, contour gnuplot={output point meta=rawz,number=4,labels=false,},samples=41,z filter/.code=\def\pgfmathresult{0},]{f(x,y)};
+  \begin{axis}[view/h=135,small,axis lines=center,domain=-1:1,domain y=-1:1,colormap={kgray}{gray(0.2cm)=(0.6);gray(1cm)=(0.9);},xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true,hide z axis,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north east},ylabel style={anchor=north west},zlabel style={anchor=south},colormap={kdark}{gray(0.2cm)=(0.2);gray(1cm)=(0.2);}]
+\addplot3[, contour gnuplot={output point meta=rawz,number=4,labels=true,},samples=41,z filter/.code=\def\pgfmathresult{0},]{f(x,y)};
  %\addplot3[mesh,samples=25]{f(x,y)};
 %\addplot3[, contour gnuplot={draw color = red,levels={0.1,0.2,0.4}}]{f(x,y)};
 \end{axis}
@@ -765,8 +765,8 @@ $f(x,y)=1-\abs{y}$
 \begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[declare function={f(\x,\y)=1-abs(\y);}]
-  \begin{axis}[view/h=135,small,axis lines=center,domain=-1:1,domain y=-1:1,colormap={kgray}{gray(0.2cm)=(0.6);gray(1cm)=(0.9);},xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true,hide z axis,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north east},ylabel style={anchor=north west},zlabel style={anchor=south}]
-\addplot3[, contour gnuplot={output point meta=rawz,number=4,labels=false,},samples=41,z filter/.code=\def\pgfmathresult{0},]{f(x,y)};
+  \begin{axis}[view/h=135,small,axis lines=center,domain=-1:1,domain y=-1:1,colormap={kgray}{gray(0.2cm)=(0.6);gray(1cm)=(0.9);},xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true,hide z axis,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north east},ylabel style={anchor=north west},zlabel style={anchor=south},colormap={kdark}{gray(0.2cm)=(0.2);gray(1cm)=(0.2);}]
+\addplot3[, contour gnuplot={output point meta=rawz,number=4,labels=true,},samples=41,z filter/.code=\def\pgfmathresult{0},]{f(x,y)};
  %\addplot3[mesh,samples=25]{f(x,y)};
 %\addplot3[, contour gnuplot={draw color = red,levels={0.1,0.2,0.4}}]{f(x,y)};
 \end{axis}
@@ -1041,4 +1041,229 @@ $0\le u\le 2\pi,\quad 0\le v\le \pi$
 \انتہا{سوال}
 %======================
 \انتہا{سوالات}
+
+
+
+
+\حصہ{حد اور استمرار}
+اس حصہ میں کثیر المتغیر تفاعل کی حد اور استمرار پر غور کیا جائے گا۔
+
+\جزوحصہء{حد}
+اگر نقطہ \عددی{(x_0,y_0)} کے قریب   تمام نقاط \عددی{(x,y) } کے لئے تفاعل \عددی{f(x,y)}  کی قیمتیں کسی  مقررہ حقیقی عدد \عددی{L} کے  بہت  زیادہ  قریب ہوں تب ہم کہتے ہیں کہ جیسے جیسے \عددی{(x,y)} نقطہ \عددی{(x_0,y_0)} تک  پہنچنے کی کوشش کرتا ہے، تفاعل \عددی{f} کی قیمت \عددی{L} تک پہنچنے کی کوشش کرتی ہے۔ یہ تعریف، واحد متغیر کے تفاعل کی حد کی تعریف کی مانند ہے۔البتہ، دھیان رہے کہ اگر \عددی{(x_0,y_0)} تفاعل \عددی{f}  کے دائرہ کار  کی اندرون میں پایا جاتا ہو تب \عددی{(x,y)} نقطہ \عددی{(x_0,y_0)} تک کسی بھی رخ سے پہنچنے کی کوشش کر سکتا ہے۔جیسا آپ نیچے  دی گئی   مثالوں میں سے چند  میں دیکھیں گے،  قریب پہنچنے کا رخ بعض اوقات مسئلہ کھڑا کر سکتا ہے۔
+
+\ابتدا{تعریف}
+اگر ہر عدد \عددی{\epsilon>0} کے لئے ایسا مطابقتی عدد \عددی{\delta>0} پایا جاتا ہو کہ \عددی{f} کے دائرہ کار میں تمام \عددی{(x,y)} کے لئے 
+\begin{align}
+0<\sqrt{(x-x_0)^2+(y-y_0)^2}<\delta\implies \abs{f(x,y)-L}<\epsilon
+\end{align}
+ہو ، تب ہم کہتے ہیں کہ \عددی{(x,y)} کا  \عددی{(x_0,y_0)} تک پہنچنے سے \عددی{f(x,y)} کی قیمت \اصطلاح{حد}\فرہنگ{حد}\حاشیہب{limit}\فرہنگ{limit} \عددی{L} تک پہنچتی ہے جس کو ہم درج ذیل لکھتے ہیں۔
+\begin{align*}
+\lim_{(x,y)\to(x_0,y_0)}f(x,y)=L
+\end{align*}
+\انتہا{تعریف}
+%====================
+
+حد کی تعریف میں \عددی{\delta \sigma} کی شرط  اس کی  معادل ہے  کہ، کسی بھی \عددی{\epsilon>0} کے لئے ایسا مطابقتی \عددی{\delta>0} پایا جاتا ہو کہ تمام \عددی{x} کے لئے درج ذیل ہو۔
+\begin{align}
+0<\abs{x-x_0}<\delta\quad \text{اور}\quad 0<\abs{y-y_0}<\delta\implies \abs{f(x,y)-L}<\epsilon
+\end{align}
+یوں حد کی قیمت  تلاش  ہوئے ہم مستوی میں فاصلوں کی صورت یا محدد میں فرق کی صورت میں سوچ سکتے ہیں۔
+
+حد کی تعریف، تفاعل \عددی{f} کے دائرہ کار کی اندرون  کے ساتھ   سرحدی نقاط \عددی{(x_0,y_0)} کے لئے بھی  قابل استعمال ہے۔  بس اتنا ضروری ہے کہ نقطہ \عددی{(x,y)} ہر وقت دائرہ کار کے اندر رہے۔
+
+واحد متغیر کے تفاعل کی طرح  درج ذیل دکھائے جا  سکتے ہیں۔
+\begin{gather}
+\begin{aligned}\label{مساوات_کثیر_المتغیر_قواعد_حد}
+\lim_{(x,y)\to(x_0,y_0)}x&=x_0\\
+\lim_{(x,y)\to(x_0,y_0)}y&=y_0\\
+\lim_{(x,y)\to(x_0,y_0)}k&=k\quad \text{\RL{\عددی{k} کوئی بھی عدد ہو سکتا ہے}}
+\end{aligned}
+\end{gather}
+یہ بھی دکھایا جا سکتا ہے کہ دو تفاعل کے مجموعہ کا حد، ان تفاعل کے انفرادی حد   (اگر دونوں موجود ہوں)کا مجموعہ ہو گا۔اسی طرح   کے نتائج   فرق، حاصل ضرب، حاصل تقسیم، مستقل مضرب اور طاقت کے لئے بھی دکھائے جا سکتے ہیں۔
+
+\ابتدا{مسئلہ}\شناخت{مسئلہ_کثیر_المتغیر_قواعد_حد}\موٹا{دو متغیرات کے تفاعل کی حد کے خواص}\\
+اگر 
+\begin{align*}
+\lim_{(x,y)\to(x_0,y_0)}f(x,y)=L\quad \text{اور}\quad \lim_{(x,y)\to(x_0,y_0)}g(x,y)=M
+\end{align*}
+ہوں تب درج ذیل قواعد کارآمد  ہوں گے۔
+\begin{description}
+\item{قاعدہ مجموعہ:}
+$\lim[f(x,y)+g(x,y)]=L+M$
+\item{قاعدہ فرق:}
+$\lim[f(x,y)-g(x,y)]=L-M$
+\item{قاعدہ مستقل مضرب:}
+$\lim kf(x,y)=kL$
+جہاں \عددی{k} کوئی مستقل ہے۔
+\item{قاعدہ حاصل تقسیم:}
+$\lim\frac{f(x,y)}{g(x,y)}=\frac{L}{M}$
+اگر  \عددی{M\ne 0} ہو۔
+\item{قاعدہ طاقت:}
+$\lim[f(x,y)]^{m/n}=L^{m/n}$
+اگر  \عددی{m} اور \عددی{n}ا عداد صحیح   اور \عددی{L^{m/n}} ایک حقیقی عدد ہو۔
+\end{description}
+تمام حد \عددی{(x,y)\to (x_0,y_0)} کی صورت میں حاصل کیے جائیں گے اور \عددی{L}، \عددی{M} کا حقیقی اعداد ہونا لازمی ہے۔
+\انتہا{مسئلہ}
+%==========
+
+ مساوات \حوالہ{مساوات_کثیر_المتغیر_قواعد_حد} پر   مسئلہ \حوالہ{مسئلہ_کثیر_المتغیر_قواعد_حد} کے اطلاق سے ہمیں معلوم ہوتا ہے کہ  \عددی{(x,y)\to(x_0,y_0)} کرتے ہوئے  کثیر رکنی اور ناطق تفاعل کی حد     ہم \عددی{(x_0,y_0)} پر  تفاعل کی قیمت   سے حاصل کرتے  ہیں۔ بس اتنا ضروری  ہے کہ  نقطہ \عددی{(x_0,y_0)} پر تفاعل  معین ہو۔
+
+\ابتدا{مثال}
+\begin{align*}
+\lim_{(x,y)\to(0,1)}\frac{x-xy+3}{x^2y+5xy-y^3}&=\frac{0-(0)(1)+3}{(0)^2(1)+5(0)(1)-(1)^3}=-3\\
+\lim_{(x,y)\to(3,-4)}\sqrt{x^2+y^2}&=\sqrt{(3)^2+(-4)^2}=\sqrt{25}=5
+\end{align*}
+\انتہا{مثال}
+%=================
+\ابتدا{مثال}
+درج ذیل حاصل کریں۔
+\begin{align*}
+\lim_{(x,y)\to(0,0)}\frac{x^2-xy}{\sqrt{x}-\sqrt{y}}
+\end{align*}
+حل:\quad
+چونکہ \عددی{(x,y)\to(0,0)} پر نسب نما   \عددی{ 0} کو پہنچتا ہے لہٰذا  ہم  قاعدہ حاصل تقسیم (مسئلہ \حوالہ{مسئلہ_کثیر_المتغیر_قواعد_حد})  استعمال نہیں کر سکتے ہیں۔ البتہ نسب نما اور شمار کنندہ کو \عددی{\sqrt{x}+\sqrt{y}} سے ضرب  دے کر ایسا معادل حاصل تقسیم حاصل ہوتا ہے جس کا حد ہم تلاش کر سکتے ہیں:
+\begin{align*}
+\lim_{(x,y)\to(0,0)}\frac{x^2-xy}{\sqrt{x}-\sqrt{y}}&=\lim_{(x,y)\to(0,0)}\frac{(x^2-xy)(\sqrt{x}+\sqrt{y})}{(\sqrt{x}-\sqrt{y})(\sqrt{x}+\sqrt{y})}\\
+&=\lim_{(x,y)\to(0,0)}\frac{x(x-y)(\sqrt{x}+\sqrt{y})}{x-y}&&\text{الجبرا}\\
+&=\lim_{(x,y)\to(0,0)}x(\sqrt{x}+\sqrt{y})&&\text{\RL{جزو \عددی{(x-y)} کاٹا گیا}}\\
+&=0(\sqrt{0}+\sqrt{0})=0
+\end{align*} 
+\انتہا{مثال}
+%================
+
+\جزوحصہء{استمرار}
+واحد متغیر کے تفاعل کی طرح، استمرار کی تعریف  حد کی صورت میں کی جاتی ہے۔
+
+\ابتدا{تعریف}
+اگر 
+\begin{enumerate}[a.]
+\item
+\عددی{(x_0,y_0)} پر \عددی{f} معین ہو،
+\item
+\عددی{\lim_{(x,y)\to(x_0,y_0)}f(x,y)} موجود ہو،
+\item
+\عددی{\lim_{(x,y)\to(x_0,y_0)}f(x,y)=f(x_0,y_0)} ہو،
+\end{enumerate} 
+تب تفاعل  \عددی{f}    \اصطلاح{نقطہ \عددی{(x_0,y_0)} پر استمراری}\فرہنگ{استمراری!نقطہ پر}\حاشیہب{continuous}\فرہنگ{continuous!at a point} ہو گا۔ ایک  تفاعل  جو اپنے دائرہ کار کے  ہر نقطہ پر استمراری ہو\اصطلاح{ استمراری}\فرہنگ{استمراری}\حاشیہب{continuous}\فرہنگ{continuous} ہو گا۔
+\انتہا{تعریف}
+%===============
+
+حد کی تعریف کی طرح،  استمرار کی تعریف بھی \عددی{f} کے دائرہ کار کے تمام اندرونی نقاط کے ساتھ  ساتھ  سرحدی نقاط پر بھی قابل اطلاق  ہوتا ہے بس اتنا ضروری ہے کہ پورے  وقت  نقطہ \عددی{(x,y)}تفاعل کے دائرہ کار میں رہے۔
+
+جیسا آپ  دیکھ سکتے ہیں، مسئلہ \حوالہ{مسئلہ_کثیر_المتغیر_قواعد_حد}    کا ایک نتیجہ  یہ ہے  کہ استمراری تفاعل  کے الجبرائی  جوڑ  ہر اس نقطہ پر استمراری ہوں گے جس پر تمام شامل تفاعل استمراری ہوں۔اس کا مطلب ہے کہ جہاں  تمام   استمراری تفاعل استمراری ہوں وہاں ان  کے مجموعہ، فرق، حاصل ضرب،  مستقل مضرب، حاصل تقسیم اور طاقت استمراری ہوں گے۔   بالخصوص دو متغیرات کی کثیر رکنی اور ناطق تفاعل ان تمام نقطوں پر استمراری ہوں گے جہاں یہ معین ہوں۔
+
+اگر  \عددی{x} اور \عددی{y} کا استمراری تفاعل  \عددی{z=f(x,y)} ہو  جبکہ \عددی{z}  کا استمراری تفاعل \عددی{z=g(z)} ہو، تب  مرکب   \عددی{w=g(f(x,y))}  استمراری ہو گا۔یوں  ہر نقطہ \عددی{(x,y)} پر درج ذیل استمراری ہوں گے۔
+\begin{align*}
+e^{x-y},\quad \cos\frac{xy}{x^2+1},\quad \ln(1+x^2y^2)
+\end{align*}
+
+واحد متغیر کے تفاعل کی طرح، استمراری تفاعل کا  مرکب  بھی استمراری ہو گا،  بس اتنا ضروری ہے کہ وہاں  ہر  تفاعل  استمراری ہو۔
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x,\y)=2*\x*\y/((\x)^2+(\y)^2);}]
+  \begin{axis}[small,axis lines=center,colormap={}{gray(0.2cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},hide y axis,xlabel style={anchor={west}},zlabel style={anchor=south},xtick={\empty},ytick={\empty},ztick={\empty}]
+    \addplot3[surf] { (x==0&&y==0) ?0 : f(x,y) } ;
+  \end{axis}
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x,\y)=2*\x*\y/((\x)^2+(\y)^2);}]
+  \begin{axis}[small,axis lines=center,colormap={}{gray(0.2cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor={west}},ylabel style={anchor=south west},zlabel style={anchor=south},xtick={\empty},ytick={\empty},ztick={\empty},hide z axis]
+\addplot3[contour gnuplot={output point meta=rawz,number=5,labels=false,},samples=41,z filter/.code=\def\pgfmathresult{0},]{f(x,y)};
+\addplot3[] coordinates {(0,0,0)}coordinate(ka);
+  \end{axis}
+\draw[fill=white](ka) circle (2pt);
+\end{tikzpicture}
+\end{subfigure}
+\caption{ماسوائے نقطہ \عددی{(0,0)} تفاعل \عددی{f(x,y)} استمراری ہے۔}
+\label{شکل_مثال_کثیرالمتغیر_حد_یکتا_ضروری}
+\end{figure}
+
+\ابتدا{مثال}\شناخت{مثال_کثیرالمتغیر_حد_یکتا_ضروری}
+دکھائیں کہ ماسوائے مبدا   درج ذیل ہر نقطہ پر استمراری ہے (شکل \حوالہ{شکل_مثال_کثیرالمتغیر_حد_یکتا_ضروری})۔
+\begin{align*}
+f(x,y)=
+\begin{cases}
+\frac{2xy}{x^2+y^2},&(x,y)\ne (0,0)\\
+0,&(x,y)=(0,0)
+\end{cases}
+\end{align*}
+حل:\quad
+ہر نقطہ \عددی{(x,y)\ne (0,0)} پر تفاعل کی قیمت \عددی{x} اور \عددی{y}کے  ناطق تفاعل سے حاصل کی جاتی ہے لہٰذا   \عددی{f}   استمراری ہو گا۔
+
+نقطہ \عددی{(0,0)} پر \عددی{f}  کی قیمت معین ہے، لیکن ہم دعویٰ کرتے ہیں کہ \عددی{(x,y)\to(0,0)} کرتے ہوئے اس کا حد غیر موجود ہے۔اس کی وجہ، جیسا ہم دیکھیں گے،   یہ ہے کہ مبدا تک مختلف راہوں سے پہنچتے ہوئے مختلف  نتائج حاصل ہوتے ہیں۔
+
+درج ذیل کی بنا، سوراخ دار لکیر \عددی{y=mx,\, x\ne 0} پر \عددی{m} کی ہر قیمت کے لئے تفاعل \عددی{f} کی ایک مستقل قیمت  ہو گی۔
+\begin{align*}
+\left. f(x,y)\right\vert_{y=mx}=\left. \frac{2xy}{x^2+y^2}\right\vert_{y=mx}=\frac{2x(mx)}{x^2+(mx)^2}=\frac{2mx^2}{x^2+m^2x^2}=\frac{2m}{1+m^2}
+\end{align*}
+یوں  اس لکیر  پر جیسے جیسے   \عددی{(x,y)} مبدا تک پہنچتا ہے،  \عددی{f} کی حد اتنی ہو گی:
+\begin{align*}
+\lim_{\substack{(x,y)\to(0,0)\\ \text{\RL{خط $y=mx$ پر}}}} f(x,y)=\lim_{(x,y)\to(0,0)}\big[\left.f(x,y)\right\vert_{y=mx}\big]=\frac{2m}{1+m^2}
+\end{align*}
+ہم دیکھتے ہیں کہ حد کی قیمت \عددی{m} پر منحصر ہے۔یوں ایسی کوئی   یکتا قیمت حاصل نہیں ہوتی  جس کو    مبدا تک \عددی{(x,y)} پہنچنے   پر ہم  \عددی{f}  کی حد کہہ سکیں۔ مبدا پر حد غیر موجود ہے لہٰذا مبدا  پر تفاعل غیر استمراری ہو گا۔
+\انتہا{مثال}
+%=============
+
+دو  (یا دو سے زیادہ)متغیرات کے تفاعل کے حد کے بارے میں ایک اہم نقطہ مثال \حوالہ{مثال_کثیرالمتغیر_حد_یکتا_ضروری} میں  اجاگر ہوا۔ ایک نقطہ پر حد کی موجودگی کے لئے  ضروری ہے کہ اس نقطہ تک  تمام آمد    راہوں  پر  حد  کی قیمت ایک جیسی ہو۔  یوں جب بھی ہم ایک نقطہ  تک  ایسی راہیں  تلاش  کریں جن  پر حد ایک دوسرے سے  مختلف ہوں  تب  اس نقطہ پر تفاعل کا حد غیر موجود ہو گا۔
+
+\ابتدا{پرکھ}\موٹا{حد کی غیر موجودگی کی  دو راہ  پرکھ}\\
+اگر \عددی{(x_0,y_0)} تک نقطہ \عددی{(x,y)} ایسی دو مختلف راہوں سے پہنچے جن پر \عددی{f(x,y)} کے حد ایک دوسرے سے مختلف ہوں تب \عددی{\lim\limits_{(x,y)\to(x_0,y_0)}f(x,y)} غیر موجود ہو گا۔
+\انتہا{پرکھ}
+%===================
+
+\ابتدا{مثال}\شناخت{مثال_کثیرالمتغیر_مبدا_پر_غیر_استمراری_سطح_ب}
+دکھائیں کہ \عددی{(0,0)} تک \عددی{(x,y)} پہنچنے سے درج ذیل تفاعل کا کوئی حد حاصل نہیں ہوتا ہے (شکل \حوالہ{شکل_مثال_کثیرالمتغیر_مبدا_پر_غیر_استمراری_سطح_ب})۔
+\begin{align*}
+f(x,y)=\frac{2x^2y}{x^4+y^2}
+\end{align*}
+حل:\quad
+منحنی \عددی{y=kx^2,\, x\ne 0} پر اس تفاعل کی قیمت ایک مستقل ہے:
+\begin{align*}
+\left.f(x,y)\right\vert_{y=kx^2}=\left.\frac{2x^2y}{x^4+y^2}\right\vert_{y=kx^2}=\frac{2x^2(kx^2)}{x^4+(kx^2)^2}=\frac{2kx^4}{x^4+k^2x^4}=\frac{2k}{1+k^2}
+\end{align*}  
+یوں
+\begin{align*}
+\lim_{\substack{(x,y)\to (0,0)\\ \text{\RL{$y=kx^2$ پر}}}}f(x,y)=\lim_{(x,y)\to(0,0)}\big[\left.f(x,y)\right\vert_{y=kx^2}\big]=\frac{2k}{1+k^2}
+\end{align*}
+ہو گا  جو   آمد راہ  پر منحصر ہے۔ اگر \عددی{(x,y)} نقطہ \عددی{(0,0)} تک قطع مکافی \عددی{y=x^2}  راہ پر چلتے ہوئے پہنچے، جہاں \عددی{k=1} ہے،  تب حد \عددی{1} کے برابر حاصل ہوتا ہے۔ اگر \عددی{(x,y)} نقطہ \عددی{(0,0)} تک محور \عددی{x} پر چلتے ہوئے پہنچے، جہاں \عددی{k=0} ہے،  تب حد \عددی{0} کے برابر حاصل ہوتا ہے۔ یوں دو راہ پرکھ کے تحت \عددی{(0,0)} تک \عددی{(x,y)} کے پہنچنے سے \عددی{f} کا کوئی حد حاصل نہیں ہو گا۔  
+\انتہا{مثال}
+%=================
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x,\y)=2*\x*\y/((\x)^4+(\y)^2);}]
+  \begin{axis}[view/h=90,small,axis lines=center,colormap={}{gray(0.2cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},hide y axis,xlabel style={anchor={north}},zlabel style={anchor=south},xtick={\empty},ytick={\empty},ztick={\empty}]
+    \addplot3[surf,domain=-2:2,domain y=-1:1] { (x==0&&y==0) ?0 : f(x,y) } ;
+  \end{axis}
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x,\y)=2*\x*\y/((\x)^4+(\y)^2);}]
+  \begin{axis}[view/h=90,small,axis lines=center,colormap={kdark}{gray(0.2cm)=(0.6);gray(1cm)=(0.6);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor={west}},ylabel style={anchor=south west},zlabel style={anchor=south},xtick={\empty},ytick={\empty},ztick={\empty},hide z axis]
+\addplot3[contour gnuplot={output point meta=rawz,number=10,labels=false,},samples=41,z filter/.code=\def\pgfmathresult{0},]{f(x,y)};
+  \end{axis}
+\end{tikzpicture}
+\end{subfigure}
+\caption{ماسوائے نقطہ \عددی{(0,0)} تفاعل \عددی{f(x,y)=2x^2y/(x^4+y^2)} استمراری ہے۔}
+\label{شکل_مثال_کثیرالمتغیر_مبدا_پر_غیر_استمراری_سطح_ب}
+\end{figure}
+یہاں آپ سوال اٹھا سکتے ہیں کہ مبدا تک نقطہ \عددی{(x,y)} کے پہنچنے سے بہت سارے مختلف حد ملتے ہیں لہٰذا یہ کہنا درست نہیں کہ \عددی{f} کا حد غیر موجود ہے۔ یہی وہ نقطہ ہے جسے سمجھنا ضروری ہے۔ حد کی تعریف  کہتی ہے کہ حد کی قیمت راہ پر منحصر نہیں ہو سکتی۔
+
+\جزوحصہء{دو سے زیادہ متغیرات کے تفاعل}
+دو متغیرات کے تفاعل  کے حد اور استمرار کی تعریف  اور ان  تفاعل کے مجموعہ،  فرق، حاصل ضرب، حاصل تقسیم، طاقت اور مرکب کے بارے میں حاصل نتائج  تین یا تین سے زیادہ متغیرات کے تفاعل کے لئے بھی کارآمد  ہیں۔ درج ذیل تفاعل اپنے پورے دائرہ کار میں استمراری ہیں
+\begin{align*}
+\ln(x+y+z)\quad \text{اور}\quad \frac{y\sin z}{x-1}
+\end{align*} 
+اور  درج ذیل طرز کا حد ، جہاں \عددی{N} نقطہ \عددی{(x,y,z)} کو ظاہر کرتا ہے،   حاصل کرنے کے لئے  تفاعل میں نقطہ پر  کیا جاتا ہے۔
+\begin{align*}
+\lim_{N\to(1,0,-1)}\frac{e^{x+z}}{z^2+\cos\sqrt{xy}}=\frac{e^{1-1}}{(-1)^2+\cos 0}=\frac{1}{2}
+\end{align*}
+
 
