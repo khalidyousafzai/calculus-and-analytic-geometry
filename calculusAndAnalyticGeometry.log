@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.11.8)  26 DEC 2019 15:12
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.11.8)  27 DEC 2019 17:05
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1745,9 +1745,9 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
 )
 \verbatim@out=\write4
-runsystem(touch w18-test-20191226912.tex)...executed.
+runsystem(touch w18-test-201912271025.tex)...executed.
 
-runsystem(rm -f w18-test-20191226912.tex)...executed.
+runsystem(rm -f w18-test-201912271025.tex)...executed.
 
 runsystem(rm -f "calculusAndAnalyticGeometry.gnuploterrors")...executed.
 
@@ -2223,133 +2223,730 @@ LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/bx/n' will be
 
 
 ] [11]) [12]
-\openout2 = `./tex/questions.aux'.
+\openout2 = `./tex/calculusMultivariableFunctionsAndPartialDerivatives.aux'.
 
- (./tex/questions.tex
+ (./tex/calculusMultivariableFunctionsAndPartialDerivatives.tex
+[1512
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]
+باب 13.
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 1.
+(Font)              scaled to size 20.74pt on input line 1.
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/bx/n' will be
-(Font)              scaled to size 12.0pt on input line 1.
+(Font)              scaled to size 20.74pt on input line 1.
 LaTeX Font Info:    Font shape `TU/AASameerSagarNastaleeqBold(0)/m/n' will be
 (Font)              scaled to size 10.0pt on input line 2.
- [1554
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
+(Font)              scaled to size 14.4pt on input line 6.
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/bx/n' will be
+(Font)              scaled to size 14.4pt on input line 6.
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 9.
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/bx/n' will be
+(Font)              scaled to size 12.0pt on input line 9.
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 13.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 13.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 13.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 13.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 13.
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 13.
+[1513]
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+[][]
+ []
+
+[1514]
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+[][]
+ []
+
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 73.
+[1515] [1516]
+Package pgfplots info on input line 164: fill between: activating layered graph
+ics
+\pgf@layerbox@axis background=\box97
+\pgf@layerboxsaved@axis background=\box98
+\pgf@layerbox@axis grid=\box99
+\pgf@layerboxsaved@axis grid=\box100
+\pgf@layerbox@axis ticks=\box101
+\pgf@layerboxsaved@axis ticks=\box102
+\pgf@layerbox@axis lines=\box103
+\pgf@layerboxsaved@axis lines=\box104
+\pgf@layerbox@axis tick labels=\box105
+\pgf@layerboxsaved@axis tick labels=\box106
+\pgf@layerbox@pre main=\box107
+\pgf@layerboxsaved@pre main=\box108
+\pgf@layerbox@axis descriptions=\box109
+\pgf@layerboxsaved@axis descriptions=\box110
+\pgf@layerbox@axis foreground=\box111
+\pgf@layerboxsaved@axis foreground=\box112
+Package pgfplots info on input line 164: Setting layers 'axis background,axis g
+rid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axis
+ foreground'...
+Package pgfplots info on input line 164: the combination of 'axis on top' and '
+activate layers' implies 'set layers=axis on top'. Deactivate 'axis on top' if 
+you want other layers.
+Package pgfplots info on input line 164: Setting layers 'axis background,pre ma
+in,main,axis grid,axis ticks,axis lines,axis tick labels,axis descriptions,axis
+ foreground'...
+ [1517] [1518]
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 267.
+ [1519] [1520] [1521]
+\openout3 = `calculusAndAnalyticGeometry_contourtmp0.dat'.
+
+\openout3 = `calculusAndAnalyticGeometry_contourtmp0.script'.
+
+runsystem(gnuplot "calculusAndAnalyticGeometry_contourtmp0.script")...executed.
+
+PGFPlots: reading {calculusAndAnalyticGeometry_contourtmp0.table}
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
 
 
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [0.0:0.0]) on input line 473.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+\openout3 = `calculusAndAnalyticGeometry_contourtmp1.dat'.
+
+\openout3 = `calculusAndAnalyticGeometry_contourtmp1.script'.
+
+runsystem(gnuplot "calculusAndAnalyticGeometry_contourtmp1.script")...executed.
+
+PGFPlots: reading {calculusAndAnalyticGeometry_contourtmp1.table}
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [0.0:0.0]) on input line 485.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+\openout3 = `calculusAndAnalyticGeometry_contourtmp2.dat'.
+
+\openout3 = `calculusAndAnalyticGeometry_contourtmp2.script'.
+
+runsystem(gnuplot "calculusAndAnalyticGeometry_contourtmp2.script")...executed.
+
+PGFPlots: reading {calculusAndAnalyticGeometry_contourtmp2.table}
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [0.0:0.0]) on input line 497.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+\openout3 = `calculusAndAnalyticGeometry_contourtmp3.dat'.
+
+\openout3 = `calculusAndAnalyticGeometry_contourtmp3.script'.
+
+runsystem(gnuplot "calculusAndAnalyticGeometry_contourtmp3.script")...executed.
+
+PGFPlots: reading {calculusAndAnalyticGeometry_contourtmp3.table}
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [0.0:0.0]) on input line 509.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+\openout3 = `calculusAndAnalyticGeometry_contourtmp4.dat'.
+
+\openout3 = `calculusAndAnalyticGeometry_contourtmp4.script'.
+
+runsystem(gnuplot "calculusAndAnalyticGeometry_contourtmp4.script")...executed.
+
+PGFPlots: reading {calculusAndAnalyticGeometry_contourtmp4.table}
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [0.0:0.0]) on input line 521.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+\openout3 = `calculusAndAnalyticGeometry_contourtmp5.dat'.
+
+\openout3 = `calculusAndAnalyticGeometry_contourtmp5.script'.
+
+runsystem(gnuplot "calculusAndAnalyticGeometry_contourtmp5.script")...executed.
+
+PGFPlots: reading {calculusAndAnalyticGeometry_contourtmp5.table}
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [0.0:0.0]) on input line 533.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+[1522] [1523] [1524] [1525] [1526] [1527] [1528] [1529] [1530]
+\openout3 = `calculusAndAnalyticGeometry_contourtmp6.dat'.
+
+\openout3 = `calculusAndAnalyticGeometry_contourtmp6.script'.
+
+runsystem(gnuplot "calculusAndAnalyticGeometry_contourtmp6.script")...executed.
+
+PGFPlots: reading {calculusAndAnalyticGeometry_contourtmp6.table}
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
 
 
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [0.0:0.0]) on input line 1178.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+[1531] [1532]
+\openout3 = `calculusAndAnalyticGeometry_contourtmp7.dat'.
+
+\openout3 = `calculusAndAnalyticGeometry_contourtmp7.script'.
+
+runsystem(gnuplot "calculusAndAnalyticGeometry_contourtmp7.script")...executed.
+
+PGFPlots: reading {calculusAndAnalyticGeometry_contourtmp7.table}
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
 
 
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [0.0:0.0]) on input line 1251.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+[1533] [1534] [1535] [1536] [1537] [1538] [1539] [1540] [1541] [1542] [1543]
+[1544] [1545] [1546] [1547] [1548] [1549]
+Overfull \hbox (6.80151pt too wide) in paragraph at lines 2148--2154
+ [][][][][][] 
+ []
+
+[1550] [1551] [1552] [1553] [1554] [1555] [1556] [1557] [1558] [1559]) [1560]
+\openout2 = `./tex/questions.aux'.
 
 
+(./tex/questions.tex) (./answer.tex
+LaTeX Font Info:    Font shape `TU/AASameerSagarNastaleeqBold(0)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 1.
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/bx/n' will be
+(Font)              scaled to size 9.0pt on input line 5.
+
+Underfull \hbox (badness 5274) in paragraph at lines 14--17
+[][]\TU/JameelNooriNastaleeq(0)/bx/n/9 (ا) مستوی  $\OML/zplm/m/it/9 xy$  \TU/Ja
+meelNooriNastaleeq(0)/bx/n/9 میں تمام نقاط، (ب) تمام حقیقی، (ج) []
+ []
 
 
+Overfull \hbox (5.71315pt too wide) in paragraph at lines 30--33
+[][]\TU/JameelNooriNastaleeq(0)/bx/n/9 شکل 13.18[] جو تفاعل  $\OML/zplm/m/it/9 
+z \OT1/zplm/m/n/9 = [] \OML/zplm/m/it/9 x [] ye[]$[]
+ []
+
+\openout3 = `calculusAndAnalyticGeometry_contourtmp8.dat'.
+
+\openout3 = `calculusAndAnalyticGeometry_contourtmp8.script'.
+
+runsystem(gnuplot "calculusAndAnalyticGeometry_contourtmp8.script")...executed.
+
+PGFPlots: reading {calculusAndAnalyticGeometry_contourtmp8.table}
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [0.0:0.0]) on input line 54.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+
+Overfull \hbox (7.01361pt too wide) in paragraph at lines 54--57
+[][]$[]$[]
+ []
 
 
+Overfull \hbox (12.4721pt too wide) in paragraph at lines 54--57
+[]$[]$ []
+ []
+
+\openout3 = `calculusAndAnalyticGeometry_contourtmp9.dat'.
+
+\openout3 = `calculusAndAnalyticGeometry_contourtmp9.script'.
+
+runsystem(gnuplot "calculusAndAnalyticGeometry_contourtmp9.script")...executed.
+
+PGFPlots: reading {calculusAndAnalyticGeometry_contourtmp9.table}
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [0.0:0.0]) on input line 58.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+
+Overfull \hbox (7.01361pt too wide) in paragraph at lines 58--61
+[][]$[]$[]
+ []
 
 
+Overfull \hbox (12.4721pt too wide) in paragraph at lines 58--61
+[]$[]$ []
+ []
+
+[1561
 
 
-
-] [1555] [1556] [1557] [1558]
-[1559]) [1560] (./answer.tex) [1561
 
 
 
 
 ]
+\openout3 = `calculusAndAnalyticGeometry_contourtmp10.dat'.
+
+\openout3 = `calculusAndAnalyticGeometry_contourtmp10.script'.
+
+runsystem(gnuplot "calculusAndAnalyticGeometry_contourtmp10.script")...executed
+.
+
+PGFPlots: reading {calculusAndAnalyticGeometry_contourtmp10.table}
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+
+
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [0.0:0.0]) on input line 62.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+
+Overfull \hbox (7.01361pt too wide) in paragraph at lines 62--65
+[][]$[]$[]
+ []
+
+
+Overfull \hbox (12.4721pt too wide) in paragraph at lines 62--65
+[]$[]$ []
+ []
+
+\openout3 = `calculusAndAnalyticGeometry_contourtmp11.dat'.
+
+\openout3 = `calculusAndAnalyticGeometry_contourtmp11.script'.
+
+runsystem(gnuplot "calculusAndAnalyticGeometry_contourtmp11.script")...executed
+.
+
+PGFPlots: reading {calculusAndAnalyticGeometry_contourtmp11.table}
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [0.0:0.0]) on input line 66.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+
+Overfull \hbox (7.01361pt too wide) in paragraph at lines 66--69
+[][]$[]$[]
+ []
+
+
+Overfull \hbox (12.4721pt too wide) in paragraph at lines 66--69
+[]$[]$ []
+ []
+
+\openout3 = `calculusAndAnalyticGeometry_contourtmp12.dat'.
+
+\openout3 = `calculusAndAnalyticGeometry_contourtmp12.script'.
+
+runsystem(gnuplot "calculusAndAnalyticGeometry_contourtmp12.script")...executed
+.
+
+PGFPlots: reading {calculusAndAnalyticGeometry_contourtmp12.table}
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [0.0:0.0]) on input line 70.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+
+Overfull \hbox (7.01361pt too wide) in paragraph at lines 70--73
+[][]$[]$[]
+ []
+
+
+Overfull \hbox (12.4721pt too wide) in paragraph at lines 70--73
+[]$[]$ []
+ []
+
+[1562] [1563]) [1564]
 \openout2 = `./tex/calculusAppendixA.aux'.
 
- (./tex/calculusAppendixA.tex [1562
+ (./tex/calculusAppendixA.tex
+ضمیمہ ا.
+) [1565
 
 
 
 ]
-ضمیمہ ا.
-LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
-(Font)              scaled to size 20.74pt on input line 1.
-LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/bx/n' will be
-(Font)              scaled to size 20.74pt on input line 1.
-) [1563]
 \openout2 = `./tex/calculusAppendixB.aux'.
 
- (./tex/calculusAppendixB.tex [1564
+ (./tex/calculusAppendixB.tex [1566
 
 
 
 
 ]
 ضمیمہ ب.
-) [1565]
+) [1567]
 \openout2 = `./tex/calculusAppendixC.aux'.
 
- (./tex/calculusAppendixC.tex [1566
+ (./tex/calculusAppendixC.tex [1568
 
 
 
 
 ]
 ضمیمہ ج.
-) [1567]
+) [1569]
 \openout2 = `./tex/calculusAppendixD.aux'.
 
- (./tex/calculusAppendixD.tex [1568
+ (./tex/calculusAppendixD.tex [1570
 
 
 
 
 ]
 ضمیمہ د.
-) [1569]
+) [1571]
 \openout2 = `./tex/calculusAppendixE.aux'.
 
- (./tex/calculusAppendixE.tex [1570
+ (./tex/calculusAppendixE.tex [1572
 
 
 
 
 ]
 ضمیمہ ه\char "200D.
-) [1571]
+) [1573]
 \openout2 = `./tex/calculusAppendixF.aux'.
 
- (./tex/calculusAppendixF.tex [1572
+ (./tex/calculusAppendixF.tex [1574
 
 
 
 
 ]
 ضمیمہ و.
-) [1573]
+) [1575]
 \openout2 = `./tex/calculusAppendixG.aux'.
 
- (./tex/calculusAppendixG.tex [1574
+ (./tex/calculusAppendixG.tex [1576
 
 
 
 
 ]
 ضمیمہ ز.
-) [1575]
+) [1577]
 \openout2 = `./tex/calculusAppendixH.aux'.
 
- (./tex/calculusAppendixH.tex [1576
+ (./tex/calculusAppendixH.tex [1578
 
 
 
 
 ]
 ضمیمہ ح.
-) [1577]
+) [1579]
 \openout2 = `./tex/calculusAppendixI.aux'.
 
- (./tex/calculusAppendixI.tex [1578
+ (./tex/calculusAppendixI.tex [1580
 
 
 
 
 ]
 ضمیمہ ط.
-) [1579] [1580
+) [1581] [1582
 
 
 
@@ -2379,7 +2976,7 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 240.
 
 
 LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.43996pt have occurred.
+(Font)              up to 3.75237pt have occurred.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2387,12 +2984,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 240.
  ) 
 Here is how much of TeX's memory you used:
- 60118 strings out of 492922
- 1504606 string characters out of 6133407
- 1792056 words of memory out of 5000000
- 63046 multiletter control sequences out of 15000+600000
- 564195 words of font info for 164 fonts, out of 8000000 for 9000
+ 64544 strings out of 492922
+ 1604706 string characters out of 6133407
+ 3420623 words of memory out of 5000000
+ 67444 multiletter control sequences out of 15000+600000
+ 582659 words of font info for 230 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 78i,9n,136p,2364b,698s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,19n,136p,2364b,7373s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on calculusAndAnalyticGeometry.pdf (39 pages).
+Output written on calculusAndAnalyticGeometry.pdf (83 pages).
