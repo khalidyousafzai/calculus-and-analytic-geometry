@@ -3554,4 +3554,674 @@ f(a,b,c,d)=\begin{vmatrix}a&b\\ c&d \end{vmatrix}
 %=============
 \انتہا{سوالات}
 
-%%%%%%%%%%%%%
+%%%%%%%%%%%
+
+\حصہ{زنجیری قاعدہ}
+جب ہم  فضا میں کسی   منحنی \عددی{x=g(t),\, y=h(t),\, z=k(t)}  کے مختلف نقطوں پر درجہ حرارت \عددی{w=f(x,y,z)} جاننا چاہتے ہوں، یا   کسی مائع  یا گیس میں   کسی راہ پر دباو میں دلچسپی رکھتے ہوں،  ہم \عددی{f} کو واحد متغیر \عددی{t} کا تفاعل تصور کر سکتے ہیں۔ یوں \عددی{t} کی ہر قیمت کے لئے نقطہ \عددی{(g(t),h(t),k(t))} پر    حرارت کی قیمت  مرکب تفاعل \عددی{f(g(t),h(t),k(t))} کی قیمت دے گی۔اس راہ پر \عددی{t} کے لحاظ سے \عددی{f} کی شرح تبدیلی  ہمیں \عددی{t} کے لحاظ سے  \عددی{f} کا تفرق دیگا، بشرطیکہ ایسا تفرق موجود ہو۔
+
+بعض اوقات ہم \عددی{g}، \عددی{h} اور \عددی{k} کے کلیات کو \عددی{f} کے کلیہ میں پر کر کے \عددی{t}  کے لحاظ سے \عددی{f} کا  بلا واسطہ تفرق لے سکتے ہیں۔لیکن زیادہ  تر  \عددی{g}، \عددی{h} اور \عددی{k} کے کلیات اتنا پیچیدہ ہوتے ہیں یا ان کے کلیات با آسانی دستیاب نہیں ہوتے ہیں لہٰذا   انہیں \عددی{f} میں پر کر کے \عددی{t} کے لحاظ سے \عددی{f} کا بلا واسطہ  تفرق لینا ممکن  نہیں ہو گا۔ ایسی صورتوں میں تفاعل کا تفرق حاصل کرنے کی خاطر ہم زنجیری قاعدہ کی مدد لیتے ہیں۔زنجیری قاعدہ کا روپ متغیرات کی تعداد پر منحصر ہو گا۔ ماسوائے اضافی متغیرات کے زنجیری قاعدہ عین حصہ \حوالہ{حصہ_تفرق_زنجیری_قاعدہ} کے زنجیری قاعدہ کی طرح کام کرتا ہے۔
+
+\جزوحصہء{دو متغیرات کے تفاعل کا زنجیری قاعدہ}
+ہم نے حصہ \حوالہ{حصہ_تفرق_زنجیری_قاعدہ} میں زنجیری قاعدہ استعمال کیا جہاں  \عددی{w=f(x)} متغیر \عددی{x} کا قابل تفرق تفاعل تھا  اور \عددی{x=g(t)}  متغیر \عددی{t} کا قابل تفرق تفاعل تھا۔ یوں \عددی{w} متغیر \عددی{t} کا قابل تفرق تفاعل تھا اور زنجیری قاعدہ کے تحت \عددی{\tfrac{\dif w}{\dif t}} کو درج ذیل کلیہ سے حاصل کیا جا سکتا تھا۔
+\begin{align*}
+\frac{\dif w}{\dif t}=\frac{\dif w}{\dif x}\frac{\dif x}{\dif t}
+\end{align*}
+تفاعل \عددی{w=f(x,y)} کے لئے   ایسا کلیہ مسئلہ \حوالہ{مسئلہ_کثیرالمتغیر_زنجیری_قاعدہ_دو_متغیرات} پیش کرتا ہے۔
+
+\ابتدا{مسئلہ}\شناخت{مسئلہ_کثیرالمتغیر_زنجیری_قاعدہ_دو_متغیرات}\موٹا{دو غیر تابع متغیرات کے تفاعل کا زنجیری قاعدہ}\\
+اگر \عددی{w=f(x,y)}  قابل تفرق ہو اور  \عددی{x}، \عددی{y} متغیر \عددی{t} کے قابل تفرق تفاعل ہوں تب \عددی{w} متغیر \عددی{t} کا قابل تفرق تفاعل ہو گا اور \عددی{\tfrac{\dif w}{\dif t}} درج ذیل ہو گا۔
+\begin{align}\label{مساوات_کثیرالمتغیر_زنجیری_دو_متغیرات_الف}
+\frac{\dif w}{\dif t}=\frac{\partial f}{\partial x}\frac{\dif x}{\dif t}+\frac{\partial f}{\partial y}\frac{\dif y}{\dif t}
+\end{align}
+\انتہا{مسئلہ}
+%==================
+\ابتدا{ثبوت}
+ہم نے اتنا دکھانا ہو گا کہ اگر  \عددی{x} اور \عددی{y} نقطہ \عددی{t=t_0} پر قابل تفرق ہوں تب \عددی{w} بھی \عددی{t_0} پر قابل تفرق ہو گا اور \عددی{N_0=(x(t_0,y(t_0))} پر درج ذیل ہو گا۔
+\begin{align}\label{مساوات_کثیرالمتغیر_زنجیری_دو_متغیرات_ب}
+\big(\frac{\dif w}{\dif t}\big)_{t_0}=\big(\frac{\partial w}{\partial x}\big)_{N_0}\big(\frac{\dif x}{\dif t}\big)_{t_0}+\big(\frac{\partial w}{\partial y}\big)_{N_0}\big(\frac{\dif y}{\dif t}\big)_{t_0}
+\end{align}
+
+ہم \عددی{t} کو \عددی{t_0} سے \عددی{t_0+\Delta t} منتقل کرنے سے پیدا بڑھوتری \عددی{\Delta x}، \عددی{\Delta y} اور \عددی{\Delta w} لیتے  ہیں۔ چونکہ \عددی{f} قابل تفرق ہے  (حصہ \حوالہ{حصہ_کثیرالمتغیر_تفرق_پذیری_خط_بندی_تفرقات} میں دی گئی تعریف ذہن میں رکھتے ہوئے)
+\begin{align}\label{مساوات_کثیرالمتغیر_زنجیری_دو_متغیرات_پ}
+\Delta w=\big(\frac{\partial w}{\partial x}\big)_{N_0}\Delta x+\big(\frac{\partial w}{\partial y}\big)_{N_0}\Delta y+\epsilon_1\Delta x+\epsilon_2\Delta y
+\end{align}
+ہو گا، جہاں \عددی{\Delta x,\Delta y\to 0} کرنے سے \عددی{\epsilon_1,\epsilon_2\to 0} ہوں گے۔ہم مساوات \حوالہ{مساوات_کثیرالمتغیر_زنجیری_دو_متغیرات_پ} کے دونوں اطراف کو \عددی{\Delta t} سے تقسیم کر کے \عددی{\Delta t} کو صفر کے قریب پہنچا کر \عددی{\tfrac{\dif w}{\dif t}} حاصل کرتے ہیں۔تقسیم سے
+\begin{align*}
+\frac{\Delta w}{\Delta t}=\big(\frac{\partial w}{\partial x}\big)_{N_0}\frac{\Delta x}{\Delta t}+\big(\frac{\partial w}{\partial y}\big)_{N_0}\frac{\Delta y}{\Delta t}+\epsilon_1\frac{\Delta x}{\Delta t}+\epsilon_2\frac{\Delta y}{\Delta t}
+\end{align*}
+حاصل ہو گا اور \عددی{\Delta t} کو صفر کے قریب پہنچانے سے درج  ذیل ملے گا۔
+\begin{align*}
+\big(\frac{\dif w}{\dif t}\big)_{t_0}&=\lim_{\Delta t\to 0}\frac{\Delta w}{\Delta t}\\
+&=\big(\frac{\partial w}{\partial x}\big)_{N_0}\big(\frac{\dif x}{\dif t}\big)_{t_0}+\big(\frac{\partial w}{\partial y}\big)_{N_0}\big(\frac{\dif y}{\dif t}\big)_{t_0}+0\cdot \big(\frac{\dif x}{\dif t}\big)_{t_0}+0\cdot \big(\frac{\dif y}{\dif t}\big)_{t_0}
+\end{align*}
+یہ مساوات \حوالہ{مساوات_کثیرالمتغیر_زنجیری_دو_متغیرات_ب} کی  تصدیق کرتی ہے لہٰذا ثبوت مکمل ہوتا ہے۔
+\انتہا{ثبوت}
+%===================
+
+تفرق \عددی{\tfrac{\dif w}{\dif t}} میں حقیقی غیر تابع متغیر \عددی{t} اور تابع متغیر \عددی{w} ہے جبکہ \عددی{x} اور \عددی{y}  درمیانی متغیرات ہیں جنہیں \عددی{t} قابو کرتا ہے۔زنجیری قاعدہ کا  درج ذیل روپ ہمیں  مساوات \حوالہ{مساوات_کثیرالمتغیر_زنجیری_دو_متغیرات_الف} میں مختلف تفرقات کے حصول کا صحیح طریقہ دیتا ہے۔
+\begin{align*}
+\frac{\dif w}{\dif t}(t_0)=\frac{\partial f}{\partial x}(x_0,y_0)\cdot\frac{\dif x}{\dif t}(t_0)+\frac{\partial f}{\partial y}(x_0,y_0)\cdot\frac{\dif y}{\dif t}(t_0)
+\end{align*} 
+یوں \عددی{\tfrac{\dif x}{\dif t}} اور \عددی{\tfrac{\dif y}{\dif t}} نقطہ \عددی{t_0} پر حاصل کیے جائیں گے۔ حقیقی غیر تابع متغیر کی قیمت  \عددی{t_0}،  درمیانی متغیرات \عددی{x} اور \عددی{y} کی   \عددی{x_0} اور \عددی{y_0} قیمتیں  تعین کرتا ہے۔ جزوی تفرقات \عددی{\tfrac{\partial w}{\partial x}} اور \عددی{\tfrac{\partial w}{\partial y}} نقطہ \عددی{(x_0,y_0)} پر حاصل کیے جاتے ہیں۔ 
+
+\ابتدا{مثال}
+زنجیری قاعدہ استعمال کرتے ہوئے راہ \عددی{x=\cos t,\,y=\sin t} پر درج ذیل کا تفرق \عددی{\tfrac{\dif w}{\dif t}} حاصل کریں۔
+\begin{align*}
+w=xy
+\end{align*}
+نقطہ \عددی{t=\tfrac{\pi}{2}} پر اس تفرق کی قیمت کیا ہو گی؟
+
+حل:\quad
+ہم مساوات \حوالہ{مساوات_کثیرالمتغیر_زنجیری_دو_متغیرات_الف} کا دایاں ہاتھ  \عددی{w=xy}، \عددی{x=\cos t} اور \عددی{y=\sin t} لیتے ہوئے معلوم کرتے ہیں:
+\begin{align*}
+\frac{\partial w}{\partial x}&=y=\sin t,\quad \frac{\partial w}{\partial y}=x=\cos t,\quad \frac{\dif x}{\dif t}=-\sin t,\quad \frac{\dif y}{\dif t}=\cos t\\
+\frac{\dif w}{\dif t}&=\frac{\partial w}{\partial x}\frac{\dif x}{\dif t}+\frac{\partial w}{\partial y}\frac{\dif y}{\dif t}=(\sin t)(-\sin t)+(\cos t)(\cos t)\\
+&=-\sin^2t+\cos^2t=\cos 2t
+\end{align*}
+
+آپ نے دیکھا کہ ہم نے \عددی{x=\cos t} اور \عددی{y=\sin t} کو جزوی تفرقات \عددی{\tfrac{\partial w}{\partial x}} اور \عددی{\tfrac{\partial w}{\partial y}} میں پر کیا۔ یوں حاصل تفرق \عددی{\tfrac{\dif w}{\dif t}}  کا اظہار غیر تابع متغیر \عددی{t} کی صورت میں   کیا جاتا ہے (جس میں  درمیا نے    متغیرات \عددی{x} اور \عددی{y} نہیں پائے  جاتے ہیں۔ )
+
+اس مثال میں ہم حاصل نتیجہ کی تصدیق زیادہ بلا واسطہ طریقہ سے  کر سکتے ہیں۔ہم \عددی{w} کو \عددی{t} کا تفاعل لکھتے ہیں:
+\begin{align*}
+w=xy=\cos t\sin t=\frac{1}{2}\sin 2t
+\end{align*}
+یوں
+\begin{align*}
+\frac{\dif w}{\dif t}=\frac{\dif}{\dif t}\big(\frac{1}{2}\sin 2t\big)=\frac{1}{2}\cdot 2\cos 2t=\cos 2t
+\end{align*}
+ہو گا۔دونوں صورتوں میں \عددی{t=\tfrac{\pi}{2}} پر درج ذیل ہو گا۔
+\begin{align*}
+\big(\frac{\dif w}{\dif t}\big)_{t=\pi/2}=\cos(2\cdot\tfrac{\pi}{2})=\cos \pi=-1
+\end{align*}
+\انتہا{مثال}
+%==========
+
+\جزوحصہء{تین متغیرات کے تفاعل کا زنجیری قاعدہ}
+ہم مساوات \حوالہ{مساوات_کثیرالمتغیر_زنجیری_دو_متغیرات_الف} کے ساتھ ایک جزو جمع  کرتے ہوئے  زنجیری قاعدہ حاصل  کرتے ہیں۔
+
+\موٹا{تین غیر تابع متغیرات کے تفاعل کا زنجیری قاعدہ}\\
+\begin{align}\label{مساوات_کثیرالمتغیر_زنجیری_تین_متغیرات_الف}
+\frac{\dif w}{\dif t}=\frac{\partial f}{\partial x}\frac{\dif x}{\dif t}+\frac{\partial f}{\partial y}\frac{\dif y}{\dif t}+\frac{\partial f}{\partial z}\frac{\dif z}{\dif t}
+\end{align}
+
+اس کا ثبوت مساوات \حوالہ{مساوات_کثیرالمتغیر_زنجیری_دو_متغیرات_الف} کی ثبوت کی طرح ہے، بس اب دو کی بجائے تین  درمیانے  متغیرات ہوں گے۔
+
+\ابتدا{مثال}\ترچھا{پیچ دار منحنی پر تفاعل کی قیمت میں تبدیلی}\\
+درج ذیل لیتے ہوئے \عددی{\tfrac{\dif w}{\dif t}} تلاش کریں۔
+\begin{align*}
+w=xy+z,\quad x=\cos t,\quad y=\sin t,\quad z=t
+\end{align*}
+نقطہ \عددی{t=0} پر اس تفرق کی قیمت کیا ہو گی؟
+
+حل:\quad
+\begin{align*}
+\frac{\dif w}{\dif t}&=\frac{\partial w}{\partial x}\frac{\dif x}{\dif t}+\frac{\partial w}{\partial y}\frac{\dif y}{\dif t}+\frac{\partial w}{\partial z}\frac{\dif z}{\dif t}&&\text{\RL{مساوات \حوالہ{مساوات_کثیرالمتغیر_زنجیری_تین_متغیرات_الف}}}\\
+&=(y)(-\sin t)+(x)(\cos t)+(1)(1)\\
+&=(\sin t)(-\sin t)+(\cos t)(\cos t)+1\\
+&=-\sin^2t+\cos^2t+1=1+\cos 2t
+\end{align*}
+یوں \عددی{t=0} پر درج ذیل ہو گا۔
+\begin{align*}
+\big(\frac{\dif w}{\dif t}\big)_{t=0}=1+\cos (0)=2
+\end{align*}
+\انتہا{مثال}
+%============
+
+\جزوحصہء{سطح پر معین تفاعل کا زنجیری قاعدہ}
+اگر ہماری دلچسپی  فضا میں ایک کرہ  پر نقطہ \عددی{(x,y,z)}  کے  حرارت \عددی{w=f(x,y,z)}سے ہو، ہم  \عددی{x}، \عددی{y} اور \عددی{z} کو  متغیرات \عددی{r} اور \عددی{s} کے تفاعل تصور کر سکتے ہیں جو  اس نقطہ کے عرض بلند اور  طول بلند قیمتیں دیتے ہیں۔ اگر \عددی{x=g(r,s)}، \عددی{y=h(r,s)} اور \عددی{z=k(r,s)} ہوں  تب ہم حرارت کو \عددی{r} اور \عددی{s} کا  مرکز تفاعل
+\begin{align*}
+w=f(g(r,s),h(r,s),k(r,s))
+\end{align*}
+ تصور کر سکتے ہیں۔ موزوں حالات میں  \عددی{r} اور \عددی{s} دونوں کے لحاظ سے \عددی{w} کے جزوی تفرقات موجود ہوں گے جنہیں درج ذیل طریقہ سے حاصل کیا جا سکتا ہے۔
+
+\موٹا{دو غیر تابع متغیرات اور تین درمیانے متغیرات کا زنجیری قاعدہ}\\
+فرض کریں \عددی{w=f(x,y,z)}، \عددی{x=g(r,s)}، \عددی{y=h(r,s)} اور \عددی{z=k(r,s)} ہوں۔ اگر چاروں تفاعل قابل تفرق ہوں، تب \عددی{r} اور \عددی{s} کے لحاظ سے \عددی{w} کے جزوی تفرقات قابل  پائے جائیں گے جنہیں درج ذیل مساوات سے حاصل کیا جا سکتا ہے۔
+\begin{align}
+\frac{\partial w}{\partial r}&=\frac{\partial w}{\partial x}\frac{\partial x}{\partial r}+\frac{\partial w}{\partial y}\frac{\partial y}{\partial r}+\frac{\partial w}{\partial z}\frac{\partial z}{\partial r}\label{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_الف}\\
+\frac{\partial w}{\partial s}&=\frac{\partial w}{\partial x}\frac{\partial x}{\partial s}+\frac{\partial w}{\partial y}\frac{\partial y}{\partial s}+\frac{\partial w}{\partial z}\frac{\partial z}{\partial s}\label{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_ب}
+\end{align}
+
+ ہم \عددی{s} کو مستقل  تصور کر کے  اور \عددی{r}  کو \عددی{t}لیتے  ہوئے مساوات \حوالہ{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_الف} کو   مساوات \حوالہ{مساوات_کثیرالمتغیر_زنجیری_تین_متغیرات_الف} سے   حاصل کر سکتے ہیں۔اسی طرح   ہم \عددی{r} کو مستقل  تصور کر کے  اور \عددی{s}  کو \عددی{t}لیتے  ہوئے مساوات \حوالہ{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_ب} کو   مساوات \حوالہ{مساوات_کثیرالمتغیر_زنجیری_تین_متغیرات_الف} سے   حاصل کر سکتے ہیں۔
+
+\ابتدا{مثال}
+درج ذیل لیتے ہوئے \عددی{\tfrac{\partial w}{\partial r}} اور \عددی{\tfrac{\partial w}{\partial s}} کو \عددی{r} اور \عددی{s} کی صورت میں لکھیں۔
+\begin{align*}
+w=x+2y+z^2,\quad x=\frac{r}{x},\quad y=r62+\ln s,\quad z=2r
+\end{align*}
+حل:\quad
+\begin{align*}
+\frac{\partial w}{\partial r}&=\frac{\partial w}{\partial x}\frac{\partial x}{\partial r}+\frac{\partial w}{\partial y}\frac{\partial y}{\partial r}+\frac{\partial w}{\partial z}\frac{\partial z}{\partial r}&&\text{\RL{مساوات \حوالہ{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_الف}}}\\
+&=(1)\big(\frac{1}{s}\big)+(2)(2r)+(2z)(2)\\
+&=\frac{1}{s}+4r+(4r)(2)=\frac{1}{s}+12r\\
+\frac{\partial w}{\partial s}&=\frac{\partial w}{\partial x}\frac{\partial x}{\partial s}+\frac{\partial w}{\partial y}\frac{\partial y}{\partial s}+\frac{\partial w}{\partial z}\frac{\partial z}{\partial s}&&\text{\RL{مساوات \حوالہ{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_ب}}}\\
+&=(1)\big(-\frac{r}{s^2}\big)+(2)\big(\frac{1}{s}\big)+(2z)(0)=\frac{2}{s}-\frac{r}{s^2}
+\end{align*}
+\انتہا{مثال}
+%=====================
+
+اگر \عددی{f} تین کی بجائے دو متغیرات کا تفاعل ہو تب درمیانہ متغیر \عددی{z} نہیں پایا جائے گا لہٰذا   مساوات \حوالہ{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_الف} اور مساوات \حوالہ{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_ب} میں ایک ایک جزو کم ہو گا۔
+
+اگر \عددی{w=f(x,y)}، \عددی{x=g(r,s)} اور \عددی{y=h(r,s)} ہوں تب درج ذیل ہوں گے۔
+\begin{gather}
+\begin{aligned}\label{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_پ}
+\frac{\partial w}{\partial s}&=\frac{\partial w}{\partial x}\frac{\partial x}{\partial s}+\frac{\partial w}{\partial y}\frac{\partial y}{\partial s}
+\end{aligned}\quad\text{اور}\quad
+\begin{aligned}
+\frac{\partial w}{\partial r}&=\frac{\partial w}{\partial x}\frac{\partial x}{\partial r}+\frac{\partial w}{\partial y}\frac{\partial y}{\partial r}
+\end{aligned}
+\end{gather}
+
+
+
+\ابتدا{مثال}
+درج ذیل لیتے ہوئے \عددی{\tfrac{\partial w}{\partial r}} اور \عددی{\tfrac{\partial w}{\partial s}} کو \عددی{r} اور \عددی{s} کی صورت میں لکھیں۔
+\begin{align*}
+w=x^2+y^2,\quad x=r-s,\quad y=r+s
+\end{align*}
+حل:\quad
+ہم مساوات \حوالہ{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_پ} استعمال کرتے ہیں۔
+\begin{gather*}
+\begin{aligned}
+\frac{\partial w}{\partial r}&=\frac{\partial w}{\partial x}\frac{\partial x}{\partial r}+\frac{\partial w}{\partial y}\frac{\partial y}{\partial r}\\
+&=(2x)(1)+(2y)(1)\\
+&=2(r-s)+2(r+s)\\
+&=4r
+\end{aligned}\quad\quad
+\begin{aligned}
+\frac{\partial w}{\partial s}&=\frac{\partial w}{\partial x}\frac{\partial x}{\partial s}+\frac{\partial w}{\partial y}\frac{\partial y}{\partial s}\\
+&=(2x)(-1)+(2y)(1)\\
+&=-2(r-s)+2(r+s)\\
+&=4s
+\end{aligned}
+\end{gather*}
+\انتہا{مثال}
+%====================
+
+اگر \عددی{f} صرف \عددی{x} کا تفاعل ہو تب مساوات \حوالہ{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_الف} اور مساوات \حوالہ{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_ب} مزید سادہ صورت اختیار کرتے ہیں۔
+
+اگر \عددی{w=f(x)} اور \عددی{x=g(r,s)} ہو تب
+\begin{align}
+\frac{\partial w}{\partial s}=\frac{\dif w}{\dif x}\frac{\partial x}{\partial s} \quad \text{اور}\quad \frac{\partial w}{\partial r}=\frac{\dif w}{\dif x}\frac{\partial x}{\partial r}
+\end{align}
+ہوں گے جہاں \عددی{\tfrac{\dif w}{\dif x}} سادہ  (ایک متغیر کا) تفرق ہے۔
+
+\جزوحصہء{خفی تفرق (باب \حوالہ{باب_تفرق})}
+یقین کیجیے  مساوات \حوالہ{مساوات_کثیرالمتغیر_زنجیری_دو_متغیرات_الف} میں دیا گیا دو متغیرات کا زنجیری قاعدہ سے ایک ایسا کلیہ اخذ ہوتا ہے جو خفی تفرق کا حصول نہایت آسان بناتا ہے۔ فرض کریں
+\begin{enumerate}[1.]
+\item
+تفاعل \عددی{F(x,y)} قابل تفرق ہے اور
+\item
+مساوات \عددی{F(x,y)=0}   تابع متغیر \عددی{y} کو خفی طور پر غیر تابع متغیر \عددی{x}  کے  قابل تفرق مساوات کی کی صورت،  مثلاً \عددی{y=h(x)}،  میں پیش کرتا ہو۔
+\end{enumerate} 
+
+چونکہ \عددی{w=F(x,y)=0}  ہے، تفرق \عددی{\tfrac{\dif w}{\dif x}} صفر ہو گا۔ زنجیری قاعدہ سے تفرق حاصل کرتے ہوئے درج ذیل حاصل ہو گا:
+\begin{align}
+0&=\frac{\dif w}{\dif x}=F_x\frac{\dif x}{\dif x}+F_y\frac{\dif y}{\dif x}\nonumber&&
+\text{\RL{مساوات \حوالہ{مساوات_کثیرالمتغیر_زنجیری_دو_متغیرات_الف} میں \عددی{t=x} اور \عددی{f=F}}}\label{مساوات_کثیر_المتغیر_خفی_الف}\\
+&=F_x\cdot 1+F_y\cdot\frac{\dif y}{\dif x}
+\end{align}
+اگر \عددی{F_y=\tfrac{\partial w}{\partial y}\ne 0} ہو تب ہم مساوات \حوالہ{مساوات_کثیر_المتغیر_خفی_الف} کو \عددی{\tfrac{\dif y}{\dif x}} کے لئے حل کر کے درج ذیل حاصل کرتے ہیں۔
+\begin{align*}
+\frac{\dif y}{\dif x}=-\frac{F_x}{F_y}
+\end{align*}
+
+فرض کریں \عددی{F(x,y)} قابل تفرق ہو اور مساوات \عددی{F(x,y)=0}  تابع متغیر \عددی{y} کو غیر تابع متغیر \عددی{x}  کے قابل تفرق تفاعل کی صورت میں پیش کرتی ہو، تب ایسا نقطہ پر جہاں \عددی{F_y\ne 0} ہو درج ذیل ہو گا۔
+\begin{align}\label{مساوات_کثیرالمتغیر_خفی_تفرق_کا_حصول}
+\frac{\dif y}{\dif x}=-\frac{F_x}{F_y}
+\end{align}
+
+\ابتدا{مثال}
+\عددی{x^2+\sin y-2y=0} لیتے ہوئے \عددی{\tfrac{\dif y}{\dif x}} تلاش کریں۔
+حل:\quad
+ہم \عددی{F(x,y)=x^2+\sin y-2y} لیتے ہیں۔یوں
+\begin{align*}
+\frac{\dif y}{\dif x}&=-\frac{F_x}{F_y}=-\frac{2x}{\cos y-2}&&\text{\RL{مساوات \حوالہ{مساوات_کثیرالمتغیر_خفی_تفرق_کا_حصول}}}
+\end{align*}
+ہو گا۔ ہم  مثال \حوالہ{مثال_تفرق_خفی_جو_بعد_میں_درکار} میں اس کو پہلے حل کر  چکے ہیں ۔ آپ دیکھ سکتے ہیں کہ موجودہ طریقہ زیادہ جلدی  جواب مہیا کرتا ہے۔
+\انتہا{مثال}
+%==========
+
+\جزوحصہء{متعدد متغیرات کے تفاعل کا زنجیری قاعدہ}
+فرض کریں \عددی{f(x,y,\cdots,v)} غیر تابع (متناہی تعداد کے)  متغیرات \عددی{x,y,\cdots,v}  کا قابل تفرق تفاعل ہے اور \عددی{x,y,\cdots,v}  (ایک دوسرے متناہی تعداد کے)  متغیرات \عددی{p,q,\cdots,t} کے قابل تفرق تفاعل ہیں۔ تب \عددی{w} متغیرات \عددی{p,q,\cdots,t} کا قابل تفرق تفاعل ہو گا اور ان متغیرات کے لحاظ سے \عددی{w} کے جزوی تفرقات  کی  صورت درج ذیل ہو گی۔
+\begin{align}\label{مساوات_کثیرالمتغیر_متعدد_متغیرات_کا_تفاعل}
+\frac{\partial w}{\partial p}=\frac{\partial w}{\partial x}\frac{\partial x}{\partial p}+\frac{\partial w}{\partial y}\frac{\partial y}{\partial p}+\cdots+\frac{\partial w}{\partial v}\frac{\partial v}{\partial p}
+\end{align}
+باقی مساوات حاصل کرنے کے لئے \عددی{p} کی جگہ باری باری \عددی{q,\cdots,t} پر کریں۔
+
+مساوات \حوالہ{مساوات_کثیرالمتغیر_متعدد_متغیرات_کا_تفاعل} کو یاد رکھنے کا  ایک طریقہ یہ ہے کہ اس کے دائیں ہاتھ کو دو سمتیات،جن کے اجزاء درج ذیل ہوں،  کا ضرب  نقطہ تصور کیا جائے ۔
+\begin{align*}
+\underbrace{\big(\frac{\partial w}{\partial x},\frac{\partial w}{\partial y},\cdot,\frac{\partial w}{\partial v}\big)}_{\text{\RL{درمیانی  متغیرات کے لحاظ سے \عددی{w} کے تفرقات}}}\quad \text{اور}\quad \underbrace{\big(\frac{\partial x}{\partial p},\frac{\partial y}{\partial p},\cdot,\frac{\partial v}{\partial p}\big)}_{\text{\RL{منتخب غیر تابع متغیر کے لحاظ سے درمیانی متغیرات کے تفرقات}}}
+\end{align*}
+
+\جزوحصہء{سوالات}
+\ابتدا{سوالات}
+\موٹا{زنجیری قاعدہ: ایک غیر تابع متغیر}\\
+سوال \حوالہ{سوال_کثیرالمتغیر_زنجیری_بلا_واسطہ_الف} تا سوال \حوالہ{سوال_کثیرالمتغیر_زنجیری_بلا_واسطہ_ب} میں (ا)   پہلے زنجیری قاعدہ استعمال کرتے ہوئے اور  بعد میں \عددی{w} کو \عددی{t} کا تفاعل لکھ کر \عددی{t} کے لحاظ سے  بلا واسطہ تفرق لیتے ہوئے،    \عددی{\tfrac{\dif w}{\dif t}} کو \عددی{t} کا تفاعل لکھیں۔ (ب) اس کے بعد \عددی{t} کی دی گئی قیمت پر \عددی{\tfrac{\dif w}{\dif t}} کی قیمت تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_کثیرالمتغیر_زنجیری_بلا_واسطہ_الف}
+$w=x^2+y^2,\quad x=\cos t,\quad y=\sin t; \quad t=\pi$
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{\dif w}{\dif t}=0,\, \tfrac{\dif w}{\dif t}(\pi)=0$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+$w=x^2+y^2,\quad x=\cos t+\sin t,\quad y=\cos t-\sin t; \quad t=0$
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$w=\frac{x}{z}+\frac{y}{z},\quad x=\cos^2t,\quad y=\sin^2t,\quad z=\frac{1}{t};\quad t=3$
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{\dif w}{\dif t}=1,\, \tfrac{\dif w}{\dif t}(3)=1$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$w=\ln(x^2+y^2+z^2),\quad x=\cos t,\quad y=\sin t,\quad z=4\sqrt{t},\quad t=3$ 
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$w=2ye^x-\ln z,\quad x=\ln(t^2+1),\quad y=\tan^{-1}t,\quad z=e^t;\quad t=1$
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{\dif w}{\dif t}=4t\tan^{-1}t+1,\, \tfrac{\dif w}{\dif t}(1)=\pi+1$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\شناخت{سوال_کثیرالمتغیر_زنجیری_بلا_واسطہ_ب}
+$w=z-\sin xy,\quad x=t,\quad y=\ln t,\quad z=e^{t-1};\quad t=1$
+\انتہا{سوال}
+%===================
+\موٹا{زنجیری قاعدہ: دو اور تین غیر تابع متغیرات}\\
+سوال \حوالہ{سوال_کثیرالمتغیر_دو_اور_تین-متغیرات_زنجیری_الف} اور سوال \حوالہ{سوال_کثیرالمتغیر_دو_اور_تین-متغیرات_زنجیری_ب}  میں (ا)  \عددی{\tfrac{\partial z}{\partial r}} اور \عددی{\tfrac{\partial z}{\partial \theta}} کو  \عددی{r} اور \عددی{\theta} کی صورت میں (پہلے)   زنجیری قاعدہ استعمال کرتے ہوئے  اور (بعد میں)  \عددی{z} کو \عددی{r} اور \عددی{\theta} کا تفاعل لکھ کر بلا واسطہ تفرق لیتے ہوئے  لکھیں۔ (ب) اس کے بعد  دیے گئے نقطہ \عددی{(r,\theta)} پر    \عددی{\tfrac{\partial z}{\partial r}} اور \عددی{\tfrac{\partial z}{\partial \theta}}  کی قیمتیں تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_کثیرالمتغیر_دو_اور_تین-متغیرات_زنجیری_الف}
+$z=4e^x\ln y,\,x=\ln(r\cos\theta),\,y=r\sin\theta;\, (r,\theta)=(2,\tfrac{\pi}{4})$
+\ابتدا{جواب}
+\wf{\unexpanded{
+(ا) 
+$\tfrac{\partial z}{\partial r}=4\cos \theta\ln(r\sin \theta)+4\cos\theta,$\\
+$\tfrac{\partial z}{\partial \theta}=-4r\sin\theta\ln(r\sin\theta)+\tfrac{4r\cos^2\theta}{\sin\theta}$\\
+(ب)
+$\tfrac{\partial z}{\partial r}=\sqrt{2}(\ln 2+2),$\\
+$\tfrac{\partial z}{\partial \theta}=-2\sqrt{2}\ln 2+4\sqrt{2}$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\شناخت{سوال_کثیرالمتغیر_دو_اور_تین-متغیرات_زنجیری_ب}
+$z=\tan^{-1}\frac{x}{y},\, x=r\cos\theta,\,y=r\sin\theta;\,(r,\theta)=(1.3,\tfrac{\pi}{6})$
+\انتہا{سوال}
+%=================
+سوال \حوالہ{سوال_کثیرالمتغیر_دو_اور_تین-متغیرات_دوبارہ_زنجیری_الف} اور سوال \حوالہ{سوال_کثیرالمتغیر_دو_اور_تین-متغیرات_دوبارہ_زنجیری_ب}  میں (ا)  \عددی{\tfrac{\partial w}{\partial u}} اور \عددی{\tfrac{\partial w}{\partial v}} کو  \عددی{u} اور \عددی{v} کی صورت میں (پہلے)   زنجیری قاعدہ استعمال کرتے ہوئے  اور (بعد میں)  \عددی{w} کو \عددی{u} اور \عددی{v} کا تفاعل لکھ کر بلا واسطہ تفرق لیتے ہوئے  لکھیں۔ (ب) اس کے بعد  دیے گئے نقطہ \عددی{(u,v)} پر    \عددی{\tfrac{\partial w}{\partial u}} اور \عددی{\tfrac{\partial w}{\partial v}}  کی قیمتیں تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_کثیرالمتغیر_دو_اور_تین-متغیرات_دوبارہ_زنجیری_الف}
+$w=xy+yz+xz,\,x=u+v,\,y=u-v,\,z=uv;\,(u,v)=(\tfrac{1}{2},1)$
+\ابتدا{جواب}
+\wf{\unexpanded{
+(ا) 
+$\tfrac{\partial w}{\partial u}=2u+4uv,$\\
+$\tfrac{\partial w}{\partial v}=-2v+2u^2$\\
+(ب)
+$\tfrac{\partial w}{\partial u}=3,\,\tfrac{\partial w}{\partial v}=-\tfrac{3}{2}$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\شناخت{سوال_کثیرالمتغیر_دو_اور_تین-متغیرات_دوبارہ_زنجیری_ب}
+$w=\ln(x^2+y^2+z^2),\, x=ue^v\sin u,\,y=ue^v\cos u,$\\
+$z=ue^v;\,(u,v)=(-2,0)$
+\انتہا{سوال}
+%===============
+سوال \حوالہ{سوال_کثیرالمتغیر_تین-متغیرات_دوبارہ_زنجیری_الف} اور سوال \حوالہ{سوال_کثیرالمتغیر_تین-متغیرات_دوبارہ_زنجیری_ب}  میں (ا)  \عددی{\tfrac{\partial u}{\partial x}}،
+ \عددی{\tfrac{\partial u}{\partial y}} اور \عددی{\tfrac{\partial u}{\partial z}} کو  \عددی{x}، و  \عددی{y}  اور \عددی{z} کی صورت میں (پہلے)   زنجیری قاعدہ استعمال کرتے ہوئے  اور (بعد میں)  \عددی{u} کو \عددی{x}، و  \عددی{y}  اور \عددی{z} کا تفاعل لکھ کر بلا واسطہ تفرق لیتے ہوئے  لکھیں۔ (ب) اس کے بعد  دیے گئے نقطہ \عددی{(x,y,z)} پر    \عددی{\tfrac{\partial u}{\partial x}}، \عددی{\tfrac{\partial u}{\partial y}}  اور \عددی{\tfrac{\partial u}{\partial z}}  کی قیمتیں تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_کثیرالمتغیر_تین-متغیرات_دوبارہ_زنجیری_الف}
+{\small{$u=\frac{p-q}{q-r},\, p=x+y+z,\, q=x-y+z,\, r=x+y-z;\, (x,y,z)=(\sqrt{3},2,1)$}}
+\ابتدا{جواب}
+\wf{\unexpanded{
+(ا) 
+$\tfrac{\partial u}{\partial x}=0,\,\tfrac{\partial u}{\partial y}=\tfrac{z}{(z-y)^2}$\\
+$\tfrac{\partial u}{\partial z}=\tfrac{-y}{(z-y)^2}$\\
+(ب)
+$\tfrac{\partial u}{\partial x}=0,\tfrac{\partial u}{\partial y}=1,\tfrac{\partial u}{\partial z}=-2$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}\شناخت{سوال_کثیرالمتغیر_تین-متغیرات_دوبارہ_زنجیری_ب}
+$u=e^{qr}\sin^{-1}p,\,p=\sin x,\,q=z^2\ln y,\,r=\tfrac{1}{z};\, (x,y,z)=(\tfrac{\pi}{4},\tfrac{1}{2},-\tfrac{1}{2})$
+\انتہا{سوال}
+%===============================
+
+سوال \حوالہ{سوال_کثیرالمتغیر_قاعدہ_سے_اخذ_الف} تا سوال \حوالہ{سوال_کثیرالمتغیر_قاعدہ_سے_اخذ_ب} میں  ہر ایک  تفرق کے لئے زنجیری قاعدہ  سے اخذ کلیہ لکھیں۔
+
+\ابتدا{سوال}\شناخت{سوال_کثیرالمتغیر_قاعدہ_سے_اخذ_الف}
+\عددی{\tfrac{\dif z}{\dif t}}؛ \عددی{z=f(x,y)}، \عددی{x=g(t)}، \عددی{y=h(t)}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{\partial z}{\partial t}=\tfrac{\partial z}{\partial x}\tfrac{\dif x}{\dif t}+\tfrac{\partial z}{\partial y}\tfrac{\dif y}{\dif t}$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}
+\عددی{\tfrac{\dif z}{\dif t}}؛   \عددی{z=f(u,v,w)}، \عددی{u=g(t)}، \عددی{v=h(t)}،  \عددی{w=k(t)}
+\انتہا{سوال}
+%=================
+\ابتدا{سوال}
+\عددی{\tfrac{\partial w}{\partial u}}، \عددی{\tfrac{\partial w}{\partial v}}؛   \عددی{w=h(x,y,z)}، \عددی{x=f(u,v)}، \عددی{y=g(u,v)}،  \عددی{z=k(u,v)} 
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{\partial w}{\partial u}=\tfrac{\partial w}{\partial x}\tfrac{\partial x}{\partial  u}+\tfrac{\partial w}{\partial y}\tfrac{\partial y}{\partial  u}+\tfrac{\partial w}{\partial z}\tfrac{\partial z}{\partial  u}$\\
+$\tfrac{\partial w}{\partial v}=\tfrac{\partial w}{\partial x}\tfrac{\partial  x}{\partial  v}+\tfrac{\partial w}{\partial y}\tfrac{\partial  y}{\partial v}+\tfrac{\partial w}{\partial z}\tfrac{\partial  z}{\partial  v}$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+\عددی{\tfrac{\partial w}{\partial x}}،  \عددی{\tfrac{\partial w}{\partial y}}؛   \عددی{w=f(r,s,t)}، \عددی{r=g(x,y)}، \عددی{s=h(x,y)}،  \عددی{t=k(x,y)} 
+\انتہا{سوال}
+%=================
+\ابتدا{سوال}
+\عددی{\tfrac{\partial w}{\partial u}}،  \عددی{\tfrac{\partial w}{\partial v}}؛   \عددی{w=g(x,y)}، \عددی{x=h(u,v)}، \عددی{y=k(u,v)}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{\partial w}{\partial u}=\tfrac{\partial w}{\partial x}\tfrac{\partial  x}{\partial  u}+\tfrac{\partial w}{\partial y}\tfrac{\partial  y}{\partial  u}$\\
+$\tfrac{\partial w}{\partial v}=\tfrac{\partial w}{\partial x}\tfrac{\partial  x}{\partial v}+\tfrac{\partial w}{\partial y}\tfrac{\partial y}{\partial  v}$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%=================
+\ابتدا{سوال}
+\عددی{\tfrac{\partial w}{\partial x}}،  \عددی{\tfrac{\partial w}{\partial y}}؛   \عددی{w=g(u,v)}، \عددی{u=h(x,y)}، \عددی{v=k(x,y)} 
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+\عددی{\tfrac{\partial z}{\partial t}}،  \عددی{\tfrac{\partial z}{\partial s}}؛   \عددی{z=f(x,y)}، \عددی{x=g(t,s)}، \عددی{y=h(t,s)} 
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{\partial z}{\partial t}=\tfrac{\partial z}{\partial x}\tfrac{\partial  x}{\partial  t}+\tfrac{\partial z}{\partial y}\tfrac{\partial  y}{\partial t}$\\
+$\tfrac{\partial z}{\partial s}=\tfrac{\partial z}{\partial x}\tfrac{\partial  x}{\partial  s}+\tfrac{\partial z}{\partial y}\tfrac{\partial y}{\partial  s}$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+\عددی{\tfrac{\partial y}{\partial r}}؛   \عددی{y=f(u)}، \عددی{u=g(r,s)}
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+\عددی{\tfrac{\partial w}{\partial s}}،  \عددی{\tfrac{\partial w}{\partial t}}؛   \عددی{w=g(u)}، \عددی{u=h(s,t)}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{\partial w}{\partial s}=\tfrac{\dif w}{\dif u}\tfrac{\partial  u}{\partial s},\,\tfrac{\partial w}{\partial t}=\tfrac{\dif w}{\dif u}\tfrac{\partial  u}{\partial  t}$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+\عددی{\tfrac{\partial w}{\partial p}}؛   \عددی{w=f(x,y,z,v)}، \عددی{x=g(p,q)}، \عددی{y=h(p,q)}،\\
+  \عددی{z=j(p,q)}، \عددی{v=k(p,q)} 
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+\عددی{\tfrac{\partial w}{\partial r}}،  \عددی{\tfrac{\partial w}{\partial s}}؛   \عددی{w=f(x,y)}، \عددی{x=g(r)}، \عددی{y=h(s)} 
+\ابتدا{جواب}
+\wf{\unexpanded{
+چونکہ \عددی{\tfrac{\dif y}{\dif r}=0} ہے لہٰذا \\
+$\tfrac{\partial w}{\partial r}=\tfrac{\partial w}{\partial x}\tfrac{\dif x}{\dif r}+\tfrac{\partial w}{\partial y}\tfrac{\dif y}{\dif r}=\tfrac{\partial w}{\partial x}\tfrac{\dif x}{\dif r}$\\
+چونکہ \عددی{\tfrac{\dif x}{\dif s}=0} ہے لہٰذا \\
+$\tfrac{\partial w}{\partial s}=\tfrac{\partial w}{\partial x}\tfrac{\dif x}{\dif s}+\tfrac{\partial w}{\partial y}\tfrac{\dif y}{\dif s}=\tfrac{\partial w}{\partial y}\tfrac{\dif y}{\dif s}$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\شناخت{سوال_کثیرالمتغیر_قاعدہ_سے_اخذ_ب}
+\عددی{\tfrac{\partial w}{\partial s}}؛   \عددی{w=g(x,y)}، \عددی{x=h(r,s,t)}، \عددی{y=k(r,s,t)} 
+\انتہا{سوال}
+%===================
+
+\موٹا{خفی تفرق}\\
+سوال \حوالہ{سوال_کثیرالمتغیر_خفی_الف} تا سوال \حوالہ{سوال_کثیرالمتغیر_خفی_ب} میں تصور کریں کہ دی گئی مساوات \عددی{y} کو غیر تابع متغیر \عددی{x} کا قابل تفرق تفاعل پیش کرتی ہے۔دیے گئے نقطہ پر  مساوات \حوالہ{مساوات_کثیرالمتغیر_خفی_تفرق_کا_حصول} کی مدد سے \عددی{\tfrac{\dif y}{\dif x}} کی قیمت تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_کثیرالمتغیر_خفی_الف}
+$x^3-2y^2+xy=0,\quad (1,1)$
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{4}{3}$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+$xy+y^2-3x-3=0,\quad (-1,1)$
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+$x^2+xy+y^2-7=0,\quad (1,2)$
+\ابتدا{جواب}
+\wf{\unexpanded{
+$-\tfrac{4}{5}$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}\شناخت{سوال_کثیرالمتغیر_خفی_ب}
+$xe^y+\sin xy+y-\ln 2=0,\quad (0,\ln 2)$
+\انتہا{سوال}
+%======================
+
+ہم تین یا اس سے زیادہ متغیرات  کے تفاعل کے لئے  مساوات \حوالہ{مساوات_کثیرالمتغیر_خفی_تفرق_کا_حصول} کی موزوں صورتیں   لکھ سکتے ہیں۔ تین متغیرات کے تفاعل کے لئے کچھ یوں ہو گا:
+
+اگر مساوات \عددی{F(x,y,z)=0}  تابع متغیر \عددی{z} کو غیر تابع متغیرات \عددی{x}، \عددی{y} کی صورت میں پیش کرتی ہو تب جن نقطوں پر \عددی{F_z\ne 0} ہو وہاں درج ذیل ہوں گے:
+\begin{align}
+\frac{\partial z}{\partial x}=-\frac{F_x}{F_z},\quad \frac{\partial z}{\partial y}=-\frac{F_y}{F_z}
+\end{align}
+اس مساوات کو  استعمال کرتے ہوئے سوال \حوالہ{سوال_کثیرالمتغیر_زیادہ_خفی_الف} تا سوال \حوالہ{سوال_کثیرالمتغیر_زیادہ_خفی_ب} میں دیے گئے نقطہ پر  \عددی{\tfrac{\partial z}{\partial x}} اور \عددی{\tfrac{\partial z}{\partial y}} کی قیمتیں تلاش کریں۔ 
+  
+\ابتدا{سوال}\شناخت{سوال_کثیرالمتغیر_زیادہ_خفی_الف}
+$z^3-xy+yz+y^3-2=0,\quad (1,1,1)$
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{\partial z}{\partial x}=\tfrac{1}{4},\,\tfrac{\partial z}{\partial y}=-\tfrac{3}{4}$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%=================
+\ابتدا{سوال}
+$\frac{1}{x}+\frac{1}{y}+\frac{1}{z}-1=0,\quad (2,3,6)$
+\انتہا{سوال}
+%=================
+\ابتدا{سوال}
+$\sin(x+y)+\sin(y+z)+\sin(x+z)=0,\quad (\pi,\pi,\pi)$
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{\partial z}{\partial x}=-1,\,\tfrac{\partial z}{\partial y}=-1$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%=================
+\ابتدا{سوال}\شناخت{سوال_کثیرالمتغیر_زیادہ_خفی_ب}
+$xe^y+ye^z+2\ln x-2-3\ln 2=0,\quad (1,\ln 2,\ln 3)$
+\انتہا{سوال}
+%=================
+\موٹا{منتخب جزوی تفرقات}\\
+\ابتدا{سوال}
+  \عددی{w=(x+y+z)^2}، \عددی{x=r-s}، \عددی{y=\cos(r+s)} اور \عددی{z=\sin(r+s)} لیتے ہوئے  \عددی{r=1}،   \عددی{s=-1}  پر  \عددی{\tfrac{\partial w}{\partial r}} تلاش کریں۔
+\ابتدا{جواب}
+\wf{\unexpanded{
+$12$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}
+\عددی{w=xy+\ln z}، \عددی{x=\tfrac{v^2}{u}}، \عددی{y=u+v} اور \عددی{z=\cos u} لیتے ہوئے \عددی{u=-1}،    \عددی{v=2} پر \عددی{\tfrac{\partial w}{\partial v}} تلاش کریں۔
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+\عددی{w=x^2+\tfrac{y}{x}}، \عددی{x=u-2v+1} اور \عددی{y=2u+v-2} لیتے ہوئے \عددی{u=0}، \عددی{v=0} پر \عددی{\tfrac{\partial w}{\partial v}} تلاش کریں۔
+\ابتدا{جواب}
+\wf{\unexpanded{
+$-7$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+\عددی{z=\sin xy+x\sin y}، \عددی{x=u^2+v^2} اور \عددی{y=uv} لیتے ہوئے \عددی{u=0}، \عددی{v=1} پر \عددی{\tfrac{\partial z}{\partial u}} تلاش کریں۔
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+\عددی{z=5\tan^{-1}x}  اور \عددی{x=e^u+\ln v}  لیتے ہوئے \عددی{u=\ln 2}، \عددی{v=1} پر \عددی{\tfrac{\partial z}{\partial u}} اور \عددی{\tfrac{\partial z}{\partial v}}  تلاش کریں۔
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{\partial z}{\partial u}=2,\,\tfrac{\partial z}{\partial v}=1$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}
+\عددی{z=\ln q}  اور \عددی{q=\sqrt{v+3}\tan^{-1}u}  لیتے ہوئے \عددی{u=1}، \عددی{v=-2} پر \عددی{\tfrac{\partial z}{\partial u}} اور \عددی{\tfrac{\partial z}{\partial v}}  تلاش کریں۔
+\انتہا{سوال}
+%===================
+
+\موٹا{نظریہ اور مثالیں}\\
+\ابتدا{سوال}\ترچھا{دور میں برقی دباو کی تبدیلی}\\
+ایک برقی  دور جو \عددی{V=IR} کو مطمئن  کرتا ہو میں  بیٹری کمزور پڑنے سے برقی دباو \عددی{V} آہستہ آہستہ  گھٹتا ہے۔ساتھ ہی ساتھ مزاحمت گرم ہونے کی بنا بڑھتا ہے۔درج ذیل مساوات استعمال کرتے ہوئے اس لمحہ پر برقی رو کی شرح تبدیلی دریافت کریں جب \عددی{R=\SI{600}{\ohm}}، \عددی{I=\SI{0.04}{\ampere}}، \عددی{\tfrac{\dif R}{\dif t}=\SI{0.5}{\ohm\per\second}} اور \عددی{\tfrac{\dif V}{\dif t}=\SI{-0.01}{\volt\per\second}} ہوں۔
+\begin{align*}
+\frac{\dif V}{\dif t}=\frac{\partial V}{\partial I}\frac{\dif I}{\dif t}+\frac{\partial V}{\partial R}\frac{\dif R}{\dif t}
+\end{align*}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\SI{-0.00005}{\ampere\per\second}$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}\ترچھا{ایک ڈبے کی اضلاع کی تبدیلی}\\
+ایک مستطیل ڈبے کے اضلاع \عددی{a}، \عددی{b} اور \عددی{c}  وقت کے ساتھ تبدیل ہو رہے ہیں۔اس ڈبے کا   حجم اور  سطحی رقبہ کس شرح سے اس لمحہ تبدیل ہوں  گے  جب \عددی{a=\SI{1}{\meter}}، \عددی{b=\SI{2}{\meter}}، \عددی{c=\SI{3}{\meter}}، \عددی{\tfrac{\dif a}{\dif t}=\tfrac{\dif b}{\dif t}=\SI{1}{\meter\per\second}} اور \عددی{\tfrac{\dif c}{\dif t}=\SI{-3}{\meter\per\second}}  ہوں؟ کیا اس لمحہ پر  ڈبے کے اندرونی  وتروں کی لمبائیاں بڑھ رہی ہیں یا گھٹ رہی ہیں؟
+\انتہا{سوال}
+%=================
+\ابتدا{سوال}
+اگر \عددی{f(u,v,w)} قابل تفرق ہو اور \عددی{u=x-y}، \عددی{v=y-z} اور \عددی{w=z-x} ہوں تب دکھائیں کہ درج ذیل ہو گا۔
+\begin{align*}
+\frac{\partial f}{\partial x}+\frac{\partial f}{\partial y}+\frac{\partial f}{\partial z}=0
+\end{align*}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+(ا) دکھائیں کہ قابل تفرق تفاعل \عددی{w=f(x,y)} میں قطبی محدد \عددی{x=r\cos\theta} اور \عددی{y=r\sin\theta}  پر کر کے درج ذیل حاصل کیے جا سکتے ہیں۔
+\begin{align*}
+\frac{\partial w}{\partial r}=f_x\cos\theta+f_y\sin\theta,\quad  \frac{1}{r}\frac{\partial w}{\partial \theta}=-f_x\sin\theta+f_y\cos\theta
+\end{align*}
+(ب) جزو-ا میں دی گئی مساواتوں کو حل کرتے ہوئے  \عددی{f_x} اور \عددی{f_y} کو \عددی{\tfrac{\partial w}{\partial r}} اور \عددی{\tfrac{\partial w}{\partial \theta}} کی صورت میں لکھیں۔ 
+(ج) درج ذیل دکھائیں۔
+\begin{align*}
+(f_x)^2+(f_y)^2=\big(\frac{\partial w}{\partial r}\big)^2+\frac{1}{r^2}\big(\frac{\partial w}{\partial \theta}\big)^2
+\end{align*}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}
+اگر  \عددی{w=f(u,v)}مساوات  لاپلاس \عددی{f_{uu}+f_{vv}=0}   کو مطمئن کرتا ہو اور \عددی{u=\tfrac{x^2-y^2}{2}} اور \عددی{v=xy} ہوں   تب دکھائیں کہ  \عددی{w} مساوات لاپلاس \عددی{w_{xx}+w_{yy}=0} کو بھی مطمئن کرے گا۔
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+فرض کریں \عددی{w=f(u)+g(v)} ہے جہاں \عددی{u=x+iy}، \عددی{v=x-iy} اور \عددی{i=\sqrt{-1}} ہیں۔ دکھائیں کہ \عددی{w} مساوات لاپلاس \عددی{w_{xx}+w_{yy}=0} کو مطمئن کرتا ہے، بشرطیکہ تمام درکار تفاعل قابل تفرق ہوں۔
+\انتہا{سوال}
+%===================
+
+\موٹا{منحنی پر چلتے ہوئے تفاعل کی قیمت میں تبدیلی }\\
+\ابتدا{سوال}
+فرض کریں پیچدار منحنی \عددی{x=\cos t,\,y=\sin t,\, z=t} پر  پائے جانے والے نقطوں پر تفاعل \عددی{f(x,y,z)}  کے جزوی تفرقات درج ذیل ہیں۔
+\begin{align*}
+f_x=\cos t,\quad f_y=\sin t,\quad f_z=t^2+t-2
+\end{align*}
+اس منحنی پر ، کس نقطوں پر  (اگر ایسا ہو) \عددی{f}  کی انتہائی  قیمتیں ہوں گی؟
+\ابتدا{جواب}
+\wf{\unexpanded{
+\عددی{(\cos 1,\sin 1,1)}  اور \عددی{(\cos(-2),\sin(-2),-2)}
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%===============
+\ابتدا{سوال}
+تفاعل \عددی{w=x^2e^{2y}\cos 3z} لیتے ہوئے  دائرہ \عددی{x=\cos t,\, y=\ln(t+2),\,z=t,\,}  کے  نقطہ \عددی{(1,\ln2 ,0)} پر \عددی{\tfrac{\dif w}{\dif t}} تلاش کریں۔  
+\انتہا{سوال}
+%================
+\ابتدا{سوال}
+دائرہ \عددی{x=\cos t,\, y=\sin t,\, 0\le t\le 2\pi} کے نقطہ \عددی{(x,y)}  پر درجہ حرارت  \عددی{T=f(x,y)} لیں اور درج ذیل فرض کریں۔
+\begin{align*}
+\frac{\partial T}{\partial x}=8x-4y,\quad \frac{\partial T}{\partial y}=8y-4x
+\end{align*}
+\begin{enumerate}[a.]
+\item
+تفرقات \عددی{\tfrac{\dif T}{\dif t}} اور \عددی{\tfrac{\dif^{\,2}T}{\dif t^2}} کو دیکھ کر بتائیں کہ اس دائرہ پر کہاں زیادہ سے زیادہ اور کہاں کم سے کم درجہ حرارت ہو گا۔
+\item
+حرارت \عددی{T=4x^2-4xy+4y^2}   لیتے ہوئے دائرہ پر زیادہ سے زیادہ اور کم سے کم \عددی{T} تلاش کریں۔
+\end{enumerate}
+\ابتدا{جواب}
+\wf{\unexpanded{
+(ا) 
+\عددی{(-\tfrac{\sqrt{2}}{2},\tfrac{\sqrt{2}}{2})} اور \عددی{(\tfrac{\sqrt{2}}{2},-\tfrac{\sqrt{2}}{2})} پر زیادہ سے زیادہ،\\
+\عددی{(\tfrac{\sqrt{2}}{2},\tfrac{\sqrt{2}}{2})} اور \عددی{(-\tfrac{\sqrt{2}}{2},-\tfrac{\sqrt{2}}{2})} کم سے کم۔\\
+(ب)
+زیادہ =\عددی{6}، کم =\عددی{2}
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%==================
+\ابتدا{سوال}
+درج ذیل ترخیم  کے نقطہ \عددی{(x,y)} پر درجہ حرارت \عددی{T=g(x,y)} لیں۔
+\begin{align*}
+x=2\sqrt{2}\cos t,\quad y=\sqrt{2}\sin t,\quad 0\le t\le 2\pi
+\end{align*}
+مزید  درج ذیل فرض کریں۔
+\begin{align*}
+\frac{\partial T}{\partial x}=y,\quad \frac{\partial T}{\partial y}=x
+\end{align*}
+\begin{enumerate}[a.]
+\item
+تفرقات \عددی{\tfrac{\dif T}{\dif t}} اور \عددی{\tfrac{\dif^{\,2}T}{\dif t^2}} کو دیکھ کر بتائیں  ترخیم پر  کہاں زیادہ سے زیادہ  اور  کہاں کم سے کم    \عددی{T} ہو گا۔
+\item
+حرارت \عددی{T=xy-2} لیتے ہوئے ترسیم کر کہاں زیادہ سے زیادہ اور کم سے کم \عددی{T} ہو گا؟
+\end{enumerate}
+\انتہا{سوال}
+%============
+\موٹا{تکملات کے تفرقات}\\
+استمرار کی  نرم شرائط  پر پورا کرتے  ہوئے  اگر
+\begin{align*}
+F(x)=\int_a^bg(t,x)\dif t
+\end{align*}
+ہو  تب \عددی{F'(x)=\int_a^bg_x(t,x)\dif t} ہو گا۔ اس حقیقت کو اور زنجیری قاعدہ کو استعمال کرتے  ہوئے ہم
+\begin{align*}
+F(x)=\int_a^{f(x)}g(t,x)\dif t
+\end{align*}
+کا تفرق  درج ذیل لے کر حاصل کر سکتے ہیں جہاں \عددی{u=f(x)} ہو گا۔
+\begin{align*}
+G(u,x)=\int_a^ug(t,x)\dif t
+\end{align*}
+سوال \حوالہ{سوال_کثیرالمتغیر_تکمل_کا_تفرق_الف} اور سوال \حوالہ{سوال_کثیرالمتغیر_تکمل_کا_تفرق_ب} میں تفاعل کے تفرق تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_کثیرالمتغیر_تکمل_کا_تفرق_الف}
+$F(x)=\int_0^{x^2}\sqrt{t^4+x^3}\dif t$
+\ابتدا{جواب}
+\wf{\unexpanded{
+$2x\sqrt{x^8+x^3}+\int_0^{x^2}\tfrac{3x^2}{2\sqrt{t^4+x^3}}\dif t$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}\شناخت{سوال_کثیرالمتغیر_تکمل_کا_تفرق_ب}
+$F(x)=\int_{x^2}^1\sqrt{t^3+x^2}\dif t$
+\انتہا{سوال}
+%====================
+
+\انتہا{سوالات}
+%%%%%%%%%%%%%%%%%%%%%%
