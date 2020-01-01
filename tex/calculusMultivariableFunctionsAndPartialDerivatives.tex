@@ -2069,11 +2069,12 @@ f_x&=\frac{\partial}{\partial x}\big(\frac{2y}{y+\cos x}\big)=\frac{(y+\cos x)\t
 \end{align*}
 \انتہا{مثال}
 %=================
-\ابتدا{مثال}
+
+\ابتدا{مثال}\شناخت{مثال_کثیر_المتغیر_پیالہ_جزوی_تفرق}
 مستوی \عددی{x=1} قطع مکافی سطح  \عددی{z=x^2+y^2} کو قطع مکافی میں قطع کرتا ہے۔نقطہ \عددی{(1,2,5)} پر اس قطع مکافی کے مماس کی ڈھلوان تلاش کریں۔
 
 حل:\quad
-مماس کی ڈھلوان نقطہ \عددی{(1,2)} پر جزوی تفرق \عددی{\tfrac{\partial z}{\partial y}} کی قیمت ہو گی:
+مماس کی ڈھلوان نقطہ \عددی{(1,2)} پر جزوی تفرق \عددی{\tfrac{\partial z}{\partial y}} کی قیمت ہو گی (شکل \حوالہ{شکل_مثال_کثیر_المتغیر_پیالہ_جزوی_تفرق}):
 \begin{align*}
 \left.\frac{\partial z}{\partial y}\right\vert_{(1,2)}=\left.\frac{\partial}{\partial y}(x^2+y^2)\right\vert_{(1,2)}=\left.2y\right\vert_{(1,2)}=2(2)=4
 \end{align*}
@@ -2083,7 +2084,21 @@ f_x&=\frac{\partial}{\partial x}\big(\frac{2y}{y+\cos x}\big)=\frac{(y+\cos x)\t
 \end{align*}
 \انتہا{مثال}
 %==============
-
+\begin{figure}
+\centering
+\begin{tikzpicture}[declare function={f(\x,\y)=(\x)^2+(\y)^2;fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);fz(\r,\t)=(\r)^2;ft(\y)=5+4*(\y-2);}]
+\pgfmathsetmacro{\k}{2.4}
+\begin{axis}[small,clip=false,axis lines=center,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.8);},view/h=110,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=west},zlabel style={anchor={south}},enlargelimits=true,hide z axis]
+\addplot3[z buffer=sort,surf,domain=0:2.6,domain y=-45:360]({fx(x,y)},{fy(x,y)},{fz(x,y)});
+\addplot3[thick,domain y=-\k:\k](1,\y,{1+(\y)^2});
+\addplot3[]coordinates {(1,\k,0)(1,\k,0)(1,\k,7)(1,-\k,7)(1,-\k,0)}node[pos=0.75,pin={[align=center]190:{\RL{مستوی}\\ $x=1$}}]{};
+\addplot3[domain y=0.75:2](1,y,{ft(y)})node[pos=0,pin={-45:{\RL{مماسی خط}}}]{};
+\addplot3[]coordinates{(1,2,5)}node[circ]{}node[right]{$(1,2,5)$};
+\end{axis}
+\end{tikzpicture}
+\caption{مستوی \عددی{x=1} اور سطح \عددی{z=x^2+y^2} کے تقاطع منحنی کا نقطہ \عددی{(1,2,5)} پر  مماس (مثال \حوالہ{مثال_کثیر_المتغیر_پیالہ_جزوی_تفرق})۔}
+\label{شکل_مثال_کثیر_المتغیر_پیالہ_جزوی_تفرق}
+\end{figure}
 سادہ تفرق کی طرح جزوی تفرق کے لئے بھی  خفی تفرق کار آمد ہے۔
 
 \ابتدا{مثال}
@@ -2146,7 +2161,7 @@ f(x,y,z)=x\sin(y+3z)
 \centering
 \begin{tikzpicture}
 \pgfmathsetmacro{\k}{1.5}
-\draw(0,0) to [american voltage source,l_={$V_S$}]++(0,\k) to [short]++(\k,0) to [resistor,l={$R_1$}]++(0,-\k) to [short](0,0);
+\draw(0,0) to [american voltage source,l_={$V_S$}]++(0,\k) to [short,i>={$I$}]++(\k,0) to [resistor,l={$R_1$}]++(0,-\k) to [short](0,0);
 \ctikzset{bipoles/length=1.25cm}
 \draw(\k,0) to [short,*-]++(\k,0) to [resistor,l_={$R_2$}]++(0,\k) to [short,-*]++(-\k,0);
 \draw(2*\k,0) to [short,*-]++(\k,0) to [resistor,l_={$R_3$}]++(0,\k) to [short,-*]++(-\k,0);
@@ -2759,7 +2774,7 @@ $v_x=\tfrac{\ln v}{(\ln u)(\ln v)-1}$
  \begin{align}\label{مساوات_کثیر_المتغیر_مساوات_لاپلاس_ب}
 \frac{\partial^{\,2}f}{\partial x^2}+\frac{\partial^{\,2}f}{\partial y^2}=0
 \end{align}
-حاصل ہوتی ہے جو مستوی میں  خفی قوہ اور برقرار حال حراری تقسیم  بیان کرتی ہے۔
+حاصل ہوتی ہے جو مستوی میں  خفی قوہ اور برقرار حال حراری تقسیم  بیان کرتی ہے (شکل \حوالہ{شکل_کثیر_المتغیر_لاپلاس_اور_حرارت})۔
 
 دکھائیں کہ سوال \حوالہ{سوال_کثیرالمتغیر_مطمئن_لاپلاس_الف} تا سوال \حوالہ{سوال_کثیرالمتغیر_مطمئن_لاپلاس_ب} میں  دیا ہر ایک  تفاعل مساوات لاپلاس میں سے کسی ایک کو مطمئن کرتا ہے۔ 
 
@@ -2787,6 +2802,48 @@ $f(x,y,z)=(x^2+y^2+z^2)^{-1/2}$
 $f(x,y,z)=e^{2x+4y}\cos 5z$
 \انتہا{سوال}
 %=====================
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\a}{2.5}
+\pgfmathsetmacro{\b}{1.25}
+\pgfmathsetmacro{\t}{0.1}
+\pgfmathsetmacro{\ang}{45}
+\draw[fill=llgray](0,0)coordinate(aa)--++(\a,0)coordinate(bb)--++(\ang:\b)coordinate(cc)--++(-\a,0)coordinate(dd)--(0,0);
+\draw(0,0)--++(0,-\t)coordinate(aaa)--++(\a,0)coordinate(bbb)--++(\ang:\b)coordinate(ccc)--(cc);
+\draw[fill=llgray](aa)--(aaa)--(bbb)--(ccc)--(cc)--(bb)--(aa);
+\draw(bb)--(bbb);
+\draw(\a/2,-0.8) circle (0.3cm and 0.1cm);
+\draw(\a/2-0.3,-0.8)--++(0,-0.5);
+\draw(\a/2+0.3,-0.8)--++(0,-0.5);
+\draw[fill=white](\a/2,-0.3)to [out=-135,in=110]++(0,-0.5) to [out=80,in=-45]++(0,0.5);
+\draw(3/4*\a,\b/2)node[circ]{}node[pin=60:{$\frac{\partial^{\,2}f}{\partial x^2}+\frac{\partial^{\,2}f}{\partial y^2}=0$}]{};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\a}{2.5}
+\pgfmathsetmacro{\b}{1.25}
+\pgfmathsetmacro{\c}{0.6}
+\pgfmathsetmacro{\t}{0.1}
+\pgfmathsetmacro{\ang}{45}
+\draw(0,0)coordinate(aa)--++(\a,0)coordinate(bb)--++(\ang:\b)coordinate(cc)--++(-\a,0)coordinate(dd)--++(\ang:-\b);
+\draw(0,\c)coordinate(taa)--++(\a,0)coordinate(tbb)--++(\ang:\b)coordinate(tcc)--++(-\a,0)coordinate(tdd)--++(\ang:-\b);
+\draw[fill=llgray,opacity=0.5](0,\c/2)coordinate(maa)--++(\a,0)coordinate(mbb)--++(\ang:\b)coordinate(mcc)--++(-\a,0)coordinate(mdd)--++(\ang:-\b);
+\draw[dashed](0,\c/2-\t)--++(\ang:\b)--++(\a,0);
+\draw[fill=llgray,opacity=0.5](0,\c/2-\t)--++(\a,0)--++(\ang:\b)--++(0,\t)--++(\ang:-\b)--++(-\a,0)--++(0,-\t);
+\draw(aa)--(taa)  (bb)--(tbb)  (cc)--(tcc)  (dd)--(tdd);
+\draw(1/2*\a,\b/2+\t)node[circ]{}node[pin={[pin distance=1cm]70:{$\frac{\partial^{\,2}f}{\partial x^2}+\frac{\partial^{\,2}f}{\partial y^2}+\frac{\partial^{\,2}f}{\partial z^2}=0$}}]{};
+\end{tikzpicture}
+\caption{مستوی کی سرحدی (کناروں کی) حرارت قابو کی گئی ہے۔}
+\end{subfigure}
+\caption{مستوی اور ٹھوس اجسام میں برقرار حال حرارت، مساوات لاپلاس کو مطمئن کرتی ہے۔}
+\label{شکل_کثیر_المتغیر_لاپلاس_اور_حرارت}
+\end{figure}
 
 \موٹا{مساوات موج}\\
 سمندر  کے کنارے کھڑے  ہو کر سمندری امواج کی لی گئی  تصویر  میں نشیب و فراز کا   ایک منظم نقش نظر آتا ہے۔ہمیں  فضا میں  فاصلہ کے لحاظ سے   دوری انتصابی حرکت نظر آتی ہے۔ پانی میں کھڑے ہو کر ہم گزرتی امواج کی بنا پانی کا اتار چھڑاو محسوس کرتے ہیں۔ ہم وقت کے لحاظ سے دوری انتصابی حرکت  دیکھتے ہیں۔طبیعیات  میں اس خوبصورت   تشاکلی کو \ترچھا{یک بعدی مساوات موج}
@@ -2881,12 +2938,26 @@ f(x,y)=f(x_0,y_0)+f_x(x_0,y_0)\Delta x+f_y(x_0,y_0)\Delta y+\epsilon_1\Delta x+\
 %============
 
 ہم مسئلہ \حوالہ{مسئلہ_کثیرالمتغیر_بڑھوتری} اور مسئلہ  \حوالہ{مسئلہ_کثیرالمتغیر_تفاعل_استمرار} سے دیکھتے ہیں کہ  اگر اس پورے  خطہ میں، جس میں  نقطہ \عددی{(x_0,y_0)} پایا جاتا ہو،     \عددی{f_x} اور \عددی{f_y} استمراری ہوں تب  \عددی{(x_0,y_0)} پر \عددی{f(x,y)} لازماً استمراری ہو گا۔  یاد رہے کہ  دو متغیرات کا تفاعل اس نقطہ پر غیر استمراری ہو سکتا ہے جہاں اس  کا جزوی اول تفرق موجود ہو (مثال \حوالہ{مثال_کثیرالمتغیر_ٹکڑوں_میں_استمراری})۔ صرف موجودگی کافی نہیں ہے۔ 
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\a}{5.25}
+\pgfmathsetmacro{\b}{3}
+\draw[fill=llgray](0,0)--++(\a,0)--++(0,\b)--++(-\a,0)--+(0,-\b);
+\draw(1.25,0.5)node[circ]{}node[left]{$(x_0,y_0)$}node[pin={[align=center,pin distance=0.25cm]80:{\RL{نقطہ جہاں}\\   \RL{\عددی{f} قابل تفرق ہے}}}]{}--++(2,0)node[pos=0.5,below]{$\Delta x=x-x_0$}--++(0,2)node[pos=0.5,right]{$\Delta y=y-y_0$}node[circ]{}node[right]{$(x,y)$}node[pin={[align=center,left]-170:{\RL{\عددی{(x_0,y_0)} کے}\\   \RL{قریب نقطہ}}}]{};
+\end{tikzpicture}
+\caption{
+اگر \عددی{(x_0,y_0)} پر \عددی{f} قابل تفرق ہو تب قریبی نقطہ \عددی{(x,y)} پر \عددی{f} کی قیمت تقریباً\\
+\عددی{f(x_0,y_0)+f_x(x_0,y_0)\Delta x+f_y(x_0,y_0)\Delta y} ہو گی۔
+}
+\label{شکل_کثیرالمتغیر_نقطہ_کے_قریب_قیمت}
+\end{figure}
 
 \جزوحصہء{دو متغیرات کے تفاعل کی خط بندی}
 دو متغیرات کے تفاعل پیچیدہ ہو سکتے ہیں اور بعض اوقات    ہم چاہیں گے کہ  ان کی جگہ  ایسے نسبتاً  سادہ  تفاعل استعمال کریں  جن کے ساتھ کام کرنا  آسان ہو  اور جو  مخصوص عملی  استعمال میں درکار درستگی دیتے ہوں۔ہم      واحد متغیر کے تفاعل  کی خط بند ی  کی طرز پر ایسا    کرتے ہیں (حصہ \حوالہ{حصہ_استعمال_خط_بندی_اور_تفرقات})۔
 
 
-فرض کریں   تفاعل \عددی{z=f(x,y)} نقطہ \عددی{(x_0,y_0)} پر  قابل تفرق ہے  اور ہم اس نقطہ پر     \عددی{f}، \عددی{f_x} اور \عددی{f_y} کی  قیمتیں  جانتے ہیں۔ ہم  اس تفاعل کا ایسا متبادل  چاہتے ہیں جو  \عددی{(x_0,y_0)}    کے قریب  موثر ہو۔ چونکہ \عددی{f} قابل تفرق ہے لہٰذا نقطہ \عددی{(x_0,y_0)} پر مساوات \حوالہ{مساوات_کثیرالمتغیر_نقطہ_پر_تفاعل_کی_قیمت}  تفاعل \عددی{f} کے لئے کار آمد ہو گا۔یوں \عددی{\Delta x=x-x_0} اور \عددی{\Delta y=y-y_0} کی بڑھوتری  سے   \عددی{(x_0,y_0)} سے نقطہ  \عددی{(x,y)}  منتقل ہونے سے \عددی{f} کی نئی قیمت
+فرض کریں   تفاعل \عددی{z=f(x,y)} نقطہ \عددی{(x_0,y_0)} پر  قابل تفرق ہے  اور ہم اس نقطہ پر     \عددی{f}، \عددی{f_x} اور \عددی{f_y} کی  قیمتیں  جانتے ہیں۔ ہم  اس تفاعل کا ایسا متبادل  چاہتے ہیں جو  \عددی{(x_0,y_0)}    کے قریب  موثر ہو۔ چونکہ \عددی{f} قابل تفرق ہے لہٰذا نقطہ \عددی{(x_0,y_0)} پر مساوات \حوالہ{مساوات_کثیرالمتغیر_نقطہ_پر_تفاعل_کی_قیمت}  تفاعل \عددی{f} کے لئے کار آمد ہو گا۔یوں \عددی{\Delta x=x-x_0} اور \عددی{\Delta y=y-y_0} کی بڑھوتری  سے   \عددی{(x_0,y_0)} سے نقطہ  \عددی{(x,y)}  منتقل  (شکل \حوالہ{شکل_کثیرالمتغیر_نقطہ_کے_قریب_قیمت})    ہونے سے \عددی{f} کی نئی قیمت
 \begin{align*}
 f(x,y)&=f(x_0,y_0)+f_x(x_0,y_0)(x-x_0)+f_y(x_0,y_0)(y-y_0)+\epsilon_1\Delta x+\epsilon_2\Delta y
 \end{align*}
@@ -2931,9 +3002,27 @@ L(x,y)&=f(x_0,y_0)+f_x(x_0,y_0)(x-x_0)+f_y(x_0,y_0)(y-y_0)&&\text{\RL{مساوا
 نقطہ \عددی{(3,2)} پر \عددی{f} کی خط بندی \عددی{L(x,y)=4x-y-2} ہے۔
 \انتہا{مثال}
 %================
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{2.75}
+\pgfmathsetmacro{\b}{2}
+\draw[-latex](0,0)--(3.5,0)node[right]{$x$};
+\draw[-latex](0,0)--(0,2.5)node[left]{$y$};
+\draw[fill=llgray,opacity=0.5](0.5,0.25)node[above right,black]{$R$}--++(\a,0)--++(0,\b)--++(-\a,0)--++(0,-\b);
+\draw[-latex](0.5,0.25)++(\a/2,\b/2)--++(\a/2,0)node[pos=0.5,above]{$h$};
+\draw[-latex](0.5,0.25)++(\a/2,\b/2)node[ocirc]{}node[below]{$(x_0,y_0)$}--++(0,\b/2)node[pos=0.5,left]{$k$};
+\end{tikzpicture}
+\caption{
+مستوی \عددی{xy} میں مستطیل خطہ  \عددی{R}:
+$\abs{x-x_0}\le h,\,\abs{y-y_0}\le k$
+جہاں  میں ہم اپنی تخمین کے خلل کی کارآمد  حد بندی تلاش کر سکتے ہیں
+}
+\label{شکل_کثیرالمتغیر_تخمین_درستگی}
+\end{figure}
 
 \جزوحصہء{معیاری خطی تخمین کی درستگی}
-تخمین \عددی{f(x,y)\approx L(x,y)}  میں خلل کی تلاش میں ہم \عددی{f} کے دو  رتبی  جزوی تفرقات استعمال کرتے ہیں۔ فرض کریں ایک  کھلا  سلسلہ  میں \عددی{f} کے یک رتبی اور دو رتبی جزوی تفرقات استمراری ہوں اور اس سلسلہ   میں ایک  مستطیل خطہ \عددی{R}   جس کا مرکز \عددی{(x_0,y_0)} ہو پایا جاتا ہو۔ اس مستطیل خطہ کو  درج ذیل عدم مساوات  ظاہر کرتے ہیں۔
+تخمین \عددی{f(x,y)\approx L(x,y)}  میں خلل کی تلاش میں ہم \عددی{f} کے دو  رتبی  جزوی تفرقات استعمال کرتے ہیں۔ فرض کریں ایک  کھلا  سلسلہ  میں \عددی{f} کے یک رتبی اور دو رتبی جزوی تفرقات استمراری ہوں اور اس سلسلہ   میں ایک  مستطیل خطہ \عددی{R}   جس کا مرکز \عددی{(x_0,y_0)} ہو پایا جاتا ہو۔ اس مستطیل خطہ کو  درج ذیل عدم مساوات  ظاہر کرتے ہیں (شکل \حوالہ{شکل_کثیرالمتغیر_تخمین_درستگی})۔
 \begin{align*}
 \abs{x-x_0}\le h,\quad \abs{y-y_0}\le k
 \end{align*}
@@ -3019,8 +3108,43 @@ R:\quad \abs{x-3}\le 0.1,\quad \abs{y-2}\le 0.1
 تفاعل \عددی{f} کی خط بندی میں اس تبدیلی کو\اصطلاح{ \عددی{f} کی کل تفریق}\فرہنگ{تفریق!کل}\حاشیہب{total differential}\فرہنگ{differential!total} کہتے ہیں۔
 \انتہا{تعریف}
 %=================
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\ra}{0.5}
+\pgfmathsetmacro{\rb}{\ra/2}
+\pgfmathsetmacro{\h}{1.25}
+\draw([shift={(180:\ra cm and \rb cm)}]0,0) arc (180:360:\ra cm and \rb cm);
+\draw(0,\h) circle (\ra cm and \rb cm);
+\draw(-\ra,0)--++(0,\h)  (\ra,0)--++(0,\h);
+\draw(0,\h)--++(\ra,0)node[pos=0.25,pin=45:{$r=5$}]{};
+\draw(\ra,\h/2)node[right]{$h=25$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\ra}{1.25}
+\pgfmathsetmacro{\rb}{\ra/2}
+\pgfmathsetmacro{\h}{0.5}
+\draw([shift={(180:\ra cm and \rb cm)}]0,0) arc (180:360:\ra cm and \rb cm);
+\draw(0,\h) circle (\ra cm and \rb cm);
+\draw(-\ra,0)--++(0,\h)  (\ra,0)--++(0,\h);
+\draw(0,\h)--++(\ra,0)node[pos=0.45,above]{$r=25$};
+\draw(\ra,\h/2)node[right]{$h=5$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{
+بیلن-ا کا حجم \عددی{r} میں چھوٹی تبدیلی کو زیادہ حساس ہے جبکہ بیلن-ب کا حجم \عددی{h} میں چھوٹی تبدیلی کو زیادہ حساس ہے۔
+}
+\label{شکل_مثال_کثیرالمتغیر_تبدیلی_کو_حساسیت}
+\end{figure}
 
-\ابتدا{مثال}\ترچھا{تبدیلی کے لئے حساسیت }\\
+\ابتدا{مثال}\شناخت{مثال_کثیرالمتغیر_تبدیلی_کو_حساسیت}\ترچھا{تبدیلی کے لئے حساسیت }\\
 آپ کا ادارہ       دائری نلکی حوض   بناتا ہے جس کا قد \عددی{\SI{25}{\meter}} اور رداس \عددی{\SI{5}{\meter}} ہے۔ قد اور رداس میں چھوٹی تبدیلی کو حوض کے حجم کی حساسیت تلاش کریں۔ 
 
 حل:\quad
@@ -3040,7 +3164,7 @@ H(r,h)=\pi r^2 h
 \begin{align*}
 \dif H=(2\pi r h)_{(25,5)}\dif h+(\pi r^2)_{(25,5)}\dif r=250\pi\dif r+625\pi\dif h
 \end{align*}
-ہو گا۔اب حوض کا حجم قد میں تبدیلی کو زیادہ حساس ہے۔
+ہو گا۔اب حوض کا حجم قد میں تبدیلی کو زیادہ حساس ہے (شکل \حوالہ{شکل_مثال_کثیرالمتغیر_تبدیلی_کو_حساسیت})۔
 
 اس مثال سے ہم یہ قاعدہ سیکھتے ہیں کہ تفاعل ان متغیرات کو زیادہ حساس ہوتے ہیں جو سب سے بڑا جزوی  تفرق دیتا ہو۔
 \انتہا{مثال}
@@ -3104,8 +3228,22 @@ H(r,h)=\pi r^2 h
 
 ایسی صورت میں ہم ناپی گئی قیمتوں  \عددی{(r_0,h_0)}  کو مرکز رکھتے ہوئے ایک مربع  منتخب کرتے ہیں جس میں \عددی{H} کی  قیمت \عددی{\pi r_0^2h_0} سے قابل قبول حد سے زیادہ تجاوز نہ کرتا ہو۔
 %=================
-\ابتدا{مثال}
-نقطہ \عددی{(r_0,h_0=(5,12)} کو مرکز رکھتے ہوئے ایسا مربع تلاش کریں جس میں حجم \عددی{H=\pi r^2h} کی   قیمت \عددی{\pm 0.1} سے زیادہ تجاوز نہ کرے۔
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{1.75}
+\pgfmathsetmacro{\b}{1.5}
+\draw[-latex](0,0)--(3,0)node[right]{$x$};
+\draw[-latex](0,0)--(0,2.5)node[left]{$y$};
+\draw[fill=llgray,opacity=0.5](1,1)--++(\a,0)--++(0,\b)--++(-\a,0)--++(0,-\b);
+\draw[-latex](1,1)++(\a/2,\b/2)--++(\a/2,0)node[pos=0.5,above]{$\dif r$};
+\draw[-latex](1,1)++(\a/2,\b/2)node[ocirc]{}node[below]{$(5,12)$}--++(0,\b/2)node[pos=0.5,left]{$\dif h$};
+\end{tikzpicture}
+\caption{نقطہ \عددی{(5,12)} کے گرد چھوٹا مربع (مثال \حوالہ{مثال_کثیرالمتغیر_موزوں_مستطیل_تلاش})}
+\label{شکل_مثال_کثیرالمتغیر_موزوں_مستطیل_تلاش}
+\end{figure}
+\ابتدا{مثال}\شناخت{مثال_کثیرالمتغیر_موزوں_مستطیل_تلاش}
+نقطہ \عددی{(r_0,h_0=(5,12)} کو مرکز رکھتے ہوئے ایسا مربع تلاش کریں جس میں حجم \عددی{H=\pi r^2h} کی   قیمت \عددی{\pm 0.1} سے زیادہ تجاوز نہ کرے (شکل \حوالہ{شکل_مثال_کثیرالمتغیر_موزوں_مستطیل_تلاش})۔
 
 حل:\quad
 ہم \عددی{\dif H} کی درج ذیل تخمین  لیتے ہیں۔
@@ -3187,8 +3325,47 @@ f_{xx}=2, f_{yy}=0, f_{zz}=-3\sin z, f_{xy}=-1,f_{xz}=0,f_{yz}=0
 ہو گا لہٰذا خلل \عددی{0.0024} سے زیادہ نہیں ہو گا۔
 \انتہا{مثال}
 %===========
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\len}{3.75}
+\pgfmathsetmacro{\w}{0.25}
+\pgfmathsetmacro{\h}{0.5}
+\pgfmathsetmacro{\ang}{60}
+\pgfmathsetmacro{\sa}{-10}
+\pgfmathsetmacro{\sb}{-170}
+\draw(0,0)to [out=\sa,in=\sb]coordinate[pos=0.5](kM)++(\len,0)--++(0,\h)coordinate(k)to [out=\sb,in=\sa]++(-\len,0)--++(0,-\h);
+\draw(\len,0)--++(\ang:\w)node[pos=0.5,right]{$w$}--++(0,\h)node[pos=0.5,right]{$h$}to [out=\sb,in=\sa]++(-\len,0)--++(\ang:-\w);
+\draw(k)--++(\ang:\w);
+\draw[dashed](0,\h/2)--++(\len,0);
+\draw(0,\h)++(\ang:\w)++(0,0.1)--++(0,0.2)coordinate[pos=0.5](kL);
+\draw(\len,\h)++(\ang:\w)++(0,0.1)--++(0,0.2)coordinate[pos=0.5](kR);
+\draw[stealth-stealth](kL)--(kR)node[pos=0.5,fill=white]{$x$};
+\draw[stealth-stealth](\len/2,\h/2)--(kM)node[pos=0.3,pin={[pin edge=-]-45:{جھول\,$=S$}}]{};
+\end{tikzpicture}
+\caption{شہتیر کا جھول}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\len}{3.75}
+\pgfmathsetmacro{\w}{0.25}
+\pgfmathsetmacro{\h}{0.5}
+\pgfmathsetmacro{\ang}{60}
+\draw(0,0)--++(\len,0)node[pos=0.5,below]{$x_0=\SI{4}{\meter}$}--++(0,\h)coordinate(k)--++(-\len,0)--++(0,-\h);
+\draw(\len,0)--++(\ang:\w)node[pos=0.5,pin={[pin distance=0.25cm]-45:{$w_0=\SI{10}{\centi\meter}$}}]{}--++(0,\h)node[pos=0.5,right]{$h_0=\SI{20}{\centi\meter}$}--++(-\len,0)--++(\ang:-\w);
+\draw(k)--++(\ang:\w);
+\end{tikzpicture}
+\caption{شہتیر کی جسامت}
+\end{subfigure}
+\caption{}
+\label{شکل_مثال_کثیرالمتغیر_شہتیر_جھول}
+\end{figure}
+
 \ابتدا{مثال}\شناخت{مثال_کثیرالمتغیر_شہتیر_جھول}\ترچھا{یکساں بار بردار شہتیر کی جھول }\\
-ایک افقی مستطیل شہتیر جس کے  دونوں سروں کو  سہارا دیا گیا  اور جس پر یکساں بوجھ (یکساں وزن فی میٹر لمبائی) ڈالا گیا ہو  اس  بوجھ کے نیچے جھک جائے گا۔ جھکاو \عددی{S}  کو درج ذیل کلیہ سے معلوم کیا جا سکتا ہے ۔
+ایک افقی مستطیل شہتیر جس کے  دونوں سروں کو  سہارا دیا گیا  اور جس پر یکساں بوجھ (یکساں وزن فی میٹر لمبائی) ڈالا گیا ہو  اس  بوجھ کے نیچے جھک جائے گا (شکل \حوالہ{شکل_مثال_کثیرالمتغیر_شہتیر_جھول}-ا)۔ جھکاو \عددی{S}  کو درج ذیل کلیہ سے معلوم کیا جا سکتا ہے ۔
 \begin{align*}
 S=C\frac{px^4}{wh}
 \end{align*}
@@ -3205,7 +3382,7 @@ S=C\frac{px^4}{wh}
 \item{C}\quad
 ایک مستقل  جو اس مادہ پر منحصر ہو گا جس سے شہتیر بنایا گیا ہو۔
 \end{description}
-ایک شہتیر کی   لمبائی \عددی{\SI{4}{\meter}}، چوڑائی  \عددی{\SI{10}{\centi\meter}}  اور   قد  \عددی{\SI{20}{\centi\meter}}  ہیں۔اس پر \عددی{\SI{100}{\newton\per\meter}} بوجھ ڈالا گیا ہے۔ جھول میں تبدیلی  \عددی{\dif S}  سے شہتیر کے بارے میں کیا نتیجہ حاصل کیا جا سکتا ہے؟
+ایک شہتیر کی   لمبائی \عددی{\SI{4}{\meter}}، چوڑائی  \عددی{\SI{10}{\centi\meter}}  اور   قد  \عددی{\SI{20}{\centi\meter}}  ہیں۔اس پر \عددی{\SI{100}{\newton\per\meter}} بوجھ ڈالا گیا ہے (شکل \حوالہ{شکل_مثال_کثیرالمتغیر_شہتیر_جھول}-ب)۔ جھول میں تبدیلی  \عددی{\dif S}  سے شہتیر کے بارے میں کیا نتیجہ حاصل کیا جا سکتا ہے؟
 
 حل:\quad
 چونکہ \عددی{S} چار متغیرات \عددی{p}، \عددی{x}، \عددی{w}، \عددی{h} کا تفاعل ہے لہٰذا اس  کی  کل تفریق \عددی{\dif S} درج ذیل ہو گی۔
@@ -3391,10 +3568,47 @@ $\approx \SI{0.1}{\percent}$
 \انتہا{جواب}
 \انتہا{سوال}
 %======================
-\ابتدا{سوال}\ترچھا{محدد کی تبدیلی میں خلل کی منتقل}\\
-(ا) اگر \عددی{x=3\mp 0.01} اور \عددی{y=4\mp 0.01} ہوں تب  نقطہ \عددی{N(x,y)} کے قطبی محدد \عددی{r}، \عددی{\theta} کتنی درستگی  تک   کلیات \عددی{r^2=x^2+y^2}، \عددی{\theta=\tan^{-1}\tfrac{y}{x}} سے   حاصل ہوں گے؟   حاصل قطبی محدد  میں تبدیلی کو  نقطہ \عددی{(x_0,y_0)=(3,4)} پر مطابقتی قیمتوں کا فی صد  لکھیں۔ (ب) نقطہ \عددی{(x_0,y_0)=(3,4)} پر \عددی{r} اور \عددی{\theta} کی قیمتیں \عددی{x} یا \عددی{y} کو زیادہ حساس ہیں؟ اپنے جواب کی وجہ پیش کریں۔ 
+\ابتدا{سوال}\شناخت{سوال_قطبی_محدد_میں_خلل}\ترچھا{محدد کی تبدیلی میں خلل کی منتقل}\\
+(ا) اگر \عددی{x=3\mp 0.01} اور \عددی{y=4\mp 0.01} ہوں تب  نقطہ \عددی{N(x,y)} کے قطبی محدد \عددی{r}، \عددی{\theta} کتنی درستگی  تک   کلیات \عددی{r^2=x^2+y^2}، \عددی{\theta=\tan^{-1}\tfrac{y}{x}} سے   حاصل ہوں گے؟   حاصل قطبی محدد  میں تبدیلی کو  نقطہ \عددی{(x_0,y_0)=(3,4)} پر مطابقتی قیمتوں کا فی صد  لکھیں۔ (ب) نقطہ \عددی{(x_0,y_0)=(3,4)} پر \عددی{r} اور \عددی{\theta} کی قیمتیں \عددی{x} یا \عددی{y} کو زیادہ حساس ہیں؟ اپنے جواب کی وجہ پیش کریں (شکل \حوالہ{شکل_سوال_قطبی_محدد_میں_خلل})۔ 
 \انتہا{سوال}
 %======================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\r}{2.5}
+\pgfmathsetmacro{\ang}{30}
+\pgfmathsetmacro{\kx}{\r*cos(\ang)}
+\pgfmathsetmacro{\ky}{\r*sin(\ang)}
+\draw[-latex](0,0)--(3,0)node[right]{$x$};
+\draw[-latex](0,0)--(0,2)node[left]{$y$};
+\draw(0,0)--++(\ang:\r)node[pos=0.5,above left]{$r$}node[circ]{}node[above]{$N(3\mp0.01,4\mp0.01)$};
+\draw[-stealth]([shift={(0:0.6)}]0,0) arc (0:\ang:0.6)node[pos=0.6,right]{$\theta$};
+\draw(\kx,0)node[below]{$3$}--++(0,0.2);
+\draw(0,\ky)node[left]{$4$}--++(0.2,0);
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_قطبی_محدد_میں_خلل}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\a}{2.5}
+\pgfmathsetmacro{\b}{1.75}
+\pgfmathsetmacro{\angA}{10}
+\pgfmathsetmacro{\angB}{50}
+\draw(0,0)--++(180+\angA:\a)coordinate(a)node[pos=0.5,below right]{$b=200\mp 0.5$};
+\draw(0,0)--++(180-\angB:\b)coordinate(b)node[pos=0.7,above right]{$a=150\mp 0.5$};
+\draw(a)--(b);
+\draw([shift={(180-\angB:0.5)}]0,0) arc (180-\angB:180+\angA:0.5)node[pos=0.5,xshift=0.5ex,left,font=\scriptsize]{$C=60^{\circ}\mp 2^{\circ}$};
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_کثیرالمتغیر_تکون_رقبہ_میں_خلل}
+\end{minipage}
+\end{figure}
+
+
 \موٹا{تین متغیرات کے تفاعل}\\
 سوال \حوالہ{سوال_کثیرالمتغیر_خط_بندی_تین_متغیراتی_تفاعل_الف} تا سوال \حوالہ{سوال_کثیرالمتغیر_خط_بندی_تین_متغیراتی_تفاعل_ب} میں دیے نقاط  پر تفاعل کی خط بندی \عددی{L(x,y)} تلاش کریں۔ 
 
@@ -3522,7 +3736,7 @@ f(a,b,c,d)=\begin{vmatrix}a&b\\ c&d \end{vmatrix}
 \انتہا{سوال}
 %===========
 \ابتدا{سوال}
-مستطیل کا رقبہ \عددی{\tfrac{1}{2}ab\sin C}  کے برابر ہوتا ہے جہاں \عددی{a} اور \عددی{b} مستطیل کے دو اضلاع کی لمبائی جبکہ \عددی{C} ان  اضلاع  کے بیچ زاویہ ہے۔ آپ \عددی{a=150}،
+مثلث  کا رقبہ \عددی{\tfrac{1}{2}ab\sin C}  کے برابر ہوتا ہے جہاں \عددی{a} اور \عددی{b} مستطیل کے دو اضلاع کی لمبائی جبکہ \عددی{C} ان  اضلاع  کے بیچ زاویہ ہے (شکل \حوالہ{شکل_سوال_کثیرالمتغیر_تکون_رقبہ_میں_خلل})۔ آپ \عددی{a=150}،
  \عددی{b=200} اور \عددی{C=60^{\circ}} ناپتے ہیں۔ اگر \عددی{a} اور \عددی{b} کی ناپ میں \عددی{\mp 0.5} اور \عددی{C} کی ناپ میں \عددی{\mp 2^{\circ}}  خلل متوقع ہو تب  رقبہ میں کتنا کلل ہو سکتا ہے؟ (یاد رہے کہ زاویہ   ریڈیئن میں لینا ضروری ہے۔) 
 \انتہا{سوال}
 %==================
@@ -3604,7 +3818,33 @@ f(a,b,c,d)=\begin{vmatrix}a&b\\ c&d \end{vmatrix}
 \end{align*} 
 یوں \عددی{\tfrac{\dif x}{\dif t}} اور \عددی{\tfrac{\dif y}{\dif t}} نقطہ \عددی{t_0} پر حاصل کیے جائیں گے۔ حقیقی غیر تابع متغیر کی قیمت  \عددی{t_0}،  درمیانی متغیرات \عددی{x} اور \عددی{y} کی   \عددی{x_0} اور \عددی{y_0} قیمتیں  تعین کرتا ہے۔ جزوی تفرقات \عددی{\tfrac{\partial w}{\partial x}} اور \عددی{\tfrac{\partial w}{\partial y}} نقطہ \عددی{(x_0,y_0)} پر حاصل کیے جاتے ہیں۔ 
 
-\ابتدا{مثال}
+زنجیری  قاعدہ کو شکل \حوالہ{شکل_کثیر_المتغیر_زنجیری_قاعدہ_یاد_رکھنا} کی  مدد سے یاد رکھنا زیادہ آسان  ہو گا۔اس طرح شکل  کو  \اصطلاح{شکل شجرہ}\فرہنگ{شکل شجرہ}\حاشیہب{tree diagram}\فرہنگ{tree diagram}  کہتے ہیں۔  آپ شکل شجرہ سے  دیکھ سکتے ہیں کہ جب \عددی{t=t_0} ہو تفرقات \عددی{\tfrac{\dif x}{\dif t}} اور \عددی{\tfrac{\dif y}{\dif t}} کی قیمتیں   \عددی{t_0} پر حاصل کیا جاتا ہے۔ اب  قابل تفرق تفاعل \عددی{x} کے لئے \عددی{x_0} کی قیمت \عددی{t_0} تعین کرتا ہے اور قابل تفرق تفاعل \عددی{y} کے لئے \عددی{y_0}  کی قیمت \عددی{t_0} تعین کرتا ہے۔ جزوی تفرقات \عددی{\tfrac{\partial w}{\partial x}}، \عددی{\tfrac{\partial w}{\partial y}} (جو از خود \عددی{x} اور \عددی{y} کے تفاعل ہیں)  کی قیمتیں نقطہ \عددی{N_0(x_0,y_0)} پر حاصل کی جاتی ہیں جو \عددی{t_0} کا مطابقتی نقطہ ہے۔ حقیقی  غیر تابع متغیر \عددی{t} ہے جبکہ \عددی{x} اور \عددی{y} درمیانے متغیرات اور \عددی{w}  تابع متغیر ہے۔
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\h}{1.25}
+\pgfmathsetmacro{\w}{1}
+\coordinate(kT) at (0,\h);
+\coordinate(ka) at (-\w,0);
+\coordinate(kc) at (\w,0);
+\coordinate(kB) at (0,-\h);
+\draw(kT)node[circ]{}node[above right,xshift=-1ex]{$w=f(x,y)$}--(ka)node[circ]{}node[left]{$x$}node[left,pos=0.5]{$\tfrac{\partial w}{\partial x}$};
+\draw(kT)--(kc)node[circ]{}node[right]{$y$}node[right,pos=0.5]{$\tfrac{\partial w}{\partial y}$};
+\draw(ka)--(kB)node[circ]{}node[below]{$t$}node[pos=0.5,left]{$\tfrac{\dif x}{\dif t}$};
+\draw(kc)--(kB)node[pos=0.5,right]{$\tfrac{\dif y}{\dif t}$};
+\draw(2*\w,\h)node[right]{\RL{تابع متغیر}};
+\draw(2*\w,0)node[right]{\RL{درمیانے  متغیرات}};
+\draw(2*\w,-\h)node[right]{\RL{غیر تابع متغیر}};
+\draw(0,-\h)node[below,yshift={-0.5cm}]{$\frac{\dif w}{\dif t}=\frac{\partial w}{\partial x}\frac{\dif x}{\dif t}+\frac{\partial w}{\partial y}\frac{\dif y}{\dif t}$};
+\draw(0,\h)node[above,yshift=0.5cm]{\RL{\موٹا{زنجیری قاعدہ}}};
+\end{tikzpicture}
+\caption{
+زنجیری قاعدہ یاد رکھنے کی خاطر اس شکل کو ذہن میں رکھیں۔اب \عددی{\tfrac{\dif w}{\dif t}}  معلوم کرنے کی خاطر \عددی{w} سے شروع ہو کر \عددی{t} تک باری باری دونوں راہ پر  چل  کر  تفرقات کا  حاصل ضرب لیں ۔  آخر میں دونوں راہ کے حاصل ضرب کا  مجموعہ لیں۔ 
+}
+\label{شکل_کثیر_المتغیر_زنجیری_قاعدہ_یاد_رکھنا}
+\end{figure}
+
+\ابتدا{مثال}\شناخت{مثال_کثیرالمتغیر_زنجیری_حاصل_ضرب_تفاعل}
 زنجیری قاعدہ استعمال کرتے ہوئے راہ \عددی{x=\cos t,\,y=\sin t} پر درج ذیل کا تفرق \عددی{\tfrac{\dif w}{\dif t}} حاصل کریں۔
 \begin{align*}
 w=xy
@@ -3619,7 +3859,7 @@ w=xy
 &=-\sin^2t+\cos^2t=\cos 2t
 \end{align*}
 
-آپ نے دیکھا کہ ہم نے \عددی{x=\cos t} اور \عددی{y=\sin t} کو جزوی تفرقات \عددی{\tfrac{\partial w}{\partial x}} اور \عددی{\tfrac{\partial w}{\partial y}} میں پر کیا۔ یوں حاصل تفرق \عددی{\tfrac{\dif w}{\dif t}}  کا اظہار غیر تابع متغیر \عددی{t} کی صورت میں   کیا جاتا ہے (جس میں  درمیا نے    متغیرات \عددی{x} اور \عددی{y} نہیں پائے  جاتے ہیں۔ )
+آپ نے دیکھا کہ ہم نے \عددی{x=\cos t} اور \عددی{y=\sin t} کو جزوی تفرقات \عددی{\tfrac{\partial w}{\partial x}} اور \عددی{\tfrac{\partial w}{\partial y}} میں پر کیا (شکل \حوالہ{شکل_مثال_کثیرالمتغیر_زنجیری_حاصل_ضرب_تفاعل})۔ یوں حاصل تفرق \عددی{\tfrac{\dif w}{\dif t}}  کا اظہار غیر تابع متغیر \عددی{t} کی صورت میں   کیا جاتا ہے (جس میں  درمیا نے    متغیرات \عددی{x} اور \عددی{y} نہیں پائے  جاتے ہیں۔ )
 
 اس مثال میں ہم حاصل نتیجہ کی تصدیق زیادہ بلا واسطہ طریقہ سے  کر سکتے ہیں۔ہم \عددی{w} کو \عددی{t} کا تفاعل لکھتے ہیں:
 \begin{align*}
@@ -3635,6 +3875,54 @@ w=xy=\cos t\sin t=\frac{1}{2}\sin 2t
 \end{align*}
 \انتہا{مثال}
 %==========
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\h}{1.25}
+\pgfmathsetmacro{\w}{1}
+\coordinate(kT) at (0,\h);
+\coordinate(ka) at (-\w,0);
+\coordinate(kb) at (0,0);
+\coordinate(kc) at (\w,0);
+\coordinate(kB) at (0,-\h);
+\draw(kT)node[circ]{}node[above right,xshift=-2ex]{$w=f(x,y,z)$}--(ka)node[circ]{}node[left]{$x$}node[left,pos=0.5]{$\tfrac{\partial w}{\partial x}$};
+\draw(kT)--(kb)node[circ]{}node[right]{$y$}node[left,pos=0.7,xshift=0.25ex]{$\tfrac{\partial w}{\partial y}$};
+\draw(kT)--(kc)node[circ]{}node[right]{$z$}node[right,pos=0.5]{$\tfrac{\partial w}{\partial z}$};
+\draw(ka)--(kB)node[circ]{}node[below]{$t$}node[pos=0.5,left]{$\tfrac{\dif x}{\dif t}$};
+\draw(kb)--(kB)node[pos=0.4,left,xshift=0.5ex]{$\tfrac{\dif y}{\dif t}$};
+\draw(kc)--(kB)node[pos=0.5,right]{$\tfrac{\dif z}{\dif t}$};
+\draw(2*\w,\h)node[right]{\RL{تابع متغیر}};
+\draw(2*\w,0)node[right]{\RL{درمیانے  متغیرات}};
+\draw(2*\w,-\h)node[right]{\RL{غیر تابع متغیر}};
+\draw(0,-\h)node[below,yshift={-0.5cm}]{$\frac{\dif w}{\dif t}=\frac{\partial w}{\partial x}\frac{\dif x}{\dif t}+\frac{\partial w}{\partial y}\frac{\dif y}{\dif t}+\frac{\partial w}{\partial z}\frac{\dif z}{\dif t}$};
+\draw(0,\h)node[above,yshift=0.5cm]{\RL{\موٹا{زنجیری قاعدہ}}};
+\end{tikzpicture}
+\caption{یہاں \عددی{w} سے \عددی{t} تک تین راستے ہیں۔اب بھی \عددی{\tfrac{\dif w}{\dif t}} حاصل کرنے کی خاطر ہر راہ پر چلتے ہوئے تفرقات کا ضرب لے کر تمام    کا مجموعہ لیں۔}
+\label{شکل_مثال_کثیرالمتغیر_زنجیری_حاصل_ضرب_تفاعل}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={fx(\x)=cos(\x);fy(\x)=1/360*\x+0.25*sin(\x);}]
+\pgfmathsetmacro{\ra}{1}
+\pgfmathsetmacro{\rb}{0.25}
+\pgfmathsetmacro{\h}{1}
+\draw([shift={(180:\ra cm and \rb cm)}]0,-\h) arc (180:360:\ra cm and \rb cm);
+\draw([shift={(0:\ra cm and \rb cm)}]0,\h) arc (0:360:\ra cm and \rb cm);
+\draw(-\ra,-\h)--(-\ra,\h);
+\draw(\ra,-\h)--(\ra,\h);
+\draw[dashed,domain=-360:-180] plot ({fx(\x)},{fy(\x)});
+\draw[domain=-180:0] plot ({fx(\x)},{fy(\x)});
+\draw[dashed,domain=0:180] plot ({fx(\x)},{fy(\x)});
+\draw[domain=180:360] plot ({fx(\x)},{fy(\x)});
+\end{tikzpicture}
+\caption{پیچدار منحنی}
+\label{شکل_مثال_کثیرالمتغیر_پیچدار_پر_پابند_راہ}
+\end{minipage}
+\end{figure}
+
+
 
 \جزوحصہء{تین متغیرات کے تفاعل کا زنجیری قاعدہ}
 ہم مساوات \حوالہ{مساوات_کثیرالمتغیر_زنجیری_دو_متغیرات_الف} کے ساتھ ایک جزو جمع  کرتے ہوئے  زنجیری قاعدہ حاصل  کرتے ہیں۔
@@ -3646,12 +3934,12 @@ w=xy=\cos t\sin t=\frac{1}{2}\sin 2t
 
 اس کا ثبوت مساوات \حوالہ{مساوات_کثیرالمتغیر_زنجیری_دو_متغیرات_الف} کی ثبوت کی طرح ہے، بس اب دو کی بجائے تین  درمیانے  متغیرات ہوں گے۔
 
-\ابتدا{مثال}\ترچھا{پیچ دار منحنی پر تفاعل کی قیمت میں تبدیلی}\\
+\ابتدا{مثال}\شناخت{مثال_کثیرالمتغیر_پیچدار_پر_پابند_راہ}\ترچھا{پیچ دار منحنی پر تفاعل کی قیمت میں تبدیلی}\\
 درج ذیل لیتے ہوئے \عددی{\tfrac{\dif w}{\dif t}} تلاش کریں۔
 \begin{align*}
 w=xy+z,\quad x=\cos t,\quad y=\sin t,\quad z=t
 \end{align*}
-نقطہ \عددی{t=0} پر اس تفرق کی قیمت کیا ہو گی؟
+نقطہ \عددی{t=0} پر اس تفرق کی قیمت کیا ہو گی (شکل \حوالہ{شکل_مثال_کثیرالمتغیر_پیچدار_پر_پابند_راہ})؟
 
 حل:\quad
 \begin{align*}
@@ -3681,8 +3969,77 @@ w=f(g(r,s),h(r,s),k(r,s))
 \frac{\partial w}{\partial s}&=\frac{\partial w}{\partial x}\frac{\partial x}{\partial s}+\frac{\partial w}{\partial y}\frac{\partial y}{\partial s}+\frac{\partial w}{\partial z}\frac{\partial z}{\partial s}\label{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_ب}
 \end{align}
 
- ہم \عددی{s} کو مستقل  تصور کر کے  اور \عددی{r}  کو \عددی{t}لیتے  ہوئے مساوات \حوالہ{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_الف} کو   مساوات \حوالہ{مساوات_کثیرالمتغیر_زنجیری_تین_متغیرات_الف} سے   حاصل کر سکتے ہیں۔اسی طرح   ہم \عددی{r} کو مستقل  تصور کر کے  اور \عددی{s}  کو \عددی{t}لیتے  ہوئے مساوات \حوالہ{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_ب} کو   مساوات \حوالہ{مساوات_کثیرالمتغیر_زنجیری_تین_متغیرات_الف} سے   حاصل کر سکتے ہیں۔
+ ہم \عددی{s} کو مستقل  تصور کر کے  اور \عددی{r}  کو \عددی{t}لیتے  ہوئے مساوات \حوالہ{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_الف} کو   مساوات \حوالہ{مساوات_کثیرالمتغیر_زنجیری_تین_متغیرات_الف} سے   حاصل کر سکتے ہیں۔اسی طرح   ہم \عددی{r} کو مستقل  تصور کر کے  اور \عددی{s}  کو \عددی{t}لیتے  ہوئے مساوات \حوالہ{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_ب} کو   مساوات \حوالہ{مساوات_کثیرالمتغیر_زنجیری_تین_متغیرات_الف} سے   حاصل کر سکتے ہیں۔ مساوات \حوالہ{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_الف} اور مساوات \حوالہ{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_ب} کے اشکال شجرہ  شکل \حوالہ{شکل_کثیرالمتغیر اور اشکال شجرہ_برائے} میں دکھائی گئی ہیں۔
 
+\begin{figure}
+\centering
+\begin{subfigure}{0.30\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\h}{1.25}
+\pgfmathsetmacro{\w}{1}
+\coordinate (kT) at (0,\h);
+\coordinate (kB) at (0,-\h);
+\coordinate (ka) at (-\w,0);
+\coordinate (kb) at (0,0);
+\coordinate (kc) at (\w,0);
+\draw[-latex](kB)node[circ]{}node[below]{$r,s$}--(ka)node[pos=0.5,left]{$g$}node[circ]{}node[left]{$x$};
+\draw[-latex](kB)--(kb)node[pos=0.5,left]{$h$}node[circ]{}node[left]{$y$};
+\draw[-latex](kB)--(kc)node[pos=0.5,right]{$k$}node[circ]{}node[right]{$z$};
+\draw[dashed](-\w-0.35,-0.25) rectangle (\w+0.35,0.25);
+\draw[-latex](0,0.25)--(kT)node[circ]{}node[above]{$w$}node[pos=0.5,right]{$f$};
+\draw(1.5*\w,\h)node[right]{\RL{تابع متغیر}};
+\draw(1.5*\w,0)node[right]{\RL{درمیانے  متغیرات}};
+\draw(1.5*\w,-\h)node[right]{\RL{غیر تابع متغیرات}};
+\draw(\w,-\h)node[below,yshift={-0.5cm}]{$w=f(g(r,s),h(r,s),k(r,s))$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.30\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\h}{1.25}
+\pgfmathsetmacro{\w}{1}
+\coordinate(kT) at (0,\h);
+\coordinate(ka) at (-\w,0);
+\coordinate(kb) at (0,0);
+\coordinate(kc) at (\w,0);
+\coordinate(kB) at (0,-\h);
+\draw(kT)node[circ]{}node[above right,xshift=-2ex]{$w=f(x,y,z)$}--(ka)node[circ]{}node[left]{$x$}node[left,pos=0.5]{$\tfrac{\partial w}{\partial x}$};
+\draw(kT)--(kb)node[circ]{}node[right]{$y$}node[left,pos=0.7,xshift=0.25ex]{$\tfrac{\partial w}{\partial y}$};
+\draw(kT)--(kc)node[circ]{}node[right]{$z$}node[right,pos=0.5]{$\tfrac{\partial w}{\partial z}$};
+\draw(ka)--(kB)node[circ]{}node[below]{$r$}node[pos=0.5,left]{$\tfrac{\dif x}{\dif r}$};
+\draw(kb)--(kB)node[pos=0.4,left,xshift=0.5ex]{$\tfrac{\dif y}{\dif r}$};
+\draw(kc)--(kB)node[pos=0.5,right]{$\tfrac{\dif z}{\dif r}$};
+\draw(0,-\h)node[below,yshift={-0.5cm}]{$\frac{\dif w}{\dif r}=\frac{\partial w}{\partial x}\frac{\dif x}{\dif r}+\frac{\partial w}{\partial y}\frac{\dif y}{\dif r}+\frac{\partial w}{\partial z}\frac{\dif z}{\dif r}$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.30\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\h}{1.25}
+\pgfmathsetmacro{\w}{1}
+\coordinate(kT) at (0,\h);
+\coordinate(ka) at (-\w,0);
+\coordinate(kb) at (0,0);
+\coordinate(kc) at (\w,0);
+\coordinate(kB) at (0,-\h);
+\draw(kT)node[circ]{}node[above right,xshift=-2ex]{$w=f(x,y,z)$}--(ka)node[circ]{}node[left]{$x$}node[left,pos=0.5]{$\tfrac{\partial w}{\partial x}$};
+\draw(kT)--(kb)node[circ]{}node[right]{$y$}node[left,pos=0.7,xshift=0.25ex]{$\tfrac{\partial w}{\partial y}$};
+\draw(kT)--(kc)node[circ]{}node[right]{$z$}node[right,pos=0.5]{$\tfrac{\partial w}{\partial z}$};
+\draw(ka)--(kB)node[circ]{}node[below]{$s$}node[pos=0.5,left]{$\tfrac{\dif x}{\dif s}$};
+\draw(kb)--(kB)node[pos=0.4,left,xshift=0.5ex]{$\tfrac{\dif y}{\dif s}$};
+\draw(kc)--(kB)node[pos=0.5,right]{$\tfrac{\dif z}{\dif s}$};
+\draw(0,-\h)node[below,yshift={-0.5cm}]{$\frac{\dif w}{\dif s}=\frac{\partial w}{\partial x}\frac{\dif x}{\dif s}+\frac{\partial w}{\partial y}\frac{\dif y}{\dif s}+\frac{\partial w}{\partial z}\frac{\dif z}{\dif s}$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{مرکب  تفاعل اور شکل شجرہ برائے مساوات \حوالہ{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_الف} اور مساوات \حوالہ{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_ب}}
+\label{شکل_کثیرالمتغیر اور اشکال شجرہ_برائے}
+\end{figure}
+
+%======================
 \ابتدا{مثال}
 درج ذیل لیتے ہوئے \عددی{\tfrac{\partial w}{\partial r}} اور \عددی{\tfrac{\partial w}{\partial s}} کو \عددی{r} اور \عددی{s} کی صورت میں لکھیں۔
 \begin{align*}
@@ -3710,6 +4067,67 @@ w=x+2y+z^2,\quad x=\frac{r}{x},\quad y=r62+\ln s,\quad z=2r
 \frac{\partial w}{\partial r}&=\frac{\partial w}{\partial x}\frac{\partial x}{\partial r}+\frac{\partial w}{\partial y}\frac{\partial y}{\partial r}
 \end{aligned}
 \end{gather}
+
+  شکل \حوالہ{شکل_کثیرالمتغیر_شکل_شجرہ_دو_متغیرات}   میں  مساوات \حوالہ{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_پ} کی  شکل شجرہ  دکھائی  گئی  ہے۔
+
+\begin{figure}
+\centering
+\begin{minipage}{0.30\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\h}{1.25}
+\pgfmathsetmacro{\w}{1}
+\coordinate(kT) at (0,\h);
+\coordinate(ka) at (-\w,0);
+\coordinate(kc) at (\w,0);
+\coordinate(kB) at (0,-\h);
+\draw(kT)node[circ]{}node[above right,xshift=-1.5ex]{$w=f(x,y)$}--(ka)node[circ]{}node[left]{$x$}node[left,pos=0.5]{$\tfrac{\partial w}{\partial x}$};
+\draw(kT)--(kc)node[circ]{}node[right]{$y$}node[right,pos=0.5]{$\tfrac{\partial w}{\partial y}$};
+\draw(ka)--(kB)node[circ]{}node[below]{$r$}node[pos=0.5,left]{$\tfrac{\dif x}{\dif r}$};
+\draw(kc)--(kB)node[pos=0.5,right]{$\tfrac{\dif y}{\dif r}$};
+\draw(0,-\h)node[below,yshift={-0.5cm}]{$\frac{\dif w}{\dif r}=\frac{\partial w}{\partial x}\frac{\dif x}{\dif r}+\frac{\partial w}{\partial y}\frac{\dif y}{\dif r}$};
+\end{tikzpicture}
+\caption{مساوات \حوالہ{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_پ} کی پہلی مساوات کی شکل شجرہ۔}
+\label{شکل_کثیرالمتغیر_شکل_شجرہ_دو_متغیرات}
+\end{minipage}\hfill
+\begin{minipage}{0.30\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\h}{1.25}
+\pgfmathsetmacro{\w}{1}
+\coordinate(kT) at (0,\h);
+\coordinate(ka) at (0,0);
+\coordinate(kb) at (-\w,-\h);
+\coordinate(kc) at (\w,-\h);
+\draw(kT)node[circ]{}node[above right,xshift=-1ex]{$w=f(x)$}--(ka)node[circ]{}node[right]{$x$}node[left,pos=0.5]{$\tfrac{\dif w}{\dif x}$};
+\draw(ka)--(kb)node[circ]{}node[below]{$r$}node[left,pos=0.5]{$\tfrac{\partial x}{\partial r}$};
+\draw(ka)--(kc)node[circ]{}node[below]{$s$}node[right,pos=0.5]{$\tfrac{\partial x}{\partial s}$};
+
+\draw(0,-\h)node[below,yshift={-0.5cm}]{$\begin{aligned}\frac{\dif w}{\dif r}&=\frac{\dif w}{\dif x}\frac{\partial x}{\partial r}\\
+\frac{\dif w}{\dif s}&=\frac{\dif w}{\dif x}\frac{\partial x}{\partial s}  \end{aligned}$};
+\end{tikzpicture}
+\caption{شجرہ برائے مساوات \حوالہ{مساوات_کثیر_المتغیر_دو_مساوات_شجرہ}}
+\label{شکل_کثیرالمتغیر_شکل_شجرہ_واحد_متغیر}
+\end{minipage}\hfill
+\begin{minipage}{0.30\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\h}{1.25}
+\pgfmathsetmacro{\w}{1}
+\coordinate(kT) at (0,\h);
+\coordinate(ka) at (-\w,0);
+\coordinate(kc) at (\w,0);
+\coordinate(kB) at (0,-\h);
+\draw(kT)node[circ]{}node[above]{$w=F(x,y)$}--(ka)node[circ]{}node[left]{$x$}node[left,pos=0.5]{$\tfrac{\partial w}{\partial x}=F_x$};
+\draw(kT)--(kc)node[circ]{}node[right]{$y=h(x)$}node[right,pos=0.5]{$F_y=\tfrac{\partial w}{\partial y}$};
+\draw(ka)--(kB)node[circ]{}node[below]{$x$}node[pos=0.5,left]{$\tfrac{\dif x}{\dif x}=1$};
+\draw(kc)--(kB)node[pos=0.5,right]{$\tfrac{\dif y}{\dif x}=h(x)$};
+\draw(0,-\h)node[below,yshift={-0.5cm}]{$\frac{\dif w}{\dif x}=F_x\cdot 1+F_y\cdot \frac{\dif y}{\dif x}$};
+\end{tikzpicture}
+\caption{شجرہ برائے مساوات \حوالہ{مساوات_کثیر_المتغیر_خفی_الف}}
+\label{شکل_کثیرالمتغیر_شکل_شجرہ_مرکب}
+\end{minipage}
+\end{figure}
 
 
 
@@ -3739,11 +4157,11 @@ w=x^2+y^2,\quad x=r-s,\quad y=r+s
 
 اگر \عددی{f} صرف \عددی{x} کا تفاعل ہو تب مساوات \حوالہ{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_الف} اور مساوات \حوالہ{مساوات_کثیرالمتغیر_دو_غیر_تابع_تین_درمیانے_متغیر_ب} مزید سادہ صورت اختیار کرتے ہیں۔
 
-اگر \عددی{w=f(x)} اور \عددی{x=g(r,s)} ہو تب
-\begin{align}
+اگر \عددی{w=f(x)} اور \عددی{x=g(r,s)} ہوں  تب
+\begin{align}\label{مساوات_کثیر_المتغیر_دو_مساوات_شجرہ}
 \frac{\partial w}{\partial s}=\frac{\dif w}{\dif x}\frac{\partial x}{\partial s} \quad \text{اور}\quad \frac{\partial w}{\partial r}=\frac{\dif w}{\dif x}\frac{\partial x}{\partial r}
 \end{align}
-ہوں گے جہاں \عددی{\tfrac{\dif w}{\dif x}} سادہ  (ایک متغیر کا) تفرق ہے۔
+ہوں گے جہاں \عددی{\tfrac{\dif w}{\dif x}} سادہ  (ایک متغیر کا) تفرق ہے (شکل \حوالہ{شکل_کثیرالمتغیر_شکل_شجرہ_واحد_متغیر})۔
 
 \جزوحصہء{خفی تفرق (باب \حوالہ{باب_تفرق})}
 یقین کیجیے  مساوات \حوالہ{مساوات_کثیرالمتغیر_زنجیری_دو_متغیرات_الف} میں دیا گیا دو متغیرات کا زنجیری قاعدہ سے ایک ایسا کلیہ اخذ ہوتا ہے جو خفی تفرق کا حصول نہایت آسان بناتا ہے۔ فرض کریں
@@ -3754,11 +4172,11 @@ w=x^2+y^2,\quad x=r-s,\quad y=r+s
 مساوات \عددی{F(x,y)=0}   تابع متغیر \عددی{y} کو خفی طور پر غیر تابع متغیر \عددی{x}  کے  قابل تفرق مساوات کی کی صورت،  مثلاً \عددی{y=h(x)}،  میں پیش کرتا ہو۔
 \end{enumerate} 
 
-چونکہ \عددی{w=F(x,y)=0}  ہے، تفرق \عددی{\tfrac{\dif w}{\dif x}} صفر ہو گا۔ زنجیری قاعدہ سے تفرق حاصل کرتے ہوئے درج ذیل حاصل ہو گا:
+چونکہ \عددی{w=F(x,y)=0}  ہے، تفرق \عددی{\tfrac{\dif w}{\dif x}} صفر ہو گا۔ زنجیری قاعدہ (شکل \حوالہ{شکل_کثیرالمتغیر_شکل_شجرہ_مرکب}) سے تفرق حاصل کرتے ہوئے درج ذیل حاصل ہو گا:
 \begin{align}
-0&=\frac{\dif w}{\dif x}=F_x\frac{\dif x}{\dif x}+F_y\frac{\dif y}{\dif x}\nonumber&&
-\text{\RL{مساوات \حوالہ{مساوات_کثیرالمتغیر_زنجیری_دو_متغیرات_الف} میں \عددی{t=x} اور \عددی{f=F}}}\label{مساوات_کثیر_المتغیر_خفی_الف}\\
-&=F_x\cdot 1+F_y\cdot\frac{\dif y}{\dif x}
+0&=\frac{\dif w}{\dif x}=F_x\frac{\dif x}{\dif x}+F_y\frac{\dif y}{\dif x}&&
+\text{\RL{مساوات \حوالہ{مساوات_کثیرالمتغیر_زنجیری_دو_متغیرات_الف} میں \عددی{t=x} اور \عددی{f=F}}}\nonumber\\
+&=F_x\cdot 1+F_y\cdot\frac{\dif y}{\dif x}\label{مساوات_کثیر_المتغیر_خفی_الف}
 \end{align}
 اگر \عددی{F_y=\tfrac{\partial w}{\partial y}\ne 0} ہو تب ہم مساوات \حوالہ{مساوات_کثیر_المتغیر_خفی_الف} کو \عددی{\tfrac{\dif y}{\dif x}} کے لئے حل کر کے درج ذیل حاصل کرتے ہیں۔
 \begin{align*}
@@ -4098,6 +4516,11 @@ $\tfrac{\partial z}{\partial u}=2,\,\tfrac{\partial z}{\partial v}=1$
 \begin{align*}
 \frac{\dif V}{\dif t}=\frac{\partial V}{\partial I}\frac{\dif I}{\dif t}+\frac{\partial V}{\partial R}\frac{\dif R}{\dif t}
 \end{align*}
+\begin{center}
+\begin{tikzpicture}
+\draw(0,0) to [american voltage source,l={$V$}]++(0,2) to [short,i>={$I$}]++(2,0) to [resistor,l={$R$}]++(0,-2) to [short]++(-2,0);
+\end{tikzpicture}
+\end{center}
 \ابتدا{جواب}
 \wf{\unexpanded{
 $\SI{-0.00005}{\ampere\per\second}$
@@ -4248,9 +4671,9 @@ w,z&x,y\\
 w,y&x,z
 \end{tabular}
 \end{center}
-ہم دونوں صورتوں میں   \عددی{w} کو منتخب غیر تابع متغیرات کی صورت میں  صریحاً لکھ سکتے ہیں۔ایسا کرنے کی خاطر ہم دوسری مساوات   استعمال کرتے ہوئے پہلی مساوات کا    دوسرا تابع متغیر   خارج کرتے ہیں۔ 
+ہم دونوں صورتوں میں   \عددی{w} کو منتخب غیر تابع متغیرات کی صورت میں  صریحاً لکھ سکتے ہیں۔ایسا کرنے کی خاطر ہم دوسری مساوات   استعمال کرتے ہوئے پہلی مساوات کا    دوسرا تابع متغیر   حذف کرتے ہیں۔ 
 
-پہلی انتخاب میں \عددی{z} دوسرا تابع متغیر ہو گا۔ ہم پہلی مساوات میں اس کی جگہ \عددی{x^2+y^2} پر کر کے اس کو خارج کرتے ہیں۔یوں
+پہلی انتخاب میں \عددی{z} دوسرا تابع متغیر ہو گا۔ ہم پہلی مساوات میں اس کی جگہ \عددی{x^2+y^2} پر کر کے اس کو حذف  کرتے ہیں۔یوں
 \begin{align*}
 w&=x^2+y^2+z^2=x^2+y^2+(x^+y^2)^2\\
 &=x^2+y^2+x^4+2x^2y^2+y^4
@@ -4261,7 +4684,7 @@ w&=x^2+y^2+z^2=x^2+y^2+(x^+y^2)^2\\
 \end{align}
  حاصل ہو گا جو  \عددی{x} اور \عددی{y} غیر تابع متغیرات لیتے ہوئے \عددی{\tfrac{\partial w}{\partial x}} کی مساوات ہے۔
 
-دوسری  انتخاب میں غیر تابع متغیرات \عددی{x} اور \عددی{z} ہیں جبکہ دوسرا تابع تغیر \عددی{y} ہے۔یوں \عددی{y} خارج کرنے کی خاطر ہم پہلی مساوات میں \عددی{y^2} کی جگہ \عددی{z-x^2} پر کر کے
+دوسری  انتخاب میں غیر تابع متغیرات \عددی{x} اور \عددی{z} ہیں جبکہ دوسرا تابع تغیر \عددی{y} ہے۔یوں \عددی{y} حذف  کرنے کی خاطر ہم پہلی مساوات میں \عددی{y^2} کی جگہ \عددی{z-x^2} پر کر کے
 \begin{align}
 w&=x^2+y^2+z^2=x^2+(z-x^2)+z^2=z+z^2\nonumber\\
 \tfrac{\partial w}{\partial x}&=0\label{مساوات_کثیرالمتغیر_دوسرا_جواب}
@@ -4305,3 +4728,211 @@ w&=x^2+y^2+z^2=x^2+(z-x^2)+z^2=z+z^2\nonumber\\
 \caption{نقطہ \عددی{N} کو پابند کرنے سے جزوی تفرقات کے مختلف نتائج حاصل ہوں گے۔}
 \label{شکل_مثال_کثیرالمتغیر_سطح_پابند_جزوی_تفرق}
 \end{figure}
+
+\جزوحصہء{جزوی تفرق \عددی{\tfrac{\partial w}{\partial x}} جب تفاعل  \عددی{w=f(x,y,z)}}  کے متغیرات کو دوسری مساوات قابو کرتی ہو
+جیسا ہم نے مساوات \حوالہ{مثال_کثیرالمتغیر_سطح_پابند_جزوی_تفرق} میں دیکھا، جب تفاعل  \عددی{w=f(x,y,z)} کے متغیرات کو ایک دوسری مساوات قابو کرتی ہو تب \عددی{\tfrac{\partial w}{\partial x}}   تین قدموں میں  حاصل ہو گا۔۔یہ اقدام \عددی{\tfrac{\partial w}{\partial y}} اور \عددی{\tfrac{\partial w}{\partial z}} کے حصول کے لئے بھی کارآمد ہوں گے۔
+\begin{enumerate}[1.]
+\item
+پہلے فیصلہ کریں کہ کون سے متغیرات تابع اور کون سے غیر تابع تصور کئے جائیں گے۔ (حقیقت میں ایسا فیصلہ طبیعی یا نظریاتی سیاق و سباق پر منحصر   ہو گا۔  )
+\item
+باقی تابع متغیرات کو \عددی{w} کی مساوات سے خارج کریں۔
+\item
+تفرق کو معمول کے مطابق حاصل کریں۔
+\end{enumerate}
+
+اگر دوسرے قدم پر ہم باقی تابع متغیرات کو حدف نہ کر  سکیں تب  ہم  دونوں مساوات کا تفرق لے  کر     \عددی{\tfrac{\partial w}{\partial x}} کے لئے حل کرنے کی کوشش کرتے ہیں۔اگلی مثال میں ایسا کرنا دکھایا گیا ہے۔
+
+\ابتدا{مثال}
+اگر درج ذیل ہوں تب نقطہ \عددی{(x,y,z)=(2,-1,1)} پر   \عددی{\tfrac{\partial w}{\partial x}}کیا ہو گا؟
+\begin{align*}
+w=x^2+y^2+z^2,\quad z^3-xy+yz+y^3=1
+\end{align*}
+حل:\quad
+یہاں \عددی{w} کی مساوات سے \عددی{z} حذف کرنا  آسان نہیں ہے۔ ہم اس لئے  \عددی{x} اور \عددی{y} کو غیر تابع متغیرات  جبکہ \عددی{w} اور \عددی{z} کو تابع متغیرات  تصور کرتے ہوئے دونوں مساوات   کا \عددی{x} کے لحاظ سے تفرق لیتے ہیں۔یوں 
+\begin{align}\label{مساوات_کثیرالمتغیر_اصل_الف}
+\frac{\partial w}{\partial x}=2x+2z\frac{\partial z}{\partial x}
+\end{align}
+اور
+\begin{align}\label{مساوات_کثیرالمتغیر_اصل_ب}
+3z^2\frac{\partial z}{\partial x}-y+y\frac{\partial z}{\partial x}+0=0
+\end{align}
+حاصل ہوں گے۔ان  مساوات کو   ملا کر \عددی{x}، \عددی{y} اور \عددی{z} کی صورت میں \عددی{\tfrac{\partial w}{\partial x}} کے لئے حل کرتے ہیں۔ہم مساوات \حوالہ{مساوات_کثیرالمتغیر_اصل_ب} کو \عددی{\tfrac{\partial z}{\partial x}} کے لئے حل کر  کے
+\begin{align*}
+\frac{\partial z}{\partial x}=\frac{y}{y+3z^2}
+\end{align*}
+حاصل کرتے ہیں جس کو مساوات \حوالہ{مساوات_کثیرالمتغیر_اصل_الف}  میں پر کرنے سے درج ذیل حاصل ہو گا۔
+\begin{align*}
+\big(\frac{\partial w}{\partial x}\big)_{(2,-1,1)}=2(2)+\frac{2(-1)(1)}{-1+3(1)^2}=4+\frac{-2}{2}=3
+\end{align*}
+\انتہا{مثال}
+%============  
+
+تفرق کے حصول میں غیر تابع متغیرات واضح کرنے کی خاطر ہم درج ذیل علامتیت استعمال کرتے ہیں۔
+\begin{description}
+\item{$\big(\frac{\partial w}{\partial x}\big)_y$}\quad
+\عددی{\tfrac{\partial w}{\partial x}} جہاں \عددی{x} اور \عددی{y} غیر تابع ہیں۔
+\item{$\big(\frac{\partial f}{\partial x}\big)_{x,t}$}\quad
+\عددی{\tfrac{\partial f}{\partial x}} جہاں \عددی{y}، \عددی{x}  اور \عددی{t} غیر تابع ہیں۔
+\end{description}
+
+\ابتدا{مثال}\شناخت{مثال_کثیرالمتغیر_کئی_تابع}
+جزوی تفرق \عددی{(\tfrac{\partial w}{\partial x})_{y,z}} تلاش کریں جہاں \عددی{w=x^2+y-z+\sin t} اور \عددی{x+y=t} ہیں۔
+
+حل:\quad
+متغیرات \عددی{x}، \عددی{y} اور \عددی{z} کو غیر تابع لیتے ہوئے درج ذیل حاصل  ہو گا۔
+\begin{align*}
+t&=x+y,\quad w=x^2+y-z+\sin(x+y)\\
+\big(\frac{\partial w}{\partial x}\big)_{y,z}&=2x+0-0+\cos(x+y)\frac{\partial}{\partial x}(x+y)\\
+&=2x+\cos(x+y)
+\end{align*}
+\انتہا{مثال}
+%===================
+
+\جزوحصہء{تیر دار  اشکال}
+مثال \حوالہ{مثال_کثیرالمتغیر_کئی_تابع} کی طرح مسائل حل کرتے ہوئے تیر دار اشکال استعمال کرنا مدد گار ثابت ہوتا ہے۔تیر دار اشکال تفاعل اور متغیرات کے بیچ تعلق دکھاتے ہیں۔اگر
+\begin{align*}
+x+y=t\quad \text{اور}\quad w=x*2+y-z+\sin t
+\end{align*}
+ہوں  ہمیں \عددی{x}، \عددی{y} اور \عددی{z}  غیر تابع لیتے ہوئے \عددی{\tfrac{\partial w}{\partial x}} تلاش کرنے کو کہا جائے تب درکار اشکال درج ذیل ہوں گے:
+\begin{align}\label{مساوات_کثیرالمتغیر_تیر_دار}
+\underset{\text{\RL{غیر تابع متغیرات}}}{\begin{pmatrix}
+x\\y\\z
+\end{pmatrix}} \to
+\underset{\underset{\begin{matrix}x=x\\y=y\\z=z\\t=x+y  \end{matrix}}{\text{\RL{درمیانے متغیرات اور تعلق}}}}{
+\begin{pmatrix}
+x\\y\\z\\t
+\end{pmatrix}}\to \underset{\text{\RL{تابع متغیر}}}{w}
+\end{align} 
+اس تیر دار شکل میں غیر تابع متغیرات دائیں ہاتھ، درمیانے متغیرات اور ان کا غیر تابع متغیرات کے ساتھ تعلق  درمیان میں اور تابع متغیرات دائیں ہاتھ ہیں۔
+
+جزوی تفرق \عددی{\tfrac{\partial w}{\partial x}} حاصل کرنے کے لئے ہم چار متغیرات کا زنجیری قاعدہ \عددی{w} پر لاگو  کرتے ہیں۔
+\begin{align}
+\frac{\partial w}{\partial x}=\frac{\partial w}{\partial x}\frac{\partial x}{\partial x}+\frac{\partial w}{\partial y}\frac{\partial y}{\partial x}+\frac{\partial w}{\partial z}\frac{\partial z}{\partial x}+\frac{\partial w}{\partial t}\frac{\partial t}{\partial x}
+\end{align}
+اس کلیہ کے  دائیں ہاتھ میں \عددی{w} کے جزوی تفرقات کو  \عددی{w=x^2+y-z+\sin t} کے لئے حاصل کر کے  اس کلیہ میں پر کرتے ہوئے  درج ذیل حاصل کرتے ہیں۔
+\begin{gather}
+\begin{aligned}\label{مساوات_کثیرالمتغیر_درمیانی_مساوات}
+\frac{\partial w}{\partial x}&=2x\frac{\partial x}{\partial x}+(1)\frac{\partial y}{\partial x}+(-1)\frac{\partial z}{\partial x}+\cos t\frac{\partial t}{\partial x}\\
+&=2x\frac{\partial x}{\partial x}+\frac{\partial y}{\partial x}-\frac{\partial z}{\partial x}+\cos t\frac{\partial t}{\partial x}
+\end{aligned}
+\end{gather}
+باقی جزوی تفرقات حاصل کرنے کے لئے  ہم متغیرات کی غیر تابعیت اور تابعیت  بروئے کار لاتے ہیں۔ ہم مساوات \حوالہ{مساوات_کثیرالمتغیر_تیر_دار} سے دیکھتے ہیں کہ \عددی{x}، \عددی{y} اور \عددی{z} غیر تابع  ہیں اور \عددی{t=x+y}  ہے۔ یوں
+\begin{align*}
+\frac{\partial x}{\partial x}=1,\quad \frac{\partial y}{\partial x}=0,\quad \frac{\partial z}{\partial x}=0,\quad \frac{\partial t}{\partial x}=\frac{\partial}{\partial x}(x+y)=(1+0)=1
+\end{align*}
+ہو گا۔ہم انہیں مساوات \حوالہ{مساوات_کثیرالمتغیر_درمیانی_مساوات} میں پر کر کے \عددی{\frac{\partial x}{\partial x}} حاصل کرتے ہیں:
+\begin{align*}
+\big(\frac{\partial x}{\partial x}\big)_{y,z}&=2x(1)+0-0+(\cos t)(1)\\
+&=2x+\cos t\\
+&=2x+\cos(x+y)&&\text{\RL{غیر تابع متغیر کی صورت میں}}
+\end{align*}
+
+\جزوحصہء{سوالات}
+\ابتدا{سوالات}
+\موٹا{پابند متغیرات کے تفاعل کے جزوی تفرقات}\\
+سوال \حوالہ{سوال_کثیرالمتغیر_پابند_تفرق_الف} تا سوال \حوالہ{سوال_کثیرالمتغیر_پابند_تفرق_ب} میں  تیر دار اشکال سے شروع کرتے ہوئے دیے تفرقات تلاش کریں۔
+
+\ابتدا{سوال}\شناخت{سوال_کثیرالمتغیر_پابند_تفرق_الف}
+$w=x^2+y^2+z^2,\quad z=x^2+y^2$\\
+(ا) \عددی{\big(\frac{\partial w}{\partial y}\big)_z}، (ب) \عددی{ \big(\frac{\partial w}{\partial z}\big)_x}، (ج) \عددی{\big(\frac{\partial w}{\partial z}\big)_y}
+\ابتدا{جواب}
+\wf{\unexpanded{
+(ا) \عددی{0}، (ب) \عددی{1+2z}، (ج) \عددی{1+2z}
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%===============
+\ابتدا{سوال}
+$w=x^2+y-z+\sin t,\quad x+y=t$\\
+(ا) \عددی{\big(\frac{\partial w}{\partial y}\big)_{x,z}}، (ب) \عددی{ \big(\frac{\partial w}{\partial y}\big)_{z,t}}،
+ (ج) \عددی{\big(\frac{\partial w}{\partial z}\big)_{x,y}}،\\
+(د) \عددی{\big(\frac{\partial w}{\partial z}\big)_{y,t}}، (ہ) \عددی{ \big(\frac{\partial w}{\partial t}\big)_{x,z}}،
+ (و) \عددی{\big(\frac{\partial w}{\partial t}\big)_{y,z}}،
+\انتہا{سوال}
+%===============
+\ابتدا{سوال}\شناخت{سوال_کثیرالمتغیر_پابند_تفرق_ب}
+ایک  گیس جو مثالی گیس کے کلیہ \عددی{PH=nRT} پر پورا اترتا ہو، جہاں \عددی{n}، \عددی{R} مستقل ہیں، کی اندرونی توانائی \عددی{U=f(P,H,T)}  ہو گی۔\\
+(ا) \عددی{\big(\frac{\partial U}{\partial P}\big)_H}، (ب) \عددی{ \big(\frac{\partial U}{\partial T}\big)_H}
+\ابتدا{جواب}
+\wf{\unexpanded{
+(ا)
+$\tfrac{\partial U}{\partial P}+\tfrac{\partial U}{\partial T}(\tfrac{H}{nR})$
+(ب)
+$\tfrac{\partial U}{\partial P}(\tfrac{nR}{H})+\tfrac{\partial U}{\partial T}$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%===============
+\ابتدا{سوال}
+نقطہ \عددی{(x,y,z)=(0,1,\pi)}  اور \عددی{w=x^2+y^2+z^2}، \عددی{y\sin z+z\sin x=0}   لیں۔ اس نقطہ پر (ا)  \عددی{\big(\frac{\partial w}{\partial x}\big)_{y}}، (ب)  \عددی{\big(\frac{\partial w}{\partial z}\big)_{y}} تلاش کریں۔
+\انتہا{سوال}
+%================
+\ابتدا{سوال}
+نقطہ \عددی{(w,x,y,z)=(4,2,1,-1)} اور  \عددی{w=x^2y^2+yz-z^3} اور \عددی{x^2+y^2+z^2=6}  لیتے ہوئے اس نقطہ پر  (ا)   \عددی{\big(\frac{\partial w}{\partial y}\big)_{x}}، (ب)  \عددی{\big(\frac{\partial w}{\partial y}\big)_{z}} تلاش کریں۔
+\ابتدا{جواب}
+\wf{\unexpanded{
+(ا) \عددی{5}، (ب) \عددی{5}
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%============
+\ابتدا{سوال}
+نقطہ \عددی{(u,v)=(\sqrt{2},1)} پر \عددی{\big(\tfrac{\partial u}{\partial y}\big)_x} تلاش کریں  جہاں  \عددی{x=u^2+v^2} اور \عددی{y=uv} ہیں۔
+\انتہا{سوال}
+%======================
+\ابتدا{سوال}
+فرض کریں \عددی{x^2+y^2=r^2} اور \عددی{x=r\cos\theta} ہیں۔ جزوی تفرقات  \عددی{\big(\tfrac{\partial x}{\partial r}\big)_{\theta}} اور 
+\عددی{\big(\tfrac{\partial r}{\partial x}\big)_y} تلاش کریں۔
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{x}{\sqrt{x^2+y^2}}$
+}}
+\انتہا{جواب}
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}
+فرض کریں \عددی{w=x^2-y^2+4z+t} اور \عددی{x+2z+t=25} ہیں۔ دکھائیں کہ مساوات
+\begin{align*}
+\tfrac{\partial w}{\partial x}=2x-1\quad \text{اور}\quad \tfrac{\partial w}{\partial x}=2x-2
+\end{align*}
+مختلف متغیرات کو تابع اور غیر تابع تصور کرتے ہوئے   \عددی{\tfrac{\partial w}{\partial x}} دیتے ہیں۔ دونوں صورتوں  میں غیر تابع متغیرات تلاش کریں۔
+\انتہا{سوال}
+%=========== 
+\موٹا{ بغیر کسی مخصوص کلیہ جزوی تفرقات کا حصول}\\
+\ابتدا{سوال}
+ماقوا حرکیات  کی میدان میں  ایک  مستمل حقیقت کہتا ہے کہ اگر \عددی{f(x,y,z)=0} ہو تب
+\begin{align*}
+\big(\frac{\partial x}{\partial y}\big)_z \big(\frac{\partial y}{\partial z}\big)_x  \big(\frac{\partial z}{\partial x}\big)_y=-1
+\end{align*}
+ہو گا۔اس حقیقت  کی تصدیق کریں۔ (اشارہ:تمام تفرقات کو باضابطہ جزوی تفرقات \عددی{\tfrac{\partial f}{\partial x}}،  \عددی{\tfrac{\partial f}{\partial y}} اور \عددی{\tfrac{\partial f}{\partial z}} کی صورت میں لکھیں۔)
+\انتہا{سوال}
+%=============
+\ابتدا{سوال}
+اگر  \عددی{z=x+f(u)} اور \عددی{u=xy} ہوں تب درج ذیل دکھائیں۔
+\begin{align*}
+x\frac{\partial z}{\partial x}-y\frac{\partial z}{\partial y}=x
+\end{align*}
+\انتہا{سوال}
+%===========
+\ابتدا{سوال}
+فرض کریں  مساوات \عددی{g(x,y,z)=0}  غیر تابع متغیرات \عددی{x} اور \عددی{y} کا قابل تفرق تفاعل \عددی{z} تعین کرتی ہے اور \عددی{g_z\ne 0} ہے۔ درج ذیل دکھائیں۔
+\begin{align*}
+\big(\frac{\partial z}{\partial y}\big)_x=-\frac{\partial g/\partial y}{\partial g/\partial z}
+\end{align*}
+\انتہا{سوال}
+%================
+\ابتدا{سوال}
+فرض کریں  \عددی{f(x,y,z,w)=0} اور \عددی{g(x,y,z,w)=0}  غیر تابع متغیرات  \عددی{x} اور \عددی{y}  کے قابل  تفاعل تفاعل \عددی{z} اور \عددی{w} تعین کرتے  ہیں۔مزید  
+\begin{align*}
+\frac{\partial f}{\partial z}\frac{\partial g}{\partial w}-\frac{\partial f}{\partial w}\frac{\partial g}{\partial z}\ne 0
+\end{align*}
+فرض کرتے ہوئے درج ذیل دکھائیں۔
+\begin{align*}
+\big(\frac{\partial z}{\partial x}\big)_y&=-\frac{\frac{\partial f}{\partial x}\frac{\partial g}{\partial w}-\frac{\partial f}{\partial w}\frac{\partial g}{\partial x}}{\frac{\partial f}{\partial z}\frac{\partial g}{\partial w}-\frac{\partial f}{\partial w}\frac{\partial g}{\partial z}}\\
+\big(\frac{\partial w}{\partial y}\big)_x&=-\frac{\frac{\partial f}{\partial z}\frac{\partial g}{\partial y}-\frac{\partial f}{\partial y}\frac{\partial g}{\partial z}}{\frac{\partial f}{\partial z}\frac{\partial g}{\partial w}-\frac{\partial f}{\partial w}\frac{\partial g}{\partial z}}
+\end{align*}
+\انتہا{سوال}
+%================
+\انتہا{سوالات}
+
+%%%%%%%%%%%%%%%%%%%%%%%
