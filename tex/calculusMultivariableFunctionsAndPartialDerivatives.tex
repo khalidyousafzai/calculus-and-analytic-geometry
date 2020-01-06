@@ -4433,7 +4433,8 @@ $u=e^{qr}\sin^{-1}p,\,p=\sin x,\,q=z^2\ln y,\,r=\tfrac{1}{z};\, (x,y,z)=(\tfrac{
 \انتہا{سوال}
 %===============================
 
-سوال \حوالہ{سوال_کثیرالمتغیر_قاعدہ_سے_اخذ_الف} تا سوال \حوالہ{سوال_کثیرالمتغیر_قاعدہ_سے_اخذ_ب} میں  ہر ایک  تفرق کے لئے زنجیری قاعدہ  سے اخذ کلیہ لکھیں۔
+\موٹا{ شجرہ کا  استعمال}\\
+سوال \حوالہ{سوال_کثیرالمتغیر_قاعدہ_سے_اخذ_الف} تا سوال \حوالہ{سوال_کثیرالمتغیر_قاعدہ_سے_اخذ_ب} میں شکل شجرہ  بناتے ہوئے   ہر ایک  تفرق کا    کلیہ  اخذ کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_کثیرالمتغیر_قاعدہ_سے_اخذ_الف}
 \عددی{\tfrac{\dif z}{\dif t}}؛ \عددی{z=f(x,y)}، \عددی{x=g(t)}، \عددی{y=h(t)}
@@ -5086,7 +5087,20 @@ x\frac{\partial z}{\partial x}-y\frac{\partial z}{\partial y}=x
 \begin{align*}
 x=x_0+su_1,\quad y=y_0+su_2
 \end{align*}
- اکائی سمتیہ \عددی{\uu} کے رخ  نقطہ \عددی{N_0} سے فاصلہ  کو مقدار معلوم \عددی{s}سے ظاہر کیا جاتا ہے۔ ہم نقطہ \عددی{N_0} پر \عددی{\uu} کے رخ \عددی{f} کی شرح تبدیلی   \عددی{\tfrac{\dif f}{\dif s}}  سے حاصل کرتے ہیں۔
+ اکائی سمتیہ \عددی{\uu} کے رخ  نقطہ \عددی{N_0} سے فاصلہ  کو مقدار معلوم \عددی{s}سے ظاہر کیا جاتا ہے۔ ہم نقطہ \عددی{N_0} پر \عددی{\uu} کے رخ \عددی{f} کی شرح تبدیلی   \عددی{\tfrac{\dif f}{\dif s}}  سے حاصل کرتے ہیں (شکل \حوالہ{شکل_کثیرالمتغیر_کسی_رخ_بڑھنے_کی_شرح})۔
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small]
+\draw[-latex](0,0)--++(4.5,0)node[right]{$x$};
+\draw[-latex](0,0)--++(0,3)node[left]{$y$};
+\draw[smooth cycle] plot coordinates {(-0.25,1.5)(1,0)(2.5,0.2)(4.5,1.5)(2,3)(1.6,2.2) };
+\draw(1,0.75)++(45:-1)--++(45:4.5)node[above,align=left]{$x=x_0+su_1,$\\$y=y_0+su_2$};
+\draw[-latex,thick](1,0.75)node[circ]{}node[right,yshift=-0.5ex]{$N_0(x_0,y_0)$}--++(45:2)node[below right,xshift=-4ex,align=right]{\text{\RL{\عددی{s} بڑھنے کا رخ}}\\$\uu=u_1\ai+u_2\aj$};
+\draw(0.5,1.5)node[]{$R$};
+\end{tikzpicture}
+\caption{نقطہ \عددی{N_0} پر \عددی{\uu} کے رخ \عددی{f} کی شرح تبدیلی  \عددی{N_0} پر لکیر کے ساتھ \عددی{f} کی شرح تبدیلی ہو گی۔}
+\label{شکل_کثیرالمتغیر_کسی_رخ_بڑھنے_کی_شرح}
+\end{figure}
 
 \ابتدا{تعریف}
 نقطہ \عددی{N_0(x_0,y_0)} پر اکائی سمتیہ \عددی{\uu=u_1\ai+u_2\aj} کے رخ \عددی{f} کا تفرق درج ذیل عدد ہو گا
@@ -5157,7 +5171,7 @@ x=x_0+su_1,\quad y=y_0+su_2
 \انتہا{مسئلہ}
 %===============
 
-\ابتدا{مثال}
+\ابتدا{مثال}\شناخت{مثال_کثیرالمتغیر_سمتیہ_کے_رخ_شرح_تبدیلی}
 نقطہ \عددی{(2,0)} پر \عددی{\kvec{A}=3\ai-4\aj} رخ \عددی{f(x,y)=xe^y+\cos(xy)} کا رخی تفرق تلاش کریں۔
 
 حل:\quad
@@ -5174,14 +5188,26 @@ f_y(2,0)&=(xe^y-x\sin(xy))_{(2,0)}=2e^0-2\cdot 0=2
 \begin{align*}
 \left.\nabla f\right\vert_{(2,0)}=f_x(2,0)\ai+f_y(2,0)\aj=\ai+2\aj
 \end{align*}
-ہو گی۔نقطہ \عددی{(2,0)} پر \عددی{\kvec{A}} رخ \عددی{f} کا تفرق درج ذیل ہو گا۔
+ہو گی (شکل \حوالہ{شکل_مثال_کثیرالمتغیر_سمتیہ_کے_رخ_شرح_تبدیلی})۔نقطہ \عددی{(2,0)} پر \عددی{\kvec{A}} رخ \عددی{f} کا تفرق درج ذیل ہو گا۔
 \begin{align*}
 \left.\big(D_{\uu}f\big)\right\vert_{(2,0)}&=\left.\nabla f\right\vert_{(2,0)}\cdot \uu\\
 &=(\ai+2\aj)\cdot\big(\frac{3}{5}\ai-\frac{4}{5}\aj\big)=\frac{3}{5}-\frac{8}{5}=-1
 \end{align*}
 \انتہا{مثال}
 %====================
-
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x,\y)=\x*e^(\y)+cos(deg(\x*\y));}]
+\begin{axis}[view={0}{90},axis on top,clip=false,axis lines=center,small,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=west},ylabel style={anchor=south},zlabel style={anchor=east},xtick={1,2,3,4},ytick={-1,1,2},ztick={\empty},domain=0:4,domain y=-1:2]
+%\addplot3[surf,z buffer=sort,domain=0:3,domain y=-1:3]{f(x,y)};
+\addplot3[-latex,thick]coordinates {(2,0,{f(2,0)})(2+3/5,0-4/5,{f(2+3/5,0-4/5)})}node[pos=0,circ]{}node[pos=0,above,xshift=-0.75ex,yshift=0.5ex]{$N_0$}node[below,xshift=-2ex]{$\uu=\tfrac{3}{5}\ai-\tfrac{4}{5}\aj$};
+\addplot3[-latex,thick]coordinates {(2,0,{f(2,0)})(2+1,0+2,{f(2+1,0+2)})}node[above]{$\nabla f=\ai+2\aj$};
+\addplot3[contour gnuplot={draw color = black,labels=false,levels={1,2,3,4,5,7,10,15,20,25}}]{f(x,y)};
+\end{axis}
+\end{tikzpicture}
+\caption{روایتی طور  پر \عددی{\nabla f} کو \عددی{f} کے دائرہ کار میں دکھایا  جاتا ہے۔ موجودہ تفاعل کے لئے مکمل مستوی \عددی{xy} دائرہ کار ہو گا۔ سمتیہ \عددی{\uu=\tfrac{3}{5}\ai-\tfrac{4}{5}\aj} کے رخ \عددی{f} کی شرح تبدیلی \عددی{\nabla f\cdot \uu=-1} ہو گی (مثال \حوالہ{مثال_کثیرالمتغیر_سمتیہ_کے_رخ_شرح_تبدیلی})۔}
+\label{شکل_مثال_کثیرالمتغیر_سمتیہ_کے_رخ_شرح_تبدیلی}
+\end{figure}
 \جزوحصہء{رخی تفرقات  کے خواص}
 رخی تفرق کے کلیہ
 \begin{align*}
@@ -5207,7 +5233,33 @@ D_{\uu}f=\abs{\nabla f}\cos(\pi/2)=\abs{\nabla f}\cdot 0 =0
 
 جیسا ہم دیکھیں گے، یہ خواص تین بعدی فضا میں بھی کارآمد  ہوں گی۔
 
-\ابتدا{مثال}
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=sqrt(2)*\r*cos(\t);fy(\r,\t)=sqrt(2)*\r*sin(\t);fz(\r,\t)=\r^2;f(\x,\y)=0.5*(\x)^2+0.5*(\y)^2;g(\x)=sqrt(1.5-(\x)^2);}]
+\pgfmathsetmacro{\ra}{1}
+\begin{axis}[view/h=110,clip=false,axis lines=center,small,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},xtick={\empty},ytick={\empty},ztick={\empty},hide z axis]
+%\addplot3[surf,z buffer=sort,domain=-1:1,domain y=-1:1]{f(x,y)};
+\addplot3[surf,z buffer=sort,domain=0:1.1,domain y=0:360]({fx(x,y)},{fy(x,y)},{fz(x,y)});
+\addplot3[-latex] coordinates {(0,0,0.6)(0,0,2)}node[left]{$z$};
+\addplot3[thin,domain y=0:360]({fx(\ra,y)},{fy(\ra,y)},{fz(\ra,y)})node[pos=0.25,pin={[pin distance=0.25cm]-45:{\RL{دائرہ پر تبدیلی صفر ہے}}}]{};
+\addplot3[]coordinates {(1,1,1)}node[circ]{}node[above]{$(1,1,1)$};
+\addplot3[dashed]coordinates {(1,1,1)(1,1,0)}node[circ]{}node[below]{$(1,1)$};
+\addplot3[-latex]coordinates {(1,1,0)(2,2,0)}node[below right]{$\nabla f=\ai+\aj$}node[pos=0.95,pin={[pin edge=-]-100:{\RL{تیز ترین بڑھنا}}}]{};
+\addplot3[-latex]coordinates {(1,1,0)(0,0,0)}node[pos=0.5,pin={[pin distance=1.5cm,pin edge=-]-170:{\RL{تیز ترین گٹھنا}}}]{};
+%\addplot3[contour gnuplot={draw color = black,labels=false,levels={1,2,3,4,5,7,10,15,20,25}}]{f(x,y)};
+%\addplot3[-latex,domain y=45:65]({fx(\ra,y)},{fy(\ra,y)},{0});
+\addplot3[-latex]coordinates {(1,1,0)(0.5,1.5,0)}node[pos=0.25,pin={[pin edge=-,right]-20:{\RL{صفر تبدیلی}}}]{};
+\addplot3[-latex]coordinates {(1,1,0)(1.5,0.5,0)};
+\addplot3[]({fx(1.1,270)},{fy(1.1,270)},{fz(1.1,270)})node[left]{$\begin{aligned}z&=f(x,y)\\  &=\tfrac{x^2}{2}+\tfrac{y^2}{2}\end{aligned}$};
+\end{axis}
+\end{tikzpicture}
+\caption{نقطہ \عددی{(1,1,1)} پر \عددی{f} تیز ترین \عددی{\nabla f} رخ بڑھتا ہے جو سطح پر سیدھا چڑھنے کا  مطابقتی رخ ہے (مثال \حوالہ{مثال_کثیرالمتغیر_تیز_ترین_بڑھنے_کا_رخ})۔}
+\label{شکل_مثال_کثیرالمتغیر_تیز_ترین_بڑھنے_کا_رخ}
+\end{figure}
+
+
+%==================
+\ابتدا{مثال}\شناخت{مثال_کثیرالمتغیر_تیز_ترین_بڑھنے_کا_رخ}
 نقطہ \عددی{(1,1)} پر  وہ رخ تلاش کریں جس رخ  تفاعل \عددی{f(x,y)=\tfrac{x^2}{2}+\tfrac{y^2}{2}}        (ا) تیز ترین بڑھتا ہو، (ب)  تیز ترین گھٹتا ہو، (ج)  میں کوئی تبدیلی رونما نہیں ہوتی ہو۔
 
 حل:\quad
@@ -5223,7 +5275,7 @@ D_{\uu}f=\abs{\nabla f}\cos(\pi/2)=\abs{\nabla f}\cdot 0 =0
 \begin{align*}
 -\uu=-\frac{1}{\sqrt{2}}\ai-\frac{1}{\sqrt{2}}\aj
 \end{align*}
-(ج) نقطہ \عددی{(1,1)} پر صفر تبدیلی کا رخ  \عددی{\nabla f}   کو عمودی ہو گا۔یہ رخ درج ذیل ہوں گے۔
+(ج) نقطہ \عددی{(1,1)} پر صفر تبدیلی کا رخ  \عددی{\nabla f}   کو عمودی ہو گا۔یہ رخ درج ذیل ہوں گے (شکل \حوالہ{شکل_مثال_کثیرالمتغیر_تیز_ترین_بڑھنے_کا_رخ})۔
 \begin{align*}
 \kvec{n}=-\frac{1}{\sqrt{2}}\ai+\frac{1}{\sqrt{2}}\aj,\quad -\kvec{n}=\frac{1}{\sqrt{2}}\ai-\frac{1}{\sqrt{2}}\aj
 \end{align*}
@@ -5241,7 +5293,7 @@ D_{\uu}f=\abs{\nabla f}\cos(\pi/2)=\abs{\nabla f}\cdot 0 =0
 \end{gather}
 مساوات \حوالہ{مساوات_کثیرالمتغیر_ڈھلوان_مماس} کہتی ہے  کہ مماسی سمتیہ \عددی{\tfrac{\dif\kvec{r}}{\dif t}} کو  \عددی{\nabla f} عمودی ہو گا، لہٰذا  \عددی{\nabla f}   نقطہ \عددی{(x_0,y_0)} پر  منحنی کو عمودی ہو گا۔
 
-تفاعل \عددی{f(x,y)} کے دائرہ کار میں ہر نقطہ \عددی{(x_0,y_0)} پر \عددی{f} کی ڈھلوان نقطہ \عددی{(x_0,y_0)} پر ہم قد منحنی کو عمودی ہو گی۔
+تفاعل \عددی{f(x,y)} کے دائرہ کار میں ہر نقطہ \عددی{(x_0,y_0)} پر \عددی{f} کی ڈھلوان نقطہ \عددی{(x_0,y_0)} پر ہم قد منحنی کو عمودی ہو گی (شکل \حوالہ{شکل_کثیر_المتغیر_ہم_قد__ڈھلوان_عمودی})۔
 
 ہم اس  مشاہدہ   کی بنا  ہم قد منحنیات  کی مماسات   کی مساواتیں  دریافت کر سکتے ہیں۔یہ ڈھلوان کو عمودی خطوط ہوں گے۔ نقطہ \عددی{N_0(x_0,y_0)} سے گزرتا ہوا،  سمتیہ \عددی{\kvec{N}=A\ai+B\aj} کو عمودی خط  کی مساوات درج ذیل ہو گی (سوال \حوالہ{سوال_کثیرالمتغیر_خط_کی_مساوات})۔
 \begin{align*}
@@ -5251,9 +5303,48 @@ A(x-x_0)+B(y-y_0)=0
 \begin{align}\label{مساوات_کثیرالمتغیر_ہم_قد_کی_خط_مماس}
 f_x(x_0,y_0)(x-x_0)+f_y(x_0,y_0)(y-y_0)=0
 \end{align}
+%===========
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\ra}{1.25}
+\pgfmathsetmacro{\a}{0.75}
+\pgfmathsetmacro{\b}{0.5}
+\pgfmathsetmacro{\ang}{50}
+\pgfmathsetmacro{\w}{4}
+\pgfmathsetmacro{\h}{3.5}
+\pgfmathsetmacro{\angA}{70}
+\draw[smooth cycle] plot coordinates {(20:\ra)(40:0.75*\ra)(60:0.85*\ra)(80:1*\ra)(100:0.8*\ra)(120:\ra)(140:0.85*\ra)(160:\ra)(180:0.75*\ra) (200:\ra)(220:0.85*\ra)(240:0.75*\ra)(260:1*\ra)(280:0.9*\ra)(300:\ra)(320:0.8*\ra)(340:\ra)};
+\draw[smooth cycle] plot coordinates {(20:\a*\ra)(40:\a*0.75*\ra)(60:\a*0.85*\ra)(80:\a*1*\ra)(100:\a*0.8*\ra)(120:\a*\ra)(140:\a*0.85*\ra)(160:\a*\ra)(180:\a*0.75*\ra) (200:\a*\ra)(220:\a*0.85*\ra)(240:\a*0.75*\ra)(260:\a*1*\ra)(280:\a*0.9*\ra)(300:\a*\ra)(320:\a*0.8*\ra)(340:\a*\ra)};
+\draw[smooth cycle] plot coordinates {(20:\b*\ra)(40:\b*0.75*\ra)(60:\b*0.85*\ra)(80:\b*1*\ra)(100:\b*0.8*\ra)(120:\b*\ra)(140:\b*0.85*\ra)(160:\b*\ra)(180:\b*0.75*\ra) (200:\b*\ra)(220:\b*0.85*\ra)(240:\b*0.75*\ra)(260:\b*1*\ra)(280:\b*0.9*\ra)(300:\b*\ra)(320:\b*0.8*\ra)(340:\b*\ra)};
+\draw[-latex](40:0.75*\ra)node[circ]{}node[right,yshift=1ex,xshift=1ex]{$(x_0,y_0)$}--++(\ang:0.75)node[above,xshift=2ex]{$\nabla f(x_0,y_0)$};
+\draw[](260:1*\ra)node[pin={-70:{\RL{منحنی $f(x,y)=f(x_0,y_0)$}}}]{};
+\draw(-2,-1.5)--++(\w,0)--++(\angA:\h)--++(-\w,0)--++(\angA:-\h);
+\end{tikzpicture}
+\caption{دو متغیرات کے تفاعل کی ڈھلوان ہر صورت ہم قد منحنیات کی عمودی ہو گی۔}
+\label{شکل_کثیر_المتغیر_ہم_قد__ڈھلوان_عمودی}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\t)=sqrt(8)*cos(\t);fy(\t)=sqrt(2)*sin(\t);g(\x)=1/2*\x+2;}]
+\pgfmathsetmacro{\xa}{2*sqrt(2)}
+\begin{axis}[axis equal,view/h=110,clip=false,axis lines=center,small,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=west},ylabel style={anchor=west},zlabel style={anchor=south},xtick={-2,-1,1,2,\xa},xticklabels={$-2$,$-1$,$1$,$2$,\rlap{$2\sqrt{2}$}},ytick={-1,1},ztick={\empty},hide z axis]
+%\addplot3[surf,z buffer=sort,domain=-1:1,domain y=-1:1]{f(x,y)};
+\addplot[smooth,domain=0:360]({fx(x)},{fy(x)})node[pos=0.125,above right]{$\frac{x^2}{4}+y^2=2$};
+\addplot[domain=-3:2]{g(x)}node[above,xshift=3ex]{$x-2y=-4$};
+\addplot[-latex,thick] coordinates{(-2,1)(-3,3)}node[pos=0,circ]{}node[pos=0,below,xshift=2ex]{$(-2,1)$}node[above]{$\nabla f_{(-2,1)}=-\ai+2\aj$};
+\end{axis}
+\end{tikzpicture}
+\caption{ہم قطع مکافی کو تفاعل \عددی{f(x,y)=\tfrac{x^2}{4}+y^2} کی  ہم قد منحنی تصور کر کے اس کا مماس تلاش کر سکتے ہیں (مثال \حوالہ{مثال_کثیر_المتغیر_ترخیم_مماسی_ہم_قد})۔}
+\label{شکل_مثال_کثیر_المتغیر_ترخیم_مماسی_ہم_قد}
+\end{minipage}
+\end{figure}
 
-\ابتدا{مثال}
-نقطہ \عددی{(-2,1)} پر درج ذیل ترخیم کے مماس کی مساوات تلاش کریں۔
+%====================
+\ابتدا{مثال}\شناخت{مثال_کثیر_المتغیر_ترخیم_مماسی_ہم_قد}
+نقطہ \عددی{(-2,1)} پر درج ذیل ترخیم کے مماس کی مساوات تلاش کریں (شکل \حوالہ{شکل_مثال_کثیر_المتغیر_ترخیم_مماسی_ہم_قد})۔
 \begin{align*}
 \frac{x^2}{4}+y^2=2
 \end{align*}
@@ -5325,7 +5416,7 @@ f_x&=\left. 3x^2-y^2\right\vert_{(1,1,0)}=2,\quad f_y=\left. -2xy\right\vert_{(1
 \end{align}
 منحنی  کے ساتھ ساتھ  ہر نقطہ  پر \عددی{\nabla f}،  منحنی کی سمتیہ  رفتار   کو عمودی ہو گا۔
 
-آئیں اب نقطہ \عددی{N_0}  سے گزرتی منحنی تک اپنے آپ کو محدود رکھتے ہیں۔نقطہ \عددی{N_0} پر تمام سمتیات  رفتار،  \عددی{N_0} پر \عددی{\nabla f} کو عمودی ہوں گے لہٰذا منحنی  کے تمام مماسی خط  اس مستوی میں پائے جائیں گے جو \عددی{N_0} پر \عددی{\nabla f} کو عمودی ہو۔ اس مستوی کو ہم \عددی{N_0} پر سطح کا مماسی مستوی کہتے ہیں۔ نقطہ \عددی{N_0} سے گزرتا ہوا ایسا خط جو  اس مستوی کو عمودی ہو، \عددی{N_0} پر سطح کا عمودی خط ہو گا۔
+آئیں اب نقطہ \عددی{N_0}  سے گزرتی منحنی تک اپنے آپ کو محدود رکھتے ہیں (شکل \حوالہ{شکل_کثیرالمتغیر_نقطہ_پر_مماسی_سطح_کی_تعریف})۔نقطہ \عددی{N_0} پر تمام سمتیات  رفتار،  \عددی{N_0} پر \عددی{\nabla f} کو عمودی ہوں گے لہٰذا منحنی  کے تمام مماسی خط  اس مستوی میں پائے جائیں گے جو \عددی{N_0} پر \عددی{\nabla f} کو عمودی ہو۔ اس مستوی کو ہم \عددی{N_0} پر سطح کا مماسی مستوی کہتے ہیں۔ نقطہ \عددی{N_0} سے گزرتا ہوا ایسا خط جو  اس مستوی کو عمودی ہو، \عددی{N_0} پر سطح کا عمودی خط ہو گا۔
 
 \ابتدا{تعریف}
 نقطہ \عددی{N_0(x_0,y_0,z_0)}  پر  \عددی{\left.\nabla f\right\vert_{N_0}} کا  عمودی مستوی،   نقطہ \عددی{N_0}   پر  ہم قد منحنی \عددی{f(x,y,z)=c}  کا مماسی مستوی  ہو گا۔
@@ -5339,8 +5430,53 @@ f_x(N_0)(x-x_0)+f_y(N_0)(y-y_0)+f_z(N_0)(z-z_0)=0\\
 x=x_0+f_x(N_0)t,\quad y=y_0+f_y(N_0)t,\quad z=z_0+f_z(N_0)t
 \end{align}
 
-\ابتدا{مثال}
-نقطہ \عددی{N_0(1,2,4)} پر درج ذیل کا مماسی مستوی اور عمودی خط دریافت کریں۔
+%===============
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);fz(\r,\t)=9-(\r)^2;g(\x,\y)=14-2*\x-4*\y;hx(\t)=1+\t;hy(\t)=2+\t*sin(deg(\t));hz(\t)=9-(hx(\t))^2-(hy(\t))^2;kx(\t)=1+\t*sin(deg(\t));ky(\t)=2+\t;kz(\t)=9-(kx(\t))^2-(ky(\t))^2;}]
+\pgfmathsetmacro{\ra}{1}
+\pgfmathsetmacro{\ang}{300}
+\pgfmathsetmacro{\ks}{-1.1}
+\pgfmathsetmacro{\ke}{0.65}
+\begin{axis}[view/h=115,clip=false,axis lines=center,small,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},xtick={\empty},ytick={\empty},ztick={\empty},hide axis]
+%\addplot3[surf,z buffer=sort,domain=-1:1,domain y=-1:1]{f(x,y)};
+\addplot3[surf,z buffer=sort,domain=0:3,domain y=0:360]({fx(x,y)},{fy(x,y)},{fz(x,y)});
+\addplot3[surf,domain=-0.75:2,domain y=1:2.5]{g(x,y)};
+\addplot3[]coordinates{(-0.75,1,{g(-0.75,1)})}node[right]{\RL{مماسی مستوی}};
+\addplot3[]coordinates{({fx(\ra,\ang)},{fy(\ra,\ang)},{fz(\ra,\ang)})}node[above left]{$f(x,y,z)=c$};
+\addplot3[-latex]coordinates {(1,2,4)(1+2,2+4,4+1)}node[pos=0,circ]{}node[pos=0,below left,font=\scriptsize]{$N_0$}node[right,yshift=1ex]{$\nabla f$};
+\addplot3[domain=\ks:\ke,samples y=0]({hx(x)},{hy(x)},{hz(x)});
+\addplot3[domain=\ks:\ke,samples y=0]({kx(x)},{ky(x)},{kz(x)});
+\draw[-latex](axis cs:1,2,4)--++(axis cs:-2,-1,4)node[right]{$v_1$};
+\draw[-latex](axis cs:1,2,4)--++(axis cs:0,-2,7)node[right]{$v_2$};
+\end{axis}
+\end{tikzpicture}
+\caption{نقطہ \عددی{N_0} سے گزرتی ہوئی  سطح میں ہر ہموار منحنی کا سمتیہ رفتار  \عددی{\nabla f} کو عمودی ہو گا۔یوں \عددی{N_0} پر سمتیات رفتار ایک مشترک مستوی میں پائے جائیں گے جس کو ہم مماسی مستوی کہتے ہیں۔}
+\label{شکل_کثیرالمتغیر_نقطہ_پر_مماسی_سطح_کی_تعریف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);fz(\r,\t)=9-(\r)^2;g(\x,\y)=14-2*\x-4*\y;}]
+\pgfmathsetmacro{\ra}{1}
+\pgfmathsetmacro{\ang}{300}
+\begin{axis}[view/h=115,clip=false,axis lines=center,small,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},xtick={\empty},ytick={\empty},ztick={\empty}]
+%\addplot3[surf,z buffer=sort,domain=-1:1,domain y=-1:1]{f(x,y)};
+\addplot3[surf,z buffer=sort,domain=0:3,domain y=0:360]({fx(x,y)},{fy(x,y)},{fz(x,y)});
+\addplot3[surf,domain=-0.75:2.25,domain y=1:3]{g(x,y)};
+\addplot3[]coordinates{(-0.75,1,{g(-0.75,1)})}node[right]{\RL{مماسی مستوی}};
+\addplot3[]coordinates{({fx(\ra,\ang)},{fy(\ra,\ang)},{fz(\ra,\ang)})}node[above left]{\RL{دائری قطع مکافی}};
+\addplot3[]coordinates {(1,2,4)(1+2,2+4,4+1)}node[pos=0,circ]{}node[pos=0,above,font=\scriptsize]{$N_0(1,2,4)$}node[right,yshift=1ex]{\RL{عمودی خط}};
+\end{axis}
+\end{tikzpicture}
+\caption{نقطہ \عددی{N_0} پر دائری قطع مکافی سطح   کا مماسی مستوی اور عمودی خط (مثال \حوالہ{مثال_کثیرالمتغیر_عمودی_خط_مماسی_مستوی_دائری_قطع_مکافی})۔}
+\label{شکل_مثال_کثیرالمتغیر_عمودی_خط_مماسی_مستوی_دائری_قطع_مکافی}
+\end{minipage}
+\end{figure}
+%==================
+\ابتدا{مثال}\شناخت{مثال_کثیرالمتغیر_عمودی_خط_مماسی_مستوی_دائری_قطع_مکافی}
+نقطہ \عددی{N_0(1,2,4)} پر درج ذیل کا مماسی مستوی اور عمودی خط دریافت کریں (شکل \حوالہ{شکل_مثال_کثیرالمتغیر_عمودی_خط_مماسی_مستوی_دائری_قطع_مکافی})۔
 \begin{align*}
 f(x,y,z)&=x^2+y^2+z-9=0&&\text{\RL{دائری قطع مکافی}}
 \end{align*}

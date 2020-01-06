@@ -1,85 +1,18 @@
-\begin{figure}
-\centering
-\begin{tikzpicture}[font=\small]
-\draw[-latex](0,0)--++(4.5,0)node[right]{$x$};
-\draw[-latex](0,0)--++(0,3)node[left]{$y$};
-\draw[smooth cycle] plot coordinates {(-0.25,1.5)(1,0)(2.5,0.2)(4.5,1.5)(2,3)(1.6,2.2) };
-\draw(1,0.75)++(45:-1)--++(45:4.5)node[above,align=left]{$x=x_0+su_1,$\\$y=y_0+su_2$};
-\draw[-latex,thick](1,0.75)node[circ]{}node[right,yshift=-0.5ex]{$N_0(x_0,y_0)$}--++(45:2)node[below right,xshift=-4ex,align=right]{\text{\RL{\عددی{s} بڑھنے کا رخ}}\\$\uu=u_1\ai+u_2\aj$};
-\draw(0.5,1.5)node[]{$R$};
-\end{tikzpicture}
-\caption{نقطہ \عددی{N_0} پر \عددی{\uu} کے رخ \عددی{f} کی شرح تبدیلی  \عددی{N_0} پر لکیر کے ساتھ \عددی{f} کی شرح تبدیلی ہو گی۔}
-\label{شکل_کثیرالمتغیر_کسی_رخ_بڑھنے_کی_شرح}
-\end{figure}
 
 \begin{figure}
 \centering
-\begin{tikzpicture}[font=\small,declare function={f(\x,\y)=\x*e^(\y)+cos(deg(\x*\y));}]
-\begin{axis}[view={0}{90},axis on top,clip=false,axis lines=center,small,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=west},ylabel style={anchor=south},zlabel style={anchor=east},xtick={1,2,3,4},ytick={-1,1,2},ztick={\empty},domain=0:4,domain y=-1:2]
-%\addplot3[surf,z buffer=sort,domain=0:3,domain y=-1:3]{f(x,y)};
-\addplot3[-latex,thick]coordinates {(2,0,{f(2,0)})(2+3/5,0-4/5,{f(2+3/5,0-4/5)})}node[pos=0,circ]{}node[pos=0,above,xshift=-0.75ex,yshift=0.5ex]{$N_0$}node[below,xshift=-2ex]{$\uu=\tfrac{3}{5}\ai-\tfrac{4}{5}\aj$};
-\addplot3[-latex,thick]coordinates {(2,0,{f(2,0)})(2+1,0+2,{f(2+1,0+2)})}node[above]{$\nabla f=\ai+2\aj$};
-\addplot3[contour gnuplot={draw color = black,labels=false,levels={1,2,3,4,5,7,10,15,20,25}}]{f(x,y)};
-\end{axis}
-\end{tikzpicture}
-\caption{روایتی طور  پر \عددی{\nabla f} کو \عددی{f} کے دائرہ کار میں دکھایا  جاتا ہے۔ موجودہ تفاعل کے لئے مکمل مستوی \عددی{xy} دائرہ کار ہو گا۔ سمتیہ \عددی{\uu=\tfrac{3}{5}\ai-\tfrac{4}{5}\aj} کے رخ \عددی{} کی شرح تبدیلی \عددی{\nabla f\cdot \uu=-1} ہو گی۔}
-\end{figure}
-
-\begin{figure}
-\centering
-\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=sqrt(2)*\r*cos(\t);fy(\r,\t)=sqrt(2)*\r*sin(\t);fz(\r,\t)=\r^2;f(\x,\y)=0.5*(\x)^2+0.5*(\y)^2;g(\x)=sqrt(1.5-(\x)^2);}]
-\pgfmathsetmacro{\ra}{1}
-\begin{axis}[view/h=110,clip=false,axis lines=center,small,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},xtick={\empty},ytick={\empty},ztick={\empty},hide z axis]
+\begin{tikzpicture}[font=\small,declare function={fx(\t)=4-\t;fy(\t)=sqrt(14-(\t-4)^2);fz(\t)=\t;g(\x,\y)=4-\x;hx(\t)=sqrt(2)*cos(\t);hy(\t)=sqrt(2)*sin(\t);hz(\k)=\k;}]
+\pgfmathsetmacro{\ta}{4-sqrt(14)}
+\pgfmathsetmacro{\tb}{4+sqrt(14)}
+\begin{axis}[view/h=115,clip=false,axis lines=center,small,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},xtick={\empty},ytick={\empty},ztick={\empty},hide axis]
 %\addplot3[surf,z buffer=sort,domain=-1:1,domain y=-1:1]{f(x,y)};
-\addplot3[surf,z buffer=sort,domain=0:1.1,domain y=0:360]({fx(x,y)},{fy(x,y)},{fz(x,y)});
-\addplot3[-latex] coordinates {(0,0,0.6)(0,0,2)}node[left]{$z$};
-\addplot3[thin,domain y=0:360]({fx(\ra,y)},{fy(\ra,y)},{fz(\ra,y)})node[pos=0.25,pin={[pin distance=0.25cm]-45:{\RL{دائرہ پر تبدیلی صفر ہے}}}]{};
-\addplot3[]coordinates {(1,1,1)}node[circ]{}node[above]{$(1,1,1)$};
-\addplot3[dashed]coordinates {(1,1,1)(1,1,0)}node[circ]{}node[below]{$(1,1)$};
-\addplot3[-latex]coordinates {(1,1,0)(2,2,0)}node[below right]{$\nabla f=\ai+\aj$}node[pos=0.95,pin={[pin edge=-]-100:{\RL{تیز ترین بڑھنا}}}]{};
-\addplot3[-latex]coordinates {(1,1,0)(0,0,0)}node[pos=0.5,pin={[pin distance=1.5cm,pin edge=-]-170:{\RL{تیز ترین گٹھنا}}}]{};
-%\addplot3[contour gnuplot={draw color = black,labels=false,levels={1,2,3,4,5,7,10,15,20,25}}]{f(x,y)};
-%\addplot3[-latex,domain y=45:65]({fx(\ra,y)},{fy(\ra,y)},{0});
-\addplot3[-latex]coordinates {(1,1,0)(0.5,1.5,0)}node[pos=0.25,pin={[pin edge=-,right]-20:{\RL{صفر تبدیلی}}}]{};
-\addplot3[-latex]coordinates {(1,1,0)(1.5,0.5,0)};
-\addplot3[]({fx(1.1,270)},{fy(1.1,270)},{fz(1.1,270)})node[left]{$\begin{aligned}z&=f(x,y)\\  &=\tfrac{x^2}{2}+\tfrac{y^2}{2}\end{aligned}$};
+\addplot3[surf]({x},{y},{g(x,y)});
+\addplot3[surf,domain=0:360,domain y=0:1]({hx(x)},{hy(x)},{hz(y)});
+\addplot3[black,domain=\ta:\tb,samples y=1]({fx(x)},{fy(x)},{fz(x)});
+\addplot3[black,domain=\ta:\tb,samples y=1]({fx(x)},{-fy(x)},{fz(x)});
 \end{axis}
 \end{tikzpicture}
-\caption{نقطہ \عددی{(1,1,1)} پر \عددی{f} تیز ترین \عددی{\nabla f} رخ بڑھتا ہے جو سطح پر سیدھا چڑھنے کا  مطابقی رخ ہے۔}
 \end{figure}
 
 
-\begin{figure}
-\centering
-\begin{tikzpicture}[font=\small]
-\pgfmathsetmacro{\ra}{1.25}
-\pgfmathsetmacro{\a}{0.75}
-\pgfmathsetmacro{\b}{0.5}
-\pgfmathsetmacro{\ang}{50}
-\pgfmathsetmacro{\w}{4}
-\pgfmathsetmacro{\h}{3.5}
-\pgfmathsetmacro{\angA}{70}
-\draw[smooth cycle] plot coordinates {(20:\ra)(40:0.75*\ra)(60:0.85*\ra)(80:1*\ra)(100:0.8*\ra)(120:\ra)(140:0.85*\ra)(160:\ra)(180:0.75*\ra) (200:\ra)(220:0.85*\ra)(240:0.75*\ra)(260:1*\ra)(280:0.9*\ra)(300:\ra)(320:0.8*\ra)(340:\ra)};
-\draw[smooth cycle] plot coordinates {(20:\a*\ra)(40:\a*0.75*\ra)(60:\a*0.85*\ra)(80:\a*1*\ra)(100:\a*0.8*\ra)(120:\a*\ra)(140:\a*0.85*\ra)(160:\a*\ra)(180:\a*0.75*\ra) (200:\a*\ra)(220:\a*0.85*\ra)(240:\a*0.75*\ra)(260:\a*1*\ra)(280:\a*0.9*\ra)(300:\a*\ra)(320:\a*0.8*\ra)(340:\a*\ra)};
-\draw[smooth cycle] plot coordinates {(20:\b*\ra)(40:\b*0.75*\ra)(60:\b*0.85*\ra)(80:\b*1*\ra)(100:\b*0.8*\ra)(120:\b*\ra)(140:\b*0.85*\ra)(160:\b*\ra)(180:\b*0.75*\ra) (200:\b*\ra)(220:\b*0.85*\ra)(240:\b*0.75*\ra)(260:\b*1*\ra)(280:\b*0.9*\ra)(300:\b*\ra)(320:\b*0.8*\ra)(340:\b*\ra)};
-\draw[-latex](40:0.75*\ra)node[circ]{}node[right,yshift=1ex,xshift=1ex]{$(x_0,y_0)$}--++(\ang:0.75)node[above,xshift=2ex]{$\nabla f(x_0,y_0)$};
-\draw[](260:1*\ra)node[pin={-70:{\RL{منحنی $f(x,y)=f(x_0,y_0)$}}}]{};
-\draw(-2,-1.5)--++(\w,0)--++(\angA:\h)--++(-\w,0)--++(\angA:-\h);
-\end{tikzpicture}
-\caption{دو متغیرات کے تفاعل کی ڈھلوان ہر صورت ہم قد منحنیات کی عمودی ہو گی۔}
-\end{figure}
 
-
-\begin{figure}
-\centering
-\begin{tikzpicture}[font=\small,declare function={fx(\t)=sqrt(8)*cos(\t);fy(\t)=sqrt(2)*sin(\t);g(\x)=1/2*\x+2;}]
-\pgfmathsetmacro{\xa}{2*sqrt(2)}
-\begin{axis}[axis equal,view/h=110,clip=false,axis lines=center,small,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=west},ylabel style={anchor=west},zlabel style={anchor=south},xtick={-2,-1,1,2,\xa},xticklabels={$-2$,$-1$,$1$,$2$,\rlap{$2\sqrt{2}$}},ytick={-1,1},ztick={\empty},hide z axis]
-%\addplot3[surf,z buffer=sort,domain=-1:1,domain y=-1:1]{f(x,y)};
-\addplot[smooth,domain=0:360]({fx(x)},{fy(x)})node[pos=0.125,above right]{$\frac{x^2}{4}+y^2=2$};
-\addplot[domain=-3:2]{g(x)}node[above,xshift=3ex]{$x-2y=-4$};
-\addplot[-latex,thick] coordinates{(-2,1)(-3,3)}node[pos=0,circ]{}node[pos=0,below,xshift=2ex]{$(-2,1)$}node[above]{$\nabla f_{(-2,1)}=-\ai+2\aj$};
-\end{axis}
-\end{tikzpicture}
-\caption{ہم قطع مکافی کو تفاعل \عددی{f(x,y)=\tfrac{x^2}{4}+y^2} کی  ہم قد منحنی تصور کر کے اس کا مماس تلاش کر سکتے ہیں۔}
-\end{figure}

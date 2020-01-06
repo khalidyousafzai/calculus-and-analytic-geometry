@@ -1,1 +1,1 @@
-unset surface; set cntrparam levels 4; set contour; set table "calculusAndAnalyticGeometry_contourtmp8.table"; splot "calculusAndAnalyticGeometry_contourtmp8.dat";
+unset surface; set cntrparam levels discrete 1,2,3,4,5,7,10,15,20,25; set contour; set table "calculusAndAnalyticGeometry_contourtmp8.table"; splot "calculusAndAnalyticGeometry_contourtmp8.dat";
