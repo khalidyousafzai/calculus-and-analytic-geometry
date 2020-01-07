@@ -5495,7 +5495,46 @@ x=1+2t,\quad y=2+4t,\quad z=4+t
 \end{align*}
 \انتہا{مثال}
 %======================
-\ابتدا{مثال}
+\begin{figure}
+\centering
+\pgfmathsetmacro{\ra}{1}
+\pgfmathsetmacro{\rb}{0.25}
+\pgfmathsetmacro{\h}{2}
+\pgfmathsetmacro{\w}{3.25}
+\pgfmathsetmacro{\l}{2}
+\pgfmathsetmacro{\ang}{45}
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=\ra*cos(\t);fy(\r,\t)=\rb*sin(\t);fz(\r,\t)=1/360*\t;}]
+\draw[name path=bottomArc] ([shift={(180:\ra cm and \rb cm)}]0,0) arc (180:360:\ra cm and \rb cm)
+node[pos=0.5,pin=-45:{$x^2+y^2-2=0$}]{};
+\draw[] ([shift={(0:\ra cm and \rb cm)}]0,\h) arc (0:360:\ra cm and \rb cm);
+\path(-2.5,\h/4)--++(\w,0)--++(\ang:\l)coordinate(kTR)--++(-\w,0)coordinate(kTL)--++(\ang:-\l);
+\draw(-2.5,\h/4)--++(\w,0)--++(\ang:\l)node[right]{$x+z-4=0$};%--++(-\w,0)--++(\ang:-\l);
+\draw(-\ra,\h/3) to [out=-20,in=-90]coordinate[pos=0.5](N)coordinate[pos=0.75](NN)++(2*\ra,\h/2);
+\path[name path=kLow](-2.5,\h/4)--++(\w,0);
+\path[name path=kRight](-2.5,\h/4)++(\w,0)--++(\ang:\l);
+\path[name path=kTop](-2.5,\h/4)++(\w,0)++(\ang:\l)--++(-\w,0);
+\path[name path=kLeft](-2.5,\h/4)++(\w,0)++(\ang:\l)++(-\w,0)--++(\ang:-\l);
+\path[name path=leftVertical](-\ra,0)--++(0,\h);
+\path[name path=rightVertical](\ra,0)--++(0,\h);
+\draw[name intersections={of={leftVertical and kLow}}](-\ra,0)--(intersection-1)  (-\ra,\h/3)--(-\ra,\h);
+\draw[name intersections={of={rightVertical and kRight}}] (\ra,0)--(intersection-1)  (\ra,5/6*\h)--(\ra,\h);
+\draw[name intersections={of={kTop and rightVertical}}](kTR)--(intersection-1);
+\draw[name intersections={of={kTop and leftVertical}}](intersection-1)--(kTL)--++(\ang:-\l);
+\path[name path=kx](0,0)--++(-135:1);
+\draw[-latex,name intersections={of=kx and bottomArc}] (intersection-1)--++(-135:0.5)node[below]{$x$};
+\draw[-latex](\ra,0)--++(0.5,0)node[right]{$y$};
+\draw[-latex](0,\h)--++(0,0.5)node[left]{$z$};
+\draw[-latex](N)node[circ]{}node[right,xshift=0.5ex,font=\scriptsize]{$N_0$}--++(-0.125,0.5)node[left]{$\nabla g$};
+\draw[-latex](N)--++(0.5,-0.5)node[below,xshift=-1ex,yshift=0.5ex]{$\nabla f$};
+\draw[-latex](N)--++(\ang:-1)node[left]{$\nabla f\times \nabla g$};
+\draw(NN)node[pin={[pin distance=1.25cm,right]10:{\RL{ترخیم}}}]{};
+\end{tikzpicture}
+\caption{بیلن \عددی{f(x,y,z)=x^2+y^2-2=0} اور مستوی \عددی{g(x,y,z)=x+z-4=0} ایک دوسرے کو  ترخیم میں  قطع کرتے ہیں۔}
+\label{شکل_مثال_کثیرالمتغیر_بیلن_مستوی_تقاطع}
+\end{figure}
+
+
+\ابتدا{مثال}\شناخت{مثال_کثیرالمتغیر_بیلن_مستوی_تقاطع}
 بیلنی سطح
 \begin{align*}
 f(x,y,z)=x^2+y^2-2=0
@@ -5504,7 +5543,7 @@ f(x,y,z)=x^2+y^2-2=0
 \begin{align*}
 g(x,y,z)=x+z-4=0
 \end{align*}
-ایک ترخیم \عددی{T} میں ملتے ہیں۔ نقطہ \عددی{N_0(1,1,3)} پر \عددی{T} کے مماسی خط کی مقدار معلوم مساوات تلاش کریں۔
+ایک ترخیم \عددی{T} میں ملتے ہیں (شکل \حوالہ{مثال_کثیرالمتغیر_بیلن_مستوی_تقاطع})۔ نقطہ \عددی{N_0(1,1,3)} پر \عددی{T} کے مماسی خط کی مقدار معلوم مساوات تلاش کریں۔
 
 حل:\quad
 نقطہ \عددی{N_0} پر مماسی خط \عددی{\nabla f} اور \عددی{\nabla g} دونوں کو  عمودی  لہٰذا \عددی{\kvec{v}=\nabla f\times \nabla g} کو متوازی ہو گا۔ نقطہ \عددی{N_0} کے محدد اور  \عددی{\kvec{v}} کے اجزاء ہمیں  مماسی  خط کی مساوات دیتے ہیں۔ ہمارے پاس درج ذیل ہے۔
@@ -6114,13 +6153,65 @@ $-\tfrac{7}{\sqrt{5}}$
 }}
 \انتہا{جواب}
 %==================
-\ابتدا{سوال}\ترچھا{دائرہ کے درپیچیدہ  پر تبدیلی}\\
-درج ذیل منحنی  کے   اکائی مماسی سمتیہ  کے رخ تفاعل \عددی{f(x,y)=x^2+y^2} کا تفرق   تلاش کریں۔
+\ابتدا{سوال}\شناخت{سوال_کثیرالمتغیر_دائرے_کا_درپیچیدہ}\ترچھا{دائرہ کے درپیچیدہ  پر تبدیلی}\\
+درج ذیل منحنی  کے   اکائی مماسی سمتیہ  کے رخ تفاعل \عددی{f(x,y)=x^2+y^2} کا تفرق   تلاش کریں (شکل \حوالہ{شکل_سوال_کثیرالمتغیر_دائرے_کا_درپیچیدہ})۔
 \begin{align*}
 \kvec{r}(t)=(\cos t+t\sin t)\ai+(\sin t-t\cos t)\aj,\,t>0
 \end{align*}
 \انتہا{سوال}
 %=========
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\t)=cos(deg(\t))+\t*sin(deg(\t));fy(\t)=sin(deg(\t))-\t*cos(deg(\t));}]
+\pgfmathsetmacro{\ang}{120}
+\pgfmathsetmacro{\angR}{\ang*pi/180}
+\pgfmathsetmacro{\kx}{cos(\ang)}
+\pgfmathsetmacro{\ky}{sin(\ang)}
+\draw[-latex](-1.25,0)--(1.5,0)node[right]{$x$};
+\draw[-latex](0,-1.25)--(0,1.75)node[left]{$y$};
+\draw[domain=0:2.5]plot ({fx(\x)},{fy(\x)});
+\draw(0,0) circle (1);
+\draw(0,0)node[below left]{$O$}--(\ang:1)node[circ]{}node[above left]{$Q$}--({fx(\angR)},{fy(\angR)})node[pos=0.6,above]{\RL{دھاگہ}}coordinate(N)node[circ]{}node[right]{$N(x,y)$};
+\draw[-stealth]([shift={(0:0.3)}]0,0) arc (0:\ang:0.3)node[pos=0.3,right]{$t$};
+\draw[-latex,thick](0,0)--(N)node[pos=0.75,below]{$\kvec{r}$};
+\draw(0.5,0)node[below]{$1$};
+\draw[-latex,thick](N)--++(\ang:1)node[right]{$\kvec{T}$};
+\end{tikzpicture}
+\caption{دائرے کا درپیچیدہ (سوال \حوالہ{سوال_کثیرالمتغیر_دائرے_کا_درپیچیدہ})}
+\label{شکل_سوال_کثیرالمتغیر_دائرے_کا_درپیچیدہ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\ra}{1.5}
+\pgfmathsetmacro{\rb}{\ra/4}
+\pgfmathsetmacro{\a}{4/5*\ra}
+\pgfmathsetmacro{\b}{2/6*\ra}
+\pgfmathsetmacro{\ang}{20}
+\draw(0,0) circle (\ra cm and \rb cm);
+\draw([shift={(180:\ra)}]0,0) arc (180:360:\ra);
+\path(0,-0.85*\ra)coordinate(N)++(-\a/2,-\b/2)coordinate(L)--++(90+\ang:\b)coordinate(kL);
+\path(0,-0.85*\ra)++(\a/2,-\b/2)coordinate(R)--++(90+-\ang:\b)coordinate(kR);
+\draw[fill=white](L)--(kL)--(kR)--(R)coordinate[pos=0.75](kk)--(L);
+\draw(kk)++(-0.125,0)node[pin={[right]-10:{$z=L(x,y)$}}]{};
+\draw(N)node[circ]{}node[pin={[pin distance=1.75cm,left]145:{$(x_0,y_0,f(x_0,y_0))$}}]{};
+\draw[dashed](L)--++(0,-0.5)coordinate(LL);
+\draw[dashed](R)--++(0,-0.5)coordinate(RR);
+\draw[dashed](kL)--++(0,-1.5)coordinate(kLL);
+\draw[dashed](kR)--++(0,-1.5)coordinate(kRR);
+\draw(LL)--(kLL)--(kRR)--(RR)--(LL);
+\draw($(LL)!0.5!(kRR)$)node[circ]{}node[pin=-45:{$(x_0,y_0)$}]{};
+\draw[-latex](-1.25*\ra,-1.25*\ra)--++(3*\ra,0)node[below]{$y$};
+\draw[-latex](-1.25*\ra,-1.25*\ra)--++(-0.5,-0.5)node[left]{$x$};
+\draw[-latex](-1.25*\ra,-1.25*\ra)--++(0,1)node[left]{$z$};
+\draw(\ra,0)node[right]{$z=f(x,y)$};
+\end{tikzpicture}
+\caption{تفاعل \عددی{z=f(x,y)} اور نقطہ \عددی{(x_0,y_0)} پر  اس کی خط بندی \عددی{z=L(x,y)} کی ترسیم۔  خط بند مستوی \عددی{L}،  نقطہ \عددی{(x_0,y_0)} کے سیدھا اوپر بلندی پر   سطح \عددی{z=f(x,y)} کو مماسی ہو گا۔یوں آپ جیومیٹریائی طور پر دیکھ سکتے ہیں کہ \عددی{(x_0,y_0)} کی پڑوس میں \عددی{L} اور \عددی{f} کی قیمتیں یکساں ہوں گی۔}
+\label{شکل_سوال_کثیرالمتغیر_خط_بندی-تفاعل}
+\end{minipage}
+\end{figure}
 \ابتدا{سوال}\ترچھا{پیچدار منحنی کے ساتھ ساتھ تبدیلی}\\
 نقاط  \عددی{t=-\pi/4,0,\pi/4} پر پیچ دار  منحنی \عددی{\kvec{r}(t)=(\cos t)\ai+(\sin t)\aj+t\ak}  کے اکائی مماسی سمتیات کے رخ     تفاعل \عددی{f(x,y,z)=x^2+y^2+z^2} کے تفرقات   تلاش کریں۔ یہ تفاعل مبدا سے پیچدار منحنی کے نقطہ \عددی{N(x,y,z)} کے  فاصلہ کا مربع  دیتا ہے۔اس منحنی پر چلتے ہوئے   تفرق   \عددی{t} کے لحاظ سے فاصلے کے مربع کی شرح تبدیلی دے گا۔
 \انتہا{سوال}
@@ -6150,13 +6241,13 @@ A(x-x_0)+B(y-y_0)=0
 فرض کریں \عددی{t} کی تمام قیمتوں کے لئے قابل تفرق منحنی \عددی{x=g(t),\, y=h(t)} پر  قابل تفرق تفاعل \عددی{f(x,y)} کی قیمت  مستقل \عددی{c} ہو۔ مساوات \عددی{f(g(t),h(t))=c} کے دونوں اطراف کا \عددی{t} کے لحاظ سے تفرق لے کر دکھائیں کہ ہر نقطہ پر منحنی کا مماس اور  \عددی{\nabla f} آپس میں عمودی ہیں۔ 
 \انتہا{سوال}
 %==================
-\ابتدا{سوال}\ترچھا{تفاعل \عددی{f(x,y)} کی خط بندی، مماسی مستوی تخمین ہو گی۔}\\
+\ابتدا{سوال}\شناخت{سوال_کثیرالمتغیر_خط_بندی-تفاعل}\ترچھا{تفاعل \عددی{f(x,y)} کی خط بندی، مماسی مستوی تخمین ہو گی۔}\\
 دکھائیں کہ نقطہ \عددی{N_0(x_0,y_0,f(x_0,y_0))} پر سطح \عددی{z=f(x,y)}  کا مماسی مستوی  درج ذیل ہو گا جہاں \عددی{f} قابل تفرق ہے۔
 \begin{align*}
 &f_x(x_0,y_0)(x-x_0)+f_y(x_0,y_0)(y-y_0)-(z-f(x_0,y_0))=0\\
 z&=f(x_0,y_0)+f_x(x_0,y_0)(x-x_0)+f_y(x_0,y_0)(y-y_0)&&\text{یعنی}
 \end{align*} 
-یوں \عددی{N_0} پر مماسی مستوی  نقطہ \عددی{N_0} پر \عددی{f} کی خط بندی کی ترسیم ہو گی۔
+یوں \عددی{N_0} پر مماسی مستوی  نقطہ \عددی{N_0} پر \عددی{f} کی خط بندی کی ترسیم ہو گی (شکل \حوالہ{شکل_سوال_کثیرالمتغیر_خط_بندی-تفاعل})۔
 \انتہا{سوال}
 %============
 \ابتدا{سوال}\ترچھا{رخی تفرقات اور غیر سمتی اجزاء}\\
