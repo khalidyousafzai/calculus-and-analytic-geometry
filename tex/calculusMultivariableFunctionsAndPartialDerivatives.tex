@@ -7377,4 +7377,488 @@ $ -4\le x\le 3,\quad -2\le y\le 2$
 \انتہا{سوالات}
 %%%%%%%%%%%%%%%%%%%
 
+\حصہ{لیگرینج   ضاربین}
+جیسا ہم  حصہ \حوالہ{حصہ_کثیرالمتغیر_انتہائی_قیمتیں_اور_نقاط_زین} میں دیکھ چکے،  بعض اوقات ہمیں تفاعل کی انتہائی قیمت ایسی صورت  درکار ہو گی جب اس کے دائرہ کار کو مستوی کے کسی مخصوص  ذیلی  حصہ، مثلاً قرص یا  بند تکونی خطہ،  پر رہنے کا پابند بنایا    گیا ہو۔  لیکن جیسا شکل \حوالہ{شکل_کثیرالمتغیر_مشروط_زیادہ_سے_زیادہ_قیمت}   میں دکھایا گیا ہے،   تفاعل پر  دیگر  پابندیاں بھی عائد کی جا سکتی ہیں۔
 
+اس حصہ میں ہم پابند تفاعل کی انتہائی قیمتیں تلاش کرنے کے ایک طاقتور ترکیب پر غور کریں گے جس کو \ترچھا{لیگرینج ضاربین} کی ترکیب کہتے ہیں۔  جیومیٹری  کے  انتہا   قیمت مسائل حل کرتے ہوئے     یوسف  لوئی لیگرینج  نے \سن{1755} میں  اس ترکیب کو دریافت کیا۔  موجودہ دور میں اس کا استعمال اقتصادیات، انجینئری  (جہاں  کثیرالمراحل راکٹ کی تخلیق میں اسے استعمال کیا جاتا ہے) اور ریاضیات  میں پایا جاتا ہے۔
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);fz(\r,\t)=49-(\r)^2;gx(\y)=10-3*\y;gz(\y)=49-(10-3*\y)^2-(\y)^2;}]
+\pgfmathsetmacro{\ka}{1}
+\pgfmathsetmacro{\kb}{5}
+\begin{axis}[view/h=135,axis on top,clip=false,axis lines=center,small,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north},ylabel style={anchor=north},zlabel style={anchor=west},xtick={\empty},ytick={\empty},ztick={\empty},hide axis]
+\addplot3[z buffer=sort,surf,domain=0:7,domain y=0:400]({fx(x,y)},{fy(x,y)},{fz(x,y)});
+\addplot3[domain y=\ka:\kb] ({gx(y)},{y},{gz(y)});
+\addplot3[domain y=0.5:7] ({gx(y)},{y},0)node[pos=0.95,pin={[align=center,above]60:{\RL{شرطی مساوات}\\$x+3y-10=0$}}]{};
+\addplot3[] ({gx(3)},{3},{gz(3)})node[circ]{}node[pin=70:{\RL{مشروط زیادہ سے زیادہ قیمت}}]{};
+\addplot3[](0,0,49)node[circ]{}node[pin={[pin distance=0.25cm]135:{\RL{آزادانہ زیادہ سے زیادہ قیمت}}}]{};
+\addplot3[]({3},{-3},{fz(3,-3)})node[left,font=\scriptsize]{$f(x,y)=49-x^2-y^2$};
+\addplot3[-latex] coordinates{(7,0,0)(11,0,0)}node[below]{$x$};
+\addplot3[-latex] coordinates{(0,7,0)(0,11,0)}node[below]{$y$};
+\addplot3[-latex] coordinates{(0,0,49)(0,0,60)}node[right]{$z$};
+\end{axis}
+\end{tikzpicture}
+\caption{تفاعل \عددی{f(x,y)=49-x^2-y^2} کی شرطی مساوات \عددی{x+3y-10=0} کے تحت زیادہ سے زیادہ قیمت۔}
+\label{شکل_کثیرالمتغیر_مشروط_زیادہ_سے_زیادہ_قیمت}
+\end{figure}
+
+
+\جزوحصہء{تفاعل کی مشروط   زیادہ سے زیادہ  قیمت نقاط اور کم سے کم قیمت نقاط }
+\ابتدا{مثال}\شناخت{مثال_کثیرالمتغیر_کم_سے_کم_پابند_نقطہ}
+مبدا کے قریب ترین نقطہ \عددی{N(x,y,z)}مستوی \عددی{2x+y-z=0}  پر تلاش کریں۔
+
+حل:\quad
+ہمیں  تفاعل 
+\begin{align*}
+\abs{\krightharpoonup{ON}}&=\sqrt{(x-0)^2+(y-0)^2+(z-0)^2}\\
+&=\sqrt{x^2+y^2+z^2}
+\end{align*}
+کی کم سے کم قیمت درج ذیل شرط  کے تحت    تلاش کرنے کو کہا گیا ہے۔
+\begin{align*}
+2x+y-z-5=0
+\end{align*}
+چونکہ  جب بھی تفاعل
+\begin{align*}
+f(x,y,z)=x^2+y^2+z^2
+\end{align*}
+کی قیمت کم سے کم ہو، \عددی{\krightharpoonup{ON}} کی قیمت بھی کم سے کم ہوتی ہے لہٰذا  ہم \عددی{2x+y-z-5=0}  کی شرط کو مطمئن کرتے   ہوئے \عددی{f(x,y,z)} کی کم سے کم قیمت تلاش کر کے  اس مسئلہ کو  حل کر سکتے ہیں۔   اس مساوات میں \عددی{x} اور \عددی{y} کو غیر تابع متغیرات تصور کرتے ہوئے  \عددی{z} کو
+\begin{align*}
+z=2x+y-5
+\end{align*}
+لکھ کر ہمیں وہ نقطہ \عددی{(x,y)} تلاش کرنا ہو گا جس پر تفاعل
+\begin{align*}
+h(x,y)=f(x,y,2x+y-5)=x^2+y^2+(2x+y-5)^2
+\end{align*}
+کی قیمت کم سے کم ہو۔ چونکہ پورا \عددی{xy} مستوی \عددی{h} کا دائرہ کار ہے لہٰذا  یک رتبی تفرقی پرکھ کے تحت \عددی{h} کی کم سے کم قیمت ان نقاط پر پائی جائے گی جن پر
+\begin{align*}
+h_x=2x+2(2x+y-5)(2)=0,\quad h_y=2y+2(2x+y-5)=0
+\end{align*}
+ہو۔ان سے
+\begin{align*}
+10x+4y=20,\quad 4x+4y=10
+\end{align*}
+یعنی
+\begin{align*}
+x=\frac{5}{3},\quad y=\frac{5}{6}
+\end{align*}
+حاصل ہو گا۔ ہم دو رتبی تفرقی پرکھ کے ساتھ ساتھ جیومیٹریائی دلیل  دیتے ہوئے  دکھا سکتے ہیں کہ ان قیمتوں پر \عددی{h} کی قیمت کم سے کم ہو گی۔ مستوی \عددی{z=2x+y-5} پر مطابقتی \عددی{z} محدد
+\begin{align*}
+z=2\big(\frac{5}{3}\big)+\frac{5}{6}-5=-\frac{5}{6}
+\end{align*}
+ہو گا۔یوں  مطلوبہ  نقطہ
+\begin{align*}
+N\big(\frac{5}{3},\frac{5}{6},-\frac{5}{6}\big)
+\end{align*}
+ہو گا جو مبدا سے \عددی{\tfrac{5}{\sqrt{6}}\approx 2.04} فاصلہ  پر ہو گا۔
+\انتہا{مثال}
+%=============
+
+ہم نے  مثال \حوالہ{مثال_کثیرالمتغیر_کم_سے_کم_پابند_نقطہ} میں       پابندی کے شرط کی قیمتیں پر کرتے ہوئے کم سے کم قیمت نقطہ تلاش کیا۔ یہ ترکیب بعض اوقات ہمیں آسانی  سے  جواب نہیں دے پاتی۔یہی وجہ ہے کہ اس حصہ میں نئی ترکیب متعارف کی جائے گی۔
+
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={fz(\x,\y)=sqrt((\x)^2-1);}]
+\begin{axis}[view/h=135,clip=false,axis lines=center,small,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north},ylabel style={anchor=north},zlabel style={anchor=west},xtick={\empty},ytick={\empty},ztick={\empty},hide axis]
+\addplot3[z buffer=sort,surf,domain=-1:-2,domain y=-1:1](x,y,{fz(x,y)});
+\addplot3[z buffer=sort,surf,domain=-1:-2,domain y=-1:1](x,y,{-fz(x,y)});
+\addplot3[-latex]coordinates{(0,0,0)(0,1.25,0)}node[right]{$y$};
+\addplot3[-latex]coordinates{(0,0,0)(0,0,1)}node[above]{$z$};
+\addplot3[]coordinates {(-1,0,0)(1,0,0)};
+\addplot3[z buffer=sort,surf,domain=1:2,domain y=-1:1](x,y,{fz(x,y)});
+\addplot3[z buffer=sort,surf,domain=1:2,domain y=-1:1](x,y,{-fz(x,y)});
+\addplot3[-latex]coordinates{(1,0,0)(1.5,0,0)}node[below]{$x$};
+\addplot3[domain=-1:-2,black,samples y=0](x,0,{fz(x,0)});
+\addplot3[domain=-1:-2,black,samples y=0](x,0,{-fz(x,0)});
+\addplot3[domain=1:2,black,samples y=0](x,0,{fz(x,0)});
+\addplot3[domain=1:2,black,samples y=0](x,0,{-fz(x,0)});
+\addplot3[]coordinates {(1,0,0)}node[circ]{}node[left,yshift=1ex]{$(1,0,0)$};
+\addplot3[]coordinates {(-1,0,0)}node[circ]{}node[right]{$(-1,0,0)$};
+\addplot3[]coordinates {(-2,-1,{fz(-2,-1)})}{}node[left]{$x^2-z^2=1$};
+\end{axis}
+\end{tikzpicture}
+\caption{قطع زائد بیلن۔}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={fz(\x,\y)=sqrt((\x)^2-1);}]
+\begin{axis}[view/h=160,clip=false,axis lines=center,small,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=north},zlabel style={anchor=west},xtick={\empty},ytick={\empty},ztick={\empty},axis on top]
+\addplot3[fill=llgray]coordinates{(-1,-1,0)(-1,1,0)(-2,1,0)(-2,-1,0)(-1,-1,0)};
+\addplot3[z buffer=sort,surf,domain=-1:-2,domain y=-1:1](x,y,{fz(x,y)});
+\addplot3[z buffer=sort,surf,domain=-1:-2,domain y=-1:1](x,y,{-fz(x,y)});
+\addplot3[fill=llgray]coordinates{(1,-1,0)(1,1,0)(-1,1,0)(-1,-1,0)(1,-1,0)};
+\addplot3[z buffer=sort,surf,domain=1:2,domain y=-1:1](x,y,{fz(x,y)});
+\addplot3[z buffer=sort,surf,domain=1:2,domain y=-1:1](x,y,{-fz(x,y)});
+\addplot3[fill=llgray]coordinates{(2,-1,0)(2,1,0)(1,1,0)(1,-1,0)(2,-1,0)};
+\addplot3[]coordinates{(2,-1,{fz(2,-1)})}node[above]{$x=\sqrt{z^2+1}$};
+\addplot3[]coordinates{(-2,-1,{fz(-2,-1)})}node[above]{$x=-\sqrt{z^2+1}$};
+\addplot3[]coordinates{(-1,1,0)}node[pin={[right]-45:{$x=-1$}}]{};
+\addplot3[]coordinates{(1,1,0)}node[pin={[left]-135:{$x=1$}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{
+قطع زائد  \عددی{x^2-z^2=1}  پر مستوی \عددی{xy} میں نقطہ \عددی{(x,y,z)}کے پہلے دو محدد  کے انتخاب میں  مستوی \عددی{xy} کی پٹی \عددی{-1<x<1}  شامل نہیں ہو گی۔ 
+}
+\end{subfigure}
+\caption{مشروط انتہائی قیمت۔}
+\label{شکل_مثال_کثیرالمتغیر_پیچیدہ_بدل_حل}
+\end{figure}
+\ابتدا{مثال}\شناخت{مثال_کثیرالمتغیر_پیچیدہ_بدل_حل}
+درج ذیل  قطع زائد بیلن پر مبدا کا قریب ترین نقطہ تلاش کریں۔
+\begin{align*}
+x^2-z^2-1=0
+\end{align*}
+پہلا حل:\quad
+بیلن کو شکل \حوالہ{شکل_مثال_کثیرالمتغیر_پیچیدہ_بدل_حل}-ا   میں دکھایا گیا ہے۔ ہمیں اس بیلن پر مبدا کے قریب ترین نقاط تلاش کرنے ہیں۔یہ وہ نقاط ہوں گے  جو   \عددی{x^2-z^2-1=0}  کو مطمئن کرتے ہوئے  تفاعل
+\begin{align*}
+f(x,y,z)&=x^2+y^2+z^2&&\text{\RL{فاصلے کا مربع}}
+\end{align*}
+کی قیمت کو  کم سے کم بناتے ہوں۔ اگر ہم  شرطی  مساوات میں \عددی{x } اور \عددی{y} کو غیر تابع متغیرات تصور کریں تب
+\begin{align*}
+z^2=x^2-1
+\end{align*}
+لکھا جا سکتا ہے۔یوں بیلن پر  نقاط کو درج ذیل لکھا جا سکتا ہے۔
+\begin{align*}
+h(x,y)=x^2+y^2+(x^2-1)=2x^2+y^2-1
+\end{align*}
+بیلن پر ان نقاط کے محدد جو \عددی{f} کی قیمت کو کم سے کم بناتے ہوں تلاش کرنے کی خاطر ہمیں  \عددی{xy} مستوی میں وہ نقاط معلوم کرنے ہوں گے جن پر \عددی{h} کی قیمت کم سے کم ہو۔ ہم جانتے ہیں کہ \عددی{h} کی انتہائی قیمتیں صرف ان نقاط پر ممکن ہیں جن پر
+\begin{align*}
+h_x=4x=0,\quad h_y=2y=0
+\end{align*}
+ہو، یعنی، نقطہ \عددی{(0,0)}  لیکن بیلن پر ایسا کوئی نقطہ نہیں پایا جاتا ہے جہاں \عددی{x} اور \عددی{y} بیکوقت صفر ہوں۔ ایسا کیوں کر ہوا؟
+
+کیا  ہو ا کہ یک رتبی تفرقی پرکھ  سے ہم نے (درست طور پر)   \عددی{h} \ترچھا{کے دائرہ کار میں}  وہ نقطہ  معلوم کیا  جس پر \عددی{h} کی قیمت کم سے کم   تھی   جبکہ ہمیں \ترچھا{بیلن پر}  وہ نقطہ درکار  تھا  جس پر \عددی{h} کی قیمت کم سے کم ہو۔ اگرچہ \عددی{h} کا دائرہ کار  مکمل  \عددی{xy} مستوی پر مشتمل  ہے، ہمیں مستوی \عددی{xy} میں بیلن کے سایہ  کو  دائرہ کار لیتے ہوئے  نقطہ \عددی{(x,y,z)} کے پہلے دو محدد   تلاش کرنے تھے۔  بیلن کے سایہ میں خطوط  \عددی{x=-1} اور \عددی{x=1} کے بیچ خطہ شامل نہیں ہو گا (شکل \حوالہ{شکل_مثال_کثیرالمتغیر_پیچیدہ_بدل_حل}-ب)۔
+
+ہم (\عددی{x} اور \عددی{y} کی بجائے)    \عددی{y} اور \عددی{z} کو غیر تابع متغیرات تصور کرتے ہوئے اس  پریشانی سے نجات حاصل کر سکتے ہیں۔یوں
+\begin{align*}
+x^2=z^2+1
+\end{align*}
+لکھ کر \عددی{f(x,y,z)=x^2+y^2+z^2} سے 
+\begin{align*}
+k(y,z)=(z^2+1)+y^2+z^2=1+y^2+2z^2
+\end{align*}
+حاصل  ہو گا۔ اب  ہم وہ نقاط تلاش کرتے ہیں جن پر \عددی{k} کی قیمت کم سے کم ہو۔ اب \عددی{yz} مستوی میں \عددی{k} کے دائرہ کار میں وہ حصہ جس میں \عددی{y} اور \عددی{z} دریافت کئے جاتے ہیں، بیلن  پر اس دائرہ کار جس پر \عددی{(x,y,z)}  مطلوب ہے،   ایک دوسرے    جیسے ہیں۔ یوں جو نقاط \عددی{k} کی قیمت کو کم سے کم بناتے ہوں، بیلن پر مطابقتی نقاط  دیں گے۔ اب \عددی{k} کی کم سے کم قیمت ان نقطوں پر ہو گی جہاں
+\begin{align*}
+k_y=2y=0,\quad k_z=4z=0
+\end{align*}
+یعنی \عددی{y=z=0} ہو۔یوں
+\begin{align*}
+x^2=z^2+1=1,\quad x=\mp 1
+\end{align*}
+ہو گا۔بیلن پر مطابقتی نقاط \عددی{(\mp 1,0,0)} ہوں گے۔ ہم عدم مساوات
+\begin{align*}
+k(y,z)=1+y^2+2z^2\ge 1
+\end{align*}
+سے دیکھ سکتے ہیں کہ نقاط \عددی{(\mp 1,0,0)} ہمیں \عددی{k} کی کم سے کم قیمت دیں گے۔ ہم  دیکھتے  ہیں کہ مبدا سے بیلن کا کم سے کم فاصلہ \عددی{1} ہو گا۔
+
+دوسرا حل:\quad
+مبدا سے بیلن تک کم ترین فاصلہ یوں بھی تلاش کیا جا سکتا ہے کہ آپ مبدا پر ایک بلبلا  تصور کریں۔ اس بلبلا میں اتنی ہوا بھڑیں  کہ یہ بیلن کو   بس چھوئے (شکل \حوالہ{شکل_کثیرالمتغیر_بلبلا_قطع_زائد_مس})۔ جس نقطہ پر یہ بلبلا بیلن کو چھوتا ہے اس نقطہ پر  بلبلے اور بیلن کا ایک ہی مماسی مستوی  اور ایک ہی عمودی خط ہو گا۔یوں اگر
+\begin{align*}
+g(x,y,z)=x^2-z^2-1\quad \text{}\quad f(x,y,z)=x^2+y^2+z^2-a^2
+\end{align*}
+کو \عددی{0} کے برابر رکھ کر   حاصل ہم قد منحنیات کو   بلبلا اور بیلن تصور کیا جائے  تب ڈھلوان \عددی{\nabla f} اور \عددی{\nabla g}  اس نقطہ پر متوازی ہوں گے جہاں یہ سطحیں ایک دوسرے کو چھوتی  ہیں۔ یوں  نقطہ مس  پر ہم ایسا غیر سمتی  \عددی{\lambda} تلاش کر سکتے ہیں جو
+\begin{align*}
+\nabla f=\lambda \nabla g
+\end{align*}
+یعنی
+\begin{align*}
+2x\ai+2y\aj+2z\ak=\lambda(2x\ai-2z\ak)
+\end{align*}
+کو مطمئن کرتا ہو۔اس طرح نقطہ مماس پر \عددی{x}، \عددی{y} اور \عددی{z} محدد درج ذیل تین مساوات کو مطمئن کریں گے۔
+\begin{align}\label{مساوات_کثیرالمتغیر_مماسی_نقطہ_شرط}
+2x=2\lambda x,\quad 2y=0,\quad 2z=-2\lambda z
+\end{align}
+
+نقطہ \عددی{(x,y,z)} جس کے محدد  مساوات \حوالہ{مساوات_کثیرالمتغیر_مماسی_نقطہ_شرط} کو مطمئن کرتے  ہوں    \عددی{\lambda} کی کس قیمت کے لئے سطح \عددی{x^2-z^2-1=0} پر پائے جائیں گے؟   اس کا جواب  دینے   کی خاطر ہم اس حقیقت کو  استعمال کرتے ہوئے  کہ  اس سطح پر کسی بھی نقطہ کا \عددی{x} محدد صفر نہیں ہے، فیصلہ کرتے ہیں   کہ مساوات \حوالہ{مساوات_کثیرالمتغیر_مماسی_نقطہ_شرط} کی پہلی مساوات میں \عددی{x\ne 0} ہو گا۔یوں \عددی{2x=2\lambda x}  صرف
+\begin{align*}
+\lambda=1\quad \text{یعنی}\quad 2=2\lambda
+\end{align*}
+کی صورت  میں ممکن ہو گا۔اب \عددی{\lambda=1} لیتے ہوئے مساوات \عددی{2z=-2\lambda z} سے \عددی{2z=-2z} حاصل ہو گا جس کو صرف \عددی{z=0} مطمئن کرتا ہے۔ ساتھ ہی  مساوات \عددی{2y=0}  سے \عددی{y=0} حاصل ہو گا۔ ان معلومات سے ہم دیکھتے ہیں کہ مطلوبہ نقطہ  کا روپ درج ذیل ہو گا۔
+\begin{align*}
+(x,0,0)
+\end{align*}
+سطح \عددی{x^2-z^2=1} پر کن  نقاط کے محدد کا یہی  روپ ہے؟ ان نقاط پر
+\begin{align*}
+x^2-(0)^2=1,\quad x^2=1,\quad x=\mp 1
+\end{align*}
+ہو گا۔بیلن پر مبدا کے   قریب ترین نقاط \عددی{(\mp 1,0,0)} ہوں  گے۔ 
+\انتہا{مثال}
+%========================
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={fz(\x,\y)=sqrt((\x)^2-1);gz(\x,\y)=sqrt(1-(\x)^2-(\y)^2);}]
+\pgfmathsetmacro{\a}{3}
+\pgfmathsetmacro{\b}{2.5}
+\pgfmathsetmacro{\c}{-0.5}
+\pgfmathsetmacro{\angO}{100}
+\pgfmathsetmacro{\angI}{-130}
+\pgfmathsetmacro{\angC}{70}
+\draw(0,0)coordinate(ka) to [out=\angO,in=\angI]++(\angC:\b)--++(\a,\c)coordinate(kb) to [out=\angI,in=\angO]++(\angC:-\b)--++(-\a,-\c);
+\draw[fill=white]($(ka)!0.5!(kb)$)coordinate(kC) circle (1);
+\pgfmathsetmacro{\angO}{80}
+\pgfmathsetmacro{\angI}{50}
+\pgfmathsetmacro{\angC}{110}
+\path[](-0.5,-1)to[out=\angO,in=\angI]coordinate[pos=0.8](kL)++(\angC:\b)coordinate(kA) --++(\a,\c)coordinate(kB)to [out=\angI,in=\angO]coordinate[pos=0.2](kR)++(\angC:-\b)--++(-\a,-\c);
+\fill[white](kL)--(kA)--(kB)--(kR)--cycle;
+\draw[fill=white](-0.5,-1)to[out=\angO,in=\angI]coordinate[pos=0.8](kL)++(\angC:\b)coordinate(kA) --++(\a,\c)coordinate(kB)to [out=\angI,in=\angO]coordinate[pos=0.2](kR)++(\angC:-\b)--++(-\a,-\c);
+\draw(kL)--(kR);
+\draw[-latex](kC)++(0,1)--++(0,0.5)node[left]{$z$};
+\draw[-latex](kC)++(45:-1)--++(45:-0.5)node[left]{$x$};
+\draw[-latex](kC)++(0.5,0)--++(0.75,0)node[right]{$y$};
+\end{tikzpicture}
+\caption{مبدا پر ایک بلبلا جو قطع زائد \عددی{x^2-z^2-1=0} کو مس کرتا ہے۔}
+\label{شکل_کثیرالمتغیر_بلبلا_قطع_زائد_مس}
+\end{figure}
+
+
+\جزوحصہء{لیگرینج ضاربین}
+ہم نے مثال \حوالہ{مثال_کثیرالمتغیر_پیچیدہ_بدل_حل} کا دوسرا حل   \اصطلاح{لیگرینج ضاربین}\فرہنگ{لیگرینج!ضاربین کی ترکیب}\حاشیہب{method of Lagrange multipliers}
+\فرہنگ{Lagrange!multipliers' method} کی ترکیب سے حاصل کیا۔  عمومی طور پر یہ ترکیب کہتی  ہے  تفاعل \عددی{f(x,y,z)}،    جس کے متغیرات پر  شرط \عددی{g(x,y,z)=0} لاگو کی گئی ہو،   کی انتہائی قیمتیں،  سطح \عددی{g=0} پر  ان  نقاط پر پائی جائیں گی جو 
+\begin{align*}
+\nabla f=\lambda \nabla g
+\end{align*}
+کو کسی غیر سمتی مستقل \عددی{\lambda} (جس کو \اصطلاح{لیگرینج  ضارب}\فرہنگ{لیگرینج!ضارب}\حاشیہب{Lagrange!multiplier}\فرہنگ{Lagrange!multiplier} کہتے ہیں)  کے لئے مطمئن کرتے ہوں۔
+
+اس ترکیب  کو مزید جاننے کے لئے  اور یہ  دیکھتے  کی خاطر  کہ  یہ ترکیب کیوں کام کرتی ہے، ہم درج ذیل  مشاہدہ کرتے ہیں جس کو ایک مسئلہ کی صورت میں پیش کیا گیا ہے۔
+
+\ابتدا{مسئلہ}\شناخت{مسئلہ_کثیرالمتغیر_عمودی_ڈھلوان_کا_مسئلہ}\موٹا{عمودی ڈھلوان کا مسئلہ}\\
+ فرض کریں  \عددی{f(x,y,z)}  ایک ایسے خطہ میں قابل تفرق ہے جس کی اندرون میں ہموار منحنی
+\begin{align*}
+C:\quad \kvec{r}=g(t)\ai+h(t)\aj+k(t)\ak
+\end{align*}
+پائی جاتی ہے۔ اگر \عددی{C} پر \عددی{N_0} ایک ایسا  نقطہ ہو جہاں \عددی{C} کی نسبت  \عددی{f} کی  مقامی زیادہ سے زیادہ یا مقامی کم سے کم قیمت ہو تب \عددی{N_0} پر \عددی{\nabla f} منحنی \عددی{C} کو عمودی ہو گا۔ 
+\انتہا{مسئلہ}
+%=================
+\ابتدا{ثبوت}
+ہم دکھاتے ہیں کہ \عددی{N_0} پر منحنی کہ سمتیہ رفتار کو \عددی{\nabla f} عمودی ہو گا۔منحنی \عددی{C} پر \عددی{f} کی قیمتیں  مرکب تفاعل \عددی{f(g(t),h(t),k(t))}  دیتا ہے جس کا \عددی{t} کے لحاظ سے تفرق
+\begin{align*}
+\frac{\dif f}{\dif t}=\frac{\partial f}{\partial x}\frac{\dif g}{\dif t}+\frac{\partial f}{\partial y}\frac{\dif h}{\dif t}+\frac{\partial f}{\partial z}\frac{\dif k}{\dif t}=\nabla f\cdot \kvec{v}
+\end{align*}
+ہو گا ایک نقطہ \عددی{N_0} جس پر  \عددی{f} کی منحنی پر قیمت کی نسبت سے  مقامی زیادہ سے زیادہ قیمت یا مقامی کم سے کم قیمت ہو، \عددی{\tfrac{\dif f}{\dif t}=0}  لہٰذا
+\begin{align*}
+\nabla f\cdot \kvec{v}=0
+\end{align*}
+ہو گا
+
+ہم مسئلہ \حوالہ{مسئلہ_کثیرالمتغیر_عمودی_ڈھلوان_کا_مسئلہ} میں جزو \عددی{z} کو حذف  کر کے دو متغیری  تفاعل  کے لئے اسی طرح کا نتیجہ حاصل کرتے ہیں۔
+\انتہا{ثبوت}
+%===================
+
+\ابتدا{ضمنی نتیجہ}برائے مسئلہ \حوالہ{مسئلہ_کثیرالمتغیر_عمودی_ڈھلوان_کا_مسئلہ}\\
+ہموار منحنی \عددی{\kvec{r}=g(t)\ai+h(t)\aj}  پر   قابل تفرق تفاعل \عددی{f(x,y)} کی قیمتوں کی نسبت  جن نقاط پر \عددی{f}   کی زیادہ سے زیادہ یا کم سے کم قیمتیں ہوں وہاں \عددی{\nabla f\cdot \kvec{v}=0} ہو گا۔
+\انتہا{ضمنی نتیجہ}
+
+ترکیب لیگرینج  ضاربین کا انحصار مسئلہ \حوالہ{مسئلہ_کثیرالمتغیر_عمودی_ڈھلوان_کا_مسئلہ} ہے فرض کریں \عددی{f(x,y,z)} اور \عددی{g(x,y,z)} قابل تفرق ہیں اور  سطح \عددی{g(x,y,z)=0} پر \عددی{N_0} ایک ایسا نقطہ ہے  جہاں  سطح پر دیگر قیمتوں کے لحاظ سے \عددی{f} کی مقامی زیادہ سے زیادہ قیمت یا مقامی کم سے کم قیمت پائی جاتی ہو۔ تب  سطح \عددی{g(x,y,z)=0} پر \عددی{N_0} سے  گزرتی ہوئی  ہر قابل تفرق منحنی پر  \عددی{f} کی قیمتوں کے لحاظ  سے \عددی{N_0} پر \عددی{f} کی مقامی زیادہ سے زیادہ قیمت یا مقامی کم سے کم قیمت پائی جائے گی۔ یوں \عددی{N_0} سے گزرتی ہوئی ایسی ہر قابل تفرق  منحنی کے سمتیہ رفتار کو \عددی{\nabla f} عمودی ہو گا  ۔ لیکن \عددی{\nabla g}  (جیسا ہم حصہ \حوالہ{حصہ_کثیرالمتغیر_رخی_تفرقات_سمتیہ_ڈھلوان_مماسی_سطحیں} میں دیکھ چکے ہیں \عددی{\nabla g}  ہم قد سطح \عددی{g=0} کو عمودی ہو گا) بھی ان سمتیات  رفتار کو عمودی ہے لہٰذا \عددی{N_0} پر \عددی{\nabla g} اور غیر سمتی \عددی{\lambda}  کا حاصل ضرب \عددی{\nabla f} کے برابر ہو گا۔ 
+
+\موٹا{لیگرینج ضاربین کی ترکیب}
+فرض کریں \عددی{f(x,y,z)} اور \عددی{g(x,y,z)} قابل تفرق ہیں۔ شرط \عددی{g(x,y,z)=0}  پر پورا اترتے ہوئے \عددی{f} کی مقامی زیادہ سے زیادہ قیمت یا  مقامی کم سے کم قیمت تلاش کرنے کی خاطر  \عددی{x}، \عددی{y}، \عددی{z} اور \عددی{\lambda} کی ایسی قیمتیں معلوم کریں جو درج ذیل مساوات کو  بیکوقت مطمئن کرتی  ہوں۔ 
+\begin{align*}
+\nabla f=\lambda \nabla g,\quad g(x,y,z)=0
+\end{align*}
+دو متغیری تفاعل  کے لئے موزوں مساوات درج ذیل ہوں گی۔
+\begin{align*}
+\nabla f=\lambda \nabla g,\quad g(x,y)=0
+\end{align*}
+
+%====================
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.75,font=\small,declare function={f(\x)=sqrt(2-1/4*(\x)^2);}]
+ \pgfmathsetmacro{\k}{2*sqrt(2)}
+ \pgfmathsetmacro{\ky}{sqrt(2)}
+ \pgfmathsetmacro{\kd}{2*sqrt(2)-0.1}
+ \pgfmathsetmacro{\ky}{sqrt(2)}
+\draw[-latex](-3,0)--(3.5,0)node[right]{$x$};
+\draw[-latex](0,-1.5)--(0,2.125)node[above]{$y$};
+\draw(\k,0)--++(0,-0.1)node[below right,font=\scriptsize]{$2\sqrt{2}$};
+\draw(0,\ky)node[above left,font=\scriptsize]{$\sqrt{2}$}--++(0.1,0);
+\draw[domain=-\k:-\kd] plot (\x,{f(\x)});
+\draw[domain=\kd:\k]plot (\x,{f(\x)});
+\draw[domain=-\k:-\kd]plot (\x,{-f(\x)});
+\draw[domain=\kd:\k]plot (\x,{-f(\x)});
+\draw[domain=-\kd:\kd]plot (\x,{f(\x)});
+\draw[domain=-\kd:\kd]plot (\x,{-f(\x)});
+\draw(2,2)node[]{$\frac{x^2}{8}+\frac{y^2}{2}=1$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.75,font=\small,declare function={f(\x)=sqrt(2-1/4*(\x)^2);}]
+ \pgfmathsetmacro{\k}{2*sqrt(2)}
+ \pgfmathsetmacro{\kd}{2*sqrt(2)-0.05}
+ \pgfmathsetmacro{\ky}{sqrt(2)}
+ \pgfmathsetmacro{\kv}{0.75}
+ \pgfmathsetmacro{\a}{0.8}
+ \pgfmathsetmacro{\b}{3}
+ \pgfmathsetmacro{\c}{1.5}
+ \pgfmathsetmacro{\d}{3}
+ \pgfmathsetmacro{\e}{0.6}
+ \pgfmathsetmacro{\f}{3}
+%
+\draw[domain=-\kd:\kd] plot (\x,{f(\x)});
+\draw[domain=-\kd:\kd]plot (\x,{-f(\x)});
+\draw[domain=-\k:-\kd]plot (\x,{f(\x)});
+\draw[domain=\kd:\k]plot (\x,{f(\x)});
+\draw[domain=-\k:-\kd]plot (\x,{-f(\x)});
+\draw[domain=\kd:\k]plot (\x,{-f(\x)});
+%
+\draw[thick,domain=\a:\b]plot(\x,{2/\x});
+\draw[thick,domain=\a:\b]plot(\x,{-2/\x});
+\draw[thick,domain=\a:\b]plot(-\x,{2/\x});
+\draw[thick,domain=\a:\b]plot(-\x,{-2/\x});
+\draw[domain=\c:\d]plot(\x,{3/\x});
+\draw[domain=\c:\d]plot(\x,{-3/\x});
+\draw[domain=\c:\d]plot(-\x,{3/\x});
+\draw[domain=\c:\d]plot(-\x,{-3/\x});
+\draw[domain=\e:\f]plot(\x,{1/\x});
+\draw[domain=\e:\f]plot(\x,{-1/\x});
+\draw[domain=\e:\f]plot(-\x,{1/\x});
+\draw[domain=\e:\f]plot(-\x,{-1/\x});
+\draw[-latex,thick](2,1)--++(1*\kv,2*\kv)coordinate[pos=0.5](kT)node[right]{$\nabla f=(\ai+2\aj)$};
+\draw[-latex,very thick,gray](2,1)--(kT)node[pos=0.75,right,xshift=1ex]{$\nabla g=(\frac{1}{2}\ai+\aj)$};
+\draw[-latex,thick](-2,1)--++(1*\kv,-2*\kv);
+\draw[-latex,very thick,gray](-2,1)--++(-0.5*\kv,0.5*2*\kv);
+\draw[-latex,thick](2,-1)--++(-1*\kv,2*\kv);
+\draw[-latex,very thick,gray](2,-1)--++(0.5*\kv,-0.5*2*\kv);
+\draw[-latex,thick](-2,-1)--++(-1*\kv,-2*\kv);
+\draw[-latex,very thick,gray](-2,-1)--++(-0.5*\kv,-0.5*2*\kv);
+\draw(\a,2/\a)node[pin=45:{$xy=2$}]{};
+\draw(-\a,2/\a)node[pin=135:{$xy=-2$}]{};
+\draw(\a,-2/\a)node[pin=-45:{$xy=-2$}]{};
+\draw(-\a,-2/\a)node[pin=-135:{$xy=2$}]{};
+\draw(1,0)node[below]{$1$}--++(0,0.1);
+\draw(2,0)--++(0,0.1);
+\draw(-1,0)--++(0,0.1);
+\draw(-2,0)--++(0,0.1);
+\draw(0,1)node[left]{$1$}--++(0.1,0);
+\draw(0,-1)--++(0.1,0);
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{
+تفاعل \عددی{f(x,y)=xy} پر شرط \عددی{g(x,y)=x^2/8+y^2/2-1=0} لاگو کرنے سے  تفاعل \عددی{f} کی انتہائی قیمتیں چار نقاط \عددی{(\mp2,\mp 1)}  پر حاصل ہوتی ہیں۔  یہ ترخیم پر وہ نقاط ہیں جہاں \عددی{\nabla g}  کا غیر سمتی مضرب \عددی{\nabla f} ہو گا۔
+}
+\label{شکل_مثال_کثیرالمتغیر_ترخیم_انتہائی_مشروط}
+\end{figure}
+\ابتدا{مثال}\شناخت{مثال_کثیرالمتغیر_ترخیم_انتہائی_مشروط}
+ترخیم
+\begin{align*}
+\frac{x^2}{8}+\frac{y^2}{2}=1
+\end{align*}
+پر درج ذیل تفاعل کی زیادہ سے زیادہ اور کم سے کم قیمتیں تلاش کریں (شکل \حوالہ{شکل_مثال_کثیرالمتغیر_ترخیم_انتہائی_مشروط}-ا)۔
+\begin{align*}
+f(x,y)=xy
+\end{align*}
+حل:\quad
+ہم \عددی{f(x,y)=xy} کی انتہائی قیمتیں  درج ذیل شرط  پر پورا اترتے ہوئے تلاش کرنا چاہتے ہیں۔
+\begin{align*}
+g(x,y)=\frac{x^2}{8}+\frac{y^2}{2}-1=0
+\end{align*}
+ایسا کرنے کی خاطر ہم پہلے \عددی{x}، \عددی{y} اور \عددی{\lambda} کی وہ قیمتیں دریافت کرتے ہیں جو درج ذیل کو مطمئن کرتی ہوں۔
+\begin{align*}
+\nabla f=\lambda \nabla g,\quad g(x,y)=0
+\end{align*}
+مساوات ڈھلوان ہمیں
+\begin{align*}
+y\ai+x\aj=\frac{\lambda}{4}x\ai+\lambda y\aj
+\end{align*}
+دیتی ہے جس سے
+\begin{align*}
+y=\frac{\lambda}{4}x,\quad x=\lambda y, \quad y=\frac{\lambda}{4}(\lambda y)=\frac{\lambda^2}{4}y
+\end{align*}
+حاصل ہوتے ہیں لہٰذا \عددی{y=0} یعنی \عددی{\lambda=\mp2} ہو گا۔ ہم اب درج ذیل دو صورتوں پر غور کرتے ہیں۔\\
+\موٹا{پہلی صورت:}  اگر \عددی{y=0} ہو تب \عددی{x=y=0} ہو گا۔لیکن \عددی{(0,0)} ترخیم پر نہیں پایا جاتا ہے لہٰذا \عددی{y\ne 0} ہو گا۔\\
+\موٹا{دوسری صورت:}  اگر \عددی{y\ne 0} ہو تب \عددی{\lambda=\mp 2} اور \عددی{x=\mp 2y} ہو گا۔ انہیں مساوات \عددی{g(x,y)=0} میں پر کرنے سے درج ذیل حاصل ہو گا۔
+\begin{align*}
+\frac{(\mp 2y)^2}{8}+\frac{y^2}{2}=1,\quad 4y^2+4y^2=8,\quad y=\mp 1
+\end{align*}
+یوں ترخیم پر تفاعل \عددی{f(x,y)=xy} کی انتہائی قیمتیں چار نقطوں  \عددی{(\mp 2,1)}، \عددی{(\mp 2,-1)} پر پائی جائیں گی۔ یہ انتہائی قیمتیں \عددی{f(x,y)=xy=2} اور \عددی{f(x,y)=xy=-2} ہوں گی۔ 
+
+\موٹا{حل کی جیومیٹری}\\
+تفاعل \عددی{f(x,y)=xy} کی ہم قد منحنیات قطع زائد \عددی{xy=c} ہیں (شکل \حوالہ{شکل_مثال_کثیرالمتغیر_ترخیم_انتہائی_مشروط}-ب)۔ مبدا سے یہ قطع زائد جتنے دور ہوں، \عددی{f} کی مطلق قیمت اتنی بڑی ہو گی۔ ہم \عددی{f(x,y)} کی وہ  انتہائی قیمتیں جاننا چاہتے ہیں جو ترخیم \عددی{x^2+4y^2=8} پر پائی جاتی ہوں۔ مبدا سے دور ترین وہ کونسی قطع زائد ہیں  جو ترخیم کو قطع کرتی ہیں؟ وہ قطع زائد جو ترخیم کو مس کرتی  ہوئی گزرتی ہوں، جو ترخیم کی مماسی ہوں۔ان نقطوں پر جو بھی سمتیہ قطع زائد کو عمودی ہو، ترخیم کو بھی عمودی ہو گا، لہٰذا \عددی{\nabla f=y\ai+x\aj}  سمتیہ \عددی{\nabla g=\tfrac{x}{4}\ai+y\aj} کا مستقل مضرب (\عددی{\lambda=\mp 2}) ہو گا۔مثلاً  نقطہ \عددی{(2,1)} پر
+\begin{align*}
+\nabla f=\ai+2\aj,\quad \nabla g=\frac{1}{2}\ai+\aj,\quad \nabla f=2\nabla g
+\end{align*}
+ہو گا  جبکہ  نقطہ \عددی{(-2,1)} پر درج ذیل ہو گا۔
+\begin{align*}
+\nabla f=\ai-2\aj,\quad \nabla g=-\frac{1}{2}\ai+\aj,\quad \nabla -2\nabla g
+\end{align*}
+\انتہا{مثال}
+%====================
+
+
+\ابتدا{مثال}\شناخت{مثال_کثیرالمتغیر_دائرہ_پر_انتہائی_قیمتیں_درکار}
+دائرہ \عددی{x^2+y^2=1} پر تفاعل \عددی{f(x,y)=3x+4y} کی زیادہ سے زیادہ اور کم سے کم قیمتیں تلاش کریں۔
+
+حل:\quad
+ہم ترکیب لیگرینج ضاربین  میں
+\begin{align*}
+f(x,y)=3x+4y,\quad g(x,y)=x^2+y^2-1=0
+\end{align*} 
+لیتے ہوئے \عددی{x}، \عددی{y} اور \عددی{\lambda} کی وہ قیمتیں تلاش کرتے ہیں جو  درج ذیل  مساوات کو مطمئن کرتی ہوں۔
+\begin{align*}
+\nabla f&=\lambda \nabla g:\quad 3\ai+4\aj=2x\lambda\ai+2y\lambda \aj,\\
+g(x,y)&=0:\quad x^2+y^2-1=0
+\end{align*}
+مساوات ڈھلوان سے مراد \عددی{\lambda\ne 0} لیا جا سکتا ہے لہٰذا یہ مساوات
+\begin{align*}
+x=\frac{3}{2\lambda},\quad y=\frac{2}{\lambda}
+\end{align*}
+دیتی ہے  جو  دیگر حقائق کے ساتھ ساتھ ہمیں بتاتی ہے  کہ \عددی{x} اور \عددی{y} کی علامتیں ایک دوسرے جیسی ہیں۔مساوات \عددی{g(x,y)=0} میں \عددی{x} اور \عددی{y} کی  قیمتیں پر کرتے ہوئے
+\begin{align*}
+\big(\frac{3}{2\lambda}\big)^2+\big(\frac{2}{\lambda}\big)^2-1=0
+\end{align*}
+یعنی
+\begin{align*}
+\frac{9}{4\lambda^2}+\frac{4}{\lambda^2}=1,\quad 9+16=4\lambda^2,\quad \lambda=\mp\frac{5}{2}
+\end{align*}
+حاصل ہو گا۔ یوں 
+\begin{align*}
+x=\frac{3}{2\lambda}=\mp\frac{3}{5},\quad y=\frac{2}{\lambda}=\mp\frac{4}{5}
+\end{align*}
+ہوں گے اور \عددی{f(x,y)=3x+4y} کی انتہائی قیمتیں نقاط \عددی{\mp(\tfrac{3}{5},\tfrac{4}{5})} پر پائی جائیں گی۔
+
+نقاط   \عددی{\mp(\tfrac{3}{5},\tfrac{4}{5})} پر \عددی{3x+4y} کی قیمتیں معلوم کر کے ہم دیکھتے ہیں کہ دائرہ \عددی{x^2+y^2=1} پر  زیادہ سے زیادہ  اور کم سے کم قیمتیں درج ذیل ہوں گی۔
+\begin{align*}
+3\big(\frac{3}{5}\big)+4\big(\frac{4}{5}\big)=\frac{25}{5}=5,\quad  3\big(-\frac{3}{5}\big)+4\big(-\frac{4}{5}\big)=-\frac{25}{5}=-5
+\end{align*}  
+\موٹا{حل کی  جیومیٹری}\\
+تفاعل \عددی{f(x,y)=3x+4y} کی ہم قد منحنیات خطوط \عددی{3x+4y=c} ہیں (شکل \حوالہ{شکل_مثال_کثیرالمتغیر_دائرہ_پر_انتہائی_قیمتیں_درکار})۔ مبدا سے یہ خطوط جتنے دور ہوں، \عددی{f} کی مطلق قیمت اتنی زیادہ ہو گی۔ ہم \عددی{f} کی وہ انتہائی قیمتیں جاننا چاہتے ہیں جو دائرہ \عددی{x^2+y^2=1} پر پائے جاتے ہوں۔ وہ کون سے خطوط ہیں جو مبدا سے دور ترین ہوتے ہوئے دائرہ کو قطع کرتے ہیں؟ وہ خطوط جو دائرے کے مماس ہیں۔ نقطہ مماس پر ہر وہ سمتیہ  جو  خط  کا عمودی ہو، دائرہ کو بھی عمودی ہو گا لہٰذا ڈھلوان \عددی{\nabla f}  ڈھلوان \عددی{\nabla g} کا مستقل مضرب  (\عددی{\lambda=\mp\tfrac{5}{2}})  ہو گا۔  مثلاً نقطہ \عددی{\tfrac{3}{5},\tfrac{4}{5}} پر درج ذیل ہوں گے۔
+\begin{align*}
+\nabla f=3\ai+4\aj,\quad \nabla g=\frac{6}{5}\ai+\frac{8}{5}\aj,\quad \nabla f=\frac{5}{2}\nabla g
+\end{align*} 
+\انتہا{مثال}
+%============
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,scale=0.5,declare function={f(\x,\k)=\k/4-3/4*\x;}]
+\pgfmathsetmacro{\a}{3}
+\pgfmathsetmacro{\b}{2.5}
+\pgfmathsetmacro{\ang}{50}
+\pgfmathsetmacro{\v}{0.6}
+\pgfmathsetmacro{\k}{2/5}
+\draw[-latex](-1.5,0)--(2.25,0)node[right]{$x$};
+\draw[-latex](0,-1.25)--(0,2.75)node[above]{$y$};
+\draw(0,0) circle (1);
+\foreach \k in {-7,-5,-3,-1,1,3,5,7}{\draw[domain=-1.25:1.25]plot (\x,{f(\x,\k)});}
+\foreach \k in {-5,5}{\draw[thick,domain=-1.25:1.25]plot (\x,{f(\x,\k)});}
+\draw(-1.25,{f(-1.25,5)})node[left]{3x+4y=5};
+\draw(1.25,{f(1.25,-5)})node[right]{3x+4y=-5};
+\draw(3/5,4/5)node[circ,pin={[right]20:{$(\tfrac{3}{5},\tfrac{4}{5})$}}]{};
+\draw[-latex,thick,gray](3/5,4/5)--++(\k*3*\v,\k*4*\v)node[pos=1,left,gray]{$\nabla g$};
+\draw[-latex](3/5,4/5)--++(3*\v,4*\v)node[pos=0.9,right]{$\nabla f=3\ai+4\aj=\tfrac{5}{2}\nabla g$};
+\draw[](-3/5,-4/5)node[circ]{};
+\end{tikzpicture}
+\caption{
+دائرہ \عددی{x^2+y^2=1} پر تفاعل \عددی{f(x,y)=3x+4y} کی زیادہ سے زیادہ قیمت نقطہ \عددی{(3/5,4/5)}   اور کم سے کم قیمت نقطہ \عددی{(-3/5,-4/5)} پر پائی جاتی ہیں۔ ان نقطوں پر  \عددی{\nabla g} کا مستقل مضرب \عددی{\nabla f} ہو گا۔ اس شکل میں پہلے نقطہ پر ڈھلوان دکھائی گئی ہے جبکہ دوسرے نقطہ پر ڈھلوان نہیں دکھائی گئی ہے۔ 
+}
+\label{شکل_مثال_کثیرالمتغیر_دائرہ_پر_انتہائی_قیمتیں_درکار}
+\end{figure}
