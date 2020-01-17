@@ -1,0 +1,189 @@
+\begin{figure}
+\centering
+\begin{minipage}{0.55\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\a}{3.75}
+\pgfmathsetmacro{\b}{2.5}
+\draw[-latex](0,0)--++(4.5,0)node[right]{$x$};
+\draw[-latex](0,0)--++(0,3.25)node[right]{$y$};
+\draw[thick](0.4,0.25) rectangle ++(\a,\b)node[right]{$R$};
+\draw(0.4,0)node[below]{$a$}--++(0,0.1)  (0.4,0)++(\a,0)node[below]{$b$}--++(0,0.1); 
+\draw(0,0.25)node[left]{$c$}--++(0.1,0)  (0,0.25)++(0,\b)node[left]{$d$}--++(0.1,0); 
+\foreach \x in {0.125,0.2,0.3,0.45,0.6,0.8,0.9} {\draw(0.4+\a*\x,0.125)--++(0,\b+0.25);}
+\foreach \y in {0.2,0.3,0.5,0.7,0.8,0.9}{\draw(0.25,0.25+\b*\y)--++(\a+0.25,0);}
+\draw[fill=lgray](0.4+0.45*\a,0.25+0.3*\b) rectangle (0.4+0.6*\a,0.25+0.5*\b);
+\draw[stealth-stealth](0.4+0.45*\a,-0.1)--(0.4+0.6*\a,-0.1)node[pos=0.5,below]{$\Delta x_k$};
+\draw[stealth-stealth](-0.1,0.25+0.3*\b)--(-0.1,0.25+0.5*\b)node[pos=0.5,left]{$\Delta y_k$};
+\draw(0.4+0.475*\a,0.25+0.4*\b)--++(-0.3,0.3)node[above,fill=white]{$\Delta S_k$};
+\draw(0.4+0.55*\a,0.25+0.45*\b)node[circ]{}--++(0.3,0.2)node[above right,fill=white]{$(x_k,y_k)$};
+\end{tikzpicture}
+\caption{
+خطہ \عددی{R} کو مستطیل جال  چھوٹے  مستطیل خانوں میں تقسیم کرتا ہے جن کے رقبے   \عددی{\Delta S_k=\Delta x_k\Delta y_k}ہوں گے۔
+}
+\end{minipage}\hfill
+\begin{minipage}{0.4\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{2.5}
+\pgfmathsetmacro{\b}{2}
+\draw(0,0) rectangle (\a,\b);
+\draw(0.65*\a,0)--++(0,\b);
+\draw(0.325*\a,0.5*\b)node[]{$R_1$};
+\draw(0.82*\a,0.5*\b)node[]{$R_2$};
+\draw(0.5*\a,0)node[below,font=\scriptsize]{$\iint\limits_{R_1\cup R_2}f(x,y)\dif S=\iint\limits_{R_1}f(x,y)\dif S+\iint\limits_{R_2}f(x,y)\dif S$};
+\end{tikzpicture}
+\caption{
+دوہرا تکملات بھی ایک گنّا تکملات کی طرح  مجموعیت دائرہ کار کی خاصیت رکھتے ہیں۔
+}
+\end{minipage}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x,\y)=4-(\x)^2-(\y)^2;}]
+\pgfmathsetmacro{\a}{0.25}
+\pgfmathsetmacro{\b}{0.8}
+\pgfmathsetmacro{\c}{0.4}
+\pgfmathsetmacro{\d}{0.8}
+\pgfmathsetmacro{\aa}{0.5}
+\pgfmathsetmacro{\bb}{0.62}
+\pgfmathsetmacro{\cc}{0.5}
+\pgfmathsetmacro{\dd}{0.62}
+\pgfmathsetmacro{\delA}{0.1}
+\pgfmathsetmacro{\delB}{0.15}
+\pgfmathsetmacro{\delC}{1/2*(\delA+\delB)}
+\pgfmathsetmacro{\mx}{\aa+1/3*(\bb-\aa)}
+\pgfmathsetmacro{\my}{\cc+2/3*(\dd-\cc)}
+\begin{axis}[clip=false,small,axis lines=center,view/h=130,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xtick={\a,\b},ytick={\c,\d},ztick={\empty},xticklabels={$a$,$b$},yticklabels={$c$,$d$},xmin=0,ymin=0,zmin=0,xlabel style={anchor=east},ylabel style={anchor=west}]
+\addplot3[]coordinates{(\a,\c,{f(\a,\c)})(\a,\c,0)};
+\addplot3[]coordinates{(\b,\c,{f(\b,\c)})(\b,\c,0)};
+\addplot3[]coordinates{(\b,\d,{f(\b,\d)})(\b,\d,0)};
+\addplot3[]coordinates{(\a,\d,{f(\a,\d)})(\a,\d,0)};
+\addplot3[surf,domain=\a:\b,domain y=\c:\d]{f(x,y)};
+\addplot3[fill=llgray]coordinates{(\a,\c,0)(\b,\c,0)(\b,\d,0)(\a,\d,0)(\a,\c,0)};
+\addplot3[]coordinates{(\aa,\cc,{f(\aa,\cc)})(\bb,\cc,{f(\bb,\cc)})(\bb,\dd,{f(\bb,\dd)})(\aa,\dd,{f(\aa,\dd)})(\aa,\cc,{f(\aa,\cc)})};
+\addplot3[]coordinates{(\aa,\cc,0)(\bb,\cc,0)(\bb,\dd,0)(\aa,\dd,0)(\aa,\cc,0)};
+\addplot[dashed]coordinates{(\a,0)(\a,\c)};
+\addplot[dashed]coordinates{(\b,0)(\b,\c)};
+\addplot[dashed]coordinates{(\a,\c)(0,\c)};
+\addplot[dashed]coordinates{(\a,\d)(0,\d)};
+\addplot3[]coordinates{(\mx,\my,{f(\mx,\my)})}node[circ]{};
+\addplot3[]coordinates{(\mx,\my,0)}node[circ]{}node[pin=-45:{$(x_k,y_k)$}]{}node[pin=-130:{$\Delta S_k$}]{};
+\addplot3[]coordinates{(\mx,\my+\delA,{f(\mx,\my+\delA)})(\mx,\my+\delB,{f(\mx,\my+\delB)})};
+\addplot3[]coordinates{(\mx,\my+\delA,0)(\mx,\my+\delB,0)};
+\addplot3[stealth-stealth] coordinates{(\mx,\my+\delC,{f(\mx,\my+\delC)})(\mx,\my+\delC,0)}node[pos=0.3,pin={[pin edge=-,right,pin distance=1.25cm]30:{$z=f(x_k,y_k)$}}]{};
+\addplot3[]coordinates{(\a,\c+0.1,{f(\a,\c+0.1)})}node[pin={30:{$z=f(x,y)$}}]{};
+\addplot3[]coordinates {(\aa,\cc,{f(\aa,\cc)})(\aa,\cc,0)};
+\addplot3[]coordinates {(\bb,\cc,{f(\bb,\cc)})(\bb,\cc,0)};
+\addplot3[]coordinates {(\bb,\dd,{f(\bb,\dd)})(\bb,\dd,0)};
+\addplot3[]coordinates {(\aa,\dd,{f(\aa,\dd)})(\aa,\dd,0)};
+\addplot3[] coordinates{(\a,\d,0)}node[left,xshift=-2ex]{$R$};
+\end{axis}
+\end{tikzpicture}
+\caption{
+ٹھوس جسم کو تخمینی طور پر  متعدد مستطیل منشور نما  سے ظاہر کرتے ہوئے ہم  زیادہ عمومی منشور نما کے حجم کو بطور دوہرا تکمل  تعین کر سکتے ہیں۔ یہاں منشور کا حجم \عددی{R} پر \عددی{f(x,y)} کا دوہرا تکمل ہو گا۔
+}
+\end{figure}
+
+
+
+
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x,\y)=4-\x-\y;}]
+\pgfmathsetmacro{\a}{0}
+\pgfmathsetmacro{\b}{2}
+\pgfmathsetmacro{\c}{0}
+\pgfmathsetmacro{\d}{1}
+\pgfmathsetmacro{\del}{0.2}
+\pgfmathsetmacro{\kx}{0.6}
+\begin{axis}[clip=false,small,axis lines=center,view/h=130,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xtick={\kx,\b},ytick={\d},ztick={4},xticklabels={$x$,$2$},xmin=0,ymin=0,zmin=0,xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south}]
+\addplot3[fill=lgray]coordinates{(\kx,\c,{f(\kx,\c)})(\kx,\d,{f(\kx,\d)})(\kx,\d,0)(\kx,\c,0)(\kx,\c,{f(\kx,\c)})};
+\addplot3[]coordinates{(\a,\c,{f(\a,\c)})(\a,\c,0)};
+\addplot3[]coordinates{(\b,\c,{f(\b,\c)})(\b,\c,0)};
+\addplot3[]coordinates{(\b,\d,{f(\b,\d)})(\b,\d,0)};
+\addplot3[]coordinates{(\a,\d,{f(\a,\d)})(\a,\d,0)};
+\addplot3[]coordinates{(\a,\c,{f(\a,\c)})(\b,\c,{f(\b,\c)})(\b,\d,{f(\b,\d)})(\a,\d,{f(\a,\d)})(\a,\c,{f(\a,\c)})};
+\addplot3[]coordinates{(\a,\c,0)(\b,\c,0)(\b,\d,0)(\a,\d,0)(\a,\c,0)};
+\addplot3[thick] coordinates {(\kx,\c,{f(\kx,\c)})(\kx,\d,{f(\kx,\d)})}node[pos=0.5,pin={[pin distance=0.75cm]45:{$z=4-x-y$}}]{};
+\addplot3[]coordinates{(\kx,\d-\del,{1/4*f(\kx,\d-\del)})}  node[pin={[below,pin distance=1cm]-60:{$S(x)=\int_{y=0}^{y=1}(4-x-y)\dif y$}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{
+رقبہ عمودی تراش \عددی{S(x)} حاصل کرنے کے لئے ہم \عددی{x} کو مستقل ٹھراتے  ہوئے \عددی{y} کے لحاظ سے  تکمل لیتے ہیں۔
+}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x,\y)=4-\x-\y;}]
+\pgfmathsetmacro{\a}{0}
+\pgfmathsetmacro{\b}{2}
+\pgfmathsetmacro{\c}{0}
+\pgfmathsetmacro{\d}{1}
+\pgfmathsetmacro{\del}{0.2}
+\pgfmathsetmacro{\ky}{0.6}
+\begin{axis}[clip=false,small,axis lines=center,view/h=130,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xtick={\b},ytick={\ky,\d},yticklabels={$y$,$1$},ztick={4},xmin=0,ymin=0,zmin=0,xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south}]
+\addplot3[fill=lgray]coordinates{(\a,\ky,{f(\a,\ky)})(\b,\ky,{f(\b,\ky)})(\b,\ky,0)(\a,\ky,0)(\a,\ky,{f(\a,\ky)})};
+\addplot3[]coordinates{(\a,\c,{f(\a,\c)})(\a,\c,0)};
+\addplot3[]coordinates{(\b,\c,{f(\b,\c)})(\b,\c,0)};
+\addplot3[]coordinates{(\b,\d,{f(\b,\d)})(\b,\d,0)};
+\addplot3[]coordinates{(\a,\d,{f(\a,\d)})(\a,\d,0)};
+\addplot3[]coordinates{(\a,\c,{f(\a,\c)})(\b,\c,{f(\b,\c)})(\b,\d,{f(\b,\d)})(\a,\d,{f(\a,\d)})(\a,\c,{f(\a,\c)})};
+\addplot3[]coordinates{(\a,\c,0)(\b,\c,0)(\b,\d,0)(\a,\d,0)(\a,\c,0)};
+\addplot3[thick] coordinates {(\a,\ky,{f(\a,\ky)})(\b,\ky,{f(\b,\ky)})}node[pos=0.25,pin={[]45:{$z=4-x-y$}}]{};
+\addplot3[]coordinates{(\b-\del,\ky,{1/4*f(\b-\del,\ky)})}  node[pin={[below,pin distance=1cm]-45:{$S(y)=\int_{x=0}^{x=2} (4-x-y)\dif x$}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{
+رقبہ عمودی تراش \عددی{S(y)} حاصل کرنے کے لئے ہم \عددی{y} کو مستقل ٹھراتے  ہوئے \عددی{x} کے لحاظ سے  تکمل لیتے ہیں۔
+}
+\end{minipage}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\begin{minipage}{0.55\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\a}{3.75}
+\pgfmathsetmacro{\b}{2.5}
+\draw[-latex](0,0)--++(4.5,0)node[right]{$x$};
+\draw[-latex](0,0)--++(0,3.25)node[right]{$y$};
+\draw[fill=lgray](0.4+\a*0.07,0.25+\b*0.97)
+\foreach \x/\y in{0.07/0.97,0.8/0.97,0.8/0.8,0.9/0.8,0.9/0.7,0.97/0.7,0.97/0.2,0.8/0.2,0.8/0.1,0.6/0.1,
+0.6/0.02,0.2/0.02,0.2/0.1,0.07/0.1,0.07/0.3,0/0.3,0/0.8,0.07/0.8,0.07/0.97} {--(0.4+\a*\x,0.25+\b*\y)};
+\draw(0.4,0)node[below]{$a$}--++(0,0.1)  (0.4,0)++(\a,0)node[below]{$b$}--++(0,0.1); 
+\draw(0,0.25)node[left]{$c$}--++(0.1,0)  (0,0.25)++(0,\b)node[left]{$d$}--++(0.1,0); 
+\foreach \x in {0,0.07,0.125,0.2,0.3,0.45,0.6,0.8,0.9,0.97} {\draw(0.4+\a*\x,0.125)--++(0,\b+0.25);}
+\foreach \y in {0.02,0.1,0.2,0.3,0.5,0.7,0.8,0.97}{\draw(0.25,0.25+\b*\y)--++(\a+0.25,0);}
+\draw[fill=gray](0.4+0.45*\a,0.25+0.3*\b) rectangle (0.4+0.6*\a,0.25+0.5*\b);
+\draw[stealth-stealth](0.4+0.45*\a,-0.1)--(0.4+0.6*\a,-0.1)node[pos=0.5,below]{$\Delta x_k$};
+\draw[stealth-stealth](-0.1,0.25+0.3*\b)--(-0.1,0.25+0.5*\b)node[pos=0.5,left]{$\Delta y_k$};
+\draw(0.4+0.475*\a,0.25+0.4*\b)--++(-0.3,0.3)node[above]{$\Delta S_k$};
+\draw(0.4+0.55*\a,0.25+0.45*\b)node[circ]{}--++(0.3,0.2)node[above right]{$(x_k,y_k)$};
+\draw[thick](0.3,1/2*\b) to [out=-90,in=170](1/3*\a,0.25) to [out=-10,in=-170](2/3*\a,0.265) to [out=10,in=-90] (\a+0.45,1/2*\b) to [out=90,in=-10](\a-0.5,\b+0.25) to [out=170,in=5](1/4*\a,\b+0.25) to [out=-175,in=90](0.3,1/2*\b);
+\draw(0.4+\a*0.54,0.25+\b*0.87)node[]{$R$};
+\end{tikzpicture}
+\caption{
+غیر مستطیل محدود  خطہ کو  مستطیل جال سے   خانہ بند کیا گیا ہے۔
+}
+\end{minipage}\hfill
+\begin{minipage}{0.4\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{3}
+\pgfmathsetmacro{\b}{2}
+\draw(\a*0,\b*0.75) to [out=90,in=180] coordinate[pos=0.85](kT)(\a*0.4,\b*1)node[above right]{$R=R_1\cup R_2$} to [out=0,in=90](\a*1,\b*0.4) to [out=-90,in=0](\a*0.8,\b*0) to [out=180,in=-45]coordinate[pos=0.2](kB)(\a*0.4,\b*0.5) to [out=145,in=-90](\a*0,\b*0.75);
+\draw[-latex](0.2,0.2)--++(3.5,0)node[right]{$x$};
+\draw[-latex](0.2,0.2)--++(0,2.5)node[left]{$y$};
+\draw(kT) to [out=-45,in=70]node[pos=0.3,left,xshift=-3ex]{$R_1$}node[pos=0.7,right,xshift=1ex]{$R_2$}(kB)node[below,yshift=-2ex,font=\scriptsize]{$\iint\limits_{R}f(x,y)\dif S=\iint\limits_{R_1}f(x,y)\dif S+\iint\limits_{R_2}f(x,y)\dif S$};
+\end{tikzpicture}
+\caption{
+مستطیل خطہ کی مجموعیت کی خاصیت ان غیر مستطیل  خطوں کے لئے بھی کارآمد ہے جن کی پوری  سرحد استمراری منحنیات سے بنی ہو۔
+}
+\end{minipage}
+\end{figure}
