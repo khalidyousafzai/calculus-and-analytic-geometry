@@ -10,7 +10,7 @@
 \begin{align*}
 R:\quad a\le x\le b,\quad c\le y\le d
 \end{align*}
-ہم تصور میں   \عددی{R} پر \عددی{x} اور \عددی{y} محور کے متوازی لکیروں کا  ایک جال بچھاتے ہیں جو  \عددی{R} کو چھوٹے چھوٹے رقبوں \عددی{\Delta S=\Delta x\Delta y} میں تقسیم کرتے ہیں۔ ہم ان رقبوں کو کسی ترتیب \عددی{\Delta S_1}، \عددی{\Delta S_2}، \نقطے، \عددی{\Delta S_n} سے  شمار کر کے ہر چھوٹے رقبہ  \عددی{\Delta S_k} میں  ایک نقطہ \عددی{(x_k,y_k)} منتخب کر کے  درج ذیل مجموعہ لیتے ہیں۔
+ہم تصور میں   \عددی{R} پر \عددی{x} اور \عددی{y} محور کے متوازی لکیروں کا  ایک جال بچھاتے ہیں جو  \عددی{R} کو چھوٹے چھوٹے رقبوں \عددی{\Delta S=\Delta x\Delta y} میں تقسیم کرتے ہیں (شکل \حوالہ{شکل_بالکثرت_مستطیل_جال})۔ ہم ان رقبوں کو کسی ترتیب \عددی{\Delta S_1}، \عددی{\Delta S_2}، \نقطے، \عددی{\Delta S_n} سے  شمار کر کے ہر چھوٹے رقبہ  \عددی{\Delta S_k} میں  ایک نقطہ \عددی{(x_k,y_k)} منتخب کر کے  درج ذیل مجموعہ لیتے ہیں۔
 \begin{align}\label{مساوات_کثیرالمتغیر_مجموعہ_الف}
 S_n=\sum_{k=1}^{n}f(x_k,y_k)\Delta S_k
 \end{align}
@@ -23,6 +23,50 @@ S_n=\sum_{k=1}^{n}f(x_k,y_k)\Delta S_k
 \iint\limits_R f(x,y)\dif S=\lim\limits_{\Delta S\to 0}\sum_{k=1}^n f(x_k,y_k)\Delta S_k
 \end{align}
 واحد متغیری تفاعل کی طرح،   جب تک  خانہ بندی کے دونوں معیار صفر تک پہنچتے ہوں،  وقفات   \عددی{[a,b]} اور \عددی{[c,d]} کی طرز تقسیم کا   مجموعہ کی  حد پر کوئی اثر نہیں پایا جائے گا۔ مساوات \حوالہ{مساوات_کثیرالمتغیر_مجموعہ_ب} میں  حد کی قیمت، نا تو  رقبات \عددی{\Delta S_k} کی ترتیب شمار پر اور نا ہی ہر \عددی{\Delta S_k} میں نقطہ \عددی{(x_k,y_k)}  کے مقام پر منحصر ہو گی۔ انفرادی مجموعات \عددی{S_n} کی قیمتیں ان پر ضرور منحصر ہوں گی لیکن   ان مجموعات  کا حد آخر میں  وہی ایک  ہو گا۔استمراری \عددی{f} کے لئے  اس حد کی وجودیت اور  یکتائی کے  ثبوت اعلٰی  نصاب میں دیے   جاتے ہیں۔دوہرا تکمل کی وجودیت  کے لئے   \عددی{f} کا  استمرار کافی لیکن غیر لازمی شرط  ہے۔ یہ حد بہت سارے غیر استمراری تفاعل کے لئے بھی موجود  ہے۔
+
+\begin{figure}
+\centering
+\begin{minipage}{0.55\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\a}{3.75}
+\pgfmathsetmacro{\b}{2.5}
+\draw[-latex](0,0)--++(4.5,0)node[right]{$x$};
+\draw[-latex](0,0)--++(0,3.25)node[right]{$y$};
+\draw[thick](0.4,0.25) rectangle ++(\a,\b)node[right]{$R$};
+\draw(0.4,0)node[below]{$a$}--++(0,0.1)  (0.4,0)++(\a,0)node[below]{$b$}--++(0,0.1); 
+\draw(0,0.25)node[left]{$c$}--++(0.1,0)  (0,0.25)++(0,\b)node[left]{$d$}--++(0.1,0); 
+\foreach \x in {0.125,0.2,0.3,0.45,0.6,0.8,0.9} {\draw(0.4+\a*\x,0.125)--++(0,\b+0.25);}
+\foreach \y in {0.2,0.3,0.5,0.7,0.8,0.9}{\draw(0.25,0.25+\b*\y)--++(\a+0.25,0);}
+\draw[fill=lgray](0.4+0.45*\a,0.25+0.3*\b) rectangle (0.4+0.6*\a,0.25+0.5*\b);
+\draw[stealth-stealth](0.4+0.45*\a,-0.1)--(0.4+0.6*\a,-0.1)node[pos=0.5,below]{$\Delta x_k$};
+\draw[stealth-stealth](-0.1,0.25+0.3*\b)--(-0.1,0.25+0.5*\b)node[pos=0.5,left]{$\Delta y_k$};
+\draw(0.4+0.475*\a,0.25+0.4*\b)--++(-0.3,0.3)node[above,fill=white]{$\Delta S_k$};
+\draw(0.4+0.55*\a,0.25+0.45*\b)node[circ]{}--++(0.3,0.2)node[above right,fill=white]{$(x_k,y_k)$};
+\end{tikzpicture}
+\caption{
+خطہ \عددی{R} کو مستطیل جال  چھوٹے  مستطیل خانوں میں تقسیم کرتا ہے جن کے رقبے   \عددی{\Delta S_k=\Delta x_k\Delta y_k}ہوں گے۔
+}
+\label{شکل_بالکثرت_مستطیل_جال}
+\end{minipage}\hfill
+\begin{minipage}{0.4\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{2.5}
+\pgfmathsetmacro{\b}{2}
+\draw(0,0) rectangle (\a,\b);
+\draw(0.65*\a,0)--++(0,\b);
+\draw(0.325*\a,0.5*\b)node[]{$R_1$};
+\draw(0.82*\a,0.5*\b)node[]{$R_2$};
+\draw(0.5*\a,0)node[below,font=\scriptsize]{$\iint\limits_{R_1\cup R_2}f(x,y)\dif S=\iint\limits_{R_1}f(x,y)\dif S+\iint\limits_{R_2}f(x,y)\dif S$};
+\end{tikzpicture}
+\caption{
+دوہرا تکملات بھی ایک گنّا تکملات کی طرح  مجموعیت دائرہ کار کی خاصیت رکھتے ہیں۔
+}
+\label{شکل_بالکثرت_مجموعیت_دائرہ_کار}
+\end{minipage}
+\end{figure}
+
 
 \جزوحصہء{دوہرا تکملات کے خواص}
 ایک گنّا تکملات کی طرح، دوہرا تکملات کے ایسا الجبرائی خواص پائے جاتے ہیں جو حساب اور عملی استعمال کے لئے کارآمد ثابت ہوتے ہیں۔
@@ -39,18 +83,124 @@ $\iint\limits_R (f(x,y)\mp g(x,y))\dif S=\iint\limits_R f(x,y)\dif S\mp\iint\lim
 یہ خواص ایک گنّا تکملات  کے خواص کی طرح ہیں (حصہ \حوالہ{حصہ_تکمل_خصوصیات_رقبہ_اوسط_قیمت_مسئلہ})۔ ان کے علاوہ  درج ذیل مجموعیت کا خواص بھی پایا جاتا ہے
 \item\quad
 $\iint\limits_R f(x,y)\dif S=\int\limits_{R_1}f(x,y)\dif S+\iint\limits_{R_2} f(x,y)\dif S$\\
-جہاں  ایک دوسرے کو نا ڈھانپنے والے مستطیل   \عددی{R_1} اور \عددی{R_2} خطوں  کا مجموعہ (اشتراک)   \عددی{R} ہے۔ یہاں بھی ہم ثبوت پیش نہیں کریں گے۔
+جہاں  ایک دوسرے کو نا ڈھانپنے والے مستطیل   \عددی{R_1} اور \عددی{R_2} خطوں  کا  اشتراک    \عددی{R} ہے (شکل \حوالہ{شکل_بالکثرت_مجموعیت_دائرہ_کار})۔ یہاں بھی ہم ثبوت پیش نہیں کریں گے۔
 \end{enumerate}
 
 \جزوحصہء{دوہرا تکملات بطور حجم}
-مثبت \عددی{f(x,y)} کی صورت میں ہم مستطیل خطہ \عددی{R} پر \عددی{f} کے دوہرا تکمل کو  ٹھوس  منشور نما  کا حجم تصور کر سکتے ہیں جس کی  نچلا سطح \عددی{R} اور بالائی سطح \عددی{z=f(x,y)} ہو گی۔ مجموعہ \عددی{S_n=\sum f(x_k,y_k)\Delta S_k} میں ہر رکن \عددی{f(x_k,y_k)\Delta S_k} ایک   انتصابی مستطیلی   منشور نما  کا حجم ہو گا جو   جو    بنیاد \عددی{\Delta S_k} پر  سیدھا کھڑے ٹھوس خطے  کے حجم کی تخمینی قیمت  ہو گی۔     یوں مجموعہ \عددی{S_n}   پورے ٹھوس جسم کے حجم کی تخمین  ہو گی۔ اس حجم کی تعریف درج ذیل  ہے۔
+مثبت \عددی{f(x,y)} کی صورت میں ہم مستطیل خطہ \عددی{R} پر \عددی{f} کے دوہرا تکمل کو  ٹھوس  منشور نما  کا حجم تصور کر سکتے ہیں جس کی  نچلا سطح \عددی{R} اور بالائی سطح \عددی{z=f(x,y)} ہو گی (شکل \حوالہ{شکل_بالکثرت_ٹھوس_جسم_حجم_منشور})۔ مجموعہ \عددی{S_n=\sum f(x_k,y_k)\Delta S_k} میں ہر رکن \عددی{f(x_k,y_k)\Delta S_k} ایک   انتصابی مستطیلی   منشور نما  کا حجم ہو گا جو   جو    بنیاد \عددی{\Delta S_k} پر  سیدھا کھڑے ٹھوس خطے  کے حجم کی تخمینی قیمت  ہو گی۔     یوں مجموعہ \عددی{S_n}   پورے ٹھوس جسم کے حجم کی تخمین  ہو گی۔ اس حجم کی تعریف درج ذیل  ہے۔
 \begin{align}\label{مساوات_دوہرا_فوبینی_الف}
 \text{حجم}=\lim S_n=\iint\limits_R f(x,y)\dif S
 \end{align}
 جیسا ہم توقع کرتے ہیں، حجم تلاش کرنے کی  مذکورہ بالا زیادہ عمومی ترکیب  سے حاصل نتائج ، باب \حوالہ{باب_تکمل_کا_استعمال} میں پیش کی گئی ترکیب کے نتائج کے عین مطابق ہیں۔ ہم اس حقیقت کا ثبوت یہاں پیش نہیں کریں گے۔ 
 
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x,\y)=4-(\x)^2-(\y)^2;}]
+\pgfmathsetmacro{\a}{0.25}
+\pgfmathsetmacro{\b}{0.8}
+\pgfmathsetmacro{\c}{0.4}
+\pgfmathsetmacro{\d}{0.8}
+\pgfmathsetmacro{\aa}{0.5}
+\pgfmathsetmacro{\bb}{0.62}
+\pgfmathsetmacro{\cc}{0.5}
+\pgfmathsetmacro{\dd}{0.62}
+\pgfmathsetmacro{\delA}{0.1}
+\pgfmathsetmacro{\delB}{0.15}
+\pgfmathsetmacro{\delC}{1/2*(\delA+\delB)}
+\pgfmathsetmacro{\mx}{\aa+1/3*(\bb-\aa)}
+\pgfmathsetmacro{\my}{\cc+2/3*(\dd-\cc)}
+\begin{axis}[clip=false,small,axis lines=center,view/h=130,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xtick={\a,\b},ytick={\c,\d},ztick={\empty},xticklabels={$a$,$b$},yticklabels={$c$,$d$},xmin=0,ymin=0,zmin=0,xlabel style={anchor=east},ylabel style={anchor=west}]
+\addplot3[]coordinates{(\a,\c,{f(\a,\c)})(\a,\c,0)};
+\addplot3[]coordinates{(\b,\c,{f(\b,\c)})(\b,\c,0)};
+\addplot3[]coordinates{(\b,\d,{f(\b,\d)})(\b,\d,0)};
+\addplot3[]coordinates{(\a,\d,{f(\a,\d)})(\a,\d,0)};
+\addplot3[surf,domain=\a:\b,domain y=\c:\d]{f(x,y)};
+\addplot3[fill=llgray]coordinates{(\a,\c,0)(\b,\c,0)(\b,\d,0)(\a,\d,0)(\a,\c,0)};
+\addplot3[]coordinates{(\aa,\cc,{f(\aa,\cc)})(\bb,\cc,{f(\bb,\cc)})(\bb,\dd,{f(\bb,\dd)})(\aa,\dd,{f(\aa,\dd)})(\aa,\cc,{f(\aa,\cc)})};
+\addplot3[]coordinates{(\aa,\cc,0)(\bb,\cc,0)(\bb,\dd,0)(\aa,\dd,0)(\aa,\cc,0)};
+\addplot[dashed]coordinates{(\a,0)(\a,\c)};
+\addplot[dashed]coordinates{(\b,0)(\b,\c)};
+\addplot[dashed]coordinates{(\a,\c)(0,\c)};
+\addplot[dashed]coordinates{(\a,\d)(0,\d)};
+\addplot3[]coordinates{(\mx,\my,{f(\mx,\my)})}node[circ]{};
+\addplot3[]coordinates{(\mx,\my,0)}node[circ]{}node[pin=-45:{$(x_k,y_k)$}]{}node[pin=-130:{$\Delta S_k$}]{};
+\addplot3[]coordinates{(\mx,\my+\delA,{f(\mx,\my+\delA)})(\mx,\my+\delB,{f(\mx,\my+\delB)})};
+\addplot3[]coordinates{(\mx,\my+\delA,0)(\mx,\my+\delB,0)};
+\addplot3[stealth-stealth] coordinates{(\mx,\my+\delC,{f(\mx,\my+\delC)})(\mx,\my+\delC,0)}node[pos=0.3,pin={[pin edge=-,right,pin distance=1.25cm]30:{$z=f(x_k,y_k)$}}]{};
+\addplot3[]coordinates{(\a,\c+0.1,{f(\a,\c+0.1)})}node[pin={30:{$z=f(x,y)$}}]{};
+\addplot3[]coordinates {(\aa,\cc,{f(\aa,\cc)})(\aa,\cc,0)};
+\addplot3[]coordinates {(\bb,\cc,{f(\bb,\cc)})(\bb,\cc,0)};
+\addplot3[]coordinates {(\bb,\dd,{f(\bb,\dd)})(\bb,\dd,0)};
+\addplot3[]coordinates {(\aa,\dd,{f(\aa,\dd)})(\aa,\dd,0)};
+\addplot3[] coordinates{(\a,\d,0)}node[left,xshift=-2ex]{$R$};
+\end{axis}
+\end{tikzpicture}
+\caption{
+ٹھوس جسم کو تخمینی طور پر  متعدد مستطیل منشور نما  سے ظاہر کرتے ہوئے ہم  زیادہ عمومی منشور نما کے حجم کو بطور دوہرا تکمل  تعین کر سکتے ہیں۔ یہاں منشور کا حجم \عددی{R} پر \عددی{f(x,y)} کا دوہرا تکمل ہو گا۔
+}
+\label{شکل_بالکثرت_ٹھوس_جسم_حجم_منشور}
+\end{figure}
+%====================================
+
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x,\y)=4-\x-\y;}]
+\pgfmathsetmacro{\a}{0}
+\pgfmathsetmacro{\b}{2}
+\pgfmathsetmacro{\c}{0}
+\pgfmathsetmacro{\d}{1}
+\pgfmathsetmacro{\del}{0.2}
+\pgfmathsetmacro{\kx}{0.6}
+\begin{axis}[clip=false,small,axis lines=center,view/h=130,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xtick={\kx,\b},ytick={\d},ztick={4},xticklabels={$x$,$2$},xmin=0,ymin=0,zmin=0,xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south}]
+\addplot3[fill=lgray]coordinates{(\kx,\c,{f(\kx,\c)})(\kx,\d,{f(\kx,\d)})(\kx,\d,0)(\kx,\c,0)(\kx,\c,{f(\kx,\c)})};
+\addplot3[]coordinates{(\a,\c,{f(\a,\c)})(\a,\c,0)};
+\addplot3[]coordinates{(\b,\c,{f(\b,\c)})(\b,\c,0)};
+\addplot3[]coordinates{(\b,\d,{f(\b,\d)})(\b,\d,0)};
+\addplot3[]coordinates{(\a,\d,{f(\a,\d)})(\a,\d,0)};
+\addplot3[]coordinates{(\a,\c,{f(\a,\c)})(\b,\c,{f(\b,\c)})(\b,\d,{f(\b,\d)})(\a,\d,{f(\a,\d)})(\a,\c,{f(\a,\c)})};
+\addplot3[]coordinates{(\a,\c,0)(\b,\c,0)(\b,\d,0)(\a,\d,0)(\a,\c,0)};
+\addplot3[thick] coordinates {(\kx,\c,{f(\kx,\c)})(\kx,\d,{f(\kx,\d)})}node[pos=0.5,pin={[pin distance=0.75cm]45:{$z=4-x-y$}}]{};
+\addplot3[]coordinates{(\kx,\d-\del,{1/4*f(\kx,\d-\del)})}  node[pin={[below,pin distance=1cm]-110:{$S(x)=\int_{y=0}^{y=1}(4-x-y)\dif y$}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{
+رقبہ عمودی تراش \عددی{S(x)} حاصل کرنے کے لئے ہم \عددی{x} کو مستقل ٹھراتے  ہوئے \عددی{y} کے لحاظ سے  تکمل لیتے ہیں۔
+}
+\label{شکل_بالکثرت_فوبینی_ایکس_مستقل}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x,\y)=4-\x-\y;}]
+\pgfmathsetmacro{\a}{0}
+\pgfmathsetmacro{\b}{2}
+\pgfmathsetmacro{\c}{0}
+\pgfmathsetmacro{\d}{1}
+\pgfmathsetmacro{\del}{0.2}
+\pgfmathsetmacro{\ky}{0.6}
+\begin{axis}[clip=false,small,axis lines=center,view/h=130,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xtick={\b},ytick={\ky,\d},yticklabels={$y$,$1$},ztick={4},xmin=0,ymin=0,zmin=0,xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south}]
+\addplot3[fill=lgray]coordinates{(\a,\ky,{f(\a,\ky)})(\b,\ky,{f(\b,\ky)})(\b,\ky,0)(\a,\ky,0)(\a,\ky,{f(\a,\ky)})};
+\addplot3[]coordinates{(\a,\c,{f(\a,\c)})(\a,\c,0)};
+\addplot3[]coordinates{(\b,\c,{f(\b,\c)})(\b,\c,0)};
+\addplot3[]coordinates{(\b,\d,{f(\b,\d)})(\b,\d,0)};
+\addplot3[]coordinates{(\a,\d,{f(\a,\d)})(\a,\d,0)};
+\addplot3[]coordinates{(\a,\c,{f(\a,\c)})(\b,\c,{f(\b,\c)})(\b,\d,{f(\b,\d)})(\a,\d,{f(\a,\d)})(\a,\c,{f(\a,\c)})};
+\addplot3[]coordinates{(\a,\c,0)(\b,\c,0)(\b,\d,0)(\a,\d,0)(\a,\c,0)};
+\addplot3[thick] coordinates {(\a,\ky,{f(\a,\ky)})(\b,\ky,{f(\b,\ky)})}node[pos=0.25,pin={[]45:{$z=4-x-y$}}]{};
+\addplot3[]coordinates{(\b-\del,\ky,{1/4*f(\b-\del,\ky)})}  node[pin={[below,pin distance=1cm]-45:{$S(y)=\int_{x=0}^{x=2} (4-x-y)\dif x$}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{
+رقبہ عمودی تراش \عددی{S(y)} حاصل کرنے کے لئے ہم \عددی{y} کو مستقل ٹھراتے  ہوئے \عددی{x} کے لحاظ سے  تکمل لیتے ہیں۔
+}
+\label{شکل_بالکثرت_فوبینی_وائے_مستقل}
+\end{minipage}
+\end{figure}
+
+
 \جزوحصہء{دوہرا تکمل کے حصول کا مسئلہ فوبینی}
-فرض کریں ہم  مستوی \عددی{xy} میں  مستطیل خطہ \عددی{R:0\le x\le 2,\, 0\le y\le 1} پر مستوی \عددی{z=4-x-y}  کے نیچے حجم تلاش کرنا چاہتے ہیں۔ اگر ہم حصہ \حوالہ{حصہ_استعمال_تکمل_ترکیب_ٹکیاں} کی ترکیب استعمال کرتے ہوئے  محور \عددی{x} کے عمودی ٹکیاں  لیں تب حجم
+فرض کریں ہم  مستوی \عددی{xy} میں  مستطیل خطہ \عددی{R:0\le x\le 2,\, 0\le y\le 1} پر مستوی \عددی{z=4-x-y}  کے نیچے حجم تلاش کرنا چاہتے ہیں۔ اگر ہم حصہ \حوالہ{حصہ_استعمال_تکمل_ترکیب_ٹکیاں} کی ترکیب استعمال کرتے ہوئے  محور \عددی{x} کے عمودی ٹکیاں  لیں  (شکل \حوالہ{شکل_بالکثرت_فوبینی_ایکس_مستقل})    تب حجم
 \begin{align}\label{مساوات_دوہرا_فوبینی_ب}
 \int_{x=0}^{x=2}S(x)\dif x
 \end{align}
@@ -72,7 +222,7 @@ S(x)=\int_{y=0}^{y=1}(4-x-y)\dif y
 \end{align*}
 دائیں ہاتھ الجبرائی فقرہ، جسے  \اصطلاح{بار بار  تکمل}\فرہنگ{تکمل!بار بار}\حاشیہب{repeated integral}\فرہنگ{integral!repeated} کہتے ہیں، کہتا ہے  کہ حجم تلاش کرنے کی خاطر، پہلے  \عددی{x} کو مستقل  ٹھراتے  ہوئے \عددی{y} کے لحاظ سے \عددی{4-x-y} کا   تکمل \عددی{y=0} تا \عددی{y=1}   لیں اور اس کے بعد  \عددی{y} کو مستقل ٹھراتے  ہوئے، \عددی{x} کے لحاظ سے حاصل نتیجہ کا تکمل   \عددی{x=0} تا \عددی{x=2}  لیں۔
 
- اگر ہم  محور  \عددی{y}  کے عمودی ٹکیاں لیتے تب نتیجہ کیا ہوتا۔  ایسی صورت میں   ایک علامتی عمودی تراش رقبہ، \عددی{y} کا تفاعل ہو گا:
+ اگر ہم  محور  \عددی{y}  کے عمودی ٹکیاں لیتے تب نتیجہ کیا ہوتا (شکل \حوالہ{شکل_بالکثرت_فوبینی_وائے_مستقل})؟    ایسی صورت میں   ایک علامتی عمودی تراش رقبہ، \عددی{y} کا تفاعل ہو گا:
 \begin{align}
 S(y)=\int_{x=0}^{x=2}(4-x-y)\dif x=\left[4x-\frac{x^2}{2}-xy\right]_{x=0}^{x=2}=6-2y
 \end{align} 
@@ -135,8 +285,55 @@ S(y)=\int_{x=0}^{x=2}(4-x-y)\dif x=\left[4x-\frac{x^2}{2}-xy\right]_{x=0}^{x=2}=
 \end{center}
 
 
+
+\begin{figure}
+\centering
+\begin{minipage}{0.55\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\a}{3.75}
+\pgfmathsetmacro{\b}{2.5}
+\draw[-latex](0,0)--++(4.5,0)node[right]{$x$};
+\draw[-latex](0,0)--++(0,3.25)node[right]{$y$};
+\draw[fill=lgray](0.4+\a*0.07,0.25+\b*0.97)
+\foreach \x/\y in{0.07/0.97,0.8/0.97,0.8/0.8,0.9/0.8,0.9/0.7,0.97/0.7,0.97/0.2,0.8/0.2,0.8/0.1,0.6/0.1,
+0.6/0.02,0.2/0.02,0.2/0.1,0.07/0.1,0.07/0.3,0/0.3,0/0.8,0.07/0.8,0.07/0.97} {--(0.4+\a*\x,0.25+\b*\y)};
+\draw(0.4,0)node[below]{$a$}--++(0,0.1)  (0.4,0)++(\a,0)node[below]{$b$}--++(0,0.1); 
+\draw(0,0.25)node[left]{$c$}--++(0.1,0)  (0,0.25)++(0,\b)node[left]{$d$}--++(0.1,0); 
+\foreach \x in {0,0.07,0.125,0.2,0.3,0.45,0.6,0.8,0.9,0.97} {\draw(0.4+\a*\x,0.125)--++(0,\b+0.25);}
+\foreach \y in {0.02,0.1,0.2,0.3,0.5,0.7,0.8,0.97}{\draw(0.25,0.25+\b*\y)--++(\a+0.25,0);}
+\draw[fill=gray](0.4+0.45*\a,0.25+0.3*\b) rectangle (0.4+0.6*\a,0.25+0.5*\b);
+\draw[stealth-stealth](0.4+0.45*\a,-0.1)--(0.4+0.6*\a,-0.1)node[pos=0.5,below]{$\Delta x_k$};
+\draw[stealth-stealth](-0.1,0.25+0.3*\b)--(-0.1,0.25+0.5*\b)node[pos=0.5,left]{$\Delta y_k$};
+\draw(0.4+0.475*\a,0.25+0.4*\b)--++(-0.3,0.3)node[above]{$\Delta S_k$};
+\draw(0.4+0.55*\a,0.25+0.45*\b)node[circ]{}--++(0.3,0.2)node[above right]{$(x_k,y_k)$};
+\draw[thick](0.3,1/2*\b) to [out=-90,in=170](1/3*\a,0.25) to [out=-10,in=-170](2/3*\a,0.265) to [out=10,in=-90] (\a+0.45,1/2*\b) to [out=90,in=-10](\a-0.5,\b+0.25) to [out=170,in=5](1/4*\a,\b+0.25) to [out=-175,in=90](0.3,1/2*\b);
+\draw(0.4+\a*0.54,0.25+\b*0.87)node[]{$R$};
+\end{tikzpicture}
+\caption{
+غیر مستطیل محدود  خطہ کو  مستطیل جال سے   خانہ بند کیا گیا ہے۔
+}
+\label{شکل_بالکثرت_غیر_مستطیل_دائرہ_کار}
+\end{minipage}\hfill
+\begin{minipage}{0.4\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\a}{3}
+\pgfmathsetmacro{\b}{2}
+\draw(\a*0,\b*0.75) to [out=90,in=180] coordinate[pos=0.85](kT)(\a*0.4,\b*1)node[above right]{$R=R_1\cup R_2$} to [out=0,in=90](\a*1,\b*0.4) to [out=-90,in=0](\a*0.8,\b*0) to [out=180,in=-45]coordinate[pos=0.2](kB)(\a*0.4,\b*0.5) to [out=145,in=-90](\a*0,\b*0.75);
+\draw[-latex](0.2,0.2)--++(3.5,0)node[right]{$x$};
+\draw[-latex](0.2,0.2)--++(0,2.5)node[left]{$y$};
+\draw(kT) to [out=-45,in=70]node[pos=0.3,left,xshift=-3ex]{$R_1$}node[pos=0.7,right,xshift=1ex]{$R_2$}(kB)node[below,yshift=-2ex,font=\scriptsize]{$\iint\limits_{R}f(x,y)\dif S=\iint\limits_{R_1}f(x,y)\dif S+\iint\limits_{R_2}f(x,y)\dif S$};
+\end{tikzpicture}
+\caption{
+مستطیل خطہ کی مجموعیت کی خاصیت ان غیر مستطیل  خطوں کے لئے بھی کارآمد ہے جن کی پوری  سرحد استمراری منحنیات سے بنی ہو۔
+}
+\label{شکل_بالکثرت_مجموعیت_غیر_مستطیل_دائرہ_کار}
+\end{minipage}
+\end{figure}
+
 \جزوحصہء{محدود غیر مستطیل  خطہ پر دوہرا تکملات }
-محدود غیر مستطیل خطہ پر تفاعل \عددی{f(x,y)}  کا دوہرا تکمل تعین کرنے کی خاطر  ہم اب بھی \عددی{R} پر مستطیل جال بچھاتے ہیں لیکن جزوی مجموعہ میں صرف ان چھوٹے رقبوں  \عددی{\Delta S=\Delta x\Delta y}کو شامل کرتے ہیں جو مکمل طور پر اس خطہ میں پائے جاتے ہوں۔ ہم ان چھوٹے رقبوں کو کسی بھی  ترتیب سے شمار کرتے  ہوئے، ہر رقبہ \عددی{\Delta S_k} میں کوئی نقطہ \عددی{(x_k,y_k)} منتخب کر کے   درج ذیل مجموعہ حاصل کرتے ہیں۔
+محدود غیر مستطیل خطہ پر تفاعل \عددی{f(x,y)}  کا دوہرا تکمل تعین کرنے کی خاطر  ہم اب بھی \عددی{R} پر مستطیل جال بچھاتے ہیں (شکل \حوالہ{شکل_بالکثرت_غیر_مستطیل_دائرہ_کار})    لیکن جزوی مجموعہ میں صرف ان چھوٹے رقبوں  \عددی{\Delta S=\Delta x\Delta y}کو شامل کرتے ہیں جو مکمل طور پر اس خطہ میں پائے جاتے ہوں۔ ہم ان چھوٹے رقبوں کو کسی بھی  ترتیب سے شمار کرتے  ہوئے، ہر رقبہ \عددی{\Delta S_k} میں کوئی نقطہ \عددی{(x_k,y_k)} منتخب کر کے   درج ذیل مجموعہ حاصل کرتے ہیں۔
 \begin{align*}
 S_n=\sum_{k=1}^n f(x_k,y_k)\Delta S_k
 \end{align*}
@@ -146,14 +343,69 @@ S_n=\sum_{k=1}^n f(x_k,y_k)\Delta S_k
 \end{align*}
 یہ حد کم  پابندی کی صورت میں بھی موجود ہو سکتا ہے۔
 
-غیر مستطیل خطہ پر استمراری  تفاعل کے دوہرا تکملات کے وہی خواص ہوں گے جو مستطیل خطہ پر  دوہرا تکملات کے ہوتے ہیں۔ دائرہ کار کی  خواص مجموعیت  کہتی ہے کہ اگر \عددی{R} کو ایسے   دو  خطوں  \عددی{R_1} اور \عددی{R_2} میں تقسیم کیا جائے جو ایک دوسرے کو نہ ڈھانپتے   ہوں  اور  جن کی سرحدیں  متناہی تعداد کے قطعات یا ہموار منحنیات  سے بنی ہوئی  ہوں     تب  درج ذیل ہو گا۔
+غیر مستطیل خطہ پر استمراری  تفاعل کے دوہرا تکملات کے وہی خواص ہوں گے جو مستطیل خطہ پر  دوہرا تکملات کے ہوتے ہیں۔ دائرہ کار کی  خواص مجموعیت  کہتی ہے کہ اگر \عددی{R} کو ایسے   دو  خطوں  \عددی{R_1} اور \عددی{R_2} میں تقسیم کیا جائے جو ایک دوسرے کو نہ ڈھانپتے   ہوں  اور  جن کی سرحدیں  متناہی تعداد کے قطعات یا ہموار منحنیات  سے بنی ہوئی  ہوں (مثال کے لئے  شکل \حوالہ{شکل_بالکثرت_مجموعیت_غیر_مستطیل_دائرہ_کار} دیکھیں)        تب  درج ذیل ہو گا۔
 \begin{align*}
 \iint\limits_R f(x,y)\dif S=\iint\limits_{R_1}f(x,y)\dif S+\iint\limits_{R_2}f(x,y)\dif S
 \end{align*}
 
 ہم  \عددی{R} پر استمراری اور مثبت  \عددی{f} کی صورت میں  \عددی{R} اور \عددی{z=f(x,y)} کے بیچ ٹھوس جسم کے حجم  کی تعریف پہلے کی طرح اب بھی   \عددی{\iint_R f(x,y)\dif S} کرتے ہیں۔
 
-اگر شکل میں  مستوی \عددی{xy} میں دکھائے گئے خطہ کی طرح \عددی{R}ہو  اور حجم کی   "بالائی"   حد \عددی{y=g_2(x)}،  "زیریں"  حد \عددی{y=g_1(x)}، اور اطراف کے حدود  خط \عددی{x=a} اور خط  \عددی{x=b} ہوں تب  ہم حجم \عددی{H}  کو  ٹکیوں کی ترکیب سے حاصل کر سکتے ہیں۔ ہم پہلے رقبہ عمودی تراش تلاش کرتے ہیں
+
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\x,\y)=\x;fy(\x,\y)=\y;fz(\x,\y)=1-(\y-1)^2;}]
+\pgfmathsetmacro{\a}{0}
+\pgfmathsetmacro{\b}{0}
+\pgfmathsetmacro{\c}{1}
+\pgfmathsetmacro{\d}{2}
+\pgfmathsetmacro{\e}{1}
+\pgfmathsetmacro{\f}{0.5}
+\pgfmathsetmacro{\h}{1}
+\pgfmathsetmacro{\angA}{90}
+\pgfmathsetmacro{\angB}{-100}
+\pgfmathsetmacro{\angC}{30}
+\pgfmathsetmacro{\angD}{-135}
+\pgfmathsetmacro{\angE}{20}
+\pgfmathsetmacro{\angF}{130}
+\pgfmathsetmacro{\angX}{-117}
+\pgfmathsetmacro{\angY}{-27}
+\draw(\a,\b)coordinate(ka) to [out=\angA,in=\angB] coordinate[pos=0.75](kL)++(\c,\d)coordinate(kc);
+\draw(\a+\e,\b-\f)coordinate(kb) to [out=\angC,in=\angD] coordinate[pos=0.75](kR)++(\c,\d)coordinate(kd);
+\draw(ka) to [out=\angE,in=\angF](kb);
+\draw(kc) to [out=\angE,in=\angF](kd);
+\draw[thick](kL) to [out=\angE,in=\angF]coordinate[pos=0.5](kM)(kR);
+\draw[gray](kM)--++(30:1)node[black,above,xshift=2ex]{$z=f(x,y)$};
+\draw(ka)--++(0,-\h)coordinate(kka);
+\draw(kb)--++(0,-\h)coordinate(kkb);
+\draw(kc)--++(0,-\h)coordinate(kkc);
+\draw(kd)--++(0,-\h)coordinate(kkd);
+\draw(kL)--++(0,-\h)coordinate(kkL);
+\draw(kR)--++(0,-\h)coordinate(kkR);
+\draw(kka)--(kkb);
+\draw(kkc)--(kkd);
+\draw(kkL)--(kkR);
+\draw[thick](kka)to [out=\angA,in=\angB] coordinate[pos=0.25](kLeft)(kkc);
+\draw[thick](kkb)to [out=\angC,in=\angD]coordinate[pos=0.25](kRight) (kkd);
+\draw(kRight)node[pin=20:{$y=g_2(x)$}]{};
+\draw[gray](kLeft)--++(135:0.75)node[above,black,xshift=-2ex]{$y=g_1(x)$};
+\draw[fill=lgray,opacity=0.5](kL) to [out=\angE,in=\angF](kR)--(kkR)--(kkL)--(kL);
+\draw($(kka)!0.5!(kkb)$)node[above]{$R$};
+\draw[dashed](kka)--++(\angY:-2)node[left]{$b$};
+\draw[dashed](kkc)--++(\angY:-2)node[left]{$a$};
+\draw[dashed](kkL)--++(\angY:-2)node[left]{$x$};
+\draw[-latex](kkc)++(\angY:-2)--++(\angX:2.75)node[below]{$x$};
+\draw[-latex](kkc)++(\angY:-2)--++(\angX:-1)--++(\angY:1)node[right]{$y$};
+\draw[-latex](kkc)++(\angY:-2)++(\angX:-1)--++(0,0.5)node[left]{$z$};
+\end{tikzpicture}
+\caption{
+سایہ دار انتصابی ٹکیہ  کا رقبہ \عددی{S(x)=\int_{g_1(x)}^{g_2(x)}f(x,y)\dif y} ہو گا۔ اس ٹھوس  جسم کا حجم تلاش کرنے کے لئے ہم  \عددی{x=a} سے \عددی{x=b} تک \عددی{S(x)} کا تکمل لیں گے۔ 
+}
+\label{شکل_بالکثرت_انتصابی_ٹکیہ_کا_رقبہ}
+\end{figure}
+
+
+اگر شکل \حوالہ{شکل_بالکثرت_انتصابی_ٹکیہ_کا_رقبہ}  میں  مستوی \عددی{xy} میں دکھائے گئے خطہ کی طرح \عددی{R}ہو  اور حجم کی   "بالائی"   حد \عددی{y=g_2(x)}،  "زیریں"  حد \عددی{y=g_1(x)}، اور اطراف کے حدود  خط \عددی{x=a} اور خط  \عددی{x=b} ہوں تب  ہم حجم \عددی{H}  کو  ٹکیوں کی ترکیب سے حاصل کر سکتے ہیں۔ ہم پہلے رقبہ عمودی تراش تلاش کرتے ہیں
 \begin{align*}
 S(x)=\int_{y=g_1(x)}^{y=g_2(x)} f(x,y)\dif y
 \end{align*}
@@ -162,7 +414,51 @@ S(x)=\int_{y=g_1(x)}^{y=g_2(x)} f(x,y)\dif y
 H=\int_a^b S(x)\dif x=\int_a^b\int_{g_1(x)}^{g_2(x)} f(x,y)\dif y\dif x
 \end{align}
 
-اسی طرح اگر  شکل میں  دکھائے گئے خطہ کی طرح \عددی{R} ہو اور حجم کے حدود \عددی{x=h_2(y)}، \عددی{x=h_1(y)} اور خط \عددی{y=c} اور \عددی{y=d} ہوں تب  ٹکیوں کی ترکیب سے بار بار تکمل سے حجم تلاش کیا جا سکتا ہے:
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\x,\y)=\x;fy(\x,\y)=\y;fz(\x,\y)=1-(\y-1)^2;}]
+\pgfmathsetmacro{\a}{0}
+\pgfmathsetmacro{\b}{0}
+\pgfmathsetmacro{\c}{2}
+\pgfmathsetmacro{\d}{1}
+\pgfmathsetmacro{\e}{1}
+\pgfmathsetmacro{\f}{1}
+\pgfmathsetmacro{\h}{1}
+\pgfmathsetmacro{\angA}{10}
+\pgfmathsetmacro{\angB}{170}
+\pgfmathsetmacro{\angC}{-10}
+\pgfmathsetmacro{\angD}{100}
+\pgfmathsetmacro{\angE}{20}
+\pgfmathsetmacro{\angF}{130}
+\pgfmathsetmacro{\angX}{-120}
+\draw[thick](\a,\b)coordinate(ka)to [out=\angA,in=\angB]coordinate[pos=0.4](kFL)coordinate[pos=0.75](kFM)++(\c,-\d)coordinate(kb)++(\angX:-2)coordinate(kd);
+\draw[gray](kFM)--++(-135:0.5)node[below,black]{$x=h_2(y)$};
+\draw[thick](\a,\b)++(\angX:-0.75)coordinate(kc)to [out=\angC,in=\angD]coordinate[pos=0.85](kBM)coordinate[pos=0.325](kBL)(kd);
+\draw[gray](kBM)--++(20:0.75)node[right,black]{$x=h_1(y)$};
+\draw(kb)--++(0,\h)coordinate(kf);
+\draw(ka)--++(0,1/2*\h)coordinate(ke);
+\draw(kd)--++(0,\h)coordinate(kh);
+\draw(ke) to [out=-\angA,in=-\angB]coordinate[pos=0.4](kFH)(kf);
+\draw(ka)--(kc)--++(0,1/2*\h)coordinate(kg) to [out=-\angA,in=-\angB]coordinate[pos=0.4](kBH)(kh);
+\draw (kb)--(kd);
+\draw(ke)to [out=50,in=-170](kg)    (kf)to [out=40,in=-160](kh);
+\draw[fill=lgray,opacity=0.5](kFL)--(kFH) to [out=45,in=-165](kBH)--(kBL)--(kFL); 
+\draw[thick](kFH) to [out=45,in=-165]coordinate[pos=0.75](kM)(kBH);
+\draw[gray](kM)--++(135:0.75)node[above,xshift=-2ex,black,font=\scriptsize]{$z=f(x,y)$};
+\draw[latex-latex](\a,\b)++(-1.5,0)node[below]{$x$}--++(\angX:-2.5)coordinate(kO)node[left]{$O$}--++(5,0)node[right]{$y$};
+\draw[-latex](kO)--++(0,1)node[left]{$z$};
+\draw[dashed](kc)--++(\angX:-1.75)node[above]{$c$};
+\draw[dashed](kd)--++(\angX:-1.6)node[above]{$d$};
+\draw[dashed](kBL)--++(\angX:-1.55)node[above]{$x$};
+\end{tikzpicture}
+\caption{
+سایہ دار ٹکیہ کا رقبہ \عددی{S(y)=\int_{h_1(y)}^{h_2(y)}f(x,y)\dif x} ہے۔ \\
+ٹھوس جسم کا حجم \عددی{\int_c^dS(y)\dif y=\int_c^d\int_{h_1(y)}^{h_2(y)}f(x,y)\dif x\dif y} ہو گا۔
+}
+\label{شکل_بالکثرت_انتصابی_ٹکیہ_ٹھوس_حجم}
+\end{figure}
+
+اسی طرح اگر  شکل \حوالہ{شکل_بالکثرت_انتصابی_ٹکیہ_ٹھوس_حجم} میں  دکھائے گئے خطہ کی طرح \عددی{R} ہو اور حجم کے حدود \عددی{x=h_2(y)}، \عددی{x=h_1(y)} اور خط \عددی{y=c} اور \عددی{y=d} ہوں تب  ٹکیوں کی ترکیب سے بار بار تکمل سے حجم تلاش کیا جا سکتا ہے:
 \begin{align}\label{مساوات_بالکثرت_حجم_ٹکیاں_ب}
 H=\int_c^d\int_{h_1(y)}^{h_2(y)}f(x,y)\dif x\dif y
 \end{align}
@@ -187,18 +483,75 @@ H=\int_c^d\int_{h_1(y)}^{h_2(y)}f(x,y)\dif x\dif y
 \انتہا{مسئلہ}
 %===========
 
-\ابتدا{مثال}
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x,\y)=3-\x-\y;}]
+\pgfmathsetmacro{\m}{0.6}
+\pgfmathsetmacro{\n}{0.25}
+\pgfmathsetmacro{\a}{0.2}
+\begin{axis}[clip=false,small,axis lines=center,view={100}{15},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true, xlabel={$x$}, ylabel={$y$}, zlabel={$z$}, xtick={\empty},ytick={\empty},ztick={\empty}, xmin=0,ymin=0,zmin=0,xmax=1.5,ymax=1.125,xlabel style={anchor=north}, ylabel style={anchor=west},zlabel style={anchor=south}]
+\addplot3[fill=llgray,opacity=0.5]coordinates{(0,0,0)(1,1,0)(1,0,0)};
+\addplot3[fill=lgray,opacity=0.5]coordinates {(0,0,3)(1,0,2)(1,1,1) (0,0,3)}node[pos=0.9,pin={[black,right]20:{$\begin{aligned}z&=f(x,y)\\ &=3-x-y\end{aligned}$}}]{};
+\addplot3[]coordinates{(0,0,0)(1.25,1.25,0)}node[below]{$y=x$};
+\addplot3[]coordinates {(1,0,0)(1,0,2)}node[pos=0,left,yshift=0.5ex]{$(1,0,0)$}node[left]{$(1,0,2)$};
+\addplot3[]coordinates {(1,1,0)(1,1,1)}node[pos=0,right,yshift=1ex]{$(1,1,0)$}node[right,yshift=1ex]{$(1,1,1)$};
+\addplot3[]coordinates{(0,0,3)}node[left]{$(0,0,3)$};
+\addplot3[]coordinates{(0.6,0.6,0)}node[pin=-135:{$R$}]{};
+\addplot3[]coordinates{(\m,\n,{f(\m,\n)})(\m+\a,\n,{f(\m+\a,\n)})(\m+\a,\n+\a,{f(\m+\a,\n+\a)})(\m,\n+\a,{f(\m,\n+\a)})(\m,\n,{f(\m,\n)})};
+\addplot3[]coordinates{(\m,\n,0)(\m+\a,\n,0)(\m+\a,\n+\a,0)(\m,\n+\a,0)(\m,\n,0)};
+\addplot3[]coordinates{(\m,\n,{f(\m,\n)})(\m,\n,0)};
+\addplot3[]coordinates{(\m+\a,\n,{f(\m+\a,\n)})(\m+\a,\n,0)};
+\addplot3[]coordinates{(\m+\a,\n+\a,{f(\m+\a,\n+\a)})(\m+\a,\n+\a,0)};
+\addplot3[]coordinates{(\m,\n+\a,{f(\m,\n+\a)})(\m,\n+\a,0)};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}[scale=2,font=\small]
+\fill[lgray](0,0)--(1,0)--(1,1)--(0,0);
+\draw[-latex](0,0)--(1.25,0)node[below]{$x$};
+\draw[-latex](0,0)--(0,1.25)node[right]{$y$};
+\draw(0,0)--(1.25,1.25)node[above,xshift=-1ex]{$y=x$};
+\draw(1,0)node[below]{$1$}--(1,1.125)node[left]{$x=1$};
+\draw[thick](0.6,0)node[below,xshift=-1ex]{$y=0$}--(0.6,0.6);
+\draw[gray](0.6,0.6)++(0,0.02)--++(-0.1,0.125)node[above,black]{$y=x$};
+\draw(0.4,0)node[above]{$R$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.25\textwidth}
+\centering
+\begin{tikzpicture}[scale=2,font=\small]
+\fill[lgray](0,0)--(1,0)--(1,1)--(0,0);
+\draw[-latex](0,0)--(1.25,0)node[below]{$x$};
+\draw[-latex](0,0)--(0,1.25)node[right]{$y$};
+\draw(0,0)--(1.25,1.25)node[above,xshift=-1ex]{$y=x$};
+\draw(1,0)node[below]{$1$}--(1,1.125)node[left]{$x=1$};
+\draw[thick](0.6,0.6)node[left]{$x=y$}--(1,0.6)node[right]{$x=1$};
+\draw(0.5,0)node[above]{$R$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{منشور کا حجم (مثال \حوالہ{مثال_بالکثرت_فوبینی_مثلث})}
+\label{شکل_مثال_بالکثرت_فوبینی_مثلث}
+\end{figure}
+
+\ابتدا{مثال}\شناخت{مثال_بالکثرت_فوبینی_مثلث}
 ایک منشور جس کا قاعدہ  مستوی \عددی{xy} میں ایک مثلث   ہو،  جس کے اضلاع محور \عددی{x}، خط \عددی{x=1} اور خط \عددی{y=x} ہوں اور جس کا راس  درج ذیل مستوی میں پایا جاتا ہو، کا حجم تلاش کریں۔
 \begin{align*}
 z=f(x,y)=3-x-y
 \end{align*}
 حل:\quad
-ہم دیکھتے ہیں کہ  \عددی{0} اور \عددی{1} تک کسی بھی  \عددی{x} کے لئے \عددی{y} کی قیمت \عددی{y=0} تا \عددی{y=x} ہو گی۔ یوں درج ذیل ہو گا۔
+ہم دیکھتے ہیں (شکل \حوالہ{شکل_مثال_بالکثرت_فوبینی_مثلث}-ا)  کہ  \عددی{0} اور \عددی{1} تک کسی بھی  \عددی{x} کے لئے \عددی{y} کی قیمت \عددی{y=0} تا \عددی{y=x} ہو گی (شکل \حوالہ{شکل_مثال_بالکثرت_فوبینی_مثلث}-ب)۔ یوں درج ذیل ہو گا۔
 \begin{align*}
 H&=\int_0^1\int_0^x(3-x-y)\dif y\dif x=\int_0^1\big[3y-xy-\frac{y^2}{2}\big]_{y=0}^{y=x}\dif x\\
 &=\int_0^1\big(3x-\frac{3x^2}{2}\big)\dif x=\big[\frac{3x^2}{2}-\frac{x^3}{2}\big]_{x=0}^{x=1}=1
 \end{align*}
-تکملات لینے کی ترتیب الٹ کرنے سے درج ذیل  ہو گا۔
+تکملات  کی ترتیب الٹ کرنے سے درج ذیل  ہو گا (شکل \حوالہ{شکل_مثال_بالکثرت_فوبینی_مثلث}-ج)۔
 \begin{align*}
 H&=\int_0^1\int_y^1(3-x-y)\dif x\dif y=\int_0^1\big[3x-\frac{x^2}{2}-xy\big]_{x=y}^{x=1}\dif y\\
 &=\int_0^1\big(3-\frac{1}{2}-y-3y+\frac{y^2}{2}+y^2\big)\dif y\\
@@ -210,13 +563,26 @@ H&=\int_0^1\int_y^1(3-x-y)\dif x\dif y=\int_0^1\big[3x-\frac{x^2}{2}-xy\big]_{x=
 
 اگرچہ مسئلہ فوبینی ہمیں یقین دھیانی  کرتا ہے کہ دوہرا تکمل کی قیمت    بار بار تکمل میں    کسی بھی ترتیب سے  تکملات لیتے ہوئے حاصل کیا جا سکتا ہے، حقیقت میں ایک تکمل کا حصول  دوسرے سے آسان ہو سکتا ہے۔ اگلی مثال میں آپ ایسی صورت حال دیکھتے ہیں۔
 
-\ابتدا{مثال}
+\begin{figure}
+\centering
+\begin{tikzpicture}[scale=2,font=\small]
+\fill[lgray](0,0)--(1,0)--(1,1)--(0,0);
+\draw[-latex](0,0)--(1.5,0)node[right]{$x$};
+\draw[-latex](0,0)--(0,1.25)node[left]{$y$};
+\draw(0,0)node[left]{$O$}--(1.25,1.25)node[right]{$y=x$};
+\draw(1,0)node[below]{$1$}--(1,1.125)node[above,xshift=-2ex]{$x=1$};
+\draw(0.5,0)node[above]{$R$};
+\end{tikzpicture}
+\caption{تکمل کا دائرہ کار برائے مثال \حوالہ{مثال_بالکثرت_غیر_بنیادی_تفاعل}}
+\label{شکل_مثال_بالکثرت_غیر_بنیادی_تفاعل}
+\end{figure}
+\ابتدا{مثال}\شناخت{مثال_بالکثرت_غیر_بنیادی_تفاعل}
 مستوی \عددی{xy} میں محور \عددی{x}، خط \عددی{x=1} اور خط \عددی{y=x} کے بیچ خطہ \عددی{R} ہے۔ درج ذیل کی قیمت تلاش کریں۔
 \begin{align*}
 \iint\limits_R \frac{\sin x}{x}\dif S
 \end{align*}
 حل:\quad
-تکمل کا خطہ شکل میں دکھایا گیا ہے۔ اگر ہم پہلے \عددی{y} اور بعد میں \عددی{x} کے لحاظ سے تکمل لیں تب
+تکمل کا خطہ شکل \حوالہ{شکل_مثال_بالکثرت_غیر_بنیادی_تفاعل}  میں دکھایا گیا ہے۔ اگر ہم پہلے \عددی{y} اور بعد میں \عددی{x} کے لحاظ سے تکمل لیں تب
 \begin{align*}
 \int_0^1\big(\int_0^x \frac{\sin x}{x}\dif y\big)\dif x&=\int_0^1\big(y\frac{\sin x}{x}\big]_{y=0}^{y=x}\big)\dif x=\int_0^1\sin x\dif x\\
 &=-\cos(1)+1\approx 0.46
@@ -230,6 +596,36 @@ H&=\int_0^1\int_y^1(3-x-y)\dif x\dif y=\int_0^1\big[3x-\frac{x^2}{2}-xy\big]_{x=
 قبل از وقت یہ جاننا ممکن نہیں    کہ کس ترتیب سے تکمل لینے سے ہمیں آسانی ہو گی لہٰذا  اس پر زیادہ  مت سوچیں اور کسی  ایک ترتیب سے حل کرنے کی کوشش کریں اور اگر  مشکلات  پیش آئیں تب تکمل کی ترتیب الٹ کر کے دوبارہ کوشش کریں۔
 \انتہا{مثال}
 %================
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);}]
+\begin{axis}[axis equal,clip=false,small,axis lines=center,enlargelimits=true, xlabel={$x$}, ylabel={$y$}, zlabel={$z$}, xtick={1},ytick={1},ztick={\empty},xlabel style={anchor=west}, ylabel style={anchor=south},zlabel style={anchor=south},xmin=-0.125]
+\addplot[thick,fill=lgray,domain=0:90,variable=\t]({fx(1,t)},{fy(1,t)})node[pos=0.75,above right]{$x^2+y^2=1$}--(1,0)node[pos=0.25,above right]{$R$}node[pos=0.5,sloped,below]{$x+y=1$};
+\addplot[]coordinates{(0,0)}node[below left]{$0$};
+\end{axis}
+\end{tikzpicture}
+\caption{تکمل کے خطہ کا خاکہ بنائیں اور تحدیدی منحنیات کی نشاندہی کریں۔}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);}]
+\begin{axis}[axis equal,clip=false,small,axis lines=center,enlargelimits=true, xlabel={$x$}, ylabel={$y$}, zlabel={$z$}, xtick={1},ytick={1},ztick={\empty},xlabel style={anchor=west}, ylabel style={anchor=south},zlabel style={anchor=south},xmin=-0.125]
+\addplot[thick,fill=lgray,domain=0:90,variable=\t]({fx(1,t)},{fy(1,t)})--(1,0)node[pos=0.3,above right]{$R$};
+\addplot[-latex]coordinates {(0.6,-0.125)(0.6,1)}node[pos=0.25,left]{$L$};
+\addplot[]coordinates{(0.6,0)}node[below right]{$x$};
+\addplot[]coordinates {(0.6,0.4)}node[pin={[align=center,pin distance=1cm]10:{\text{دخول}\\  $y=1-x$}}]{};
+\addplot[]coordinates {(0.6,0.8)}node[pin={[align=center,pin distance=0.25cm]45:{\text{خروج}\\  $y=\sqrt{1-x^2}$}}]{};
+\addplot[]coordinates{(0,0)}node[below left]{$0$}node[pin={[align=center]-70:{\RL{\text{کم سے کم}}}\\$x$}]{};
+\addplot[]coordinates{(1,0)}node[pin={[align=center]-110:{\RL{\text{زیادہ سے زیادہ}}\\$x$}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{خطہ \عددی{R} میں جس نقاط پر انتصابی لکیر داخل اور خارج ہوتی ہے، ان کی نشاندہی کریں۔یہی  تکمل کے \عددی{y} حد  ہوں گے۔تمام    انتصابی لکیروں کو شامل کرنے والے \عددی{x} حدود کی نشاندہی کریں۔ یہی تکمل کے \عددی{x} حد ہوں گے۔}
+\end{subfigure}
+\caption{تکمل کے حدوں کی تلاش۔}
+\label{شکل_بالکثرت_تکمل_کے_حدوں_کی_تلاش}
+\end{figure}
 
 \جزوحصہء{تکمل کے حدود کی تلاش}
 دوہرا تکمل کی قیمت کے حصول میں سب سے مشکل کام تکمل کے حد تلاش کرنا ہو سکتا ہے۔ خوش قسمتی سے   ایک  اچھا  طریقہ کار موجود ہے جس پر ہم چل سکتے ہیں۔ 
@@ -239,33 +635,83 @@ H&=\int_0^1\int_y^1(3-x-y)\dif x\dif y=\int_0^1\big[3x-\frac{x^2}{2}-xy\big]_{x=
 \begin{enumerate}[1.]
 \item
 \ترچھا{خاکہ:}\quad
-تکمل کے  خطہ کا خاکہ بنائیں اور اس کی سرحدی منحنیات   پر نام و نشان لگائیں۔
+تکمل کے  خطہ کا خاکہ بنائیں اور اس کی سرحدی منحنیات   پر نام و نشان لگائیں (شکل \حوالہ{شکل_بالکثرت_تکمل_کے_حدوں_کی_تلاش}-ا)۔
 \item
 \ترچھا{تکمل کے \عددی{y} حد:}\quad
-بڑھتی \عددی{y} رخ خطہ \عددی{R} سے گزرتا ہوا انتصابی  خط \عددی{L} کھینچیں۔ جن مقامات  پر \عددی{L}  اس خطہ میں داخل   اور اس سے     خارج ہوتا ہے، یہ تکمل کے \عددی{y} حد ہوں گے۔
+بڑھتی \عددی{y} رخ خطہ \عددی{R} سے گزرتا ہوا انتصابی  خط \عددی{L} کھینچیں۔ جن مقامات  پر \عددی{L}  اس خطہ میں داخل   اور اس سے     خارج ہوتا ہے، یہ تکمل کے \عددی{y} حد ہوں گے (شکل \حوالہ{شکل_بالکثرت_تکمل_کے_حدوں_کی_تلاش}-ب)۔
 \item
  \ترچھا{تکمل کے \عددی{x} حد:}\quad
-وہ \عددی{x} حد منتخب کریں جن میں \عددی{R} سے گزرتی ہوئی تمام انتصابی  لکیریں شامل ہوں۔ تکمل درج ذیل ہو گا۔
+وہ \عددی{x} حد منتخب کریں جن میں \عددی{R} سے گزرتی ہوئی تمام انتصابی  لکیریں شامل ہوں (شکل \حوالہ{شکل_بالکثرت_تکمل_کے_حدوں_کی_تلاش}-ب)۔ تکمل درج ذیل ہو گا۔
 \begin{align*}
 \iint\limits_R f(x,y)\dif S=\int_{x=0}^{x=1}\int_{y=1-x}^{y=\sqrt{1-x^2}}f(x,y)\dif y\dif x
 \end{align*}
 \end{enumerate}
 
-(ب) اسی دوہرا تکمل کو   بطور  بار بار تکمل حل کرتے ہوئے، ترتیب الٹ کرنے سے، انتصابی لکیروں کی بجائے  افقی لکیریں استعمال کریں۔ تکمل درج ذیل ہو گا۔
+(ب) اسی دوہرا تکمل کو   بطور  بار بار تکمل حل کرتے ہوئے، ترتیب الٹ کرنے سے، انتصابی لکیروں کی بجائے  افقی لکیریں استعمال کریں (شکل \حوالہ{شکل_بالکثرت_بار_بار_تکمل_الٹ_ترتیب})۔ تکمل درج ذیل ہو گا۔
 \begin{align*}
 \iint\limits_R f(x,y)\dif S=\int_0^1\int_{1-y}^{\sqrt{1-y^2}}f(x,y)\dif x\dif y
 \end{align*} 
 
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);}]
+\begin{axis}[axis equal,clip=false,small,axis lines=center,enlargelimits=true, xlabel={$x$}, ylabel={$y$}, zlabel={$z$}, xtick={1},ytick={1},ztick={\empty},xlabel style={anchor=west}, ylabel style={anchor=south},zlabel style={anchor=south},xmin=-0.125]
+\addplot[thick,fill=lgray,domain=0:90,variable=\t]({fx(1,t)},{fy(1,t)})--(1,0)node[pos=0.3,above right]{$R$};
+\addplot[-latex]coordinates {(-0.125,0.6)(1.25,0.6)}node[pos=0,left]{$y$};
+\addplot[]coordinates{(0.6,0)}node[below right]{$x$};
+\addplot[]coordinates {(0.4,0.6)}node[pin={[align=center,pin distance=1cm]60:{\text{دخول}\\  $x=1-y$}}]{};
+\addplot[]coordinates {(0.8,0.6)}node[pin={[align=center,pin distance=0.5cm]10:{\text{خروج}\\  $x=\sqrt{1-y^2}$}}]{};
+\addplot[]coordinates{(0,0)}node[below left]{$0$}node[pin={[align=center]170:{\RL{\text{کم سے کم}}}\\$y$}]{};
+\addplot[]coordinates{(0,1)}node[pin={[align=center]-170:{\RL{\text{زیادہ سے زیادہ}}\\$y$}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{بار بار تکمل میں ترتیب الٹ کرنے سے  \عددی{R} پر افقی لکیریں کھینچی جائیں گی۔}
+\label{شکل_بالکثرت_بار_بار_تکمل_الٹ_ترتیب}
+\end{figure}
 %===============
-\ابتدا{مثال}
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=2*\x;g(\x)=(\x)^2;}]
+\begin{axis}[clip=false,small,axis lines=center,enlargelimits=true, xlabel={$x$}, ylabel={$y$}, zlabel={$z$}, xtick={2},ytick={4},ztick={\empty},xlabel style={anchor=west}, ylabel style={anchor=south},zlabel style={anchor=south}]
+\addplot[name path=kL,domain=0:2.15](x,{f(x)})node[pos=0.5,above left]{$y=2x$};
+\addplot[name path=kR,domain=0:2.15](x,{g(x)})node[pos=0.5,below right]{$y=x^2$};
+\addplot[lgray] fill between[of=kL and kR,soft clip={domain=0:2}];
+\addplot[]coordinates{(2,4)}node[below right]{$(2,4)$};
+\addplot[]coordinates{(0,0)}node[below left]{$0$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={f(\x)=2*\x;g(\x)=(\x)^2;}]
+\begin{axis}[clip=false,small,axis lines=center,enlargelimits=true, xlabel={$x$}, ylabel={$y$}, zlabel={$z$}, xtick={2},ytick={4},ztick={\empty},xlabel style={anchor=west}, ylabel style={anchor=south},zlabel style={anchor=south}]
+\addplot[name path=kL,domain=0:2.15](x,{f(x)});
+\addplot[name path=kR,domain=0:2.15](x,{g(x)});
+\addplot[lgray] fill between[of=kL and kR,soft clip={domain=0:2}];
+\addplot[]coordinates{(2,4)}node[below right]{$(2,4)$};
+\addplot[-latex]coordinates {(-0.125,2)(2.5,2)};
+\addplot[]coordinates{(1,2)}node[pin=110:{$x=\frac{y}{2}$}]{};
+\addplot[]coordinates{(sqrt(2),2)}node[pin=20:{$x=\sqrt{y}$}]{};
+\addplot[]coordinates{(0,0)}node[below left]{$0$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{دو منحنیات کے بیچ خطہ (مثال \حوالہ{مثال_بالکثرت_منحنیات_بیچ_خطہ_دوہرا_تکمل})}
+\label{شکل_مثال_بالکثرت_منحنیات_بیچ_خطہ_دوہرا_تکمل}
+\end{figure}
+\ابتدا{مثال}\شناخت{مثال_بالکثرت_منحنیات_بیچ_خطہ_دوہرا_تکمل}
 درج ذیل   تکمل کے خطہ تکمل  کا خاکہ  بنائیں اور تکمل کی ترتیب الٹ کرتے ہوئے اس ما مساوی تکمل لکھیں۔
 \begin{align*}
 \int_0^2\int_{x^2}^{2x}(4x+2)\dif y\dif x
 \end{align*}
 حل:\quad
-تکمل کا خطہ،  عدم مساوات \عددی{x^2\le y\le 2x}  اور \عددی{0\le x\le 2} دیتے ہیں۔ یوں اس خطہ کے حد، خط \عددی{x=0}،  خط  \عددی{x=2} اور منحنیات \عددی{y=x^2} اور \عددی{y=2x} ہوں گی۔
+تکمل کا خطہ،  عدم مساوات \عددی{x^2\le y\le 2x}  اور \عددی{0\le x\le 2} دیتے ہیں۔ یوں اس خطہ کے حد، خط \عددی{x=0}،  خط  \عددی{x=2} اور منحنیات \عددی{y=x^2} اور \عددی{y=2x} ہوں گی (شکل \حوالہ{شکل_مثال_بالکثرت_منحنیات_بیچ_خطہ_دوہرا_تکمل}-ا)۔
 
-تکمل کی ترتیب الٹ کرتے ہوئے ہم اس خطہ  پر افقی لکیریں کھینچتے ہیں۔ یہ لکیریں اس خطہ میں \عددی{x=\tfrac{y}{2}} پر داخلی ہوتی ہیں اور \عددی{x=\sqrt{y}} پر اس سے خارج ہوتی ہیں۔ ان تمام افقی لکیریں کو شامل کرنے کے لئے ہمیں \عددی{y=0} سے \عددی{y=4} تک لینا ہو گا۔ یوں  متبادل تکمل درج ذیل ہو گا۔
+تکمل کی ترتیب الٹ کرتے ہوئے ہم اس خطہ  پر افقی لکیریں کھینچتے ہیں۔ یہ لکیریں اس خطہ میں \عددی{x=\tfrac{y}{2}} پر داخلی ہوتی ہیں اور \عددی{x=\sqrt{y}} پر اس سے خارج ہوتی ہیں۔ ان تمام افقی لکیریں کو شامل کرنے کے لئے ہمیں \عددی{y=0} سے \عددی{y=4} تک لینا ہو گا (شکل \حوالہ{شکل_مثال_بالکثرت_منحنیات_بیچ_خطہ_دوہرا_تکمل}-ب)۔ یوں  متبادل تکمل درج ذیل ہو گا۔
 \begin{align*}
 \int_0^4\int_{y/2}^{\sqrt{y}}(4x+2)\dif x\dif y
 \end{align*}
