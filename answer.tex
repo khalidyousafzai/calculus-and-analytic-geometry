@@ -1,0 +1,238 @@
+ {\urduTechTermsfont {حصہ}} 14.1\hskip 1em\relax {\urduTechTermsfont {صفحہ}} 1677
+\begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
+\item [
+1)
+]
+ $16$ \begin {center} \begin {tikzpicture}[font=\scriptsize ] \pgfmathsetmacro {\a }{2.5} \pgfmathsetmacro {\b }{1.5} \draw [-latex](0,0)--(3,0)node[right]{$x$}; \draw [-latex](0,0)--(0,2)node[above]{$y$}; \draw [fill=lgray](0,0) rectangle++(\a ,\b )node[above right]{$(3,2)$}; \draw (0,0)node[below left]{$0$} (\a ,0)node[below]{$3$} (0,\b )node[left]{$2$}; \end {tikzpicture} \end {center} 
+\item [
+3)
+]
+ $1$ \begin {center} \begin {tikzpicture}[font=\scriptsize ] \pgfmathsetmacro {\a }{2} \pgfmathsetmacro {\b }{1} \draw [-latex](-1.25,0)--(1.5,0)node[right]{$x$}; \draw [-latex](0,-1.25)--(0,0.5)node[above]{$y$}; \draw [fill=lgray](-1,0) rectangle++(\a ,-\b )node[right]{$(1,-1)$}; \draw (-1,0)node[below left]{$-1$} (-1,-\b )node[left]{$(-1,-1)$} (1,0)node[below right]{$1$}; \end {tikzpicture} \end {center} 
+\item [
+5)
+]
+ $\frac {\pi ^2}{2}+2$ \begin {center} \begin {tikzpicture}[font=\scriptsize ] \pgfmathsetmacro {\a }{1} \pgfmathsetmacro {\b }{1} \draw [-latex](0,0)--(1.5,0)node[right]{$x$}; \draw [-latex](0,0)--(0,1.5)node[above]{$y$}; \draw [fill=lgray](0,0)--(\a ,\b )node[right]{$(\pi ,\pi )$}--(\a ,0)node[below]{$\pi $}--cycle; \draw (0,1)node[left]{$\pi $}--++(0.1,0) (0,0)node[below left]{$0$}; \end {tikzpicture} \end {center} 
+\item [
+7)
+]
+ $8\ln 8-16+e$ \begin {center} \begin {tikzpicture}[font=\scriptsize ,declare function={f(\y )=ln(\y );}] \pgfmathsetmacro {\a }{ln(8)} \pgfmathsetmacro {\b }{ln(ln(8))} \begin {axis}[axis on top,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\b },xticklabels={$\ln \ln 8$},ytick={1,\a },yticklabels={$1$,$\ln 8$},ymin=0,enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xmax=1.2] \addplot [name path=kf,domain=1:ln(8)]({f(x)},{x})node[pos=0.25,below right]{$x=\ln y$}node[right]{$(\ln \ln 8,\ln 8)$}; \addplot [draw=none,name path=ky]coordinates{(0,1)(0,\a )}; \addplot []coordinates{(0,\a )(\b ,\a )}; \addplot [lgray]fill between[of={kf and ky}]; \end {axis} \end {tikzpicture} \end {center} 
+\item [
+9)
+]
+ $e-2$ \begin {center} \begin {tikzpicture}[font=\scriptsize ,declare function={f(\y )=(\y )^2;}] \pgfmathsetmacro {\a }{0} \pgfmathsetmacro {\b }{1} \begin {axis}[axis on top,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1},xticklabels={$1$},ytick={1},yticklabels={$1$}, ymin=0,enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xmax=1.1] \addplot [name path=kf,domain=0:1]({f(x)},{x})node[pos=0.5,below right]{$x=y^2$}node[right]{$(1,1)$}; \addplot [draw=none,name path=ky]coordinates{(0,0)(0,1)}; \addplot []coordinates{(0,1)(1,1)}; \addplot [lgray]fill between[of={kf and ky}]; \end {axis} \end {tikzpicture} \end {center} 
+\item [
+11)
+]
+ $\frac {3}{2}\ln 2$ 
+\item [
+13)
+]
+ $\frac {1}{6}$ 
+\item [
+15)
+]
+ $-\frac {1}{10}$ 
+\item [
+17)
+]
+ $8$ \begin {center} \begin {tikzpicture}[font=\scriptsize ,declare function={f(\y )=ln(\y );}] \pgfmathsetmacro {\a }{ln(8)} \pgfmathsetmacro {\b }{ln(ln(8))} \begin {axis}[clip=false,axis on top,small,axis lines=middle,xlabel={$p$},ylabel={$v$},xtick={-2,2},xticklabels={$-2$,$2$},ytick={-2}, yticklabels={$-2$},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}] \addplot [fill=lgray]coordinates{(0,0)(2,-2)(-2,-2)(0,0)}; \addplot []coordinates{(-2,-2)}node[left]{$(-2,-2)$}; \addplot []coordinates{(2,-2)}node[right]{$(2,-2)$}; \addplot []coordinates{(-1,-1)}node[above left]{$v=p$}; \addplot []coordinates{(1,-1)}node[above right]{$v=-p$}; \end {axis} \end {tikzpicture} \end {center} 
+\item [
+19)
+]
+ $2\pi $ \begin {center} \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=1/(cos(deg(\x )));}] \pgfmathsetmacro {\a }{-pi/3} \pgfmathsetmacro {\b }{pi/3} \begin {axis}[clip=false,axis on top,small,axis lines=middle,xlabel={$t$},ylabel={$u$},xtick={\a ,\b },xticklabels={$-\tfrac {\pi }{3}$,$\tfrac {\pi }{3}$},ytick={1,2},yticklabels={$1$,$2$}, ymin=0,enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xmax=1.1] \addplot [name path=kf,domain=\a :\b ](x,{f(x)})node[pos=0.75,above left]{$u=\sec t$}node[above,pos=0]{$(-\tfrac {\pi }{3},2)$}node[above]{$(\tfrac {\pi }{3},2)$}; \addplot [draw=none,name path=kx]coordinates{(\a ,0)(\b ,0)}; \addplot [lgray]fill between[of={kf and kx}]; \addplot []coordinates{(\a ,0)(\a ,2)}; \addplot []coordinates{(\b ,0)(\b ,2)}; \end {axis} \end {tikzpicture} \end {center} 
+\item [
+21)
+]
+ $\int _2^4\int _0^{(4-y)/2}\dif x\dif y$ \begin {center} \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=4-2*\x ;}] \pgfmathsetmacro {\a }{0} \pgfmathsetmacro {\b }{1} \begin {axis}[clip=false,axis on top,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1},xticklabels={$1$},ytick={2,4},yticklabels={$2$,$4$}, ymin=0,enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xmax=1.1] \addplot [name path=kf,domain=\a :\b ](x,{f(x)})node[pos=0.5,above right]{$y=4-2x$}node[right]{$(1,2)$}; \addplot [name path=kx]coordinates{(0,2)(1,2)}; \addplot [lgray]fill between[of={kf and kx}]; \end {axis} \end {tikzpicture} \end {center} 
+\item [
+23)
+]
+ $\int _0^1\int _{x^2}^{x}\dif y\dif x$ \begin {center} \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=\x ^2;g(\x )=\x ;}] \pgfmathsetmacro {\a }{0} \pgfmathsetmacro {\b }{1} \begin {axis}[clip=false,axis on top,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1},xticklabels={$1$},ytick={1},yticklabels={$1$}, ymin=0,enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xmax=1.1] \addplot [name path=kf,domain=\a :\b ](x,{f(x)})node[pos=0.5,below right]{$y=x^2$}node[above,right]{$(1,1)$}; \addplot [name path=kg,domain=\a :\b ](x,{g(x)})node[pos=0.5,above left]{$y=x$}; \addplot [lgray]fill between[of={kf and kg}]; \end {axis} \end {tikzpicture} \end {center} 
+\item [
+25)
+]
+ $\int _1^e\int _{\ln y}^{1}\dif x\dif y$ \begin {center} \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=e^(\x );}] \pgfmathsetmacro {\a }{0} \pgfmathsetmacro {\b }{1} \pgfmathsetmacro {\e }{2.718} \begin {axis}[clip=false,axis on top,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1},xticklabels={$1$},ytick={1,\e },yticklabels={$1$,$e$}, ymin=0,enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xmax=1.1] \addplot [name path=kf,domain=\a :\b ](x,{f(x)})node[pos=0.5,above left]{$y=e^x$}node[above,right]{$(1,e)$}; \addplot [name path=kx]coordinates{(0,1)(1,1)}node[right]{$(1,1)$}; \addplot [lgray]fill between[of={kf and kx}]; \addplot []coordinates{(1,1)(1,\e )}; \end {axis} \end {tikzpicture} \end {center} 
+\item [
+27)
+]
+ $\int _0^9\int _{0}^{(\sqrt {9-y})/2}16x\dif x\dif y$ \begin {center} \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=9-4*(\x )^2;}] \pgfmathsetmacro {\a }{0} \pgfmathsetmacro {\b }{3/2} \pgfmathsetmacro {\e }{2.718} \begin {axis}[clip=false,axis on top,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1.5},xticklabels={$\tfrac {3}{2}$},ytick={9},yticklabels={$9$}, ymin=0,enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}] \addplot [name path=kf,domain=\a :\b ](x,{f(x)})node[pos=0.5,above right]{$y=9-4x^2$}; \addplot [name path=kx,draw=none]coordinates{(0,0)(1.5,0)}; \addplot [lgray]fill between[of={kf and kx}]; \end {axis} \end {tikzpicture} \end {center} 
+\item [
+29)
+]
+ $\int _{-1}^{1}\int _{0}^{\sqrt {1-x^2}}3y\dif y\dif x$ \begin {center} \begin {tikzpicture}[font=\scriptsize ,declare function={fx(\x )=cos(\x );fy(\x )=sin(\x );}] \pgfmathsetmacro {\a }{0} \pgfmathsetmacro {\b }{180} \pgfmathsetmacro {\e }{2.718} \begin {axis}[axis equal,clip=false,axis on top,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-1,1},xticklabels={$-1$,$1$},ytick={1},yticklabels={$1$}, ymin=0,ymax=1.25,enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}] \addplot [name path=kf,domain=\a :\b ]({fx(x)},{fy(x)})node[pos=0.25,above right]{$x^2+y^2=1$}; \addplot [name path=kx]coordinates{(-1,0)(1,0)}; \addplot [lgray]fill between[of={kf and kx}]; \end {axis} \end {tikzpicture} \end {center} 
+\item [
+31)
+]
+ $2$ \begin {center} \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=\x ;}] \pgfmathsetmacro {\a }{0} \pgfmathsetmacro {\b }{pi} \begin {axis}[clip=false,axis on top,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\b },xticklabels={$\pi $},ytick={\b },yticklabels={$\pi $}, ymin=0,enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xmax=4] \addplot [name path=kf,domain=\a :\b ](x,{f(x)})node[pos=0.5,below right]{$y=x$}node[right]{$(\pi ,\pi )$}; \addplot [name path=kx]coordinates{(0,\b )(\b ,\b )}; \addplot [lgray]fill between[of={kf and kx}]; \addplot []coordinates{(0,\b )(\b ,\b )}; \end {axis} \end {tikzpicture} \end {center} 
+\item [
+33)
+]
+ $\frac {e-2}{2}$ \begin {center} \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=\x ;}] \pgfmathsetmacro {\a }{0} \pgfmathsetmacro {\b }{1} \begin {axis}[clip=false,axis on top,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1},xticklabels={$1$},ytick={1},yticklabels={$1$}, ymin=0,enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xmax=1.25] \addplot [name path=kf,domain=\a :\b ](x,{f(x)})node[pos=0.5,above left]{$y=x$}node[above,right]{$(1,1)$}; \addplot [name path=kx]coordinates{(0,0)(1,0)}; \addplot [lgray]fill between[of={kf and kx}]; \addplot []coordinates{(1,0)(1,1)}; \end {axis} \end {tikzpicture} \end {center} 
+\item [
+35)
+]
+ $2$ \begin {center} \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=2*\x ;}] \pgfmathsetmacro {\a }{0} \pgfmathsetmacro {\b }{sqrt(ln(3))} \pgfmathsetmacro {\c }{2*\b } \begin {axis}[clip=false,axis on top,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\b },xticklabels={$\sqrt {\ln 3}$},ytick={\c },yticklabels={$2\sqrt {\ln 3}$}, ymin=0,enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xmax=1.5] \addplot [name path=kf,domain=\a :\b ](x,{f(x)})node[pos=0.5,above left]{$y=2x$}node[above,right]{$(\sqrt {\ln 3},2\sqrt {\ln 3})$}; \addplot [name path=kx]coordinates{(0,0)(\b ,0)}; \addplot [lgray]fill between[of={kf and kx}]; \addplot []coordinates{(\b ,0)(\b ,\c )}; \end {axis} \end {tikzpicture} \end {center} 
+\item [
+37)
+]
+ $\tfrac {1}{80\pi }$ \begin {center} \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=\x ^4;}] \pgfmathsetmacro {\a }{0} \pgfmathsetmacro {\b }{0.5} \pgfmathsetmacro {\c }{0.0625} \begin {axis}[scaled y ticks=false,clip=false,axis on top,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\b },xticklabels={$0.5$},ytick={\c },yticklabels={$0.0625$}, ymin=0,enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xmax=0.75] \addplot [name path=kf,domain=\a :\b ](x,{f(x)})node[pos=0.75,above left]{$y=x^4$}node[above,]{$(0.5,0.0625)$}; \addplot [name path=kx]coordinates{(0,0)(\b ,0)}; \addplot [lgray]fill between[of={kf and kx}]; \addplot []coordinates{(\b ,0)(\b ,\c )}; \end {axis} \end {tikzpicture} \end {center} 
+\item [
+39)
+]
+ $-\tfrac {2}{3}$ 
+\item [
+41)
+]
+ $\tfrac {4}{3}$ 
+\item [
+43)
+]
+ $\tfrac {625}{12}$ 
+\item [
+45)
+]
+ $16$ 
+\item [
+47)
+]
+ $20$ 
+\item [
+49)
+]
+ $2(1+\ln 2)$ 
+\item [
+51)
+]
+ $1$ 
+\item [
+53)
+]
+ $\pi ^2$ 
+\item [
+55)
+]
+ $-\tfrac {1}{4}$ 
+\item [
+57)
+]
+ $\tfrac {20\sqrt {3}}{9}$ 
+\item [
+59)
+]
+ $\int _0^1\int _x^{2-x}(x^2+y^2)\dif y\dif x=\tfrac {4}{3}$ \begin {center} \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=2-\x ;g(\x )=\x ;}] \pgfmathsetmacro {\a }{0} \pgfmathsetmacro {\b }{1} \begin {axis}[clip=false,axis on top,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\b },xticklabels={$1$},ytick={1,2},yticklabels={$1$,$2$}, ymin=0,enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}] \addplot [name path=kf,domain=\a :\b ](x,{f(x)})node[pos=0.5,sloped,above]{$y=2-x$}; \addplot [name path=kg,domain=\a :\b ](x,{g(x)})node[pos=0.5,sloped,below]{$y=x$}; \addplot [lgray]fill between[of={kf and kg}]; \end {axis} \end {tikzpicture} \end {center} 
+\item [
+67)
+]
+ $0.603$ 
+\item [
+69)
+]
+ $0.233$ 
+\end {description}
+ {\urduTechTermsfont {حصہ}} 14.2\hskip 1em\relax {\urduTechTermsfont {صفحہ}} 1693
+\begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
+\item [
+1)
+]
+ $\int _0^2\int _0^{2-x}\dif y\dif x=2,\,\, \int _0^2\int _0^{2-y}\dif x\dif y=2$ \begin {center} \begin {tikzpicture}[font=\small ] \draw [-latex](0,0)--(3,0)node[right]{$x$}; \draw [-latex](0,0)--(0,2.5)node[left]{$y$}; \draw [fill=lgray](0,2)node[left]{$2$}--(2,0)node[pos=0.5,above right,font=\scriptsize ]{$y=2-x$}node[below]{$2$}--(0,0)--(0,2); \end {tikzpicture} \end {center} 
+\item [
+3)
+]
+ $\int _{-2}^1\int _{y-2}^{-y^2}\dif x\dif y=\frac {9}{2}$ \begin {center} \begin {tikzpicture}[font=\small ,declare function={f(\y )=-\y ^2;}] \begin {axis}[axis on top,clip=false,small,axis lines=center,view/h=130,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xtick={-2,-4},ytick={-2,1},ztick={\empty },xlabel style={anchor=west},ylabel style={anchor=south}] \addplot [name path=kf,domain=-2:1]({f(x)},x)node[pos=0.25,below right]{$x=-y^2$}; \addplot [name path=kg]coordinates{(-1,1)(-4,-2)}node[pos=0,above]{$(-1,1)$}node[below]{$(-4,-2)$}node[pos=0.75,above left]{$y=x+2$}; \addplot [lgray]fill between[of={kf and kg}]; \end {axis} \end {tikzpicture} \end {center} 
+\item [
+5)
+]
+ $\int _0^{\ln 2}\int _0^{e^x}\dif y\dif x=1$ \begin {center} \begin {tikzpicture}[font=\small ,declare function={f(\x )=e^(\x );}] \pgfmathsetmacro {\k }{ln(2)} \begin {axis}[axis on top,clip=false,small,axis lines=center,view/h=130,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xtick={\k },xticklabels={$\ln 2$},ytick={1,2},ztick={\empty },xlabel style={anchor=west},ylabel style={anchor=south},ymin=0] \addplot [name path=kf,domain=0:\k ](x,{f(x)})node[pos=0.5,above left]{$y=e^x$}node[above]{$(\ln 2,2)$}; \addplot [name path=kg]coordinates{(\k ,2)(\k ,0)}; \addplot [draw=none,name path=kx]coordinates{(0,0)(\k ,0)}; \addplot [lgray]fill between[of={kf and kx}]; \end {axis} \end {tikzpicture} \end {center} 
+\item [
+7)
+]
+ $\int _0^1\int _{y^2}^{2y-y^2}\dif x\dif y=\frac {1}{3}$ \begin {center} \begin {tikzpicture}[font=\small ,declare function={f(\y )=\y ^2;g(\y )=2*\y -\y ^2;}] \pgfmathsetmacro {\k }{ln(2)} \begin {axis}[axis on top,clip=false,small,axis lines=center,view/h=130,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xtick={1},ytick={1},ztick={\empty },xlabel style={anchor=west},ylabel style={anchor=south},ymin=0] \addplot [name path=kf,domain=0:1]({f(x)},x)node[pos=0.5,above left]{$x=y^2$}node[above]{$(1,1)$}; \addplot [name path=kg,domain=0:1](g(x),x)node[pos=0.45,below right]{$x=2y-y^2$}; \addplot [lgray]fill between[of={kf and kg}]; \end {axis} \end {tikzpicture} \end {center} 
+\item [
+9)
+]
+ $12$ \begin {center} \begin {tikzpicture}[font=\small ,declare function={f(\x )=sqrt(3*\x );g(\x )=1/2*\x ;}] \pgfmathsetmacro {\k }{ln(2)} \begin {axis}[axis on top,clip=false,small,axis lines=center,view/h=130,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xtick={12},ytick={6},ztick={\empty },xlabel style={anchor=west},ylabel style={anchor=south},ymin=0] \addplot [name path=kfa,domain=0:1](x,{f(x)}); \addplot [name path=kf,domain=1:12](x,{f(x)})node[pos=0.5,above left]{$y^2=3x$}node[above]{$(12,6)$}; \addplot [name path=kg,domain=0:12](x,{g(x)})node[pos=0.45,below right]{$y=\tfrac {x}{2}$}; \addplot [lgray]fill between[of={kfa and kg},soft clip={domain=0:1}]; \addplot [lgray]fill between[of={kf and kg},soft clip={domain=1:12}]; \end {axis} \end {tikzpicture} \end {center} 
+\item [
+11)
+]
+ $\sqrt {2}-1$ \begin {center} \begin {tikzpicture}[font=\small ,declare function={f(\x )=cos(deg(\x ));g(\x )=sin(deg(\x ));}] \pgfmathsetmacro {\k }{pi/4} \pgfmathsetmacro {\kk }{1/sqrt(2)} \begin {axis}[axis on top,clip=false,small,axis lines=center,view/h=130,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xtick={\k },xticklabels={$\tfrac {\pi }{4}$},ytick={\kk },yticklabels={$\tfrac {\sqrt {2}}{2}$},ztick={\empty },xlabel style={anchor=west},ylabel style={anchor=south},ymin=0] \addplot [name path=kf,domain=0:\k ](x,{f(x)})node[pos=0.5,above right]{$y=\cos x$}node[right]{$(\tfrac {\pi }{4},\tfrac {\sqrt {2}}{2})$}; \addplot [name path=kg,domain=0:\k ](x,{g(x)})node[pos=0.45,below right]{$y=\sin x$}; \addplot [lgray]fill between[of={kf and kg}]; \end {axis} \end {tikzpicture} \end {center} 
+\item [
+13)
+]
+ $\frac {3}{2}$ \begin {center} \begin {tikzpicture}[font=\small ,declare function={f(\x )=1-\x ;g(\x )=-1/2*\x ;h(\x )=-2*\x ;}] \begin {axis}[axis on top,clip=false,small,axis lines=center,view/h=130,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xtick={-1,2},ytick={2},ztick={\empty },xlabel style={anchor=west},ylabel style={anchor=south}] \addplot [name path=kf,domain=-1:2](x,{f(x)})node[pos=0.5,above right]{$y=1-x$}node[pos=0,above]{$(-1,2)$}node[right]{$(2,-1)$}; \addplot [name path=kg,domain=0:2](x,{g(x)})node[pos=0.55,below left]{$y=-\tfrac {x}{2}$}; \addplot [name path=kh,domain=-1:0](x,{h(x)})node[pos=0.5,below left]{$y=-2x$}; \addplot [lgray]fill between[of={kf and kg},soft clip={domain=0:2}]; \addplot [lgray]fill between[of={kf and kh},soft clip={domain=-1:0}]; \end {axis} \end {tikzpicture} \end {center} 
+\item [
+15)
+]
+ (ا) \عددی {0}، (ب) \عددی {\tfrac {4}{\pi ^2}} 
+\item [
+17)
+]
+ $\tfrac {8}{3}$ 
+\item [
+19)
+]
+ $\bar {x}=\tfrac {5}{14},\,\bar {y}=\tfrac {38}{35}$ 
+\item [
+21)
+]
+ $\bar {x}=\tfrac {64}{35},\,\bar {y}=\tfrac {5}{7}$ 
+\item [
+23)
+]
+ $\bar {x}=0,\,\bar {y}=\tfrac {4}{3\pi }$ 
+\item [
+25)
+]
+ $\bar {x}=\bar {y}=\tfrac {4a}{3\pi }$ 
+\item [
+27)
+]
+ $\bar {x}=\tfrac {\pi }{2},\,\bar {y}=\tfrac {\pi }{8}$ 
+\item [
+29)
+]
+ $\bar {x}=-1,\,\bar {y}=\tfrac {1}{4}$ 
+\item [
+31)
+]
+ $I_x=\tfrac {64}{105},\,R_x=2\sqrt {\frac {2}{7}}$ 
+\item [
+33)
+]
+ $\bar {x}=\tfrac {3}{8},\,\bar {y}=\tfrac {17}{16}$ 
+\item [
+35)
+]
+ $\bar {x}=\tfrac {11}{3},\,\bar {y}=\tfrac {14}{27},\, I_y=432,\,R_y=4$ 
+\item [
+37)
+]
+ $\bar {x}=0,\,\bar {y}=\tfrac {13}{31},\, I_y=\tfrac {7}{5},\,R_y=\sqrt {\frac {21}{31}}$ 
+\item [
+39)
+]
+ $\bar {x}=0,\,\bar {y}=\tfrac {7}{10},\,I_x=\frac {9}{10},\, I_y=\frac {3}{10}$\\ $I_0=\frac {6}{5},\, R_x=\frac {3\sqrt {6}}{10},\,R_y=\frac {3\sqrt {2}}{10},\,R_0=\frac {3\sqrt {2}}{5}$ 
+\item [
+41)
+]
+ $\num {40000}(1-e^{-2})\ln (\tfrac {7}{2})\approx \num {43329}$ 
+\item [
+43)
+]
+ \عددی {0<a\le \tfrac {5}{2}} 
+\item [
+45)
+]
+ $(\bar {x},\bar {y})=(2/\pi ,0)$ 
+\item [
+47)
+]
+ (ا) \عددی {\tfrac {3}{2}}، (ب) ایک جیسے ہیں۔ 
+\item [
+53)
+]
+ (ا) \عددی {(\tfrac {7}{5},\tfrac {31}{10})}، (ب) \عددی {(\tfrac {19}{7},\tfrac {18}{7})}، (ج) \عددی {(\tfrac {9}{2},\tfrac {19}{8})}، (د) \عددی {(\tfrac {11}{4},\tfrac {43}{16})} 
+\item [
+55)
+]
+ مشترک سرحد پر ہونے کے لئے \عددی {h=a\sqrt {2}}، مثلث کے اندر ہونے کے لئے \عددی {h>a\sqrt {2}} 
+\end {description}
