@@ -4216,7 +4216,7 @@ $\int_{0}^{2}\int_{0}^{4-x^2}\int_{0}^{x}\frac{\sin 2z}{4-z}\dif y\dif z\dif x$
 اس حصہ میں تین بعدی اجسام کی  کمیت اور معیار اثر کا حصول کارتیسی محدد میں سکھایا جائے گا۔ یہ کلیات دو بعدی  اجسام کے کلیات کی طرح ہیں۔ کروی اور نلکی محدد میں حساب کرنا  اگلے حصہ میں دکھایا جائے گا۔
 
 \جزوحصہء{کمیت اور معیار اثر}
-فضا میں خطہ \عددی{D} میں پائے جانے والے ایک جسم کی  کمیتی کثافت \عددی{\delta(x,y,z)} ہے۔ خطہ \عددی{D} پر \عددی{\delta} کا تکمل اس جسم کی کمیت دیگا۔ یہ دیکھنے کی خاطر کہ ایسا کیوں  کر ہو گا  ہم  اس جسم کو \عددی{n} ٹکڑوں  میں تقسیم کرتے ہیں۔ جسم کی کمیت درج ذیل حد ہو گی۔
+فضا میں خطہ \عددی{D} میں پائے جانے والے ایک جسم کی  کمیتی کثافت \عددی{\delta(x,y,z)} ہے۔ خطہ \عددی{D} پر \عددی{\delta} کا تکمل اس جسم کی کمیت دیگا۔ یہ دیکھنے کی خاطر کہ ایسا کیوں  کر ہو گا  ہم  اس جسم کو \عددی{n} ٹکڑوں  میں تقسیم کرتے ہیں (شکل \حوالہ{شکل_بالکثرت_ٹھوس_جسم_کے_ٹکڑے})۔ جسم کی کمیت درج ذیل حد ہو گی۔
 \begin{align}\label{مساوات_بالکثرت_تین_بعدی_کمیت}
 M=\lim_{n\to\infty}\sum_{k=1}^{n}\Delta m_k=\lim_{n\to\infty}\sum_{k=1}^{n}\delta(x_k,y_k,z_k)\Delta H_k=\iiint\limits_D \delta(x,y,z) \dif H
 \end{align}
@@ -4256,8 +4256,39 @@ $R_L=\sqrt{\frac{I_L}{M}}$
 \end{description}
 
 %================
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\a}{0.1}
+\pgfmathsetmacro{\b}{0.2}
+\pgfmathsetmacro{\c}{0.2}
+\pgfmathsetmacro{\kx}{1}
+\pgfmathsetmacro{\ky}{2}
+\pgfmathsetmacro{\kz}{1.5}
+\begin{axis}[clip=false,view/h=110,small,axis lines=center,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},enlargelimits=true,xtick={\empty},ytick={\empty},ztick={\empty}]
+\addplot3[]coordinates{(\kx-\a,\ky+\b,\kz-\c)(\kx-\a,\ky+\b,\kz+\c)(\kx-\a,\ky-\b,\kz+\c)};
+\addplot3[]coordinates{(\kx+\a,\ky-\b,\kz-\c)(\kx+\a,\ky+\b,\kz-\c)(\kx+\a,\ky+\b,\kz+\c)(\kx+\a,\ky-\b,\kz+\c)(\kx+\a,\ky-\b,\kz-\c)};
+\addplot3[]coordinates{(\kx-\a,\ky-\b,\kz+\c)(\kx+\a,\ky-\b,\kz+\c)};
+\addplot3[]coordinates{(\kx-\a,\ky+\b,\kz+\c)(\kx+\a,\ky+\b,\kz+\c)};
+\addplot3[]coordinates{(\kx-\a,\ky+\b,\kz-\c)(\kx+\a,\ky+\b,\kz-\c)};
+\addplot3[]coordinates{(\kx,0,0)(\kx,\ky,0)(\kx,\ky,\kz)(\kx,0,\kz)(\kx,0,0)};
+\addplot3[]coordinates{(\kx,\ky,0)(0,\ky,0)};
+\addplot3[]coordinates{(\kx,0,\kz)(0,0,\kz)}node[pos=0.5,left]{$x$};
+\addplot3[]coordinates{(0,0,\kz)(\kx,\ky,\kz)}node[pos=0.5,above right]{$\sqrt{x^2+y^2}$};
+\addplot3[]coordinates{(\kx,\ky,\kz)(0,\ky,0)}node[pos=0.5,above right]{$\sqrt{x^2+y^2}$};
+\addplot3[]coordinates{(\kx,\ky,\kz)(\kx,0,0)}node[pos=0.55,sloped,below]{$\sqrt{y^2+z^2}$};
+\RightAngle{(\kx,\ky,\kz)}{(\kx,0,\kz)}{(0,0,\kz)}
+\addplot3[draw=none]coordinates{(\kx,0,0)(\kx,0,\kz)}node[pos=0.5,left]{$z$};
+\addplot3[draw=none]coordinates{(\kx,0,0)(\kx,\ky,0)}node[pos=0.5,below]{$y$};
+\addplot3[]coordinates{(\kx-\a,\ky+\b,\kz+\c)}node[above right]{$\Delta H$};
+\end{axis}
+\end{tikzpicture}
+\caption{محددی محور اور محددی مستویات سے ایک ٹکڑے کے فاصلے۔}
+\label{شکل_بالکثرت_ٹھوس_جسم_کے_ٹکڑے}
+\end{figure}
+
 \ابتدا{مثال}\شناخت{مثال_بالکثرت_تین_بعدی_ٹھوس_جسم_الف}
-مستقل کثافت \عددی{\delta} کا مستطیل ٹھوس جسم  شکل میں دکھایا گیا ہے۔ اس  کے \عددی{I_x}، \عددی{I_y} اور \عددی{I_z} دریافت کریں۔
+مستقل کثافت \عددی{\delta} کا مستطیل ٹھوس جسم  شکل \حوالہ{شکل_مثال_بالکثرت_تین_بعدی_ٹھوس_جسم_الف}  میں دکھایا گیا ہے۔ اس  کے \عددی{I_x}، \عددی{I_y} اور \عددی{I_z} دریافت کریں۔
 
 حل:\quad
 ہم مذکورہ بالا کلیات استعمال کرتے ہیں۔یوں
@@ -4277,8 +4308,54 @@ I_z=\frac{M}{12}(a^2+b^2)\quad \text{اور}\quad I_y=\frac{M}{12}(a^2+c^2)
 \end{align*}
 \انتہا{مثال}
 %=============
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\a}{1}
+\pgfmathsetmacro{\b}{2}
+\pgfmathsetmacro{\c}{1.5}
+\pgfmathsetmacro{\kx}{0}
+\pgfmathsetmacro{\ky}{0}
+\pgfmathsetmacro{\kz}{0}
+\begin{axis}[clip=false,view/h=110,small,axis lines=center,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=east},enlargelimits=true,xtick={\empty},ytick={\empty},ztick={\empty},hide axis]
+\addplot3[]coordinates{(\kx-\a,\ky+\b,\kz-\c)(\kx-\a,\ky+\b,\kz+\c)(\kx-\a,\ky-\b,\kz+\c)};
+\addplot3[]coordinates{(\kx+\a,\ky-\b,\kz-\c)(\kx+\a,\ky+\b,\kz-\c)(\kx+\a,\ky+\b,\kz+\c)(\kx+\a,\ky-\b,\kz+\c)(\kx+\a,\ky-\b,\kz-\c)};
+\addplot3[]coordinates{(\kx-\a,\ky-\b,\kz+\c)(\kx+\a,\ky-\b,\kz+\c)};
+\addplot3[]coordinates{(\kx-\a,\ky+\b,\kz+\c)(\kx+\a,\ky+\b,\kz+\c)};
+\addplot3[]coordinates{(\kx-\a,\ky+\b,\kz-\c)(\kx+\a,\ky+\b,\kz-\c)};
+\addplot3[-latex]coordinates{(\a,0,0)(\a+3,0,0)}node[left]{$x$};
+\addplot3[-latex]coordinates{(0,\b,0)(0,\b+2,0)}node[right]{$y$};
+\addplot3[-latex]coordinates{(0,0,\c)(0,0,\c+2)}node[above]{$z$};
+\addplot3[]coordinates{(\a,0,-\c)}node[below]{$b$};
+\addplot3[]coordinates{(0,\b,-\c)}node[right]{$a$};
+\addplot3[]coordinates{(-\a,\b,0)}node[right]{$c$};
+\end{axis}
+\end{tikzpicture}
+\caption{ٹھوس جسم برائے مثال \حوالہ{مثال_بالکثرت_تین_بعدی_ٹھوس_جسم_الف}}
+\label{شکل_مثال_بالکثرت_تین_بعدی_ٹھوس_جسم_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);fz(\t,\t)=4-(\r)^2;}]
+\pgfmathsetmacro{\ra}{1.2}
+\pgfmathsetmacro{\ta}{45}
+\begin{axis}[clip=false,view/h=135,small,axis lines=center,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=east},enlargelimits=true,xtick={\empty},ytick={\empty},ztick={\empty},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\addplot3[z buffer=sort,surf,domain=0:2,domain y=0:360,variable=\r,variable y=\t]({fx(r,t)},{fy(r,t)},{fz(r,t)});
+\addplot3[domain y=0:360,variable=\r,variable y=\t]({fx(2,t)},{fy(2,t)},0);
+\addplot3[]coordinates{(0,1,3)}node[pin=45:{$z=4-x^2-y^2$}]{};
+\addplot3[]coordinates{(2,2,0)}node[pin=-45:{$x^2+y^2=4$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{ٹھوس جسم برائے مثال \حوالہ{مثال_بالکثرت_تین_بعدی_ٹھوس_جسم_ب}}
+\label{شکل_مثال_بالکثرت_تین_بعدی_ٹھوس_جسم_ب}
+\end{minipage}
+\end{figure}
+
+
 \ابتدا{مثال}\شناخت{مثال_بالکثرت_تین_بعدی_ٹھوس_جسم_ب}
-مستقل کثافت \عددی{\delta} کے جسم کی  نچلی سرحد مستوی \عددی{z=0} میں قرص \عددی{R:\, x^2+y^2\le 4} ہے جبکہ اس کی بالائی حد  قطع مکافی \عددی{z=4-x^2-y^2} ہے۔
+مستقل کثافت \عددی{\delta} کے جسم کی  نچلی سرحد مستوی \عددی{z=0} میں قرص \عددی{R:\, x^2+y^2\le 4} ہے جبکہ اس کی بالائی حد  قطع مکافی \عددی{z=4-x^2-y^2} ہے (شکل  \حوالہ{شکل_مثال_بالکثرت_تین_بعدی_ٹھوس_جسم_ب})۔ اس جس کا مرکز کمیت تلاش کریں۔
 
 حل:\quad
 تشاکلی کی بنا \عددی{\bar{x}=\bar{y}=0} ہو گا۔ ہمیں \عددی{\bar{z}}  معلوم  کرنے کے لئے پہلے درج ذیل دریافت  کرنے ہوں گے۔
