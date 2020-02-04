@@ -1,602 +1,175 @@
-\حصہ{نلکی اور کروی محدد میں تہرا تکمل}﻿
-انجینئری،  طبیعیات اور جیومیٹری میں  مخروط ، بیلن یا کرہ کے ساتھ کام  نلکی اور کروی محدد میں زیادہ آسان ہوتا ہے۔
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,]
+\pgfmathsetmacro{\a}{1.5}
+\pgfmathsetmacro{\b}{2}
+\pgfmathsetmacro{\c}{1}
+\begin{axis}[clip=false,axis lines=center,view/h=110,enlargelimits=true,xtick={\a},ytick={\b},ztick={\c},xticklabels={$a$},yticklabels={$b$},zticklabels={$c$},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south}]
+\addplot3[]coordinates{(\a,0,0)(\a,\b,0)(\a,\b,\c)(\a,0,\c)(\a,0,0)};
+\addplot3[]coordinates{(\a,\b,0)(0,\b,0)(0,\b,\c)(\a,\b,\c)};
+\addplot3[]coordinates{(\a,0,\c)(0,0,\c)(0,\b,\c)(\a,\b,\c)};
+\end{axis}
+\end{tikzpicture}
+\end{figure}
 
-\جزوحصہء{نلکی محدد}
-جن  بیلن  کا محور  \عددی{z} محدد   پر پایا جاتا ہو اور وہ مستویات جن میں \عددی{z} محدد پایا جاتا ہو یا جو \عددی{z} محدد کے عمودی ہوں، کو نلکی محدد میں بیان کرنا  نہایت  آسان ہوتا ہے۔
-
-
-جیسا ہم دیکھ چکے ہیں ان سطحوں کی مساوات  مستقل محددی صورت رکھتی ہیں۔
-\begin {align*}
-\rho  & = 4\\
-\phi & =\frac{\pi}{3}\\
-z &=2
-\end {align*}
-
-فضا میں خطہ کی نلکی محدد  میں مستطیلی خانہ بندی  کر کے  ایک خانے کا  حجم 
-\begin {align*}
-\dif H = \dif z \,\rho \dif \rho \dif \phi
-\end {align*}
-
-
-ہو گا۔تب نلکی محدد میں تہرا تکملات کو  بطور بارہا تکملات حل کیا جائے گا۔ ایسا  اگلی مثال میں دکھایا گیا ہے۔
-
-
-\ابتدا {مثال}
-خطہ \عددی{D} پر تفاعل  \عددی{f(\rho,\phi,z)} کی نلکی محدد میں تکمل  کی حدیں تلاش کریں۔ خطہ \عددی{D} نیچے سے مستوی  
-\(z=0\)
-اور اطراف سے دائری بیلن
-\(x^2+(y-1)^2=1\)
- جبکہ اوپر سے قطع مکافی
-\(z=x^2+y^2\)
- کے بیچ پایا جاتا ہے۔
-
-
-حل
-\begin {enumerate}[1.]
-\item
-\ترچھا {خاکہ بنانا:}\quad
-\عددی{D}  کا  قاعدہ ہی  مستوی \عددی{xy} پر \عددی{D} کی تظلیل \عددی{R}  ہو  گی۔تظلیل \عددی{R} کی سرحد دائرہ \عددی{x^2+(y-1)^2=2} ہو گی جس کی قطبی مساوات درج ذیل ہے۔
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,]
+\pgfmathsetmacro{\a}{1.5}
+\pgfmathsetmacro{\b}{2}
+\pgfmathsetmacro{\c}{1}
+\begin{axis}[clip=false,axis lines=center,view/h=110,enlargelimits=true,xtick={\a},ytick={\b},ztick={\c},xticklabels={$a$},yticklabels={$b$},zticklabels={$c$},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south}, hide axis]
+\addplot3[]coordinates{(1/2*\a,-1/3*\b,-1/3*\c)(1/2*\a,2/3*\b,-1/3*\c)(1/2*\a,-1/3*\b,2/3*\c)(1/2*\a,-1/3*\b,-1/3*\c)};
+\addplot3[]coordinates{(1/2*\a,2/3*\b,-1/3*\c)(-1/2*\a,2/3*\b,-1/3*\c)(-1/2*\a,-1/3*\b,2/3*\c)(1/2*\a,-1/3*\b,2/3*\c)};
+\addplot3[-latex]coordinates{(1/2*\a,0,0)(1.75*\a,0,0)}node[below]{$x$};
+\addplot3[-latex]coordinates{(0,1/3*\b,0)(0,\b,0)}node[right]{$y$};
+\addplot3[-latex]coordinates{(0,0,1/3*\c)(0,0,\c)}node[above]{$z$};
+\addplot3[stealth-stealth]coordinates{(1/2*\a,0,-1/3*\c)(1/2*\a,0,0)}node[pos=0.5,right]{$\tfrac{c}{3}$};
+\addplot3[stealth-stealth]coordinates{(1/2*\a,0,0)(1/2*\a,-1/3*\b,0)}node[pos=0.5,above]{$\tfrac{b}{3}$};
+\addplot3[stealth-stealth]coordinates{(0,0,1/3*\c)(1/2*\a,0,1/3*\c)}node[pos=0.5,above left]{$\tfrac{a}{2}$};
+\addplot3[]coordinates{(1/2*\a,1/3*\b,-1/3*\c)}node[below]{$b$};
+\addplot3[]coordinates{(0,2/3*\b,-1/3*\c)}node[right]{$a$};
+\addplot3[]coordinates{(1/2*\a,-1/3*\b,1/3*\c)}node[left]{$c$};
+\addplot3[]coordinates{(-1/2*\a,1/3*\b,1/3*\c)}node[above,align=center]{\text{\RL{وسطانی مرکز}}\\  \عددی{(0,0,0)}};
+\end{axis}
+\end{tikzpicture}
+\end{figure}
 
 
-\begin {align*}
-x^2+(y-1)^2&=1\\
-x^2+y^2-2y+1&=1\\
-\rho^2-2\rho\sin\phi&=0\\
-\rho&=2\sin\phi
-\end {align*}
-\item
-\ترچھا {تکمل کی \عددی{z} حدیں:}\quad
-خطہ \عددی{R} میں عمومی نقطہ \عددی{(\rho,\phi)} سے گزرتی ہوئی لکیر \عددی{M}، جو \عددی{z} محدد کے متوازی  ہو \عددی{D} میں   \عددی{z=0} پر داخل اور \عددی{z=x^2+y^2=\rho^2} پر خارج  ہو گی۔
-\item
-\ترچھا{تکمل کی \عددی{\rho} حدیں:}\quad
-مبدا سے  خط \عددی{L} جو نقطہ \عددی{(\rho,\phi)}  سے گزرتا ہو، \عددی{R} میں \عددی{\rho=0} پر داخل اور \عددی{\rho=2\sin\phi} پر خارج ہو گا۔
-\item
-\ترچھا{تکمل کی \عددی{\phi} حدیں:}\quad
-خط \عددی{L}  جھاڑو کی طرح \عددی{R} کو جھاڑتے ہوئے مثبت \عددی{x} محور کے ساتھ \عددی{\phi=0} اور \عددی{\phi=\pi}کے بیچ رہتا ہے۔
-\end {enumerate}
-یوں تکمل درج ذیل ہو گا۔
-\begin{align*}
-\iiint\limits_D f(\rho,\phi,z)\dif H=\int_{0}^{\pi}\int_0^{2\sin\phi}\int_{0}^{\rho^2}f(\rho,\phi,z)\dif z \,\rho\dif \rho\dif \phi
-\end{align*}
-\انتہا{مثال}
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=2*\r*cos(\t);fy(\r,\t)=\r*sin(\t);fz(\r,\t)=2-2*\r*cos(\t);}]
+\pgfmathsetmacro{\ta}{160}
+\begin{axis}[clip=false,axis lines=center,view/h=160,enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},xtick={\empty},ytick={\empty},ztick={\empty},hide axis]
+\addplot3[smooth,domain y=0:360,variable y=\t] ({fx(1,t)},{fy(1,t)},{fz(1,t)})node[pos=0.75,pin=135:{$z=2-x$}]{};
+\addplot3[smooth,domain y=0:360,variable y=\t] ({fx(1,t)},{fy(1,t)},0)node[pos=0.4,pin=-45:{$x^2+4y^2=4$}]{};
+\addplot3[]coordinates{({fx(1,\ta)},{fy(1,\ta)},{fz(1,\ta)}) ({fx(1,\ta)},{fy(1,\ta)},0)};
+\addplot3[dashed]coordinates{(0,0,0)(2,0,0)}node[circ]{}node[below]{$2$};
+\addplot3[-latex]coordinates{(2,0,0)(2.5,0,0)}node[left]{$x$};
+\addplot3[dashed]coordinates{(0,0,0)(0,1,0)}node[circ]{}node[below]{$1$};
+\addplot3[-latex]coordinates{(0,1,0)(0,2,0)}node[right]{$y$};
+\addplot3[dashed]coordinates{(0,0,0)(0,0,2)}node[circ]{}node[left]{$2$};
+\addplot3[-latex]coordinates{(0,0,2)(0,0,4.5)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\end{figure}
 
 
-اس مثال میں ہم نے نلکی محدد میں تکمل کی حدیں تلاش کرنا سیکھا۔
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\x)=\x;fy(\x)=sqrt(\x);fz(\x)=4-(\x)^2;}]
+\pgfmathsetmacro{\xa}{0.4}
+\pgfmathsetmacro{\xb}{0.1}
+\begin{axis}[clip=false,axis lines=center,view/h=160,enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},xtick={\empty},ytick={\empty},ztick={\empty}]
+\addplot3[smooth,domain=0:\xa,samples y=0] ({fx(x)},{fy(x)},{fz(x)});
+\addplot3[smooth,domain=0:\xa,samples y=0] ({fx(x)},{fy(x)},0);
+\addplot3[smooth,domain=\xa:2,samples y=0] ({fx(x)},{fy(x)},{fz(x)});
+\addplot3[smooth,domain=\xa:2,samples y=0] ({fx(x)},{fy(x)},0)node[pos=0.4,pin=-45:{$x=y^2$}]{};
+\addplot3[smooth,domain=0:2,samples y=0] ({fx(x)},0,{fz(x)})node[pos=0.75,pin=135:{$z=4-x^2$}]{};
+\addplot3[]coordinates{(2,0,0)(2,sqrt(2),0)}node[pos=0,below]{$2$}node[below]{$(2,\sqrt{2},0)$};
+\addplot3[]coordinates{ ({fx(\xb)},{fy(\xb)},{fz(\xb)}) ({fx(\xb)},{fy(\xb)},0)};
+\addplot3[]coordinates{(0,0,4)}node[right]{$4$};
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\x)=\x;fy(\x)=sqrt(\x);fz(\x)=4-(\x)^2;}]
+\pgfmathsetmacro{\xa}{0.4}
+\pgfmathsetmacro{\xb}{0.1}
+\begin{axis}[clip=false,axis lines=center,view/h=110,enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},xtick={\empty},ytick={\empty},ztick={\empty},hide axis]
+\addplot3[]coordinates{(2,0,0)(2,3,0)(2,3,2)(2,0,2)(2,0,0)};
+\addplot3[]coordinates{(2,3,2)(0,3,2)(0,0,2)(2,0,2)};
+\addplot3[]coordinates{(2,3,0) (1,3,0) (1,3,1)(0,3,1) (0,3,2)};
+\addplot3[]coordinates{(1,3,0)(1,5,0)};
+\addplot3[]coordinates{(1,3,1)(1,5,1)};
+\addplot3[]coordinates{(0,3,1)(0,5,1)};
+\addplot3[fill=white]coordinates{(3,6,-2)(-1,6,-2)(-1,6,1)(-1,5,1)(3,5,1)(3,5,-2)(3,6,-2)};
+\addplot3[]coordinates{(3,6,-2)(3,6,1)(-1,6,1)};
+\addplot3[]coordinates{(3,5,1)(3,6,1)};
+\addplot3[-latex]coordinates{(2,0,0)(3,0,0)}node[left]{$x$};
+\addplot3[-latex]coordinates{(0,6,0)(0,8,0)}node[right]{$y$};
+\addplot3[-latex]coordinates{(0,0,2)(0,0,2.5)}node[left]{$z$};
+\addplot3[]coordinates{(2,0,2)}node[left]{$(2,0,2)$};
+\addplot3[]coordinates{(2,0,0)}node[below,xshift=2ex]{$(2,0,0)$};
+\addplot3[]coordinates{(3,6,-2)}node[right]{$(3,6,-2)$};
+\addplot3[]coordinates{(-1,6,-2)}node[right]{$(-1,6,-2)$};
+\addplot3[]coordinates{(-1,6,1)}node[right]{$(-1,6,1)$};
+\addplot3[]coordinates{(0,3,2)}node[right]{$(0,3,2)$};
+\addplot3[]coordinates{(-1,5.5,1)}node[above]{$1$};
+\addplot3[]coordinates{(0,4,1)}node[above]{$2$};
+\addplot3[]coordinates{(1,0,2)}node[left]{$2$};
+\addplot3[]coordinates{(2,1.5,2)}node[above]{$3$};
+\addplot3[]coordinates{(2,0,1)}node[left]{$2$};
+\addplot3[]coordinates{(1,6,-2)}node[right]{$4$};
+\addplot3[]coordinates{(2,1.5,1)}node[]{$A$};
+\addplot3[]coordinates{(1,4,0.5)}node[]{$B$};
+\addplot3[]coordinates{(3,5.5,-0.5)}node[]{$C$};
+\end{axis}
+\end{tikzpicture}
+\end{figure}
 
 
-\ابتدا{مثال}
-بیلن
-\(x^2+y^2=4\)
- میں بند ٹھوس جسم  جو اوپر سے  قطع مکافی سطح 
-\(z=x^2+y^2\)
-اور نیچے سے مستوی
-\(xy\)
- کے بیچ پایا جاتا ہو، کا وسطانی مرکز تلاش  کریں۔ ٹھوس جسم کی کثافت \عددی{\delta=1} ہے۔
 
 
-حل
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\x)=cos(\x);fy(\x)=sin(\x);}]
+\pgfmathsetmacro{\xa}{135}
+\pgfmathsetmacro{\xb}{\xa+180}
+\pgfmathsetmacro{\xc}{65}
+\pgfmathsetmacro{\xd}{\xc+180}
+\pgfmathsetmacro{\a}{1.5}
+\pgfmathsetmacro{\b}{1.25}
+\begin{axis}[clip=false,axis lines=center,view/h=135,enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},xtick={\empty},ytick={\empty},ztick={\empty},hide  axis]
+\addplot3[domain=0:360]({fx(x)},{fy(x)},2);
+\addplot3[domain=0:360]({fx(x)},{fy(x)},0);
+\addplot3[]coordinates{({fx(\xa)},{fy(\xa)},{2})({fx(\xa)},{fy(\xa)},0)};
+\addplot3[]coordinates{({fx(\xb)},{fy(\xb)},{2})({fx(\xb)},{fy(\xb)},0)};
+\addplot3[]coordinates{(-\a,-\b,2)(\a,-\b,2)(\a,\b,2)(-\a,\b,2)(-\a,-\b,2)};
+\addplot3[]coordinates{({2*fx(\xc)},{2*fy(\xc)},2)({2*fx(\xc)},{2*fy(\xc)},0)({2*fx(\xd)},{2*fy(\xd)},0)({2*fx(\xd)},{2*fy(\xd)},2) ({2*fx(\xc)},{2*fy(\xc)},2)};
+\addplot3[thick]coordinates{({fx(\xc)},{fy(\xc)},0)({fx(\xc)},{fy(\xc)},2)}node[circ]{}node[pin={[pin distance=1cm,right]-10:{$(\rho,\phi,z)$}}]{};
+\addplot3[-stealth,domain=0:\xc,samples y=0] ({1.2*fx(x)},{1.2*fy(x)},0)node[pos=0.4,below]{$\phi$};
+\addplot3[thick]coordinates{(0,0,0)({fx(\xc)},{fy(\xc)},0)}node[pos=0.6,left]{$\rho$};
+\addplot3[dashed]coordinates{(0,0,0)(0,0,2)}node[circ]{}node[right]{$z$};
+\addplot3[-latex]coordinates{(0,0,2)(0,0,3.5)}node[left]{$z$};
+\addplot3[-latex]coordinates{(0,0,0)(2,0,0)}node[left]{$x$};
+\addplot3[-latex]coordinates{(0,0,0)(0,2,0)}node[right]{$y$};
+\end{axis}
+\end{tikzpicture}
+\end{figure}
 
 
-ہم اوپر سے قطع کافی
-\(z = \rho^2\)
- اور نیچے سے مستوی
-\(z=0\)
- میں ملفوف ٹھوس جسم  کا خاکہ بناتے ہیں۔اس کا قاعدہ  
-\(R\)
- مستوی
-\(xy\)
- میں قرص
-\(\abs{\rho}\le 2\)
- ہوگا۔
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);}]
+\pgfmathsetmacro{\ta}{30}
+\pgfmathsetmacro{\tb}{\ta+45}
+\pgfmathsetmacro{\ra}{1.25}
+\pgfmathsetmacro{\rb}{\ra+0.45}
+\pgfmathsetmacro{\h}{0.5}
+\begin{axis}[clip=false,axis lines=center,view/h=20,enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},xtick={\empty},ytick={\empty},ztick={\empty},xmin=0,ymin=0,zmin=0,zmax=1,hide x axis, hide y axis]
+\addplot3[thick,domain y=\ta:\tb,samples=0,variable=\r,variable y=\t] ({fx(\ra,t)},{fy(\ra,t)},0)node[pos=0.7,sloped,below]{$\rho\dif\phi$};
+\addplot3[domain y=\ta:\tb,samples=0,variable=\r,variable y=\t] ({fx(\rb,t)},{fy(\rb,t)},0);
+\addplot3[domain y=\ta:\tb,samples=0,variable=\r,variable y=\t] ({fx(\ra,t)},{fy(\ra,t)},\h);
+\addplot3[domain y=\ta:\tb,samples=0,variable=\r,variable y=\t] ({fx(\rb,t)},{fy(\rb,t)},\h);
+\addplot3[thick]coordinates{({fx(\ra,\ta)},{fy(\ra,\ta)},0)({fx(\rb,\ta)},{fy(\rb,\ta)},0)}node[pos=0.5,below]{$\dif\rho$};
+\addplot3[]coordinates{({fx(\ra,\tb)},{fy(\ra,\tb)},0)({fx(\rb,\tb)},{fy(\rb,\tb)},0)};
+\addplot3[]coordinates{({fx(\ra,\ta)},{fy(\ra,\ta)},\h)({fx(\rb,\ta)},{fy(\rb,\ta)},\h)};
+\addplot3[]coordinates{({fx(\ra,\tb)},{fy(\ra,\tb)},\h)({fx(\rb,\tb)},{fy(\rb,\tb)},\h)};
+\addplot3[]coordinates{({fx(\ra,\ta)},{fy(\ra,\ta)},0)({fx(\ra,\ta)},{fy(\ra,\ta)},\h)};
+\addplot3[thick]coordinates{({fx(\rb,\ta)},{fy(\rb,\ta)},0)({fx(\rb,\ta)},{fy(\rb,\ta)},\h)}node[pos=0.5,right]{$\dif z$};
+\addplot3[]coordinates{({fx(\ra,\tb)},{fy(\ra,\tb)},0)({fx(\ra,\tb)},{fy(\ra,\tb)},\h)};
+\addplot3[]coordinates{({fx(\rb,\tb)},{fy(\rb,\tb)},0)({fx(\rb,\tb)},{fy(\rb,\tb)},\h)};
+\addplot3[]coordinates{(0,0,0)({fx(\ra,\ta)},{fy(\ra,\ta)},0)}node[pos=0.75,below]{$\rho$};
+\addplot3[]coordinates{(0,0,0)({fx(\ra,\tb)},{fy(\ra,\tb)},0)};
+\addplot3[]coordinates{(0,0,\h)({fx(\ra,\ta)},{fy(\ra,\ta)},\h)};
+\addplot3[]coordinates{(0,0,\h)({fx(\ra,\tb)},{fy(\ra,\tb)},\h)};
+\addplot3[samples=0,domain y=\ta:\tb,variable y=\t]({fx(0.5,t)},{fy(0.5,t)},0)node[pos=0.7,xshift=1ex,right]{$\dif \phi$};
+\end{axis}
+\end{tikzpicture}
+\end{figure}
 
 
-ٹھوس جسم کا وسطانی مرکز  تشاکلی محور پر ہو گا جو محور \عددی{z} ہے۔ یوں \عددی{\bar{x}=\bar{y}=0} ہوگا۔ ہم معیار اثر \عددی{M_{xy}} کو کمیت \عددی{M} سے تقسیم کر کے \عددی{\bar{z}}  تلاش کرتے ہیں۔
 
-
-کمیت اور معیار اثر کے تکملات کی حدیں تلاش کرنے کی خاطر  ہم وہی چار مخصوص قدم لیتے ہیں۔  خاکہ بنا  کر ہم پہلا قدم مکمل کر چکے ہیں۔باقی اقدام  درج ذیل  ہیں۔
-\begin{enumerate}
- \setcounter{enumi}{1}
-\item
-\ترچھا{تکمل کی \عددی{z} حدیں:}\quad
-علامتی نقطہ \عددی{(\rho,\phi)} سے گزرتی ہوئی، محدد \عددی{z} کی متوازی  لکیر \عددی{M}،  ٹھوس جسم میں  \عددی{z=0} سے  داخل اور  \عددی{z=\rho^2} سے  خارج ہو گی۔ 
-\item
-\ترچھا{تکمل کی \عددی{\rho} حدیں:}\quad
-مبدا سے شروع نقطہ \عددی{\rho,\phi} سے گزرتی ہوئی لکیر \عددی{L} خطہ \عددی{R} میں \عددی{\rho=0} سے داخل اور \عددی{\rho=2} سے خارج ہو گی۔
-\item
-\ترچھا{تکمل کی \عددی{\phi} حدیں:}\quad
-لکیر \عددی{L} قاعدہ پر گھڑی کی سوئی کی طرح گھومتی  ہوئی    \عددی{\phi=0} سے  \عددی{\phi=2\pi} تک طے کرتی ہے۔
-\end{enumerate}
-یوں  \عددی{M_{xy}}کی قیمت
-\begin{align*} 
- M_{xy}&=\int_0^{2\pi}\int_0^{2}\int_0^{\rho^2}z\dif z \,\rho\dif \rho\dif \phi =\int_0^{2\pi}\int_0^2\big[\frac{z^2}{2}\big]_{0}^{\rho^2} \rho\dif \rho\dif \phi\\
-&=\int_0^{2\pi}\int_0^2\frac{\rho^5}{2}\dif \rho\dif \phi=\int_0^{2\pi}\big[\frac{\rho^6}{12}\big]_0^{\rho^2}\dif \phi=\int_0^{2\pi}\frac{16}{3}\dif\phi=\frac{32\pi}{3}
-\end{align*}
-اور \عددی{M} کی قیمت
-\begin{align*}
-M&=\int_0^{2\pi}\int_0^2\int_0^{\rho^2}\dif z \,\rho\dif \rho\dif \phi=\int_0^{2\pi}\int_0^2\big[z\big]_{0}^{\rho^2} \rho\dif \rho\dif \phi\\
-&=\int_0^{2\pi}\int_0^2 \rho^3\dif \rho\dif \phi=\int_0^{2\pi}\big[\frac{\rho^4}{4}\big]_0^2\dif\phi=\int_0^{2\pi}4\dif\phi=8\pi
-\end{align*}
-ہو گی لہٰذا
-\begin {align*}
-\bar {z}=\frac  {M_{xy}} {M}=\frac{32\pi}{3}\frac{1}{8\pi}=\frac{4}{3}
-\end {align*}
-ہو گا۔ وسطانی مرکز \عددی{(0,0,4/3)} ہو گا جو  ٹھوس جسم سے باہر ہے۔
-\انتہا {مثال}
-%===================
-
-\جزوحصہء{نلکی محدد میں تکمل کی قیمت کا حصول}
-فضا میں خطہ \عددی{D} پر  تکمل
-\[\iiint\limits_D f(\rho,\phi,z)\dif H\]
-کی قیمت  حاصل کرتے ہوئے نلکی محدد میں پہلے \عددی{z}، اس کے بعد \عددی{\rho} اور آخر میں \عددی{\phi} کے لحاظ سے تکمل لیتے ہوئے  درج ذیل اقدام کرنے ہوں گے۔
-\begin{enumerate}[1.]
-\item
-\ترچھا{خاکہ:}\quad
-خطہ \عددی{D} اور مستوی \عددی{xy} پر اس کی تظلیل \عددی{R}  کا خاکہ بنائیں۔ \عددی{D} اور \عددی{R} کی سرحدی  سطحوں  اور منحنیات کی نشاندہی کریں۔
-\item
-\ترچھا{تکمل کی \عددی{z} حدیں:}\quad
-\عددی{R} میں علامتی نقطہ \عددی{(\rho,\phi)} پر محور \عددی{z} کے متوازی  ایک علامتی لکیر \عددی{M} کھینچیں جو بڑھ کر  \عددی{D} میں \عددی{z=g_1(\rho,\phi)} سے داخل اور \عددی{z=g_2(\rho,\phi)} سے خارج ہو گی۔یہی تکمل کی \عددی{z} حدیں ہوں گی۔
-\item
-\ترچھا{تکمل کی \عددی{\rho} حدیں:}\quad
-مبدا سے ایک لکیر \عددی{L} کھینچیں جو نقطہ \عددی{(\rho,\phi)} سے گزرتی ہو۔ یہ شعاع  خطہ \عددی{R} میں \عددی{\rho=h_1(\phi)} سے داخل اور \عددی{\rho=h_2(\phi)} سے خارج ہو گی۔ یہی تکمل کی \عددی{\rho} حدیں ہوں گی۔
-\item
-\ترچھا{تکمل کی \عددی{\phi} حدیں:}\quad
-لکیر \عددی{L} خطہ \عددی{R} کو جھاڑتے ہوئے  مثبت \عددی{x} محور کے ساتھ زاویہ \عددی{\phi=\alpha} اور \عددی{\phi=\beta}  کے بیچ رہتی ہے۔ یہی تکمل کی \عددی{\phi} حدیں ہوں گی۔
-\end{enumerate}
-یوں تکمل درج ذیل ہو گا۔
-\begin{align}
-\iiint\limits_D f(\rho,\phi,z)\dif H=\int_{\phi=\alpha}^{\phi=\beta}\int_{\rho=h_1(\phi)}^{\rho=h_2(\phi)}\int_{z=g_1(\rho,\phi)}^{z=g_2(\rho,\phi)}f(\rho,\phi,z)\dif z \,\rho\dif \rho \dif\phi
-\end{align}
-
-\جزوحصہء{کروی محدد}
-ایسے کرہ جن   کے مراکز مبدا پر ہوں، وہ نصف چادر جن کا چول محور \عددی{z} ہو، اور وہ مخروط جن کا راس  مبدا پر  اور محور محددی نظام کے محور \عددی{z} پر ہو، کو کروی محدد میں بیان کرنا آسان ہوتا ہے۔ ان سطحوں کی مساواتیں درج ذیل ہوں گی۔
-\begin{align*}
-r&=4&&\text{\RL{کرہ ،جس کا رداس \عددی{4} اور مرکز مبدا پر ہے}}\\
-\phi&=\frac{\pi}{3}&&\text{\RL{مبدا سے اوپر رخ کھلتا ہوا مخروط جو مثبت \عددی{z} محور کے ساتھ \عددی{\pi/3} زاویہ بناتا ہے}}\\
-\phi&=\frac{\pi}{3}&&\text{\RL{نصف چادر جس کا چول محور \عددی{z} ہے اور جو مثبت \عددی{x} محور کے ساتھ \عددی{\pi/3} زاویہ بناتا ہے}}
-\end{align*}
-
-کروی محدد میں  چھوٹے مستطیل حجم  سے  مراد  وہ \اصطلاح{کروی  پچر}\فرہنگ{کروی!پچر}\حاشیہب{spherical wedge}\فرہنگ{spherical!wedge}   ہے جس کو \عددی{\dif r}، \عددی{\dif \phi} اور \عددی{\dif \phi} تعین کرتے ہیں۔ یہ پچر تقریباً مستطیلی ہو گا جس کے ایک اطراف  کی  قوسی لمبائی  \عددی{r\dif\phi}، دوسرے طرف کی قوسی لمبائی  \عددی{r\sin\phi\dif\phi} اور موٹائی  \عددی{\dif r} ہو گی۔ یوں   کروی محدد میں چھوٹے ٹکڑے کا حجم 
-\begin{align}
-\dif H=r^2\sin\phi \dif r\dif \phi\dif \phi
-\end{align}
-ہو گا اور تہرا تکمل کی صورت درج ذیل ہو گی۔
-\begin{align*}
-\iiint F(r,\phi,\phi)\dif H=\iiint F(r,\phi,\phi) r^2\sin\phi\dif r \dif \phi\dif \phi
-\end{align*}
-ہم عموماً پہلے \عددی{r} کے لحاظ سے تکمل لیتے ہیں۔ ہم  صرف ان تکملات  پر غور کریں گے  جو \عددی{z} محور کے لحاظ سے اجسام طواف  (یا ان کا حصہ) ہوں اور جن کے \عددی{\phi} اور \عددی{\phi} حدیں مستقل ہوں۔
-
-\جزوحصہء{کروی محدد میں تکمل کی قیمت کا حصول}
-فضا میں خطہ \عددی{D} پر تکمل
-\begin{align*}
-\iiint\limits_D F(r,\phi,\phi)\dif H
-\end{align*}
-کی قیمت حاصل کرتے ہوئے  پہلے \عددی{r}، اس کے بعد \عددی{\phi}، اور آخر میں \عددی{\phi} کے لحاظ سے تکمل لیتے ہوئے ہمیں درج ذیل اقدام کرنے ہوں گے۔
-\begin{enumerate}[1.]
-\item
-\ترچھا{خاکہ:}\quad
-خطہ \عددی{D} اور مستوی \عددی{xy} میں \عددی{D} کی تظلیل \عددی{R}  کا خاکہ بنا کر \عددی{D} کی سرحدی سطحوں کی نشاندہی کریں۔
-\item
-\ترچھا{تکمل کی \عددی{r} حدیں:}\quad
-مبدا سے ایک لکیر \عددی{M} کھینچیں جو مثبت محور \عددی{z} کے ساتھ زاویہ \عددی{\phi} بناتی ہو۔ ساتھ ہی \عددی{R} پر \عددی{M} کی تظلیل \عددی{L} کا خاکہ بنائیں جو مثبت \عددی{x} محور کے ساتھ زاویہ \عددی{\phi} بنائی گی۔ جیسے جیسے \عددی{r} بڑھے گا \عددی{M} خطہ \عددی{D} میں \عددی{r=g_1(\phi,\phi)} سے داخل اور \عددی{r=g_2(\phi,\phi)} سے خارج ہو گی۔ یہی تکمل کی \عددی{r} حدیں ہوں گی۔
-\item
-\ترچھا{تکمل کی \عددی{\phi} حدیں:}\quad
-کسی بھی مخصوص \عددی{\phi} کے لئے  \عددی{M} مثبت محور \عددی{z} کے ساتھ \عددی{\phi=\phi_1} سے \عددی{\phi=\phi_2} تک زاویہ بنائے گی۔یہی تکمل کی \عددی{\phi} حدیں ہوں گی۔
-\item
-\ترچھا{تکمل کی \عددی{\phi} حدیں:}\quad
-کسی بھی مخصوص \عددی{\phi} کے لئے \عددی{L}  خطہ \عددی{R} پر جھاڑو کی طرح چلتے ہوئے \عددی{\phi=\alpha} سے \عددی{\phi=\beta} تک چلتی ہے۔  یہی تکمل کی \عددی{\phi} حدیں ہوں گی۔
-\end{enumerate}
-یوں تکمل درج ذیل ہو گا۔
-\begin{align*}
-\iiint\limits_D F(r,\phi,\phi)\dif H=\int_{\phi=\alpha}^{\phi=\beta}\int_{\phi_1}^{\phi_2}\int_{r=g_1(\phi,\phi)}^{r=g_2(\phi,\phi)} F(r,\phi,\phi) r^2\sin\phi \dif r\dif \phi \dif \phi
-\end{align*} 
-
-\ابتدا{مثال}\شناخت{مثال_بالکثرت_کروی_کرہ_مخروط}
-ٹھوس کرہ \عددی{r\le 1} سے مخروط \عددی{\theta=\pi/3} بالائی     خطہ \عددی{D} کاٹتا ہے۔ اس خطہ کا حجم تلاش کریں۔
-
-حل:\quad
-اس خطے کا حجم \عددی{\iiint\limits_D r^2\sin\phi\dif r\dif \phi \dif \phi} ہو گا۔تکمل کی قیمت معلوم کرنے کے لئے درج ذیل اقدام کرنے ہوں گے۔
-\begin{enumerate}[1.]
-\item
-\ترچھا{خاکہ:}\quad
-ہم \عددی{D} اور مستوی \عددی{xy} میں اس کی تظلیل  \عددی{R} کا خاکہ بناتے ہیں۔
-\item
-\ترچھا{تکمل کی \عددی{r} حدیں:}\quad
-ہم مثبت \عددی{z} محور کے ساتھ \عددی{\phi} زاویہ پر  مبدا سے شعاع \عددی{M}  کھینچتے ہیں اور ساتھ ہی  \عددی{xy} مستوی میں اس کی تظلیل \عددی{L}  کھینچتے ہیں جو مثبت \عددی{x} محور کے ساتھ زاویہ \عددی{\phi} بناتا ہے۔ شعاع \عددی{M} خطہ \عددی{D}میں \عددی{r=0)} سے داخل اور \عددی{r=1} سے خارج ہو گا۔
-\item
-\ترچھا{تکمل کی \عددی{\phi} حدیں:}\quad
- مخروط \عددی{\theta=\pi/3}  مثبت \عددی{z} محور کے ساتھ  زاویہ \عددی{\pi/3} بناتا ہے۔ یوں شعاع \عددی{M}  زاویہ \عددی{\phi=0} سے \عددی{\phi=\pi/3} تک چل سکتی ہے۔
-\item
-\ترچھا{تکمل کی \عددی{\phi} حدیں:}\quad
-شعاع \عددی{L} خطہ \عددی{R} پر   \عددی{\phi=0} سے \عددی{2\pi} تک چلتی ہے۔
-\end{enumerate}
-یوں تکمل درج ذیل ہو گا۔
-\begin{align*}
-H&=\iiint\limits_D r^2\sin\phi\dif r\dif \phi\dif \phi=\int_{0}^{2\pi}\int_{0}^{\pi/3}\int_{0}^{1} r^2\sin\phi\dif r\dif \phi\dif \phi\\
-&=\int_{0}^{2\pi}\int_{0}^{\pi/3}\big[\frac{r^3}{3}\big]_0^1 \sin\phi\dif \phi\dif\phi=\int_{0}^{2\pi}\int_{0}^{\pi/3}\frac{1}{3} \sin\phi\dif\phi\dif\phi\\
-&=\int_{0}^{2\pi}\big[-\frac{1}{3}\cos\phi\big]_{0}^{\pi/3} \dif\phi=\int_{0}^{2\pi} \big(-\frac{1}{6}+\frac{1}{3}\big)\dif\phi=\frac{1}{6}(2\pi)=\frac{\pi}{3}
-\end{align*}
-\انتہا{مثال}
-%======
-\ابتدا{مثال}
-مستقل کثافت \عددی{\delta=1} کا ایک ٹھوس جسم مثال \حوالہ{مثال_بالکثرت_کروی_کرہ_مخروط} کے خطہ \عددی{D} میں پایا جاتا ہے۔ محور \عددی{z} کے لحاظ سے اس جسم کا جمودی معیار اثر تلاش کریں۔
-
-حل:\quad
-کارتیسی محدد  میں جمودی معیار اثر
-\begin{align*}
-I_z=\iiint (x^2+y^2)\dif H
-\end{align*}
-ہو گا۔کروی محدد میں \عددی{x^2+y^2=(r\sin\phi\cos\phi)^2+(r\sin\phi\sin\phi)^2=r^2\sin^2\phi} کی بنا  جمودی معیار اثر
-\begin{align*}
-I_z&=\iiint (r^2\sin^2\phi)r^2\sin\phi\dif r\dif \phi\dif\phi=\iiint r^4\sin^3\phi\dif r\dif\phi\dif\phi
-\end{align*}
-ہو گا جس کی قیمت  مثال \حوالہ{مثال_بالکثرت_کروی_کرہ_مخروط} کے خطہ کے لئے درج ذیل ہو گی۔
-\begin{align*}
-I_z&=\int_{0}^{2\pi}\int_{0}^{\pi/3}\int_{0}^{1}r^4\sin^3\phi\dif r\dif \phi\dif\phi=\int_{0}^{2\pi}\int_{0}^{\pi/3}\big[\frac{r^5}{5}\big]_0^1 \sin^3\phi\dif\phi\dif\phi\\
-&=\frac{1}{5}\int_{0}^{2\pi}\int_{0}^{\pi/3}(1-\cos^2\phi)\sin\phi\dif\phi\dif\phi=\frac{1}{5}\int_0^{2\pi} \big[-\cos\phi+\frac{\cos^3\phi}{3}\big]_0^{\pi/3}\dif\phi\\
-&=\frac{1}{5}\int_0^{2\pi}\big(-\frac{1}{2}+1+\frac{1}{24}-\frac{1}{3}\big)\dif\phi=\frac{1}{5}\int_0^{2\pi}\frac{5}{24}\dif\phi=\frac{1}{24}(2\pi)=\frac{\pi}{12}
-\end{align*}
-\انتہا{مثال}
-%=====================
-
-\موٹا{محددی بدل کے کلیات}\\
-\begin{center}
-\begin{tabular}{LLL}
-\toprule
-\multicolumn{1}{C}{\text{\RL{نلکی سے کارتیسی}}}&\multicolumn{1}{C}{\text{\RL{کروی سے کارتیسی}}}&\multicolumn{1}{C}{\text{\RL{کروی سے نلکی}}}\\
-\midrule
-x=\rho\cos\phi&x=r\sin\phi\cos\phi&\rho=r\sin\phi\\
-y=\rho\sin\phi&y=r\sin\phi\sin\phi&z=r\cos\phi\\
-z=z&z=r\cos\phi&\phi=\phi\\
-\bottomrule
-\end{tabular}
-\end{center}
-
-مطابقتی چھوٹے حجم درج ذیل ہیں۔
-\begin{align*}
-\dif H&=\dif x\dif y\dif z\\
-&=\dif z\, \rho \dif \rho \dif \phi\\
-&=r^2\sin\phi \dif r\dif \phi\dif \phi
-\end{align*}
-
-%===========================
-\جزوحصہء{سوالات}
-\موٹا{نلکی محدد}\\
-سوال \حوالہ{سوال_بالکثرت_نلکی_تکمل_الف} تا سوال \حوالہ{سوال_بالکثرت_نلکی_تکمل_ب} میں تکمل کی قیمت نلکی محدد استعمال کرتے ہوئے تلاش کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_بالکثرت_نلکی_تکمل_الف}
-$\int_{0}^{2\pi}\int_{0}^{1}\int_{r}^{\sqrt{2-r^2}} \dif z\,\rho \dif\rho\dif\phi $
-\انتہا{سوال}
-%======================
-\ابتدا{سوال}
-$\int_{0}^{2\pi}\int_{0}^{3}\int_{r^2/3}^{\sqrt{18-r^2}} \dif z\,\rho \dif\rho\dif\phi $
-\انتہا{سوال}
-%======================
-\ابتدا{سوال}
-$\int_{0}^{2\pi}\int_{0}^{\phi/2\pi}\int_{0}^{3+24r^2} \dif z\,\rho \dif\rho\dif\phi $
-\انتہا{سوال}
-%======================
-\ابتدا{سوال}
-$\int_{0}^{\pi}\int_{0}^{\phi/\pi}\int_{-\sqrt{4-r^2}}^{3\sqrt{4-r^2}}z \dif z\,\rho \dif\rho\dif\phi $
-\انتہا{سوال}
-%================
-\ابتدا{سوال}
-$\int_{0}^{2\pi}\int_{0}^{1}\int_{r}^{1/\sqrt{2-r^2}}3 \dif z\,\rho \dif\rho\dif\phi $
-\انتہا{سوال}
-%================
-\ابتدا{سوال}\شناخت{سوال_بالکثرت_نلکی_تکمل_ب}
-$\int_{0}^{2\pi}\int_{0}^{1}\int_{-1/2}^{1/2}(\rho^2\sin^2\phi+z^2) \dif z\,\rho \dif\rho\dif\phi $
-\انتہا{سوال}
-%================
-اب تک ہم  نلکی محدد کی تکملات  کو پسندیدہ  ترتیب  \عددی{z}، \عددی{\rho}،  \عددی{\phi}   سے حل کرتے آ رہے ہیں۔ بعض اوقات دیگر ترتیبات سے تکمل کا حل زیادہ آسان ہوتا ہے۔ سوال \حوالہ{سوال_بالکثرت_دیگر_نلکی_الف} تا سوال \حوالہ{سوال_بالکثرت_دیگر_نلکی_ب} کے تکملات کی قیمت تلاش کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_بالکثرت_دیگر_نلکی_الف}
-$\int_{0}^{2\pi}\int_{0}^{3}\int_{0}^{z/3} \rho^3\dif\rho \dif z\dif \phi$
-\انتہا{سوال}
-%==================
-\ابتدا{سوال}
-$\int_{-1}^{1}\int_{0}^{2\pi}\int_{0}^{1+\cos\phi} 4\rho\dif\rho \dif \theta\dif z$
-\انتہا{سوال}
-%==================
-\ابتدا{سوال}
-$\int_{0}^{1}\int_{0}^{\sqrt{z}}\int_{0}^{2\pi}(\rho^2\cos^2\phi+z^2)\rho \dif\phi\dif\rho \dif z$
-\انتہا{سوال}
-%=====
-\ابتدا{سوال}\شناخت{سوال_بالکثرت_دیگر_نلکی_ب}
-$\int_{0}^{2}\int_{\rho-2}^{\sqrt{4-\rho^2}}\int_{0}^{2\pi} (\rho\sin\phi+1)\rho \dif \phi \dif z\dif \rho$
-\انتہا{سوال}
-%===============================
-\ابتدا{سوال}\شناخت{سوال_بالکثرت_درکار_خطہ_ملفوف}
-نیچے سے مستوی \عددی{z=0}، اوپر سے کرہ \عددی{x^2+y^2+z^2=4}، اور اطراف سے بیلن \عددی{x^2+y^2=1} میں  خطہ \عددی{D}  ملفوف ہے۔نلکی محدد میں  خطہ \عددی{D} کا حجم معلوم کرنے کے لئے تہرا تکمل درج ذیل  تکمل کی ترتیب کے لئے لکھیں۔
-\begin{multicols}{3}
-\begin{enumerate}[a.]
-\item
-$\dif z\dif \rho\dif\phi$
-\item
-$\dif \rho\dif z\dif\phi$
-\item
-$\dif \phi\dif z\dif\rho$
-\end{enumerate}
-\end{multicols}
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-نیچے سے مخروط  \عددی{z=\sqrt{x^2+y^2}}، اوپر سے قطع مکافی  \عددی{z=2-x^2-y^2}، اور اطراف سے بیلن \عددی{x^2+y^2=1} میں  خطہ \عددی{D}  ملفوف ہے۔نلکی محدد میں  خطہ \عددی{D} کا حجم معلوم کرنے کے لئے تہرا تکمل درج ذیل  تکمل کی ترتیب کے لئے لکھیں۔
-\begin{multicols}{3}
-\begin{enumerate}[a.]
-\item
-$\dif z\dif \rho\dif\phi$
-\item
-$\dif \rho\dif z\dif\phi$
-\item
-$\dif \phi\dif z\dif\rho$
-\end{enumerate}
-\end{multicols}
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-نیچے سے مستوی \عددی{z=0}،  اطراف سے بیلن \عددی{\rho=\cos\phi}، اور اوپر سے قطع مکافی سطح \عددی{z=3\rho^2} میں ملفوف خطہ \عددی{D} کے لئے درج ذیل تکمل کی قیمت تلاش کرنے کے لئے  کے تکمل کی  حدیں معلوم کریں۔
-\begin{align*}
-\iiint F(\rho,\phi,z)\dif z\,\rho \dif \rho\dif\phi
-\end{align*}
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-درج ذیل تکمل کو معادل نلکی محدد کے تکمل میں تبدیل کر  اس کی قیمت تلاش کریں۔
-\begin{align*}
-\int_{-1}^1 \int_0^{\sqrt{1-y^2}}\int_0^x (x^2+y^2)\dif z\dif x\dif y
-\end{align*}
-\انتہا{سوال}
-%====================
-
-سوال \حوالہ{سوال_بالکثرت_تہرا_نلکی_درکار_الف} تا سوال \حوالہ{سوال_بالکثرت_تہرا_نلکی_درکار_ب}  میں دیے گئے خطہ \عددی{D} پر تکمل \عددی{\iiint_D F(\rho,\phi,z)\dif z\,\rho\dif \rho\dif\phi} کی قیمت حاصل کرنے کے لئے تہرا تکمل لکھیں۔
-
-\ابتدا{سوال}\شناخت{سوال_بالکثرت_تہرا_نلکی_درکار_الف}
-وہ     قائمہ دائری بیلن جس کا  قاعدہ  مستوی \عددی{xy} میں  دائرہ \عددی{\rho=2\sin\phi}  اور  سر   مستوی \عددی{z=4-y}میں  ہو، خطہ \عددی{D} ہے۔
-\انتہا{سوال}
-%===============
-\ابتدا{سوال}
-وہ   قائمہ دائری بیلن جس کا  قاعدہ  مستوی \عددی{xy} میں  دائرہ \عددی{\rho=3\cos \phi}  اور  سر   مستوی \عددی{z=5-x} میں   ہو، خطہ \عددی{D} ہے۔
-\انتہا{سوال}
-%============
-\ابتدا{سوال}
-وہ  قائمہ دائری بیلن جس کا  قاعدہ  مستوی \عددی{xy} میں  قلب نما \عددی{\rho=1+\cos\phi}  کے اندر  اور دائرہ \عددی{\rho=1} کے باہر  اور سر  مستوی \عددی{z=4} میں   ہو، خطہ \عددی{D} ہے۔
-\انتہا{سوال}
-%============
-\ابتدا{سوال}
-وہ ٹھوس قائمہ بیلن جس کا  قاعدہ دائرہ \عددی{\rho=\cos\phi} اور دائرہ \عددی{\rho=2\cos\phi} کے بیچ اور سر مستوی \عددی{z=3-y} میں ہو،  خطہ \عددی{D} ہے۔
-\انتہا{سوال}
-%================
-\ابتدا{سوال}
-وہ منشور جس کا قاعدہ مستوی \عددی{xy} میں  محور \عددی{x}،  لکیر \عددی{y=x} اور لکیر \عددی{x=1} کے بیچ  مثلث   اور  سر مستوی \عددی{z=2-y} میں ہو، خطہ \عددی{D} ہے۔
-\انتہا{سوال}
-%===============
-\ابتدا{سوال}\شناخت{سوال_بالکثرت_تہرا_نلکی_درکار_ب}
-وہ منشور جس کا قاعدہ مستوی \عددی{xy} میں  محور \عددی{y}،  لکیر \عددی{y=x} اور لکیر \عددی{y=1} کے بیچ  مثلث  اور  سر مستوی \عددی{z=2-x} میں ہو، خطہ \عددی{D} ہے۔
-\انتہا{سوال}
-%====================
-
-\موٹا{کروی محدد}\\
-سوال \حوالہ{سوال_بالکثرت_کروی_الف} تا سوال \حوالہ{سوال_بالکثرت_کروی_ب} میں کروی تکملات کی قیمت تلاش کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_بالکثرت_کروی_الف}
-$\int_{0}^{\pi}\int_{0}^{\pi}\int_{0}^{2\sin\theta} r^2\sin\theta \dif r\dif\theta\dif\phi$
-\انتہا{سوال}
-%=================
-\ابتدا{سوال}
-$\int_{0}^{2\pi}\int_{0}^{\pi/4}\int_{0}^{2} (r\cos\theta) r^2\sin\theta\dif r\dif\theta\dif\phi$
-\انتہا{سوال}
-%=================
-\ابتدا{سوال}
-$\int_{0}^{2\pi}\int_{0}^{\pi}\int_{0}^{(1-\cos\theta)/2} r^2\sin\theta\dif r\dif\theta\dif\phi$
-\انتہا{سوال}
-%=================
-\ابتدا{سوال}
-$\int_{0}^{3\pi/2}\int_{0}^{\pi}\int_{0}^{1} 5 r^3\sin^3\theta\dif r\dif\theta\dif\phi$
-\انتہا{سوال}
-%=================
-\ابتدا{سوال}
-$\int_{0}^{2\pi}\int_{0}^{\pi/3}\int_{\sec\theta}^{2} 3 r^2\sin\theta\dif r\dif\theta\dif\phi$
-\انتہا{سوال}
-%=================
-\ابتدا{سوال}\شناخت{سوال_بالکثرت_کروی_ب}
-$\int_{0}^{2\pi}\int_{0}^{\pi/4}\int_{0}^{\sec\theta} (r\cos\theta) r^2\sin\theta\dif r\dif\theta\dif\phi$
-\انتہا{سوال}
-%=================
-
-اب تک ہم   کروی  محدد کی تکملات  کو پسندیدہ  ترتیب   سے حل کرتے آ رہے ہیں۔ بعض اوقات دیگر ترتیبات سے تکمل کا حل زیادہ آسان ہوتا ہے۔سوال \حوالہ{سوال_بالکثرت_کروی_دیگر_الف} تا سوال \حوالہ{سوال_بالکثرت_کروی_دیگر_ب} میں تکملات کی قیمت تلاش کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_بالکثرت_کروی_دیگر_الف}
-$\int_{0}^{2}\int_{-\pi}^{0}\int_{\pi/4}^{\pi/2} r^3 \sin 2\theta \dif \theta\dif \phi\dif r$
-\انتہا{سوال}
-%================
-\ابتدا{سوال}
-$\int_{\pi/6}^{\pi/3}\int_{\csc\theta}^{2\csc\theta}\int_{0}^{2\pi} r^2\sin\theta\dif\phi \dif r\dif \theta$
-\انتہا{سوال}
-%================
-\ابتدا{سوال}
-$\int_{0}^{1}\int_{0}^{\pi}\int_{0}^{\pi/4} 12r\sin^3\theta\dif \theta\dif \phi\dif r$
-\انتہا{سوال}
-%================
-\ابتدا{سوال}\شناخت{سوال_بالکثرت_کروی_دیگر_ب}
-$\int_{\pi/6}^{\pi/2}\int_{-\pi/2}^{\pi/2}\int_{\csc\theta}^{2}5r^4\sin^3\theta \dif r\dif \phi\dif \theta$
-\انتہا{سوال}
-%================
-\ابتدا{سوال}
-کروی محدد میں (ا) \عددی{\dif r\dif\theta\dif\phi}، (ب) \عددی{\dif\theta\dif r\dif \phi} ترتیب سے سوال \حوالہ{سوال_بالکثرت_درکار_خطہ_ملفوف}  کے خطہ کے حجم  کے  تہرا  تکمل لکھیں۔ 
-\انتہا{سوال}
-%==================
-\ابتدا{سوال}
-نیچے سے مخروط   \عددی{z=\sqrt{x^2+y^2}} اور اوپر سے مستوی \عددی{z=1}  کے بیچ خطہ \عددی{D}  کے حجم کا تکمل کروی محدد میں(ا) \عددی{\dif r\dif\theta\dif\phi} ، (ب) \عددی{\dif\theta\dif r\dif \phi} ترتیب    کے لئے  لکھیں۔
-\انتہا{سوال}
-%=================
-سوال \حوالہ{سوال_بالکثرت_کروی_حجم_تلاش_الف} تا سوال \حوالہ{سوال_بالکثرت_کروی_حجم_تلاش_ب} میں  دئے گئے ٹھوس جس کے حجم کے کروی تکمل (ا) کی حدیں تلاش کریں۔ (ب) کروی تکمل حل کرتے  ہوئے جسم کا حجم معلوم کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_بالکثرت_کروی_حجم_تلاش_الف}
-کرہ \عددی{r=\cos\theta} اور نصف کرہ \عددی{r=2,\,z\ge 0} کے بیچ ٹھوس جسم۔
-\انتہا{سوال}
-%==================
-\ابتدا{سوال}
-نیچے سے نصف کرہ \عددی{r=1,\,z\ge 0} اور اوپر سے سطح طواف قلب نما \عددی{r=1+\cos\theta}  میں ملفوف  ٹھوس جسم۔
-\انتہا{سوال}
-%===================
-\ابتدا{سوال}\شناخت{سوال_بالکثرت_کروی_حجم_درکار_پ}
-جسم طواف قلب نما \عددی{r=1-\cos\theta}   میں ملفوف۔
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-وہ  بالائی خطہ جو مستوی \عددی{xy} سوال \حوالہ{سوال_بالکثرت_کروی_حجم_درکار_پ} کے جسم سے  کاٹتا ہے۔
-\انتہا{سوال}
-%======================
-\ابتدا{سوال}
-نیچے سے کرہ \عددی{r=2\cos\theta}  اور اوپر سے مخروط \عددی{z=\sqrt{x^2+y^2}} میں ملفوف جسم۔
-\انتہا{سوال}
-%================
-\ابتدا{سوال}\شناخت{سوال_بالکثرت_کروی_حجم_تلاش_ب}
-نیچے سے مستوی \عددی{xy}، اوپر سے  مخروط \عددی{\theta=\tfrac{\pi}{3}} اور اطراف سے کرہ \عددی{r=2} میں ملفوف
-\انتہا{سوال}
-%===========
-
-\موٹا{کارتیسی، نلکی اور کروی محدد}\\
-\ابتدا{سوال}
-کرہ \عددی{r=2} کے حجم کا تہرا تکمل (ا) کروی ، (ب) نلکی، اور (ج) کارتیسی محدد میں لکھیں۔
-\انتہا{سوال}
-%===========
-\ابتدا{سوال}
-ثُمن اول میں نیچے سے مخروط \عددی{\theta=\tfrac{\pi}{4}} اور اوپر سے کرہ \عددی{r=3} میں ملفوف خطہ \عددی{D} کے حجم کا تہرا تکمل (ا) نلکی اور  (ب) کروی محدد میں لکھیں۔ (ج)  اس کے بعد اس جسم کا حجم تلاش کریں۔
-\انتہا{سوال}
-%================
-\ابتدا{سوال}
-رداس \عددی{2} اکائیاں   کے کرہ کو ،کرہ سے مرکز سے \عددی{1} اکائی دور، مستوی دو ٹکڑوں میں کاٹتی ہے۔  چھوٹے ٹکڑے  کے حجم کا تہرا تکمل (ا) کروی، (ب) نلکی، اور (ج) کارتیسی محدد میں لکھیں۔ (د) اس ٹکڑے کا حجم کسی ایک تہرا تکمل کو حل کرتے ہوئے   معلوم کریں۔
-\انتہا{سوال}
-%==================
-\ابتدا{سوال}
-ٹھوس نصف کرہ \عددی{x^2+y^2+z^2\le 1,\, z\ge 0} کے جمودی معیار اثر \عددی{I_z} کو (ا) نلکی اور (ب) کروی محدد میں لکھیں۔ (ج) \عددی{I_z} کی قیمت تلاش کریں۔
-\انتہا{سوال}
-%==================
-
-\موٹا{حجم}\\
-سوال \حوالہ{سوال_بالکثرت_ٹھوس_جسم_حجم_الف} تا سوال \حوالہ{سوال_بالکثرت_ٹھوس_جسم_حجم_ب} میں ٹھوس اجسام کے حجم تلاش کریں۔
-
-\ابتدا{سوال}\شناخت{سوال_بالکثرت_ٹھوس_جسم_حجم_الف}
-\انتہا{سوال}
-%============================
-\ابتدا{سوال}
-\انتہا{سوال}
-%============================
-\ابتدا{سوال}
-\انتہا{سوال}
-%============================
-\ابتدا{سوال}
-\انتہا{سوال}
-%============================
-\ابتدا{سوال}
-\انتہا{سوال}
-%============================
-\ابتدا{سوال}\شناخت{سوال_بالکثرت_ٹھوس_جسم_حجم_ب}
-\انتہا{سوال}
-%============================
-\ابتدا{سوال}
-مخروط \عددی{\theta=\tfrac{\pi}{3}} اور \عددی{\theta=\tfrac{2\pi}{3}} کے بیچ ٹھوس  کرہ \عددی{r\le a} کے حصہ  کا حجم تلاش کریں۔
-\انتہا{سوال}
-%===================
-\ابتدا{سوال}
-ثُمن اول میں نصف مستویات \عددی{\phi=0} اور \عددی{\phi=\tfrac{\pi}{6}} کے بیچ  ٹھوس کرہ  \عددی{r\le a}  کے حصہ کا حجم تلاش کریں۔
-\انتہا{سوال}
-%=================
-\ابتدا{سوال}
-ٹھوس کرہ \عددی{r\le 2} سے مستوی \عددی{z=1} جو چھوٹا ٹکڑا کاٹتا ہے، اس کا حجم تلاش کریں۔
-\انتہا{سوال}
-%===================
-\ابتدا{سوال}
-مستویات \عددی{z=1} اور \عددی{z=2} کے بیچ مخروط \عددی{z=\sqrt{x^2+y^2}} کے حصہ کا حجم تلاش کریں۔
-\انتہا{سوال}
-%=============
-\ابتدا{سوال}
-نیچے سے مستوی \عددی{z=0}، اوپر سے سطح قطع مکافی \عددی{z=x^2+y^2} اور اطراف سے بیلن \عددی{x^2+y^2=1} میں ملفوف خطے کا حجم تلاش کریں۔
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-نیچے سے سطح قطع مکافی  \عددی{z=x^2+y^2}، اوپر سے سطح قطع مکافی \عددی{z=1+x^2+y^2} اور اطراف سے بیلن \عددی{x^2+y^2=1} میں ملفوف خطے کا حجم تلاش کریں۔
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-موٹی  دیوار کے بیلن \عددی{1\le x^2+y^2\le 2}  سے مخروط \عددی{z=\mp\sqrt{x^2+y^2}}  جتنا حصہ کاٹتے ہیں، اس کا حجم تلاش کریں۔
-\انتہا{سوال}
-%=============
-\ابتدا{سوال}
-کرہ \عددی{x^2+y^2+z^2=2} کے اندر اور بیلن \عددی{x^2+y^2=1} کے باہر خطے کا حجم تلاش کریں۔
-\انتہا{سوال}
-%==========
-\ابتدا{سوال}
-بیلن \عددی{x^2+y^2=4} اور مستویات \عددی{z=0} اور \عددی{y+z=4} میں ملفوف خطے کا حجم تلاش کریں۔
-\انتہا{سوال}
-%=========
-\ابتدا{سوال}
-بیلن \عددی{x^2+y^2=4} اور مستویات \عددی{z=0} اور \عددی{x+y+z=4} میں ملفوف خطے کا حجم تلاش کریں۔
-\انتہا{سوال}
-%=========
-\ابتدا{سوال}
-اوپر سے سطح قطع مکافی \عددی{z=5-x^2-y^2} اور نیچے سے سطح قطع مکافی \عددی{z=4x^2+4y^2} میں ملفوف خطے کا حجم تلاش کریں۔
-\انتہا{سوال}
-%================
-\ابتدا{سوال}
- بیلن \عددی{x^2+y^2=1} سے باہر،  اوپر سے سطح قطع مکافی \عددی{z=9-x^2-y^2} اور  نیچے سے مستوی \عددی{xy} میں ملفوف    خطے  کا حجم تلاش کریں۔
-\انتہا{سوال}
-%================
-\ابتدا{سوال}
-اس خطے کا حجم تلاش کریں جسے ٹھوس بیلن \عددی{x^2+y^2\le 1}  کرہ \عددی{x^2+y^2+z^2=4} سے کاٹتا ہے۔
-\انتہا{سوال}
-%=========
-\ابتدا{سوال}
-اوپر سے کرہ \عددی{x^2+y^2+z^2=2} اور نیچے سے سطح قطع مکافی \عددی{z=x^2+y^2} میں ملفوف خطے کا حجم تلاش کریں۔
-\انتہا{سوال}
-%================
-
-\موٹا{اوسط قیمت}\\
-
-\ابتدا{سوال}
-مستویات \عددی{z=-1} اور \عددی{z=1} کے بیچ بیلن \عددی{\rho=1}  میں تفاعل \عددی{F(\rho,\phi,z)=\rho} کی اوسط قیمت    تلاش کریں۔
-\انتہا{سوال}
-%================
-\ابتدا{سوال}
-کرہ \عددی{\rho^2+z^2=1} (یعنی کرہ \عددی{x^2+y^2+z^2=1})  کے اندر  تفاعل \عددی{F(\rho,\phi,z)=\rho} کی اوسط قیمت تلاش کریں۔
-\انتہا{سوال}
-%===============
-\ابتدا{سوال}
-ٹھوس گیند \عددی{r\le 1}  میں تفاعل \عددی{F(r,\theta,\phi)=r} کی اوسط قیمت تلاش کریں۔
-\انتہا{سوال}
-%========
-\ابتدا{سوال}
-بالائی نصف ٹھوس کرہ \عددی{r\le 1,\, 0\le\theta\le\pi/2}  میں تفاعل \عددی{F(r,\theta,\phi)=r\cos\theta} کی اوسط قیمت تلاش کریں۔
-\انتہا{سوال}
-%==========
-
-\موٹا{کمیت، معیار اثر، اور وسطانی مراکز}\\
-\ابتدا{سوال}
-نیچے سے مستوی \عددی{z=0}، اوپر سے مخروط \عددی{z=\rho,\,\rho\ge 0}، اور اطراف سے بیلن \عددی{\rho=1} میں ملفوف  مستقل کثافت کے ٹھوس جسم کا  مرکز کمیت تلاش کریں۔
-\انتہا{سوال}
-%================
-\ابتدا{سوال}
-ثُمن اول میں اوپر سے مخروط \عددی{z=\sqrt{x^2+y^2}}، نیچے سے مستوی \عددی{z=0}، اور اطراف سے بیلن \عددی{x^2+y^2=4} اور مستویات \عددی{x=0} اور \عددی{y=0} میں ملفوف  خطے کا وسطانی مرکز تلاش کریں۔
-\انتہا{سوال}
-%===============
-\ابتدا{سوال}
-اس ٹھوس جسم کا وسطانی مرکز تلاش کریں جو سوال \حوالہ{سوال_بالکثرت_کروی_حجم_تلاش_ب} میں دیا گیا ہے۔ 
-\انتہا{سوال}
-%============
-\ابتدا{سوال}
-اوپر سے کرہ \عددی{r=a} اور نیچے سے  مخروط \عددی{\theta=\tfrac{\pi}{4}} کے بیچ ٹھوس جسم کا وسطانی مرکز تلاش کریں۔
-\انتہا{سوال}
-%================
-\ابتدا{سوال}
-اوپر سے سطح \عددی{z=\sqrt{\rho}}، نیچے سے مستوی \عددی{xy}، اور اطراف سے  بیلن \عددی{\rho=4} میں ملفوف ٹھوس جسم کا وسطانی مرکز تلاش کریں۔
-\انتہا{سوال}
-%==============
-\ابتدا{سوال}
-اس خطے کا وسطانی مرکز تلاش کریں جو نصف مستویات \عددی{\phi=-\pi/3,\,\rho\ge 0} اور \عددی{\phi=\pi/3,\,\rho\ge 0} ٹھوس گیند \عددی{\rho^2+z^2\le 1}  سے  کاٹتے ہیں۔
-\انتہا{سوال}
-%==========
-\ابتدا{سوال}
-قائمہ دائری موٹی دیوار کے  بیلن   کی اندرونی سطح بیلن \عددی{\rho=1} اور بیرونی سطح بیلن \عددی{\rho=2} ہیں۔اس کا نچلا سر مستوی \عددی{z=0} اور بالائی سر  مستوی \عددی{z=4}  میں پایا جاتا ہے۔ محور \عددی{z} کے لحاظ سے  اس  کا جمودی معیار اثر اور رداس دوار تلاش کریں (\عددی{\delta=1} لیں)۔
-\انتہا{سوال}
-%======================
