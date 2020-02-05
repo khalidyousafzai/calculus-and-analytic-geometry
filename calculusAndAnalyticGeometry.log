@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.11.8)  4 FEB 2020 15:28
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.11.8)  5 FEB 2020 14:06
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1818,9 +1818,9 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
 )
 \verbatim@out=\write4
-runsystem(touch w18-test-202024928.tex)...executed.
+runsystem(touch w18-test-202025846.tex)...executed.
 
-runsystem(rm -f w18-test-202024928.tex)...executed.
+runsystem(rm -f w18-test-202025846.tex)...executed.
 
 runsystem(rm -f "calculusAndAnalyticGeometry.gnuploterrors")...executed.
 
@@ -2376,11 +2376,39 @@ LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 11.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 11.
-) [1747] [1748] [1749]
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 195.
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 195.
+
+Overfull \hbox (1.37306pt too wide) detected at line 195
+[]
+ []
+
+
+Overfull \hbox (19.66318pt too wide) detected at line 195
+[]
+ []
+
+
+Overfull \hbox (49.74196pt too wide) in paragraph at lines 231--256
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (52.18538pt too wide) in paragraph at lines 260--286
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (40.52142pt too wide) in paragraph at lines 290--326
+ [][][][][][] 
+ []
+
+) [1747] [1748] [1749] [1750]
 \openout2 = `./tex/questionsA.aux'.
 
- (./tex/questionsA.tex)
-[1750
+ (./tex/questionsA.tex) (./answer.tex) [1751
 
 
 
@@ -2405,10 +2433,11 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 
 
 
-] (./answer.tex) [1751]
+]
 \openout2 = `./tex/calculusAppendixA.aux'.
 
- (./tex/calculusAppendixA.tex [1752
+
+(./tex/calculusAppendixA.tex [1752
 
 
 
@@ -2533,12 +2562,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 242.
  ) 
 Here is how much of TeX's memory you used:
- 63100 strings out of 492922
- 1591993 string characters out of 6133407
- 2317529 words of memory out of 5000000
- 65977 multiletter control sequences out of 15000+600000
- 559575 words of font info for 147 fonts, out of 8000000 for 9000
+ 63626 strings out of 492922
+ 1602382 string characters out of 6133407
+ 2353701 words of memory out of 5000000
+ 66501 multiletter control sequences out of 15000+600000
+ 559591 words of font info for 149 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 78i,12n,136p,2364b,2502s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,20n,346p,2364b,2609s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on calculusAndAnalyticGeometry.pdf (36 pages).
