@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.11.8)  8 FEB 2020 13:58
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.11.8)  8 FEB 2020 19:01
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1818,9 +1818,9 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
 )
 \verbatim@out=\write4
-runsystem(touch w18-test-202028838.tex)...executed.
+runsystem(touch w18-test-2020281141.tex)...executed.
 
-runsystem(rm -f w18-test-202028838.tex)...executed.
+runsystem(rm -f w18-test-2020281141.tex)...executed.
 
 runsystem(rm -f "calculusAndAnalyticGeometry.gnuploterrors")...executed.
 
@@ -2343,6 +2343,11 @@ Overfull \hbox (4.49997pt too wide) detected at line 148
  [][][]\TU/JameelNooriNastaleeq(0)/bx/n/10 1733[][][]
  []
 
+
+Overfull \hbox (4.49997pt too wide) detected at line 149
+ [][][]\TU/JameelNooriNastaleeq(0)/bx/n/10 1749[][][]
+ []
+
 )
 \tf@toc=\write7
 \openout7 = `calculusAndAnalyticGeometry.toc'.
@@ -2805,11 +2810,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 5697--5698
 [1746] [1747]) [1748]
 \openout2 = `./tex/questions.aux'.
 
- (./tex/questions.tex)
+ (./tex/questions.tex
+Missing character: There is no ﻿ in font Jameel Noori Nastaleeq/OT:script=arab;
+language=DFLT;!
+ [1749
+
+
+]) [1750]
 \openout2 = `./tex/questionsA.aux'.
 
- (./tex/questionsA.tex)
-(./answer.tex
+ (./tex/questionsA.tex) (./answer.tex
 LaTeX Font Info:    Font shape `TU/AASameerSagarNastaleeqBold(0)/m/n' will be
 (Font)              scaled to size 9.0pt on input line 1.
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/bx/n' will be
@@ -2851,9 +2861,7 @@ Overfull \hbox (33.13042pt too wide) in paragraph at lines 38--38
  [][][][][] 
  []
 
-[1749
-
-
+[1751
 
 
 
@@ -2957,7 +2965,7 @@ Overfull \hbox (7.67163pt too wide) in paragraph at lines 62--62
  [][][][][] 
  []
 
-[1750]
+[1752]
 Package pgfplots info on input line 66: fill between: activating layered graphi
 cs
 Package pgfplots info on input line 66: Setting layers 'axis background,axis gr
@@ -3038,7 +3046,7 @@ Overfull \hbox (5.4332pt too wide) in paragraph at lines 122--122
  [][][][][] 
  []
 
-[1751]
+[1753]
 Package pgfplots info on input line 141: fill between: activating layered graph
 ics
 Package pgfplots info on input line 141: Setting layers 'axis background,axis g
@@ -3119,7 +3127,7 @@ Overfull \hbox (27.7582pt too wide) in paragraph at lines 157--157
  [][][][][] 
  []
 
-[1752]
+[1754]
 Package pgfplots info on input line 161: fill between: activating layered graph
 ics
 Package pgfplots info on input line 161: Setting layers 'axis background,axis g
@@ -3172,7 +3180,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 339--342
 NooriNastaleeq(0)/bx/n/9 تمام[]
  []
 
-[1753]
+[1755]
 Underfull \hbox (badness 10000) in paragraph at lines 446--449
 []\TU/JameelNooriNastaleeq(0)/bx/n/9 (ب) $[][] [][] [][] \OML/zplm/m/it/9 ^^Z [
 ] ^^Z [] z [] ^^^ \OT1/zplm/m/n/9 +$[]
@@ -3204,102 +3212,102 @@ Overfull \hbox (9.48654pt too wide) in paragraph at lines 486--489
 ] ^^R [] ^^R [] r [] ^^^ \OT1/zplm/m/n/9 +$[]
  []
 
-[1754]
+[1756]
 Overfull \hbox (2.49062pt too wide) in paragraph at lines 506--509
 []\TU/JameelNooriNastaleeq(0)/bx/n/9 (ج) $[][] [][] [][] [] \OML/zplm/m/it/9 z 
 [] y [] x$ []
  []
 
-) [1755]
+) [1757]
 \openout2 = `./tex/calculusAppendixA.aux'.
 
- (./tex/calculusAppendixA.tex [1756
+ (./tex/calculusAppendixA.tex [1758
 
 
 
 ]
 ضمیمہ ا.
-) [1757]
+) [1759]
 \openout2 = `./tex/calculusAppendixB.aux'.
 
- (./tex/calculusAppendixB.tex [1758
+ (./tex/calculusAppendixB.tex [1760
 
 
 
 
 ]
 ضمیمہ ب.
-) [1759]
+) [1761]
 \openout2 = `./tex/calculusAppendixC.aux'.
 
- (./tex/calculusAppendixC.tex [1760
+ (./tex/calculusAppendixC.tex [1762
 
 
 
 
 ]
 ضمیمہ ج.
-) [1761]
+) [1763]
 \openout2 = `./tex/calculusAppendixD.aux'.
 
- (./tex/calculusAppendixD.tex [1762
+ (./tex/calculusAppendixD.tex [1764
 
 
 
 
 ]
 ضمیمہ د.
-) [1763]
+) [1765]
 \openout2 = `./tex/calculusAppendixE.aux'.
 
- (./tex/calculusAppendixE.tex [1764
+ (./tex/calculusAppendixE.tex [1766
 
 
 
 
 ]
 ضمیمہ ه\char "200D.
-) [1765]
+) [1767]
 \openout2 = `./tex/calculusAppendixF.aux'.
 
- (./tex/calculusAppendixF.tex [1766
+ (./tex/calculusAppendixF.tex [1768
 
 
 
 
 ]
 ضمیمہ و.
-) [1767]
+) [1769]
 \openout2 = `./tex/calculusAppendixG.aux'.
 
- (./tex/calculusAppendixG.tex [1768
+ (./tex/calculusAppendixG.tex [1770
 
 
 
 
 ]
 ضمیمہ ز.
-) [1769]
+) [1771]
 \openout2 = `./tex/calculusAppendixH.aux'.
 
- (./tex/calculusAppendixH.tex [1770
+ (./tex/calculusAppendixH.tex [1772
 
 
 
 
 ]
 ضمیمہ ح.
-) [1771]
+) [1773]
 \openout2 = `./tex/calculusAppendixI.aux'.
 
- (./tex/calculusAppendixI.tex [1772
+ (./tex/calculusAppendixI.tex [1774
 
 
 
 
 ]
 ضمیمہ ط.
-) [1773] [1774
+) [1775] [1776
 
 
 
@@ -3338,12 +3346,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 242.
  ) 
 Here is how much of TeX's memory you used:
- 67186 strings out of 492922
- 1674387 string characters out of 6133407
- 2929101 words of memory out of 5000000
- 70049 multiletter control sequences out of 15000+600000
+ 67196 strings out of 492922
+ 1674595 string characters out of 6133407
+ 2929192 words of memory out of 5000000
+ 70059 multiletter control sequences out of 15000+600000
  566557 words of font info for 179 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  78i,22n,362p,2364b,5090s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on calculusAndAnalyticGeometry.pdf (125 pages).
+Output written on calculusAndAnalyticGeometry.pdf (127 pages).
