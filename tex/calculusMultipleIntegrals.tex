@@ -4384,11 +4384,54 @@ M=\iint\limits_R\int_{0}^{4-x^2-y^2}\delta \dif z\dif y\dif x=8\pi\delta
 \انتہا{سوال}
 %=================
 \ابتدا{سوال}\شناخت{سوال_بالکثرت_اکائی_کثافت_درکار_پ}
-ایک پچر کے وسطانی مرکز  گزرتے محددی محور پچر کے کناروں کے متوازی ہیں۔اگر \عددی{a=b=6} اور \عددی{c=4} تب \عددی{I_x}، \عددی{I_y} اور \عددی{I_z} کیا ہوں گے۔
+ایک پچر کے وسطانی مرکز  گزرتے محددی محور پچر کے کناروں کے متوازی ہیں  (شکل \حوالہ{شکل_سوال_بالکثرت_اکائی_کثافت_درکار_پ})۔اگر \عددی{a=b=6} اور \عددی{c=4} تب \عددی{I_x}، \عددی{I_y} اور \عددی{I_z} کیا ہوں گے۔
 \انتہا{سوال}
 %===================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,]
+\pgfmathsetmacro{\a}{1.5}
+\pgfmathsetmacro{\b}{2}
+\pgfmathsetmacro{\c}{1}
+\begin{axis}[clip=false,axis lines=center,view/h=110,enlargelimits=true,xtick={\a},ytick={\b},ztick={\c},xticklabels={$a$},yticklabels={$b$},zticklabels={$c$},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south}, hide axis]
+\addplot3[]coordinates{(1/2*\a,-1/3*\b,-1/3*\c)(1/2*\a,2/3*\b,-1/3*\c)(1/2*\a,-1/3*\b,2/3*\c)(1/2*\a,-1/3*\b,-1/3*\c)};
+\addplot3[]coordinates{(1/2*\a,2/3*\b,-1/3*\c)(-1/2*\a,2/3*\b,-1/3*\c)(-1/2*\a,-1/3*\b,2/3*\c)(1/2*\a,-1/3*\b,2/3*\c)};
+\addplot3[-latex]coordinates{(1/2*\a,0,0)(1.75*\a,0,0)}node[below]{$x$};
+\addplot3[-latex]coordinates{(0,1/3*\b,0)(0,\b,0)}node[right]{$y$};
+\addplot3[-latex]coordinates{(0,0,1/3*\c)(0,0,\c)}node[above]{$z$};
+\addplot3[stealth-stealth]coordinates{(1/2*\a,0,-1/3*\c)(1/2*\a,0,0)}node[pos=0.5,right]{$\tfrac{c}{3}$};
+\addplot3[stealth-stealth]coordinates{(1/2*\a,0,0)(1/2*\a,-1/3*\b,0)}node[pos=0.5,above]{$\tfrac{b}{3}$};
+\addplot3[stealth-stealth]coordinates{(0,0,1/3*\c)(1/2*\a,0,1/3*\c)}node[pos=0.5,above left]{$\tfrac{a}{2}$};
+\addplot3[]coordinates{(1/2*\a,1/3*\b,-1/3*\c)}node[below]{$b$};
+\addplot3[]coordinates{(0,2/3*\b,-1/3*\c)}node[right]{$a$};
+\addplot3[]coordinates{(1/2*\a,-1/3*\b,1/3*\c)}node[left]{$c$};
+\addplot3[]coordinates{(-1/2*\a,1/3*\b,1/3*\c)}node[above,align=center]{\text{\RL{وسطانی مرکز}}\\  \عددی{(0,0,0)}};
+\end{axis}
+\end{tikzpicture}
+\caption{پچر برائے سوال \حوالہ{سوال_بالکثرت_اکائی_کثافت_درکار_پ}}
+\label{شکل_سوال_بالکثرت_اکائی_کثافت_درکار_پ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,]
+\pgfmathsetmacro{\a}{1.5}
+\pgfmathsetmacro{\b}{2}
+\pgfmathsetmacro{\c}{1}
+\begin{axis}[small,clip=false,axis lines=center,view/h=110,enlargelimits=true,xtick={\a},ytick={\b},ztick={\c},xticklabels={$a$},yticklabels={$\rlap{b}$},zticklabels={$c$},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south}]
+\addplot3[]coordinates{(\a,0,0)(\a,\b,0)(\a,\b,\c)(\a,0,\c)(\a,0,0)};
+\addplot3[]coordinates{(\a,\b,0)(0,\b,0)(0,\b,\c)(\a,\b,\c)};
+\addplot3[]coordinates{(\a,0,\c)(0,0,\c)(0,\b,\c)(\a,\b,\c)};
+\end{axis}
+\end{tikzpicture}
+\caption{مستطیل ٹھوس جسم برائے سوال \حوالہ{سوال_بالکثرت_اکائی_کثافت_درکار_ت}}
+\label{شکل_سوال_بالکثرت_اکائی_کثافت_درکار_ت}
+\end{minipage}
+\end{figure}
+
 \ابتدا{سوال}\شناخت{سوال_بالکثرت_اکائی_کثافت_درکار_ت}
-مستطیل ٹھوس جسم کے \عددی{I_x}، \عددی{I_y} اور \عددی{I_z} دریافت کرتے ہوئے جسم کے کناروں کے لحاظ سے جمودی معیار اثر تلاش کریں۔
+مستطیل ٹھوس جسم کے \عددی{I_x}، \عددی{I_y} اور \عددی{I_z} دریافت کرتے ہوئے جسم کے کناروں کے لحاظ سے جمودی معیار اثر تلاش کریں (شکل \حوالہ{شکل_سوال_بالکثرت_اکائی_کثافت_درکار_ت})۔
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
@@ -4399,8 +4442,8 @@ M=\iint\limits_R\int_{0}^{4-x^2-y^2}\delta \dif z\dif y\dif x=8\pi\delta
 مستقل کثافت کے ایک ٹھوس "کونڈا"  کی زیریں سرحدی سطح \عددی{z=4y^2}،  بالائی سرحدی سطح \عددی{z=4} اور اطراف  مستویات \عددی{x=1} اور \عددی{x=-1} ہیں۔ اس کی مرکز کمیت  اور تینوں محوروں کے لحاظ سے جمودی معیار اثر تلاش کریں۔
 \انتہا{سوال}
 %============================
-\ابتدا{سوال}
-مستقل کثافت کے ایک ٹھوس جسم کی زیریں سرحد مستوی \عددی{z=0}، بالائی سرحد مستوی \عددی{z=2-x} اور اس کے اطراف ترخیمی بیلن \عددی{x^2+4y^2=4} ہے۔ (ا)  \عددی{\bar{x}} اور \عددی{\bar{y}} دریافت کریں۔ (ب)  درج ذیل تکمل کی قیمت حاصل کریں۔آخری تکمل میں \عددی{x} کے لحاظ سے تکمل لیتے ہوئے   آپ کو  تکملات کا جدول استعمال کرنا ہو گا۔
+\ابتدا{سوال}\شناخت{سوال_بالکثرت_چھ_سوال}
+مستقل کثافت کے ایک ٹھوس جسم کی زیریں سرحد مستوی \عددی{z=0}، بالائی سرحد مستوی \عددی{z=2-x} اور اس کے اطراف ترخیمی بیلن \عددی{x^2+4y^2=4} ہے (شکل \حوالہ{شکل_سوال_بالکثرت_چھ_سوال})۔ (ا)  \عددی{\bar{x}} اور \عددی{\bar{y}} دریافت کریں۔ (ب)  درج ذیل تکمل کی قیمت حاصل کریں۔آخری تکمل میں \عددی{x} کے لحاظ سے تکمل لیتے ہوئے   آپ کو  تکملات کا جدول استعمال کرنا ہو گا۔
 $M_{xy}=\int_{-2}^{2}\int_{-(1/2)\sqrt{4-x^2}}^{(1/2)\sqrt{4-x^2}}\int_{0}^{2-x}z\dif z\dif y\dif x$
 اس کے بعد \عددی{M_{xy}} کو \عددی{M} سے تقسیم کر کے تصدیق کریں کہ \عددی{\bar{z}=\tfrac{5}{4}} ہو گا۔
 \انتہا{سوال}
@@ -4413,6 +4456,49 @@ $M_{xy}=\int_{-2}^{2}\int_{-(1/2)\sqrt{4-x^2}}^{(1/2)\sqrt{4-x^2}}\int_{0}^{2-x}
 ایک ٹھوس مکعب کے اضلاع  کی لمبائیاں \عددی{2}  اکائیاں ہے۔ یہ مستویات \عددی{x=\mp1}، \عددی{z=\mp1}،  \عددی{y=3} اور \عددی{y=5}  کے بیچ واقع ہے۔ اس مکعب کا مرکز کمیت اور محددی محوروں کے لحاظ سے مکعب کے  رداس دوار تلاش کریں۔
 \انتہا{سوال}
 %=====================
+
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=2*\r*cos(\t);fy(\r,\t)=\r*sin(\t);fz(\r,\t)=2-2*\r*cos(\t);}]
+\pgfmathsetmacro{\ta}{160}
+\begin{axis}[small,clip=false,axis lines=center,view/h=160,enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},xtick={\empty},ytick={\empty},ztick={\empty},hide axis]
+\addplot3[smooth,domain y=0:360,variable y=\t] ({fx(1,t)},{fy(1,t)},{fz(1,t)})node[pos=0.75,pin=135:{$z=2-x$}]{};
+\addplot3[smooth,domain y=0:360,variable y=\t] ({fx(1,t)},{fy(1,t)},0)node[pos=0.4,pin=-45:{$x^2+4y^2=4$}]{};
+\addplot3[]coordinates{({fx(1,\ta)},{fy(1,\ta)},{fz(1,\ta)}) ({fx(1,\ta)},{fy(1,\ta)},0)};
+\addplot3[dashed]coordinates{(0,0,0)(2,0,0)}node[circ]{}node[below]{$2$};
+\addplot3[-latex]coordinates{(2,0,0)(2.5,0,0)}node[left]{$x$};
+\addplot3[dashed]coordinates{(0,0,0)(0,1,0)}node[circ]{}node[below]{$1$};
+\addplot3[-latex]coordinates{(0,1,0)(0,2,0)}node[right]{$y$};
+\addplot3[dashed]coordinates{(0,0,0)(0,0,2)}node[circ]{}node[left]{$2$};
+\addplot3[-latex]coordinates{(0,0,2)(0,0,4.5)}node[left]{$z$};
+\end{axis}
+\end{tikzpicture}
+\caption{ٹھوس جسم برائے سوال \حوالہ{سوال_بالکثرت_چھ_سوال}}
+\label{شکل_سوال_بالکثرت_چھ_سوال}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\x)=\x;fy(\x)=sqrt(\x);fz(\x)=4-(\x)^2;}]
+\pgfmathsetmacro{\xa}{0.4}
+\pgfmathsetmacro{\xb}{0.1}
+\begin{axis}[small,clip=false,axis lines=center,view/h=160,enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},xtick={\empty},ytick={\empty},ztick={\empty}]
+\addplot3[smooth,domain=0:\xa,samples y=0] ({fx(x)},{fy(x)},{fz(x)});
+\addplot3[smooth,domain=0:\xa,samples y=0] ({fx(x)},{fy(x)},0);
+\addplot3[smooth,domain=\xa:2,samples y=0] ({fx(x)},{fy(x)},{fz(x)});
+\addplot3[smooth,domain=\xa:2,samples y=0] ({fx(x)},{fy(x)},0)node[pos=0.4,pin=-45:{$x=y^2$}]{};
+\addplot3[smooth,domain=0:2,samples y=0] ({fx(x)},0,{fz(x)})node[pos=0.75,pin=135:{$z=4-x^2$}]{};
+\addplot3[]coordinates{(2,0,0)(2,sqrt(2),0)}node[pos=0,below]{$2$}node[below]{$(2,\sqrt{2},0)$};
+\addplot3[]coordinates{ ({fx(\xb)},{fy(\xb)},{fz(\xb)}) ({fx(\xb)},{fy(\xb)},0)};
+\addplot3[]coordinates{(0,0,4)}node[right]{$4$};
+\end{axis}
+\end{tikzpicture}
+\caption{ٹھوس جسم برائے سوال \حوالہ{سوال_بالکثرت_متغیر_کثافت_ب}}
+\label{شکل_سوال_بالکثرت_متغیر_کثافت_ب}
+\end{minipage}
+\end{figure}
+
 \ابتدا{سوال}
 ایک پچر  کے \عددی{a=4}، \عددی{b=6} اور \عددی{c=3} ہیں     (سوال \حوالہ{سوال_بالکثرت_اکائی_کثافت_درکار_پ} دیکھیں)۔  اس کا خاکہ بنا کر تصدیق کریں کہ  پچر کے کسی علامتی  نقطہ \عددی{(x,y,z)}  سے  لکیر \عددی{L:\, y=6,\, z=0}  تک  فاصلے کا مربع  \عددی{ r^2=(y-6)^2+z^2} ہو گا۔ لکیر \عددی{L} کے لحاظ سے اس پچر کا جمودی معیار اثر اور رداس دوار معلوم کریں۔
 \انتہا{سوال}
@@ -4438,7 +4524,7 @@ $M_{xy}=\int_{-2}^{2}\int_{-(1/2)\sqrt{4-x^2}}^{(1/2)\sqrt{4-x^2}}\int_{0}^{2-x}
 \انتہا{سوال}
 %=================
 \ابتدا{سوال}\شناخت{سوال_بالکثرت_متغیر_کثافت_ب}
-ثُمن اول میں مستویات \عددی{y=0} اور \عددی{z=0}  اور سطح \عددی{z=4-x^2} اور سطح \عددی{x=y^2} کے بیچ واقع  جسم کی کثافت \عددی{\delta(x,y,z)=kxy} ہے  جہاں \عددی{k} ایک مستقل ہے۔
+ثُمن اول میں مستویات \عددی{y=0} اور \عددی{z=0}  اور سطح \عددی{z=4-x^2} اور سطح \عددی{x=y^2} کے بیچ واقع  جسم کی کثافت \عددی{\delta(x,y,z)=kxy} ہے  جہاں \عددی{k} ایک مستقل ہے (شکل \حوالہ{شکل_سوال_بالکثرت_متغیر_کثافت_ب})۔
 \انتہا{سوال}
 %=======================
 سوال \حوالہ{سوال_بالکثرت_ٹھوس_جسم_اقدام_الف} اور سوال \حوالہ{سوال_بالکثرت_ٹھوس_جسم_اقدام_ب} میں درج ذیل تلاش کریں۔
@@ -4541,8 +4627,48 @@ I_L=\iiint\limits_D \abs{\kvec{v}-h\ai}^2\dif m
 کلیہ پاپس (مساوات  \حوالہ{مساوات_بالکثرت_کلیہ_تین_بعدی_کلیہ_پاپس_الف}) اخذ کریں۔ (اشارہ:ثُمن اول میں ایک دوسرے کو نہ ڈھانپتے ہوئے اجسام \عددی{B_1} اور \عددی{B_2} کا خاکہ بنا کر ان کے مراکز کمیت کو \عددی{(\bar{x}_1,\bar{y}_1,\bar{z}_1)} اور \عددی{(\bar{x}_2,\bar{y}_2,\bar{z}_2)} سے ظاہر کریں۔ کمیت \عددی{m_1} اور \عددی{m_2} اور ان کمیت کے مراکز کے محدد  کی صورت میں محددی مستویات کے لحاظ سے \عددی{B_1\cup B_2} کے  معیار اثر حاصل کریں۔)
 \انتہا{سوال}
 %===============
-\ابتدا{سوال}
-مستقل کثافت \عددی{\delta=1} کے تین مستطیل ٹھوس اجسام سے ایک جسم حاصل کیا گیا ہے۔ کلیہ پاپس استعمال کرتے ہوئے درج  ذیل کے مراکز کمیت تلاش کریں۔
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\x)=\x;fy(\x)=sqrt(\x);fz(\x)=4-(\x)^2;}]
+\pgfmathsetmacro{\xa}{0.4}
+\pgfmathsetmacro{\xb}{0.1}
+\begin{axis}[small,clip=false,axis lines=center,view/h=110,enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},xtick={\empty},ytick={\empty},ztick={\empty},hide axis]
+\addplot3[]coordinates{(2,0,0)(2,3,0)(2,3,2)(2,0,2)(2,0,0)};
+\addplot3[]coordinates{(2,3,2)(0,3,2)(0,0,2)(2,0,2)};
+\addplot3[]coordinates{(2,3,0) (1,3,0) (1,3,1)(0,3,1) (0,3,2)};
+\addplot3[]coordinates{(1,3,0)(1,5,0)};
+\addplot3[]coordinates{(1,3,1)(1,5,1)};
+\addplot3[]coordinates{(0,3,1)(0,5,1)};
+\addplot3[fill=white]coordinates{(3,6,-2)(-1,6,-2)(-1,6,1)(-1,5,1)(3,5,1)(3,5,-2)(3,6,-2)};
+\addplot3[]coordinates{(3,6,-2)(3,6,1)(-1,6,1)};
+\addplot3[]coordinates{(3,5,1)(3,6,1)};
+\addplot3[-latex]coordinates{(2,0,0)(3,0,0)}node[left]{$x$};
+\addplot3[-latex]coordinates{(0,6,0)(0,8,0)}node[right]{$y$};
+\addplot3[-latex]coordinates{(0,0,2)(0,0,2.5)}node[left]{$z$};
+\addplot3[]coordinates{(2,0,2)}node[left]{$(2,0,2)$};
+\addplot3[]coordinates{(2,0,0)}node[below,xshift=2ex]{$(2,0,0)$};
+\addplot3[]coordinates{(3,6,-2)}node[right]{$(3,6,-2)$};
+\addplot3[]coordinates{(-1,6,-2)}node[right]{$(-1,6,-2)$};
+\addplot3[]coordinates{(-1,6,1)}node[right]{$(-1,6,1)$};
+\addplot3[]coordinates{(0,3,2)}node[right]{$(0,3,2)$};
+\addplot3[]coordinates{(-1,5.5,1)}node[above]{$1$};
+\addplot3[]coordinates{(0,4,1)}node[above]{$2$};
+\addplot3[]coordinates{(1,0,2)}node[left]{$2$};
+\addplot3[]coordinates{(2,1.5,2)}node[above]{$3$};
+\addplot3[]coordinates{(2,0,1)}node[left]{$2$};
+\addplot3[]coordinates{(1,6,-2)}node[right]{$4$};
+\addplot3[]coordinates{(2,1.5,1)}node[]{$A$};
+\addplot3[]coordinates{(1,4,0.5)}node[]{$B$};
+\addplot3[]coordinates{(3,5.5,-0.5)}node[]{$C$};
+\end{axis}
+\end{tikzpicture}
+\caption{ٹھوس جسم برائے سوال \حوالہ{سوال_بالکثرت_تین_حصے_جسم}}
+\label{شکل_سوال_بالکثرت_تین_حصے_جسم}
+\end{figure}
+
+\ابتدا{سوال}\شناخت{سوال_بالکثرت_تین_حصے_جسم}
+مستقل کثافت \عددی{\delta=1} کے تین مستطیل ٹھوس اجسام سے ایک جسم حاصل کیا گیا ہے (شکل \حوالہ{شکل_سوال_بالکثرت_تین_حصے_جسم})۔ کلیہ پاپس استعمال کرتے ہوئے درج  ذیل کے مراکز کمیت تلاش کریں۔
 \begin{multicols}{4}
 \begin{enumerate}[a.]
 \item
@@ -4575,8 +4701,72 @@ $A\cup B\cup C$
 \حصہ{نلکی اور کروی محدد میں تہرا تکمل}﻿
 انجینئری،  طبیعیات اور جیومیٹری میں  مخروط ، بیلن یا کرہ کے ساتھ کام  نلکی اور کروی محدد میں زیادہ آسان ہوتا ہے۔
 
+
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\x)=cos(\x);fy(\x)=sin(\x);}]
+\pgfmathsetmacro{\xa}{135}
+\pgfmathsetmacro{\xb}{\xa+180}
+\pgfmathsetmacro{\xc}{65}
+\pgfmathsetmacro{\xd}{\xc+180}
+\pgfmathsetmacro{\a}{1.5}
+\pgfmathsetmacro{\b}{1.25}
+\begin{axis}[clip=false,axis lines=center,view/h=135,enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},xtick={\empty},ytick={\empty},ztick={\empty},hide  axis]
+\addplot3[domain=0:360]({fx(x)},{fy(x)},2);
+\addplot3[domain=0:360]({fx(x)},{fy(x)},0);
+\addplot3[]coordinates{({fx(\xa)},{fy(\xa)},{2})({fx(\xa)},{fy(\xa)},0)};
+\addplot3[]coordinates{({fx(\xb)},{fy(\xb)},{2})({fx(\xb)},{fy(\xb)},0)};
+\addplot3[]coordinates{(-\a,-\b,2)(\a,-\b,2)(\a,\b,2)(-\a,\b,2)(-\a,-\b,2)};
+\addplot3[]coordinates{({2*fx(\xc)},{2*fy(\xc)},2)({2*fx(\xc)},{2*fy(\xc)},0)({2*fx(\xd)},{2*fy(\xd)},0)({2*fx(\xd)},{2*fy(\xd)},2) ({2*fx(\xc)},{2*fy(\xc)},2)};
+\addplot3[thick]coordinates{({fx(\xc)},{fy(\xc)},0)({fx(\xc)},{fy(\xc)},2)}node[circ]{}node[pin={[pin distance=1cm,right]-10:{$(\rho,\phi,z)$}}]{};
+\addplot3[-stealth,domain=0:\xc,samples y=0] ({1.2*fx(x)},{1.2*fy(x)},0)node[pos=0.4,below]{$\phi$};
+\addplot3[thick]coordinates{(0,0,0)({fx(\xc)},{fy(\xc)},0)}node[pos=0.6,left]{$\rho$};
+\addplot3[dashed]coordinates{(0,0,0)(0,0,2)}node[circ]{}node[right]{$z$};
+\addplot3[-latex]coordinates{(0,0,2)(0,0,3.5)}node[left]{$z$};
+\addplot3[-latex]coordinates{(0,0,0)(2,0,0)}node[left]{$x$};
+\addplot3[-latex]coordinates{(0,0,0)(0,2,0)}node[right]{$y$};
+\end{axis}
+\end{tikzpicture}
+\caption{نلکی محدد میں مستقل محدد سطحیں۔}
+\label{شکل_بالکثرت_نلکی_مستقل_سطحیں}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);}]
+\pgfmathsetmacro{\ta}{30}
+\pgfmathsetmacro{\tb}{\ta+45}
+\pgfmathsetmacro{\ra}{1.25}
+\pgfmathsetmacro{\rb}{\ra+0.45}
+\pgfmathsetmacro{\h}{0.5}
+\begin{axis}[clip=false,axis lines=center,view/h=20,enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},xtick={\empty},ytick={\empty},ztick={\empty},xmin=0,ymin=0,zmin=0,zmax=1,hide x axis, hide y axis]
+\addplot3[thick,domain y=\ta:\tb,samples=0,variable=\r,variable y=\t] ({fx(\ra,t)},{fy(\ra,t)},0)node[pos=0.7,sloped,below]{$\rho\dif\phi$};
+\addplot3[domain y=\ta:\tb,samples=0,variable=\r,variable y=\t] ({fx(\rb,t)},{fy(\rb,t)},0);
+\addplot3[domain y=\ta:\tb,samples=0,variable=\r,variable y=\t] ({fx(\ra,t)},{fy(\ra,t)},\h);
+\addplot3[domain y=\ta:\tb,samples=0,variable=\r,variable y=\t] ({fx(\rb,t)},{fy(\rb,t)},\h);
+\addplot3[thick]coordinates{({fx(\ra,\ta)},{fy(\ra,\ta)},0)({fx(\rb,\ta)},{fy(\rb,\ta)},0)}node[pos=0.5,below]{$\dif\rho$};
+\addplot3[]coordinates{({fx(\ra,\tb)},{fy(\ra,\tb)},0)({fx(\rb,\tb)},{fy(\rb,\tb)},0)};
+\addplot3[]coordinates{({fx(\ra,\ta)},{fy(\ra,\ta)},\h)({fx(\rb,\ta)},{fy(\rb,\ta)},\h)};
+\addplot3[]coordinates{({fx(\ra,\tb)},{fy(\ra,\tb)},\h)({fx(\rb,\tb)},{fy(\rb,\tb)},\h)};
+\addplot3[]coordinates{({fx(\ra,\ta)},{fy(\ra,\ta)},0)({fx(\ra,\ta)},{fy(\ra,\ta)},\h)};
+\addplot3[thick]coordinates{({fx(\rb,\ta)},{fy(\rb,\ta)},0)({fx(\rb,\ta)},{fy(\rb,\ta)},\h)}node[pos=0.5,right]{$\dif z$};
+\addplot3[]coordinates{({fx(\ra,\tb)},{fy(\ra,\tb)},0)({fx(\ra,\tb)},{fy(\ra,\tb)},\h)};
+\addplot3[]coordinates{({fx(\rb,\tb)},{fy(\rb,\tb)},0)({fx(\rb,\tb)},{fy(\rb,\tb)},\h)};
+\addplot3[dashed]coordinates{(0,0,0)({fx(\ra,\ta)},{fy(\ra,\ta)},0)}node[pos=0.75,below]{$\rho$};
+\addplot3[dashed]coordinates{(0,0,0)({fx(\ra,\tb)},{fy(\ra,\tb)},0)};
+\addplot3[dashed]coordinates{(0,0,\h)({fx(\ra,\ta)},{fy(\ra,\ta)},\h)};
+\addplot3[dashed]coordinates{(0,0,\h)({fx(\ra,\tb)},{fy(\ra,\tb)},\h)};
+\addplot3[dashed,samples=0,domain y=\ta:\tb,variable y=\t]({fx(0.5,t)},{fy(0.5,t)},0)node[pos=0.7,xshift=1ex,right]{$\dif \phi$};
+\end{axis}
+\end{tikzpicture}
+\caption{نلکی محدد میں چھوٹا حجم \عددی{\dif H=\dif z\rho\dif\rho\dif\phi} ہو گا۔}
+\label{شکل_بالکثرت_نلکی_چھوٹا_حجم_تعریف}
+\end{minipage}
+\end{figure}
+
 \جزوحصہء{نلکی محدد}
-جن  بیلن  کا محور  \عددی{z} محدد   پر پایا جاتا ہو اور وہ مستویات جن میں \عددی{z} محدد پایا جاتا ہو یا جو \عددی{z} محدد کے عمودی ہوں، کو نلکی محدد میں بیان کرنا  نہایت  آسان ہوتا ہے۔
+جن  بیلن  کا محور  \عددی{z} محدد   پر پایا جاتا ہو اور وہ مستویات جن میں \عددی{z} محدد پایا جاتا ہو یا جو \عددی{z} محدد کے عمودی ہوں، کو نلکی محدد میں بیان کرنا  نہایت  آسان ہوتا ہے (شکل \حوالہ{شکل_بالکثرت_نلکی_مستقل_سطحیں})۔
 
 
 جیسا ہم دیکھ چکے ہیں ان سطحوں کی مساوات  مستقل محددی صورت رکھتی ہیں۔
@@ -4586,23 +4776,32 @@ $A\cup B\cup C$
 z &=2
 \end {align*}
 
-فضا میں خطہ کی نلکی محدد  میں مستطیلی خانہ بندی  کر کے  ایک خانے کا  حجم 
+فضا میں خطہ کی نلکی محدد  میں مستطیلی خانہ بندی کا   ایک خانہ  شکل \حوالہ{شکل_بالکثرت_نلکی_چھوٹا_حجم_تعریف} میں دکھایا گیا ہے۔ اگر \عددی{z} محدد سے اس خانے کی وسط تک رداس \عددی{\rho} ہو تب خانے کے اندرونی اور بیرونی سطحوں کے رداس  بالترتیب \عددی{\rho-\tfrac{\dif \rho}{2}} اور \عددی{\rho+\tfrac{\dif \rho}{2}} ہوں گے۔اس چھوٹے   خانے کو نقطہ دار لکیروں سے   \عددی{z} محدد تک بڑھا کر
+  حجم 
+\(\tfrac{1}{2}(\rho+\tfrac{\dif\rho}{2})^2\dif\phi\dif z\)
+ حاصل ہو گا جس میں  سے اضافی حجم  
+\(\tfrac{1}{2}(\rho-\tfrac{\dif\rho}{2})^2\dif\phi\dif z\)
+ منفی کر کے چھوٹے حصہ کا حجم معلوم کیا جا سکتا ہے۔
 \begin {align*}
-\dif H = \dif z \,\rho \dif \rho \dif \phi
+\dif H &=\frac{1}{2}\big(\rho+\frac{\dif \rho}{2}\big)^2\dif\phi\dif z-\frac{1}{2}\big(\rho-\frac{\dif \rho}{2}\big)^2\dif\phi\dif z \\
+&= \dif z \,\rho \dif \rho \dif \phi
 \end {align*}
+چھوٹے  مستطیل  خانے کی وسطی (یا اندرونی قوسی) چوڑائی \عددی{\rho\dif\phi}، لمبائی \عددی{\dif\rho} اور قد \عددی{\dif z} لے  کر  
+\begin{align*}
+\dif H=(\rho\dif\phi)(\dif\rho)(\dif z)=\dif z\rho\dif \rho\dif\phi
+\end{align*}
+حجم  زیادہ  آسانی سے حاصل کیا جا سکتا ہے۔اسی طرح خانے کی سامنے (یا پشت) سطح کا رقبہ \عددی{\dif \rho\dif z}، نچلی (یا بالائی) سطح   کا رقبہ \عددی{\rho\dif \phi\dif\rho} اور قوسی  (اندرونی یا بیرونی) سطح کا رقبہ  \عددی{\rho\dif\phi\dif z}  ہو   گا ۔ یوں  نلکی محدد میں تہرا تکملات کو  بطور بارہا تکملات حل کیا جائے گا۔ ایسا  اگلی مثال 
+میں دکھایا گیا ہے۔
 
 
-ہو گا۔تب نلکی محدد میں تہرا تکملات کو  بطور بارہا تکملات حل کیا جائے گا۔ ایسا  اگلی مثال میں دکھایا گیا ہے۔
-
-
-\ابتدا {مثال}
+\ابتدا {مثال}\شناخت{مثال_بالترتیب_نلکی_تہرا_تکمل_الف}
 خطہ \عددی{D} پر تفاعل  \عددی{f(\rho,\phi,z)} کی نلکی محدد میں تکمل  کی حدیں تلاش کریں۔ خطہ \عددی{D} نیچے سے مستوی  
 \(z=0\)
 اور اطراف سے دائری بیلن
 \(x^2+(y-1)^2=1\)
  جبکہ اوپر سے قطع مکافی
 \(z=x^2+y^2\)
- کے بیچ پایا جاتا ہے۔
+ کے بیچ پایا جاتا ہے (شکل \حوالہ{شکل_مثال_بالترتیب_نلکی_تہرا_تکمل_الف})۔
 
 
 حل
@@ -4638,14 +4837,71 @@ x^2+y^2-2y+1&=1\\
 اس مثال میں ہم نے نلکی محدد میں تکمل کی حدیں تلاش کرنا سیکھا۔
 
 
-\ابتدا{مثال}
+
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\x)=cos(\x);fy(\x)=1+sin(\x);fz(\x)=2+2*sin(\x);}]
+\pgfmathsetmacro{\xa}{110}
+\pgfmathsetmacro{\xb}{\xa+180}
+\pgfmathsetmacro{\xx}{0.35}
+\pgfmathsetmacro{\yy}{1.7}
+\pgfmathsetmacro{\yyy}{2.5}
+\pgfmathsetmacro{\zz}{4}
+\pgfmathsetmacro{\angL}{atan(\yy/\xx)}
+\begin{axis}[clip=false,axis lines=center,view/h=110,enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},xtick={\empty},ytick={2},ztick={\empty},zmax=5,hide z axis]
+\addplot3[domain=0:360]({fx(x)},{fy(x)},{fz(x)})node[pos=0.9,pin={[font=\scriptsize]135:{\begin{minipage}{2cm} \begin{align*} z&=x^2+y^2 &&\text{کارتیسی}\\ z&=\rho^2&&\text{نلکی}\end{align*} \end{minipage}}}]{};
+\addplot3[domain=0:360]({fx(x)},{fy(x)},0)node[pos=0.195,below]{$R$}node[pos=0.2,pin={[font=\scriptsize]-45:{\begin{minipage}{2cm} \begin{align*}&x^2+(y-1)^2=1&&\text{کارتیسی}\\ &\rho=2\sin\phi &&\text{نلکی} \end{align*}\end{minipage}}}]{};
+\addplot3[] coordinates{({fx(\xa)},{fy(\xa)},{fz(\xa)})({fx(\xa)},{fy(\xa)},0)}node[pos=0.5,right]{$D$};
+\addplot3[] coordinates{({fx(\xb)},{fy(\xb)},{fz(\xb)})({fx(\xb)},{fy(\xb)},0)};
+\addplot3[dashed]coordinates{(\xx,\yy,0)(\xx,\yy,\zz)}node[pos=0,pin=-45:{$(\rho,\phi)$}]{}node[pos=0,circ]{}node[pos=1,circ]{};
+\addplot3[-latex]coordinates{(\xx,\yy,\zz)(\xx,\yy,6)}node[right]{$M$};
+\addplot3[-latex]coordinates{(0,0,0)(\xx*\yyy/\yy,\yyy,0)}node[right]{$L$};
+\addplot3[-latex]coordinates{(0,0,0)(0,0,2)}node[left]{$z$};
+\addplot3[-stealth,domain=0:\angL,samples y=0]({0.6*cos(x)},{0.6*sin(x)},0)node[pos=0.75,below]{$\phi$};
+\end{axis}
+\end{tikzpicture}
+\caption{جسم برائے مثال \حوالہ{مثال_بالترتیب_نلکی_تہرا_تکمل_الف}}
+\label{شکل_مثال_بالترتیب_نلکی_تہرا_تکمل_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small]
+\pgfmathsetmacro{\ang}{atan(0.25/0.5)}
+\pgfmathsetmacro{\a}{1}
+\pgfmathsetmacro{\b}{0.75*\a}
+\pgfmathsetmacro{\h}{2}
+\draw(0,0) circle (\a cm and \b cm);
+\draw(0,\h) circle (\a cm and \b cm);
+\draw[]plot [domain=-1:1] (\x,{2*(\x)^2});
+\draw(-0.75,{2*(0.75)^2})node[pin={-135:{$\begin{aligned}z&=x^2+y^2\\  z&=\rho^2\end{aligned}$}}]{};
+\draw(-\a,0)--++(0,\h);
+\draw(\a,0)--++(0,\h)node[pos=0.5,pin=45:{$\begin{aligned}x^2+y^2&=4\\  \rho&=2  \end{aligned}$}]{};
+\draw(0.5,-0.25)node[circ]{}node[pin=-80:{$(\rho,\phi)$}]{}--++(0,1.25)node[circ]{};
+\path[name path=klid]([shift={(180:\a cm and \b cm)}]0,\h) arc (180:360:\a cm and \b cm);
+\path[name path=kM] (0.5,-0.25)++(0,1.25)--++(0,1);
+\draw[-latex,name intersections={of={kM and klid}}](intersection-1)--++(0,0.5)node[above]{$M$};
+\draw[-latex](0,0)--(1.25,-1.25*0.25/0.5)node[right]{$L$};
+\draw[-latex](0,0)--++(-135:1.2)node[left]{$x$};
+\draw[-latex](0,0)--++(2,0)node[right]{$y$};
+\draw[-latex](0,\h-\b)--++(0,2)node[left]{$z$};
+\draw(0,\h)node[left]{$4$}--++(0.1,0);
+\draw[-stealth]([shift={(-135:0.3)}]0,0) arc (-135:-\ang:0.3)node[pos=0.6,below]{$\phi$};
+\end{tikzpicture}
+\caption{جسم برائے مثال \حوالہ{مثال_بالترتیب_نلکی_تہرا_تکمل_ب}}
+\label{شکل_مثال_بالترتیب_نلکی_تہرا_تکمل_ب}
+\end{minipage}
+\end{figure}
+
+\ابتدا{مثال}\شناخت{مثال_بالترتیب_نلکی_تہرا_تکمل_ب}
 بیلن
 \(x^2+y^2=4\)
  میں بند ٹھوس جسم  جو اوپر سے  قطع مکافی سطح 
 \(z=x^2+y^2\)
 اور نیچے سے مستوی
 \(xy\)
- کے بیچ پایا جاتا ہو، کا وسطانی مرکز تلاش  کریں۔ ٹھوس جسم کی کثافت \عددی{\delta=1} ہے۔
+ کے بیچ پایا جاتا ہو، کا وسطانی مرکز تلاش  کریں (شکل \حوالہ{مثال_بالترتیب_نلکی_تہرا_تکمل_ب})۔ ٹھوس جسم کی کثافت \عددی{\delta=1} ہے۔
 
 
 حل
@@ -4661,7 +4917,7 @@ x^2+y^2-2y+1&=1\\
 \(xy\)
  میں قرص
 \(\abs{\rho}\le 2\)
- ہوگا۔
+ ہو گا۔
 
 
 ٹھوس جسم کا وسطانی مرکز  تشاکلی محور پر ہو گا جو محور \عددی{z} ہے۔ یوں \عددی{\bar{x}=\bar{y}=0} ہوگا۔ ہم معیار اثر \عددی{M_{xy}} کو کمیت \عددی{M} سے تقسیم کر کے \عددی{\bar{z}}  تلاش کرتے ہیں۔
@@ -4705,21 +4961,126 @@ M&=\int_0^{2\pi}\int_0^2\int_0^{\rho^2}\dif z \,\rho\dif \rho\dif \phi=\int_0^{2
 \begin{enumerate}[1.]
 \item
 \ترچھا{خاکہ:}\quad
-خطہ \عددی{D} اور مستوی \عددی{xy} پر اس کی تظلیل \عددی{R}  کا خاکہ بنائیں۔ \عددی{D} اور \عددی{R} کی سرحدی  سطحوں  اور منحنیات کی نشاندہی کریں۔
+خطہ \عددی{D} اور مستوی \عددی{xy} پر اس کی تظلیل \عددی{R}  کا خاکہ بنائیں ۔ \عددی{D} اور \عددی{R} کی سرحدی  سطحوں  اور منحنیات کی نشاندہی کریں (شکل \حوالہ{شکل_بالکثرت_نلکی_محدد_تکمل_کا_حصول}-ا)۔
 \item
 \ترچھا{تکمل کی \عددی{z} حدیں:}\quad
-\عددی{R} میں علامتی نقطہ \عددی{(\rho,\phi)} پر محور \عددی{z} کے متوازی  ایک علامتی لکیر \عددی{M} کھینچیں جو بڑھ کر  \عددی{D} میں \عددی{z=g_1(\rho,\phi)} سے داخل اور \عددی{z=g_2(\rho,\phi)} سے خارج ہو گی۔یہی تکمل کی \عددی{z} حدیں ہوں گی۔
+\عددی{R} میں علامتی نقطہ \عددی{(\rho,\phi)} پر محور \عددی{z} کے متوازی  ایک علامتی لکیر \عددی{M} کھینچیں جو بڑھ کر  \عددی{D} میں \عددی{z=g_1(\rho,\phi)} سے داخل اور \عددی{z=g_2(\rho,\phi)} سے خارج ہو گی (شکل \حوالہ{شکل_بالکثرت_نلکی_محدد_تکمل_کا_حصول}-ب)۔یہی تکمل کی \عددی{z} حدیں ہوں گی۔
 \item
 \ترچھا{تکمل کی \عددی{\rho} حدیں:}\quad
-مبدا سے ایک لکیر \عددی{L} کھینچیں جو نقطہ \عددی{(\rho,\phi)} سے گزرتی ہو۔ یہ شعاع  خطہ \عددی{R} میں \عددی{\rho=h_1(\phi)} سے داخل اور \عددی{\rho=h_2(\phi)} سے خارج ہو گی۔ یہی تکمل کی \عددی{\rho} حدیں ہوں گی۔
+مبدا سے ایک لکیر \عددی{L} کھینچیں جو نقطہ \عددی{(\rho,\phi)} سے گزرتی ہو۔ یہ شعاع  خطہ \عددی{R} میں \عددی{\rho=h_1(\phi)} سے داخل اور \عددی{\rho=h_2(\phi)} سے خارج ہو گی (شکل \حوالہ{شکل_بالکثرت_نلکی_محدد_تکمل_کا_حصول}-ج)۔  یہی تکمل کی \عددی{\rho} حدیں ہوں گی۔
 \item
 \ترچھا{تکمل کی \عددی{\phi} حدیں:}\quad
-لکیر \عددی{L} خطہ \عددی{R} کو جھاڑتے ہوئے  مثبت \عددی{x} محور کے ساتھ زاویہ \عددی{\phi=\alpha} اور \عددی{\phi=\beta}  کے بیچ رہتی ہے۔ یہی تکمل کی \عددی{\phi} حدیں ہوں گی۔
+لکیر \عددی{L} خطہ \عددی{R} کو جھاڑتے ہوئے  مثبت \عددی{x} محور کے ساتھ زاویہ \عددی{\phi=\alpha} اور \عددی{\phi=\beta}  کے بیچ رہتی ہے (شکل \حوالہ{شکل_بالکثرت_نلکی_محدد_تکمل_کا_حصول}-ج)۔ یہی تکمل کی \عددی{\phi} حدیں ہوں گی۔
 \end{enumerate}
 یوں تکمل درج ذیل ہو گا۔
 \begin{align}
 \iiint\limits_D f(\rho,\phi,z)\dif H=\int_{\phi=\alpha}^{\phi=\beta}\int_{\rho=h_1(\phi)}^{\rho=h_2(\phi)}\int_{z=g_1(\rho,\phi)}^{z=g_2(\rho,\phi)}f(\rho,\phi,z)\dif z \,\rho\dif \rho \dif\phi
 \end{align}
+\begin{figure}
+\centering
+\begin{subfigure}{0.30\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize]
+\pgfmathsetmacro{\angA}{-170}
+\pgfmathsetmacro{\angB}{100}
+\pgfmathsetmacro{\angC}{-10}
+\pgfmathsetmacro{\angD}{-135}
+\pgfmathsetmacro{\angE}{-100}
+\pgfmathsetmacro{\angF}{-40}
+\draw[-latex,name path=kx](0,0)--++(-1.5,-1.5)node[right]{$x$};
+\draw[-latex](0,0)--++(2.5,0)node[right]{$y$};
+\draw[-latex](0,0)--++(0,2)node[left]{$z$};
+\draw[fill=lgray,draw=black,text=black,opacity=0.5](2.25,-0.25)coordinate(kA) to [out=\angA,in=\angB]node[pos=0.75,above left,yshift=-1ex,font=\scriptsize]{$\rho=h_1(\phi)$}++(-1.5,-0.75)coordinate(kB)node[above right,xshift=1ex,yshift=0.5ex]{$R$} to [out=\angC,in=\angD]node[pos=0.5,right]{$\rho=h_2(\phi)$}(kA);
+\path[dashed](kA)--++(0,2.25)coordinate(kC)coordinate[pos=0.5](kE);
+\path[dashed](kB)--++(0,3)coordinate(kD)coordinate[pos=0.5](kF);
+\draw[dashed](kA)--(kE)  (kB)--(kF);
+\draw(kC)--(kE)  (kD)--(kF);
+\draw[dashed](kE) to [out=\angA,in=\angB](kF);
+\draw(kF) to [out=\angC,in=\angD](kE); 
+\draw(kE) to [out=\angE,in=\angF]coordinate[pos=0.25](kLower)(kF);
+\draw(kC) to [out=110,in=60]coordinate[pos=0.25](kUpper)(kD);
+\draw[](kC) to [out=-\angA,in=-\angB](kD);
+\draw[dashed](kD) to [out=-\angC,in=-\angD](kC);
+\draw(kLower)node[pin={[right,pin distance=0.25cm,font=\scriptsize]10:{$z=g_1(\rho,\phi)$}}]{};
+\draw(kUpper)node[pin={[above]35:{$z=g_2(\rho,\phi)$}}]{};
+\draw($(kC)!0.5!(kE)$)node[right]{$D$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.30\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize]
+\pgfmathsetmacro{\angA}{-170}
+\pgfmathsetmacro{\angB}{100}
+\pgfmathsetmacro{\angC}{-10}
+\pgfmathsetmacro{\angD}{-135}
+\pgfmathsetmacro{\angE}{-100}
+\pgfmathsetmacro{\angF}{-40}
+\draw[-latex,name path=kx](0,0)--++(-1.5,-1.5)node[right]{$x$};
+\draw[-latex](0,0)--++(2.5,0)node[right]{$y$};
+\draw[-latex](0,0)--++(0,2)node[left]{$z$};
+\draw[fill=lgray,draw=black,text=black,opacity=0.5](2.25,-0.25)coordinate(kA) to [out=\angA,in=\angB]node[pos=0.5, left,xshift=-2ex,yshift=-1ex,font=\scriptsize]{$\rho=h_1(\phi)$}++(-1.5,-0.75)coordinate(kB)node[above right,xshift=1ex,yshift=0.5ex]{$R$} to [out=\angC,in=\angD]node[pos=0.75,right,font=\scriptsize]{$\rho=h_2(\phi)$}(kA);
+\path[dashed](kA)--++(0,2.25)coordinate(kC)coordinate[pos=0.5](kE);
+\path[dashed](kB)--++(0,3)coordinate(kD)coordinate[pos=0.5](kF);
+%\draw[dashed](kA)--(kE)  (kB)--(kF);
+\draw(kC)--(kE)  (kD)--(kF);
+\draw[dashed](kE) to [out=\angA,in=\angB](kF);
+\draw(kF) to [out=\angC,in=\angD](kE); 
+\draw(kE) to [out=\angE,in=\angF]coordinate[pos=0.25](kLower)(kF);
+\draw(kC) to [out=110,in=60]coordinate[pos=0.25](kUpper)(kD);
+\draw[](kC) to [out=-\angA,in=-\angB](kD);
+\draw[dashed](kD) to [out=-\angC,in=-\angD](kC);
+\draw($(kC)!0.5!(kE)$)node[right]{$D$};
+\draw($(kA)!0.5!(kB)$)node[circ]{}node[pin={[pin distance=0.25cm]-45:{$(\rho,\phi)$}}]{}--($(kE)!0.5!(kF)+(0,-0.3)$)coordinate(kMm)node[circ]{};
+\draw[dashed](kMm)node[pin={[right,pin edge={-,solid},align=center,pin distance=1cm]30:{\text{\RL{داخل}}\\ $z=g_1(\rho,\phi)$}}]{}--($(kC)!0.5!(kD)$)node[circ]{}node[pin={[align=center,pin edge={-,solid}]35:{\text{\RL{خارج}}\\ $z=g_2(\rho,\phi)$}}]{};
+\draw[-latex]($(kC)!0.5!(kD)$)--++(0,1)node[left]{$M$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.30\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize]
+\pgfmathsetmacro{\angA}{-170}
+\pgfmathsetmacro{\angB}{100}
+\pgfmathsetmacro{\angC}{-10}
+\pgfmathsetmacro{\angD}{-135}
+\pgfmathsetmacro{\angE}{-100}
+\pgfmathsetmacro{\angF}{-40}
+\pgfmathsetmacro{\angMM}{atan(-0.625/1.55)}
+\pgfmathsetmacro{\angEE}{atan(-0.25/2.25)}
+\pgfmathsetmacro{\angSS}{atan(-1/0.75)}
+\draw[-latex,name path=kx](0,0)--++(-1.5,-1.5)node[right]{$x$};
+\draw[-latex](0,0)--++(2.25,0)node[right]{$y$};
+\draw[-latex](0,0)--++(0,2)node[left]{$z$};
+\draw[fill=lgray,draw=black,text=black,opacity=0.5](2.25,-0.25)coordinate(kA)node[circ]{} to [out=\angA,in=\angB]++(-1.5,-0.75)coordinate(kB)node[circ]{}node[right,xshift=2ex,yshift=-1ex]{$R$} to [out=\angC,in=\angD](kA);
+\path[name path=kR](kA) to [out=\angA,in=\angB](kB);
+\path[name path=kL](kB) to [out=\angC,in=\angD](kA);
+\path[dashed](kA)--++(0,2.25)coordinate(kC)coordinate[pos=0.5](kE);
+\path[dashed](kB)--++(0,3)coordinate(kD)coordinate[pos=0.5](kF);
+\draw(kC)--(kE)  (kD)--(kF);
+\draw[dashed](kE) to [out=\angA,in=\angB](kF);
+\draw(kF) to [out=\angC,in=\angD](kE); 
+\draw(kE) to [out=\angE,in=\angF]coordinate[pos=0.25](kLower)(kF);
+\draw(kC) to [out=110,in=60]coordinate[pos=0.25](kUpper)(kD);
+\draw[](kC) to [out=-\angA,in=-\angB](kD);
+\draw[dashed](kD) to [out=-\angC,in=-\angD](kC);
+\draw($(kC)!0.5!(kE)$)node[right]{$D$};
+\draw($(kA)!0.5!(kB)$)coordinate(kLM)node[circ]{}node[xshift=-2ex,yshift=-1ex]{$(\rho,\phi)$}--($(kE)!0.5!(kF)+(0,-0.3)$)coordinate(kMm)node[circ]{};
+\draw[dashed](kMm)--($(kC)!0.5!(kD)$)node[circ]{};
+\draw[-latex]($(kC)!0.5!(kD)$)--++(0,1)node[left]{$M$};
+\draw[-latex,name path=kray](0,0)--++(\angMM:2.25)node[right]{$L$};
+\draw[name intersections={of=kR and kray}](intersection-1)node[circ]{}node[pin={[align=center,pin distance=0.75cm]-170:{\text{داخل}\\$\rho=h_1(\phi)$}}]{};
+\draw[name intersections={of=kL and kray}](intersection-1)node[circ]{}node[pin={[align=center,pin distance=0.25cm,below]-70:{\text{خارج}\\  $\rho=h_2(\phi)$}}]{};
+\draw[-latex](0,0)--++(\angEE:2.75)node[right]{$\phi=\beta$};
+\draw[-latex](0,0)--++(\angSS:1.75)node[left,yshift=-1ex]{$\phi=\alpha$};
+\draw[-stealth]([shift={(-135:0.3)}]0,0) arc (-135:\angSS:0.3)node[pos=0.5,below]{$\alpha$};
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{نلکی محدد میں تہرا تکمل کی حدوں کا تعین۔}
+\label{شکل_بالکثرت_نلکی_محدد_تکمل_کا_حصول}
+\end{figure}
+
 
 \جزوحصہء{کروی محدد}
 ایسے کرہ جن   کے مراکز مبدا پر ہوں، وہ نصف چادر جن کا چول محور \عددی{z} ہو، اور وہ مخروط جن کا راس  مبدا پر  اور محور محددی نظام کے محور \عددی{z} پر ہو، کو کروی محدد میں بیان کرنا آسان ہوتا ہے۔ ان سطحوں کی مساواتیں درج ذیل ہوں گی۔
