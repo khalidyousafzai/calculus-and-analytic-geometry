@@ -1,8 +1,8 @@
 \ProvidesPackage{khalidUrduBooksMaths}
 \usepackage{fontspec}
-\usepackage{makeidx}
+\usepackage{makeidx}								%generates index
 \usepackage{amsmath}                                                                         %\tfrac for fractions in text
-\usepackage{amssymb}      
+\usepackage{amssymb}      						%ams symbols
 \usepackage{amsthm}      						%theorem environment. started using in the maths book
 \usepackage{mathtools}
 \usepackage{commath}									%differentiation symbols
@@ -10,7 +10,7 @@
 \usepackage{lineno}										%line numbers in pdf
 \usepackage{graphics}
 \usepackage[]{graphicx} 
-\usepackage{cancel}
+\usepackage{cancel}										%not used
 \usepackage{mathpazo}              %kkk   causes trouble with siunitx units such as ohm which needs correction using sisetup
 \usepackage{booktabs}                                  %for tables toprule, midrule and bottomrule
 \usepackage{parskip} 
@@ -43,7 +43,7 @@
 \usepackage{subcaption}
 
 %\usepackage{hyperref}                   %loaded second last just before polyglossia. still giving problems
-\usepackage{polyglossia}                %is loaded the last
+\usepackage{polyglossia}                %is loaded the last. this is the package that handles urdu
 
 
 %\renewcommand\thelinenumber{\textenglish{\arabic{linenumber}}}
