@@ -1,0 +1,250 @@
+\باب{تکملات کا مختصر جدول}\شناخت{ضمیمہ_جدول_تکملات}
+
+
+% table of integrals
+%1
+
+\begin{align}  
+\int u\dif{v}&=uv -\int v\dif{u}\\
+\int a^{u}\dif{u}&=\frac{a^{u}}{\ln {a}}+C, \quad a\ne 1,\quad a>0\\
+ \int \cos u \dif{u}&=\sin u+C \\
+ \int \sin u\dif{u}&=-\cos{u}+C\\
+\int (ax+b)^{n} \dif {x}&=\frac{(ax+b)^{n+1}}{a(n+1)}+C, \quad n\ne -1\label{مساوات_جدول_تکمل_پانچ}
+\end{align}
+%6
+\begin{align}
+  \int (ax+b)^{-1}\dif{x}&=\frac{1}{a}\ln |ax+b|+C    \\
+ \int x(ax+b)^{n}\dif{x}&=\frac{(ax+b)^{n+1}}{a^{2}}\big[ \frac{ax+b}{n+2}-\frac{b}{n+1}\big]+C,\quad n\ne-1,\, -2        \label{مساوات_جدول_تکمل_سات} \\
+ \int x(ax+b)^{-1} \dif{x}&=\frac{x}{a}-\frac{b}{a^{2}}\ln |ax+b|+C    \label{مساوات_جدول_تکمل_آٹھ}\\
+  \int x(ax+b)^{-2}\dif{x}&=\frac{1}{a^{2}} \big[\ln|ax+b|+\frac{b}{ax+b} \big] +C      \\
+ \int \frac{\dif{x}}{x(ax+b)}&=\frac{1}{b}\ln \abs{\frac{x}{ax+b}}+C        
+ \end{align}
+%11
+\begin{align} 
+\int (\sqrt{ax+b})^{n}\dif{x}&=\frac{2}{a}\frac{(\sqrt{ax+b})^{n+2}}{n+2}+C,\quad n\ne-2\label{مساوات_جدول_تکمل_گیارہ}\\
+\int \frac{\sqrt{ax+b}}{x}\dif{x}&=2\sqrt{ax+b}+b\int\frac{\dif{x}}{x\sqrt {ax+b}}
+\end{align}
+%13 a
+\begin{gather}
+\begin{aligned}
+\int \frac{\dif{x}}{x\sqrt{ax-b}}&=\frac{2}{\sqrt{b}}\tan^{-1}\sqrt{\frac{ax-b}{b}}+C\label{مساوات_جدول_تکمل_تیرہ}\\
+%13 b
+\int \frac{\dif{x}}{x\sqrt{ax+b}}&=\frac{1}{\sqrt{b}}\ln\abs{\frac{\sqrt{ax+b}-\sqrt{b}}{\sqrt{ax+b}+\sqrt{b}}}+C
+\end{aligned}
+\end{gather}
+
+\begin{align}
+\int \frac{\sqrt{ax+b}}{x^{2}}\dif{x}&=-\frac{\sqrt{ax+b}}{x}+\frac{a}{2}\int \frac{\dif{x}}{x\sqrt{ax+b}}+C\\
+\int\frac{\dif{x}}{x^{2}\sqrt{ax+b}}&=-\frac{\sqrt{ax+b}}{bx}-\frac{a}{2b}\int \frac{\dif{x}}{x\sqrt{ax+b}}+C\label{مساوات_جدول_تکمل_پندرہ}
+\end{align}
+%16
+\begin{align} 
+\int \frac{\dif{x}}{a^{2}+x^{2}}&=\frac{1}{a}\tan^{-1}\frac{x}{a}+C \\
+\int \frac{\dif{x}}{(a^{2}+x^{2})^{2}}&=\frac{x}{2a^{2}(a^{2}+x^{2})}+\frac{1}{2a^{3}}\tan^{-1}\frac{x}{a}+C\\
+\int\frac{\dif{x}}{a^{2}-x^{2}}&=\frac{1}{2a}\ln\abs{\frac{x+a}{x-a}}+C\\
+\int \frac{\dif{x}}{(a^{2}-x^{2})^{2}}&=\frac{x}{2a^2(a^2-x^2)}+\frac{1}{4a^3}\ln\abs{\frac{x+a}{x-a}}+C\\
+\int \frac{\dif{x}}{\sqrt{a^{2}+x^{2}}}&=\sinh^{-1}\frac{x}{a}+C=\ln(x+\sqrt{a^{2}+x^{2}})+C
+\end{align}
+%21
+\begin{align} 
+\int\sqrt{a^2+x^2}\dif x&=\frac{x}{2}\sqrt{a^2+x^2}+\frac{a^2}{2}\ln(x+\sqrt{a^2+x^2})+C\\
+\int x^{2}\sqrt{a^{2}+x^{2}}\dif{x}&=\frac{x}{8}(a^{2}+2x^{2})\sqrt{a^{2}+x^{2}}-\frac{a^{4}}{8}\ln(x+\sqrt{a^{2}+x^{2}})+C\\
+\int \frac{\sqrt{a^{2}+x^{2}}}{x}\dif{x}&=\sqrt{a^{2}+x^{2}}-a \ln \abs{\frac{a+\sqrt{a^{2}+x^{2}}}{x}}+C \\
+\int \frac{\sqrt{a^{2}+x^{2}}}{x^{2}}\dif{x}&=\ln(x+\sqrt{a^{2}+x^{2}})-\frac{\sqrt{a^{2}+x^{2}}}{x}+C
+\end{align}
+%25
+\begin{align} 
+\int \frac{x^{2}}{\sqrt{a^{2}+x^{2}}}\dif{x}&=-\frac{a^{2}}{2}\ln(x+\sqrt{a^{2}+x^{2}})+\frac{x\sqrt{a^{2}+x^{2}}}{2}+C\\
+\int \frac{\dif{x}}{x\sqrt{a^{2}+x^{2}}}&=-\frac{1}{a}\ln\abs{\frac{a+\sqrt{a^{2}+x^{2}}}{x}}+C\\
+\int \frac{\dif{x}}{x^{2}\sqrt{a^{2}+x^{2}}}&=-\frac{\sqrt{a^{2}+x^{2}}}{a^{2}x}+C\\
+\int \frac{\dif{x}}{\sqrt{a^{2}-x^{2}}}&=\sin^{-1}\frac{x}{a}+C\\ 
+\int \sqrt{a^{2}-x^{2}}\dif{x}&=\frac{x}{2}\sqrt{a^{2}-x^{2}}+\frac{a^{2}}{2}\sin ^{-1}\frac{x}{a}+C
+\end{align}
+%30
+\begin{align}
+ \int x^{2}\sqrt{a^{2}-x^{2}}\dif{x}&=\frac{a^{4}}{8}\sin^{-1}\frac{x}{a}-\frac{1}{8}x\sqrt{a^{2}-x^{2}}(a^{2}-2x^{2})+C\\
+\int\frac{\sqrt{a^{2}-x^{2}}}{x}\dif x&=\sqrt{a^{2}-x^{2}}-a\ln\abs{\frac{a+\sqrt{a^{2}-x^{2}}}{x}}+C\\
+\int\frac{\sqrt{a^{2}-x^{2}}}{x^2}\dif x&=-\sin^{-1}\frac{x}{a}-\frac{\sqrt{a^2-x^2}}{x}+C\\
+\int\frac{x^2}{\sqrt{a^{2}-x^{2}}}\dif x&=\frac{a^2}{2}\sin^{-1}\frac{x}{a}-\frac{1}{2}x\sqrt{a^{2}-x^{2}}+C\label{مساوات_جدول_تکمل_تینتیس}\\
+\int\frac{\dif x}{x\sqrt{a^{2}-x^{2}}}&=-\frac{1}{a}\ln|\frac{a+\sqrt{a^{2}-x^{2}}}{x}|+C\\
+\int\frac{\dif x}{x^{2}\sqrt{a^{2}-x^{2}}}&=-\frac{\sqrt{a^{2}-x^{2}}}{a^{2}x}+C\\
+\int\frac{\dif x}{\sqrt{x^{2}-a^{2}}}&=\cosh^{-1}\frac{x}{a}+C=\ln|x+\sqrt{x^{2}-a^{2}}|+C
+\end{align}
+
+%37
+\begin{align}
+ \int\sqrt{x^{2}-a^{2}}\dif x&=\frac{x}{2}\sqrt{x^{2}-a^{2}}-\frac{a^{2}}{2}\ln|x+\sqrt{x^{2}-a^{2}}|+C\\
+\int (\sqrt{x^{2}-a^{2}})^{n}dx&=\frac{x(\sqrt{x^{2}-a^{2}})^{n}}{n+1}-\frac{na^2}{n+1}\int(\sqrt{x^2-a^2})^{n-2}\dif x,\quad n\ne{-1}\\
+ \int\frac{\dif x}{(\sqrt{x^{2}-a^{2}})^{n}}&=\frac{x(\sqrt{x^{2}-a^{2}})^{2-n}}{(2-n)a^{2}}-\frac{n-3}{(n-2)a^{2}}\int\frac{dx}{(\sqrt{x^{2}-a^{2}})^{n-2}},n\neq{2}\\
+ \int x (\sqrt{x^{2}-a^{2}})^{n}\dif{x}&=\frac{(\sqrt{x^{2}-a^{2}})^{n+2}}{n+2}+C, \quad n\ne -2\\
+\int x^{2}\sqrt{x^{2}-a^{2}}\dif{x}&=\frac{x}{8}(2x^{2}-a^{2})\sqrt{x^{2}-a^{2}}-\frac{a^{4}}{8}\ln|x+\sqrt{x^{2}-a^{2}}|+C\\
+\int \frac{\sqrt{x^{2}-a^{2}}}{x}\dif{x}&=\sqrt{x^{2}-a^{2}}-a \sec^{-1}|\frac{x}{a}|+C \\
+\int \frac{\sqrt{x^{2}-a^{2}}}{x^{2}}\dif{x}&=\ln |x+\sqrt{x^{2}-a^{2}}|-\frac{\sqrt{x^{2}-a^{2}}}{x}+C\\
+\int\frac{x^{2}}{\sqrt{x^{2}-a^{2}}}\dif {x}&=\frac{a^{2}}{2}\ln|x+\sqrt{x^{2}-a^{2}}|+\frac{x}{2}\sqrt{x^{2}-a^{2}}+C
+\end{align}
+%45
+\begin{align} 
+\int \frac{\dif{x}}{x\sqrt{x^{2}-a^{2}}}&=\frac{1}{a}\sec^{-1}|\frac{x}{a}|+C=\frac{1}{a}\cos^{-1}|\frac{a}{x}|+C\\
+\int \frac{\dif{x}}{x^{2}\sqrt{x^{2}-a^{2}}}&=\frac{\sqrt{x^{2}-a^{2}}}{a^{2}x}+C\\
+\int \frac{\dif{x}}{\sqrt{2ax-x^{2}}}&=\sin^{-1}\big(\frac{x-a}{a}\big)+C\\
+\int \sqrt{2ax-x^{2}} \dif{x}&=\frac{x-a}{2}\sqrt{2ax-x^{2}}+\frac{a^{2}}{2}\sin^{-1}\big(\frac{x-a}{a} \big)+C\\
+\int (\sqrt{2ax-x^{2}})^{n}\dif{x}&=\frac{(x-a)(\sqrt{2ax-x^{2}})^{n}}{n+1}+\frac{na^{2}}{n+1}\int (\sqrt{2ax-x^{2}})^{n-2}\dif{x}\\
+ \int \frac{\dif{x}}{(\sqrt{2ax-x^{2}})^{n}}&=\frac{(x-a)(\sqrt{2ax-x^{2}})^{2-n}}{(n-2)a^{2}}+\frac{n-3}{(n-2)a^{2}}\int\frac{\dif{x}}{(\sqrt{2ax-x^{2}})^{n-2}} 
+\end{align}
+%51
+\begin{align} 
+\int x \sqrt{2ax-x^2} \dif x &= \frac{(x+a)(2x-3a) \sqrt{2ax-x^2}}{6} + \frac{a^3}{2} \sin^{-1} \big( \frac{x-a}{a} \big) +C\\
+\int\frac{\sqrt{2ax-x^2} }{x} \dif x&= \sqrt{2ax-x^2} + a \sin^{-1} \big( \frac{x-a}{a} \big) +C \\
+\int\frac{\sqrt{2ax-x^2} }{x^2} \dif x&= -2 \sqrt{\frac{2a-x}{x} } - \sin^{-1} \big( \frac{x-a}{a} \big) +C \\
+\int\frac{x \dif x}{\sqrt{2ax-x^2}} &= a \sin{^{-1}} \big( \frac{x-a}{a}  \big) - \sqrt{2ax-x^2} +C
+\end{align}
+%55
+\begin{align}
+ \int \frac{\dif x}{x \sqrt{2ax-x^2}} &= - \frac{1}{a}  \sqrt{\frac{2a-x}{x}} +C\\
+\int\sin ax \dif x &= - \frac{1}{a} \cos ax +C\\
+\int\cos ax \dif x &= \frac{1}{a} \sin ax +C\\
+\int\sin^2 ax \dif x &= \frac{x}{2} - \frac{\sin 2ax}{4a} +C\\
+\int\cos^2 ax \dif x &= \frac{x}{2} + \frac{\sin 2ax}{4a} +C\\
+ \int \sin^n ax \dif x &= - \frac{\sin^{n-1} ax \cos ax}{na} + \frac{n-1}{n} \int \sin^{n-2} ax \dif x\\
+\int\cos^n ax \dif x &= \frac{\cos^{n-1} ax \sin ax}{na} + \frac{n-1}{n} \int \cos^{n-2} ax \dif x\label{مساوات_جدول_تکمل_اکسٹھ}
+\end{align}
+%62
+\begin{gather}
+\begin{aligned}
+\int\sin ax \cos bx \dif x &= - \frac{\cos (a+b)x}{2(a+b)}- \frac{\cos (a-b)x}{2(a-b)} +C, \quad a^2 \neq b^2\\
+\int\sin ax \sin bx \dif x &= \frac{\sin (a-b)x}{2(a-b)}- \frac{\sin (a+b)x}{2(a+b)} +C,\quad a^2 \neq b^2\\
+\int\cos ax \cos bx \dif x &= \frac{\sin (a-b)x}{2(a-b)}+ \frac{\sin (a+b)x}{2(a+b)} +C, \quad a^2 \neq b^2
+\end{aligned}
+\end{gather}
+
+\begin{align}
+\int\sin ax \cos ax \dif x &= - \frac{\cos 2ax}{4a} +C\\
+\int\sin^n ax \cos ax \dif x &= \frac{\sin^{n+1} ax}{(n+1)a} +C,\quad n \neq -1
+\end{align}
+%65 
+\begin{align} 
+\int \frac{\cos ax}{\sin ax} \dif x &= \frac{1}{a} \ln|\sin ax| +C\\
+\int\cos^n ax \sin ax \dif x &= - \frac{\cos^{n+1} ax}{(n+1)a} +C, \quad n \neq -1\\
+\int\frac{\sin ax}{\cos ax} \dif x &= -\frac{1}{a} \ln|\cos ax| +C
+\end{align}
+\begin{multline}
+\int\sin^n ax \cos^m ax \dif x = - \frac{\sin^{n-1} ax \cos^{m+1} ax}{a(m+n)} \\+ \frac{n-1}{m+n} \int \sin^{n-2} ax \cos^{m} ax \dif x , \quad n \neq -m \quad \text{\RL{(تخفیف \(\sin^nax\))}}\label{مساوات_جدول_تکمل_اٹسٹھ}\
+\end{multline}
+\begin{multline}
+\int\sin^n ax \cos^m ax \dif x = \frac{\sin^{n+1} ax \cos^{m-1} ax}{a(m+n)} \\
++ \frac{m-1}{m+n} \int \sin^{n} ax \cos^{m-2} ax \dif x , \quad m \neq -n \quad \text{\RL{(تخفیف \(\cos^max\))}}\label{مساوات_جدول_تکمل_انتر}
+\end{multline}
+%70
+\begin{align}
+\int\frac{\dif x}{b+ c \sin ax} &= \frac{-2}{a \sqrt{b^2 - c^2}} \tan^{-1} \big[\sqrt{\frac{b-c}{b+c}} \tan \big(\frac{ \pi }{4} - \frac{ax}{2} \big) \big] +C, \quad b^2>c^2\\
+ \int \frac{\dif x}{b+c \sin ax} &= \frac{-1}{a\sqrt{c^2 -b^2}} \ln \big| \frac{c+b \sin ax + \sqrt{c^2 -b^2 } \cos ax}{b+c \sin ax} \big| + C, \quad  b^2 < c^2  \\
+ \int \frac{\dif x}{1+\sin ax} &= - \frac{1}{a} \tan \big( \frac{\pi}{4} - \frac{ax}{2} \big) + C  \\
+ \int \frac{\dif x}{1-\sin ax } &= \frac{1}{a} \tan \big( \frac{\pi}{4} + \frac{ax}{2} \big) + C \\
+ \int \frac{\dif x}{b+c \cos ax} &= \frac{2}{a\sqrt{b^2 - c^2 }} \tan^{1} \big[ \sqrt{\frac{b-c}{b+c}} \tan \frac{ax}{2} \big] +C,  \quad b^2 > c^2 
+\end{align}
+%75
+\begin{align} 
+ \int \frac{\dif x}{b+c \cos ax} &= \frac{1}{a\sqrt{c^2 -b^2}} \ln \big| \frac{c+b \cos ax + \sqrt{c^2 -b^2 } \sin ax}{b+c \cos ax} \big| + C, \quad  b^2 < c^2  \\
+ \int \frac{\dif x}{1+ \cos ax} &= \frac{1}{a} \tan \frac{ax}{2} + C \\
+ \int \frac{\dif x}{1- \cos ax} &= - \frac{1}{a} \cot \frac{ax}{2} + C\\
+ \int x \sin ax \dif x &= \frac{1}{a^2} \sin ax - \frac{x}{a} \cos ax + C\\
+ \int x \cos ax \dif x &= \frac{1}{a^2} \cos ax + \frac{x}{a} \sin ax + C\\
+ \int x^n \sin ax \dif x &= - \frac{x^n}{a} \cos ax + \frac{n}{a} \int x^{n-1} \cos ax \dif x 
+\end{align}
+%81
+\begin{align}
+  \int x^n \cos ax \dif x &= \frac{x^n}{a} \sin ax - \frac{n}{a} \int x^{n-1} \sin ax \dif x \\
+\int \tan ax \dif x &= \frac{1}{a} \ln | \sec ax | + C \\
+ \int \cot ax \dif x &= \frac{1}{a} \ln | \sin ax | + C \\
+ \int \tan^2 ax \dif x &= \frac{1}{a} \tan ax - x + C \\
+ \int \cot^2 ax \dif x &= -\frac{1}{a} \cot ax - x + C \\
+ \int \tan^{n} ax \dif x &= \frac{\tan^{n-1} ax}{a(n-1)} - \int \tan^{n-2} ax \dif x , \quad n \neq 1 \\
+ \int \cot^{n} ax \dif x &= -\frac{\cot^{n-1} ax}{a(n-1)} - \int \cot^{n-2} ax \dif x , \quad n \neq 1 \\
+ \int \sec ax \dif x &= \frac{1}{a} \ln | \sec ax + \tan ax | + C \\
+ \int \csc ax \dif x &= - \frac{1}{a} \ln | \csc ax + \cot ax | + C
+ \end{align}
+%90
+\begin{align}
+  \int \sec^2 ax \dif x &= \frac{1}{a} \tan ax + C \\
+ \int \csc^2 ax \dif x &= -\frac{1}{a} \cot ax + C \\
+ \int \sec^n ax \dif x &= \frac{\sec^{n-2} ax \tan ax}{a(n-1)} + \frac{n-2}{n-1} \int \sec^{n-2} ax \dif x, \quad n \neq 1 \\
+ \int \csc^n ax \dif x &= - \frac{\csc^{n-2} ax \cot ax}{a(n-1)} + \frac{n-2}{n-1} \int \csc^{n-2} ax \dif x, \quad n \neq 1 \\
+ \int \sec^n ax \tan ax \dif x &= \frac{\sec^n ax}{na} + C, \quad n \neq 0 \\
+ \int \csc^n ax \cot ax \dif x &= - \frac{\csc^n ax}{na} + C, \quad n \neq 0 \\
+ \int \sin^{-1}  ax \dif x &= x \sin^{-1} ax + \frac{1}{a} \sqrt{1-a^2x^2} + C \\
+ \int \cos^{-1}  ax \dif x &= x \cos^{-1} ax - \frac{1}{a} \sqrt{1-a^2x^2} + C \\
+ \int \tan^{-1} ax \dif x &= x \tan^{-1} ax - \frac{1}{2a} \ln (1+a^2 x^2) + C \\
+ \int x^n \sin^{-1} ax \dif x &= \frac{x^{n+1}}{n+1} \sin^{-1} ax - \frac{a}{n+1} \int \frac{x^{n+1} \dif x}{\sqrt{1-a^2x^2}}, \quad n \neq -1\label{مساوات_جدول_تکمل_ننانوے}
+ \end{align}
+%100
+\begin{align} 
+ \int x^n \cos^{-1} ax \dif x &= \frac{x^{n+1}}{n+1} \cos^{-1} ax + \frac{a}{n+1} \int \frac{x^{n+1} \dif x}{\sqrt{1-a^2x^2}}, \quad n \neq -1 \\
+ \int x^n \tan^{-1} ax \dif x &= \frac{x^{n+1}}{n+1} \tan^{-1} ax - \frac{a}{n+1} \int \frac{x^{n+1} \dif x}{1+ a^2 x^2}, \quad n \neq -1 \\
+ \int e^{ax} \dif x&=\frac{1}{a} e^{ax} + C \\
+ \int b^{ax} \dif x &= \frac{1}{a} \frac{b^{ax}}{\ln b} + C, \quad b>0, \quad b \neq 1 \\
+ \int x e^{ax} \dif x &= \frac{e^{ax}}{a^2} (ax-1) + C \\
+ \int x^n e^{ax} \dif x &= \frac{1}{a} x^n e^{ax} - \frac{n}{a} \int x^{n-1} e^{ax} \dif x  
+\end{align}
+%106
+\begin{align} 
+ \int x^n b^{ax} \dif x &= \frac{x^n b^{ax}}{a \ln b}-\frac{n}{a\ln b} \int n^{n-1} b^{ax} \dif x, \quad b> 0, \, b \neq 1 \\
+ \int e^{ax} \sin bx \dif x &= \frac{e^{ax}}{a^2 + b^2} (a \sin bx - b \cos bx ) + C \\
+ \int e^{ax} \cos bx \dif x &= \frac{e^{ax}}{a^2 + b^2} (a \cos bx + b \sin bx ) + C \\
+ \int \ln ax \dif x &= x \ln ax - x + C \\
+ \int x^n (\ln ax)^m \dif x &= \frac{x^{n+1} ( \ln ax )^m}{n+1} - \frac{m}{n+1} \int x^n (\ln ax)^{m-1} \dif x, \quad n \neq -1 
+\end{align}
+\begin{align} 
+ \int x^{-1} (\ln ax)^{m} \dif x &= \frac{(\ln ax)^{m+a}}{m+1} + C, \quad m \neq -1 \\
+ \int \frac{\dif x}{x \ln ax} &= \ln | \ln ax | + C \\
+ \int \sinh ax \dif x &= \frac{1}{a} \cosh ax + C \\
+ \int \cosh ax \dif x &= \frac{1}{a} \sinh ax + C
+ \end{align}
+%115
+\begin{align} 
+ \int \sinh^2 ax \dif x &= \frac{\sinh 2ax}{4a} - \frac{x}{2} + C \\
+ \int \cosh^2 ax \dif x&= \frac{\sinh 2ax }{4a} + \frac{x}{2} + C \\
+ \int \sinh^{n} ax \dif x &= \frac{\sinh^{n-1} ax \cosh ax}{na} - \frac{n-1}{n} \int \sinh^{n-2} ax \dif x, \quad n \neq 0 \\
+ \int \cosh^{n} ax \dif x &= \frac{\cosh^{n-1} ax \sinh ax}{na} + \frac{n-1}{n} \int \cosh^{n-2} ax \dif x, \quad n \neq 0 \\
+ \int x \sinh ax \dif x&= \frac{x}{a} \cosh ax - \frac{1}{a^2} \sinh ax + C \\
+ \int x \cosh ax \dif x&= \frac{x}{a} \sinh ax - \frac{1}{a^2} \cosh ax + C \\
+ \int x^n \sinh ax \dif x &= \frac{x^n}{a} \cosh ax - \frac{n}{a} \int x^{n-1} \cosh ax \dif x  \\
+ \int x^n \cosh ax \dif x &= \frac{x^n}{a} \sinh ax - \frac{n}{a} \int x^{n-1} \sinh ax \dif x  
+\end{align}
+%123
+\begin{align} 
+ \int \tanh ax \dif x&= \frac{1}{a} \ln (\cosh ax) + C \\
+ \int \coth ax \dif x &= \frac{1}{a} \ln | \sinh ax | + C \\
+ \int \tanh^2 ax \dif x &= x - \frac{1}{a} \tanh ax + C \\
+ \int \coth^2 ax \dif x &= x - \frac{1}{a} \coth ax + C \\
+ \int \tanh^n ax \dif x &= - \frac{\tanh^{n-1} ax}{(n-1)a} + \int \tanh^{n-2} ax \dif x , \quad n \neq 1 \\
+ \int \coth^n ax \dif x &= - \frac{\coth^{n-1} ax}{(n-1)a} + \int \coth^{n-2} ax \dif x , \quad n \neq 1 \\
+ \int \sech ax \dif x &= \frac{1}{a} \sin^{-1} (\tanh ax) + C 
+\end{align}
+%130
+\begin{align} 
+ \int \csch ax \dif x &= \frac{1}{a} \ln \big| \tanh \frac{ax}{2} \big| + C \\
+ \sech^2 ax \dif x &= \frac{1}{a} \tanh ax + C \\
+ \int \csch^2 ax \dif x &= - \frac{1}{a} \coth ax + C \\
+ \int \sech^n ax \dif x &= \frac{\sech^{n-2} ax \tanh ax }{(n-1)a} + \frac{n-2}{n-1} \int \sech^{n-2} ax \dif x, \quad n \neq 1 \\
+ \int \csch^n ax \dif x &= - \frac{\csch^{n-2} ax \coth ax }{(n-1)a} - \frac{n-2}{n-1} \int \csch^{n-2} ax \dif x, \quad n \neq 1
+ \end{align}
+\begin{align}
+  \int \sech^n ax \tanh ax \dif x &= - \frac{\sech^n ax}{na} + C, \quad n\neq 0 \\
+ \int \csch^n ax \coth ax \dif x &= - \frac{\csch^n ax}{na} + C, \quad n\neq 0 \\
+ \int e^{ax} \sinh bx \dif x &= \frac{e^{ax}}{2} \big[ \frac{e^{bx}}{a+b} - \frac{e^{-bx}}{a-b} \big] + C, \quad a^2 \neq b^2 \\
+ \int e^{ax} \cosh bx \dif x &= \frac{e^{ax}}{2} \big[ \frac{e^{bx}}{a+b} + \frac{e^{-bx}}{a-b} \big] + C, \quad a^2 \neq b^2 \\
+ \int^{\infty}_{0} x^{n-1} e^{-x}\dif x &= \Gamma (n) = (n-1)!, \quad n>0 \\
+ \int^{\infty}_{0} e^{-ax^{2}} \dif x &= \frac{1}{2} \sqrt{\frac{\pi}{a}}, \quad a> 0 
+\end{align}
+\begin{align}
+\int_0^{\pi/2}\sin^nx\dif x=\int_0^{\pi/2}\cos^nx\dif x=
+\begin{cases}
+\frac{1\cdot 3\cdot 5\cdots(n-1)}{2\cdot 4\cdot 6\cdots n}\cdot\frac{\pi}{2},&\text{\RL{اگر $n\ge 2$ عدد صحیح ہو}}\\
+\frac{2\cdot 4\cdot 6\cdots (n-1)}{3\cdot 5\cdot 7\cdots n},&\text{\RL{اگر $n\ge 3$ طاق عدد صحیح ہو}}
+\end{cases}
+\end{align}
+
+
+
+
+
