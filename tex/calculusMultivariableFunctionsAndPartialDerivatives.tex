@@ -2149,7 +2149,7 @@ f_x&=\frac{\partial}{\partial x}\big(\frac{2y}{y+\cos x}\big)=\frac{(y+\cos x)\t
 \begin{tikzpicture}[declare function={f(\x,\y)=(\x)^2+(\y)^2;fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);fz(\r,\t)=(\r)^2;ft(\y)=5+4*(\y-2);}]
 \pgfmathsetmacro{\k}{2.4}
 \begin{axis}[small,clip=false,axis lines=center,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.8);},view/h=110,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=west},zlabel style={anchor={south}},enlargelimits=true,hide z axis]
-\addplot3[z buffer=sort,surf,domain=0:2.6,domain y=-45:360]({fx(x,y)},{fy(x,y)},{fz(x,y)});
+\addplot3[z buffer=sort,surf,domain=0:2.6,domain y=0:360]({fx(x,y)},{fy(x,y)},{fz(x,y)});
 \addplot3[thick,domain y=-\k:\k](1,\y,{1+(\y)^2});
 \addplot3[]coordinates {(1,\k,0)(1,\k,0)(1,\k,7)(1,-\k,7)(1,-\k,0)}node[pos=0.75,pin={[align=center]190:{\RL{مستوی}\\ $x=1$}}]{};
 \addplot3[domain y=0.75:2](1,y,{ft(y)})node[pos=0,pin={-45:{\RL{مماسی خط}}}]{};
@@ -4850,7 +4850,7 @@ w&=x^2+y^2+z^2=x^2+(z-x^2)+z^2=z+z^2\nonumber\\
 \centering
 \begin{tikzpicture}[declare function={f(\x,\y)=(\x)^2+(\y)^2;fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);fz(\r,\t)=(\r)^2;}]
 \begin{axis}[small,clip=false,axis lines=center,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.8);},view/h=110,xtick={\empty},ytick={\empty},ztick={\empty},xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=west},zlabel style={anchor={south}},enlargelimits=true,hide z axis]
-\addplot3[z buffer=sort,surf,domain=0:1.2,domain y=-45:360]({fx(x,y)},{fy(x,y)},{fz(x,y)});
+\addplot3[z buffer=sort,surf,domain=0:1.2,domain y=0:360]({fx(x,y)},{fy(x,y)},{fz(x,y)});
 \addplot3[domain y=-70:110]({fx(1,\y)},{fy(1,\y)},{fz(1,\y)})node[pin={[align=center,right]20:{\RL{مستوی \عددی{z=1} میں دائرہ}\\ $x^2+y^2=1$}}]{};
 \addplot3[dashed,domain y=110:290]({fx(1,\y)},{fy(1,\y)},{fz(1,\y)});
 \addplot3[dashed,thick,domain=-1.25:0,samples y=0](\x,0,{(\x)^2})node[pos=0,above,align=center,xshift=1ex]{$z=x^2$\\ $y=0$};
@@ -7388,7 +7388,7 @@ $ -4\le x\le 3,\quad -2\le y\le 2$
 \pgfmathsetmacro{\ka}{1}
 \pgfmathsetmacro{\kb}{5}
 \begin{axis}[view/h=135,axis on top,clip=false,axis lines=center,small,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north},ylabel style={anchor=north},zlabel style={anchor=west},xtick={\empty},ytick={\empty},ztick={\empty},hide axis]
-\addplot3[z buffer=sort,surf,domain=0:7,domain y=0:400]({fx(x,y)},{fy(x,y)},{fz(x,y)});
+\addplot3[z buffer=sort,surf,domain=0:7,domain y=0:360]({fx(x,y)},{fy(x,y)},{fz(x,y)});
 \addplot3[domain y=\ka:\kb] ({gx(y)},{y},{gz(y)});
 \addplot3[domain y=0.5:7] ({gx(y)},{y},0)node[pos=0.95,pin={[align=center,above]60:{\RL{شرطی مساوات}\\$x+3y-10=0$}}]{};
 \addplot3[] ({gx(3)},{3},{gz(3)})node[circ]{}node[pin=70:{\RL{مشروط زیادہ سے زیادہ قیمت}}]{};
