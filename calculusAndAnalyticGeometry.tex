@@ -61,11 +61,10 @@
 \sisetup{math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega}   %with mathpazo this is needed else must not be here. now micro is smaller
 \DeclareSIUnit \var {var}    %used in electric circuits volt-ampere-reactive
 
-\input longdiv.tex
-\usepackage{polynom}
+\input longdiv.tex		%this is a package but doesnot load with usepackage. it writes pen and paper long division
+\usepackage{polynom}		%this writes pen and paper long division for polynomials
 \usepgfplotslibrary{fillbetween}
 \usepackage[]{gnuplottex}
-
 %============================
 \usepackage{newfile}                                                                  %writing answers to the end of the book
 \newwrite\tempfile
@@ -92,9 +91,9 @@
 
 \includeonly{./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusIntegration,./tex/calculusApplicationsOfIntegrals,./tex/calculusTranscendentalFunctions,./tex/calculusTechniquesOfIntegration,./tex/calculusInfiniteSeries,./tex/calculusConicSectionsParametrizedCurvesPolarCoordinates,./tex/calculusVectorsAndAnalyticGeometryInSpace,./tex/calculusVectorValuedFunctionsandMotionInSpace,./tex/calculusMultivariableFunctionsAndPartialDerivatives,./tex/calculusMultipleIntegrals,./tex/calculusIntegrationInVectorFields,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI,./tex/calculusIntegrationTable}
 %
-%\includeonly{./tex/cktSymbols,./tex/calculusPreface,./tex/prefaceFirstBooks,./tex/calculusTechniquesOfIntegration,./tex/questions,./tex/questionsA,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI,./tex/calculusIntegrationTable}%
+%\includeonly{./tex/cktSymbols,./tex/calculusPreface,./tex/prefaceFirstBooks,./tex/questions,./tex/questionsA,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI,./tex/calculusIntegrationTable}%
 %
-%\includeonly{./tex/cktSymbols,./calculusPreface,./tex/prefaceFirstBook,./tex/questions}%
+%\includeonly{./tex/cktSymbols,./calculusPreface,./tex/prefaceFirstBook,./tex/calculusTechniquesOfIntegration,./tex/questions}%
 
 
 \author{
@@ -209,6 +208,7 @@
 
 %=======================
 \appendix
+\renewcommand{\theequation}{\arabic{equation}}
 \include{./tex/calculusAppendixA}
 \include{./tex/calculusAppendixB}
 \include{./tex/calculusAppendixC}
