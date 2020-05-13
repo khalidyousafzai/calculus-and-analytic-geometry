@@ -26,3 +26,61 @@
 \end{axis} 
 \end{tikzpicture}
 \end{figure}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\la}{2}
+\pgfmathsetmacro{\lb}{1/4*\la}
+\pgfmathsetmacro{\lc}{1/2*\la}
+\pgfmathsetmacro{\a}{-30}
+\pgfmathsetmacro{\aa}{-180-\a}
+\pgfmathsetmacro{\b}{-70}
+\pgfmathsetmacro{\bb}{110}
+\pgfmathsetmacro{\c}{\a}
+\pgfmathsetmacro{\cc}{\aa}
+\pgfmathsetmacro{\d}{180-\bb}
+\pgfmathsetmacro{\dd}{-180-\b}
+%bottom
+\draw(0,0) to [out=\a,in=\aa]++(\la,0);
+\draw(0,0) to [out=\b,in=\bb]node[pos=0.5,left]{$D$}++(\lb,-1)coordinate(BL) to [out=\c,in=\cc]++(\lc,0)coordinate(BR) to [out=\d,in=\dd]coordinate[pos=0.5](funA)(\la,0);
+\draw[dashed](BL)--++(0.25,0.15)coordinate(BBL);
+\draw[dashed](BR)--++(-0.25,0.15)coordinate(BBR);
+\draw[dashed](BBL) to [out=-30,in=-150]coordinate[pos=0.5](kBot)(BBR);
+\draw(funA)++(-0.25,0)node[pin={[align=right]-30:{$r=g_1(\theta,\phi)$}}]{};
+\pgfmathsetmacro{\la}{2}
+\pgfmathsetmacro{\lb}{1/5*\la}
+\pgfmathsetmacro{\lc}{\la-2*\lb}
+\pgfmathsetmacro{\a}{45}
+\pgfmathsetmacro{\aa}{-145}
+\pgfmathsetmacro{\b}{10}
+\pgfmathsetmacro{\bb}{-150}
+\pgfmathsetmacro{\d}{180-\bb}
+\pgfmathsetmacro{\dd}{-180-\b}
+%top
+\draw(0,0) to [out=\b,in=\bb]++(\lb,0.75)coordinate(TL) to [out=\c,in=\cc]coordinate[pos=0.5](kTop)++(\lc,0)coordinate(TR) to [out=\d,in=\dd]coordinate[pos=0.5](funB)(\la,0);
+\draw[name path=ka,dashed](TL)--(BBL);
+\draw[name path=kb,dashed](TR)--(BBR);
+\draw[name path=tr,dashed](0,0)--(1/2*\la,0.25)--(\la,0);
+\draw(funB)++(-0.2,0)node[pin=30:{$r=g_2(\theta,\phi)$}]{};
+\draw[dashed,name intersections={of=ka and tr,by=aa}, name intersections={of=kb and tr, by=bb}](aa) to [out=-40,in=-140](bb);
+\draw[dashed](kBot)--(kTop);
+\draw[-stealth](kTop)++(0,0.1)--++(0,0.5)node[left]{$z$};
+\draw(kBot)++(0,-0.3)--++(0,-0.5)coordinate(korigin);
+\draw[-stealth](korigin)--++(-1,-0.5)node[left]{$x$};
+\draw[-stealth](korigin)--++(1,-0.5)node[right]{$y$};
+%shadow
+\pgfmathsetmacro{\la}{2}
+\pgfmathsetmacro{\lc}{1/2*\la}
+\pgfmathsetmacro{\lb}{1/5*\la}
+\pgfmathsetmacro{\a}{-30}
+\pgfmathsetmacro{\aa}{-180-\a}
+\pgfmathsetmacro{\b}{-45}
+\pgfmathsetmacro{\bb}{-180-\a}
+%\draw(0,-1.85)coordinate(kka) to [out=\a,in=\aa]++(\la,0)coordinate(kkb);
+\draw[name path=aa]([shift={(-150:\lc)}]1/2*\la,-1) arc (-150:-30:\lc)coordinate[pos=0](sA)coordinate[pos=1](sB);
+\draw[name path=bb]([shift={(-150:\lb)}]1/2*\la,-1.5) arc (-150:-30:\lb)coordinate[pos=0](sD)coordinate[pos=1](sC);
+\draw(sA)node[left]{$R$}--(sD);
+\draw(sB)--(sC);
+\end{tikzpicture}
+\end{figure}
