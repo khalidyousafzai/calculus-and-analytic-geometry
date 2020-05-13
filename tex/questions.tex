@@ -1,0 +1,28 @@
+\begin{figure}
+\centering
+\pgfmathsetmacro{\pS}{-30}
+\pgfmathsetmacro{\pE}{100}
+\pgfmathsetmacro{\tU}{20}
+\pgfmathsetmacro{\tD}{60}
+\pgfmathsetmacro{\ra}{1}
+\pgfmathsetmacro{\rb}{0.5}
+\pgfmathsetmacro{\rc}{3}
+\begin{tikzpicture}[declare function={fx(\r,\t,\p)=\r*sin(\t)*cos(\p);fy(\r,\t,\p)=\r*sin(\t)*sin(\p);fz(\r,\t,\p)=\r*cos(\t);}]
+\begin{axis}[view/h=135,axis on top,clip=false,axis lines=center,small,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north},ylabel style={anchor=north},zlabel style={anchor=west},xtick={\empty},ytick={\empty},ztick={\empty}]
+%front view Lower section
+\addplot3[variable=\t, variable y=\p,domain y=\pS:\pE]({fx(\ra,\tD,p)},{fy(\ra,\tD,p)},{fz(\ra,\tD,p)});
+\addplot3[variable=\t, variable y=\p,domain y=\pS:\pE]({fx(\rb,\tD,p)},{fy(\rb,\tD,p)},{fz(\ra,\tD,p)});
+\addplot3[variable=\t, variable y=\p,domain y=\pS:\pE]({fx(\rc,\tU,p)},{fy(\rc,\tU,p)},{fz(\ra,\tU,p)});
+\addplot3[]plot coordinates {({fx(\ra,\tD,\pS)},{fy(\ra,\tD,\pS)},{fz(\ra,\tD,\pS)})({fx(\rb,\tD,\pS)},{fy(\rb,\tD,\pS)},{fz(\ra,\tD,\pS)})};
+\addplot3[]plot coordinates {({fx(\ra,\tD,\pE)},{fy(\ra,\tD,\pE)},{fz(\ra,\tD,\pS)})({fx(\rb,\tD,\pE)},{fy(\rb,\tD,\pE)},{fz(\ra,\tD,\pE)})};
+\addplot3[]plot coordinates {({fx(\ra,\tD,\pS)},{fy(\ra,\tD,\pS)},{fz(\ra,\tD,\pS)})({fx(\rc,\tU,\pS)},{fy(\rc,\tU,\pS)},{fz(\ra,20,\pS)})};
+\addplot3[]plot coordinates {({fx(\ra,\tD,\pE)},{fy(\ra,\tD,\pE)},{fz(\ra,\tD,\pE)})({fx(\rc,\tU,\pE)},{fy(\rc,\tU,\pE)},{fz(\ra,20,\pE)})};
+%\shadow on floor
+\addplot3[name path=kS,variable=\t, variable y=\p,domain y=\pS:\pE]({fx(\rb,\tD,p)},{fy(\rb,\tD,p)},{0});
+\addplot3[name path=kL,variable=\t, variable y=\p,domain y=\pS:\pE]({fx(\rc,\tU,p)},{fy(\rc,\tU,p)},{0});
+\addplot3[]plot coordinates {({fx(\rb,\tD,\pS)},{fy(\rb,\tD,\pS)},{0})({fx(\rc,\tU,\pS)},{fy(\rc,\tU,\pS)},{0})};
+\addplot3[]plot coordinates {({fx(\rb,\tD,\pE)},{fy(\rb,\tD,\pE)},{0})({fx(\rc,\tU,\pE)},{fy(\rc,\tU,\pE)},{0})};
+\addplot[lgray] fill between [of=kS and kL];
+\end{axis} 
+\end{tikzpicture}
+\end{figure}

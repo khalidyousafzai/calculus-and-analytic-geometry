@@ -47,6 +47,7 @@ khalid/.local/share/gtksourceview-3.0/styles/kUrduColours.xml
   <color name="light_blue"                  value="#c2f2ee"/>
   <color name="light_red"                  value="#e38a99"/>
   <color name="light_gray"                  value="#f0ebec"/>
+  <color name="pink"      value="#ce20d4"/>
 
   <!-- Global Settings -->
   <style name="current-line"                background="#eeeeec"/>
@@ -118,8 +119,8 @@ khalid/.local/share/gtksourceview-3.0/styles/kUrduColours.xml
   <style name="latex:display-math"          foreground="#6A5ACD"/>
   <style name="latex:command"               foreground="#2E8B57" bold="true"/>
   <style name="latex:include"               use-style="def:preprocessor"/>
-  <style name="latex:masculine"           foreground="blue"/>
-  <style name="latex:technicalMasculine"           foreground="blue" background="light_gray"/>
+  <style name="latex:masculine"           foreground="pink"/>
+  <style name="latex:technicalMasculine"           foreground="pink" background="light_gray"/>
   <style name="latex:feminine"           foreground="red"/>
   <style name="latex:technicalFeminine"           foreground="red" background="light_gray"/>
 

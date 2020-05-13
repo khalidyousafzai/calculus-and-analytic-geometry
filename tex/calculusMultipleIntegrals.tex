@@ -4958,24 +4958,6 @@ M&=\int_0^{2\pi}\int_0^2\int_0^{\rho^2}\dif z \,\rho\dif \rho\dif \phi=\int_0^{2
 فضا میں خطہ \عددی{D} پر  تکمل
 \[\iiint\limits_D f(\rho,\phi,z)\dif H\]
 کی قیمت  حاصل کرتے ہوئے نلکی محدد میں پہلے \عددی{z}، اس کے بعد \عددی{\rho} اور آخر میں \عددی{\phi} کے لحاظ سے تکمل لیتے ہوئے  درج ذیل اقدام کرنے ہوں گے۔
-\begin{enumerate}[1.]
-\item
-\ترچھا{خاکہ:}\quad
-خطہ \عددی{D} اور مستوی \عددی{xy} پر اس کی تظلیل \عددی{R}  کا خاکہ بنائیں ۔ \عددی{D} اور \عددی{R} کی سرحدی  سطحوں  اور منحنیات کی نشاندہی کریں (شکل \حوالہ{شکل_بالکثرت_نلکی_محدد_تکمل_کا_حصول}-ا)۔
-\item
-\ترچھا{تکمل کی \عددی{z} حدیں:}\quad
-\عددی{R} میں علامتی نقطہ \عددی{(\rho,\phi)} پر محور \عددی{z} کے متوازی  ایک علامتی لکیر \عددی{M} کھینچیں جو بڑھ کر  \عددی{D} میں \عددی{z=g_1(\rho,\phi)} سے داخل اور \عددی{z=g_2(\rho,\phi)} سے خارج ہو گی (شکل \حوالہ{شکل_بالکثرت_نلکی_محدد_تکمل_کا_حصول}-ب)۔یہی تکمل کی \عددی{z} حدیں ہوں گی۔
-\item
-\ترچھا{تکمل کی \عددی{\rho} حدیں:}\quad
-مبدا سے ایک لکیر \عددی{L} کھینچیں جو نقطہ \عددی{(\rho,\phi)} سے گزرتی ہو۔ یہ شعاع  خطہ \عددی{R} میں \عددی{\rho=h_1(\phi)} سے داخل اور \عددی{\rho=h_2(\phi)} سے خارج ہو گی (شکل \حوالہ{شکل_بالکثرت_نلکی_محدد_تکمل_کا_حصول}-ج)۔  یہی تکمل کی \عددی{\rho} حدیں ہوں گی۔
-\item
-\ترچھا{تکمل کی \عددی{\phi} حدیں:}\quad
-لکیر \عددی{L} خطہ \عددی{R} کو جھاڑتے ہوئے  مثبت \عددی{x} محور کے ساتھ زاویہ \عددی{\phi=\alpha} اور \عددی{\phi=\beta}  کے بیچ رہتی ہے (شکل \حوالہ{شکل_بالکثرت_نلکی_محدد_تکمل_کا_حصول}-ج)۔ یہی تکمل کی \عددی{\phi} حدیں ہوں گی۔
-\end{enumerate}
-یوں تکمل درج ذیل ہو گا۔
-\begin{align}
-\iiint\limits_D f(\rho,\phi,z)\dif H=\int_{\phi=\alpha}^{\phi=\beta}\int_{\rho=h_1(\phi)}^{\rho=h_2(\phi)}\int_{z=g_1(\rho,\phi)}^{z=g_2(\rho,\phi)}f(\rho,\phi,z)\dif z \,\rho\dif \rho \dif\phi
-\end{align}
 \begin{figure}
 \centering
 \begin{subfigure}{0.30\textwidth}
@@ -5082,23 +5064,305 @@ M&=\int_0^{2\pi}\int_0^2\int_0^{\rho^2}\dif z \,\rho\dif \rho\dif \phi=\int_0^{2
 \end{figure}
 
 
+\begin{enumerate}[1.]
+\item
+\ترچھا{خاکہ:}\quad
+خطہ \عددی{D} اور مستوی \عددی{xy} پر اس کی تظلیل \عددی{R}  کا خاکہ بنائیں ۔ \عددی{D} اور \عددی{R} کی سرحدی  سطحوں  اور منحنیات کی نشاندہی کریں (شکل \حوالہ{شکل_بالکثرت_نلکی_محدد_تکمل_کا_حصول}-ا)۔
+\item
+\ترچھا{تکمل کی \عددی{z} حدیں:}\quad
+\عددی{R} میں علامتی نقطہ \عددی{(\rho,\phi)} پر محور \عددی{z} کے متوازی  ایک علامتی لکیر \عددی{M} کھینچیں جو بڑھ کر  \عددی{D} میں \عددی{z=g_1(\rho,\phi)} سے داخل اور \عددی{z=g_2(\rho,\phi)} سے خارج ہو گی (شکل \حوالہ{شکل_بالکثرت_نلکی_محدد_تکمل_کا_حصول}-ب)۔یہی تکمل کی \عددی{z} حدیں ہوں گی۔
+\item
+\ترچھا{تکمل کی \عددی{\rho} حدیں:}\quad
+مبدا سے ایک لکیر \عددی{L} کھینچیں جو نقطہ \عددی{(\rho,\phi)} سے گزرتی ہو۔ یہ شعاع  خطہ \عددی{R} میں \عددی{\rho=h_1(\phi)} سے داخل اور \عددی{\rho=h_2(\phi)} سے خارج ہو گی (شکل \حوالہ{شکل_بالکثرت_نلکی_محدد_تکمل_کا_حصول}-ج)۔  یہی تکمل کی \عددی{\rho} حدیں ہوں گی۔
+\item
+\ترچھا{تکمل کی \عددی{\phi} حدیں:}\quad
+لکیر \عددی{L} خطہ \عددی{R} کو جھاڑتے ہوئے  مثبت \عددی{x} محور کے ساتھ زاویہ \عددی{\phi=\alpha} اور \عددی{\phi=\beta}  کے بیچ رہتی ہے (شکل \حوالہ{شکل_بالکثرت_نلکی_محدد_تکمل_کا_حصول}-ج)۔ یہی تکمل کی \عددی{\phi} حدیں ہوں گی۔
+\end{enumerate}
+یوں تکمل درج ذیل ہو گا۔
+\begin{align}
+\iiint\limits_D f(\rho,\phi,z)\dif H=\int_{\phi=\alpha}^{\phi=\beta}\int_{\rho=h_1(\phi)}^{\rho=h_2(\phi)}\int_{z=g_1(\rho,\phi)}^{z=g_2(\rho,\phi)}f(\rho,\phi,z)\dif z \,\rho\dif \rho \dif\phi
+\end{align}
+
+
 \جزوحصہء{کروی محدد}
-ایسے کرہ جن   کے مراکز مبدا پر ہوں، وہ نصف چادر جن کا چول محور \عددی{z} ہو، اور وہ مخروط جن کا راس  مبدا پر  اور محور محددی نظام کے محور \عددی{z} پر ہو، کو کروی محدد میں بیان کرنا آسان ہوتا ہے۔ ان سطحوں کی مساواتیں درج ذیل ہوں گی۔
+ایسے کرہ جن   کے مراکز مبدا پر ہوں، وہ نصف چادر جن کا چول محور \عددی{z} ہو، اور وہ مخروط جن کا راس  مبدا پر  اور محور محددی نظام کے محور \عددی{z} پر ہو، کو کروی محدد (شکل \حوالہ{شکل_کثرت_کروی_پیمائش_فاصلہ_دو_زاویات}) میں بیان کرنا زیادہ آسان ہوتا ہے۔ ان سطحوں کی مساواتیں درج ذیل ہوں گی۔ اس نظام میں کسی بھی نقطہ \عددی{N(r_0,\theta_0,\phi_0)} کے محدد \عددی{(r_0,\theta_0,\phi_0)}،  آپس میں عمودی تین سطحوں \عددی{r=r_0}، \عددی{\theta=\theta_0}، \عددی{\phi=\phi_0} کا نقطہ ملاپ ہو گا (شکل \حوالہ{شکل_کثیر_کروی_تین_عمودی_سطحوں_سے_نقطہ})۔
 \begin{align*}
 r&=4&&\text{\RL{کرہ ،جس کا رداس \عددی{4} اور مرکز مبدا پر ہے}}\\
 \phi&=\frac{\pi}{3}&&\text{\RL{مبدا سے اوپر رخ کھلتا ہوا مخروط جو مثبت \عددی{z} محور کے ساتھ \عددی{\pi/3} زاویہ بناتا ہے}}\\
 \phi&=\frac{\pi}{3}&&\text{\RL{نصف چادر جس کا چول محور \عددی{z} ہے اور جو مثبت \عددی{x} محور کے ساتھ \عددی{\pi/3} زاویہ بناتا ہے}}
 \end{align*}
+%
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[x={(-0.5cm,-0.5cm)},y={(1cm,0cm)},z={(0cm,1cm)}]
+%\pgfmathsetseed{1}
+\newdimen\XCoord
+\newdimen\YCoord
+\pgfmathsetmacro{\kr}{2.5}
+\pgfmathsetmacro{\kphi}{60}
+%\pgfmathsetmacro{\ktheta}{45}
+%axis
+\draw[gray] (0,0,0)--(3,0,0)node[left]{$x$};
+\draw[gray] (0,0,0)--(0,3,0)node[below]{$y$};
+\draw[gray] (0,0,0)--(0,0,3)node[left]{$z$};
+% r, phi , theta
+\begin{scope}[canvas is xy plane at z=0]
+\draw(\kr,0,0) arc (0:90:\kr);
+\end{scope}
+%
+\begin{scope}[canvas is xz plane at y=0]
+\draw(\kr,0,0) arc (0:90:\kr);
+\end{scope}
+%
+\begin{scope}[canvas is yz plane at x=0]
+\draw(\kr,0,0) arc (0:90:\kr);
+\end{scope}
+%
+\draw[dashed](0,0,\kr)    \foreach \ktheta in {0,1,...,90}{--({\kr*sin(\ktheta)*cos(\kphi)},{\kr*sin(\ktheta)*sin(\kphi)},{\kr*cos(\ktheta)})};
+\pgfmathsetmacro{\ktheta}{50}
+\draw[fill] (0,0,0)--({\kr*sin(\ktheta)*cos(\kphi)},{\kr*sin(\ktheta)*sin(\kphi)},{\kr*cos(\ktheta)})node[fill=white,pos=0.3]{$r$} 
+circle (1pt)node[right]{$N$};
+%
+\draw[-stealth](0,0,\kr*2/3)    \foreach \ktheta in {0,1,...,50}{--({\kr*2/3*sin(\ktheta)*cos(\kphi)},{\kr*2/3*sin(\ktheta)*sin(\kphi)},{\kr*2/3*cos(\ktheta)})};
+\pgfmathsetmacro{\ktheta}{25}
+\node[fill=white] at ({\kr*2/3*sin(\ktheta)*cos(\kphi)},{\kr*2/3*sin(\ktheta)*sin(\kphi)},{\kr*2/3*cos(\ktheta)}){$\theta$};
+%
+\draw[gray,dashed] (0,0,0)--(\kphi:\kr);
+\draw[-stealth] ([shift=(0:0.9)]0,0) arc (0:\kphi:0.9);
+\node[fill=white] at (\kphi/2:0.9){$\phi$};
+%
+\node[right] at (0,2,2.2){$ \begin{aligned} 0 \le & r \le \infty \\ 0 \le & \theta \le \pi \\ 0 \le & \phi \le 2 \pi \end{aligned}$};
+\end{tikzpicture}%
+\caption{کروی محدد کی پیمائش ایک فاصلہ اور دو زاویات کی مدد سے کی جاتی ہے۔}
+\label{شکل_کثرت_کروی_پیمائش_فاصلہ_دو_زاویات}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[x={(-0.5cm,-0.5cm)},y={(1cm,0cm)},z={(0cm,1cm)}]
+%\pgfmathsetseed{1}
+\pgfmathsetmacro{\kr}{2}
+\pgfmathsetmacro{\krr}{2.5}
+\pgfmathsetmacro{\kphiS}{30}
+\pgfmathsetmacro{\kphiSN}{\kphiS+1}
+\pgfmathsetmacro{\kphiE}{170}
+\pgfmathsetmacro{\ktheta}{30}
+\pgfmathsetmacro{\kthetaN}{\ktheta+1}
 
-کروی محدد میں  چھوٹے مستطیل حجم  سے  مراد  وہ \اصطلاح{کروی  پچر}\فرہنگ{کروی!پچر}\حاشیہب{spherical wedge}\فرہنگ{spherical!wedge}   ہے جس کو \عددی{\dif r}، \عددی{\dif \phi} اور \عددی{\dif \phi} تعین کرتے ہیں۔ یہ پچر تقریباً مستطیلی ہو گا جس کے ایک اطراف  کی  قوسی لمبائی  \عددی{r\dif\phi}، دوسرے طرف کی قوسی لمبائی  \عددی{r\sin\phi\dif\phi} اور موٹائی  \عددی{\dif r} ہو گی۔ یوں   کروی محدد میں چھوٹے ٹکڑے کا حجم 
+\pgfmathsetmacro{\kphiPHI}{60}   %phi surface is drawn here
+%
+%axis
+\draw[gray] (0,0,0)--(3,0,0)node[left]{$x$};
+\draw[gray] (0,0,0)--(0,3,0)node[below]{$y$};
+\draw[gray] (0,0,0)--(0,0,3)node[left]{$z$};
+%
+\pgfdeclareradialshading{sphere}{\pgfpoint{-1cm}{1cm}}% 
+{color(0cm)=(white);
+color(0.7cm)=(gray!20); color(2cm)=(gray!80); color(2.05cm)=(white)}
+
+%\pgfuseshading{sphere}
+%
+% r surface
+\begin{scope}[canvas is xy plane at z=0]
+\draw[name path=xy arc](\kr,0,0) arc (0:90:\kr);
+\end{scope}
+%
+\begin{scope}[canvas is xz plane at y=0]
+\draw(\kr,0,0) arc (0:90:\kr);
+\end{scope}
+%
+\begin{scope}[canvas is yz plane at x=0]
+\draw[name path=yz edge](\kr,0,0) arc (0:90:\kr);
+\end{scope}
+%
+%theta surface
+\pgfmathsetmacro{\kphi}{\kphiS}
+\draw[fill=white,fill opacity=1] ({\krr*sin(\ktheta)*cos(\kphi)},{\krr*sin(\ktheta)*sin(\kphi)},{\krr*cos(\ktheta)})coordinate(arcUL)
+ \foreach \kphi in {\kphiS,\kphiSN,...,100}{--({\krr*sin(\ktheta)*cos(\kphi)},{\krr*sin(\ktheta)*sin(\kphi)},{\krr*cos(\ktheta)})}--
+ ({\kr*sin(\ktheta)*cos(90)},{\kr*sin(\ktheta)*sin(90)},{\kr*cos(\ktheta)})
+ \foreach \kphi in {90,89,...,\kphiS}{--({\kr*sin(\ktheta)*cos(\kphi)},{\kr*sin(\ktheta)*sin(\kphi)},{\kr*cos(\ktheta)})coordinate(arcLL)}--cycle;
+%
+\pgfmathsetmacro{\kphi}{100}
+\draw[] ({\krr*sin(\ktheta)*cos(\kphi)},{\krr*sin(\ktheta)*sin(\kphi)},{\krr*cos(\ktheta)})coordinate(arcUL)
+ \foreach \kphi in {100,101,...,\kphiE}{--({\krr*sin(\ktheta)*cos(\kphi)},{\krr*sin(\ktheta)*sin(\kphi)},{\krr*cos(\ktheta)})coordinate(arcE)};
+%
+\path[name path=to arcE](0,0,0)--(arcE);
+\draw [name intersections={of=yz edge and to arcE,by={arcEedge}}] (arcE)--(arcEedge);
+%
+%phi surface at 60 degrees defined by \kphiPHI
+%
+\pgfmathsetmacro{\kphi}{\kphiS}
+\path[name path=upper arc front] ({\krr*sin(\ktheta)*cos(\kphi)},{\krr*sin(\ktheta)*sin(\kphi)},{\krr*cos(\ktheta)})coordinate(arcUL)
+ \foreach \kphi in {\kphiS,\kphiSN,...,100}{--({\krr*sin(\ktheta)*cos(\kphi)},{\krr*sin(\ktheta)*sin(\kphi)},{\krr*cos(\ktheta)})};
+%
+\path[name path=xy radial upper] (0,0,\kr)--++(\kphiPHI:\krr);
+\draw[name intersections={of=xy radial upper and upper arc front,by={phi theta upper}}] (0,0,\kr)--(phi theta upper);
+%
+\pgfmathsetmacro{\krho}{\kr*tan(\ktheta)}
+\path[name path=xy radial lower] (0,0,0)--(\kphiPHI:\krr);
+\path[fill=white,opacity=1,name intersections ={of=xy radial lower and xy arc,by={arcRadialL}}] ({\krho*cos(\kphiPHI)},{\krho*sin(\kphiPHI)},\kr)coordinate(outOFtheta)--({\krr*cos(\kphiPHI)},{\krr*sin(\kphiPHI)},\kr)coordinate(phiUR)--++(0,0,-\kr)coordinate(phiLR)--(arcRadialL);
+%
+\path[name path=phi lower section]({\kr*sin(\ktheta)*cos(90)},{\kr*sin(\ktheta)*sin(90)},{\kr*cos(\ktheta)})
+ \foreach \kphi in {90,89,...,\kphiS}{--({\kr*sin(\ktheta)*cos(\kphi)},{\kr*sin(\ktheta)*sin(\kphi)},{\kr*cos(\ktheta)})coordinate(arcLL)};
+%
+\path[name path=phiThetaIntersction] (0,0,0)--({\krho*cos(\kphiPHI)},{\krho*sin(\kphiPHI)},\kr)--({\krr*cos(\kphiPHI)},{\krr*sin(\kphiPHI)},\kr);
+\draw[fill=white,opacity=1,name intersections={of=phiThetaIntersction and phi lower section,by={phiThetaLOW}}] (phiThetaLOW)--(outOFtheta)--(phiUR)--(phiLR)--(arcRadialL) \foreach \i in {90,89,...,\ktheta}{--({\kr*sin(\i)*cos(\kphiPHI)},{\kr*sin(\i)*sin(\kphiPHI)},{\kr*cos(\i)})};
+%
+\pgfmathsetmacro{\kphi}{\kphiPHI}
+\pgfmathsetmacro{\ktheta}{0}
+\draw({\kr*sin(\ktheta)*cos(\kphi)},{\kr*sin(\ktheta)*sin(\kphi)},{\kr*cos(\ktheta)})
+ \foreach \ktheta in {0,1,...,20}{--({\kr*sin(\ktheta)*cos(\kphi)},{\kr*sin(\ktheta)*sin(\kphi)},{\kr*cos(\ktheta)})};
+%
+\draw[fill] (phiThetaLOW) circle (1pt) node[xshift=-0.1cm,yshift=-0.3cm]{$N$};
+\draw[stealth-] (1,-0.5,0) to [out=180,in=-45] ++(-1,-1,0)node[left]{\RL{$r=r_0$ سطح}};
+\draw[stealth-] ($(phiLR)!0.5!(arcRadialL)$) to [out=-130,in=180]++(1,0.5)node[right]{\RL{$\phi=\phi_0$ سطح}};
+\draw[stealth-] (arcE)++(0,0.2,0) to [out=90,in=180] ++(-0.4,0.4)node[right]{\RL{$\theta=\theta_0$ سطح}};
+\end{tikzpicture}%
+\caption{کروی محدد میں تین آپس میں عمودی سطحیں نقطہ \(N\) تعین کرتے ہیں۔}
+\label{شکل_کثیر_کروی_تین_عمودی_سطحوں_سے_نقطہ}
+\end{minipage}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[x={(-0.5cm,-0.5cm)},y={(1cm,0cm)},z={(0cm,1cm)}]
+%\pgfmathsetseed{1}
+\pgfmathsetmacro{\kr}{2}
+\pgfmathsetmacro{\krD}{2.5}
+\pgfmathsetmacro{\kphi}{60}
+\pgfmathsetmacro{\kphiN}{\kphi+1}
+\pgfmathsetmacro{\kphiD}{70}
+\pgfmathsetmacro{\kphiDN}{\kphiD-1}
+\pgfmathsetmacro{\ktheta}{30}
+\pgfmathsetmacro{\kthetaN}{\ktheta+1}
+\pgfmathsetmacro{\kthetaD}{40}
+\pgfmathsetmacro{\kthetaDN}{\kthetaD-1}
+%
+%axis
+\draw[gray] (0,0,0)--(1.5,0,0)node[left]{$x$};
+\draw[gray] (0,0,0)--(0,3,0)node[below]{$y$};
+\draw[gray] (0,0,0)--(0,0,3)node[left]{$z$};
+%
+\coordinate (iLL) at ({\kr*sin(\kthetaD)*cos(\kphiD)},{\kr*sin(\kthetaD)*sin(\kphiD)},{\kr*cos(\kthetaD)});
+\coordinate (iLR) at ({\kr*sin(\kthetaD)*cos(\kphi)},{\kr*sin(\kthetaD)*sin(\kphi)},{\kr*cos(\kthetaD)});
+\coordinate (iUL) at ({\kr*sin(\ktheta)*cos(\kphiD)},{\kr*sin(\ktheta)*sin(\kphiD)},{\kr*cos(\ktheta)});
+\coordinate (iUR) at ({\kr*sin(\ktheta)*cos(\kphi)},{\kr*sin(\ktheta)*sin(\kphi)},{\kr*cos(\ktheta)});
+%
+\coordinate (oLL) at ({\krD*sin(\kthetaD)*cos(\kphiD)},{\krD*sin(\kthetaD)*sin(\kphiD)},{\krD*cos(\kthetaD)});
+\coordinate (oLR) at ({\krD*sin(\kthetaD)*cos(\kphi)},{\krD*sin(\kthetaD)*sin(\kphi)},{\krD*cos(\kthetaD)});
+\coordinate (oUL) at ({\krD*sin(\ktheta)*cos(\kphiD)},{\krD*sin(\ktheta)*sin(\kphiD)},{\krD*cos(\ktheta)});
+\coordinate (oUR) at ({\krD*sin(\ktheta)*cos(\kphi)},{\krD*sin(\ktheta)*sin(\kphi)},{\krD*cos(\ktheta)});
+%
+%inner face
+\draw (iLL) 
+\foreach \i in {\kthetaD,\kthetaDN,...,\ktheta}{--({\kr*sin(\i)*cos(\kphiD)},{\kr*sin(\i)*sin(\kphiD)},{\kr*cos(\i)})}
+\foreach \i in {\kphiD,\kphiDN,...,\kphi}{-- ({\kr*sin(\ktheta)*cos(\i)},{\kr*sin(\ktheta)*sin(\i)},{\kr*cos(\ktheta)})}
+\foreach \i in {\ktheta,\kthetaN,...,\kthetaD}{--({\kr*sin(\i)*cos(\kphi)},{\kr*sin(\i)*sin(\kphi)},{\kr*cos(\i)})}
+\foreach \i in {\kphi,\kphiN,...,\kphiD}{--({\kr*sin(\kthetaD)*cos(\i)},{\kr*sin(\kthetaD)*sin(\i)},{\kr*cos(\kthetaD)})};
+%outer face
+\draw (oLL) 
+\foreach \i in {\kthetaD,\kthetaDN,...,\ktheta}{--({\krD*sin(\i)*cos(\kphiD)},{\krD*sin(\i)*sin(\kphiD)},{\krD*cos(\i)})}
+\foreach \i in {\kphiD,\kphiDN,...,\kphi}{-- ({\krD*sin(\ktheta)*cos(\i)},{\krD*sin(\ktheta)*sin(\i)},{\krD*cos(\ktheta)})}
+\foreach \i in {\ktheta,\kthetaN,...,\kthetaD}{--({\krD*sin(\i)*cos(\kphi)},{\krD*sin(\i)*sin(\kphi)},{\krD*cos(\i)})}
+\foreach \i in {\kphi,\kphiN,...,\kphiD}{--({\krD*sin(\kthetaD)*cos(\i)},{\krD*sin(\kthetaD)*sin(\i)},{\krD*cos(\kthetaD)})};
+%edges
+\draw (iLL)--(oLL)  (iLR)--(oLR)  (iUL)--(oUL)  (iUR)--(oUR);
+%drop to ground
+%\draw[gray,dashed] (0,0,0)--(iLL)  (0,0,0)--(iLR)  (0,0,0)--(iUL)  (0,0,0)--(iUR);
+%\draw[gray,dashed] (iLL)--({\kr*sin(\kthetaD)*cos(\kphiD)},{\kr*sin(\kthetaD)*sin(\kphiD)},0);
+%\draw[gray,dashed] (iLR)--({\kr*sin(\kthetaD)*cos(\kphi)},{\kr*sin(\kthetaD)*sin(\kphi)},0);
+%theta
+\draw[gray,dashed] (0,0,\kr) 
+\foreach \i in {0,1,...,90}{--({\kr*sin(\i)*cos(\kphi)},{\kr*sin(\i)*sin(\kphi)},{\kr*cos(\i)})}--(0,0,0);
+\draw[gray,dashed] (0,0,\kr) 
+\foreach \i in {0,1,...,90}{--({\kr*sin(\i)*cos(\kphiD)},{\kr*sin(\i)*sin(\kphiD)},{\kr*cos(\i)})}--(0,0,0);
+%text
+\draw[stealth-] ($(iLR)!0.5!(iUR)$) to [out=-140,in=0] ++(0,-1,-0.4)node[left]{$r \textup{d} \theta$};
+\draw[stealth-] ($(iLL)!0.5!(iLR)$) to [out=-45,in=180] ++(0,1,-0.4)node[right]{$r \sin \theta \textup{d} \phi$};
+\draw[stealth-] ($(iLL)!0.5!(oLL)$) to [out=-10,in=180] ++(0,1,0.2)node[right]{$\textup{d} r$};
+\node at (0,2,2.5){\RL{چھوٹا حجم= $r^2 \sin \theta \textup{d} r \textup{d} \theta \textup{d} \phi$}};
+\end{tikzpicture}%
+\caption{کروی محدد میں چھوٹا حجم۔}
+\label{شکل_کثرت_کروی_چھوٹا_حجم}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[x={(-0.5cm,-0.5cm)},y={(1cm,0cm)},z={(0cm,1cm)}]
+%\pgfmathsetseed{1}
+\pgfmathsetmacro{\kr}{2}
+\pgfmathsetmacro{\krD}{2.5}
+\pgfmathsetmacro{\kphi}{60}
+\pgfmathsetmacro{\kphiN}{\kphi+1}
+\pgfmathsetmacro{\kphiD}{70}
+\pgfmathsetmacro{\kphiDN}{\kphiD-1}
+\pgfmathsetmacro{\ktheta}{30}
+\pgfmathsetmacro{\kthetaN}{\ktheta+1}
+\pgfmathsetmacro{\kthetaD}{40}
+\pgfmathsetmacro{\kthetaDN}{\kthetaD-1}
+%
+%axis
+\draw[gray] (0,0,0)--(1.5,0,0)node[left]{$x$};
+\draw[gray] (0,0,0)--(0,3,0)node[below]{$y$};
+\draw[gray] (0,0,0)--(0,0,3)node[left]{$z$};
+%
+\coordinate (iLL) at ({\kr*sin(\kthetaD)*cos(\kphiD)},{\kr*sin(\kthetaD)*sin(\kphiD)},{\kr*cos(\kthetaD)});
+\coordinate (iLR) at ({\kr*sin(\kthetaD)*cos(\kphi)},{\kr*sin(\kthetaD)*sin(\kphi)},{\kr*cos(\kthetaD)});
+\coordinate (iUL) at ({\kr*sin(\ktheta)*cos(\kphiD)},{\kr*sin(\ktheta)*sin(\kphiD)},{\kr*cos(\ktheta)});
+\coordinate (iUR) at ({\kr*sin(\ktheta)*cos(\kphi)},{\kr*sin(\ktheta)*sin(\kphi)},{\kr*cos(\ktheta)});
+%
+\coordinate (oLL) at ({\krD*sin(\kthetaD)*cos(\kphiD)},{\krD*sin(\kthetaD)*sin(\kphiD)},{\krD*cos(\kthetaD)});
+\coordinate (oLR) at ({\krD*sin(\kthetaD)*cos(\kphi)},{\krD*sin(\kthetaD)*sin(\kphi)},{\krD*cos(\kthetaD)});
+\coordinate (oUL) at ({\krD*sin(\ktheta)*cos(\kphiD)},{\krD*sin(\ktheta)*sin(\kphiD)},{\krD*cos(\ktheta)});
+\coordinate (oUR) at ({\krD*sin(\ktheta)*cos(\kphi)},{\krD*sin(\ktheta)*sin(\kphi)},{\krD*cos(\ktheta)});
+%
+%theta
+\draw[gray,dashed] (0,0,\kr) 
+\foreach \i in {0,1,...,90}{--({\kr*sin(\i)*cos(\kphi)},{\kr*sin(\i)*sin(\kphi)},{\kr*cos(\i)})}--(0,0,0);
+\draw[gray,dashed] (0,0,\kr) 
+\foreach \i in {0,1,...,90}{--({\kr*sin(\i)*cos(\kphiD)},{\kr*sin(\i)*sin(\kphiD)},{\kr*cos(\i)})}--(0,0,0);
+%edges
+\draw[] (iLL)--(oLL) (iLR)--(oLR) ;
+\draw[]  (iUL)--(oUL)--(oUR)--(iUR)--cycle;
+%inner face
+\draw[] (iLL) 
+\foreach \i in {\kthetaD,\kthetaDN,...,\ktheta}{--({\kr*sin(\i)*cos(\kphiD)},{\kr*sin(\i)*sin(\kphiD)},{\kr*cos(\i)})}
+\foreach \i in {\kphiD,\kphiDN,...,\kphi}{-- ({\kr*sin(\ktheta)*cos(\i)},{\kr*sin(\ktheta)*sin(\i)},{\kr*cos(\ktheta)})}
+\foreach \i in {\ktheta,\kthetaN,...,\kthetaD}{--({\kr*sin(\i)*cos(\kphi)},{\kr*sin(\i)*sin(\kphi)},{\kr*cos(\i)})}
+\foreach \i in {\kphi,\kphiN,...,\kphiD}{--({\kr*sin(\kthetaD)*cos(\i)},{\kr*sin(\kthetaD)*sin(\i)},{\kr*cos(\kthetaD)})};
+%outer face
+\draw[shade] (oLL) 
+\foreach \i in {\kthetaD,\kthetaDN,...,\ktheta}{--({\krD*sin(\i)*cos(\kphiD)},{\krD*sin(\i)*sin(\kphiD)},{\krD*cos(\i)})}
+\foreach \i in {\kphiD,\kphiDN,...,\kphi}{-- ({\krD*sin(\ktheta)*cos(\i)},{\krD*sin(\ktheta)*sin(\i)},{\krD*cos(\ktheta)})}
+\foreach \i in {\ktheta,\kthetaN,...,\kthetaD}{--({\krD*sin(\i)*cos(\kphi)},{\krD*sin(\i)*sin(\kphi)},{\krD*cos(\i)})}
+\foreach \i in {\kphi,\kphiN,...,\kphiD}{--({\krD*sin(\kthetaD)*cos(\i)},{\krD*sin(\kthetaD)*sin(\i)},{\krD*cos(\kthetaD)})};
+\draw[stealth-] ($(oLL)!0.5!(oUR)$) to [out=60,in=180] ++(0,0.5,0.5)node[right]{$r^2 \sin \theta \textup{d} \theta \textup{d} \phi$};
+%left front face
+\draw[shade] (iUR) \foreach \i in {\ktheta,\kthetaN,...,\kthetaD}{--({\kr*sin(\i)*cos(\kphi)},{\kr*sin(\i)*sin(\kphi)},{\kr*cos(\i)})}--(oLR)\foreach \i in {\kthetaD,\kthetaDN,...,\ktheta}{--({\krD*sin(\i)*cos(\kphi)},{\krD*sin(\i)*sin(\kphi)},{\krD*cos(\i)})}--cycle;
+%text front face
+\draw[stealth-] ($(iLR)!0.5!(oUR)$) to [out=180,in=0] ++(0,-1,-0.4)node[left]{$r \textup{d} \theta \textup{d} r$};
+%shades
+\draw[shade] (iLL)--(iLR)--(oLR)--(oLL)--cycle;
+\draw[stealth-] ($(iLR)!0.5!(oLL)$) to [out=-60,in=180] ++(0,0.5,-0.2)node[right]{$r \sin \theta \textup{d} \phi \textup{d}r$};
+\end{tikzpicture}
+\caption{کروی محدد میں چھوٹی سطحیں۔}
+\label{شکل_کثرت_کروی_چھوٹی_سطحیں}
+\end{minipage}
+\end{figure}
+کروی محدد میں  چھوٹے مستطیل حجم  سے  مراد  وہ \اصطلاح{کروی  پچر}\فرہنگ{کروی!پچر}\حاشیہب{spherical wedge}\فرہنگ{spherical!wedge}   ہے جس کو \عددی{\dif r}، \عددی{\dif \phi} اور \عددی{\dif \phi} تعین کرتے ہیں۔ یہ پچر تقریباً مستطیلی ہو گا جس کے ایک اطراف  کی  قوسی لمبائی  \عددی{r\dif\phi}، دوسرے طرف کی قوسی لمبائی  \عددی{r\sin\phi\dif\phi} اور موٹائی  \عددی{\dif r} ہو گی۔ یوں   کروی محدد میں چھوٹے ٹکڑے کا حجم \عددی{\dif H}  (شکل \حوالہ{شکل_کثرت_کروی_چھوٹا_حجم}) 
 \begin{align}
-\dif H=r^2\sin\phi \dif r\dif \phi\dif \phi
+\dif H=(\dif r)(r\sin\theta\dif\phi)(r\dif\theta)=r^2\sin\phi \dif r\dif \phi\dif \phi
 \end{align}
 ہو گا اور تہرا تکمل کی صورت درج ذیل ہو گی۔
 \begin{align*}
 \iiint F(r,\phi,\phi)\dif H=\iiint F(r,\phi,\phi) r^2\sin\phi\dif r \dif \phi\dif \phi
 \end{align*}
 ہم عموماً پہلے \عددی{r} کے لحاظ سے تکمل لیتے ہیں۔ ہم  صرف ان تکملات  پر غور کریں گے  جو \عددی{z} محور کے لحاظ سے اجسام طواف  (یا ان کا حصہ) ہوں اور جن کے \عددی{\phi} اور \عددی{\phi} حدیں مستقل ہوں۔
+
+اس مستطیلی پچر کی سطحیں شکل \حوالہ{شکل_کثرت_کروی_چھوٹی_سطحیں} میں دکھائی گئی ہیں۔
 
 \جزوحصہء{کروی محدد میں تکمل کی قیمت کا حصول}
 فضا میں خطہ \عددی{D} پر تکمل
