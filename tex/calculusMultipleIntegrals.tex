@@ -5088,7 +5088,7 @@ M&=\int_0^{2\pi}\int_0^2\int_0^{\rho^2}\dif z \,\rho\dif \rho\dif \phi=\int_0^{2
 ایسے کرہ جن   کے مراکز مبدا پر ہوں، وہ نصف چادر جن کا چول محور \عددی{z} ہو، اور وہ مخروط جن کا راس  مبدا پر  اور محور محددی نظام کے محور \عددی{z} پر ہو، کو کروی محدد (شکل \حوالہ{شکل_کثرت_کروی_پیمائش_فاصلہ_دو_زاویات}) میں بیان کرنا زیادہ آسان ہوتا ہے۔ ان سطحوں کی مساواتیں درج ذیل ہوں گی۔ اس نظام میں کسی بھی نقطہ \عددی{N(r_0,\theta_0,\phi_0)} کے محدد \عددی{(r_0,\theta_0,\phi_0)}،  آپس میں عمودی تین سطحوں \عددی{r=r_0}، \عددی{\theta=\theta_0}، \عددی{\phi=\phi_0} کا نقطہ ملاپ ہو گا (شکل \حوالہ{شکل_کثیر_کروی_تین_عمودی_سطحوں_سے_نقطہ})۔
 \begin{align*}
 r&=4&&\text{\RL{کرہ ،جس کا رداس \عددی{4} اور مرکز مبدا پر ہے}}\\
-\phi&=\frac{\pi}{3}&&\text{\RL{مبدا سے اوپر رخ کھلتا ہوا مخروط جو مثبت \عددی{z} محور کے ساتھ \عددی{\pi/3} زاویہ بناتا ہے}}\\
+\theta&=\frac{\pi}{3}&&\text{\RL{مبدا سے اوپر رخ کھلتا ہوا مخروط جو مثبت \عددی{z} محور کے ساتھ \عددی{\pi/3} زاویہ بناتا ہے}}\\
 \phi&=\frac{\pi}{3}&&\text{\RL{نصف چادر جس کا چول محور \عددی{z} ہے اور جو مثبت \عددی{x} محور کے ساتھ \عددی{\pi/3} زاویہ بناتا ہے}}
 \end{align*}
 %
@@ -5352,67 +5352,218 @@ color(0.7cm)=(gray!20); color(2cm)=(gray!80); color(2.05cm)=(white)}
 \label{شکل_کثرت_کروی_چھوٹی_سطحیں}
 \end{minipage}
 \end{figure}
-کروی محدد میں  چھوٹے مستطیل حجم  سے  مراد  وہ \اصطلاح{کروی  پچر}\فرہنگ{کروی!پچر}\حاشیہب{spherical wedge}\فرہنگ{spherical!wedge}   ہے جس کو \عددی{\dif r}، \عددی{\dif \phi} اور \عددی{\dif \phi} تعین کرتے ہیں۔ یہ پچر تقریباً مستطیلی ہو گا جس کے ایک اطراف  کی  قوسی لمبائی  \عددی{r\dif\phi}، دوسرے طرف کی قوسی لمبائی  \عددی{r\sin\phi\dif\phi} اور موٹائی  \عددی{\dif r} ہو گی۔ یوں   کروی محدد میں چھوٹے ٹکڑے کا حجم \عددی{\dif H}  (شکل \حوالہ{شکل_کثرت_کروی_چھوٹا_حجم}) 
+کروی محدد میں  چھوٹے مستطیل حجم  سے  مراد  وہ \اصطلاح{کروی  پچر}\فرہنگ{کروی!پچر}\حاشیہب{spherical wedge}\فرہنگ{spherical!wedge}   ہے جس کو \عددی{\dif r}، \عددی{\dif \theta} اور \عددی{\dif \phi} تعین کرتے ہیں۔ یہ پچر تقریباً مستطیلی ہو گا جس کے ایک اطراف  کی  قوسی لمبائی  \عددی{r\dif\theta}، دوسرے طرف کی قوسی لمبائی  \عددی{r\sin\theta\dif\phi} اور موٹائی  \عددی{\dif r} ہو گی۔ یوں   کروی محدد میں چھوٹے ٹکڑے کا حجم \عددی{\dif H}  (شکل \حوالہ{شکل_کثرت_کروی_چھوٹا_حجم}) 
 \begin{align}
-\dif H=(\dif r)(r\sin\theta\dif\phi)(r\dif\theta)=r^2\sin\phi \dif r\dif \phi\dif \phi
+\dif H=(\dif r)(r\sin\theta\dif\phi)(r\dif\theta)=r^2\sin\theta \dif r\dif \theta\dif \phi
 \end{align}
 ہو گا اور تہرا تکمل کی صورت درج ذیل ہو گی۔
 \begin{align*}
-\iiint F(r,\phi,\phi)\dif H=\iiint F(r,\phi,\phi) r^2\sin\phi\dif r \dif \phi\dif \phi
+\iiint F(r,\theta,\phi)\dif H=\iiint F(r,\theta,\phi) r^2\sin\theta\dif r \dif \theta\dif \phi
 \end{align*}
-ہم عموماً پہلے \عددی{r} کے لحاظ سے تکمل لیتے ہیں۔ ہم  صرف ان تکملات  پر غور کریں گے  جو \عددی{z} محور کے لحاظ سے اجسام طواف  (یا ان کا حصہ) ہوں اور جن کے \عددی{\phi} اور \عددی{\phi} حدیں مستقل ہوں۔
+ہم عموماً پہلے \عددی{r} کے لحاظ سے تکمل لیتے ہیں۔ ہم  صرف ان تکملات  پر غور کریں گے  جو \عددی{z} محور کے لحاظ سے اجسام طواف  (یا ان کا حصہ) ہوں اور جن کے \عددی{\theta} اور \عددی{\phi} حدیں مستقل ہوں۔
 
 اس مستطیلی پچر کی سطحیں شکل \حوالہ{شکل_کثرت_کروی_چھوٹی_سطحیں} میں دکھائی گئی ہیں۔
 
 \جزوحصہء{کروی محدد میں تکمل کی قیمت کا حصول}
 فضا میں خطہ \عددی{D} پر تکمل
 \begin{align*}
-\iiint\limits_D F(r,\phi,\phi)\dif H
+\iiint\limits_D F(r,\theta,\phi)\dif H
 \end{align*}
-کی قیمت حاصل کرتے ہوئے  پہلے \عددی{r}، اس کے بعد \عددی{\phi}، اور آخر میں \عددی{\phi} کے لحاظ سے تکمل لیتے ہوئے ہمیں درج ذیل اقدام کرنے ہوں گے۔
+کی قیمت حاصل کرتے ہوئے  پہلے \عددی{r}، اس کے بعد \عددی{\theta}، اور آخر میں \عددی{\phi} کے لحاظ سے تکمل لیتے ہوئے ہمیں درج ذیل اقدام کرنے ہوں گے۔
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.40\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\la}{2}
+\pgfmathsetmacro{\lb}{1/4*\la}
+\pgfmathsetmacro{\lc}{1/2*\la}
+\pgfmathsetmacro{\a}{-30}
+\pgfmathsetmacro{\aa}{-180-\a}
+\pgfmathsetmacro{\b}{-70}
+\pgfmathsetmacro{\bb}{110}
+\pgfmathsetmacro{\c}{\a}
+\pgfmathsetmacro{\cc}{\aa}
+\pgfmathsetmacro{\d}{180-\bb}
+\pgfmathsetmacro{\dd}{-180-\b}
+%bottom
+\draw(0,0) to [out=\a,in=\aa]++(\la,0);
+\draw(0,0) to [out=\b,in=\bb]node[pos=0.5,left]{$D$}++(\lb,-1)coordinate(BL) to [out=\c,in=\cc]++(\lc,0)coordinate(BR) to [out=\d,in=\dd]coordinate[pos=0.5](funA)(\la,0);
+\draw[dashed](BL)--++(0.25,0.15)coordinate(BBL);
+\draw[dashed](BR)--++(-0.25,0.15)coordinate(BBR);
+\draw[dashed](BBL) to [out=-30,in=-150]coordinate[pos=0.5](kBot)(BBR);
+\draw(funA)++(-0.25,0)node[pin={[align=right]-30:{$r=g_1(\theta,\phi)$}}]{};
+\pgfmathsetmacro{\la}{2}
+\pgfmathsetmacro{\lb}{1/5*\la}
+\pgfmathsetmacro{\lc}{\la-2*\lb}
+\pgfmathsetmacro{\a}{45}
+\pgfmathsetmacro{\aa}{-145}
+\pgfmathsetmacro{\b}{10}
+\pgfmathsetmacro{\bb}{-150}
+\pgfmathsetmacro{\d}{180-\bb}
+\pgfmathsetmacro{\dd}{-180-\b}
+%top
+\draw(0,0) to [out=\b,in=\bb]++(\lb,0.75)coordinate(TL) to [out=\c,in=\cc]coordinate[pos=0.5](kTop)++(\lc,0)coordinate(TR) to [out=\d,in=\dd]coordinate[pos=0.5](funB)(\la,0);
+\draw[name path=ka,dashed](TL)--(BBL);
+\draw[name path=kb,dashed](TR)--(BBR);
+\draw[name path=tr,dashed](0,0)--(1/2*\la,0.25)--(\la,0);
+\draw(funB)++(-0.2,0)node[pin=30:{$r=g_2(\theta,\phi)$}]{};
+\draw[dashed,name intersections={of=ka and tr,by=aa}, name intersections={of=kb and tr, by=bb}](aa) to [out=-40,in=-140](bb);
+\draw[dashed](kBot)--(kTop);
+\draw[-stealth](kTop)++(0,0.1)--++(0,0.5)node[left]{$z$};
+\draw(kBot)++(0,-0.3)--++(0,-0.5)coordinate(korigin);
+\draw[-stealth](korigin)--++(-1.5,-0.5)node[left]{$x$};
+\draw[-stealth](korigin)--++(1.5,-0.5)node[right]{$y$};
+%shadow
+\pgfmathsetmacro{\slop}{-10}
+\pgfmathsetmacro{\la}{2}
+\path(korigin)++(-180-\slop:0.75/5*\la)coordinate(aa)--++(-180-\slop:3/10*\la)coordinate(bb);
+\path(korigin)++(\slop:0.75/5*\la)coordinate(cc)--++(\slop:3/10*\la)coordinate(dd);
+\draw[fill=lgray](aa)--(bb)coordinate[pos=0.5](kkL) to [out=-45,in=-135](dd)--(cc) to [out=-135,in=-45](aa);
+\draw(kkL)node[above]{$R$};
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.50\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\la}{2}
+\pgfmathsetmacro{\lb}{1/4*\la}
+\pgfmathsetmacro{\lc}{1/2*\la}
+\pgfmathsetmacro{\a}{-30}
+\pgfmathsetmacro{\aa}{-180-\a}
+\pgfmathsetmacro{\b}{-70}
+\pgfmathsetmacro{\bb}{110}
+\pgfmathsetmacro{\c}{\a}
+\pgfmathsetmacro{\cc}{\aa}
+\pgfmathsetmacro{\d}{180-\bb}
+\pgfmathsetmacro{\dd}{-180-\b}
+%bottom
+\draw(0,0) to [out=\a,in=\aa]++(\la,0);
+\draw(0,0) to [out=\b,in=\bb]node[pos=0.5,left]{$D$}++(\lb,-1)coordinate(BL) to [out=\c,in=\cc]++(\lc,0)coordinate(BR) to [out=\d,in=\dd]coordinate[pos=0.5](funA)(\la,0);
+\draw[dashed](BL)--++(0.25,0.15)coordinate(BBL);
+\draw[dashed](BR)--++(-0.25,0.15)coordinate(BBR);
+\draw[dashed](BBL) to [out=-30,in=-150]coordinate[pos=0.5](kBot)(BBR);
+\pgfmathsetmacro{\la}{2}
+\pgfmathsetmacro{\lb}{1/5*\la}
+\pgfmathsetmacro{\lc}{\la-2*\lb}
+\pgfmathsetmacro{\a}{45}
+\pgfmathsetmacro{\aa}{-145}
+\pgfmathsetmacro{\b}{10}
+\pgfmathsetmacro{\bb}{-150}
+\pgfmathsetmacro{\d}{180-\bb}
+\pgfmathsetmacro{\dd}{-180-\b}
+%top
+\draw(0,0) to [out=\b,in=\bb]++(\lb,0.75)coordinate(TL) to [out=\c,in=\cc]coordinate[pos=0.5](kTop)++(\lc,0)coordinate(TR) to [out=\d,in=\dd]coordinate[pos=0.5](funB)(\la,0);
+\draw[name path=ka,dashed](TL)--(BBL);
+\draw[name path=kb,dashed](TR)--(BBR);
+\draw[name path=tr,dashed](0,0)--(1/2*\la,0.25)--(\la,0);
+\draw[dashed,name intersections={of=ka and tr,by=aa}, name intersections={of=kb and tr, by=bb}](aa) to [out=-40,in=-140](bb);
+\draw[dashed](kBot)--(kTop);
+\draw[-stealth](kTop)++(0,0.1)--++(0,1.2)node[right]{$z$};
+\draw(kBot)++(0,-0.3)--++(0,-0.5)coordinate(korigin);
+\draw[-stealth](korigin)--++(-1.5,-0.5)node[below]{$x$};
+\draw[-stealth](korigin)--++(1.5,-0.5)node[below]{$y$};
+%shadow
+\pgfmathsetmacro{\angX}{-180+atan(0.5/1.5)}
+\pgfmathsetmacro{\slop}{-10}
+\pgfmathsetmacro{\la}{2}
+\path(korigin)++(-180-\slop:0.75/5*\la)coordinate(aa)--++(-180-\slop:3/10*\la)coordinate(bb);
+\path(korigin)++(\slop:0.75/5*\la)coordinate(cc)--++(\slop:3/10*\la)coordinate(dd);
+\draw[fill=lgray,opacity=0.5](aa)--(bb)coordinate[pos=0.5](kkL) to [out=-45,in=-135](dd)--(cc) to [out=-135,in=-45](aa);
+\draw(kkL)node[above]{$R$};
+%angle phi
+\draw[-latex](korigin)--++(-180-\slop:\la)node[left]{$\phi=\alpha$};
+\draw[-latex](korigin)--++(\slop:\la)node[right]{$\phi=\beta$};
+\draw[-latex](korigin)--++(-70:1/2*\la)coordinate[pos=0.65](kphiE)node[below]{$L$};
+\draw[-stealth](korigin)++(\angX:1) to[out=-45,in=-145] node[pos=0.5,below]{$\phi$}(kphiE);
+% angle theta
+\draw[](korigin)--++(72:0.4*3)node[circ]{}node[pin=-30:{$r=g_1(\theta,\phi)$}]{};
+\draw[dashed](korigin)++(72:0.4*3)--++(72:0.35*3)node[circ]{}node[pin={[pin edge={-,solid}]-30:{$r=g_2(\theta,\phi)$}}]{};
+\draw[-latex](korigin)++(72:0.4*3)++(72:0.35*3)--++(72:0.3*3)node[right]{$M$};
+\draw[-stealth]([shift={(90:2.75)}]korigin) arc (90:72:2.75)node[pos=0.5,above]{$\theta$};
+\pgfmathsetmacro{\kthetaMin}{100}
+\pgfmathsetmacro{\kthetaMax}{110}
+\draw(0,0)++(\kthetaMax:0.1)--++(\kthetaMax:1)coordinate[pos=0.7](ktMax);
+\draw(TL)++(\kthetaMin:0.1)--++(\kthetaMin:0.5)coordinate[pos=0.7](ktMin);
+\draw[-stealth](korigin)++(90:3) to [out=160,in=45]node[pos=0.5,above]{$\theta_1$}(ktMin);
+\draw[-stealth](korigin)++(90:2.5) to [out=160,in=45]node[pos=0.85,above]{$\theta_2$}(ktMax);
+\end{tikzpicture}
+\end{subfigure}%
+\caption{کروی محدد میں تہرا تکمل کے حدوں کی تلاش۔}
+\label{شکل_کثیر_کروی_تکمل_کے_حدوں_تلاش}
+\end{figure}
+
+
 \begin{enumerate}[1.]
 \item
 \ترچھا{خاکہ:}\quad
-خطہ \عددی{D} اور مستوی \عددی{xy} میں \عددی{D} کی تظلیل \عددی{R}  کا خاکہ بنا کر \عددی{D} کی سرحدی سطحوں کی نشاندہی کریں۔
+خطہ \عددی{D} اور مستوی \عددی{xy} میں \عددی{D} کی تظلیل \عددی{R}  کا خاکہ بنا کر \عددی{D} کی سرحدی سطحوں کی نشاندہی کریں (شکل \حوالہ{شکل_کثیر_کروی_تکمل_کے_حدوں_تلاش})۔
 \item
 \ترچھا{تکمل کی \عددی{r} حدیں:}\quad
-مبدا سے ایک لکیر \عددی{M} کھینچیں جو مثبت محور \عددی{z} کے ساتھ زاویہ \عددی{\phi} بناتی ہو۔ ساتھ ہی \عددی{R} پر \عددی{M} کی تظلیل \عددی{L} کا خاکہ بنائیں جو مثبت \عددی{x} محور کے ساتھ زاویہ \عددی{\phi} بنائی گی۔ جیسے جیسے \عددی{r} بڑھے گا \عددی{M} خطہ \عددی{D} میں \عددی{r=g_1(\phi,\phi)} سے داخل اور \عددی{r=g_2(\phi,\phi)} سے خارج ہو گی۔ یہی تکمل کی \عددی{r} حدیں ہوں گی۔
+مبدا سے ایک لکیر \عددی{M} کھینچیں جو مثبت محور \عددی{z} کے ساتھ زاویہ \عددی{\phi} بناتی ہو۔ ساتھ ہی \عددی{R} پر \عددی{M} کی تظلیل \عددی{L} کا خاکہ بنائیں جو مثبت \عددی{x} محور کے ساتھ زاویہ \عددی{\phi} بنائی گی۔ جیسے جیسے \عددی{r} بڑھے گا \عددی{M} خطہ \عددی{D} میں \عددی{r=g_1(\theta,\phi)} سے داخل اور \عددی{r=g_2(\theta,\phi)} سے خارج ہو گی۔ یہی تکمل کی \عددی{r} حدیں ہوں گی۔
 \item
 \ترچھا{تکمل کی \عددی{\phi} حدیں:}\quad
-کسی بھی مخصوص \عددی{\phi} کے لئے  \عددی{M} مثبت محور \عددی{z} کے ساتھ \عددی{\phi=\phi_1} سے \عددی{\phi=\phi_2} تک زاویہ بنائے گی۔یہی تکمل کی \عددی{\phi} حدیں ہوں گی۔
+کسی بھی مخصوص \عددی{\phi} کے لئے  \عددی{M} مثبت محور \عددی{z} کے ساتھ \عددی{\theta=\theta_1} سے \عددی{\theta=\theta_2} تک زاویہ بنائے گی۔یہی تکمل کی \عددی{\theta} حدیں ہوں گی۔
 \item
 \ترچھا{تکمل کی \عددی{\phi} حدیں:}\quad
-کسی بھی مخصوص \عددی{\phi} کے لئے \عددی{L}  خطہ \عددی{R} پر جھاڑو کی طرح چلتے ہوئے \عددی{\phi=\alpha} سے \عددی{\phi=\beta} تک چلتی ہے۔  یہی تکمل کی \عددی{\phi} حدیں ہوں گی۔
+کسی بھی مخصوص \عددی{\phi} کے لئے \عددی{L}   خطہ \عددی{R} پر جھاڑو کی طرح چلتے ہوئے \عددی{\phi=\alpha} سے \عددی{\phi=\beta} تک چلتی ہے۔  یہی تکمل کی \عددی{\phi} حدیں ہوں گی۔
 \end{enumerate}
 یوں تکمل درج ذیل ہو گا۔
 \begin{align*}
-\iiint\limits_D F(r,\phi,\phi)\dif H=\int_{\phi=\alpha}^{\phi=\beta}\int_{\phi_1}^{\phi_2}\int_{r=g_1(\phi,\phi)}^{r=g_2(\phi,\phi)} F(r,\phi,\phi) r^2\sin\phi \dif r\dif \phi \dif \phi
+\iiint\limits_D F(r,\theta,\phi)\dif H=\int_{\phi=\alpha}^{\phi=\beta}\int_{\theta_1}^{\theta_2}\int_{r=g_1(\theta,\phi)}^{r=g_2(\theta,\phi)} F(r,\theta,\phi) r^2\sin\theta \dif r\dif \theta \dif \phi
 \end{align*} 
 
 \ابتدا{مثال}\شناخت{مثال_بالکثرت_کروی_کرہ_مخروط}
 ٹھوس کرہ \عددی{r\le 1} سے مخروط \عددی{\theta=\pi/3} بالائی     خطہ \عددی{D} کاٹتا ہے۔ اس خطہ کا حجم تلاش کریں۔
-
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\ll}{2}
+\pgfmathsetmacro{\rr}{\ll*sin(60)}
+\pgfmathsetmacro{\yy}{\ll*cos(60)}
+\pgfmathsetmacro{\ang}{180-atan(0.25/1)}
+\draw[fill=lgray,opacity=0.5](0,0) circle (\rr cm and 1/8*\rr cm);
+\draw(-\rr,0)node[left]{$R$};
+\draw[-stealth](0,0)--++(-\ang:\ll)node[left]{$x$};
+\draw[-stealth](0,0)--++(\ll,-0.25*\ll)node[right]{$y$};
+\draw[](0,0)--++(30:\ll)coordinate(kR)node[pos=0.7,pin={-20:{$\theta=\frac{\pi}{3}$}}]{};
+\draw[](0,0)--++(180-30:\ll)coordinate(kL);
+\draw(0,\yy) circle (\rr cm and 1/8*\rr cm);
+\draw([shift={(30:\ll)}]0,0) arc (30:150:\ll)node[pos=1,left]{$D$}node[pos=0.75,pin={135:{$r=1$}}]{};
+\draw[dashed](0,0)--(0,\ll);
+\draw[-stealth](0,\ll)--++(0,0.5)node[left]{$z$};
+\draw[](0,0)++(50:1.2)node[circ]{}coordinate(kT);
+\draw[dashed](0,0)--++(50:2)node[circ]{};
+\draw[-latex](0,0)++(50:2)--++(50:0.5)node[right]{$M$};
+\draw[dashed](kT)--++(0,-1.5)coordinate(kB);
+\draw[-latex,shorten >= -0.5cm](0,0)--(kB)node[shift={(0.6,-0.3)}]{$L$};
+\draw[-stealth](-\ang:1) to [out=-45,in=-135] node[pos=0.5,below]{$\phi$}(-40:0.5);
+\end{tikzpicture}
+\caption{کرہ اور مخروط کے بیچ خطہ۔}
+\label{شکل_مثال_بالکثرت_کروی_کرہ_مخروط}
+\end{figure}
 حل:\quad
-اس خطے کا حجم \عددی{\iiint\limits_D r^2\sin\phi\dif r\dif \phi \dif \phi} ہو گا۔تکمل کی قیمت معلوم کرنے کے لئے درج ذیل اقدام کرنے ہوں گے۔
+اس خطے کا حجم \عددی{\iiint\limits_D r^2\sin\theta\dif r\dif \theta \dif \phi} ہو گا۔تکمل کی قیمت معلوم کرنے کے لئے درج ذیل اقدام کرنے ہوں گے۔
 \begin{enumerate}[1.]
 \item
 \ترچھا{خاکہ:}\quad
-ہم \عددی{D} اور مستوی \عددی{xy} میں اس کی تظلیل  \عددی{R} کا خاکہ بناتے ہیں۔
+ہم \عددی{D} اور مستوی \عددی{xy} میں اس کی تظلیل  \عددی{R} کا خاکہ بناتے ہیں (شکل \حوالہ{شکل_مثال_بالکثرت_کروی_کرہ_مخروط})۔
 \item
 \ترچھا{تکمل کی \عددی{r} حدیں:}\quad
-ہم مثبت \عددی{z} محور کے ساتھ \عددی{\phi} زاویہ پر  مبدا سے شعاع \عددی{M}  کھینچتے ہیں اور ساتھ ہی  \عددی{xy} مستوی میں اس کی تظلیل \عددی{L}  کھینچتے ہیں جو مثبت \عددی{x} محور کے ساتھ زاویہ \عددی{\phi} بناتا ہے۔ شعاع \عددی{M} خطہ \عددی{D}میں \عددی{r=0)} سے داخل اور \عددی{r=1} سے خارج ہو گا۔
+ہم مثبت \عددی{z} محور کے ساتھ \عددی{\theta} زاویہ پر  مبدا سے شعاع \عددی{M}  کھینچتے ہیں اور ساتھ ہی  \عددی{xy} مستوی میں اس کی تظلیل \عددی{L}  کھینچتے ہیں جو مثبت \عددی{x} محور کے ساتھ زاویہ \عددی{\phi} بناتا ہے۔ شعاع \عددی{M} خطہ \عددی{D}میں \عددی{r=0)} سے داخل اور \عددی{r=1} سے خارج ہو گا۔
 \item
-\ترچھا{تکمل کی \عددی{\phi} حدیں:}\quad
- مخروط \عددی{\theta=\pi/3}  مثبت \عددی{z} محور کے ساتھ  زاویہ \عددی{\pi/3} بناتا ہے۔ یوں شعاع \عددی{M}  زاویہ \عددی{\phi=0} سے \عددی{\phi=\pi/3} تک چل سکتی ہے۔
+\ترچھا{تکمل کی \عددی{\theta} حدیں:}\quad
+ مخروط \عددی{\theta=\pi/3}  مثبت \عددی{z} محور کے ساتھ  زاویہ \عددی{\pi/3} بناتا ہے۔ یوں شعاع \عددی{M}  زاویہ \عددی{\theta=0} سے \عددی{\theta=\pi/3} تک چل سکتی ہے۔
 \item
 \ترچھا{تکمل کی \عددی{\phi} حدیں:}\quad
 شعاع \عددی{L} خطہ \عددی{R} پر   \عددی{\phi=0} سے \عددی{2\pi} تک چلتی ہے۔
 \end{enumerate}
 یوں تکمل درج ذیل ہو گا۔
 \begin{align*}
-H&=\iiint\limits_D r^2\sin\phi\dif r\dif \phi\dif \phi=\int_{0}^{2\pi}\int_{0}^{\pi/3}\int_{0}^{1} r^2\sin\phi\dif r\dif \phi\dif \phi\\
-&=\int_{0}^{2\pi}\int_{0}^{\pi/3}\big[\frac{r^3}{3}\big]_0^1 \sin\phi\dif \phi\dif\phi=\int_{0}^{2\pi}\int_{0}^{\pi/3}\frac{1}{3} \sin\phi\dif\phi\dif\phi\\
-&=\int_{0}^{2\pi}\big[-\frac{1}{3}\cos\phi\big]_{0}^{\pi/3} \dif\phi=\int_{0}^{2\pi} \big(-\frac{1}{6}+\frac{1}{3}\big)\dif\phi=\frac{1}{6}(2\pi)=\frac{\pi}{3}
+H&=\iiint\limits_D r^2\sin\theta\dif r\dif \theta\dif \phi=\int_{0}^{2\pi}\int_{0}^{\pi/3}\int_{0}^{1} r^2\sin\theta\dif r\dif \theta\dif \phi\\
+&=\int_{0}^{2\pi}\int_{0}^{\pi/3}\big[\frac{r^3}{3}\big]_0^1 \sin\theta\dif \theta\dif\phi=\int_{0}^{2\pi}\int_{0}^{\pi/3}\frac{1}{3} \sin\theta\dif\theta\dif\phi\\
+&=\int_{0}^{2\pi}\big[-\frac{1}{3}\cos\theta\big]_{0}^{\pi/3} \dif\phi=\int_{0}^{2\pi} \big(-\frac{1}{6}+\frac{1}{3}\big)\dif\phi=\frac{1}{6}(2\pi)=\frac{\pi}{3}
 \end{align*}
 \انتہا{مثال}
 %======
@@ -5424,14 +5575,14 @@ H&=\iiint\limits_D r^2\sin\phi\dif r\dif \phi\dif \phi=\int_{0}^{2\pi}\int_{0}^{
 \begin{align*}
 I_z=\iiint (x^2+y^2)\dif H
 \end{align*}
-ہو گا۔کروی محدد میں \عددی{x^2+y^2=(r\sin\phi\cos\phi)^2+(r\sin\phi\sin\phi)^2=r^2\sin^2\phi} کی بنا  جمودی معیار اثر
+ہو گا۔کروی محدد میں \عددی{x^2+y^2=(r\sin\theta\cos\phi)^2+(r\sin\theta\sin\phi)^2=r^2\sin^2\theta} کی بنا  جمودی معیار اثر
 \begin{align*}
-I_z&=\iiint (r^2\sin^2\phi)r^2\sin\phi\dif r\dif \phi\dif\phi=\iiint r^4\sin^3\phi\dif r\dif\phi\dif\phi
+I_z&=\iiint (r^2\sin^2\theta)r^2\sin\theta\dif r\dif \theta\dif\phi=\iiint r^4\sin^3\theta\dif r\dif\theta\dif\phi
 \end{align*}
 ہو گا جس کی قیمت  مثال \حوالہ{مثال_بالکثرت_کروی_کرہ_مخروط} کے خطہ کے لئے درج ذیل ہو گی۔
 \begin{align*}
-I_z&=\int_{0}^{2\pi}\int_{0}^{\pi/3}\int_{0}^{1}r^4\sin^3\phi\dif r\dif \phi\dif\phi=\int_{0}^{2\pi}\int_{0}^{\pi/3}\big[\frac{r^5}{5}\big]_0^1 \sin^3\phi\dif\phi\dif\phi\\
-&=\frac{1}{5}\int_{0}^{2\pi}\int_{0}^{\pi/3}(1-\cos^2\phi)\sin\phi\dif\phi\dif\phi=\frac{1}{5}\int_0^{2\pi} \big[-\cos\phi+\frac{\cos^3\phi}{3}\big]_0^{\pi/3}\dif\phi\\
+I_z&=\int_{0}^{2\pi}\int_{0}^{\pi/3}\int_{0}^{1}r^4\sin^3\theta\dif r\dif \theta\dif\phi=\int_{0}^{2\pi}\int_{0}^{\pi/3}\big[\frac{r^5}{5}\big]_0^1 \sin^3\theta\dif\theta\dif\phi\\
+&=\frac{1}{5}\int_{0}^{2\pi}\int_{0}^{\pi/3}(1-\cos^2\theta)\sin\theta\dif\theta\dif\phi=\frac{1}{5}\int_0^{2\pi} \big[-\cos\theta+\frac{\cos^3\theta}{3}\big]_0^{\pi/3}\dif\phi\\
 &=\frac{1}{5}\int_0^{2\pi}\big(-\frac{1}{2}+1+\frac{1}{24}-\frac{1}{3}\big)\dif\phi=\frac{1}{5}\int_0^{2\pi}\frac{5}{24}\dif\phi=\frac{1}{24}(2\pi)=\frac{\pi}{12}
 \end{align*}
 \انتہا{مثال}
@@ -5443,18 +5594,18 @@ I_z&=\int_{0}^{2\pi}\int_{0}^{\pi/3}\int_{0}^{1}r^4\sin^3\phi\dif r\dif \phi\dif
 \toprule
 \multicolumn{1}{C}{\text{\RL{نلکی سے کارتیسی}}}&\multicolumn{1}{C}{\text{\RL{کروی سے کارتیسی}}}&\multicolumn{1}{C}{\text{\RL{کروی سے نلکی}}}\\
 \midrule
-x=\rho\cos\phi&x=r\sin\phi\cos\phi&\rho=r\sin\phi\\
-y=\rho\sin\phi&y=r\sin\phi\sin\phi&z=r\cos\phi\\
-z=z&z=r\cos\phi&\phi=\phi\\
+x=\rho\cos\phi&x=r\sin\theta\cos\phi&\rho=r\sin\theta\\
+y=\rho\sin\phi&y=r\sin\theta\sin\phi&z=r\cos\theta\\
+z=z&z=r\cos\theta&\phi=\phi\\
 \bottomrule
 \end{tabular}
 \end{center}
 
 مطابقتی چھوٹے حجم درج ذیل ہیں۔
 \begin{align*}
-\dif H&=\dif x\dif y\dif z\\
-&=\dif z\, \rho \dif \rho \dif \phi\\
-&=r^2\sin\phi \dif r\dif \phi\dif \phi
+\dif H&=\dif x\dif y\dif z&&\text{\RL{کارتیسی}}\\
+&=\dif z\, \rho \dif \rho \dif \phi&&\text{\RL{نلکی}}\\
+&=r^2\sin\theta \dif r\dif \theta\dif \phi&&\text{\RL{کروی}}
 \end{align*}
 
 %===========================

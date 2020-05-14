@@ -1,86 +1,62 @@
 \begin{figure}
 \centering
-\pgfmathsetmacro{\pS}{-30}
-\pgfmathsetmacro{\pE}{100}
-\pgfmathsetmacro{\tU}{20}
-\pgfmathsetmacro{\tD}{60}
-\pgfmathsetmacro{\ra}{1}
-\pgfmathsetmacro{\rb}{0.5}
-\pgfmathsetmacro{\rc}{3}
-\begin{tikzpicture}[declare function={fx(\r,\t,\p)=\r*sin(\t)*cos(\p);fy(\r,\t,\p)=\r*sin(\t)*sin(\p);fz(\r,\t,\p)=\r*cos(\t);}]
-\begin{axis}[view/h=135,axis on top,clip=false,axis lines=center,small,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north},ylabel style={anchor=north},zlabel style={anchor=west},xtick={\empty},ytick={\empty},ztick={\empty}]
-%front view Lower section
-\addplot3[variable=\t, variable y=\p,domain y=\pS:\pE]({fx(\ra,\tD,p)},{fy(\ra,\tD,p)},{fz(\ra,\tD,p)});
-\addplot3[variable=\t, variable y=\p,domain y=\pS:\pE]({fx(\rb,\tD,p)},{fy(\rb,\tD,p)},{fz(\ra,\tD,p)});
-\addplot3[variable=\t, variable y=\p,domain y=\pS:\pE]({fx(\rc,\tU,p)},{fy(\rc,\tU,p)},{fz(\ra,\tU,p)});
-\addplot3[]plot coordinates {({fx(\ra,\tD,\pS)},{fy(\ra,\tD,\pS)},{fz(\ra,\tD,\pS)})({fx(\rb,\tD,\pS)},{fy(\rb,\tD,\pS)},{fz(\ra,\tD,\pS)})};
-\addplot3[]plot coordinates {({fx(\ra,\tD,\pE)},{fy(\ra,\tD,\pE)},{fz(\ra,\tD,\pS)})({fx(\rb,\tD,\pE)},{fy(\rb,\tD,\pE)},{fz(\ra,\tD,\pE)})};
-\addplot3[]plot coordinates {({fx(\ra,\tD,\pS)},{fy(\ra,\tD,\pS)},{fz(\ra,\tD,\pS)})({fx(\rc,\tU,\pS)},{fy(\rc,\tU,\pS)},{fz(\ra,20,\pS)})};
-\addplot3[]plot coordinates {({fx(\ra,\tD,\pE)},{fy(\ra,\tD,\pE)},{fz(\ra,\tD,\pE)})({fx(\rc,\tU,\pE)},{fy(\rc,\tU,\pE)},{fz(\ra,20,\pE)})};
-%\shadow on floor
-\addplot3[name path=kS,variable=\t, variable y=\p,domain y=\pS:\pE]({fx(\rb,\tD,p)},{fy(\rb,\tD,p)},{0});
-\addplot3[name path=kL,variable=\t, variable y=\p,domain y=\pS:\pE]({fx(\rc,\tU,p)},{fy(\rc,\tU,p)},{0});
-\addplot3[]plot coordinates {({fx(\rb,\tD,\pS)},{fy(\rb,\tD,\pS)},{0})({fx(\rc,\tU,\pS)},{fy(\rc,\tU,\pS)},{0})};
-\addplot3[]plot coordinates {({fx(\rb,\tD,\pE)},{fy(\rb,\tD,\pE)},{0})({fx(\rc,\tU,\pE)},{fy(\rc,\tU,\pE)},{0})};
-\addplot[lgray] fill between [of=kS and kL];
-\end{axis} 
+\begin{tikzpicture}[font=\small,declare function={fx(\t)=cos(\t);fy(\t)=1+sin(\t);fz(\t)=4-1-sin(\t);}]
+\pgfmathsetmacro{\kx}{0.35}
+\pgfmathsetmacro{\ky}{\kx^2}
+\pgfmathsetmacro{\kz}{1-\ky}
+\pgfmathsetmacro{\tp}{110}
+\pgfmathsetmacro{\tpa}{180+\tp}
+\begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\addplot3[black,domain=0:360,variable=\t]({fx(t)},{fy(t)},{0})node[pos=0.125,pin=-45:{$\rho=2\sin\phi$}]{};
+\addplot3[black,domain=0:360,variable=\t]({fx(t)},{fy(t)},{fz(t)})node[pos=0.5,pin=45:{$z=4-y$}]{};
+\addplot3[]plot coordinates {({fx(\tp)},{fy(\tp)},{0})({fx(\tp)},{fy(\tp)},{fz(\tp)})};
+\addplot3[]plot coordinates {({fx(\tpa)},{fy(\tpa)},{0})({fx(\tpa)},{fy(\tpa)},{fz(\tpa)})};
+\end{axis}
 \end{tikzpicture}
 \end{figure}
 
+
 \begin{figure}
 \centering
-\begin{tikzpicture}
-\pgfmathsetmacro{\la}{2}
-\pgfmathsetmacro{\lb}{1/4*\la}
-\pgfmathsetmacro{\lc}{1/2*\la}
-\pgfmathsetmacro{\a}{-30}
-\pgfmathsetmacro{\aa}{-180-\a}
-\pgfmathsetmacro{\b}{-70}
-\pgfmathsetmacro{\bb}{110}
-\pgfmathsetmacro{\c}{\a}
-\pgfmathsetmacro{\cc}{\aa}
-\pgfmathsetmacro{\d}{180-\bb}
-\pgfmathsetmacro{\dd}{-180-\b}
-%bottom
-\draw(0,0) to [out=\a,in=\aa]++(\la,0);
-\draw(0,0) to [out=\b,in=\bb]node[pos=0.5,left]{$D$}++(\lb,-1)coordinate(BL) to [out=\c,in=\cc]++(\lc,0)coordinate(BR) to [out=\d,in=\dd]coordinate[pos=0.5](funA)(\la,0);
-\draw[dashed](BL)--++(0.25,0.15)coordinate(BBL);
-\draw[dashed](BR)--++(-0.25,0.15)coordinate(BBR);
-\draw[dashed](BBL) to [out=-30,in=-150]coordinate[pos=0.5](kBot)(BBR);
-\draw(funA)++(-0.25,0)node[pin={[align=right]-30:{$r=g_1(\theta,\phi)$}}]{};
-\pgfmathsetmacro{\la}{2}
-\pgfmathsetmacro{\lb}{1/5*\la}
-\pgfmathsetmacro{\lc}{\la-2*\lb}
-\pgfmathsetmacro{\a}{45}
-\pgfmathsetmacro{\aa}{-145}
-\pgfmathsetmacro{\b}{10}
-\pgfmathsetmacro{\bb}{-150}
-\pgfmathsetmacro{\d}{180-\bb}
-\pgfmathsetmacro{\dd}{-180-\b}
-%top
-\draw(0,0) to [out=\b,in=\bb]++(\lb,0.75)coordinate(TL) to [out=\c,in=\cc]coordinate[pos=0.5](kTop)++(\lc,0)coordinate(TR) to [out=\d,in=\dd]coordinate[pos=0.5](funB)(\la,0);
-\draw[name path=ka,dashed](TL)--(BBL);
-\draw[name path=kb,dashed](TR)--(BBR);
-\draw[name path=tr,dashed](0,0)--(1/2*\la,0.25)--(\la,0);
-\draw(funB)++(-0.2,0)node[pin=30:{$r=g_2(\theta,\phi)$}]{};
-\draw[dashed,name intersections={of=ka and tr,by=aa}, name intersections={of=kb and tr, by=bb}](aa) to [out=-40,in=-140](bb);
-\draw[dashed](kBot)--(kTop);
-\draw[-stealth](kTop)++(0,0.1)--++(0,0.5)node[left]{$z$};
-\draw(kBot)++(0,-0.3)--++(0,-0.5)coordinate(korigin);
-\draw[-stealth](korigin)--++(-1,-0.5)node[left]{$x$};
-\draw[-stealth](korigin)--++(1,-0.5)node[right]{$y$};
-%shadow
-\pgfmathsetmacro{\la}{2}
-\pgfmathsetmacro{\lc}{1/2*\la}
-\pgfmathsetmacro{\lb}{1/5*\la}
-\pgfmathsetmacro{\a}{-30}
-\pgfmathsetmacro{\aa}{-180-\a}
-\pgfmathsetmacro{\b}{-45}
-\pgfmathsetmacro{\bb}{-180-\a}
-%\draw(0,-1.85)coordinate(kka) to [out=\a,in=\aa]++(\la,0)coordinate(kkb);
-\draw[name path=aa]([shift={(-150:\lc)}]1/2*\la,-1) arc (-150:-30:\lc)coordinate[pos=0](sA)coordinate[pos=1](sB);
-\draw[name path=bb]([shift={(-150:\lb)}]1/2*\la,-1.5) arc (-150:-30:\lb)coordinate[pos=0](sD)coordinate[pos=1](sC);
-\draw(sA)node[left]{$R$}--(sD);
-\draw(sB)--(sC);
+\begin{tikzpicture}[font=\small,declare function={fx(\t)=3/2+3/2*cos(\t);fy(\t)=3/2*sin(\t);fz(\t)=5-3/2-3/2*cos(\t);}]
+\pgfmathsetmacro{\kx}{0.35}
+\pgfmathsetmacro{\ky}{\kx^2}
+\pgfmathsetmacro{\kz}{1-\ky}
+\pgfmathsetmacro{\tp}{135}
+\pgfmathsetmacro{\tpa}{180+\tp}
+\begin{axis}[clip=false,view/h=135,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\addplot3[black,domain=0:360,variable=\t]({fx(t)},{fy(t)},{0})node[pos=0.125,pin=-45:{$\rho=3\cos\phi$}]{};
+\addplot3[black,domain=0:360,variable=\t]({fx(t)},{fy(t)},{fz(t)});
+\addplot3[]plot coordinates {(0,0.2,5)}node[pin=20:{$z=5-x$}]{};
+\addplot3[]plot coordinates {({fx(\tp)},{fy(\tp)},{0})({fx(\tp)},{fy(\tp)},{fz(\tp)})};
+\addplot3[]plot coordinates {({fx(\tpa)},{fy(\tpa)},{0})({fx(\tpa)},{fy(\tpa)},{fz(\tpa)})};
+\end{axis}
 \end{tikzpicture}
 \end{figure}
+
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fr(\t)=1+cos(\t);gr(\t)=1;fy(\t)=3/2*sin(\t);fz(\t)=5-3/2-3/2*cos(\t);}]
+\pgfmathsetmacro{\kx}{0.35}
+\pgfmathsetmacro{\ky}{\kx^2}
+\pgfmathsetmacro{\kz}{1-\ky}
+\pgfmathsetmacro{\tp}{90}
+\pgfmathsetmacro{\tpa}{-90}
+\pgfmathsetmacro{\tpb}{340}
+\pgfmathsetmacro{\tpc}{50}
+\pgfmathsetmacro{\tpd}{30}
+\begin{axis}[clip=false,view/h=135,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={4},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\addplot3[data cs=polar,domain=-90:90,variable=\t,samples y=0]({t},{fr(t)},{0});
+\addplot3[data cs=polar,domain=-90:90,variable=\t,samples y=0]({t},{gr(t)},{0});
+\addplot3[data cs=polar,domain=-90:90,variable=\t,samples y=0]({t},{fr(t)},{4});
+\addplot3[data cs=polar,domain=-90:90,variable=\t,samples y=0]({t},{gr(t)},{4});
+\addplot3[data cs=polar]plot coordinates {({\tp},{fr(\tp)},{0})({\tp},{fr(\tp)},{4})};
+\addplot3[data cs=polar]plot coordinates {({\tpa},{fr(\tpa)},{0})({\tpa},{fr(\tpa)},{4})};
+\addplot3[data cs=polar]plot coordinates {({\tpb},{fr(\tpb)},{0})({\tpb},{fr(\tpb)},{4})};
+\addplot3[data cs=polar,]plot coordinates {({\tpc},{gr(\tpc)},{0})}node[pin=-45:{$\rho=1$}]{};
+\addplot3[data cs=polar,]plot coordinates {({\tpd},{fr(\tpd)},{0})}node[pin=-45:{$\rho=1+\cos\phi$}]{};
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+
