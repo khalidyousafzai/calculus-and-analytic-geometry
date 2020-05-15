@@ -5746,10 +5746,51 @@ $\dif \phi\dif z\dif\rho$
 \انتہا{سوال}
 %====================
 
-سوال \حوالہ{سوال_بالکثرت_تہرا_نلکی_درکار_الف} تا سوال \حوالہ{سوال_بالکثرت_تہرا_نلکی_درکار_ب}  میں دیے گئے خطہ \عددی{D} پر تکمل \عددی{\iiint_D F(\rho,\phi,z)\dif z\,\rho\dif \rho\dif\phi} کی قیمت حاصل کرنے کے لئے تہرا تکمل لکھیں۔
+سوال \حوالہ{سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_الف} تا سوال \حوالہ{سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_ث}  میں دیے گئے خطہ \عددی{D} پر تکمل \عددی{\iiint_D F(\rho,\phi,z)\dif z\,\rho\dif \rho\dif\phi} کی قیمت حاصل کرنے کے لئے تہرا تکمل لکھیں۔
 
-\ابتدا{سوال}\شناخت{سوال_بالکثرت_تہرا_نلکی_درکار_الف}
-وہ     قائمہ دائری بیلن جس کا  قاعدہ  مستوی \عددی{xy} میں  دائرہ \عددی{\rho=2\sin\phi}  اور  سر   مستوی \عددی{z=4-y}میں  ہو، خطہ \عددی{D} ہے۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\t)=cos(\t);fy(\t)=1+sin(\t);fz(\t)=4-1-sin(\t);}]
+\pgfmathsetmacro{\kx}{0.35}
+\pgfmathsetmacro{\ky}{\kx^2}
+\pgfmathsetmacro{\kz}{1-\ky}
+\pgfmathsetmacro{\tp}{110}
+\pgfmathsetmacro{\tpa}{180+\tp}
+\begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\addplot3[black,domain=0:360,variable=\t]({fx(t)},{fy(t)},{0})node[pos=0.125,pin=-45:{$\rho=2\sin\phi$}]{};
+\addplot3[black,domain=0:360,variable=\t]({fx(t)},{fy(t)},{fz(t)})node[pos=0.5,pin=45:{$z=4-y$}]{};
+\addplot3[]plot coordinates {({fx(\tp)},{fy(\tp)},{0})({fx(\tp)},{fy(\tp)},{fz(\tp)})};
+\addplot3[]plot coordinates {({fx(\tpa)},{fy(\tpa)},{0})({fx(\tpa)},{fy(\tpa)},{fz(\tpa)})};
+\end{axis}
+\end{tikzpicture}
+\caption{خطہ برائے سوال \حوالہ{سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_الف}}
+\label{شکل_سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\t)=3/2+3/2*cos(\t);fy(\t)=3/2*sin(\t);fz(\t)=5-3/2-3/2*cos(\t);}]
+\pgfmathsetmacro{\kx}{0.35}
+\pgfmathsetmacro{\ky}{\kx^2}
+\pgfmathsetmacro{\kz}{1-\ky}
+\pgfmathsetmacro{\tp}{135}
+\pgfmathsetmacro{\tpa}{180+\tp}
+\begin{axis}[clip=false,view/h=135,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\addplot3[black,domain=0:360,variable=\t]({fx(t)},{fy(t)},{0})node[pos=0.125,pin=-45:{$\rho=3\cos\phi$}]{};
+\addplot3[black,domain=0:360,variable=\t]({fx(t)},{fy(t)},{fz(t)});
+\addplot3[]plot coordinates {(0,0.2,5)}node[pin=20:{$z=5-x$}]{};
+\addplot3[]plot coordinates {({fx(\tp)},{fy(\tp)},{0})({fx(\tp)},{fy(\tp)},{fz(\tp)})};
+\addplot3[]plot coordinates {({fx(\tpa)},{fy(\tpa)},{0})({fx(\tpa)},{fy(\tpa)},{fz(\tpa)})};
+\end{axis}
+\end{tikzpicture}
+\caption{خطہ برائے سوال \حوالہ{سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_ب}}
+\label{شکل_سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_ب}
+\end{minipage}%
+\end{figure}
+
+\ابتدا{سوال}\شناخت{سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_الف}
+وہ     قائمہ دائری بیلن جس کا  قاعدہ  مستوی \عددی{xy} میں  دائرہ \عددی{\rho=2\sin\phi}  اور  سر   مستوی \عددی{z=4-y}میں  ہو، خطہ \عددی{D} ہے (شکل \حوالہ{شکل_سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_الف})۔
 \انتہا{سوال}
 %===============
 \ابتدا{جواب}
@@ -5758,12 +5799,66 @@ $\dif \phi\dif z\dif\rho$
 }}
 \انتہا{جواب}
 %======================
-\ابتدا{سوال}
-وہ   قائمہ دائری بیلن جس کا  قاعدہ  مستوی \عددی{xy} میں  دائرہ \عددی{\rho=3\cos \phi}  اور  سر   مستوی \عددی{z=5-x} میں   ہو، خطہ \عددی{D} ہے۔
+\ابتدا{سوال}\شناخت{سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_ب}
+وہ   قائمہ دائری بیلن جس کا  قاعدہ  مستوی \عددی{xy} میں  دائرہ \عددی{\rho=3\cos \phi}  اور  سر   مستوی \عددی{z=5-x} میں   ہو، خطہ \عددی{D} ہے (شکل \حوالہ{شکل_سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_ب})۔
 \انتہا{سوال}
 %============
-\ابتدا{سوال}
-وہ  قائمہ دائری بیلن جس کا  قاعدہ  مستوی \عددی{xy} میں  قلب نما \عددی{\rho=1+\cos\phi}  کے اندر  اور دائرہ \عددی{\rho=1} کے باہر  اور سر  مستوی \عددی{z=4} میں   ہو، خطہ \عددی{D} ہے۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fr(\t)=1+cos(\t);gr(\t)=1;fy(\t)=3/2*sin(\t);fz(\t)=5-3/2-3/2*cos(\t);}]
+\pgfmathsetmacro{\kx}{0.35}
+\pgfmathsetmacro{\ky}{\kx^2}
+\pgfmathsetmacro{\kz}{1-\ky}
+\pgfmathsetmacro{\tp}{90}
+\pgfmathsetmacro{\tpa}{-90}
+\pgfmathsetmacro{\tpb}{340}
+\pgfmathsetmacro{\tpc}{50}
+\pgfmathsetmacro{\tpd}{30}
+\begin{axis}[clip=false,view/h=135,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={4},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\addplot3[data cs=polar,domain=-90:90,variable=\t,samples y=0]({t},{fr(t)},{0});
+\addplot3[data cs=polar,domain=-90:90,variable=\t,samples y=0]({t},{gr(t)},{0});
+\addplot3[data cs=polar,domain=-90:90,variable=\t,samples y=0]({t},{fr(t)},{4});
+\addplot3[data cs=polar,domain=-90:90,variable=\t,samples y=0]({t},{gr(t)},{4});
+\addplot3[data cs=polar]plot coordinates {({\tp},{fr(\tp)},{0})({\tp},{fr(\tp)},{4})};
+\addplot3[data cs=polar]plot coordinates {({\tpa},{fr(\tpa)},{0})({\tpa},{fr(\tpa)},{4})};
+\addplot3[data cs=polar]plot coordinates {({\tpb},{fr(\tpb)},{0})({\tpb},{fr(\tpb)},{4})};
+\addplot3[data cs=polar,]plot coordinates {({\tpc},{gr(\tpc)},{0})}node[pin=-45:{$\rho=1$}]{};
+\addplot3[data cs=polar,]plot coordinates {({\tpd},{fr(\tpd)},{0})}node[pin=-45:{$\rho=1+\cos\phi$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{خطہ برائے سوال \حوالہ{سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_پ}}
+\label{شکل_سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_پ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fr(\t)=cos(\t);gr(\t)=2*cos(\t);fx(\t)=1/2+1/2*cos(\t);fy(\t)=1/2*sin(\t);fz(\t)=3-1/2*sin(\t);gx(\t)=1+cos(\t);gy(\t)=sin(\t);gz(\t)=3-sin(\t);}]
+\pgfmathsetmacro{\tp}{110}
+\pgfmathsetmacro{\tpa}{180+\tp}
+\pgfmathsetmacro{\tpb}{60}
+\pgfmathsetmacro{\tpc}{30}
+\pgfmathsetmacro{\tpd}{135}
+\begin{axis}[clip=false,view/h=\tp,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\addplot3[data cs=polar,domain=0:360,variable=\t,smooth]({t},{fr(t)},{0});
+\addplot3[data cs=polar,domain=0:360,variable=\t,smooth]({t},{gr(t)},{0});
+\addplot3[domain=0:360,variable=\t,smooth]({fx(\t)},{fy(\t)},{fz(\t)});
+\addplot3[domain=0:360,variable=\t,smooth]({gx(\t)},{gy(\t)},{gz(\t)});
+\addplot3[]plot coordinates {({fx(\tp)},{fy(\tp)},{0})({fx(\tp)},{fy(\tp)},{fz(\tp)})};
+\addplot3[]plot coordinates {({fx(\tpa)},{fy(\tpa)},{0})({fx(\tpa)},{fy(\tpa)},{fz(\tpa)})};
+\addplot3[]plot coordinates {({gx(\tp)},{gy(\tp)},{0})({gx(\tp)},{gy(\tp)},{gz(\tp)})};
+\addplot3[]plot coordinates {({gx(\tpa)},{gy(\tpa)},{0})({gx(\tpa)},{gy(\tpa)},{gz(\tpa)})};
+\addplot3[]plot coordinates {({fx(\tpb)},{fy(\tpb)},{0})}node[pin={[pin distance=1cm]-30:{$\rho=\cos\phi$}}]{};
+\addplot3[]plot coordinates {({gx(\tpc)},{gy(\tpc)},{0})}node[pin=-45:{$\rho=2\cos\phi$}]{};
+\addplot3[]plot coordinates {({gx(\tpd)},{gy(\tpd)},{gz(\tpd)})}node[pin=45:{$z=3-y$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{خطہ برائے سوال \حوالہ{سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_ت}}
+\label{شکل_سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_ت}
+\end{minipage}
+\end{figure}
+\ابتدا{سوال}\شناخت{سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_پ}
+وہ  قائمہ دائری بیلن جس کا  قاعدہ  مستوی \عددی{xy} میں  قلب نما \عددی{\rho=1+\cos\phi}  کے اندر  اور دائرہ \عددی{\rho=1} کے باہر  اور سر  مستوی \عددی{z=4} میں   ہو، خطہ \عددی{D} ہے (شکل \حوالہ{شکل_سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_پ})۔
 \انتہا{سوال}
 %============
 \ابتدا{جواب}
@@ -5772,12 +5867,48 @@ $\dif \phi\dif z\dif\rho$
 }}
 \انتہا{جواب}
 %======================
-\ابتدا{سوال}
-وہ ٹھوس قائمہ بیلن جس کا  قاعدہ دائرہ \عددی{\rho=\cos\phi} اور دائرہ \عددی{\rho=2\cos\phi} کے بیچ اور سر مستوی \عددی{z=3-y} میں ہو،  خطہ \عددی{D} ہے۔
+\ابتدا{سوال}\شناخت{سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_ت}
+وہ ٹھوس قائمہ بیلن جس کا  قاعدہ دائرہ \عددی{\rho=\cos\phi} اور دائرہ \عددی{\rho=2\cos\phi} کے بیچ اور سر مستوی \عددی{z=3-y} میں ہو،  خطہ \عددی{D} ہے (شکل \حوالہ{شکل_سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_ت})۔
 \انتہا{سوال}
 %================
-\ابتدا{سوال}
-وہ منشور جس کا قاعدہ مستوی \عددی{xy} میں  محور \عددی{x}،  لکیر \عددی{y=x} اور لکیر \عددی{x=1} کے بیچ  مثلث   اور  سر مستوی \عددی{z=2-y} میں ہو، خطہ \عددی{D} ہے۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fr(\t)=cos(\t);gr(\t)=2*cos(\t);fx(\t)=1/2+1/2*cos(\t);fy(\t)=1/2*sin(\t);fz(\t)=3-1/2*sin(\t);gx(\t)=1+cos(\t);gy(\t)=sin(\t);gz(\t)=3-sin(\t);}]
+\pgfmathsetmacro{\tp}{110}
+\pgfmathsetmacro{\tpa}{180+\tp}
+\begin{axis}[clip=false,view/h=\tp,small,axis lines=middle,xtick={1},ytick={\empty},ztick={2},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},xmax=1.25,ymax=1,zmax=2.25]
+\addplot3[]plot coordinates {(0,0,2)(1,0,2)(1,1,1)(0,0,2)};
+\addplot3[]plot coordinates {(1,0,0)(1,1,0)};
+\addplot3[]plot coordinates {(1,0,0)(1,0,2)};
+\addplot3[]plot coordinates {(1,1,0)(1,1,1)};
+\addplot3[]plot coordinates {(0,0,0)(1.5,1.5,0)}node[left,xshift=-1ex]{$y=x$};
+\addplot3[]plot coordinates {(0.5,0.5,1.5)}node[pin=30:{$z=2-y$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{خطہ برائے سوال \حوالہ{سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_ٹ}}
+\label{شکل_سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_ٹ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fr(\t)=cos(\t);gr(\t)=2*cos(\t);fx(\t)=1/2+1/2*cos(\t);fy(\t)=1/2*sin(\t);fz(\t)=3-1/2*sin(\t);gx(\t)=1+cos(\t);gy(\t)=sin(\t);gz(\t)=3-sin(\t);}]
+\begin{axis}[clip=false,view/h=100,small,axis lines=middle,xtick={\empty},ytick={1},ztick={2},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},xmax=0.5,ymax=1.25,zmax=2.25]
+\addplot3[]plot coordinates {(0,0,2)(0,1,2)(0.5,0.5,1.5)(0,0,2)};
+\addplot3[]plot coordinates {(0,0,0)(0.5,0.5,0)(0,1,0)};
+\addplot3[]plot coordinates {(0.5,0.5,0)(0.5,0.5,1.5)};
+\addplot3[]plot coordinates {(0,1,0)(0,1,2)};
+\addplot3[]plot coordinates {(0,0,0)(0.75,0.75,0)}node[left,xshift=-1ex]{$y=x$};
+\addplot3[]plot coordinates {(0.125,0.5,2)}node[pin=45:{$z=2-x$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{خطہ برائے سوال \حوالہ{سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_ث}}
+\label{شکل_سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_ث}
+\end{minipage}
+\end{figure}
+
+\ابتدا{سوال}\شناخت{سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_ٹ}
+وہ منشور جس کا قاعدہ مستوی \عددی{xy} میں  محور \عددی{x}،  لکیر \عددی{y=x} اور لکیر \عددی{x=1} کے بیچ  مثلث   اور  سر مستوی \عددی{z=2-y} میں ہو، خطہ \عددی{D} ہے (شکل \حوالہ{شکل_سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_ٹ})۔
 \انتہا{سوال}
 %===============
 \ابتدا{جواب}
@@ -5786,8 +5917,8 @@ $\dif \phi\dif z\dif\rho$
 }}
 \انتہا{جواب}
 %======================
-\ابتدا{سوال}\شناخت{سوال_بالکثرت_تہرا_نلکی_درکار_ب}
-وہ منشور جس کا قاعدہ مستوی \عددی{xy} میں  محور \عددی{y}،  لکیر \عددی{y=x} اور لکیر \عددی{y=1} کے بیچ  مثلث  اور  سر مستوی \عددی{z=2-x} میں ہو، خطہ \عددی{D} ہے۔
+\ابتدا{سوال}\شناخت{سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_ث}
+وہ منشور جس کا قاعدہ مستوی \عددی{xy} میں  محور \عددی{y}،  لکیر \عددی{y=x} اور لکیر \عددی{y=1} کے بیچ  مثلث  اور  سر مستوی \عددی{z=2-x} میں ہو، خطہ \عددی{D} ہے (شکل \حوالہ{شکل_سوال_کثیر_دائرہ_کار_پر_تہرا_تکمل_لکھنا_ث})۔
 \انتہا{سوال}
 %====================
 
@@ -5884,10 +6015,69 @@ $\int_{\pi/6}^{\pi/2}\int_{-\pi/2}^{\pi/2}\int_{\csc\theta}^{2}5r^4\sin^3\theta 
 نیچے سے مخروط   \عددی{z=\sqrt{x^2+y^2}} اور اوپر سے مستوی \عددی{z=1}  کے بیچ خطہ \عددی{D}  کے حجم کا تکمل کروی محدد میں(ا) \عددی{\dif r\dif\theta\dif\phi} ، (ب) \عددی{\dif\theta\dif r\dif \phi} ترتیب    کے لئے  لکھیں۔
 \انتہا{سوال}
 %=================
-سوال \حوالہ{سوال_بالکثرت_کروی_حجم_تلاش_الف} تا سوال \حوالہ{سوال_بالکثرت_کروی_حجم_تلاش_ب} میں  دئے گئے ٹھوس جس کے حجم کے کروی تکمل (ا) کی حدیں تلاش کریں۔ (ب) کروی تکمل حل کرتے  ہوئے جسم کا حجم معلوم کریں۔
+سوال \حوالہ{سوال_بالکثرت_کروی_حجم_تلاش_الف} تا سوال \حوالہ{سوال_بالکثرت_کروی_حجم_تلاش_ث} میں  دئے گئے ٹھوس جس کے حجم کے کروی تکمل (ا) کی حدیں تلاش کریں۔ (ب) کروی تکمل حل کرتے  ہوئے جسم کا حجم معلوم کریں۔
+
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\t,\p)=1/2*sin(\t)*cos(\p);fy(\t,\p)=1/2*sin(\t)*sin(\p);fz(\t,\p)=1/2+1/2*cos(\t);gx(\t,\p)=2*sin(\t)*cos(\p);gy(\t,\p)=2*sin(\t)*sin(\p);gz(\t,\p)=2*cos(\t);}]
+\pgfmathsetmacro{\pa}{0}
+\pgfmathsetmacro{\pb}{90}
+\pgfmathsetmacro{\ga}{0}
+\pgfmathsetmacro{\gb}{180}
+\pgfmathsetmacro{\gc}{90}
+\pgfmathsetmacro{\gd}{270}
+\pgfmathsetmacro{\ha}{90}
+\pgfmathsetmacro{\tp}{110}
+\pgfmathsetmacro{\tpa}{180+\tp}
+\begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\addplot3[black,domain=0:360,domain y =0:90,variable=\t,variable y=\p]({fx(t,\pa)},{fy(t,\pa)},{fz(t,\pa)});
+\addplot3[black,domain=0:360,domain y =0:90,variable=\t,variable y=\p]({fx(t,\pb)},{fy(t,\pb)},{fz(t,\pb)});
+\addplot3[black,domain=0:90,samples y=0,variable=\t,variable y=\p]({gx(t,\ga)},{gy(t,\ga)},{gz(t,\ga)});
+\addplot3[black,domain=0:90,samples y=0,variable=\t,variable y=\p]({gx(t,\gb)},{gy(t,\gb)},{gz(t,\gb)});
+\addplot3[black,domain=0:90,samples y=0,variable=\t,variable y=\p]({gx(t,\gc)},{gy(t,\gc)},{gz(t,\gc)});
+\addplot3[black,domain=0:90,samples y=0,variable=\t,variable y=\p]({gx(t,\gd)},{gy(t,\gd)},{gz(t,\gd)});
+\addplot3[black,domain y=0:360,variable=\t,variable y=\p]({gx(\ha,p)},{gy(\ha,p)},{gz(\ha,p)});
+\addplot3[]plot coordinates {({gx(45,90)},{gy(45,90)},{gz(45,90)})}node[pin=45:{$r=2,\, z\ge 0$}]{};
+\addplot3[]plot coordinates {(0,0,0)}node[below right,xshift=-2ex]{$r=\cos\theta$};
+\end{axis}
+\end{tikzpicture}
+\caption{جسم برائے سوال \حوالہ{سوال_بالکثرت_کروی_حجم_تلاش_الف}}
+\label{شکل_سوال_بالکثرت_کروی_حجم_تلاش_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\t,\p)=(1+cos(\t))*sin(\t)*cos(\p);fy(\t,\p)=(1+cos(\t))*sin(\t)*sin(\p);fz(\t,\p)=(1+cos(\t))*cos(\t);gx(\t,\p)=sin(\t)*cos(\p);gy(\t,\p)=sin(\t)*sin(\p);gz(\t,\p)=cos(\t);}]
+\pgfmathsetmacro{\pa}{0}
+\pgfmathsetmacro{\pb}{180}
+\pgfmathsetmacro{\pc}{90}
+\pgfmathsetmacro{\pd}{270}
+\pgfmathsetmacro{\ta}{30}
+\pgfmathsetmacro{\tb}{45}
+\begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\addplot3[black,domain=0:90,samples y=0,variable=\t,variable y=\p]({fx(t,\pa)},{fy(t,\pa)},{fz(t,\pa)});
+\addplot3[black,domain=0:90,samples y=0,variable=\t,variable y=\p]({fx(t,\pb)},{fy(t,\pb)},{fz(t,\pb)});
+\addplot3[black,domain=0:90,samples y=0,variable=\t,variable y=\p]({fx(t,\pc)},{fy(t,\pc)},{fz(t,\pc)});
+\addplot3[black,domain=0:90,samples y=0,variable=\t,variable y=\p]({fx(t,\pd)},{fy(t,\pd)},{fz(t,\pd)});
+\addplot3[black,domain=0:90,samples y=0,variable=\t,variable y=\p]({gx(t,\pa)},{gy(t,\pa)},{gz(t,\pa)});
+\addplot3[black,domain=0:90,samples y=0,variable=\t,variable y=\p]({gx(t,\pb)},{gy(t,\pb)},{gz(t,\pb)});
+\addplot3[black,domain=0:90,samples y=0,variable=\t,variable y=\p]({gx(t,\pc)},{gy(t,\pc)},{gz(t,\pc)});
+\addplot3[black,domain=0:90,samples y=0,variable=\t,variable y=\p]({gx(t,\pd)},{gy(t,\pd)},{gz(t,\pd)});
+\addplot3[black,domain=0:90,domain y=0:360,variable=\t,variable y=\p]({gx(90,p)},{gy(90,p)},{gz(90,p)});
+%
+\addplot3[]plot coordinates {({fx(\ta,\pc)},{fy(\ta,\pc)},{fz(\ta,\pc)})}node[pin=20:{$r=1+\cos\theta$}]{};
+\addplot3[]plot coordinates {({gx(\tb,\pc)},{gy(\tb,\pc)},{gz(\tb,\pc)})}node[pin={[pin distance=1cm]20:{$r=1$}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{جسم برائے سوال \حوالہ{سوال_بالکثرت_کروی_حجم_تلاش_ب}}
+\label{شکل_سوال_بالکثرت_کروی_حجم_تلاش_ب}
+\end{minipage}
+\end{figure}
+
 
 \ابتدا{سوال}\شناخت{سوال_بالکثرت_کروی_حجم_تلاش_الف}
-کرہ \عددی{r=\cos\theta} اور نصف کرہ \عددی{r=2,\,z\ge 0} کے بیچ ٹھوس جسم۔
+کرہ \عددی{r=\cos\theta} اور نصف کرہ \عددی{r=2,\,z\ge 0} کے بیچ ٹھوس جسم (شکل \حوالہ{شکل_سوال_بالکثرت_کروی_حجم_تلاش_الف})۔
 \انتہا{سوال}
 %==================
 \ابتدا{جواب}
@@ -5896,11 +6086,11 @@ $\int_{\pi/6}^{\pi/2}\int_{-\pi/2}^{\pi/2}\int_{\csc\theta}^{2}5r^4\sin^3\theta 
 }}
 \انتہا{جواب}
 %======================
-\ابتدا{سوال}
-نیچے سے نصف کرہ \عددی{r=1,\,z\ge 0} اور اوپر سے سطح طواف قلب نما \عددی{r=1+\cos\theta}  میں ملفوف  ٹھوس جسم۔
+\ابتدا{سوال}\شناخت{سوال_بالکثرت_کروی_حجم_تلاش_ب}
+نیچے سے نصف کرہ \عددی{r=1,\,z\ge 0} اور اوپر سے سطح طواف قلب نما \عددی{r=1+\cos\theta}  میں ملفوف  ٹھوس جسم (شکل \حوالہ{شکل_سوال_بالکثرت_کروی_حجم_تلاش_ب})۔
 \انتہا{سوال}
 %===================
-\ابتدا{سوال}\شناخت{سوال_بالکثرت_کروی_حجم_درکار_پ}
+\ابتدا{سوال}\شناخت{سوال_بالکثرت_کروی_حجم_تلاش_پ}
 جسم طواف قلب نما \عددی{r=1-\cos\theta}   میں ملفوف۔
 \انتہا{سوال}
 %====================
@@ -5911,11 +6101,64 @@ $\int_{\pi/6}^{\pi/2}\int_{-\pi/2}^{\pi/2}\int_{\csc\theta}^{2}5r^4\sin^3\theta 
 \انتہا{جواب}
 %======================
 \ابتدا{سوال}
-وہ  بالائی خطہ جو   سوال \حوالہ{سوال_بالکثرت_کروی_حجم_درکار_پ} کے جسم سے مستوی \عددی{xy}   کاٹتا ہے۔
+وہ  بالائی خطہ جو   سوال \حوالہ{سوال_بالکثرت_کروی_حجم_تلاش_پ} کے جسم سے مستوی \عددی{xy}   کاٹتا ہے۔
 \انتہا{سوال}
 %======================
-\ابتدا{سوال}
-نیچے سے کرہ \عددی{r=2\cos\theta}  اور اوپر سے مخروط \عددی{z=\sqrt{x^2+y^2}} میں ملفوف جسم۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\t,\p)=sin(\t)*cos(\p);fy(\t,\p)=sin(\t)*sin(\p);fz(\t,\p)=1+cos(\t);gx(\r,\p)=\r*cos(\p);gy(\r,\p)=\r*sin(\p);gz(\r,\p)=\r;}]
+\pgfmathsetmacro{\pa}{0}
+\pgfmathsetmacro{\pb}{180}
+\pgfmathsetmacro{\pc}{90}
+\pgfmathsetmacro{\pd}{270}
+\pgfmathsetmacro{\ta}{30}
+\pgfmathsetmacro{\tb}{45}
+\begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\addplot3[black,domain=90:180,samples y=0,variable=\t,variable y=\p]({fx(t,\pa)},{fy(t,\pa)},{fz(t,\pa)});
+\addplot3[black,domain=90:180,samples y=0,variable=\t,variable y=\p]({fx(t,\pb)},{fy(t,\pb)},{fz(t,\pb)});
+\addplot3[black,domain=90:180,samples y=0,variable=\t,variable y=\p]({fx(t,\pc)},{fy(t,\pc)},{fz(t,\pc)})node[pos=0.5,pin=20:{$r=2\cos\theta$}]{};
+\addplot3[black,domain=90:180,samples y=0,variable=\t,variable y=\p]({fx(t,\pd)},{fy(t,\pd)},{fz(t,\pd)});
+\addplot3[black,domain=90:180,domain y =0:360,variable=\t,variable y=\p]({fx(90,p)},{fy(90,p)},{fz(90,p)});
+\addplot3[black,domain=0:1,samples y=0,variable=\r,variable y=\p]({gx(r,\pa)},{gy(r,\pa)},{gz(r,\pa)});
+\addplot3[black,domain=0:1,samples y=0,variable=\r,variable y=\p]({gx(r,\pb)},{gy(r,\pb)},{gz(r,\pb)});
+\addplot3[black,domain=0:1,samples y=0,variable=\r,variable y=\p]({gx(r,\pc)},{gy(r,\pc)},{gz(r,\pc)});
+\addplot3[black,domain=0:1,samples y=0,variable=\r,variable y=\p]({gx(r,\pd)},{gy(r,\pd)},{gz(r,\pd)})node[pos=0.85,pin={[pin distance=1cm]70:{$z=\sqrt{x^2+y^2}$}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{جسم برائے سوال \حوالہ{سوال_بالکثرت_کروی_حجم_تلاش_ٹ}}
+\label{شکل_سوال_بالکثرت_کروی_حجم_تلاش_ٹ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\t,\p)=2*sin(\t)*cos(\p);fy(\t,\p)=2*sin(\t)*sin(\p);fz(\t,\p)=2*cos(\t);gx(\r,\p)=\r*sin(60)*cos(\p);gy(\r,\p)=\r*sin(60)*sin(\p);gz(\r,\p)=\r*cos(60);}]
+\pgfmathsetmacro{\pa}{0}
+\pgfmathsetmacro{\pb}{180}
+\pgfmathsetmacro{\pc}{90}
+\pgfmathsetmacro{\pd}{270}
+\pgfmathsetmacro{\ta}{30}
+\pgfmathsetmacro{\tb}{45}
+\begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\addplot3[black,domain=60:90,samples y=0,variable=\t,variable y=\p]({fx(t,\pa)},{fy(t,\pa)},{fz(t,\pa)});
+\addplot3[black,domain=60:90,samples y=0,variable=\t,variable y=\p]({fx(t,\pb)},{fy(t,\pb)},{fz(t,\pb)});
+\addplot3[black,domain=60:90,samples y=0,variable=\t,variable y=\p]({fx(t,\pc)},{fy(t,\pc)},{fz(t,\pc)})node[pos=0.5,pin=20:{$r=2$}]{};
+\addplot3[black,domain=60:90,samples y=0,variable=\t,variable y=\p]({fx(t,\pd)},{fy(t,\pd)},{fz(t,\pd)});
+\addplot3[black,domain=90:180,domain y =0:360,variable=\t,variable y=\p]({fx(60,p)},{fy(60,p)},{fz(60,p)});
+\addplot3[black,domain=90:180,domain y =0:360,variable=\t,variable y=\p]({fx(90,p)},{fy(90,p)},{fz(90,p)});
+\addplot3[black,domain=0:2,samples y=0,variable=\r,variable y=\p]({gx(r,\pa)},{gy(r,\pa)},{gz(r,\pa)});
+\addplot3[black,domain=0:2,samples y=0,variable=\r,variable y=\p]({gx(r,\pb)},{gy(r,\pb)},{gz(r,\pb)});
+\addplot3[black,domain=0:2,samples y=0,variable=\r,variable y=\p]({gx(r,\pc)},{gy(r,\pc)},{gz(r,\pc)});
+\addplot3[black,domain=0:2,samples y=0,variable=\r,variable y=\p]({gx(r,\pd)},{gy(r,\pd)},{gz(r,\pd)})node[pos=0.85,pin={[pin distance=1cm]60:{$\theta=\frac{\pi}{3}$}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{جسم برائے سوال \حوالہ{سوال_بالکثرت_کروی_حجم_تلاش_ث}}
+\label{شکل_سوال_بالکثرت_کروی_حجم_تلاش_ث}
+\end{minipage}
+\end{figure}
+
+\ابتدا{سوال}\شناخت{سوال_بالکثرت_کروی_حجم_تلاش_ٹ}
+نیچے سے کرہ \عددی{r=2\cos\theta}  اور اوپر سے مخروط \عددی{z=\sqrt{x^2+y^2}} میں ملفوف جسم (شکل \حوالہ{شکل_سوال_بالکثرت_کروی_حجم_تلاش_ٹ})۔
 \انتہا{سوال}
 %================
 \ابتدا{جواب}
@@ -5924,8 +6167,8 @@ $\int_{\pi/6}^{\pi/2}\int_{-\pi/2}^{\pi/2}\int_{\csc\theta}^{2}5r^4\sin^3\theta 
 }}
 \انتہا{جواب}
 %======================
-\ابتدا{سوال}\شناخت{سوال_بالکثرت_کروی_حجم_تلاش_ب}
-نیچے سے مستوی \عددی{xy}، اوپر سے  مخروط \عددی{\theta=\tfrac{\pi}{3}} اور اطراف سے کرہ \عددی{r=2} میں ملفوف
+\ابتدا{سوال}\شناخت{سوال_بالکثرت_کروی_حجم_تلاش_ث}
+نیچے سے مستوی \عددی{xy}، اوپر سے  مخروط \عددی{\theta=\tfrac{\pi}{3}} اور اطراف سے کرہ \عددی{r=2} میں ملفوف جسم (شکل \حوالہ{شکل_سوال_بالکثرت_کروی_حجم_تلاش_ث})۔
 \انتہا{سوال}
 %===========
 
@@ -5972,9 +6215,61 @@ $\int_{\pi/6}^{\pi/2}\int_{-\pi/2}^{\pi/2}\int_{\csc\theta}^{2}5r^4\sin^3\theta 
 %==================
 
 \موٹا{حجم}\\
-سوال \حوالہ{سوال_بالکثرت_ٹھوس_جسم_حجم_الف} تا سوال \حوالہ{سوال_بالکثرت_ٹھوس_جسم_حجم_ب} میں ٹھوس اجسام کے حجم تلاش کریں۔
+سوال \حوالہ{سوال_بالکثرت_ٹھوس_جسم_حجم_الف} تا سوال \حوالہ{سوال_بالکثرت_ٹھوس_جسم_حجم_ث} میں ٹھوس اجسام کے حجم تلاش کریں۔
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\p)=\r*cos(\p);fy(\r,\p)=\r*sin(\p);fz(\r,\p)=4-4*\r^2;fzz(\r,\p)=\r^4-1;}]
+\pgfmathsetmacro{\pa}{0}
+\pgfmathsetmacro{\pb}{90}
+\pgfmathsetmacro{\pc}{180}
+\pgfmathsetmacro{\pd}{270}
+\pgfmathsetmacro{\tp}{110}
+\pgfmathsetmacro{\tpa}{180+\tp}
+\begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\addplot3[black,domain=0:1,variable=\r, variable y=\p,samples y=0]({fx(r,\pa)},{fy(r,\pa)},{fz(r,\pa)});
+\addplot3[black,domain=0:1,variable=\r, variable y=\p,samples y=0]({fx(r,\pb)},{fy(r,\pb)},{fz(r,\pb)})node[pos=0.5,pin=45:{$z=4-4(x^2+y^2)$}]{};
+\addplot3[black,domain=0:1,variable=\r, variable y=\p,samples y=0]({fx(r,\pc)},{fy(r,\pc)},{fz(r,\pc)});
+\addplot3[black,domain=0:1,variable=\r, variable y=\p,samples y=0]({fx(r,\pd)},{fy(r,\pd)},{fz(r,\pd)});
+\addplot3[black,domain=0:1,domain y=0:360,variable=\r, variable y=\p]({fx(1,p)},{fy(1,p)},{fz(1,p)});
+\addplot3[black,domain=0:1,variable=\r, variable y=\p,samples y=0]({fx(r,\pa)},{fy(r,\pa)},{fzz(r,\pa)});
+\addplot3[black,domain=0:1,variable=\r, variable y=\p,samples y=0]({fx(r,\pb)},{fy(r,\pb)},{fzz(r,\pb)})node[pos=0.5,pin=-10:{$z=(x^2+y^2)^2-1$}]{};
+\addplot3[black,domain=0:1,variable=\r, variable y=\p,samples y=0]({fx(r,\pc)},{fy(r,\pc)},{fzz(r,\pc)});
+\addplot3[black,domain=0:1,variable=\r, variable y=\p,samples y=0]({fx(r,\pd)},{fy(r,\pd)},{fzz(r,\pd)});
+\end{axis}
+\end{tikzpicture}
+\caption{جسم برائے شکل \حوالہ{سوال_بالکثرت_ٹھوس_جسم_حجم_الف}}
+\label{شکل_سوال_بالکثرت_ٹھوس_جسم_حجم_الف}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\p)=\r*cos(\p);fy(\r,\p)=\r*sin(\p);fz(\r,\p)=1-\r;fzz(\r,\p)=-sqrt(1-\r^2);}]
+\pgfmathsetmacro{\pa}{0}
+\pgfmathsetmacro{\pb}{90}
+\pgfmathsetmacro{\pc}{180}
+\pgfmathsetmacro{\pd}{270}
+\pgfmathsetmacro{\tp}{110}
+\pgfmathsetmacro{\tpa}{180+\tp}
+\begin{axis}[clip=false,view/h=120,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\addplot3[black,domain=0:1,variable=\r, variable y=\p,samples y=0]({fx(r,\pa)},{fy(r,\pa)},{fz(r,\pa)});
+\addplot3[black,domain=0:1,variable=\r, variable y=\p,samples y=0]({fx(r,\pb)},{fy(r,\pb)},{fz(r,\pb)});
+\addplot3[black,domain=0:1,variable=\r, variable y=\p,samples y=0]({fx(r,\pc)},{fy(r,\pc)},{fz(r,\pc)})node[pos=0.5,pin=45:{$z=1-\rho$}]{};
+\addplot3[black,domain=0:1,variable=\r, variable y=\p,samples y=0]({fx(r,\pd)},{fy(r,\pd)},{fz(r,\pd)});
+\addplot3[black,domain=0:1,domain y=0:360,variable=\r, variable y=\p]({fx(1,p)},{fy(1,p)},{fz(1,p)});
+\addplot3[black,domain=0:1,variable=\r, variable y=\p,samples y=0]({fx(r,\pa)},{fy(r,\pa)},{fzz(r,\pa)});
+\addplot3[black,domain=0:1,variable=\r, variable y=\p,samples y=0]({fx(r,\pb)},{fy(r,\pb)},{fzz(r,\pb)})node[pos=0.5,pin=-10:{$z=-\sqrt{1-\rho^2}$}]{};
+\addplot3[black,domain=0:1,variable=\r, variable y=\p,samples y=0]({fx(r,\pc)},{fy(r,\pc)},{fzz(r,\pc)});
+\addplot3[black,domain=0:1,variable=\r, variable y=\p,samples y=0]({fx(r,\pd)},{fy(r,\pd)},{fzz(r,\pd)});
+\end{axis}
+\end{tikzpicture}
+\caption{جسم برائے شکل \حوالہ{سوال_بالکثرت_ٹھوس_جسم_حجم_ب}}
+\label{شکل_سوال_بالکثرت_ٹھوس_جسم_حجم_ب}
+\end{minipage}
+\end{figure}
 
 \ابتدا{سوال}\شناخت{سوال_بالکثرت_ٹھوس_جسم_حجم_الف}
+اوپر سے \عددی{z=4-4(x^2+y^2)} اور نیچے سے \عددی{z=(x^2+y^2)^2-1} میں ملفوف جسم (شکل \حوالہ{شکل_سوال_بالکثرت_ٹھوس_جسم_حجم_الف})۔
 \انتہا{سوال}
 %============================
 \ابتدا{جواب}
@@ -5983,10 +6278,48 @@ $\int_{\pi/6}^{\pi/2}\int_{-\pi/2}^{\pi/2}\int_{\csc\theta}^{2}5r^4\sin^3\theta 
 }}
 \انتہا{جواب}
 %======================
-\ابتدا{سوال}
+\ابتدا{سوال}\شناخت{سوال_بالکثرت_ٹھوس_جسم_حجم_ب}
+اوپر سے \عددی{z=1-\rho} اور نیچے سے \عددی{z=-\sqrt{1-\rho^2}} میں ملفوف جسم (شکل \حوالہ{شکل_سوال_بالکثرت_ٹھوس_جسم_حجم_ب})۔
 \انتہا{سوال}
 %============================
-\ابتدا{سوال}
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fr(\p)=3*cos(\p);fx(\p)=3/2+3/2*cos(\p);fy(\p)=3/2*sin(\p);fz(\p)=-3/2*sin(\p);}]
+\pgfmathsetmacro{\pa}{110}
+\pgfmathsetmacro{\tpa}{180+\pa}
+\pgfmathsetmacro{\tpb}{340}
+\begin{axis}[clip=false,view/h=120,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\addplot3[data cs=polar,black,domain=90:180,variable=\p,samples y=0]({p},{fr(p)},{0});
+\addplot3[black,domain=180:360,variable=\p,samples y=0]({fx(p)},{fy(p)},{fz(p)})node[pos=0.25,pin=60:{$z=-y$}]{};
+\addplot3[]plot coordinates {({fx(\tpa)},{fy(\tpa)},{fz(\tpa)})({fx(\tpa)},{fy(\tpa)},{0})};
+\addplot3[]plot coordinates {({fx(\tpb)},{fy(\tpb)},{0})}node[pin=-160:{$\rho=3\cos\phi$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{جسم برائے شکل \حوالہ{سوال_بالکثرت_ٹھوس_جسم_حجم_پ}}
+\label{شکل_سوال_بالکثرت_ٹھوس_جسم_حجم_پ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fr(\p)=-3*cos(\p);fx(\p)=-3/2+3/2*cos(\p);fy(\p)=3/2*sin(\p);fz(\p)=sqrt(9/2-9/2*cos(\p));}]
+\pgfmathsetmacro{\pa}{135}
+\pgfmathsetmacro{\tpa}{180+\pa}
+\pgfmathsetmacro{\tpb}{70}
+\begin{axis}[clip=false,view/h=135,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\addplot3[data cs=polar,black,domain=90:270,variable=\p,samples y=0]({p},{fr(p)},{0});
+\addplot3[black,domain=0:360,variable=\p,samples y=0]({fx(p)},{fy(p)},{fz(p)})node[pos=0.6,pin=135:{$z=\sqrt{x^2+y^2}$}]{};
+\addplot3[]plot coordinates {({fx(\pa)},{fy(\pa)},{fz(\pa)})({fx(\pa)},{fy(\pa)},{0})};
+\addplot3[]plot coordinates {({fx(\tpa)},{fy(\tpa)},{fz(\tpa)})({fx(\tpa)},{fy(\tpa)},{0})};
+\addplot3[]plot coordinates {({fx(\tpb)},{fy(\tpb)},{0})}node[pin=-20:{$\rho=-3\cos\phi$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{جسم برائے شکل \حوالہ{سوال_بالکثرت_ٹھوس_جسم_حجم_ت}}
+\label{شکل_سوال_بالکثرت_ٹھوس_جسم_حجم_ت}
+\end{minipage}
+\end{figure}
+\ابتدا{سوال}\شناخت{سوال_بالکثرت_ٹھوس_جسم_حجم_پ}
+مستوی \عددی{xy} سے اوپر ٹھوس نلکی \عددی{\rho=3\cos\phi} کا وہ حصہ جو مستوی \عددی{z=-y} سے نیچے ہے (شکل \حوالہ{شکل_سوال_بالکثرت_ٹھوس_جسم_حجم_پ})۔ 
 \انتہا{سوال}
 %============================
 \ابتدا{جواب}
@@ -5995,10 +6328,44 @@ $\int_{\pi/6}^{\pi/2}\int_{-\pi/2}^{\pi/2}\int_{\csc\theta}^{2}5r^4\sin^3\theta 
 }}
 \انتہا{جواب}
 %======================
-\ابتدا{سوال}
+\ابتدا{سوال}\شناخت{سوال_بالکثرت_ٹھوس_جسم_حجم_ت}
+مستوی \عددی{xy} سے اوپر ٹھوس نلکی \عددی{\rho=-3\cos\phi} کا وہ حصہ جو سطح \عددی{z=\sqrt{x^2+y^2}} سے نیچے ہے (شکل \حوالہ{شکل_سوال_بالکثرت_ٹھوس_جسم_حجم_ت})۔ 
 \انتہا{سوال}
-%============================
-\ابتدا{سوال}
+%==================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fr(\p)=sin(\p);fx(\p)=1/2*cos(\p);fy(\p)=1/2+1/2*sin(\p);fz(\p)=sqrt(1/2-1/2*sin(\p));gz(\x)=sqrt(1-\x^2);}]
+\pgfmathsetmacro{\tpa}{-30}
+\pgfmathsetmacro{\tpb}{70}
+\begin{axis}[clip=false,view/h=135,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\addplot3[data cs=polar,black,domain=0:90,variable=\p,samples y=0]({p},{fr(p)},{0})node[pos=0.6,pin=-30:{$\rho=\sin\phi$}]{};
+\addplot3[black,domain=-90:90,variable=\p,samples y=0]({fx(p)},{fy(p)},{fz(p)});
+\addplot3[black,domain=0:1,samples y=0]({0},{x},{gz(x)})node[pos=0.2,yshift=-3ex,pin=20:{$z=\sqrt{1-x^2-y^2}$}]{};
+\addplot3[]plot coordinates {({fx(\tpa)},{fy(\tpa)},{fz(\tpa)})({fx(\tpa)},{fy(\tpa)},{0})};
+\end{axis}
+\end{tikzpicture}
+\caption{جسم برائے شکل \حوالہ{سوال_بالکثرت_ٹھوس_جسم_حجم_ٹ}}
+\label{شکل_سوال_بالکثرت_ٹھوس_جسم_حجم_ٹ}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fr(\p)=cos(\p);fx(\p)=1/2+1/2*cos(\p);fy(\p)=1/2*sin(\p);fz(\p)=3*sqrt(1/2-1/2*cos(\p));gz(\x)=3*sqrt(1-\x^2);}]
+\pgfmathsetmacro{\tpa}{110}
+\begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\addplot3[data cs=polar,black,domain=0:90,variable=\p,samples y=0]({p},{fr(p)},{0})node[pos=0.25,pin=-30:{$\rho=\cos\phi$}]{};
+\addplot3[black,domain=0:180,variable=\p,samples y=0]({fx(p)},{fy(p)},{fz(p)})node[pos=0.85,xshift=-3ex,pin=35:{$z=3\sqrt{1-x^2-y^2}$}]{};
+\addplot3[black,domain=0:1,samples y=0]({x},{0},{gz(x)});
+\addplot3[]plot coordinates {({fx(\tpa)},{fy(\tpa)},{fz(\tpa)})({fx(\tpa)},{fy(\tpa)},{0})};
+\end{axis}
+\end{tikzpicture}
+\caption{جسم برائے شکل \حوالہ{سوال_بالکثرت_ٹھوس_جسم_حجم_ث}}
+\label{شکل_سوال_بالکثرت_ٹھوس_جسم_حجم_ث}
+\end{minipage}
+\end{figure}
+\ابتدا{سوال}\شناخت{سوال_بالکثرت_ٹھوس_جسم_حجم_ٹ}
+مستوی \عددی{xy} سے اوپر ٹھوس نلکی \عددی{\rho=\sin\phi} کا وہ حصہ جو سطح \عددی{z=\sqrt{1-x^2-y^2}} سے نیچے ہے (شکل \حوالہ{شکل_سوال_بالکثرت_ٹھوس_جسم_حجم_ٹ})۔ 
 \انتہا{سوال}
 %============================
 \ابتدا{جواب}
@@ -6007,7 +6374,8 @@ $\int_{\pi/6}^{\pi/2}\int_{-\pi/2}^{\pi/2}\int_{\csc\theta}^{2}5r^4\sin^3\theta 
 }}
 \انتہا{جواب}
 %======================
-\ابتدا{سوال}\شناخت{سوال_بالکثرت_ٹھوس_جسم_حجم_ب}
+\ابتدا{سوال}\شناخت{سوال_بالکثرت_ٹھوس_جسم_حجم_ث}
+مستوی \عددی{xy} سے اوپر ٹھوس نلکی \عددی{\rho=\cos\phi} کا وہ حصہ جو مستوی \عددی{z=3\sqrt{1-x^2-y^2}} سے نیچے ہے (شکل \حوالہ{شکل_سوال_بالکثرت_ٹھوس_جسم_حجم_ث})۔ 
 \انتہا{سوال}
 %============================
 \ابتدا{سوال}

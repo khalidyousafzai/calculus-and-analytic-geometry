@@ -1216,7 +1216,7 @@ H=\int_a^bS(x)\dif x=\int_0^3x^2\dif x=\left.\tfrac{x^3}{3}\right\vert_0^3=9
 \draw(kSa)--(kSb)--(kEb)coordinate[pos=0.5](kC)--(kEa)--(kSa)coordinate[pos=0.5](kCC);
 \draw(0,0)--(kC)--(kCC)node[pos=0.5,shift={(0.1cm,0)}]{$x$};
 \draw($(0,0)!0.5!(kCC)$)node[below]{$x$};
-\draw(kSa)++(0,-0.1)--++(-45:0.5)node[right]{$(x,\sqrt{9-x^2})$};
+\draw(kSa)++(0,-0.1)--++(-45:0.5)node[right]{$(x,-\sqrt{9-x^2})$};
 \draw[dashed](0,0)--(kEa)node[pos=0.6,left]{$3$};
 \path[name path=xaxis](-0.2*\la,0)--(1.75*\la,0);
 \draw(0,0)--(kCC);
