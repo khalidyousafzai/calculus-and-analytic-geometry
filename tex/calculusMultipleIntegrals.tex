@@ -6655,12 +6655,42 @@ $\int_{\pi/6}^{\pi/2}\int_{-\pi/2}^{\pi/2}\int_{\csc\theta}^{2}5r^4\sin^3\theta 
 \جزوحصہء{دوہرا تکملات  میں بدل} 
 
 
-ہم قطبی محدد د کی بدل کا استعمال حصہ \حوالہ{حصہ_بالکثرت_دوہرا_تکملات_قطبی_روپ} میں  دیکھ چکے ہیں جو دہرا تکملات کی بدل، جس میں متغیرات کی تبدیلی کو خطے کی تبدیلی تصور کیا جاتا ہے، کی ایک  مخصوص شکل ہے۔ 
+ہم قطبی محدد  کی بدل کا استعمال حصہ \حوالہ{حصہ_بالکثرت_دوہرا_تکملات_قطبی_روپ} میں  دیکھ چکے ہیں جو دہرا تکملات کی بدل، جس میں متغیرات کی تبدیلی کو خطے کی تبدیلی تصور کیا جاتا ہے، کی ایک  مخصوص صورت ہے۔ 
 
 
-فرض کریں مستوی \عددی{uv} کے خطہ \عددی{G} کو ایک ایک مطابقت کے ساتھ مساوات
+فرض کریں مستوی \عددی{uv} کے خطہ \عددی{G} کا تبادلہ ایک ایک مطابقت کی مساوات
 \[x=g(u,v),\quad y=h(u,v)\]
- کے ذریعہ مستوی \عددی{xy} کے خطہ \عددی{R} میں بدلا جاتا ہے۔ ہم \عددی{R} کو اس بدل میں \عددی{G} کا \اصطلاح{عکس}\فرہنگ{عکس}\حاشیہب{image}\فرہنگ{image} اور \عددی{G} کو \عددی{R} کا  \اصطلاح{قبل عکس}\فرہنگ{عکس!قبل}\حاشیہب{preimage}\فرہنگ{image!pre} کہتے ہیں۔خطہ \عددی{R} کسی بھی تفاعل \عددی{f(x,y)} کو خطہ \عددی{G} میں معین تفاعل \عددی{f(g(u,v),h(u,v))} بھی تصور کیا جا سکتا ہے۔ خطہ \عددی{R} میں \عددی{f(x,y)} کے تکمل کا خطہ \عددی{G} میں \عددی{f(g(u,v),h(u,v))} کے تکمل کے ساتھ کیا تعلق ہو گا؟
+ کے ذریعہ مستوی \عددی{xy} کے خطہ \عددی{R} میں کیا جاتا ہے (شکل \حوالہ{شکل_کثیر_ایک_خطہ_سے_دوسرے_خطہ_تکمل_تبادلہ})۔ ہم \عددی{R} کو اس تبادل میں \عددی{G} کا \اصطلاح{عکس}\فرہنگ{عکس}\حاشیہب{image}\فرہنگ{image} اور \عددی{G} کو \عددی{R} کا  \اصطلاح{قبل عکس}\فرہنگ{عکس!قبل}\حاشیہب{preimage}\فرہنگ{image!pre} کہتے ہیں۔خطہ \عددی{R} میں کسی بھی تفاعل \عددی{f(x,y)} کو خطہ \عددی{G} میں معین تفاعل \عددی{f(g(u,v),h(u,v))} بھی تصور کیا جا سکتا ہے۔ خطہ \عددی{R} میں \عددی{f(x,y)} کے تکمل کا خطہ \عددی{G} میں \عددی{f(g(u,v),h(u,v))} کے تکمل کے ساتھ کیا تعلق ہو گا؟
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-stealth](-0.25,0)--++(4.5,0)node[right]{$u$};
+\draw[-stealth](1,-1.25)--++(0,3.5)node[left]{$v$};
+\draw[fill=lgray,smooth cycle,opacity=0.5]plot coordinates {(0,0)(1,-1)(2,-1)(4,1)(3,2)};
+\draw(2,1)node[circ]{}node[below]{$(u,v)$};
+\draw(3,1.5)node[]{$G$};
+\end{tikzpicture}
+\caption{کارتیسی \(uv\) مستوی}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[-stealth](-0.25,0)--++(4,0)node[right]{$x$};
+\draw[-stealth](1,-1.5)--++(0,3)node[left]{$y$};
+\draw[fill=lgray,smooth cycle,opacity=0.5]plot coordinates {(0,0)(0.5,-1)(2,-1)(3,0)(2,1)(1,1)};
+\draw(1.5,0.7)node[circ]{}node[below]{$(x,y)$};
+\draw(2,-0.5)node[]{$R$};
+\draw(2,1.5)node[right]{$\begin{aligned} x&=g(u,v)\\ y&=h(u,v) \end{aligned}$};
+\end{tikzpicture}
+\caption{کارتیسی \(xy\) مستوی}
+\end{subfigure}
+\caption{
+مستوی \عددی{xy} میں خطہ \عددی{R} پر تکمل کا تبادلہ مساوات \عددی{x=g(u,v)}، \عددی{y=h(u,v)}  مستوی \عددی{uv} میں خطہ \عددی{G} پر کرتی ہیں۔ 
+}
+\label{شکل_کثیر_ایک_خطہ_سے_دوسرے_خطہ_تکمل_تبادلہ}
+\end{figure}
 
 
 اس کا جواب: اگر \عددی{g}، \عددی{h} اور \عددی{f} کے جزوی تفرقات استمراری ہوں اور \عددی{J(u,v)} (جس پر جلد تبصرہ کیا جائے گا) صرف  تنہا نقطوں پر صفر ہو (اگر صفر ہو بھی)  تب درج ذیل ہو گا۔ 
@@ -6671,7 +6701,7 @@ $\int_{\pi/6}^{\pi/2}\int_{-\pi/2}^{\pi/2}\int_{\csc\theta}^{2}5r^4\sin^3\theta 
 
 
 \ابتدا{تعریف}
-  \اصطلاح{یعقوبی مقطع}\حاشیہد{یہ ریاضی دان کارل   گستاف یعقوب یعقوبی کے نام سے منسوب ہے۔} یا محددی بدل \عددی{x=g(u,v)}، \عددی{y=h(u,v)} کے \اصطلاح{یعقوبی}\فرہنگ{یعقوبی}\حاشیہب{Jacobian}\فرہنگ{Jacobian} سے مراد درج ذیل ہے:
+  \اصطلاح{یعقوبی مقطع}\حاشیہد{یہ ریاضی دان کارل   گستاف یعقوب یعقوبی کے نام سے منسوب ہے۔} یا محددی تبادل \عددی{x=g(u,v)}، \عددی{y=h(u,v)} کے \اصطلاح{یعقوبی}\فرہنگ{یعقوبی}\حاشیہب{Jacobian}\فرہنگ{Jacobian} سے مراد درج ذیل ہے:
 \begin{align}\label{مساوات_بالکثرت_یعقوبی_تعریف}
 \renewcommand{\arraystretch}{1.5}
 J(u,v)=\begin{vmatrix}
@@ -6714,15 +6744,62 @@ r(\cos^2\theta+\sin^2\theta)=r
 \end{aligned}
 \end{gather}
 
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\kpi}{3.142/2}
+\begin{axis}[small,axis lines=middle, xlabel={$\rho$},ylabel={$\phi$},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1},ytick={\kpi},yticklabels={$\frac{\pi}{2}$}]
+\addplot[fill=lgray,opacity=0.5]plot coordinates {(0,0)(1,0)(1,pi/2)(0,pi/2)(0,0)};
+\addplot[]plot coordinates {(0.4,0)(0.4,pi/2)};
+\addplot[]plot coordinates {(0.7,0)(0.7,pi/2)};
+\addplot[]plot coordinates {(0,pi/4)(1,pi/4)};
+\addplot[]plot coordinates {(0,pi/5)(1,pi/5)};
+\addplot[fill=gray]plot coordinates {(0.4,pi/5)(0.7,pi/5)(0.7,pi/4)(0.4,pi/4)(0.4,pi/5)};
+\addplot[]plot coordinates{(0.8,pi/3)}node[]{$G$};
+\end{axis}
+\end{tikzpicture}
+\caption{کارتیسی \(\rho\phi\) مستوی}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={fx(\r,\p)=\r*cos(\p);fy(\r,\p)=\r*sin(\p);}]
+\begin{axis}[clip=false,small,axis lines=middle, xlabel={$x$},ylabel={$y$},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1},ytick={1},axis on top,xmax=1.25,ymax=1.25]
+\addplot[name path=fun,domain=0:90] ({fx(1,x)},{fy(1,x)});
+\addplot[domain=0:90] ({fx(0.4,x)},{fy(0.4,x)});
+\addplot[domain=0:90] ({fx(0.7,x)},{fy(0.7,x)});
+\addplot[domain=0:1] ({fx(x,36)},{fy(x,36)});
+\addplot[domain=0:1] ({fx(x,45)},{fy(x,45)});
+\path[name path=xaxis] (axis cs:0,0)--(axis cs:1,0);
+\addplot[fill=llgray] fill between[of=fun and xaxis];
+%
+\addplot[draw=none,name path=ka,domain=36:45] ({fx(0.4,x)},{fy(0.4,x)});
+\addplot[draw=none,name path=kb,domain=36:45] ({fx(0.7,x)},{fy(0.7,x)});
+\addplot[fill=gray] fill between[of=ka and kb];
+\addplot[data cs=polar]plot coordinates {(60,0.8)}node[]{$R$};
+\addplot[data cs=polar]plot coordinates {(0,1)}node[above right]{$\phi=0$};
+\addplot[data cs=polar]plot coordinates {(90,1)}node[above right]{$\phi=\frac{\pi}{2}$};
+\end{axis}
+\end{tikzpicture}
+\caption{کارتیسی \(xy\) مستوی}
+\end{subfigure}
+\caption{
+خطہ \عددی{G} کا تبادلہ مساوات \عددی{x=\rho\cos\phi}، \عددی{y=\rho\sin\phi} خطہ \عددی{R} میں کرتی ہیں۔
+}
+\label{شکل_کثیر_چکور_سے_دائری_خطہ}
+\end{figure}
 
-شکل میں دکھایا گیا ہے کہ کس طرح  مستطیل \عددی{G: 0\le r\le 1,\,0\le \theta\le \pi/2} کو مساوات \عددی{x=r\cos\theta} اور \عددی{y=r\sin\theta}  ایک چوتھائی دائرہ \عددی{R}، جس کی سرحد  ربع اول میں مستوی \عددی{xy} پر \عددی{x^2+y^2=1} ہے، میں بدلتے ہیں۔
+شکل \حوالہ{شکل_کثیر_چکور_سے_دائری_خطہ} میں دکھایا گیا ہے کہ کس طرح  مستطیل \عددی{G: 0\le r\le 1,\,0\le \theta\le \pi/2} کا تبادلہ مساوات \عددی{x=r\cos\theta} اور \عددی{y=r\sin\theta}  ایک چوتھائی دائرہ \عددی{R}، جس کی سرحد  ربع اول میں مستوی \عددی{xy} پر \عددی{x^2+y^2=1} ہے، میں کرتی ہیں۔
 
 دھیان رہے کہ مساوات \حوالہ{مساوات_بالکثرت_قطبی_مستطیل_تکمل} کی دائیں ہاتھ میں قطبی محددی مستوی میں کسی خطہ پر \عددی{f(r\cos\theta,r\sin\theta)} کا تکمل نہیں  بلکہ  کارتیسی \عددی{r,\theta} مستوی کے خطہ \عددی{G} میں   \عددی{f(r\cos\theta,r\sin\theta)} اور \عددی{r} کے حاصل ضرب کا تکمل ہے۔
 
-آئیں بدل کی دوسری مثال دیکھیں۔
+دھیان رہے کہ مساوات تبادل \عددی{x=g(u,v)}، \عددی{y=h(u,v)} خطہ \عددی{G} کا تبادلہ \عددی{R} میں کرتی ہیں مگر یہ مساوات \عددی{R} میں تکمل کو تبدیل کر کے  \عددی{G} میں تکمل  دیتی ہیں۔
+
+آئیں تبادل کی دوسری مثال دیکھیں۔
 
  \ابتدا{مثال}\شناخت{مثال_بالکثرت_بدل_خطہ}
-  مستوی  \عددی{uv} میں موزوں خطہ پر   بدل  
+  مستوی  \عددی{uv} میں موزوں خطہ پر   تبادل  
 \begin{align}\label{مساوات_بالکثرت_بدل_مثال}
 u=\frac{2x-y}{2},\quad v=\frac{y}{2}
 \end{align}
@@ -6730,10 +6807,45 @@ u=\frac{2x-y}{2},\quad v=\frac{y}{2}
 \begin{align*}
 \int_0^4\int_{x=y/2}^{x=y/2+1}\frac{2x-y}{2}\dif x\dif y
 \end{align*}
-حل:\quad
-ہم مستوی  \عددی{xy} میں تکمل کے خطے کا خاکہ بنا کر اس کی سرحدوں کی نشاندہی کرتے ہیں۔
 
-مساوات \حوالہ{مساوات_بالکثرت_یعقوبی_بدل} استعمال کرنے کی خاطر ہمیں مستوی \عددی{uv} میں مطابقتی خطہ \عددی{G} اور بدل کا یعقوبی  معلوم کرنے ہوں  گے۔ انہیں دریافت کرنے کے لئے  ہم مساوات \حوالہ{مساوات_بالکثرت_بدل_مثال} کو \عددی{x} اور \عددی{y} کے لئے \عددی{u}  اور \عددی{v} کی صورت میں حل    کرتے ہیں۔یوں درج ذیل حاصل ہو گا۔
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\kpi}{3.142/2}
+\begin{axis}[clip=false,small,axis lines=middle, xlabel={$u$},ylabel={$v$},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1},ytick={2},axis on top]
+\addplot[fill=lgray,opacity=0.5]plot coordinates {(0,0)(1,0)(1,2)(0,2)(0,0)};
+\addplot[]plot coordinates {(0.5,1)}node[]{$G$};
+\addplot[]plot coordinates {(0,1)}node[left]{$u=0$};
+\addplot[]plot coordinates {(1,1)}node[right]{$u=1$};
+\addplot[]plot coordinates {(0.5,0)}node[below]{$v=0$};
+\addplot[]plot coordinates {(0.5,2)}node[above]{$v=2$};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={fx(\r,\p)=\r*cos(\p);fy(\r,\p)=\r*sin(\p);}]
+\begin{axis}[clip=false,small,axis lines=middle, xlabel={$x$},ylabel={$y$},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1},ytick={4},axis on top]
+\addplot[fill=lgray,opacity=0.5]plot coordinates {(0,0)(1,0)(3,4)(2,4)(0,0)};
+\addplot[]plot coordinates {(1.5,2)}node[]{$R$};
+\addplot[]plot coordinates {(1.75,1.5)}node[right]{$y=2x-2$};
+\addplot[]plot coordinates {(1.5,3)}node[left]{$y=2x$};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+\caption{
+خطہ \عددی{G} کا تبادلہ مساوات \عددی{x=u+v}، \عددی{y=2v} خطہ \عددی{R} میں کرتی  ہیں۔ ان مساوات کو \عددی{u=(2x-y)/2}، \عددی{v=y/2} لکھ کر \عددی{R} کا تبادلہ \عددی{G} میں  کیا جا سکتا ہے۔
+}
+\label{شکل_کثیر_مستطیل_سے_چار_ضلعی}
+\end{figure}
+
+
+حل:\quad
+ہم مستوی  \عددی{xy} میں تکمل کے خطے کا خاکہ بنا کر اس کی سرحدوں کی نشاندہی کرتے ہیں (شکل \حوالہ{شکل_کثیر_مستطیل_سے_چار_ضلعی})۔
+
+مساوات \حوالہ{مساوات_بالکثرت_یعقوبی_بدل} استعمال کرنے کی خاطر ہمیں مستوی \عددی{uv} میں مطابقتی خطہ \عددی{G} اور تبادل کا یعقوبی  معلوم کرنے ہوں  گے۔ انہیں دریافت کرنے کے لئے  ہم مساوات \حوالہ{مساوات_بالکثرت_بدل_مثال} کو \عددی{x} اور \عددی{y} کے لئے \عددی{u}  اور \عددی{v} کی صورت میں حل    کرتے ہیں۔یوں درج ذیل حاصل ہو گا۔
 \begin{align}\label{مساوات_بالکثرت_یو_وی_سرحد}
 x=u+v,\quad y=2v
 \end{align}
@@ -6753,7 +6865,7 @@ y=4&2v=4&v=2\\
 \bottomrule
 \end{tabular}
 \end{center}
-بدل کا یعقوبی  (مساوات \حوالہ{مساوات_بالکثرت_یو_وی_سرحد} سے) درج ذیل ہو گا۔
+تبادل کا یعقوبی  (مساوات \حوالہ{مساوات_بالکثرت_یو_وی_سرحد} سے) درج ذیل ہو گا۔
 \begin{align*}
 \renewcommand{\arraystretch}{1.5}
 J(u,v)=\begin{vmatrix}
@@ -6779,8 +6891,43 @@ J(u,v)=\begin{vmatrix}
 \begin{align*}
 \int_0^1\int_0^{1-x}\sqrt{x+y}(y-2x)^2\dif y\dif x
 \end{align*}
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\kpi}{3.142/2}
+\begin{axis}[clip=false,small,axis lines=middle, xlabel={$u$},ylabel={$v$},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1},xticklabels ={$\rlap{1}$},ytick={-2,1},axis on top]
+\addplot[fill=lgray,opacity=0.5]plot coordinates {(0,0)(1,-2)(1,1)(0,0)};
+\addplot[]plot coordinates {(0.5,0)}node[below]{$G$};
+\addplot[]plot coordinates {(1,-1)}node[right]{$u=1$};
+\addplot[]plot coordinates {(0.5,0.5)}node[above left]{$v=u$};
+\addplot[]plot coordinates {(0.5,-1)}node[below left]{$v=-2u$};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[]
+\begin{axis}[clip=false,small,axis lines=middle, xlabel={$x$},ylabel={$y$},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1},ytick={1},axis on top]
+\addplot[draw=black,fill=lgray,opacity=0.5]plot coordinates {(0,0)(1,0)(0,1)(0,0)};
+\addplot[]plot coordinates {(0.5,0.25)}node[]{$R$};
+\addplot[]plot coordinates {(0.5,0)}node[below]{$y=0$};
+\addplot[]plot coordinates {(0.5,0.5)}node[above right]{$x+y=1$};
+\addplot[]plot coordinates {(0,0.5)}node[left]{$x=0$};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+\caption{
+خطہ \عددی{G} کا تبادلہ مساوات \عددی{x=\tfrac{u}{3}-\tfrac{v}{3}}، \عددی{y=\tfrac{2u}{3}+\tfrac{v}{3}} خطہ \عددی{R} میں کرتی  ہیں۔ ان مساوات  کو \عددی{u=x+y}، \عددی{v=y-2x} لکھ کر \عددی{R} کا تبادلہ \عددی{G} میں  کیا جا سکتا ہے۔
+}
+\label{شکل_کثیر_مثلث_سے_مثلث}
+\end{figure}
+
+
 حل:\quad
-ہم  مستوی{xy} میں تکمل کے خطہ \عددی{R} کا خاکہ بنا  کر اس کی سرحدوں کی نشاندہی کرتے ہیں۔متکمل کو دیکھ کر ہمیں خیال آتا ہے کہ بدل \عددی{u=x+y} اور \عددی{v=y-2x}استعمال کیا جائے جنہیں \عددی{u} اور \عددی{v} کی صورت میں \عددی{x} اور \عددی{y} کے لئے حل کرتے ہوئے درج ذیل حاصل ہو گا۔
+ہم  مستوی{xy} میں تکمل کے خطہ \عددی{R} کا خاکہ بنا  کر اس کی سرحدوں کی نشاندہی کرتے ہیں (شکل \حوالہ{شکل_کثیر_مثلث_سے_مثلث})۔متکمل کو دیکھ کر ہمیں خیال آتا ہے کہ تبادل \عددی{u=x+y} اور \عددی{v=y-2x}استعمال کیا جائے جنہیں \عددی{u} اور \عددی{v} کی صورت میں \عددی{x} اور \عددی{y} کے لئے حل کرتے ہوئے درج ذیل حاصل ہو گا۔
 \begin{align}\label{مساوات_بالکثرت_سرحدیں_دوبارہ}
 x=\frac{u}{3}-\frac{v}{3},\quad y=\frac{2u}{3}+\frac{v}{3}
 \end{align}
@@ -6799,7 +6946,7 @@ y=0&\frac{2u}{3}+\frac{v}{3}=0&v=-2u\\
 \bottomrule
 \end{tabular}
 \end{center}
-مساوات \حوالہ{مساوات_بالکثرت_سرحدیں_دوبارہ} میں دیے بدل کا یعقوبی درج ذیل ہو گا۔
+مساوات \حوالہ{مساوات_بالکثرت_سرحدیں_دوبارہ} میں دیے تبادل کا یعقوبی درج ذیل ہو گا۔
 \begin{align*}
 \renewcommand{\arraystretch}{1.5}
 J(u,v)=\begin{vmatrix}
@@ -6820,9 +6967,41 @@ J(u,v)=\begin{vmatrix}
 %======================
 
 \جزوحصہء{تہرا تکملات میں بدل}
-تہرا تکملات کے متغیرات کی تبدیلی کو   تین بعدی خطہ کا   بدل  تصور کرنے والے ترکیب کی خصوصی صورتیں  نلکی اور کروی محددی بدل ہیں۔ یہ ترکیب دوہرا  تکملات کی ترکیب کی طرح ہے، بس اب ہم دو کی بجائے تین بعد میں کام  کرتے ہیں۔ 
+نلکی اور کروی بدل ان بدل کی خصوصی صورتیں ہیں جو تہرا تکملات کے متغیرات کی تبدیلی کو تین بعدی فضا کا تبادل تصور کرتے ہیں۔ یہ ترکیب دوہرا  تکملات کی ترکیب کی طرح ہے، بس اب ہم دو کی بجائے تین بعد میں کام  کرتے ہیں۔ 
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\kpi}{3.142/2}
+\begin{axis}[view/h=110,clip=false,small,axis lines=middle, xlabel={$u$},ylabel={$v$},zlabel={$w$},enlargelimits=true,xtick={\empty},ytick={\empty},ztick={\empty}]
+\addplot3[fill=gray,opacity=0.5]plot coordinates {(2,1,1)(2,2,1)(2,2,2)(2,1,2)(2,1,1)};
+\addplot3[fill=lgray,opacity=0.5]plot coordinates {(2,2,1)(1,2,1)(1,2,2)(2,2,2)(2,2,1)};
+\addplot3[fill=llgray,opacity=0.5]plot coordinates {(2,2,2)(1,2,2)(1,1,2)(2,1,2)(2,2,2)};
+\addplot3[]plot coordinates {(1,1.5,2)}node[above]{$G$};
+\end{axis}
+\end{tikzpicture}
+\caption{کارتیسی \عددی{uvw} فضا۔}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[]
+\begin{axis}[view/h=110,clip=false,small,axis lines=middle, xlabel={$x$},ylabel={$y$},zlabel={$z$},enlargelimits=true,xtick={\empty},ytick={\empty},ztick={\empty}]
+\addplot3[fill=gray,opacity=0.5]plot coordinates {(2,1,1)(2,2,1)(2,1,2)(2,1,1)};
+\addplot3[fill=lgray,opacity=0.5]plot coordinates {(2,2,1)(1,2,1)(1,1,2)(2,1,2)(2,2,1)};
+\addplot3[]plot coordinates {(1,1.5,1.6)}node[above]{$D$};
+\end{axis}
+\end{tikzpicture}
+\caption{کارتیسی \عددی{xyz} فضا۔}
+\end{subfigure}
+\caption{
+کارتیسی \عددی{xyz} فضا میں خطہ \عددی{D} پر تکمل کا تبادلہ مساوات \عددی{x=g(u,v,w)}، \عددی{y=h(u,v,w)}، \عددی{z=k(u,v,w)}  کارتیسی \عددی{uvw} فضا میں خطہ \عددی{G} پر تکمل میں کرتی ہیں۔
+}
+\label{شکل_کثیر_مکعب_سے_منشور}
+\end{figure}
 
-فرض کریں \عددی{uvw} فضا میں خطہ \عددی{G} کو  ایک ایک مطابقت کے  ساتھ \عددی{xyz} فضا کے خطہ \عددی{D} میں درج ذیل  روپ کی مساواتوں  سے بدلا جاتا ہے۔
+
+فرض کریں \عددی{uvw} فضا میں خطہ \عددی{G} کا تبادلہ  ایک ایک مطابقت کے  ساتھ \عددی{xyz} فضا کے خطہ \عددی{D} میں درج ذیل  روپ کی مساواتوں  سے کیا جاتا ہے (شکل \حوالہ{شکل_کثیر_مکعب_سے_منشور})۔
 \begin{align*}
 x=g(u,v,w),\quad y=h(u,v,w),\quad z=k(u,v,w)
 \end{align*}
@@ -6844,12 +7023,63 @@ J(u,v,w)=\begin{vmatrix}
 \end{vmatrix}=\frac{\partial(x,y,z)}{\partial(u,v,w)}
 \end{align} 
 متغیرات کی تبدیلی کا    کلیہ، جس کو مساوات \حوالہ{مساوات_بالکثرت_یعقوبی_تہرا_تکمل} میں پیش کیا گیا ہے، پیچیدہ ہے اور دو بعدی صورت کی طرح ، اس کی اشتقاق کو یہاں پیش نہیں کیا جائے گا۔
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\kpi}{3.142/2}
+\begin{axis}[view/h=110,clip=false,small,axis lines=middle, xlabel={$\rho$},ylabel={$\phi$},zlabel={$z$},enlargelimits=true,xtick={\empty},ytick={\empty},ztick={\empty},zlabel style={anchor=east}]
+\addplot3[fill=gray,opacity=0.5]plot coordinates {(2,1,1)(2,2,1)(2,2,2)(2,1,2)(2,1,1)};
+\addplot3[fill=lgray,opacity=0.5]plot coordinates {(2,2,1)(1,2,1)(1,2,2)(2,2,2)(2,2,1)};
+\addplot3[fill=llgray,opacity=0.5]plot coordinates {(2,2,2)(1,2,2)(1,1,2)(2,1,2)(2,2,2)};
+\addplot3[]plot coordinates {(1,2,2)}node[right]{$G$};
+\addplot3[]plot coordinates {(1,1.3,2)}node[above]{\begin{minipage}{0.25\textwidth} \text{\RL{ایک مکعب جس کے اطراف محددی}}\\
+ \text{\RL{محوروں کے متوازی ہیں۔}}  \end{minipage}};
+\end{axis}
+\end{tikzpicture}
+\caption{کارتیسی \عددی{\rho\phi z} فضا۔}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={fx(\r,\p)=\r*cos(\p);fy(\r,\p)=\r*sin(\p);}]
+\pgfmathsetmacro{\angS}{45}
+\pgfmathsetmacro{\angE}{60}
+\pgfmathsetmacro{\angC}{50}
+\begin{axis}[view/h=110,clip=false,small,axis lines=middle, xlabel={$x$},ylabel={$y$},zlabel={$z$},enlargelimits=true,xtick={\empty},ytick={\empty},ztick={\empty},zlabel style={anchor=east}]
+\addplot3[name path=kin,domain=\angS:\angE,variable =\p,samples y=0]({fx(1,p)},{fy(1,p)},{2});
+\addplot3[name path=kout,domain=\angS:\angE,variable =\p,samples y=0]({fx(2,p)},{fy(2,p)},{2});
+\addplot3[dashed]plot coordinates {(0,0,2)({fx(1,\angS)},{fy(1,\angS)},{2})};
+\addplot3[dashed]plot coordinates {(0,0,2)({fx(1,\angE)},{fy(1,\angE)},{2})};
+\addplot3[dashed]plot coordinates {(0,0,1)({fx(1,\angS)},{fy(1,\angS)},{1})};
+\addplot3[dashed]plot coordinates {(0,0,1)({fx(1,\angE)},{fy(1,\angE)},{1})};
+\addplot3[]plot coordinates {({fx(1,\angS)},{fy(1,\angS)},{2})({fx(2,\angS)},{fy(2,\angS)},{2})};
+\addplot3[]plot coordinates {({fx(1,\angE)},{fy(1,\angE)},{2})({fx(2,\angE)},{fy(2,\angE)},{2})};
+\addplot[llgray]fill between[of=kout and kin];
+\addplot3[fill=lgray]plot coordinates {({fx(1,\angS)},{fy(1,\angS)},{2})({fx(1,\angS)},{fy(1,\angS)},{1})({fx(2,\angS)},{fy(2,\angS)},{1})({fx(2,\angS)},{fy(2,\angS)},{2})({fx(1,\angS)},{fy(1,\angS)},{2})};
+\addplot3[name path=klow,domain=\angS:\angE,variable=\p]({fx(2,p)},{fy(2,p)},{1});
+\addplot3[fill=lgray]fill between[of=kout and klow];
+\addplot3[]plot coordinates {({fx(2,\angE)},{fy(2,\angE)},{1})({fx(2,\angE)},{fy(2,\angE)},{2})};
+\addplot3[]plot coordinates {({fx(2,\angE)},{fy(2,\angE)},{2})}node[right]{$D$};
+\addplot3[]plot coordinates {({fx(1.5,\angC)},{fy(1.5,\angC)},{2})}node[pin=45:{\text{\RL{مستقل $z$}}}]{};
+\addplot3[]plot coordinates {({fx(2,\angC)},{fy(2,\angC)},{1.5})}node[pin={[pin distance=1cm]-45:{\text{\RL{مستقل $\rho$}}}}]{};
+\addplot3[]plot coordinates {({fx(1.75,\angS)},{fy(1.75,\angS)},{1.25})}node[pin={-135:{\text{\RL{مستقل $\phi$}}}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{کارتیسی \عددی{xyz} فضا۔}
+\end{subfigure}
+\caption{
+خطہ \عددی{G} کا تبادلہ مساوات \عددی{x=\rho\cos\phi}، \عددی{y=\rho\sin\phi}، \عددی{z=z} خطہ \عددی{D} میں کرتی ہیں۔
+}
+\label{شکل_کثیر_مکعب_نلکی_محدد}
+\end{figure}
 
-نلکی محدد میں \عددی{u}، \عددی{v} اور \عددی{w}  کی جگہ \عددی{\rho}، \عددی{\phi} اور \عددی{z} ہوں گے۔ کارتیسی \عددی{\rho\phi z} فضا سے کارتیسی \عددی{xyz} فضا میں بدل درج ذیل مساوات دیں گی۔
+
+نلکی محدد میں \عددی{u}، \عددی{v} اور \عددی{w}  کی جگہ \عددی{\rho}، \عددی{\phi} اور \عددی{z} ہوں گے۔ کارتیسی \عددی{\rho\phi z} فضا سے کارتیسی \عددی{xyz} فضا میں تبادل درج ذیل مساوات دیں گی (شکل \حوالہ{شکل_کثیر_مکعب_نلکی_محدد})۔
 \begin{align*}
 x=\rho\cos\phi,\quad y=\rho\sin\phi,\quad z=z
 \end{align*}   
-اس بدل کا یعقوبی
+اس تبادل کا یعقوبی
 \begin{align*}
 \renewcommand{\arraystretch}{1.5}
 J(\rho,\phi,z)=&\begin{vmatrix}
@@ -6870,14 +7100,68 @@ J(\rho,\phi,z)=&\begin{vmatrix}
     جب بھی \عددی{\rho\ge 0} ہو، ہم  مطلق کی علامت سے چھٹکارا حاصل کر سکتے ہیں۔ 
 
 
-کروی  محدد میں \عددی{u}، \عددی{v} اور \عددی{w}  کی جگہ \عددی{r}، \عددی{\theta} اور \عددی{\phi} ہوں گے۔ کارتیسی \عددی{r \theta\phi} فضا سے کارتیسی \عددی{xyz} فضا میں بدل درج ذیل مساوات دیں گی۔
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\kpi}{3.142/2}
+\begin{axis}[view/h=110,clip=false,small,axis lines=middle, xlabel={$r$},ylabel={$\theta$},zlabel={$\phi$},enlargelimits=true,xtick={\empty},ytick={\empty},ztick={\empty},zlabel style={anchor=east}]
+\addplot3[fill=gray,opacity=0.5]plot coordinates {(2,1,1)(2,2,1)(2,2,2)(2,1,2)(2,1,1)};
+\addplot3[fill=lgray,opacity=0.5]plot coordinates {(2,2,1)(1,2,1)(1,2,2)(2,2,2)(2,2,1)};
+\addplot3[fill=llgray,opacity=0.5]plot coordinates {(2,2,2)(1,2,2)(1,1,2)(2,1,2)(2,2,2)};
+\addplot3[]plot coordinates {(1,2,2)}node[right]{$G$};
+\addplot3[]plot coordinates {(1,1.3,2)}node[above]{\begin{minipage}{0.25\textwidth} \text{\RL{ایک مکعب جس کے اطراف محددی}}\\
+ \text{\RL{محوروں کے متوازی ہیں۔}}  \end{minipage}};
+\end{axis}
+\end{tikzpicture}
+\caption{کارتیسی \عددی{r\theta\phi} فضا۔}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={fx(\r,\t,\p)=\r*sin(\t)*cos(\p);fy(\r,\t,\p)=\r*sin(\t)*sin(\p);fz(\r,\t,\p)=\r*cos(\t);}]
+\pgfmathsetmacro{\rS}{2}
+\pgfmathsetmacro{\rE}{3}
+\pgfmathsetmacro{\tS}{30}
+\pgfmathsetmacro{\tE}{45}
+\pgfmathsetmacro{\pS}{45}
+\pgfmathsetmacro{\pE}{60}
+\pgfmathsetmacro{\rC}{1/2*(\rS+\rE)}
+\pgfmathsetmacro{\tC}{1/2*(\tS+\tE)}
+\pgfmathsetmacro{\pC}{1/2*(\pS+\pE)}
+\pgfmathsetmacro{\pCC}{\pS+1/3*(\pE-\pS)}
+\begin{axis}[view/h=110,clip=false,small,axis lines=middle, xlabel={$x$},ylabel={$y$},zlabel={$z$},enlargelimits=true,xtick={\empty},ytick={\empty},ztick={\empty},zlabel style={anchor=east},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\addplot3[name path=fin,domain=\tS:\tE,variable=\t,samples y=0]({fx(\rS,t,\pS)},{fy(\rS,t,\pS)},{fz(\rS,t,\pS)});
+\addplot3[name path=fout,domain=\tS:\tE,variable=\t,samples y=0]({fx(\rE,t,\pS)},{fy(\rE,t,\pS)},{fz(\rE,t,\pS)});\addplot3[domain=\rS:\rE,variable=\r,samples y=0]({fx(r,\tS,\pS)},{fy(r,\tS,\pS)},{fz(r,\tS,\pS)});
+\addplot3[domain=\rS:\rE,variable=\r,samples y=0]({fx(r,\tE,\pS)},{fy(r,\tE,\pS)},{fz(r,\tE,\pS)});
+\addplot[fill=lgray] fill between [of=fin and fout];
+\addplot3[domain=\pS:\pE,variable=\p,samples y=0]({fx(\rE,\tS,p)},{fy(\rE,\tS,p)},{fz(\rE,\tS,p)});
+\addplot3[name path=outHigh,domain=\pS:\pE,variable=\p,samples y=0]({fx(\rE,\tE,p)},{fy(\rE,\tE,p)},{fz(\rE,\tE,p)});
+\addplot3[domain=\tS:\tE,variable=\t,samples y=0]({fx(\rE,t,\pE)},{fy(\rE,t,\pE)},{fz(\rE,t,\pE)});
+\addplot3[domain=\rS:\rE,variable=\r,samples y=0]({fx(r,\tE,\pE)},{fy(r,\tE,\pE)},{fz(r,\tE,\pE)});
+\addplot3[name path=outLow,domain=\pS:\pE,variable=\p,samples y=0]({fx(\rS,\tE,p)},{fy(\rS,\tE,p)},{fz(\rS,\tE,p)});
+\addplot[fill=llgray]fill between [of=outLow and outHigh];
+\addplot3[]plot coordinates {({fx(\rE,\tC,\pC)},{fy(\rE,\tC,\pC)},{fz(\rE,\tC,\pC)})}node[pin=45:{\text{\RL{مستقل $r$}}}]{};
+\addplot3[]plot coordinates {({fx(\rC,\tC,\pS)},{fy(\rC,\tC,\pS)},{fz(\rC,\tC,\pS)})}node[pin=-110:{\text{\RL{مستقل $\phi$}}}]{};
+\addplot3[]plot coordinates {({fx(\rC,\tE,\pCC)},{fy(\rC,\tE,\pCC)},{fz(\rC,\tE,\pCC)})}node[pin={-45:{\text{\RL{مستقل $\theta$}}}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{کارتیسی \عددی{xyz} فضا۔}
+\end{subfigure}
+\caption{
+خطہ \عددی{G} کا تبادلہ مساوات \عددی{x=r\sin\theta\cos\phi}، \عددی{y=r\sin\theta\sin\phi}، \عددی{z=r\cos\theta} خطہ \عددی{D} میں کرتی ہیں۔
+}
+\label{شکل_کثیر_مکعب_کروی_محدد}
+\end{figure}
+
+کروی  محدد میں \عددی{u}، \عددی{v} اور \عددی{w}  کی جگہ \عددی{r}، \عددی{\theta} اور \عددی{\phi} ہوں گے۔ کارتیسی \عددی{r \theta\phi} فضا سے کارتیسی \عددی{xyz} فضا میں تبادل درج ذیل مساوات دیں گی (شکل \حوالہ{شکل_کثیر_مکعب_کروی_محدد})۔
 \begin{align*}
 x=r\sin\theta\cos\phi,\quad y=r\sin\theta\sin\phi,\quad z=r\sin\theta
 \end{align*}   
-اس بدل کا یعقوبی
+اس تبادل کا یعقوبی
 \begin{align}\label{مساوات_بالکثرت_کروی_یعقوبی}
 \renewcommand{\arraystretch}{1.5}
-J(\rho,\phi,z)=&\begin{vmatrix}
+J(r,\theta,\phi)=&\begin{vmatrix}
 \frac{\partial x}{\partial r}&\frac{\partial x}{\partial \theta}&\frac{\partial x}{\partial \phi}\\
 \frac{\partial y}{\partial r}&\frac{\partial y}{\partial \theta}&\frac{\partial y}{\partial \phi}\\
 \frac{\partial z}{\partial r}&\frac{\partial z}{\partial \theta}&\frac{\partial z}{\partial \phi}
@@ -6889,10 +7173,10 @@ J(\rho,\phi,z)=&\begin{vmatrix}
 \end{align}
  کروی محدد میں \عددی{0\le \theta\le \pi} کی بنا   \عددی{\sin\theta} کبھی بھی منفی نہیں ہو  سکتا   ہے  لہٰذا مطلق کی علامت لکھنے کی ضرورت نہیں ہے۔ 
 
-آئیں بدل کی ایک مثال دیکھتے ہیں۔
+آئیں تبادل کی ایک مثال دیکھتے ہیں۔
 
 \ابتدا{مثال}\شناخت{مثال_بالکثرت_بدل_تکمل}
-درج ذیل بدل 
+درج ذیل تبادل 
 \begin{align}\label{مساوات_بالکثرت_کروی_بدل}
 u=(2x-y)/2,\quad v=y/2,\quad w=z/3
 \end{align}
@@ -6900,10 +7184,45 @@ u=(2x-y)/2,\quad v=y/2,\quad w=z/3
 \begin{align*}
 \int_0^3\int_0^4\int_{x=y/2}^{x=y/2+1} \big(\frac{2x-y}{2}+\frac{z}{3}\big)\dif x\dif y\dif z
 \end{align*}
-حل:\quad
-ہم \عددی{xyz} فضا میں تکمل کے خطہ \عددی{D} کا خاکہ بنا کر اس کی سرحدوں کی نشاندہی کرتے ہیں۔ یہاں سرحدی سطحیں مستویات ہیں۔
 
-مساوات \حوالہ{مساوات_بالکثرت_یعقوبی_تہرا_تکمل}  استعمال کرنے کے لئے ہمیں  \عددی{uvw}  فضا میں  مطابقتی خطہ \عددی{G} اور بدل کا یعقوبی جاننا ہو گا۔ ہم مساوات \حوالہ{مساوات_بالکثرت_کروی_بدل} کو \عددی{x}، \عددی{y} اور \عددی{z} کے لئے \عددی{u}، \عددی{v} اور \عددی{w} کی صورت میں حل کر کے 
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[view/h=110,clip=false,small,axis lines=middle, xlabel={$u$},ylabel={$v$},zlabel={$w$},enlargelimits=true,xtick={1},ytick={2},ztick={1},xlabel style={anchor=north east},ylabel style={anchor=west},zlabel style={anchor=south}]
+\addplot3[fill=gray,opacity=0.5]plot coordinates {(1,0,0)(1,2,0)(1,2,1)(1,0,1)(1,0,0)};
+\addplot3[fill=lgray,opacity=0.5]plot coordinates {(1,2,0)(0,2,0)(0,2,1)(1,2,1)(1,2,0)};
+\addplot3[fill=llgray,opacity=0.5]plot coordinates {(1,0,1)(1,2,1)(0,2,1)(0,0,1)(1,0,1)};
+\addplot3[]plot coordinates {(0,2,1)}node[right]{$G$};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[]
+\begin{axis}[view/h=110,clip=false,small,axis lines=middle, xlabel={$x$},ylabel={$y$},zlabel={$z$},enlargelimits=true,xtick={1},ytick={4},ztick={3},ylabel style={anchor=west},zlabel style={anchor=south}]
+\addplot3[fill=gray,opacity=0.5]plot coordinates {(1,0,0)(3,4,0)(3,4,3)(1,0,3)(1,0,0)};
+\addplot3[fill=lgray,opacity=0.5]plot coordinates {(3,4,0)(2,4,0)(2,4,3)(3,4,3)(3,4,0)};
+\addplot3[fill=llgray,opacity=0.5]plot coordinates {(1,0,3)(3,4,3)(2,4,3)(0,0,3)(1,0,3)};
+\addplot3[dashed]plot coordinates {(0,0,0)(2,4,0)};
+\addplot3[dashed]plot coordinates {(2,4,0)(0,4,0)};
+\addplot3[]plot coordinates {(2,4,3)}node[right]{$D$};
+\addplot3[]plot coordinates {(1,2,3)}node[pin=45:{\begin{minipage}{0.2\textwidth} \text{\RL{پچھلی سطح}}\\ \(x=\frac{y}{2}\) \end{minipage}}]{};
+\addplot3[]plot coordinates {(2,2,0)}node[pin={[below]-135:{\begin{minipage}{0.4\textwidth} \text{\RL{سامنے والی سطح}}\\ \(x=\frac{y}{2}+1\) \end{minipage}}}]{};
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+\caption{
+خطہ \عددی{G}  کا تبادلہ مساوات \عددی{x=u+v}، \عددی{y=2v}، \عددی{z=3w} خطہ \عددی{D} میں  کرتی ہیں جبکہ ان کی مخالف مساوات \عددی{u=\tfrac{2x-y}{2}}، \عددی{v=\tfrac{y}{2}}، \عددی{w=\tfrac{z}{3}} خطہ \عددی{D} کا تبادلہ \عددی{G} میں  کرتی ہیں۔
+}
+\label{شکل_کثیر_مکعب_سے_مستطیل}
+\end{figure}
+
+حل:\quad
+ہم \عددی{xyz} فضا میں تکمل کے خطہ \عددی{D} کا خاکہ بنا کر اس کی سرحدوں کی نشاندہی کرتے ہیں (شکل \حوالہ{شکل_کثیر_مکعب_سے_مستطیل})۔ یہاں سرحدی سطحیں مستویات ہیں۔
+
+مساوات \حوالہ{مساوات_بالکثرت_یعقوبی_تہرا_تکمل}  استعمال کرنے کے لئے ہمیں  \عددی{uvw}  فضا میں  مطابقتی خطہ \عددی{G} اور تبادل کا یعقوبی جاننا ہو گا۔ ہم مساوات \حوالہ{مساوات_بالکثرت_کروی_بدل} کو \عددی{x}، \عددی{y} اور \عددی{z} کے لئے \عددی{u}، \عددی{v} اور \عددی{w} کی صورت میں حل کر کے 
 \begin{align}\label{مساوات_بالکثرت_نئے_متغیرات}
 x=u+v,\quad y=2v,\quad z=3w
 \end{align}
@@ -6950,14 +7269,14 @@ J(u,v,w)=\begin{vmatrix}
 
 \جزوحصہء{سوالات}
 \ابتدا{سوالات}
-\موٹا{بدل محدد}\\
+\موٹا{تبادل محدد}\\
 \ابتدا{سوال}\شناخت{سوال_بالکثرت_بدل_الف}
 \begin{enumerate}[a.]
 \item
 درج ذیل نظام کو \عددی{x} اور \عددی{y} کے لئے \عددی{u} اور \عددی{v} کی صورت میں حل کریں۔ اس کے بعد یعقوبی \عددی{\tfrac{\partial(x,y)}{\partial(u,v)}} کی قیمت تلاش کریں۔
 \[u=x-y,\quad v=2x+y\]
 \item
-مستوی \عددی{xy} میں تکونی خطہ جس کے راس \عددی{(0,0)}، \عددی{(1,1)} اور \عددی{(1,-2)} ہیں  کا عکس بدل \عددی{u=x-y}، \عددی{v=2x+y} میں تلاش کریں۔ مستوی \عددی{uv} میں تبدیل شدہ  خطے کا خاکہ بنائیں۔
+مستوی \عددی{xy} میں تکونی خطہ جس کے راس \عددی{(0,0)}، \عددی{(1,1)} اور \عددی{(1,-2)} ہیں  کا عکس تبادل \عددی{u=x-y}، \عددی{v=2x+y} میں تلاش کریں۔ مستوی \عددی{uv} میں تبدیل شدہ  خطے کا خاکہ بنائیں۔
 \end{enumerate}
 \انتہا{سوال}
 %======================
@@ -6976,7 +7295,7 @@ J(u,v,w)=\begin{vmatrix}
 درج ذیل نظام کو \عددی{x} اور \عددی{y} کے لئے \عددی{u} اور \عددی{v} کی صورت میں حل کریں۔ اس کے بعد یعقوبی \عددی{\tfrac{\partial(x,y)}{\partial(u,v)}} کی قیمت تلاش کریں۔
 \[u=x+2y,\quad v=x-y\]
 \item
-مستوی \عددی{xy} میں  لکیر  \عددی{y=0}، \عددی{y=x} اور \عددی{x+2y=2} کے بیچ  تکونی خطے   کا عکس بدل \عددی{u=x+2y}، \عددی{v=x-y} میں تلاش کریں۔ مستوی \عددی{uv} میں تبدیل شدہ  خطے کا خاکہ بنائیں۔
+مستوی \عددی{xy} میں  لکیر  \عددی{y=0}، \عددی{y=x} اور \عددی{x+2y=2} کے بیچ  تکونی خطے   کا عکس تبادل \عددی{u=x+2y}، \عددی{v=x-y} میں تلاش کریں۔ مستوی \عددی{uv} میں تبدیل شدہ  خطے کا خاکہ بنائیں۔
 
 \end{enumerate}
 \انتہا{سوال}
@@ -6987,7 +7306,7 @@ J(u,v,w)=\begin{vmatrix}
 درج ذیل نظام کو \عددی{x} اور \عددی{y} کے لئے \عددی{u} اور \عددی{v} کی صورت میں حل کریں۔ اس کے بعد یعقوبی \عددی{\tfrac{\partial(x,y)}{\partial(u,v)}} کی قیمت تلاش کریں۔
 \[u=3x+2y,\quad v=x+4y\]
 \item
-مستوی \عددی{xy} میں محور   \عددی{x}، محور  \عددی{y} اور لکیر  \عددی{x+y=1} کے بیچ  تکونی خطے   کا عکس بدل \عددی{u=3x+2y}، \عددی{v=x+4y} میں تلاش کریں۔ مستوی \عددی{uv} میں تبدیل شدہ  خطے کا خاکہ بنائیں۔
+مستوی \عددی{xy} میں محور   \عددی{x}، محور  \عددی{y} اور لکیر  \عددی{x+y=1} کے بیچ  تکونی خطے   کا عکس تبادل \عددی{u=3x+2y}، \عددی{v=x+4y} میں تلاش کریں۔ مستوی \عددی{uv} میں تبدیل شدہ  خطے کا خاکہ بنائیں۔
 \end{enumerate}
 \انتہا{سوال}
 %========================
@@ -7005,12 +7324,12 @@ J(u,v,w)=\begin{vmatrix}
 درج ذیل نظام کو \عددی{x} اور \عددی{y} کے لئے \عددی{u} اور \عددی{v} کی صورت میں حل کریں۔ اس کے بعد یعقوبی \عددی{\tfrac{\partial(x,y)}{\partial(u,v)}} کی قیمت تلاش کریں۔
 \[u=2x-3y,\quad v=-x+y\]
 \item
-مستوی \عددی{xy} میں    \عددی{x=-3}،   \عددی{x=0}، \عددی{y=x} اور   \عددی{y=x+1} کے بیچ   متوازی  الاضلاع کا عکس بدل \عددی{u=2x-3y}، \عددی{v=-x+y} میں تلاش کریں۔ مستوی \عددی{uv} میں تبدیل شدہ  خطے کا خاکہ بنائیں۔
+مستوی \عددی{xy} میں    \عددی{x=-3}،   \عددی{x=0}، \عددی{y=x} اور   \عددی{y=x+1} کے بیچ   متوازی  الاضلاع کا عکس تبادل \عددی{u=2x-3y}، \عددی{v=-x+y} میں تلاش کریں۔ مستوی \عددی{uv} میں تبدیل شدہ  خطے کا خاکہ بنائیں۔
 \end{enumerate}
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}
-درج ذیل بدل کے یعقوبی تلاش کریں۔
+درج ذیل تبادل کے یعقوبی تلاش کریں۔
 \begin{multicols}{2}
 \begin{enumerate}[a.]
 \item
@@ -7031,7 +7350,7 @@ J(u,v,w)=\begin{vmatrix}
 \انتہا{جواب}
 %===============================
 \ابتدا{سوال}
-درج ذیل بدل کے یعقوبی تلاش کریں۔
+درج ذیل تبادل کے یعقوبی تلاش کریں۔
 \begin{enumerate}[a.]
 \item
 \(x=u\cos v,\quad y=u\sin v,\quad z=w\)
@@ -7050,12 +7369,12 @@ J(u,v,w)=\begin{vmatrix}
 \انتہا{سوال}
 %================
 \ابتدا{سوال}
-ربع اول میں  لکیر \عددی{y=-2x+4}، \عددی{y=-2x+7}، \عددی{y=x-2} اور \عددی{y=x+1} کے بیچ  خطہ \عددی{R}  پر درج ذیل تکمل کی قیمت سوال \حوالہ{سوال_بالکثرت_بدل_الف} کا بدل استعمال کرتے ہوئے حاصل کریں۔
+ربع اول میں  لکیر \عددی{y=-2x+4}، \عددی{y=-2x+7}، \عددی{y=x-2} اور \عددی{y=x+1} کے بیچ  خطہ \عددی{R}  پر درج ذیل تکمل کی قیمت سوال \حوالہ{سوال_بالکثرت_بدل_الف} کا تبادل استعمال کرتے ہوئے حاصل کریں۔
 \[\iint\limits_R(2x^2-xy-y^2)\dif x\dif y\]
 \انتہا{سوال}
 %======================
 \ابتدا{سوال}
-ربع اول میں  لکیر \عددی{y=-\tfrac{3}{2}x+1}،   \عددی{y=-\tfrac{3}{2}x+3} ، \عددی{y=-\tfrac{1}{4}x} اور \عددی{y=-\tfrac{1}{4}x+1} کے بیچ  خطہ  \عددی{R}  پر درج ذیل تکمل کی قیمت سوال \حوالہ{سوال_بالکثرت_بدل_پ} کا بدل استعمال کرتے ہوئے حاصل کریں۔
+ربع اول میں  لکیر \عددی{y=-\tfrac{3}{2}x+1}،   \عددی{y=-\tfrac{3}{2}x+3} ، \عددی{y=-\tfrac{1}{4}x} اور \عددی{y=-\tfrac{1}{4}x+1} کے بیچ  خطہ  \عددی{R}  پر درج ذیل تکمل کی قیمت سوال \حوالہ{سوال_بالکثرت_بدل_پ} کا تبادل استعمال کرتے ہوئے حاصل کریں۔
 \[\iint\limits_R(3x^2+14xy+8y^2)\dif x\dif y\]
 \انتہا{سوال}
 %=====================
@@ -7066,12 +7385,12 @@ J(u,v,w)=\begin{vmatrix}
 \انتہا{جواب}
 %===============================
 \ابتدا{سوال}
-درج ذیل تکمل کی قیمت  سوال \حوالہ{سوال_بالکثرت_بدل_ت}  کا  خطہ \عددی{R}  اور بدل استعمال کرتے ہوئے دریافت کریں۔
+درج ذیل تکمل کی قیمت  سوال \حوالہ{سوال_بالکثرت_بدل_ت}  کا  خطہ \عددی{R}  اور تبادل استعمال کرتے ہوئے دریافت کریں۔
 \[\iint\limits_R 2(x-y)\dif x\dif y\] 
 \انتہا{سوال}
 %==================
 \ابتدا{سوال}
-ربع اول میں مستوی \عددی{xy} میں  قطع زائد \عددی{xy=1}،  \عددی{xy=9} اور لکیر \عددی{y=x}، \عددی{y=4x} کے بیچ خطہ \عددی{R} ہے۔ بدل \عددی{x=u/v}، \عددی{y=uv} جہاں  \عددی{u>0}، \عددی{v>0} ہیں استعمال  کرتے ہوئے درج ذیل تکمل کو  مستوی \عددی{uv}   میں موزوں خطہ \عددی{G} پر ایک  تکمل کی صورت میں  لکھیں۔
+ربع اول میں مستوی \عددی{xy} میں  قطع زائد \عددی{xy=1}،  \عددی{xy=9} اور لکیر \عددی{y=x}، \عددی{y=4x} کے بیچ خطہ \عددی{R} ہے۔ تبادل \عددی{x=u/v}، \عددی{y=uv} جہاں  \عددی{u>0}، \عددی{v>0} ہیں استعمال  کرتے ہوئے درج ذیل تکمل کو  مستوی \عددی{uv}   میں موزوں خطہ \عددی{G} پر ایک  تکمل کی صورت میں  لکھیں۔
 \[\iint\limits_R \big(\sqrt{\frac{y}{x}}+\sqrt{xy}\big)\dif x\dif y\]
 خطہ \عددی{G} پر اس \عددی{uv} تکمل کی قیمت تلاش کریں۔
 \انتہا{سوال}
@@ -7083,12 +7402,12 @@ J(u,v,w)=\begin{vmatrix}
 \انتہا{جواب}
 %===============================
 \ابتدا{سوال}
-(ا)  بدل \عددی{x=u}، \عددی{y=uv} کا یعقوبی تلاش کریں اور خطہ \عددی{G:1\le u\le 2,\,1\le uv\le 2} کا  مستوی \عددی{uv} میں  خاکہ بنائیں۔ (ب) اس کے بعد مساوات \حوالہ{مساوات_بالکثرت_یعقوبی_بدل} استعمال کرتے ہوئے درج ذیل تکمل  کو \عددی{G}  پر ایک تکمل کی صورت میں لکھیں۔ دونوں تکملات کو حل کرتے ہوئے تکمل کی قیمتیں حاصل کریں۔
+(ا)  تبادل \عددی{x=u}، \عددی{y=uv} کا یعقوبی تلاش کریں اور خطہ \عددی{G:1\le u\le 2,\,1\le uv\le 2} کا  مستوی \عددی{uv} میں  خاکہ بنائیں۔ (ب) اس کے بعد مساوات \حوالہ{مساوات_بالکثرت_یعقوبی_بدل} استعمال کرتے ہوئے درج ذیل تکمل  کو \عددی{G}  پر ایک تکمل کی صورت میں لکھیں۔ دونوں تکملات کو حل کرتے ہوئے تکمل کی قیمتیں حاصل کریں۔
 \[\int_1^2\int_1^2\frac{y}{x}\dif y\dif x\]
 \انتہا{سوال}
 %======================
 \ابتدا{سوال}
-مستوی \عددی{xy} میں ترخیم \عددی{\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}=1,\,a>0,b>0} کے بیچ خطہ پر مستقل کثافت کی پتلی چادر  کی مبدا کے لحاظ سے  معیار  اثر اول  تلاش کریں۔ (اشارہ: بدل \عددی{x=ar\cos\theta}، \عددی{y=br\sin\theta} استعمال کریں۔)
+مستوی \عددی{xy} میں ترخیم \عددی{\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}=1,\,a>0,b>0} کے بیچ خطہ پر مستقل کثافت کی پتلی چادر  کی مبدا کے لحاظ سے  معیار  اثر اول  تلاش کریں۔ (اشارہ: تبادل \عددی{x=ar\cos\theta}، \عددی{y=br\sin\theta} استعمال کریں۔)
 \انتہا{سوال}
 %=======================
 \ابتدا{جواب}
@@ -7098,11 +7417,11 @@ J(u,v,w)=\begin{vmatrix}
 \انتہا{جواب}
 %===============================
 \ابتدا{سوال}
-مستوی \عددی{xy} میں   \عددی{\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}=1}  پر تفاعل \عددی{f(x,y)=1} کا تکمل لے کر ترخیم کا رقبہ \عددی{\pi ab} حاصل کیا جا سکتا ہے۔ اس تکمل کو سیدھا حل کرنے کے لئے اس میں تکونیاتی تفاعل  پر کرنا ہو گا۔ اس سے آسان طریقہ بدل \عددی{x=au}، \عددی{y=bv} استعمال کرتے ہوئے تبدیل شدہ تکمل کی    قیمت کا مستوی \عددی{uv}     میں  قرص \عددی{G:u^2+v^2\le 1} پر حصول ہے۔
+مستوی \عددی{xy} میں   \عددی{\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}=1}  پر تفاعل \عددی{f(x,y)=1} کا تکمل لے کر ترخیم کا رقبہ \عددی{\pi ab} حاصل کیا جا سکتا ہے۔ اس تکمل کو سیدھا حل کرنے کے لئے اس میں تکونیاتی تفاعل  پر کرنا ہو گا۔ اس سے آسان طریقہ تبادل \عددی{x=au}، \عددی{y=bv} استعمال کرتے ہوئے تبدیل شدہ تکمل کی    قیمت کا مستوی \عددی{uv}     میں  قرص \عددی{G:u^2+v^2\le 1} پر حصول ہے۔
 \انتہا{سوال}
 %=========================
 \ابتدا{سوال}
-درج ذیل تکمل کو پہلے مستوی \عددی{uv}  میں خطہ \عددی{G} پر سوال \حوالہ{سوال_بالکثرت_بدل_ب} کے بدل سے تبدیل کرتے ہوئے  حل کریں۔
+درج ذیل تکمل کو پہلے مستوی \عددی{uv}  میں خطہ \عددی{G} پر سوال \حوالہ{سوال_بالکثرت_بدل_ب} کے تبادل سے تبدیل کرتے ہوئے  حل کریں۔
 \[\int_0^{2/3}\int_y^{2-2y}(x+2y)e^{(y-x)}\dif x\dif y\]
 \انتہا{سوال}
 %======================
@@ -7113,13 +7432,13 @@ J(u,v,w)=\begin{vmatrix}
 \انتہا{جواب}
 %===============================
 \ابتدا{سوال}
-مستوی \عددی{uv} میں درج ذیل تکمل  کو بدل \عددی{x=u+\tfrac{v}{2}}، \عددی{y=v} کی مدد سے منتقل کریں۔ تبدیل شدہ تکمل کی قیمت تلاش کریں۔
+مستوی \عددی{uv} میں درج ذیل تکمل  کو تبادل \عددی{x=u+\tfrac{v}{2}}، \عددی{y=v} کی مدد سے منتقل کریں۔ تبدیل شدہ تکمل کی قیمت تلاش کریں۔
 \[\int_0^2\int_{y/2}^{(y+4)/2}y^3(2x-y)e^{(2x-y)^2}\dif x\dif y\]
 \انتہا{سوال}
 %=======================
 \موٹا{تہرا تکملات}\\
 \ابتدا{سوال}\شناخت{سوال_بالکثرت_کروی_یعقوبی}
-کارتیسی \عددی{r\theta\phi} فضا  سے کارتیسی \عددی{xyz} فضا کے بدل کا یعقوبی مساوات \حوالہ{مساوات_بالکثرت_کروی_یعقوبی} کا مقطع  دیتا ہے۔ اس مقطع  کو حل کر کے اس کی قیمت \عددی{r^2\sin\theta} حاصل کریں۔
+کارتیسی \عددی{r\theta\phi} فضا  سے کارتیسی \عددی{xyz} فضا کے تبادل کا یعقوبی مساوات \حوالہ{مساوات_بالکثرت_کروی_یعقوبی} کا مقطع  دیتا ہے۔ اس مقطع  کو حل کر کے اس کی قیمت \عددی{r^2\sin\theta} حاصل کریں۔
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
@@ -7129,7 +7448,7 @@ J(u,v,w)=\begin{vmatrix}
 \ابتدا{سوال}
 ترخیم نما 
 \[\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1\]
-کا حجم تلاش کریں۔(اشارہ: بدل \عددی{x=au}، \عددی{y=bv}، \عددی{z=cw}  لے کر فضا \عددی{uvw} میں موزوں خطہ پر تکمل  کی قیمت تلاش کریں۔)
+کا حجم تلاش کریں۔(اشارہ: تبادل \عددی{x=au}، \عددی{y=bv}، \عددی{z=cw}  لے کر فضا \عددی{uvw} میں موزوں خطہ پر تکمل  کی قیمت تلاش کریں۔)
 \انتہا{سوال}
 %========================
 \ابتدا{جواب}
@@ -7141,14 +7460,14 @@ J(u,v,w)=\begin{vmatrix}
 \ابتدا{سوال}
 ٹھوس ترخیم نما 
 \[\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}\le 1\]
-پر درج ذیل تکمل کی قیمت تلاش کریں۔(اشارہ: بدل \عددی{x=au}، \عددی{y=bv}، \عددی{z=cw} لے کر فضا \عددی{uvw} میں موزوں خطہ پر تکمل  کی قیمت تلاش کریں۔)
+پر درج ذیل تکمل کی قیمت تلاش کریں۔(اشارہ: تبادل \عددی{x=au}، \عددی{y=bv}، \عددی{z=cw} لے کر فضا \عددی{uvw} میں موزوں خطہ پر تکمل  کی قیمت تلاش کریں۔)
 \[\iiint \abs{xyz}\dif x\dif y\dif z\]
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}
 فضا \عددی{xyz} میں  خطہ \عددی{D} درج           ذیل ہے۔
 \[1\le x\le 2,\quad 0\le xy\le 2,\quad 0\le z\le 1\]
-بدل
+تبادل
 \[u=x,\quad v=xy,\quad w=3z\]
 استعمال کر کے فضا  \عددی{uvw}  میں موزوں خطہ \عددی{G}  پر درج ذیل  تکمل کی قیمت تلاش کریں۔
 \[\iiint\limits_D (x^2y+3xyz)\dif x\dif y\dif z\]
@@ -7167,7 +7486,7 @@ J(u,v,w)=\begin{vmatrix}
 \انتہا{سوال}
 %=========================
 \ابتدا{سوال}
-واحد متغیر کے تکملات  میں بدل کو کس طرح ترکیب بدل کی ایک خصوصی روپ تصور کیا جا سکتا ہے؟ ان میں یعقوبی کی قیمت کیا ہو گی؟ ایک مثال کی مدد سے وضاحت کریں۔
+واحد متغیر کے تکملات  میں بدل کو کس طرح ترکیب تبادل کا ایک خصوصی روپ تصور کیا جا سکتا ہے؟ ان میں یعقوبی کی قیمت کیا ہو گی؟ ایک مثال کی مدد سے وضاحت کریں۔
 \انتہا{سوال}
 %======================
 \انتہا{سوالات}

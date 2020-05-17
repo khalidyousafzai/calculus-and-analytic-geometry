@@ -1,0 +1,3317 @@
+
+%1060
+
+\( \kvec{r}(t)=g(t)\ai + h(t)\aj +k(t)\ak \quad , \quad a\le t \le b,            \)  
+\(   f(x,y,z)          \)  
+\(   f(g(t),h(t),k(t))          \)  
+\(     t=a        \)  
+\(   t=b          \)  
+\(     f(x,y,z)        \)  
+\(   \kvec{r}(t)=g(t)\ai + h(t)\aj+k(t)\ak, a\le t \le b          \)  
+\(   (x_{k}, y_{k} , z_{k}  )                 \)  
+ \[   S_{n}=\sum^{n}_{k=1}f(x_{k}, y_{k} , z_{k}  ) \Delta s_{k}          \]
+   \[   \int_{c}f(x,y,z)\dif{s}           \]
+
+%1061
+\(             \)             \[              \]
+\( \kvec{r}(t)=g(t)\ai + h(t)\aj +k(t)\ak \quad , \quad a\le t \le b,            \)  
+\(   f(x,y,z)          \)  
+\(   f(g(t),h(t),k(t))          \)  
+\(     t=a        \)  
+\(   t=b          \)  
+\(     f(x,y,z)        \)  
+\(   \kvec{r}(t)=g(t)\ai + h(t)\aj+k(t)\ak, a\le t \le b          \)  
+\(   (x_{k}, y_{k} , z_{k}  )                 \)  
+ \[   S_{n}=\sum^{n}_{k=1}f(x_{k}, y_{k} , z_{k}  ) \Delta s_{k}          \]
+   \[   \int_{c}f(x,y,z)\dif{s}           \]
+%page#1062
+\[\kvec{r}(t)\]
+\[a\le t\le b\]
+\[\kvec{v} = \dif{\kvec{r}}/ \dif t\]
+\[\kvec{0}\]
+\[s(t) = \int_{a}^{t}|\kvec{v}(\tau )| \dif{\tau }\]
+\[\dif s = |\kvec{v}(t)|\dif t\]
+\[\int_{C}f(x,y,z)\dif s =\int_{a}^{b}f(g(t),h(t),k(t))|\kvec{v}(t)|\dif t\]
+\[f(x,y,z)\]
+\[\kvec{r}(t)=g(t)\ai + h(t)\aj + k(t)\ak, a\le t\le b\]
+\[\int_{C}f(x,y,z)\dif s = \int_{a}^{b}f(g(t),h(t),k(t))|\kvec{v}(t)|\dif t\]
+\[f(x,y,z)= x-3y^2 + z\]
+\[(1,1,1)\]
+\[\kvec{r}(t)=t\ai + t\aj + t\ak, 0\le t\le 1\]
+\[|\kvec{v}(t)| = \sqrt{1^2 + 1^2 + 1^2} = \sqrt{3}\]
+\[\int_{C}f(x,y,z)\dif s = \int_{0}^{1}f(t,t,t)(\sqrt{3})\dif t\]
+\[=\int_{1}^{0}(t-3t^2)\sqrt{3}\dif t\]
+\[\sqrt{3}\int_{0}^{1}(2t-3t^2)\dif t = \sqrt{3}\Big[t^2 -t^3\Big]_{1}^{0} =0\]
+\[C_1,C_2,...,C_n\]
+%page#1063
+\[\int_{C}f\dif s = \int_{C_1}f\dif s + \int_{C_2}f\dif s +...+\int_{C_n}\dif s\]
+\[(1,1,1)\]
+\[C_1\quad C_2\quad f(x,y,z)=x-3y^2 +z\quad C_1\cup C_2\]
+\[C_1\quad C_2\]
+\[C_1: \kvec{r}(t)=t\ai +t\aj, 0\le t\le 1; |\kvec{v}|=\sqrt{1^2+1^2} =\sqrt{2}\]
+\[C_2: \kvec{r}(t)=\ai + \aj + t\ak, 0\le t\le 1; |\kvec{v}|=\sqrt{0^2 + 0^2 + 1^2} =1\]
+\[=\int_{C_1 \cup C_2}f(x,y,z)\dif s = \int_{C_1}f(x,y,z)\dif s + \int_{C_2}f(x,y,z)\dif s\]
+\[=\int_{0}^{1}f(t,t,0)\sqrt{2}\dif t + \int_{0}^{1}(1-3+t)(1)\dif t\]
+\[=\sqrt{2}\Big[\frac{t^2}{2} - t^3\Big]_0^1 = -\frac{\sqrt{2}}{2} -\frac{3}{2}\]
+\[C_1\cup C_2\]
+\[\delta(x,y,z)\]
+\[\kvec{r}(t)=(\cos {4t})\ai + (\sin {4t})\aj + t\ak,\quad 0\le t\le 2\pi\]
+\[\delta = 1\]
+\[(0,0,\pi)\]
+%page#1064
+\[M = \int_{C}\delta(x,y,z)\dif s\]
+\[M_{yz} = \int_{C} x\delta \dif s,\quad M_{xz}=\int_{C} y\delta \dif s,\quad M_{xy}=\int_{C} z\delta \dif s\]
+\[\overline{x} =\frac{M_{yz}}{M},\quad \overline{y}= \frac{M_{xz}}{M},\quad \overline{z}= \frac{M_{xy}}{M}\]
+\[I_x =\int_{C}(y^2 + z^2)\delta \dif s, \quad I_y =\int_{C}(x^2 + z^2)\delta \dif s\]
+\[I_z = \int_{C}(x^2 + y^2)\delta \dif s, \quad I_L=\int_{C}r^2\delta \dif s\]
+\[r(x, y, z)=\quad \quad \quad (x,y,z) \quad L\]
+\[R_{L} =\sqrt{I_{L}/M}\]
+\[\quad \quad \quad \quad \quad \quad |\kvec{v}(t)| :\]
+\[|\kvec{v}(t)| = \sqrt{(\frac{\dif x}{\dif t})^2 + (\frac{\dif y}{\dif t})^2 + (\frac{\dif z}{\dif t})^2}\]
+\[\quad = \sqrt{(-4 \sin{4t})^2 + (4 \cos{4t})^2 +1} =\sqrt{17}\]
+\[M= \int_{Helix}\delta \dif s = \int_{0}^{2\pi}(1)\sqrt{17}\dif t\]
+\[I_z=\int_{Helix}(x^2 + y^2)\delta\dif s = \int_{0}^{2\pi}(\cos^{2}4t + \sin^{2}4t)(1)\sqrt{17}\dif t\]
+\[\quad = \int_{0}^{2\pi}\sqrt{17}\dif t=2\pi\sqrt{17}\]
+\[R_z=\sqrt{\frac{I_z}{M}} = \sqrt{(2\pi\sqrt{17})/(2\pi\sqrt{17})} = 1\]
+\[y^2 + z^2 = 1, z\geq 0\]
+\[(x,y,z) \quad \quad \delta(x,y,z) = 2-z\]
+\[\overline{x} = 0 \quad \overline{y}=0\]
+\[\overline{z}\]
+\[\kvec{r}(t) =(\cos{t})\aj + (\sin{t})\ak, \quad 0\leq t\leq\pi\]
+%page#1065
+\[|\kvec{v}(t)| = \sqrt{(\frac{\dif x}{dif t})^2 + (\frac{\dif y}{\dif t})^2 + (\frac{\dif z}{\dif t})^2} = \sqrt{(0)^2 + (-\sin{t})^2 + (\cos{t})^2} =1\]
+\[M = \int_{C}\delta\dif s =\int_{C}(2-z)\dif s = \int_{0}^{\pi}(2-\sin{t})\dif t = 2\pi - 2\]
+\[M_{xy} = \int_{C}z\delta\dif s = \int_{C}z(2-z)\dif s = \int_{0}^{\pi}(\sin{t})(2-\sin{t})\dif t\]
+\[\quad = \int_{0}^{\pi}(2\sin{t} -\sin^{2}t)\dif t = \frac{8-\pi}{4\pi -4}\approx 0.57\]
+\[\quad \overline{z}\quad\quad\quad\quad\quad(0, 0, 0.57).\]
+\[1.\kvec{r}(t) = t\ai + (1-t)\aj, \quad 0\leq t\leq 1\]
+\[2.\kvec{r}(t) = \ai + \aj + t\ak,\quad -1\leq t \leq 1\]
+\[3.\kvec{r}(t) = (2\cos{t})\ai + (2\sin{t})\aj,\quad 0\leq t\leq 2\pi\]
+\[4.\kvec{r}(t) = t\ai, \quad -1\leq t\leq 1\]
+\[5.\kvec{r}(t) = t\ai + t\aj + t\ak, 0\leq t\leq 2\]
+\[6.\kvec{r}(t) = t\aj + (2-2t)\ak,\quad 0\leq t\leq 1\]
+\[7.\kvec{r}(t) = (t^2 - 1)\aj + 2t\ak,\quad -1\leq t\leq 1\]
+\[8.\kvec{r}(t) = (2\cos{t})\ai + (2\sin{t})\ak,\quad 0\leq t\leq\pi\]
+%page#1066
+\[9. \int_{c}(x+y)\dif s\]
+\[x=t,y=(1-t),z=0\]
+\[(0,1,0)\]
+\[(1,0,0)\]
+\[10. \int_{c}(x-y+z-2)\dif s\]
+\[x=t,y=(1-t),z=1\]
+\[(0,1,1)\]
+\[(1,0,1)\]
+\[11. \int_{c}(xy+y+z)\dif s\]
+\[\kvec{r}(t)+2t\ai+t\aj+(2-2t)\ak, 0\le t \le 1\]
+\[12. \int_{c}\sqrt{x^{2}+y^{2}}\dif s\]
+\[\kvec{r}(t)=(4\cos{t})\ai+(4\sin{t})\aj+3t\ak, -2\pi\le t\le2\pi\]
+\[13. f(x,y,z)=x+y+z\]
+\[(1,2,3)\]
+\[(0,-1,1)\]
+\[14. f(x,y,z)=\sqrt{3}/(x^{2}+y^{2}+z^{2})\]
+\[\kvec{r}(t)=t\ai+t\aj+t\ak, 1\le t\le\infty\]
+\[15. f(x,y,z)=x+\sqrt{y}-z^{2}\]
+\[(0,0,0)\]
+\[(1,1,1)\]
+\[C_{1}:\quad \kvec{r}(t)=t\ai+t^{2}\aj, 0\le t\le1\]
+\[C_{2}:\quad\kvec{r}(t)=\ai+\aj+t\ak, 0\le t\le 1\]
+\[16. f(x,y,z)=x+\sqrt{y}-z^{2}\]
+\[(0,0,0)\]
+\[(1,1,1)\]
+\[C_{1}\quad\kvec{r}(t)=t\ak, 0\le t\le 1\]
+\[C_{2}\quad\kvec{r}(t)=t\aj+\ak, 0\le t\le1\]
+\[C_{3}\quad\kvec{r}(t)=t\ai+\aj+\ak, 0\le t\le 1\]
+\[17. f(x,y,z)=(x+y+z)/(x^{2}+y^{2}+z^{2})\]
+\[\kvec{r}(t) = t\ai + t\aj + t\ak, 0< a \leq t\leq b\]
+\[18. f(x,y,z) = -\sqrt{x^2 + z^2}\]
+\[\kvec{r}(t)=(a\cos{t})\ai+(a\sin{t})\ak, 0\le t\le 2\pi\]
+\[19.f(x,y)=x^{3}/y\quad C: y=x^{2}/2, 0\le x\le 2\]
+\[20. f(x,y)=(x+y^{2})/\sqrt{1+x^{2}},\quad C: y=x^{2}/2\]
+\[1,1/2)\]
+\[(0,0)\]
+\[21. f(x,y)=x+y, \quad C: x^{2}+y^{2}=4\]
+\[(2,0)\]
+\[(0,2)\]
+\[22. f(x,y)=x^{2}-y,\quad C: x^{2}+y^{2}=4\]
+\[(0,2)\]
+\[(\sqrt{2},\sqrt{2})\]
+\[23. \kvec{r}(t)=(t^{2}-1)\aj+2t\ak, 0\le t\le \]
+\[\delta=(3/2)t\]
+\[24. \delta(x,y,z)=15\sqrt{y+2}\]
+\[\kvec{r}(t)=(t^{2}-1)\aj+2t\ak, -1\le t\le 1\]
+\[25. \kvec{r}(t)=\sqrt{2}t\ai+\sqrt{2t}\aj+(4-t^{2})\ak, 0\le t\le 1\]
+\[\delta=3t\]
+\[\delta=1\]
+\[26. \kvec{r}(t)=t\ai+2t\aj+(2/3)t^{3/2}\ak, 0\le t\le 2\]
+\[\delta=3\sqrt{5+t}\]
+\[27. x^{2}+y^{2}=a^{2}\]
+\[28. \kvec{r}(t)=t\aj+(2-2t)\ak, 0\le t\le1\]
+\[29. \kvec{r}(t)=(\cos{t})\ai+(\sin{t})\aj+t\ak, 0\le t\le 2\pi\]
+\[ I_{z}\]
+\[R_{z}\]
+\[\delta\]
+\[0\le t\le 4\pi\]
+\[I_{z}\]
+\[R_{z}\]
+\[30. \delta =1\]
+\[\kvec{r}(t) = (t\cos{t})\ai + (t\sin{t})\aj + (2\sqrt{2}/3)t^(3/2)\ak,\quad 0\le t\le1\]
+\[\overline{z},I_{z},R_{z}\]
+\[I_{x}\quad R_{x}\]
+\[\kvec{r}(t) = t\ai + \frac{2\sqrt{2}}{3}t^{3/2}\aj,\quad 0\le t\le 2\]
+\[\delta = 1/(t + 1)\]
+\[a) \dif s = |v(t)|\dif t\quad\quad \kvec{r}(t) = g(t)\ai + h(t)\aj + k(t)\ak\]
+\[b) f(g(t),h(t),k(t))|\kvec{v}(t)|\]
+\[\int_{C}f\dif s\]
+%page#1067
+\[f(x,y,z)=\sqrt{1+30x^{2}+10y};\quad\kvec{r}(t)=t\ai+t^{2}\aj+3t^{2} \ak, 0\le t \le 2\]
+\[f(x,y,z)=\sqrt{1+x^{3}+5y^{3}};\quad\kvec{r}(t)=t\ai+\frac{1}{3}t^{2}\aj+\sqrt{t}\ak,  0\le t \le 2\]
+\[f(x,y,z)=x\sqrt{y}=3z^{2};\quad \kvec{r}(t)=\cos{2t}\ai+\sin{2t}\aj+5t\ak, 0\le t \le 2\pi\]
+\[f(x,y,z)=\big(1+\frac{9}{4}z^{1/3}\big)^{1/4}; \quad\kvec{r}(t)=\cos{2t}\ai+\sin{2t}\aj+t^{5/2}\ak, 0\le t \le 2\pi\]
+\[\kvec{F}(x,y,z)=M(x,y,z)\ai+N(x,y,z)\aj+P(x,y,z)\ak\]
+\[\kvec{F}(x,y)=M(x,y)\ai+n(x,y)\aj\]
+
+%page#1068
+\[\kvec{F}=\frac{GM(x\ai+y\aj+z\ak)}{(x^{2}+y^{2}+z^{2})^{3/2}}\]
+\[\kvec{F}=x\ai+y\aj\]
+\[\kvec{F}=(-y\ai+x\aj)/(x^{2}+y^{2})^{1/2}\]
+
+%page#1069
+\[f(x,y,z)\]
+\[\nabla f=\frac{\partial{f}}{\partial{x}}\ai+\frac{\partial{f}}{\partial{y}}\aj+\frac{\partial{f}}{\partial{z}}\ak\]
+\[f(x,y,z)=xyz\]
+\[\kvec{F}=\nabla f=yz\ai+xz\aj+xy\ak\]
+\[\kvec{F}=M(x,y,z)\ai+N(x,y,z)\aj+P(x,y,z)\ak\]
+\[\kvec{r}(t)=g(t)\ai+h(t)\aj+k(t)\ak, a\le t \le b\]
+\[\kvec{F}\cdot\kvec{T}\]
+\[\kvec{F}=M(x,y,z)\ai+N(x,y,z)\aj+P(x,y,z)\ak\]
+\[\kvec{r}(t)=g(t)\ai+h(t)\aj+k(t)\ak\]
+\[t=a\]
+\[t=b\]
+\[W=\int_{t=a}^{t=b}\kvec{F}\cdot\kvec{T}\dif s\]
+%page#1070
+\[=\kvec{F}_{k}\cdot\kvec{T}_{k}\Delta s_{k}\]
+\[\sum_{k=1}^{n}\kvec{F}_{k}\cdot\kvec{T}_{k}\Delta s_{k}\]
+\[[a,b]\]
+\[\int_{t=a}^{t=b}\kvec{F}\cdot \kvec{T}\dif s\]
+\[\kvec{T}\]
+\[\kvec{F}\cdot\kvec{T}\]
+\begin{align*}
+\kvec{W}&=\int_{t=a}^{t=b}\kvec{F}\cdot\kvec{T}\dif{s}\\
+&=\int_{t=a}^{t=b}\kvec{F}\cdot\dif{\kvec{r}}\\
+&=\int_{a}^{b}\kvec{F}\cdot \frac{\dif{\kvec{r}}}{\dif{t}}\dif{t}\\
+&=\int_{b}^{a}\big(M\frac{\dif{g}}{\dif{t}}+N\frac{\dif{h}}{\dif{t}}+P\frac{\dif{k}}{\dif{t}}\big)\dif{t}\\
+&=\int_{b}^{a}\big(M\frac{\dif{x}}{\dif{t}}+N\frac{\dif{y}}{\dif{t}}+P\frac{\dif{z}}{\dif{t}}\big)\dif{t}\\
+&=\int_{a}^{b}M\dif{x}+N\dif{y}+P\dif{z}\\
+\end{align*}
+\[\kvec{F}\]
+\[\dif{\kvec{r}}/\dif{t}\]
+\[\kvec{F}\]
+\[\dif{\kvec{r}}/\dif{t}\]
+\[t=a\]
+\[t=b\]
+\[y=mx+c\]
+\x=y+z
+\[\frac{1}{x}\]
+
+
+
+%ammar khan page number 1071 to 1080
+
+% PAGE NUMBER 1071
+\[ F=(y-x^2)\ai + (z-y^2)\aj + (x-z^2)\ak\]
+\[r(t)=t\ai+t^{2}\aj+t^3 \ak \,0 \le t \ge 1 \]
+\[(0,0,0) to (1,1,1)\]
+\begin{align*}
+F&=(y-x^2)\ai + (z-y^2)\aj + (x-z^2)\ak\\
+F&=(t^{2}-t^{2})\ai + (t^{3}-t^{4})\aj +(t-t^{6})\ak
+\end{align*}
+\begin{align*}
+\frac{\dif \kvec{r}}{\dif t}&=\frac{\dif}{\dif t}(t\ai+t^{2}\aj+t^{3}\ak)\\
+&=\ai+2t\aj+3t^{2}\ak
+\end{align*}
+\begin{align*}
+\kvec {F} \cdot \frac{\dif \kvec {r}}{\dif t} = [(t^{3}-t^{4})\aj + (t-t^{6})\ak] \cdot (\ai + 2t\aj + 3t^{2}\ak)
+\end{align*}
+\begin{align*}
+Work &= \int_{0}^{1} (2t^{4}-2t^{5}+3t^{3}-3t^{8})\dif t\\
+&=\big[\frac{2}{5}t^{5} - \frac {2}{6}t^{6} - \frac {3}{4}t^{4} - \frac{3}{9}t^{9}\big]=\frac{29}{60}
+\end{align*}
+\[ \kvec F=M\ai + N\aj + P\ak\]
+\begin{align*}
+\kvec{F} \cdot \kvec{T} 
+\end{align*}
+\begin{align*}
+ \kvec{r}(t)= g(t)\ai + h(t)\aj +k(t)\ak \,  a\le t \ge b
+\end{align*}
+\begin{equation*}
+\kvec F=M(x,y,z)\ai +N(x,y,z)\aj+P(x,y,z)\ak
+\end{equation*}
+\begin{equation*}
+t=a\quad to\quad t=b
+\end{equation*}
+\[a\quad to \quad b \]
+\begin{equation*}
+Flow= \int_{a}^{b} \kvec F \cdot \kvec T \dif s
+\end{equation*}
+%example 3
+\[\kvec{F}=x\ai +z\aj +y\ak \]
+\[\kvec{r}(t) = (\cos t)\ai +(\sin t)\aj +t\ak \quad 0\le\, t\, \ge \frac{\pi}{2}\]
+% PAGE NUMBER 1072
+%solution
+%step 1
+\[\kvec{F}\]
+\begin{align*}
+\kvec{F}&=x\ai  +z\aj + y\ak\\
+&=(\cos t)\ai + t\aj + (\sin t)\ak
+\end{align*}
+%step 2
+\[ \frac{\dif \kvec {r}}{\dif t} \]
+\begin{align*}
+\frac{\dif \kvec {r}}{\dif t}&=(-\sin t)\ai +(\cos t)\aj + \ak
+\end{align*}
+% step 3
+\begin{align*}
+\kvec{F} \cdot \frac{\dif \kvec {r}}{\dif t}&= (\cos t)(-\sin t) +(t)(\cos t)(\sin t)(1)\\
+&=-\sin t \cos t +t\cos t +\sin t
+\end{align*}
+%
+%
+%step 4
+\begin{align*}
+t=a \quad to\quad t=b
+\end{align*}
+\begin{align*}
+Flow&= \int_{t=a}^{t=b} \kvec{F} \cdot \frac{\dif{\kvec {r}}}{\dif{t}}\\
+&=\int_{0}^{\frac{\pi}{2}} (-\sin t \cos t +t\cos t+ \sin t)\dif{t} \\
+&= \big[\frac {\cos ^{2}t}{2} + t \sin t \big]_{0}^{\frac{\pi}{2}}\\
+&=\big(0 + \frac{\pi}{2} \big) -\big( \frac{1}{2} +0 \big) \\
+&=\frac{\pi}{2}- \frac{1}{2}
+\end{align*}
+%example 4 question
+\[ \kvec {F} = (x-y)\ai + x\aj \]
+\begin{align*}
+\kvec {r}(t)= (\cos t)\ai +(\sin t)\aj \, , 0\, \le\, t \, \ge \, 2\pi
+\end{align*}
+%solution line 1
+\begin{align*}
+\kvec{F}&=(x-y)\ai +x\aj \\
+&=(\cos t - \sin t)\ai + (\cos t)\aj
+\end{align*}
+%step 2
+\begin{align*}
+\frac{\dif{\kvec{r}}}{\dif {t}} = (- \sin t)\ai + (\cos t)\aj
+\end{align*}
+%step 3
+\begin{align*}
+\kvec{F}\cdot \frac{\dif{\kvec{r}}}{\dif t} = -\sin t \cos t + \sin ^{2} t+\cos ^{2} t
+\end{align*}
+%step 4
+\begin{align*}
+Circulation&=\int_{0}^{2\pi} \kvec{F} \cdot \frac{\dif{\kvec {r}}}{\dif{t}} \dif{t} \\
+&=\int_{0}^{2\pi} (1-\sin t \cos t)\dif{t}\\
+&=[t - \frac{\sin ^{2}t}{2} \big ]_{0}^{2 \pi} \\
+&=2 \pi 
+\end{align*}
+%FLUX ACROSS A PLANE CURVE
+\[ \kvec{F} \cdot \kvec{n} \]
+\[ \kvec{F} \]
+\[ \kvec{F} \]
+\[ \kvec{F} \cdot \kvec{n} \]
+%DEFINATION
+\[ \kvec{F} = \kvec {M} (x,y)\ai + N(x,y)\aj   \]
+\[ \kvec{n}    \]
+% PAGE NUMBER 1073
+\[ \kvec{flux} \quad \kvec{F}\]
+\[ Flux\,  of \, \kvec{F} \, across\,  C = \int_{c} \kvec{F} \cdot \kvec{n} \dif{s}\]
+\[\kvec{F}\]
+\[ \kvec {F} \cdot \kvec {n}\]
+\[\kvec{F}\]
+\[\kvec{F}\]
+\[ \kvec {F} \cdot \kvec {T}\]
+\[\kvec{F}\]
+\[\kvec{F}\]
+\[\kvec{F}\]
+\begin{align*}
+x=g(t)   ,\quad y=h(t) ,\quad a\, \le \, t \, \ge \, b  
+\end{align*}
+\[ \kvec {n}\]
+\[ \kvec {T}\]
+\[\kvec {k}\]
+\[\kvec{T} \times \kvec{k}\]
+\[\kvec{k} \times \kvec{T}\]
+\[\kvec{k} \times \kvec{T}\]
+\[\kvec{T} \times \kvec{k}\]
+\[\kvec{n} = \kvec{T} \times \kvec{k}	\]
+\begin{align*}
+\kvec{n} = \kvec{T} \times \kvec{k} = \big (\frac{\dif {x}}{\dif {s}} \ai + \frac{\dif {y}}{\dif {s}} \aj \big ) \times \ak = \frac{\dif {y}}{\dif {s}}\ai - \frac{\dif {x}}{\dif {s}} \aj
+\end{align*}
+\[\kvec{F}=M(x,y)\ai +N(x,y)\aj 	\]
+\begin{align*}
+\kvec{F} \cdot \kvec{n} = M (x,y) \frac{\dif{y}}{\dif{s}} - N(x,y)\frac{\dif {x}}{\dif {s}}
+\end{align*}
+\begin{align*}
+x=g(t),\quad y=h(t),\quad a\, \le \,t\, \ge \, b
+\end{align*}
+% PAGE NUMBER 1074
+% EXAMPLE 05
+\[\kvec{F}=(x,y)\ai + x\aj 	\]
+\[x^{2}+y^{2}=1\]
+\[\kvec{r}(t)=(\cos t)\ai + (\sin t)\aj , 0\, \le \, t \, \ge \, 2\pi\]
+% ERROR IN THIS STATMENT
+\begin{gather}
+\begin{align*}
+M&=x-y=\cos t - \sin t, \,\\
+N&=x=\cos t \,
+\end{align*}
+\begin{align*}
+\dif{y}&=\dif(\sin t)=\cos t \dif t \\
+\dif{x}&=\dif(\cos t)=-\sin t \dif {t}
+\end{align*}
+\end{gather}
+% EQUAION 04
+\begin{align*}
+Flux&=\int_{c} M\dif{y}-N\dif {x} = \int_{0}^{2\pi}(\cos ^{2} t-\sin t \cos t + \cos t \sin t) \dif{t}\\
+&=\int_{0}^{2\pi}\cos ^{2}\dif{t}=\int_{0}^{2\pi} \frac {1+\cos 2t}{2} \dif{t}=\Big [\frac{t}{2}+\frac{\sin 2t}{4} \Big ]_{0}^{2\pi}= 2\pi
+\end{align*}
+\[\kvec{F}\]
+% EXERCISE 14.2
+%QUESTION 1
+\begin{align*}
+f(x,y,z)= (x^{2}+y^{2}+z^{2})^{\frac{-1}{2}}
+\end{align*}
+% question 2 (error in this line)
+\begin{align*}
+f(x,y,z)= \ln \sqrt{(x^{2}+y^{2}+z^{2})}
+\end{align*}
+% question 3 
+\begin{align*}
+g(x,y,z)= e^{z}-\ln(x^{2}+y^{2})
+\end{align*}
+%question 4
+\begin{align*}
+g(x,y,z)=xy+yz+xz
+\end{align*}
+%question 5
+\begin{align*}
+\kvec{F}=M(x,y)\ai + N(x,y)\aj	
+\end{align*}
+\[\kvec{F}\]
+\[(x,y)\]
+%question 06
+\[\kvec{F}=M(x,y)\ai + N(x,y)\aj	\]
+\[\kvec{F}=\kvec{0}	\]
+\[(a,b)\, ,\, \kvec{F}	\]
+\[x^{2}+y^{2}=a^{2}+b^{2}\]
+\[|\kvec{F} | = \sqrt{a^{2}+b^{2}}\]
+%work
+\[\kvec{F}\]
+\[(0,0,0)\]
+\[(1,1,1)\]
+% a
+\[C_{1} : \kvec{r}(t)=t\ai +t\aj +t\ak \, , 0\, \le \, t \, \ge \, 1\]
+%b
+\[C_{2} : \kvec{r}(t)=t\ai + t^{2}\aj + t^{4} \ak \, , 0\, \le \, t \, \ge \, 1	\]
+%c
+\[C_{3} \cup C_{4}\]
+\[(0,0,0)\]
+\[(1,1,0)\]
+\[(1,1,0)\]
+\[(1,1,1)\]
+%question 07
+\[\kvec{F} = 3y\ai + 2x \aj + 4z\ak\]
+%question 8
+\[\kvec{F}= [1/(x^{2}+1)]\aj\]
+%question 9
+\[\kvec{F}=\sqrt{z}\ai -2x\aj +\sqrt{y}\ak\]
+% question 10
+\[\quad \kvec{F}=xy\ai +yz\aj + xz\ak\]
+%question 11
+\[\quad \kvec{F}=(3x^{2} -3x)\ai + 3z\aj + \ak\]
+%question 12
+\[\quad 	\kvec{F}=(y+z)\ai + (z+x)\aj+(x+y)\ak\]
+%question 13
+\begin{align*}
+\kvec{F}&=xy\ai +y\aj -yz\ak \\
+&=\kvec{r}(t)=t\ai +t^{2}\aj +t\ak,\, 0\, \le \,t\, \ge \, 1
+\end{align*}
+%question 14
+\begin{align*}
+\kvec{F}&= 2y\ai +3x\aj +(x+y)\ak \\
+&=\kvec{r}(t)= (\cos t)\ai + (\sin t)\aj +(t/6)\ak ,\, 0\, \le \,t\, \ge \, 2\pi
+\end{align*}
+%question 15
+\begin{align*}
+\kvec{F}&= z\ai + x\aj +y\ak \\
+&=\kvec{r}(t)= (\sin t)\ai + (\cos t)\aj +t\ak ,\, 0\, \le \,t\, \ge \, 2\pi
+\end{align*}
+%question 16
+\begin{align*}
+\kvec{F}&= 6z\ai + y^{2}\aj +12x\ak \\
+&=\kvec{r}(t)= (\sin t)\ai + (\cos t)\aj +(t/6)\ak ,\, 0\, \le \,t\, \ge \, 2\pi\\
+\end{align*}
+%question 17
+\[\int_{C} xy \dif{x} + (x+y)\dif{y}\]
+\[y=x^{2}\]
+\[(-1,1)\]
+\[(2,4)\]
+%question 18 
+\[\int_{C} (x-y)\dif{x} +(x+y)\dif{y}\]
+\[(0,0)\, , \,(1,0)\, , \, (0,1)\]
+%question 19
+\[\int_{\kvec{F} \cdot \kvec{T} \dif{s}}\]
+\[\kvec{F}=x^{2}\ai -y\aj\]
+\[x=y^{2}\]
+\[(4,2)\, , \, (1,-1)\]
+%question 20
+\[\int_{C} \kvec{F} \cdot \dif{r}\]
+\[\kvec{F} - y\ai - x\aj\]
+\[x^{2} + y^{2}=1\]
+\[(1,0)\, , \, (0,1)\]
+%question 21
+\[f(x,y)=(x+y)^{2}\]
+\[(1,1)\, , \, (2,3)\]
+%question 22
+\[f(x,y)= (x+y)^{2}\]
+\[x^{2}+y^{2}=4\]
+\[(2,0)\]
+%question 23
+\[\kvec{F_{1}}=x\ai + y\aj \quad \kvec{F_{2}}=-y\ai +x\aj\]
+%case 1
+\[\kvec{r}(t)=(\cos t)\ai +(\sin t)\aj , \, 0\, \le \, t\, \ge \, 2\pi\]
+%case 2
+\[\kvec{r}(t)=(\cos t)\ai +(4\sin t )\aj,\,0\, \le \, t\, \ge \, 2\pi\]
+%exercise 25 to 28 
+\[\kvec{r_{1}}(t)=(a\cos t)\ai +(a\sin t)\aj , \, 0\, \le \, t \, \ge \, \pi,\]
+\[\kvec{r_{2}}(t)= t\ai, \, -a\le \, t \, \ge \, a\]
+%question 25
+\[\quad \kvec{F}=x\ai + y\aj\]
+%question 26
+\[\quad \kvec{F}= x^{2} \ai + y^{2} \aj	\]
+%question 27
+\[\quad \kvec{F}=-y \ai + x\aj\]
+%question 28
+\[\quad \kvec{F}=-y^{2}\ai + x^{2}\aj\]
+%question 29
+\[\kvec{F} = (x+y)\ai - (x^{2}+y^{2})\aj\]
+\[(1,0)\quad (-1,0)\]
+% part a
+\[x^{2}+y^{2}=1\]
+%part b
+\[(1,0)\quad (-1,0)\]
+\[(1,0)\quad (0,-1)\quad (0,-1)\quad (-1,0)\]
+%question 30
+\[\kvec{F} \quad (1,0)\quad (0,1)\quad (-1,0)\]
+%question 31
+\[\kvec{F}=-\frac{y}{\sqrt{x^{2}+y^{2}}} \ai + \frac{x}{\sqrt{x^{2}+y^{2}}}\aj\]
+\[x^{2}+y^{2}=4\]
+%question 32
+\[\kvec{F}=x\ai + y\aj\]
+\[x^{2}+y^{2}=1\]
+%question 33
+\[\kvec{G}=\kvec{P}(x,y)\ai + \kvec{Q}(x,y)\aj	\]
+\[(a,b) \neq (0,0)\, , \kvec{G}\]
+\[\sqrt{a^{2}+b^{2}}\]
+\[=x^{2}+y^{2}=a^{2}+b^{2}\]
+\[(0,0)\]
+\[\kvec{G}\]
+\[\kvec{F}\]
+%question 34
+\[\kvec{G}=\kvec{P}(x,y)\ai + \kvec{Q}(x,y)\aj	\]
+\[(a,b) \neq (0,0)\, , \kvec{G}\]
+\[x^{2}+y^{2}=a^{2}+b^{2}\]
+\[(0,0)\]
+\[\kvec{G}\]
+\[\kvec{F}\]
+%question35
+\[\kvec{G}=P(x,y)\ai+Q(x,y)\aj\]
+\[(x,y)\neq (0,0)	\, , \, \kvec{F}\]
+\[(0,0)\]
+%question 36
+\[\kvec{F}=M(x,y)\ai +N(x,y)\aj\]
+\[(x,y)\neq (0,0)\, , \, \kvec{F}\]
+\[|\kvec{F}|\]
+\[(x,y)\]
+\[(x,y)\]
+\[(0,0)\]
+%FLOW INTEGRALS IN SPACE
+\[\kvec{F}\]
+%37
+\begin{align*}
+\kvec{\kvec{F}} &=-4xy\ai+8y\aj +2\ak \\
+\kvec{r}(t)=t\ai +t^{2}\aj +\ak \, , \, 0\, \le \, t\, \ge \, 2
+\end{align*}
+%38
+\begin{align*}
+\kvec{F}&=x^{2}\ai +yz\aj + y^{2}\ak\\
+\kvec{r}(t)&=3t\aj + 4t{\ak} , \, 0\, \le \, t \, \ge \, 1
+\end{align*}
+%39
+\begin{align*}
+\kvec{F}&=(x-z)\ai +x\ak\\
+\kvec{r}(t)&=(\cos t)\ai + (\sin t)\ak, 0\le t \ge \pi
+\end{align*}
+%40
+\begin{align*}
+\kvec{F}&=-y\ai+ x\aj +2\ak\\
+\kvec{r}(t)&=(-2\cos t)\ai + (2\sin t)\aj + 2t\ak
+\end{align*}
+%41
+\[\kvec{F}=2x\ai+2z\aj+=2y\ak\]
+\begin{align*}
+ C_{1}:\quad\kvec{r}(t)&=(\cos t)\ai+(\sin t)\aj+t\ak,\quad0\le t \le\pi/2\\
+ C_{2}:\quad\kvec{r}(t)&=\aj+(\pi/2)(1-t)\ak,\quad 0\le t \le\ 1\\
+ C_{3}:\quad\kvec{r}(t)&=t\ai+(1-t)\aj,\quad 0 \le t \le\ 1
+\end{align*} 
+%42
+\[ 2x +3y-z = 0\]
+\[x^{2}+y^{2}=12 \]
+\[\kvec{F} = x\ai +y\aj + z\ak \]
+%43
+\[ \kvec{F} = xy\ai + y\aj -yz\ak\]
+\[ (0,0,0)\]
+\[(1,1,1)\]
+\[ y=x^{2}\]
+\[z=x\]
+%44
+\[ \kvec{F} =\nabla (xy^{2}z^{3})\]
+\[ (1,1,1)\]
+\[ (2,1,-1)\]
+%45
+\[ f(t)\]
+\[ a\le t\ge b\]
+\[ \kvec{r}(t) =t\ai+ f(t)\aj , a\le t \ge b,\]
+\[ \kvec{F} =y\ai \] 
+%46
+\begin{align*}
+\int_{C}\kvec{F}\cdot\kvec{T}\dif s=k[(b^{2}+(f(b))^{2})^{(1/2)}-(a^{2}+(f(a))^{2})^{1/2}]
+\end{align*}
+%47
+\begin{align*}
+\kvec{F}=xy^{6}\ai+3x(xy{5}+2)\aj;\, \kvec{r}(t)=2\cos t \ai+\sin t \aj,\quad 0\le t\le 2\pi
+\end{align*}
+%48
+\begin{align*}
+\kvec{F}=\frac{3}{1+x^{2}}\ai + \frac{2}{1+y^{2}}\aj;\quad \kvec{r}(t)=\cos t\ai + \sin t\aj, \quad 0\le t \le \pi
+\end{align*}
+%49
+\begin{align*}
+\kvec{F}&=(y+yz \cos xyz)\ai +(x^{2} +xz \cos xyz)\aj +(z+xy \cos xyz)\ak ; \\ \kvec{r}(t)&=2 \cos t \ai +3 \sin t \aj +\ak ,\quad 0 \le t \le 2\pi
+\end{align*}
+%50
+\begin{align*}
+\kvec{F}=2xy\ai-y^{2}\aj+ze^{x}\ak;\quad\kvec{r}(t)=-t\ai+\sqrt{t}\aj+3t\ak,\quad 1 \le t \le 4
+\end{align*}
+%51
+\begin{align*}
+\kvec{F}&=(2y+\sin x)\ai +(z^{2}=(1/3) \cos y)\aj + x^{4}\ak;\\
+\kvec{r}&=\sin t\ai +\cos t \aj +\sin 2t\ak,\quad -\pi/2 \le t \le \pi/2
+\end{align*}
+%52
+\begin{align*}
+\kvec{F}=(x^{2}y\ai+ \frac{1}{3}x^{3}\aj+xy\ak;\kvec{r}(t)=\cos t\ai+ \sin t \aj+\\
+(2 \sin^{2}(t)-1)\ak,\quad 0 \le t \le 2\pi
+\end{align*}
+\[\int \kvec{F} \cdot \dif \kvec{r}\]
+\[\int \kvec{F} \cdot \dif \kvec{r}\]
+\[\int \kvec{F} \cdot \dif \kvec{r}\]
+\[\int \kvec{F} \cdot \dif \kvec{r}\]
+\[\kvec{F}\]
+\[\int_{A}^{B} \kvec{F} \cdot \dif {r}\]
+\[\int \kvec{F} \cdot \dif {r}\]
+\[\kvec{F}\]
+\[\kvec{F} \cdot \nabla f\]
+\[\kvec{F}\]
+%defination (1077)
+\[\kvec{F}\]
+\[\kvec{F}\]
+\[\int_{A}^{B} \kvec{F} \cdot \dif{r} = \int_{A}^{B} \nabla f \cdot \dif \kvec{r} = f(\kvec{B}- \kvec{A})\]
+\[\nabla f\]
+\[\int_{a}^{b} f^{"}(x) \dif{x}=f(b) - f(a)\]
+\[\kvec{F}\]
+\[\kvec{F}\]
+\[\kvec{F}\]
+\[\kvec{F} = \nabla f\]
+\[\kvec{F}\]
+% PAGE NUMBER 1078
+\[\vec{F}=\nabla f = \frac{\partial f}{\partial x} \ai + \frac{\partial f}{\partial y} \aj + \frac{\partial f}{\partial z} \ak\]
+\[\int_{A}^{B} \kvec{F} \cdot \dif \kvec{r} = f(B) - f(A)\]
+% PROOF
+\[\kvec{F} \kvec{\nabla} \kvec{f}\]
+\[C:\quad \kvec{r}(t) = g(t)\ai + h(t)\aj + k(t)\ak\, , \,a\le t \ge b,\]
+\begin{align*}
+\frac{\dif{f}}{\dif{t}}&=\frac{\partial f}{\partial x} \frac{\dif{x}}{\dif{t}} + \frac{\partial f}{\partial y} \frac{\dif{y}}{\dif{t}} + \frac{\partial f}{\partial z} \frac{\dif{z}}{\dif{t}} \\
+&=\nabla f \cdot \big(\frac{\dif{x}}{\dif{t}}\ai +\frac{\dif{y}}{\dif{t}}\aj +\frac{\dif{z}}{\dif{t}}\ak \big)\\
+&=\nabla f \cdot \frac{\dif{r}}{\dif{t}} \\
+&=\kvec{F} \cdot \frac{\dif{r}}{\dif{t}}\\
+&=\int_{C} \kvec{F} \cdot \dif \kvec{r}= \int_{t=a}^{t=b} \kvec{F} \cdot \frac{\dif{r}}{\dif{t}} \dif{t}\\
+&=\int_{a}^{b} \frac{\dif{f}}{\dif{t}} \dif{t} \\
+&= f(g(t),h(t),k(t)) \big]_{a}^{b} =f(B)-f(A)
+\end{align*}
+%EXAMPLE 01
+\[\kvec{F} = yz\ai + xz \aj + xy \ak = \nabla (x,y,z)\]
+\[(-1,3,9)\]
+\[(1,6,-4)\]
+\[f(x,y,z) = xyz\]
+\begin{align*}
+\int_{A}^{B} \kvec{F} \cdot \dif \kvec{r} &= \int_{A}^{B} \nabla f \cdot \dif \kvec{r}\\
+&=f(B)- f(A)\\
+&=xyz|_{(1,6,-4)} -xyz|_{(-1,3,9)}\\
+&=(1)(6)(-4) - (-1)(3)(9)\\
+&=-24+27=3
+\end{align*}
+%PAGE 1079
+\[\int\kvec{F} \cdot \dif{r}=0	\]
+\[\kvec{F}\]
+\[\kvec{F} \cdot \dif \kvec{r}\]
+\[\kvec{F}\]
+%PROOF
+\begin{align*}
+\int_{C_{1}} \kvec{F} \cdot \dif{\kvec{r}} -\int_{C_{2}}\kvec{F}\cdot \dif{\kvec{r}}= \int_{C_{1}}\kvec{F}\cdot\dif{\kvec{r}}+\int_{-C_{2}}\kvec{F}\cdot \dif{\kvec{r}}=\int_{C}\kvec{F}\cdot \dif{\kvec{r}}
+\end{align*}
+%\begin{align*}
+%\int_{C}\kvec{F}\cdot\dif{\kvec{r}}=\int_{C_{1}}\kvec{F}\cdot \dif{\kvec{r}}+\int_{C_{2}}\kvec{F}\cdot\dif{\kvec{r}}=\int_{A}^{B}\kvec{F}\cdot\dif{\kvec{r}}-\int_{A}^{B}\kvec{F}\cdot\dif{\kvec{r}}=0
+%\begin{align*}
+%\kvec{F}=\nabla f \, on \, D \quad \Leftrightarrow \quad \kvec{F} \, conservation \, on \, D \quad \Leftrightarrow \quad \int_{c} \kvec{F}\cdot\dif{r}=0
+%\end{align*}
+\[\kvec{F}\]
+\[\kvec{F}\]
+\[(\kvec{F}=\nabla f)?\]
+%error
+\[\kvec{F}=M(x,y,z)\ai+N(x,y,z)\aj+P(x,y,z)\ak\]
+\[\kvec{F}\]
+\begin{align*}
+\frac{\partial P}{\partial y}=\frac{\partial N}{\partial z}, \quad \frac{\partial M}{\partial z}=\frac{\partial p}{\partial x}, \quad and \quad \frac{\partial N}{\partial x}=\frac{\partial N}{\partial x}=\frac{\partial M}{\partial y}
+\end{align*}
+\begin{align*}
+\kvec=M\ai+N\aj+P\ak=\frac{\partial f}{\partial x}\ai+\frac{\partial f}{\partial y}\aj+\frac{\partial f}{\partial z}\ak
+\end{align*}
+\begin{align*}
+\frac{\partial P}{\partial y}&=\frac{\partial}{\partial y}\big(\frac{\partial f}{\partial z}\big)=\frac{\partial^{2} f}{\partial y \partial z}\\
+&=\frac{\partial^{\,2}}{\partial z} {\partial y}\\
+&=\frac{\partial}{\partial z}\big(\frac{\partial f}{\partial y}\big)=\frac{\partial N}{\partial z}
+\end{align*}
+\[ \kvec{F}\]
+\[ \kvec{F}\]
+\[ \kvec{F}\]
+\[\nabla f = \kvec{F}\]
+\[\frac{\partial f}{\partial x} \ai + \frac{\partial f}{\partial y} \aj +\frac{\partial f}{\partial z} \ak =M\ai + N\aj +P\ak\]
+\[\frac{\partial f}{\partial x} =M, \quad \frac{\partial f}{\partial y}=N, \quad \frac{
+\partial f}{\partial z}=P\]
+%EXAMPLE 2 PAGE 1080
+\[\kvec{F}=(e^{x} \cos y + yz)\ai +(xz - e^{x}\sin y)\aj + (xy+z)\ak\]
+%solution
+\[M=e^{x}\cos y +yz,\quad N=xz-e^{x}\sin y,\quad P=xy+z\]
+\[\frac{\partial P}{\partial y}=x=\frac{\partial N}{\partial z},\quad \frac{\partial M}{\partial z}=y=\frac{\partial P}{\partial x},\quad \frac{\partial N}{\partial x} = -e^{x}\sin y +z=\frac{\partial M}{\partial y}\]
+\[ \nabla f = \kvec{F}\]
+%EQUATION 4
+\[\frac{\partial f}{\partial x}=e^{x}\cos y +yz,\quad \frac{\partial f}{\partial y}=xz-e^{x}\sin y. \quad \frac{\partial f}{\partial z}=xy+z\]
+\[f(x,y,z)=e^{x} \cos y + xyz + g(y,z)\]
+\[\frac{\partial f}{\partial y}\]
+\[ -e^{x} \sin y +xz + \frac{\partial g}{\partial y}=xz-e^{x} \sin y\]
+\[\frac{\partial g}{\partial y} = 0\]
+\[ f(x,y,z)= e^{x} \cos y + xyz +h(z)\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%page#1081
+\begin{align*}
+xy+\frac{\dif h}{\dif z}&=xy+z,\quad \frac{\dif h}{\dif z}=z,\\
+\end{align*}
+
+\begin{align*}
+h(z)&=\frac{z^{2}}{2}+c\\
+\end{align*}
+
+\begin{align*}
+f(x,y,z)=e^{x}\cos y+xyz+\frac{z^{2}}{2}+C\\
+\end{align*}
+
+\begin{align*}
+\kvec{F}=(2x-3)\ai-z\aj+(\cos z)\ak\\ 
+\end{align*}
+
+\begin{align*}
+\frac{\partial{P}}{\partial{y}}=\frac{\partial}{\partial{y}}(\cos z)=0,\quad\frac{\partial{N}}{\partial{z}}(-z)=-1\\
+\end{align*}
+
+\begin{align*}
+\int_{A}^{B}M\dif x+N\dif y+P\dif z\\
+\end{align*}
+
+\begin{align*}
+M\dif x+N\dif y+P\dif z\\
+\end{align*}
+
+\begin{align*}
+\int_{A}^{B}M\dif x+N\dif y+P\dif z&=\int_{A}^{B}\frac{\partial{f}}{\partial{x}}\dif x+\frac{\partial{f}}{\partial{y}}\dif y+\frac{\partial{f}}{\partial{z}}\dif z\\
+&=\int_{A}^{B}\nabla f\cdot\dif x\\
+&=f(B)-f(A).\\
+\end{align*}
+
+\begin{align*}
+\int_{A}^{B}\dif f&=f(B)-f(A)\\
+\end{align*}
+
+\begin{align*}
+M(x,y,z)\dif x+N(x,y,z)\dif y+P(x,y,z)\dif z\\
+\end{align*}
+
+\begin{align*}
+M\dif x+N\dif y+P\dif z=\frac{\partial{f}}{\partial{x}}\dif x+\frac{\partial{f}}{\partial{y}}\dif y+\frac{\partial{f}}{\partial{z}}\dif z=\dif f\\
+\end{align*}
+%page#1082
+
+\begin{align*}
+M\dif x+N\dif y+P\dif z=\dif f\\
+\end{align*}
+
+\begin{align*}
+\vec{F}=M\ai+N\aj+P\ak\\
+\end{align*}
+
+\begin{align*}
+\kvec{F}=\nabla f\\
+\end{align*}
+
+\begin{align*}
+M\dif x+N\dif y+P\dif z\\
+\end{align*}
+
+\begin{align*}
+M\dif x+N\dif y+P\dif z\\
+\end{align*}
+
+\begin{align*}
+M\dif x+N\dif y+P\dif z\\
+\end{align*}
+
+\begin{align*}
+\frac{\partial{P}}{\partial{y}}=\frac{\partial{N}}{\partial{z}},\quad\frac{\partial{M}}{\partial{z}}=\frac{\partial{P}}{\partial{x}},\quad\frac{\partial{N}}{\partial{x}}=\frac{\partial{M}}{\partial{y}}\\
+\end{align*}
+
+\begin{align*}
+\kvec{F}=M\ai+N\aj+P\ak\\
+\end{align*}
+
+\begin{align*}
+y\dif x+x\dif y+4\dif z\\
+\end{align*}
+
+\begin{align*}
+\int_{(1,1,1)}^{(2,3,-1)}y\dif x+x\dif y+4\dif z\\
+\end{align*}
+
+\begin{align*}
+(1,1,1) (2,3,-1)\\
+\end{align*}
+
+\begin{align*}
+M=y,N=x,P=4\\
+\end{align*}
+
+\begin{align*}
+\frac{\partial{P}}{\partial{y}}=0=\frac{\partial{N}}{\partial{z}},\quad\frac{\partial{M}}{\partial{z}}=0=\frac{\partial{P}}{\partial{x}},\quad\frac{\partial{N}}{\partial{x}}=\frac{\partial{M}}{\partial{y}}
+\end{align*}
+
+\begin{align*}y\dif x+x\dif y+4\dif z
+\end{align*}
+
+\begin{align*}
+y\dif x+x\dif y+4\dif z=\dif f
+\end{align*}
+
+\begin{align*}
+f(2,3,-1)-f(1,1,1)
+\end{align*}
+
+\begin{align*}
+\frac{\partial f}{\partial{x}}=y,\quad\frac{\partial{f}}{\partial{y}}=x\quad\frac{\partial{f}}{\partial{z}}=4\\
+\end{align*}
+
+\begin{align*}
+f(x,y,z)=xy+g(y,z)
+\end{align*}
+
+\begin{align*}
+\frac{\partial{f}}{\partial{y}}=x+\frac{\partial{g}}{\partial{y}}=x,\quad\frac{\partial{g}}{\partial{y}}=0\\
+\end{align*}
+
+\begin{align*}
+f(x,y,z)=xy+h(z)\\
+\end{align*}
+
+\begin{align*}
+\frac{\partial{f}}{\partial{z}}=0+\frac{\dif{h}}{\dif{z}}=4,\quad h(z)=4z+C\\
+\end{align*}
+
+\begin{align*}
+f(x,y,z)=xy+4z+C
+\end{align*}
+
+\begin{align*}
+f(2,3,-1)-f(1,1,1)=2+C-(5+C)=-3\\
+\end{align*}
+
+%page#1083
+
+\[\kvec{F}=yz\ai+xz\aj+xy\ak\]
+\[\kvec{F}=(y\sin{z})\ai+(x\sin{z})\aj+(xy\cos{z})\ak\]
+\[\kvec{F}=y\ai+(x+z)\aj-y\ak\]
+\[\kvec{F}=-y\ai+x\aj\]
+\[\kvec{F}=(z+y)\ai+z\aj+(y+x)\ak\]
+\[\kvec{F}=(e^{x}\cos{y})\ai-(e^{x}\sin{y})\aj+z\ak\]
+
+\[\kvec{F}=2x\ai+3y\aj+4y\aj\]
+\[\kvec{F}=(y=z)\ai+(x+z)\aj+(x+y)\ak\]
+\[\kvec{F}=e^{v+2z}(\ai+x\aj+2x\ak)\]
+\[\kvec{F}=(y\sin{z})\ai+(x\sin{z})\aj+(xy\cos{z})\ak\]
+\[\kvec{F}=\big(\ln{x}+\sec^{2}{(x+y)}\big)\ai+\big(\sec^{2}{(x+y)}+\frac{y}{y^{2}+z^{2}}\big)\aj+\frac{z}{y^{2}+z^{2}}\ak\]
+
+
+\[\int_{(0,0,0)}^{(2,3,-6)}2x\dif x+2y\dif y+2z\dif z\]
+\[\int_{(1,1,2)}^{(3,5,0)}yz\dif x+xz\dif y+xy\dif z\]
+\[\int_{(0,0,0)}^{(1,2,3)}2xy\dif x+(x^{2}-z^{2})\dif y-2yz\dif z\]
+\[\int_{(0,0,0)}^{(3,3,1)}2x\dif x-y^{2}\dif y-\frac{4}{1+z^{2}}\dif z\]
+\[\int_{(1,0,0)}^{(0,1,1)}\sin{y}\cos{x}\dif x+\cos{y}\sin{x}\dif y+\dif z\]
+\[\int_{(1,\pi/2,2)}^{(0,2,1)}2\cos{y}\dif x+\big(\frac{1}{y}-2x\sin{y}\big)\dif y+\frac{1}{z}\dif z\]
+\[\int_{(1,1,1)}^{(1,2,3)}3x^{2}\dif x+\frac{z^{2}}{y}\dif y+2z\ln{y}\dif z\]
+\[\int_{(1,2,1)}^{(2,1,1)}(2x\ln{y}-yz)\dif x+\big(\frac{x^{2}}{y}-xz\big)\dif y-xy\dif z\]
+\[\int_{(1,1,1)}^{(1,2,2)}\frac{1}{y}\dif x+\big(\frac{1}{z}-{x}{y^{2}}\big)\dif y-\frac{y}{z^{2}}\dif z\]
+\[\int_{(-1,-1,-1)}^{(2,2,2)}\frac{2x\dif x+2y\dif y+2z\dif z}{x^{2}+y^{2}+z^{2}}\]
+\[\int_{(2,3,-1)}^{(1,1,1)}y\dif x+x\dif y+4\dif z\]
+\[(1,1,1) (2,3,-1)\]
+\[\kvec{F}=y\ai+x\aj+4\ak\]
+\[\int_{c}x^{2}\dif x+yz\dif y+(y^{2}/2)\dif z\]
+\[(0,0,0) (0,3,4)\]
+\[\int_{A}^{B}z^{2}\dif x+2y\dif y+2xz\dif z\]
+\[\int_{A}^{B}\frac{x\dif x+y\dif y+z\dif z}{\sqrt{x^{2}+y^{2}+z^{2}}}\]
+\[\kvec{F}\]
+\[\nabla f\]
+\[\kvec{F}=\frac{2x}{y}\ai+\frac{1-x^{2}}{y^{2}}\aj\]
+\[\kvec{F}=(e^{x}\ln{y})\ai+(\frac{e^{x}}{y}+\sin{z})\aj+(y\cos{z})\ak\]
+\[\kvec{F}=(x^{2}+y)\ai+(y^{2}+x)\aj+ze^{z}\ak\]
+\[(1,0,0)\]
+\[(1,0,1)\]
+\[x=1,y=0,0\le z\le1\]
+\[\kvec{r}(t)=(\cos{t})\ai+(\sin{t})\aj+(t/2\pi)\ak,0\le t\le 2\pi\]
+\[(1,0,0)\]
+\[(0,0,0)\]
+\[z=x^{2},y=0\]
+\[(0,0,0)\]
+\[(1,0,1)\]
+\[\kvec{F}=e^{vz}\ai+(xze^{vz}+z\cos{y})\aj+(xye^{vz}+\sin{y})\ak\]
+\[(1,0,1)\]
+\[(1,\pi/2,0)\]
+\[x=1,y=\pi t/2,z=1-t,0\le t\le 1\]
+\[(1,0,1)\]
+\[(1,\pi/2,0)\]
+\[(1,0,1)\]
+\[(1,0,0)\]
+\[(1,0,0)\]
+\[y=\pi x^{2}/2,z=0\]
+%page#1084
+\[\kvec{F}=\nabla(x^{3}y^{2})\]
+\[(-1,1) (1,1)\]
+\[(-1,1)(0,0)\]
+\[(0,0)(1,1)\]
+\[\int_{c}\kvec{F}\]
+\[f(x,y)=x^{3}y^{2}\]
+\[\int_{c}2x\cos{y}\dif x-x^{2}\sin{y}\dif y\]
+\[y=(x^{2}-1)\]
+\[(1,0),(0,1)\]
+\[(-1,\pi),(1,0)\]
+\[(-1,0),(1,0)\]
+\[\kvec{r}(t)=(\cos^3{t})\kvec{i}+(\sin^3{t})\kvec{j},0\le t\le 2\pi\]
+\[(1,0),(1,0)\]
+\[\kvec{F}=-GmM\frac{x\kvec{i}+y\kvec{j}+z\kvec{k}}{(x^{2}+y^{2}+z^{2})^{3/2}}\]
+\[GmM(\big(\frac{1}{s_{2}}-\frac{1}{s_{1}}\big)\]
+\[(ay^{2}+2czx)\dif x+y(bx+cz)\dif y+(ay^{2}+cx^{2})\dif z\]
+\[\kvec{F}=(y^{2}+2czx)\kvec{i}+y(bx+cz)\kvec{j}+(y^{2}+cx^{2})\kvec{k}\]
+\[\kvec{F}=\nabla f\]
+\[g(x,y,z)=\int_{(0,0,0)}^{(x,y,z)}\kvec{F}\cdot \dif \kvec{r}\]
+\[\nabla g=\kvec{F}\]
+%page#1085
+\[\kvec{F}(x,y)\cdot (-\kvec{j})\Delta x=-N(x,y)\Delta x\]
+\[\kvec{F}(x,y+\Delta y)\cdot \kvec{j}\Delta x=N(x,y+\Delta y)\Delta x\]
+\[\kvec{F}(x,y)\cdot (-\kvec{j})\Delta x=-N(x,y)\Delta x\]
+\[\kvec{F}(x+\Delta x,y)\cdot \kvec{i}\Delta y=M(x+\Delta x,y)\Delta y\]
+\[\kvec{F}(x,y)\cdot (-\kvec{i})\Delta y=-M(x,y)\Delta y\]
+\[(N(x,y+\Delta y)-N(x,y))\Delta x\approx\]
+\[(M(x+\Delta x,y)-M(x,y))\delta y\]
+\[\approx \big(\frac{\partial{M}}{\partial{x}}+\frac{\partial{N}}{\partial{y}}\big)\Delta x \Delta y.\]
+\[\approx \big(\frac{\partial{M}}{\partial{x}}+\frac{\partial{N}}{\partial{y}}\big)\]
+\[\kvec{F}=M\ai+N\aj\]
+\[(x,y)\]
+\[\kvec{F}=\frac{\partial{M}}{\partial{x}}+\frac{\partial{N}}{\partial{y}}\]
+%page#1086
+\[\kvec{F}(x,y)=(x^{2}-y)\ai+(xy-y^{2})\aj\]
+\[\kvec{F}=\frac{\partial{M}}{\partial{x}}+\frac{\partial{N}}{\partial{y}}=\frac{\partial}{\partial{x}}(x^{2}-y)+\frac{\partial}{\partial{y}}(xy-y^{2})\]
+\[=2x+x-2y=3x-2y\]
+\[\kvec{F}(x,y)=M(x,y)\ai+N(x,y)\aj\]
+\[\kvec{F}(x,y)\cdot \ai\Delta x=M(x,y)\Delta x\]
+\[\kvec{F}(x,y+\Delta y)\cdot (-\ai)\Delta x=-M(x,y+\Delta y)\Delta x\]
+\[\kvec{F}(x,y)\cdot \ai \Delta x=M(x,y)\Delta x\]
+\[\kvec{F}(x+\Delta x,y)\cdot \aj \Delta y=N(x+\Delta x, y)\Delta y\]
+\[\kvec{F}(x,y)\cdot (-\aj)\Delta y=-N(x,y)\Delta y\]
+\[-M((x,y+\Delta y)-M(x,y))\Delta x \approx -\big(\frac{\partial{M}}{\partial{y}}\Delta y\big)\Delta x\]
+\[(N(x+\Delta x,y)-N(x,y))\Delta y \approx \big(\frac{\partial{N}}{\partial{x}}\Delta x\big)\Delta y\]
+\[\Delta x \Delta y\]
+\[\approx \frac{\partial{N}}{\partial{x}}-\frac{\partial{M}}{\partial{y}}\]
+%page#1087
+\[\kvec{F}=M\ai+N\aj\]
+\[\kvec{F}= \frac{\partial{N}}{\partial{x}}-\frac{\partial{M}}{\partial{y}}\]
+\[\kvec{F}(x,y)=(x^{2}-y)\ai+(xy-y^{2})\aj\]
+\[\kvec{F}=\frac{\partial{N}}{\partial{x}}-\frac{\partial{M}}{\partial{y}}=\frac{\partial}{\partial{x}}(xy-y^{2})-\frac{\partial}{\partial{y}}(x^{2}-y)=y+1\]
+\[\kvec{F}=M\ai+N\aj\]
+\[\oint_{c}\kvec{F}\cdot n\dif s=\oint_{c}M\dif y-N\dif x=\int \int_{R}\big(\frac{\partial{M}}{\partial{x}}+\frac{\partial{N}}{\partial{y}}\big)\dif x\dif y\]
+\[\kvec{F}=M\ai+N\aj\]
+%page#1088
+\[\oint_{C}\kvec{F}\cdot\kvec{T}\dif s=\oint_{C}M\dif x+N\dif y=\int \int_{R}\big(\frac{\partial{N}}{\partial{x}}-\frac{\partial{M}}{\partial{y}}\big)\dif x\dif y\]
+\[\kvec{G_{1}}=N\ai-M\aj\]
+\[\kvec{G_{2}}=-N\ai+M\aj\]
+\[\kvec{F}(x,y)=(x-y)\ai+x\aj\]
+\[C: \kvec{r}(t)=(\cos{t})\ai+(\sin{t})\aj,0\le t\le 2\pi\]
+\[M=\cos{t}-\sin{t}, \dif x=d(\cos{t})=-\sin{t}\dif t\]
+\[N=\cos{t}, \dif y=d(\sin{t})=\cos{t}\dif t\]
+\begin{align*}
+\oint_{C}M\dif y-N\dif x&=\int_{t=0}^{t=2\pi}(\cos{t}-\sin{t})(\cos{t}\dif t)-(\cos{t})(-\sin{t}\dif t)\\
+&=\int_{0}^{2\pi}\cos^{2}{t}\dif t=\pi\\
+\int \int_{R}\big(\frac{\partial{M}}{\partial{x}}+\frac{\partial{N}}{\partial{x}}\big)\dif x\dif y&=\int \int_{R}(1+0)\dif x \dif y\\
+&=\int \int_{R}\dif x\dif y\\
+\end{align*}
+%page#1089
+\begin{align*}
+\oint_{C}M\dif x+N\dif y&=\int_{t=0}^{t=2\pi}(\cos{t}-\sin{t})(-\sin{t}\dif t)+(\cos{t}(\cos{t}\dif t))\\
+&=\int_{0}^{2\pi}(-\sin{t}\cos{t}+1)\dif t=2\pi\\
+\int \int_{R}\big(\frac{\partial{M}}{\partial{x}}+\frac{\partial{N}}{\partial{x}}\big)\dif x\dif y&=\int \oint(1-(-1))\dif x\dif y=2\int \int_{R}\dif x\dif y=2\pi\\
+\end{align*}
+\[\oint_{c}xy\dif y-y^{2}\dif x\]
+\[M=xy,N=y^{2}\]
+\begin{align*}
+\oint_{C}xy\dif y -y^{2}\dif x&=\int \int_{R}(y+2y)\dif x\dif y=\int_{0}^{1}\int_{0}^{1}3y\dif x\dif y\\
+&=\int_{0}^{1}\big[3xy\big]_{x=0}^{x=1}\dif y=\int_{0}^{1}3y\dif y=\frac{3}{2}y^{2}\big]_{0}^{1}=\frac{3}{2}\\
+\end{align*}
+\[M=-y^{2}\]
+\[N=xy\]
+\[\oint_{C}-y^{2}\dif x+xy\dif y=\int \int_{R}(y-(-2y))\dif x\dif y=\frac{3}{2}\]
+\[\kvec{F}(x,y)=x\ai+y^{2}\aj\]
+\[x\pm1\]
+\[y\pm1\]
+\[M=x,N=y^{2}\]
+%page1090
+\begin{align*}
+&=\oint_{C}\kvec{F}\cdot n\dif s=\oint_{C}M\dif y-N\dif x\\
+&=\int \int_{R}\big(\frac{\partial{M}}{\partial{x}}+\frac{\partial{N}}{\partial{y}}\big)\dif x\dif y\\
+&=\int_{-1}^{1}\int_{-1}^{1}(1+2y)\dif x\dif y=\int_{-1}^{1}\big[x+2xy\big]_{x=-1}^{x=1}\dif y\\
+&=\int_{-1}^{1}(2+4y)\dif y=\big[2y+2y^{2}\big]_{-1}^{1}=4\\
+\end{align*}
+\[\oint_{C}M\dif x+N\dif y+\int \int_{R}\big(\frac{\partial{N}}{\partial{x}}-\frac{\partial{M}}{\partial{y}}\big)\dif x\dif y\]
+\[C_{1}:y=f_{1}(x),a\le x\le b, C_{2}: y=f_{2}(x),b\ge x\ge a\]
+\[\frac{\partial{M}}{\partial{y}}\]
+\[y=f_{1}(x)\]
+\[y=f_{2}(x)\]
+\[\int_{f_{2}(x)}^{f_{2}(x)}\frac{\partial{M}}{\partial{y}}\dif y=M(x,y)\big]_{y=f_{1}(x)}^{y=f_{2}(x)}=M(x,f_{2}(x))-M(x,f_{1}(x))\]
+\begin{align*}
+\int_{a}^{b}\int_{f_{1}(x)}^{f_{2}(x)}\frac{\partial{M}}{\partial{y}}\dif y\dif x&=\int_{a}^{b}[M(x,f_{2}(x))-M(x,f_{1}(x))]\dif x\\
+&=-\int_{b}^{a}M(x,f_{2}(x))\dif x-\int_{a}^{b}M(x,f_{1}(x))\dif x\\
+&=-\int_{C_{2}}M\dif x-\int_{C_{1}}M\dif x\\
+&=-\oint_{C}M\dif x\\
+\end{align*}
+
+\[\oint_{C}M\dif x=\int \int_{R}\big(-\frac{\partial{M}}{\partial{y}}\big)\dif x\dif y\]
+\[\frac{\partial{N}}{\partial{x}}\]
+
+
+%1091 to 1095
+ \[ \ C_{1}^{\prime}:\' x=g_1(y)\] 
+
+\[ \ d\geq y\geq c\]
+
+\[ \ C_{2}^{\prime}:\quad x=g_2(y)\]
+
+\[ \ c \leq y\leq d\]
+
+
+
+\[ \oint_c= N\dif{y}=\int\int_{R}\frac{\partial N}{\partial x}\dif{x}\dif{y} \]
+
+\[ \ x=a\]
+
+\[ \ x=b\]
+
+\[\ y =c\]
+
+\[ \ y=d\]
+
+\[ \ C_{1}: y=c, \quad a\leq x\leq b\]
+
+\[ \ C_{2}: x=b, \quad c\leq y\leq d\]
+
+\[C_{3}: y=d, \quad b\geq x \geq a\]
+
+\[ C_{4}: x=a, \quad d\geq y \geq c\]
+
+\[ \int_{c}^{d}\int_{a}^{b}\frac{\partial N}{\partial x}\dif{x}\dif{y}=\int_{c}^{d}(N(b,y)-N(a,y))\dif {y}\]
+
+\[\ =\int_{d}^{c}\' N(b,y)\dif{y}+\int_{c}^{d}\' N(a,y)\dif{y}\]
+
+\[ \int_{C1} N\dif{y} +\int_{C2} N\dif{y}\]
+
+\[\ y\]
+
+\[ \ N\dif {y} =\int_{c3}\]
+
+\[ \ N\dif{y}=0\]
+
+\[ \  N\dif{y}+\int_{c}\]
+
+\[ \int_{c}^{d}\int_{a}^{b}\frac{\partial N}{\partial x}\dif{x}\dif{y}=\oint_{c}N\dif{y}\]
+
+\[ \int_{c}^{d}\int_{a}^{b}\frac{\partial M}{\partial y}\dif{x}\dif{y}=\oint_{c}M\dif{y}\]
+
+\[ \oint_{c}M\dif{x}+N\dif{y}=\int\int_{R}\big(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\big)\dif{x}\dif{y}\]
+
+\[ \int_{c3}M\dif{x}+N\dif{y}=\int\int_{R1}\big(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\big)\dif{x}\dif{y}\]
+
+\[ \int_{c4}M\dif{x}+N\dif{y}=\int\int_{R12}\big(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\big)\dif{x}\dif{y}\]
+
+\[ \oint_{c}M\dif{x}+N\dif{y}= \int\int_{R}\big(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\big)\dif{x}\dif{y}\]
+
+\[ \oint_{c,}M\dif{x}+N\dif{y}= \int_{a\leq}\int_{\leq b}\big(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\big)\dif{x}\dif{y}\]
+
+\[ \oint(M\dif{x}+N\dif{y})+\oint(M\dif{x}+N\dif{y})=\int_{a\leq,}\int_{\leq b}\big(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\big)\dif{x}\dif{y}\]
+
+\[ \ R:h^{2}\leq x^{2}+y^{2}\leq 1 \]
+
+\[ \ 0<h<1\]
+
+\[ \ M=\frac{-y}{x^{2}+y^{2}},\]
+
+\[ \ N= \frac {x}{x^{2}+y^{2}}\]
+
+\[ \ C_{1}: \quad x=\cos t\]
+
+\[\ y=\sin t\]
+
+\[ \ 0\leq t\leq 2\pi \]
+
+\[ \ C_{h}: \quad x=h\cos \theta t\]
+
+\[ \ y= -h\sin \theta \]
+
+\[ \ 0\leq \theta \leq 2\pi \]
+
+\[ \frac{\partial M}{\partial y}=\frac{(x^{2}+y{2}(-1)+y(2y)}{(x^{2}+y{2})^{2}}\]
+
+\[\ = \frac{y^{2}-x^{2}}{(x^{2}+y^{2})^{2}}=\frac{\partial N}{\partial x}\]
+
+\[ \int\int_{R}\big(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial N}\big)\dif{x}\dif{y}=\int\int_{R}0\dif{x}\dif{y}=0\]
+
+\[ M\dif{x}+N\dif{y}\]
+
+\[ \oint_{c}M\dif{x}+N\dif{y}=\oint_{C1}\frac{x\dif{y}-y\dif{x}}{x^{2}+y^{2}}+\oint_{C}\frac{x\dif{y}-y\dif{x}}{x^{2}+y^{2}}\]
+
+\[ = \int_{0}^{2\pi} (\cos^{2}t +\sin^{2}t)\dif t-\int_{0}^{2\pi}\frac{h^{2}(\cos^{2}\theta+\sin^{2}\theta)}{h^{2}}\dif \theta \]
+
+\[ \ 2\pi-2\pi=0\]
+
+\[\oint_{k}(M\dif{x}+N\dif{y})+\oint_{C}(M\dif{x}+N\dif{y})=\int\int_{R}\big(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\big)\dif{y}\dif{x}=0\]
+
+\[ \oint_{k}(M\dif{x}+N\dif{y})=2\pi \]
+
+\[ \ x = r \cos \theta \]
+
+\[ \ y=r \sin \theta \]
+
+\[ \dif{x}=  -r\sin \theta \dif \theta+\cos \theta \dif{x}\]
+
+\[ \dif{y}=  r\cos \theta \dif \theta +\sin \theta \dif{r}\]
+
+\[ \frac{ x\dif{y}-y\dif{x}}{x^{2}+y^{2}}=\frac{x^{2}(\cos^{2}\theta+\sin^{2}\theta)\dif\theta}{r^{2}}=\dif \theta \]
+
+\[ \bold F \bold - \bold Mi+N\bold j\]
+
+\[ \ x^{2}+y^{2}\leq a^{2}\]
+
+\[ \ C: \bold r=(a\cos t)\bold i +  (a \sin i)\bold j \]
+
+\[\ 0 \leq t\leq 2\pi \]
+
+\[ \bold 1, \bold F= -y\bold i+x\bold j\]
+
+\[ \bold 2, \bold F =y\bold i\]
+
+\[ \bold 3, \bold F= 2x\bold i - 3y \bold j\]
+
+\[ \bold 4, \bold F=-x^{2}y\bold i +xy^{2}\bold j \]
+
+\[ \bold 5, \bold F= (x-y)\bold i+(y-x)\bold j\]
+
+\[ \ x=0\]
+
+\[ \ x= 1\]
+
+\[ \ y=0\]
+
+\[ \ y =1\]
+
+\[ \bold 6, \bold F=(x^{2}+4y)\bold i+(x+ y^{2})\bold j\]
+
+\[ \bold 7, \bold F=(Y^{2}+X^{2})\bold i +( x^{2}+y^{2})\bold j\]
+
+\[ \ x=3\]
+
+\[ \ y=x\]
+
+\[ \ y =0\]
+
+\[ \bold 8, \bold F=(x+y)\bold i -(x^{2}+y^{2})\bold j\]
+
+\[ \ x=1\]
+
+\[ \ y=x\]
+
+\[ \ y =0\]
+
+\[ \bold 9, \bold F=(x+e^{-1} \sin y)\bold i+(x +e^{-1}\cos y)\bold j \]
+
+\[ t^{2}=\cos2\theta\]
+
+\[ \bold {10}, \bold F= (tan^{-1}\frac{y}{x})\bold i+\bold In(x^{2}+y^{2})\bold j\]
+
+\[ \ 1 \leq r\leq 2,0\leq \theta \leq \pi \]
+
+\[ \bold {11}, \bold F= xy\bold i +y^{2}\bold j \]
+
+\[ \ y =x^{2}\]
+
+\[ \ y=x\]
+
+\[ \bold {12}, \bold F= (-\sin y)\bold i+x \cos y)\bold j\]
+
+\[ \ x= \pi /2\]
+
+\[ \ y= \pi /2\]
+
+\[ \bold {13}, \bold F =\big(3xy-\frac {x}{1+y^{2}}\big)\bold i +(e^{3}+\tan^{-1}y)\bold j \]
+
+\[ r =a(1+\cos\theta),a\> 0\]
+
+\[ \bold {14}, \bold F-(y+e^{x}\' In y )\bold i+(e^{x}/y)\bold j\]
+
+\[ \ y =3-x^{2}\]
+
+\[ \y =x^{4}+1 \]
+
+\[ \bold{15}, \bold F= 2xy^{3}\bold i+4x^{2}y^{2}\bold j\]
+
+\[ \ x=1\]
+
+\[ \ y =x^{3}\]
+
+\[ \bold{16},\bold F=(4x-2y)\bold i +(2x-4y)\bold j\]
+
+\[ \ (x-2)^{2}+(y-2)^{2}=4 \]
+
+\[ \bold {17}, \oint_{c}(y^{2}\dif{x}+x^{2}\dif{y})\]
+
+\[ \ x=0,x+y-1,y-0\]
+
+\[ \bold {18}, \oint_{c}(13y\dif{x}+2x\dif{y})\]
+
+\[ \ 0\leq x \leq x \leq \pi, 0 \leq y\leq \sin x\]
+
+\[\bold {19}, \oint_{c}(6y+x)\dif{x}+(y+2x)\dif{y}\]
+
+\[ \ (x-2)^{2}+(y-3)^{2}=4\]
+
+\[ \bold{20}, \oint _c(2x +y)^{2}\dif{x}+(2xy+3y)\dif {y}\]
+
+\[ \ R=\frac{1}{2}\oint_{c}x\dif{y}-y\dif{x} \]
+
+\[ \ R= \int\int_{R}\dif{y}\dif{x}=\int\int_{e}\big(\frac{1}{2}+\frac{1}{2}\big)\dif{y}\dif{x}\]
+
+\[ \ = \oint_{c}\frac{1}{2}x\dif x=\frac{1}{2}y\dif{x}\]
+
+\[ \bold{21},\bold r(t)= (a\cos t)\bold i+(a \sin t)\bold j, 0\leq t \leq 2\pi \]
+
+\[ \bold {22},\bold r(t) =  (a\cos t)\bold i+(b \sin t)\bold j, 0\leq t \leq 2\pi \]
+
+\[ \bold {23},\bold r(t)=(\cos^{3}r)\bold i +(\sin^{3}r)\bold j,0\leq t \leq 2\pi \]
+
+\[ \bold {24}, \bold r(t)= t^{1}+((t^{3}/3)-t)\bold j\]
+
+\[ -\sqrt{3}\leq t\leq \sqrt{3}\]
+
+\[ \bold{25}, \bold a)\quad \oint_{c}f(x)\dif{x}+g(y)\dif{y}\]
+
+\[ \bold b) \quad \oint_{c}ky\dif{x}+hx\dif{y}\]
+
+\[ \bold {26}, \quad \oint_{c}xy^{2}\dif x +(x^{2}y+2x)\dif {y}\]
+
+\[ \bold {27}, \quad \oint_{c}4x^{3}y\dif{x}+x^{2}\dif {y}\]
+
+\[ \bold{28}, \quad \oint_{c}-y^{3}\dif{x}+x^{3}\dif{y}?\]
+
+\[ \bold {29} \quad \bold R= \oint_{c}x\dif{y}= -\oint_{c}y\dif{x}\]
+
+\[ \ y=f(x)\]
+
+\[ \ x=a\]
+
+\[ \ x=b\]
+
+\[ \int_{e}^{b}f(x)\dif{x}=\oint_{c}y\dif{x}\]
+
+\[ \bold {31}\]
+
+\[ \frac{1}{2}\oint_{c}x^{2}\dif{y}=-\oint_{c}xy\dif{x}=\frac{1}{3}\oint_{c}x^{2}\dif{y}-xy\dif{x}=Ax\]
+
+\[ \bold{32}\]
+
+\[ \frac{1}{3}\oint_{c}x^{3}\dif{y}= -\oint_{c}x^{2}y\dif{x}-\frac{1}{4}\oint_{c}x^{3}\dif{y}=x^{2}y\dif{x}=\bold iy\]
+
+\[ \frac{ \partial^{2}f}{\partial x^{2}}-\frac{ \partial^{2}f}{\partial y^{2}}=0\]
+
+\[ \oint_{c}\frac{\partial f}{\partial y}\dif{x}-\frac{\partial f}{\partial x}\dif{y}=0\]
+
+\[ \bold{34}\]
+
+\[ \big(\frac{1}{4}x^{2}y+\frac{1}{3}y^{2}\big)\bold i +x\bold j\]
+
+\[ \bold {35}\]
+
+\[ \bold a), \quad f(x,y)=In(x^{2}+y{2})\]
+
+\[ x^{2}+y{2}=a{2}\]
+
+\[ \oint_{c}vf. \bold n\dif{x}\]
+
+\[ \bold b)\]
+
+\[ \oint_{k}vf.\bold n \dif {x}\]
+
+\[ \bold {36}\]
+
+\[ \bold F=M(x,y)\bold i+N(x,y)\bold j\]
+
+\[ \ Mx+Ny\neq 0 \]
+
+\[ \frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\]
+
+\[ \bold {41}, \quad \bold F= (2x-y)\bold i +(x+3y)\bold j,\quad C:\quad x^{2}+4y^{2}=4\]
+
+\[ \bold {42}, \quad \bold F=(2x^{3}-y^{3}\bold i+(x^{3}+y{3})\bold j, \quad C:\quad \frac{x^{2}}{4}+\frac{y^{2}}{9}=1\]
+
+\[ \bold {43},\quad \bold F= x^{-1}e'\bold i +(e^{y}In x+2x)\bold j\]
+
+\[ \ y=1+x^{4}\]
+
+\[ \ y-2\]
+
+\[ \bold {44}, \quad \bold F= xe'\bold i +4x^{2} In y\bold j, \quad C: \quad (0,0),(2,0),(0,4)\]
+
+       
+%page 1096
+\(  f(x,y,z) =c  \)
+\( \nabla f  \)
+\( \Delta  A_{k}  \)
+\( T_{k}(x_{k},y_{k},z_{k})  \)
+\( \nabla f (x_{k},y_{k},z_{k} )  \)
+\(  \abs{(u_{k}\times v_{k})\cdot \vec{p}} \) 
+\( \abs{(u_{k}\times v_{k})\cdot \vec{p}} =\delta A_{k}\)
+\(  \abs{u_{k}\times v_{k}}\)
+ \[  \abs{u_{k}\times v_{k}} \,\,\,\, \abs{\kvec{p}} \abs{\cos(angle between u_{k}\times v_{k} and P)}\Delta A_{k}  \]
+ \[ \Delta P_{k} \abs{\cos \gamma _{k}}= \Delta A_{k}   \]
+ \[ \Delta P_{k}=\frac{\Delta A_{k}}{\abs{\cos \gamma _{k}}}   \]   
+ \( \gamma _{k}\neq 0  \)
+\( \nabla f \cdot \kvec {p}\neq 0 \)
+\[ \sum \Delta \kvec{P}_{k}=\sum \frac{\Delta A_{k}}{\abs{cos \gamma _{k}}}   \]  
+%page 1097
+
+\[  \int \int_{R}\frac{1}{\abs{\cos \gamma}}\dif{A}  \]
+\(  f(x,y,z) = c   \) 
+\(  \abs{\nabla f \cdot \kvec{p}} = \abs{\nabla f}\abs{\kvec{p}\abs{\cos \gamma}}  \)
+ \[ \frac{1}{\abs{\cos \gamma}}=  \frac{\abs{\nabla f}}{\abs{\nabla f \cdot \kvec{p}}} \]
+\( f(x,y,z)=c  \) 
+\[ surface area = \int \int_{R} \frac{\abs{\nabla f}}{\abs{\nabla f \cdot \kvec{p}}}\dif{A}   \] 
+\(\nabla f \cdot \kvec{p} \neq 0 \) 
+\( \nabla f \cdot \kvec{p}\neq 0  \) 
+\( f(x,y,z)=c  \) 
+%example 1
+\( x^{2}+y^{2}-z=0  \)
+   \(  z=4 \)
+\( f(x,y,z)=x^{2}+y^{2}-z=0  \)
+\(x^{2}+y^{2}\le 4   \)  
+\(\kvec{p}=\kvec{k}   \)  
+\((x,y,z)   \)  
+\begin{align*}
+f(x,y,z)&=x^{2}+y^{2}-z
+\abs{\nabla f}&=\sqrt{(2x)^{2}+(2y)^{2}+(-1)^{2}}
+&=\sqrt{4x^{2}+4y^{2}+1}
+\abs{\nabla f \cdot \kvec{p}}&=\abs{\nabla f \cdot \kvec{k}}=\abs{-1}=1
+\end{align*}
+%page 1098
+
+\( R\cdot \dif{x}\dif{y}   \) 
+\begin{align*}
+ surface area & =\int \int_{R}\frac{\abs{\nabla f}}{\abs{\nabla f \dif \kvec{p}}}\dif{A}
+& =  \int_{x^{2}+y^{2}\le4}\int \sqrt{4x^{2}+4y^{2}+1}\dif{x}\dif{y}
+& = \int_{0}^{2\pi} \int_{0}^{2} \sqrt{4r^{2}+1}r \dif{r}\dif{\theta}
+& = \int_{0}^{2\pi}\big[  \frac{1}{12}(4r^{2}+1)^{\frac{3}{2}} \big]_{0}^{2}\dif{\theta}
+& = \int_{0}^{2\pi}\frac{1}{12}(17^{\frac{3}{2}}-1)\dif{\theta}=\frac{\pi}{6}(17\sqrt{17}-1)  
+\end{align*}
+%example 2
+  
+\( x^{2}+y^{2}+z^{2}=2\quad , z\ge 2  \) 
+\( x^{2}+y^{2}=1  \) 
+\( f(x,y,z)= x^{2}+y^{2}+z^{2}=2 \) 
+\( R : x^{2}+y^{2}\le 1  \) 
+\begin{align}
+f(x,y,z)&=x^{2}+y^{2}+z^{2}
+\nabla f & = 2x\ai +2y\aj+2z\ak
+\abs{\nabla f \cdot \kvec{p}}&=\abs{\nabla f \cdot \kvec{k}}=\abs{2z}=2z
+\end{align}
+ \[ surface\,area=\int\int_{R} \frac{\abs{\nabla f}}{\abs{\nabla f \cdot \kvec{p}}}\dif{A}=\int\int_{R}\frac{2\sqrt{2}}{2z}\dif{A}=\sqrt{2}\int\int_{R}\frac{\dif{A}}{z}    \]    
+ \[  z=\sqrt{2-x^{2}-y^{2}}    \]  
+\begin{align}
+surface \, area &=\sqrt{2}\int\int_{R}\frac{\dif{A}}{z}=\sqrt{2}\int_{x^{2}+y^{2}-1}\int\frac{\dif{A}}{\sqrt{2-x^{2}-y^{2}}}
+&=\sqrt{2}\int_{0}^{2\pi}\int_{0}^{2\pi} \int_{0}^{1}\frac{r\dif{r}\dif{\theta}}{\sqrt{2-r^{2}}}
+& = \sqrt{2}\int_{0}^{2\pi} \big[ -(2-r^{2})^{\frac{1}{2}}  \big]_{r=0}^{r=1} \dif{\theta}
+&=\sqrt{2}\int_{0}^{2\pi}(\sqrt{2}-1)\dif{\theta}=2\pi(2-\sqrt{2})
+\end{align}
+%page 1099
+
+\( f(x,y,z) = c  \)  
+\( g(x,y,z)  \)  
+\(( x_{k},y_{k},z_{k})  \)  
+\( (x_{k},y_{k},z_{k})\Delta P_{k}  \)  
+ \[  total \, charge = \sum g(x_{k},y_{k},z_{k})\Delta P_{k}=\sum g(x_{k},y_{k},z_{k})\frac{\Delta A_{k}}{\abs{\cos\gamma-{k}}}  \]   
+\[ \int\int_{R}g(x,y,z)\frac{\dif{A}}{\cos\gamma}=\int\int_{R}g(x,y,z)\frac{\abs{\nabla f}}{\nabla f \cdot \kvec{p}}\dif{A}  \]   
+\( f(x,y,z)=c  \) 
+\[ \int \int_{R}g(x,y,z)\frac{\abs{\nabla f}}{\abs{\nabla f\cdot \kvec{p}}}\dif{A}   \]   
+%page 1100
+\(   \)    \[    \]   
+ \[ \dif{\alpha}=\frac{\abs{\nabla f}}{\abs{\nabla f \cdot \kvec{p}}}\dif{A}  \quad \int\int_{s}g\dif{\alpha}   \]   
+ \[ \int\int_{s}g\dif{\alpha}=\int\int_{s_{1}}g\dif{\alpha}+\int\int_{s_{2}}g\dif{\alpha}+\cdot+\int\int_{s_{n}} g\dif{\alpha}  \]   
+%example 3
+\(g(x,y,z)=xyz\)
+\( x=1\, , \, y=1   \)  
+\( z=1  \)  
+\( xyz=0  \)  
+ \[\int \int_{cube\,surface} xyz\dif{\alpha}=\int\int_{side A}xyz\dif{\alpha}+\int_{side B}\int xyz\dif{\alpha}+\int_{side C}\int xyz \dif{\alpha}    \]   
+\( f(x,y,z)=z=1  \) 
+\( R_{xy} : 0\le x\le 1  \) 
+\( 0\le y \le 1  \) 
+\[ \kvec{p}=\kvec{k}\quad \nabla f=\kvec{k}  \,,\,\, \abs{\nabla f}=1 \abs{\nabla f \cdot \kvec{p}}=\abs{\kvec{k}\cdot \kvec{k}}=1   \]  
+\[ \dif{\alpha}=\frac{\abs{\nabla f}}{\abs{\nabla f \cdot \kvec{p}}}\dif{A}=\frac{1}{1}\dif{x}\dif{y}=\dif{x}\dif{y}\]
+\[ xyz=xy(1)=xy   \]    
+\[ \int_{side A}\int xyz \dif{\alpha}=\int\int_{R_{xy}}xy\dif{x}\dif{y}=\int_{0}^{1}\int_{0}^{1} xy \dif{x}\dif{y}=\int_{0}^{1}\frac{y}{2}\dif{y}=\frac{1}{4}   \]   
+
+
+
+
+
+
+
+
+%page#1101
+\(\frac{1}{4}\)
+\\
+\[\int\int_{cube \,surface} xyz \,d\sigma=\frac{1}{4}+\frac{1}{4}+\frac{1}{4}= \frac{3}{4}\]
+\\
+\begin{equation}
+\textbf{Flux}=\iint\limits_{S}\kvec{F.n}\,d\sigma
+\end{equation}
+
+\[\int_{C}\kvec{F . n}\,ds\]
+\\
+\(g(x,y,z)=c\)
+
+\begin{equation}
+\kvec{n}=\pm\frac{\nabla g}{|\nabla g|}
+\end{equation}
+
+%page#1102
+\begin{align}
+\textbf{Flux}=&\iint\limits_{S}\kvec{F.n}\,d\sigma\\
+=&\iint\limits_{R}\Big(\kvec{F.}\frac{\pm \nabla g}{|\nabla g|}\Big) \frac{|\nabla g|}{|\nabla g\kvec{.p}|}\,dA\\
+=&\iint\limits_{R}\frac{\pm|\nabla g|}{|\nabla g\kvec{.p}|}\,dA
+\end{align}
+\\
+%example 4
+\(\kvec{F}=yz\aj+z^2\ak\)\\
+\(y^2+z^2=1\)\\
+\(z=\ge 0\)\\
+\(x=0\)\\
+\(x=1\)\\
+\(g(x,y,z)=y^2+z^2\)\\
+\\
+\[\kvec{n}=+\frac{\nabla g}{|\nabla g|}=\frac{2y\aj+2z\ak}{\sqrt{4y^2+4z^2}}=\frac{2y\aj+2z\ak}{2}= y\aj+z\ak\]
+
+\(\kvec{p}=\kvec{k}\)
+
+\[d\sigma=\frac{\nabla g}{|\nabla g\kvec{.k}|}\,dA=\frac{2}{|2z|}\,dA= \frac{1}{z}\,dA\]
+
+\(z\ge 0\)
+\\
+\(\kvec{F.n}\)
+
+\begin{align*}
+\kvec{F.n}=&(yz\aj+z^2\ak).(y\aj+z\ak)\\
+=& y^2z+z^3=z(y^2+z^2)\\
+=& z
+\end{align*}
+
+\(y^2+z^2=1\)
+
+\[\iint\limits_{S} \kvec{F.n}\,d\sigma=\iint\limits_{S}(z)\Big(\frac{1}{z}dA\Big)=\iint\limits_{R_{xy}}dA= area(R_{xy})=2\]
+
+\[f(x,y,z)= x^2+y^2+z^2=a^2, \quad z\ge 0\]
+
+\(\bar{z}\)
+\\
+\(\bar{z}= \frac{\kvec{M}_{xy}}{\kvec{M}}\)
+\\
+\[\kvec{M}=\iint\limits_{S}\delta \, d\sigma=\delta \iint\limits_{S} d\sigma=(\delta)(area of S)= 2\pi a^2\delta\]
+
+%page#1103
+\[\kvec{M}=\iint\limits_{S}\delta(x,y,z)\,d\sigma \quad (\delta(x,y,z)=density at (x,y,z),mass per unit area)\]
+
+\[\kvec{M}_{yz}= \iint\limits_{S} x\delta d\sigma, \quad \kvec{M}_{xz}=\iint\limits_{S} y\delta d\sigma, \quad \kvec{M}_{xy}= \iint\limits_{S} z\delta d\sigma\]
+
+\[\bar{x}=\frac{\kvec{M}_{yz}}{\kvec{M}}, \quad \bar{y}=\frac{\kvec{M}_{xz}}{\kvec{M}}, \quad\bar{z}=\frac{\kvec{M}_{xy}}{\kvec{M}}\]
+
+\begin{align*}
+I_x =&\iint\limits_{S} (y^2+z^2)\delta d\sigma, \quad I_y =\iint\limits_{S} (x^2+z^2)\delta d\sigma,\\
+I_z =&\iint\limits_{S} (x^2+y^2)\delta d\sigma, \quad I_L =\iint\limits_{S} r^2\delta d\sigma
+\end{align*}
+
+\(R_L= \sqrt{\frac{I_{L}}{\kvec{M}}}\)
+\\
+\(\kvec{p}=\kvec{k}\)
+
+\begin{align*}
+|\nabla f|=&|2x\ai+2y\aj+2z\ak|=2 \sqrt{x^2+y^2+z^2}=2a \\
+|\nabla f\kvec{.p}|=&|\nabla f \kvec{.k}|=|2z|= 2z\\
+d\sigma =& \frac{|\nabla f|}{|\nabla f\kvec{.p}|}dA= \frac{a}{z}dA
+\end{align*}
+
+\[\kvec{M}_{xy}=\iint\limits_{S}z\delta d\sigma = \delta\iint\limits_{R} z\frac{a}{z} dA=\delta a\iint\limits_{R} dA= \delta a\pi (a^2)=\delta \pi a^3\]
+
+\[\bar{z}= \frac{\kvec{M}_{xy}}{\kvec{M}}= \frac{\pi a^3\delta}{2\pi a^2 \delta}=\frac{a}{2}\]
+
+\((0,0,\frac{a}{2})\)
+\\
+%exercise
+%01
+\(x^2+y^2-z=0\) \\
+\(z=2\)   \\
+%02
+\(x^2+y^2-z=0\)  \\
+\(z=2\)  \\
+\(z=6\)   \\
+%03
+\(x+2y+2z=5\)   \\
+\(x=y^2\)   \\
+\(x=2-y^2\)  \\
+%04
+\(x^2-2z=0\)   \\
+\(x=\sqrt{3}\)    \\
+\(y=0\)  \\
+\(y=x\) \\
+
+%page#1104
+%05
+\(x^2-2y-2z=0\) \\
+\(x=2\) \\
+\(y=0\) \\
+\(y=3x\) \\
+%06
+\(x^2+y^2+z^2=2\) \\
+\(z=\sqrt{x^2+y^2}\)  \\
+%07
+\(z=cx\)  \\
+\(x^2+y^2=1\)  \\
+%08
+\(x^2+z^2=1\)  \\
+\(x=\pm\frac{1}{2}\)  \\
+\(y=\pm\frac{1}{2}\)   \\
+%09
+\(x=4-y^2-z^2\)   \\
+\(1\le y^2+z^2\le 4\) \\
+%10
+\(x^2+y+z^2=2\)  \\
+\(y=0\)  \\
+%11
+\(x^2-2\ln x+\sqrt{15}y-z=0\)  \\
+\(1\le x\le 2\) \\
+\(0\le y\le 1\) \\
+%12
+\(2x^{\frac{3}{2}}+2y{\frac{3}{2}}-3z=0\) \\
+\(0\le x\le 1\)  \\
+\(0\le y\le 1\) \\
+%13
+\(g(x,y,z)= x+y+z\)  \\
+\(x=a\) \\
+\(y=a\) \\
+\(z=a\)  \\
+%14
+\(g(x,y,z)= y+z\)  \\
+\(x=2\)  \\
+\(y+z=1\)  \\
+%15
+\(g(x,y,z)= xyz\) \\
+\(x=a\)  \\
+\(y=b\) \\
+\(z=c\)  \\
+%16
+\(g(x,y,z)= xyz\) \\
+\(x=\pm a\)  \\
+\(y=\pm b\)  \\
+\(z=\pm c\)  \\
+%17
+\(g(x,y,z)=x+y+z\) \\
+\(2x+2y+z=2\)  \\
+%18
+\(g(x,y,z)=x\sqrt{y^2+4}\)  \\
+\(y^2+4z=16\)  \\
+\(x=0\)  \\
+\(x=1\)  \\
+\(z=0\)  \\
+%19
+\(\kvec{F}(x,y,z)= -\ai+2\aj+3\ak\)   \\
+\(z=0\)   \\
+\(0\le x\le2\)  \\
+\(0\le y\le 3\)  \\
+%20
+\(\kvec{F}(x,y,z)=yx^2\ai-2\aj+xz\ak\) \\
+\(y=0\) \\
+\(-1\le x \le 2\)  \\
+\(2\le z\le 7\)    \\
+%21-26
+\begin{enumerate}[a.]
+\item
+ \(\kvec{F}(x,y,z)= z\ak\)
+
+\item 
+\(\kvec{F}(x,y,z)=-y\ai+x\aj\)
+
+\item 
+\(\kvec{F}(x,y,z)=y\ai-x\aj+\ak\)
+
+\item 
+\(\kvec{F}(x,y,z)= zx\ai+zy\aj+z^2\ak\)
+
+\item 
+\(\kvec{F}(x,y,z)=x\ai+y\aj+z\ak\)
+
+\item
+\(\kvec{F}(x,y,z)=\frac{x\ai+y\aj+z\ak}{\sqrt{x^2+y^2+z^2}}\)
+\end{enumerate}
+
+%27
+
+\(\kvec{F}(x,y,z)=z^2\ai+x\aj-3z\ak\)  \\
+\(z=4-y^2\)  \\
+\(x=0\)    \\
+\(x=1\)     \\
+\(z=0\)     \\
+%28
+\(\kvec{F}(x,y,z)=4x\ai+4y\aj+2\ak\) \\
+\(z=x^2+y^2\)  \\
+\(z=1\)  \\
+%29
+\(y=e^x\)  \\
+\(1\le y \le2\)  \\
+\(0\le z\le 1\) \\
+\(\kvec{F}(x,y,z)= -2\ai+2y\aj+z\ak\)  \\
+%30
+\(y=\ln x\)  \\
+\(1\le x\le e\)  \\
+\(0\le z\le 1\)   \\
+\(\kvec{F}=2y\aj+z\ak\)  \\
+%31
+\(\kvec{F}= 2xy\ai+2yz\aj+2xz\ak\)  \\
+\(x=a\) \\
+\(y=a\)  \\
+\(z=a\)  \\
+%32
+\(\kvec{F}=xz\ai+yz\aj+\ak\)   \\
+\(x^2+y^2+z^2\le 25\)   \\
+\(z=3\)  \\
+%33
+\(x^2+y^2+z^2=a^2\)  \\
+%34
+\(y^2+z^2=9\)  \\
+\(z\ge 0\)  \\
+\(x=0\)  \\
+\(x=3\)   \\
+
+%page #1105
+%35
+\(x^2+y^2-z^2=0\)  \\
+\(z=1\)  \\
+\(z=2\)   \\
+%36
+\(4x^2+4y^2-z^2=0\)  \\
+\(z\ge 0\)  \\
+\(x^2+y^2=2x\) \\
+
+\(z=f(x,y)\)  \\
+\(\kvec{F}(x,y,z)=0\)  \\
+\(\kvec{F}(x,y,z)=f(x,y)-z\)  \\
+\(\kvec{p}=\kvec{k}\)   \\
+\begin{align*}
+|\nabla F|=&|f_{x}\ai+f_{y}\aj-\ak|= \sqrt{f_{x}^2+f_{y}^2+1}\\
+|\nabla F\kvec{.p}|=&|(f_{x}\ai+f_{y}\aj-\ak)|=|-1|=1
+\end{align*}
+
+\begin{equation}
+A=\iint\limits_{R_{xy}}\frac{|\nabla F|}{|\nabla F\kvec{.p}|}dA=\iint\limits_{R_{xy}}\sqrt{f_{x}^2+f_{y}^2+1}dxdy
+\end{equation}
+
+\(x=f(y,z)\)
+
+\begin{equation}
+A=\iint\limits_{R_{yz}}\sqrt{f_{y}^2+f_{z}^2+1}dydz
+\end{equation}
+
+\begin{equation}
+A=\iint\limits_{R_{xz}}\sqrt{f_{x}^2+f_{z}^2+1}dxdz
+\end{equation}
+%39
+\(z=x^2+y^2\)  \\
+\(z=3\)  \\
+%40
+\(x=1-y^2=z^2\) \\
+%41
+\(z=\sqrt{x^2+y^2}\)  \\
+\(x^2+y^2=1\)   \\
+\(9x^2+4y^2=36\)  \\
+%42
+\(2x+6y+3z=6\) \\
+%43
+\(y=(2/3)z^{3/2}\) \\
+\(x=1\) \\
+\(y=\frac{16}{3}\) \\
+%44
+\(y+z=4\) \\
+\(x=4-z^2\) \\
+
+%1106
+\(y=f(x)\)  \\
+\(\kvec{F}(x,y)=0\)  \\
+\(\kvec{r}(t)=f(t)\ai+g(t)\aj,\,\,\,a\le t\le b\)  \\
+\(z=f(x,y)\) \\
+\(\kvec{F}(x,y,z)=0\)\\
+
+\begin{equation}
+\kvec{r}(u,v)= f(u,v)\ai +g(u,v)\aj+h(u,v)\ak
+\end{equation}
+
+\(a\le u\le b\) \\
+\(c\le v \le d\) \\
+ \[x=f(u,v),\quad y=g(u,v, \quad z=h(u,v))\]
+
+%example
+\[z=\sqrt{x^2+y^2},\quad \quad 0\le z\le 1\]
+\((x,y,z)\)  \\
+\(x=r\cos\theta\)  \\
+\(y=r\sin\theta\)  \\
+\(z=\sqrt{x^2+y^2}=r\)  \\
+\(0\le r\le 1\)  \\
+\(0\le \theta \le 2\pi\)  \\
+\(u=r\)  \\
+\(v=\theta\)   \\
+\[\kvec{r}(r,\theta)=(r\cos\theta)\ai+(r\sin\theta)\aj+r\ak,\quad 0\le r\le 1,\quad (0\le \theta \le 2\pi)\]
+
+%example 2
+\(x^2+y^2+z^2=a^2\)  \\
+\(x,y,z\)   \\
+\(x=a\sin\phi \cos\theta\)  \\
+\(y=a\sin\phi \sin\theta\)   \\
+\(z=a\cos\phi\)  \\
+\(0\le \phi \le \pi\)  \\
+\(0\le \theta \le 2\pi\)  \\
+\(u=\phi\)  \\
+\(v=\theta\)  \\
+\[\kvec{r}(\phi, \theta)=(a\sin\phi \cos\theta)\ai+(a\sin\phi \sin\theta)\aj+(a\cos\phi)\ak,\quad 0\le \phi \le \pi, \,\,0\le \theta \le 2\pi\]
+
+
+
+%page#1107
+%example 3
+\[x^2+(y-3)^2=9,\quad 0\le z\le 5\]
+\(x,y,z\)
+\(x=r\cos\theta\)\\
+\(y=r\sin\theta\)\\
+\(z=z\)\\
+\(x^2+(y-3)^2=9\)\\
+\(r=6\sin\theta\)\\
+\(0\le \theta \le \pi\)\\
+\begin{align*}
+x=&r\cos\theta=6\sin\theta\cos\theta =3\sin 2\theta\\
+y=& r\sin \theta = 6\sin^2 \theta\\
+z=&z
+\end{align*}
+\(u=\theta\)\\
+\(v=z\)\\
+\[\kvec{r}(\theta ,z)=(3\sin 2\theta)\ai+(6\sin^2 \theta)\aj+z\ak, \quad 0\le \theta \le \pi, \,\, 0\le z \le5\]
+
+\[\kvec{r}(u,v)=f(u,v)\ai+g(u,v)\aj+h(u,v)\ak, \quad a\le u\le b, \quad c\le v\le d\]
+\begin{align*}
+\kvec{r}_{u}=&\frac{\partial \kvec{r}}{\partial u}=\frac{\partial f }{\partial u}\ai+\frac{\partial g}{\partial u}\aj+\frac{\partial h}{\partial u}\ak\\
+\kvec{r}_{v}=&\frac{\partial \kvec{r}}{\partial v}=\frac{\partial f}{\partial v}\ai+\frac{\partial g}{\partial v}\aj+\frac{\partial h }{\partial v}\ak
+\end{align*}
+
+\(\kvec{r}(u,v)=f(u,v)\ai+g(u,v)\aj+h(u,v)\ak\)\\
+\(\kvec{r}_{u} \times\kvec{r}_{v}\)\\
+\(\Delta A_{uv}\)\\
+\(u=u_{0}\)\\
+\(u=u_{0}+\Delta u\)\\
+\(v=v_{0}\)\\
+\(v=v_{0}+\Delta v\)\\
+\(\Delta \sigma_{uv}\)\\
+\(v=v_{0}\)\\
+\(u=u_{0}\)\\
+\(u_{0},v_{0}\)\\
+\(\kvec{r}_{u}(u_{0},v_{0})\)\\
+\(\kvec{r}_{v}(u_{0},v_{0})\)\\
+\(\kvec{r}_{u} \times \kvec{r}_{v}\)\\
+\(\kvec{r}_{u} \times \kvec{r}_{v}\neq 0\)\\
+\(\Delta u\kvec{r}_{u}\)\\
+\(\Delta v \kvec{r}_{v}\)\\
+\begin{equation}
+|\Delta u\kvec{r}_{u}\times \Delta v \kvec{r}_{v}|=|\kvec{r}_{u}\times \kvec{r}_{v}|\Delta u\Delta v
+\end{equation}
+
+
+
+%page 1108
+\(\Delta A_{uv}\)\\
+\(\Delta \sigma_{uv}\)
+\begin{equation}
+\sum_{u}\sum_{v}|\kvec{r}_{u}\times \kvec{r}_{v}|\Delta u\Delta v
+\end{equation}
+
+\(\kvec{r}(u,v)=f(u,v)\ai+g(u,v)\aj+h(u,v)\ak,\quad a \le u\le b,\quad  c \le v\le d\)
+
+\begin{equation}
+\int_{c}^{d}\int_{a}^{b}|\kvec{r}_{u}\times \kvec{r}_{v}|dudv
+\end{equation}
+\(|\kvec{r}_{u}\times \kvec{r}_{v}|dudv\)
+
+\begin{equation}
+d\sigma= |\kvec{r}_{u}\times \kvec{r}_{v}|dudv\quad\quad\iint\limits_{S} d\sigma
+\end{equation}
+
+
+%1109
+% example 04
+
+ \[  \kvec{r}(r,\theta)=(r \cos\theta)\ai + (r\sin\theta)\aj r\ak , \quad  0\le r\le 1,\quad 0\le \theta\le 2\pi          \]
+\(   \kvec{r}_{r} \times \kvec{r}_{\theta}          \) 
+\begin{equation*}
+\kvec{r}_{r}\times\kvec{r}_{\theta}=
+\begin{bmatrix}
+\ai       &         \aj       &       \ak \\
+\cos\theta  &    \sin\theta    &   1  \\
+-(r \cos\theta)\ai & -(r\sin\theta)\aj +(r cos^{2}\theta + r\sin^{2}\theta)\ak
+\end{bmatrix}
+\end{equation*}
+\(    \abs{\kvec{r}_{r}\times \kvec{r}_{\theta}}=\sqrt{r^{2}cos^{2}\theta+r^{2}sin^{2}\theta+r^{2}}=\sqrt{2r^{2}}=\sqrt{2}r         \)   
+ \[  A=\int_{0}^{2\pi}\int_{0}^{1}\abs{\kvec{r}_{r}\times \kvec{r}_{\theta}} \dif{r}\dif{\theta}           \]
+ \[  =\int_{0}^{2\pi}\int_{0}^{1}\sqrt{2}\dif{r}\dif{\theta}=\int_{0}^{2\pi}\frac{\sqrt{2}}{2}\dif{\theta}=\frac{\sqrt{2}}{2} (2\pi)=\pi \sqrt{2}           \]
+%example 5
+\[\kvec{r}(\phi, \theta)= (a \sin\phi \cos\theta)\ai +(a\sin\phi\sin\theta)\aj+(a\cos\phi)\ak       \]
+ \[    0\le\phi\le\pi,\quad 0\le\theta\le2\pi          \]
+\(     \kvec{r}_{\phi}\times \kvec{r}_{\theta}        \)    
+\begin{equation}
+ \kvec{r}_{\phi}\times \kvec{r}_{\theta} =
+\begin{bmatrix}
+\ai                    &              \aj                     &          \ak\\
+a\cos\phi\sin\theta & a\cos\phi\sin\theta & -a\sin\phi\\
+-a\sin\phi\sin\theta & a\sin\phi\cos\theta & 0\\
+\end{bmatrix}
+=(a^{2}\sin^{2}\phi\cos\theta)\ai+(a^{2}\sin^{2}\phi\sin\theta)\aj+(a^{2}\sin\phi\cos\phi)\ak
+\end{equation}
+\begin{align}
+\abs{\kvec{r}_{\phi}\times\kvec{r}_{\theta}}&=\sqrt{a^{4}\sin^{4}\phi\cos^{2}\theta+a^{4}\sin^{4}\phi\sin^{2}\theta+a^{4}\sin^{2}\phi\cos^{2}\phi}\\
+&=\sqrt{ a^{4}\sin^{4}\phi+a^{4}\sin^{2}\phi\cos^{2}\phi     }=\sqrt{a^{4}\sin^{2}\phi(\sin^{2}\phi +\cos^{2}\phi)    }
+&=a^{2}\sqrt{\sin^{2}\phi}=a^{2}\sin\phi
+\end{align}
+
+\(   \phi\ge 0           \)  
+\(   0\le\phi\le\pi          \)  
+\begin{align*}
+A&=\int_{0}^{2\pi}\int_{0}^{\pi} a^{2}\sin\phi\dif{\phi}\dif{\theta}
+&=\int_{0}^{2\pi}\big[ -a^{2}\cos\phi    \big]_{0}^{\pi}\dif{\theta}=\int_{0}^{2\pi} 2a^{2}\dif{\theta}=4\pi a^{2}
+\end{align*}
+
+%page1110
+\(\kvec{r}(u,v)=f(u,v)\ai+g(u,v)\aj+h(u,v)\ak,  a\le u\le b, c\le v\le d,\)
+\(  G(x,y,z)           \)    
+ \[  \int\int_{S}G(x,y,z)\dif{\sigma}=\int_{c}^{d}\int_{a}^{b} G(f(u,v),g(u,v),h(u,v))\abs{\kvec{r}_{u}\times\kvec{r}_{v}}\dif{u}\dif{v}            \]
+%example 6
+\(    G(x,y,z)=x^{2}         \) 
+\(  z=\sqrt{x^{2}+y^{2}}, 0\le z\le 1           \) 
+\(   \abs{\kvec{r}_{r}\times \kvec{r}_{\theta}}=\sqrt{2}r          \) 
+\begin{align*}
+\int\int_{s}x^{2}\dif{\sigma}&=\int_{0}^{2\pi}\int_{0}^{1}(r^{2}\cos^{2}\theta)(\sqrt{2}r)\dif{r}\dif{\theta}
+&=\sqrt{2}\int_{0}^{2\pi}\int_{0}^{1}r^{3}\cos^{2}\theta\dif{\theta}=\frac{\sqrt{2}}{4}\big[ \frac{\theta}{2}+\frac{1}{4}\sin2\theta   \big]_{0}^{2\pi}=\frac{\pi \sqrt{2}}{4}
+\end{align*}
+%example 7
+\(             \)             \[              \]
+\(  \kvec{F}=yz\ai+x\aj-z^{2}\ak           \) 
+\(     y=x^{2},\quad 0\le x\le1,\quad 0\le z\le 4        \) 
+\(     x=x , y=x^{2}         \) 
+\(    z=z         \) 
+\(  \kvec{r}(x,z)=x\ai+x^{2}\aj+z\ak, 0\le x\le 1, 0\le z\le 4           \) 
+\begin{equation}
+\kvec{r}_{x}\times \kvec{r}_{z}=
+\begin{bmatrix}
+\ai   &    \aj   &    \ak   \\
+1  &   2x   &   0  \\
+0&    0&   1\\
+\end{bmatrix}
+\end{equation}
+ \[      \kvec{n}\frac{\kvec{r}_{x\times\kvec{r}_{z}}}{\abs{\kvec{r}_{x}\times\kvec{r}_{z}}}=\frac{2x\ai-\aj}{\sqrt{4x^{2}+1}}        \]
+\(   y=x^{2}  \)
+ \[ \kvec{F}=yz\ai+x\aj-z^{2}\ak=x^{2}z\ai+x\aj-z^{2}\ak             \]
+\begin{align*}
+\kvec{F}\cdot\kvec{n}&=\frac{1}{\sqrt{4x^{2}+1}}\big(  (x^{2}z)(2x)+(x)(-1)+(-z)^{2}(0)  \big)\\
+&=\frac{2x^{3}z-x}{\sqrt{4x^{2}+1}}
+\end{align*}
+%page 1111
+\begin{align*}
+\int\int_{s}\kvec{F}\cdot\kvec{n}\dif{\sigma}&=\int_{0}^{4}\int_{0}^{1}\frac{2x^{3}z-x}{4x^{2}+1}\abs{\kvec{r}_{x}\times\kvec{r}_{z}\dif{x}\dif{z}}\\
+&=\int_{0}^{4}\int_{0}^{1}\frac{2x^{3}z-x}{\sqrt{4x^{2}+1}}\sqrt{4x^{2}+1}\dif{x}\dif{z}\\
+&=\int_{0}^{4}\int_{0}^{1}(2x^{3}-z)\dif{x}\dif{z}=\int_{0}^{4}\big[ \frac{1}{2}x^{4}z-\frac{1}{2}x^{2}     \big]_{x=0}^{x=1}\\
+&=\int_{0}^{4}\frac{1}{2}(z-1)\dif{z}=\frac{1}{4}(z-1)^{2}\big]_{0}^{4}\\
+&=\frac{1}{4}(9)-\frac{1}{4}(1)=2
+\end{align*}
+%example 8
+\(  z=\sqrt{x^{2}+y^{2}}\)
+\(  z=1\) 
+\(   z=2  \)
+\[  \kvec{r}(r,\theta)=r\cos\theta\ai+r\sin\theta\aj+r\ak,\quad 1\le r\le 2, \quad 0\le r\le 2\pi\]
+\( \abs{\kvec{r}_{r}}\times\kvec{r}_{\theta} =\sqrt{2}r \)
+\begin{align}
+M&=\int\int_{s}\delta\dif{\alpha}=\int_{0}^{2\pi}\int_{1}^{2}\delta\sqrt{2}r\dif{r}\dif{\theta} \\
+&=\delta\sqrt{2}\int_{0}^{2\pi}\big[ \frac{r^{2}}{2}  \big]^{2}\dif{\theta}=\delta\sqrt{2}\int_{0}^{2\pi}\big( 2-\frac{1}{2}  \big) \dif{\theta} \\
+& =\delta\sqrt{2}\big[ \frac{3\theta}{2}\big]_{0}^{2\pi} \\
+M_{xy}&=\int\int_{s}\delta z \dif{\sigma}=\int_{0}^{2\pi}\int_{1}^{2}\delta r \sqrt{2}r\dif{r}\dif{\theta}  \\
+& =\delta\sqrt{2}\int_{0}^{2\pi}\int_{1}^{2}r^{2}\dif{r}\dif{\theta}=\delta\sqrt{2}\int_{0}^{2\pi}\big[ \frac{r^{3}}{3}\big]_{1}^{2}\dif{\theta}  \\
+&\delta\sqrt{2}\int_{0}^{2\pi}\frac{7}{3}\dif{\theta}=\frac{14}{3}\pi\delta\sqrt{2}   \\
+z&=\frac{M_{xy}}{M}=\frac{14\pi\delta\sqrt{2}}{3(3\pi\delta\sqrt{2})=\frac{14}{9}}
+\end{align}
+
+
+
+% 1112
+%1
+\(z=x^{2}+y^{2},\,\,z\le4\)\\
+%2
+\(9-x^{2}-y^{2},\,\,z\ge0\)\\
+%3
+\(z=\sqrt{x^{2}+y^{2}}/2\)
+\(z=0\)
+\(z=3\)\\
+%4
+\(z=2\sqrt{x^{2}+y^{2}}\)
+\(z=2\)
+\(z=4\)\\
+%5
+\(x^{2}+y^{2}+z^{2}=9\)
+\(z=\sqrt{x^{2}+y^{2}}\)\\
+%6
+\(x^{2}+y^{2}+z^{2}=4\)
+\(z=\sqrt{x^{2}+y^{2}}\)\\
+%7
+\(x^{2}+y^{2}+z^{2}=3\)
+\(z=\sqrt{3}/2\)
+\(z=-\sqrt{3}/2\)\\
+%8
+\(x^{2}+y^{2}+z^{2}=8\)
+\(z=-2\)\\
+%9
+\(z=4-y^{2}\)
+\(x=0\)
+\(x=2\)
+\(z=0\)\\
+%10
+\(y=x^{2}\)
+\(z=0\)
+\(z=3\)
+\(y=2\)\\
+%11
+\(y^{2}+z^{2}=9\)
+\(x=0\)
+\(x=3\)\\
+%12
+\(x^{2}+z^{2}=4\)
+\(y=-2\)
+\(y=2\)\\
+%13
+\(x+y+z=1\)
+\(x^{2}+y^{2}=9\)
+\(y^{2}+z^{2}=9\)\\
+%14
+\(x-y+2z=2\)
+\(x^{2}+z^{2}=3\)
+\(y^{2}+z^{2}=2\)\\
+%15
+\((x-2)^{2}+z^{2}=4\)
+\(y=0\)
+\(y=3\)\\
+%16
+\(y^{2}+(z-5)^{2}=25\)
+\(x=0\)
+\(x=3\)\\
+%17
+\(y+2z=2\)
+\(x^{2}+y^{2}=1\)\\
+%18
+\(z=-x\)
+\(x^{2}+y^{2}=4\)\\
+%19
+\(z=2\sqrt{x^{2}+y^{2}}\)
+\(z=2\)
+\(z=6\)\\
+%20
+\(z=\sqrt{x^{2}+y^{2}}/3\)
+\(z=1\)
+\(z=4/3\)\\
+%21
+\(x^{2}+y^{2}=1\)
+\(z=1\)
+\(z=4\)\\
+%22
+\(x^{2}+z^{2}=10\)
+\(y=-1\)
+\(y=1\)\\
+%23
+\(z=2-x^{2}-y^{2}\)
+\(z=\sqrt{x^{2}+y^{2}}\)\\
+%24
+\(z=x^{2}+y^{2}\)
+\(z=1\)
+\(z=4\)\\
+%25
+\(x^{2}+y^{2}+z^{2}=2\)
+\(z=\sqrt{x^{2}+y^{2}}\)\\
+%26
+\(x^{2}+y^{2}+z^{2}=4\)
+\(z=-1\)
+\(z=\sqrt{3}\)\\
+%27
+\(G(x,y,z)=x\)
+\(y=x^{2},0\le x\le 2,0\le z\le 3\)\\
+%28
+\(G(x,y,z)=z\)
+\(y^{2}+z^{2}=4,z\ge 0,1\le x\le 4\)\\
+%29
+\(G(x,y,z)=x^{2}\)
+\(x^{2}+y^{2}+z^{2}=1\)\\
+%30
+\(G(x,y,z)=z^{2}\)
+\(x^{2}+y^{2}+z^{2}=a^{2},z\ge 0\)\\
+%31
+\(F(x,y,z)=z\)
+\(x+y+z=4\)
+\(0\le x\le 1,0\le y\le 1\)\\
+%32
+\(F(x,y,z)=z-x\)
+\(z=\sqrt{x^{2}+y^{2}},0\le z\le 1\)\\
+%33
+\(H(x,y,z)=x^{2}\sqrt{5-4z}\)
+\(z=1-x^{2}-y^{2},z\ge 0\)\\
+%34
+\(H(x,y,z)=yz\)
+\(x^{2}+y^{2}+z^{2}=4\)
+\(z=\sqrt{x^{2}+y^{2}}\)\\
+%flux across surfaces
+\(\iint_{S}\kvec{F}\cdot\kvec{n}\dif{\sigma}\)\\
+%35
+\(F=z^{2}\ai+x\aj-3z\ak\)
+\(z=4-y^{2}\)
+\(x=0,x=1\)
+\(z=0\)\\
+
+%1113
+%36
+\(F=x^{2}\aj-xz\ak\)
+\(y=x^{2},-1\le x\le 1\)
+\(z=0\)
+\(z=2\)\\
+%37
+\(F=z\ak\)
+\(x^{2}+y^{2}+z^{2}=a^{2}\)\\
+%38
+\(F=x\ai+y\aj+z\ak\)
+\(x^{2}+y^{2}+z^{2}=a^{2}\)\\
+%39
+\(F=2xy\ai+2yz\aj+2xz\ak\)
+\(x+y+z=2a\)
+\(0\le x\le a,0\le y\le a\)\\
+%40
+\(x\ai+y\aj+z\ak\)
+\(x^{2}+y^{2}=1\)
+\(z=0\)
+\(z=a\)\\
+%41
+\(F=xy\ai-z\ak\)
+\(z=\sqrt{x^{2}+y^{2}},0\le z\le 1\)\\
+%42
+\(F=y^{2}\ai+xz\aj-\ak\)
+\(z=\sqrt{x^{2}+y^{2}},0\le z\le 2\)\\
+%43
+\(F=-x\ai-y\aj+z^{2}\ak\)
+\(z=\sqrt{x^{2}+y^{2}}\)
+\(z=1\)
+\(z=2\)\\
+%44
+\(F=4x\ai+4y\aj+2\ak\)
+\(z=x^{2}+y^{2}\)
+\(z=1\)\\
+%45
+\(x^{2}+y^{2}+z^{2}=a^{2}\)\\
+%46
+\(x^{2}+y^{2}-z^{2}=0\)
+\(z=1\)
+\(z=2\)\\
+%47
+\(x^{2}+y^{2}+z^{2}=a^{2}\)\\
+%48
+\(z=\sqrt{x^{2}+y^{2}},0\le z\le 1\)\\
+%tangent planes
+\(P_0(f(u_0,v_0),\,g(u_0,v_0),\,h(u_0,v_0))\)
+\(r(u,v)=f(u,v)\ai+g(u,v)\aj+h(u,v)\ak\)
+\(\kvec r_u(u_0,v_0)\times\kvec r_v(u_0,v_0)\)
+\(\kvec r_u(u_0,v_0)\)
+\(\kvec r_v(u_0,v_0)\)\\
+%49
+\(\kvec r(r,\theta)=(r\cos \theta)\ai+(r\sin \theta)\aj+r\ak,r\ge 0,0\le \theta\le 2\pi\)
+\(P_0(\sqrt{2},\sqrt{2},2)\)
+\(r,\theta)=(2,\pi/4)\)\\
+%50
+\(\kvec r(\phi,\theta)=(4\sin \phi \cos \theta)\ai+(4\sin \phi \sin \theta)\aj+(4\cos \phi)\ak,0\le \phi\le \pi/2,0\le \theta\le 2\pi\)
+\(P_0(\sqrt{2},\sqrt{2},2\sqrt{3})\)
+\((\phi,\theta)=(\pi/6,\pi/4)\)\\
+%51
+\(\kvec r(\theta,z)=(3\sin 2\theta)\ai+(6\sin^{2} \theta)\aj+z\ak,0\le \theta\le \pi\)
+\(P_0\big(\frac{3\sqrt{3}}{2},\frac{9}{2},0\big)\)
+\((\theta,z)=(\pi/3,0)\)\\
+%52
+\(\kvec r(x,y)=x\ai+y\aj-x^{2}\ak,-\infty<x<\infty,-\infty<y<\infty\)
+\(P_0(1,2,-1)\)
+\((x,y)=(1,2)\)\\
+%53(a)
+\(r>0\)
+\((R,0,0)\)
+\(\kvec r(u,v)=((R+r\cos u)\cos v)\ai+((R+r\cos u)\sin v)\aj+(r\sin u)\ak,\)
+\(0\le u\le 2\pi\)
+\(0\le v\le 2\pi\)\\
+%(b)
+\(\kvec A=4\pi^{2}Rr\)\\
+%54
+\(C:(f(u),g(u))\)
+\(g(u)>0\)
+\(a\le u\le b\)\\
+%b
+\(x=y^{2},y\ge 0\)
+
+%1114
+%55
+%a
+\(x=a\cos \theta,y=b\sin \theta,0\le \theta 2\pi\)
+\((x^{2}/a^{2})+(y^{2}/b^{2})=1\)
+\(\kvec r(\theta,\phi)=(a\cos \theta\cos \phi)\ai+(b\sin \theta\cos \phi)\aj+(c\sin \phi)\ak\)
+\((x^{2}/a^{2})+(y^{2}/b^{2})+(z^{2}/c^{2})=1\)\\
+%56
+%a
+\(x^{2}+y^{2}-z^{2}=1\)
+\(x^{2}+y^{2}=r^{2}\)
+\(r^{2}-z^{2}=1\)\\
+%b
+\((x^{2}/a^{2})+(y^{2}/b^{2})-(z^{2}/c^{2})=1.\)\\
+%57
+\(x^{2}+y^{2}-z^{2}=25\)
+\(x_{0},y_{0},0\)
+\(x_{0}^{2}+y_{0}^{2}=25\)\\
+%58
+\(z^{2}/c^{2})-(x^{2}/a^{2})-(y^{2}/b^{2})=1\)\\
+
+%STOKES THEOREM(114)
+
+\(kvec {F}=M\ai+N\aj\)
+\((x,y)\)
+\(\partial N\partial x-\partial M/\partial y\)
+\(\kvec {F}=M\ai+N\aj+P\ak\)\\
+\begin{align}
+curl\kvec {F}=\big(\frac{\partial P}{\partial y}-\frac{\partial N}{\partial z}\big)\ai+\big(\frac{\partial M}{\partial z}-\frac{\partial P}{\partial x}\big)\aj+\big(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\big)\ak
+\end{align}
+%DEL NOTATION
+\begin{align}
+\nabla=\ai\frac{\partial}{\partial x}+\aj\frac{\partial}{\partial y}+\ak\frac{\partial}{\partial z}
+\end{align}
+%1115
+\(\kvec {F}\)
+\(\nabla\times\kvec {F}\)
+
+\begin{gather}
+\begin{aligned}
+\nabla\times\kvec {F}&=\begin{vmatrix}
+\ai&\aj&\ak\\
+\frac{\partial}{\partial x}&\frac{\partial}{\partial y}&\frac{\partial}{\partial z}\\
+M&N&P
+\end{vmatrix}\\
+&=\big(\frac{\partial P}{\partial y}-\frac{\partial N}{\partial z}\big)\ai+\big(\frac{\partial M}{\partial z}-\frac{\partial P}{\partial x}\big)\aj+\big(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\big)\ak\\
+&=curl\kvec{F}
+\end{aligned}
+\end{gather}
+\begin{align}
+curl\kvec {F}=\nabla \times\kvec {F}
+\end{align}
+
+%example 1
+
+\(\kvec {F}=(x^{2}-y)\ai+4z\aj+x^{2}\ak\)\\
+%solution
+\(curl\kvec {F}=\nabla \times\kvec {F}\)
+
+\begin{align*}
+&=\begin{vmatrix}
+\ai&\aj&\ak\\
+\frac{\partial}{\partial x}&\frac{\partial}{\partial y}&\frac{\partial}{\partial z}\\
+x^{2}-y&4z&x^{2}
+\end{vmatrix}\\
+&=\big(\frac{\partial}{\partial y}(x^{2})-\frac{\partial}{\partial z}(4z)\big)\ai-\big(\frac{\partial}{\partial x}(x^{2})-\frac{\partial}{\partial z}(x^{2}-y)\big)\aj+\big(\frac{\partial}{\partial x}(4z)-\frac{\partial}{\partial y}(x^{2}-y)\big)\ak\\
+&=(0-4)\ai-(2x-0)\aj+(0+1)\ak\\
+&=-4\ai-2x\aj+\ak
+\end{align*}
+
+\(f(x,y,z)\)\\
+\(\nabla f=\frac{\partial f}{\partial x}\ai+\frac{\partial f}{\partial y}\aj+\frac{\partial f}{\partial z}\ak\)\\
+
+%stokes's theorem/page no 1116
+
+\(\kvec{F}=M\ai+N\aj+P\ak\)
+\(\nabla\times\kvec {F}\cdot\kvec {n}\)\\
+
+\begin{align}
+\int_{C}\kvec {F}\cdot\dif{x}=\iint_{S}\nabla\times\kvec {F}\cdot\kvec {n}\dif{\sigma}
+\end{align}
+\(\iint_{S_1}\nabla\times\kvec{F}\cdot\kvec{n_1}\dif{\sigma}=\iint_{S_1}\nabla\times\kvec{F}\cdot\kvec{n_2}\dif{\sigma}\)\\
+\(\dif{\sigma}=\dif{x}\dif{y}\)\\
+
+\begin{align}
+(\nabla\times\kvec{F})\cdot\kvec{n}=(\nabla\times\kvec{F})\cdot\kvec{k}=\big(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\big)
+\end{align}
+\(\int_{C}\kvec{F}\cdot\dif{r}=\iint_{R}\big(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\big)\dif{x}\dif{y}\)\\
+
+\begin{align}
+\int_{C}\kvec{F}\cdot\dif{r}=\iint_{R}\nabla\kvec{F}\cdot\kvec{k}\dif{A}
+\end{align}
+
+%example 2
+\(S:\,x^{2}+y^{2}+z^{2}=9,\,z\ge 0\)
+\(C:\,x^{2}+y^{2}=9,\,z=0\)
+\(\kvec{F}=y\ai-x\aj\)\\
+\(\kvec{r}(\theta)=(3\cos \theta)\ai+(3\sin \theta)\aj,\,0\le \theta\le 2\pi:\)\\
+
+\begin{align*}
+\dif{\kvec r}&=(-3\sin \theta\dif\theta)\ai+(3\cos \theta\dif\theta)\aj\\
+\kvec{F}&=y\ai-x\aj=(3\sin \theta)\ai-(3\cos \theta)\aj\\
+\kvec{F}\cdot\dif{r}&=-9\sin ^{2}\theta\dif{\theta}-9\cos ^{2}\theta\dif{\theta}=-9\dif{\theta}\\
+\int_{C}\kvec{F}\cdot\dif{r}&=\int_{0}^{2\pi}-9\dif{\theta}=-18\pi
+\end{align*}
+
+%pg1117
+
+\begin{align*}
+\nabla\times\kvec{F}&=\big(\frac{\partial P}{\partial y}-\frac{\partial N}{\partial z}\big)\ai+\big(\frac{\partial M}{\partial z}-\frac{\partial P}{\partial x}\big)\aj+\big(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\big)\ak\\
+&=(0-0)\ai+(0-0)\aj+(-1-1)\ak=-2\ak\\
+n&=\frac{x\ai+y\aj+z\ak}{\sqrt{x^{2}+y^{2}+z^{2}}}=\frac{x\ai+y\aj+z\ak}{3}\\
+\dif{\sigma}&=\frac{3}{z}\dif{A}\\
+\nabla\times\kvec{F}\cdot\kvec{n}\dif{\sigma}=-\frac{2z}{3}\frac{3}{z}\dif{A}\\
+\iint_{S}\nabla\times\kvec{F}\cdot\kvec{n}\dif{\sigma}=\iint_{x^{2}+y^{2}\le 9}-2\dif{A}=-18\pi
+\end{align*}
+
+%example
+
+\(\kvec {F}=(x^{2}-y)\ai+4z\aj+x^{2}\ak\)
+\(z=2\)
+\(\sqrt{x^{2}+{2}}\)\\
+\(\kvec r(r,\theta)=(r\cos \theta)\ai+(r\sin \theta)\aj+r\ak\,\,0\le \kvec{r}\le 2,\,0\le \theta\le 2\pi\)
+\begin{align*}
+n&=\frac{\kvec{r_r}\times\kvec{r_\theta}}{\abs{\kvec{r_r}\times\kvec{r_\theta}}}=\frac{-(r\cos \theta)\ai-(r\sin \theta)\aj+r\ak}{\kvec{r}\sqrt{2}}
+&=\frac{1}{\sqrt{2}}(-(\cos \theta)\ai-(\sin \theta)\aj+\ak)\\
+\dif{\sigma}&=\kvec{r}\sqrt{2}\dif{r}\dif{\theta}\\
+\nabla\times\kvec{F}&=-4\ai-2x\aj+\ak\\
+&=-4\ai-2r\cos \theta\aj+\ak\\
+\nabla\times\kvec{F}\cdot\kvec{n}&=\frac{1}{\sqrt{2}}(4\cos \theta+2r\cos \theta\sin \theta+1)\\
+&=\frac{1}{\sqrt{2}}(4\cos \theta+r\sin 2\theta+1)
+\end{align*}
+
+%1118
+
+\begin{align*}
+\int_{C}\kvec{F}\cdot\kvec{r}&=\iint_{S}\nabla\times\kvec{F}\cdot\kvec{n}\dif{\sigma}\\
+&=\int_{0}^{2\pi}\int_{0}^{2}\frac{1}{\sqrt{2}}(4\cos \theta+r\sin 2\theta+1)(r\sqrt{2}\dif{r}\dif{\theta})=4\pi
+\end{align*}
+
+%an interpretation
+
+\(\kvec{v}(x,y,z)\)
+\((x,y,z)\)
+\(\delta(x,y,z)\)
+\(\kvec{F}=\delta\kvec v\)\\
+
+\(\int_{C}\kvec{F}\cdot\dif{\kvec{r}}\)\\
+\(\int_{C}\kvec{F}\cdot\dif{\kvec{r}}=\iint_{S}\nabla\times\kvec{F}\cdot\kvec{n}\dif{\sigma}\)\\
+\(\nabla\times\kvec{F}\)
+\(\nabla\times\kvec{F}\)
+\(\nabla\times\kvec{F}\)\\
+
+\begin{align}
+(\nabla\times\kvec{F}\cdot\kvec{u})_Q=\lim_{p\to{0}}\frac{1}{\pi p^{2}}\iint_{S}\nabla\times\kvec{F}\cdot\kvec{u}\dif{\sigma}
+\end{align}
+
+\begin{align}
+(\nabla\times\kvec{F}\cdot\kvec{u})_Q=\lim_{p\to{0}}\frac{1}{\pi p^{2}}\oint_{C}\kvec{F}\cdot\dif{\kvec{r}}
+\end{align}
+
+\(\frac{1}{\pi p^{2}}\oint_{C}\kvec{F}\cdot\dif{\kvec{r}}\)\\
+\(\nabla\times\kvec{F}\)
+
+%example 4
+
+\(\kvec{v}=\omega(-y\ai+x\aj)\)
+\(\kvec{F}=\delta\kvec{v}\)
+\(\nabla\times\kvec{F}\)
+\(\kvec{F}=\delta\kvec{v}=-\delta\omega y\ai+\delta\omega x\aj\)\\
+
+\begin{align*}
+\nabla\times\kvec{F}&=\big(\frac{\partial P}{\partial y}-\frac{\partial N}{\partial z}\big)\ai+\big(\frac{\partial M}{\partial z}-\frac{\partial P}{\partial x}\big)\aj+\big(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\big)\ak\\
+&=(0-0)\ai+(0-0)\aj+(\delta\omega-(-\delta\omega))\ak=2\delta\omega\ak
+\end{align*}
+
+% page 1119
+
+\(\nabla\times\kvec{F}\)\\
+\(\int_{C}\kvec{F}\cdot\dif{\kvec{r}}=\iint_{S}\nabla\times\kvec{F}\cdot\kvec{n}\dif{\sigma}=\iint_{S}2\omega \ak\cdot\ak\dif{x}\dif{y}=(2\omega)(\pi p^{2})\)\\
+\((\nabla\times\kvec{F})\cdot\ak=2\omega=\frac{1}{\pi p^{2}}\oint_{C}\kvec{F}\cdot\dif{\kvec{r}}\)\\
+\(\kvec{u}=\kvec{k}\)\\
+
+%example 5
+
+\(\int_{C}\kvec{F}\cdot\dif{\kvec r}\)
+\(\kvec{F}=xz\ai+xy\aj+3xz\ak\)
+\(2x+y+z=2\)\\
+
+%solution
+
+\(f(x,y,z)=2\)
+\(f(x,y,z)=2x+y+z\)\\
+\(\kvec{n}=\frac{\nabla f}{\abs{\nabla f}}=\frac{(2\ai+\aj+\ak)}{\abs{2\ai+\aj+\ak}}=\frac{1}{\sqrt{6}}(2\ai+\aj+\ak)\)\\
+\(curl\kvec{F}=\nabla\times\kvec{F}=\begin{vmatrix}
+\ai&\aj&\ak\\
+\frac{\partial}{\partial x}&\frac{\partial}{\partial y}&\frac{\partial}{\partial z}\\
+xz&xy&3xz
+\end{vmatrix}=(x-3z)\aj+y\ak\)\\
+
+\(z=2-2x-y\)\\
+\(\nabla\times\kvec{F}=(x-3(2-2x-y))\aj+y\ak=(7x+4y-6)\aj+y\ak\)\\
+\(\nabla\times\kvec{F}\cdot\kvec{n}=\frac{1}{\sqrt{6}}(7x+4y-6+y)=\frac{1}{\sqrt{6}}(7x+4y-6)\)\\
+\(\dif{\sigma}=\frac{\abs{\nabla f}}{\abs{\nabla f\cdot\kvec{k}}}\dif{A}=\frac{\sqrt{6}}{1}\dif{x}\dif{y}\)\\
+\(\int_{C}\kvec{F}\cdot\dif{\kvec{r}}=\iint_{S}\nabla\times\kvec{F}\cdot\kvec{n}\dif{\sigma}\)\\
+\(\int_{0}^{1}\int_{0}^{2-2x}\frac{1}{\sqrt{6}}(7x+4y-6)\sqrt{6}\dif{x}\dif{y}\)\\
+\(\int_{0}^{1}\int_{0}^{2-2x}(7x+4y-6)\dif{x}\dif{y}=-1\)\\
+
+%page 1120
+
+\(\big(\int_{EAB}+\int_{BCE}+\int_{CDE}\big)\kvec{F}\cdot\dif{\kvec r}=\big(\iint_{EAB}+\iint_{BCE}+\iint_{CDE}\big)\nabla\times\kvec{F}\cdot\kvec{n}\dif{\sigma}\)\\
+\(\int_{ABCDE}\kvec{F}\cdot\kvec{\dif r}=\iint_{ABCDE}\nabla\times\kvec{F}\cdot\kvec{n}\dif{\sigma}\)\\
+\(\int_{\nabla}\kvec{F}\cdot\kvec{\dif r}=\iint_{S}\nabla\times\kvec{F}\cdot\kvec{n}\dif{\sigma}\)\\
+
+
+%stokes theorem for surfaces
+
+\(\nabla\times\kvec{F}\)\\
+
+%an imp identity
+
+\begin{align}
+curl grad f=0\,\,\,\nabla\times\nabla f=0
+\end{align}
+
+\(f(x,y,z)\)\\
+\(\nabla\times\nabla f=\begin{vmatrix}
+\ai&\aj&\ak\\
+\frac{\partial}{\partial x}&\frac{\partial}{\partial y}&\frac{\partial}{\partial z}\\
+\frac{\partial f}{\partial x}&\frac{\partial f}{\partial y}&\frac{\partial f}{\partial z}
+\end{vmatrix}=(f_{zy}-f_{yz})\ai-(f_{zx}-f_{xz})\aj-(f_{yx}-f_{xy})\ak\)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%page 1121
+
+\(\nabla \times \kvec{F}=\kvec{0}\)
+
+\begin{align*}
+\oint_C \kvec{F}\cdot \dif\kvec{r}=0
+\end{align*}
+
+\begin{align*}
+\oint_C \kvec{F}\cdot \dif\kvec{r}=\iint_S \nabla \times\kvec{F}\cdot\kvec{n}\dif\sigma=0
+\end{align*}
+
+\begin{align*}
+\oint_C \kvec{F} \cdot\dif \kvec{r} =0
+\end{align*}
+
+%1122 Exercise 14.8
+
+%Q1
+\(\kvec{F}= x^2 \ai + 2x \aj + z^2 \ak \) 
+\(4x^2 +y^2 =4\) \\
+
+%Q2
+\(\kvec{F}= 2y \ai + 3x \aj - z^2 \ak \) \\
+\(x^2 +y^2 =9\)\\
+
+%Q3
+\(\kvec{F}= y \ai + xz \aj + x^2 \ak \) \\
+\(x+y+z=1\)\\
+
+%Q4
+\(\kvec{F}= (y^2 +z^2)\ai + (x^2+z^2)\aj + (x^2+y^2)\ak \) \\
+\(x+y+z=1\) \\
+
+%Q5
+\(\kvec{F}=(y^2+z^2)\ai + (x^2+y^2)\aj + (x^2+y^2)\ak \) \\
+\(x=\pm1 \) \\
+\(y=\pm1 \) \\
+
+%Q6
+\(\kvec{F}=x^2y^3\ai + \aj +z\ak \) \\
+\(x^2+y^2=4 \) \\
+\(x^2 +y^2 +z^2 =16 , z\ge 0 \) \\
+
+%Q7
+\begin{align*}
+S: \quad 4^x+9y^2+36z^2 =36, \quad z\ge=0,
+\end{align*}
+\begin{align*}
+\kvec{F}= y\ai +x^2\aj + (x^2 +y^4 )^{3/2} \sin e^{\sqrt{xyz}}
+\end{align*}
+\begin{align*}
+\iint_S \nabla \times \kvec{F} \cdot \kvec{n} \dif \sigma
+\end{align*}
+\( x=3n\cos t, y=2 \sin t, 0\le t\le 2\pi \) 
+
+%Q8
+\begin{align*}
+S: \quad 4x^2 +y+z^2=4, \quad y\ge0
+\end{align*}
+\begin{align*}
+\kvec{F} = \big( -z + \frac{1}{2+x} \big)\ai + (tan^{-1} y) \aj + \big( x + \frac{1}{4+z} \big) \ak
+\end{align*}
+\begin{align*}
+\iint_S \nabla \times \kvec{F} \cdot \kvec{n} \dif \sigma
+\end{align*}
+
+%Q9
+\(x^2 + y^2 = a^2 , 0 \le z \le h \) \\
+\(x^2+y^2 \le a^2, z=h  \) \\
+\(\kvec{F} = - y \ai + x\aj + x^2 \ak \) \\
+\( \nabla \times \kvec{F} \) \\
+
+%Q10
+\begin{align*}
+\iint_S \nabla \times (y \ai) \cdot \kvec{n} \dif \sigma 
+\end{align*} 
+\( x^2 + y^2 + z^2 =1, z \ge 0 \) \\
+
+%Q11
+\begin{align*}
+\iint_S \nabla \times \kvec{F} \cdot \kvec{n} \dif \sigma
+\end{align*}
+
+%Q12
+\begin{align*}
+\iint_S \nabla \times \kvec{F} \cdot \kvec{n} \dif \sigma ?
+\end{align*}
+
+%Q13
+\( \kvec{F} = 2z \ai + 3x \aj + 5y \ak \) \\
+\( S: \quad \kvec{r} (r,\theta) = (r\cos\theta) \ai + (r\sin\theta ) \aj + (4-r^2) \ak, \, 0 \le r \le 2,\, 0 \le \theta \le 2 \pi \) \\
+
+%Q14
+\( \kvec{F} =(y-z) \ai + (z-x) \aj + (x+z) \ak \) \\
+\( S: \quad \kvec{r} (r,\theta) = (r\cos\theta) \ai + (r\sin\theta ) \aj + (9-r^2) \ak, \, 0 \le r \le 3,\, 0 \le \theta \le 2 \pi \) \\
+
+%Q15
+\( \kvec{F} = x^2 y \ai + 2y^3 z \aj + 3z \ak \) \\
+\( S: \quad \kvec{r} (r,\theta) = (r\cos\theta) \ai + (r\sin\theta ) \aj + r\ak \, 0 \le r \le 1, \, 0 \le \theta \le 2 \pi \) \\
+
+%Q16
+\( \kvec{F} (x-y) \ai + ( y-z) \aj (z-x) \ak \) \\
+\( S: \quad \kvec{r} (r,\theta) = (r\cos\theta) \ai + (r\sin\theta ) \aj + (5-r) \ak \, 0 \le r \le 5, \, 0 \le \theta \le 2 \pi \) \\
+
+%Q17
+\( \kvec{F} = 3y \ai + (5-2x) \aj + (z^2 -2) \ak \) \\
+\( S: \quad \kvec{r} (\phi, \theta ) = ( \sqrt{3} \sin \phi \cos\theta ) \ai + ( \sqrt{3} \sin \phi \sin\theta ) \aj + ( \sqrt{3}\cos\phi ) \ak , \, 0\le \phi \le \pi/2 , \, 0 \le \theta \le 2\pi \) \\
+
+%Q18
+\( \kvec{F} = y^2 \ai + z^2 \aj + x\ak \) \\
+\( S: \quad \kvec{r} (\phi, \theta ) = ( s \sin \phi \cos \theta ) \ai + (2 \sin\phi \sin\theta) \aj + (2 \cos\phi) \ak , 0 \le \phi \le \pi/2 , 0 \le \theta \le 2\pi \) \\
+
+%Q19
+\( \nabla \times \nabla f = \kvec {0} \) \\
+
+\begin{enumerate}[a.]
+\item
+\( \kvec{F} = 2x \ai + 2y \aj + 2z \ak \) 
+\item
+\( \kvec{F} = \nabla (xy^{2}z^{3}) \)
+\item
+\( \kvec{F} = \nabla \times (x\ai + y\aj + z\ak) \) 
+\item
+\( \kvec{F} = \nabla f  \)
+\end{enumerate}
+
+%Q20
+\( f( x,y,z)= (x^2 + y^2 + z^2 )^{-1/2} \) \\
+\( \kvec{F} = \nabla f \) \\
+\( x^2 +y^2 = a^2 \) \\
+\( \kvec{r} = (a \cos t ) \ai + ( a \sin t ) \aj , \, 0 \le t \le 2 \pi , \, \) \\
+\( \kvec{F} \cdot \dif \kvec{r} \) 
+
+%Q21
+\( 2x + 2y + z = 2 \) \\
+\begin{align*}
+\oint 2y \dif x + 3z \dif y -x \dif z
+\end{align*}
+
+%Q22
+\( \kvec{F} = x\ai +y\aj +z\ak , \, \nabla \times \kvec{F} = \kvec{0} \) \\
+
+%Q23
+\( x\ai + y\aj + z\ak \) 
+
+%Q25
+\begin{align*}
+\oint _C \nabla (r^4) \cdot \kvec{n} \dif s, 
+\end{align*}
+\( r= \sqrt{x^2 + y^2 } \)
+
+%Q26
+\begin{align*}
+\kvec{F} = \frac{-y}{x^2 + y^2} \ai + \frac{x}{x^2 + y^2 } \aj + z\ak
+\end{align*}
+
+\( \oint \kvec{F} \cdot \dif \kvec{r} \) \\
+\( x^2 + y^2 =1 \)
+
+%Section 14.8 
+
+\( \kvec{F}=M(x,y,z) \ai + N(x,y,z) \aj + P(x,y,z) \ak \)\\
+
+\begin{align}
+div\, \kvec{F}=\nabla \cdot \kvec{F} = \frac{\partial M}{\partial x} + \frac{\partial N}{\partial y}+ \frac{\partial P}{\partial z}
+\end{align}
+
+%P1124
+
+\( (x, \, y, \, z) \) \\
+
+%example1
+
+\( \kvec{F} = 2xz \ai -xy \aj -z \ak \) \\
+\begin{align*}
+\nabla \cdot \kvec{F} = \frac{\partial}{\partial x} (2xz) + \frac{\partial}{\partial y} ( -xy) + \frac{\partial}{\partial z} (-z) = 2z-x-1
+\end{align*}
+
+%theorem7
+\( \kvec{F} = M\ai + N\aj + P\ak \) \\
+\( \nabla \cdot \kvec{F} \) \\
+\begin{align}
+\iint_S \kvec{F} \cdot \kvec{n} \dif \sigma = \iiint_D \nabla \cdot \kvec{F} \dif V
+\end{align}
+
+%example2
+\( \kvec{F} =x\ai + y\aj +z\ak \) \\
+\( x^2 + y^2 +z^2 = a^2 \) \\
+
+\( f(x, \, y, \, z) = x^2 + y^2 +z^2 -a^2 \) \\
+
+\begin{align*}
+\kvec{n} = \frac{2(x\ai + y\aj +z\ak)}{\sqrt{4(x^2 + y^2 +z^2)}} = \frac{x\ai +y\aj +z\ak}{a}
+\end{align*}
+
+\begin{align*}
+\kvec{F} \cdot \dif \sigma = \frac{x^2 +y^2 + z^2 }{a} \dif \sigma = \frac{a^2}{a} \dif \sigma = a \dif \sigma 
+\end{align*}
+
+\( x^2 + y^2 +z^2 = a^2 \) \\
+
+\begin{align*}
+\iint_S \kvec{F} \cdot \kvec{n} \dif \sigma = \iint a \dif \sigma = a \iint_S \dif \sigma = a(4 \pi a^2 ) = 4 \pi a^3 
+\end{align*}
+
+%p1125
+\begin{align*}
+\nabla \cdot \kvec{F} = \frac{\partial}{\partial z} (x) + \frac{\partial}{\partial y} (y) + \frac{\partial}{\partial z} (z) = 3
+\end{align*}
+
+\begin{align*}
+\iiint_D \nabla \cdot \kvec{F} = \iiint_D 3\dif V = 3 \big( \frac{4}{3} \pi a^3 \big) = 4 \pi a^3 
+\end{align*}
+
+%example3
+\( \kvec{F} = xy\ai + yz\aj +xz\ak \) \\
+\( x=1, y=1, z=1 \) \\
+
+\begin{align*}
+\nabla \cdot \kvec{F} = \frac{\partial}{\partial x}(xy) + \frac{\partial}{\partial y} (yz) \frac{\partial}{\partial z} ( xz) = y+z+x
+\end{align*} 
+
+\begin{align*}
+Flux =& \iint_{ cube  surface} \kvec{F} \cdot \kvec{n} \dif \sigma = \iiint_{cube  interior} \nabla \cdot \kvec{F} \dif V \\
+=& \int_{0}^{1} \int_{0}^{1} \int_{0}^{1} (x+y+z) \dif x \dif y \dif z = \frac{3}{2}
+\end{align*}
+
+\( S_1 : \quad z= f_1 (x,y) \quad (x,y) \, in \,  R_xy \) \\
+\( S_2 : \quad z= f_2 (x,y) \quad (x,y) \, in \,  R_xy \) \\
+\( f_1 \le f_2 \) \\
+
+\( \kvec{n} = n_1 \ai + n_2 \aj + n_3 \ak \) \\
+
+\begin{align*}
+n_1 &= \kvec{n} \cdot \ai = | \kvec{n} ||\ai| \cos \alpha = \cos \alpha \\
+n_2 &= \kvec{n} \cdot \aj = | \kvec{n} ||\aj| \cos \beta = \cos \beta \\
+n_3 &= \kvec{n} \cdot \ak = | \kvec{n} ||\ak| \cos \gamma = \cos\gamma
+\end{align*}
+
+\begin{align*}
+\kvec{n} = (\cos \alpha) \ai + (\cos\beta)\aj +(\cos\gamma)\ak \\
+\kvec{F} \cdot \kvec{n} = M\cos\alpha + N \cos\beta +P \cos\gamma
+\end{align*}
+
+%p1126
+
+\begin{align*}
+\iint_S (M \cos\alpha + N \cos \beta + P \cos \gamma) \dif \sigma = \iiint_D \big( \frac{\partial M}{\partial x} + \frac{\partial N}{\partial y} + \frac{\partial P}{\partial z} \big) \dif x \dif x \dif z
+\end{align*}
+
+\begin{align}
+\iint_S M \cos \alpha\dif \sigma &=  \iiint_D \frac{\partial M}{\partial x} \dif x \dif y \dif z \\
+\iint_S N \cos \beta \dif \sigma &= \iiint_D \frac{\partial N}{\partial y} \dif x \dif y \dif z \\
+\iint_S P \cos \gamma \dif\sigma &= \iiint_D \frac{\partial P}{\partial z} \dif x \dif y \dif z
+\end{align}
+
+\( z= f_1 (x,y) \)
+
+\begin{align*}
+\cos\gamma \dif \sigma = \dif x \dif y \, because \, \dif \sigma = \frac{\dif A}{| \cos\gamma|}= \frac{\dif x \dif y}{\cos\gamma} 
+\end{align*}
+
+\( \cos \gamma \dif \sigma = = \dif \x \dif y \) 
+
+\begin{align*}
+\iint_S P \cos \gamma \dif \sigma &= \iint_{S_{2}} P \cos \gamma \dif \sigma + \iint_{S_{1}} P \cos \gamma \dif \sigma \\
+&= \iint_{R_{xy}} P (x,y, f_2 (x,y)) \dif x \dif y - \iint_{R_{xy}} P (x, y, f_1 (x,y)) \dif x \dif y \\
+&= \iint_{R_{xy}} [ p(x,y, f_2 (x,y)) - P (x,y, f_1 (x,y)) \dif x \dif y \\
+&= \iint_{R_{xy}} \big[ \int_{f_1 (x,y)}^{f_2 (x,y) } \frac{\partial P}{\partial z} \dif z \big] \dif x \dif y = \iiint_D \frac{\partial P}{\partial z} \dif z \dif x \dif y 
+\end{align*}
+
+\( x, \, y, \, z: \, M, \, \N, \, P: \, \alpha , \, \beta , \, \gamma , \, \) 
+
+%P1127
+\begin{align*}
+\iint_{S{_1}} \kvec{F} \cdot \kvec{n_1} \dif \sigma_{1} = \iiint_{D_{1}} \nabla \cdot \kvec{F} \dif V_1 
+\end{align*}
+
+\begin{align*}
+\iint_{S{_2}} \kvec{F} \cdot \kvec{n_2} \dif \sigma_{2} = \iiint_{D_{2}} \nabla \cdot \kvec{F} \dif V_2 
+\end{align*}
+
+\begin{align*}
+\iint_{S} \kvec{F} \cdot \kvec{n} \dif \sigma = \iiint_{D} \nabla \cdot \kvec{F} \dif V ,  
+\end{align*}
+
+%Example 4
+
+\begin{align*}
+\kvec{F} = \frac{x \ai + y\aj + z \ak}{\rho^3} , \quad \rho = \sqrt{x^2 + y^2 +z^2}
+\end{align*}
+
+\( D: 0 < a^2 \le x^2 + y^2 + z^2 \le b^2 \) \\
+\( \nabla \cdot \kvec{F} \) \\
+
+\begin{align*}
+\frac{\partial \rho }{\partial x} = \frac{1}{2} (x^2 + y^2 +z^2)^{\frac{-1}{2}} (2x) = \frac{x}{\rho}
+\end{align*}
+\begin{align*}
+\frac{partial M}{partial x} = \frac{\partial}{\partial x} (x \rho^{-3} = \rho^{-3} x \rho^{-4} \frac{\partial \rho}{\partial x} = \frac{1}{\rho^{3}} - \frac{3x^2}{\rho^{5}}
+\end{align*}
+\begin{align*}
+\frac{\partial N}{\partial y} = \frac{1}{\rho^{3}} - \frac{3y^2}{\rho^{5}} \quad and \quad \frac{\partial P}{\partial z} = \frac{1}{\rho^{3}} - \frac{3z^2}{\rho^{5}}
+\end{align*}
+\begin{align*}
+\nabla \kvec{F} = \frac{3}{\rho^{3}} - \frac{3}{\rho^{5}} (x^2 + y^2 + z^2 ) = \frac{3}{\rho^{3}} - \frac{3 \rho^{2}}{\rho^{5}} = 0 
+\end{align*}
+\begin{align*}
+\iint_{D} \nabla \cdot \kvec{F} \dif \V = 0
+\end{align*}
+
+\( \nabla \cdot \kvec{F} \) 
+
+%P1128
+
+\begin{align*}
+\kvec{n} = \frac{x\ai + y\aj + z\ak}{\sqrt{x^2 + y^2 + z^2}} = \frac{x \ai +y \aj + z \ak}{a} 
+\end{align*}
+
+\begin{align*}
+\kvec{F} \cdot \kvec{n} = \frac{x\ai + y\aj + z\ak}{a^3} \cdot \frac{x\ai + y\aj + z\ak}{a} \frac{x^2 + y^2 + z^2}{a^4} = \frac{a^2}{a^4} = \frac{1}{a^2} 
+\end{align*}
+
+\begin{align*}
+\iint_{S_a} \kvec{F} \cdot \kvec{n} \dif \sigma = \frac{1}{a^2} \iint{S_a} \dif \sigma = \frac{1}{a^2} (4 \pi a^2 ) = 4\pi 
+\end{align*}
+
+\begin{align*}
+\kvec{E} (x,y,z) = \frac{1}{4 \pi \epsilon_0} \frac{q}{|\kvec{r}|^2} \big( \frac{r}{|\kvec{r}|} \big) = \frac{q}{4 \pi \epsilon_0} \frac{\kvec{r}}{|\kvec{r} |^3} = \frac{q}{4 \pi \epsilon_0} \frac{x\ai + y\aj + z\ak}{\rho^3} 
+\end{align*}
+
+\( \rho = |\kvec{r} | = \sqrt{x^2 + y^2 + z^2} \) \\
+
+\begin{align*}
+\kvec{E} = \frac{q}{4 \pi \epsilon_0 } \kvec{F}. 
+\end{align*}
+
+\( \frac{q}{\epsilon_0} \) \\
+
+\begin{align*}
+\nabla \cdot \kvec{E} = \nabla \cdot \frac{q}{4 \pi \epsilon_0} \nabla \cdot \kvec{F} = 0
+\end{align*}
+
+\( \rho > 0 \) \\
+\( \nabla \cdot \kvec{E} \) \\
+
+\begin{align*}
+\iint_{boundary of D} \kvec{E} \cdot \kvec{n} \dif \sigma = 0,
+\end{align*}
+
+\begin{align*}
+\iint_{S} \kvec{E} \cdot \kvec{n} \dif \sigma = \frac{q}{\epsilon_0}
+\end{align*}
+
+%p1129
+
+\( \kvec{v} (x,y,z) \) \\
+\( \delta = \delta (t,x,y,z) \) \\
+
+\( \kvec{F} = \delta \kvec{v} \) \\
+
+\begin{align*}
+\nabla \cdot \kvec{F} + \frac{\partial \delta}{\partial t} = 0
+\end{align*}
+
+\begin{align*}
+\iint_S \kvec{F} \cdot \kvec{n} \dif \sigma
+\end{align*}
+
+\begin{align*}
+\Delta V \approx \kvec{v} \cdot \kvec{n} \Delta \sigma \Delta t.
+\end{align*}
+
+\begin{align*}
+\Delta m \approx \delta \kvec{v} \cdot \kvec{n} \Delta \sigma \Delta t,
+\end{align*}
+
+\begin{align*}
+\frac{\Delta m}{\Delta t} \approx \delta \kvec{v} \cdot \kvec{n} \Delta \sigma
+\end{align*}
+
+\begin{align*}
+\frac{\sum \Delta m}{\Delta t} \approx \sum \delta \kvec{v} \cdot \kvec{n} \Delta \sigma
+\end{align*}
+
+\begin{align*}
+\frac{\dif m}{\dif t} = \iint_S \delta \kvec{v} \cdot \kvec{n} \dif \sigma
+\end{align*}
+
+\begin{align*}
+\frac{\dif m}{\dif t} = \iint_S \kvec{F} \cdot \kvec{n} \dif \sigma 
+\end{align*}
+
+\begin{align*}
+\frac{1}{ Volume B} \iiint_B  \nabla \cdot  \kvec{F} \dif V
+\end{align*}
+
+%P1130
+
+\begin{align*}
+( \nabla \cdot \kvec{F} )_P = \frac{1}{Volume B} \iiint_B \nabla \cdot \kvec{F} \dif V = \frac{\iint_S \kvec{F} \cdot \kvec{n} \dif \sigma}{Volume of B}
+\end{align*}
+
+\begin{align*}
+\nabla \cdot \kvec{F} = - \frac{\partial \delta}{\partial t} 
+\end{align*}
+
+\begin{align*}
+\iint_S \kvec{F} \cdot \kvec{n} \dif \sigma = \iiint_D \nabla \cdot \kvec{F} \dif V
+\end{align*}
+
+\begin{align*}
+\oint_C \kvec{F} \cdot \kvec{n} \dif s = \iint_R \big( \frac{\partial M}{\partial x} + \frac{\partial N}{\partial y} \big) \dif x \dif y = \iint_R \nabla \cdot \kvec{F} \dif A
+\end{align*}
+
+\( \nabla \times \kvec{F} \cdot \kvec{k} = ( \partial N / \partial x) - ( \partial M / \partial y) \) 
+
+%Green Theorem and Its Generalization to three Dimensions
+
+\begin{align*}
+\oint_C \kvec{F} \cdot \dif \kvec{r} = \iint \big( \frac{\partial M}{\partial x} - \frac{\partial N}{\partial y} \big) \dif x \dif y = \iint_R \nabla \times \kvec{F} \cdot \kvec{k} \dif \A
+\end{align*}
+
+\begin{align*}
+\oint_C \kvec{F} \cdot \kvec{n} \dif s = \iint_R \nabla \cdot \kvec{F} \dif A
+\end{align*}
+
+
+
+
+
+
+
+
+
+
+
+
+%1131 to 1135
+%ayesha
+
+
+\[	\frac{tan^{2}x}{\big[\sqrt{4+\frac{x^{2}}{y^{2}}}\big ]_{a}^{b}}\]
+\[  \lim_{x\to\infty}\frac {1}{sin^{3}x}\]
+\[\int_{A}^{B}\sin{x}\cos^{2}{x}dx\]
+\[\sum_{n=i}^{\infty}KiRiCi\]
+\[\oint_{c}{\kvec{F}}\cdot{\dif\kvec{r}}=\int{\int_{R}}\nabla\times\kvec{F}\cdot\kvec{k}dA\]
+\[\oint_{c}{\kvec{F}}\cdot{\dif\kvec{r}}=\int{\int_{S}}\nabla\times\kvec{F}\cdot\kvec{n}d{\sigma}\]
+\[\int_{a}^{b}\frac{df}{dx}dx=f(b)-f(a)\]
+\[f(b)-f(a)=f(b)\kvec{i}\cdot\kvec{(i)}+f(a)\kvec{i}\cdot\kvec{(-i)}\]
+            \[=\kvec{F}(b)\cdot\kvec{n}+\kvec{F}(a)\cdot\kvec{n}\]
+\[\int_{[a,b]}\nabla\cdot\kvec{F}dx\]
+\[\kvec{F}=(y-x)\kvec{i}+(z-y)\kvec{j}+(y-x)\kvec{k}\]
+\[\kvec{F}=x^{2}\kvec{i}+y^{2}\kvec{j}+z^{2}\kvec{k}\]
+\[\kvec{F}=y\kvec{i}+xy\kvec{j}-z\kvec{k}\]
+\[\kvec{F}=x^{2}\kvec{i}+xz\kvec{j}+3z\kvec{k}\]
+\[\kvec{F}=x^{2}\kvec{i}-2xy\kvec{j}+3xz\kvec{k}\]
+\[\kvec{F}=(6x^{2}+2xy)\kvec{i}+(2y+x^{2}z)\kvec{j}+4x^{2}y^{3}\kvec{k}\]
+\[\kvec{F}=2xz\kvec{i}-xy\kvec{j}-z^{2}\kvec{k}\]
+\[\kvec{F}=x^{3}\kvec{i}+y^{3}\kvec{j}+z^{3}\kvec{k}\]
+\[\kvec{F}=\sqrt{x^{2}+y^{2}+z^{2}}(x\kvec{i}+y\kvec{j}+z\kvec{k})\]
+\[\kvec{F}=(x\kvec{i}+y\kvec{j}+z\kvec{k})/\sqrt{x^{2}+y^{2}+z^{2}}\]
+\[\kvec{F}=(5x^{3}+12xy^{2})\kvec{i}+(y^{3}+e^{y}sinz)\kvec{j}+(5z^{3}+e^{y}cosz)\kvec{k}\]
+\[\kvec{F}=ln(x^{2}+y^{2})\kvec{i}-\big(\frac{2z}{x}tan^{-1}\frac{y}{x}\big)\kvec{j}+z\sqrt{x^{2}+y^{2}}\kvec{k}\]
+\[\nabla\cdot(a\kvec{F}_{1}+b\kvec{F}_{2})=a\nabla\cdot\kvec{F}_{1}+b\nabla\cdot\kvec{F}_{2}\]
+\[\nabla\times(a\kvec{F}_{1}+b\kvec{F}_{2})=a\nabla\times\kvec{F}_{1}+b\nabla\times\kvec{F}_{2}\]
+\[\nabla\cdot(\kvec{F}_{1}\times\kvec{F}_{2})=\kvec{F}_{2}\cdot\nabla\times\kvec{F}_{1}-\kvec{F}_{1}\cdot\nabla\times\kvec{F}_{2}\]
+\[\nabla\cdot(g\kvec{F})=g\nabla\cdot\kvec{F}+\nabla\g\cdot\kvec{F}\]
+\[\nabla\times(g\kvec{F})=g\nabla\times\kvec{F}+\nabla\g\times\kvec{F}\]
+\[M\frac{\partial}{\partial x}+N\frac{\partial}{\partial y}+P\frac{\partial}{\partial z}\]
+\[\nabla\times(\kvec{F}_{1}\times\kvec{F}_{2})=(\kvec{F}_{2}\cdot\nabla)\kvec{F}_{1}-(\kvec{F}_{1}\cdot\nabla)\kvec{F}_{2}+(\nabla\cdot\kvec{F}_{2})\kvec{F}_{1}-(\nabla\cdot\kvec{F}_{1})\kvec{F}_{2}\]
+\[\nabla(\kvec{F}_{1}\cdot\kvec{F}_{2})=(\kvec{F}_{1}\cdot\nabla)\kvec{F}_{2}+(\kvec{F}_{2}\cdot\nabla)\kvec{F}_{1}+\kvec{F}_{1}\times(\nabla\times\kvec{F}_{2})+\kvec{F}_{2}\times(\nabla\times\kvec{F}_{1})\]
+\[\int\int_{D}\int\nabla\cdot\kvec{F}dV?\]
+\[Volume of D=\frac{1}{3}\int\int_{S}\kvec{F}\cdot\kvec{n}d\sigma\]
+\[\nabla^{2}f=\nabla\cdot\nabla f=\frac{\partial^{2}f}{\partial x^{2}}+\frac{\partial^{2}f}{\partial y^{2}}+\frac{\partial^{2}f}{\partial z^{2}}=0\]
+\[\int\int_{S}f\nabla f\cdot\kvec{n}d\sigma=\int\int_{D}\int|\nabla f|^{2}dV\]
+\[\int\int_{S}\nabla f\cdot\kvec{n}d\sigma\]
+\[\int\int_{S}f\nabla g\cdot\kvec{n}d\sigma=\int\int_{D}\int(f\nabla^{2}g+\nabla f\cdot\nabla g)dV\]
+\[\int\int_{S}(f\nabla g-g\nabla f)\cdot\kvec{n}d\sigma\]
+\[=\int\int_{D}\int(f\nabla^{2}g-g\nabla^{2}f)dV\]
+\[\frac{d}{dt}\int\int_{D}\int p(t,x,y,z)dV=-\int\int_{S}p\kvec{v}\cdot\kvec{n}d\sigma\]
+\[\frac{d}{dt}\int\int_{D}\int p(t,x,y,z)dV=\int\int_{D}\int\frac{\partial p}{\partial t}dV\]
+\[\nabla\cdot p\kvec{v}+\frac{\partial p}{\partial t}=0\]
+\[\frac{\partial T}{\partial t}=k\nabla^{2}T\]
+\[\int^{(4,-3,0)}_{(-1,1,1)}\frac{dx+dy+dz}{\sqrt{x+y+z}}\]
+\[\int^{(10.3,3)}_{(1,1,1)}dx-\sqrt\frac{z}{y}dy-\sqrt\frac{y}{z}dz\]
+\[\int_{C}8xsinydx-8ycosxdy\]
+\[\int_{C}y^{2}dx+x^{2}dy\]
+\[g(x,y,z)=\frac{yz}{\sqrt{4y^{2}+1}}\]
+\[g(x,y,z)=\frac{z}{\sqrt{4y^{2}+1}}\]
+
+
+
+
+
+%1136
+\[\kvec{r}(u,v)=(u+v)\kvec{i}+(u-v)\kvec{j}+v\kvec{k}\quad 0\leq{u}\leq{1}\quad 0\leq{v}\leq{1}\]
+\[\kvec{r}(r,\theta)=r\cos\theta\kvec{i}+r\sin\theta\kvec{j}+0\kvec{k}\quad 0\leq{\theta}\leq{2\pi}\quad 0\leq{r}\leq{1}\]
+\[\int\int_{s}\sqrt{x^{2}+y^{2}+1}d\sigma\]
+\[\kvec{F}=x\kvec{i}+y\kvec{j}+z\kvec{k}\]
+\[\kvec{F}=(x\kvec{i}+y\kvec{j}+z\kvec{k})/(x^{2}+y^{2}+z^{2})^{3/2}\]
+\[\kvec{F}=xe^{y}\kvec{i}+ye^{z}\kvec{j}+ye^{x}\kvec{k}\]
+\[\kvec{F}=(\kvec{i}+z\kvec{j}+y\kvec{k})/(x+yz)\]
+\[\kvec{F}=2\kvec{i}+(2y+z)\kvec{j}+(y+1)\kvec{k}\]
+\[\kvec{F}=(z\cos{xz})\kvec{i}+e^{y}\kvec{j}+(x\cos{xz})\kvec{k}\]
+\[\kvec{F}=2xy\kvec{i}+\kvec{j}+x^{2}\kvec{k}\]
+\[\kvec{F}=2xy\kvec{i}+x^{2}\kvec{j}+\kvec{k}\]
+\[\kvec{F}=\frac{x\kvec{i}+y\kvec{j}}{(x^{2}+y^{2})^{3/2}}\]
+\[\kvec{F}=y^{2}\kvec{i}-y\kvec{j}+3z^{2}\kvec{k}\]
+\[\kvec{F}=(x^{2}+y)\kvec{i}+(x+y)\kvec{j}+(4y^{2}-z)\kvec{k}\]
+\[\kvec{r}_{(t)}=t\kvec{i}+\frac{2\sqrt{2}}{3}t^{3/2}\kvec{j}+\frac{t^{2}}{2}\kvec{k}\quad ;\quad 0\leq{t}\leq{2}\]
+
+%1137
+\[\kvec{F}=(2xy+x)\kvec{i}+(xy-y)\kvec{j}\]
+\[\oint_{c}ln x\sin ydy-\frac{\cos y}{x}dx=0\]
+\[\kvec{F}=2xy\kvec{i}+2yz\kvec{j}+2xz\kvec{k}\]
+\[\kvec{F}=xz\kvec{i}+yz\kvec{j}+\kvec{k}\]
+\[\kvec{F}=-2x\kvec{i}-3y\kvec{j}+z\kvec{k}\]
+\[\kvec{F}=(6x+y)\kvec{i}-(x+z)\kvec{j}+4yz\kvec{k}\]
+
+%1138
+\[\kvec{r}(r,\theta)=(\kvec{r}\cos\theta)\kvec{i}+(\kvec{r}\sin\theta)\kvec{j}+0\kvec{k}\]
+\[work=\lim_{n\to\infty}\sum^{n}_{k=1}gx_{k}y_{k}^{2}\Delta s_{k}=\int_{c}gxy^{2}ds\]
+\[work=\lim_{n\to\infty}\sum^{n}_{k=1}gx_{k}y_{k}z_{k}\Delta\sigma_{k}=\int\int_{s}gxyzd\sigma\]
+\[Force=\lim_{n\to\infty}\sum^{n}_{k=1}w(4-z_{k})\Delta\sigma_{k}=\int\int_{s}w(4-z)d\sigma\]
+\[Buoyant force=\int\int_{s}w(z-4)\kvec{k}\cdot\kvec{n}d\sigma\]
+\[\kvec{F}=\int\int_{s}w(2-z)d\sigma\]
+\[\oint_{c}\kvec{E}\cdot d\kvec{r}=-\frac{\partial}{\partial t}\int\int_{s}\kvec{B}\cdot\kvec{n}d\sigma\]
+\[\oint_{c}\kvec{E}\cdot d\kvec{r}\]
+
+%1139
+\[\kvec{F}=-\frac{GmM}{|\kvec{r}|^{3}}\kvec{r}\]
+\[\int\int_{s}(\nabla_{f}\times\nabla_{g})\kvec{n}d\sigma=\oint_{c}f\nabla g\cdot d\kvec{r}\]
+\[\d\sigma=(EG-F^{2})^{1/2}dudv\]
+\[E=|\kvec{r}_{u}|^{2},\quad F=r_{u}\cdot r_{v},\quad G=|r_{v}|^{2}\]
+\[V=\frac{1}{3}\int\int_{s}\kvec{r}\cdot\kvec{n}d\sigma\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%unknown begin
+\(	z=\sqrt{x^{2}+y^{2}}	\)
+
+\(	z=1	\)
+
+\(	z=2	\)
+
+\(	\overline{x}=\overline{y}=0	\)
+
+\(	\overline{z}=M_{xy}/M	\)
+
+\(	\kvec{r}(r , \theta)=rcos\theta\ai+rsin\theta\aj+r\ak,\quad1\leq{r}\leq2,\,\,0\leq\theta\leq2\pi,	\)
+
+\(	\abs{\kvec{r_r}\times\kvec{r_\theta}}=\sqrt{2}r.	\)
+
+
+\begin{align*}
+M&=\iint_{S}\delta \dif{\sigma}\\
+&=\int_{0}^{2\pi}\int_{1}^{2}\delta\sqrt{2}r\dif{r}\dif{\theta}\\
+&=\delta\sqrt{2}\int_{0}^{2\pi}\big[\frac{r^2}{2}\big]_{1}^{2}\dif{\theta}\\
+&=\delta\sqrt{2}\int_{0}^{2\pi}\big(2-\frac{1}{2}\big)\dif{\theta}\\
+&=\delta\sqrt{2}\big[\frac{3\theta}{2}\big]_{0}^{2\pi}\\
+&=3\pi\delta\sqrt{2}\\
+M_{xy}&=\iint_{S}\delta z\dif{\sigma}\\
+&=\int_{0}^{2\pi}\int_{1}^{2}\delta r\sqrt{2}r\dif{r}\dif{\theta}\\
+&=\delta\sqrt{2}\int_{0}^{2\pi}\int_{1}^{2}r^{2}\dif{r}\dif{\theta}\\
+&=\delta\sqrt{2}\int_{0}^{2\pi}\big[\frac{r^3}{3}\big]_{0}{2}\dif{\theta}\\
+&=\delta\sqrt{2}\int_{0}^{2\pi}\frac{7}{3}\dif{\theta}\\
+&=\frac{14}{3}\pi\delta\sqrt{2}\\
+\overline z&=\frac{M_{xy}}{M}=\frac{14\pi\delta\sqrt{2}}{3(3\pi\delta\sqrt{2})}\\
+&=\frac{14}{9}
+\end{align*}
+
+%exercise 14.6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

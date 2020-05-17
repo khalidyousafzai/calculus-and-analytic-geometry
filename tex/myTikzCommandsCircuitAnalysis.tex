@@ -4,6 +4,13 @@
 \tikzset{-<-/.style={decoration={markings, mark=at position #1 with {\arrow{latex reversed}}},postaction={decorate}}}
 \tikzset{osquare/.style={draw,solid,fill=white, rectangle, minimum size=4pt, inner sep=0pt, outer sep=0pt}}   %node[osquare,fill=black]{}
 
+%this puts small orthogonal tick marks along a curve at selected points. a point at each side of the location has to be provided to %the \path[] section of the command as shown.
+% 		\draw[smooth, domain=0:2]plot ({\x},{\x^2});
+%		\foreach \t in {0.5,1,1.5}{\path[| mark=0.5] ({\t-0.1},{(\t-0.1)^2}) -- ({\t+0.1},{(\t+0.1)^2});}
+\tikzset{| mark/.style={postaction=decorate,decoration={markings,
+mark=at position #1 with {\draw[line cap=round,mark segment] (0,-2pt) -- (0,2pt);
+}}},mark segment/.style={thick}}
+
 
 %draws right angles \RightAngle{A}{B}{C}
 \providecommand{\RightAngle}[4][5pt]{\draw[] ($#3!#1!#2$)--($ #3!2!($($#3!#1!#2$)!.5!($#3!#1!#4$)$) $) --($#3!#1!#4$) ;     }
