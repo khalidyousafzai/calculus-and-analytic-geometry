@@ -1,6 +1,6 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.11.8)  17 MAY 2020 16:35
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.11.8)  18 MAY 2020 17:28
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **calculusAndAnalyticGeometry
 (./calculusAndAnalyticGeometry.tex
@@ -1818,17 +1818,20 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
 )
 \verbatim@out=\write4
-runsystem(touch w18-test-2020517995.tex)...executed.
+runsystem(touch w18-test-20205181048.tex)...disabled (restricted).
 
-runsystem(rm -f w18-test-2020517995.tex)...executed.
+runsystem(rm -f w18-test-20205181048.tex)...disabled (restricted).
 
-runsystem(rm -f "calculusAndAnalyticGeometry.gnuploterrors")...executed.
+runsystem(rm -f "calculusAndAnalyticGeometry.gnuploterrors")...disabled (restri
+cted).
 
-Package gnuplottex Info: Automatically converting gnuplot files. on input line 
-110.
+
+
+Package gnuplottex Warning: Shell escape not enabled.
+(gnuplottex)                You'll need to convert the graphs yourself..
+
 \c@fignum=\count388
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/newfile/newfile.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/newfile/newfile.sty
 Package: newfile 2009/09/03 v1.0c Output and input files
 \c@streamvline=\count389
 )
@@ -1873,7 +1876,7 @@ LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
 (./tex/calculusMultivariableFunctionsAndPartialDerivatives.aux)
 (./tex/calculusMultipleIntegrals.aux)
 (./tex/calculusIntegrationInVectorFields.aux) (./tex/questions.aux)
-(./tex/questionsA.aux) (./tex/temp.aux) (./tex/calculusAppendixA.aux)
+(./tex/questionsA.aux) (./tex/tocMatric.aux) (./tex/calculusAppendixA.aux)
 (./tex/calculusAppendixB.aux) (./tex/calculusAppendixC.aux)
 (./tex/calculusAppendixD.aux) (./tex/calculusAppendixE.aux)
 (./tex/calculusAppendixF.aux) (./tex/calculusAppendixG.aux)
@@ -2355,7 +2358,7 @@ Overfull \hbox (4.49997pt too wide) detected at line 151
 
 
 Overfull \hbox (4.49997pt too wide) detected at line 152
- [][][]\TU/JameelNooriNastaleeq(0)/bx/n/10 1773[][][]
+ [][][]\TU/JameelNooriNastaleeq(0)/bx/n/10 1774[][][]
  []
 
 )
@@ -2374,30 +2377,115 @@ Overfull \hbox (4.49997pt too wide) detected at line 152
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/bx/n' will be
 (Font)              scaled to size 24.88pt on input line 1.
  [11]) [12]
+\openout2 = `./tex/calculusIntegrationInVectorFields.aux'.
+
+
+(./tex/calculusIntegrationInVectorFields.tex
+باب 15.
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
+(Font)              scaled to size 20.74pt on input line 1.
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/bx/n' will be
+(Font)              scaled to size 20.74pt on input line 1.
+LaTeX Font Info:    Font shape `TU/AASameerSagarNastaleeqBold(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 2.
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
+(Font)              scaled to size 14.4pt on input line 5.
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/bx/n' will be
+(Font)              scaled to size 14.4pt on input line 5.
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 6.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 6.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 6.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 6.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 6.
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 6.
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 13.
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 31.
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/bx/n' will be
+(Font)              scaled to size 12.0pt on input line 31.
+[1771
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+] [1772] [1773] [1774] [1775] [1776]) [1777]
 \openout2 = `./tex/questions.aux'.
 
- (./tex/questions.tex)
-[1777] (./answer.tex) [1851
+ (./tex/questions.tex
+
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [0.0:0.0]) on input line 11.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 11.
+
+Overfull \hbox (5.07332pt too wide) in paragraph at lines 8--13
+ [][][][][][] 
+ []
 
 
+Package pgfplots Warning: Axis range for axis x is approximately empty; enlargi
+ng it (it is [1.0000000000:1.0000000000]) on input line 21.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+
+Package pgfplots Warning: Axis range for axis y is approximately empty; enlargi
+ng it (it is [1.0000000000:1.0000000000]) on input line 21.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+
+Overfull \hbox (10.80898pt too wide) in paragraph at lines 18--23
+ [][][][][][] 
+ []
 
 
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [0.0:0.0]) on input line 31.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+
+Package pgfplots Warning: Axis range for axis y is approximately empty; enlargi
+ng it (it is [0.0:0.0]) on input line 41.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [0.0:0.0]) on input line 41.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+
+Overfull \hbox (5.07129pt too wide) in paragraph at lines 48--55
+ [][][][][][] 
+ []
+
+) [1778
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+] (./answer.tex) [1769
 
 
 
@@ -2431,7 +2519,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 247.
 (./tex/calculusMultivariableFunctionsAndPartialDerivatives.aux)
 (./tex/calculusMultipleIntegrals.aux)
 (./tex/calculusIntegrationInVectorFields.aux) (./tex/questions.aux)
-(./tex/questionsA.aux) (./tex/temp.aux) (./tex/calculusAppendixA.aux)
+(./tex/questionsA.aux) (./tex/calculusAppendixA.aux)
 (./tex/calculusAppendixB.aux) (./tex/calculusAppendixC.aux)
 (./tex/calculusAppendixD.aux) (./tex/calculusAppendixE.aux)
 (./tex/calculusAppendixF.aux) (./tex/calculusAppendixG.aux)
@@ -2441,17 +2529,21 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 247.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 247.
 
 
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.43996pt have occurred.
+
+
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 247.
  ) 
 Here is how much of TeX's memory you used:
- 62774 strings out of 492922
- 1583557 string characters out of 6133407
- 1890162 words of memory out of 5000000
- 65663 multiletter control sequences out of 15000+600000
- 555721 words of font info for 133 fonts, out of 8000000 for 9000
+ 63406 strings out of 492922
+ 1600596 string characters out of 6133407
+ 1927400 words of memory out of 5000000
+ 66282 multiletter control sequences out of 15000+600000
+ 566525 words of font info for 175 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 78i,9n,136p,2364b,1101s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,14n,136p,2364b,3197s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on calculusAndAnalyticGeometry.pdf (13 pages).
+Output written on calculusAndAnalyticGeometry.pdf (20 pages).

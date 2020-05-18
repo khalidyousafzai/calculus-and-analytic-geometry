@@ -1,19 +1,78 @@
+\جزوحصہء{سوالات}
+\موٹا{سمتی مساوات کی ترسیمات}\\
+سوال \حوالہ{سوال_سمتی_تکمل_مساوات_ترسیم_الف} تا سوال \حوالہ{سوال_سمتی_تکمل_مساوات_ترسیم_الف} میں دی مساوات کی مطابقتی ترسیم شکل تا شکل میں تلاش کریں۔
 \begin{figure}
 \centering
-\begin{tikzpicture}[declare function={fx(\x)=sin(\x)+1/3*cos(3*\x);fy(\t)=cos(\t);fz(\t)=\t/100;}]
-\coordinate (O) at (-0.5,-1);
-\draw[smooth, domain=5:120]plot ({\x/30},{fx(\x)});
-\foreach \t in {1,3,5,7,9,11}{\path[| mark=0.5] ({(\t-0.1)/3},{fx((\t-0.1)*10)}) -- ({(\t+0.1)/3},{fx((\t+0.1)*10)});}
-\draw[] ({7.5/3},{fx(7.5*10)})node[circ]{}node[right,yshift=-1ex]{$(x_k,y_k,z_k)$};
-\draw[-stealth](O)--++(-0.5,-0.5)node[left]{$x$};
-\draw[-stealth](O)--++(3,0)node[right]{$y$};
-\draw[-stealth](O)--++(0,1.5)node[left]{$z$};
-\draw[-latex](O)--({4/3},{fx(4*10)})node[pos=0.5,below]{$\kvec{r}$};
-\draw[] ({1/3},{fx(1*10)})node[xshift=-2ex,yshift=2ex]{$t=a$};
-\draw[] ({11/3},{fx(11*10)})node[xshift=2ex,yshift=2ex]{$t=b$};
-\draw[decorate,decoration={brace,amplitude=5pt, raise=5pt}] ({7/3},{fx(7*10)})--({9/3},{fx(9*10)})node[above left,shift={(145:5pt)}]{$\Delta s_k$};
+\begin{subfigure}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[declare function={fx(\t)=\t;fy(\t)=1-\t;fz(\t)=0;}]
+\begin{axis}[clip=false,width=4cm, font=\tiny,view/h=110,axis lines=middle,xtick={1},ytick={1},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},xmax=1.25,ymax=1.125]
+\addplot3[domain=0:1,variable=\t,samples y=0,->-=0.5]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=1,circ]{};
+\end{axis}
 \end{tikzpicture}
-\caption{
-منحنی \عددی{\kvec{r}=g(t)\ai+h(t)\aj+k(t)\ak} کو \عددی{t=a} اور \عددی{t=b} کے بیچ چھوٹے قوسین میں تقسیم کیا گیا ہے۔ علامتی چھوٹے قوس کی لمبائی \عددی{\Delta s_k} ہے۔
-}
+\caption{}
+\label{شکل_سوال_سمتی_تکمل_مساوات_ترسیم_الف}
+\end{subfigure}\hfill
+\begin{subfigure}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[declare function={fx(\t)=1;fy(\t)=1;fz(\t)=\t;}]
+\begin{axis}[clip=false,width=4cm, font=\tiny,view/h=110,axis lines=middle,xtick={1},ytick={1},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\addplot3[domain=-1:1,variable=\t,samples y=0,->-=0.5]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=0,right]{$(1,1,-1)$}node[pos=1,circ]{}node[pos=1,right]{$(1,1,1)$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتی_تکمل_مساوات_ترسیم_ب}
+\end{subfigure}\hfill
+\begin{subfigure}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[declare function={fx(\t)=2*cos(deg(\t));fy(\t)=2*sin(deg(\t));fz(\t)=0;}]
+\begin{axis}[clip=false,width=4cm, font=\tiny,view/h=120,axis lines=middle,xtick={2},ytick={2},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},xmax=2.25,ymax=2.125]
+\addplot3[domain=0:2*pi,variable=\t,samples y=0,->-=0.2]({fx(t)},{fy(t)},{fz(t)});
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتی_تکمل_مساوات_ترسیم_پ}
+\end{subfigure}\hfill
+\begin{subfigure}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[declare function={fx(\t)=\t;fy(\t)=0;fz(\t)=0;}]
+\begin{axis}[clip=false,width=4cm, font=\tiny,view/h=135,axis lines=middle,xtick={-1,1},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},xmin=-1.25,xmax=1.25]
+\addplot3[domain=-1:1,variable=\t,samples y=0,->-=0.85]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=1,circ]{};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتی_تکمل_مساوات_ترسیم_ت}
+\end{subfigure}
+\begin{subfigure}{0.22\textwidth}
+\centering
+\begin{tikzpicture}[declare function={fx(\t)=\t;fy(\t)=\t;fz(\t)=\t;}]
+\begin{axis}[clip=false,width=4cm, font=\tiny,view/h=110,axis lines=middle,xtick={2},ytick={2},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},xmax=2.5]
+\addplot3[domain=0:2,variable=\t,samples y=0,->-=0.5]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=1,circ]{}node[pos=1,right]{$(2,2,2)$};
+\addplot3[dashed]plot coordinates{(2,2,2)(2,2,0)(2,0,0)};
+\addplot3[dashed]plot coordinates{(2,2,0)(0,2,0)};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\label{شکل_سوال_سمتی_تکمل_مساوات_ترسیم_ٹ}
+\end{subfigure}
 \end{figure}
+
+\ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_مساوات_ترسیم_الف}
+\(\kvec{r}(t)=t\ai+(1-t)\aj,\quad 0\le t\le 1\)
+\انتہا{سوال}
+%
+\ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_مساوات_ترسیم_ب}
+\(\kvec{r}(t)=\ai+\aj+t\ak,\quad -1\le t\le 1\)
+\انتہا{سوال}
+%
+\ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_مساوات_ترسیم_پ}
+\(\kvec{r}(t)=(2\cos t)\ai+(2\sin t)\aj,\quad 0\le t\le 2\pi\)
+\انتہا{سوال}
+%
+\ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_مساوات_ترسیم_ت}
+\(\kvec{r}(t)=t\ai,\quad -1\le t\le 1\)
+\انتہا{سوال}
+%
+\ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_مساوات_ترسیم_ٹ}
+\(\kvec{r}(t)=t\ai+t\aj+t\ak,\quad 0\le t\le 2\)
+\انتہا{سوال}
