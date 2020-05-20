@@ -23,7 +23,7 @@
 %%\newcommand*{\اصطلاح}[1]{{\color{red}{#1}}}   %colours spills to next word when there is index or footnote entry with the word
 %%\newcommand{\اصطلاح}[1]{{\urdufontBig{#1}}}
 
-\newcommand{\اصطلاح}[1]{{\urduTechTermsfont{#1}}}
+\newcommand{\اصطلاح}[1]{{\urduTechTermsfont{#1}}}  %%%moved to main file
 
 
 %end commands cannot be redefined and as such these two are not usable
@@ -39,7 +39,7 @@
 \newcommand*{\استعمال}[1]{\usepackage{#1}}
 
 %footnotes and indexes
-\newcommand*{\حاشیہب}[1]{{\raggedright{\footnote{\textenglish{#1}}}} }               %footnote to the left hand side
+\newcommand*{\حاشیہب}[1]{{\raggedright{\footnote{\textenglish{#1}}}} }          %  moved to main file. footnote to the left hand side
 \newcommand*{\حاشیہد}[1]{{\raggedleft{\footnote{#1}}}}
 \newcommand*{\حاشیہط}[1]{\marginpar{#1}}
 
@@ -48,7 +48,7 @@
 %references and labels
 \newcommand*{\شناخت}[1]{\label{#1}}
 \newcommand*{\حوالہ}[1]{\ref{#1}}
-\newcommand*{\حوالہء}[1]{#1}
+\newcommand*{\حوالہء}[1]{#1}			%dummy to enter the figure number directly while the figure is not ready
 \newcommand*{\حوالہصفحہ}[1]{\pageref{#1}}
 
 %counters
@@ -75,7 +75,7 @@
 
 \newcommand*{\قریب}[1]{\mbox{#1}}  %dissallows splitting along two lines 
 \newcommand{\سن}[1]{؁\,\ensuremath{#1}}
-\newcommand{\زور}[1]{\aemph{#1}} %overline to emphasize
+\newcommand{\زور}[1]{\aemph{#1}} %overline urdu text to emphasize
 
 
 \renewcommand{\indexname}{فرہنگ}        %does nothing here. must be placed within begin{urdufont} environment to be the last to take effect 
@@ -306,12 +306,18 @@
 }%
 {\wf{\unexpanded{\end{description}}}\par\noindent\ignorespacesafterend}
 %==================
-\newenvironment*{جواب}				
+\newenvironment*{جواب}  %the next is a better environment. it take less input		
 {\noindent\ignorespaces\wf{\unexpanded{\item[}}\wf{\thequestioncounter)}\wf{\unexpanded{]}}}%
 {\noindent\ignorespacesafterend}
+%%==================
+%%==================
+%%this takes one input hence there is no need to write \wf{\unexpanded{...}} in every answer
+%\newenvironment*{جواب}[1]			%put actual answer in {} examples {\(\sqrt{2}\)} 	
+%{\noindent\ignorespaces\wf{\unexpanded{\item[}}\wf{\thequestioncounter)}\wf{\unexpanded{]}}\wf{\unexpanded{#1}}}%
+%{\noindent\ignorespacesafterend}
 %==================
-\newenvironment*{جوابء}				
-{\noindent\ignorespaces\wf{\unexpanded{[}}\wf{\thequestioncounter)}\wf{\unexpanded{]}}}%
-{\par\noindent\ignorespacesafterend}
+%\newenvironment*{جوابء}				%i think is wrong and not used	
+%{\noindent\ignorespaces\wf{\unexpanded{[}}\wf{\thequestioncounter)}\wf{\unexpanded{]}}}%
+%{\par\noindent\ignorespacesafterend}
 %==================
 
