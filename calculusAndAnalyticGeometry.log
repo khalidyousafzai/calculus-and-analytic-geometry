@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.11.8)  20 MAY 2020 17:47
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.11.8)  21 MAY 2020 15:52
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1818,9 +1818,9 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
 )
 \verbatim@out=\write4
-runsystem(touch w18-test-20205201067.tex)...executed.
+runsystem(touch w18-test-2020521952.tex)...executed.
 
-runsystem(rm -f w18-test-20205201067.tex)...executed.
+runsystem(rm -f w18-test-2020521952.tex)...executed.
 
 runsystem(rm -f "calculusAndAnalyticGeometry.gnuploterrors")...executed.
 
@@ -2405,8 +2405,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 5.
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
 (Font)              scaled to size 6.0pt on input line 5.
-)
-[1778
+ [1778
 
 
 
@@ -2426,7 +2425,10 @@ LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
 
 
 
-] (./answer.tex) [1779
+]
+Missing character: There is no ِ in font zplmr7m!
+
+[1779]) [1780] (./answer.tex) [1781
 
 
 
@@ -2470,17 +2472,21 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 259.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 259.
 
 
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.43996pt have occurred.
+
+
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 259.
  ) 
 Here is how much of TeX's memory you used:
- 62455 strings out of 492922
- 1576301 string characters out of 6133407
- 1888647 words of memory out of 5000000
- 65342 multiletter control sequences out of 15000+600000
- 561913 words of font info for 159 fonts, out of 8000000 for 9000
+ 62487 strings out of 492922
+ 1576937 string characters out of 6133407
+ 1888689 words of memory out of 5000000
+ 65374 multiletter control sequences out of 15000+600000
+ 566509 words of font info for 173 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 78i,9n,136p,2364b,594s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,20n,136p,2364b,594s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on calculusAndAnalyticGeometry.pdf (13 pages).
+Output written on calculusAndAnalyticGeometry.pdf (15 pages).
