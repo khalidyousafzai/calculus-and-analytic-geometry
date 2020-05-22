@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.11.8)  21 MAY 2020 15:52
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.11.8)  22 MAY 2020 17:21
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1818,9 +1818,9 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
 )
 \verbatim@out=\write4
-runsystem(touch w18-test-2020521952.tex)...executed.
+runsystem(touch w18-test-20205221041.tex)...executed.
 
-runsystem(rm -f w18-test-2020521952.tex)...executed.
+runsystem(rm -f w18-test-20205221041.tex)...executed.
 
 runsystem(rm -f "calculusAndAnalyticGeometry.gnuploterrors")...executed.
 
@@ -2428,12 +2428,12 @@ LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
 ]
 Missing character: There is no ِ in font zplmr7m!
 
-[1779]) [1780] (./answer.tex) [1781
+[1779] [1780] [1781] [1782]) [1783] [1784
 
 
 
 
-] [1882
+] (./answer.tex) [1785] [1882
 
 
 
@@ -2449,11 +2449,12 @@ Missing character: There is no ِ in font zplmr7m!
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 259.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 259.
- (./calculusAndAnalyticGeometry.aux
-(./tex/calculusPreface.aux) (./tex/prefaceFirstBook.aux)
-(./tex/calculusPreliminaries.aux) (./tex/calculusLimitsAndContinuity.aux)
-(./tex/calculusDerivatives.aux) (./tex/calculusApplicationsOfDerivatives.aux)
-(./tex/calculusIntegration.aux) (./tex/calculusApplicationsOfIntegrals.aux)
+
+(./calculusAndAnalyticGeometry.aux (./tex/calculusPreface.aux)
+(./tex/prefaceFirstBook.aux) (./tex/calculusPreliminaries.aux)
+(./tex/calculusLimitsAndContinuity.aux) (./tex/calculusDerivatives.aux)
+(./tex/calculusApplicationsOfDerivatives.aux) (./tex/calculusIntegration.aux)
+(./tex/calculusApplicationsOfIntegrals.aux)
 (./tex/calculusTranscendentalFunctions.aux)
 (./tex/calculusTechniquesOfIntegration.aux) (./tex/calculusInfiniteSeries.aux)
 (./tex/calculusConicSectionsParametrizedCurvesPolarCoordinates.aux)
@@ -2481,12 +2482,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 259.
  ) 
 Here is how much of TeX's memory you used:
- 62487 strings out of 492922
- 1576937 string characters out of 6133407
- 1888689 words of memory out of 5000000
- 65374 multiletter control sequences out of 15000+600000
+ 62495 strings out of 492922
+ 1577054 string characters out of 6133407
+ 1888731 words of memory out of 5000000
+ 65382 multiletter control sequences out of 15000+600000
  566509 words of font info for 173 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 78i,20n,136p,2364b,594s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,20n,136p,2364b,599s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on calculusAndAnalyticGeometry.pdf (15 pages).
+Output written on calculusAndAnalyticGeometry.pdf (19 pages).
