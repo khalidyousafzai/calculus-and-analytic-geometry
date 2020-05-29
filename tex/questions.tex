@@ -52,7 +52,9 @@
 %========= 
 \ابتدا{ثبوت}\موٹا{کہ \عددی{\kvec{F}=\nabla f} سے مراد تکمل کی قیمت کا راہ سے آزاد ہونا ہے}\\
 فرض کریں \عددی{D} میں \عددی{A} اور \عددی{B} دو نقطے ہیں اور \عددی{D} میں \عددی{A} سے \عددی{B} تک
- ہموار راہ \عددی{C:\, \kvec{r}(t)=g(t)\ai+h(t)\aj+k(t)\ak,\, a\le t\le b} ہے۔ منحنی کی ہمراہ \عددی{t} کے لحاظ سے  \عددی{C} قابل تفرق ہے اور درج ذیل ہو گا۔
+ ہموار راہ درج ذیل ہے۔
+\[C:\quad \kvec{r}(t)=g(t)\ai+h(t)\aj+k(t)\ak,\quad a\le t\le b\]
+ منحنی کی ہمراہ \عددی{t} کے لحاظ سے  \عددی{C} قابل تفرق ہے اور درج ذیل ہو گا۔
 \begin{align}
 \frac{\dif f}{\dif t}&=\frac{\partial f}{\partial x}\frac{\dif x}{\dif t}+\frac{\partial f}{\partial y}\frac{\dif y}{\dif t}+\frac{\partial f}{\partial z}\frac{\dif z}{\dif t}&&\text{\RL{زنجیری قاعدہ}}\nonumber\\
 &=\nabla f\cdot \big(\frac{\dif x}{\dif t}\ai+\frac{\dif y}{\dif t}\aj+\frac{\dif z}{\dif t}\ak\big)=\nabla f\cdot \frac{\dif\kvec{r}}{\dif t}=\kvec{F}\cdot\frac{\dif\kvec{r}}{\dif t}\label{مساوات_سمتی_تکمل_ثبوت_بقائی}
@@ -83,3 +85,135 @@
 \end{align*}
 \انتہا{مثال}
 %=====================
+\ابتدا{مسئلہ}\شناخت{مسئلہ_سمتی_تکمل_بند_راہ_صفر}
+درج ذیل فقرے  معادل ہیں۔
+\begin{enumerate}[a.]
+\item
+خطہ \عددی{D} میں ہر بند راہ پر \عددی{\int\kvec{F}\cdot\dif\kvec{r}=0} ہے۔
+\item
+خطہ \عددی{D} پر میدان \عددی{\kvec{F}} بقائی ہے۔
+\end{enumerate}
+\انتہا{مسئلہ}
+%=============
+\ابتدا{ثبوت}\موٹا{جزو-ا}\\
+ہم دکھانا چاہتے ہیں کہ \عددی{D} میں کسی بھی دو نقاط \عددی{A} اور \عددی{B} کے بیچ کسی بھی  دو راہوں \عددی{C_1} اور \عددی{C_2} پر \عددی{\kvec{F}\cdot\dif\kvec{r}} کے تکملات کی قیمتیں ایک دوسرے جیسی ہوں گی۔ہم شکل میں \عددی{C_2} کا رخ الٹ کر کے \عددی{B} سے \عددی{A} تک راہ کو \عددی{-C_2} لکھتے ہیں۔راہ \عددی{C_1} اور راہ \عددی{-C_2} مل کر بند راہ \عددی{C} دیتے ہیں۔اب درج ذیل ہو گا۔
+\begin{align*}
+\int_{C_1}\kvec{F}\cdot\dif\kvec{r}-\int_{C_2}\kvec{F}\cdot\dif\kvec{r}=\int_{C_1}\kvec{F}\cdot\dif\kvec{r}+\int_{-C_2}\kvec{F}\cdot\dif\kvec{r}=\int_{C}\kvec{F}\cdot\dif\kvec{r}=0
+\end{align*}
+یوں \عددی{C_1} اور \عددی{C_2} پر تکمل کی قیمتیں ایک دوسرے جیسی  ہیں۔
+\انتہا{ثبوت}
+%========================
+\ابتدا{ثبوت}\موٹا{جزو-ب}\\
+ہم دکھانا چاہتے ہیں کہ ہر بند راہ \عددی{C} پر \عددی{\kvec{F}\cdot\dif\kvec{r}} کا تکمل صفر ہے۔ ہم \عددی{C} پر کسی دو نقطوں \عددی{A} اور \عددی{B} کا انتخاب کر کے \عددی{C} کو دو ٹکڑوں میں تقسیم کرتے ہیں: نقطہ \عددی{A} سے \عددی{B} تک ٹکڑے کو  \عددی{C_1} اور نقطہ \عددی{B} سے \عددی{A} تک ٹکڑے کو \عددی{C_2} لیتے ہوئے خلاف گھڑی تکمل درج ذیل ہو گا۔ 
+\begin{align*}
+\oint_C\kvec{F}\cdot\dif\kvec{r}&=\int_{C_1}\kvec{F}\cdot\dif\kvec{r}+\int_{C_2}\kvec{F}\cdot\dif\kvec{r}=\int_A^B\kvec{F}\cdot\dif\kvec{r}-\int_B^A\kvec{F}\cdot\dif\kvec{r}=0
+\end{align*}
+\انتہا{ثبوت}
+%====================
+مسئلہ \حوالہ{مسئلہ_سمتی_تکمل_بنیادی_مسئلہ} اور مسئلہ \حوالہ{مسئلہ_سمتی_تکمل_بند_راہ_صفر} کے نتائج کو  یکجا  کرتے ہیں۔
+\begin{align*}
+\oint_C\kvec{F}\cdot\dif\kvec{r}=0\,\text{\RL{\(D\)\, میں کسی بھی بند راہ پر}}\quad \Leftrightarrow \quad \text{\RL{\(D\)\, پر \, \(\kvec{F}\)\, بقائی ہے}}\quad \Leftrightarrow\quad   \kvec{F}=\nabla f \,\text{\RL{\(D\)\, پر}}
+\end{align*}
+
+یہ جانتے ہوئے کہ  بقائی میدان میں لکیری تکملات کا حل کتنا آسان ہے، دو سوالات پیدا ہوتے ہیں:
+\begin{enumerate}[1.]
+\item
+ہمیں کیسے جان سکتے ہیں کہ  میدان \عددی{\kvec{F}} بقائی ہے؟
+\item
+بقائی میدان \عددی{\kvec{F}} کا مطابقتی  مخفی قوہ تفاعل \عددی{f} کیسے دریافت کیا جا سکتا ہے (جہاں \عددی{\kvec{F}=\nabla f} ہو گا)۔
+\end{enumerate}
+
+\جزوحصہء{بقائی میدان کا مخفی قوہ تفاعل کا حصول}
+بقائی میدان کا پرکھ درج ذیل ہے۔
+\ابتدا{پرکھ}\موٹا{بقائی میدان کا اجزائی پرکھ}\\
+میدان \عددی{\kvec{F}=M(x,y,z)\ai+N(x,y,z)\aj+P(x,y,z)\ak} جس کے اجزائی  تفاعل کے استمراری یک رتبی جزوی تفرقات پائے جاتے ہوں صرف اور صرف اس صورت بقائی ہو گا جب درج ذیل مطمئن  ہوں۔
+\begin{align}\label{مساوات_سمتی_تکمل_بقائی_جزوی_پرکھ}
+\frac{\partial P}{\partial y}=\frac{\partial N}{\partial z},\quad \frac{\partial M}{\partial z}=\frac{\partial P}{\partial x}, \quad \text{اور}\quad \frac{\partial N}{\partial x}=\frac{\partial M}{\partial y}
+\end{align}
+\انتہا{پرکھ}
+%=====================
+\ابتدا{ثبوت پرکھ}
+ہم دکھاتے ہیں کہ بقائی \عددی{\kvec{F}} کے لئے  مساوات \حوالہ{مساوات_سمتی_تکمل_بقائی_جزوی_پرکھ} ہر صورت مطمئن ہو گا۔ایسا مخفی قوہ تفاعل \عددی{f} پایا جائے گا جو درج ذیل کو مطمئن کرے گا۔
+\begin{align*}
+\kvec{F}=M\ai+N\aj+&P\ak=\frac{\partial f}{\partial x}\ai+\frac{\partial f}{\partial y}\aj+\frac{\partial f}{\partial z}\ak
+\end{align*}
+یوں درج ذیل ہو گا۔
+\begin{align*}
+\frac{\partial P}{\partial y}&=\frac{\partial}{\partial y}\big(\frac{\partial f}{\partial z}\big)=\frac{\partial^{\,2}f}{\partial y\partial z}\\
+&=\frac{\partial^{\,2}f}{\partial z\partial y}&&\text{\small{\begin{minipage}{3.25cm}\RL{استمراری ہونے کی بدولت مدغم جزوی تفرقات ایک دوسرے کے برابر ہوں گے}  \end{minipage}}}\\
+&=\frac{\partial}{\partial z}\big(\frac{\partial f}{\partial y}\big)=\frac{\partial N}{\partial z}
+\end{align*}
+مساوات \حوالہ{مساوات_سمتی_تکمل_بقائی_جزوی_پرکھ} کے باقی دو اجزاء بھی اسی طرح ثابت کیے جا سکتے ہیں۔
+
+ثبوت کا دوسرا حصہ، جس سے مراد لیا جا سکتا ہے کہ مساوات \حوالہ{مساوات_سمتی_تکمل_بقائی_جزوی_پرکھ} کہتی ہے کہ \عددی{\kvec{F}} بقائی ہو گا، مسئلہ سٹوکس کا نتیجہ ہے۔
+\انتہا{ثبوت پرکھ}
+%=======================
+
+یہ جانتے ہوئے کہ \عددی{\kvec{F}} بقائی ہے، ہم عموماً مخفی قوہ تفاعل \عددی{f} دریافت کرنا چاہیں گے جو مساوات \عددی{\nabla f=\kvec{F}} یعنی
+\begin{align*}
+\frac{\partial f}{\partial x}\ai+\frac{\partial f}{\partial y}\aj+\frac{\partial f}{\partial z}\ak=M\ai+N\aj+P\ak
+\end{align*}
+کو \عددی{f} کے لئے حل کرنے سے حاصل ہو گا۔ ہم درج ذیل تین مساوات کا تکمل لے کر ایسا کرتے ہیں۔
+\begin{align*}
+\frac{\partial f}{\partial x}=M,\quad \frac{\partial f}{\partial y}=N,\quad \frac{\partial f}{\partial z}=P
+\end{align*}
+%
+\ابتدا{مثال}
+دکھائیں کہ \عددی{\kvec{F}=(e^x\cos y+yz)\ai+(xz-e^x\sin y)\aj+(xy+z)\ak} بقائی ہے اور اس کا مخفی قوہ تفاعل \عددی{f} تلاش کریں۔
+
+حل:\quad
+ہم مساوات \حوالہ{مساوات_سمتی_تکمل_بقائی_جزوی_پرکھ} میں دی گئی پرکھ کا اطلاق 
+\begin{align*}
+M=e^x\cos y+yz,\quad N=xz-e^x\sin y,\quad P=xy+z
+\end{align*}
+پر کر کے درج ذیل حاصل کرتے ہیں۔
+\begin{align*}
+\frac{\partial P}{\partial y}=x=\frac{\partial N}{\partial z},\quad \frac{\partial M}{\partial z}=y=\frac{\partial P}{\partial x},\quad \frac{\partial N}{\partial x}=z-e^x\sin y=\frac{\partial M}{\partial y}
+\end{align*}
+یہ مساوات مل کر ہمیں بتاتے ہیں کہ  ایسا \عددی{f} پایا جاتا ہے جو \عددی{\nabla f=\kvec{F}} کو مطمئن کرتا ہے۔
+
+ہم درج ذیل مساواتوں کے تکملات سے \عددی{f} کو تلاش کرتے ہیں۔
+\begin{align}\label{مساوات_سمتی_تکمل_مثال_بقائی}
+\frac{\partial f}{\partial x}=e^x\cos y+yz,\quad \frac{\partial f}{\partial y}=xz-e^x\sin y,\quad \frac{\partial f}{\partial z}=xy+z
+\end{align}
+ہم بائیں سے شروع کرتے ہوئے \عددی{y} اور \عددی{z} کو مستقل تصور کر کے  پہلی مساوات کا تکمل \عددی{x} کے لحاظ سے  لیتے ہیں:
+\begin{align}\label{مساوات_سمتی_تکمل_بقائی_مثال_الف}
+f(x,y,z)=e^x\cos y+xyz+g(y,z)
+\end{align}
+ہم نے تکمل کے مستقل کو \عددی{g(y,z)} لکھا ہے چونکہ اس کی قیمت \عددی{y} اور \عددی{z} کے ساتھ تبدیل ہو سکتی ہے۔اس مساوات سے  ہم \عددی{\tfrac{\partial f}{\partial y}} تلاش کر کے مساوات \حوالہ{مساوات_سمتی_تکمل_مثال_بقائی} میں دی گئی  \عددی{\tfrac{\partial f}{\partial y}} کے برابر پر کرتے ہیں:
+ \begin{align*}
+-e^x\sin y+xz+\frac{\partial g}{\partial y}=xz-e^x\sin y
+\end{align*}
+یوں \عددی{\tfrac{\partial g}{\partial y}=0} ہو گا لہٰذا \عددی{g} کی قیمت صرف \عددی{z} پر منحصر ہو گی۔اس طرح مساوات \حوالہ{مساوات_سمتی_تکمل_بقائی_مثال_الف} درج ذیل روپ اختیار کرے گی۔
+\begin{align*}
+f(x,y,z)&=e^x\cos y+xyz+h(z)
+\end{align*}
+اس مساوات سے ہم \عددی{\tfrac{\partial f}{\partial z}} معلوم کر کے مساوات \حوالہ{مساوات_سمتی_تکمل_مثال_بقائی} میں دی گئی  \عددی{\tfrac{\partial f}{\partial z}} کے برابر پر کرتے ہیں:
+\begin{align*}
+xy+\frac{\dif h}{\dif z}&=xy+z\\
+\frac{\dif h}{\dif z}&=z\quad \text{یعنی}
+\end{align*}
+متغیر \عددی{z} کے ساتھ تکمل لیتے ہیں:
+\begin{align*}
+h(z)==\frac{z^2}{2}+C
+\end{align*}
+اس طرح درج ذیل ہو گا۔
+\begin{align*}
+f(x,y,z)=e^x\cos y+xyz+\frac{z^2}{2}+C
+\end{align*}
+یوں  مستقل \عددی{C} کی لامتناہی ممکنہ منفرد قیمتیں منتخب کر کے  \عددی{\kvec{F}} کے لامتناہی تعداد کے مخفی قوہ تفاعل حاصل ہوں گے۔ 
+\انتہا{مثال}
+%======================
+\ابتدا{مثال}
+دکھائیں کہ \عددی{\kvec{F}=(2x-3)\ai-z\aj+(\cos z)\ak} غیر بقائی ہے۔
+
+حل:\quad
+ہم مساوات \حوالہ{مساوات_سمتی_تکمل_بقائی_جزوی_پرکھ} میں دی گئی پرکھ استعمال کر کے 
+\begin{align*}
+\frac{\partial P}{\partial y}=\frac{\partial}{\partial y}(\cos z)=0,\quad \frac{\partial N}{\partial z}=\frac{\partial}{\partial z}(-z)=-1
+\end{align*}
+حاصل کرتے ہیں۔یہ قیمتیں ایک دوسرے سے مختلف ہیں لہٰذا \عددی{\kvec{F}} غیر بقائی ہو گا۔ پرکھ کے باقی اجزاء کو دیکھنے کی ضرورت نہیں ہے۔
+\انتہا{مثال}
+%====================
+\جزوحصہء{قطعی تفرقی روپ}
+
