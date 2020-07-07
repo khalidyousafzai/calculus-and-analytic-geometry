@@ -1,3 +1,11 @@
-cat *.tex|sed 's:/:\n:g'|sed 's/\[\]\-\*/\n/g'|sed 's/\]\[/\n/g' |sed 's/[\\a-zA-Z0-9,.<>?":l}{)(^&$%#@;|_=!]/ /g'|sed 's/[،۔؟؛:0123456789]/ /g'|sed 's/ /\n/g'|sort|uniq -c|wc -l
+ to find unique words in a book
 
+cat *.tex|sed 's:/:\n:g'|sed 's/\[\]\-\*/\n/g'|sed 's/\]\[/\n/g' |sed 's/[\\a-zA-Z0-9,.<>?":l}{)(^&$%#@;|_=!]/ /g'|sed 's/[،۔؟؛:0123456789]/ /g'|sed 's/ /\n/g'|sed "s/[\t'*]/ /g"|sed "s/['* ُ ِ َ ّ ]/ /g" |sed "s/\[/\n/g"|sed "s/\]/\n/g" |sed "s/ //g"| sed "/^$/d"|sort|uniq -c|wc -l
 
+to write unique words to the "words" folder on the Desktop
+
+cat *.tex|sed 's:/:\n:g'|sed 's/\[\]\-\*/\n/g'|sed 's/\]\[/\n/g' |sed 's/[\\a-zA-Z0-9,.<>?":l}{)(^&$%#@;|_=!]/ /g'|sed 's/[،۔؟؛:0123456789]/ /g'|sed 's/ /\n/g'|sed "s/[\t'*]/ /g"|sed "s/['* ُ ِ َ ّ ]/ /g" |sed "s/\[/\n/g"|sed "s/\]/\n/g" |sed "s/ //g"| sed "/^$/d"|sort|uniq> ~/Desktop/words/bookName.txt
+
+to find total unique words in all the books using the output (bookName.txt)  of the second command above
+
+cat *.txt|sed 's:/:\n:g'|sed 's/\[\]\-\*/\n/g'|sed 's/\]\[/\n/g' |sed 's/[\\a-zA-Z0-9,.<>?":l}{)(^&$%#@;|_=!]/ /g'|sed 's/[،۔؟؛:0123456789]/ /g'|sed 's/ /\n/g'|sed "s/[\t'* ُ ِ َ ّ ]/ /g"|sed "s/\[/\n/g"|sed "s/\]/\n/g" |sed "s/ //g"| sed "/^$/d"|sort|uniq>uniqueWords.txt
