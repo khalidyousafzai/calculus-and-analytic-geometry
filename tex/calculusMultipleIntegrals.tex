@@ -2639,12 +2639,13 @@ J_n=\sum_{k=1}^nf(r_k,\theta_k)r_k\Delta r\Delta \theta
 \centering
 \begin{minipage}{0.50\textwidth}
 \centering
-\begin{tikzpicture}[font=\small,declare function={f(\x)=1+cos(\x);}]
+\begin{tikzpicture}[font=\small,declare function={f(\x)=1+cos(\x);gx(\x)=cos(\x);gy(\x)=sin(\x);}]
 \pgfmathsetmacro{\ang}{-40}
 \pgfmathsetmacro{\ra}{1+cos(\ang)}
 \begin{axis}[axis on top,axis equal,clip=false,small,axis lines=middle,xtick={1,2},xticklabels={\rlap{$1$},\rlap{$2$}},ytick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$}, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
 \addplot[opacity=0.5,fill=lgray,data cs=polar,domain=0:360,smooth]{f(x)}node[pos=0.2,above right]{$r=1+\cos\theta$};
-\draw[fill=white](0,0) circle (1);
+%\draw[fill=white](0,0) circle (1);
+\addplot[domain=0:360] ({gx(x)},{gy(x)});
 \addplot[data cs=polar,domain=90:270,smooth]{f(x)};
 \draw[-latex](0,0)--(\ang:2.2);
 \addplot[-stealth,domain=0:\ang] ({0.4*cos(x)},{0.4*sin(x)})node[pos=0.6,right]{$\theta$}; 
@@ -5165,7 +5166,7 @@ color(0.7cm)=(gray!20); color(2cm)=(gray!80); color(2.05cm)=(white)}
 %
 % r surface
 \begin{scope}[canvas is xy plane at z=0]
-\draw[name path=xy arc](\kr,0,0) arc (0:90:\kr);
+\draw[name path global=xy arc](\kr,0,0) arc (0:90:\kr);
 \end{scope}
 %
 \begin{scope}[canvas is xz plane at y=0]
@@ -5173,7 +5174,7 @@ color(0.7cm)=(gray!20); color(2cm)=(gray!80); color(2.05cm)=(white)}
 \end{scope}
 %
 \begin{scope}[canvas is yz plane at x=0]
-\draw[name path=yz edge](\kr,0,0) arc (0:90:\kr);
+\draw[name path global=yz edge](\kr,0,0) arc (0:90:\kr);
 \end{scope}
 %
 %theta surface
@@ -5187,26 +5188,26 @@ color(0.7cm)=(gray!20); color(2cm)=(gray!80); color(2.05cm)=(white)}
 \draw[] ({\krr*sin(\ktheta)*cos(\kphi)},{\krr*sin(\ktheta)*sin(\kphi)},{\krr*cos(\ktheta)})coordinate(arcUL)
  \foreach \kphi in {100,101,...,\kphiE}{--({\krr*sin(\ktheta)*cos(\kphi)},{\krr*sin(\ktheta)*sin(\kphi)},{\krr*cos(\ktheta)})coordinate(arcE)};
 %
-\path[name path=to arcE](0,0,0)--(arcE);
+\path[name path global=to arcE](0,0,0)--(arcE);
 \draw [name intersections={of=yz edge and to arcE,by={arcEedge}}] (arcE)--(arcEedge);
 %
 %phi surface at 60 degrees defined by \kphiPHI
 %
 \pgfmathsetmacro{\kphi}{\kphiS}
-\path[name path=upper arc front] ({\krr*sin(\ktheta)*cos(\kphi)},{\krr*sin(\ktheta)*sin(\kphi)},{\krr*cos(\ktheta)})coordinate(arcUL)
+\path[name path global=upper arc front] ({\krr*sin(\ktheta)*cos(\kphi)},{\krr*sin(\ktheta)*sin(\kphi)},{\krr*cos(\ktheta)})coordinate(arcUL)
  \foreach \kphi in {\kphiS,\kphiSN,...,100}{--({\krr*sin(\ktheta)*cos(\kphi)},{\krr*sin(\ktheta)*sin(\kphi)},{\krr*cos(\ktheta)})};
 %
-\path[name path=xy radial upper] (0,0,\kr)--++(\kphiPHI:\krr);
+\path[name path global=xy radial upper] (0,0,\kr)--++(\kphiPHI:\krr);
 \draw[name intersections={of=xy radial upper and upper arc front,by={phi theta upper}}] (0,0,\kr)--(phi theta upper);
 %
 \pgfmathsetmacro{\krho}{\kr*tan(\ktheta)}
-\path[name path=xy radial lower] (0,0,0)--(\kphiPHI:\krr);
+\path[name path global=xy radial lower] (0,0,0)--(\kphiPHI:\krr);
 \path[fill=white,opacity=1,name intersections ={of=xy radial lower and xy arc,by={arcRadialL}}] ({\krho*cos(\kphiPHI)},{\krho*sin(\kphiPHI)},\kr)coordinate(outOFtheta)--({\krr*cos(\kphiPHI)},{\krr*sin(\kphiPHI)},\kr)coordinate(phiUR)--++(0,0,-\kr)coordinate(phiLR)--(arcRadialL);
 %
-\path[name path=phi lower section]({\kr*sin(\ktheta)*cos(90)},{\kr*sin(\ktheta)*sin(90)},{\kr*cos(\ktheta)})
+\path[name path global=phi lower section]({\kr*sin(\ktheta)*cos(90)},{\kr*sin(\ktheta)*sin(90)},{\kr*cos(\ktheta)})
  \foreach \kphi in {90,89,...,\kphiS}{--({\kr*sin(\ktheta)*cos(\kphi)},{\kr*sin(\ktheta)*sin(\kphi)},{\kr*cos(\ktheta)})coordinate(arcLL)};
 %
-\path[name path=phiThetaIntersction] (0,0,0)--({\krho*cos(\kphiPHI)},{\krho*sin(\kphiPHI)},\kr)--({\krr*cos(\kphiPHI)},{\krr*sin(\kphiPHI)},\kr);
+\path[name path global=phiThetaIntersction] (0,0,0)--({\krho*cos(\kphiPHI)},{\krho*sin(\kphiPHI)},\kr)--({\krr*cos(\kphiPHI)},{\krr*sin(\kphiPHI)},\kr);
 \draw[fill=white,opacity=1,name intersections={of=phiThetaIntersction and phi lower section,by={phiThetaLOW}}] (phiThetaLOW)--(outOFtheta)--(phiUR)--(phiLR)--(arcRadialL) \foreach \i in {90,89,...,\ktheta}{--({\kr*sin(\i)*cos(\kphiPHI)},{\kr*sin(\i)*sin(\kphiPHI)},{\kr*cos(\i)})};
 %
 \pgfmathsetmacro{\kphi}{\kphiPHI}

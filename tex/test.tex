@@ -1,0 +1,50 @@
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\small,x={(-0.7071cm,-0.7071cm)},y={(1cm,0)},z={(0,1cm)},declare function={f(\x)=sqrt(1+\x*\x);}]
+\pgfmathsetmacro{\h}{0.5}
+\pgfmathsetmacro{\s}{-1}
+\pgfmathsetmacro{\e}{1}
+\pgfmathsetmacro{\step}{(\e-\s-0.2)/10}
+\draw[-latex](-1,0,0)--(2,0,0)node[right]{$x$};
+\draw[-latex](0,-2.2,0)--(0,2,0)node[right]{$y$};
+\draw[-latex](0,0,0)--(0,0,1.5)node[above]{$z$};
+\draw[thick,domain=\s:\e]plot (\h,{f(\x)},\x);
+\draw[thick,domain=\s:\e]plot (0,{f(\x)},\x);
+\draw[thick,domain=\s:\e]plot (-\h,{f(\x)},\x);
+\draw[thick,domain=\s:\e]plot (\h,{-f(\x)},\x);
+\draw[thick,domain=\s:\e]plot (0,{-f(\x)},\x);
+\draw[thick,domain=\s:\e]plot (-\h,{-f(\x)},\x);
+\foreach \z in {-0.8,-0.6,-0.4,-0.2,0,0.2,0.4,0.6,0.8}{\draw(\h+0.125,{f(\z)},\z)--++(-2*\h-0.25,0,0);}
+\foreach \z in {-0.8,-0.6,-0.4,-0.2,0,0.2,0.4,0.6,0.8}{\draw(\h+0.125,{-f(\z)},\z)--++(-2*\h-0.25,0,0);}
+\draw(0,{f(\s)},\s)++(0,0.05,-0.05)--++(0,0,-0.3)node[below,align=center]{\RL{پیداکار قطع زائد}\\ $y^2-z^2=1$};
+\draw(0,{-f(\e)},\e)++(0,-0.05,0.05)--++(0,0,0.3)node[above,align=center]{\RL{پیداکار قطع زائد}\\ $y^2-z^2=1$};
+\end{tikzpicture}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.75,font=\small,x={(-0.7071cm,-0.7071cm)},y={(1cm,0)},z={(0,1cm)},declare function={f(\x)=sqrt(1+\x*\x);}]
+\pgfmathsetmacro{\h}{0.5}
+\pgfmathsetmacro{\s}{-1}
+\pgfmathsetmacro{\e}{1}
+\pgfmathsetmacro{\step}{(\e-\s-0.2)/10}
+\draw[-latex](0,-2,0)--(0,-1,0);
+\fill[lgray,domain=\s:\e]plot (\h,{-f(\x)},\x)--++(-2*\h,0,0) [domain=\e:\s] plot(-\h,{-f(\x)},\x)--++(2*\h,0,0);
+\draw[](0,-1,0)--(0,1,0);
+\fill[lgray,domain=\s:\e]plot (\h,{f(\x)},\x)--++(-2*\h,0,0) [domain=\e:\s] plot(-\h,{f(\x)},\x)--++(2*\h,0,0);
+\draw[thick,domain=\s:\e]plot (0,{f(\x)},\x);
+\draw[thick,domain=\s:\e]plot (0,{-f(\x)},\x);
+\draw[-latex](-1,0,0)--(2,0,0)node[right]{$x$};
+\draw[-latex](0,1,0)--(0,2,0)node[right]{$y$};
+\draw[-latex](0,0,0)--(0,0,1.5)node[above]{$z$};
+\draw(0,{f(\e)},\e)node[above,xshift=2ex]{$y^2-z^2=1$};
+\end{tikzpicture}
+\end{subfigure}
+\caption{
+محور \عددی{x} کے متوازی  اور   مستوی \عددی{yz} میں  پائی جانے والی وہ لکیریں   جو قطع زائد \عددی{y^2-z^2=1} سے گزرتی  ہوں، قطع زائد نلکی \عددی{y^2-z^2=1} پیدا کرتی ہیں۔محور \عددی{x} کے عمودی  سطحیں اس سے قطع زائد کاتتی ہیں۔}
+\label{شکل_سمتیہ_قطع_زائد_نلکی}
+\end{figure}
+
+
