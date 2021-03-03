@@ -4717,12 +4717,21 @@ y^2&=x\\
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
 \centering
+<<<<<<< HEAD
 \begin{tikzpicture}[declare function={f(\x)=-sqrt(25-\x^2);gx(\x)=5*cos(\x);gy(\x)=5*sin(\x);},font=\small]
+=======
+\begin{tikzpicture}[declare function={f(\x)=-sqrt(25-\x^2);g(\x)=5*cos(\x);gy(\x)=5*sin(\x);},font=\small]
+>>>>>>> 2e89f8eae40485e371d3acb7f607ab3c953e6d8a
 \pgfmathsetmacro{\A}{3}
 \pgfmathsetmacro{\nA}{f(\A)}
 \pgfmathsetmacro{\nB}{f(\A+0.1)}
 \begin{axis}[axis equal,clip=false,small,axis lines=middle,xtick={\empty},ytick={\empty},xlabel={$x$},ylabel={$y$},xmin=-6,xmax=6,ymin=-6,ymax=6.5]
+<<<<<<< HEAD
 \addplot[domain=0:360]({gx(x)},{gy(x)});
+=======
+%\draw(axis cs:0,0) circle (5);
+\addplot[domain=0:360] ({g(x)},{g(x)});
+>>>>>>> 2e89f8eae40485e371d3acb7f607ab3c953e6d8a
 \draw[shorten <=-1cm, shorten >=-1cm](axis cs:\A,\nA)node[circ]{}node[above left]{$(3,-4)$}node[below right]{$\tfrac{\dif y}{\dif x}=-\tfrac{x}{y}=\tfrac{3}{4}$}--(axis cs:\A+0.1,\nB);
 \draw(axis cs:5,0)node[circ]{}node[below left]{$-5$} (axis cs:-5,0)node[circ]{}node[below right]{$5$};
 \draw(axis cs:-4,2.5)node[fill=white,font=\footnotesize]{$y_1=\sqrt{25-x^2}$};

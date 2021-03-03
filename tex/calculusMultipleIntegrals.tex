@@ -2639,12 +2639,21 @@ J_n=\sum_{k=1}^nf(r_k,\theta_k)r_k\Delta r\Delta \theta
 \centering
 \begin{minipage}{0.50\textwidth}
 \centering
+<<<<<<< HEAD
 \begin{tikzpicture}[font=\small,declare function={f(\x)=1+cos(\x); gx(\x)=cos(\x);gy(\x)=sin(\x);}]
+=======
+\begin{tikzpicture}[font=\small,declare function={f(\x)=1+cos(\x);gx(\x)=cos(\x);gy(\x)=sin(\x);}]
+>>>>>>> 2e89f8eae40485e371d3acb7f607ab3c953e6d8a
 \pgfmathsetmacro{\ang}{-40}
 \pgfmathsetmacro{\ra}{1+cos(\ang)}
 \begin{axis}[axis on top,axis equal,clip=false,small,axis lines=middle,xtick={1,2},xticklabels={\rlap{$1$},\rlap{$2$}},ytick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$}, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
 \addplot[opacity=0.5,fill=lgray,data cs=polar,domain=0:360,smooth]{f(x)}node[pos=0.2,above right]{$r=1+\cos\theta$};
+<<<<<<< HEAD
 \addplot[domain=0:360,fill=white]({gx(x)},{gy(x)});
+=======
+%\draw[fill=white](0,0) circle (1);
+\addplot[domain=0:360] ({gx(x)},{gy(x)});
+>>>>>>> 2e89f8eae40485e371d3acb7f607ab3c953e6d8a
 \addplot[data cs=polar,domain=90:270,smooth]{f(x)};
 \draw[-latex](0,0)--(\ang:2.2);
 \addplot[-stealth,domain=0:\ang] ({0.4*cos(x)},{0.4*sin(x)})node[pos=0.6,right]{$\theta$}; 
