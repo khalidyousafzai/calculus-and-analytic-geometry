@@ -4787,8 +4787,8 @@ $x+y=3,\,2y+z=7$
 \draw[thick,domain=\s:\e]plot (\h,{-f(\x)},\x);
 \draw[thick,domain=\s:\e]plot (0,{-f(\x)},\x);
 \draw[thick,domain=\s:\e]plot (-\h,{-f(\x)},\x);
-\foreach \z in {\s+0.1,\s+\step,...,\e}{\draw(\h+0.125,{f(\z)},\z)--++(-2*\h-0.25,0,0);}
-\foreach \z in {\s+0.1,\s+\step,...,\e}{\draw(\h+0.125,{-f(\z)},\z)--++(-2*\h-0.25,0,0);}
+\foreach \z in {-0.8,-0.6,-0.4,-0.2,0,0.2,0.4,0.6,0.8}{\draw(\h+0.125,{f(\z)},\z)--++(-2*\h-0.25,0,0);}
+\foreach \z in {-0.8,-0.6,-0.4,-0.2,0,0.2,0.4,0.6,0.8}{\draw(\h+0.125,{-f(\z)},\z)--++(-2*\h-0.25,0,0);}
 \draw(0,{f(\s)},\s)++(0,0.05,-0.05)--++(0,0,-0.3)node[below,align=center]{\RL{پیداکار قطع زائد}\\ $y^2-z^2=1$};
 \draw(0,{-f(\e)},\e)++(0,-0.05,0.05)--++(0,0,0.3)node[above,align=center]{\RL{پیداکار قطع زائد}\\ $y^2-z^2=1$};
 \end{tikzpicture}
