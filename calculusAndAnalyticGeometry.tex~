@@ -1,8 +1,12 @@
 \documentclass[leqno,b5paper]{book}
 %\documentclass[leqno]{book} %the geometry package defines the paper size
+
+% xelatex --shell-escape calculusAndAnalyticGeometry   %must run to avail gnuplot functionality. gnuplot must be installed.
+\typeout{to avail gnuplot functionality must run   "xelatex --shell-escape calculusAndAnalyticGeometry"}
+
 %===================
 %testing tikz inside book
-\usepackage[oldvoltagedirection]{circuitikz}
+\usepackage[arrowmos,RPvoltages]{circuitikz}
 \usepackage{pgfplotstable}
 \usepackage{pgfplots}
 
@@ -15,8 +19,9 @@
 \usepackage{multicol}                                        %for getting multicolumn itemize, enumerate etc
 \usepackage{enumerate}                   %for getting better auto numbering in enumerate
 
+
 %pathmorphing gives the ripples like look
-\usetikzlibrary{3d,shadings,fadings,intersections,calc,decorations.markings,decorations.pathreplacing,external,shapes.misc,decorations.pathmorphing,patterns}
+\usetikzlibrary{shapes,snakes,3d,shadings,fadings,intersections,calc,decorations.markings,decorations.pathreplacing,external,shapes.misc,decorations.pathmorphing,patterns}
 
 
 %\tikzexternalize[mode=list and make] %disable to generate figures
@@ -29,16 +34,18 @@
 %\renewcommand{\arraystretch}{2} give this before tabular for vertical space 
 
 \definecolor{lgray}{cmyk}{0,0,0,0.2}
-\colorlet{llgray}{gray!20}
+\colorlet{llgray}{gray!10}
 \definecolor{dgray}{cmyk}{0,0,0,0.7}
 %========================
-%\usepackage[hidelinks]{hyperref}  %used in machines book but not here
-\usepackage{./tex/khalidUrduBooksMaths}                     %my sty file
+%%\usepackage[hidelinks]{hyperref}  %used in machines book but not here
+%\usepackage{./tex/khalidUrduBooksMaths}                     %moved to last place
 \usepackage{amsbsy} %for bold Poynting, lessgtr symbol
 \usepackage{mathrsfs}   %for Poynting symbol
 \usepackage{IEEEtrantools}
 \usepackage{multirow}   %for multiple row cells in a table column
 \usepackage[misc]{ifsym} 
+
+\usepackage{./tex/khalidUrduBooks}     % polyglossia must be the last package as it handles urdu
 
 \newcommand{\tikzmark}[1]{%
   \tikz[overlay,remember picture] \node (#1) {};}
@@ -57,14 +64,33 @@
 \sisetup{math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega}   %with mathpazo this is needed else must not be here. now micro is smaller
 \DeclareSIUnit \var {var}    %used in electric circuits volt-ampere-reactive
 
-\input longdiv.tex
-\usepackage{polynom}
+\input longdiv.tex		%this is a package but doesnot load with usepackage. it writes pen and paper long division
+\usepackage{polynom}		%this writes pen and paper long division for polynomials
 \usepgfplotslibrary{fillbetween}
+\usepackage[]{gnuplottex}
+%============================
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{newfile}                                                                  %writing answers to the end of the book
+\newwrite\tempfile
+\immediate\openout\tempfile=answer.tex
+\newcommand*\wf[1]{\immediate\write\tempfile{#1}}
+%
+%%the  \اصطلاح and \حاشیہب have been disabled  in "myUrduCommandsCalculus.tex" and instead 
+%%the following is used. this retains their original definitions and writes them to a "technicalTerms.tex" text file too.
+%\newwrite\tempfileTerms				 %collecting technical terms. uses newfile package
+%\immediate\openout\tempfileTerms=technicalTerms.tex
+%\newcommand*\wTechTerms[1]{\immediate\write\tempfileTerms{#1}}
+%\newcommand*{\اصطلاح}[1]{\wTechTerms{\unexpanded{ur, #1 ,}}{\urduTechTermsfont{#1}}}
+%\newcommand*{\حاشیہب}[1]{ \wTechTerms{\unexpanded{en, #1,}}{\raggedright{\footnote{\textenglish{#1}}}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%============================                                                            
+%=================================
+%=================================
 
 \input{./tex/myHarpoons.tex}                       %testing harpoons
 
 
-\input{./tex/myUrduCommandsCalculus.tex}                  %turning latex into urdu
+\input{./tex/myUrduCommands.tex}                  %turning latex into urdu
 \input{./tex/myUrduGreek.tex}
 \input{./tex/myEMTvectors.tex}
 \input{./tex/myDeclareFunctions.tex}     %\sech, \csch, \arcsh, \arcs   hyperbolic and arc-secant etc
@@ -78,11 +104,13 @@
 \graphicspath{{./fig/figFrontPage/}{./fig/figCalculusLimits/}{./fig/figCalculusDerivatives/}{./fig/figCalculusIntegration/}{./fig/figCalculusApplicationsOfIntegrals}{./fig/figCalculusTechniquesOfIntegration/}}%paths to figures
 
 
-%\includeonly{./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusIntegration,./tex/calculusApplicationsOfIntegrals,./tex/calculusTranscendentalFunctions,./tex/calculusTechniquesOfIntegration,./tex/calculusInfiniteSeries,./tex/calculusConicSectionsParametrizedCurvesPolarCoordinates,./tex/calculusVectorsAndAnalyticGeometryInSpace,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI}
+\includeonly{./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusIntegration,./tex/calculusApplicationsOfIntegrals,./tex/calculusTranscendentalFunctions,./tex/calculusTechniquesOfIntegration,./tex/calculusInfiniteSeries,./tex/calculusConicSectionsParametrizedCurvesPolarCoordinates,./tex/calculusVectorsAndAnalyticGeometryInSpace,./tex/calculusVectorValuedFunctionsandMotionInSpace,./tex/calculusMultivariableFunctionsAndPartialDerivatives,./tex/calculusMultipleIntegrals,./tex/calculusIntegrationInVectorFields,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI,./tex/calculusIntegrationTable}
 %
-\includeonly{./tex/cktSymbols,./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusVectorsAndAnalyticGeometryInSpace,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI}%
+%\includeonly{./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries}%
 %
-%\includeonly{./tex/cktSymbols,./calculusPreface,./tex/prefaceFirstBook,./tex/calculusTechniquesOfIntegration,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB}%
+
+%\includeonly{./tex/cktSymbols,./calculusPreface,./tex/prefaceFirstBook,./tex/calculusDerivatives,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI,./tex/calculusIntegrationTable}%
+
 
 
 \author{
@@ -96,8 +124,10 @@
 
 
 
-\title{احصاء اور تحلیلی جیومیٹری}
-\date{}                           %if absent gives date in arabic which is a rubbish
+\title{
+احصاء اور تحلیلی علم الہندسہ
+}
+%\date{}                           %if absent gives date in arabic which is a rubbish
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -112,16 +142,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\linenumbers
-\makeindex
+%\makeindex
 
 %==========
 \begin{document}
-\begin{urdufont}
+\sloppy
 
 
-\renewcommand*{\contentsname}{عنوان}    %this command has to be placed right here
-\renewcommand*{\proofname}{ثبوت}   %if placed before start of begin{urdufont}, it gets swept by the settings of the font environment
-\renewcommand*{\appendixname}{ضمیمہ}
+%\renewcommand*{\contentsname}{عنوان}    %this command has to be placed right here
+%\renewcommand*{\proofname}{ثبوت}   %if placed before start of begin{urdufont}, it gets swept by the settings of the font environment
+%\renewcommand*{\appendixname}{ضمیمہ}
 
 
 \frontmatter                          %just added instead of \pagenumbering{roman}
@@ -140,12 +170,13 @@
 
 
 \mainmatter                      %added this
-\renewcommand*{\chaptername}{باب}
+%\renewcommand*{\chaptername}{باب}
 %%\pagenumbering{arabic}   %instead of this
 
 \pagestyle{headings}
 
 
+%\include{./tex/test}
 \include{./tex/calculusPreliminaries}
 \include{./tex/calculusLimitsAndContinuity}
 \include{./tex/calculusDerivatives}
@@ -157,10 +188,15 @@
 \include{./tex/calculusInfiniteSeries}
 \include{./tex/calculusConicSectionsParametrizedCurvesPolarCoordinates}
 \include{./tex/calculusVectorsAndAnalyticGeometryInSpace}
+\include{./tex/calculusVectorValuedFunctionsandMotionInSpace}
+\include{./tex/calculusMultivariableFunctionsAndPartialDerivatives}
+\include{./tex/calculusMultipleIntegrals}
+\include{./tex/calculusIntegrationInVectorFields}
 \include{./tex/questions}
-\include{./tex/temp}
+\include{./tex/questionsA}
 
 
+%\immediate\closeout\tempfileTerms
 
 %=========================================================
 %\addcontentsline{toc}{chapter}{حوالہ}     %it is standard not to include References in toc. 
@@ -180,7 +216,19 @@
 %\end{otherlanguage}
 %\end{thebibliography}
 %============================================================
+
+\chapter*{جوابات}
+\addcontentsline{toc}{chapter}{جوابات}
+\immediate\closeout\tempfile
+\begin{multicols}{2}
+{\small
+\input{answer}
+}
+\end{multicols}
+
+%=======================
 \appendix
+\renewcommand{\theequation}{\arabic{equation}}
 \include{./tex/calculusAppendixA}
 \include{./tex/calculusAppendixB}
 \include{./tex/calculusAppendixC}
@@ -190,11 +238,13 @@
 \include{./tex/calculusAppendixG}
 \include{./tex/calculusAppendixH}
 \include{./tex/calculusAppendixI}
+\include{./tex/calculusIntegrationTable}
 %
 
 %\include{./tex/emtEndOfBookTableDivergenceCurlGradientLaplacian}
 %\include{./tex/toDoList}
 %\include{./tex/emtQuestions}
+
 \backmatter
 
 \cleardoublepage
@@ -203,14 +253,12 @@
 %\include{./tex/emtCoordinatesRelations}
 %================
 
-
 %=================
 
-\renewcommand*{\indexname}{فرہنگ}      %this command has to be placed right here just before printindex command
+%\renewcommand*{\indexname}{فرہنگ}      %this command has to be placed right here just before printindex command
 \cleardoublepage
-\addcontentsline{toc}{chapter}{فرہنگ}
-%\printindex
+\addcontentsline{toc}{chapter}{اشاریہ}
 
+\printindex
 
-\end{urdufont}
 \end{document}

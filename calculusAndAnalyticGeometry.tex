@@ -61,7 +61,9 @@
 %\renewcommand{\arraystretch}{2}   %space in tables and arrays
 
 
-\sisetup{math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega}   %with mathpazo this is needed else must not be here. now micro is smaller
+\sisetup{
+math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
+  math-degree=\textup{°}}   		%with mathpazo this is needed else must not be here. now micro is smaller
 \DeclareSIUnit \var {var}    %used in electric circuits volt-ampere-reactive
 
 \input longdiv.tex		%this is a package but doesnot load with usepackage. it writes pen and paper long division
