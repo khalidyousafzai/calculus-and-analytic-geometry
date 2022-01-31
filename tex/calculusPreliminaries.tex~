@@ -109,7 +109,7 @@ $\frac{1}{b}<\frac{1}{a}\impliedby a<b$
 &$[a,\infty)$&$\{x|x\ge a\}$&\begin{tikzpicture}[baseline] \centering  \draw[-latex](-0.5,0)--(3.5,0);\draw[thick,-latex](0,0)--(3.5,0);  \draw(0,0)node[circ]{}node[below]{$a$}; \end{tikzpicture}\\
 &$(-\infty,b)$&$\{x|x<b\}$&\begin{tikzpicture}[baseline] \centering  \draw[-latex](-0.5,0)--(3.5,0);\draw[thick](-0.5,0)--(3,0);  \draw(3,0)node[ocirc]{}node[below]{$b$}; \end{tikzpicture}\\
 &$(-\infty,b]$&$\{x|x\le b\}$&\begin{tikzpicture}[baseline] \centering  \draw[-latex](-0.5,0)--(3.5,0);\draw[thick](-0.5,0)--(3,0);  \draw(3,0)node[circ]{}node[below]{$b$}; \end{tikzpicture}\\
-&$(-\infty,\infty)$&$\Re$&\begin{tikzpicture} \centering  \draw[latex-latex,thick](-0.5,0)--(3.5,0); \end{tikzpicture}\\
+&$(-\infty,\infty)$&$\mathbb{R}$&\begin{tikzpicture} \centering  \draw[latex-latex,thick](-0.5,0)--(3.5,0); \end{tikzpicture}\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -137,7 +137,7 @@ $\tfrac{2}{x-1}\ge 4$
 \begin{align*}
 2x-4&<x+1&&\\
 2x&<x+5&&\text{\RL{دونوں ہاتھ $4$ جمع کریں}}\\
-x&<5&& \text{دونوں ہاتھ سے $x$ منفی کریں}
+x&<5&& \text{\RL{دونوں ہاتھ سے $x$ منفی کریں}}
 \end{align*}
 %
 \begin{center}
@@ -153,7 +153,7 @@ x&<5&& \text{دونوں ہاتھ سے $x$ منفی کریں}
 \begin{align*}
 -\frac{x}{3}&<x-1\\
 -x&<3x-3&&\text{\RL{دونوں ہاتھ کو $3$ سے ضرب دیں}}\\
-0&<4x-3&&\text{دونوں ہاتھ کے ساتھ $x$ جمع کریں}\\
+0&<4x-3&&\text{\RL{دونوں ہاتھ کے ساتھ $x$ جمع کریں}}\\
 3&<4x&&\text{\RL{دونوں ہاتھ کے ساتھ $3$ جمع کریں}}\\
 \frac{3}{4}&<x&&\text{\RL{دونوں ہاتھ کو $3$ سے تقسیم کریں}}
 \end{align*}
@@ -2919,7 +2919,7 @@ $g \circ g$
 \انتہا{سوال}
 %===========================
 
-\حصہ{ترسیم کی منتقلی}\شناخت{حصہ_ابتدا_منتقلی_ترسیم}
+\حصہ{ترسیم کی منتقلی}\شناخت{حصہ_ابتدا_ترسیم_کی_منتقلی}
 اس حصہ میں مساوات کو یوں تبدیل کرنا سیکھتے ہیں کہ اس کی ترسیم دائیں، بائیں، اوپر یا نیچے منتقل ہو۔ایسا کرنے سے  نئی مقام پر جانی پہچانی ترسیم کو جلد پہچاننے میں مدد ملتی ہے۔اسی طرح غیر جانی پہچانی مساوات کا ترسیم بنانے میں بھی مدد مل سکتا ہے۔ہم دائرہ اور قطع مکافی کو مثال بناتے ہوئے اس عمل کو سیکھتے ہیں۔ یہ عمل ہر دیگر منحنیات پر بھی قابل لاگو ہے۔
 
 \جزوحصہء{ترسیم کو کیسے منتقل کیا جاتا ہے} 
@@ -3067,7 +3067,7 @@ y&=f(x-h) &&\text{\RL{افقی منتقلی}}
 \label{شکل_ابتدا_چکور_غیر_چکر_نقش}
 \end{figure}
 
-اگر دائری کی مساوات معیاری صورت میں نہ دی گئی ہو تب ہم مربع مکمل کرتے ہوئے معیاری مساوات حاصل کر سکتے ہیں۔
+اگر دائرے کی مساوات معیاری صورت میں نہ دی گئی ہو تب ہم مربع مکمل کرتے ہوئے معیاری مساوات حاصل کر سکتے ہیں۔
 
 \ابتدا{مثال}
 درج ذیل دائرہ کا رداس اور مرکز تلاش کریں۔
@@ -4954,8 +4954,8 @@ x=r\cos\theta,\quad y=r\sin\theta
 \begin{otherlanguage}{english}
 \begin{tabular}{@{}C|RRRRRRRRRRR@{}}
 \toprule
-\text{\urdufont{درجہ}} &-180^{\circ}&-135^{\circ}&-90^{\circ}&-45^{\circ}& 0^{\circ} &30^{\circ}&45^{\circ}&60^{\circ}&90^{\circ}&135^{\circ}&180^{\circ}\\
-\text{\urdufont{ریڈیئن}}&-\pi&-\frac{3\pi}{4}&-\frac{\pi}{2}&-\frac{\pi}{4}&0&\frac{\pi}{6}&\frac{\pi}{4}&\frac{\pi}{3}&\frac{\pi}{2}&\frac{3\pi}{4}&\pi\Bstrut\\ 
+\text{\texturdu{درجہ}} &-180^{\circ}&-135^{\circ}&-90^{\circ}&-45^{\circ}& 0^{\circ} &30^{\circ}&45^{\circ}&60^{\circ}&90^{\circ}&135^{\circ}&180^{\circ}\\
+\text{\texturdu{ریڈیئن}}&-\pi&-\frac{3\pi}{4}&-\frac{\pi}{2}&-\frac{\pi}{4}&0&\frac{\pi}{6}&\frac{\pi}{4}&\frac{\pi}{3}&\frac{\pi}{2}&\frac{3\pi}{4}&\pi\Bstrut\\ 
 \midrule
 \sin \theta&0&-\tfrac{\sqrt{2}}{2}&-1&-\tfrac{\sqrt{2}}{2}&0&\tfrac{1}{2}&\frac{\sqrt{2}}{2}&\frac{\sqrt{3}}{2}&1&\tfrac{\sqrt{2}}{2}&0\Bstrut\\
 \cos\theta&-1&-\tfrac{\sqrt{2}}{2}&0&\tfrac{\sqrt{2}}{2}&1&\frac{\sqrt{3}}{2}&\frac{\sqrt{2}}{2}&\tfrac{1}{2}&0&-\tfrac{\sqrt{2}}{2}&-1\Bstrut\\
@@ -5267,33 +5267,33 @@ $\SI{20.9}{\centi\meter}$
 سوال \حوالہ{سوال_ابتدا_تفاعل_تلاش_الف} تا سوال \حوالہ{سوال_ابتدا_تفاعل_تلاش_ب} میں \عددی{\sin x}، \عددی{\cos x}، \عددی{\tan x} میں سے ایک دیا گیا ہے۔باقی دو تفاعل کو دیے گئے وقفے کے اندر تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_ابتدا_تفاعل_تلاش_الف}
-$\sin x=\tfrac{3}{5},\quad  [\tfrac{\pi}{2},\pi]\text{دائرہ کار:}$\\
+$\sin x=\tfrac{3}{5},\quad  [\tfrac{\pi}{2},\pi]\text{\RL{دائرہ کار:}}$\\
 جواب:\quad
 $\cos x=-\tfrac{4}{5},\quad \tan x=-\tfrac{3}{4}$
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}
-$\tan x=2,\quad  [0,\tfrac{\pi}{2}]\text{دائرہ کار:}$
+$\tan x=2,\quad  [0,\tfrac{\pi}{2}]\text{\RL{دائرہ کار:}}$
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}
-$\cos x=\tfrac{1}{3},\quad  [-\tfrac{\pi}{2},0]\text{دائرہ کار:}$\\
+$\cos x=\tfrac{1}{3},\quad  [-\tfrac{\pi}{2},0]\text{\RL{دائرہ کار:}}$\\
 جواب:\quad
 $\sin x=-\tfrac{\sqrt{8}}{3},\quad \tan x=-\sqrt{8}$
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}
-$\cos x=-\tfrac{5}{13},\quad  [\tfrac{\pi}{2},\pi]\text{دائرہ کار:}$
+$\cos x=-\tfrac{5}{13},\quad  [\tfrac{\pi}{2},\pi]\text{\RL{دائرہ کار:}}$
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}
-$\tan x=\tfrac{1}{2},\quad  [\pi,\tfrac{3\pi}{2}]\text{دائرہ کار:}$\\
+$\tan x=\tfrac{1}{2},\quad  [\pi,\tfrac{3\pi}{2}]\text{\RL{دائرہ کار:}}$\\
 جواب:\quad
 $\sin x=-\tfrac{1}{\sqrt{5}},\quad \cos x=-\tfrac{2}{\sqrt{5}}$
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}\شناخت{سوال_ابتدا_تفاعل_تلاش_ب}
-$\sin x=-\tfrac{1}{2},\quad  [\pi,\tfrac{3\pi}{2}]\text{دائرہ کار:}$
+$\sin x=-\tfrac{1}{2},\quad  [\pi,\tfrac{3\pi}{2}]\text{\RL{دائرہ کار:}}$
 \انتہا{سوال}
 %========================
 \موٹا{تکونیاتی تفاعل کی ترسیم}\\
