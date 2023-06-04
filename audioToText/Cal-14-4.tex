@@ -1,0 +1,452 @@
+\documentclass{book}
+\usepackage{fontspec}
+\usepackage{amsmath}
+\usepackage{commath}
+\usepackage{multicol}
+\usepackage{polyglossia}
+\setmainlanguage[numerals=maghrib]{arabic}     
+\setotherlanguages{english}
+\newfontfamily\arabicfont[Scale=1.0,Script=Arabic]{PakType Naskh Basic Urdu} 
+\newfontfamily\urdufont[WordSpace=1.0,Script=Arabic]{PakType Naskh Basic Urdu}
+\begin{document}
+%page 1106 example 3
+\begin{urdufont}
+ہم سب سے پہلے تفالات، تفرک اور تفریق کو 
+t
+کی سورت میں لکھتے ہیں۔
+$$ M = \cos{(t)} - \sin{(t)}, \vspace{0.2cm} dx = d(\cos{(t)}) = -\sin{(t)}dt $$,
+$$ N = \cos{(t)}, \vspace{0.2cm} dy = d(\sin{(t)}) = \cos{(t)}dt $$,
+$$ \frac{\partial M}{\partial x} =1, \quad \frac{\partial M}{\partial y} = -1, \frac{\partial N}{\partial x} =1, \quad \frac{\partial N}{\partial y} = 0 $$.
+مساوات
+(۱۱) 
+کی دونوں اطراف درج زیل روپ اختیار کرتے ہیں۔ 
+\begin{align*}
+    \oint_c M dy  - N dx &= \int_{t=0}^{t= 2\pi} (\cos{(t)} - \sin{(t)})(\cos{(t)} dt) - (\cos{(t)})(-\sin{(t)} dt) \\
+    &= \int_{t=0}^{t= 2\pi} \cos^2{(t)} dt = \pi \\
+    \int \int_R (\frac{\partial M}{\partial x} + \frac{\partial N}{\partial y}) dx dy &=  \int \int_R (1 + 0) dx dy \\
+    &= \int \int_R dx dy = \text{area of unit circle} = \pi
+\end{align*}
+مساوات
+(۱۲)
+کے دونوں اطراف درج زیل روپ اختیار کرتے ہیں۔
+\begin{align*}
+    \oint_c M dx  - N dy &= \int_{t=0}^{t= 2\pi} (\cos{(t)} - \sin{(t)})(-\sin{(t)} dt) + (\cos{(t)})(\cos{(t)} dt) \\
+    &= \int_{t=0}^{t= 2\pi} (-\sin{(t)}\cos{(t)} + 1) dt = 2\pi \\
+\int \int_R (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}) dx dy &=  \int \int_R (1 - (-1)) dx dy = 2 \int \int_R dx dy = 2\pi
+\end{align*}
+\section{مسٗلہ گرین استعمال کرتے ہوےٗ لکیری تقملات کی قیمت کا تلاش}
+ہم مختلف منھییوں کے سر آپس میں جوڑ کر ایک بند منھنی سی حاصل کر سکتے ہیں۔ منھنی 
+C
+پر لکیری تکمل کی قیمت تلاش کرنے کا عمل کافی لمبا ہوسکتا ہے۔  چونکہ اس میں کیٰ مختلف تقملات کی قیمت حاصل کرنی ہوکی۔  لیکن اکر 
+C
+خطہ
+R
+جس پر مصلہ گرین کا اطلاق ہوتا ہو، کی حد بندی کرتا ہو۔ تب ہم مصلہ گرین استعمال کرتے ہوےٗ 
+C
+پر لکیری تکمل کو 
+R
+پر ایک دورہ تقمل میں تبدیل کرسکتے ہیں۔ 
+
+ابتداء مثال
+۴
+درج زیل تکمل کی قیمت تلاش کریں۔ 
+$$ \oint_C xy dy - y^2 dx $$
+جہاں ربیا اول میں لکیر
+کی قیمت
+$x=1$
+اور
+$y=1$
+چکوڑ 
+C
+کاٹتے ہیں۔
+
+حل:
+
+ہم مصلہ گرین کی دونوں روٹ میں سے ایک استعمال کرتے ہوےٗ لکیری تکمل کو چکوڑ پر ایک دورہ تکمل میں تبدیل کر سکتے ہیں۔  ایک مساوات جراء استعمال کرتے ہوےٗ ۔ 
+: $M = xy, N = y^2$
+لیتے ہیں۔ جہاں چکوڑ کی سرحد
+R
+%should be C
+اور اس کے اندروں
+R
+   ہیں۔ یوں درج زیل حاصل ہوگا۔
+\begin{align*}
+    \oint_C xy dy - y^2 dx &= \int \int_R (y + 2y) dx dy = \int_0^1 \int_0^1 3y dx \\
+    &= \int_0^1 [3xy]_{x=0}^{x=1} dy = \int_0^1 3y dy = \frac{3}{2}
+\end{align*}
+دو مساوات 
+(۱۲) 
+استعمال کرتے ہوےٗ
+$M = iy^2$
+اور
+$N = xy$
+لیتے ہیں۔ جس سے وہ ہی نتیجا حاصل ہوتا ہے۔
+$$ \oint_C -y^2 dx + xy dy = \int \int_R (y - (-2y)) dx dy = \frac{3}{2}. $$
+
+ابتداء مثال ۵ 
+میداں
+$ F(x,y) = x i + y^2 j$
+کا اس چکوڑ سے باہر کی طرف بہاوٗ تلاش کریں۔ جس کو لکیریں 
+$ x = \pm 1$
+اور 
+$ y = \pm 1$
+پر گیرتی ہیں۔
+
+حل:
+لکیری تکمل سے بہاوٗ حاصل کرنے کے لیےٗ چار تکملات کی ضرورت پیش آےٗ گی۔
+  چکوڑ کے ہر زلہ کے لیےٗ  
+ایک دم تکمل کرنا ہوگا۔  مسلٗہ گرین سے ہم اس تکمیلی عمل کو ایک دورہ تکمل میں تبدیل کر سکتے ہیں۔ ہم 
+$M = x$
+اور 
+$N = y^2$
+لیتے ہیں۔ جہاں چکوڑ
+C
+ہے اور اس کے اندروں
+R
+  ہے ۔
+یوں درج زیل ہوگا۔
+\begin{align*}
+    \text{بہاوٗ} &= \oint_C F \dot n ds = \oint_C M dy - N dx \\
+    &= \int \int_R (\frac{\partial M}{\partial x} + \frac{\partial N}{\partial y}) dx dy\\
+    &= \int_{-1}^{1} \int_{-1}^{1} (1 + 2y) dx dy = \int{-1}^{1} [x + 2xy]_{x = -1}^{x = 1} dy \\
+    &= \int_{-1}^{1} (2 + 4y) dy = [2y + 2y^2]_{-1}^{1} = 4
+\end{align*}
+\section{ ( مخصوص حدصے ) مصلہ گریں کا ثبوت}
+فرض کریں مستوی
+x-y
+میں 
+C
+ ایک ایسی ہموار، سادہ، مندہنی ہے۔ جس کو محور کے متوازی کویٗ بھی لکیر صرف دو نقتوں پر کاٹا کرتی ہے۔ منہنی 
+C
+ خطہ 
+R
+ کو 
+منقوف کرتی ہے۔
+اور ایک ایسے کھلے خطے میں جس میں 
+C
+اور 
+R
+پاےٗ جاتے ہوں، 
+M, N
+اور ان کے یک کنا جزوی تفرقات ہر نقتا پر استمراری ہیں۔ ہم مسلٗہ گرین کی ڈاٗری بہاوٗ و گردسی روپ ثابت کرنا چہاتے ہیں۔ 
+\begin{align*}
+    \oint_C N dx + N dy = \int \int_R (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y} dx dy)
+\end{align*}
+شکل 
+14.30
+میں 
+C
+کو دو سمد بند ہندسوں میں دیکھایا گیا ہے۔ 
+\begin{align*}
+    C_1: y = f_1(x), \quad  a \leq x \leq b, \quad\quad\quad C_2:  y = f_2(x), \quad  b \geq x \geq a,
+\end{align*}
+نکات
+a
+اور 
+b
+کے بیچ کسی بھی 
+x
+کے لیےٗ ہم 
+$\frac{\partial M}{\partial y}$
+کو 
+y
+ کے لہاز سے 
+$ y = f_1(x)$
+تا
+$  y = f_2(x)$
+ تکمل کر سکتے ہیں۔ جس سے درج زیل حاصل ہوگا،
+
+ اس کو ہم 
+a
+ تا 
+b
+ مسویر
+x
+ کے لہاز سے تکمل کر سکتے ہیں۔
+\begin{align*}
+    \int_a^b \int_{f_1(x)}^{f_2(x)} \frac{\partial M}{\partial y} dy dx &= \int_{a}^{b} [M(x, f_2(x)) - M(x, f_1(x))] dx \\
+    &= - \int_{b}^{a} M(x, f_2(x)) dx - \int_{a}^{b} M(x, f_1(x)) dx \\
+    &= - \int_{C_2} M dx -\int_{C_1} M dx \\
+    &= -\oint_C M dx.
+\end{align*}
+ہوں درج زیل ہوگا،
+\begin{align*}
+    \oint_C M dx = \int \int_R (-\frac{\partial M}{\partial y}) dx dy
+\end{align*}
+مساوات 
+15
+ہمیں مساوات
+13
+ میں درکار نتائج کا نصف حصہ دیتا ہے۔ اس کا دوسرا نصف 
+حصہ ہمیں
+$\frac{\partial M}{\partial x}$
+کا پہلے
+x
+کے لہاز سے اور باد میں
+y
+کے لہاز سے، جیسا شکل 
+14.31
+میں دکھایا گیا ہے۔ لینا ہوگا۔ اس میں شکل
+14.30
+کی منینی
+C
+ کو 
+دو حصوں میں تقسیم کیا گیا ہے۔ 
+$C_1': x = g_1(y), \quad d \geq y \geq c$
+اور
+$C_2': x = g_2(y), \quad c \leq y \leq d$
+۔اس دورہ تکمل کا نتیجہ درج زیل ہے۔
+\begin{align}
+    \oint_C N dy = \int \int_R \frac{\partial N}{\partial x} dx dy.
+\end{align}
+مساوات
+15
+اور
+16
+کو ملا کر مساوات 
+13
+ حاصل ہوتا ہے۔
+یوں ثبوت مکمل ہوا۔
+\section{دیگر خطوں میں ثبوت کی توسیہ}
+چونکہ شکل
+۱۴۔۳۲
+میں لکیر
+$x=a, x=b, y=c$
+اور
+$y=d$
+خطہ کی سرحد کو دو سے زیادہ نقات پر مس کرتے ہیں لہازا مسئلہ گریں کے ثبوت میں پیس کیئے گئے دلائل اس مستقل خطہ کے لیئے قابل قبول نہیں ہونگے۔ البتہ سرحد 
+C
+کو چار سمد بند لکیری کنات 
+\begin{align}
+    C_1: y =c, a \leq x \leq b, \quad C_2: x=b, c \leq y \leq d,\\
+    C_3: y=d, b \geq x \geq a, \quad C_4: x=a, d \geq y \geq c,
+\end{align}
+میں تقسیم کرتے ہوئے ہم اپنے دلائل میں درج زیل ترمیم کر سکتے ہیں۔ مساوات 
+
+کے ثبوت کی ترز پر چلتے ہوئے ہمارے پاس درج زیل ہوگا۔
+\begin{align}
+    \int_{c}^{d} \int_{a}^{b} \frac{\partial N}{\partial x} dx dy &= \int_{c}^{d} (N(b,y)-N(a,y)) dy\\
+    &= \int_{c}^{d} N(b,y) dy + \int_{d}^{c} N(a,y)) dy\\
+    &= \int_{C_2} N dy + \int_{C_1} N dy
+\end{align}
+چونکہ 
+$C_1$
+اور 
+$C_3$
+پر 
+y
+ایک مستکل ہے۔ لہازا
+$\int_{C_1} N dy = int_{C_3} N dy = 0$
+ہوگا اور ہوں ہم مساوات 
+17
+کے دائیں ہاتھ کے ساتھ 
+$\int_{C_1} N dy + \int_{C_1} N dy$
+مساوات چھیرے بغیر جمع کرسکتے ہیں۔ ایسا کرنے سے درج زیل ہوگا۔ 
+\begin{align}
+    \int_c^d \int_{a}^{b} \frac{\partial N}{\partial x} dx dy = \oint_C N dy
+\end{align}
+اسی طرح ہم درج زیل دیکھا سکتے ہیں۔
+\begin{align}
+    \int_{a}^{b} \int_c^d  \frac{\partial M}{\partial y} dy dx  = \oint_C M dx
+\end{align}
+مساوات 
+18
+سے مساوات 
+19
+منفی کرتے ہوئے ہمیں دوبارہ درج زیل نتیجہ ملتا ہے۔
+\begin{align}
+    \oint_C M dx + N dy = \int \int_R (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}) dx dy
+\end{align}
+شدل
+14.33
+کے طرز کے خطوں کو بھی با آسانی نپٹا جاسکتا ہے۔ مساوات 
+13
+کا اطلاق اب بھی ہوگا۔ شکل 
+14.34
+ میں نال کی شکل کا خطہ
+R
+دکھایا گیا ہے۔
+ اور ہم دیکھتے 
+ہیں کہ خطہ
+$R_1$
+اور 
+$R_2$
+کے ساتھ ان کی سرحد اگٹھا کرتے ہوئے مساوات 
+13
+کا اطلاق یہاں بھی ہوگا۔ 
+مسلئہ گریں کا اطلاق 
+$C_1, R_1$
+پر اور
+$C_2, R_2$
+ہوگا۔ جس سے درج زیل حاصل ہوگا۔
+\begin{align}
+    \int_{C_1} M dx + N dy &= \int \int_{R_1} (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}) dx dy \\
+    \int_{C_2} M dx + N dy &= \int \int_{R_2} (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}) dx dy
+\end{align}
+اں مساوات کو آپس میں جمع کرتے ہوئے ہم دیکھتے ہیں کہ 
+$C_1$
+کے لیئے
+B
+تا 
+A
+محور
+x
+لکیری تکمل کو
+$C_2$
+پر کسی کتا پر مخالف رخ کا تکمل کاٹتا ہے۔ یوں 
+\begin{align}
+    \oint M dx + N dy = \int \int_R (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}) dx dy,
+\end{align}
+جہاں 
+x
+محور کے دو کتات 
+$-b$
+تا
+$-a$
+اور
+$a$
+تا
+$b$
+اور دو نسف دائرے مل کر
+C
+دیتے ہیں اور خطہ 
+R
+منہنی 
+C
+کے اندر پایا جاتا ہے۔
+
+مختلف سرحدوں پر لکیری تقملات کو جمع کرتے ہوئے ایک سرحد پر تکمل کے حصول کے طریقے کر متناہی تعداد کی زیلی خطوں تک وسعت دی جاسکتی ہے۔ شکل
+14.3 ( ا )
+میں، رباول میں خطہ
+$R_1$
+ کی خلافِ گڑی سمت بند سرحد
+$C_1$
+ ہے۔ دیگر ربوں میں 
+ $C_i$
+خطہ
+$R_i$
+، جہاں 
+$i = 1, 2, 3, 4 $
+ہے، سرحد ہوگا۔ مسئلہ گریں درج زیل دیتا ہے۔
+\begin{align}
+    \oint_{C_1} M dx + N dy = \int \int_{R_1} (\frac{\partial N}{\partial x} -  \frac{\partial M}{\partial y}) dx dy
+\end{align}
+ہم
+$i= 1, 2, 3, 4$
+کے لیئے  مساوات
+20
+( کا مجموع لیتے ہیں۔ (شکل 14. 35 ب
+\begin{align}
+    \oint_{r=b} (M dx + N dy) + \oint_{r=0} (M dx + N dy) = \int \int_{0\leq r \leq b} (\frac{\partial N}{\partial x} -  \frac{\partial M}{\partial y}) dx dy
+\end{align}
+مساوات 
+21
+کہتی ہے کہ چھلےدار حصہ 
+R
+پر 
+$ (\partial N/\partial x) - (\partial M/\partial y) $
+کا دوراہ تکمل 
+R
+کے مکمل درحد پر
+$ M dx + N dy $
+کے اس لکیری تکمل کے برابر ہوگا ، جس کو حاصل کرتے ہوئے سرحد پر یوں چلا جائے کہ 
+R
+آپ کے بائیں جانب ہو۔
+( شکل 14.35 ب   )
+
+ابتداؑ مثال 
+6
+چھلےدار حصہ 
+$ R: h^2 \leq x^2 + y^2 \leq 1, 0<h<1 $
+( شکل 14.36 )
+مسئلہ گریں مساوات 
+12
+کی دائری بہاوؑ روپ کی تشدیق
+$$ M = \frac{-y}{x^2 + y^2} \quad\quad N=\frac{x}{x^2 + y^2} $$
+کی صورت میں معلوم کریں۔
+
+حل: خطہ 
+R
+کی سرحد دائرہ
+$$C_1 : x=h\cos{(\theta)},\quad  y= -h\sin{(\theta)},\quad 0\leq \theta \leq 2\pi$$
+جس پر
+t
+ بڑہانے سے خلاف گڑی چلا جائے گا اور دائرہ
+$$ C_h : x=h\cos{(\theta)},\quad  y= -h\sin{(\theta)},\quad 0\leq \theta \leq 2\pi $$
+جس پر 
+$\theta$
+بڑہنے سے گڑیوار چلا جائے گا۔ خطہ
+R
+میں تفعلات
+M
+اور
+N
+کے جرئی تفرق استمراری ہیں۔ مزید
+\begin{align*}
+    \frac{\partial M}{\partial y} &= \frac{(x^2 + y^2)(-1) + y(2y)}{(x^2 + y^2)^2} \\
+    &= \frac{y^2 - x^2}{(x^2 + y^2)^2} = \frac{\partial N}{\partial x}
+\end{align*}
+ہوگا۔ لہازا
+\begin{align*}
+    \int \int_R (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}) dx dy = \int \int_R 0 dx dy =0 
+\end{align*}
+خطہ
+R
+کی سرحد پر 
+$ M dx + N dy$
+کا ینٹگرل درج زیل ہوگا۔
+\begin{align*}
+\int_C M dx + N dy &= \oint_{C_1} \frac{x dy - y dx}{x^2 + y^2} + \oint_{C_h}  \frac{x dy - y dx}{x^2 + y^2} \\
+&= int_0^{2\pi} (\cos^2{t} + \sin^2{t}) dt - int_0^{2\pi} \frac{h^2 (\cos^2{\theta} + \sin^2{\theta})}{h^2} d\theta\\
+&= 2\pi - 2\pi =0 
+\end{align*}
+چونکہ مساوات 
+6
+میں 
+(0,0)
+پر تفعلات
+M
+اور
+N
+غیراستمراری ہیں۔ لہازا دائرہ
+$C_1$
+پر اور اس کے اندر خطہ پر مسئلہ گرین کا اطلاق نہیں ہوگا۔ ہمیں مدہ ہو غیرشامل کرنا ہوگا۔ 
+ہم 
+$C_h$
+کے اندر نقات خارج کرتے ہوئے ایسا کرتے ہیں۔
+
+ہم مثال 
+6
+میں دائرہ
+$C_1$
+کے بجائے ایک ترسیم یا کوئی سادہ بند منہنی 
+K
+لے سکتے ہیں۔ جو 
+$C_h$
+کو گیرتا ہو۔ 
+( شکل 14.37 )
+نتیجہ تنبی درج زیل ہوگا۔ 
+\begin{align*}
+    \oint_K ( M dx + N dy ) + \oint_{C_b} ( M dx + N dy) = \oint_{C_h} (M dx + N dy) = int \int_R (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}) dy dx = 0
+\end{align*}
+جس سے کسی بھی منہنی 
+کے لیئے ایک حیرت خیز نتیجہ اخز ہوتا ہے۔
+\begin{align*}
+    \oint_K ( M dx + N dy ) = 2 \pi
+\end{align*}
+ہم قطبی مہدد استعمال کرتے ہوئے اس نتیجہ کو سمج سکتے ہیں۔ 
+\begin{align*}
+   & x = r\cos{\theta} \vspace{2cm} y = r\sin{\theta}\\
+   & dx = -r \sin{\theta} d\theta + \cos{\theta} dr \vspace{2cm} dy = r \cos{\theta} d\theta + \sin{\theta} dr,
+\end{align*}
+لیتے ہوئے
+\begin{align}
+ \frac{x dy - ydx}{x^2 + y^2} = \frac{r^2( \cos^2{\theta} + \sin^2{\theta}) d\theta}{r^2} = d\theta   
+\end{align}
+اور ایک مرتبہ 
+K
+پر خلاف گڑی چلتے ہوئے 
+$\theta$
+کی قیمت 
+$2\pi$
+نڑھتی ہے۔
