@@ -48,7 +48,7 @@
 
 %references and labels
 \newcommand*{\شناخت}[1]{\label{#1}}
-\newcommand*{\حوالہ}[1]{\ref{#1}}
+\newcommand*{\حوالہ}[1]{\textenglish{\ref{#1}}}
 \newcommand*{\حوالہء}[1]{#1}			%dummy to enter the figure number directly while the figure is not ready
 \newcommand*{\حوالہصفحہ}[1]{\pageref{#1}}
 
@@ -83,19 +83,19 @@
 %===============================
 
 
-%numbering scheme
-\renewcommand*{\thefigure}{\thechapter.\arabic{figure}}
-\renewcommand*{\thetable}{\thechapter.\arabic{table}}
-\renewcommand*{\theequation}{\thechapter.\arabic{equation}}
-\renewcommand*{\thesection}{\thechapter.\arabic{section}}
-\renewcommand*{\thesubsection}{\thechapter.\arabic{section}.\arabic{subsection}}
-\renewcommand*{\thesubsubsection}{\thechapter.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+%%numbering scheme
+%\renewcommand*{\thefigure}{\thechapter.\arabic{figure}}
+%\renewcommand*{\thetable}{\thechapter.\arabic{table}}
+%\renewcommand*{\theequation}{\thechapter.\arabic{equation}}
+%\renewcommand*{\thesection}{\thechapter.\arabic{section}}
+%\renewcommand*{\thesubsection}{\thechapter.\arabic{section}.\arabic{subsection}}
+%\renewcommand*{\thesubsubsection}{\thechapter.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
 %=======================================
-%the following pertains to theorem environment. added to maths sty
-\renewcommand*{\thetheorem}{\thechapter.\arabic{theorem}}
-\renewcommand*{\thecorollary}{\thechapter.\arabic{theorem}.\arabic{corollary}}
-\renewcommand*{\thelemma}{\thechapter.\arabic{lemma}}
-\renewcommand*{\thedefinition}{\thechapter.\arabic{definition}.}
+%%the following pertains to theorem environment. added to maths sty
+%\renewcommand*{\thetheorem}{\thechapter.\arabic{theorem}}
+%\renewcommand*{\thecorollary}{\thechapter.\arabic{theorem}.\arabic{corollary}}
+%\renewcommand*{\thelemma}{\thechapter.\arabic{lemma}}
+%\renewcommand*{\thedefinition}{\thechapter.\arabic{definition}.}
 
 %================
 %my environments
