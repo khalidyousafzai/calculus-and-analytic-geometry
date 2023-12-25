@@ -133,7 +133,18 @@ math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%included the following to correct the RTL issues with equation numbering after upgradation to ubuntu 18.04
+%might break bidi package as said on the internet
+\makeatletter
+\def\maketag@@@#1{\hbox{\m@th\normalfont\RTL{{\beginR #1\endR}}}}
+\def\tagform@#1{\maketag@@@{(\ignorespaces{\beginR#1\endR}\unskip)}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlatin
 %\linenumbers
 %\makeindex
 
@@ -142,7 +153,7 @@ math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
 \sloppy
 
 
-%\renewcommand*{\contentsname}{عنوان}    %this command has to be placed right here
+\renewcommand*{\contentsname}{عنوان}    %this command has to be placed right here
 %\renewcommand*{\proofname}{ثبوت}   %if placed before start of begin{urdufont}, it gets swept by the settings of the font environment
 %\renewcommand*{\appendixname}{ضمیمہ}
 
