@@ -56,7 +56,7 @@ This file is placed in    khalid\.local\share\gtksourceview-3.0\language-specs\k
             <prefix>\\</prefix>
             <!-- We need to special case "_" since it is not considered a
               boundary but it is allowed in latex -->
-            <suffix>(\b|(?=_))</suffix>
+         <suffix>(\b|(?=_))</suffix>
             <keyword>Alpha</keyword>
             <keyword>Beta</keyword>
             <keyword>Chi</keyword>
@@ -299,9 +299,7 @@ This file is placed in    khalid\.local\share\gtksourceview-3.0\language-specs\k
   	     <keyword>منفی</keyword>
   	     <keyword>مبش</keyword>
   	     <keyword>مبشق</keyword>
-  	     
-  	     
-  	     
+  
         </context>
 
     <context id="kMas" style-ref="kMasculine">
@@ -656,6 +654,7 @@ This file is placed in    khalid\.local\share\gtksourceview-3.0\language-specs\k
 <keyword>معائنہ</keyword>
 <keyword>دارومدار</keyword>
 <keyword>تصور</keyword>
+<keyword>تصورات</keyword>
 <keyword>ماخذ</keyword>
 <keyword>اختیار</keyword>
 <keyword>چلن</keyword>
@@ -668,8 +667,31 @@ This file is placed in    khalid\.local\share\gtksourceview-3.0\language-specs\k
 <keyword>چوراہے</keyword>
 <keyword>چوراہوں</keyword>
 <keyword>بلب</keyword>
+<keyword>نظام</keyword>
+<keyword>موازنہ</keyword>
+<keyword>موازنے</keyword>
+<keyword>موازنوں</keyword>
+<keyword>وقوع</keyword>
+<keyword>فیتہ</keyword>
+<keyword>فیتے</keyword>
+<keyword>فیتوں</keyword>
+<keyword>معاہدہ</keyword>
+<keyword>معاہدوں</keyword>
+<keyword>تول</keyword>
+<keyword>سنگ</keyword>
+<keyword>ترک</keyword>
+<keyword>محکمہ</keyword>
+<keyword>تجربہ</keyword>
+<keyword>اتفاق</keyword>
+<keyword>پہلو</keyword>
+<keyword>دھماکہ</keyword>
+<keyword>دھماکے</keyword>
+<keyword>مظہر</keyword>
+<keyword>مشاہدہ</keyword>
+<keyword>مشاہدات</keyword>
 
 
+ 
         </context>
 
     <context id="kFem" style-ref="kFeminine">
@@ -701,6 +723,8 @@ This file is placed in    khalid\.local\share\gtksourceview-3.0\language-specs\k
 <keyword>حیثیت</keyword>
 <keyword>افواہ</keyword>
 <keyword>اکائی</keyword>
+<keyword>اکائیاں</keyword>
+<keyword>اکائیوں</keyword>
 <keyword>برق</keyword>
 <keyword>پرکھ</keyword>
 <keyword>پرواز</keyword>
@@ -753,6 +777,7 @@ This file is placed in    khalid\.local\share\gtksourceview-3.0\language-specs\k
 <keyword>علامتیں</keyword>
 <keyword>علامتوں</keyword>
 <keyword>علامات</keyword>
+<keyword>علامتیت</keyword>
 <keyword>عمر</keyword>
 <keyword>قباحت</keyword>
 <keyword>قوت</keyword>
@@ -999,12 +1024,18 @@ This file is placed in    khalid\.local\share\gtksourceview-3.0\language-specs\k
 <keyword>بتیاں</keyword>
 <keyword>بتیوں</keyword>
 <keyword>دھار</keyword>
-
+<keyword>ضرورت</keyword>
+<keyword>وضع</keyword>
+<keyword>آسانی</keyword>
+<keyword>جمہوریہ</keyword>
+<keyword>گاہ</keyword>
+<keyword>گاہوں</keyword>
+<keyword>نلی</keyword>
 
         </context>
 
     <context id="kTechMasculine" style-ref="kTechnicalMasculine">
-	<keyword>سمتیہ</keyword>
+		<keyword>سمتیہ</keyword>
 	<keyword>سمتیے</keyword>
 	<keyword>سمتیات</keyword>
 	<keyword>سمتیوں</keyword>
@@ -1104,7 +1135,12 @@ This file is placed in    khalid\.local\share\gtksourceview-3.0\language-specs\k
 	<keyword>ذخیرہ</keyword>
 	<keyword>معمولہ</keyword>
 	<keyword>معمولے</keyword>
-	
+	<keyword>سرنامہ</keyword>
+	<keyword>رتبہ</keyword>
+	<keyword>رتبے</keyword>
+	<keyword>رتبوں</keyword>
+	<keyword>ضلع</keyword>
+
         </context>
 
     <context id="kTechFeminine" style-ref="kTechnicalFeminine">
@@ -1149,6 +1185,7 @@ This file is placed in    khalid\.local\share\gtksourceview-3.0\language-specs\k
 	<keyword>اوسط</keyword>
 	<keyword>استعداد</keyword>
 	<keyword>نقل</keyword>
+	<keyword>کہکشاں</keyword>
 	
 	
         </context>

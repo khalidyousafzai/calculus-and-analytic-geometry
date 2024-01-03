@@ -1,0 +1,221 @@
+%starts at example-3 solution and ends at start of ex14.4 questions
+%corrected urdu and confirmed accuracy of all equations, references pending where refering to outside this text 
+%p1088-p1093
+
+ حل:\quad
+ ہم  پہلے تفاعلات، تفرق اور تفریق کو  \عددی{t} کی صورت میں لکھتے ہیں۔ 
+\begin{align*}
+  M = \cos t - \sin t,  \quad \dif x = \dif(\cos t )= -\sin t\dif t \\ 
+  N = \cos t, \quad  \dif y = \dif(\sin t) = \cos t\dif t \\ 
+   \frac{\partial M}{\partial x} =1, \quad \frac{\partial M}{\partial y} = -1,\quad  \frac{\partial N}{\partial x} =1, \quad \frac{\partial N}{\partial y} = 0  
+\end{align*}
+ مساوات  \حوالہء{11}   کے دو    اطراف درج ذیل روپ اختیار کرتے ہیں۔  
+\begin{align*}
+     \varointctrclockwise_C M \dif y  - N \dif x &= \int_{t=0}^{t= 2\pi} (\cos t - \sin t)(\cos t \dif t) - (\cos t)(-\sin t \dif t) \\     
+     &= \int_{0}^{2\pi} \cos^2 t \dif t = \pi \\     
+     \iint_R \big(\frac{\partial M}{\partial x} + \frac{\partial N}{\partial y}\big) \dif x \dif y &=  \iint_R (1 + 0) \dif x \dif y \\     &= \iint_R \dif x \dif y = \text{\RL{اکائی دائرے کا رقبہ}} = \pi 
+\end{align*}
+ مساوات    \حوالہء{12}کے دو  اطراف درج ذیل روپ اختیار کرتے ہیں۔ 
+\begin{align*}
+     \varointctrclockwise_c M \dif x  + N \dif y &= \int_{t=0}^{t= 2\pi} (\cos t - \sin t)(-\sin t \dif t) + (\cos t)(\cos t \dif t) \\     &= \int_{0}^{2\pi} (-\sin t\cos t + 1) \dif t = 2\pi \\ 
+     \iint_R \big(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\big) \dif x \dif y &=  \iint_R (1 - (-1)) \dif x \dif y = 2 \iint_R \dif x \dif y = 2\pi 
+\end{align*}
+ %
+%
+%\انتہا{مثال} 
+ 
+%--------------------------------
+ 
+   
+
+%---------------
+\حصہء{مسئلہ گرین استعمال کرتے ہوئے لکیری تکملات کی قیمت کا تلاش} 
+ہم مختلف منحنی  کے سر آپس میں جوڑ کر ایک بند منحنی  \عددی{C}  حاصل کر سکتے ہیں؛ منحنی     \عددی{C}  پر لکیری تکمل کی قیمت تلاش کرنے کا عمل   لمبا ہو سکتا ہے؛   چونکہ اس میں  \عددی{C} کے بہت سارے  مختلف تکملات کی قیمت حاصل کرنی ہو                           گی۔  لیکن،   اگر  \عددی{C} ایسے  خطہ \عددی{R}  کی حد بندی کرتی ہو، جس پر مسئلہ گرین کا اطلاق ہوتا ہو، ہم مسئلہ گرین استعمال کر کے \عددی{C} پر لکیری تکمل کو  \عددی{R} پر   دہرا  تکمل  میں تبدیل کر سکتے ہیں۔    
+%------------------------- 
+ %ex 4
+\ابتدا{مثال}
+ درج ذیل تکمل کی قیمت تلاش کریں
+\begin{align*}
+  \varointctrclockwise_C xy \dif y - y^2 \dif x  
+\end{align*}
+ جہاں ربع اول میں لکیر \عددی{x=1} اور \عددی{y=1} چوکور   \عددی{C} کاٹتی  ہیں۔  
+ 
+ 
+
+ حل:\quad
+ ہم مسئلہ گرین کے  دو    روپ    میں سے کوئی ایک استعمال  کر  کے لکیری تکمل کو چوکور پر  دہرا تکمل میں تبدیل کر سکتے ہیں۔
+\begin{enumerate}[1.]
+\item
+   مساوات \حوالہء{11}   استعمال کرتے  ہیں: \عددی{M = xy}،  \عددی{N = y^2}  لے کر ،  جہاں چوکور کی سرحد \عددی{C}    اور اس کا  اندرون  \عددی{R}    ہے،   ذیل حاصل ہوگا۔ 
+\begin{align*}
+\varointctrclockwise_C xy \dif y - y^2 \dif x &= \iint_R (y + 2y) \dif x \dif y = \int_0^1 \int_0^1 3y \dif x\dif y \\   
+  &= \int_0^1 \big[3xy\big]_{x=0}^{x=1} \dif y = \int_0^1 3y \dif y =\frac{3}{2}y^2\big]_0^1= \frac{3}{2} 
+\end{align*}
+\item
+  مساوات   \حوالہء{12}  استعمال کرتے  ہیں: \عددی{M = iy^2} اور \عددی{N = xy} لینے سے یہی نتیجہ حاصل ہو گا۔ 
+\begin{align*}
+\varointctrclockwise_C -y^2 \dif x + xy \dif y = \iint_R (y - (-2y)) \dif x \dif y = \frac{3}{2}  
+\end{align*}
+\end{enumerate}
+
+\انتہا{مثال} 
+%---------------------- 
+ %ex 5  
+%---------------------
+\ابتدا{مثال}
+ میدان \عددی{ \kvec{F}(x,y) = x \ai + y^2 \aj} کا اس چوکور سے  خارجی  بہاو تلاش کریں جس کو لکیریں  \عددی{ x = \pm 1} اور  \عددی{ y = \pm 1} گھیرتی ہیں۔  
+
+ حل:\quad
+ لکیری تکمل سے بہاو حاصل کرنے کے لئے چار تکملات کی ضرورت پیش آئے گی؛    چوکور کے ہر ضلع کے لئے   ایک  تکمل کرنا ہوگا۔  مسئلہ گرین سے ہم  لکیری تکمل کو  ایک  دہرا تکمل میں تبدیل کر سکتے ہیں۔ ہم  \عددی{M = x} ،  \عددی{N = y^2} ،  چوکور \عددی{C}،     اور چوکور کا اندرون \عددی{R}   لیتے ہیں۔ یوں درج ذیل ہوگا۔ 
+\begin{align*}
+     \text{بہاو} &=\varointctrclockwise_C \kvec{F} \cdot \kvec{n} \dif s =\varointctrclockwise_C  M \dif y - N \dif x \\    
+      &= \iint_R \big(\frac{\partial M}{\partial x} + \frac{\partial N}{\partial y}\big) \dif x \dif y\quad\quad\quad  \text{\RL{(مسئلہ گرین)}}\\    
+       &= \int_{-1}^{1} \int_{-1}^{1} (1 + 2y) \dif x \dif y = \int_{-1}^{1} \big[x + 2xy\big]_{x = -1}^{x = 1} \dif y \\   
+         &= \int_{-1}^{1} (2 + 4y) \dif y = \big[2y + 2y^2\big]_{-1}^{1} = 4 
+\end{align*}
+ 
+
+\انتہا{مثال} 
+%----------------------  
+%---------------
+\حصہء{ مسئلہ  گرین کا ثبوت (خصوصی  خطے)}
+ فرض کریں مستوی \عددی{ xy} میں  \عددی{C}   ایسی ہموار، سادہ، منحنی  ہے جس کو محور کے متوازی   کوئی   لکیر دو  سے زیادہ نقطوں پر  نہیں کاٹتی۔  فرض کریں، منحنی  \عددی{C}  خطہ  \عددی{R}    گھیرتی    ہے، اور ایسے کھلا خطہ میں جس میں  \عددی{C} اور  \عددی{R} دونوں  پائے جاتے ہوں \عددی{M}، \عددی{N}،   اور ان کے یک گنّا جزوی تفرق  ہر نقطہ پر استمراری ہیں۔ ہم مسئلہ گرین کا دائری  بہاو  و  گردش روپ:
+\begin{align}\label{مساوات_سمتی_تکمل_خصوصی_پر_ثبوت}
+\varointctrclockwise_C N \dif x + N \dif y = \iint_R \big(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\big) \dif x \dif y 
+\end{align}
+ ثابت کرنا چاہتے  ہیں۔     شکل      \حوالہء{14.30} میں  \عددی{C}  دو سمت بند حصوں کا مجموعہ    دکھایا گیا ہے۔  
+\begin{align*}
+     C_1: y &= f_1(x), \quad  a \leq x \leq b, && C_2:  y = f_2(x), \quad  b \geq x \geq a 
+\end{align*}
+ نقطہ  \عددی{ a} اور    نقطہ \عددی{b} کے بیچ کسی بھی   \عددی{x} کے لئے ہم  \عددی{\frac{\partial M}{\partial y}} کا تکمل  \عددی{  y}  کے لحاظ سے  \عددی{ y = f_1(x)} تا \عددی{  y = f_2(x)}    لے سکتے ہیں، جو درج ذیل دیگا۔ 
+ \begin{align}
+ \int_{f_1(x)}^{f_2(x)} \frac{\partial M}{\partial y}\dif y= M(x,y) \big]_{y=f_1(x)}^{y=f_2(x)}=M(x,f_2(x))-M(x,f_1(x))
+ \end{align}
+ اس کو ہم    \عددی{x} کے لحاظ سے \عددی{a}  تا    \عددی{b}  تکمل کر سکتے ہیں۔ 
+\begin{align*}
+\int_a^b \int_{f_1(x)}^{f_2(x)}\frac{\partial M}{\partial y} \dif y \dif x&= \int_{a}^{b}[M(x, f_2(x)) - M(x, f_1(x))] \dif x \\     &= - \int_{b}^{a} M(x, f_2(x)) \dif x - \int_{a}^{b} M(x, f_1(x)) \dif x \\     &= - \int_{C_2} M \dif x -\int_{C_1} M \dif x \\     &= -\varointctrclockwise_C M \dif x 
+\end{align*}
+ یوں درج ذیل ہوگا۔ 
+\begin{align}\label{مساوات_سمتی_تکمل_آدھا_الف}
+\varointctrclockwise_C M \dif x = \iint_R \big(-\frac{\partial M}{\partial y}\big) \dif x \dif y 
+\end{align}
+
+ مساوات    \حوالہ{مساوات_سمتی_تکمل_آدھا_الف}  ہمیں مساوات    \حوالہ{مساوات_سمتی_تکمل_خصوصی_پر_ثبوت}میں درکار نتائج کا نصف حصہ دیتی ہے۔ جیسا شکل   \حوالہء{14.31}  ہمیں آمادہ کرتی ہے،  اس کا دوسرا نصف    حصہ  \عددی{\frac{\partial N}{\partial x}} کا تکمل  پہلے  \عددی{x}  اور بعد  میں \عددی{y} کے لحاظ سے لے کر حاصل ہو گا ۔ اس میں شکل    \حوالہء{14.30}کی منحنی \عددی{C}  کو درج ذیل   دو  سمت بند حصوں  میں تقسیم کیا گیا ہے ۔
+ \begin{align*}
+ C_1': x = g_1(y), \quad d \geq y \geq c \quad \quad \text{\RL{اور}}\quad \quad  C_2': x = g_2(y), \quad c \leq y \leq d
+ \end{align*}
+اس دہرا تکمل کا نتیجہ درج ذیل ہے۔ 
+\begin{align}\label{مساوات_سمتی_تکمل_دوسرا_حصہ}
+\varointctrclockwise_C N \dif y = \iint_R \frac{\partial N}{\partial x} \dif x \dif y 
+\end{align}
+ مساوات   \حوالہ{مساوات_سمتی_تکمل_آدھا_الف} اور   مساوات   \حوالہ{مساوات_سمتی_تکمل_دوسرا_حصہ}ملا کر مساوات     \حوالہ{مساوات_سمتی_تکمل_خصوصی_پر_ثبوت}حاصل ہو گی۔ یوں ثبوت مکمل ہوتا ہے۔   
+
+%---------------
+
+\حصہء{دیگر خطوں کو  ثبوت کی توسیع} 
+ شکل    \حوالہء{14.32}میں لکیر \عددی{x=a}، \عددی{x=b}، \عددی{y=c}، اور \عددی{y=d} مستطیل    خطہ کی سرحد کو دو سے زیادہ نقطوں  پر مس کرتی  ہیں لہٰذا مسئلہ  گرین کے ثبوت میں پیش   دلائل اس مستطیل  خطہ کے لئے قابل قبول نہیں۔ البتہ سرحد  \عددی{C} کو چار سمت بند لکیری  قطعات 
+\begin{align*}
+     C_1: \quad y &=c, \quad a \leq x \leq b, \quad\quad \quad C_2:\quad  x=b,\quad  c \leq y \leq d,\\     
+     C_3:\quad y&=d,\quad b \geq x \geq a, \quad\quad\quad C_4: \quad x=a,\quad d \geq y \geq c, 
+\end{align*}
+ میں تقسیم کر کے  ہم دلائل میں درج ذیل ترمیم کر سکتے ہیں۔ 
+ 
+ مساوات \حوالہ{مساوات_سمتی_تکمل_دوسرا_حصہ}    کے ثبوت کی طرز پر چلتے ہوئے  درج ذیل ہوگا۔ 
+ \begin{gather}
+\begin{aligned}\label{مساوات_سمتی_تکمل_درمیان_ثبوت}
+     \int_{c}^{d} \int_{a}^{b} \frac{\partial N}{\partial x} \dif x \dif y &= \int_{c}^{d} (N(b,y)-N(a,y)) \dif y\\  
+        &= \int_{c}^{d} N(b,y) \dif y + \int_{d}^{c} N(a,y)) \dif y\\   
+          &= \int_{C_2} N \dif y + \int_{C_4} N \dif y 
+\end{aligned}
+\end{gather}
+ اب \عددی{C_1} اور  \عددی{C_3} پر \عددی{  y}  مستقل ہے،  لہٰذا \عددی{\int_{C_1} N \dif y = \int_{C_3} N \dif y = 0} ہوگا اور ہم مساوات   \حوالہ{مساوات_سمتی_تکمل_درمیان_ثبوت}    چھیڑے بغیر، اس کے کے دائیں ہاتھ \عددی{\int_{C_1} N \dif y + \int_{C_3} N \dif y} جمع کر سکتے ہیں۔ ایسا کرنے سے درج ذیل ہوگا۔  
+\begin{align}\label{مساوات_سمتی_تکمل_نتیجہ_الف}
+     \int_c^d \int_{a}^{b} \frac{\partial N}{\partial x} \dif x \dif y = \varointctrclockwise_C N \dif y 
+\end{align}
+ اسی طرح ہم  درج ذیل  دکھا سکتے ہیں۔ 
+\begin{align}\label{مساوات_سمتی_تکمل_نتیجہ_ب}
+     \int_{a}^{b} \int_c^d  \frac{\partial M}{\partial y} \dif y \dif x  = -\varointctrclockwise_C M \dif x 
+\end{align}
+ مساوات   \حوالہ{مساوات_سمتی_تکمل_نتیجہ_الف}  سے مساوات     \حوالہ{مساوات_سمتی_تکمل_نتیجہ_ب}منفی کر کے  درج ذیل نتیجہ   دوبارہ حاصل ہو گا۔ 
+\begin{align}
+\varointctrclockwise_C M \dif x + N \dif y = \iint_R \big(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\big) \dif x \dif y 
+\end{align}
+
+ شکل    \حوالہء{14.33} طرز کے خطوں کو بھی اتنی ہی  آسانی  سے نپٹا جا سکتا ہے۔ مساوات     \حوالہ{مساوات_سمتی_تکمل_خصوصی_پر_ثبوت}کا اطلاق اب بھی ہوگا۔ شکل     \حوالہء{14.34} میں گھوڑے کے نعل کی شکل کا خطہ \عددی{R} دکھایا گیا ہے؛  اور ہم دیکھتے  ہیں کہ خطہ \عددی{R_1} ، خطہ \عددی{R_2}  اور ان کی سرحد اکٹھا کرتے ہوئے مساوات   \حوالہ{مساوات_سمتی_تکمل_خصوصی_پر_ثبوت}   کا اطلاق یہاں بھی ہوگا۔  مسئلہ  گرین کا اطلاق   \عددی{C_1}، \عددی{R_1} اور \عددی{C_2}، \عددی{R_2}  پر  ہوگا،جس سے درج ذیل حاصل ہوگا۔ 
+\begin{align*}
+\int_{C_1}M \dif x+N \dif y&=\iint_{R_1}\big(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\big) \dif x \dif y \\     
+\int_{C_2} M \dif x + N \dif y &= \iint_{R_2} \big(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\big) \dif x \dif y 
+\end{align*}
+ ان  مساوات کو آپس میں جمع کرتے ہوئے ہم دیکھتے ہیں کہ  \عددی{C_1} کے لئے  \عددی{b} تا   \عددی{a}  محور \عددی{y} پر لکیری تکمل کو \عددی{C_2} پر اسی قطع  پر   لیکن مخالف رخ کا تکمل کاٹتا ہے۔ یوں   ذیل ہو گا
+\begin{align*}
+\varointctrclockwise M \dif x + N \dif y = \iint_R \big(\frac{\partial N}{\partial x} 
+- \frac{\partial M}{\partial y}\big) \dif x \dif y, 
+\end{align*}
+ جہاں   \عددی{x} محور کے دو قطعات   \عددی{-b} تا \عددی{-a} اور \عددی{a} تا \عددی{b} اور دو نصف دائرے مل کر \عددی{C} دیتے ہیں ،  اور  جہاں خطہ  \عددی{R} منحنی  \عددی{C} کے اندر پایا جاتا ہے۔
+ 
+   مختلف سرحدوں پر لکیری تکملات  جمع کر کے ایک سرحد پر تکمل کے حصول کی ترکیب  کو متناہی تعداد کے ذیلی خطوں تک وسعت دی جا سکتی ہے۔ شکل\حوالہء{ 14.35 }ا لف میں ، خطہ \عددی{R_1}  کی   ربع اول  میں  مخالف گھڑی سمت بند سرحد \عددی{C_1}   ہے۔ باقی تین  ربعات کے لئے بھی ایسا ہو گا:    خطہ \عددی{R_i} کی سرحد \عددی{C_i}  ہو گی، جہاں   \عددی{i = 1, 2, 3, 4 } ہے۔ مسئلہ  گرین کے تحت  درج ذیل ہو گا۔ 
+\begin{align}\label{مساوات_سمتی_تکمل_چار_حصے}
+     \varointctrclockwise_{C_i} M \dif x + N \dif y = \iint_{R_i} \big(\frac{\partial N}{\partial x} -  \frac{\partial M}{\partial y}\big) \dif x \dif y 
+\end{align}
+ ہم \عددی{i= 1, 2, 3, 4} کے لئے  مساوات    \حوالہ{مساوات_سمتی_تکمل_چار_حصے}  کا مجموعہ  لیتے ہیں(شکل    \حوالہء{14.35} ب )۔
+\begin{align}\label{مساوات_سمتی_تکمل_چار_مجموعہ}
+     \varointctrclockwise_{r=b} (M \dif x + N \dif y) + \varointclockwise_{r=a} (M \dif x + N \dif y) = \iint_{a\leq r \leq b} \big(\frac{\partial N}{\partial x} -  \frac{\partial M}{\partial y}\big) \dif x \dif y 
+\end{align}
+ مساوات     \حوالہ{مساوات_سمتی_تکمل_چار_مجموعہ} کہتی ہے   ، \اصطلاح{ چھلے دار  }\فرہنگ{چھلے دار}\حاشیہب{annular}\فرہنگ{annular} خطہ \عددی{R}
+  پر  \عددی{ (\partial N/\partial x) - (\partial M/\partial y) } کا دہرا  تکمل،  \عددی{R} کی مکمل  سرحد پر چلتے ہوئے \عددی{R} بائیں ہاتھ رکھ کر  \عددی{ M \dif x + N \dif y } کے   لکیری تکمل   کے برابر ہو گا  ( شکل     \حوالہء{14.35} ب   )  ۔
+%---------------------
+%---------------------
+\ابتدا{مثال}\شناخت{مثال_سمتی_تکمل_چھلے_دار}
+ چھلے دار  خطہ \عددی{ R: h^2 \leq x^2 + y^2 \leq 1, \,0<h<1 } ( شکل   \حوالہء{14.36} ) پر  مسئلہ  گرین (مساوات     \حوالہء{12} ) کے  دائری بہاو روپ کی تصدیق  درج ذیل کے لئے کریں۔
+\begin{align*}
+  M = \frac{-y}{x^2 + y^2} \quad\quad N=\frac{x}{x^2 + y^2}  
+\end{align*}
+
+ حل:\quad
+ خطہ  \عددی{R} کی سرحد دائرہ :
+\begin{align*}
+ C_1:\quad  x=\cos t,\quad  y= \sin t,\quad 0\leq t \leq 2\pi 
+\end{align*}
+   جس پر \عددی{ t}   بڑھانے سے خلاف گھڑی چلا جائے گا ،اور دائرہ :
+\begin{align*}
+  C_h:\quad  x=h\cos \theta,\quad  y= -h\sin\theta,\quad 0\leq \theta \leq 2\pi  
+\end{align*}
+جس پر  \عددی{\theta}  بڑھانے سے گھڑی وار چلا جائے گا ، پر مشتمل ہے۔پورے  خطہ \عددی{R} میں تفاعلات  \عددی{M} ، \عددی{N}  اور ان کے جزوی تفرق استمراری ہیں۔ مزید  
+\begin{align*}
+     \frac{\partial M}{\partial y} &= \frac{(x^2 + y^2)(-1) + y(2y)}{(x^2 + y^2)^2} \\     &= \frac{y^2 - x^2}{(x^2 + y^2)^2} = \frac{\partial N}{\partial x} 
+\end{align*}
+  لہٰذا  درج ذیل ہو گا۔
+\begin{align*}
+     \iint_R \big(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\big) \dif x \dif y = \iint_R 0 \dif x \dif y =0  
+\end{align*}
+ خطہ \عددی{R} کی سرحد پر  \عددی{ M \dif x + N \dif y} کا  تکمل  درج ذیل ہوگا۔ 
+\begin{align*}
+ \int_C M \dif x + N \dif y &= \varointctrclockwise_{C_1} \frac{x \dif y - y \dif x}{x^2 + y^2} + \varointclockwise_{C_h}  \frac{x \dif y - y \dif x}{x^2 + y^2} \\ 
+ &= \int_0^{2\pi} (\cos^2{t} + \sin^2{t}) \dif t - \int_0^{2\pi} \frac{h^2 (\cos^2{\theta} + \sin^2{\theta})}{h^2} \dif \theta\\
+  &= 2\pi - 2\pi =0  
+\end{align*}
+\انتہا{مثال} 
+%------------------- 
+
+چونکہ مثال   \حوالہ{مثال_سمتی_تکمل_چھلے_دار}   میں \عددی{  (0,0) } پر تفاعلات \عددی{ M} اور  \عددی{N} غیر استمراری ہیں لہٰذا دائرہ \عددی{C_1}  اور اس کے اندر خطہ پر مسئلہ گرین کا اطلاق نہیں ہوگا۔ ہمیں  مبدا   خارج (غیر شامل ) کرنا ہوگا؛ ہم  \عددی{C_h} کے اندر نقطے  خارج کر کے ایسا کرتے ہیں۔
+
+  ہم مثال   \حوالہ{مثال_سمتی_تکمل_چھلے_دار} میں دائرہ \عددی{C_1} کے بجائے     ایسی ترخیم  یا  سادہ بند منحنی   \عددی{K} لے سکتے ہیں، جو  \عددی{C_h} کو   گھیرتی ہو ( شکل   \حوالہء{14.37} ) ۔ نتیجہ اب بھی 
+\begin{align*}
+\varointctrclockwise_K ( M \dif x + N \dif y ) + \varointclockwise_{C_h} ( M \dif x + N \dif y) = \iint_R \big(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\big) \dif y \dif x = 0 
+\end{align*}
+ہو گا،  جس سے کسی بھی  ایسی منحنی   \عددی{K} کے لئے درج ذیل حیرت  کن نتیجہ اخذ ہوتا ہے۔ 
+\begin{align*}
+\varointctrclockwise_K ( M \dif x + N \dif y ) = 2 \pi 
+\end{align*}
+ قطبی محدد  استعمال کر کے یہ نتیجہ سمجھا جا سکتا ہے۔   یوں  
+\begin{align*}
+  x& = r\cos{\theta} && y = r\sin{\theta}\\   
+ \dif x &= -r \sin{\theta} \dif \theta + \cos{\theta} \dif r  &&  \dif y = r \cos{\theta} \dif \theta + \sin{\theta} \dif r 
+\end{align*}
+ لکھ کر درج ذیل ہو گا
+\begin{align}
+  \frac{x \dif y - y\dif x}{x^2 + y^2} = \frac{r^2( \cos^2{\theta} + \sin^2{\theta}) \dif \theta}{r^2} = \dif \theta    
+\end{align}
+ اور ایک مرتبہ \عددی{  K}  پر خلاف گھڑی  چکر کاٹنے سے   \عددی{\theta} کی قیمت  \عددی{2\pi} بڑھتی ہے۔
+ 
+ %this is where question of ex 14.4  start  p1093

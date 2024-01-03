@@ -70,6 +70,7 @@ math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
 \usepackage{polynom}		%this writes pen and paper long division for polynomials
 \usepgfplotslibrary{fillbetween}
 \usepackage[]{gnuplottex}
+\usepackage{esint}              %added on 2 jan 2023 for sec 14-4 onwards for counterclockwise integrals
 %============================
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{newfile}                                                                  %writing answers to the end of the book
@@ -106,13 +107,12 @@ math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
 \graphicspath{{./fig/figFrontPage/}{./fig/figCalculusLimits/}{./fig/figCalculusDerivatives/}{./fig/figCalculusIntegration/}{./fig/figCalculusApplicationsOfIntegrals}{./fig/figCalculusTechniquesOfIntegration/}}%paths to figures
 
 
-\includeonly{./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusIntegration,./tex/calculusApplicationsOfIntegrals,./tex/calculusTranscendentalFunctions,./tex/calculusTechniquesOfIntegration,./tex/calculusInfiniteSeries,./tex/calculusConicSectionsParametrizedCurvesPolarCoordinates,./tex/calculusVectorsAndAnalyticGeometryInSpace,./tex/calculusVectorValuedFunctionsandMotionInSpace,./tex/calculusMultivariableFunctionsAndPartialDerivatives,./tex/calculusMultipleIntegrals,./tex/calculusIntegrationInVectorFields,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI,./tex/calculusIntegrationTable}
-%
-%\includeonly{,./tex/calculusTranscendentalFunctions}%
+%\includeonly{./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusIntegration,./tex/calculusApplicationsOfIntegrals,./tex/calculusTranscendentalFunctions,./tex/calculusTechniquesOfIntegration,./tex/calculusInfiniteSeries,./tex/calculusConicSectionsParametrizedCurvesPolarCoordinates,./tex/calculusVectorsAndAnalyticGeometryInSpace,./tex/calculusVectorValuedFunctionsandMotionInSpace,./tex/calculusMultivariableFunctionsAndPartialDerivatives,./tex/calculusMultipleIntegrals,./tex/calculusIntegrationInVectorFields,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI,./tex/calculusIntegrationTable}
 %
 
 %\includeonly{./tex/cktSymbols,./calculusPreface,./tex/prefaceFirstBook,./tex/calculusDerivatives,./tex/questions,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI,./tex/calculusIntegrationTable}%
 
+\includeonly{,./tex/Cal-14-4}%
 
 
 \author{
@@ -146,7 +146,7 @@ math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
 
 \setlatin
 %\linenumbers
-%\makeindex
+\makeindex
 
 %==========
 \begin{document}
@@ -198,6 +198,7 @@ math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
 \include{./tex/calculusIntegrationInVectorFields}
 \include{./tex/questions}
 \include{./tex/questionsA}
+\include{./tex/Cal-14-4}
 
 
 %\immediate\closeout\tempfileTerms
@@ -263,6 +264,6 @@ math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
 \cleardoublepage
 \addcontentsline{toc}{chapter}{اشاریہ}
 
-\printindex
+%\printindex
 
 \end{document}
