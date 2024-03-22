@@ -1,0 +1,152 @@
+
+ %ex 3 solution
+  حل:\quad ہم  پہلے تفاعلات، تفرق ، اور تفریق کو  \عددی{t} کی صورت میں لکھتے ہیں۔ 
+\begin{align*}
+  M &= \cos{(t)} - \sin{(t)},  &&\dif x = \dif(\cos{(t)}) = -\sin{(t)}\dif t \\  N &= \cos{(t)},  && \dif y = \dif(\sin{(t)}) = \cos{(t)}\dif t \\  \frac{\partial M}{\partial x} &=1, \quad \frac{\partial M}{\partial y} = -1,\quad  \frac{\partial N}{\partial x} =1, \quad \frac{\partial N}{\partial y} = 0  
+\end{align*}
+ مساوات  \حوالہء{11}   کے  دونوں اطراف درج ذیل روپ اختیار کرتے ہیں۔  
+\begin{align*}
+     \oint_c M \dif y  - N \dif x &= \int_{t=0}^{t= 2\pi} (\cos{(t)} - \sin{(t)})(\cos{(t)} \dif t) - (\cos{(t)})(-\sin{(t)} \dif t) \\     &= \int_{t=0}^{t= 2\pi} \cos^2{(t)} \dif t = \pi \\     \int \int_R (\frac{\partial M}{\partial x} + \frac{\partial N}{\partial y}) \dif x \dif y &=  \int \int_R (1 + 0) \dif x \dif y \\     &= \int \int_R \dif x \dif y = \text{area of unit circle} = \pi 
+\end{align*}
+ مساوات    \حوالہء{12}کے دونوں اطراف درج ذیل روپ اختیار کرتے ہیں۔ 
+\begin{align*}
+     \oint_c M \dif x  - N \dif y &= \int_{t=0}^{t= 2\pi} (\cos{(t)} - \sin{(t)})(-\sin{(t)} \dif t) + (\cos{(t)})(\cos{(t)} \dif t) \\     &= \int_{t=0}^{t= 2\pi} (-\sin{(t)}\cos{(t)} + 1) \dif t = 2\pi \\ \int \int_R (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}) \dif x \dif y &=  \int \int_R (1 - (-1)) \dif x \dif y = 2 \int \int_R \dif x \dif y = 2\pi 
+\end{align*}
+ %
+\انتہا{مثال} 
+ 
+%--------------------------------
+ 
+   
+\حصہء{مسئلہ گرین استعمال کرتے ہوئے لکیری تکملات کی قیمت کا تلاش} ہم مختلف منحنی  کے سر آپس میں جوڑ کر ایک بند منحنی سی حاصل کر سکتے ہیں۔ منحنی     \عددی{C}  پر لکیری تکمل کی قیمت تلاش کرنے کا عمل کافی لمبا ہو سکتا ہے۔  چونکہ اس میں کی  مختلف تکملات کی قیمت حاصل کرنی ہو                           کی۔  لیکن  اگر  \عددی{C} خطہ \عددی{R}  جس پر مسئلہ گرین کا اطلاق ہوتا ہو، کی حد بندی کرتا ہو۔ تب ہم مسئلہ گرین استعمال کرتے ہوئے  \عددی{C} پر لکیری تکمل کو  \عددی{R} پر ایک دورہ تقمل میں تبدیل کر سکتے ہیں۔    
+%------------------------- 
+ %ex 4 
+ 
+\ابتدا{مثال} درج ذیل تکمل کی قیمت تلاش کریں۔  
+\begin{align*}
+  \oint_C xy \dif y - y^2 \dif x  
+\end{align*}
+ جہاں ربیا اول میں لکیر کی قیمت \عددی{x=1} اور \عددی{y=1} چکوڑ  \عددی{C} کاٹتے ہیں۔  حل:  ہم مسئلہ گرین کی دونوں روٹ میں سے ایک استعمال کرتے ہوئے لکیری تکمل کو چکوڑ پر ایک دورہ تکمل میں تبدیل کر سکتے ہیں۔  ایک مساوات جراء استعمال کرتے ہوئے ۔  : \عددی{M = xy, N = y^2} لیتے ہیں۔ جہاں چکوڑ کی سرحد \عددی{R} %should be C
+  اور اس کے اندروں \عددی{R}    ہیں۔ یوں درج ذیل حاصل ہوگا۔ 
+\begin{align*}
+     \oint_C xy \dif y - y^2 \dif x &= \int \int_R (y + 2y) \dif x \dif y = \int_0^1 \int_0^1 3y \dif x \\     &= \int_0^1 [3xy]_{x=0}^{x=1} \dif y = \int_0^1 3y \dif y = \frac{3}{2} 
+\end{align*}
+ دو مساوات   \حوالہء{12}  استعمال کرتے ہوئے \عددی{M = iy^2} اور \عددی{N = xy} لیتے ہیں۔ جس سے وہ ہی نتیجا حاصل ہوتا ہے۔ 
+\begin{align*}
+  \oint_C -y^2 \dif x + xy \dif y = \int \int_R (y - (-2y)) \dif x \dif y = \frac{3}{2}  
+\end{align*}
+\انتہا{مثال} 
+%---------------------- 
+ %ex 5  
+\ابتدا{مثال} میداں \عددی{ F(x,y) = x i + y^2 j} کا اس چکوڑ سے باہر کی طرف بہاوٗ تلاش کریں۔ جس کو لکیریں  \عددی{ x = \pm 1} اور  \عددی{ y = \pm 1} پر گیرتی ہیں۔  حل: لکیری تکمل سے بہاوٗ حاصل کرنے کے لیےٗ چار تکملات کی ضرورت پیش آےٗ گی۔   چکوڑ کے ہر زلہ کے لیےٗ   ایک دم تکمل کرنا ہوگا۔  مسلٗہ گرین سے ہم اس تکمیلی عمل کو ایک دورہ تکمل میں تبدیل کر سکتے ہیں۔ ہم  \عددی{M = x} اور  \عددی{N = y^2} لیتے ہیں۔ جہاں چکوڑ \عددی{C} ہے اور اس کے اندروں \عددی{R}   ہے ۔ یوں درج ذیل ہوگا۔ 
+\begin{align*}
+     \text{بہاوٗ} &= \oint_C F \dot n ds = \oint_C M \dif y - N \dif x \\     &= \int \int_R (\frac{\partial M}{\partial x} + \frac{\partial N}{\partial y}) \dif x \dif y\\     &= \int_{-1}^{1} \int_{-1}^{1} (1 + 2y) \dif x \dif y = \int{-1}^{1} [x + 2xy]_{x = -1}^{x = 1} \dif y \\     &= \int_{-1}^{1} (2 + 4y) \dif y = [2y + 2y^2]_{-1}^{1} = 4 
+\end{align*}
+ 
+\انتہا{مثال} 
+%----------------------  
+\حصہء{ (مسئلہ  گرین کا ثبوت (خصوصی خطوں  کے لئے)} فرض کریں مستوی x-y میں  \عددی{C}  ایک ایسی ہموار، سادہ، مندہنی ہے۔ جس کو محور کے متوازی کویٗ بھی لکیر صرف دو نقتوں پر کاٹا کرتی ہے۔ منہنی  \عددی{C}  خطہ  \عددی{R}  کو  منقوف کرتی ہے۔ اور ایک ایسے کھلے خطے میں جس میں  \عددی{C} اور  \عددی{R} پاےٗ جاتے ہوں،  M, N اور ان کے یک کنا جزوی تفرقات ہر نقتا پر استمراری ہیں۔ ہم مسلٗہ گرین کی ڈاٗری بہاوٗ و گردسی روپ ثابت کرنا چہاتے ہیں۔  
+\begin{align*}
+     \oint_C N \dif x + N \dif y = \int \int_R (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y} \dif x \dif y) 
+\end{align*}
+ شکل      \حوالہء{14.30} میں  \عددی{C} کو دو سمد بند ہندسوں میں دیکھایا گیا ہے۔  
+\begin{align*}
+     C_1: y = f_1(x), \quad  a \leq x \leq b, \quad\quad\quad C_2:  y = f_2(x), \quad  b \geq x \geq a, 
+\end{align*}
+ نکات a اور  b کے بیچ کسی بھی  x کے لیےٗ ہم  \عددی{\frac{\partial M}{\partial y}} کو  y  کے لہاز سے  \عددی{ y = f_1(x)} تا \عددی{  y = f_2(x)}  تکمل کر سکتے ہیں۔ جس سے درج ذیل حاصل ہوگا،   اس کو ہم  a  تا  b  مسویر x  کے لہاز سے تکمل کر سکتے ہیں۔ 
+\begin{align*}
+\int_a^b \int_{f_1(x)}^{f_2(x)}\frac{\partial M}{\partial y} \dif y \dif x&= \int_{a}^{b}[M(x, f_2(x)) - M(x, f_1(x))] \dif x \\     &= - \int_{b}^{a} M(x, f_2(x)) \dif x - \int_{a}^{b} M(x, f_1(x)) \dif x \\     &= - \int_{C_2} M \dif x -\int_{C_1} M \dif x \\     &= -\oint_C M \dif x 
+\end{align*}
+ ہوں درج ذیل ہوگا، 
+\begin{align*}
+     \oint_C M \dif x = \int \int_R (-\frac{\partial M}{\partial y}) \dif x \dif y 
+\end{align*}
+ مساوات   \حوالہء{15}  ہمیں مساوات    \حوالہء{13}میں درکار نتائج کا نصف حصہ دیتا ہے۔ اس کا دوسرا نصف  حصہ ہمیں \عددی{\frac{\partial M}{\partial x}} کا پہلے x کے لہاز سے اور باد میں y کے لہاز سے، جیسا شکل   \حوالہء{14.31}  میں دکھایا گیا ہے۔ لینا ہوگا۔ اس میں شکل    \حوالہء{14.30}کی منینی \عددی{C}  کو  دو حصوں میں تقسیم کیا گیا ہے۔  \عددی{C_1': x = g_1(y), \quad d \geq y \geq c} اور \عددی{C_2': x = g_2(y), \quad c \leq y \leq d} ۔اس دورہ تکمل کا نتیجہ درج ذیل ہے۔ 
+\begin{align}
+     \oint_C N \dif y = \int \int_R \frac{\partial N}{\partial x} \dif x \dif y 
+\end{align}
+ مساوات   \حوالہء{15} اور   مساوات   \حوالہء{16}کو ملا کر مساوات     \حوالہء{13}حاصل ہوتا ہے۔ یوں ثبوت مکمل ہوا۔   
+\حصہء{دیگر خطوں میں ثبوت کی توسیہ} چونکہ شکل    \حوالہء{14.32}میں لکیر \عددی{x=a, x=b, y=c} اور \عددی{y=d} خطہ کی سرحد کو دو سے زیادہ نقات پر مس کرتے ہیں لہازا مسئلہ  گرین کے ثبوت میں پیس کیئے گئے دلائل اس مستقل خطہ کے لیئے قابل قبول نہیں ہونگے۔ البتہ سرحد  \عددی{C} کو چار سمد بند لکیری کنات  
+\begin{align}
+     C_1: y =c, a \leq x \leq b, \quad C_2: x=b, c \leq y \leq d,\\     
+     C_3: y=d, b \geq x \geq a, \quad C_4: x=a, d \geq y \geq c, 
+\end{align}
+ میں تقسیم کرتے ہوئے ہم اپنے دلائل میں درج ذیل ترمیم کر سکتے ہیں۔ مساوات   کے ثبوت کی ترز پر چلتے ہوئے ہمارے پاس درج ذیل ہوگا۔ 
+\begin{align}
+     \int_{c}^{d} \int_{a}^{b} \frac{\partial N}{\partial x} \dif x \dif y &= \int_{c}^{d} (N(b,y)-N(a,y)) \dif y\\     &= \int_{c}^{d} N(b,y) \dif y + \int_{d}^{c} N(a,y)) \dif y\\     &= \int_{C_2} N \dif y + \int_{C_1} N \dif y 
+\end{align}
+ چونکہ  \عددی{C_1} اور  \عددی{C_3} پر  y ایک مستکل ہے۔ لہازا \عددی{\int_{C_1} N \dif y = int_{C_3} N \dif y = 0} ہوگا اور ہوں ہم مساوات   \حوالہء{17}  کے دائیں ہاتھ کے ساتھ  \عددی{\int_{C_1} N \dif y + \int_{C_1} N \dif y} مساوات چھیرے بغیر جمع کرسکتے ہیں۔ ایسا کرنے سے درج ذیل ہوگا۔  
+\begin{align}
+     \int_c^d \int_{a}^{b} \frac{\partial N}{\partial x} \dif x \dif y = \oint_C N \dif y 
+\end{align}
+ اسی طرح ہم درج ذیل دیکھا سکتے ہیں۔ 
+\begin{align}
+     \int_{a}^{b} \int_c^d  \frac{\partial M}{\partial y} \dif y \dif x  = \oint_C M \dif x 
+\end{align}
+ مساوات   \حوالہء{18}  سے مساوات     \حوالہء{19}منفی کرتے ہوئے ہمیں دوبارہ درج ذیل نتیجہ ملتا ہے۔ 
+\begin{align}
+     \oint_C M \dif x + N \dif y = \int \int_R (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}) \dif x \dif y 
+\end{align}
+ شکل    \حوالہء{14.33}کے طرز کے خطوں کو بھی با آسانی نپٹا جاسکتا ہے۔ مساوات     \حوالہء{13}کا اطلاق اب بھی ہوگا۔ شکل     \حوالہء{14.34} میں نال کی شکل کا خطہ \عددی{R} دکھایا گیا ہے۔  اور ہم دیکھتے  ہیں کہ خطہ \عددی{R_1} اور  \عددی{R_2} کے ساتھ ان کی سرحد اگٹھا کرتے ہوئے مساوات   \حوالہء{13}   کا اطلاق یہاں بھی ہوگا۔  مسلئہ  گرین کا اطلاق  \عددی{C_1, R_1} پر اور \عددی{C_2, R_2} ہوگا۔ جس سے درج ذیل حاصل ہوگا۔ 
+\begin{align}
+\int_{C_1} M \dif x + N \dif y &= \int \int_{R_1} (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}) \dif x \dif y \\     \int_{C_2} M \dif x + N \dif y &= \int \int_{R_2} (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}) \dif x \dif y 
+\end{align}
+ اں مساوات کو آپس میں جمع کرتے ہوئے ہم دیکھتے ہیں کہ  \عددی{C_1} کے لیئے B تا  A محور x لکیری تکمل کو \عددی{C_2} پر کسی کتا پر مخالف رخ کا تکمل کاٹتا ہے۔ یوں  
+\begin{align}
+     \oint M \dif x + N \dif y = \int \int_R (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}) \dif x \dif y, 
+\end{align}
+ جہاں  x محور کے دو کتات  \عددی{-b} تا \عددی{-a} اور \عددی{a} تا \عددی{b} اور دو نسف دائرے مل کر \عددی{C} دیتے ہیں اور خطہ  \عددی{R} منہنی  \عددی{C} کے اندر پایا جاتا ہے۔  مختلف سرحدوں پر لکیری تکملات کو جمع کرتے ہوئے ایک سرحد پر تکمل کے حصول کے طریقے کر متناہی تعداد کی زیلی خطوں تک وسعت دی جاسکتی ہے۔ شکل 14.3 ( ا ) میں، رباول میں خطہ \عددی{R_1}  کی خلافِ گڑی سمت بند سرحد \عددی{C_1}  ہے۔ دیگر ربوں میں   \عددی{C_i} خطہ \عددی{R_i} ، جہاں  \عددی{i = 1, 2, 3, 4 } ہے، سرحد ہوگا۔ مسئلہ  گرین درج ذیل دیتا ہے۔ 
+\begin{align}
+     \oint_{C_1} M \dif x + N \dif y = \int \int_{R_1} (\frac{\partial N}{\partial x} -  \frac{\partial M}{\partial y}) \dif x \dif y 
+\end{align}
+ ہم \عددی{i= 1, 2, 3, 4} کے لیئے  مساوات    \حوالہء{20} ( کا مجموع لیتے ہیں۔ (شکل    \حوالہء{14.35} ب 
+\begin{align}
+     \oint_{r=b} (M \dif x + N \dif y) + \oint_{r=0} (M \dif x + N \dif y) = \int \int_{0\leq r \leq b} (\frac{\partial N}{\partial x} -  \frac{\partial M}{\partial y}) \dif x \dif y 
+\end{align}
+ مساوات     \حوالہء{21} کہتی ہے کہ چھلےدار حصہ  \عددی{R} پر  \عددی{ (\partial N/\partial x) - (\partial M/\partial y) } کا دوراہ تکمل  \عددی{R} کے مکمل درحد پر \عددی{ M \dif x + N \dif y } کے اس لکیری تکمل کے برابر ہوگا ، جس کو حاصل کرتے ہوئے سرحد پر یوں چلا جائے کہ  \عددی{R} آپ کے بائیں جانب ہو۔ ( شکل     \حوالہء{14.35} ب   )  
+%--------------------- 
+\ابتدا{مثال } چھلےدار حصہ  \عددی{ R: h^2 \leq x^2 + y^2 \leq 1, 0<h<1 } ( شکل   \حوالہء{14.36} ) مسئلہ  گرین مساوات     \حوالہء{12} کی دائری بہاوؑ روپ کی تشدیق 
+\begin{align*}
+  M = \frac{-y}{x^2 + y^2} \quad\quad N=\frac{x}{x^2 + y^2}  
+\end{align*}
+  کی صورت میں معلوم کریں۔  حل: خطہ  \عددی{R} کی سرحد دائرہ 
+\begin{align*}
+ C_1 : x=h\cos{(\theta)},\quad  y= -h\sin{(\theta)},\quad 0\leq \theta \leq 2\pi 
+\end{align*}
+  جس پر t  بڑہانے سے خلاف گڑی چلا جائے گا اور دائرہ 
+\begin{align*}
+  C_h : x=h\cos{(\theta)},\quad  y= -h\sin{(\theta)},\quad 0\leq \theta \leq 2\pi  
+\end{align*}
+  جس پر  \عددی{\theta} بڑہنے سے گڑیوار چلا جائے گا۔ خطہ \عددی{R} میں تفعلات M اور N کے جرئی تفرق استمراری ہیں۔ مزید 
+\begin{align*}
+     \frac{\partial M}{\partial y} &= \frac{(x^2 + y^2)(-1) + y(2y)}{(x^2 + y^2)^2} \\     &= \frac{y^2 - x^2}{(x^2 + y^2)^2} = \frac{\partial N}{\partial x} 
+\end{align*}
+ ہوگا۔ لہازا 
+\begin{align*}
+     \int \int_R (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}) \dif x \dif y = \int \int_R 0 \dif x \dif y =0  
+\end{align*}
+ خطہ \عددی{R} کی سرحد پر  \عددی{ M \dif x + N \dif y} کا ینٹگرل درج ذیل ہوگا۔ 
+\begin{align*}
+ \int_C M \dif x + N \dif y &= \oint_{C_1} \frac{x \dif y - y \dif x}{x^2 + y^2} + \oint_{C_h}  \frac{x \dif y - y \dif x}{x^2 + y^2} \\ &= int_0^{2\pi} (\cos^2{t} + \sin^2{t}) \dif t - int_0^{2\pi} \frac{h^2 (\cos^2{\theta} + \sin^2{\theta})}{h^2} d\theta\\ &= 2\pi - 2\pi =0  
+\end{align*}
+ 
+\انتہا{مثال} 
+%------------------- 
+
+چونکہ مثال   \حوالہء{6}   میں  (0,0) پر تفعلات M اور N غیراستمراری ہیں۔ لہازا دائرہ \عددی{C_1} پر اور اس کے اندر خطہ پر مسئلہ گرین کا اطلاق نہیں ہوگا۔ ہمیں مدہ ہو غیرشامل کرنا ہوگا۔  ہم  \عددی{C_h} کے اندر نقات خارج کرتے ہوئے ایسا کرتے ہیں۔  ہم مثال  6 میں دائرہ \عددی{C_1} کے بجائے ایک ترسیم یا کوئی سادہ بند منہنی  K لے سکتے ہیں۔ جو  \عددی{C_h} کو گیرتا ہو۔  ( شکل   \حوالہء{14.37} ) نتیجہ تنبی درج ذیل ہوگا۔  
+\begin{align*}
+     \oint_K ( M \dif x + N \dif y ) + \oint_{C_b} ( M \dif x + N \dif y) = \oint_{C_h} (M \dif x + N \dif y) = int \int_R (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}) \dif y \dif x = 0 
+\end{align*}
+ جس سے کسی بھی منہنی  کے لیئے ایک حیرت خیز نتیجہ اخز ہوتا ہے۔ 
+\begin{align*}
+     \oint_K ( M \dif x + N \dif y ) = 2 \pi 
+\end{align*}
+ ہم قطبی مہدد استعمال کرتے ہوئے اس نتیجہ کو سمج سکتے ہیں۔  
+\begin{align*}
+    & x = r\cos{\theta} \vspace{2cm} y = r\sin{\theta}\\    & \dif x = -r \sin{\theta} \dif \theta + \cos{\theta} \dif r \vspace{2cm} \dif y = r \cos{\theta} \dif \theta + \sin{\theta} \dif r 
+\end{align*}
+ لیتے ہوئے 
+\begin{align}
+  \frac{x \dif y - y\dif x}{x^2 + y^2} = \frac{r^2( \cos^2{\theta} + \sin^2{\theta}) \dif \theta}{r^2} = \dif \theta    
+\end{align}
+ اور ایک مرتبہ  K پر خلاف گڑی چلتے ہوئے  \عددی{\theta} کی قیمت  \عددی{2\pi} نڑھتی ہے۔

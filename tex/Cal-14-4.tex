@@ -1,5 +1,7 @@
-%starts at example-3 solution and ends at start of ex14.4 questions
-%edited BUT outside references pending
+%starts at example-3  and ends at start of ex14.4 questions
+%only Q1 to Q10 of ex14.4 is complete in the next tex file.
+%audio of ex14.4 is missing. must do its audio
+%edited BUT figures pending
 %p1088-p1093
 \ابتدا{مثال}
 مسئلہ گرین کے دونوں روپ کی تصدیق میدان
@@ -19,13 +21,13 @@ C:\quad \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj,\quad 0\le t\le 2\pi
   N = \cos t, \quad  \dif y = \dif(\sin t) = \cos t\dif t \\ 
    \frac{\partial M}{\partial x} =1, \quad \frac{\partial M}{\partial y} = -1,\quad  \frac{\partial N}{\partial x} =1, \quad \frac{\partial N}{\partial y} = 0  
 \end{align*}
- مساوات  \حوالہء{11}   کے دو    اطراف درج ذیل روپ اختیار کرتے ہیں۔  
+ مساوات \حوالہ{مساوات_سمتی_تکمل_اخراج_اور_تکمل_پھیلاو}   کے دو    اطراف درج ذیل روپ اختیار کرتے ہیں۔  
 \begin{align*}
      \varointctrclockwise_C M \dif y  - N \dif x &= \int_{t=0}^{t= 2\pi} (\cos t - \sin t)(\cos t \dif t) - (\cos t)(-\sin t \dif t) \\     
      &= \int_{0}^{2\pi} \cos^2 t \dif t = \pi \\     
      \iint_R \big(\frac{\partial M}{\partial x} + \frac{\partial N}{\partial y}\big) \dif x \dif y &=  \iint_R (1 + 0) \dif x \dif y \\     &= \iint_R \dif x \dif y = \text{\RL{اکائی دائرے کا رقبہ}} = \pi 
 \end{align*}
- مساوات    \حوالہء{12}کے دو  اطراف درج ذیل روپ اختیار کرتے ہیں۔ 
+ مساوات \حوالہ{مساوات_سمتی_تکمل_اخراج_اور_تکمل_گردش} کے دو  اطراف درج ذیل روپ اختیار کرتے ہیں۔ 
 \begin{align*}
      \varointctrclockwise_c M \dif x  + N \dif y &= \int_{t=0}^{t= 2\pi} (\cos t - \sin t)(-\sin t \dif t) + (\cos t)(\cos t \dif t) \\     &= \int_{0}^{2\pi} (-\sin t\cos t + 1) \dif t = 2\pi \\ 
      \iint_R \big(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\big) \dif x \dif y &=  \iint_R (1 - (-1)) \dif x \dif y = 2 \iint_R \dif x \dif y = 2\pi 
@@ -56,13 +58,13 @@ C:\quad \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj,\quad 0\le t\le 2\pi
  ہم مسئلہ گرین کے  دو    روپ    میں سے کوئی ایک استعمال  کر  کے لکیری تکمل کو چوکور پر  دہرا تکمل میں تبدیل کر سکتے ہیں۔
 \begin{enumerate}[1.]
 \item
-   مساوات \حوالہء{11}   استعمال کرتے  ہیں: \عددی{M = xy}،  \عددی{N = y^2}  لے کر ،  جہاں چوکور کی سرحد \عددی{C}    اور اس کا  اندرون  \عددی{R}    ہے،   ذیل حاصل ہوگا۔ 
+   مساوات  \حوالہ{مساوات_سمتی_تکمل_اخراج_اور_تکمل_پھیلاو}    استعمال کرتے  ہیں: \عددی{M = xy}،  \عددی{N = y^2}  لے کر ،  جہاں چوکور کی سرحد \عددی{C}    اور اس کا  اندرون  \عددی{R}    ہے،   ذیل حاصل ہوگا۔ 
 \begin{align*}
 \varointctrclockwise_C xy \dif y - y^2 \dif x &= \iint_R (y + 2y) \dif x \dif y = \int_0^1 \int_0^1 3y \dif x\dif y \\   
   &= \int_0^1 \big[3xy\big]_{x=0}^{x=1} \dif y = \int_0^1 3y \dif y =\frac{3}{2}y^2\big]_0^1= \frac{3}{2} 
 \end{align*}
 \item
-  مساوات   \حوالہء{12}  استعمال کرتے  ہیں: \عددی{M = iy^2} اور \عددی{N = xy} لینے سے یہی نتیجہ حاصل ہو گا۔ 
+  مساوات \حوالہ{مساوات_سمتی_تکمل_اخراج_اور_تکمل_گردش} استعمال کرتے  ہیں: \عددی{M = iy^2} اور \عددی{N = xy} لینے سے یہی نتیجہ حاصل ہو گا۔ 
 \begin{align*}
 \varointctrclockwise_C -y^2 \dif x + xy \dif y = \iint_R (y - (-2y)) \dif x \dif y = \frac{3}{2}  
 \end{align*}
@@ -163,7 +165,7 @@ C:\quad \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj,\quad 0\le t\le 2\pi
 \end{align*}
  جہاں   \عددی{x} محور کے دو قطعات   \عددی{-b} تا \عددی{-a} اور \عددی{a} تا \عددی{b} اور دو نصف دائرے مل کر \عددی{C} دیتے ہیں ،  اور  جہاں خطہ  \عددی{R} منحنی  \عددی{C} کے اندر پایا جاتا ہے۔
  
-   مختلف سرحدوں پر لکیری تکملات  جمع کر کے ایک سرحد پر تکمل کے حصول کی ترکیب  کو متناہی تعداد کے ذیلی خطوں تک وسعت دی جا سکتی ہے۔ شکل\حوالہء{ 14.35 }ا لف میں ، خطہ \عددی{R_1}  کی   ربع اول  میں  مخالف گھڑی سمت بند سرحد \عددی{C_1}   ہے۔ باقی تین  ربعات کے لئے بھی ایسا ہو گا:    خطہ \عددی{R_i} کی سرحد \عددی{C_i}  ہو گی، جہاں   \عددی{i = 1, 2, 3, 4 } ہے۔ مسئلہ  گرین کے تحت  درج ذیل ہو گا۔ 
+   مختلف سرحدوں پر لکیری تکملات  جمع کر کے ایک سرحد پر تکمل کے حصول کی ترکیب  کو متناہی تعداد کے ذیلی خطوں تک وسعت دی جا سکتی ہے۔ شکل\حوالہء{ 14.35 } الف  میں ، خطہ \عددی{R_1}  کی   ربع اول  میں  مخالف گھڑی سمت بند سرحد \عددی{C_1}   ہے۔ باقی تین  ربعات کے لئے بھی ایسا ہو گا:    خطہ \عددی{R_i} کی سرحد \عددی{C_i}  ہو گی، جہاں   \عددی{i = 1, 2, 3, 4 } ہے۔ مسئلہ  گرین کے تحت  درج ذیل ہو گا۔ 
 \begin{align}\label{مساوات_سمتی_تکمل_چار_حصے}
      \varointctrclockwise_{C_i} M \dif x + N \dif y = \iint_{R_i} \big(\frac{\partial N}{\partial x} -  \frac{\partial M}{\partial y}\big) \dif x \dif y 
 \end{align}
@@ -176,7 +178,7 @@ C:\quad \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj,\quad 0\le t\le 2\pi
 %---------------------
 %---------------------
 \ابتدا{مثال}\شناخت{مثال_سمتی_تکمل_چھلے_دار}
- چھلے دار  خطہ \عددی{ R: h^2 \leq x^2 + y^2 \leq 1, \,0<h<1 } ( شکل   \حوالہء{14.36} ) پر  مسئلہ  گرین (مساوات     \حوالہء{12} ) کے  دائری بہاو روپ کی تصدیق  درج ذیل کے لئے کریں۔
+ چھلے دار  خطہ \عددی{ R: h^2 \leq x^2 + y^2 \leq 1, \,0<h<1 } ( شکل   \حوالہء{14.36} ) پر  مسئلہ  گرین (مساوات \حوالہ{مساوات_سمتی_تکمل_اخراج_اور_تکمل_گردش} ) کے  دائری بہاو روپ کی تصدیق  درج ذیل کے لئے کریں۔
 \begin{align*}
   M = \frac{-y}{x^2 + y^2} \quad\quad N=\frac{x}{x^2 + y^2}  
 \end{align*}
