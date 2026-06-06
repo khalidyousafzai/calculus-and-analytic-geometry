@@ -21,7 +21,7 @@
 
 
 %pathmorphing gives the ripples like look
-\usetikzlibrary{shapes,snakes,3d,shadings,fadings,intersections,calc,decorations.markings,decorations.pathreplacing,external,shapes.misc,decorations.pathmorphing,patterns}
+\usetikzlibrary{shapes,snakes,3d,shadings,fadings,intersections,calc,decorations.markings,decorations.pathreplacing,external,shapes.misc,decorations.pathmorphing,patterns,shapes.arrows}
 
 
 %\tikzexternalize[mode=list and make] %disable to generate figures
@@ -107,11 +107,12 @@ math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
 \graphicspath{{./fig/figFrontPage/}{./fig/figCalculusLimits/}{./fig/figCalculusDerivatives/}{./fig/figCalculusIntegration/}{./fig/figCalculusApplicationsOfIntegrals}{./fig/figCalculusTechniquesOfIntegration/}}%paths to figures
 
 
-\includeonly{./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusIntegration,./tex/calculusApplicationsOfIntegrals,./tex/calculusTranscendentalFunctions,./tex/calculusTechniquesOfIntegration,./tex/calculusInfiniteSeries,./tex/calculusConicSectionsParametrizedCurvesPolarCoordinates,./tex/calculusVectorsAndAnalyticGeometryInSpace,./tex/calculusVectorValuedFunctionsandMotionInSpace,./tex/calculusMultivariableFunctionsAndPartialDerivatives,./tex/calculusMultipleIntegrals,./tex/calculusIntegrationInVectorFields,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI,./tex/calculusIntegrationTable}
+%\includeonly{./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusPreliminaries,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusIntegration,./tex/calculusApplicationsOfIntegrals,./tex/calculusTranscendentalFunctions,./tex/calculusTechniquesOfIntegration,./tex/calculusInfiniteSeries,./tex/calculusConicSectionsParametrizedCurvesPolarCoordinates,./tex/calculusVectorsAndAnalyticGeometryInSpace,./tex/calculusVectorValuedFunctionsandMotionInSpace,./tex/calculusMultivariableFunctionsAndPartialDerivatives,./tex/calculusMultipleIntegrals,./tex/calculusIntegrationInVectorFields,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI,./tex/calculusIntegrationTable}
 %
 
 %\includeonly{,./tex/calculusIntegrationInVectorFields,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI,./tex/calculusIntegrationTable}%
 
+\includeonly{./tex/calculusIntegrationInVectorFields,,./tex/Cal-14-4}
 %\includeonly{./tex/Cal-14-6}
 %\includeonly{./tex/calculusIntegrationInVectorFields,./tex/Cal-14-5a}
 %\includeonly{./tex/Cal-14-5a}%
@@ -201,7 +202,7 @@ math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
 \include{./tex/calculusMultipleIntegrals}
 \include{./tex/calculusIntegrationInVectorFields}
 %\include{./tex/questions}
-%\include{./tex/Cal-14-6}
+\include{./tex/Cal-14-4}
 
 
 %\immediate\closeout\tempfileTerms
