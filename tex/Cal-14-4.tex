@@ -17,8 +17,8 @@ C:\quad \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj,\quad 0\le t\le 2\pi
  حل:\quad
  ہم  پہلے تفاعلات، تفرق اور تفریق کو  \عددی{t} کی صورت میں لکھتے ہیں۔ 
 \begin{align*}
-  M = \cos t - \sin t,  \quad \dif x = \dif(\cos t )= -\sin t\dif t \\ 
-  N = \cos t, \quad  \dif y = \dif(\sin t) = \cos t\dif t \\ 
+  M = \cos t - \sin t,  \quad \dif x = \dif\,(\cos t )= -\sin t\dif t \\ 
+  N = \cos t, \quad  \dif y = \dif\,(\sin t) = \cos t\dif t \\ 
    \frac{\partial M}{\partial x} =1, \quad \frac{\partial M}{\partial y} = -1,\quad  \frac{\partial N}{\partial x} =1, \quad \frac{\partial N}{\partial y} = 0  
 \end{align*}
  مساوات \حوالہ{مساوات_سمتی_تکمل_اخراج_اور_تکمل_پھیلاو}   کے دو    اطراف درج ذیل روپ اختیار کرتے ہیں۔  
@@ -95,7 +95,57 @@ C:\quad \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj,\quad 0\le t\le 2\pi
 \begin{align}\label{مساوات_سمتی_تکمل_خصوصی_پر_ثبوت}
 \varointctrclockwise_C N \dif x + N \dif y = \iint_R \big(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\big) \dif x \dif y 
 \end{align}
- ثابت کرنا چاہتے  ہیں۔     شکل      \حوالہء{14.30} میں  \عددی{C}  دو سمت بند حصوں کا مجموعہ    دکھایا گیا ہے۔  
+================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\begin{tikzpicture}[declare function={f(\x)=3+ 2*cos(\x)*cos(30) - 1*sin(\x)*sin(30);g(\x)=2 + 2*cos(\x)*sin(30) + 1*sin(\x)*cos(30);}]
+\begin{axis}[xmin=0,xmax=4,ymin=0,ymax=3.5,clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,}, enlarge x limits=0.3,
+ enlarge y limits=0.1,xtick={f(170),f(350),f(50)} ,xticklabels={$a$,$b$,$x$}, ytick={\empty},extra x tick style={xticklabel style={yshift=0.5ex,anchor=south}},
+%extra x ticks={-0.7},extra x tick labels={$a$}
+]
+\addplot[no markers, domain=0:360,smooth , postaction = {decorate}, decoration = {markings, mark = at position 0.4 with {\arrow{Stealth[length = 2mm, bend]}}, mark = at position 0.85 with {\arrow{Stealth[length = 2mm, bend]}}}
+] ({f(\x)},{g(\x)});
+\addplot[only marks,mark=*,samples at={170,350}] ({f(\x)},{g(\x)});
+\addplot[]coordinates {({f(50)},{g(50)})} node[above ,xshift=1em]{\small $P_2(x,f_2(x))$};
+\addplot[dashed]coordinates {({f(50)},{g(50)}) ({f(50)},0)}{};
+\addplot[dashed]coordinates {({f(170)},{g(170)}) ({f(170)},0)}{};
+\addplot[dashed]coordinates {({f(350)},{g(350)}) ({f(350)},0)}{};
+\addplot[dashed]coordinates {({f(120)},{g(120)})}node[above,rotate=45]{\small $C_2:y=f_2(x)$};
+\addplot[dashed]coordinates {({f(210)},{g(210)})}node[below,xshift=1.6em]{\small $C_1:y=f_1(x)$};
+\addplot[]coordinates {({f(270)},{g(270)})}node[right,fill=white,xshift=0.7em,yshift=-0.5em]{\small $P_1(x,f_1(x))$};
+\addplot[dashed]coordinates {({f(120)},{g(120)})}node[xshift=3em]{\small $R$};
+\end{axis}
+\end{tikzpicture}
+\caption{منحنی \عددی{C_1} جو \عددی{y=f_1(x)}  کی ترسیم ہے اور \عددی{C_2} جو \عددی{y=f_2(x)} کی ترسیم ہے ، مل کر  سرحدی منحنی \عددی{C} دیتی ہیں۔}
+\label{شکل_سمتی_میدان_تکمل_گرین_مخصوص_خطے}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\begin{tikzpicture}[declare function={f(\x)=3+ 2*cos(\x)*cos(30) - 1*sin(\x)*sin(30);g(\x)=2 + 2*cos(\x)*sin(30) + 1*sin(\x)*cos(30);}]
+\begin{axis}[xmin=0,xmax=4,ymin=0,ymax=3.5,,clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,}, enlarge x limits=0.3,
+ enlarge y limits=0.1,ytick={g(220),g(40),g(330)} ,yticklabels={$c$,$d$,$y$}, xtick={\empty},extra x tick style={xticklabel style={yshift=0.5ex,anchor=south}},
+%extra x ticks={-0.7},extra x tick labels={$a$}
+]
+\addplot[no markers, domain=0:360,smooth , postaction = {decorate}, decoration = {markings, mark = at position 0.4 with {\arrow{Stealth[length = 2mm, bend]}}, mark = at position 0.85 with {\arrow{Stealth[length = 2mm, bend]}}}
+] ({f(\x)},{g(\x)});
+\addplot[only marks,mark=*,samples at={40,220}] ({f(\x)},{g(\x)});
+\addplot[]coordinates {({f(330)},{g(330)})}node[right,]{\small $Q_2(x,f_1(x))$};
+\addplot[]coordinates {({f(120)},{g(120)})} node[right]{\small $Q_1(x,f_2(x))$};
+\addplot[dashed]coordinates {({f(40)},{g(40)}) (0,{g(40)})}{};
+\addplot[dashed]coordinates {({f(220)},{g(220)}) (0,{g(220)})}{};
+\addplot[dashed]coordinates {({f(330)},{g(330)}) (0,{g(330)})}{};
+\addplot[dashed]coordinates {({f(290)},{g(290)})}node[below,rotate=45]{\small $C_2':x=g_2(x)$};
+\addplot[dashed]coordinates {({f(120)},{g(120)})}node[above,rotate=45,fill=white,yshift=0.5em]{\small $C_1':x=g_1(x)$};
+\addplot[dashed]coordinates {({f(120)},{g(120)})}node[xshift=2em,yshift=-3em]{\small $R$};
+\end{axis}
+\end{tikzpicture}
+\caption{منحنی \عددی{C_1'} جو \عددی{x=g_1(y)}  کی ترسیم ہے اور \عددی{C_2'} جو \عددی{x=g_2(y)} کی ترسیم ہے ، مل کر  سرحدی منحنی \عددی{C} دیتی ہیں۔}
+\label{شکل_سمتی_میدان_تکمل_گرین_مخصوص_خطے_دوم}
+\end{minipage}
+\end{figure}
+===================
+
+ ثابت کرنا چاہتے  ہیں۔     شکل      \حوالہ{شکل_سمتی_میدان_تکمل_گرین_مخصوص_خطے} میں  \عددی{C}  دو سمت بند حصوں کا مجموعہ    دکھایا گیا ہے۔  
 \begin{align*}
      C_1: y &= f_1(x), \quad  a \leq x \leq b, && C_2:  y = f_2(x), \quad  b \geq x \geq a 
 \end{align*}
@@ -112,7 +162,7 @@ C:\quad \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj,\quad 0\le t\le 2\pi
 \varointctrclockwise_C M \dif x = \iint_R \big(-\frac{\partial M}{\partial y}\big) \dif x \dif y 
 \end{align}
 
- مساوات    \حوالہ{مساوات_سمتی_تکمل_آدھا_الف}  ہمیں مساوات    \حوالہ{مساوات_سمتی_تکمل_خصوصی_پر_ثبوت}میں درکار نتائج کا نصف حصہ دیتی ہے۔ جیسا شکل   \حوالہء{14.31}  عندیہ دیتی ہے،  اس کا دوسرا نصف    حصہ،   \عددی{\frac{\partial N}{\partial x}} کا تکمل  ، پہلے  \عددی{x}  اور بعد  میں \عددی{y} کے لحاظ سے ، لے کر حاصل ہو گا ۔ اس میں شکل    \حوالہء{14.30}کی منحنی \عددی{C}  کو درج ذیل   دو  سمت بند حصوں  میں تقسیم کیا گیا ہے ۔
+ مساوات    \حوالہ{مساوات_سمتی_تکمل_آدھا_الف}  ہمیں مساوات    \حوالہ{مساوات_سمتی_تکمل_خصوصی_پر_ثبوت}میں درکار نتائج کا نصف حصہ دیتی ہے۔ جیسا شکل   \حوالہ{شکل_سمتی_میدان_تکمل_گرین_مخصوص_خطے_دوم} عندیہ دیتی ہے،  اس کا دوسرا نصف    حصہ،   \عددی{\frac{\partial N}{\partial x}} کا تکمل  ، پہلے  \عددی{x}  اور بعد  میں \عددی{y} کے لحاظ سے ، لے کر حاصل ہو گا ۔ اس میں شکل    \حوالہ{شکل_سمتی_میدان_تکمل_گرین_مخصوص_خطے}کی منحنی \عددی{C}  کو درج ذیل   دو  سمت بند حصوں  میں تقسیم کیا گیا ہے ۔
  \begin{align*}
  C_1': x = g_1(y), \quad d \geq y \geq c \quad \quad \text{\RL{اور}}\quad \quad  C_2': x = g_2(y), \quad c \leq y \leq d
  \end{align*}
@@ -125,13 +175,38 @@ C:\quad \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj,\quad 0\le t\le 2\pi
 %---------------
 
 \حصہء{دیگر خطوں کو  ثبوت کی توسیع} 
- شکل    \حوالہء{14.32}میں لکیر \عددی{x=a}، \عددی{x=b}، \عددی{y=c}، اور \عددی{y=d} مستطیل    خطہ کی سرحد کو دو سے زیادہ نقطوں  پر مس کرتی  ہیں لہٰذا مسئلہ  گرین کے ثبوت میں پیش   دلائل اس مستطیل  خطہ کے لئے قابل قبول نہیں۔ البتہ سرحد  \عددی{C} کو چار سمت بند لکیری  قطعات 
+ شکل    \حوالہ{شکل_سمتی_میدان_تکمل_مستطیل_سمت_بند_ٹکڑے}میں لکیر \عددی{x=a}، \عددی{x=b}، \عددی{y=c}، اور \عددی{y=d} مستطیل    خطہ کی سرحد کو دو سے زیادہ نقطوں  پر مس کرتی  ہیں لہٰذا مسئلہ  گرین کے ثبوت میں پیش   دلائل اس مستطیل  خطہ کے لئے قابل قبول نہیں۔ البتہ سرحد  \عددی{C} کو چار سمت بند لکیری  قطعات 
 \begin{align*}
      C_1: \quad y &=c, \quad a \leq x \leq b, \quad\quad \quad C_2:\quad  x=b,\quad  c \leq y \leq d,\\     
      C_3:\quad y&=d,\quad b \geq x \geq a, \quad\quad\quad C_4: \quad x=a,\quad d \geq y \geq c, 
 \end{align*}
  میں تقسیم کر کے  ہم دلائل میں درج ذیل ترمیم کر سکتے ہیں۔ 
  
+\begin{figure}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=3+ 2*cos(\x)*cos(30) - 1*sin(\x)*sin(30);g(\x)=2 + 2*cos(\x)*sin(30) + 1*sin(\x)*cos(30);}]
+\begin{axis}[clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,}, enlarge x limits=0.3,
+ enlarge y limits=0.1,xtick={1,3},xticklabels={$a$,$b$},ytick={1,2} ,yticklabels={$c$,$d$},extra x tick style={xticklabel style={yshift=0.5ex,anchor=south}},
+%extra x ticks={-0.7},extra x tick labels={$a$}
+]
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.17 with {\arrow{Stealth[length = 2mm, bend]}}, mark = at position 0.42 with {\arrow{Stealth[length = 2mm, bend]}},mark = at position 0.67 with {\arrow{Stealth[length = 2mm, bend]}},mark = at position 0.92 with {\arrow{Stealth[length = 2mm, bend]}}}
+] coordinates {(1,1) (3,1) (3,2) (1,2) (1,1)};
+\addplot[dashed]coordinates {(1,0)(1,1)};
+\addplot[dashed]coordinates {(3,0)(3,1)};
+\addplot[dashed]coordinates {(0,1)(1,1)};
+\addplot[dashed]coordinates {(0,2)(1,2)};
+\addplot[]coordinates {(2,1.5)}node[]{$R$};
+\addplot[draw=none]coordinates {(2,1)}node[below]{$C_1:y=c$};
+\addplot[draw=none]coordinates {(2,2)}node[above]{$C_3:y=d$};
+\addplot[draw=none]coordinates {(1,1.5)}node[left,yshift=0.5em]{$C_4$}node[below left]{$x=a$};
+\addplot[draw=none]coordinates {(3,1.5)}node[right]{$C_2:x=b$};
+\end{axis}
+\end{tikzpicture}
+\caption{مستطیل کے لئے مسئلہ گرین کا ثبوت پیش کرنے کی خاطر ہم سرحد کو چار سمت بند لکیروں میں تقسیم کرتے ہیں۔}
+\label{شکل_سمتی_میدان_تکمل_مستطیل_سمت_بند_ٹکڑے}
+\end{figure}
+
+%KKK??? am here
  مساوات \حوالہ{مساوات_سمتی_تکمل_دوسرا_حصہ}    کے ثبوت کی طرز پر چلتے ہوئے  درج ذیل ہوگا۔ 
  \begin{gather}
 \begin{aligned}\label{مساوات_سمتی_تکمل_درمیان_ثبوت}
