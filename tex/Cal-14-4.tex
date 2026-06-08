@@ -104,9 +104,8 @@ C:\quad \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj,\quad 0\le t\le 2\pi
  enlarge y limits=0.1,xtick={f(170),f(350),f(50)} ,xticklabels={$a$,$b$,$x$}, ytick={\empty},extra x tick style={xticklabel style={yshift=0.5ex,anchor=south}},
 %extra x ticks={-0.7},extra x tick labels={$a$}
 ]
-\addplot[no markers, domain=0:360,smooth , postaction = {decorate}, decoration = {markings, mark = at position 0.4 with {\arrow{Stealth[length = 2mm, bend]}}, mark = at position 0.85 with {\arrow{Stealth[length = 2mm, bend]}}}
-] ({f(\x)},{g(\x)});
-\addplot[only marks,mark=*,samples at={170,350}] ({f(\x)},{g(\x)});
+\addplot[no markers, domain=0:360,smooth , postaction = {decorate}, decoration = {markings, mark = at position 0.4 with {\arrow{Stealth[length = 2mm, bend]}}, mark = at position 0.85 with {\arrow{Stealth[length = 2mm, bend]}}}] ({f(x)},{g(x)});
+\addplot[only marks,mark=*,samples at={170,350}] ({f(x)},{g(x)});
 \addplot[]coordinates {({f(50)},{g(50)})} node[above ,xshift=1em]{\small $P_2(x,f_2(x))$};
 \addplot[dashed]coordinates {({f(50)},{g(50)}) ({f(50)},0)}{};
 \addplot[dashed]coordinates {({f(170)},{g(170)}) ({f(170)},0)}{};
@@ -126,9 +125,8 @@ C:\quad \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj,\quad 0\le t\le 2\pi
  enlarge y limits=0.1,ytick={g(220),g(40),g(330)} ,yticklabels={$c$,$d$,$y$}, xtick={\empty},extra x tick style={xticklabel style={yshift=0.5ex,anchor=south}},
 %extra x ticks={-0.7},extra x tick labels={$a$}
 ]
-\addplot[no markers, domain=0:360,smooth , postaction = {decorate}, decoration = {markings, mark = at position 0.4 with {\arrow{Stealth[length = 2mm, bend]}}, mark = at position 0.85 with {\arrow{Stealth[length = 2mm, bend]}}}
-] ({f(\x)},{g(\x)});
-\addplot[only marks,mark=*,samples at={40,220}] ({f(\x)},{g(\x)});
+\addplot[no markers, domain=0:360,smooth , postaction = {decorate}, decoration = {markings, mark = at position 0.4 with {\arrow{Stealth[length = 2mm, bend]}}, mark = at position 0.85 with {\arrow{Stealth[length = 2mm, bend]}}}] ({f(x)},{g(x)});
+\addplot[only marks,mark=*,samples at={40,220}] ({f(x)},{g(x)});
 \addplot[]coordinates {({f(330)},{g(330)})}node[right,]{\small $Q_2(x,f_1(x))$};
 \addplot[]coordinates {({f(120)},{g(120)})} node[right]{\small $Q_1(x,f_2(x))$};
 \addplot[dashed]coordinates {({f(40)},{g(40)}) (0,{g(40)})}{};
@@ -187,8 +185,13 @@ C:\quad \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj,\quad 0\le t\le 2\pi
 \begin{tikzpicture}[declare function={f(\x)=3+ 2*cos(\x)*cos(30) - 1*sin(\x)*sin(30);g(\x)=2 + 2*cos(\x)*sin(30) + 1*sin(\x)*cos(30);}]
 \begin{axis}[clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,}, enlarge x limits=0.3,
  enlarge y limits=0.1,xtick={1,3},xticklabels={$a$,$b$},ytick={1,2} ,yticklabels={$c$,$d$},extra x tick style={xticklabel style={yshift=0.5ex,anchor=south}},
-%extra x ticks={-0.7},extra x tick labels={$a$}
-]
+extra y ticks={},
+extra y tick labels={},
+extra y tick style={
+        tick label style={
+            yshift={\ticknum == 0 ? -10pt : 20pt},
+            yshift={\ticknum == 1 ? -10pt : -10pt}
+}}]
 \addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.17 with {\arrow{Stealth[length = 2mm, bend]}}, mark = at position 0.42 with {\arrow{Stealth[length = 2mm, bend]}},mark = at position 0.67 with {\arrow{Stealth[length = 2mm, bend]}},mark = at position 0.92 with {\arrow{Stealth[length = 2mm, bend]}}}
 ] coordinates {(1,1) (3,1) (3,2) (1,2) (1,1)};
 \addplot[dashed]coordinates {(1,0)(1,1)};
@@ -206,7 +209,7 @@ C:\quad \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj,\quad 0\le t\le 2\pi
 \label{شکل_سمتی_میدان_تکمل_مستطیل_سمت_بند_ٹکڑے}
 \end{figure}
 
-%KKK??? am here
+
  مساوات \حوالہ{مساوات_سمتی_تکمل_دوسرا_حصہ}    کے ثبوت کی طرز پر چلتے ہوئے  درج ذیل ہوگا۔ 
  \begin{gather}
 \begin{aligned}\label{مساوات_سمتی_تکمل_درمیان_ثبوت}
@@ -228,28 +231,141 @@ C:\quad \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj,\quad 0\le t\le 2\pi
 \varointctrclockwise_C M \dif x + N \dif y = \iint_R \big(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\big) \dif x \dif y 
 \end{align}
 
- شکل    \حوالہء{14.33} طرز کے خطوں کو بھی اتنی ہی  آسانی  سے نپٹا جا سکتا ہے۔ مساوات     \حوالہ{مساوات_سمتی_تکمل_خصوصی_پر_ثبوت}کا اطلاق اب بھی ہوگا۔ شکل     \حوالہء{14.34} میں گھوڑے کے نعل کی شکل کا خطہ \عددی{R} دکھایا گیا ہے؛  اور ہم دیکھتے  ہیں کہ خطہ \عددی{R_1} ، خطہ \عددی{R_2}  اور ان کی سرحد اکٹھا کرتے ہوئے مساوات   \حوالہ{مساوات_سمتی_تکمل_خصوصی_پر_ثبوت}   کا اطلاق یہاں بھی ہوگا۔  مسئلہ  گرین کا اطلاق   \عددی{C_1}، \عددی{R_1} اور \عددی{C_2}، \عددی{R_2}  پر  ہوگا،جس سے درج ذیل حاصل ہوگا۔ 
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=3+1*cos(\x);g(\x)=1+1*sin(\x);}]
+\begin{axis}[axis equal,clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,}, enlarge x limits=0.3,
+ enlarge y limits=0.1,xtick={\empty},xticklabels={$a$,$b$},ytick={\empty} ,yticklabels={$c$,$d$},extra x tick style={xticklabel style={yshift=0.5ex,anchor=south}},
+%extra x ticks={-0.7},extra x tick labels={$a$}
+]
+\addplot[thick,domain=0:180, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.25 with {\arrow{Stealth[length = 2mm, bend]}}}] ({f(x)},{g(x)});
+\addplot[thick,no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.25 with {\arrow{Stealth[length = 2mm, bend]}}}]coordinates {(2,1)(4,1)};
+\addplot[]({f(90)},{g(90)})node[above]{$C$}node[below,yshift=-2em]{$R$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={fa(\x)=2*cos(\x);ga(\x)=2*sin(\x);fb(\x)=1*cos(\x);gb(\x)=1*sin(\x);}]
+\begin{axis}[axis equal,clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,}, enlarge x limits=0.3,
+ enlarge y limits=0.1,xtick={1,2},xticklabels={$a$,$b$},ytick={1,2} ,yticklabels={$a$,$b$},extra x tick style={xticklabel style={yshift=0.5ex,anchor=south}},
+%extra x ticks={-0.7},extra x tick labels={$a$}
+]
+\addplot[thick,domain=0:90, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}
+] ({fa(\x)},{ga(\x)}) node [pos=0.7, above right] {$C$} node [pos=0.5,shift={(45:-0.5)}] {$R$};
+\addplot[thick,domain=0:90, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}
+] ({fb(\x)},{gb(\x)});
+\addplot[thick,, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}]coordinates {(0,2) (0,1)};
+\addplot[thick,, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}]coordinates {(1,0)(2,0)};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{دیگر خطے جن پر مسئلہ گرین کا اطلاق ہوگا۔}
+\label{شکل_سمتی_میدان_تکمل_مستطیل_دیگر_خطے_گرین}
+\end{figure}
+%====================
+\begin{figure}
+\centering
+\begin{tikzpicture}[declare function={fa(\x)=2*cos(\x);ga(\x)=2*sin(\x);fb(\x)=1*cos(\x);gb(\x)=1*sin(\x);}]
+\begin{axis}[axis equal,clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,},xtick={-1,-2,1,2},xticklabels={$-a$,$-b$,$a$,$b$},ytick={\empty} ,yticklabels={$a$,$b$},enlargelimits=true, extra y ticks={0.8,2.2},extra y tick labels={$a$,$b$},extra y tick style={tick style={draw=none}}]
+\addplot[name path=kpathA,thick,domain=0:90, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] ({fa(x)},{ga(x)}) node [pos=0.5, above right] {$C_1$}node[pos=0.25,left,xshift=-1em]{$R_1$};
+\addplot[name path=kpathB,thick,domain=0:90, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] ({fb(x)},{gb(x)})node[pos=0.5,below left]{$C_1$};
+\addplot[thick]coordinates {(0,2) (0,1)};
+\addplot[thick,, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}]coordinates {(1,0)(2,0)}node[pos=0.5,below]{$C_1$};
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] coordinates {(0.15,1.9)(0.15,1.1)}node[pos=0.5,right]{$C_1$};
+%
+\addplot[name path=kpathA,thick,domain=90:180, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] ({fa(x)},{ga(x)}) node [pos=0.5, above left] {$C_2$}node[pos=0.75,right,xshift=1em]{$R_2$};
+\addplot[name path=kpathB,thick,domain=90:180, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] ({fb(x)},{gb(x)})node[pos=0.5,below right]{$C_2$};
+\addplot[thick]coordinates {(0,2) (0,1)};
+\addplot[thick,, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}]coordinates {(-1,0)(-2,0)}node[pos=0.5,below]{$C_2$};
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] coordinates {(-0.15,1.9)(-0.15,1.1)}node[pos=0.5,left]{$C_2$};
+\end{axis}
+\end{tikzpicture}
+\caption{خطہ \عددی{R_1} اور \عددی{R_2} کو ملا کر خطہ \عددی{R} حاصل کیا گیا ہے۔}
+\label{شکل_سمتی_میدان_تکمل_نعل}
+\end{figure}
+
+
+ شکل    \حوالہ{شکل_سمتی_میدان_تکمل_مستطیل_دیگر_خطے_گرین}طرز کے خطوں کو بھی اتنی ہی  آسانی  سے نپٹا جا سکتا ہے۔ مساوات     \حوالہ{مساوات_سمتی_تکمل_خصوصی_پر_ثبوت}کا اطلاق اب بھی ہوگا۔ شکل     \حوالہ{شکل_سمتی_میدان_تکمل_نعل} میں گھوڑے کے نعل کی شکل کا خطہ \عددی{R} دکھایا گیا ہے؛  اور ہم دیکھتے  ہیں کہ خطہ \عددی{R_1} ، خطہ \عددی{R_2}  اور ان کی سرحد اکٹھا کرتے ہوئے مساوات   \حوالہ{مساوات_سمتی_تکمل_خصوصی_پر_ثبوت}   کا اطلاق  ہوگا۔  مسئلہ  گرین کا اطلاق   \عددی{C_1}، \عددی{R_1} اور \عددی{C_2}، \عددی{R_2}  پر  ہوگا،جس سے درج ذیل حاصل ہوگا۔ 
 \begin{align*}
 \int_{C_1}M \dif x+N \dif y&=\iint_{R_1}\big(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\big) \dif x \dif y \\     
 \int_{C_2} M \dif x + N \dif y &= \iint_{R_2} \big(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\big) \dif x \dif y 
 \end{align*}
- ان  مساوات کو آپس میں جمع کرتے ہوئے ہم دیکھتے ہیں کہ  \عددی{C_1} کے لئے  \عددی{b} تا   \عددی{a}  محور \عددی{y} پر لکیری تکمل کو \عددی{C_2} پر اسی قطع  پر   لیکن مخالف رخ کا تکمل کاٹتا ہے۔ یوں   ذیل ہو گا
+ ان  مساوات کو آپس میں جمع کرتے ہوئے ہم دیکھتے ہیں کہ محور \عددی{y}    پر \عددی{C_1} کے لئے  \عددی{b} تا   \عددی{a}  لکیری تکمل کو \عددی{C_2} پر اسی قطع  پر   لیکن مخالف رخ کا تکمل کاٹتا ہے۔ یوں   ذیل ہو گا
 \begin{align*}
 \varointctrclockwise M \dif x + N \dif y = \iint_R \big(\frac{\partial N}{\partial x} 
 - \frac{\partial M}{\partial y}\big) \dif x \dif y, 
 \end{align*}
  جہاں   \عددی{x} محور کے دو قطعات   \عددی{-b} تا \عددی{-a} اور \عددی{a} تا \عددی{b} اور دو نصف دائرے مل کر \عددی{C} دیتے ہیں ،  اور  جہاں خطہ  \عددی{R} منحنی  \عددی{C} کے اندر پایا جاتا ہے۔
  
-   مختلف سرحدوں پر لکیری تکملات  جمع کر کے ایک سرحد پر تکمل کے حصول کی ترکیب  کو متناہی تعداد کے ذیلی خطوں تک وسعت دی جا سکتی ہے۔ شکل\حوالہء{ 14.35 } الف  میں ، خطہ \عددی{R_1}  کی   ربع اول  میں  مخالف گھڑی سمت بند سرحد \عددی{C_1}   ہے۔ باقی تین  ربعات کے لئے بھی ایسا ہو گا:    خطہ \عددی{R_i} کی سرحد \عددی{C_i}  ہو گی، جہاں   \عددی{i = 1, 2, 3, 4 } ہے۔ مسئلہ  گرین کے تحت  درج ذیل ہو گا۔ 
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={fa(\x)=2*cos(\x);ga(\x)=2*sin(\x);fb(\x)=1*cos(\x);gb(\x)=1*sin(\x);}]
+\begin{axis}[axis equal,clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,},xtick={\empty},xticklabels={$-a$,$-b$,$a$,$b$},ytick={\empty} ,yticklabels={$a$,$b$},enlargelimits=true, extra x ticks={0.8,2.2},extra x tick labels={$a$,$b$},extra x tick style={tick style={draw=none}}]
+\addplot[name path=kpathA,thick,domain=0:90, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] ({fa(x)},{ga(x)}) node [pos=0.5, above right] {$C_1$}node[pos=0.35,left,xshift=-1em]{$R_1$};
+\addplot[name path=kpathB,thick,domain=0:90, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] ({fb(x)},{gb(x)})node[pos=0.5,below left]{$C_1$};
+\addplot[thick]coordinates {(0,2) (0,1)};
+\addplot[thick]coordinates {(1,0)(2,0)};
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] coordinates {(0.15,1.9)(0.15,1.1)}node[pos=0.5,right]{$C_1$};
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] coordinates {(1.1,0.15)(1.9,0.15)}node[pos=0.6,above]{$C_1$};
+%
+\addplot[name path=kpathA,thick,domain=90:180, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] ({fa(x)},{ga(x)}) node [pos=0.5, above left] {$C_2$}node[pos=0.65,right,xshift=1em]{$R_2$};
+\addplot[name path=kpathB,thick,domain=90:180, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] ({fb(x)},{gb(x)})node[pos=0.5,below right]{$C_2$};
+\addplot[thick]coordinates {(0,2) (0,1)};
+\addplot[thick]coordinates {(-1,0)(-2,0)};
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] coordinates {(-0.15,1.9)(-0.15,1.1)}node[pos=0.5,left]{$C_2$};
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] coordinates {(-1.9,0.15)(-1.1,0.15)}node[pos=0.6,above]{$C_2$};
+%
+\addplot[name path=kpathA,thick,domain=180:270, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] ({fa(x)},{ga(x)}) node [pos=0.5, below left] {$C_3$}node[pos=0.35,right,xshift=0.5em]{$R_3$};
+\addplot[name path=kpathB,thick,domain=180:270, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] ({fb(x)},{gb(x)})node[pos=0.5,above  right]{$C_3$};
+\addplot[thick]coordinates {(0,-2) (0,-1)};
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] coordinates {(-0.15,-1.1) (-0.15,-1.9)}node[pos=0.5,left]{$C_3$};
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] coordinates {(-1.1,-0.15) (-1.9,-0.15)}node[pos=0.6,below]{$C_3$};
+%
+\addplot[name path=kpathA,thick,domain=270:360, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] ({fa(x)},{ga(x)}) node [pos=0.5, below right] {$C_4$}node[pos=0.6,left,xshift=-0.5em]{$R_4$};
+\addplot[name path=kpathB,thick,domain=270:360, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] ({fb(x)},{gb(x)})node[pos=0.5,above  left]{$C_4$};
+\addplot[thick]coordinates {(0,-2) (0,-1)};
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] coordinates {(0.15,-1.1) (0.15,-1.9)}node[pos=0.5,right]{$C_4$};
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] coordinates {(1.1,-0.15) (1.9,-0.15)}node[pos=0.6,below]{$C_4$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={fa(\x)=2*cos(\x);ga(\x)=2*sin(\x);fb(\x)=1*cos(\x);gb(\x)=1*sin(\x);}]
+\begin{axis}[axis equal,clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,},xtick={\empty},xticklabels={$-a$,$-b$,$a$,$b$},ytick={\empty} ,yticklabels={$a$,$b$},enlargelimits=true, extra x ticks={0.7,2.2},extra x tick labels={$a$,$b$},extra x tick style={tick style={draw=none}}]
+\addplot[name path=kpathA,thick,domain=0:360,smooth, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.125 with {\arrow{Stealth[length = 2mm, bend]}}}, decoration = {markings, mark = at position 0.375 with {\arrow{Stealth[length = 2mm, bend]}}}, decoration = {markings, mark = at position 0.625 with {\arrow{Stealth[length = 2mm, bend]}}}, decoration = {markings, mark = at position 0.875 with {\arrow{Stealth[length = 2mm, bend]}}}] ({fa(x)},{ga(x)})node[pos=0.55,right,xshift=0.5em]{$R$} coordinate[pos=0.45](kTest);
+\addplot[name path=kpathB,thick,domain=0:360, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.125 with {\arrowreversed{Stealth[length = 2mm, bend]}}},decoration = {markings, mark = at position 0.375 with {\arrowreversed{Stealth[length = 2mm, bend]}}},decoration = {markings, mark = at position 0.625 with {\arrowreversed{Stealth[length = 2mm, bend]}}},decoration = {markings, mark = at position 0.875 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] ({fb(x)},{gb(x)});
+\addplot []coordinates {(-1.8,1)(-2.5,1)}node[left]{\RL{{خطہ \عددی{R} کی سرحد}}};
+\addplot []coordinates {(-1.0,0.5)(-2.5,0.8)};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{
+خطہ \عددی{R} چار ٹکڑوں پر مشتمل ہے۔ نلکی محدد میں اندرونی دائرے کے لئے \عددی{r=a} اور بیرونی کے لئے \عددی{r=b} ہے جبکہ  خطہ کے لئے \عددی{a\le r\le b} ہے۔}
+\label{شکل_سمتی_میدان_تکمل_چار_خطے}
+\end{figure}
+
+%KKK??? am here
+
+   مختلف سرحدوں پر لکیری تکملات  جمع کر کے ایک سرحد پر تکمل کے حصول کی ترکیب  کو متناہی تعداد کے ذیلی خطوں تک وسعت دی جا سکتی ہے۔ شکل\حوالہ{شکل_سمتی_میدان_تکمل_چار_خطے}- الف  میں ، خطہ \عددی{R_1}  کی   ربع اول  میں  مخالف گھڑی سمت بند سرحد \عددی{C_1}   ہے۔ باقی تین  ربعات کے لئے بھی ایسا ہو گا:    خطہ \عددی{R_i} کی سرحد \عددی{C_i}  ہو گی، جہاں   \عددی{i = 1, 2, 3, 4 } ہے۔ مسئلہ  گرین کے تحت  درج ذیل ہو گا۔ 
 \begin{align}\label{مساوات_سمتی_تکمل_چار_حصے}
      \varointctrclockwise_{C_i} M \dif x + N \dif y = \iint_{R_i} \big(\frac{\partial N}{\partial x} -  \frac{\partial M}{\partial y}\big) \dif x \dif y 
 \end{align}
- ہم \عددی{i= 1, 2, 3, 4} کے لئے  مساوات    \حوالہ{مساوات_سمتی_تکمل_چار_حصے}  کا مجموعہ  لیتے ہیں(شکل    \حوالہء{14.35} ب )۔
+ ہم \عددی{i= 1, 2, 3, 4} کے لئے  مساوات    \حوالہ{مساوات_سمتی_تکمل_چار_حصے}  کا مجموعہ  لیتے ہیں(شکل    \حوالہ{شکل_سمتی_میدان_تکمل_چار_خطے}- ب )۔
 \begin{align}\label{مساوات_سمتی_تکمل_چار_مجموعہ}
      \varointctrclockwise_{r=b} (M \dif x + N \dif y) + \varointclockwise_{r=a} (M \dif x + N \dif y) = \iint_{a\leq r \leq b} \big(\frac{\partial N}{\partial x} -  \frac{\partial M}{\partial y}\big) \dif x \dif y 
 \end{align}
  مساوات     \حوالہ{مساوات_سمتی_تکمل_چار_مجموعہ} کہتی ہے   ، \اصطلاح{ چھلے دار  }\فرہنگ{چھلے دار}\حاشیہب{annular}\فرہنگ{annular} خطہ \عددی{R}
-  پر  \عددی{ (\partial N/\partial x) - (\partial M/\partial y) } کا دہرا  تکمل،  \عددی{R} کی مکمل  سرحد پر چلتے ہوئے \عددی{R} بائیں ہاتھ رکھ کر  \عددی{ M \dif x + N \dif y } کے   لکیری تکمل   کے برابر ہو گا  ( شکل     \حوالہء{14.35} ب   )  ۔
+  پر  \عددی{ (\partial N/\partial x) - (\partial M/\partial y) } کا دہرا  تکمل،  \عددی{R} کی مکمل  سرحد پر چلتے ہوئے \عددی{R} بائیں ہاتھ رکھ کر  \عددی{ M \dif x + N \dif y } کے   لکیری تکمل   کے برابر ہو گا  ( شکل     \حوالہ{شکل_سمتی_میدان_تکمل_چار_خطے}- ب   )  ۔
 %---------------------
 %---------------------
 \ابتدا{مثال}\شناخت{مثال_سمتی_تکمل_چھلے_دار}
