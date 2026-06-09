@@ -1,3 +1,8 @@
+%done till start of ex14.4 questions.
+%only Q1 to Q10 of ex14.4 is complete in the next tex file.
+%audio of ex14.4 is missing. must do its audio
+%edited and figures complete in this file
+%done p1093 of finney
 \باب{سمتی میدان میں تکمل}\شناخت{باب_سمتی_میدان_میں_تکمل}
 \موٹا{ایک جائزہ}\quad
 اس باب  کا موضوع  سمتی میدان میں تکمل ہے۔ اس باب کی ریاضی کو برقناطیسیت  کے خواص   بیان کرنے کے لئے، تاروں میں حرارت  کے بہاؤ پر غور ، اور  مصنوعی سیارہ کو  مدار میں منتقل کرنے  کے لئے درکار توانائی کے حصول کے لئے استعمال کیا جاتا ہے۔
@@ -2575,5 +2580,454 @@ $\text{\RL{گردش \(\kvec{F}\)}}(x_0,y_0)<0$\\
 
 مسئلہ گرین کے لئے ضروری ہے  دو مفروضے مطمئن ہوتے ہوں۔ اول ہمیں \عددی{M} اور \عددی{N} پر ایسا شرائط مسلط کرنے ہوں گے کہ مسئلہ گرین میں پائے جانے والے تکملات موجود ہوں۔ہم فرض کرتے ہیں کہ کسی ایسے کھلا خطہ، جس میں \عددی{C} اور \عددی{R} پائے جاتے ہوں، کے ہر نقطہ پر \عددی{M} اور \عددی{N} اور ان کے یک رتبی تفرقات استمراری ہوں گے۔ دوم، ہمیں منحنی \عددی{C} پر ہندسی شرائط مسلط کرنے ہوں گے۔ منحنی سادہ، بند اور ایسے  ٹکڑوں پر مشتمل ہونی چاہیے جن کی ہمراہ \عددی{M} اور \عددی{N} قابل تکمل ہوں۔ ہم فرض کرتے ہیں کہ \عددی{C} ٹکڑوں میں ہموار ہے۔ ہم جو ثبوت  مسئلہ گرین کے لئے پیش کرتے ہیں اس میں \عددی{R} کی شکل و صورت پر بھی شرائط مسلط کئے گئے ہیں۔ اعلٰی نصاب کی کتب میں نسبتاً کم شرائط پر مبنی ثبوت موجود ہیں۔ آئیں پہلے چند مثالیں دیکھیں۔
 %-----------------------------------------
-%p1088  next is example 3
 
+\ابتدا{مثال}
+مسئلہ گرین کے دونوں روپ کی تصدیق میدان
+\begin{align*}
+\kvec{F}(x,y)=(x-y)\ai+x\aj
+\end{align*}
+کے لئے اکائی دائرہ \عددی{C} میں   محدود  خطہ \عددی{R} پر کریں۔
+\begin{align*}
+C:\quad \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj,\quad 0\le t\le 2\pi
+\end{align*}
+
+
+ حل:\quad
+ ہم  پہلے تفاعلات، تفرق اور تفریق کو  \عددی{t} کی صورت میں لکھتے ہیں۔ 
+\begin{align*}
+  M = \cos t - \sin t,  \quad \dif x = \dif\,(\cos t )= -\sin t\dif t \\ 
+  N = \cos t, \quad  \dif y = \dif\,(\sin t) = \cos t\dif t \\ 
+   \frac{\partial M}{\partial x} =1, \quad \frac{\partial M}{\partial y} = -1,\quad  \frac{\partial N}{\partial x} =1, \quad \frac{\partial N}{\partial y} = 0  
+\end{align*}
+ مساوات \حوالہ{مساوات_سمتی_تکمل_اخراج_اور_تکمل_پھیلاو}   کے دو    اطراف درج ذیل روپ اختیار کرتے ہیں۔   
+\begin{align*}
+     \varointctrclockwise_C M \dif y  - N \dif x &= \int_{t=0}^{t= 2\pi} (\cos t - \sin t)(\cos t \dif t) - (\cos t)(-\sin t \dif t) \\     
+     &= \int_{0}^{2\pi} \cos^2 t \dif t = \pi \\     
+     \iint_R \big(\frac{\partial M}{\partial x} + \frac{\partial N}{\partial y}\big) \dif x \dif y &=  \iint_R (1 + 0) \dif x \dif y \\     &= \iint_R \dif x \dif y = \text{\RL{اکائی دائرے کا رقبہ}} = \pi 
+\end{align*}
+ مساوات \حوالہ{مساوات_سمتی_تکمل_اخراج_اور_تکمل_گردش} کے دو  اطراف درج ذیل روپ اختیار کرتے ہیں۔ 
+\begin{align*}
+     \varointctrclockwise_c M \dif x  + N \dif y &= \int_{t=0}^{t= 2\pi} (\cos t - \sin t)(-\sin t \dif t) + (\cos t)(\cos t \dif t) \\     &= \int_{0}^{2\pi} (-\sin t\cos t + 1) \dif t = 2\pi \\ 
+     \iint_R \big(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\big) \dif x \dif y &=  \iint_R (1 - (-1)) \dif x \dif y = 2 \iint_R \dif x \dif y = 2\pi 
+\end{align*}
+ %
+%
+\انتہا{مثال} 
+ 
+%--------------------------------
+ 
+   
+
+%---------------
+\حصہء{مسئلہ گرین استعمال کرتے ہوئے لکیری تکملات کی قیمت کا تلاش} 
+ہم مختلف منحنی  کے سر آپس میں جوڑ کر ایک بند منحنی  \عددی{C}  حاصل کر سکتے ہیں؛ منحنی     \عددی{C}  پر لکیری تکمل کی قیمت تلاش کرنے کا عمل   لمبا ہو سکتا ہے؛   چونکہ اس میں  \عددی{C} کے بہت سارے  مختلف تکملات کی قیمت حاصل کرنی ہو                           گی۔  لیکن،   اگر  \عددی{C} ایسے  خطہ \عددی{R}  کی حد بندی کرتی ہو، جس پر مسئلہ گرین کا اطلاق ہوتا ہو، ہم مسئلہ گرین استعمال کر کے \عددی{C} پر لکیری تکمل کو  \عددی{R} پر   دہرا  تکمل  میں تبدیل کر سکتے ہیں۔    
+%------------------------- 
+ %ex 4
+\ابتدا{مثال}
+ درج ذیل تکمل کی قیمت تلاش کریں
+\begin{align*}
+  \varointctrclockwise_C xy \dif y - y^2 \dif x  
+\end{align*}
+ جہاں ربع اول میں لکیر \عددی{x=1} اور \عددی{y=1} چوکور   \عددی{C} کاٹتی  ہیں۔  
+ 
+ 
+
+ حل:\quad
+ ہم مسئلہ گرین کے  دو    روپ    میں سے کوئی ایک استعمال  کر  کے لکیری تکمل کو چوکور پر  دہرا تکمل میں تبدیل کر سکتے ہیں۔
+\begin{enumerate}[1.]
+\item
+   مساوات  \حوالہ{مساوات_سمتی_تکمل_اخراج_اور_تکمل_پھیلاو}    استعمال کرتے  ہیں: \عددی{M = xy}،  \عددی{N = y^2}  لے کر ،  جہاں چوکور کی سرحد \عددی{C}    اور اس کا  اندرون  \عددی{R}    ہے،   ذیل حاصل ہوگا۔ 
+\begin{align*}
+\varointctrclockwise_C xy \dif y - y^2 \dif x &= \iint_R (y + 2y) \dif x \dif y = \int_0^1 \int_0^1 3y \dif x\dif y \\   
+  &= \int_0^1 \big[3xy\big]_{x=0}^{x=1} \dif y = \int_0^1 3y \dif y =\frac{3}{2}y^2\big]_0^1= \frac{3}{2} 
+\end{align*}
+\item
+  مساوات \حوالہ{مساوات_سمتی_تکمل_اخراج_اور_تکمل_گردش} استعمال کرتے  ہیں: \عددی{M = iy^2} اور \عددی{N = xy} لینے سے یہی نتیجہ حاصل ہو گا۔ 
+\begin{align*}
+\varointctrclockwise_C -y^2 \dif x + xy \dif y = \iint_R (y - (-2y)) \dif x \dif y = \frac{3}{2}  
+\end{align*}
+\end{enumerate}
+
+\انتہا{مثال} 
+%---------------------- 
+ %ex 5  
+%---------------------
+\ابتدا{مثال}
+ میدان \عددی{ \kvec{F}(x,y) = x \ai + y^2 \aj} کا اس چوکور سے  خارجی  بہاو تلاش کریں جس کو لکیریں  \عددی{ x = \pm 1} اور  \عددی{ y = \pm 1} گھیرتی ہیں۔  
+
+ حل:\quad
+ لکیری تکمل سے بہاو حاصل کرنے کے لئے چار تکملات کی ضرورت پیش آئے گی؛    چوکور کے ہر ضلع کے لئے   ایک  تکمل کرنا ہوگا۔  مسئلہ گرین سے ہم  لکیری تکمل کو  ایک  دہرا تکمل میں تبدیل کر سکتے ہیں۔ ہم  \عددی{M = x} ،  \عددی{N = y^2} ،  چوکور \عددی{C}،     اور چوکور کا اندرون \عددی{R}   لیتے ہیں۔ یوں درج ذیل ہوگا۔ 
+\begin{align*}
+     \text{بہاو} &=\varointctrclockwise_C \kvec{F} \cdot \kvec{n} \dif s =\varointctrclockwise_C  M \dif y - N \dif x \\    
+      &= \iint_R \big(\frac{\partial M}{\partial x} + \frac{\partial N}{\partial y}\big) \dif x \dif y\quad\quad\quad  \text{\RL{(مسئلہ گرین)}}\\    
+       &= \int_{-1}^{1} \int_{-1}^{1} (1 + 2y) \dif x \dif y = \int_{-1}^{1} \big[x + 2xy\big]_{x = -1}^{x = 1} \dif y \\   
+         &= \int_{-1}^{1} (2 + 4y) \dif y = \big[2y + 2y^2\big]_{-1}^{1} = 4 
+\end{align*}
+ 
+
+\انتہا{مثال} 
+%----------------------  
+%---------------
+\حصہء{ مسئلہ  گرین کا ثبوت (خصوصی  خطے)}
+ فرض کریں مستوی \عددی{ xy} میں  \عددی{C}   ایسی ہموار، سادہ، منحنی  ہے جس کو محور کے متوازی   کوئی   لکیر دو  سے زیادہ نقطوں پر  نہیں کاٹتی۔  فرض کریں، منحنی  \عددی{C}  خطہ  \عددی{R}    گھیرتی    ہے، اور ایسے کھلا خطہ میں جس میں  \عددی{C} اور  \عددی{R} دونوں  پائے جاتے ہوں \عددی{M}، \عددی{N}،   اور ان کے یک گنّا جزوی تفرق  ہر نقطہ پر استمراری ہیں۔ ہم مسئلہ گرین کا دائری  بہاو  و  گردش روپ:
+\begin{align}\label{مساوات_سمتی_تکمل_خصوصی_پر_ثبوت}
+\varointctrclockwise_C N \dif x + N \dif y = \iint_R \big(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\big) \dif x \dif y 
+\end{align}
+================
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\begin{tikzpicture}[declare function={f(\x)=3+ 2*cos(\x)*cos(30) - 1*sin(\x)*sin(30);g(\x)=2 + 2*cos(\x)*sin(30) + 1*sin(\x)*cos(30);}]
+\begin{axis}[xmin=0,xmax=4,ymin=0,ymax=3.5,clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,}, enlarge x limits=0.3,
+ enlarge y limits=0.1,xtick={f(170),f(350),f(50)} ,xticklabels={$a$,$b$,$x$}, ytick={\empty},extra x tick style={xticklabel style={yshift=0.5ex,anchor=south}},
+%extra x ticks={-0.7},extra x tick labels={$a$}
+]
+\addplot[no markers, domain=0:360,smooth , postaction = {decorate}, decoration = {markings, mark = at position 0.4 with {\arrow{Stealth[length = 2mm, bend]}}, mark = at position 0.85 with {\arrow{Stealth[length = 2mm, bend]}}}] ({f(x)},{g(x)});
+\addplot[only marks,mark=*,samples at={170,350}] ({f(x)},{g(x)});
+\addplot[]coordinates {({f(50)},{g(50)})} node[above ,xshift=1em]{\small $P_2(x,f_2(x))$};
+\addplot[dashed]coordinates {({f(50)},{g(50)}) ({f(50)},0)}{};
+\addplot[dashed]coordinates {({f(170)},{g(170)}) ({f(170)},0)}{};
+\addplot[dashed]coordinates {({f(350)},{g(350)}) ({f(350)},0)}{};
+\addplot[dashed]coordinates {({f(120)},{g(120)})}node[above,rotate=45]{\small $C_2:y=f_2(x)$};
+\addplot[dashed]coordinates {({f(210)},{g(210)})}node[below,xshift=1.6em]{\small $C_1:y=f_1(x)$};
+\addplot[]coordinates {({f(270)},{g(270)})}node[right,fill=white,xshift=0.7em,yshift=-0.5em]{\small $P_1(x,f_1(x))$};
+\addplot[dashed]coordinates {({f(120)},{g(120)})}node[xshift=3em]{\small $R$};
+\end{axis}
+\end{tikzpicture}
+\caption{منحنی \عددی{C_1} جو \عددی{y=f_1(x)}  کی ترسیم ہے اور \عددی{C_2} جو \عددی{y=f_2(x)} کی ترسیم ہے ، مل کر  سرحدی منحنی \عددی{C} دیتی ہیں۔}
+\label{شکل_سمتی_میدان_تکمل_گرین_مخصوص_خطے}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\begin{tikzpicture}[declare function={f(\x)=3+ 2*cos(\x)*cos(30) - 1*sin(\x)*sin(30);g(\x)=2 + 2*cos(\x)*sin(30) + 1*sin(\x)*cos(30);}]
+\begin{axis}[xmin=0,xmax=4,ymin=0,ymax=3.5,,clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,}, enlarge x limits=0.3,
+ enlarge y limits=0.1,ytick={g(220),g(40),g(330)} ,yticklabels={$c$,$d$,$y$}, xtick={\empty},extra x tick style={xticklabel style={yshift=0.5ex,anchor=south}},
+%extra x ticks={-0.7},extra x tick labels={$a$}
+]
+\addplot[no markers, domain=0:360,smooth , postaction = {decorate}, decoration = {markings, mark = at position 0.4 with {\arrow{Stealth[length = 2mm, bend]}}, mark = at position 0.85 with {\arrow{Stealth[length = 2mm, bend]}}}] ({f(x)},{g(x)});
+\addplot[only marks,mark=*,samples at={40,220}] ({f(x)},{g(x)});
+\addplot[]coordinates {({f(330)},{g(330)})}node[right,]{\small $Q_2(x,f_1(x))$};
+\addplot[]coordinates {({f(120)},{g(120)})} node[right]{\small $Q_1(x,f_2(x))$};
+\addplot[dashed]coordinates {({f(40)},{g(40)}) (0,{g(40)})}{};
+\addplot[dashed]coordinates {({f(220)},{g(220)}) (0,{g(220)})}{};
+\addplot[dashed]coordinates {({f(330)},{g(330)}) (0,{g(330)})}{};
+\addplot[dashed]coordinates {({f(290)},{g(290)})}node[below,rotate=45]{\small $C_2':x=g_2(x)$};
+\addplot[dashed]coordinates {({f(120)},{g(120)})}node[above,rotate=45,fill=white,yshift=0.5em]{\small $C_1':x=g_1(x)$};
+\addplot[dashed]coordinates {({f(120)},{g(120)})}node[xshift=2em,yshift=-3em]{\small $R$};
+\end{axis}
+\end{tikzpicture}
+\caption{منحنی \عددی{C_1'} جو \عددی{x=g_1(y)}  کی ترسیم ہے اور \عددی{C_2'} جو \عددی{x=g_2(y)} کی ترسیم ہے ، مل کر  سرحدی منحنی \عددی{C} دیتی ہیں۔}
+\label{شکل_سمتی_میدان_تکمل_گرین_مخصوص_خطے_دوم}
+\end{minipage}
+\end{figure}
+===================
+
+ ثابت کرنا چاہتے  ہیں۔     شکل      \حوالہ{شکل_سمتی_میدان_تکمل_گرین_مخصوص_خطے} میں  \عددی{C}  دو سمت بند حصوں کا مجموعہ    دکھایا گیا ہے۔  
+\begin{align*}
+     C_1: y &= f_1(x), \quad  a \leq x \leq b, && C_2:  y = f_2(x), \quad  b \geq x \geq a 
+\end{align*}
+ نقطہ  \عددی{ a} اور    نقطہ \عددی{b} کے بیچ کسی بھی   \عددی{x} کے لئے ہم  \عددی{\frac{\partial M}{\partial y}} کا تکمل  \عددی{  y}  کے لحاظ سے  \عددی{ y = f_1(x)} تا \عددی{  y = f_2(x)}    لے سکتے ہیں، جو درج ذیل دیگا۔ 
+ \begin{align}
+ \int_{f_1(x)}^{f_2(x)} \frac{\partial M}{\partial y}\dif y= M(x,y) \big]_{y=f_1(x)}^{y=f_2(x)}=M(x,f_2(x))-M(x,f_1(x))
+ \end{align}
+ اس کو ہم    \عددی{x} کے لحاظ سے \عددی{a}  تا    \عددی{b}  تکمل کر سکتے ہیں۔ 
+\begin{align*}
+\int_a^b \int_{f_1(x)}^{f_2(x)}\frac{\partial M}{\partial y} \dif y \dif x&= \int_{a}^{b}[M(x, f_2(x)) - M(x, f_1(x))] \dif x \\     &= - \int_{b}^{a} M(x, f_2(x)) \dif x - \int_{a}^{b} M(x, f_1(x)) \dif x \\     &= - \int_{C_2} M \dif x -\int_{C_1} M \dif x \\     &= -\varointctrclockwise_C M \dif x 
+\end{align*}
+ یوں درج ذیل ہوگا۔ 
+\begin{align}\label{مساوات_سمتی_تکمل_آدھا_الف}
+\varointctrclockwise_C M \dif x = \iint_R \big(-\frac{\partial M}{\partial y}\big) \dif x \dif y 
+\end{align}
+
+ مساوات    \حوالہ{مساوات_سمتی_تکمل_آدھا_الف}  ہمیں مساوات    \حوالہ{مساوات_سمتی_تکمل_خصوصی_پر_ثبوت}میں درکار نتائج کا نصف حصہ دیتی ہے۔ جیسا شکل   \حوالہ{شکل_سمتی_میدان_تکمل_گرین_مخصوص_خطے_دوم} عندیہ دیتی ہے،  اس کا دوسرا نصف    حصہ،   \عددی{\frac{\partial N}{\partial x}} کا تکمل  ، پہلے  \عددی{x}  اور بعد  میں \عددی{y} کے لحاظ سے ، لے کر حاصل ہو گا ۔ اس میں شکل    \حوالہ{شکل_سمتی_میدان_تکمل_گرین_مخصوص_خطے}کی منحنی \عددی{C}  کو درج ذیل   دو  سمت بند حصوں  میں تقسیم کیا گیا ہے ۔
+ \begin{align*}
+ C_1': x = g_1(y), \quad d \geq y \geq c \quad \quad \text{\RL{اور}}\quad \quad  C_2': x = g_2(y), \quad c \leq y \leq d
+ \end{align*}
+اس دہرا تکمل کا نتیجہ درج ذیل ہے۔ 
+\begin{align}\label{مساوات_سمتی_تکمل_دوسرا_حصہ}
+\varointctrclockwise_C N \dif y = \iint_R \frac{\partial N}{\partial x} \dif x \dif y 
+\end{align}
+ مساوات   \حوالہ{مساوات_سمتی_تکمل_آدھا_الف} اور   مساوات   \حوالہ{مساوات_سمتی_تکمل_دوسرا_حصہ}ملا کر مساوات     \حوالہ{مساوات_سمتی_تکمل_خصوصی_پر_ثبوت}حاصل ہو گی۔ یوں ثبوت مکمل ہوتا ہے۔   
+
+%---------------
+
+\حصہء{دیگر خطوں کو  ثبوت کی توسیع} 
+ شکل    \حوالہ{شکل_سمتی_میدان_تکمل_مستطیل_سمت_بند_ٹکڑے}میں لکیر \عددی{x=a}، \عددی{x=b}، \عددی{y=c}، اور \عددی{y=d} مستطیل    خطہ کی سرحد کو دو سے زیادہ نقطوں  پر مس کرتی  ہیں لہٰذا مسئلہ  گرین کے ثبوت میں پیش   دلائل اس مستطیل  خطہ کے لئے قابل قبول نہیں۔ البتہ سرحد  \عددی{C} کو چار سمت بند لکیری  قطعات 
+\begin{align*}
+     C_1: \quad y &=c, \quad a \leq x \leq b, \quad\quad \quad C_2:\quad  x=b,\quad  c \leq y \leq d,\\     
+     C_3:\quad y&=d,\quad b \geq x \geq a, \quad\quad\quad C_4: \quad x=a,\quad d \geq y \geq c, 
+\end{align*}
+ میں تقسیم کر کے  ہم دلائل میں درج ذیل ترمیم کر سکتے ہیں۔ 
+ 
+\begin{figure}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=3+ 2*cos(\x)*cos(30) - 1*sin(\x)*sin(30);g(\x)=2 + 2*cos(\x)*sin(30) + 1*sin(\x)*cos(30);}]
+\begin{axis}[clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,}, enlarge x limits=0.3,
+ enlarge y limits=0.1,xtick={1,3},xticklabels={$a$,$b$},ytick={1,2} ,yticklabels={$c$,$d$},extra x tick style={xticklabel style={yshift=0.5ex,anchor=south}},
+extra y ticks={},
+extra y tick labels={},
+extra y tick style={
+        tick label style={
+            yshift={\ticknum == 0 ? -10pt : 20pt},
+            yshift={\ticknum == 1 ? -10pt : -10pt}
+}}]
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.17 with {\arrow{Stealth[length = 2mm, bend]}}, mark = at position 0.42 with {\arrow{Stealth[length = 2mm, bend]}},mark = at position 0.67 with {\arrow{Stealth[length = 2mm, bend]}},mark = at position 0.92 with {\arrow{Stealth[length = 2mm, bend]}}}
+] coordinates {(1,1) (3,1) (3,2) (1,2) (1,1)};
+\addplot[dashed]coordinates {(1,0)(1,1)};
+\addplot[dashed]coordinates {(3,0)(3,1)};
+\addplot[dashed]coordinates {(0,1)(1,1)};
+\addplot[dashed]coordinates {(0,2)(1,2)};
+\addplot[]coordinates {(2,1.5)}node[]{$R$};
+\addplot[draw=none]coordinates {(2,1)}node[below]{$C_1:y=c$};
+\addplot[draw=none]coordinates {(2,2)}node[above]{$C_3:y=d$};
+\addplot[draw=none]coordinates {(1,1.5)}node[left,yshift=0.5em]{$C_4$}node[below left]{$x=a$};
+\addplot[draw=none]coordinates {(3,1.5)}node[right]{$C_2:x=b$};
+\end{axis}
+\end{tikzpicture}
+\caption{مستطیل کے لئے مسئلہ گرین کا ثبوت پیش کرنے کی خاطر ہم سرحد کو چار سمت بند لکیروں میں تقسیم کرتے ہیں۔}
+\label{شکل_سمتی_میدان_تکمل_مستطیل_سمت_بند_ٹکڑے}
+\end{figure}
+
+
+ مساوات \حوالہ{مساوات_سمتی_تکمل_دوسرا_حصہ}    کے ثبوت کی طرز پر چلتے ہوئے  درج ذیل ہوگا۔ 
+ \begin{gather}
+\begin{aligned}\label{مساوات_سمتی_تکمل_درمیان_ثبوت}
+     \int_{c}^{d} \int_{a}^{b} \frac{\partial N}{\partial x} \dif x \dif y &= \int_{c}^{d} (N(b,y)-N(a,y)) \dif y\\  
+        &= \int_{c}^{d} N(b,y) \dif y + \int_{d}^{c} N(a,y)) \dif y\\   
+          &= \int_{C_2} N \dif y + \int_{C_4} N \dif y 
+\end{aligned}
+\end{gather}
+ اب \عددی{C_1} اور  \عددی{C_3} پر \عددی{  y}  مستقل ہے،  لہٰذا \عددی{\int_{C_1} N \dif y = \int_{C_3} N \dif y = 0} ہوگا اور ہم مساوات   \حوالہ{مساوات_سمتی_تکمل_درمیان_ثبوت}    چھیڑے بغیر، اس کے کے دائیں ہاتھ \عددی{\int_{C_1} N \dif y + \int_{C_3} N \dif y} جمع کر سکتے ہیں۔ ایسا کرنے سے درج ذیل ہوگا۔  
+\begin{align}\label{مساوات_سمتی_تکمل_نتیجہ_الف}
+     \int_c^d \int_{a}^{b} \frac{\partial N}{\partial x} \dif x \dif y = \varointctrclockwise_C N \dif y 
+\end{align}
+ اسی طرح ہم  درج ذیل  دکھا سکتے ہیں۔ 
+\begin{align}\label{مساوات_سمتی_تکمل_نتیجہ_ب}
+     \int_{a}^{b} \int_c^d  \frac{\partial M}{\partial y} \dif y \dif x  = -\varointctrclockwise_C M \dif x 
+\end{align}
+ مساوات   \حوالہ{مساوات_سمتی_تکمل_نتیجہ_الف}  سے مساوات     \حوالہ{مساوات_سمتی_تکمل_نتیجہ_ب}منفی کر کے  درج ذیل نتیجہ   دوبارہ حاصل ہو گا۔ 
+\begin{align}
+\varointctrclockwise_C M \dif x + N \dif y = \iint_R \big(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\big) \dif x \dif y 
+\end{align}
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={f(\x)=3+1*cos(\x);g(\x)=1+1*sin(\x);}]
+\begin{axis}[axis equal,clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,}, enlarge x limits=0.3,
+ enlarge y limits=0.1,xtick={\empty},xticklabels={$a$,$b$},ytick={\empty} ,yticklabels={$c$,$d$},extra x tick style={xticklabel style={yshift=0.5ex,anchor=south}},
+%extra x ticks={-0.7},extra x tick labels={$a$}
+]
+\addplot[thick,domain=0:180, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.25 with {\arrow{Stealth[length = 2mm, bend]}}}] ({f(x)},{g(x)});
+\addplot[thick,no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.25 with {\arrow{Stealth[length = 2mm, bend]}}}]coordinates {(2,1)(4,1)};
+\addplot[]({f(90)},{g(90)})node[above]{$C$}node[below,yshift=-2em]{$R$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={fa(\x)=2*cos(\x);ga(\x)=2*sin(\x);fb(\x)=1*cos(\x);gb(\x)=1*sin(\x);}]
+\begin{axis}[axis equal,clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,}, enlarge x limits=0.3,
+ enlarge y limits=0.1,xtick={1,2},xticklabels={$a$,$b$},ytick={1,2} ,yticklabels={$a$,$b$},extra x tick style={xticklabel style={yshift=0.5ex,anchor=south}},
+%extra x ticks={-0.7},extra x tick labels={$a$}
+]
+\addplot[thick,domain=0:90, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}
+] ({fa(\x)},{ga(\x)}) node [pos=0.7, above right] {$C$} node [pos=0.5,shift={(45:-0.5)}] {$R$};
+\addplot[thick,domain=0:90, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}
+] ({fb(\x)},{gb(\x)});
+\addplot[thick,, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}]coordinates {(0,2) (0,1)};
+\addplot[thick,, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}]coordinates {(1,0)(2,0)};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{دیگر خطے جن پر مسئلہ گرین کا اطلاق ہوگا۔}
+\label{شکل_سمتی_میدان_تکمل_مستطیل_دیگر_خطے_گرین}
+\end{figure}
+%====================
+\begin{figure}
+\centering
+\begin{tikzpicture}[declare function={fa(\x)=2*cos(\x);ga(\x)=2*sin(\x);fb(\x)=1*cos(\x);gb(\x)=1*sin(\x);}]
+\begin{axis}[axis equal,clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,},xtick={-1,-2,1,2},xticklabels={$-a$,$-b$,$a$,$b$},ytick={\empty} ,yticklabels={$a$,$b$},enlargelimits=true, extra y ticks={0.8,2.2},extra y tick labels={$a$,$b$},extra y tick style={tick style={draw=none}}]
+\addplot[name path=kpathA,thick,domain=0:90, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] ({fa(x)},{ga(x)}) node [pos=0.5, above right] {$C_1$}node[pos=0.25,left,xshift=-1em]{$R_1$};
+\addplot[name path=kpathB,thick,domain=0:90, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] ({fb(x)},{gb(x)})node[pos=0.5,below left]{$C_1$};
+\addplot[thick]coordinates {(0,2) (0,1)};
+\addplot[thick,, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}]coordinates {(1,0)(2,0)}node[pos=0.5,below]{$C_1$};
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] coordinates {(0.15,1.9)(0.15,1.1)}node[pos=0.5,right]{$C_1$};
+%
+\addplot[name path=kpathA,thick,domain=90:180, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] ({fa(x)},{ga(x)}) node [pos=0.5, above left] {$C_2$}node[pos=0.75,right,xshift=1em]{$R_2$};
+\addplot[name path=kpathB,thick,domain=90:180, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] ({fb(x)},{gb(x)})node[pos=0.5,below right]{$C_2$};
+\addplot[thick]coordinates {(0,2) (0,1)};
+\addplot[thick,, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}]coordinates {(-1,0)(-2,0)}node[pos=0.5,below]{$C_2$};
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] coordinates {(-0.15,1.9)(-0.15,1.1)}node[pos=0.5,left]{$C_2$};
+\end{axis}
+\end{tikzpicture}
+\caption{خطہ \عددی{R_1} اور \عددی{R_2} کو ملا کر خطہ \عددی{R} حاصل کیا گیا ہے۔}
+\label{شکل_سمتی_میدان_تکمل_نعل}
+\end{figure}
+
+
+ شکل    \حوالہ{شکل_سمتی_میدان_تکمل_مستطیل_دیگر_خطے_گرین}طرز کے خطوں کو بھی اتنی ہی  آسانی  سے نپٹا جا سکتا ہے۔ مساوات     \حوالہ{مساوات_سمتی_تکمل_خصوصی_پر_ثبوت}کا اطلاق اب بھی ہوگا۔ شکل     \حوالہ{شکل_سمتی_میدان_تکمل_نعل} میں گھوڑے کے نعل کی شکل کا خطہ \عددی{R} دکھایا گیا ہے؛  اور ہم دیکھتے  ہیں کہ خطہ \عددی{R_1} ، خطہ \عددی{R_2}  اور ان کی سرحد اکٹھا کرتے ہوئے مساوات   \حوالہ{مساوات_سمتی_تکمل_خصوصی_پر_ثبوت}   کا اطلاق  ہوگا۔  مسئلہ  گرین کا اطلاق   \عددی{C_1}، \عددی{R_1} اور \عددی{C_2}، \عددی{R_2}  پر  ہوگا،جس سے درج ذیل حاصل ہوگا۔ 
+\begin{align*}
+\int_{C_1}M \dif x+N \dif y&=\iint_{R_1}\big(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\big) \dif x \dif y \\     
+\int_{C_2} M \dif x + N \dif y &= \iint_{R_2} \big(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\big) \dif x \dif y 
+\end{align*}
+ ان  مساوات کو آپس میں جمع کرتے ہوئے ہم دیکھتے ہیں کہ محور \عددی{y}    پر \عددی{C_1} کے لئے  \عددی{b} تا   \عددی{a}  لکیری تکمل کو \عددی{C_2} پر اسی قطع  پر   لیکن مخالف رخ کا تکمل کاٹتا ہے۔ یوں   ذیل ہو گا
+\begin{align*}
+\varointctrclockwise M \dif x + N \dif y = \iint_R \big(\frac{\partial N}{\partial x} 
+- \frac{\partial M}{\partial y}\big) \dif x \dif y, 
+\end{align*}
+ جہاں   \عددی{x} محور کے دو قطعات   \عددی{-b} تا \عددی{-a} اور \عددی{a} تا \عددی{b} اور دو نصف دائرے مل کر \عددی{C} دیتے ہیں ،  اور  جہاں خطہ  \عددی{R} منحنی  \عددی{C} کے اندر پایا جاتا ہے۔
+ 
+\begin{figure}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={fa(\x)=2*cos(\x);ga(\x)=2*sin(\x);fb(\x)=1*cos(\x);gb(\x)=1*sin(\x);}]
+\begin{axis}[axis equal,clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,},xtick={\empty},xticklabels={$-a$,$-b$,$a$,$b$},ytick={\empty} ,yticklabels={$a$,$b$},enlargelimits=true, extra x ticks={0.8,2.2},extra x tick labels={$a$,$b$},extra x tick style={tick style={draw=none}}]
+\addplot[name path=kpathA,thick,domain=0:90, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] ({fa(x)},{ga(x)}) node [pos=0.5, above right] {$C_1$}node[pos=0.35,left,xshift=-1em]{$R_1$};
+\addplot[name path=kpathB,thick,domain=0:90, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] ({fb(x)},{gb(x)})node[pos=0.5,below left]{$C_1$};
+\addplot[thick]coordinates {(0,2) (0,1)};
+\addplot[thick]coordinates {(1,0)(2,0)};
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] coordinates {(0.15,1.9)(0.15,1.1)}node[pos=0.5,right]{$C_1$};
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] coordinates {(1.1,0.15)(1.9,0.15)}node[pos=0.6,above]{$C_1$};
+%
+\addplot[name path=kpathA,thick,domain=90:180, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] ({fa(x)},{ga(x)}) node [pos=0.5, above left] {$C_2$}node[pos=0.65,right,xshift=1em]{$R_2$};
+\addplot[name path=kpathB,thick,domain=90:180, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] ({fb(x)},{gb(x)})node[pos=0.5,below right]{$C_2$};
+\addplot[thick]coordinates {(0,2) (0,1)};
+\addplot[thick]coordinates {(-1,0)(-2,0)};
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] coordinates {(-0.15,1.9)(-0.15,1.1)}node[pos=0.5,left]{$C_2$};
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] coordinates {(-1.9,0.15)(-1.1,0.15)}node[pos=0.6,above]{$C_2$};
+%
+\addplot[name path=kpathA,thick,domain=180:270, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] ({fa(x)},{ga(x)}) node [pos=0.5, below left] {$C_3$}node[pos=0.35,right,xshift=0.5em]{$R_3$};
+\addplot[name path=kpathB,thick,domain=180:270, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] ({fb(x)},{gb(x)})node[pos=0.5,above  right]{$C_3$};
+\addplot[thick]coordinates {(0,-2) (0,-1)};
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] coordinates {(-0.15,-1.1) (-0.15,-1.9)}node[pos=0.5,left]{$C_3$};
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] coordinates {(-1.1,-0.15) (-1.9,-0.15)}node[pos=0.6,below]{$C_3$};
+%
+\addplot[name path=kpathA,thick,domain=270:360, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] ({fa(x)},{ga(x)}) node [pos=0.5, below right] {$C_4$}node[pos=0.6,left,xshift=-0.5em]{$R_4$};
+\addplot[name path=kpathB,thick,domain=270:360, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] ({fb(x)},{gb(x)})node[pos=0.5,above  left]{$C_4$};
+\addplot[thick]coordinates {(0,-2) (0,-1)};
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrow{Stealth[length = 2mm, bend]}}}] coordinates {(0.15,-1.1) (0.15,-1.9)}node[pos=0.5,right]{$C_4$};
+\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.5 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] coordinates {(1.1,-0.15) (1.9,-0.15)}node[pos=0.6,below]{$C_4$};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={fa(\x)=2*cos(\x);ga(\x)=2*sin(\x);fb(\x)=1*cos(\x);gb(\x)=1*sin(\x);}]
+\begin{axis}[axis equal,clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,},xtick={\empty},xticklabels={$-a$,$-b$,$a$,$b$},ytick={\empty} ,yticklabels={$a$,$b$},enlargelimits=true, extra x ticks={0.7,2.2},extra x tick labels={$a$,$b$},extra x tick style={tick style={draw=none}}]
+\addplot[name path=kpathA,thick,domain=0:360,smooth, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.125 with {\arrow{Stealth[length = 2mm, bend]}}}, decoration = {markings, mark = at position 0.375 with {\arrow{Stealth[length = 2mm, bend]}}}, decoration = {markings, mark = at position 0.625 with {\arrow{Stealth[length = 2mm, bend]}}}, decoration = {markings, mark = at position 0.875 with {\arrow{Stealth[length = 2mm, bend]}}}] ({fa(x)},{ga(x)})node[pos=0.55,right,xshift=0.5em]{$R$} coordinate[pos=0.45](kTest);
+\addplot[name path=kpathB,thick,domain=0:360, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.125 with {\arrowreversed{Stealth[length = 2mm, bend]}}},decoration = {markings, mark = at position 0.375 with {\arrowreversed{Stealth[length = 2mm, bend]}}},decoration = {markings, mark = at position 0.625 with {\arrowreversed{Stealth[length = 2mm, bend]}}},decoration = {markings, mark = at position 0.875 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] ({fb(x)},{gb(x)});
+\addplot []coordinates {(-1.8,1)(-2.5,1)}node[left]{\RL{{خطہ \عددی{R} کی سرحد}}};
+\addplot []coordinates {(-1.0,0.5)(-2.5,0.8)};
+\end{axis}
+\end{tikzpicture}
+\caption{}
+\end{subfigure}
+\caption{
+خطہ \عددی{R} چار ٹکڑوں پر مشتمل ہے۔ نلکی محدد میں اندرونی دائرے کے لئے \عددی{r=a} اور بیرونی کے لئے \عددی{r=b} ہے جبکہ  خطہ کے لئے \عددی{a\le r\le b} ہے۔}
+\label{شکل_سمتی_میدان_تکمل_چار_خطے}
+\end{figure}
+
+
+
+   مختلف سرحدوں پر لکیری تکملات  جمع کر کے ایک سرحد پر تکمل کے حصول کی ترکیب  کو متناہی تعداد کے ذیلی خطوں تک وسعت دی جا سکتی ہے۔ شکل\حوالہ{شکل_سمتی_میدان_تکمل_چار_خطے}- ا   میں   مخالف گھڑی سمت بند سرحد    \عددی{C_1}  ربع اول میں واقع خطہ \عددی{R_1}  کو گھیرتی ہے۔ باقی تین  ربعات کے لئے بھی ایسا ہو گا:    خطہ \عددی{R_i} کی سرحد \عددی{C_i}  ہو گی، جہاں   \عددی{i = 1, 2, 3, 4 } ہے۔ مسئلہ  گرین کے تحت  درج ذیل ہو گا۔ 
+\begin{align}\label{مساوات_سمتی_تکمل_چار_حصے}
+     \varointctrclockwise_{C_i} M \dif x + N \dif y = \iint_{R_i} \big(\frac{\partial N}{\partial x} -  \frac{\partial M}{\partial y}\big) \dif x \dif y 
+\end{align}
+ ہم \عددی{i= 1, 2, 3, 4} کے لئے  مساوات    \حوالہ{مساوات_سمتی_تکمل_چار_حصے}  کا مجموعہ  لے کر شکل    \حوالہ{شکل_سمتی_میدان_تکمل_چار_خطے}- ب  حاصل کرتے ہیں۔
+\begin{align}\label{مساوات_سمتی_تکمل_چار_مجموعہ}
+     \varointctrclockwise_{r=b} (M \dif x + N \dif y) + \varointclockwise_{r=a} (M \dif x + N \dif y) = \iint_{a\leq r \leq b} \big(\frac{\partial N}{\partial x} -  \frac{\partial M}{\partial y}\big) \dif x \dif y 
+\end{align}
+ مساوات     \حوالہ{مساوات_سمتی_تکمل_چار_مجموعہ} کہتی ہے   ، \اصطلاح{ چھلے دار  }\فرہنگ{چھلے دار}\حاشیہب{annular}\فرہنگ{annular} خطہ \عددی{R}
+  پر  \عددی{ (\partial N/\partial x) - (\partial M/\partial y) } کا دہرا  تکمل،  \عددی{R} کی مکمل  سرحد پر چلتے ہوئے \عددی{R} بائیں ہاتھ رکھ کر  \عددی{ M \dif x + N \dif y } کے   لکیری تکمل   کے برابر ہو گا  ( شکل     \حوالہ{شکل_سمتی_میدان_تکمل_چار_خطے}- ب   )  ۔
+%---------------------
+%---------------------
+\ابتدا{مثال}\شناخت{مثال_سمتی_تکمل_چھلے_دار}
+ چھلے دار  خطہ \عددی{ R: h^2 \leq x^2 + y^2 \leq 1, \,0<h<1 } ( شکل   \حوالہ{شکل_سمتی_میدان_تکمل_مثال_چھلے_دار} ) پر  مسئلہ  گرین (مساوات \حوالہ{مساوات_سمتی_تکمل_اخراج_اور_تکمل_گردش} ) کے  دائری بہاو روپ کی تصدیق  درج ذیل کے لئے کریں۔
+\begin{align*}
+  M = \frac{-y}{x^2 + y^2} \quad\quad N=\frac{x}{x^2 + y^2}  
+\end{align*}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[declare function={fa(\x)=2*cos(\x);ga(\x)=2*sin(\x);fb(\x)=1*cos(\x);gb(\x)=1*sin(\x);}]
+\begin{axis}[axis equal,clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,},xtick={\empty},xticklabels={$-a$,$-b$,$a$,$b$},ytick={\empty} ,yticklabels={$a$,$b$},enlargelimits=true, extra x ticks={0.7,2.2},extra x tick labels={$h$,$\ell$},extra x tick style={tick style={draw=none}}]
+\addplot[name path=kpathA,thick,domain=0:360,smooth, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.125 with {\arrow{Stealth[length = 2mm, bend]}}}, decoration = {markings, mark = at position 0.375 with {\arrow{Stealth[length = 2mm, bend]}}}, decoration = {markings, mark = at position 0.625 with {\arrow{Stealth[length = 2mm, bend]}}}, decoration = {markings, mark = at position 0.875 with {\arrow{Stealth[length = 2mm, bend]}}}] ({fa(x)},{ga(x)})node[pos=0.55,right,xshift=0.5em]{$R$}node[pos=0.135,shift={(0.5em,0.5em)}]{$C_{\ell}$} coordinate[pos=0.45](kTest);
+\addplot[name path=kpathB,thick,domain=0:360, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.125 with {\arrowreversed{Stealth[length = 2mm, bend]}}},decoration = {markings, mark = at position 0.375 with {\arrowreversed{Stealth[length = 2mm, bend]}}},decoration = {markings, mark = at position 0.625 with {\arrowreversed{Stealth[length = 2mm, bend]}}},decoration = {markings, mark = at position 0.875 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] ({fb(x)},{gb(x)})node[pos=0.07,shift={(0.5em,0.5em)}]{$C_h$};
+\end{axis}
+\end{tikzpicture}
+\caption{دکھائی گئی سرحدوں کی ہمراہ تکمل لیتے ہوئے چھلا دار خط \عددی{R} پر مسئلہ گرین کا اطلاق کیا جا سکتا ہے (مثال \حوالہ{مثال_سمتی_تکمل_چھلے_دار})۔}
+\label{شکل_سمتی_میدان_تکمل_مثال_چھلے_دار}
+\end{figure}
+
+ حل:\quad
+ خطہ  \عددی{R} کی سرحد دائرہ :
+\begin{align*}
+ C_{\ell}:\quad  x=\cos t,\quad  y= \sin t,\quad 0\leq t \leq 2\pi 
+\end{align*}
+   جس پر \عددی{ t}   بڑھانے سے ہم  خلاف گھڑی گامزن ہوں گے،اور دائرہ :
+\begin{align*}
+  C_h:\quad  x=h\cos \theta,\quad  y= -h\sin\theta,\quad 0\leq \theta \leq 2\pi  
+\end{align*}
+جس پر  \عددی{\theta}  بڑھانے سے ہم  گھڑی وار  گامزن ہوں گے، پر مشتمل ہے۔پورے  خطہ \عددی{R} میں تفاعلات  \عددی{M} ، \عددی{N}  اور ان کے جزوی تفرق استمراری ہیں۔ مزید  
+\begin{align*}
+     \frac{\partial M}{\partial y} &= \frac{(x^2 + y^2)(-1) + y(2y)}{(x^2 + y^2)^2} \\     &= \frac{y^2 - x^2}{(x^2 + y^2)^2} = \frac{\partial N}{\partial x} 
+\end{align*}
+  لہٰذا  درج ذیل ہو گا۔
+\begin{align*}
+     \iint_R \big(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\big) \dif x \dif y = \iint_R 0 \dif x \dif y =0  
+\end{align*}
+ خطہ \عددی{R} کی سرحد پر  \عددی{ M \dif x + N \dif y} کا  تکمل  درج ذیل ہوگا۔ 
+\begin{align*}
+ \int_C M \dif x + N \dif y &= \varointctrclockwise_{C_1} \frac{x \dif y - y \dif x}{x^2 + y^2} + \varointclockwise_{C_h}  \frac{x \dif y - y \dif x}{x^2 + y^2} \\ 
+ &= \int_0^{2\pi} (\cos^2{t} + \sin^2{t}) \dif t - \int_0^{2\pi} \frac{h^2 (\cos^2{\theta} + \sin^2{\theta})}{h^2} \dif \theta\\
+  &= 2\pi - 2\pi =0  
+\end{align*}
+\انتہا{مثال} 
+%------------------- 
+
+چونکہ مثال   \حوالہ{مثال_سمتی_تکمل_چھلے_دار}   میں \عددی{  (0,0) } پر تفاعلات \عددی{ M} اور  \عددی{N} غیر استمراری ہیں لہٰذا دائرہ \عددی{C_1}  اور اس کے اندر خطہ پر مسئلہ گرین کا اطلاق نہیں ہوگا۔ ہمیں  مبدا   خارج (غیر شامل ) کرنا ہوگا؛ ہم  \عددی{C_h} کے اندر نقطے  خارج کر کے ایسا کرتے ہیں۔
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[declare function={fa(\x)=2*cos(\x);ga(\x)=2*sin(\x);fb(\x)=1*cos(\x);gb(\x)=1*sin(\x);}]
+\begin{axis}[axis equal,clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,},xtick={\empty},xticklabels={$-a$,$-b$,$a$,$b$},ytick={\empty} ,yticklabels={$a$,$b$},enlargelimits=true, extra x ticks={\empty},extra x tick labels={$h$,$\ell$},extra x tick style={tick style={draw=none}}]
+\addplot[smooth cycle,name path=kpathA,thick,domain=0:360, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0 with {\arrow{Stealth[length = 2mm, bend]}}}, decoration = {markings, mark = at position 0.125 with {\arrow{Stealth[length = 2mm, bend]}}}, decoration = {markings, mark = at position 0.375 with {\arrow{Stealth[length = 2mm, bend]}}}, decoration = {markings, mark = at position 0.65 with {\arrow{Stealth[length = 2mm, bend]}}}] coordinates {(-1.5,-1.5)(0,-1.4)(1,-0.75)(2.5,0)(2.75,1)(2,2)(0,1.4)(-1.3,1.3)(-2,0)}node[pos=0.25,below right]{$K$};
+\addplot[name path=kpathB,thick,domain=0:360, no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.125 with {\arrowreversed{Stealth[length = 2mm, bend]}}},decoration = {markings, mark = at position 0.375 with {\arrowreversed{Stealth[length = 2mm, bend]}}},decoration = {markings, mark = at position 0.625 with {\arrowreversed{Stealth[length = 2mm, bend]}}},decoration = {markings, mark = at position 0.875 with {\arrowreversed{Stealth[length = 2mm, bend]}}}] ({fb(x)},{gb(x)})node[pos=0.45,shift={(-0.5em,0.5em)}]{$C_h$};
+\addplot[]coordinates{(0,0)}coordinate[](kZero);
+\addplot[]coordinates{(2.75,1)}coordinate[](kAng);
+\addplot[]coordinates{(1.5,0)}coordinate[](kStart);
+\end{axis}
+\draw(kZero)--(kAng)coordinate[pos=0.5](kEnd);
+\draw[-latex] (kStart) to [out=90,in=-45]node[pos=0.5,right]{$\theta$}(kEnd);
+\end{tikzpicture}
+\caption{دائرہ \عددی{C} اور  منحنی \عددی{K}  کے بیچ  خطہ۔}
+\label{شکل_سمتی_میدان_تکمل_مثال_دائرہ_منحنی_بند}
+\end{figure}
+
+  ہم مثال   \حوالہ{مثال_سمتی_تکمل_چھلے_دار} میں دائرہ \عددی{C_1} کی  بجائے     ایسی ترخیم  یا  سادہ بند منحنی   \عددی{K} لے سکتے ہیں، جو  \عددی{C_h} کو   گھیرتی ہو ( شکل   \حوالہ{شکل_سمتی_میدان_تکمل_مثال_دائرہ_منحنی_بند}) ۔ نتیجہ اب بھی 
+\begin{align*}
+\varointctrclockwise_K ( M \dif x + N \dif y ) + \varointclockwise_{C_h} ( M \dif x + N \dif y) = \iint_R \big(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\big) \dif y \dif x = 0 
+\end{align*}
+ہو گا،  جس سے کسی بھی  ایسی منحنی   \عددی{K} کے لئے درج ذیل حیرت  کن نتیجہ اخذ ہوتا ہے۔ 
+\begin{align*}
+\varointctrclockwise_K ( M \dif x + N \dif y ) = 2 \pi 
+\end{align*}
+ قطبی محدد  استعمال کر کے یہ نتیجہ سمجھا جا سکتا ہے۔   یوں  
+\begin{align*}
+  x& = r\cos{\theta} && y = r\sin{\theta}\\   
+ \dif x &= -r \sin{\theta} \dif \theta + \cos{\theta} \dif r  &&  \dif y = r \cos{\theta} \dif \theta + \sin{\theta} \dif r 
+\end{align*}
+ لکھ کر درج ذیل ہو گا
+\begin{align}
+  \frac{x \dif y - y\dif x}{x^2 + y^2} = \frac{r^2( \cos^2{\theta} + \sin^2{\theta}) \dif \theta}{r^2} = \dif \theta    
+\end{align}
+ اور ایک مرتبہ \عددی{  K}  پر خلاف گھڑی  چکر کاٹنے سے   \عددی{\theta} کی قیمت  \عددی{2\pi} بڑھتی ہے۔
+ 
+ %this is where question of ex 14.4  start  p1093
+ %questions audio is probably non existant. must do myself
+ 
