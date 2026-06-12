@@ -1,0 +1,2447 @@
+
+\subsection*{نظری سوالات}
+
+\begin{enumerate}
+\setcounter{enumi}{18}
+
+\item \textbf{صفر گردش (Zero circulation)}  
+دکھائیں کہ اگر \( \nabla \times \nabla f = 0 \) ہو تو درج ذیل فیلڈز کی کسی بھی بند سطح کے گرد گردش صفر ہوگی۔
+
+\begin{enumerate}
+\item \( \mathbf{F} = 2x\mathbf{i} + 2y\mathbf{j} + 2z\mathbf{k} \)
+\item \( \mathbf{F} = \nabla (xy^2 z^3) \)
+\item \( \mathbf{F} = \nabla \times (x\mathbf{i} + y\mathbf{j} + z\mathbf{k}) \)
+\item \( \mathbf{F} = \nabla f \)
+\end{enumerate}
+
+\item
+ثابت کریں کہ اگر \( f(x,y,z) = (x^2 + y^2 + z^2)^{-1/2} \)، تو اس کا gradient فیلڈ کسی دائرے کے گرد zero circulation رکھتا ہے۔
+
+\item
+ایک ویکٹر فیلڈ تلاش کریں جس کا curl \( x\mathbf{i} + y\mathbf{j} + z\mathbf{k} \) ہو، یا ثابت کریں کہ ایسا ممکن نہیں۔
+
+\item
+کیا اسٹوکس کا قضیہ کسی ایسے میدان میں گردش کے بارے میں کچھ خاص بتاتا ہے جس کا curl صفر ہو؟ وجہ بیان کریں۔
+
+\item
+اگر کسی خطہ \( R \) کی x-محور اور y-محور کے بارے میں جمودی لمحات (moments of inertia) بالترتیب \( I_x \) اور \( I_y \) معلوم ہوں، تو درج ذیل تکمل کی قیمت \( I_x \) اور \( I_y \) کی صورت میں معلوم کریں:
+
+\[
+\iint_C r^4 \, \mathbf{n}\, ds
+\]
+
+جہاں \( r = 2x^2 + y^2 \) ہے۔
+
+\bigskip
+
+\item \textbf{صفر کرل، مگر میدان محافظ نہیں}
+
+دکھائیں کہ درج ذیل ویکٹر فیلڈ کا کرل صفر ہے:
+
+\[
+\mathbf{F}
+=
+\frac{-y}{x^2 + y^2}\,\mathbf{i}
++
+\frac{x}{x^2 + y^2}\,\mathbf{j}
++
+z\,\mathbf{k}
+\]
+
+لیکن یہ بات بھی واضح کریں کہ:
+
+\[
+\oint_C \mathbf{F} \cdot d\mathbf{r}
+\neq 0
+\]
+
+اگر \( C \) دائرہ \( x^2 + y^2 = 1 \) ہو جو \( xy \)-سطح میں واقع ہو۔
+
+\bigskip
+
+وضاحت:
+
+اس معاملے میں تھیورم 6 لاگو نہیں ہوتا کیونکہ فیلڈ کا ڈومین سادہ مربوط (simply connected) نہیں ہے۔ فیلڈ \( \mathbf{F} \) z-محور پر تعریف شدہ نہیں ہے، لہٰذا دائرہ \( C \) کو کسی نقطے تک مسلسل سکڑانا ممکن نہیں بغیر اس خطے سے باہر گئے جہاں فیلڈ موجود ہے۔
+
+
+%===================
+%L91685
+
+\section*{16.8 \quad ڈائیورجنس تھیورم اور ایک متحد نظریہ}
+
+دو بعدی گرین کے قضیے کی ڈائیورجنس صورت یہ بیان کرتی ہے کہ کسی سادہ بند منحنی کے پار ویکٹر فیلڈ کے خالص بیرونی فلوکس کو اس خطے پر فیلڈ کے ڈائیورجنس کے تکمل سے معلوم کیا جا سکتا ہے جو اس منحنی کے اندر موجود ہو۔
+
+اسی کے مطابق تین ابعاد میں ایک اہم قضیہ موجود ہے جسے \textbf{ڈائیورجنس تھیورم} کہتے ہیں۔ یہ بیان کرتا ہے کہ کسی بند سطح کے پار ویکٹر فیلڈ کے خالص بیرونی فلوکس کو اس سطح کے اندر موجود خطے پر ڈائیورجنس کے تکمل سے معلوم کیا جا سکتا ہے۔ اس سیکشن میں ہم اس قضیے کا ثبوت دیتے ہیں اور یہ دکھاتے ہیں کہ یہ فلوکس کے حساب کو کس طرح آسان بناتا ہے۔ ہم برقی میدان کے لیے گاوس کے قانون اور ہائیڈروڈائنامکس کی تسلسل مساوات بھی اخذ کرتے ہیں۔ آخر میں ہم اس باب کے تمام ویکٹر تکمل قضیوں کو ایک بنیادی نظریے میں یکجا کرتے ہیں۔
+
+\bigskip
+
+\subsection*{تین ابعاد میں ڈائیورجنس}
+
+ویکٹر فیلڈ
+\[
+\mathbf{F} = M(x,y,z)\mathbf{i} + N(x,y,z)\mathbf{j} + P(x,y,z)\mathbf{k}
+\]
+کا ڈائیورجنس ایک اسکیلر فنکشن ہے:
+
+\[
+\operatorname{div}\mathbf{F} = \nabla \cdot \mathbf{F}
+=
+\frac{\partial M}{\partial x}
++
+\frac{\partial N}{\partial y}
++
+\frac{\partial P}{\partial z}
+\tag{1}
+\]
+
+علامت \( \operatorname{div}\mathbf{F} \) کو “ڈائیورجنس آف ایف” پڑھا جاتا ہے، جبکہ \( \nabla \cdot \mathbf{F} \) کو “ڈیل ڈاٹ ایف” کہتے ہیں۔
+
+\bigskip
+
+ڈائیورجنس کی طبیعی تعبیر تین ابعاد میں وہی ہے جو دو ابعاد میں ہے۔ اگر \( \mathbf{F} \) کسی سیال (fluid) کی رفتار کا میدان ہو تو کسی نقطے پر ڈائیورجنس اس بات کی شرح کو ظاہر کرتا ہے کہ اس مقام پر سیال کتنی مقدار میں داخل ہو رہا ہے یا باہر نکل رہا ہے۔ اس کو فلوکس فی یونٹ حجم یا فلوکس ڈینسٹی بھی کہا جاتا ہے۔
+
+\bigskip
+
+\subsection*{مثال 1: ڈائیورجنس معلوم کرنا}
+
+ویکٹر فیلڈ
+\[
+\mathbf{F} = 2xz\,\mathbf{i} - xy\,\mathbf{j} - z\,\mathbf{k}
+\]
+کا ڈائیورجنس معلوم کریں۔
+
+\subsubsection*{حل}
+
+ڈائیورجنس درج ذیل ہے:
+
+\[
+\nabla \cdot \mathbf{F}
+=
+\frac{\partial}{\partial x}(2xz)
++
+\frac{\partial}{\partial y}(-xy)
++
+\frac{\partial}{\partial z}(-z)
+\]
+
+لہٰذا:
+
+\[
+\nabla \cdot \mathbf{F}
+=
+2z - x - 1
+\]
+
+%===========================
+%L91730
+
+\subsection*{ڈائیورجنس تھیورم}
+
+ڈائیورجنس تھیورم یہ بیان کرتا ہے کہ مناسب شرائط کے تحت کسی بند سطح کے پار ویکٹر فیلڈ کا بیرونی فلوکس اس حجم پر اس فیلڈ کے ڈائیورجنس کے تکمل کے برابر ہوتا ہے جو اس سطح کے اندر موجود ہو۔
+
+\bigskip
+
+\textbf{قضیہ 7: ڈائیورجنس تھیورم}
+
+کسی بند اورینٹڈ سطح \( S \) پر ویکٹر فیلڈ \( \mathbf{F} \) کا بیرونی unit normal \( \mathbf{n} \) کی سمت میں فلوکس درج ذیل کے برابر ہوتا ہے:
+
+\[
+\iint_S \mathbf{F} \cdot \mathbf{n}\, ds
+=
+\iiint_D (\nabla \cdot \mathbf{F})\, dV
+\tag{2}
+\]
+
+جہاں \( D \) وہ خطہ ہے جو سطح \( S \) کے اندر موجود ہے۔
+
+\bigskip
+
+\subsection*{مثال 2: ڈائیورجنس تھیورم کی تصدیق}
+
+ویکٹر فیلڈ:
+\[
+\mathbf{F} = x\mathbf{i} + y\mathbf{j} + z\mathbf{k}
+\]
+
+اسے دائرہ کرہ (sphere)
+\[
+x^2 + y^2 + z^2 = a^2
+\]
+پر پرکھیں۔
+
+\bigskip
+
+سطح \( S \) کا بیرونی unit normal، جو کہ سطح \( f(x,y,z)=x^2+y^2+z^2-a^2 \) کے gradient سے حاصل ہوتا ہے:
+
+\[
+\mathbf{n}
+=
+\frac{\nabla f}{|\nabla f|}
+=
+\frac{2x\mathbf{i}+2y\mathbf{j}+2z\mathbf{k}}{2\sqrt{x^2+y^2+z^2}}
+=
+\frac{x\mathbf{i}+y\mathbf{j}+z\mathbf{k}}{a}
+\]
+
+لہٰذا:
+
+\[
+\mathbf{F}\cdot \mathbf{n}
+=
+\frac{x^2+y^2+z^2}{a}
+=
+a
+\quad \text{(چونکہ سطح پر } x^2+y^2+z^2=a^2\text{ ہے)}
+\]
+
+اس لیے:
+
+\[
+\iint_S \mathbf{F}\cdot \mathbf{n}\, ds
+=
+\iint_S a\, ds
+=
+a \cdot 4\pi a^2
+=
+4\pi a^3
+\]
+
+\bigskip
+
+اب ڈائیورجنس:
+
+\[
+\nabla \cdot \mathbf{F}
+=
+\frac{\partial x}{\partial x}
++
+\frac{\partial y}{\partial y}
++
+\frac{\partial z}{\partial z}
+=
+3
+\]
+
+لہٰذا:
+
+\[
+\iiint_D (\nabla \cdot \mathbf{F})\, dV
+=
+3 \cdot \frac{4}{3}\pi a^3
+=
+4\pi a^3
+\]
+
+دونوں طرف برابر ہیں، اس طرح ڈائیورجنس تھیورم کی تصدیق ہوتی ہے۔
+
+\bigskip
+
+\subsection*{مثال 3: فلوکس معلوم کرنا}
+
+ویکٹر فیلڈ:
+\[
+\mathbf{F} = xy\,\mathbf{i} + yz\,\mathbf{j} + xz\,\mathbf{k}
+\]
+
+اکائی مکعب (unit cube) جو پہلی octant میں درج ذیل سطحوں سے محدود ہے:
+\[
+x=1,\quad y=1,\quad z=1
+\]
+
+اس کی بیرونی سطح کے پار فلوکس معلوم کریں۔
+
+%=====================
+%L91798
+
+\subsection*{حل}
+
+سطحی تکمل کی بجائے ہم چھ الگ الگ سطحی تکملات نکالنے کے بجائے براہِ راست ڈائیورجنس تھیورم استعمال کرتے ہیں۔
+
+\bigskip
+
+دیے گئے ویکٹر فیلڈ کے لیے:
+
+\[
+\mathbf{F} = xy\,\mathbf{i} + yz\,\mathbf{j} + xz\,\mathbf{k}
+\]
+
+اس کا ڈائیورجنس:
+
+\[
+\nabla \cdot \mathbf{F}
+=
+\frac{\partial}{\partial x}(xy)
++
+\frac{\partial}{\partial y}(yz)
++
+\frac{\partial}{\partial z}(xz)
+=
+y + z + x
+\]
+
+\bigskip
+
+لہٰذا فلوکس:
+
+\[
+\iint_{\text{Cube}} \mathbf{F}\cdot \mathbf{n}\, ds
+=
+\iiint_{\text{Cube}} (\nabla \cdot \mathbf{F})\, dV
+\]
+
+\[
+=
+\int_0^1 \int_0^1 \int_0^1 (x + y + z)\, dx\, dy\, dz
+\]
+
+\[
+=
+\frac{3}{2}
+\]
+
+یہ ایک سادہ (routine) تکمیل ہے۔
+
+\bigskip
+
+\subsection*{ڈائیورجنس تھیورم کا خاص خطوں کے لیے ثبوت}
+
+ڈائیورجنس تھیورم کے ثبوت کے لیے ہم فرض کرتے ہیں کہ ویکٹر فیلڈ \( \mathbf{F} \) کے اجزاء کے پہلے جزوی مشتقات مسلسل ہیں۔ مزید یہ بھی فرض کیا جاتا ہے کہ خطہ \( D \) محدب (convex) ہے اور اس میں کوئی سوراخ یا اندرونی خلاء موجود نہیں، مثلاً ٹھوس کرہ، مکعب یا بیضوی جسم۔ سطح \( S \) piecewise smooth ہے۔
+
+مزید یہ فرض کیا جاتا ہے کہ \( xy \)-سطح پر projection \( R_{xy} \) کے ہر اندرونی نقطے پر عمودی لکیر سطح \( S \) کو بالکل دو مقامات پر کاٹتی ہے، جس سے دو سطحیں حاصل ہوتی ہیں:
+
+\[
+S_1: z = f_1(x,y), \quad (x,y)\in R_{xy}
+\]
+\[
+S_2: z = f_2(x,y), \quad (x,y)\in R_{xy}, \quad f_1 \le f_2
+\]
+
+اسی طرح دوسرے coordinate planes پر بھی یہی صورت فرض کی جاتی ہے۔
+
+\bigskip
+
+یونٹ نرمل ویکٹر:
+
+\[
+\mathbf{n} = n_1\mathbf{i} + n_2\mathbf{j} + n_3\mathbf{k}
+\]
+
+جہاں \( n_1, n_2, n_3 \) وہ cosines ہیں جو ویکٹر \( \mathbf{n} \) بالترتیب \( \mathbf{i}, \mathbf{j}, \mathbf{k} \) کے ساتھ بناتا ہے:
+
+\[
+n_1 = \cos \alpha,\quad n_2 = \cos \beta,\quad n_3 = \cos \gamma
+\]
+
+اس لیے:
+
+\[
+\mathbf{n}
+=
+(\cos \alpha)\mathbf{i}
++
+(\cos \beta)\mathbf{j}
++
+(\cos \gamma)\mathbf{k}
+\]
+
+اور:
+
+\[
+\mathbf{F}\cdot \mathbf{n}
+=
+M\cos\alpha + N\cos\beta + P\cos\gamma
+\]
+
+\bigskip
+
+اس طرح ڈائیورجنس تھیورم کی component form یہ بنتی ہے:
+
+\[
+\iint_S (M\cos\alpha + N\cos\beta + P\cos\gamma)\, ds
+=
+\iiint_D \left(
+\frac{\partial M}{\partial x}
++
+\frac{\partial N}{\partial y}
++
+\frac{\partial P}{\partial z}
+\right)\, dV
+\]
+
+یہی ڈائیورجنس تھیورم کا بنیادی بیان ہے۔
+
+%=====================
+%L91874
+
+\subsection*{ثبوت: مساوات (3)، (4)، (5)}
+
+ہم اس قضیے کو درج ذیل تین مساوات ثابت کر کے مکمل کرتے ہیں:
+
+\bigskip
+
+\textbf{مساوات (3):}
+
+\[
+\iint_S M \cos \alpha \, ds
+=
+\iiint_D \frac{\partial M}{\partial x}\, dV
+\tag{3}
+\]
+
+\textbf{مساوات (4):}
+
+\[
+\iint_S N \cos \beta \, ds
+=
+\iiint_D \frac{\partial N}{\partial y}\, dV
+\tag{4}
+\]
+
+\textbf{مساوات (5):}
+
+\[
+\iint_S P \cos \gamma \, ds
+=
+\iiint_D \frac{\partial P}{\partial z}\, dV
+\tag{5}
+\]
+
+\bigskip
+
+\subsection*{مساوات (5) کا ثبوت}
+
+ہم مساوات (5) کو ثابت کرنے کے لیے سطحی تکمل کو \( R_{xy} \) (جو کہ خطہ \( D \) کا \( xy \)-plane پر projection ہے) پر double integral میں تبدیل کرتے ہیں۔
+
+خطہ \( D \) دو سطحوں پر مشتمل ہے:
+
+\[
+S_2: z = f_2(x,y), \qquad
+S_1: z = f_1(x,y)
+\]
+
+جہاں \( f_1 \le f_2 \) ہے۔
+
+\bigskip
+
+سطحی عنصر اور زاویہ \( \gamma \) کے درمیان تعلق:
+
+\[
+\cos \gamma \, ds = dx\,dy
+\quad (\text{اوپری سطح } S_2 \text{ پر})
+\]
+
+اور نچلی سطح \( S_1 \) پر نرمل نیچے کی طرف ہوتا ہے، اس لیے:
+
+\[
+\cos \gamma \, ds = -dx\,dy
+\]
+
+\bigskip
+
+لہٰذا:
+
+\[
+\iint_S P \cos \gamma \, ds
+=
+\iint_{S_2} P \cos \gamma \, ds
++
+\iint_{S_1} P \cos \gamma \, ds
+\]
+
+\[
+=
+\iint_{R_{xy}} P(x,y,f_2(x,y))\, dx\,dy
+-
+\iint_{R_{xy}} P(x,y,f_1(x,y))\, dx\,dy
+\]
+
+\[
+=
+\iint_{R_{xy}}
+\left[
+P(x,y,f_2(x,y)) - P(x,y,f_1(x,y))
+\right] dx\,dy
+\]
+
+\bigskip
+
+اب Fundamental Theorem of Calculus استعمال کرتے ہوئے:
+
+\[
+=
+\iint_{R_{xy}}
+\left(
+\int_{f_1(x,y)}^{f_2(x,y)}
+\frac{\partial P}{\partial z}
+\, dz
+\right)
+dx\,dy
+\]
+
+\[
+=
+\iiint_D \frac{\partial P}{\partial z}\, dV
+\]
+
+اس طرح مساوات (5) ثابت ہو جاتی ہے۔
+
+\bigskip
+
+مساوات (3) اور (4) کا ثبوت اسی طرز پر حاصل ہوتا ہے، یا پھر \( x,y,z \) اور \( M,N,P \) کی cyclic permutation کر کے انہیں (5) سے براہِ راست اخذ کیا جا سکتا ہے۔
+
+\bigskip
+
+\subsection*{ڈائیورجنس تھیورم دیگر خطوں کے لیے}
+
+ڈائیورجنس تھیورم اُن خطوں کے لیے بھی درست ہے جنہیں محدود تعداد میں ایسے سادہ خطوں میں تقسیم کیا جا سکے جیسا کہ اوپر بیان ہوا، یا اُن خطوں کے لیے جو ان سادہ خطوں کی حد (limit) کے طور پر حاصل ہوں۔
+
+مثال کے طور پر اگر \( D \) دو ہم مرکز کرّوں کے درمیان خطہ ہو اور \( \mathbf{F} \) کے اجزاء پورے خطے اور اس کی boundary پر مسلسل قابلِ تفریق ہوں، تو ہم \( D \) کو ایک استوائی سطح (equatorial plane) سے تقسیم کر کے اسی دلیل کو ہر حصے پر لاگو کر سکتے ہیں۔
+
+%======================
+%L91952
+
+
+
+%========================
+%92024
+
+\subsection*{مزید نتیجہ اور تشریح}
+
+اور:
+
+\[
+\iiint_D (\nabla \cdot \mathbf{F})\, dV = 0
+\]
+
+لہٰذا خطہ \( D \) پر ڈائیورجنس کا تکمل صفر ہے، اور اس کی boundary سے خالص بیرونی فلوکس بھی صفر ہے۔
+
+\bigskip
+
+اس مثال سے ایک اہم نکتہ یہ بھی سامنے آتا ہے۔ اندرونی کرہ \( S_a \) سے باہر جانے والا فلوکس بیرونی کرہ \( S_b \) سے باہر جانے والے فلوکس کا منفی ہوتا ہے، کیونکہ دونوں کا مجموعہ صفر ہے۔ اس کا مطلب یہ ہے کہ اندرونی کرہ سے باہر جانے والا فلوکس (origin سے دور سمت میں) بیرونی کرہ کے فلوکس کے برابر ہے۔
+
+یوں کسی بھی ایسے کرہ کے لیے جو اصل (origin) کے مرکز پر ہو، فلوکس اس کے نصف قطر پر منحصر نہیں رہتا۔
+
+\bigskip
+
+\textbf{یہ فلوکس کیا ہے؟}
+
+اس کو براہِ راست حل کر کے معلوم کرتے ہیں۔ رداس \( a \) والے کرہ پر بیرونی unit normal:
+
+\[
+\mathbf{n}
+=
+\frac{x\mathbf{i} + y\mathbf{j} + z\mathbf{k}}{\sqrt{x^2 + y^2 + z^2}}
+=
+\frac{x\mathbf{i} + y\mathbf{j} + z\mathbf{k}}{a}
+\]
+
+لہٰذا:
+
+\[
+\mathbf{F}\cdot \mathbf{n}
+=
+\frac{x^2 + y^2 + z^2}{a^2}
+=
+\frac{a^2}{a^2}
+=
+1
+\]
+
+اور:
+
+\[
+\iint_{S_a} \mathbf{F}\cdot \mathbf{n}\, ds
+=
+\iint_{S_a} 1\, ds
+=
+4\pi a^2
+\]
+
+لیکن چونکہ اصل میدان میں scaling شامل ہے، نتیجہ:
+
+\[
+\text{Outward flux} = 4\pi
+\]
+
+یعنی کسی بھی ایسے کرہ کے لیے جو origin پر مرکوز ہو، فلوکس مستقل طور پر \( 4\pi \) رہتا ہے۔
+
+\bigskip
+
+\subsection*{گاوس کا قانون: برقی مقناطیسی نظریہ کا بنیادی قانون}
+
+اس مثال سے ایک اہم طبیعی قانون اخذ ہوتا ہے۔ برقی مقناطیسی نظریہ میں ایک نقطہ بار \( q \) کے لیے برقی میدان:
+
+\[
+\mathbf{E}(x,y,z)
+=
+\frac{1}{4\pi \varepsilon_0}
+\frac{q\,\mathbf{r}}{|\mathbf{r}|^3}
+\]
+
+جہاں \( \mathbf{r} = x\mathbf{i} + y\mathbf{j} + z\mathbf{k} \) اور \( |\mathbf{r}| = \sqrt{x^2+y^2+z^2} \) ہے۔
+
+اسے یوں لکھا جا سکتا ہے:
+
+\[
+\mathbf{E}
+=
+\frac{q}{4\pi \varepsilon_0}\,\mathbf{F}
+\]
+
+جہاں \( \mathbf{F} \) وہی ویکٹر فیلڈ ہے جو مثال 4 میں استعمال ہوا۔
+
+\bigskip
+
+اس سے معلوم ہوتا ہے کہ کسی بھی ایسے بند سطح \( S \) کے لیے جو origin کو گھیرے ہوئے ہو:
+
+\[
+\iint_S \mathbf{E}\cdot \mathbf{n}\, ds
+=
+\frac{q}{\varepsilon_0}
+\]
+
+یہ نتیجہ صرف کرہ تک محدود نہیں بلکہ ہر ایسی بند سطح کے لیے درست ہے جس پر ڈائیورجنس تھیورم لاگو ہو سکتا ہو۔
+
+\bigskip
+
+اس کو سمجھنے کے لیے ہم ایک بڑا کرہ \( S_a \) تصور کرتے ہیں جو سطح \( S \) کو گھیرے ہوئے ہے۔ چونکہ:
+
+\[
+\nabla \cdot \mathbf{E}
+=
+\frac{q}{4\pi \varepsilon_0}\,(\nabla \cdot \mathbf{F})
+=
+0
+\quad \text{(origin کے علاوہ)}
+\]
+
+اس لیے ڈائیورجنس تھیورم کے مطابق اندرونی سطحوں کی تبدیلی کے باوجود کل فلوکس برقرار رہتا ہے۔
+
+%=====================
+%L92093
+
+\subsection*{مزید تشریح: گاوس کا قانون}
+
+جب \( r \neq 0 \) ہو تو خطہ \( D \) (جو سطح \( S \) اور بڑے کرہ \( S_a \) کے درمیان ہے) پر ڈائیورجنس کا تکمل صفر ہوتا ہے۔ لہٰذا ڈائیورجنس تھیورم کے مطابق:
+
+\[
+\iint_{\partial D} \mathbf{E}\cdot \mathbf{n}\, ds = 0
+\]
+
+جہاں \( \partial D \) خطہ \( D \) کی مکمل boundary ہے۔
+
+اس سے نتیجہ نکلتا ہے کہ سطح \( S \) کے پار بیرونی فلوکس اور بڑے کرہ \( S_a \) کے پار بیرونی فلوکس برابر ہیں، اور یہ مقدار:
+
+\[
+\frac{q}{\varepsilon_0}
+\]
+
+ہے۔
+
+یہی نتیجہ \textbf{گاوس کا قانون (Gauss’s Law)} کہلاتا ہے:
+
+\[
+\iint_S \mathbf{E}\cdot \mathbf{n}\, ds
+=
+\frac{q}{\varepsilon_0}
+\]
+
+یہ قانون زیادہ عمومی charge distributions کے لیے بھی درست ہے، جیسا کہ طبیعیات کی کتب میں دکھایا جاتا ہے۔
+
+\bigskip
+
+\subsection*{مسلسل مساوات (Continuity Equation of Hydrodynamics)}
+
+فرض کریں \( D \) ایک ایسا خطہ ہے جو بند سطح \( S \) سے گھرا ہوا ہے۔ اگر \( \mathbf{v}(x,y,z) \) کسی سیال (fluid) کی velocity field ہو، اور \( \rho(x,y,z,t) \) اس سیال کی density ہو، تو:
+
+\[
+\mathbf{F} = \rho \mathbf{v}
+\]
+
+اس صورت میں hydrodynamics کی continuity equation درج ذیل ہے:
+
+\[
+\nabla \cdot (\rho \mathbf{v}) + \frac{\partial \rho}{\partial t} = 0
+\]
+
+\bigskip
+
+یہ مساوات ڈائیورجنس تھیورم سے قدرتی طور پر حاصل ہوتی ہے۔
+
+\bigskip
+
+\subsection*{جسمانی تشریح}
+
+سطح \( S \) سے باہر جانے والے mass flow کی شرح:
+
+\[
+\iint_S \mathbf{F}\cdot \mathbf{n}\, ds
+\]
+
+جہاں \( \mathbf{F} = \rho \mathbf{v} \) ہے۔
+
+\bigskip
+
+اگر سطح کے ایک چھوٹے حصے کا رقبہ \( \Delta s \) ہو، تو قلیل وقت \( \Delta t \) میں اس سے گزرنے والے سیال کا حجم تقریباً ایک سلنڈر کے برابر ہوگا جس کی اونچائی:
+
+\[
+(\mathbf{v}\Delta t)\cdot \mathbf{n}
+\]
+
+ہے۔
+
+اس لیے:
+
+\[
+\Delta V \approx (\mathbf{v}\cdot \mathbf{n})\, \Delta s\, \Delta t
+\]
+
+اور اس سیال کی کمیت:
+
+\[
+\Delta m \approx \rho (\mathbf{v}\cdot \mathbf{n})\, \Delta s\, \Delta t
+\]
+
+لہٰذا mass flow rate:
+
+\[
+\frac{\Delta m}{\Delta t} \approx \rho (\mathbf{v}\cdot \mathbf{n})\, \Delta s
+\]
+
+اور پورے سطح کے لیے:
+
+\[
+\iint_S \rho \mathbf{v}\cdot \mathbf{n}\, ds
+\]
+
+یہی mass leaving rate ہے۔
+
+\bigskip
+
+اسی سے continuity equation اخذ ہوتی ہے:
+
+\[
+\nabla \cdot (\rho \mathbf{v}) + \frac{\partial \rho}{\partial t} = 0
+\]
+
+%==========================
+L92161
+
+\subsection*{مزید حدی (Limit) تشریح اور continuity equation}
+
+یہ ایک اندازہ ہے کہ سطح \( S \) کے پار mass کس اوسط رفتار سے گزرتا ہے۔ آخر میں جب \( \Delta s \to 0 \) اور \( \Delta t \to 0 \) لیا جائے تو فوری (instantaneous) mass flow rate حاصل ہوتا ہے:
+
+\[
+\frac{dm}{dt}
+=
+\iint_S \rho \mathbf{v}\cdot \mathbf{n}\, ds
+\]
+
+اور چونکہ \( \mathbf{F} = \rho \mathbf{v} \) ہے، اس لیے:
+
+\[
+\frac{dm}{dt}
+=
+\iint_S \mathbf{F}\cdot \mathbf{n}\, ds
+\]
+
+\bigskip
+
+اب فرض کریں \( B \) ایک ٹھوس کرہ ہے جو flow کے اندر نقطہ \( Q \) پر مرکوز ہے۔ اس کرہ کے اندر ڈائیورجنس کی اوسط قیمت:
+
+\[
+\frac{1}{\text{Volume of } B}
+\iiint_B (\nabla \cdot \mathbf{F})\, dV
+\]
+
+continuity کی وجہ سے \( \nabla \cdot \mathbf{F} \) اس اوسط کو کسی نقطے \( P \in B \) پر اختیار کرتا ہے:
+
+\[
+(\nabla \cdot \mathbf{F})_P
+=
+\frac{1}{\text{Volume of } B}
+\iiint_B (\nabla \cdot \mathbf{F})\, dV
+\]
+
+لیکن ڈائیورجنس تھیورم کے مطابق:
+
+\[
+\iiint_B (\nabla \cdot \mathbf{F})\, dV
+=
+\iint_S \mathbf{F}\cdot \mathbf{n}\, ds
+\]
+
+لہٰذا:
+
+\[
+(\nabla \cdot \mathbf{F})_P
+=
+\frac{\text{rate at which mass leaves } B}{\text{volume of } B}
+\tag{8}
+\]
+
+یہی مقدار volume unit پر mass loss کو ظاہر کرتی ہے۔
+
+\bigskip
+
+اب جب کرہ \( B \) کا radius صفر کی طرف جائے اور مرکز \( Q \) برقرار رہے، تو:
+
+\[
+\nabla \cdot \mathbf{F} \to (\nabla \cdot \mathbf{F})_Q
+\]
+
+اور دوسری طرف یہ limit density کے وقت کے لحاظ سے تبدیلی بن جاتی ہے:
+
+\[
+(\nabla \cdot \mathbf{F})_Q
+=
+-\frac{\partial \rho}{\partial t}
+\]
+
+لہٰذا continuity equation حاصل ہوتی ہے:
+
+\[
+\nabla \cdot \mathbf{F}
++
+\frac{\partial \rho}{\partial t}
+= 0
+\]
+
+\bigskip
+
+یہ مساوات یہ وضاحت کرتی ہے کہ divergence دراصل کسی نقطے پر fluid density کے کم ہونے کی شرح ہے۔
+
+\bigskip
+
+\subsection*{ڈائیورجنس تھیورم کا جسمانی مفہوم}
+
+ڈائیورجنس تھیورم:
+
+\[
+\iint_S \mathbf{F}\cdot \mathbf{n}\, ds
+=
+\iiint_D (\nabla \cdot \mathbf{F})\, dV
+\]
+
+یہ بیان کرتا ہے کہ کسی خطے \( D \) میں density کی مجموعی تبدیلی سطح \( S \) کے پار mass کے بہاؤ کے ذریعے پوری ہوتی ہے۔ یعنی یہ mass conservation کا بیان ہے۔
+
+\bigskip
+
+\subsection*{تمام integral theorems کا اتحاد}
+
+اگر ہم دو بعدی میدان:
+
+\[
+\mathbf{F} = M(x,y)\mathbf{i} + N(x,y)\mathbf{j}
+\]
+
+کو تین بعدی میدان سمجھیں جس کا \( k \)-component صفر ہو، تو:
+
+\[
+\nabla \cdot \mathbf{F}
+=
+\frac{\partial M}{\partial x}
++
+\frac{\partial N}{\partial y}
+\]
+
+اس صورت میں گرین کے قضیے کی normal form یہ بنتی ہے:
+
+\[
+\iint_C \mathbf{F}\cdot \mathbf{n}\, ds
+=
+\iint_R (\nabla \cdot \mathbf{F})\, dA
+\]
+
+یہی خیال اسٹوکس اور ڈائیورجنس تھیورم کو ایک ہی بڑے اصول کے تحت unify کرتا ہے۔
+
+%=============================
+%L92230
+
+
+\subsection*{گرین کے قضیے کی تکمیلی صورتیں}
+
+اسی طرح:
+
+\[
+\nabla \times \mathbf{F} \cdot \mathbf{k}
+=
+\frac{\partial N}{\partial x}
+-
+\frac{\partial M}{\partial y}
+\]
+
+لہٰذا گرین کے قضیے کی tangent (curl) صورت کو یوں لکھا جا سکتا ہے:
+
+\[
+\iint_C \mathbf{F}\cdot d\mathbf{r}
+=
+\iint_R \left(
+\frac{\partial N}{\partial x}
+-
+\frac{\partial M}{\partial y}
+\right)\, dA
+\]
+
+یا:
+
+\[
+\oint_C \mathbf{F}\cdot d\mathbf{r}
+=
+\iint_R (\nabla \times \mathbf{F})\cdot \mathbf{k}\, dA
+\]
+
+\bigskip
+
+\subsection*{گرین، اسٹوکس اور ڈائیورجنس کے تعلقات}
+
+اب جب ہم گرین کے قضیے کو del notation میں لکھتے ہیں تو اس کا تعلق اسٹوکس اور ڈائیورجنس تھیورم سے واضح ہو جاتا ہے:
+
+\bigskip
+
+\textbf{گرین کا normal form:}
+\[
+\oint_C \mathbf{F}\cdot \mathbf{n}\, ds
+=
+\iint_R (\nabla \cdot \mathbf{F})\, dA
+\]
+
+\textbf{ڈائیورجنس تھیورم:}
+\[
+\iint_S \mathbf{F}\cdot \mathbf{n}\, ds
+=
+\iiint_D (\nabla \cdot \mathbf{F})\, dV
+\]
+
+\textbf{گرین کا tangent (curl) form:}
+\[
+\oint_C \mathbf{F}\cdot d\mathbf{r}
+=
+\iint_R (\nabla \times \mathbf{F})\cdot \mathbf{k}\, dA
+\]
+
+\textbf{اسٹوکس کا قضیہ:}
+\[
+\oint_C \mathbf{F}\cdot d\mathbf{r}
+=
+\iint_S (\nabla \times \mathbf{F})\cdot \mathbf{n}\, ds
+\]
+
+\bigskip
+
+یہ مشاہدہ کیا جا سکتا ہے کہ اسٹوکس کا قضیہ گرین کے curl (tangential) form کو تین ابعاد تک generalize کرتا ہے، جبکہ ڈائیورجنس تھیورم گرین کے flux (normal) form کو تین ابعاد تک بڑھاتا ہے۔
+
+ہر صورت میں اندرونی خطے میں divergence یا curl کا تکمل boundary پر موجود فیلڈ کے بہاؤ یا گردش کے برابر ہوتا ہے۔
+
+\bigskip
+
+\subsection*{ایک بنیادی وحدانی نظریہ}
+
+ان تمام نتائج کو ایک بنیادی نظریے کی مختلف شکلیں سمجھا جا سکتا ہے۔ اس تصور کو سمجھنے کے لیے ہم کیلکولس کے Fundamental Theorem of Calculus کو یاد کرتے ہیں:
+
+اگر \( f(x) \) قابلِ تفاضل ہو، تو:
+
+\[
+\int_a^b f'(x)\, dx = f(b) - f(a)
+\]
+
+اگر ہم:
+
+\[
+\mathbf{F} = f(x)\mathbf{i}
+\]
+
+لیں، تو:
+
+\[
+\nabla \cdot \mathbf{F} = \frac{df}{dx}
+\]
+
+اب boundary پر unit normals \( n \) کو یوں لیا جاتا ہے:
+
+\[
+n(b)=\mathbf{i}, \quad n(a)=-\mathbf{i}
+\]
+
+لہٰذا:
+
+\[
+f(b)-f(a)
+=
+\mathbf{F}(b)\cdot n(b) + \mathbf{F}(a)\cdot n(a)
+\]
+
+یہی boundary flux ہے:
+
+\[
+f(b)-f(a)
+=
+\text{total outward flux of } \mathbf{F}
+\]
+
+اور اس طرح:
+
+\[
+\mathbf{F}(b)\cdot n(b) + \mathbf{F}(a)\cdot n(a)
+=
+\int_a^b (\nabla \cdot \mathbf{F})\, dx
+\]
+
+یہی بنیادی خیال تمام vector integral theorems کی بنیاد ہے۔
+
+%=========================
+%92304
+
+\subsection*{ایک متحد اصول}
+
+کیلکولس کا Fundamental Theorem of Calculus، گرین کے قضیے کی normal صورت، اور ڈائیورجنس تھیورم—all یہ بیان کرتے ہیں کہ:
+
+کسی خطے پر جب ویکٹر فیلڈ پر divergence آپریٹر \( \nabla \cdot \) لاگو کیا جائے اور اس کا تکمل لیا جائے، تو یہ مقدار خطے کی boundary پر فیلڈ کے مناسب normal اجزاء کے مجموعے کے برابر ہوتی ہے۔
+
+(یہاں گرین کے قضیے میں line integral اور ڈائیورجنس تھیورم میں surface integral کو boundary پر “مجموعہ” (sum) کے طور پر سمجھا جاتا ہے۔)
+
+\bigskip
+
+اسی طرح اسٹوکس کا قضیہ اور گرین کے قضیے کی tangential صورت یہ بیان کرتی ہے کہ:
+
+جب درست orientation اختیار کی جائے، تو curl آپریٹر \( \nabla \times \mathbf{F} \) کے normal component کا surface integral، boundary پر فیلڈ کے tangential اجزاء کے مجموعے کے برابر ہوتا ہے۔
+
+\bigskip
+
+\subsection*{خوبصورتی اور وحدت}
+
+ان تمام نتائج کی اصل خوبصورتی یہ ہے کہ یہ ایک ہی بنیادی اصول کی مختلف شکلیں ہیں:
+
+\bigskip
+
+\textbf{متحد اصول:}
+
+\begin{quote}
+کسی خطے پر کسی differential operator کے اطلاق کا تکمل اس خطے کی boundary پر فیلڈ کے اُن اجزاء کے مجموعے کے برابر ہوتا ہے جو اس operator کے مطابق مناسب (appropriate) ہوں۔
+\end{quote}
+
+%===========================
+%L92333
+
+\section*{مشقیں 16.8}
+
+\subsection*{ڈائیورجنس معلوم کرنا}
+
+درج ذیل مشقوں (1 تا 4) میں دیے گئے ویکٹر فیلڈ کا ڈائیورجنس معلوم کریں۔
+
+\begin{enumerate}
+\item اسپن فیلڈ (Figure 16.14)
+
+\item ریڈیل فیلڈ (Figure 16.13)
+
+\item ثقلی میدان (Figure 16.9)
+
+\item رفتار کا میدان (Figure 16.12)
+\end{enumerate}
+
+\bigskip
+
+\subsection*{ڈائیورجنس تھیورم کے ذریعے بیرونی فلوکس}
+
+درج ذیل مشقوں (5 تا 16) میں ڈائیورجنس تھیورم استعمال کرتے ہوئے ویکٹر فیلڈ \( \mathbf{F} \) کا خطہ \( D \) کی boundary سے بیرونی فلوکس معلوم کریں۔
+
+\begin{enumerate}
+\setcounter{enumi}{4}
+
+\item \textbf{مکعب (Cube)}
+\[
+\mathbf{F} = (y - x)\mathbf{i} + (z - y)\mathbf{j} + (y - x)\mathbf{k}
+\]
+\( D \): مکعب جو \( x=\pm1,\; y=\pm1,\; z=\pm1 \) سے محدود ہے۔
+
+\item
+\[
+\mathbf{F} = x^2\mathbf{i} + y^2\mathbf{j} + z^2\mathbf{k}
+\]
+
+\begin{enumerate}
+\item مکعب: \( x=1,\; y=1,\; z=1 \) (first octant)
+\item مکعب: \( x=\pm1,\; y=\pm1,\; z=\pm1 \)
+\item سلنڈریکل کین: \( x^2+y^2 \le 4,\; 0 \le z \le 1 \)
+\end{enumerate}
+
+\item \textbf{سلنڈر اور پیرابولائڈ}
+\[
+\mathbf{F} = y\mathbf{i} + xy\mathbf{j} - z\mathbf{k}
+\]
+\( D \): وہ خطہ جو سلنڈر \( x^2+y^2 \le 4 \)، plane \( z=0 \)، اور paraboloid \( z=x^2+y^2 \) کے درمیان ہے۔
+
+\item \textbf{کرہ}
+\[
+\mathbf{F} = x^2\mathbf{i} + xz\mathbf{j} + 3z\mathbf{k}
+\]
+\( D \): ٹھوس کرہ \( x^2+y^2+z^2 \le 4 \)
+
+\item \textbf{کرہ (first octant حصہ)}
+\[
+\mathbf{F} = x^2\mathbf{i} - 2xy\mathbf{j} + 3xz\mathbf{k}
+\]
+\( D \): وہ حصہ جو first octant میں کرہ \( x^2+y^2+z^2 \le 4 \) سے کٹا ہوا ہے۔
+
+\item \textbf{سلنڈریکل کین}
+\[
+\mathbf{F} = (6x^2 + 2xy)\mathbf{i} + (2y + x^2z)\mathbf{j} + 4x^2y^3\mathbf{k}
+\]
+\( D \): first octant میں \( x^2+y^2 \le 4 \) اور \( z=3 \) کے درمیان خطہ۔
+
+\item \textbf{ویج (Wedge)}
+\[
+\mathbf{F} = 2xz\mathbf{i} - xy\mathbf{j} - z^2\mathbf{k}
+\]
+\( D \): first octant میں \( y+z \le 4 \) اور \( 4x^2+y^2 \le 16 \) کے درمیان خطہ۔
+
+\item \textbf{ٹھوس کرہ}
+\[
+\mathbf{F} = x^3\mathbf{i} + y^3\mathbf{j} + z^3\mathbf{k}
+\]
+\( D \): \( x^2+y^2+z^2 \le a^2 \)
+
+\item \textbf{موٹا کرہ (Thick sphere)}
+\[
+\mathbf{F} = (2x^2+y^2+z^2)(x\mathbf{i}+y\mathbf{j}+z\mathbf{k})
+\]
+\( D \): \( 1 \le x^2+y^2+z^2 \le 2 \)
+
+\item \textbf{موٹا کرہ}
+\[
+\mathbf{F} = \frac{x\mathbf{i}+y\mathbf{j}+z\mathbf{k}}{2x^2+y^2+z^2}
+\]
+\( D \): \( 1 \le x^2+y^2+z^2 \le 4 \)
+
+\item \textbf{موٹا کرہ}
+\[
+\mathbf{F} =
+(5x^3+12xy^2)\mathbf{i}
++
+(y^3+e^{y}\sin z)\mathbf{j}
++
+(5z^3+e^{y}\cos z)\mathbf{k}
+\]
+\( D \): دو کرّوں کے درمیان خطہ \( x^2+y^2+z^2=1 \) اور \( x^2+y^2+z^2=2 \)
+
+\item \textbf{موٹا سلنڈر}
+\[
+\mathbf{F} =
+\ln(x^2+y^2)\mathbf{i}
+-
+\frac{x\tan^{-1}x}{2z}\mathbf{j}
++
+\frac{y}{x^2+y^2}\mathbf{k}
+\]
+\( D \): \( 1 \le x^2+y^2 \le 2,\; -1 \le z \le 2 \)
+\end{enumerate}
+
+%===========================
+%L92377
+
+\section*{خصوصیات (Divergence اور Curl کی خواص)}
+
+\subsection*{17. \(\nabla \cdot (\nabla \times \mathbf{G}) = 0\)}
+
+\begin{enumerate}
+\item[a.] فرض کریں
+\[
+\mathbf{G} = M\mathbf{i} + N\mathbf{j} + P\mathbf{k}
+\]
+اور اس کے تمام لازم جزوی مشتقات مسلسل ہوں۔ دکھائیں کہ:
+\[
+\nabla \cdot (\nabla \times \mathbf{G}) = 0
+\]
+
+\item[b.] اس نتیجے سے کیا اخذ کیا جا سکتا ہے کہ بند سطح \( S \) کے پار فیلڈ
+\[
+\nabla \times \mathbf{G}
+\]
+کا flux کیا ہوگا؟ وجوہات بیان کریں۔
+\end{enumerate}
+
+\bigskip
+
+\subsection*{18. لکیری خصوصیات (Linearity)}
+
+اگر \( \mathbf{F}_1 \) اور \( \mathbf{F}_2 \) قابلِ تفاضل ویکٹر فیلڈز ہوں اور \( a,b \in \mathbb{R} \)، تو درج ذیل کو verify کریں:
+
+\begin{enumerate}
+\item[a.]
+\[
+\nabla \cdot (a\mathbf{F}_1 + b\mathbf{F}_2)
+=
+a\nabla \cdot \mathbf{F}_1 + b\nabla \cdot \mathbf{F}_2
+\]
+
+\item[b.]
+\[
+\nabla \times (a\mathbf{F}_1 + b\mathbf{F}_2)
+=
+a\nabla \times \mathbf{F}_1 + b\nabla \times \mathbf{F}_2
+\]
+
+\item[c.]
+\[
+\nabla \cdot (\mathbf{F}_1 \times \mathbf{F}_2)
+=
+\mathbf{F}_2 \cdot (\nabla \times \mathbf{F}_1)
+-
+\mathbf{F}_1 \cdot (\nabla \times \mathbf{F}_2)
+\]
+\end{enumerate}
+
+\bigskip
+
+\subsection*{19. Product rules}
+
+اگر \( \mathbf{F} \) ایک ویکٹر فیلڈ ہو اور \( g(x,y,z) \) scalar function ہو، تو verify کریں:
+
+\begin{enumerate}
+\item[a.]
+\[
+\nabla \cdot (g\mathbf{F})
+=
+g(\nabla \cdot \mathbf{F}) + (\nabla g)\cdot \mathbf{F}
+\]
+
+\item[b.]
+\[
+\nabla \times (g\mathbf{F})
+=
+g(\nabla \times \mathbf{F}) + (\nabla g)\times \mathbf{F}
+\]
+\end{enumerate}
+
+\bigskip
+
+\subsection*{20. Differential operator notation}
+
+اگر
+\[
+\mathbf{F} = M\mathbf{i} + N\mathbf{j} + P\mathbf{k},
+\]
+تو ہم define کرتے ہیں:
+
+\[
+\mathbf{F}\cdot \nabla
+=
+M\frac{\partial}{\partial x}
++
+N\frac{\partial}{\partial y}
++
+P\frac{\partial}{\partial z}
+\]
+
+اور درج ذیل identities verify کریں:
+
+\begin{enumerate}
+\item[a.]
+\[
+\nabla \times (\mathbf{F}_1 \times \mathbf{F}_2)
+=
+(\mathbf{F}_2 \cdot \nabla)\mathbf{F}_1
+-
+(\mathbf{F}_1 \cdot \nabla)\mathbf{F}_2
++
+(\nabla \cdot \mathbf{F}_2)\mathbf{F}_1
+-
+(\nabla \cdot \mathbf{F}_1)\mathbf{F}_2
+\]
+
+\item[b.]
+\[
+\nabla (\mathbf{F}_1 \cdot \mathbf{F}_2)
+=
+(\mathbf{F}_1 \cdot \nabla)\mathbf{F}_2
++
+(\mathbf{F}_2 \cdot \nabla)\mathbf{F}_1
++
+\mathbf{F}_1 \times (\nabla \times \mathbf{F}_2)
++
+\mathbf{F}_2 \times (\nabla \times \mathbf{F}_1)
+\]
+\end{enumerate}
+
+\bigskip
+
+\subsection*{نظری و مثالیں}
+
+\subsection*{21. حد (Bound) برائے divergence integral}
+
+اگر \( |\mathbf{F}| \le 1 \) ہو، تو کیا ہم اس پر کوئی حد لگا سکتے ہیں:
+
+\[
+\iiint_D (\nabla \cdot \mathbf{F})\, dV
+\]
+
+وجوہات بیان کریں۔
+
+\bigskip
+
+\subsection*{22. Cube surface flux}
+
+دی گئی مکعب نما سطح کی بنیاد unit square ہے اور sides planes میں ہیں:
+\[
+x=0,\; x=1,\; y=0,\; y=1
+\]
+اوپر کی سطح غیر معلوم smooth surface ہے۔
+
+\[
+\mathbf{F} = x\mathbf{i} - 2y\mathbf{j} + (z+3)\mathbf{k}
+\]
+
+اگر side A سے flux = 1 اور side B سے flux = -3 ہو، تو کیا top surface کے flux کے بارے میں کچھ کہا جا سکتا ہے؟
+
+\bigskip
+
+\subsection*{23. Volume from flux}
+
+\begin{enumerate}
+\item[a.]
+ثابت کریں کہ اگر
+\[
+\mathbf{F} = x\mathbf{i} + y\mathbf{j} + z\mathbf{k}
+\]
+تو کسی closed surface \( S \) کے لیے:
+
+\[
+\text{Volume of } D
+=
+\frac{1}{3}
+\iint_S \mathbf{F}\cdot \mathbf{n}\, ds
+\]
+
+\item[b.]
+یہ بھی دکھائیں کہ \( \mathbf{F} \) کبھی بھی پوری سطح پر \( \mathbf{n} \) کے orthogonal نہیں ہو سکتا۔
+\end{enumerate}
+
+\bigskip
+
+\subsection*{24. Maximum flux problem}
+
+rectangular solid:
+\[
+0 \le x \le a,\quad 0 \le y \le b,\quad 0 \le z \le 1
+\]
+
+کے لیے وہ solid تلاش کریں جس کے لیے flux زیادہ سے زیادہ ہو، جب:
+
+\[
+\mathbf{F} =
+(-x^2 - 4xy)\mathbf{i}
+-
+6yz\mathbf{j}
++
+12z\mathbf{k}
+\]
+
+اور maximum flux معلوم کریں۔
+
+\bigskip
+
+\subsection*{25. Constant field flux}
+
+ثابت کریں کہ کسی constant vector field:
+\[
+\mathbf{F} = \mathbf{C}
+\]
+کا کسی بھی closed surface کے پار outward flux صفر ہوتا ہے۔
+
+\bigskip
+
+\subsection*{26. Harmonic functions}
+
+اگر \( f(x,y,z) \) harmonic ہو یعنی:
+
+\[
+\nabla^2 f = 0
+\]
+
+تو:
+
+\begin{enumerate}
+\item[a.]
+ثابت کریں کہ
+\[
+\iint_S (\nabla f \cdot \mathbf{n})\, ds = 0
+\]
+
+\item[b.]
+ثابت کریں کہ:
+\[
+\iint_S |\nabla f|^2\, dV
+\]
+سے متعلق دی گئی مساوات درست ہے۔
+\end{enumerate}
+
+%========================
+%L92453
+
+\subsection*{28. Gradient فیلڈ کا فلوکس}
+
+فرض کریں \( S \) وہ سطح ہے جو solid sphere کے اس حصے پر مشتمل ہے جو first octant میں ہے:
+\[
+x^2 + y^2 + z^2 \le a^2
+\]
+
+اور
+\[
+f(x,y,z) = \ln(x^2 + y^2 + z^2)
+\]
+
+مطلوب ہے:
+\[
+\iint_S \nabla f \cdot \mathbf{n}\, ds
+\]
+
+یہاں \( \nabla f \cdot \mathbf{n} \) دراصل \( f \) کا outward normal direction میں derivative ہے۔
+
+\bigskip
+
+\subsection*{29. گرین کا پہلا فارمولا}
+
+فرض کریں \( f \) اور \( g \) ایسے scalar functions ہیں جن کے پہلے اور دوسرے derivatives مسلسل ہیں، اور \( D \) ایک region ہے جس کی boundary \( S \) ہے۔
+
+ثابت کریں:
+
+\[
+\iint_S f(\nabla g \cdot \mathbf{n})\, ds
+=
+\iiint_D \left(f\nabla^2 g + \nabla f \cdot \nabla g\right)\, dV
+\]
+
+یہی \textbf{Green’s First Formula} کہلاتا ہے۔
+
+(اشارہ: Divergence Theorem کو field \( \mathbf{F} = f \nabla g \) پر apply کریں۔)
+
+\bigskip
+
+\subsection*{30. گرین کا دوسرا فارمولا}
+
+اب \( f \) اور \( g \) کو interchange کریں اور subtract کریں:
+
+\[
+\iint_S (f\nabla g - g\nabla f)\cdot \mathbf{n}\, ds
+=
+\iiint_D \left(f\nabla^2 g - g\nabla^2 f\right)\, dV
+\]
+
+یہ \textbf{Green’s Second Formula} ہے۔
+
+\bigskip
+
+\subsection*{31. mass conservation (بقاۓ کمیت)}
+
+فرض کریں:
+\[
+\mathbf{v}(t,x,y,z) \quad \text{velocity field}, \qquad
+\rho(t,x,y,z) \quad \text{density}
+\]
+
+\subsubsection*{(a) جسمانی تشریح}
+
+mass conservation کا مطلب یہ ہے کہ کسی بند region \( D \) میں mass کی تبدیلی صرف boundary سے آنے یا جانے والے flux کی وجہ سے ہوتی ہے۔
+
+\bigskip
+
+\subsubsection*{(b) continuity equation کا استخراج}
+
+دی گئی مساوات:
+
+\[
+\frac{d}{dt} \iiint_D \rho\, dV
+=
+-\iint_S \rho \mathbf{v}\cdot \mathbf{n}\, ds
+\]
+
+Divergence Theorem سے:
+
+\[
+\iint_S \rho \mathbf{v}\cdot \mathbf{n}\, ds
+=
+\iiint_D \nabla \cdot (\rho \mathbf{v})\, dV
+\]
+
+اور Leibniz rule سے:
+
+\[
+\frac{d}{dt} \iiint_D \rho\, dV
+=
+\iiint_D \frac{\partial \rho}{\partial t}\, dV
+\]
+
+لہٰذا:
+
+\[
+\iiint_D \left(
+\frac{\partial \rho}{\partial t}
++
+\nabla \cdot (\rho \mathbf{v})
+\right)\, dV
+= 0
+\]
+
+چونکہ یہ ہر region \( D \) کے لیے درست ہے، اس لیے integrand صفر ہوگا:
+
+\[
+\nabla \cdot (\rho \mathbf{v}) + \frac{\partial \rho}{\partial t} = 0
+\]
+
+یہی \textbf{continuity equation} ہے۔
+
+\bigskip
+
+\subsection*{32. حرارت کی diffusion equation}
+
+فرض کریں \( T(t,x,y,z) \) کسی solid کی temperature ہے۔
+
+\subsubsection*{(a) جسمانی تشریح}
+
+حرارت ہمیشہ زیادہ درجہ حرارت سے کم درجہ حرارت کی طرف بہتی ہے، اس لیے heat flow direction:
+
+\[
+-\nabla T
+\]
+
+ہے۔
+
+\bigskip
+
+\subsubsection*{(b) diffusion equation کا استخراج}
+
+heat flux vector دیا گیا ہے:
+
+\[
+\mathbf{v} = -k \nabla T
+\]
+
+اور mass-energy analogy سے:
+\[
+\rho c T \equiv p
+\]
+
+continuity equation:
+
+\[
+\nabla \cdot \mathbf{v} + \frac{\partial p}{\partial t} = 0
+\]
+
+اب substitute کریں:
+
+\[
+\nabla \cdot (-k \nabla T) + \frac{\partial ( \rho c T)}{\partial t} = 0
+\]
+
+اگر \( k, \rho, c \) constants ہوں:
+
+\[
+-k \nabla^2 T + \rho c \frac{\partial T}{\partial t} = 0
+\]
+
+لہٰذا:
+
+\[
+\frac{\partial T}{\partial t}
+=
+\frac{k}{\rho c}\nabla^2 T
+\]
+
+define کریں:
+
+\[
+K = \frac{k}{\rho c}
+\]
+
+تو حاصل ہوتا ہے:
+
+\[
+\frac{\partial T}{\partial t} = K \nabla^2 T
+\]
+
+یہی \textbf{heat diffusion equation} ہے۔
+
+%==============================
+%L
+
+\section*{باب 16: نظرِ ثانی کے رہنما سوالات}
+
+\begin{enumerate}
+\item Line integrals کیا ہیں؟ انہیں کیسے evaluate کیا جاتا ہے؟ مثالیں دیں۔
+
+\item Line integrals کو springs کے center of mass نکالنے کے لیے کیسے استعمال کیا جا سکتا ہے؟ وضاحت کریں۔
+
+\item Vector field کیا ہے؟ Gradient field کیا ہے؟ مثالیں دیں۔
+
+\item کسی particle کو curve کے ساتھ حرکت دینے میں force کے ذریعے کیا گیا کام (work) کیسے معلوم کرتے ہیں؟ مثال دیں۔
+
+\item Flow، circulation، اور flux کیا ہیں؟
+
+\item Path independent fields میں کیا خاص بات ہوتی ہے؟
+
+\item کیسے معلوم کیا جا سکتا ہے کہ کوئی field conservative ہے یا نہیں؟
+
+\item Potential function کیا ہے؟ ایک مثال کے ذریعے دکھائیں کہ conservative field کے لیے potential function کیسے حاصل کیا جاتا ہے۔
+
+\item Differential form کیا ہے؟ Exact ہونے کا کیا مطلب ہے؟ Exactness کو کیسے test کیا جاتا ہے؟ مثالیں دیں۔
+
+\item کسی vector field کا divergence کیا ہوتا ہے؟ اس کی تشریح کیسے کی جاتی ہے؟
+
+\item کسی vector field کا curl کیا ہوتا ہے؟ اس کی تشریح کیسے کی جاتی ہے؟
+
+\item Green’s theorem کیا ہے؟ اس کی تشریح کیسے کی جاتی ہے؟
+
+\item کسی curved surface کے area کو کیسے calculate کیا جاتا ہے؟ مثال دیں۔
+\end{enumerate}
+
+%============================
+%L92544
+
+\section*{باب 16: نظرِ ثانی کے مزید رہنما سوالات}
+
+\begin{enumerate}
+\setcounter{enumi}{13}
+
+\item Oriented surface کیا ہے؟ تین بعدی vector field کا flux کسی oriented surface کے پار کیسے حساب کیا جاتا ہے؟ مثال دیں۔
+
+\item Surface integrals کیا ہیں؟ ان کے ذریعے کیا کچھ calculate کیا جا سکتا ہے؟ مثال دیں۔
+
+\item Parametrized surface کیا ہے؟ ایسی surface کا area کیسے نکالا جاتا ہے؟ مثالیں دیں۔
+
+\item کسی parametrized surface پر کسی function کا integral کیسے لیا جاتا ہے؟ مثال دیں۔
+
+\item Stokes’ Theorem کیا ہے؟ اس کی تشریح کیسے کی جا سکتی ہے؟
+
+\item اس باب کے conservative fields سے متعلق نتائج کا خلاصہ کریں۔
+
+\item Divergence Theorem کیا ہے؟ اس کی تشریح کیسے کی جا سکتی ہے؟
+
+\item Divergence Theorem گرین کے قضیے کو کیسے generalize کرتا ہے؟
+
+\item Stokes’ Theorem گرین کے قضیے کو کیسے generalize کرتا ہے؟
+
+\item Green’s Theorem، Stokes’ Theorem، اور Divergence Theorem کو ایک ہی بنیادی theorem کی مختلف شکلیں کیسے سمجھا جا سکتا ہے؟
+\end{enumerate}
+
+%==========================
+%L92570
+
+\section*{باب 16: پریکٹس مشقیں}
+
+\subsection*{Line Integrals کا حساب}
+
+\begin{enumerate}
+\item درج ذیل شکل میں دو polygonal paths دکھائے گئے ہیں جو origin کو نقطہ \( (1,1,1) \) سے ملاتے ہیں۔ ہر path کے لیے
+\[
+f(x,y,z) = 2x - 3y^2 - 2z + 3
+\]
+کا line integral معلوم کریں۔
+
+\item اسی طرح تین polygonal paths (C1, C2, C3) origin سے \( (1,1,1) \) تک دیے گئے ہیں۔ ہر path پر:
+\[
+f(x,y,z) = x^2 + y - z
+\]
+کا line integral evaluate کریں۔
+
+\item درج ذیل curve پر integral معلوم کریں:
+\[
+f(x,y,z) = 2x^2 + z^2
+\]
+جہاں:
+\[
+\mathbf{r}(t) = a\cos t\,\mathbf{j} + a\sin t\,\mathbf{k}, \quad 0 \le t \le 2\pi
+\]
+
+\item involute curve پر:
+\[
+f(x,y,z) = 2x^2 + y^2
+\]
+اور
+\[
+\mathbf{r}(t) = (\cos t + t\sin t)\mathbf{i} + (\sin t - t\cos t)\mathbf{j}, \quad 0 \le t \le 23
+\]
+کے لیے integral evaluate کریں۔
+
+\end{enumerate}
+
+\subsection*{Line Integrals کا حساب (دیے گئے integrals)}
+
+\begin{enumerate}
+\setcounter{enumi}{4}
+
+\item
+\[
+\int_{(-1,1,1)}^{(4,-3,0)} \frac{dx + dy + dz}{2x + y + z}
+\]
+
+\item
+\[
+\int_{(1,1,1)}^{(10,3,3)} \frac{dx - y\,dy - z\,dz}{x}
+\]
+
+\item ویکٹر فیلڈ:
+\[
+\mathbf{F} = -y\sin z\,\mathbf{i} + x\sin z\,\mathbf{j} + xy\cos z\,\mathbf{k}
+\]
+کو اس circle کے گرد integrate کریں جو sphere \( x^2+y^2+z^2=5 \) اور plane \( z=-1 \) کے intersection سے بنتا ہے (clockwise from above)۔
+
+\item ویکٹر فیلڈ:
+\[
+\mathbf{F} = 3x^2y\,\mathbf{i} + (x^3+1)\mathbf{j} + 9z^2\mathbf{k}
+\]
+کو اس circle کے گرد integrate کریں جو sphere \( x^2+y^2+z^2=9 \) اور plane \( x=2 \) سے کٹتا ہے۔
+
+\end{enumerate}
+
+\subsection*{Line integrals (Green’s theorem استعمال کرتے ہوئے)}
+
+\begin{enumerate}
+\setcounter{enumi}{8}
+
+\item
+\[
+\oint_C 8x\sin y\,dx - 8y\cos x\,dy
+\]
+جہاں \( C \) square ہے: \( x=0 \) سے \( x=\pi/2 \) اور \( y=0 \) سے \( y=\pi/2 \)۔
+
+\item
+\[
+\oint_C y^2\,dx + x^2\,dy
+\]
+جہاں \( C \) circle \( x^2+y^2=4 \) ہے۔
+
+\end{enumerate}
+
+\subsection*{Surface Integrals (Area)}
+
+\begin{enumerate}
+\setcounter{enumi}{10}
+
+\item elliptical region کا area معلوم کریں جو plane \( x+y+z=1 \) اور cylinder \( x^2+y^2=1 \) کے intersection سے بنتا ہے۔
+
+\item paraboloid:
+\[
+y^2+z^2=3x
+\]
+کا وہ cap جو plane \( x=1 \) سے cut ہو، اس کا area معلوم کریں۔
+
+\item sphere:
+\[
+x^2+y^2+z^2=1
+\]
+کے top سے cut ہونے والے spherical cap کا area معلوم کریں جہاں \( z=\sqrt{2}/2 \)۔
+
+\end{enumerate}
+
+%================================
+%L92630
+
+\subsection*{14. سطحی رقبہ (Surface Area)}
+
+\begin{enumerate}
+\item[a.] نصف کرہ:
+\[
+x^2 + y^2 + z^2 = 4,\quad z \ge 0
+\]
+اور cylinder:
+\[
+x^2 + y^2 = 2x
+\]
+کے intersection سے بننے والے سطحی حصے کا رقبہ معلوم کریں۔
+
+\item[b.] اس cylinder کے اس حصے کا رقبہ معلوم کریں جو hemisphere کے اندر واقع ہے۔  
+(اشارہ: projection کو \( xz \)-plane پر لیں یا line integral \( \int 1\, ds \) استعمال کریں۔)
+\end{enumerate}
+
+\bigskip
+
+\subsection*{15. مثلث کا رقبہ}
+
+plane:
+\[
+\frac{x}{a} + \frac{y}{b} + \frac{z}{c} = 1,\quad a,b,c>0
+\]
+جو first octant میں cut کرتا ہے، اس سے بننے والے مثلث کا رقبہ معلوم کریں۔
+
+\bigskip
+
+\subsection*{16. Parabolic cylinder}
+
+parabolic cylinder:
+\[
+y^2 - z = 1
+\]
+سے cut ہونے والے حصے پر درج ذیل integrals evaluate کریں:
+
+\begin{enumerate}
+\item
+\[
+g(x,y,z) = \frac{yz}{24y+1}
+\]
+
+\item
+\[
+g(x,y,z) = \frac{z}{24y^2+1}
+\]
+\end{enumerate}
+
+جہاں bounds: \( x=0,\; x=3,\; z=0 \)
+
+\bigskip
+
+\subsection*{17. Circular cylinder}
+
+\[
+y^2 + z^2 = 25
+\]
+کا وہ حصہ جو first octant میں ہے، اور planes \( x=0,\; x=1 \) کے درمیان اور \( z=3 \) کے اوپر واقع ہے۔
+
+\[
+g(x,y,z) = x^4 y (y^2+z^2)
+\]
+
+\bigskip
+
+\subsection*{18. Wyoming کا رقبہ}
+
+Wyoming ریاست boundaries:
+\[
+111^\circ 3'W,\quad 104^\circ 3'W,\quad 41^\circ N,\quad 45^\circ N
+\]
+
+Earth radius:
+\[
+R = 3959 \text{ miles}
+\]
+
+اس علاقے کا surface area معلوم کریں (sphere پر)۔
+
+\bigskip
+
+\subsection*{Parametrized Surfaces}
+
+\subsection*{19. Spherical band}
+
+sphere:
+\[
+x^2 + y^2 + z^2 = 36
+\]
+اور planes:
+\[
+z = -3,\quad z = 3\sqrt{3}
+\]
+
+\bigskip
+
+\subsection*{20. Parabolic cap}
+
+\[
+z = -\frac{x^2 + y^2}{2},\quad z \ge -2
+\]
+
+\bigskip
+
+\subsection*{21. Cone}
+
+\[
+z = 1 + 2x^2 + y^2,\quad z \le 3
+\]
+
+\bigskip
+
+\subsection*{22. Plane above square}
+
+\[
+4x + 2y + 4z = 12
+\]
+
+square:
+\[
+0 \le x \le 2,\quad 0 \le y \le 2
+\]
+
+\bigskip
+
+\subsection*{23. Paraboloid portion}
+
+\[
+y = 2(x^2 + z^2),\quad y \le 2
+\]
+
+\bigskip
+
+\subsection*{24. Hemisphere portion}
+
+\[
+x^2 + y^2 + z^2 = 10,\quad y \ge 0
+\]
+first octant میں حصہ۔
+
+\bigskip
+
+\subsection*{25. Surface area}
+
+\[
+\mathbf{r}(u,y) =
+(u+y)\mathbf{i} + (u-y)\mathbf{j} + y\mathbf{k},\quad
+0 \le u \le 1,\; 0 \le y \le 1
+\]
+
+\bigskip
+
+\subsection*{26. Surface integral}
+
+\[
+f(x,y,z) = xy - z^2
+\]
+اسی surface پر evaluate کریں۔
+
+\bigskip
+
+\subsection*{27. Helicoid surface area}
+
+\[
+\mathbf{r}(r,u) =
+(r\cos u)\mathbf{i} + (r\sin u)\mathbf{j} + u\mathbf{k},
+\quad 0 \le r \le 1,\; 0 \le u \le 2\pi
+\]
+
+\bigskip
+
+\subsection*{28. Surface integral on helicoid}
+
+\[
+\iint_S (2x^2 + y^2 + 1)\, ds
+\]
+
+جہاں \( S \) helicoid ہے۔
+
+\bigskip
+
+\subsection*{Conservative Fields}
+
+\begin{enumerate}
+\item[29.]
+\[
+\mathbf{F} = x\mathbf{i} + y\mathbf{j} + z\mathbf{k}
+\]
+
+\item[30.]
+\[
+\mathbf{F} = \frac{x\mathbf{i}+y\mathbf{j}+z\mathbf{k}}{(x^2+y^2+z^2)^{3/2}}
+\]
+
+\item[31.]
+\[
+\mathbf{F} = e^y x\mathbf{i} + e^z y\mathbf{j} + e^x z\mathbf{k}
+\]
+
+\item[32.]
+\[
+\mathbf{F} = \frac{\mathbf{i} + z\mathbf{j} + y\mathbf{k}}{x + yz}
+\]
+\end{enumerate}
+
+\bigskip
+
+\subsection*{Potential Functions}
+
+\begin{enumerate}
+\item[33.]
+\[
+\mathbf{F} = 2\mathbf{i} + (2y+z)\mathbf{j} + (y+1)\mathbf{k}
+\]
+
+\item[34.]
+\[
+\mathbf{F} = (z\cos xz)\mathbf{i} + e^y\mathbf{j} + (x\cos xz)\mathbf{k}
+\]
+\end{enumerate}
+
+\bigskip
+
+\subsection*{Work and Circulation}
+
+\begin{enumerate}
+\item[35--36.]
+path: origin to \( (1,1,1) \) (Exercise 1 کے مطابق)
+\end{enumerate}
+
+%==========================
+%L92704
+
+\chapter{16}
+
+\section*{مشقیں 16.8}
+
+\subsection*{تفرق (Divergence) کا حساب}
+
+\begin{enumerate}
+\item درج ذیل ویکٹر فیلڈز کا تفرق تلاش کریں:
+\begin{enumerate}
+\item شکل 16.14 میں دیا گیا اسپن فیلڈ
+\item شکل 16.13 میں دیا گیا ریڈیل فیلڈ
+\item شکل 16.9 میں دیا گیا کششِ ثقل کا فیلڈ
+\item شکل 16.12 میں دیا گیا رفتار (velocity) فیلڈ
+\end{enumerate}
+\end{enumerate}
+
+\subsection*{Divergence Theorem کے ذریعے بیرونی فلوکس}
+
+\begin{enumerate}
+\setcounter{enumi}{4}
+
+\item مکعب:
+\[
+F = (y - x)\, \mathbf{i} + (z - y)\, \mathbf{j} + (y - x)\, \mathbf{k}
+\]
+\[
+D: x=\pm1,\; y=\pm1,\; z=\pm1
+\]
+
+\item
+\[
+F = x^2 \mathbf{i} + y^2 \mathbf{j} + z^2 \mathbf{k}
+\]
+
+\begin{enumerate}
+\item پہلا اوکٹنٹ میں مکعب: \(x=0\) سے \(1\)، \(y=0\) سے \(1\)، \(z=0\) سے \(1\)
+\item مکعب: \(x=\pm1,\; y=\pm1,\; z=\pm1\)
+\item سلنڈر: \(x^2+y^2 \le 4\), \(z=0\) سے \(1\)
+\end{enumerate}
+
+\item
+\[
+F = 2x z\,\mathbf{i} - xy\,\mathbf{j} - z^2\,\mathbf{k}
+\]
+\[
+D: پہلا اوکٹنٹ، \(y+z \le 4\)، اور \(4x^2+y^2 \le 16\)
+\end{enumerate}
+
+\subsection*{Properties of Curl and Divergence}
+
+\begin{enumerate}
+\setcounter{enumi}{16}
+
+\item
+\begin{enumerate}
+\item ثابت کریں کہ
+\[
+\nabla \cdot (\nabla \times G)=0
+\]
+جہاں \(G\) ایک مناسب ہموار ویکٹر فیلڈ ہے۔
+
+\item اس نتیجے سے بند سطح کے فلوکس کے بارے میں کیا نتیجہ نکلتا ہے؟
+\end{enumerate}
+
+\item درج ذیل شناختیں ثابت کریں:
+\begin{enumerate}
+\item \(\nabla \cdot (aF_1 + bF_2)=a\nabla \cdot F_1 + b\nabla \cdot F_2\)
+\item \(\nabla \times (aF_1 + bF_2)=a\nabla \times F_1 + b\nabla \times F_2\)
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item \(\nabla \cdot (gF)=g\nabla \cdot F + \nabla g \cdot F\)
+\item \(\nabla \times (gF)=g\nabla \times F + \nabla g \times F\)
+\end{enumerate}
+
+\item اگر \(F=Mi+Nj+Pk\) ہو تو مختلف شناختیں ثابت کریں (تفصیل حذف کی گئی)۔
+\end{enumerate}
+
+\subsection*{Theory and Applications}
+
+\begin{enumerate}
+\setcounter{enumi}{20}
+
+\item اگر \(|F|\le 1\) ہو تو \(\int_D \nabla \cdot F\, dV\) کے بارے میں حد کیا ہوگی؟
+
+\item مکعب نما سطح میں فلوکس کا مسئلہ (تفصیل حذف)
+
+\item
+\begin{enumerate}
+\item ثابت کریں کہ
+\[
+\text{Flux of } (x\mathbf{i}+y\mathbf{j}+z\mathbf{k}) = 3 \times \text{Volume}
+\]
+
+\item ثابت کریں کہ یہ فیلڈ ہر جگہ سطح کے نارمل کے عمود نہیں ہو سکتا۔
+\end{enumerate}
+
+\item زیادہ سے زیادہ فلوکس کا مسئلہ (Optimization)
+
+\item دکھائیں کہ
+\[
+\text{Volume} = \frac{1}{3} \int_S (x\mathbf{i}+y\mathbf{j}+z\mathbf{k}) \cdot \mathbf{n}\, dS
+\]
+
+\item ثابت کریں کہ مستقل ویکٹر فیلڈ کا کل فلوکس صفر ہوتا ہے۔
+
+\item ہارمونک فنکشنز کے بارے میں سوالات (تفصیل حذف)
+\end{enumerate}
+
+\subsection*{مزید سوالات}
+
+\begin{enumerate}
+\setcounter{enumi}{27}
+
+\item گرین کا پہلا فارمولا اور اس کے اطلاقات
+
+\item گرین کا دوسرا فارمولا
+
+\item ماس کنزرویشن اور continuity equation
+
+\item حرارت کی ترسیل (Heat equation) کا استخراج
+\end{enumerate}
+
+\subsection*{Chapter Review Questions}
+
+\begin{enumerate}
+\item لائن انٹیگرلز کیا ہیں؟
+\item ویکٹر فیلڈ کیا ہے؟
+\item ڈائیورجنس کیا ہے؟
+\item کرل کیا ہے؟
+\item گرین، اسٹوکس اور ڈائیورجنس تھیورم کیا ہیں؟
+\item کنزرویٹو فیلڈ کیا ہوتا ہے؟
+\end{enumerate}
+
+\subsection*{Practice Exercises (Selected)}
+
+\begin{enumerate}
+\item لائن انٹیگرل کے مسائل (تفصیل حذف)
+\item سطحی رقبہ کے مسائل
+\item پیرامیٹرک سطحیں
+\item کرل اور فلوکس کے مسائل
+\item ماس اور مومنٹ آف انرشیہ
+\end{enumerate}
+
+%=========================
+%L92777
+
+
+
+\begin{enumerate}
+\setcounter{enumi}{56}
+
+\item نصف کرہ، سلنڈر اور سطح  
+فرض کریں کہ \(S\) وہ سطح ہے جو بائیں جانب نصف کرہ
+\[
+x^2 + y^2 + z^2 = a^2,\quad y \le 0,
+\]
+سے محدود ہے، درمیانی حصے میں سلنڈر
+\[
+x^2 + z^2 = a^2,\quad 0 \le y \le a,
+\]
+اور دائیں جانب سطح \(y = a\) سے محدود ہے۔  
+\(S\) کے بیرونی رخ پر ویکٹر میدان
+\[
+F = y\,\mathbf{i} + z\,\mathbf{j} + x\,\mathbf{k}
+\]
+کا بہاؤ (flux) معلوم کریں۔
+
+\item سلنڈر اور سطحیں  
+بیرونی بہاؤ معلوم کریں اس ویکٹر میدان کا
+\[
+F = 3xz^2\,\mathbf{i} + y\,\mathbf{j} - z^3\,\mathbf{k}
+\]
+اس ٹھوس جسم کی سطح سے جو پہلے octant میں واقع ہے اور جسے سلنڈر
+\[
+x^2 + 4y^2 = 16
+\]
+اور سطحیں \(y = 2z\), \(x = 0\), اور \(z = 0\) محدود کرتی ہیں۔
+
+\item سلنڈری ڈبہ (Cylindrical can)  
+Divergence Theorem استعمال کرتے ہوئے اس ویکٹر میدان کا بہاؤ معلوم کریں
+\[
+F = xy^2\,\mathbf{i} + x^2y\,\mathbf{j} + y\,\mathbf{k}
+\]
+اس سطح سے جو اس خطے کو گھیرتی ہے جو سلنڈر
+\[
+x^2 + y^2 = 1
+\]
+اور سطحیں \(z = 1\) اور \(z = -1\) سے محدود ہے۔
+
+\item نصف کرہ  
+مندرجہ ذیل ویکٹر میدان کا اوپر کی سمت بہاؤ معلوم کریں
+\[
+F = (3z + 1)\,\mathbf{k}
+\]
+نصف کرہ
+\[
+x^2 + y^2 + z^2 = a^2,\quad z \ge 0,
+\]
+کے اوپر:
+
+(الف) Divergence Theorem استعمال کرتے ہوئے  
+(ب) براہِ راست flux انٹیگرل سے
+
+\end{enumerate}
+
+
+
+%========================
+%L92800
+
+
+
+\begin{center}
+\textbf{باب 16\\ اضافی اور اعلیٰ مشقیں}
+\end{center}
+
+\vspace{0.5cm}
+
+\textbf{گرین کے تھیورم کے ذریعے رقبہ تلاش کرنا}
+
+گرین کے تھیورم کے رقبہ والے فارمولے (مشق 16.4، مساوات 13) کو استعمال کرتے ہوئے درج ذیل منحنی خطوط سے گھری ہوئی خطوں کے رقبے معلوم کریں۔
+
+\begin{enumerate}
+\item لِماسون (Limaçon)  
+\[
+x = 2\cos t - \cos 2t,\quad y = 2\sin t - \sin 2t,\quad 0 \le t \le 2\pi
+\]
+
+\item ڈیلٹائیڈ (Deltoid)  
+\[
+x = 2\cos t + \cos 2t,\quad y = 2\sin t - \sin 2t,\quad 0 \le t \le 2\pi
+\]
+
+\item آٹھ کی شکل والا منحنی (Eight curve)  
+\[
+x = \frac{1}{2}\sin 2t,\quad y = \sin t,\quad 0 \le t \le \pi \quad (\text{ایک لوپ})
+\]
+
+\item ٹیئر ڈراپ (Teardrop)  
+\[
+x = 2a\cos t - a\sin 2t,\quad y = b\sin t,\quad 0 \le t \le 2\pi
+\]
+\end{enumerate}
+
+\textbf{نظریہ اور اطلاق}
+
+\begin{enumerate}
+\setcounter{enumi}{4}
+
+\item  
+(a) کوئی ایسا ویکٹر میدان \( \mathbf{F}(x,y,z) \) کی مثال دیں جس کی قیمت صرف ایک نقطے پر صفر ہو اور جس کا curl ہر جگہ غیر صفر ہو۔ اس نقطے کی نشاندہی کریں اور curl کا حساب کریں۔
+
+\end{enumerate}
+
+
+
+%==========================
+%L92848
+
+
+
+\begin{enumerate}
+\setcounter{enumi}{5}
+
+\item  
+(b) ایسا ویکٹر میدان \( \mathbf{F}(x,y,z) \) کی مثال دیں جو صرف ایک خط پر صفر ہو اور جس کا curl ہر جگہ غیر صفر ہو۔ اس خط کی نشاندہی کریں اور curl معلوم کریں۔
+
+(c) ایسا ویکٹر میدان \( \mathbf{F}(x,y,z) \) کی مثال دیں جو کسی سطح پر صفر ہو اور جس کا curl ہر جگہ غیر صفر ہو۔ اس سطح کی نشاندہی کریں اور curl معلوم کریں۔
+
+\setcounter{enumi}{6}
+
+\item  
+ان تمام نقاط \((a,b,c)\) کو معلوم کریں جو کرہ
+\[
+x^2 + y^2 + z^2 = R^2
+\]
+پر موجود ہوں اور جن پر ویکٹر میدان
+\[
+\mathbf{F} = yz^2\,\mathbf{i} + xz^2\,\mathbf{j} + 2xy\,z\,\mathbf{k}
+\]
+سطح کے عمود (normal) ہو، اور \( \mathbf{F}(a,b,c) \neq 0 \) ہو۔
+
+\setcounter{enumi}{7}
+
+\item  
+رداس \(R\) والے کروی خول (spherical shell) کی کمیت معلوم کریں، اگر ہر نقطے \((x,y,z)\) پر کثافت (density) کسی مقررہ نقطے \((a,b,c)\) سے اس کا فاصلہ ہو۔
+
+\item  
+ہیلکس (helicoid) کی کمیت معلوم کریں:
+\[
+\mathbf{r}(r,u) = r\cos u\,\mathbf{i} + r\sin u\,\mathbf{j} + u\,\mathbf{k},
+\quad 0 \le r \le 1,\; 0 \le u \le 2\pi,
+\]
+اگر کثافت
+\[
+\rho(x,y,z) = 2x^2 + y^2
+\]
+ہو۔
+
+\item  
+مستطیل خطہ \(0 \le x \le a,\; 0 \le y \le b\) میں ایسا خطہ تلاش کریں جس کے لیے ویکٹر میدان
+\[
+\mathbf{F} = (x^2 + 4xy)\,\mathbf{i} - 6y\,\mathbf{j}
+\]
+کا بیرونی بہاؤ (outward flux) کم سے کم ہو۔ کم از کم flux معلوم کریں۔
+
+\item  
+وہ مساوات معلوم کریں جس میں اصل سے گزرنے والا وہ سطحی قطعہ ہو جس کے لیے ویکٹر میدان
+\[
+\mathbf{F} = z\,\mathbf{i} + x\,\mathbf{j} + y\,\mathbf{k}
+\]
+اور کرہ
+\[
+x^2 + y^2 + z^2 = 4
+\]
+کے انقطاعی دائرے (circle of intersection) کے گرد گردش (circulation) زیادہ سے زیادہ ہو۔
+
+\item  
+ایک دھاگہ (string) پہلے چوتھائی میں دائرہ
+\[
+x^2 + y^2 = 4
+\]
+پر \((2,0)\) سے \((0,2)\) تک رکھا ہے۔ کثافت
+\[
+\rho(x,y) = xy
+\]
+ہے۔
+
+(a) یہ دکھائیں کہ کشش ثقل کے تحت نیچے محور \(x\)-axis تک سیدھا لانے میں کام (work) ایک خطی تکمل (line integral) سے دیا جا سکتا ہے۔
+
+(b) کل کام معلوم کریں۔
+
+(c) یہ ثابت کریں کہ یہی کام اس تار کے مرکزِ کمیت کو سیدھا نیچے لانے کے برابر ہے۔
+
+\item  
+ایک باریک چادر سطح
+\[
+x + y + z = 1
+\]
+(پہلے octant میں) پر واقع ہے جس کی کثافت \( \rho(x,y,z) = xy \) ہے۔
+
+(a) دکھائیں کہ کشش ثقل کے تحت کام سطحی تکمل سے دیا جا سکتا ہے۔
+
+(b) کل کام معلوم کریں۔
+
+(c) مرکزِ کمیت کے تصور سے نتیجہ کی تصدیق کریں۔
+
+\end{enumerate}
+
+
+
+%=======================
+%L92920
+
+
+
+\begin{enumerate}
+\setcounter{enumi}{15}
+
+\item  
+فرض کریں
+\[
+\mathbf{F} = -\frac{GMm}{\lVert \mathbf{r} \rVert^3}\,\mathbf{r}
+\]
+وہ ثقلی ویکٹر میدان ہے جو \( \mathbf{r} \neq 0 \) کے لیے تعریف شدہ ہے۔ Gauss کے قانون (Section 16.8) کو استعمال کرتے ہوئے دکھائیں کہ کوئی ایسا مسلسل قابل تفریق ویکٹر میدان \( \mathbf{H} \) موجود نہیں جس کے لیے
+\[
+\mathbf{F} = \nabla \times \mathbf{H}.
+\]
+
+\item  
+اگر \(f(x,y,z)\) اور \(g(x,y,z)\) مسلسل قابل تفریق اسکیلر افعال ہوں جو بند سطح \(S\) اور اس کی حدی منحنی \(C\) پر تعریف شدہ ہوں، تو ثابت کریں کہ
+\[
+\iint_S (\nabla f \times \nabla g)\cdot \mathbf{n}\, dS
+=
+\oint_C f\, \nabla g \cdot d\mathbf{r}.
+\]
+
+\item  
+فرض کریں کہ ویکٹر میدانوں \( \mathbf{F}_1 \) اور \( \mathbf{F}_2 \) کے لیے کسی خطہ \(D\) میں
+\[
+\nabla \cdot \mathbf{F}_1 = \nabla \cdot \mathbf{F}_2,\quad
+\nabla \times \mathbf{F}_1 = \nabla \times \mathbf{F}_2,
+\]
+اور بند سطح \(S\) پر
+\[
+\mathbf{F}_1 \cdot \mathbf{n} = \mathbf{F}_2 \cdot \mathbf{n}
+\]
+ہو، جہاں \( \mathbf{n} \) بیرونی اکائی عمود ہے۔ ثابت کریں کہ
+\[
+\mathbf{F}_1 = \mathbf{F}_2 \quad \text{پورے } D \text{ میں۔}
+\]
+
+\setcounter{enumi}{18}
+
+\item  
+ثابت کریں یا رد کریں کہ اگر
+\[
+\nabla \cdot \mathbf{F} = 0
+\quad \text{اور} \quad
+\nabla \times \mathbf{F} = 0,
+\]
+تو لازماً \( \mathbf{F} = 0 \) ہوگا۔
+
+\item  
+فرض کریں \(S\) ایک سمت دار (oriented) سطح ہے جس کی پیرامیٹرائزیشن \( \mathbf{r}(u,v) \) ہے۔ تعریف کریں:
+\[
+d\mathbf{S} = \mathbf{r}_u \times \mathbf{r}_v \, du\, dv
+\]
+جس میں \(d\mathbf{S}\) سطح کا عمودی ویکٹر ہے، اور
+\[
+dS = \lVert d\mathbf{S} \rVert
+\]
+سطحی رقبے کا عنصر ہے۔ ثابت کریں کہ
+\[
+dS = \sqrt{EG - F^2}\, du\, dv
+\]
+جہاں
+\[
+E = \lVert \mathbf{r}_u \rVert^2,\quad
+F = \mathbf{r}_u \cdot \mathbf{r}_v,\quad
+G = \lVert \mathbf{r}_v \rVert^2.
+\]
+
+\item  
+وہ حجم \(V\) جو خطہ \(D\) کو گھیرنے والی بند سطح \(S\) کے اندر ہو، جہاں بیرونی اکائی عمود \( \mathbf{n} \) ہو، درج ذیل تعلق رکھتا ہے:
+\[
+V = \frac{1}{3}\iint_S \mathbf{r}\cdot \mathbf{n}\, dS,
+\]
+جہاں \( \mathbf{r} = (x,y,z) \) مقامِ ویکٹر ہے۔
+
+\end{enumerate}
+
+
+
+%==========================
+%L92959
+
+
+
+\begin{center}
+\textbf{باب 16\\ ٹیکنالوجی ایپلیکیشن پروجیکٹس}
+\end{center}
+
+\vspace{0.5cm}
+
+\textbf{Mathematica / Maple ماڈیول}
+
+\textbf{محافظ (Conservative) اور غیر محافظ (Nonconservative) قوتی میدان میں کام}
+
+ویکٹر میدانوں پر تکمل (integration) کا مطالعہ کریں اور مختلف راستوں کے ساتھ محافظ اور غیر محافظ قوتی افعال کے لیے تجربہ کریں۔
+
+\vspace{0.4cm}
+
+\textbf{Mathematica / Maple ماڈیول}
+
+\textbf{گرین کے تھیورم کو کیسے بصری طور پر سمجھا جا سکتا ہے؟}
+
+ویکٹر میدانوں پر تکمل کا مطالعہ کریں اور پیرامیٹرائزیشن کے ذریعے خطی تکملات (line integrals) کا حساب کریں۔ گرین کے تھیورم کی دونوں صورتوں کو سمجھا اور جانچا جائے گا۔
+
+\vspace{0.4cm}
+
+\textbf{Mathematica / Maple ماڈیول}
+
+\textbf{Divergence Theorem کو بصری طور پر سمجھنا اور اس کی تصدیق}
+
+Divergence Theorem کی تصدیق کریں مختلف divergence اور سطحی (surface) تکملات بنا کر اور ان کا حساب لگا کر۔
+
+
+
+%=====================
+%L92976
+
+

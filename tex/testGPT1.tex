@@ -1,0 +1,2708 @@
+%Line 90292
+\section{معلمی سطحیں}
+
+ہم نے مستوی میں منحنیات کو تین مختلف طریقوں سے بیان کیا ہے:
+
+\begin{align*}
+\text{صریح صورت:}\qquad & y=f(x) \\
+\text{ضمنی صورت:}\qquad & F(x,y)=0 \\
+\text{معلمی سمتی صورت:}\qquad & \mathbf{r}(t)=f(t)\mathbf{i}+g(t)\mathbf{j},
+\qquad a\le t\le b
+\end{align*}
+
+فضا میں سطحوں کے لیے بھی اسی طرح کی تعریفیں موجود ہیں:
+
+\begin{align*}
+\text{صریح صورت:}\qquad & z=f(x,y) \\
+\text{ضمنی صورت:}\qquad & F(x,y,z)=0
+\end{align*}
+
+ایک معلمی صورت بھی موجود ہے جس میں سطح پر کسی نقطے کی جگہ کو دو متغیرات کے سمتی تفاعل کی صورت میں ظاہر کیا جاتا ہے۔ اس حصہ میں ہم سطحی رقبہ اور سطحی تکملات کے مطالعہ کو ان سطحوں تک وسیع کریں گے جنہیں معلمی صورت میں بیان کیا گیا ہو۔
+
+\subsection*{سطحوں کی معلمی نمائندگی}
+
+فرض کریں
+
+\begin{equation}
+\mathbf{r}(u,v)
+=
+f(u,v)\mathbf{i}
++
+g(u,v)\mathbf{j}
++
+h(u,v)\mathbf{k}
+\label{eq:16.6.1}
+\end{equation}
+
+ایک مسلسل سمتی تفاعل ہو جو \(uv\) مستوی کے ایک خطہ \(R\) پر معین ہو اور \(R\) کے داخلی حصے میں ایک ایک ہو (شکل \حوالہء{ 16.0})۔
+ہم \(\mathbf{r}\) کی سعت کو \اصطلاح{سطح }\فرہنگ{سطح}\فرہنگ{surface}\(S\) کہتے ہیں جس کی تعریف یا نقشہ کشی \(\mathbf{r}\) کے ذریعہ کی جاتی ہے۔ مساوات \eqref{eq:16.6.1} اور  \(R\)  کا دائرہ کار مل کر اس سطح کی ایک  \اصطلاح{معلمی نمائندگی}\فرہنگ{معلمی نمائندگی}\حاشیہب{parametrization}\فرہنگ{parametrixzation} تشکیل دیتے ہیں۔ متغیرات \(u\) اور \(v\) \اصطلاح{معلمات}\فرہنگ{معلمات}\حاشیہب{parameters}\فرہنگ{parameters} کہلاتے ہیں جبکہ \(R\) کو \اصطلاح{معلمی دائرہ کار}\فرہنگ{معلمی 
+دائرہ کار}\حاشیہب{parameter domain}\فرہنگ{parameter domain} کہا جاتا ہے۔
+
+%==================
+%Line 90319
+مباحثہ کو سادہ رکھنے کے لیے ہم فرض کرتے ہیں کہ  \(R\)ایک مستطیل خطہ ہے جو درج ذیل عدم مساوات سے متعین ہوتا ہے:
+
+\[
+a\le u\le b,\qquad c\le v\le d.
+\]
+
+اس شرط سے کہ کے داخلی حصے میں \(\mathbf{r}\)،  \(R\)  ایک ایک ہو، یہ یقینی ہوتا ہے کہ سطح  \(S\)خود کو قطع نہیں کرتی۔ دھیان رہے  کہ مساوات \eqref{eq:16.6.1} درج ذیل تین معلمی مساوات کی سمتی صورت ہے:
+
+\[
+x=f(u,v),\qquad
+y=g(u,v),\qquad
+z=h(u,v).
+\]
+
+\ابتدا{مثال}
+\textbf{مخروط کی معلمی نمائندگی}
+
+درج ذیل مخروط کی معملی نائندگی تلاش کریں۔
+
+\[
+z=\sqrt{x^{2}+y^{2}},
+\qquad
+0\le z\le 1
+\]
+
+\انتہا{مثال}
+
+\textbf{حل}\quad
+یہاں نلکی  محدد ہماری تمام ضروریات پوری کرتا ہے۔ مخروط پر ایک عمومی نقطہ   \((x,y,z)\)(شکل 16.51) کے لیے
+
+\[
+x=r\cos\theta,\qquad
+y=r\sin\theta,\quad
+z=\sqrt{x^{2}+y^{2}}=r
+\]
+
+ہو گا جہاں درج ذیل ہو گا۔
+
+\[
+0\le r\le 1,
+\qquad
+0\le \theta\le 2\pi.
+\]
+
+مساوات \eqref{eq:16.6.1} میں  \(u=r\)اور  \(v=\theta\)لینے سے   درج ذیل معلمی نمائندگی حاصل ہوتی ہے۔
+
+\[
+\mathbf{r}(r,\theta)=
+(r\cos\theta)\mathbf{i}
++
+(r\sin\theta)\mathbf{j}
++
+r\mathbf{k},
+\quad
+0\le r\le 1,
+\qquad
+0\le \theta\le 2\pi
+\]
+
+\ابتدا{مثال}
+\textbf{کرہ کی معلمی نمائندگی}
+
+کرہ
+\(
+x^{2}+y^{2}+z^{2}=a^{2}
+\)
+کی ایک معلمی نمائندگی تلاش کریں۔
+\انتہا{مثال}
+
+\textbf{حل}\quad
+کروی محدد   میں   عمومی نقطہ \((x,y,z)\)کے لیے
+\(
+x=a\sin\phi\cos\theta,
+\) ،  جبکہ 
+\(
+y=a\sin\phi\sin\theta,
+\)،  اور 
+\(
+z=a\cos\phi,
+\)
+ہو گا  جہاں
+\(
+0\le\phi\le\pi
+\)
+اور
+\(
+0\le\theta\le2\pi
+\)
+ ہو گا (شکل 16.52) ۔ مساوات \eqref{eq:16.6.1} میں \(u=\phi\)اور  \(v=\theta\)لینے سے درج ذیل حاصل ہو گا۔
+
+\begin{align*}
+\mathbf{r}(\phi,\theta)=&
+(a\sin\phi\cos\theta)\mathbf{i}
++
+(a\sin\phi\sin\theta)\mathbf{j}
++
+(a\cos\phi)\mathbf{k}\\
+& 0\le\phi\le\pi,
+\qquad
+0\le\theta\le2\pi
+\end{align*}
+
+\ابتدا{مثال}
+\textbf{اسطوانہ کی معلمی نمائندگی}
+
+درج ذیل اسطوانہ کی ایک معلمی نمائندگی تلاش کریں۔
+
+\[
+x^{2}+(y-3)^{2}=9,
+\qquad
+0\le z\le5
+\]
+\انتہا{مثال}
+
+\textbf{حل}\quad
+نلکی محدد میں  نقطہ \((x,y,z)\)کے لیے
+\(
+x=r\cos\theta,
+\,
+y=r\sin\theta,
+\,
+z=z.
+\)
+ہو گا۔اسطوانہ
+\(
+x^{2}+(y-3)^{2}=9
+\)
+(شکل 16.53) پر موجود نقاط کے لیے یہ مساوات \(xy\)مستوی میں اسطوانہ کے قاعدہ کی قطبی مساوات کے مترادف ہے:
+
+\begin{align*}
+x^{2}+(y^{2}-6y+9)&=9\\
+r^{2}-6r\sin\theta&=0
+\end{align*}
+
+یا درج ذیل۔
+
+\[
+r=6\sin\theta,
+\qquad
+0\le\theta\le\pi
+\]
+
+پس اسطوانہ پر ایک عمومی نقطہ کے  لئے درج ذیل ہو گا۔
+
+\begin{align*}
+x&=r\cos\theta=6\sin\theta\cos\theta=3\sin 2\theta\\
+y&=r\sin\theta=6\sin^{2}\theta\\
+z&=z.
+\end{align*}
+
+%=========================================
+%Line 90385
+
+مساوات میں \(u=\theta\) اور \(v=z\) لینے سے  درج ذیل معلمی نمائندگی حاصل ہوتی ہے۔
+
+\[
+\mathbf{r}(\theta,z)
+=
+(3\sin 2\theta)\mathbf{i}
++
+(6\sin^{2}\theta)\mathbf{j}
++
+z\mathbf{k},
+\qquad
+0\le \theta \le \pi,
+\qquad
+0\le z \le 5.
+\]
+
+\حصہء{سطحی رقبہ}
+
+ہم  ایسا  دوہرا تکمل حاصل کرنا  چاہتے ہیں جس کے ذریعے  خمیدہ سطح \(S\) کا رقبہ نکالا جا سکے، بشرطیکہ سطح کی معلمی نمائندگی درج ذیل ہو۔
+
+\[
+\mathbf{r}(u,v)
+=
+f(u,v)\mathbf{i}
++
+g(u,v)\mathbf{j}
++
+h(u,v)\mathbf{k},
+\qquad
+a\le u\le b,
+\qquad
+c\le v\le d.
+\]
+
+ اس  کے لیے سطح کا ہموار ہونا ضروری ہے۔ ہمواری کی تعریف سمتی تفاعل \(\mathbf{r}\) کے درج ذیل   جزوی تفرقات  پر مبنی ہے۔
+
+\[
+\mathbf{r}_u
+=
+\frac{\partial \mathbf{r}}{\partial u}
+=
+\frac{\partial f}{\partial u}\mathbf{i}
++
+\frac{\partial g}{\partial u}\mathbf{j}
++
+\frac{\partial h}{\partial u}\mathbf{k},
+\]
+
+\[
+\mathbf{r}_v
+=
+\frac{\partial \mathbf{r}}{\partial v}
+=
+\frac{\partial f}{\partial v}\mathbf{i}
++
+\frac{\partial g}{\partial v}\mathbf{j}
++
+\frac{\partial h}{\partial v}\mathbf{k}.
+\]
+
+\subsection*{تعریف: ہموار معلمی سطح}
+
+معلمی سطح
+\(
+\mathbf{r}(u,v)
+=
+f(u,v)\mathbf{i}
++
+g(u,v)\mathbf{j}
++
+h(u,v)\mathbf{k}
+\)
+اس وقت ہموار کہلاتی ہے جب \(\mathbf{r}_u\) اور \(\mathbf{r}_v\) مسلسل ہوں اور  معلمی دائرہ کار پر  سمتیہ \(\mathbf{r}_u \times \mathbf{r}_v \)     کبھی   صفر نہ ہو۔
+
+ہمواری کی تعریف میں یہ  شرط کہ   سمتیہ \(\mathbf{r}_u \times \mathbf{r}_v \)  معلمی دائرہ کار       پر کبھی   صفر نہ ہو،  اس بات کو یقینی بناتی ہے کہ  سمتیات \عددی{\kvec{u}} اور \عددی{\kvec{v}}  نہ صرف غیر صفر ہوں بلکہ کبھی ایک ہی خط پر بھی نہ ہوں، لہٰذا یہ ہمیشہ سطح کے لیے   مماسی سطح  تعین کرتے ہیں۔
+
+اب \(R\) میں ایک چھوٹا مستطیل \(\Delta A_{uv}\) لیں جس کے اطراف
+\(u=u_0\,\)، 
+\(u=u_0+\Delta u\,\)،
+ \(v=v_0\, \)،
+اور
+ \(v=v_0+\Delta v \,\)
+ہوں (شکل 16.54)۔ مستطیل \عددی{\Delta A_{uv}}  کا ہر پہلو سطح \(S\) پر ایک منحنی  پر نقش  ہو جاتا ہے، اور یہ چار منحنیات مل کر سطح پر ایک" چھوٹا خمیدہ رقبہ " \(\Delta S_{uv}\)   کے گرد گھیرا  بناتی ہیں۔ شکل کے مطابق \(v=v_0\)  طرف منحنی \(C_1\)  پر نقش ہے،  \(u=u_0\) منحنی \(C_2\) پر، اور  ان کا مشترک   راس  \((u_0,v_0)\)   نقطہ \عددی{P_0} پر نقش ہے۔
+
+
+%====================================================
+%Line 90461
+
+%???????????????????????????????????????????????????
+شکل 16.55 میں \(\Delta \sigma_{uv}\) بڑا کرکے دکھایا گیا ہے۔ سمتیہ
+\(
+\mathbf{r}_u(u_0,v_0)
+\)
+منحنی \(C_1\)  کو نقطہ \(P_0\) کے مقام پر مماس ہے۔ اسی طرح
+\(
+\mathbf{r}_v(u_0,v_0)
+\)
+منحنی \(C_2\) کو نقطہ \(P_0\) کے مقام پر مماس ہے۔ ان دونوں سمتیات کا صلیبی  ضرب
+\(
+\mathbf{r}_u \times \mathbf{r}_v
+\)
+نقطہ \(P_0\) پر سطح کے عمود کا متوازی ہوگا۔ (یہاں ہم یہ مفروضہ استعمال کرتے ہیں کہ سطح \(S\) ہموار ہے، تاکہ یہ یقینی بنایا جا سکے کہ
+\(
+\mathbf{r}_u \times \mathbf{r}_v \neq \mathbf{0}
+\)
+ہو۔)
+
+ ہم سطحی  ٹکڑا \(\Delta \sigma_{uv}\) کو مماسی مستوی  پر موجود اس متوازی الاضلاع سے تخمین دیتے  ہیں جس کے اطراف  سمتیات 
+\(
+\Delta u\,\mathbf{r}_u
+\)
+اور
+\(
+\Delta v\,\mathbf{r}_v
+\)
+ہیں (شکل \حوالہء{16.56})۔اس متوازی الاضلاع کا رقبہ  درج ذیل ہے۔
+
+\[
+\left|\Delta u\,\mathbf{r}_u \times \Delta v\,\mathbf{r}_v\right|
+=
+\left|\mathbf{r}_u \times \mathbf{r}_v\right|\Delta u\,\Delta v
+\tag{2}
+\]
+
+
+مستوی 
+\(uv\)
+میں 
+\(R\)  
+کی خانہ بندی   چھوٹے مستطیل  رقبوں 
+\(\Delta A_{uv}\) 
+سے کر کے سطح  \عددی{S} کی خانہ بندی  پیدا کی جا سکتی ہے جو \عددی{\Delta \sigma_{uv}} سطحی  ٹکڑوں پر مبنی ہو گا۔ہر سطحی  ٹکڑے  کے رقبے کو  مساوات \حوالہء{2} سے تخمین دے کر  ایسے تمام رقبے   جمع کرکے  \عددی{S} کا رقبہ  تخمیناً   درج ذیل حاصل ہو گا۔
+
+\[
+\sum_u \sum_v \left|\mathbf{r}_u \times \mathbf{r}_v\right| \Delta u\,\Delta v
+\tag{3}
+\]
+
+اگر  \(\Delta u \) اور \(\Delta v\) آزادانہ طور پر صفر کو پہنچتے ہو،  \عددی{\kvec{r}_u} اور \عددی{\kvec{r}_v} کی استمرار  اس بات کی ضمانت دیتا ہے کہ  مساوات \حوالہء{3} میں دیا گیا مجموعہ دوہرا تکمل \عددی{\int_c^d\int_z^b\abs{\kvec{r}_u\times \kvec{r}_v}\dif u\dif v} کو پہنچے گا۔ یہی   دوہرا تکمل  سطح \(S\) کے رقبے کی تعریف ہے، اور یہ پچھلی تعریفوں کے ساتھ ہم آہنگ ہونے کے ساتھ ساتھ  زیادہ عمومی ہے۔
+
+\ابتدا{تعریف}
+
+ ہموار سطح:
+
+\[
+\mathbf{r}(u,v)=f(u,v)\mathbf{i}+g(u,v)\mathbf{j}+h(u,v)\mathbf{k},\qquad   a\le u\le b,\quad c\le v\le d
+\]
+
+کا رقبہ درج ذیل ہوگا۔
+
+\[
+A=\int_{c}^{d}\int_{a}^{b}\left|\mathbf{r}_u \times \mathbf{r}_v\right|\,\dif u\,\dif v \tag{4}
+\]
+\انتہا{تعریف}
+
+
+
+ہم \عددی{|\kvec{r}_u\times \kvec{r}_v |\dif u\dif v} کی جگہ \عددی{\dif \sigma} لکھ کر  اس تکمل کو مختصراً درج ذیل لکھتے ہیں۔
+
+\[
+A=\iint_S \dif \sigma \quad\quad \quad\quad \dif s = \left|\mathbf{r}_u \times \mathbf{r}_v\right|\,\dif u\,\dif v.
+\tag{5}
+\]
+
+
+\ابتدا{مثال}\quad
+مخروط کا رقبہ
+
+مثال \حوالہء{1} میں  ہم مخروط کی درج ذیل  مقدار معلوم صورت دریافت کر چکے ہیں۔
+
+\[
+\mathbf{r}(r,\theta)=(r\cos\theta)\mathbf{i}+(r\sin\theta)\mathbf{j}+r\mathbf{k},\qquad0\le r\le 1,\qquad0\le \theta \le 2\pi.
+\]
+
+%========================================
+%Line 90532
+مساوات \حوالہء{4}   استعمال  کرنے کے لیے ہم  پہلے \(\mathbf{r}_r \times \mathbf{r}_\theta\) حاصل کرتے ہیں۔
+
+\begin{align*}
+\mathbf{r}_r \times \mathbf{r}_\theta &=
+\begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\cos\theta & \sin\theta & 1 \\
+-r\sin\theta & r\cos\theta & 0
+\end{vmatrix}\\
+&=-(r\cos\theta)\mathbf{i}-(r\sin\theta)\mathbf{j}+(r\cos^2\theta + r\sin^2\theta)\mathbf{k}
+\end{align*}
+چونکہ
+\(
+\cos^2\theta + \sin^2\theta = 1,
+\)
+ہے  لہٰذا 
+\[
+\mathbf{r}_r \times \mathbf{r}_\theta =-r\cos\theta\mathbf{i}-r\sin\theta\mathbf{j}+r\mathbf{k}=\sqrt{2r^2}=\sqrt{2}r
+\]
+اور مخروط کا سطحی رقبہ درج ذیل ہو گا۔
+
+\begin{align*}
+A&=\int_{0}^{2\pi}\int_{0}^{1} |\kvec{r}_r \times \kvec{r}_{\theta}|\dif r\dif \theta\\
+&=\int_{0}^{2\pi}\int_{0}^{1}\sqrt{2}\,r\,\dif r\,\dif \theta=\int_0^{2\pi} \frac{\sqrt{2}}{2}\dif \theta=\frac{\sqrt{2}}{2}(2\pi)=\pi\sqrt{2}
+\end{align*}
+\انتہا{مثال}
+
+%KKK??? am here
+%what follows should have (r,theta,phi) or (r,phi,theta)?????  
+\section*{مثال 5: سطحی رقبہ (کرہ)}
+
+ایک کرہ جس کا رداس \(a\) ہو اس کا سطحی رقبہ معلوم کریں۔
+
+\textbf{حل}
+
+ہم مثال 2 کی معلمی نمائندگی استعمال کرتے ہیں:
+
+\[
+\mathbf{r}(\phi,\theta)
+=
+(a\sin\phi\cos\theta)\mathbf{i}
++
+(a\sin\phi\sin\theta)\mathbf{j}
++
+(a\cos\phi)\mathbf{k},
+\]
+
+\[
+0\le \phi \le \pi,
+\qquad
+0\le \theta \le 2\pi.
+\]
+
+اب \(\mathbf{r}_\phi \times \mathbf{r}_\theta\) نکالتے ہیں:
+
+\[
+\mathbf{r}_\phi \times \mathbf{r}_\theta
+=
+\begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+a\cos\phi\cos\theta & a\cos\phi\sin\theta & -a\sin\phi \\
+-a\sin\phi\sin\theta & a\sin\phi\cos\theta & 0
+\end{vmatrix}
+\]
+
+اس کا نتیجہ:
+
+\[
+\mathbf{r}_\phi \times \mathbf{r}_\theta
+=
+(a^2\sin^2\phi\cos\theta)\mathbf{i}
++
+(a^2\sin^2\phi\sin\theta)\mathbf{j}
++
+(a^2\sin\phi\cos\phi)\mathbf{k}.
+\]
+
+لہٰذا مقدار:
+
+\[
+\left|\mathbf{r}_\phi \times \mathbf{r}_\theta\right|
+=
+\sqrt{
+a^4\sin^4\phi\cos^2\theta
++
+a^4\sin^4\phi\sin^2\theta
++
+a^4\sin^2\phi\cos^2\phi
+}
+\]
+
+\[
+=
+\sqrt{
+a^4\sin^4\phi + a^4\sin^2\phi\cos^2\phi
+}
+=
+a^2\sin\phi.
+\]
+
+(کیونکہ \(0\le \phi \le \pi\) میں \(\sin\phi \ge 0\))
+
+لہٰذا سطحی رقبہ:
+
+\[
+A
+=
+\int_{0}^{2\pi}\int_{0}^{\pi}
+a^2\sin\phi
+\,d\phi\,d\theta.
+\]
+
+\[
+A
+=
+\int_{0}^{2\pi}
+\left[-a^2\cos\phi\right]_{0}^{\pi}
+\,d\theta
+=
+\int_{0}^{2\pi}
+2a^2
+\,d\theta.
+\]
+
+\[
+A
+=
+4\pi a^2
+\quad \text{مربع اکائیاں}.
+\]
+
+یہ نتیجہ کرہ کے معلوم فارمولے کے مطابق ہے۔
+
+\section*{سطحی تکملات}
+
+معلمی سطح کے رقبہ کا فارمولا حاصل کرنے کے بعد اب ہم کسی تفاعل کو سطح پر تکمل کرنے کے قابل ہو جاتے ہیں، یعنی معلمی صورت میں سطحی تکملات کی تعریف کی جا سکتی ہے۔
+
+%==================================
+%L 90590
+
+\begin{center}
+{\Large تعریف: سطحی تکمل برائے پیرامیٹرک سطح}
+\end{center}
+
+اگر سطح $S$ کو پیرامیٹرک صورت میں درج ذیل طور پر ظاہر کیا جائے:
+
+\[
+\mathbf{r}(u,v) = f(u,v)\mathbf{i} + g(u,v)\mathbf{j} + h(u,v)\mathbf{k},
+\quad a \le u \le b,\; c \le v \le d
+\]
+
+اور $G(x,y,z)$ ایک متصل (continuous) تابع ہو جو سطح $S$ پر تعریف شدہ ہو، تو سطحی تکمل درج ذیل ہوگا:
+
+\[
+\iint_S G(x,y,z)\, dS
+=
+\int_c^d \int_a^b
+G\big(f(u,v), g(u,v), h(u,v)\big)\,
+\left| \mathbf{r}_u \times \mathbf{r}_v \right| \, du\, dv
+\]
+
+\vspace{1em}
+
+\begin{center}
+{\Large مثال 6: پیرامیٹرک سطح پر تکمل}
+\end{center}
+
+$G(x,y,z) = x^2$ کا تکمل مخروطی سطح
+\[
+z = 2x^2 + y^2,\quad 0 \le z \le 1
+\]
+پر معلوم کریں۔
+
+\textbf{حل:}
+
+مثال 1 اور 4 کی طرح ہم حاصل کرتے ہیں کہ
+
+\[
+\left| \mathbf{r}_r \times \mathbf{r}_u \right| = 2\sqrt{2}\, r
+\]
+
+اور
+
+\[
+x = r \cos u
+\]
+
+لہٰذا
+
+\[
+\iint_S x^2 \, dS
+=
+\int_0^{2\pi} \int_0^1
+(r^2 \cos^2 u)(2\sqrt{2}\, r)\, dr\, du
+\]
+
+\[
+=
+2\sqrt{2}
+\int_0^{2\pi} \int_0^1
+r^3 \cos^2 u \, dr\, du
+\]
+
+\[
+=
+\frac{2\sqrt{2}}{4}
+\int_0^{2\pi} \cos^2 u \, du
+=
+\frac{\sqrt{2}}{2}
+\cdot \pi
+\]
+
+\vspace{1em}
+
+\begin{center}
+{\Large مثال 7: فلوکس (Flux) کا تعین}
+\end{center}
+
+ویکٹر فیلڈ
+\[
+\mathbf{F} = yz\,\mathbf{i} + x\,\mathbf{j} - z^2\,\mathbf{k}
+\]
+
+کا فلوکس سطح
+\[
+y = x^2,\quad 0 \le x \le 1,\quad 0 \le z \le 4
+\]
+سے باہر کی طرف معلوم کریں۔
+
+\textbf{حل:}
+
+سطح پر ہم لکھتے ہیں:
+\[
+x = x,\quad y = x^2,\quad z = z
+\]
+
+لہٰذا پیرامیٹرائزیشن:
+
+\[
+\mathbf{r}(x,z) = x\mathbf{i} + x^2\mathbf{j} + z\mathbf{k}
+\]
+
+\[
+0 \le x \le 1,\quad 0 \le z \le 4
+\]
+
+ٹینجنٹ ویکٹرز کا ضرب:
+
+\[
+\mathbf{r}_x \times \mathbf{r}_z =
+\begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+1 & 2x & 0 \\
+0 & 0 & 1
+\end{vmatrix}
+= 2x\,\mathbf{i} - \mathbf{j}
+\]
+
+یونٹ نارمل:
+
+\[
+\mathbf{n}
+=
+\frac{2x\,\mathbf{i} - \mathbf{j}}{\sqrt{4x^2 + 1}}
+\]
+
+سطح پر ویکٹر فیلڈ:
+
+\[
+\mathbf{F} = x^2 z\,\mathbf{i} + x\,\mathbf{j} - z^2\,\mathbf{k}
+\]
+
+اب ڈاٹ پروڈکٹ:
+
+\[
+\mathbf{F} \cdot \mathbf{n}
+=
+\frac{2x^3 z - x}{\sqrt{4x^2 + 1}}
+\]
+
+
+%====================================================
+%L50662
+
+\vspace{1em}
+
+\textbf{سطح سے باہر کی طرف فلوکس:}
+
+سطح کے باہر کی طرف ویکٹر فیلڈ کا فلوکس درج ذیل ہے:
+
+\[
+\iint_S \mathbf{F} \cdot \mathbf{n}\, dS
+=
+\int_0^4 \int_0^1
+\frac{2x^3 z - x}{\sqrt{4x^2 + 1}}
+\left| \mathbf{r}_x \times \mathbf{r}_z \right| dx\, dz
+\]
+
+چونکہ
+
+\[
+\left| \mathbf{r}_x \times \mathbf{r}_z \right| = \sqrt{4x^2 + 1}
+\]
+
+لہٰذا:
+
+\[
+=
+\int_0^4 \int_0^1 (2x^3 z - x)\, dx\, dz
+\]
+
+اب اندرونی تکمل:
+
+\[
+\int_0^1 (2x^3 z - x)\, dx
+=
+\left[ \frac{x^4 z}{2} - \frac{x^2}{2} \right]_0^1
+\]
+
+\[
+=
+\frac{z}{2} - \frac{1}{2}
+=
+\frac{z - 1}{2}
+\]
+
+اب بیرونی تکمل:
+
+\[
+\int_0^4 \frac{z - 1}{2}\, dz
+=
+\frac{1}{2} \int_0^4 (z - 1)\, dz
+\]
+
+\[
+=
+\frac{1}{2}
+\left[ \frac{z^2}{2} - z \right]_0^4
+=
+\frac{1}{2} (8 - 4)
+=
+2
+\]
+
+\textbf{نتیجہ:}
+\[
+\text{فلوکس} = 2
+\]
+
+---
+
+\begin{center}
+{\Large مثال 8: مرکزِ کمیت (Center of Mass)}
+\end{center}
+
+ایک باریک خول (thin shell) جس کی کثافت مستقل $d$ ہے، سطح
+\[
+z = 2x^2 + y^2
+\]
+سے کاٹا گیا ہے اور اسے سطحیں
+\[
+z = 1 \quad \text{اور} \quad z = 2
+\]
+محدود کرتی ہیں۔
+
+مرکزِ کمیت معلوم کریں۔
+
+\textbf{حل:}
+
+سطح کی ہم آہنگی (symmetry) سے واضح ہے کہ:
+
+\[
+\bar{x} = 0,\quad \bar{y} = 0
+\]
+
+اب صرف $\bar{z}$ نکالنا ہے:
+
+\[
+\bar{z} = \frac{M_{xy}}{M}
+\]
+
+پیرامیٹرائزیشن:
+
+\[
+\mathbf{r}(r,u) =
+r \cos u\, \mathbf{i}
++
+r \sin u\, \mathbf{j}
++
+r\, \mathbf{k},
+\quad
+1 \le r \le 2,\; 0 \le u \le 2\pi
+\]
+
+اور:
+
+\[
+\left| \mathbf{r}_r \times \mathbf{r}_u \right| = \sqrt{2}\, r
+\]
+
+---
+
+\textbf{کل ماس:}
+
+\[
+M =
+\iint_S d\, dS
+=
+\int_0^{2\pi} \int_1^2 d \sqrt{2}\, r\, dr\, du
+\]
+
+\[
+=
+d\sqrt{2}
+\int_0^{2\pi} \int_1^2 r\, dr\, du
+\]
+
+\[
+=
+d\sqrt{2}
+\int_0^{2\pi}
+\left[ \frac{r^2}{2} \right]_1^2 du
+\]
+
+\[
+=
+d\sqrt{2}
+\int_0^{2\pi}
+\frac{3}{2}\, du
+=
+3\pi d\sqrt{2}
+\]
+
+---
+
+\textbf{$M_{xy}$:}
+
+\[
+M_{xy}
+=
+\iint_S z\, dS
+=
+\int_0^{2\pi} \int_1^2
+r \cdot d\sqrt{2}\, r\, dr\, du
+\]
+
+\[
+=
+d\sqrt{2}
+\int_0^{2\pi} \int_1^2 r^2\, dr\, du
+\]
+
+\[
+=
+d\sqrt{2}
+\int_0^{2\pi}
+\left[ \frac{r^3}{3} \right]_1^2 du
+\]
+
+\[
+=
+d\sqrt{2}
+\int_0^{2\pi}
+\frac{7}{3}\, du
+=
+\frac{14\pi d\sqrt{2}}{3}
+\]
+
+---
+
+\textbf{مرکزِ کمیت:}
+
+\[
+\bar{z}
+=
+\frac{M_{xy}}{M}
+=
+\frac{\frac{14\pi d\sqrt{2}}{3}}{3\pi d\sqrt{2}}
+=
+\frac{14}{9}
+\]
+
+---
+
+\textbf{حتمی جواب:}
+
+\[
+(0, 0, \tfrac{14}{9})
+\]
+
+%L90743
+
+\vspace{1em}
+
+\begin{center}
+{\Large مشقیں 16.6}
+\end{center}
+
+\begin{center}
+{\large سطحوں کے لیے پیرامیٹرائزیشن تلاش کرنا}
+\end{center}
+
+ان مشقوں (1 تا 16) میں سطح کی پیرامیٹرائزیشن تلاش کریں۔
+(ان کے کئی درست طریقے ہو سکتے ہیں، اس لیے آپ کے جوابات کتاب کے آخر میں دیے گئے جوابات سے مختلف ہو سکتے ہیں۔ تاہم ان کی قدریں ایک جیسی ہونی چاہئیں۔)
+
+\begin{enumerate}
+\item پیرا بولائڈ $z = x^2 + y^2$, جہاں $z \le 4$
+
+\item پیرا بولائڈ $z = 9 - x^2 - y^2$, جہاں $z \ge 0$
+
+\item مخروطی فرسٹرم (Cone frustum)  
+پہلے اکٹانٹ میں سطح:
+\[
+z = 2x^2 + \frac{y^2}{2}
+\]
+جہاں $0 \le z \le 3$
+
+\item مخروطی فرسٹرم:
+\[
+z = 2\sqrt{2x^2 + y^2}
+\quad \text{اور} \quad 2 \le z \le 4
+\]
+
+\item کروی ٹوپی (Spherical cap)  
+سطح:
+\[
+x^2 + y^2 + z^2 = 9
+\]
+جسے مخروط
+\[
+z = 2\sqrt{x^2 + y^2}
+\]
+کاٹتا ہے
+
+\item کروی ٹوپی:
+\[
+x^2 + y^2 + z^2 = 4
+\]
+پہلے اکٹانٹ میں، xy-plane اور مخروط کے درمیان
+
+\item کروی پٹی (Spherical band):
+\[
+x^2 + y^2 + z^2 = 3
+\]
+اور
+\[
+-\frac{3\sqrt{2}}{2} \le z \le \frac{3\sqrt{2}}{2}
+\]
+
+\item کروی ٹوپی:
+\[
+x^2 + y^2 + z^2 = 8
+\]
+اور plane $z = -2$ کے اوپر حصہ
+
+\item پیرا بولک سلنڈر:
+\[
+z = 4 - y^2
+\]
+جہاں $x=0$, $x=2$, اور $z=0$ سے محدود ہے
+
+\item پیرا بولک سلنڈر:
+\[
+y = x^2
+\]
+جہاں $z=0$, $z=3$, اور $y=2$
+
+\item دائرہ نما سلنڈر:
+\[
+y^2 + z^2 = 9
+\]
+جہاں $x=0$ اور $x=3$
+
+\item دائرہ نما سلنڈر:
+\[
+x^2 + z^2 = 4
+\]
+جہاں $-2 \le y \le 2$ اور $z \ge 0$
+
+\item جھکی ہوئی سطح (Tilted plane):
+\[
+x + y + z = 1
+\]
+
+(a) سلنڈر $x^2 + y^2 = 9$ کے اندر  
+(b) سلنڈر $y^2 + z^2 = 9$ کے اندر
+
+\item جھکی ہوئی سطح:
+\[
+x - y + 2z = 2
+\]
+
+(a) سلنڈر $x^2 + z^2 = 3$ کے اندر  
+(b) سلنڈر $y^2 + z^2 = 2$ کے اندر
+
+\item دائرہ نما سلنڈر بینڈ:
+\[
+(x - 2)^2 + z^2 = 4
+\]
+جہاں $0 \le y \le 3$
+
+\item دائرہ نما سلنڈر بینڈ:
+\[
+y^2 + (z - 5)^2 = 25
+\]
+جہاں $0 \le x \le 10$
+\end{enumerate}
+
+\vspace{1em}
+
+\begin{center}
+{\large پیرامیٹرائزڈ سطحوں پر تکملات}
+\end{center}
+
+ان مشقوں (27 تا 34) میں دیے گئے فنکشن کو دی گئی سطح پر integrate کریں۔
+
+\begin{enumerate}
+\setcounter{enumi}{26}
+
+\item
+$G(x,y,z)=x$  
+سطح: $y = x^2$, $0 \le x \le 2$, $0 \le z \le 3$
+
+\item
+$G(x,y,z)=z$  
+سطح: $y^2 + z^2 = 4$, $z \ge 0$, $1 \le x \le 4$
+
+\item
+$G(x,y,z)=x^2$  
+یونٹ کروی سطح: $x^2 + y^2 + z^2 = 1$
+
+\item
+$G(x,y,z)=z^2$  
+ہیمیسفیئر: $x^2 + y^2 + z^2 = a^2$, $z \ge 0$
+
+\item
+$F(x,y,z)=z$  
+سطح: $x + y + z = 4$  
+جہاں $0 \le x \le 1$, $0 \le y \le 1$
+
+\item
+$F(x,y,z)=z-x$  
+سطح: $z = 2\sqrt{x^2 + y^2}$, جہاں $0 \le z \le 1$
+
+\item
+$H(x,y,z)=x^2\sqrt{25-4z}$  
+پیرا بولک ڈوم: $z = 1 - x^2 - y^2$, $z \ge 0$
+
+\item
+$H(x,y,z)=yz$  
+کروی سطح کا وہ حصہ:
+\[
+x^2 + y^2 + z^2 = 4
+\]
+جو مخروط کے اوپر ہو:
+\[
+z = 2\sqrt{x^2 + y^2}
+\]
+\end{enumerate}
+
+%=========================
+%L90824
+
+
+
+\begin{center}
+{\Large سطحی تکمل اور فلوکس (Flux Across Parametrized Surfaces)}
+\end{center}
+
+\textbf{مشقیں 35 تا 44:}
+
+دی گئی سطح کے ذریعے مخصوص سمت میں فلوکس
+\[
+\iint_S \mathbf{F} \cdot \mathbf{n}\, dS
+\]
+کو پیرامیٹرائزیشن استعمال کرتے ہوئے معلوم کریں۔
+
+\begin{enumerate}
+
+\item
+\textbf{پیرا بولک سلنڈر:}  
+$\mathbf{F} = z^2 \mathbf{i} + x \mathbf{j} - 3z \mathbf{k}$  
+باہر کی سمت (x-axis سے دور)  
+سطح:
+\[
+z = 4 - y^2,\quad x = 0,\; x = 1,\; z = 0
+\]
+
+\item
+\textbf{پیرا بولک سلنڈر:}  
+$\mathbf{F} = x^2 \mathbf{j} - xz \mathbf{k}$  
+باہر کی سمت (yz-plane سے دور)  
+سطح:
+\[
+y = x^2,\quad -1 \le x \le 1,\quad z = 0,\; z = 2
+\]
+
+\item
+\textbf{کروی سطح:}  
+$\mathbf{F} = z \mathbf{k}$  
+سطح:
+\[
+x^2 + y^2 + z^2 = a^2
+\]
+پہلے اکٹانٹ میں، اصل سے باہر کی سمت
+
+\item
+$\mathbf{F} = x\mathbf{i} + y\mathbf{j} + z\mathbf{k}$  
+کروی سطح:
+\[
+x^2 + y^2 + z^2 = a^2
+\]
+باہر کی سمت
+
+\item
+\textbf{سطح (Plane):}  
+$\mathbf{F} = 2xy\mathbf{i} + 2yz\mathbf{j} + 2xz\mathbf{k}$  
+اوپر کی سمت  
+سطح:
+\[
+x + y + z = 2a
+\]
+جہاں $0 \le x \le a,\; 0 \le y \le a$
+
+\item
+\textbf{سلنڈر:}  
+$\mathbf{F} = x\mathbf{i} + y\mathbf{j} + z\mathbf{k}$  
+باہر کی سمت  
+سطح:
+\[
+x^2 + y^2 = 1,\quad 0 \le z \le a
+\]
+
+\item
+\textbf{مخروط:}  
+$\mathbf{F} = xy\mathbf{i} - z\mathbf{k}$  
+باہر کی سمت (z-axis سے دور)  
+سطح:
+\[
+z = 2x^2 + y^2,\quad 0 \le z \le 1
+\]
+
+\item
+\textbf{مخروط:}  
+$\mathbf{F} = y^2 \mathbf{i} + xz \mathbf{j} - \mathbf{k}$  
+باہر کی سمت  
+سطح:
+\[
+z = 2\sqrt{x^2 + y^2},\quad 0 \le z \le 2
+\]
+
+\item
+\textbf{مخروطی فرسٹرم:}  
+$\mathbf{F} = -x\mathbf{i} - y\mathbf{j} + z^2 \mathbf{k}$  
+باہر کی سمت  
+سطح:
+\[
+z = 2x^2 + y^2,\quad 1 \le z \le 2
+\]
+
+\item
+\textbf{پیرا بولائڈ:}  
+$\mathbf{F} = 4x\mathbf{i} + 4y\mathbf{j} + 2\mathbf{k}$  
+باہر کی سمت (z-axis سے دور)  
+سطح:
+\[
+z = x^2 + y^2,\quad z \le 1
+\]
+
+\end{enumerate}
+
+\vspace{1em}
+
+\begin{center}
+{\Large کمیتیں اور مومینٹس}
+\end{center}
+
+\begin{enumerate}
+\setcounter{enumi}{44}
+
+\item
+کرۂ
+\[
+x^2 + y^2 + z^2 = a^2
+\]
+کا مرکزِ کمیت معلوم کریں جو پہلے اکٹانٹ میں ہو۔
+
+\item
+ایک باریک خول جس کی کثافت مستقل $d$ ہے، مخروط
+\[
+x^2 + y^2 - z^2 = 0
+\]
+سے کاٹا گیا ہے اور اسے $z=1$ اور $z=2$ محدود کرتے ہیں۔  
+مرکزِ کمیت، مومینٹ آف انرشیا، اور radius of gyration معلوم کریں۔
+
+\item
+مستقل کثافت $d$ والے کروی خول
+\[
+x^2 + y^2 + z^2 = a^2
+\]
+کا z-axis کے بارے میں moment of inertia معلوم کریں۔
+
+\item
+مخروطی خول
+\[
+z = 2x^2 + y^2,\quad 0 \le z \le 1
+\]
+کا z-axis کے بارے میں moment of inertia معلوم کریں۔
+
+\end{enumerate}
+
+\vspace{1em}
+
+\begin{center}
+{\Large مماس طیارے (Tangent Planes)}
+\end{center}
+
+ایک پیرامیٹرک سطح
+\[
+\mathbf{r}(u,v) = f(u,v)\mathbf{i} + g(u,v)\mathbf{j} + h(u,v)\mathbf{k}
+\]
+پر نقطہ $P_0$ پر مماسی طیارہ اس ویکٹر کے عمود ہوتا ہے:
+
+\[
+\mathbf{r}_u(u_0,v_0) \times \mathbf{r}_v(u_0,v_0)
+\]
+
+مشقیں 49 تا 52 میں دی گئی سطحوں پر نقطہ $P_0$ پر مماسی طیارے کی مساوات معلوم کریں، پھر سطح اور مماسی طیارہ دونوں کو Cartesian صورت میں لکھیں اور خاکہ بنائیں۔
+
+\begin{enumerate}
+\setcounter{enumi}{48}
+
+\item مخروط:
+\[
+\mathbf{r}(r,u) = r\cos u\,\mathbf{i} + r\sin u\,\mathbf{j} + r\,\mathbf{k}
+\]
+
+\item نصف کرۂ (Hemisphere):
+\[
+\mathbf{r}(f,u) = 4\sin f\cos u\,\mathbf{i}
++ 4\sin f\sin u\,\mathbf{j}
++ 4\cos f\,\mathbf{k}
+\]
+
+\item دائرہ نما سلنڈر
+
+\item پیرا بولک سلنڈر
+
+\end{enumerate}
+
+
+
+%=============================
+%L90900
+
+\vspace{1em}
+
+\begin{center}
+{\Large سطحِ انقلابی کی پیرامیٹرائزیشن (Surface of Revolution)}
+\end{center}
+
+\textbf{مشق 54:}
+
+فرض کریں کہ پیرامیٹرک منحنی (curve)
+\[
+C: (\; f(u),\, g(u) \;)
+\]
+کو x-axis کے گرد گھمایا جاتا ہے، جہاں $g(u) > 0$ اور $a \le u \le b$۔
+
+\textbf{(a)} ثابت کریں کہ سطحِ انقلاب کی پیرامیٹرائزیشن درج ذیل ہے:
+
+\[
+\mathbf{r}(u,v)
+=
+f(u)\mathbf{i}
++
+g(u)\cos v\,\mathbf{j}
++
+g(u)\sin v\,\mathbf{k},
+\quad 0 \le v \le 2\pi
+\]
+
+یہاں:
+- $f(u)$ محورِ انقلاب کے ساتھ فاصلہ ظاہر کرتا ہے  
+- $g(u)$ محور سے فاصلہ ظاہر کرتا ہے  
+
+\vspace{1em}
+
+\textbf{(b)} منحنی:
+\[
+x = y^2,\quad y \ge 0
+\]
+کو x-axis کے گرد گھمانے سے حاصل ہونے والی سطح کی پیرامیٹرائزیشن معلوم کریں۔
+
+---
+
+\begin{center}
+{\Large بیضوی سطح (Ellipsoid)}
+\end{center}
+
+\textbf{مشق 55:}
+
+\textbf{(a)} یاد کریں کہ بیضہ (ellipse):
+\[
+\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
+\]
+کی پیرامیٹرائزیشن ہے:
+\[
+x = a\cos u,\quad y = b\sin u,\quad 0 \le u \le 2\pi
+\]
+
+سفیرائی (spherical) زاویوں $u$ اور $f$ کے ذریعے دکھائیں کہ:
+
+\[
+\mathbf{r}(u,f)
+=
+a\cos u \cos f\,\mathbf{i}
++
+b\sin u \cos f\,\mathbf{j}
++
+c\sin f\,\mathbf{k}
+\]
+
+یہ درج ذیل بیضوی سطح کی پیرامیٹرائزیشن ہے:
+
+\[
+\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1
+\]
+
+\textbf{(b)} اس بیضوی سطح کے رقبے کے لیے تکمل (surface area integral) لکھیں، لیکن حل نہ کریں۔
+
+---
+
+\begin{center}
+{\Large ہائپر بولائیڈ (Hyperboloid of One Sheet)}
+\end{center}
+
+\textbf{مشق 56:}
+
+\textbf{(a)} ایک شیٹ والے ہائپر بولائیڈ کے لیے پیرامیٹرائزیشن تلاش کریں:
+
+\[
+x^2 + y^2 - z^2 = 1
+\]
+
+اس میں:
+- دائرے کے لیے زاویہ $u$ استعمال کریں: $x^2 + y^2 = r^2$
+- ہائپر بولک تعلق: $r^2 - z^2 = 1$
+
+\textbf{(b)} نتیجہ کو عمومی صورت میں لکھیں:
+
+\[
+\frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} = 1
+\]
+
+---
+
+\textbf{مشق 57:}
+
+(مشق 56 کا تسلسل)
+
+ہائپر بولائیڈ:
+\[
+x^2 + y^2 - z^2 = 25
+\]
+
+پر نقطہ $(x_0, y_0, 0)$ جہاں
+\[
+x_0^2 + y_0^2 = 25
+\]
+پر مماسی طیارے (tangent plane) کی Cartesian مساوات معلوم کریں۔
+
+---
+
+\begin{center}
+{\Large دو شیٹ والا ہائپر بولائیڈ}
+\end{center}
+
+\textbf{مشق 58:}
+
+دو شیٹ والے ہائپر بولائیڈ کی پیرامیٹرائزیشن معلوم کریں:
+
+\[
+\frac{z^2}{c^2} - \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1
+\]
+
+
+
+%================================
+%L 90941
+
+
+
+\begin{center}
+{\Large 16.7 \quad سٹوکز کا نظریہ (Stokes’ Theorem)}
+\end{center}
+
+جیسا کہ ہم نے سیکشن 16.4 میں دیکھا، دو بعدی میدان
+\[
+\mathbf{F} = M\mathbf{i} + N\mathbf{j}
+\]
+میں کسی نقطہ $(x,y)$ پر گردش کی کثافت (circulation density) یا curl کا جزو درج ذیل اسکیلر مقدار سے ظاہر ہوتا ہے:
+
+\[
+\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}
+\]
+
+تین بعدی (three-dimensional) صورت میں کسی نقطہ $P$ کے گرد کسی سطح پر گردش کو ایک ویکٹر کے ذریعے بیان کیا جاتا ہے۔
+
+یہ ویکٹر اس سطح کے عمود (normal) ہوتا ہے جس میں گردش ہو رہی ہو (شکل 16.59)، اور اس کی سمت دائیں ہاتھ کے اصول (right-hand rule) کے مطابق گردش کی سمت سے متعلق ہوتی ہے۔
+
+اس ویکٹر کی لمبائی گردش کی شدت (rate of rotation) کو ظاہر کرتی ہے، جو عموماً اس بات پر منحصر ہوتی ہے کہ گردش والا طیارہ نقطہ $P$ کے گرد کیسے جھکا ہوا ہے۔
+
+یہ ثابت کیا جا سکتا ہے کہ بہاؤ (flow) کے ویکٹر میدان
+\[
+\mathbf{F} = M\mathbf{i} + N\mathbf{j} + P\mathbf{k}
+\]
+میں زیادہ سے زیادہ گردش (maximum circulation) کا ویکٹر درج ذیل ہوتا ہے جسے curl کہا جاتا ہے:
+
+\[
+\nabla \times \mathbf{F}
+=
+\left(
+\frac{\partial P}{\partial y} - \frac{\partial N}{\partial z}
+\right)\mathbf{i}
++
+\left(
+\frac{\partial M}{\partial z} - \frac{\partial P}{\partial x}
+\right)\mathbf{j}
++
+\left(
+\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}
+\right)\mathbf{k}
+\tag{1}
+\]
+
+یہ معلومات ہمیں سٹوکز کے نظریہ (Stokes’ Theorem) سے حاصل ہوتی ہیں، جو کہ Green’s Theorem کے circulation–curl فارم کی تین بعدی توسیع ہے۔
+
+\vspace{1em}
+
+یہ بات قابلِ غور ہے کہ:
+
+\[
+(\nabla \times \mathbf{F}) \cdot \mathbf{k}
+=
+\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}
+\]
+
+یہی وہی تعریف ہے جو ہم نے سیکشن 16.4 میں دی تھی جب
+\[
+\mathbf{F} = M(x,y)\mathbf{i} + N(x,y)\mathbf{j}
+\]
+تھا۔
+
+curl کا یہ فارم اکثر ایک علامتی آپریٹر کے ذریعے بھی لکھا جاتا ہے:
+
+\[
+\nabla =
+\mathbf{i}\frac{\partial}{\partial x}
++
+\mathbf{j}\frac{\partial}{\partial y}
++
+\mathbf{k}\frac{\partial}{\partial z}
+\tag{2}
+\]
+
+
+
+%===================================
+%L 90977
+
+\vspace{1em}
+
+\textbf{(نوٹ):} علامت $\nabla$ کو "ڈیل" (del) پڑھا جاتا ہے۔
+
+curl of $\mathbf{F}$ کو درج ذیل طور پر لکھا جاتا ہے:
+
+\[
+\nabla \times \mathbf{F}
+=
+\begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\frac{\partial}{\partial x} &
+\frac{\partial}{\partial y} &
+\frac{\partial}{\partial z} \\
+M & N & P
+\end{vmatrix}
+\]
+
+\[
+=
+\left(
+\frac{\partial P}{\partial y} - \frac{\partial N}{\partial z}
+\right)\mathbf{i}
++
+\left(
+\frac{\partial M}{\partial z} - \frac{\partial P}{\partial x}
+\right)\mathbf{j}
++
+\left(
+\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}
+\right)\mathbf{k}
+\]
+
+اس کو مختصر طور پر یوں لکھا جاتا ہے:
+
+\[
+\nabla \times \mathbf{F} = \text{curl } \mathbf{F}
+\tag{3}
+\]
+
+\vspace{1em}
+
+\begin{center}
+{\Large مثال 1: curl معلوم کرنا}
+\end{center}
+
+میدان دیا گیا ہے:
+
+\[
+\mathbf{F} = (x^2 - y)\mathbf{i} + 4z\mathbf{j} + x^2\mathbf{k}
+\]
+
+curl معلوم کریں۔
+
+\textbf{حل:}
+
+\[
+\nabla \times \mathbf{F}
+=
+\begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\frac{\partial}{\partial x} &
+\frac{\partial}{\partial y} &
+\frac{\partial}{\partial z} \\
+x^2 - y & 4z & x^2
+\end{vmatrix}
+\]
+
+\[
+=
+\mathbf{i}\left(\frac{\partial x^2}{\partial y} - \frac{\partial 4z}{\partial z}\right)
+-
+\mathbf{j}\left(\frac{\partial x^2}{\partial x} - \frac{\partial x^2 - y}{\partial z}\right)
++
+\mathbf{k}\left(\frac{\partial 4z}{\partial x} - \frac{\partial (x^2 - y)}{\partial y}\right)
+\]
+
+اب جزوی مشتقات:
+
+\[
+=
+\mathbf{i}(0 - 4)
+-
+\mathbf{j}(2x - 0)
++
+\mathbf{k}(0 - (-1))
+\]
+
+\[
+=
+-4\mathbf{i} - 2x\mathbf{j} + \mathbf{k}
+\]
+
+\vspace{1em}
+
+جیسا کہ ہم دیکھیں گے، آپریٹر $\nabla$ کے مزید بھی استعمال ہیں۔
+
+مثال کے طور پر جب اسے کسی scalar function $f(x,y,z)$ پر لگایا جائے تو یہ gradient دیتا ہے:
+
+\[
+\nabla f
+=
+\frac{\partial f}{\partial x}\mathbf{i}
++
+\frac{\partial f}{\partial y}\mathbf{j}
++
+\frac{\partial f}{\partial z}\mathbf{k}
+\]
+
+اسے "grad f" یا "del f" بھی کہا جاتا ہے۔
+
+\vspace{1em}
+
+\begin{center}
+{\Large سٹوکز کا نظریہ (Stokes’ Theorem)}
+\end{center}
+
+سٹوکز کا نظریہ کہتا ہے کہ عملی طور پر عام شرائط کے تحت:
+
+کسی ویکٹر فیلڈ کی سطح کے کنارے (boundary curve) کے گرد گردش (circulation)،
+اس سطح پر curl کے نارمل جزو کے سطحی تکمل کے برابر ہوتا ہے۔
+
+یہ boundary curve $C$ کی سمت اس طرح منتخب کی جاتی ہے کہ وہ سطح کے unit normal vector $\mathbf{n}$ کے مطابق right-hand rule کو فالو کرے (شکل 16.60)۔
+
+
+%======================
+%L 91049
+
+\vspace{1em}
+
+\begin{center}
+{\Large نظریہ 5: سٹوکز کا نظریہ (Stokes’ Theorem)}
+\end{center}
+
+سٹوکز کا نظریہ کہتا ہے کہ:
+
+ویکٹر فیلڈ
+\[
+\mathbf{F} = M\mathbf{i} + N\mathbf{j} + P\mathbf{k}
+\]
+کی گردش (circulation) کسی بند سرحدی منحنی $C$ کے گرد، جو کسی اورینٹڈ سطح $S$ کی boundary ہو، اس سطح پر curl کے نارمل جزو کے سطحی تکمل کے برابر ہوتی ہے، بشرطیکہ سمت (orientation) دائیں ہاتھ کے اصول کے مطابق ہو۔
+
+\[
+\oint_C \mathbf{F} \cdot d\mathbf{r}
+=
+\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, dS
+\tag{4}
+\]
+
+\[
+\text{Counterclockwise circulation} \quad = \quad \text{Curl integral}
+\]
+
+\vspace{1em}
+
+اس سے یہ نتیجہ نکلتا ہے کہ اگر دو مختلف اورینٹڈ سطحیں $S_1$ اور $S_2$ ایک ہی boundary $C$ رکھتی ہوں، تو ان کے curl integrals برابر ہوں گے:
+
+\[
+\iint_{S_1} (\nabla \times \mathbf{F}) \cdot \mathbf{n}_1\, dS
+=
+\iint_{S_2} (\nabla \times \mathbf{F}) \cdot \mathbf{n}_2\, dS
+\]
+
+یہ دونوں تکمل اس لیے برابر ہیں کیونکہ دونوں کا نتیجہ وہی boundary integral دیتا ہے، بشرطیکہ unit normal vectors صحیح orientation میں ہوں۔
+
+\vspace{1em}
+
+عام طور پر ہمیں کچھ ریاضیاتی شرائط درکار ہوتی ہیں تاکہ Stokes’ equation میں موجود تمام تکملات موجود ہوں۔ عام شرط یہ ہے کہ ویکٹر فیلڈ $\mathbf{F}$، منحنی $C$ اور سطح $S$ کے تمام فنکشنز اور ان کے مشتقات متصل (continuous) ہوں۔
+
+\vspace{1em}
+
+اگر $C$ xy-plane میں ایک بند منحنی ہو جو counterclockwise ہو اور $R$ وہ خطہ ہو جو $C$ سے گھرا ہوا ہو، تو:
+
+\[
+dS = dx\,dy,\quad \mathbf{n} = \mathbf{k}
+\]
+
+اور:
+
+\[
+(\nabla \times \mathbf{F}) \cdot \mathbf{n}
+=
+(\nabla \times \mathbf{F}) \cdot \mathbf{k}
+=
+\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}
+\]
+
+ان حالات میں Stokes’ equation درج ذیل صورت اختیار کر لیتی ہے:
+
+\[
+\oint_C \mathbf{F} \cdot d\mathbf{r}
+=
+\iint_R
+\left(
+\frac{\partial N}{\partial x}
+-
+\frac{\partial M}{\partial y}
+\right)
+dx\,dy
+\]
+
+یہ Green’s Theorem کی circulation–curl form ہی ہے۔
+
+اسی طرح الٹ عمل سے Green’s Theorem کو بھی del notation میں لکھا جا سکتا ہے:
+
+\[
+\oint_C \mathbf{F} \cdot d\mathbf{r}
+=
+\iint_R (\nabla \times \mathbf{F}) \cdot \mathbf{k}\, dA
+\tag{5}
+\]
+
+\begin{center}
+شکل 16.61: Green اور Stokes کے نظریات کا موازنہ
+\end{center}
+
+\vspace{1em}
+
+\begin{center}
+{\Large مثال 2: ایک نصف کرۂ (Hemisphere) پر Stokes’ Equation کی تصدیق}
+\end{center}
+
+معلوم کریں کہ درج ذیل سطح، boundary اور vector field کے لیے Equation (4) درست ہے:
+
+سطح:
+\[
+S: x^2 + y^2 + z^2 = 9,\quad z \ge 0
+\]
+
+boundary circle:
+\[
+C: x^2 + y^2 = 9,\quad z = 0
+\]
+
+ویکٹر فیلڈ:
+\[
+\mathbf{F} = y\mathbf{i} - x\mathbf{j}
+\]
+
+
+%=====================
+%L 91122
+
+\vspace{1em}
+
+\textbf{حل:}
+
+ہم سب سے پہلے boundary curve $C$ کے گرد counterclockwise گردش (جیسا کہ اوپر سے دیکھا جائے) حساب کرتے ہیں۔
+
+دی گئی پیرامیٹرائزیشن:
+\[
+\mathbf{r}(u) = 3\cos u\,\mathbf{i} + 3\sin u\,\mathbf{j},\quad 0 \le u \le 2\pi
+\]
+
+اس سے:
+
+\[
+d\mathbf{r}
+=
+-3\sin u\,du\,\mathbf{i}
++
+3\cos u\,du\,\mathbf{j}
+\]
+
+ویکٹر فیلڈ:
+\[
+\mathbf{F} = y\mathbf{i} - x\mathbf{j}
+=
+3\sin u\,\mathbf{i}
+-
+3\cos u\,\mathbf{j}
+\]
+
+اب dot product:
+
+\[
+\mathbf{F} \cdot d\mathbf{r}
+=
+-9\sin^2 u\,du
+-
+9\cos^2 u\,du
+=
+-9\,du
+\]
+
+لہٰذا:
+
+\[
+\oint_C \mathbf{F} \cdot d\mathbf{r}
+=
+\int_0^{2\pi} -9\,du
+=
+-18\pi
+\]
+
+\vspace{1em}
+
+\textbf{Curl integral کے لیے:}
+
+\[
+\nabla \times \mathbf{F}
+=
+\begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\frac{\partial}{\partial x} &
+\frac{\partial}{\partial y} &
+\frac{\partial}{\partial z} \\
+x & y & z
+\end{vmatrix}
+\]
+
+\[
+=
+(0 - 0)\mathbf{i}
++
+(0 - 0)\mathbf{j}
++
+(-1 - 1)\mathbf{k}
+=
+-2\mathbf{k}
+\]
+
+سطح کے لیے outer unit normal:
+
+\[
+\mathbf{n}
+=
+\frac{2x\,\mathbf{i} + 2y\,\mathbf{j} + z\,\mathbf{k}}{3}
+\]
+
+اور سطحی عنصر:
+
+\[
+dS = z\,dA
+\]
+
+(Section 16.5، مثال 5 کے مطابق)
+
+\vspace{1em}
+
+اب:
+
+\[
+(\nabla \times \mathbf{F}) \cdot \mathbf{n}\, dS
+=
+-2\,dA
+\]
+
+لہٰذا:
+
+\[
+\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, dS
+=
+\iint_R -2\,dA
+=
+-2 \cdot (\pi \cdot 9)
+=
+-18\pi
+\]
+
+\vspace{1em}
+
+اس طرح گردش اور curl integral دونوں برابر ہیں، جیسا کہ Stokes’ Theorem میں ہونا چاہیے۔
+
+---
+
+\begin{center}
+{\Large مثال 3: گردش (Circulation) معلوم کرنا}
+\end{center}
+
+ویکٹر فیلڈ:
+\[
+\mathbf{F} = (x^2 - y)\mathbf{i} + 4z\mathbf{j} + x^2\mathbf{k}
+\]
+
+معلوم کریں کہ اس کا گردش curve $C$ کے گرد کیا ہے، جہاں:
+
+سطح:
+\[
+z = 2
+\]
+
+اور مخروط:
+\[
+z = 2x^2 + y^2
+\]
+
+یہ دونوں ایک دوسرے کو جس curve پر کاٹتے ہیں وہ ہے:
+\[
+x^2 + y^2 = 4,\quad z = 2
+\]
+
+یہ گردش اوپر سے دیکھنے پر counterclockwise ہے۔
+
+\vspace{1em}
+
+\textbf{حل:}
+
+Stokes’ Theorem استعمال کرتے ہوئے ہم surface integral لیتے ہیں۔
+
+ہم cone کو پیرامیٹرائز کرتے ہیں:
+
+\[
+\mathbf{r}(r,u)
+=
+r\cos u\,\mathbf{i}
++
+r\sin u\,\mathbf{j}
++
+r\,\mathbf{k},
+\quad
+0 \le r \le 2,\; 0 \le u \le 2\pi
+\]
+
+اور:
+
+\[
+\mathbf{r}_r \times \mathbf{r}_u
+=
+- r\cos u\,\mathbf{i}
+-
+r\sin u\,\mathbf{j}
++
+r\,\mathbf{k}
+\]
+
+اس کا unit normal:
+
+\[
+\mathbf{n}
+=
+\frac{-\cos u\,\mathbf{i} - \sin u\,\mathbf{j} + \mathbf{k}}{\sqrt{2}}
+\]
+
+
+%======================
+%L91195
+
+\vspace{1em}
+
+سطحی عنصر:
+\[
+dS = r\sqrt{2}\,dr\,du
+\]
+
+اور curl:
+\[
+\nabla \times \mathbf{F}
+=
+-4\mathbf{i} - 2x\mathbf{j} + \mathbf{k}
+\]
+
+چونکہ $x = r\cos u$، اس لیے:
+\[
+\nabla \times \mathbf{F}
+=
+-4\mathbf{i} - 2r\cos u\,\mathbf{j} + \mathbf{k}
+\]
+
+\vspace{1em}
+
+اب سطح کے unit normal کے ساتھ dot product:
+
+\[
+(\nabla \times \mathbf{F}) \cdot \mathbf{n}
+=
+\frac{1}{\sqrt{2}}
+\left(
+4\cos u + 2r\cos u \sin u + 1
+\right)
+\]
+
+یعنی:
+
+\[
+(\nabla \times \mathbf{F}) \cdot \mathbf{n}
+=
+\frac{1}{\sqrt{2}}
+\left(
+4\cos u + r\sin 2u + 1
+\right)
+\]
+
+\vspace{1em}
+
+لہٰذا گردش:
+
+\[
+\oint_C \mathbf{F}\cdot d\mathbf{r}
+=
+\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, dS
+\quad \text{(سٹوکز کا نظریہ)}
+\]
+
+\[
+=
+\int_0^{2\pi}\int_0^2
+\frac{1}{\sqrt{2}}
+\left(
+4\cos u + r\sin 2u + 1
+\right)
+(\sqrt{2}\,r\,dr\,du)
+\]
+
+\[
+= 4\pi
+\]
+
+\vspace{1em}
+
+\begin{center}
+{\Large پڈل وہیل (Paddle Wheel) تشریح برائے $\nabla \times \mathbf{F}$}
+\end{center}
+
+فرض کریں کہ $\mathbf{v}(x,y,z)$ ایک سیال (fluid) کی رفتار (velocity) ہے جس کی کثافت $d(x,y,z)$ ہے، اور:
+
+\[
+\mathbf{F} = d\mathbf{v}
+\]
+
+تو:
+
+\[
+\oint_C \mathbf{F}\cdot d\mathbf{r}
+\]
+
+سیال کی گردش (circulation) کو ظاہر کرتا ہے جو بند منحنی $C$ کے گرد ہوتی ہے۔
+
+سٹوکز کے نظریہ کے مطابق یہ گردش سطح $S$ کے ذریعے curl کے flux کے برابر ہے:
+
+\[
+\oint_C \mathbf{F}\cdot d\mathbf{r}
+=
+\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, dS
+\]
+
+\vspace{1em}
+
+فرض کریں ہم نقطہ $Q$ پر ایک مخصوص سمت $\mathbf{u}$ لیتے ہیں۔ ایک دائرہ $C$ لیا جاتا ہے جس کا مرکز $Q$ ہے اور رداس $r$ ہے، اور اس کا طیارہ $\mathbf{u}$ کے عمود ہے۔
+
+اگر $\nabla \times \mathbf{F}$ نقطہ $Q$ پر متصل ہو تو:
+
+\[
+(\nabla \times \mathbf{F}) \cdot \mathbf{u}
+=
+\lim_{r \to 0}
+\frac{1}{\pi r^2}
+\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{u}\, dS
+\]
+
+اسے گردش کی صورت میں لکھیں تو:
+
+\[
+(\nabla \times \mathbf{F}) \cdot \mathbf{u}
+=
+\lim_{r \to 0}
+\frac{1}{\pi r^2}
+\oint_C \mathbf{F}\cdot d\mathbf{r}
+\tag{6}
+\]
+
+\vspace{1em}
+
+اس اظہار کا زیادہ سے زیادہ حاصل اس وقت ہوتا ہے جب $\mathbf{u}$، $\nabla \times \mathbf{F}$ کی سمت میں ہو۔
+
+چھوٹے $r$ کے لیے:
+
+\[
+\frac{1}{\pi r^2}\oint_C \mathbf{F}\cdot d\mathbf{r}
+\]
+
+curl کے گرد اوسط گردش کو ظاہر کرتا ہے۔
+
+
+%=====================
+%L91273
+
+\vspace{1em}
+
+یہ مقدار دراصل کسی دائرے کے گرد گردش (circulation) کو اس دائرے کے رقبے پر تقسیم کرنے سے حاصل ہونے والی مقدار ہے، جسے گردش کی کثافت (circulation density) کہتے ہیں۔
+
+فرض کریں کہ ایک چھوٹا سا پڈل وہیل (paddle wheel) جس کا رداس $r$ ہے، کسی سیال (fluid) میں نقطہ $Q$ پر رکھا جاتا ہے، اور اس کا محور سمت $\mathbf{u}$ میں ہو۔
+
+اس صورت میں سیال کی گردش اس بات کو متاثر کرے گی کہ پڈل وہیل کتنی تیزی سے گھومے گا۔ وہیل اس وقت سب سے زیادہ تیزی سے گھومے گا جب گردش کا تکمل زیادہ سے زیادہ ہو، یعنی جب اس کا محور $\nabla \times \mathbf{F}$ کی سمت میں ہو (شکل 16.63)۔
+
+\vspace{1em}
+
+\begin{center}
+{\Large مثال 4: گردش کی کثافت سے تعلق}
+\end{center}
+
+ایک سیال مستقل کثافت کے ساتھ z-axis کے گرد گھوم رہا ہے، جس کی رفتار (velocity) درج ذیل ہے:
+
+\[
+\mathbf{v} = \omega(-y\mathbf{i} + x\mathbf{j})
+\]
+
+جہاں $\omega$ ایک مستقل مقدار ہے جسے زاویائی رفتار (angular velocity) کہتے ہیں (شکل 16.64)۔
+
+اگر $\mathbf{F} = \mathbf{v}$ ہو تو $\nabla \times \mathbf{F}$ معلوم کریں اور اسے گردش کی کثافت سے relate کریں۔
+
+\vspace{1em}
+
+\textbf{حل:}
+
+\[
+\mathbf{F} = -\omega y\,\mathbf{i} + \omega x\,\mathbf{j}
+\]
+
+curl:
+
+\[
+\nabla \times \mathbf{F}
+=
+\begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\frac{\partial}{\partial x} &
+\frac{\partial}{\partial y} &
+\frac{\partial}{\partial z} \\
+-\omega y & \omega x & 0
+\end{vmatrix}
+\]
+
+\[
+=
+(0 - 0)\mathbf{i}
++
+(0 - 0)\mathbf{j}
++
+(\omega - (-\omega))\mathbf{k}
+=
+2\omega \mathbf{k}
+\]
+
+\vspace{1em}
+
+سٹوکز کے نظریہ کے مطابق، اگر $C$ ایک دائرہ ہو جس کا رداس $r$ ہے اور $S$ وہ disk ہو جس کا normal $\mathbf{k}$ ہے، تو:
+
+\[
+\oint_C \mathbf{F} \cdot d\mathbf{r}
+=
+\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, dS
+\]
+
+\[
+=
+\iint_S 2\omega\, dA
+=
+2\omega (\pi r^2)
+\]
+
+لہٰذا:
+
+\[
+(\nabla \times \mathbf{F}) \cdot \mathbf{k}
+=
+2\omega
+=
+\frac{1}{\pi r^2}
+\oint_C \mathbf{F} \cdot d\mathbf{r}
+\]
+
+یہ نتیجہ Equation (6) کے مطابق ہے جب $\mathbf{u} = \mathbf{k}$ ہو۔
+
+\vspace{1em}
+
+\begin{center}
+{\Large مثال 5: سٹوکز کے نظریہ کا اطلاق}
+\end{center}
+
+سٹوکز کے نظریہ کو استعمال کرتے ہوئے درج ذیل خطی تکمل (line integral) معلوم کریں:
+
+\[
+\oint_C \mathbf{F} \cdot d\mathbf{r}
+\]
+
+جہاں:
+
+\[
+\mathbf{F} = xz\,\mathbf{i} + xy\,\mathbf{j} + 3xz\,\mathbf{k}
+\]
+
+اور $C$ وہ boundary ہے جو سطح
+
+\[
+2x + y + z = 2
+\]
+
+کے پہلے octant والے حصے سے بنتی ہے، اور اسے اوپر سے دیکھنے پر counterclockwise سمت میں چلایا گیا ہے۔
+
+\vspace{1em}
+
+\textbf{حل:}
+
+یہ plane درج ذیل function کی سطح ہے:
+
+\[
+f(x,y,z) = 2x + y + z
+\]
+
+لہٰذا unit normal vector:
+
+\[
+\nabla f = 2\mathbf{i} + \mathbf{j} + \mathbf{k}
+\]
+
+\[
+\mathbf{n}
+=
+\frac{2\mathbf{i} + \mathbf{j} + \mathbf{k}}{\sqrt{6}}
+\]
+
+\vspace{1em}
+
+curl معلوم کریں:
+
+\[
+\nabla \times \mathbf{F}
+=
+\begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\frac{\partial}{\partial x} &
+\frac{\partial}{\partial y} &
+\frac{\partial}{\partial z} \\
+xz & xy & 3xz
+\end{vmatrix}
+\]
+
+\[
+=
+(x - 3z)\mathbf{j} + y\mathbf{k}
+\]
+
+اب plane پر:
+
+\[
+z = 2 - 2x - y
+\]
+
+لہٰذا:
+
+\[
+\nabla \times \mathbf{F}
+=
+( x - 3(2 - 2x - y) )\mathbf{j} + y\mathbf{k}
+\]
+
+\[
+=
+(7x + 3y - 6)\mathbf{j} + y\mathbf{k}
+\]
+
+
+%===================
+%L91345
+
+\vspace{1em}
+
+اب ہمارے پاس:
+
+\[
+(\nabla \times \mathbf{F}) \cdot \mathbf{n}
+=
+\frac{1}{\sqrt{6}}(7x + 4y - 6)
+\]
+
+اور چونکہ:
+
+\[
+\mathbf{n} = \frac{\nabla f}{|\nabla f|}, \quad |\nabla f| = \sqrt{6}
+\]
+
+لہٰذا سطحی عنصر:
+
+\[
+dS = \frac{|\nabla f|}{|\nabla f \cdot \mathbf{k}|}\, dA
+= \sqrt{6}\, dA
+\]
+
+اس سے:
+
+\[
+(\nabla \times \mathbf{F}) \cdot \mathbf{n}\, dS
+=
+\frac{1}{\sqrt{6}}(7x + 4y - 6)\cdot \sqrt{6}\, dA
+=
+(7x + 4y - 6)\, dA
+\]
+
+\vspace{1em}
+
+لہٰذا Stokes’ Theorem کے مطابق:
+
+\[
+\oint_C \mathbf{F}\cdot d\mathbf{r}
+=
+\iint_R (7x + 4y - 6)\, dA
+\]
+
+جہاں $R$ وہ تکونی خطہ ہے:
+
+\[
+0 \le x \le 1,\quad 0 \le y \le 2 - 2x
+\]
+
+\vspace{1em}
+
+اب تکمل:
+
+\[
+\int_0^1 \int_0^{2-2x} (7x + 4y - 6)\, dy\, dx
+\]
+
+اندرونی تکمل:
+
+\[
+\int_0^{2-2x} (7x + 4y - 6)\, dy
+=
+(7x - 6)y + 2y^2 \Big|_0^{2-2x}
+\]
+
+\[
+=
+(7x - 6)(2 - 2x) + 2(2 - 2x)^2
+\]
+
+سادہ کرنے پر:
+
+\[
+= -6x
+\]
+
+اب بیرونی تکمل:
+
+\[
+\int_0^1 (-6x)\, dx
+=
+-3
+\]
+
+\vspace{1em}
+
+\textbf{حتمی جواب:}
+
+\[
+\oint_C \mathbf{F}\cdot d\mathbf{r} = -3
+\]
+
+---
+
+\begin{center}
+{\Large کثیرسطحی (Polyhedral) سطحوں کے لیے Stokes’ Theorem کا ثبوت}
+\end{center}
+
+فرض کریں $S$ ایک کثیرسطحی سطح ہے جو محدود تعداد میں مسطح حصوں (plane regions) پر مشتمل ہے (شکل 16.66)۔
+
+ہم ہر علیحدہ حصے پر Green’s Theorem لاگو کرتے ہیں۔ اس صورت میں دو قسم کے حصے ہوتے ہیں:
+
+\begin{enumerate}
+\item وہ حصے جو مکمل طور پر دوسرے حصوں سے گھرے ہوں
+\item وہ حصے جن کی کم از کم ایک edge کسی دوسرے حصے سے متصل نہ ہو
+\end{enumerate}
+
+سطح $S$ کی boundary $\Delta$ ان edges پر مشتمل ہوتی ہے جو قسم (2) کے حصوں سے تعلق رکھتے ہیں۔
+
+مثال کے طور پر شکل 16.66 میں مثلثی حصے $EAB$, $BCE$, اور $CDE$ سطح کا حصہ ہیں، جبکہ $ABCD$ boundary ہے۔
+
+\vspace{1em}
+
+ہر مثلث پر Green’s Theorem لگانے سے:
+
+\[
+\sum \oint F\cdot dr
+=
+\sum \iint (\nabla \times \mathbf{F})\cdot \mathbf{n}\, dS
+\tag{7}
+\]
+
+\vspace{1em}
+
+بائیں طرف کے line integrals اندرونی edges پر آپس میں cancel ہو جاتے ہیں۔
+
+مثال کے طور پر edge $BE$ پر ایک triangle میں integral ایک سمت میں ہے اور دوسرے میں اس کے الٹ، اس لیے وہ ختم ہو جاتے ہیں۔
+
+اسی طرح $CE$ وغیرہ بھی cancel ہو جاتے ہیں۔
+
+لہٰذا باقی صرف boundary رہ جاتی ہے:
+
+\[
+\oint_{\partial S} \mathbf{F}\cdot d\mathbf{r}
+=
+\iint_S (\nabla \times \mathbf{F})\cdot \mathbf{n}\, dS
+\]
+
+یہی Stokes’ Theorem کا عمومی نتیجہ ہے۔
+
+
+%=====================
+%L91421
+
+
+یہ اسٹوکس کے قضیے کی وہ صورت ہے جو ایک کثیرسطحی (polyhedral) سطح \( S \) کے لیے ہے۔ اس سے زیادہ عمومی سطحوں کے لیے اس کے ثبوت اعلیٰ درجے کی تفاضلی و تکاملی کتب میں ملتے ہیں۔
+
+\section*{سوراخوں والی سطحوں کے لیے اسٹوکس کا قضیہ}
+
+اسٹوکس کے قضیے کو ایسی اورینٹڈ سطح \( S \) تک بھی وسعت دی جا سکتی ہے جس میں ایک یا ایک سے زیادہ سوراخ ہوں۔ اس کی وضاحت گرین کے قضیے کی توسیع کے مشابہ ہے: سطح \( S \) پر ویکٹر فیلڈ \( \nabla \times \mathbf{F} \) کے نارمل جزو کا سطحی تکمل، سطح کی تمام حدی منحنیات (boundary curves) کے گرد خطی تکملات کے مجموعے کے برابر ہوتا ہے، بشرطیکہ ان منحنیات کو سطح کی دی گئی سمت کے مطابق طے کیا جائے۔
+
+\bigskip
+
+\textbf{اہم شناخت}
+
+ریاضی اور طبعی علوم میں درج ذیل شناخت بار بار سامنے آتی ہے:
+
+\[
+\nabla \times (\nabla f) = 0
+\quad \text{یا} \quad
+\nabla \times \nabla f = 0
+\tag{8}
+\]
+
+یہ شناخت ہر ایسے فعل \( f(x,y,z) \) کے لیے درست ہے جس کے دوسرے جزوی مشتقات مسلسل ہوں۔ اس کا ثبوت درج ذیل ہے:
+
+\[
+\nabla \times \nabla f =
+\begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+\frac{\partial f}{\partial x} & \frac{\partial f}{\partial y} & \frac{\partial f}{\partial z}
+\end{vmatrix}
+\]
+
+اس کو حل کرنے سے حاصل ہوتا ہے:
+
+\[
+(\, f_{zy} - f_{yz} \,) \mathbf{i}
+-
+(\, f_{zx} - f_{xz} \,) \mathbf{j}
++
+(\, f_{yx} - f_{xy} \,) \mathbf{k}
+\]
+
+اگر دوسرے جزوی مشتقات مسلسل ہوں تو مکسڈ مشتقات برابر ہوتے ہیں (نظریہ 2، سیکشن 14.3)، لہٰذا یہ ویکٹر صفر ہو جاتا ہے۔
+
+\bigskip
+
+\textbf{محافظ میدان اور اسٹوکس کا قضیہ}
+
+سیکشن 16.3 میں ہم نے دیکھا کہ ایک ویکٹر فیلڈ \( \mathbf{F} \) کسی کھلے خطے \( D \) میں محافظ (conservative) اس وقت ہوتا ہے جب اس کا کسی بھی بند راستے کے گرد خطی تکمل صفر ہو۔ یہ بات مزید یہ ظاہر کرتی ہے کہ سادہ مربوط (simply connected) خطوں میں یہ شرط اس کے برابر ہے کہ
+
+\[
+\nabla \times \mathbf{F} = 0
+\]
+
+\textbf{قضیہ 6: کرل صفر اور بند راستے کی خاصیت}
+
+اگر کسی سادہ مربوط کھلے خطے \( D \) میں ہر نقطے پر \( \nabla \times \mathbf{F} = 0 \) ہو تو \( D \) میں کسی بھی ٹکڑوں میں ہموار بند منحنی \( C \) کے لیے:
+
+\[
+\oint_C \mathbf{F} \cdot d\mathbf{r} = 0
+\]
+
+\bigskip
+
+\textbf{ثبوت کا خاکہ}
+
+قضیہ 6 کا ثبوت عموماً دو مراحل میں کیا جاتا ہے۔ پہلا مرحلہ سادہ بند منحنیات کے لیے ہوتا ہے۔ ٹوپولوجی (topology) کی ایک اہم شاخ کا ایک نظریہ یہ بیان کرتا ہے کہ ...
+
+
+
+%===========================
+%L91490
+
+\bigskip
+
+ہر قابلِ تفاضل (differentiable) سادہ بند منحنی \( C \)، جو کسی سادہ مربوط کھلے خطے \( D \) میں موجود ہو، ایک ہموار دو رُخا سطح \( S \) کی حد (boundary) ہوتی ہے جو خود بھی \( D \) کے اندر موجود ہوتی ہے۔ لہٰذا اسٹوکس کے قضیے کے مطابق:
+
+\[
+\oint_C \mathbf{F} \cdot d\mathbf{r}
+=
+\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, ds
+= 0
+\]
+
+\bigskip
+
+دوسرا مرحلہ اُن منحنیات کے لیے ہے جو خود کو کاٹتی ہیں، جیسے کہ شکل 16.68 میں دکھائی گئی ہے۔ خیال یہ ہے کہ ایسی منحنیات کو سادہ حلقوں (simple loops) میں تقسیم کیا جائے، جن کے لیے قابلِ اورینٹیشن سطحیں موجود ہوں، پھر ہر حلقے پر الگ الگ اسٹوکس کے قضیے کو لاگو کیا جائے اور نتائج کو جمع کر لیا جائے۔
+
+\bigskip
+
+\textbf{شکل 16.68}
+
+سادہ مربوط کھلے خطے میں ایسی قابلِ تفاضل منحنیات جو خود کو کاٹتی ہیں، انہیں ایسے حلقوں میں تقسیم کیا جا سکتا ہے جن پر اسٹوکس کا قضیہ لاگو کیا جا سکتا ہے۔
+
+\bigskip
+
+مندرجہ ذیل خاکہ سادہ مربوط کھلے خطوں میں متعین محافظ (conservative) میدانوں کے نتائج کو خلاصہ کرتا ہے:
+
+\bigskip
+
+\[
+\begin{array}{c}
+\mathbf{F} \text{ conservative on } D
+\end{array}
+\;\;\Longleftrightarrow\;\;
+\begin{array}{c}
+\mathbf{F} = \nabla f \text{ on } D
+\end{array}
+\]
+
+\bigskip
+
+یہ تعلق درج ذیل نظریات اور نتائج کے ذریعے حاصل ہوتا ہے:
+
+\begin{itemize}
+\item نظریہ 1، سیکشن 16.3
+\item نظریہ 2، سیکشن 13.3
+\item ویکٹر شناخت: \( \nabla \times (\nabla f) = 0 \) (مساوات 8)
+\end{itemize}
+
+\bigskip
+
+اسی سے درج ذیل ہم آہنگ نتائج حاصل ہوتے ہیں:
+
+\[
+\oint_C \mathbf{F} \cdot d\mathbf{r} = 0
+\quad \text{(کسی بھی بند راستے پر)}
+\]
+
+\[
+\nabla \times \mathbf{F} = 0 \quad \text{پورے خطے } D \text{ میں}
+\]
+
+یہ نتائج سادہ مربوطیت (simple connectivity) اور اسٹوکس کے قضیے کے ساتھ مل کر ایک دوسرے کے ہم معنی ہو جاتے ہیں۔
+%==================
+%L91453
+
+\section*{مشقیں 16.7}
+
+\subsection*{اسٹوکس کے قضیے کے ذریعے گردشی مقدار (Circulation) کا حساب}
+
+درج ذیل مشقوں (1 تا 6) میں اسٹوکس کے قضیے کے سطحی تکمل (surface integral) کو استعمال کرتے ہوئے ویکٹر فیلڈ \( \mathbf{F} \) کی منحنی \( C \) کے گرد گردش (circulation) معلوم کریں، دی گئی سمت کے مطابق۔
+
+\begin{enumerate}
+\item
+\[
+\mathbf{F} = x^2 \mathbf{i} + 2x \mathbf{j} + z^2 \mathbf{k}
+\]
+\( C \): بیضوی خطہ \( 4x^2 + y^2 = 4 \)، جو \( xy \)-سطح میں واقع ہے، اور اوپر سے دیکھنے پر مخالف گھڑی سمت (counterclockwise) میں ہے۔
+
+\item
+\[
+\mathbf{F} = 2y \mathbf{i} + 3x \mathbf{j} - z^2 \mathbf{k}
+\]
+\( C \): دائرہ \( x^2 + y^2 = 9 \)، جو \( xy \)-سطح میں واقع ہے، اور اوپر سے دیکھنے پر مخالف گھڑی سمت میں ہے۔
+
+\item
+\[
+\mathbf{F} = y \mathbf{i} + xz \mathbf{j} + x^2 \mathbf{k}
+\]
+\( C \): مثلث کی حد جو سطح \( x + y + z = 1 \) سے پہلی octant میں کٹی ہوئی ہے، اوپر سے دیکھنے پر مخالف گھڑی سمت میں۔
+
+\item
+\[
+\mathbf{F} = (y^2 + z^2)\mathbf{i} + (x^2 + z^2)\mathbf{j} + (x^2 + y^2)\mathbf{k}
+\]
+\( C \): مثلث کی حد جو سطح \( x + y + z = 1 \) سے پہلی octant میں کٹی ہوئی ہے، اوپر سے دیکھنے پر مخالف گھڑی سمت میں۔
+
+\item
+\[
+\mathbf{F} = (y^2 + z^2)\mathbf{i} + (x^2 + y^2)\mathbf{j} + (x^2 + y^2)\mathbf{k}
+\]
+\( C \): مربع جو خطوط \( x = \pm 1 \) اور \( y = \pm 1 \) سے محدود ہے، \( xy \)-سطح میں واقع ہے، اور اوپر سے دیکھنے پر مخالف گھڑی سمت میں۔
+
+\item
+\[
+\mathbf{F} = x^2 y^3 \mathbf{i} + \mathbf{j} + z \mathbf{k}
+\]
+\( C \): سلنڈر \( x^2 + y^2 = 4 \) اور نصف کرہ \( x^2 + y^2 + z^2 = 16, \; z \ge 0 \) کے تقاطع پر منحنی، اوپر سے دیکھنے پر مخالف گھڑی سمت میں۔
+\end{enumerate}
+
+\subsection*{کرل کے فلوکس (Flux of the Curl)}
+
+\begin{enumerate}
+\setcounter{enumi}{6}
+
+\item
+فرض کریں \( \mathbf{n} \) بیضوی خول (elliptical shell) کا بیرونی واحدی عمودی ویکٹر ہے:
+
+\[
+S: \quad 4x^2 + 9y^2 + 36z^2 = 36, \quad z \ge 0
+\]
+
+اور
+
+\[
+\mathbf{F} = y \mathbf{i} + x^2 \mathbf{j} + (x^2 + y^4)^{3/2} \sin(2xyz)\, \mathbf{k}
+\]
+
+معلوم کریں:
+
+\[
+\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, ds
+\]
+
+(اشارہ: خول کی بنیاد پر بیضوی خط کے لیے ایک پیرامیٹرائزیشن:
+\( x = 3\cos t, \; y = 2\sin t, \; 0 \le t \le 2\pi \))
+
+\item
+
+فرض کریں \( \mathbf{n} \) بیرونی عمودی ویکٹر ہے (اصل سے دور کی سمت میں) پارابولک خول:
+
+\[
+S: \quad 4x^2 + y + z^2 = 4, \quad y \ge 0
+\]
+
+\end{enumerate}
+
+%====================
+%L91585
+
+\subsection*{جاری: مشقیں اور نظری مسائل (Stokes’ Theorem)}
+
+اور دیا گیا ہے:
+
+\[
+\mathbf{F} =
+\left(-z + \frac{1}{2 + x}\right)\mathbf{i}
++
+\left(\tan^{-1} y\right)\mathbf{j}
++
+\left(x + \frac{1}{4 + z}\right)\mathbf{k}
+\]
+
+معلوم کریں:
+
+\[
+\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, ds
+\]
+
+\bigskip
+
+\begin{enumerate}
+\setcounter{enumi}{8}
+
+\item
+\( S \): سلنڈر \( x^2 + y^2 = a^2,\; 0 \le z \le h \)، اور اس کا اوپری حصہ \( x^2 + y^2 \le a^2,\; z = h \)
+
+\[
+\mathbf{F} = -y \mathbf{i} + x \mathbf{j} + x^2 \mathbf{k}
+\]
+
+اسٹوکس کے قضیے کو استعمال کرتے ہوئے \( \nabla \times \mathbf{F} \) کے outward flux کو سطح \( S \) کے ذریعے معلوم کریں۔
+
+\item
+حساب کریں:
+
+\[
+\iint_S (\nabla \times (y \mathbf{i})) \cdot \mathbf{n}\, ds
+\]
+
+جہاں \( S \) اکائی نصف کرہ ہے:
+
+\[
+x^2 + y^2 + z^2 = 1,\quad z \ge 0
+\]
+
+\item
+Flux of curl:
+
+\[
+\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, ds
+\]
+
+یہ دکھائیں کہ یہ مقدار ہر ایسی سطح \( S \) کے لیے ایک جیسی ہے جو منحنی \( C \) کو span کرتی ہے اور ایک ہی مثبت orientation دیتی ہے۔
+
+\item
+فرض کریں \( S \) دو سطحوں \( S_1 \) اور \( S_2 \) کا مجموعہ ہے جو ایک ہموار بند منحنی \( C \) پر ملتی ہیں۔ کیا درج ذیل کے بارے میں کچھ کہا جا سکتا ہے؟
+
+\[
+\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, ds
+\]
+
+وجہ بیان کریں۔
+
+\end{enumerate}
+
+\subsection*{اسٹوکس کا قضیہ برائے پیرامیٹرائزڈ سطحیں}
+
+درج ذیل مشقوں (13 تا 18) میں اسٹوکس کے قضیے کے سطحی تکمل کو استعمال کرتے ہوئے ویکٹر فیلڈ کے curl کا flux سطح \( S \) کے ذریعے معلوم کریں۔
+
+\begin{enumerate}
+\setcounter{enumi}{12}
+
+\item
+\[
+\mathbf{F} = 2z\mathbf{i} + 3x\mathbf{j} + 5y\mathbf{k}
+\]
+\[
+\mathbf{r}(r,u) = r\cos u\,\mathbf{i} + r\sin u\,\mathbf{j} + (4 - r^2)\mathbf{k}
+\]
+
+\( 0 \le r \le 2,\; 0 \le u \le 2\pi \)
+
+\item
+\[
+\mathbf{F} = (y - z)\mathbf{i} + (z - x)\mathbf{j} + (x + z)\mathbf{k}
+\]
+\[
+\mathbf{r}(r,u) = r\cos u\,\mathbf{i} + r\sin u\,\mathbf{j} + (9 - r^2)\mathbf{k}
+\]
+
+\( 0 \le r \le 3,\; 0 \le u \le 2\pi \)
+
+\item
+\[
+\mathbf{F} = x^2 y\,\mathbf{i} + 2y^3 z\,\mathbf{j} + 3z\,\mathbf{k}
+\]
+\[
+\mathbf{r}(r,u) = r\cos u\,\mathbf{i} + r\sin u\,\mathbf{j} + r\,\mathbf{k}
+\]
+
+\( 0 \le r \le 1,\; 0 \le u \le 2\pi \)
+
+\item
+\[
+\mathbf{F} = (x - y)\mathbf{i} + (y - z)\mathbf{j} + (z - x)\mathbf{k}
+\]
+\[
+\mathbf{r}(r,u) = r\cos u\,\mathbf{i} + r\sin u\,\mathbf{j} + (5 - r)\mathbf{k}
+\]
+
+\( 0 \le r \le 5,\; 0 \le u \le 2\pi \)
+
+\item
+\[
+\mathbf{F} = 3y\mathbf{i} + (5 - 2x)\mathbf{j} + (z^2 - 2)\mathbf{k}
+\]
+\[
+\mathbf{r}(f,u) =
+(2\sqrt{3}\sin f \cos u)\mathbf{i}
++
+(2\sqrt{3}\sin f \sin u)\mathbf{j}
++
+(2\sqrt{3}\cos f)\mathbf{k}
+\]
+
+\( 0 \le f \le \frac{\pi}{2},\; 0 \le u \le 2\pi \)
+
+\item
+\[
+\mathbf{F} = y^2\mathbf{i} + z^2\mathbf{j} + x\mathbf{k}
+\]
+\[
+\mathbf{r}(f,u) =
+(2\sin f \cos u)\mathbf{i}
++
+(2\sin f \sin u)\mathbf{j}
++
+(2\cos f)\mathbf{k}
+\]
+
+\( 0 \le f \le \frac{\pi}{2},\; 0 \le u \le 2\pi \)
+
+\end{enumerate}
+
+

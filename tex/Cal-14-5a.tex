@@ -6,6 +6,8 @@
 %edited. figures and external references pending
 %some figures and section numbers, such as the followings, needs to be entered 
 % \شکلء{}  ، \حصہء{}
+===============================================================================================
+
 
 \حصہء{سوالات}
 \جزوحصہء{مسئلہ گرین کی تصدیق}
@@ -32,7 +34,6 @@
 \end{enumerate}
 \end{multicols}
 
-%KKK??? am here
 \جزوحصہء{خلاف  گھڑی  دائری بہاو اور باہر  رخ  بہاو}
 سوال \حوالہ{سوال_سمتی_تکمل_دائری_بہاو_الف} تا  \حوالہ{سوال_سمتی_تکمل_دائری_بہاو_ٹ} میں میدان \عددی{\kvec{F}}  اور منحنی \عددی{C}  کے لیے مسئلہ گرین استعمال کر کے  خلاف گھڑی دائری بہاو  اور باہر  رخ بہاو تلاش کریں۔
 
@@ -61,11 +62,8 @@
 %sec 14.5 Surface Area and Surface Integrals
 %=======================================================
 \حصہ{سطحی رقبہ اور سطحی تکملات}
-ہم مستوی  میں   خطہ پر تفاعل کا تکمل لینا جانتے ہیں لیکن ایسی صورت میں کیا ہوگا جب تفاعل ایک قوسی سطح پر پایا جاتا ہو؟    ایسی صورت میں تکمل کیسے حاصل  ہو گا؟ ایسا تکمل  ، جو\اصطلاح{ سطحی تکمل}\فرہنگ{سطحی تکمل}\حاشیہب{surface integral}\فرہنگ{surface integral} کہلاتا ہے ، کی قیمت تلاش کرنے کی خاطر      اس کو ، سطح کے نیچے محددی مستوی  پر  ، دہرا تکمل  کے روپ میں لکھا جاتا ہے( شکل  \حوالہء{14.39}) ۔ حصہ  \حوالہء{14.7} اور حصہ \حوالہء{14.8} میں ہم دیکھیں گے کہ سطحی تکملات کی مدد سے مسئلہ گرین کو تین ابعاد میں عمومیت دی جا سکتی ہے۔ 
+ہم مستوی  میں   خطہ پر تفاعل کا تکمل لینا جانتے ہیں لیکن ایسی صورت میں کیا ہوگا جب تفاعل ایک قوسی سطح پر پایا جاتا ہو؟    ایسی صورت میں تکمل کیسے حاصل  ہو گا؟ ایسا تکمل  ، جو\اصطلاح{ سطحی تکمل}\فرہنگ{سطحی تکمل}\حاشیہب{surface integral}\فرہنگ{surface integral} کہلاتا ہے ، کی قیمت تلاش کرنے کی خاطر      اس کو ، سطح کے نیچے محددی مستوی  پر   ( شکل  \حوالہ{شکل_سمتی_میدان_سطح_پر_تفاعل_سایہ})، دہرا تکمل  کے روپ میں لکھا جاتا ہے۔ حصہ  \حوالہء{14.7} اور حصہ \حوالہء{14.8} میں ہم دیکھیں گے کہ سطحی تکملات کی مدد سے مسئلہ گرین کو تین ابعاد میں عمومیت دی جا سکتی ہے۔ 
 
-\جزوحصہء{ سطحی  رقبہ  کی تعریف}
- شکل  \حوالہ{شکل_سمتی_میدان_سطح_پر_تفاعل} میں سطح \عددی{S}  اور   نیچے مستوی میں  اس کا  \قول{سایہ } خطہ \عددی{R}  دکھایا گیا ہے۔ سطح کی تعریفی مساوات   \عددی{f(x, y, c) = c} دیتی  ہے۔اگر سطح  \اصطلاح{ہموار }\فرہنگ{ہموار}\حاشیہب{smooth}\فرہنگ{smooth}  ہو   (\عددی{\nabla f} استمراری ہے اور\عددی{ S} پر کہیں بھی صفر نہیں ہے) ، ہم اس کے رقبہ کی تعریف اور قیمت\عددی{ R} پر دہرا تکمل کی صورت میں کر سکتے ہیں۔ 
- 
 \begin{figure}
 \centering
 \begin{tikzpicture}[declare function={f(\x,\y)=5+(\y)^2-(\y)^4-(\x)^2;}]
@@ -73,23 +71,95 @@
 %xmax=2,ymax=1.5,zmax=0.5,
 ,xlabel={},ylabel={},zlabel={},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},
 axis line style={draw=none}]
-\addplot3[surf,domain=-1:1,domain y=-1:1]({x},{y},0);
-\addplot3[surf,domain=-1:1,domain y=-1:1]{f(x,y)};
-\addplot3[]coordinates{(-1,1,{f(-1,1)})}node[pin=60:{$f(x,y,z)=c$}]{};
-\addplot3[]coordinates{(-1,1,0)}node[pin=60:{سایہ $R$}]{};
+\addplot3[dashed]coordinates{(-1,-1,{f(-1,-1)})(-1,-1,0)};
+\addplot3[dashed]coordinates{(1,-1,{f(1,-1)})(1,-1,0)};
+\addplot3[dashed]coordinates{(1,1,{f(1,1)})(1,1,0)};
+\addplot3[dashed]coordinates{(-1,1,{f(-1,1)})(-1,1,0)};
+\addplot3[surf,shader=flat, faceted color=none, ,domain=-1:1,domain y=-1:1]({x},{y},0);
+\addplot3[surf,shader=flat, faceted color=none, domain=-1:1,domain y=-1:1]{f(x,y)};
+\addplot3[]coordinates{(-1,0.8,{f(-1,0.8)})}node[pin=30:{$f(x,y,z)=c$}]{};
+\addplot3[]coordinates{(0,-1,{f(0,-1)})}node[left]{$S$};
+\addplot3[]coordinates{(0,1,0)}node[right,yshift=-0.5em]{\RL{سایہ $R$}};
 \end{axis}
 \end{tikzpicture}
 \caption{
-سطح \عددی{S} اور    اس کے   نیچے مستوی پر  سطح  کی   تظلیل قائمہ۔ آپ    \عددی{R} کو مستوی پر \عددی{S} کا سایہ تصور کر سکتے ہو۔  مماسی چادر \عددی{\Delta P_k} تخمیناً  رقبہ \عددی{\Delta A_k}  سے اوپر  سطحی  تختی \عددی{\Delta \sigma_k}  کو ظاہر کرتی ہے۔}
+سطح \عددی{S} اور    اس کے   نیچے   مستوی پر  سطح  کی   تظلیل قائمہ \عددی{R}۔ آپ    \عددی{R} کو مستوی پر \عددی{S} کا سایہ تصور کر سکتے ہو۔}
+\label{شکل_سمتی_میدان_سطح_پر_تفاعل_سایہ}
+\end{figure}
+
+\جزوحصہء{ سطحی  رقبہ  کی تعریف}
+ شکل  \حوالہ{شکل_سمتی_میدان_سطح_پر_تفاعل} میں سطح \عددی{S}  اور   نیچے  محددی مستوی میں  اس کا  \قول{سایہ } خطہ \عددی{R}  دکھایا گیا ہے۔ سطح کی تعریف  مساوات   \عددی{f(x, y, c) = c} دیتی  ہے۔اگر سطح  \اصطلاح{ہموار }\فرہنگ{ہموار}\حاشیہب{smooth}\فرہنگ{smooth}  ہو   (\عددی{\nabla f} استمراری ہے اور\عددی{ S} پر کہیں بھی صفر نہیں ہے) ، ہم اس کے رقبہ کی تعریف اور قیمت\عددی{ R} پر دہرا تکمل کی صورت میں کر سکتے ہیں۔ 
+ 
+\begin{figure}
+\centering
+\begin{tikzpicture}[declare function={f(\x,\y)=10-(\y)^2-2*(\x)^2;}]
+\pgfmathsetmacro{\kxa}{0.5}
+\pgfmathsetmacro{\kya}{0.3}
+  \begin{axis}[clip=false,axis on top,view/h=160,small,axis lines=center,colormap={kgray}{gray(0.2cm)=(0.6);gray(1cm)=(0.9);},xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true,
+%xmax=2,ymax=1.5,zmax=0.5,
+,xlabel={},ylabel={},zlabel={},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},
+axis line style={draw=none}]
+\addplot3[surf,faceted color=white,domain=-1.5:1.5,domain y=-1:1]({x},{y},0);
+\addplot3[surf,,faceted color=black,,domain=-\kxa:\kxa,domain y=-\kya:\kya]({x},{y},0);
+\addplot3[dashed]coordinates {(-\kxa,-\kya,0)(-\kxa,-\kya,{f(-\kxa,-\kya)})};
+\addplot3[dashed]coordinates {(\kxa,-\kya,0)(\kxa,-\kya,{f(\kxa,-\kya)})};
+\addplot3[dashed]coordinates {(\kxa,\kya,0)(\kxa,\kya,{f(\kxa,\kya)})};
+\addplot3[dashed]coordinates {(-\kxa,\kya,0)(-\kxa,\kya,{f(-\kxa,\kya)})};
+\addplot3[surf,shader=flat, faceted color=none,domain=-1.5:1.5,domain y=-1:1]{f(x,y)};
+\addplot3[]coordinates{(1.5,-1.5,{f(1.5,-1.5)})}node[above left]{$S$};
+\addplot3[]coordinates{(1.5,0,0)}node[below left]{$R$};
+\addplot3[surf,faceted color=red,domain=-\kxa:\kxa,domain y=-\kya:\kya]{f(x,y)};
+\addplot3[surf, faceted color=green,domain=-\kxa:\kxa,domain y=-\kya:\kya](x,y,{f(0,0)});
+\addplot3[]coordinates {({-\kxa},{\kya},0)}node[right]{$\Delta A_k$};
+\addplot3[]coordinates {({-\kxa+0.1},{\kya+0.1},{f(-\kxa,\kya)})}node[pin=20:{$\Delta \sigma_k$}]{};
+\addplot3[]coordinates {({-\kxa},{-\kya},{f(0,0)})}node[pin=30:{$\Delta P_k$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{
+مماسی چادر \عددی{\Delta P_k} تخمیناً  رقبہ \عددی{\Delta A_k}  سے اوپر  سطحی   رقبہ \عددی{\Delta \sigma_k}  کو ظاہر کرتی ہے۔}
 \label{شکل_سمتی_میدان_سطح_پر_تفاعل}
 \end{figure}
 
-%KKK??? am here
 
- ہم  خطہ\عددی{ R} کی خانہ بندی چھوٹے چھوٹے مستطیلوں  \عددی{\Delta A_k} میں ہم  یوں  کرتے ہیں  جیسے \عددی{ R} پر تکمل کی تعریف پیش کرنا چاہتے ہوں۔ یہ\عددی{ S} کے رقبہ کی تعریف پیش کرنے کا کا پہلا قدم ہے۔ ہر ایک\عددی{\Delta A} کے بالکل اوپر کچھ بلندی پر سطح\عددی{\Delta \sigma_k} پایا جاتا ہے،  جس کو ہم  مماسی سطح کے چھوٹے حصہ\عددی{\Delta P_k} سے تخمین دے سکتے ہیں ۔ اس کی  وضاحت کرتے ہیں۔ رقبہ\عددی{\Delta A_k} کے پچھلے کونے\عددی{C_k} کے بالکل اوپر نقطہ\عددی{T_k (x_k , y_k , z_k)} پر سطح کے مماس کا\عددی{\Delta P_k} ایک ٹکڑا ہے۔ اگر مماسی سطح\عددی{ R} کا متوازی ہو ، تب\عددی{\Delta P_k} رقبہ\عددی{\Delta A_k} کا  موافق  ہوگا۔  بصورت دیگر ، یہ ایک مستطیل ہوگا جس کا رقبہ\عددی{\Delta A_k} کے رقبہ سے کچھ زیادہ ہوگا۔ 
+ ہم  خطہ\عددی{ R} کی خانہ بندی چھوٹے چھوٹے مستطیلوں  \عددی{\Delta A_k} میں ہم  یوں  کرتے ہیں  جیسے \عددی{ R} پر تکمل کی تعریف پیش کرنا چاہتے ہوں۔ یہ\عددی{ S} کے رقبہ کی تعریف پیش کرنے کا کا پہلا قدم ہے۔ ہر ایک\عددی{\Delta A} کے بالکل اوپر کچھ بلندی پر سطح\عددی{\Delta \sigma_k} پایا جاتا ہے،  جس کو ہم  مماسی سطح کے چھوٹے حصہ\عددی{\Delta P_k} سے تخمین دے سکتے ہیں ۔ اس کی  وضاحت کرتے ہیں۔ رقبہ\عددی{\Delta A_k} کے    اگلے بائیں کونے\عددی{C_k} کے بالکل اوپر نقطہ\عددی{T_k (x_k , y_k , z_k)} پر سطح کے مماس کا\عددی{\Delta P_k} ایک ٹکڑا ہے۔ اگر مماسی سطح\عددی{ R} کا متوازی ہو ، تب\عددی{\Delta P_k} رقبہ\عددی{\Delta A_k} کا  موافق  ہوگا۔  بصورت دیگر ، یہ ایک مستطیل ہوگا جس کا رقبہ\عددی{\Delta A_k} کے رقبہ سے کچھ زیادہ ہوگا۔ 
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[declare function={f(\x,\y)=16-\x^2-2*(\y-1)^2;g(\x,\y)=14+6*\y;}]
+\pgfmathsetmacro{\kxaa}{1.0}
+\pgfmathsetmacro{\kxa}{1.5}
+\pgfmathsetmacro{\kya}{1.3}
+  \begin{axis}[clip=false,axis on top,view/h=100,small,axis lines=center,colormap={kgray}{gray(0.2cm)=(0.6);gray(1cm)=(0.9);},xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true,
+%xmax=2,ymax=1.5,zmax=0.5,
+,xlabel={},ylabel={},zlabel={},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},
+axis line style={draw=none}
+]
+\addplot3[surf,faceted color=none,domain=0:-1.5,domain y=0:1.1](x,y,0);
+\addplot3[surf,faceted color=none,domain=0:-1.5,domain y=0:1.1]{f(x,y)};
+\addplot3[surf,,faceted color=none,domain=0:-1.5,domain y=0:1.1]{g(x,y)};
+%
+\addplot3[-latex] coordinates {(0,0,{f(0,0)}) (0,0,{f(0,0)+10})}node[pos=1,above]{$\kvec{p}$}coordinate[pos=0.6] (kA);
+\addplot3[-latex] coordinates {(0,0,{f(0,0)}) (0,-0.2,{f(0,0)+9})}node[pos=1,left]{$\nabla f(x_k,y_k)$}coordinate[pos=0.5] (kB);
+\addplot3[-latex] coordinates {(0,0,{f(0,0)}) (0,1.1,{g(0,1.1)})}node[pos=0.8,above]{$\kvec{u}_k$};
+\addplot3[-latex] coordinates {(0,0,{f(0,0)}) (-1.5,0,{g(1.5,0)})}node[pos=1,above]{$\kvec{v}_k$};
+\addplot3[] coordinates {(0,0,{f(0,0)})}node[circ]{}node[pin=190:{$T_k$}]{};
+\addplot3[] coordinates {(0,0,0)}node[circ]{}node[left]{$c_k$};
+\addplot3[]coordinates {(-1.5,1.1,{f(x,y)})}node[right]{$\Delta \sigma_k$};
+\addplot3[]coordinates {(-1.5,1.1,{g(x,y)})}node[above]{$\Delta P_k$};
+\addplot3[]coordinates {(-1.5,1.1,0)}node[right]{$\Delta A_k$};
+\addplot3[-latex]coordinates {(0,0,0) (0,0,8)}node[pos=0.75,left]{$\kvec{p}$};
+\end{axis}
+\draw(kB) to [out=45,in=135] node[pos=0.4,above,xshift=-0.20em]{\footnotesize $\gamma_k$}(kA);
+\end{tikzpicture}
+\caption{
+گزشتہ شکل کی تفصیل  بڑی کر کے دکھائی گئی  ہے۔ چونکہ سمتیہ \عددی{\kvec{u}_k\times \kvec{v}_k}  (جو شکل میں نہیں دکھایا گیا) اور  سمتیہ \عددی{\nabla f} دونوں سطح \عددی{\Delta P_k} کو عمودی ہیں لہٰذا یہ آپس میں متوازی ہوں گے۔}
+\label{شکل_سمتی_میدان_سطح_پر_تفاعل_تفصیل}
+\end{figure}
+%
  
-  شکل \حوالہء{14.41} میں\عددی{\Delta \sigma_k} اور\عددی{\Delta P_k}  بڑھا چڑھا کر پیش کیے گئے  ہیں،   جہاں\عددی{T_k} پر ڈھلوان سمتیہ
-  \عددی{\nabla f(x_k , y_k , z_k)} اور\عددی{ R} کا عمودی اکائی سمتیہ\عددی{\kvec{p}} بھی  دکھائے گئے ہیں۔ اس شکل میں\عددی{\nabla f} اور\عددی{\kvec{p}} کے   بیچ  زاویہ\عددی{\gamma_k} بھی دکھایا گیا ہے۔ اس شکل میں دیگر سمتیات\عددی{\kvec{u}_k} اور\عددی{\kvec{v}_k} مماسی مستوی میں\عددی{\Delta P_k} کے کناروں پر پائے جاتے ہیں۔ یوں\عددی{\kvec{u}_k \times \kvec{v}_k} اور\عددی{\nabla f} دونوں مماسی مستوی کو عمودی ہیں۔
+
+  شکل \حوالہ{شکل_سمتی_میدان_سطح_پر_تفاعل_تفصیل} میں\عددی{\Delta \sigma_k} اور\عددی{\Delta P_k}  بڑھا چڑھا کر پیش کیے گئے  ہیں،   جہاں\عددی{T_k} پر ڈھلوان سمتیہ    \عددی{\nabla f(x_k , y_k , z_k)} اور\عددی{ R} کا عمودی اکائی سمتیہ\عددی{\kvec{p}} بھی  دکھائے گئے ہیں۔ اس شکل میں\عددی{\nabla f} اور\عددی{\kvec{p}} کے   بیچ  زاویہ\عددی{\gamma_k} بھی دکھایا گیا ہے۔ اس شکل میں دیگر سمتیات\عددی{\kvec{u}_k} اور\عددی{\kvec{v}_k} مماسی مستوی میں\عددی{\Delta P_k} کے کناروں پر پائے جاتے ہیں۔ یوں\عددی{\kvec{u}_k \times \kvec{v}_k} اور\عددی{\nabla f} دونوں مماسی مستوی کو عمودی ہیں۔سمتیہ  \عددی{\kvec{u}_k} اور 
+ سمتیہ \عددی{\kvec{v}_k}دونوں   سمتیہ  \عددی{\nabla f(x_k,y_k)} کو عمودی ہوں گے۔
   
    اعلٰی سمتی   ہندسہ سے ہم جانتے ہیں کہ کسی بھی مستوی پر، جس کا عمود\عددی{\kvec{p}} ہو ،  ایسے مستطیل  کی تظلیل کا رقبہ\عددی{|(\kvec{u}_k \times \kvec{v}_k) \cdot \kvec{p}|} ہوگا  جس کو\عددی{\kvec{u}_k} اور\عددی{\kvec{v}_k} تعین کرتے ہوں۔ یوں درج ذیل لکھا جا سکتا ہے۔
 \begin{align}\label{مساوات_سمتی_تکمل_سطحی_رقبہ_تعریف_الف}
@@ -149,11 +219,31 @@ axis line style={draw=none}]
   ہم نے \عددی{\nabla f} کو استمراری تصور کر کے اور پورے \عددی{R} پر \عددی{\nabla f \cdot \ne 0} تصور کر کے  مساوات \حوالہ{مساوات_سمتی_تکمل_سطحی_رقبہ_تعریفی_تکمل}  حاصل کی۔ جب بھی یہ تکمل موجود ہو ، اس کی قیمت کو سطح \عددی{f (x, y, z) = c} کے اس حصہ کے رقبے کی تعریف لی جاتی ہے جو \عددی{R} کے      اوپر      (بلندی پر) پایا جاتا ہو۔ 
 
 %================================
-\ابتدا{مثال} 
-قطر مکافی   مجسم \عددی{x^2 + y^2 - z = 0} کے نچلے حصے سے  مستوی  \عددی{z = 4} ایک سطح کاٹتا ہے۔ اس سطح  کا رقبہ تلاش کریں۔ 
+\ابتدا{مثال} \شناخت{مثال_سمتی_میدان_تکمل_قطع_مکافی_مجسم}
+قطع مکافی      \عددی{x^2 + y^2 - z = 0} کے نچلے حصے سے  مستوی  \عددی{z = 4} ایک سطح کاٹتا ہے۔ اس سطح  کا رقبہ تلاش کریں۔ 
 
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);fz(\r,\t)=\r^2;}]
+\begin{axis}[view/h=115,clip=false,axis lines=center,small,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south,yshift=1em},xtick={\empty},ytick={\empty},ztick={\empty},zmax=4.1,
+%hide axis
+]
+\addplot3[surf,faceted color=none,z buffer=sort,domain=0:2,domain y=0:360]({fx(x,y)},{fy(x,y)},{0});
+\addplot3[surf,faceted color=none,z buffer=sort,domain=0:2,domain y=0:360]({fx(x,y)},{fy(x,y)},{fz(x,y)});
+\addplot3[-stealth]coordinates {({fx(2,25)},{fy(2,25)},{fz(2,25)}) ({fx(2,205)},{fy(2,205)},{fz(2,205)+0.1})};
+\addplot3[]coordinates {({0},{0},{fz(2,25)}) ({0},{0.1},{fz(2,25)})}node[pos=0,left]{$4$};
+\addplot3[]coordinates {({fx(1.7,115)},{fy(1.7,115)},{fz(1.7,115)})}node[pin={[align=center]30:{$S$\\$z=x^2+y^2$}}]{};
+\addplot3[]coordinates {({fx(2,125)},{fy(2,125)},{0})}node[pin={[align=center]20:{$x^2+y^2=4$\\$R$}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{اس قطع مکافی سطح کا رقبہ مثال \حوالہ{مثال_سمتی_میدان_تکمل_قطع_مکافی_مجسم} میں حاصل کیا گیا ہے۔}
+\label{شکل_سمتی_میدان_تکمل_قطع_مکافی_مجسم}
+\end{figure}
+
+%KKK??? am at the figure above. red and green paint to rmove from earlier figs.
 \موٹا{حل :}\quad
-ہم  مستوی  \عددی{xy} میں  سطح \عددی{S} اور اس کے نیچے خطہ \عددی{R} کا خاکہ بناتے ہیں (شکل \حوالہء{14.42} )۔ سطح \عددی{S}،  ہم قد سطح  \عددی{f (x, y, z) = x^2 + y^2 - z = 0} کا حصہ ہے اور \عددی{R}،  مستوی \عددی{xy} میں قرص  \عددی{x^2 + y^2 \le 4} ہے۔ مستوی \عددی{R} کا اکائی عمودی سمتیہ  \عددی{\kvec{p}=\ak} ہے۔
+ہم  مستوی  \عددی{xy} میں  سطح \عددی{S} اور اس کے نیچے خطہ \عددی{R} کا خاکہ  
+بناتے ہیں (شکل \حوالہ{شکل_سمتی_میدان_تکمل_قطع_مکافی_مجسم})۔ سطح \عددی{S}،  ہم قد سطح  \عددی{f (x, y, z) = x^2 + y^2 - z = 0} کا حصہ ہے اور \عددی{R}،  مستوی \عددی{xy} میں قرص  \عددی{x^2 + y^2 \le 4} ہے۔ مستوی \عددی{R} کا اکائی عمودی سمتیہ  \عددی{\kvec{p}=\ak} ہے۔
 
  سطح پر کسی  بھی نقطہ \عددی{x, y, z} پر  ذیل ہو گا۔
 \begin{align*}
@@ -173,8 +263,24 @@ f (x, y, z) &= x^2 + y^2 - z\\
 \end{align*}
 \انتہا{مثال} 
 %------------------------------------------
-\ابتدا{مثال} 
-نصف کرہ   \عددی{x^2 + y^2 + z^2 =2, z \ge 0}  سے بیلن   \عددی{x^2 + y^2 =1} ایک ٹوپی کاٹتا ہے۔ اس ٹوپی کا رقبہ تلاش کریں ( شکل \حوالہء{14.43} )۔
+\ابتدا{مثال} \شناخت{مثال_سمتی_میدان_تکمل_ٹوپی_بیلن_کرہ}
+نصف کرہ   \عددی{x^2 + y^2 + z^2 =2, z \ge 0}  سے بیلن   \عددی{x^2 + y^2 =1} ایک ٹوپی کاٹتا ہے  (شکل \حوالہ{شکل_سمتی_میدان_تکمل_ٹوپی_بیلن_کرہ})۔ اس ٹوپی کا رقبہ 
+تلاش کریں۔
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[font=\small,declare function={fx(\t,\p)=sqrt(2)*cos(\t)*sin(\p);fy(\t,\p)=sqrt(2)*sin(\t)*sin(\p);fz(\t,\p)=sqrt(2)*cos(\p);
+gx(\t,\z)=1*cos(\t);gy(\t,\z)=1*sin(\t);gz(\t,\z)=\z;}]
+\begin{axis}[view/h=115,clip=false,axis lines=center,small,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south,yshift=1em},xtick={\empty},ytick={\empty},ztick={\empty},zmax=1.5,]
+\addplot3[]coordinates {({gx(-90,0.5)},{gy(-90,0.5)},{gz(-90,0.5)})}node[pin=135:{$x^2+y^2=1$}]{};
+\addplot3[surf,opacity=0.2,faceted color=none,z buffer=sort,domain=0:360,domain y=0:1]({gx(x,y)},{gy(x,y)},{gz(x,y)});
+\addplot3[surf,opacity=0.1,faceted color=none,z buffer=sort,domain=0:360,domain y=0:90]({fx(x,y)},{fy(x,y)},{fz(x,y)});
+\addplot3[]coordinates {({fx(115,80)},{fy(115,80)},{fz(115,80)})}node[pin=30:{$x^2+y^2+z^2=2$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{کرہ سے  بیلن ٹوپی کاٹتا ہے (مثال \حوالہ{مثال_سمتی_میدان_تکمل_ٹوپی_بیلن_کرہ})۔}
+\label{شکل_سمتی_میدان_تکمل_ٹوپی_بیلن_کرہ}
+\end{figure}
 
 \موٹا{حل:}\quad
 ٹوپی \عددی{S} ، ہم قد  سطح  \عددی{f (x, y, z) = x^2 + y^2 + z^2 = 2} کا  حصہ ہے۔ یہ ایک ایک مطابقت کے ساتھ مستوی  \عددی{x y}  میں قرص  \عددی{R: x^2 + y^2 \le 1}  پر تظلیل کرتا ہے۔ سمتیہ \عددی{\kvec{p}=\ak} مستوی  \عددی{R}  کو عمودی ہے۔ 

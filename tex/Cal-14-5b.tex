@@ -2,24 +2,54 @@
 %edited. figures missing and external references too if any
 %exercise 14.5 (p1103) that should follow is missing. 
 \جزوحصہء {سطحی تکملات} 
-سطحی رقبے کے  حساب میں جو تصورات استعمال کیے گئے انہیں بروئے  کار لاتے ہوئے سطح پر تفاعل کے تکمل کا حصول سکتے ہیں۔
+سطحی رقبے کے  حساب میں مستعمل تصورات بروئے  کار لاتے ہوئے سطح پر تفاعل کے تکمل کا حصول سیکھتے ہیں۔
 
- فرض کریں ، سطح  \عددی{f(x,y,z)=c}  پر برقی بار  تقسیم  کیا گیا ہے (شکل \حوالہء{14.44})اور \عددی{S}  کے ہر نقطہ پر تفاعل \عددی{g(x,y,z)}  فی اکائی رقبہ بار  (کثافت بار) دیتا ہے۔  ایسی صورت میں  \عددی{S}  پر کل بار کا  حساب تکمل کی صورت میں درج ذیل طریقے  سے لکھا جا سکتا ہے ۔
+ فرض کریں ، سطح  \عددی{f(x,y,z)=c}  پر برقی بار  تقسیم   ہے (شکل \حوالہ{شکل_سمتی_میدان_سطح_پر_کثافت_بار})اور \عددی{S}  کے ہر نقطہ پر تفاعل \عددی{g(x,y,z)}بار   فی  اکائی رقبہ (کثافت بار) دیتا ہے۔  ایسی صورت میں  \عددی{S}  پر کُل بار کا  حساب تکمل کی صورت میں درج ذیل طریقے  سے لکھا جا سکتا ہے ۔
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[declare function={f(\x,\y)=10-(\y)^2-2*(\x)^2;}]
+\pgfmathsetmacro{\kxa}{0.5}
+\pgfmathsetmacro{\kya}{0.3}
+  \begin{axis}[clip=false,axis on top,view/h=160,small,axis lines=center,colormap={kgray}{gray(0.2cm)=(0.6);gray(1cm)=(0.9);},xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true,
+%xmax=2,ymax=1.5,zmax=0.5,
+,xlabel={},ylabel={},zlabel={},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east},
+axis line style={draw=none}]
+\addplot3[surf,faceted color=white,domain=-1.5:1.5,domain y=-1:1]({x},{y},0);
+\addplot3[surf,,faceted color=black,,domain=-\kxa:\kxa,domain y=-\kya:\kya]({x},{y},0);
+\addplot3[dashed]coordinates {(-\kxa,-\kya,0)(-\kxa,-\kya,{f(-\kxa,-\kya)})};
+\addplot3[dashed]coordinates {(\kxa,-\kya,0)(\kxa,-\kya,{f(\kxa,-\kya)})};
+\addplot3[dashed]coordinates {(\kxa,\kya,0)(\kxa,\kya,{f(\kxa,\kya)})};
+\addplot3[dashed]coordinates {(-\kxa,\kya,0)(-\kxa,\kya,{f(-\kxa,\kya)})};
+\addplot3[surf,shader=flat, faceted color=none,domain=-1.5:1.5,domain y=-1:1]{f(x,y)};
+\addplot3[]coordinates{(1.5,-1.5,{f(1.5,-1.5)})}node[pin={[align=center]135:{$S$\\$f(x,y,z)=c$}}]{};
+\addplot3[]coordinates{(1.5,0,0)}node[below left]{$R$};
+\addplot3[surf,faceted color=gray,domain=-\kxa:\kxa,domain y=-\kya:\kya]{f(x,y)};
+\addplot3[surf, faceted color=none,domain=-\kxa:\kxa,domain y=-\kya:\kya](x,y,{f(0,0)});
+\addplot3[]coordinates {({-\kxa},{\kya},0)}node[right]{$\Delta A_k$};
+\addplot3[]coordinates {({-\kxa+0.1},{\kya+0.1},{f(-\kxa,\kya)})}node[pin=20:{$\Delta \sigma_k$}]{};
+\addplot3[]coordinates {({-\kxa},{-\kya},{f(0,0)})}node[pin=30:{$\Delta P_k$}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{سطح پر کثافت بار جانتے ہوئے ، سطحی تکمل میں ردوبدل کر کے، سطح پر کُل بار  دریافت کیا جا سکتا ہے۔}
+\label{شکل_سمتی_میدان_سطح_پر_کثافت_بار}
+\end{figure}
  
- ہم  \عددی{S} کے نیچے ، زمینی مستوی پر سایہ دار خطہ \عددی{R}  کو چھوٹے چھوٹے مستطیلوں میں بالکل اسی طرح تقسیم کرتے ہیں \عددی{g}سے  \عددی{S}  کا سطحی  رقبہ تلاش کرنے کے لیے کیا  جاتا ہے۔ ہر ایک \عددی{\Delta A_k} کے بالکل اوپر کچھ بلندی پر سطح \عددی{\Delta \sigma_k} پایا جاتا ہے ، جس کو ہم مماسی مستوی پر مستطیلی حصہ  \عددی{\Delta P_k}  سے تخمین کرتے ہیں ۔ 
+
+ ہم  \عددی{S} کے نیچے ، زمینی مستوی پر خطہ \عددی{R}  کو چھوٹے چھوٹے مستطیلوں میں بالکل اسی طرح تقسیم کرتے ہیں  جیسا   \عددی{S}  کا سطحی  رقبہ تلاش کرنے کے لیے کیا  جاتا ہے۔ ہر ایک \عددی{\Delta A_k} کے بالکل اوپر کچھ بلندی پر سطح \عددی{\Delta \sigma_k} پایا جاتا ہے ، جس کو ہم مماسی مستوی پر مستطیلی  ٹکڑا   \عددی{\Delta P_k}  سے تخمین کرتے ہیں ۔ 
  
-  ہم سطحی رقبے کی تعریف  کی طرز پر  چل رہے ہیں، تاہم یہاں  ایک اضافی قدم لیتے ہیں:  ہم \عددی{(x_k,y_k,z_k)}  پر  \عددی{g}  کی قیمت معلوم کر کے رقبہ  \عددی{\Delta \sigma_k}   پر کل بار کو تخمیناً حاصل  ضرب \عددی{g(x_k,y_k,z_k)\Delta P_k}  سے ظاہر کرتے ہیں ۔اس کی وجہ درج ذیل ہے: خطہ \عددی{R} کو کافی چھوٹے چھوٹے مستطیلوں میں تقسیم کرنے کی صورت میں پورے  \عددی{\Delta \sigma_k}  میں   \عددی{g}  کی قیمت تقریباً مستقل ہوگی ، اور \عددی{\Delta P_k} تقریباً \عددی{\Delta \sigma_k}کے کے برابر ہو گا ۔ یوں  \عددی{S}  پر کل بار تخمیناً درج ذیل مجموعہ کے برابر ہوگا۔
+  ہم سطحی رقبے کی تعریف  کے طرز پر  چل رہے ہیں، تاہم یہاں  ایک اضافی قدم لیتے ہیں:  ہم \عددی{(x_k,y_k,z_k)}  پر  \عددی{g}  کی قیمت معلوم کر کے رقبہ  \عددی{\Delta \sigma_k}   پر کُل بار کو تخمیناً حاصل  ضرب \عددی{g(x_k,y_k,z_k)\Delta P_k}  سے ظاہر کرتے ہیں ۔اس کی وجہ درج ذیل ہے: خطہ \عددی{R} کو کافی چھوٹے چھوٹے مستطیلوں میں تقسیم کرنے کی صورت میں پورے  \عددی{\Delta \sigma_k}  پر    \عددی{g}  کی قیمت تقریباً مستقل ہوگی ، اور \عددی{\Delta P_k} تقریباً \عددی{\Delta \sigma_k}کے کے برابر ہو گا ۔ یوں  \عددی{S}  پر کُل بار تخمیناً درج ذیل مجموعہ کے برابر ہوگا۔
   %eq 7 p1099
   \begin{align}\label{مساوات_سمتی_میدان_کل_بار}
-  \text{\RL{کل بار}}=\approx\sum g(x_k,y_k,z_k)\Delta P_k=\sum g(x_k,y_k,z_k)\frac{\Delta A_k}{\abs{\cos \gamma_k}}
+  \text{\RL{کُل بار}}=\approx\sum g(x_k,y_k,z_k)\Delta P_k=\sum g(x_k,y_k,z_k)\frac{\Delta A_k}{\abs{\cos \gamma_k}}
   \end{align}
   
-   اگر سطح\عددی{S} کو ظاہر کرنے والا تفاعل\عددی{\kvec{F}} اور اس کے  یک رتبی  جزوی تفرقات استمراری ہو ں ، اور  \عددی{S}  پر \عددی{g} استمراری ہو ، تب \عددی{R} کی خانہ بندی ہمیشہ  کی طرح نفیس بنانے سے مساوات  \حوالہ{مساوات_سمتی_میدان_کل_بار}  کے دائیں ہاتھ میں پیش مجموعے درج ذیل حد تک پہنچتے ہیں۔ 
+   اگر سطح\عددی{S} کو ظاہر کرنے والا تفاعل\عددی{f} اور اس کے  یک رتبی  جزوی تفرقات استمراری ہو ں ، اور  \عددی{S}  پر \عددی{g} استمراری ہو ، تب \عددی{R} کی خانہ بندی ہمیشہ  کی طرح نفیس بنانے سے مساوات  \حوالہ{مساوات_سمتی_میدان_کل_بار}  کے دائیں ہاتھ میں پیش مجموعے درج ذیل حد کو  پہنچتے ہیں۔ 
    %eq 8 p 1099
    \begin{align}\label{مساوات_سمتی_میدان_کل_بار_ب}
    \iint_R g(x,y,z)\frac{\dif A}{\abs{\cos \gamma}}=\iint g(x,y,z)\frac{\abs{\nabla f}}{\abs{\nabla f\cdot \kvec{p}}}\dif A
    \end{align}
-    یہ حد   سطح\عددی{S} پر \عددی{g} کا تکمل  کہلاتا ہے ، جس کو \عددی{R} پر دہرا تکمل لکھا اور حاصل کیا جاتا ہے ۔ اس تکمل کی قیمت سطح\عددی{S} پر کل بار دے گی ۔
+    یہ حد   سطح\عددی{S} پر \عددی{g} کا تکمل  کہلاتا ہے ، جس کو \عددی{R} پر دہرا تکمل لکھا اور حاصل کیا جاتا ہے ۔ اس تکمل کی قیمت سطح\عددی{S} پر کُل بار دے گی ۔
     
     اگر مساوات \حوالہ{مساوات_سمتی_میدان_کل_بار_ب} کا تکمل موجود ہو ، تب آپ توقع   کر سکتے ہیں کہ مساوات  \حوالہ{مساوات_سمتی_میدان_کل_بار_ب} کا کلیہ سطح\عددی{S} پر کسی بھی تفاعل \عددی{g} کے تکمل کی تعریف ہے ۔
     
@@ -52,9 +82,33 @@
 
 %------------------
 %ex 3, p1100 
-\ابتدا{مثال}
- ربع اول سے مستویات \عددی{x=1} ، \عددی{y=1}، اور \عددی{z=1}  ایک مکعب کاٹتی ہیں (شکل \حوالہء{14.45})۔ اس مکعب کی سطح پر \عددی{g(x,y,z)=xyz}کا تکمل لیں ۔
+\ابتدا{مثال}\شناخت{مثال_سمتی_میدان_کعبی_بار}
+ ربع اول سے مستویات \عددی{x=1} ، \عددی{y=1}، اور \عددی{z=1}  ایک مکعب کاٹتی ہیں (شکل \حوالہ{شکل_سمتی_میدان_کعبی_بار})۔ اس مکعب کی سطح پر \عددی{g(x,y,z)=xyz}کا تکمل لیں ۔
  
+\begin{figure}
+\centering
+\begin{tikzpicture}[declare function={f(\x,\y)=10-(\y)^2-2*(\x)^2;}]
+\pgfmathsetmacro{\kxa}{0.5}
+\pgfmathsetmacro{\kya}{0.3}
+  \begin{axis}[clip=false,axis on top,view/h=110,small,axis lines=center,colormap={kgray}{gray(0.2cm)=(0.6);gray(1cm)=(0.9);},xtick={1},ytick={1},ztick={1},enlargelimits=true, enlarge x limits=0.2,
+enlarge y limits=0.2, enlarge z limits=0.2,
+%xmax=2,ymax=1.5,zmax=0.5,
+,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},
+%axis line style={draw=none}
+]
+\addplot3[] coordinates {(1,0,0) (1,1,0) (0,1,0) (0,1,1) (1,1,1) (1,0,1)};
+\addplot3[] coordinates {(0,0,1) (0,1,1)};
+\addplot3[] coordinates {(1,1,0) (1,1,1)};
+\addplot3[] coordinates {(0,0,1) (1,0,1)  (1,0,0)};
+\addplot3[]coordinates {(0.25,0.5,1)} coordinate (kT)node[pin=45:{\RL{سطح الف}}]{};
+\addplot3[]coordinates {(1,0.15,0.5)} coordinate (kF)node[pin=145:{\RL{سطح ب}}]{};
+\addplot3[]coordinates {(0.25,1,0.5)} coordinate (kR)node[pin=30:{\RL{سطح ج}}]{};
+\end{axis}
+\end{tikzpicture}
+\caption{مکعب پر تفاعل کا تکمل حاصل کرنے کے لئے مکعب کے  چھ اطراف  پر تکمل لے کر  نتائج جمع کریں(مثال \حوالہ{مثال_سمتی_میدان_کعبی_بار})۔}
+\label{شکل_سمتی_میدان_کعبی_بار}
+\end{figure}
+
   \موٹا{حل:}\quad
   ہم باری باری مکعب کی چھ سطحوں پر  \عددی{ xyz} کا تکمل لے کر تمام نتائج کا مجموعہ لیتے ہیں ۔ محددی مستویات میں پائے جانے والے اطراف میں \عددی{xyz=0} ہوگا، لہٰذا  مکعب کی سطح پر تکمل گھٹ کر درج ذیل صورت اختیار کرتا ہے ۔
   \begin{align*}
@@ -82,45 +136,104 @@ xyz&=xy(1)=xy
 \جزوحصہء{سمت بندی}
   وہ  ہموار سطح  \عددی{S}،   جس پر    عمودی  اکائی سمتیات کا  ایسا میدان \عددی{\kvec{n}}   متعارف کیا جا سکتا ہو جو مقام کے ساتھ استمراری تبدیل ہو،  \اصطلاح{قابل  سمت  بند  }\فرہنگ{قابل سمت بند}\حاشیہب{orientable}\فرہنگ{orientable} یا \اصطلاح{ دو طرفہ }\فرہنگ{دو طرفہ}\حاشیہب{two-sided} \فرہنگ{two-sided} کہلاتی  ہے ۔ قابل سمت بند سطح کا ہر ذیلی ٹکڑا  قابل سمت بند ہوگا ۔ کرہ اور فضا میں دیگر بند سطحیں( ایسی ہموار سطحیں جو ٹھوس اجسام کو احاطہ کرتی ہوں) قابل  سمت بند ہوں گی۔روایتاً \عددی{\kvec{n}} کا رخ بند سطح  سے  باہر کی طرف  رکھا  جاتا ہے۔
   
-    میدان  \عددی{\kvec{n}} منتخب کرنے کے بعد ہم کہتے ہیں  سطح  \اصطلاح{سمت بند }\فرہنگ{سمت بند}\حاشیہب{oriented}\فرہنگ{oriented} بنائی گئی ہے اور سطح بشمول  عمودی میدان   \اصطلاح{سمت بند سطح }\فرہنگ{سمت بند سطح}\حاشیہب{oriented surface}\فرہنگ{oriented surface} کہلاتی ہے۔ کسی بھی نقطے پر سمتیہ  \عددی{\kvec{n}} ، اس نقطے  پر مثبت رخ   کہلاتا ہے (شکل \حوالہء{14.46} )۔ 
-    
-    شکل \حوالہء{14.47} میں \اصطلاح{ موبیوس پٹی }\فرہنگ{موبیوس پٹی}\حاشیہب{Mobius band}\فرہنگ{Mobius band} دکھائے گئی ہے جو نا قابل سمت بند ہے ۔آپ کسی بھی نقطہ سے آغاز  کر کے استمراری اکائی عمودی میدان بنانا شروع کریں۔  اکائی  عمودی  سمتیہ \عددی{\kvec{n}}  کو سطح  پر   استمراری حرکت دینے سے آپ   ابتدائی نقطے تک یوں پہنچ سکتے ہیں کہ  \عددی{\kvec{n}} کا رخ ابتدائی رخ کا مخولف ہو ۔ اس نقطے پر سمتیہ بیک وقت دو مخولف رخ نہیں ہو سکتا ، اگرچہ  استمراری میدان  کی صورت میں ایسا ہی ہونا چاہیے ۔ یوں ہم اخذ کرتے ہیں کہ ایسا میدان موجود نہیں ہو  گا ۔
+    میدان  \عددی{\kvec{n}} منتخب کرنے کے بعد ہم کہتے ہیں  سطح  \اصطلاح{سمت بند }\فرہنگ{سمت بند}\حاشیہب{oriented}\فرہنگ{oriented} بنائی گئی ہے اور سطح بشمول  عمودی میدان   \اصطلاح{سمت بند سطح }\فرہنگ{سمت بند سطح}\حاشیہب{oriented surface}\فرہنگ{oriented surface} کہلاتی ہے۔ کسی بھی نقطے پر سمتیہ  \عددی{\kvec{n}} ، اس نقطے  
+پر مثبت رخ   کہلاتا ہے (شکل \حوالہ{شکل_سمتی_میدان_قابل_سمت_بند} )۔ 
 
-\جزوحصہء  {بہاو کا سطحی تکمل }
-فرض کریں قابل سمت بند سطح \عددی{S}  پر استمراری سمتی میدان \عددی{\kvec{F}} ہے ، اور  سطح پر منتخب اکائی عمودی میدان  \عددی{\kvec{n}} ہے ۔ہم \عددی{S} پر \عددی{\kvec{F}\cdot\kvec{n}}  کے تکمل  کو   \عددی{S} پر  مثبت رخ کا  بہاو کہتے ہیں ۔یوں  \عددی{\kvec{n}} کے رخ\عددی{\kvec{F}} کے غیر سمتی جزو کا \عددی{S} پر تکمل ،  سطح سے گزرتا بہاو دے گا۔ 
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+ \tdplotsetmaincoords{0}{0}
+ \begin{tikzpicture}[scale=1,tdplot_main_coords]
+    \shade[tdplot_screen_coords,ball color = white] (0,0) circle (1);    
+\draw[-latex] (30:1)--++(30:0.5)node[right]{$\kvec{n}$}node[below right]{ \RL{مثبت رخ}};
+\end{tikzpicture}
+\caption{ہموار بند سطح ہمیشہ قابل سمت بند ہو گی۔ہر نقطے پر  باہر رخ اکائی عمودی سمتیہ  مثبت رخ دیگا۔}
+\label{شکل_سمتی_میدان_قابل_سمت_بند}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\draw  (0,0) to [out=-90,in=180](1,-0.75) to [out=0,in=-90](2,0) to [out=90,in=0](1,1) to [out=180,in=90](0.125,0.25) to [out=-90,in=180](1,-0.5) to [out=0,in=-90](1.75,0) to [out=90,in=0](1,0.75) to [out=180,in=70](0.135,0.125);
+\draw(0,0) to [out=90,in=-110]++(0.05,0.25) to [out=70,in=-110](0.195,0.55);
+\draw[-latex](0.125,0)--++(170:0.5);
+%
+\draw[dashed]  (0.125,0) to [out=-90,in=180](1,-0.625) to [out=0,in=-90](1.875,0) to [out=90,in=0](1,0.875) to [out=180,in=70](0.125,0.25);
+\end{tikzpicture}%
+\caption{موبیوس پٹی ناقابل سمت بند ہے۔}
+\label{شکل_سمتی_میدان_موبیوس_پٹی}
+\end{minipage}
+\end{figure}
+    
+
+    شکل \حوالہ{شکل_سمتی_میدان_موبیوس_پٹی} میں \اصطلاح{ موبیوس پٹی }\فرہنگ{موبیوس پٹی}\حاشیہب{Mobius band}\فرہنگ{Mobius band} دکھائے گئی ہے جو نا قابل سمت بند ہے ۔آپ کسی بھی نقطہ سے آغاز  کر کے استمراری اکائی عمودی میدان بنانا شروع کریں۔  اکائی  عمودی  سمتیہ \عددی{\kvec{n}}  کو سطح  پر   استمراری حرکت دینے سے آپ   ابتدائی نقطے تک یوں پہنچ سکتے ہیں کہ  \عددی{\kvec{n}} کا رخ ابتدائی رخ کا مخالف ہو ۔ ایک نقطے پر سمتیہ بیک وقت دو مخالف رخ نہیں ہو سکتا ، اگرچہ   استمراری میدان  کی صورت میں موبیوس  پٹی پر  ایسا ہی ہونا چاہیے ۔ یوں ہم اخذ کرتے ہیں کہ ایسا میدان موجود نہیں ہو  گا ۔
+
+
+\جزوحصہء  {بہاؤ کا سطحی تکمل }
+فرض کریں قابل سمت بند سطح \عددی{S}  پر استمراری سمتی میدان \عددی{\kvec{F}} ہے ، اور  سطح پر منتخب اکائی عمودی میدان  \عددی{\kvec{n}} ہے ۔ہم \عددی{S} پر \عددی{\kvec{F}\cdot\kvec{n}}  کے تکمل  کو   \عددی{S} پر  مثبت رخ کا  بہاؤ کہتے ہیں ۔یوں  \عددی{\kvec{n}} کے رخ\عددی{\kvec{F}} کے غیر سمتی جزو کا \عددی{S} پر تکمل ،  سطح سے گزرتا بہاؤ دے گا۔ 
 
 \جزوحصہء{ تعریف}
- قابل سمت بند سطح  \عددی{S}   کو پار کرتا  ، \عددی{\kvec{n}}  کے رخ ، تین ابعادی سمتی میدان\عددی{\kvec{F}} کا  بہاو درج ذیل کلیہ دے گا ۔ 
+ قابل سمت بند سطح  \عددی{S}   کو پار کرتا  ، \عددی{\kvec{n}}  کے رخ ، تین ابعادی سمتی میدان\عددی{\kvec{F}} کا  بہاؤ درج ذیل کلیہ دے گا ۔ 
 %eq-11, p1101
-\begin{align}\label{مساوات_سمتی_میدان_بہاو_تعریف}
-\text{\RL{بہاو}}=\iint_S \kvec{F}\cdot \kvec{n}\dif \sigma
+\begin{align}\label{مساوات_سمتی_میدان_بہاؤ_تعریف}
+\text{\RL{بہاؤ}}=\iint_S \kvec{F}\cdot \kvec{n}\dif \sigma
 \end{align} 
 
- یہ تعریف مسطح  منحنی  \عددی{C} کو  پار  کرتے، دو ابعادی میدان\عددی{\kvec{F}} کے بہاو کی تعریف کے عین مطابق ہے ۔مستوی میں بہاو کو  ، منحنی  \عددی{C} کو\عددی{\kvec{F}} کے  عمودی غیر سمتی جزو کا تکمل :
+ یہ تعریف مسطح  منحنی  \عددی{C} کو  پار  کرتے، دو ابعادی میدان\عددی{\kvec{F}} کے بہاؤ کی تعریف کے عین مطابق ہے ۔مستوی میں بہاؤ کو  ، منحنی  \عددی{C} کو\عددی{\kvec{F}} کے  عمودی غیر سمتی جزو کا تکمل :
 \begin{align*}
 \int_C \kvec{F}\cdot \kvec{n}\dif s
 \end{align*} 
  
 ظاہر کرتا ہے۔
 
-گر\عددی{\kvec{F}} تین ابعادی سیالی بہاو کا سمتی رفتار میدان ہو ، تب \عددی{S}  سے ( گزرتا ) \عددی{\kvec{F}} کا بہاو ،  منتخب مثبت رخ میں \عددی{S}   سے گزرتے  سیال  کی  خولص  شرح دے گا ۔ایسے  بہاو پر تفصیلاً تبصرہ حصہ \حوالہء{14.7}  میں کیا جائے گا۔
+گر\عددی{\kvec{F}} تین ابعادی سیالی بہاؤ کا سمتی رفتار میدان ہو ، تب \عددی{S}  سے ( گزرتا ) \عددی{\kvec{F}} کا بہاؤ ،  منتخب مثبت رخ میں \عددی{S}   سے گزرتے  سیال  کی  خولص  شرح دے گا ۔ایسے  بہاؤ پر تفصیلاً تبصرہ حصہ \حوالہء{14.7}  میں کیا جائے گا۔
 
 اگر \عددی{\kvec{S}}  ہم قد سطح \عددی{g(x,y,z)=c} کا حصہ ہو ، تب  \عددی{\kvec{n}} درج ذیل میں سے  ، جو پسند کا رخ دیتا ہو،  ہو گا۔
 %eq-12, p1101
 \begin{align}
 \kvec{n}=\pm \frac{\nabla g}{\abs{\nabla g}}
 \end{align}
-مطابقتی بہاو ذیل ہو گا۔
+مطابقتی بہاؤ ذیل ہو گا۔
 %eq-13, p1101
 \begin{align}
-\text{\RL{بہاو}}&=\iint_S\kvec{F}\cdot\kvec{n}\dif \sigma \tag{\setlatin مساوات \حوالہ{مساوات_سمتی_میدان_بہاو_تعریف}}\\
+\text{\RL{بہاؤ}}&=\iint_S\kvec{F}\cdot\kvec{n}\dif \sigma \tag{\setlatin مساوات \حوالہ{مساوات_سمتی_میدان_بہاؤ_تعریف}}\\
 &=\iint_R \big(\kvec{F}\cdot \frac{\pm \nabla g}{\abs{\nabla g}}\big)\frac{\abs{\nabla g}}{\abs{\nabla g\cdot \kvec{p}}}\dif  A\nonumber\\
 &=\iint_R \kvec{F}\cdot \frac{\pm \nabla g}{\abs{\nabla g\cdot \kvec{p}}}\dif A
 \end{align}
 
 %ex-4, p1102
-\ابتدا{مثال}
-بیلن \عددی{y^2+z^2=1, z\ge 0} سے مستویات \عددی{x=0} اور \عددی{x=1}  سطح \عددی{S} کاٹتی ہیں۔ سطح \عددی{S} سے  باہر رخ \عددی{\kvec{F}=yz\aj+z^2\ak} کا بہاو تلاش کریں۔
+\ابتدا{مثال}\شناخت{مثال_سمتی_میدان_بیلنی_چادر}
+بیلن \عددی{y^2+z^2=1, z\ge 0} سے مستویات \عددی{x=0} اور \عددی{x=1}  سطح \عددی{S} کاٹتی
+  ہیں(شکل \حوالہ{شکل_سمتی_میدان_بیلنی_چادر})۔ سطح \عددی{S} سے  باہر رخ \عددی{\kvec{F}=yz\aj+z^2\ak} کا بہاؤ تلاش کریں۔
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[declare function={fx(\x,\y)=\x;fy(\x,\y)=cos(\y);fz(\x,\y)=sin(\y);}]
+\pgfmathsetmacro{\kxa}{0.5}
+\pgfmathsetmacro{\kya}{0.3}
+  \begin{axis}[clip=false,view/h=120,small,axis lines=center,colormap={kgray}{gray(0.2cm)=(0.6);gray(1cm)=(0.9);},xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true,
+%xmax=2,ymax=1.5,zmax=0.5,
+,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},
+enlarge x limits=0.2, enlarge y limits=0.2, enlarge z limits=0.2,
+%axis line style={draw=none}
+]
+\addplot3[surf,shader=flat,faceted color=white,domain=0:1,domain y=0:180]({fx(x,y)},{fy(x,y)},{0});
+\addplot3[surf,shader=flat,faceted color=white,domain=0:1,domain y=0:180]({fx(x,y)},{fy(x,y)},{fz(x,y)});
+\addplot3[] coordinates {(1,1,0)}node[below,xshift=0.5em]{$(1,1,0)$}; 
+\addplot3[] coordinates {(1,-1,0)}node[below,xshift=-1em]{$(1,-1,0)$}; 
+\addplot3[] coordinates {({fx(0.25,45)},{fy(0.25,45)},{fz(0.25,45)})} coordinate (kN); 
+\addplot3[] coordinates {({fx(0.5,100)},{fy(0.5,100)},{fz(0.5,100)})} node[pin=135:{$y^2+z^2=1$}]{}; 
+\addplot3[] coordinates {(0.5,-0.5,0)} node[]{$R_{xy}$};
+\addplot3[] coordinates {(0,1,0)} node[below]{$1$};
+\end{axis}
+\draw[-latex](kN)--++(45:1)node[right]{$\kvec{n}$}coordinate[pos=0.2](kNN);
+\draw[](kNN)--++(135:0.2)--++(45:-0.2);
+\end{tikzpicture}
+\caption{
+سطح سے باہر رخ سمتی میدان کا بہاؤ (مثال  \حوالہ{مثال_سمتی_میدان_بیلنی_چادر})۔ زمینی رقبہ \عددی{R_{xy}} دو (2) کے برابر ہے۔}
+\label{شکل_سمتی_میدان_بیلنی_چادر}
+\end{figure}
+
 
  \موٹا{حل:}\quad
  سطح  \عددی{S}  پر باہر روح عمودی میدان  \عددی{\kvec{n}} کو  \عددی{g(x,y,z)=y^2+z^2} کی  ڈھلوان   (ذیل دیکھیں)سے معلوم کیا جا سکتا ہے۔
@@ -139,7 +252,7 @@ xyz&=xy(1)=xy
  &=y^2z+z^3=z(y^2+z^2)\\
  &=z
  \end{align*}
- یوں \عددی{S} سے  \عددی{\kvec{F}} کا    اخراجی بہاو ذیل ہو گا۔
+ یوں \عددی{S} سے  \عددی{\kvec{F}} کا    اخراجی بہاؤ ذیل ہو گا۔
  \begin{align*}
  \iint_S\kvec{F}\cdot\kvec{n}\dif \sigma=\iint_S(z)\big(\frac{1}{z}\dif A\big)=\iint_{R_{xy}}\dif A=\text{\RL{کا رقبہ}}\, R_{xy}=2
  \end{align*}
@@ -157,7 +270,7 @@ xyz&=xy(1)=xy
 \toprule
 \موٹا{کمیت}&
 M=\iint_S \delta(x,y,z)\dif \sigma\\
-&\text{\RL{کثافت (کمیت فی اکائی رقبہ) ہے}}  \delta (x,y,z)\,\text{\RL{پر}}\,(x,y,z)\,\text{\RL{نقطہ}})\\
+&\text{\RL{کثافت (کمیت فی اکائی رقبہ) ہے}}  \delta (x,y,z)\,\text{\RL{پر}}\,(x,y,z)\,\text{\RL{نقطہ}}\\
 \midrule
 \موٹا{محددی مستویات کے}& 
 M_{yz}=\iint_Sx \delta \dif \sigma,\quad\quad M_{xz}=\iint_S y\delta \dif \sigma, \quad\quad M_{xy}=\iint_S z\delta \dif \sigma\\
@@ -182,7 +295,7 @@ R_L=\sqrt{I_L/M}\\
 %---------------------------------------
 
 %ex-5, p1102
-\ابتدا{مثال} 
+\ابتدا{مثال} \شناخت{مثال_سمتی_میدان_نصف_کروی_خول}
 رداس \عددی{a}   اور مستقل کثافت\عددی{\delta}کے باریک نصف کروی خول کا مرکز  کمیت تلاش کریں ۔
 
 \موٹا{حل :}\quad
@@ -190,7 +303,29 @@ R_L=\sqrt{I_L/M}\\
 \begin{align*}
 f(x,y,z)=x^2+y^2+z^2=a^2,\quad z\ge 0
 \end{align*}
-سے ظاہر کرتے ہیں ( شکل\حوالہء{14.49} ) ۔ محور   \عددی{z} کے لحاظ سے سطح کی تشاکلی  کی بنا پر \عددی{\overline{x}=\overline{y}=0} ہوگا ۔کلیہ  \عددی{\overline{z}=M_{xy}/M} سے \عددی{\overline{z}} تلاش کرنا باقی ہے ۔
+سے ظاہر کرتے ہیں ( شکل\حوالہ{شکل_سمتی_میدان_نصف_کروی_خول}) ۔ محور   \عددی{z} کے لحاظ سے سطح کی تشاکلی  کی بنا پر \عددی{\overline{x}=\overline{y}=0} ہوگا ۔کلیہ  \عددی{\overline{z}=M_{xy}/M} سے \عددی{\overline{z}} تلاش کرنا باقی ہے ۔
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[declare function={fx(\t,\p)=sin(\p)*cos(\t);fy(\t,\p)=sin(\p)*sin(\t);fz(\t,\p)=cos(\p);}]
+  \begin{axis}[axis equal,clip=false,view/h=120,small,axis lines=center,colormap={kgray}{gray(0.2cm)=(0.6);gray(1cm)=(0.9);},xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true,
+%xmax=2,ymax=1.5,zmax=0.5,
+,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},
+enlarge x limits=0.4, enlarge y limits=0.2, enlarge z limits=0.3,
+%axis line style={draw=none}
+]
+\addplot3[surf,opacity=0.2,shader=flat,faceted color=white,domain=0:360,domain y=0:90]({fx(x,y)},{fy(x,y)},{fz(x,y)});
+\addplot3[]coordinates {(1,0,0)}node[below]{$a$};
+\addplot3[] coordinates {(0,1,0)}node[below]{$a$};
+\addplot3[]({fx(150,30)},{fy(150,30)},{fz(150,30)})node[pin=30:{$x^2+y^2+z^2=a^2$}]{};
+\addplot3[]({fx(30,90)},{fy(30,90)},{fz(30,90)})node[pin=-45:{$x^2+y^2=a^2$}]{};
+\addplot3[]({fx(330,90)},{fy(330,90)},{fz(330,90)})coordinate(kR);
+\end{axis}
+\draw[thin](kR)++(0,-0.1)--++(0,-0.2)--++(-0.5,0)node[left]{$R$};
+\end{tikzpicture}
+\caption{مستقل کمیتی کثافت کی باریک چادر کا نصف کروی خول(مثال \حوالہ{مثال_سمتی_میدان_نصف_کروی_خول})۔}
+\label{شکل_سمتی_میدان_نصف_کروی_خول}
+\end{figure}
 
  خول کی کمیت درج ذیل ہے۔
  \begin{align*}

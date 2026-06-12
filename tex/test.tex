@@ -1,17 +1,30 @@
-\begin{figure}
+\begin{table}
 \centering
-\begin{subfigure}{0.5\textwidth}
-\centering
-\begin{tikzpicture}[x=0.5cm,y=0.5cm]
-\foreach \y/\ys in {1/80,2/90,3/100,4/110}{\draw[gray](0,\y)node[left,black]{$\ys$}--++(7,0);}
-\foreach \x in {1,2,3,4,5,6}{\draw[gray](\x,0)node[below,black]{$\x$}--++(0,5);}
-\draw[-latex](-0.25,0)--(7,0)node[right]{$t\,(\si{\hour})$};
-%\draw[-latex](0,-0.2)--++(0,5)node[above]{$y\, (\si{\milli\gram\per\litre}mg/dL)$};
-\draw[-latex](0,-0.2)--(0,5)node[above]{$y\,(\si{\milli\gram\per\deci\litre})$};
-\draw(0,0.9)--(1,2.25)--(2,3.85)--(3,3.25)--(4,2.3)--(5,2.5)--(6,2.5);
-\end{tikzpicture}
-\caption{}
-\end{subfigure}%
-\caption{(ا) قبل پرواز پرکھ برداشت کے دوران دموی شکر (ب) دموی شکر کا ڈھلوان مختلف پرکھ میں نہایت تیزی سے بہت زیادہ تبدیل ہوتا ہے۔}
-\label{شکل_مثال_تفرق_پرواز}
-\end{figure}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{rL}
+\toprule
+\موٹا{کمیت}&
+M=\iint_S \delta(x,y,z)\dif \sigma\\
+&\text{\RL{کثافت (کمیت فی اکائی رقبہ) ہے}}  \delta (x,y,z)\,\text{\RL{پر}}\,(x,y,z)\,\text{\RL{نقطہ}}\\
+\midrule
+\موٹا{محددی مستویات کے}& 
+M_{yz}=\iint_Sx \delta \dif \sigma,\quad\quad M_{xz}=\iint_S y\delta \dif \sigma, \quad\quad M_{xy}=\iint_S z\delta \dif \sigma\\
+\موٹا{لحاظ سے اول معیار اثر}&\\
+\midrule
+\موٹا{مرکز کمیت کے محدد}&
+\overline{x}=M_{yz}/M,\quad\quad \overline{y}=M_{xz}/M,\quad\quad \overline{z}=M_{xy}/M\\
+\midrule
+\موٹا{جمودی معیار اثر}&
+I_x=\iint_S (y^2+z^2)\delta \dif \sigma, \quad\quad\quad I_y=\iint_S (x^2+z^2)\delta \dif \sigma\\
+&
+I_z=\iint_S (x^2+y^2)\delta \dif \sigma, \quad\quad\quad I_L=\iint_S r^2\delta \dif \sigma\\
+&
+\text{\RL{ہے}}\,r(x,y,z)\,\text{\RL{کا فاصلہ}}\,L\, \text{\RL{سے لکیر}}\,(x,y,z)\,\text{\RL{نقطہ}}\\
+\midrule
+\موٹا{لکیر  \(L\) کے لحاظ سے }&
+R_L=\sqrt{I_L/M}\\
+\موٹا{رداس دوار}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
