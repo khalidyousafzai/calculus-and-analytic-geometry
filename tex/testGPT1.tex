@@ -854,10 +854,9 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 ثابت کریں کہ اندرسہ کا  رقبہ \(A=4\pi^2Rr\) ہے۔
 \end{enumerate}
 \انتہا{سوال}
-%KKK??? am here
 %54
 \ابتدا{سوال}\موٹا{سطح طواف کا معلمی روپ}\quad
-فرض کریں کمعلمی شدہ منحنی \(C:(f(u),g(u))\)  محور  \عددی{x} کے گرد گھمائی جاتی ہے، جہاں   \(a\le u\le b\) پر \(g(u)>0\) ہے۔
+فرض کریں معلمی شدہ منحنی \(C:(f(u),g(u))\)  محور  \عددی{x} کے گرد گھمائی جاتی ہے، جہاں   \(a\le u\le b\) پر \(g(u)>0\) ہے۔
 
 \begin{enumerate}
 \item[(الف)]
@@ -914,458 +913,159 @@ x^2+y^2-z^2=1
 
 %==========================================================================================
 %=========================================================================================
-\حصہ{سٹوکس  کا نظریہ }
+\حصہ{مسئلہ سٹوکس  }
 
-جیسا کہ ہم نے  حصہ  16.4 میں دیکھا، دو بعدی میدان
-\begin{align*}
-\mathbf{F} = M\mathbf{i} + N\mathbf{j}
-\end{align*}
-میں کسی نقطہ $(x,y)$ پر گردش کی کثافت (circulation density) یا curl کا جزو درج ذیل  غیر سمتی  مقدار سے ظاہر ہوتا ہے:
+ہم نے  حصہ\حوالہء{16.4 } میں دیکھا، دو بعدی میدان \عددی{\mathbf{F} = M\mathbf{i} + N\mathbf{j}}  میں  نقطہ $(x,y)$ پر کثافت  دائری بہاؤ یا   گردش  کا جزو درج ذیل  غیر سمتی  مقدار  \عددی{\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}}  بیان کرتا ہے۔ تین  ابعاد  میں  مستوی میں نقطہ $P$ کے گرد دائری بہاؤ  کو  سمتیہ کے ذریعے بیان کیا جاتا ہے۔یہ سمتیہ اس مستوی  کے عمود ہو گا   جس میں دائری بہاؤ  ہو(شکل\حوالہء{16.59})، اور سمتیہ  کا رخ دائری بہاؤ   کے خط    کے ساتھ دائیں ہاتھ کا تعلق رکھے گا۔سمتیہ کی لمبائی  سیال کے گھومنے کی شرح ظاہر کرتی ہے، جو  \عددی{P}  کے لحاظ سے دائری بہاؤ کا مستوی  جھکانے سے  عموماً  تبدیل ہو گی۔ہم کیا دیکھتے ہیں کہ  جب دائری بہاؤ کا سمتی رفتاری میدان \عددی{\kvec{F}=M\ai+N\aj+P\ak}  ہو،  زیادہ سے زیادہ دائری بہاؤ کا سمتیہ درج ذیل \اصطلاح{گردشی سمتیہ} \فرہنگ{گردشی سمتیہ}\حاشیہب{curl vector}\فرہنگ{curl vector} ہو گا۔
+\begin{align}
+\mathbf{F}\text{گردش}=\left(\frac{\partial P}{\partial y} - \frac{\partial N}{\partial z}\right)\mathbf{i}+
+\left(\frac{\partial M}{\partial z} - \frac{\partial P}{\partial x}\right)\mathbf{j}+
+\left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)\mathbf{k}\tag{1}
+\end{align}
 
-\begin{align*}
-\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}
-\end{align*}
+یہ معلومات ہمیں\اصطلاح{مسئلہ سٹوکس }\فرہنگ{سٹوکس!مسئلہ}\حاشیہب{Stokes’ Theorem}\فرہنگ{Stokes!theorem}  دیتا ہے، جو مسئلہ گرین کے دائری بہاؤ و گردشی روپ کی  تین بعدی   وسعت ہے۔
 
-تین بعدی (three-dimensional) صورت میں کسی نقطہ $P$ کے گرد کسی سطح پر گردش کو ایک سمتیہ کے ذریعے بیان کیا جاتا ہے۔
-
-یہ سمتیہ اس سطح کے عمود (عمودی) ہوتا ہے جس میں گردش ہو رہی ہو (شکل 16.59)، اور اس کی سمت دائیں ہاتھ کے اصول (right-hand rule) کے مطابق گردش کی سمت سے متعلق ہوتی ہے۔
-
-اس سمتیہ کی لمبائی گردش کی شدت (rate of rotation) کو ظاہر کرتی ہے، جو عموماً اس بات پر منحصر ہوتی ہے کہ گردش والا طیارہ نقطہ $P$ کے گرد کیسے جھکا ہوا ہے۔
-
-یہ ثابت کیا جا سکتا ہے کہ بہاؤ (flow) کے سمتیہ میدان
-\begin{align*}
-\mathbf{F} = M\mathbf{i} + N\mathbf{j} + P\mathbf{k}
-\end{align*}
-میں زیادہ سے زیادہ گردش (maximum circulation) کا سمتیہ درج ذیل ہوتا ہے جسے curl کہا جاتا ہے:
-
-\begin{align*}
-\nabla \times \mathbf{F}
-=
-\left(
-\frac{\partial P}{\partial y} - \frac{\partial N}{\partial z}
-\right)\mathbf{i}
-+
-\left(
-\frac{\partial M}{\partial z} - \frac{\partial P}{\partial x}
-\right)\mathbf{j}
-+
-\left(
-\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}
-\right)\mathbf{k}
-\tag{1}
-\end{align*}
-
-یہ معلومات ہمیں سٹوکس کے نظریہ (Stokes’ Theorem) سے حاصل ہوتی ہیں، جو کہ Green’s Theorem کے circulation–curl روپ کی تین بعدی توسیع ہے۔
-
-\vspace{1em}
-
-یہ بات قابلِ غور ہے کہ:
-
-\begin{align*}
-(\nabla \times \mathbf{F}) \cdot \mathbf{k}
-=
-\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}
-\end{align*}
-
-یہی وہی تعریف ہے جو ہم نے  حصہ  16.4 میں دی تھی جب
-\begin{align*}
-\mathbf{F} = M(x,y)\mathbf{i} + N(x,y)\mathbf{j}
-\end{align*}
-تھا۔
-
-curl کا یہ روپ   اکثر    ایک علامتی آپریٹر کے ذریعے بھی لکھا جاتا ہے:
-
-\begin{align*}
-\nabla =
-\mathbf{i}\frac{\partial}{\partial x}
-+
-\mathbf{j}\frac{\partial}{\partial y}
-+
-\mathbf{k}\frac{\partial}{\partial z}
-\tag{2}
-\end{align*}
+دھیان رہے کہ \عددی{(\mathbf{F}\text{گردش}) \cdot \mathbf{k}=\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}} اور \عددی{\mathbf{F} = M(x,y)\mathbf{i} + N(x,y)\mathbf{j}}    کی صورت میں حصہ\حوالہء{16.4 } میں پیش کی گئی   تعریف   بلا تضاد  ہیں۔
 
 
+مساوات \حوالہء{1} میں گردش \عددی{\kvec{F}}   کا  کلیہ عموماً        درج ذیل علامتی عامل  کے ذریعے لکھا جاتا ہے۔
 
+\begin{align}
+\nabla =\mathbf{i}\frac{\partial}{\partial x}+\mathbf{j}\frac{\partial}{\partial y}+\mathbf{k}\frac{\partial}{\partial z}\tag{2}
+\end{align}
 %===================================
 %L 90977
 
-\vspace{1em}
-
-\موٹا{(نوٹ):} علامت $\nabla$ کو "ڈیل" (del) پڑھا جاتا ہے۔
-
-curl of $\mathbf{F}$ کو درج ذیل طور پر لکھا جاتا ہے:
+(علامت $\nabla$ کو  ہم "ڈیل\حاشیہب{del} "  پڑھتے ہیں۔)  یہ عامل استعمال کر کے  گردش \عددی{\kvec{F}} \فرہنگ{گردش!کلیہ}\حاشیہب{curl}\فرہنگ{curl!equation} کو  ہم \عددی{\nabla\times\kvec{F}} لکھتے ہیں۔
 
 \begin{align*}
-\nabla \times \mathbf{F}
-=
-\begin{vmatrix}
+\nabla \times \mathbf{F}&=\begin{vmatrix}
 \mathbf{i} & \mathbf{j} & \mathbf{k} \\
 \frac{\partial}{\partial x} &
 \frac{\partial}{\partial y} &
 \frac{\partial}{\partial z} \\
 M & N & P
-\end{vmatrix}
+\end{vmatrix}\\
+&=\left(\frac{\partial P}{\partial y} - \frac{\partial N}{\partial z}\right)\mathbf{i}+
+\left(\frac{\partial M}{\partial z} - \frac{\partial P}{\partial x}\right)\mathbf{j}+
+\left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)\mathbf{k}\\
+&=\kvec{F}\text{گردش}
 \end{align*}
+مختصراً درج ذیل لکھا جائے گا۔
+\begin{align}
+  \mathbf{F}\text{گردش}=\nabla \times \mathbf{F}\tag{3}
+\end{align}
+%====================================================
 
-\begin{align*}
-=
-\left(
-\frac{\partial P}{\partial y} - \frac{\partial N}{\partial z}
-\right)\mathbf{i}
-+
-\left(
-\frac{\partial M}{\partial z} - \frac{\partial P}{\partial x}
-\right)\mathbf{j}
-+
-\left(
-\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}
-\right)\mathbf{k}
-\end{align*}
+\ابتدا{مثال}\موٹا{گردش \عددی{\kvec{F}} کی تلاش}
 
-اس کو مختصر طور پر یوں لکھا جاتا ہے:
-
-\begin{align*}
-\nabla \times \mathbf{F} = \text{curl } \mathbf{F}
-\tag{3}
-\end{align*}
-
-\vspace{1em}
-
-\begin{center}
-{\Large مثال 1: curl معلوم کرنا}
-\end{center}
-
-میدان دیا گیا ہے:
-
-\begin{align*}
-\mathbf{F} = (x^2 - y)\mathbf{i} + 4z\mathbf{j} + x^2\mathbf{k}
-\end{align*}
-
-curl معلوم کریں۔
+میدان \عددی{\mathbf{F} = (x^2 - y)\mathbf{i} + 4z\mathbf{j} + x^2\mathbf{k}}   کی گردش تلاش کریں۔
 
 \موٹا{حل:}
 
 \begin{align*}
-\nabla \times \mathbf{F}
-=
+\kvec{F}\text{گردش}&=\nabla\times \kvec{F}\\
+&=
 \begin{vmatrix}
 \mathbf{i} & \mathbf{j} & \mathbf{k} \\
 \frac{\partial}{\partial x} &
 \frac{\partial}{\partial y} &
 \frac{\partial}{\partial z} \\
 x^2 - y & 4z & x^2
-\end{vmatrix}
+\end{vmatrix}\\
+&=\left(\frac{\partial}{\partial y}(x^2) - \frac{\partial }{\partial z}(4z)\right)\mathbf{i}-
+\left(\frac{\partial }{\partial x}(x^2) - \frac{\partial }{\partial z}(x^2-y)\right)\mathbf{j}+
+\left(\frac{\partial}{\partial x}(4z) - \frac{\partial}{\partial y}(x^2 - y)\right)\mathbf{k}\\
+&=(0 - 4)\ai-(2x - 0)\aj+(0 +1)\ak\\
+&=-4\mathbf{i} - 2x\mathbf{j} + \mathbf{k}
 \end{align*}
-
-\begin{align*}
-=
-\mathbf{i}\left(\frac{\partial x^2}{\partial y} - \frac{\partial 4z}{\partial z}\right)
--
-\mathbf{j}\left(\frac{\partial x^2}{\partial x} - \frac{\partial x^2 - y}{\partial z}\right)
-+
-\mathbf{k}\left(\frac{\partial 4z}{\partial x} - \frac{\partial (x^2 - y)}{\partial y}\right)
-\end{align*}
-
-اب جزوی مشتقات:
-
-\begin{align*}
-=
-\mathbf{i}(0 - 4)
--
-\mathbf{j}(2x - 0)
-+
-\mathbf{k}(0 - (-1))
-\end{align*}
-
-\begin{align*}
-=
--4\mathbf{i} - 2x\mathbf{j} + \mathbf{k}
-\end{align*}
-
-\vspace{1em}
-
-جیسا کہ ہم دیکھیں گے، آپریٹر $\nabla$ کے مزید بھی استعمال ہیں۔
-
-مثال کے طور پر جب اسے کسی scalar function $f(x,y,z)$ پر لگایا جائے تو یہ gradient دیتا ہے:
-
-\begin{align*}
-\nabla f
-=
-\frac{\partial f}{\partial x}\mathbf{i}
-+
-\frac{\partial f}{\partial y}\mathbf{j}
-+
-\frac{\partial f}{\partial z}\mathbf{k}
-\end{align*}
-
-اسے "grad f" یا "del f" بھی کہا جاتا ہے۔
-
-\vspace{1em}
-
-\begin{center}
-{\Large سٹوکس کا نظریہ (Stokes’ Theorem)}
-\end{center}
-
-سٹوکس کا نظریہ کہتا ہے کہ عملی طور پر عام شرائط کے تحت:
-
-کسی سمتیہ فیلڈ کی سطح کے کنارے (boundary curve) کے گرد گردش (circulation)،
-اس سطح پر curl کے نارمل جزو کے سطحی تکمل کے برابر ہوتا ہے۔
-
-یہ boundary curve $C$ کی سمت اس طرح منتخب کی جاتی ہے کہ وہ سطح کے unit عمودی vector $\mathbf{n}$ کے مطابق right-hand rule کو فالو کرے (شکل 16.60)۔
+\انتہا{مثال}
 
 
-%======================
+جیسا کہ ہم دیکھیں گے، عامل  $\nabla$ کے کئی دیگر استعمال پائے جاتے ہیں۔مثلاً  جب  غیر سمتی تفاعل \عددی{f(x,y,z)} پر لگایا جائے،  یہ\اصطلاح{ڈھلوان }\فرہنگ{ڈھلوان!کلیہ}\حاشیہب{gradient}\فرہنگ{gradient!equation} دیگا۔
+
+\begin{align}
+\nabla f=\frac{\partial f}{\partial x}\mathbf{i}+\frac{\partial f}{\partial y}\mathbf{j}+\frac{\partial f}{\partial z}\mathbf{k}
+\end{align}
+اسے ہم   "ڈھلوان \عددی{f}"یا "ڈیل \عددی{f}" کہیں\حاشیہب{grad f} گے\حاشیہب{del f}۔
+
+\
+\حصہء{مسئلہ سٹوکس}
+
+\اصطلاح{مسئلہ سٹوکس }\فرہنگ{سٹوکس!مسئلہ}\حاشیہب{Stokes' Theorem} \فرہنگ{Stokes!theorem}  کہتا ہے  کہ  ایسی صورتوں میں جو عملاً عام طور پائی جاتی ہیں،    فضا میں    سمت بند سطح  کی سرحد پر،      سطح کے عمودی اکائی سمتیہ \عددی{\kvec{n}} لے لحاظ سے خلاف گھڑی رخ  چلتے ہوئے (شکل \حوالہء{16.60}) ، سمتیہ میدان کا دائری بہاؤ  اور   سطح پر میدان کی گردش کے عمودی جزو کا تکمل برابر ہوں گے۔
+%=====================
 %L 91049
 
-\vspace{1em}
 
-\begin{center}
-{\Large نظریہ 5: سٹوکس کا نظریہ (Stokes’ Theorem)}
-\end{center}
+\ابتدا{مسئلہ}\موٹا{مسئلہ سٹوکس}
+    سمت بند سطح \عددی{S}   کی سرحد پر،      سطح کے عمودی اکائی سمتیہ \عددی{\kvec{n}} لے لحاظ سے خلاف گھڑی  چلتے ہوئے سمتیہ میدان  \عددی{\kvec{F}=M\ai+N\aj+P\ak} کا دائری بہاؤ   \عددی{S} پر \عددی{\nabla\times \kvec{F}\cdot\kvec{n}} کے تکمل کے برابر ہو گا۔
+\begin{align}
+ \underbrace{\ointctrclockwise_C \mathbf{F} \cdot \dif \mathbf{r}}_{\text{\RL{خلاف گھڑی دائری بہاؤ}}}=\underbrace{\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, \dif \sigma}_{\text{\RL{تکمل گردش}}}  \tag{4}
+\end{align}
+\انتہا{مسئلہ}
 
-سٹوکس کا نظریہ کہتا ہے کہ:
-
-سمتیہ فیلڈ
-\begin{align*}
-\mathbf{F} = M\mathbf{i} + N\mathbf{j} + P\mathbf{k}
-\end{align*}
-کی گردش (circulation) کسی بند سرحدی منحنی $C$ کے گرد، جو کسی اورینٹڈ سطح $S$ کی boundary ہو، اس سطح پر curl کے نارمل جزو کے سطحی تکمل کے برابر ہوتی ہے، بشرطیکہ سمت (orientation) دائیں ہاتھ کے اصول کے مطابق ہو۔
+ہم مساوات \حوالہء{4}  کو دیکھ کر کہہ سکتے ہیں کہ   ایسی دو مختلف سمت  بند سطحیں  \عددی{S_1} اور \عددی{S_2}  جن کی سرحد  \عددی{C} ایک ہو، کے تکمل گردش برابر ہوں گے۔
 
 \begin{align*}
-\oint_C \mathbf{F} \cdot d\mathbf{r}
-=
-\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, dS
-\tag{4}
-\end{align*}
-
-\begin{align*}
-\text{Counterclockwise circulation} \quad = \quad \text{Curl integral}
-\end{align*}
-
-\vspace{1em}
-
-اس سے یہ نتیجہ نکلتا ہے کہ اگر دو مختلف اورینٹڈ سطحیں $S_1$ اور $S_2$ ایک ہی boundary $C$ رکھتی ہوں، تو ان کے curl integrals برابر ہوں گے:
-
-\begin{align*}
-\iint_{S_1} (\nabla \times \mathbf{F}) \cdot \mathbf{n}_1\, dS
-=
-\iint_{S_2} (\nabla \times \mathbf{F}) \cdot \mathbf{n}_2\, dS
-\end{align*}
-
-یہ دونوں تکمل اس لیے برابر ہیں کیونکہ دونوں کا نتیجہ وہی boundary integral دیتا ہے، بشرطیکہ unit عمودی vectors صحیح orientation میں ہوں۔
-
-\vspace{1em}
-
-عام طور پر ہمیں کچھ ریاضیاتی شرائط درکار ہوتی ہیں تاکہ Stokes’ equation میں موجود تمام تکملات موجود ہوں۔ عام شرط یہ ہے کہ سمتیہ فیلڈ $\mathbf{F}$، منحنی $C$ اور سطح $S$ کے تمام فنکشنز اور ان کے مشتقات متصل (continuous) ہوں۔
-
-\vspace{1em}
-
-اگر $C$ xy-مستوی میں ایک بند منحنی ہو جو counterclockwise ہو اور $R$ وہ خطہ ہو جو $C$ سے گھرا ہوا ہو، تو:
-
-\begin{align*}
-dS = dx\,dy,\quad \mathbf{n} = \mathbf{k}
-\end{align*}
-
-اور:
-
-\begin{align*}
-(\nabla \times \mathbf{F}) \cdot \mathbf{n}
-=
-(\nabla \times \mathbf{F}) \cdot \mathbf{k}
-=
-\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}
-\end{align*}
-
-ان حالات میں Stokes’ equation درج ذیل صورت اختیار کر لیتی ہے:
-
-\begin{align*}
-\oint_C \mathbf{F} \cdot d\mathbf{r}
-=
-\iint_R
-\left(
-\frac{\partial N}{\partial x}
--
-\frac{\partial M}{\partial y}
-\right)
-dx\,dy
-\end{align*}
-
-یہ Green’s Theorem کی circulation–curl form ہی ہے۔
-
-اسی طرح الٹ عمل سے Green’s Theorem کو بھی del notation میں لکھا جا سکتا ہے:
-
-\begin{align*}
-\oint_C \mathbf{F} \cdot d\mathbf{r}
-=
-\iint_R (\nabla \times \mathbf{F}) \cdot \mathbf{k}\, dA
-\tag{5}
-\end{align*}
-
-\begin{center}
-شکل 16.61: Green اور Stokes کے نظریات کا موازنہ
-\end{center}
-
-\vspace{1em}
-
-\begin{center}
-{\Large مثال 2: ایک نصف کرۂ (Hemisphere) پر Stokes’ Equation کی تصدیق}
-\end{center}
-
-معلوم کریں کہ درج ذیل سطح، boundary اور vector field کے لیے Equation (4) درست ہے:
-
-سطح:
-\begin{align*}
-S: x^2 + y^2 + z^2 = 9,\quad z \ge 0
-\end{align*}
-
-boundary circle:
-\begin{align*}
-C: x^2 + y^2 = 9,\quad z = 0
-\end{align*}
-
-سمتیہ فیلڈ:
-\begin{align*}
-\mathbf{F} = y\mathbf{i} - x\mathbf{j}
+\iint_{S_1} (\nabla \times \mathbf{F}) \cdot \mathbf{n}_1\, \dif \sigma=
+\iint_{S_2} (\nabla \times \mathbf{F}) \cdot \mathbf{n}_2\, \dif \sigma
 \end{align*}
 
 
+ دونوں تکمل  گردش  اس لئے ایک دوسرے کے   برابر ہوں گے  کیونکہ دونوں  مساوات \حوالہء{4} کے  بائیں ہاتھ  کے برابر ہیں، بشرطیکہ اکائی  عمودی  سمتیات \عددی{\kvec{n}_1} اور \عددی{\kvec{n}_2}   سطوح کی درست سمت بندی کریں۔
+
+مسئلہ سٹوکس میں موجود  تکملات کی   وجودیت یقینی بنانے کے لئے ضرور ی ہے کہ \عددی{\kvec{F}}، \عددی{C}، اور \عددی{S} پر  ریاضیاتی شرائط مسلط ہوں گے۔ درکار عمومی شرائط  کہتے ہیں کہ تمام تفاعل، سمتیہ میدان، اور ان کے تفرق استمراری ہوں۔
+
+اگر  $C$ مستوی  \عددی{xy}  میں   موجود ، خلاف گھڑی سمت بند  منحنی   ہو، اور \عددی{R} مستوی \عددی{xy} میں ایک خطہ ہو جس کو \عددی{C} گھیرتی ہو، تب \عددی{\dif \sigma=\dif x\dif y}  اور درج ذیل ہو گا۔
+\begin{align*}
+(\nabla \times \mathbf{F}) \cdot \mathbf{n}=(\nabla \times \mathbf{F}) \cdot \mathbf{k}=\left(
+\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)
+\end{align*}
+ان حالات میں مساوات سٹوکس درج ذیل صورت اختیار  کرتی ہے
+\begin{align*}
+\ointctrclockwise_C \mathbf{F} \cdot \dif \mathbf{r}=\iint_R\left(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\right)\dif x\dif y
+\end{align*}
+جو مسئلہ گرین میں  موجود مساوات کی دائری بہاؤ و گردشی روپ ہے۔اسی طرح انہیں قدموں پر  الٹ  چلتے ہوئے  ہم مسئلہ گرین کے  دائری بہاؤ و گردشی  روپ کو دو بعدی میدان کے لئے  درج ذیل ڈیل علامتیت میں لکھ سکتے ہیں۔
+\begin{align}
+\ointctrclockwise_C \mathbf{F} \cdot \dif \mathbf{r}=\iint_R (\nabla \times \mathbf{F}) \cdot \mathbf{k}\, \dif A \tag{5}
+\end{align}
+شکل\حوالہء{16.61} ملاحظہ کریں۔
+
+
+\ابتدا{مثال}\quad \موٹا{نصف کرہ کے لئے مساوات سٹوکس کی تصدیق}\\
+نصف کرہ \عددی{S:\, x^2+y^2+z^2=9,\, z\ge 0}، اس  کو گھیرتا دائرہ \عددی{C:\, x^2+y^2=9,\,z=0}، اور میدان \عددی{\kvec{F}=y\ai-x\aj} کے لئے مساوات \حوالہء{4} کی قیمت تلاش کریں۔
 %=====================
 %L 91122
 
-\vspace{1em}
-
-\موٹا{حل:}
-
-ہم سب سے پہلے boundary curve $C$ کے گرد counterclockwise گردش (جیسا کہ اوپر سے دیکھا جائے) حساب کرتے ہیں۔
-
-دی گئی پیرامیٹرائزیشن:
+\موٹا{حل:}\quad
+معلمی روپ \عددی{\kvec{r}(\theta)=(3\cos\theta)\ai+(3\sin\theta)\aj,\,0\le \theta\le 2\pi} استعمال کرتے ہوئے اوپر  سے نظارہ کرتے ہوئے \عددی{C} کے گرد خلاف گھڑی دائری بہاؤ تلاش کرتے ہیں۔
 \begin{align*}
-\mathbf{r}(u) = 3\cos u\,\mathbf{i} + 3\sin u\,\mathbf{j},\quad 0 \le u \le 2\pi
+\dif \mathbf{r}&=-3\sin \theta\,\dif \theta\,\mathbf{i}+3\cos \theta\,\dif\theta\,\mathbf{j}\\
+\mathbf{F} &= y\mathbf{i} - x\mathbf{j}=3\sin \theta\,\mathbf{i}-3\cos \theta\,\mathbf{j}\\
+\mathbf{F} \cdot \dif \mathbf{r}&=-9\sin^2 \theta\,\dif\theta-9\cos^2 \theta\,\dif\theta=-9\dif\theta\\
+\ointctrclockwise_C \mathbf{F} \cdot \dif \mathbf{r}&=\int_0^{2\pi} -9\,\dif \theta=-18\pi
 \end{align*}
 
-اس سے:
-
+اب \عددی{\kvec{F}}   کے لئے تکمل گردش تلاش کرتے ہیں۔
 \begin{align*}
-d\mathbf{r}
-=
--3\sin u\,du\,\mathbf{i}
-+
-3\cos u\,du\,\mathbf{j}
+\nabla \times \mathbf{F}&= \left(\frac{\partial P}{\partial y}-\frac{\partial N}{\partial z}\right)\ai+
+ \left(\frac{\partial M}{\partial z}-\frac{\partial P}{\partial x}\right)\aj+
+ \left(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\right)\ak\\
+&=(0-0)\ai+(0-0)\aj+(-1-1)\ak=-2\ak\\
+\kvec{n}&=\frac{x\ai+y\aj+z\ak}{\sqrt{x^2+y^2+z^2}}=\frac{x\ai+y\aj+z\ak}{3}&&\text{\RL{بیرونی اکائی سمتیہ}}\\
+\dif \sigma&=\frac{3}{z}\dif A&&\text{\RL{حصہ \حوالہء{16.5} کی مثال \حوالہء{5} میں \عددی{a=3}}}\\
+\nabla\times \kvec{F}\cdot\kvec{n}\dif\sigma&=-\frac{2z}{3}\frac{3}{z}\dif A=-2\dif A
+\end{align*}
+یوں درج ذیل ہو گا۔
+\begin{align*}
+\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, \dif\sigma=\iint_{x^2+y^2\le 9} -2\,\dif A=-18\pi
 \end{align*}
 
-سمتیہ فیلڈ:
-\begin{align*}
-\mathbf{F} = y\mathbf{i} - x\mathbf{j}
-=
-3\sin u\,\mathbf{i}
--
-3\cos u\,\mathbf{j}
-\end{align*}
+اس طرح دائرے کی ہمراہ دائری بہاو  اور گردش کا تکمل نصف کرہ پر  برابر ہیں، جیسا کہ ہونا چاہیے تھا۔
+\انتہا{مثال}
 
-اب dot product:
-
-\begin{align*}
-\mathbf{F} \cdot d\mathbf{r}
-=
--9\sin^2 u\,du
--
-9\cos^2 u\,du
-=
--9\,du
-\end{align*}
-
-لہٰذا:
-
-\begin{align*}
-\oint_C \mathbf{F} \cdot d\mathbf{r}
-=
-\int_0^{2\pi} -9\,du
-=
--18\pi
-\end{align*}
-
-\vspace{1em}
-
-\موٹا{Curl integral کے لیے:}
-
-\begin{align*}
-\nabla \times \mathbf{F}
-=
-\begin{vmatrix}
-\mathbf{i} & \mathbf{j} & \mathbf{k} \\
-\frac{\partial}{\partial x} &
-\frac{\partial}{\partial y} &
-\frac{\partial}{\partial z} \\
-x & y & z
-\end{vmatrix}
-\end{align*}
-
-\begin{align*}
-=
-(0 - 0)\mathbf{i}
-+
-(0 - 0)\mathbf{j}
-+
-(-1 - 1)\mathbf{k}
-=
--2\mathbf{k}
-\end{align*}
-
-سطح کے لیے outer unit عمودی:
-
-\begin{align*}
-\mathbf{n}
-=
-\frac{2x\,\mathbf{i} + 2y\,\mathbf{j} + z\,\mathbf{k}}{3}
-\end{align*}
-
-اور سطحی عنصر:
-
-\begin{align*}
-dS = z\,dA
-\end{align*}
-
-(Section 16.5، مثال 5 کے مطابق)
-
-\vspace{1em}
-
-اب:
-
-\begin{align*}
-(\nabla \times \mathbf{F}) \cdot \mathbf{n}\, dS
-=
--2\,dA
-\end{align*}
-
-لہٰذا:
-
-\begin{align*}
-\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, dS
-=
-\iint_R -2\,dA
-=
--2 \cdot (\pi \cdot 9)
-=
--18\pi
-\end{align*}
-
-\vspace{1em}
-
-اس طرح گردش اور curl integral دونوں برابر ہیں، جیسا کہ Stokes’ Theorem میں ہونا چاہیے۔
-
----
-
-\begin{center}
-{\Large مثال 3: گردش (Circulation) معلوم کرنا}
-\end{center}
-
-سمتیہ فیلڈ:
-\begin{align*}
-\mathbf{F} = (x^2 - y)\mathbf{i} + 4z\mathbf{j} + x^2\mathbf{k}
-\end{align*}
-
-معلوم کریں کہ اس کا گردش curve $C$ کے گرد کیا ہے، جہاں:
+%kkk??? am here
+\ابتدا{مثال}\quad دائری بہاؤ کی تلاش\\
+مستوی \عدد{z=2} مخروط \عددی{z=\sqrt{x^2+y^2}} سے منحنی \عددی{C}  پر ملتا ہے۔ اس منحنی پر ، اوپر سے دیکھتے ہوئے خلاف گھڑی (شکل \حوالہء{16.62})، میدان \عددی{\mathbf{F} = (x^2 - y)\mathbf{i} + 4z\mathbf{j} + x^2\mathbf{k}}  کا دائری بہاؤ تلاش کریں۔
 
 سطح:
 \begin{align*}
@@ -1497,6 +1197,8 @@ dS = r\sqrt{2}\,dr\,du
 \begin{align*}
 = 4\pi
 \end{align*}
+\انتہا{مثال}
+
 
 \vspace{1em}
 
