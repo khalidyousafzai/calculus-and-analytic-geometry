@@ -1063,354 +1063,144 @@ x^2 - y & 4z & x^2
 اس طرح دائرے کی ہمراہ دائری بہاو  اور گردش کا تکمل نصف کرہ پر  برابر ہیں، جیسا کہ ہونا چاہیے تھا۔
 \انتہا{مثال}
 
-%kkk??? am here
-\ابتدا{مثال}\quad دائری بہاؤ کی تلاش\\
-مستوی \عدد{z=2} مخروط \عددی{z=\sqrt{x^2+y^2}} سے منحنی \عددی{C}  پر ملتا ہے۔ اس منحنی پر ، اوپر سے دیکھتے ہوئے خلاف گھڑی (شکل \حوالہء{16.62})، میدان \عددی{\mathbf{F} = (x^2 - y)\mathbf{i} + 4z\mathbf{j} + x^2\mathbf{k}}  کا دائری بہاؤ تلاش کریں۔
+\ابتدا{مثال}\quad \موٹا{دائری بہاؤ کی تلاش}\\
+مستوی \عددی{z=2} مخروط \عددی{z=\sqrt{x^2+y^2}} سے منحنی \عددی{C}  پر ملتا ہے۔ اس منحنی پر ، اوپر سے دیکھتے ہوئے خلاف گھڑی (شکل \حوالہء{16.62})، میدان \عددی{\mathbf{F} = (x^2 - y)\mathbf{i} + 4z\mathbf{j} + x^2\mathbf{k}}  کا ، دائری بہاؤ تلاش کریں۔
 
-سطح:
-\begin{align*}
-z = 2
-\end{align*}
+سطح: \quad
+مسئلہ سٹوکس کے استعمال سے ہم دائری بہاؤ سطح پر تکمل سے حاصل کرتے ہیں۔ اوپر سے دیکھتے ہوئے \عددی{C} پر گھڑی خلاف چلنا   \ترچھا{اندرونی }عمود  \عددی{\kvec{n}}  لینے کے مترادف ہے  جس کا  \عددی{z}   جزو مثبت ہو گا۔
 
-اور مخروط:
-\begin{align*}
-z = 2x^2 + y^2
-\end{align*}
-
-یہ دونوں ایک دوسرے کو جس curve پر کاٹتے ہیں وہ ہے:
-\begin{align*}
-x^2 + y^2 = 4,\quad z = 2
-\end{align*}
-
-یہ گردش اوپر سے دیکھنے پر counterclockwise ہے۔
-
-\vspace{1em}
-
-\موٹا{حل:}
-
-Stokes’ Theorem استعمال کرتے ہوئے ہم surface integral لیتے ہیں۔
-
-ہم cone کو پیرامیٹرائز کرتے ہیں:
+ہم مخروط کا  معلمی روپ لکھتے  ہیں۔
 
 \begin{align*}
-\mathbf{r}(r,u)
-=
-r\cos u\,\mathbf{i}
-+
-r\sin u\,\mathbf{j}
-+
-r\,\mathbf{k},
-\quad
-0 \le r \le 2,\; 0 \le u \le 2\pi
+\mathbf{r}(r,\theta)=r\cos \theta\,\mathbf{i}+r\sin \theta\,\mathbf{j}+r\,\mathbf{k},\quad0 \le r \le 2,\; 0 \le \theta \le 2\pi
 \end{align*}
-
-اور:
-
+اس طرح درج ذیل ہو گا۔
 \begin{align*}
-\mathbf{r}_r \times \mathbf{r}_u
-=
-- r\cos u\,\mathbf{i}
--
-r\sin u\,\mathbf{j}
-+
-r\,\mathbf{k}
+\kvec{n}&=\frac{\mathbf{r}_r \times \mathbf{r}_{\theta}}{|\mathbf{r}_r \times \mathbf{r}_{\theta}|}=
+\frac{- r\cos \theta\,\mathbf{i}-r\sin \theta\,\mathbf{j}+r\,\mathbf{k}}{r\sqrt{2}}&&
+\text{\RL{حصہ \حوالہء{16.6} مثال \حوالہء{4}}}\\
+&=\frac{-\cos \theta\,\mathbf{i} - \sin \theta\,\mathbf{j} + \mathbf{k}}{\sqrt{2}}\\
+\dif \sigma & = r\sqrt{2}\,\dif r\,\dif \theta&&\text{\RL{حصہ \حوالہء{16.6} مثال \حوالہء{4}}}\\
+\nabla \times \mathbf{F}&=-4\mathbf{i} - 2x\mathbf{j} + \mathbf{k}&&\text{\RL{مثال \حوالہء{1}}}\\
+&=-4\mathbf{i} - 2r\cos \theta\,\mathbf{j} + \mathbf{k}&&  x=r\cos\theta
 \end{align*}
-
-اس کا unit عمودی:
-
-\begin{align*}
-\mathbf{n}
-=
-\frac{-\cos u\,\mathbf{i} - \sin u\,\mathbf{j} + \mathbf{k}}{\sqrt{2}}
-\end{align*}
-
-
 %======================
 %L91195
-
-\vspace{1em}
-
-سطحی عنصر:
+یوں
 \begin{align*}
-dS = r\sqrt{2}\,dr\,du
+(\nabla \times \mathbf{F}) \cdot \mathbf{n}&=\frac{1}{\sqrt{2}}\left(4\cos \theta + 2r\cos \theta \sin \theta + 1\right)\\
+&=\frac{1}{\sqrt{2}}\left(4\cos \theta + r\sin 2\theta + 1\right)
 \end{align*}
-
-اور curl:
+اور دائری بہاؤ درج ذیل ہو گا۔
 \begin{align*}
-\nabla \times \mathbf{F}
-=
--4\mathbf{i} - 2x\mathbf{j} + \mathbf{k}
-\end{align*}
-
-چونکہ $x = r\cos u$، اس لیے:
-\begin{align*}
-\nabla \times \mathbf{F}
-=
--4\mathbf{i} - 2r\cos u\,\mathbf{j} + \mathbf{k}
-\end{align*}
-
-\vspace{1em}
-
-اب سطح کے unit عمودی کے ساتھ dot product:
-
-\begin{align*}
-(\nabla \times \mathbf{F}) \cdot \mathbf{n}
-=
-\frac{1}{\sqrt{2}}
-\left(
-4\cos u + 2r\cos u \sin u + 1
-\right)
-\end{align*}
-
-یعنی:
-
-\begin{align*}
-(\nabla \times \mathbf{F}) \cdot \mathbf{n}
-=
-\frac{1}{\sqrt{2}}
-\left(
-4\cos u + r\sin 2u + 1
-\right)
-\end{align*}
-
-\vspace{1em}
-
-لہٰذا گردش:
-
-\begin{align*}
-\oint_C \mathbf{F}\cdot d\mathbf{r}
-=
-\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, dS
-\quad \text{(سٹوکس کا نظریہ)}
-\end{align*}
-
-\begin{align*}
-=
-\int_0^{2\pi}\int_0^2
-\frac{1}{\sqrt{2}}
-\left(
-4\cos u + r\sin 2u + 1
-\right)
-(\sqrt{2}\,r\,dr\,du)
-\end{align*}
-
-\begin{align*}
-= 4\pi
+\ointctrclockwise_C \mathbf{F}\cdot d\mathbf{r}&=\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, \dif \sigma && \text{\RL{مسئلہ سٹوکس مساوات \حوالہء{4}}}\\
+&=\int_0^{2\pi}\int_0^2\frac{1}{\sqrt{2}}\left(4\cos \theta + r\sin 2\theta + 1\right)(\sqrt{2}\,r\,\dif r\,\dif \theta)= 4\pi
 \end{align*}
 \انتہا{مثال}
 
 
-\vspace{1em}
+\جزوحصہء{\عددی{\nabla \times \kvec{F}} کی چپو چرخی   سے  تشبیہ}
 
-\begin{center}
-{\Large پڈل وہیل (Paddle Wheel) تشریح برائے $\nabla \times \mathbf{F}$}
-\end{center}
+فرض کریں حرکت پذیر سیال کی رفتار \عددی{\kvec{v}(x,y,z)} اور نقطہ \عددی{(x,y,z)} پر اس کی کثافت \عددی{\delta(x,y,z)} ہے۔ مزید فرض کریں \عددی{\kvec{F}=\delta \kvec{v}} ہے۔ایسی صورت میں بند منحنی \عددی{C} کی ہمراہ  سیال کا دائری بہاؤ درج ذیل ہو گا۔
 
-فرض کریں کہ $\mathbf{v}(x,y,z)$ ایک سیال (fluid) کی رفتار (velocity) ہے جس کی کثافت $d(x,y,z)$ ہے، اور:
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\kL}{1}
+\pgfmathsetmacro{\kLa}{0.75}
+\pgfmathsetmacro{\kW}{0.25}
+\pgfmathsetmacro{\kRa}{0.75}
+\pgfmathsetmacro{\kRb}{0.65}
+\pgfmathsetmacro{\kRaa}{0.6}
+\pgfmathsetmacro{\kAng}{-10}
+\pgfmathsetmacro{\kAngB}{45}
+\pgfmathsetmacro{\kAngAA}{\kAng+10}
+\pgfmathsetmacro{\kAngBB}{\kAngB-10}
+\pgfmathsetmacro{\kAngCC}{\kAngB+20+45}
+\pgfmathsetmacro{\kAngDD}{\kAng+180-20}
+\pgfmathsetmacro{\kAngEE}{\kAng+180+10}
+\pgfmathsetmacro{\kAngFF}{\kAngB+180-10}
+\pgfmathsetmacro{\kAngGG}{\kAngB+180+20}
+\pgfmathsetmacro{\kAngHH}{330}
 
-\begin{align*}
-\mathbf{F} = d\mathbf{v}
-\end{align*}
-
-تو:
-
-\begin{align*}
-\oint_C \mathbf{F}\cdot d\mathbf{r}
-\end{align*}
-
-سیال کی گردش (circulation) کو ظاہر کرتا ہے جو بند منحنی $C$ کے گرد ہوتی ہے۔
-
-سٹوکس کے نظریہ کے مطابق یہ گردش سطح $S$ کے ذریعے curl کے flux کے برابر ہے:
-
-\begin{align*}
-\oint_C \mathbf{F}\cdot d\mathbf{r}
-=
-\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, dS
-\end{align*}
-
-\vspace{1em}
-
-فرض کریں ہم نقطہ $Q$ پر ایک مخصوص سمت $\mathbf{u}$ لیتے ہیں۔ ایک دائرہ $C$ لیا جاتا ہے جس کا مرکز $Q$ ہے اور رداس $r$ ہے، اور اس کا طیارہ $\mathbf{u}$ کے عمود ہے۔
-
-اگر $\nabla \times \mathbf{F}$ نقطہ $Q$ پر متصل ہو تو:
-
-\begin{align*}
-(\nabla \times \mathbf{F}) \cdot \mathbf{u}
-=
-\lim_{r \to 0}
-\frac{1}{\pi r^2}
-\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{u}\, dS
-\end{align*}
-
-اسے گردش کی صورت میں لکھیں تو:
+\draw(0,0)--++(\kAng:\kRa)coordinate (A);
+\draw[fill=lgray](A)--++(0,-0.5*\kW)--++(\kAng:\kL)--++(0,\kW)--++(\kAng:-\kL)--++(0,-0.5*\kW);
+\draw(0,0)--++(\kAng:-\kRa)coordinate (A);
+\draw[fill=lgray](A)--++(0,-0.5*\kW)--++(\kAng:-\kL)--++(0,\kW)--++(\kAng:\kL)--++(0,-0.5*\kW);
+\draw(0,0)--++(\kAngB:\kRaa)coordinate (A);
+\draw[fill=lgray](A)--++(0,-0.5*\kW)--++(\kAngB:\kLa)--++(0,\kW)--++(\kAngB:-\kLa)--++(0,-0.5*\kW);
+\draw(0,0)--++(\kAngB:-\kRaa)coordinate (A);
+\draw[fill=lgray](A)--++(0,-0.5*\kW)--++(\kAngB:-\kLa)--++(0,\kW)--++(\kAngB:\kLa)--++(0,-0.5*\kW);
+\draw[-latex,thick](0,0)node[below]{$Q$}node[circ]{}--++(0,1.5)node[right]{گردش \عددی{\kvec{F}}};
+ \draw[-latex]([shift={(110:{0.4cm and 0.2cm})}]0,0.75)  arc (100:430:0.4 cm and 0.2cm);
+ \draw[-latex]([shift={(\kAngAA:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngAA:\kAngBB:1.75 cm and 1.25cm);
+ \draw[-latex]([shift={(\kAngCC:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngCC:\kAngDD:1.75 cm and 1.25cm);
+\draw[-latex]([shift={(\kAngEE:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngEE:\kAngFF:1.75 cm and 1.25cm);
+ \draw[-latex]([shift={(\kAngGG:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngGG:\kAngHH:1.75 cm and 1.25cm);
+\end{tikzpicture}
+\end{figure}
 
 \begin{align*}
-(\nabla \times \mathbf{F}) \cdot \mathbf{u}
-=
-\lim_{r \to 0}
-\frac{1}{\pi r^2}
-\oint_C \mathbf{F}\cdot d\mathbf{r}
-\tag{6}
+\ointctrclockwise_C \mathbf{F}\cdot \dif \mathbf{r}
 \end{align*}
 
-\vspace{1em}
-
-اس اظہار کا زیادہ سے زیادہ حاصل اس وقت ہوتا ہے جب $\mathbf{u}$، $\nabla \times \mathbf{F}$ کی سمت میں ہو۔
-
-چھوٹے $r$ کے لیے:
-
+مسئلہ سٹوکس کے مطابق   یہ دائری بہاؤ  ، \عددی{C} میں محیط  سطح \عددی{S}  سے گزرتا \عددی{\nabla \times\kvec{F}} کے بہاؤ  کے برابر ہو گا۔
 \begin{align*}
-\frac{1}{\pi r^2}\oint_C \mathbf{F}\cdot d\mathbf{r}
+\ointctrclockwise_C \mathbf{F}\cdot \dif \mathbf{r}=\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, \dif\delta
 \end{align*}
-
-curl کے گرد اوسط گردش کو ظاہر کرتا ہے۔
-
-
+ ہم  \عددی{\kvec{F}} کے دائرہ کار میں    اٹل  نقطہ $Q$، اور    اس نقطہ پر   مخصوص سمت $\mathbf{u}$ منتخب کرتے  ہیں۔  فرض کریں  $C$ ایک دائرہ ہے جس کا رداس \عددی{\rho} اور مرکز \عددی{Q} ہے اور جس کا مستوی \عددی{\kvec{u}} کو عمودی ہے۔اگر \عددی{Q} پر \عددی{\nabla\times\kvec{F}} استمراری ہو،   \عددی{C} میں محیط دائری قرص \عددی{S} پر \عددی{\nabla\times\kvec{F}} کے \عددی{\kvec{u}} ویں جزو کی اوسط قیمت \عددی{\rho\to 0} کی صورت میں \عددی{Q}  پر \عددی{\nabla\times\kvec{F}} کے \عددی{\kvec{u}} ویں جزو  کو پہنچے گی۔
+\begin{align*}
+(\nabla \times \mathbf{F} \cdot \mathbf{u})_Q=\lim_{\rho\to 0}\frac{1}{\pi \rho^2}\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{u}\, \dif\sigma
+\end{align*}
+آخری مساوات میں سطحی تکمل کی جگہ دائری بہاؤ لکھ کر درج ذیل حاصل ہو گا۔
+\begin{align}
+(\nabla \times \mathbf{F} \cdot \mathbf{u})_Q=\lim_{\rho \to 0}\frac{1}{\pi \rho^2}\ointctrclockwise_C \mathbf{F}\cdot \dif \mathbf{r}\tag{6}
+\end{align}
+مساوات \حوالہء{6}    کے بائیں ہاتھ کی قیمت اس صورت زیادہ سے زیادہ ہو گی جب \عددی{\kvec{u}} کا رخ $\mathbf{u}$، $\nabla \times \mathbf{F}$ کی سمت میں ہو۔چھوٹے $\rho$ کے لئے مساوات \حوالہء{6}  کے دائیں ہاتھ   کا حد تخمیناً درج ذیل ہو گا، جو  \عددی{C} کے ہمراہ  دائری بہاؤ تقسیمِ رقبہ قرص    (دائری بہاؤ کی کثافت)ہے۔
+\begin{align*}
+\frac{1}{\pi \rho^2}\ointctrclockwise_C \mathbf{F}\cdot \dif \mathbf{r}
+\end{align*}
+فرض کریں \عددی{Q} پر رداس \عددی{\rho} کی چپو چرخی رکھی جاتی ہے جس کا دھرا  \عددی{\kvec{u}}  کے ہمراہ ہے۔ سیال کا \عددی{C} کے ہمراہ دائری بہاؤ  چپو چرخی کے   گھومنے کی رفتار پر اثر انداز ہو گا۔ جب  دائری بہاؤ تکمل کی قیمت زیادہ سے زیادہ ہو اس صورت چپو چرخی تیز سے تیز گھومے گی؛ یوں  جب دھرا \عددی{\nabla\times\kvec{F}} کے رخ ہو، چپو چرخی تیز سے تیز گھومے گی (شکل \حوالہء{16.63})۔
 %=====================
 %L91273
+\ابتدا{مثال}\quad\موٹا{کثافت دائری بہاؤ اور \عددی{\nabla\times\kvec{F}} کا تعلق}\\
+اٹل کثافت کا سیال محور \عددی{z} کے گرد \عددی{\kvec{v}=\omega(-y\ai+x\aj)}  سمتی رفتار سے گھوم رہا ہے جہاں \عددی{\omega} ایک مثبت  مستقل جس کو گھومنے  کا\اصطلاح{زاویائی رفتار }\فرہنگ{زاویائی!رفتار}کہتے ہیں(شکل \حوالہء{16.64})۔  اگر \عددی{\kvec{F}=\kvec{v}} ہو،  \عددی{\nabla\times \kvec{F}} کیا ہو گا اور کثافت دائری بہاؤ کے ساتھ اس کا تعلق کیا ہو گا؟
 
-\vspace{1em}
 
-یہ مقدار دراصل کسی دائرے کے گرد گردش (circulation) کو اس دائرے کے رقبے پر تقسیم کرنے سے حاصل ہونے والی مقدار ہے، جسے گردش کی کثافت (circulation density) کہتے ہیں۔
-
-فرض کریں کہ ایک چھوٹا سا پڈل وہیل (paddle wheel) جس کا رداس $r$ ہے، کسی سیال (fluid) میں نقطہ $Q$ پر رکھا جاتا ہے، اور اس کا محور سمت $\mathbf{u}$ میں ہو۔
-
-اس صورت میں سیال کی گردش اس بات کو متاثر کرے گی کہ پڈل وہیل کتنی تیزی سے گھومے گا۔ وہیل اس وقت سب سے زیادہ تیزی سے گھومے گا جب گردش کا تکمل زیادہ سے زیادہ ہو، یعنی جب اس کا محور $\nabla \times \mathbf{F}$ کی سمت میں ہو (شکل 16.63)۔
-
-\vspace{1em}
-
-\begin{center}
-{\Large مثال 4: گردش کی کثافت سے تعلق}
-\end{center}
-
-ایک سیال مستقل کثافت کے ساتھ z-axis کے گرد گھوم رہا ہے، جس کی رفتار (velocity) درج ذیل ہے:
+حل:\quad
+چونکہ \عددی{\kvec{F}=\kvec{v}=-\omega y\ai+\omega x\aj} ہے لہٰذا درج ذیل ہو گا۔
 
 \begin{align*}
-\mathbf{v} = \omega(-y\mathbf{i} + x\mathbf{j})
+\nabla \times \mathbf{F}=
+\nabla\times\kvec{F}&=\left(\frac{\partial P}{\partial y}-\frac{\partial N}{\partial z}\right)\ai+
+\left(\frac{\partial M}{\partial z}-\frac{\partial P}{\partial x}\right)\aj+
+\left(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\right)\ak\\
+&=(0-0)\ai+(0-0)\aj+(\omega-(-\omega))\ak=2\omega\ak
 \end{align*}
 
-جہاں $\omega$ ایک مستقل مقدار ہے جسے زاویائی رفتار (angular velocity) کہتے ہیں (شکل 16.64)۔
-
-اگر $\mathbf{F} = \mathbf{v}$ ہو تو $\nabla \times \mathbf{F}$ معلوم کریں اور اسے گردش کی کثافت سے relate کریں۔
-
-\vspace{1em}
-
-\موٹا{حل:}
+مسئلہ سٹوکس  کے مطابق،    رداس \عددی{\rho} کے دائرہ \عددی{C}   کے ہمراہ، جو مستوی مثلاً مستوی  \عددی{xy}     میں قرص \عددی{S}  کا احاطہ کرتا ہو، کے ہمراہ \عددی{\kvec{F}} کا دائری بہاؤ درج ذیل ہو گا۔
 
 \begin{align*}
-\mathbf{F} = -\omega y\,\mathbf{i} + \omega x\,\mathbf{j}
+\ointctrclockwise_C \mathbf{F} \cdot \dif \mathbf{r}=\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, \dif \sigma=\iint_S 2\omega \ak\cdot\ak \dif x\dif y=(2\omega)(\pi \rho^2)
 \end{align*}
-
-curl:
-
+یوں درج ذیل ہو گا جو \عددی{\kvec{u}=\ak} لیتے ہوئے مساوات \حوالہء{6}  کے عین مطابق ہے۔
 \begin{align*}
-\nabla \times \mathbf{F}
-=
-\begin{vmatrix}
-\mathbf{i} & \mathbf{j} & \mathbf{k} \\
-\frac{\partial}{\partial x} &
-\frac{\partial}{\partial y} &
-\frac{\partial}{\partial z} \\
--\omega y & \omega x & 0
-\end{vmatrix}
+(\nabla \times \kvec{F})\cdot \ak=2\omega=\frac{1}{\pi\rho^2}\ointctrclockwise_C \mathbf{F} \cdot \dif \mathbf{r}
 \end{align*}
+\انتہا{مثال}
 
+\ابتدا{مثال}\quad \موٹا{مسئلہ سٹوکس کا اطلاق}\\
+اوپر سے نظارہ کرتے  ہوئے ثُمن  اول  میں واقع  مستوی \عددی{2x+y+z=2} کے ٹکڑے  کی سرحد \عددی{C} پر خلاف گھڑی چل کر 
+  \عددی{\int_C \kvec{F}\cdot\dif \kvec{r}} کی قیمت مسئلہ سٹوکس استعمال کرتے ہوئے تلاش کریں، جہاں \عددی{\kvec{F}=xz\ai+xy\aj+3xz\ak} ہے۔
+
+\موٹا{حل:}\quad
+یہ مستوی    تفاعل   \عددی{f(x,y,z) = 2x + y + z}  کی  ہم قد سطح \عددی{f(x,y,z)=2} ہے۔اس کا اکائی عمودی سمتیہ
 \begin{align*}
-=
-(0 - 0)\mathbf{i}
-+
-(0 - 0)\mathbf{j}
-+
-(\omega - (-\omega))\mathbf{k}
-=
-2\omega \mathbf{k}
+\kvec{n}=\frac{\nabla f}{|\nabla f|}=\frac{2\ai+\aj+\ak}{|2\ai+\aj+\ak|}=\frac{1}{\sqrt{6}}(2\ai+\aj+\ak)
 \end{align*}
-
-\vspace{1em}
-
-سٹوکس کے نظریہ کے مطابق، اگر $C$ ایک دائرہ ہو جس کا رداس $r$ ہے اور $S$ وہ disk ہو جس کا عمودی $\mathbf{k}$ ہے، تو:
-
+سرحد \عددی{C} پر خلاف گھڑی  حرکت کے مترادف ہے۔ مسئلہ سٹوکس استعمال کرنے کے لئے درج ذیل حاصل کرنے ہیں۔
 \begin{align*}
-\oint_C \mathbf{F} \cdot d\mathbf{r}
-=
-\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, dS
-\end{align*}
-
-\begin{align*}
-=
-\iint_S 2\omega\, dA
-=
-2\omega (\pi r^2)
-\end{align*}
-
-لہٰذا:
-
-\begin{align*}
-(\nabla \times \mathbf{F}) \cdot \mathbf{k}
-=
-2\omega
-=
-\frac{1}{\pi r^2}
-\oint_C \mathbf{F} \cdot d\mathbf{r}
-\end{align*}
-
-یہ نتیجہ Equation (6) کے مطابق ہے جب $\mathbf{u} = \mathbf{k}$ ہو۔
-
-\vspace{1em}
-
-\begin{center}
-{\Large مثال 5: سٹوکس کے نظریہ کا اطلاق}
-\end{center}
-
-سٹوکس کے نظریہ کو استعمال کرتے ہوئے درج ذیل خطی تکمل (line integral) معلوم کریں:
-
-\begin{align*}
-\oint_C \mathbf{F} \cdot d\mathbf{r}
-\end{align*}
-
-جہاں:
-
-\begin{align*}
-\mathbf{F} = xz\,\mathbf{i} + xy\,\mathbf{j} + 3xz\,\mathbf{k}
-\end{align*}
-
-اور $C$ وہ boundary ہے جو سطح
-
-\begin{align*}
-2x + y + z = 2
-\end{align*}
-
-کے پہلے octant والے حصے سے بنتی ہے، اور اسے اوپر سے دیکھنے پر counterclockwise سمت میں چلایا گیا ہے۔
-
-\vspace{1em}
-
-\موٹا{حل:}
-
-یہ مستوی درج ذیل function کی سطح ہے:
-
-\begin{align*}
-f(x,y,z) = 2x + y + z
-\end{align*}
-
-لہٰذا unit عمودی vector:
-
-\begin{align*}
-\nabla f = 2\mathbf{i} + \mathbf{j} + \mathbf{k}
-\end{align*}
-
-\begin{align*}
-\mathbf{n}
-=
-\frac{2\mathbf{i} + \mathbf{j} + \mathbf{k}}{\sqrt{6}}
-\end{align*}
-
-\vspace{1em}
-
-curl معلوم کریں:
-
-\begin{align*}
-\nabla \times \mathbf{F}
-=
+\kvec{F}\text{گردش}=\nabla \times \mathbf{F}=
 \begin{vmatrix}
 \mathbf{i} & \mathbf{j} & \mathbf{k} \\
 \frac{\partial}{\partial x} &
@@ -1418,202 +1208,65 @@ curl معلوم کریں:
 \frac{\partial}{\partial z} \\
 xz & xy & 3xz
 \end{vmatrix}
+=(x-3z)\aj+y\ak
 \end{align*}
-
-\begin{align*}
-=
-(x - 3z)\mathbf{j} + y\mathbf{k}
-\end{align*}
-
-اب مستوی پر:
-
-\begin{align*}
-z = 2 - 2x - y
-\end{align*}
-
-لہٰذا:
-
+ مستوی پر\عددی{z = 2 - 2x - y} ہے لہٰذا
 \begin{align*}
 \nabla \times \mathbf{F}
 =
-( x - 3(2 - 2x - y) )\mathbf{j} + y\mathbf{k}
+( x - 3(2 - 2x - y) )\mathbf{j} + y\mathbf{k}=(7x + 3y - 6)\mathbf{j} + y\mathbf{k}
 \end{align*}
-
-\begin{align*}
-=
-(7x + 3y - 6)\mathbf{j} + y\mathbf{k}
-\end{align*}
-
-
 %===================
 %L91345
-
-\vspace{1em}
-
-اب ہمارے پاس:
-
+اور
 \begin{align*}
-(\nabla \times \mathbf{F}) \cdot \mathbf{n}
-=
-\frac{1}{\sqrt{6}}(7x + 4y - 6)
+(\nabla \times \mathbf{F}) \cdot \mathbf{n}=\frac{1}{\sqrt{6}}(7x +3y-6+y)=\frac{1}{\sqrt{6}}(7x + 4y - 6)
 \end{align*}
-
-اور چونکہ:
-
+ہو گا۔ سطحی  رقبے کا  چھوٹا ٹکڑا درج ذیل ہو گا۔
 \begin{align*}
-\mathbf{n} = \frac{\nabla f}{|\nabla f|}, \quad |\nabla f| = \sqrt{6}
+\dif \sigma  = \frac{|\nabla f|}{|\nabla f \cdot \mathbf{k}|}\, \dif A=\frac{\sqrt{6}}{1}\dif x\dif y=\sqrt{6}\dif x\dif y
 \end{align*}
-
-لہٰذا سطحی عنصر:
-
+دائری بہاؤ درج ذیل ہو گا۔
 \begin{align*}
-dS = \frac{|\nabla f|}{|\nabla f \cdot \mathbf{k}|}\, dA
-= \sqrt{6}\, dA
+\ointctrclockwise_C \kvec{F}\cdot \dif \kvec{r}&=\iint_S\nabla \times \mathbf{F}) \cdot \mathbf{n}\, \dif\sigma&&
+\text{\RL{مسئلہ سٹوکس، مساوات \حوالہء{4}}}\\
+&=\int_{0}^{1}\int_{0}^{2-2x}\frac{1}{\sqrt{6}}(7x+4y-6)\sqrt{6}\dif y\dif x=-1
 \end{align*}
+\انتہا{مثال}
 
-اس سے:
-
-\begin{align*}
-(\nabla \times \mathbf{F}) \cdot \mathbf{n}\, dS
-=
-\frac{1}{\sqrt{6}}(7x + 4y - 6)\cdot \sqrt{6}\, dA
-=
-(7x + 4y - 6)\, dA
-\end{align*}
-
-\vspace{1em}
-
-لہٰذا Stokes’ Theorem کے مطابق:
-
-\begin{align*}
-\oint_C \mathbf{F}\cdot d\mathbf{r}
-=
-\iint_R (7x + 4y - 6)\, dA
-\end{align*}
-
-جہاں $R$ وہ تکونی خطہ ہے:
-
-\begin{align*}
-0 \le x \le 1,\quad 0 \le y \le 2 - 2x
-\end{align*}
-
-\vspace{1em}
-
-اب تکمل:
-
-\begin{align*}
-\int_0^1 \int_0^{2-2x} (7x + 4y - 6)\, dy\, dx
-\end{align*}
-
-اندرونی تکمل:
-
-\begin{align*}
-\int_0^{2-2x} (7x + 4y - 6)\, dy
-=
-(7x - 6)y + 2y^2 \Big|_0^{2-2x}
-\end{align*}
-
-\begin{align*}
-=
-(7x - 6)(2 - 2x) + 2(2 - 2x)^2
-\end{align*}
-
-سادہ کرنے پر:
-
-\begin{align*}
-= -6x
-\end{align*}
-
-اب بیرونی تکمل:
-
-\begin{align*}
-\int_0^1 (-6x)\, dx
-=
--3
-\end{align*}
-
-\vspace{1em}
-
-\موٹا{حتمی جواب:}
-
-\begin{align*}
-\oint_C \mathbf{F}\cdot d\mathbf{r} = -3
-\end{align*}
-
----
-
-\begin{center}
-{\Large کثیرسطحی (Polyhedral) سطحوں کے لیے Stokes’ Theorem کا ثبوت}
-\end{center}
-
-فرض کریں $S$ ایک کثیرسطحی سطح ہے جو محدود تعداد میں مسطح حصوں (مستوی regions) پر مشتمل ہے (شکل 16.66)۔
-
-ہم ہر علیحدہ حصے پر Green’s Theorem لاگو کرتے ہیں۔ اس صورت میں دو قسم کے حصے ہوتے ہیں:
-
-\begin{enumerate}
-\item وہ حصے جو مکمل طور پر دوسرے حصوں سے گھرے ہوں
-\item وہ حصے جن کی کم از کم ایک edge کسی دوسرے حصے سے متصل نہ ہو
+\جزوحصہء{کثیر سطحی  سطح کے لئے مسئلہ سٹوکس کا ثبوت}
+فرض کریں $S$ کثیر سطحی سطح ہے جو  محدود تعداد  کے  مسطح حصوں  پر مشتمل  ہے (مثلاً شکل\حوالہء{16.66})۔ ہم  \عددی{S} کے علیحدہ علیحدہ حصوں  پر مسئلہ گرین کا اطلاق  کرتے ہیں۔  مستویات  کی دو  قسمیں ہیں۔
+\begin{enumerate}[1.]
+\item 
+وہ  جو   ہر طرف سے  دوسرے حصوں سے گھیرا ہو۔
+\item 
+وہ جن کا ایک یا ایک سے زیادہ اطراف    کسی دوسرے حصے سے متصل نہ ہو۔
 \end{enumerate}
 
-سطح $S$ کی boundary $\Delta$ ان edges پر مشتمل ہوتی ہے جو قسم (2) کے حصوں سے تعلق رکھتے ہیں۔
-
-مثال کے طور پر شکل 16.66 میں مثلثی حصے $EAB$, $BCE$, اور $CDE$ سطح کا حصہ ہیں، جبکہ $ABCD$ boundary ہے۔
-
-\vspace{1em}
-
-ہر مثلث پر Green’s Theorem لگانے سے:
-
+سطح  \عددی{S}   کی سرحد \عددی{\Delta}    قسم   \عددی{2} مستویات کے ان کناروں پر مشتمل ہے جو دوسری مستویات سے متصل نہیں۔شکل \حوالہء{16.66} میں مثلثات   \عددی{EAB}، \عددی{BCE}، اور \عددی{CDE} سطح \عددی{S}  کے کچھ حصے کو ظاہر کرتے ہیں جبکہ \عددی{ABCD} سرحد \عددی{\Delta} کے کچھ حصے کو ظاہر کرتا ہے۔ تینوں مثلثات  پر بالترتیب مسئلہ گرین کا اطلاق کر کے نتائج جمع کر کے درج ذیل حاصل ہو گا۔
+\begin{align}
+\left(\ointctrclockwise_{EAB}+\ointctrclockwise_{BCE}+\ointctrclockwise_{CDE}\right) F\cdot \dif \kvec{r}=
+\left( \iint _{EAB}+\iint_{BCE}+\iint_{CDE}\right)\nabla \times \mathbf{F}\cdot \mathbf{n}\, \dif\sigma\tag{7}
+\end{align}
+چونکہ مساوات \حوالہء{7} میں  بائیں ہاتھ کے تین لکیری تکملات میں  اندرونی   (متصل  مثلثات کے مشترک)اضلاع  پر  لکیری تکملات  کے جوڑے ایک دوسرے کو کاٹتے ہیں لہٰذا  تینوں   مل کر  کنارہ \عددی{ABCDE} پر   واحد ایک  تکمل دیتے ہیں۔مثال کے طور پر  مثلث \عددی{ABE} کے ضلع  \عددی{BE} پر لکیری تکمل کی علامت \عددی{(\pm)} مثلث \عددی{EBC} کے اسی ضلع پر لکیری تکمل کی علامت  \عددی{(\mp)}کا الٹ ہو گی۔ضلع \عددی{CE} پر بھی ایسا ہو گا۔ یوں مساوات \حوالہء{7}   درج ذیل روپ اختیار کرتی ہے۔
 \begin{align*}
-\sum \oint F\cdot dr
-=
-\sum \iint (\nabla \times \mathbf{F})\cdot \mathbf{n}\, dS
-\tag{7}
+\ointctrclockwise_{ABCDE} \mathbf{F}\cdot \dif \mathbf{r}=\iint_{ABCDE}\nabla \times \mathbf{F}\cdot \mathbf{n}\, \dif\sigma
 \end{align*}
-
-\vspace{1em}
-
-بائیں طرف کے line integrals اندرونی edges پر آپس میں cancel ہو جاتے ہیں۔
-
-مثال کے طور پر edge $BE$ پر ایک triangle میں integral ایک سمت میں ہے اور دوسرے میں اس کے الٹ، اس لیے وہ ختم ہو جاتے ہیں۔
-
-اسی طرح $CE$ وغیرہ بھی cancel ہو جاتے ہیں۔
-
-لہٰذا باقی صرف boundary رہ جاتی ہے:
-
+تمام اضلاع پر مسئلہ گرین کا اطلاق کر کے درج ذیل حاصل ہو گا جو  درحقیقت کثیر سطحی سطح \عددی{S} کا مسئلہ سٹوکس ہے۔ مزید عمومی  سطوح کے   لئے   ثبوت آپ کو   اعلٰی نصاب  میں  ملیں گے۔
 \begin{align*}
-\oint_{\partial S} \mathbf{F}\cdot d\mathbf{r}
-=
-\iint_S (\nabla \times \mathbf{F})\cdot \mathbf{n}\, dS
+\ointctrclockwise_{\Delta} \mathbf{F}\cdot \dif\mathbf{r}=\iint_{S}\nabla \times \mathbf{F}\cdot \mathbf{n}\, \dif\sigma
 \end{align*}
-
-یہی Stokes’ Theorem کا عمومی نتیجہ ہے۔
-
-
 %=====================
 %L91421
+\جزوحصہء{مسئلہ سٹوکس برائے سوراخ دار سطوح}
+مسئلہ گرین کو وسعت  دینے  کے طرز پر مسئلہ سٹوکس کو  ایسی  سمت بند  سطح \عددی{S} تک وسعت دی جا سکتی ہے جس میں ایک یا ایک سے زیادہ سوراخ ہوں (شکل \حوالہء{16.67})۔سطح \عددی{S} پر \عددی{\nabla\times\kvec{F}}  کے عمودی جزو کا   سطح تکمل تمام سرحدی منحنیات پر \عددی{\kvec{F}} کے مماسی جزو کے لکیری تکملات کے مجموعہ کے برابر ہو گا، جہاں   \عددی{S} کی سمت بندی کو مد نظر  رکھ کر منحنیات پر چلنا ہو گا۔
 
-
-یہ اسٹوکس کے قضیے کی وہ صورت ہے جو ایک کثیرسطحی (polyhedral) سطح \( S \) کے لیے ہے۔ اس سے زیادہ عمومی سطحوں کے لیے اس کے ثبوت اعلیٰ درجے کی تفاضلی و تکاملی کتب میں ملتے ہیں۔
-
-\section*{سوراخوں والی سطحوں کے لیے اسٹوکس کا قضیہ}
-
-اسٹوکس کے قضیے کو ایسی اورینٹڈ سطح \( S \) تک بھی وسعت دی جا سکتی ہے جس میں ایک یا ایک سے زیادہ سوراخ ہوں۔ اس کی وضاحت گرین کے قضیے کی توسیع کے مشابہ ہے: سطح \( S \) پر سمتیہ فیلڈ \( \nabla \times \mathbf{F} \) کے نارمل جزو کا سطحی تکمل، سطح کی تمام حدی منحنیات (boundary curves) کے گرد خطی تکملات کے مجموعے کے برابر ہوتا ہے، بشرطیکہ ان منحنیات کو سطح کی دی گئی سمت کے مطابق طے کیا جائے۔
-
-\bigskip
-
-\موٹا{اہم شناخت}
-
-ریاضی اور طبعی علوم میں درج ذیل شناخت بار بار سامنے آتی ہے:
-
-\begin{align*}
-\nabla \times (\nabla f) = 0
-\quad \text{یا} \quad
-\nabla \times \nabla f = 0
-\tag{8}
-\end{align*}
-
-یہ شناخت ہر ایسے فعل \( f(x,y,z) \) کے لیے درست ہے جس کے دوسرے جزوی مشتقات مسلسل ہوں۔ اس کا ثبوت درج ذیل ہے:
-
+\جزوجزوحصہء{ایک اہم تماثل}
+ریاضیات اور طبیعی سائنس میں درج ذیل تماثل بار بار پیش آتا ہے۔
+\begin{align}
+\nabla\times \nabla f=\kvec{0} \tag{8}
+\end{align}
+یہ تماثل  جو ہر اس تفاعل \عددی{f(x,y,z)} کے لئے  کارآمد ہے جس کے دوہرے جزوی تفرق استمراری ہوں، کہتا ہے کہ تفاعل \عددی{f(x,y,z)} کے ڈھلوان کا  دائری بہاؤ  صفر ہو گا۔اس کا ثبوت درج ذیل ہے۔
 \begin{align*}
 \nabla \times \nabla f =
 \begin{vmatrix}
@@ -1621,112 +1274,44 @@ dS = \frac{|\nabla f|}{|\nabla f \cdot \mathbf{k}|}\, dA
 \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
 \frac{\partial f}{\partial x} & \frac{\partial f}{\partial y} & \frac{\partial f}{\partial z}
 \end{vmatrix}
+=(\, f_{zy} - f_{yz} \,) \mathbf{i}-(\, f_{zx} - f_{xz} \,) \mathbf{j}+(\, f_{yx} - f_{xy} \,) \mathbf{k}
 \end{align*}
+ثانی  جزوی تفرق استمراری ہونے کی صورت میں  قوسین میں بند  مختلف اقسام کے ثانی  تفرق  برابر ہوں گے   (حصہ \حوالہء{14.3}، مسئلہ \حوالہء{2}) لہٰذا سمتیہ صفر ہو گا۔
+%KKK??? am here
+\حصہء{بقائی میدان اور مسئلہ سٹوکس}
+ہم نے حصہ \حوالہء{16.3} میں دیکھا  کہ کھلے خطہ \عددی{D} میں میدان \عددی{\kvec{F}} کا بقائی ہونا اس کے مترادف ہے کہ  \عددی{D} میں ہر بند راہ پر \عددی{\kvec{F}} کا لکیری تکمل صفر ہو۔یہ از خود، \ترچھا{سادہ تعلق }خطوں میں، اس کے مترادف ہے کہ \عددی{\nabla\times\kvec{F}=\kvec{0}} ہو۔
 
-اس کو حل کرنے سے حاصل ہوتا ہے:
-
+\ابتدا{مسئلہ}\quad \موٹا{\عددی{\nabla\times \kvec{F}=\kvec{0}}  اور بند حلقہ  خاصیت کا تعلق} \\
+اگر خلا میں سادہ تعلق آزاد خطہ \عددی{D} کے ہر نقطہ پر \عددی{\nabla\times\kvec{F}=\kvec{0}} ہو تب \عددی{D} میں  ٹکڑوں میں  ہموار بند راہ \عددی{C} پر درج ذیل ہو گا۔
 \begin{align*}
-(\, f_{zy} - f_{yz} \,) \mathbf{i}
--
-(\, f_{zx} - f_{xz} \,) \mathbf{j}
-+
-(\, f_{yx} - f_{xy} \,) \mathbf{k}
+\ointctrclockwise_C \kvec{F}\cdot\dif\kvec{r}=0
 \end{align*}
-
-اگر دوسرے جزوی مشتقات مسلسل ہوں تو مکسڈ مشتقات برابر ہوتے ہیں (نظریہ 2،  حصہ  14.3)، لہٰذا یہ سمتیہ صفر ہو جاتا ہے۔
-
-\bigskip
-
-\textbf{محافظ میدان اور اسٹوکس کا قضیہ}
-
- حصہ  16.3 میں ہم نے دیکھا کہ ایک سمتیہ فیلڈ \( \mathbf{F} \) کسی کھلے خطے \( D \) میں محافظ (conservative) اس وقت ہوتا ہے جب اس کا کسی بھی بند راستے کے گرد خطی تکمل صفر ہو۔ یہ بات مزید یہ ظاہر کرتی ہے کہ سادہ مربوط (simply connected) خطوں میں یہ شرط اس کے برابر ہے کہ
-
+\انتہا{مسئلہ}
+\ابتدا{ثبوت}
+\موٹا{خاکہ}\quad
+مسئلہ \حوالہء{6} کا ثبوت عموماً دو مراحل میں کیا جاتا ہے۔ پہلا مرحلہ سادہ بند منحنیات کے لیے ہو گا۔ اعلٰی ریاضیات کی ایک شاخ \اصطلاح{ربڑی ہندسہ}\فرہنگ{ربڑی ہندسہ}\حاشیہب{topology}\فرہنگ{topology}   کا ایک مسئلہ  کہتا ہے کہ سادہ تعلق کھلے خطہ \عددی{D} میں ہر قابل تفرق   سادہ بند منحنی  \عددی{C}  ایک ہموار دو طرفہ سطح \عددی{S}،   جو \عددی{D} میں پائی جاتی ہو، کی سرحد ہو گی ۔یوں مسئلہ سٹوکس کے تحت درج ذیل ہو گا۔
 \begin{align*}
-\nabla \times \mathbf{F} = 0
+\ointctrclockwise_C \mathbf{F} \cdot \dif\mathbf{r}=\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, \dif\sigma= 0
 \end{align*}
 
-\textbf{قضیہ 6: کرل صفر اور بند راستے کی خاصیت}
+دوسرا مرحلہ اُن منحنیات کے لیے ہے جو خود کو کاٹتی ہیں، جیسے کہ شکل\حوالہء{16.68 }میں دکھائی گئی ہے۔ ایسی منحنیات کو سادہ  حلقات، جن  کا احاطہ قابل سمت بند سطوح کرتی ہوں،  میں تقسیم کر کے باری باری ایک ایک حلقہ پر مسئلہ سٹوکس کا اطلاق کر کے نتائج کا مجموعہ لیا جاتا ہے۔
+\انتہا{ثبوت}
 
-اگر کسی سادہ مربوط کھلے خطے \( D \) میں ہر نقطے پر \( \nabla \times \mathbf{F} = 0 \) ہو تو \( D \) میں کسی بھی ٹکڑوں میں ہموار بند منحنی \( C \) کے لیے:
+  تعلق دار، سادہ تعلق کھلے خطوں پر معین بقائی میدان کے لئے حاصل  نتائج  کا نچوڑ درج ذیل شکل میں پیش کیا گیا ہے۔
+\begin{center}
+\begin{tikzpicture}
+\node[draw, single arrow,minimum height=30mm, minimum width=5mm,single arrow head extend=2mm,anchor=east,rotate=180] at (0,0) {}
+ (0,0)node[below,left,yshift=-1em,align=center]{$\ointctrclockwise_C\kvec{F}\cdot\dif\kvec{r}=0$\\ \RL{$D$ میں بند راہ پر}}--++(3,0)node[below, right,align=center,yshift=-1em]{$\nabla\times\kvec{F}=\kvec{0}$\\  \RL{پورے $D$ پر}}node[pos=0.5,below,yshift=-0.5em,align=center]{\RL{مسئلہ \حوالہء{6}}\\
+ \RL{سادہ تعلق دائرہ کار}\\ \RL{ اور مسئلہ سٹوکس}};
+\node[draw, double arrow,minimum height=30mm, minimum width=5mm,single arrow head extend=2mm,anchor=east,rotate=180] at (0,2.5) {}
+(0,2.5)node[above left]{\RL{$D$ پر بقائی $\kvec{F}$ }}--++(3,0)node[above right]{\RL{$D$ پر  $\kvec{F}=\nabla f$}}node[pos=0.5,above,yshift=0.5em,align=center]{\RL{مسئلہ \حوالہء{1}}\\   \RL{حصہ \حوالہء{16.3}} };
+\node[draw, double arrow,minimum height=21mm, minimum width=5mm,single arrow head extend=2mm,anchor=east,rotate=-90] at (0,0.2) {}
+(0,0.2)--(0,2.1)node[pos=0.6,left,xshift=-0.5em,align=center]{\RL{مسئلہ \حوالہء{2}}\\  \RL{حصہ \حوالہء{13.3}}};
+\node[draw, double arrow,minimum height=21mm, minimum width=5mm,single arrow head extend=2mm,anchor=east,rotate=-90] at (3,0.2) {}
+(3,0.2)--(3,2.1)node[pos=0.6,right,xshift=0.5em,align=center]{\RL{سمتیہ تماثل (مساوات \حوالہء{8})}\\  \RL{(استمراری  ثانی جزوی تفرقات )}};
+\end{tikzpicture}
+\end{center}
 
-\begin{align*}
-\oint_C \mathbf{F} \cdot d\mathbf{r} = 0
-\end{align*}
-
-\bigskip
-
-\textbf{ثبوت کا خاکہ}
-
-قضیہ 6 کا ثبوت عموماً دو مراحل میں کیا جاتا ہے۔ پہلا مرحلہ سادہ بند منحنیات کے لیے ہوتا ہے۔ ٹوپولوجی (topology) کی ایک اہم شاخ کا ایک نظریہ یہ بیان کرتا ہے کہ ...
-
-
-
-%===========================
-%L91490
-
-\bigskip
-
-ہر قابلِ تفاضل (differentiable) سادہ بند منحنی \( C \)، جو کسی سادہ مربوط کھلے خطے \( D \) میں موجود ہو، ایک ہموار دو رُخا سطح \( S \) کی حد (boundary) ہوتی ہے جو خود بھی \( D \) کے اندر موجود ہوتی ہے۔ لہٰذا اسٹوکس کے قضیے کے مطابق:
-
-\begin{align*}
-\oint_C \mathbf{F} \cdot d\mathbf{r}
-=
-\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, ds
-= 0
-\end{align*}
-
-\bigskip
-
-دوسرا مرحلہ اُن منحنیات کے لیے ہے جو خود کو کاٹتی ہیں، جیسے کہ شکل 16.68 میں دکھائی گئی ہے۔ خیال یہ ہے کہ ایسی منحنیات کو سادہ حلقوں (simple loops) میں تقسیم کیا جائے، جن کے لیے قابلِ اورینٹیشن سطحیں موجود ہوں، پھر ہر حلقے پر الگ الگ اسٹوکس کے قضیے کو لاگو کیا جائے اور نتائج کو جمع کر لیا جائے۔
-
-\bigskip
-
-\textbf{شکل 16.68}
-
-سادہ مربوط کھلے خطے میں ایسی قابلِ تفاضل منحنیات جو خود کو کاٹتی ہیں، انہیں ایسے حلقوں میں تقسیم کیا جا سکتا ہے جن پر اسٹوکس کا قضیہ لاگو کیا جا سکتا ہے۔
-
-\bigskip
-
-مندرجہ ذیل خاکہ سادہ مربوط کھلے خطوں میں متعین محافظ (conservative) میدانوں کے نتائج کو خلاصہ کرتا ہے:
-
-\bigskip
-
-\begin{align*}
-\begin{array}{c}
-\mathbf{F} \text{ conservative on } D
-\end{array}
-\;\;\Longleftrightarrow\;\;
-\begin{array}{c}
-\mathbf{F} = \nabla f \text{ on } D
-\end{array}
-\end{align*}
-
-\bigskip
-
-یہ تعلق درج ذیل نظریات اور نتائج کے ذریعے حاصل ہوتا ہے:
-
-\begin{itemize}
-\item نظریہ 1،  حصہ  16.3
-\item نظریہ 2،  حصہ  13.3
-\item سمتیہ شناخت: \( \nabla \times (\nabla f) = 0 \) (مساوات 8)
-\end{itemize}
-
-\bigskip
-
-اسی سے درج ذیل ہم آہنگ نتائج حاصل ہوتے ہیں:
-
-\begin{align*}
-\oint_C \mathbf{F} \cdot d\mathbf{r} = 0
-\quad \text{(کسی بھی بند راستے پر)}
-\end{align*}
-
-\begin{align*}
-\nabla \times \mathbf{F} = 0 \quad \text{پورے خطے } D \text{ میں}
-\end{align*}
-
-یہ نتائج سادہ مربوطیت (simple connectivity) اور اسٹوکس کے قضیے کے ساتھ مل کر ایک دوسرے کے ہم معنی ہو جاتے ہیں۔
-%==================
-%L91453
 
 \section*{مشقیں 16.7}
 
