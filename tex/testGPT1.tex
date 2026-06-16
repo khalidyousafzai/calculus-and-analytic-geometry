@@ -1266,7 +1266,7 @@ xz & xy & 3xz
 \begin{align}
 \nabla\times \nabla f=\kvec{0} \tag{8}
 \end{align}
-یہ تماثل  جو ہر اس تفاعل \عددی{f(x,y,z)} کے لئے  کارآمد ہے جس کے دوہرے جزوی تفرق استمراری ہوں، کہتا ہے کہ تفاعل \عددی{f(x,y,z)} کے ڈھلوان کا  دائری بہاؤ  صفر ہو گا۔اس کا ثبوت درج ذیل ہے۔
+یہ تماثل  جو ہر اس تفاعل \عددی{f(x,y,z)} کے لئے  کارآمد ہے جس کے دوہرے جزوی تفرق استمراری ہوں، کہتا ہے کہ تفاعل \عددی{f(x,y,z)} کے ڈھلوان کی گردش   صفر ہو گی۔اس کا ثبوت درج ذیل ہے۔
 \begin{align*}
 \nabla \times \nabla f =
 \begin{vmatrix}
@@ -1276,8 +1276,8 @@ xz & xy & 3xz
 \end{vmatrix}
 =(\, f_{zy} - f_{yz} \,) \mathbf{i}-(\, f_{zx} - f_{xz} \,) \mathbf{j}+(\, f_{yx} - f_{xy} \,) \mathbf{k}
 \end{align*}
-ثانی  جزوی تفرق استمراری ہونے کی صورت میں  قوسین میں بند  مختلف اقسام کے ثانی  تفرق  برابر ہوں گے   (حصہ \حوالہء{14.3}، مسئلہ \حوالہء{2}) لہٰذا سمتیہ صفر ہو گا۔
-%KKK??? am here
+ثانی  جزوی تفرق استمراری ہونے کی صورت میں  قوسین میں بند  مختلف اقسام کے ثانی  تفرق  برابر ہوں گے   (حصہ \حوالہء{14.3}، مسئلہ \حوالہء{2}) لہٰذا سمتیہ صفر ہو گا
+
 \حصہء{بقائی میدان اور مسئلہ سٹوکس}
 ہم نے حصہ \حوالہء{16.3} میں دیکھا  کہ کھلے خطہ \عددی{D} میں میدان \عددی{\kvec{F}} کا بقائی ہونا اس کے مترادف ہے کہ  \عددی{D} میں ہر بند راہ پر \عددی{\kvec{F}} کا لکیری تکمل صفر ہو۔یہ از خود، \ترچھا{سادہ تعلق }خطوں میں، اس کے مترادف ہے کہ \عددی{\nabla\times\kvec{F}=\kvec{0}} ہو۔
 
@@ -1305,241 +1305,69 @@ xz & xy & 3xz
  \RL{سادہ تعلق دائرہ کار}\\ \RL{ اور مسئلہ سٹوکس}};
 \node[draw, double arrow,minimum height=30mm, minimum width=5mm,single arrow head extend=2mm,anchor=east,rotate=180] at (0,2.5) {}
 (0,2.5)node[above left]{\RL{$D$ پر بقائی $\kvec{F}$ }}--++(3,0)node[above right]{\RL{$D$ پر  $\kvec{F}=\nabla f$}}node[pos=0.5,above,yshift=0.5em,align=center]{\RL{مسئلہ \حوالہء{1}}\\   \RL{حصہ \حوالہء{16.3}} };
-\node[draw, double arrow,minimum height=21mm, minimum width=5mm,single arrow head extend=2mm,anchor=east,rotate=-90] at (0,0.2) {}
-(0,0.2)--(0,2.1)node[pos=0.6,left,xshift=-0.5em,align=center]{\RL{مسئلہ \حوالہء{2}}\\  \RL{حصہ \حوالہء{13.3}}};
-\node[draw, double arrow,minimum height=21mm, minimum width=5mm,single arrow head extend=2mm,anchor=east,rotate=-90] at (3,0.2) {}
-(3,0.2)--(3,2.1)node[pos=0.6,right,xshift=0.5em,align=center]{\RL{سمتیہ تماثل (مساوات \حوالہء{8})}\\  \RL{(استمراری  ثانی جزوی تفرقات )}};
+\node[draw, double arrow,minimum height=21mm, minimum width=5mm,single arrow head extend=2mm,anchor=east,rotate=-90] at (0,0.2) {};
+\node[draw, double arrow,minimum height=21mm, minimum width=5mm,single arrow head extend=2mm,anchor=east,rotate=-90] at (3,0.2) {};
+\path(3,0.2)--(3,2.1)node[pos=0.6,right,xshift=0.5em,align=center]{\RL{سمتیہ تماثل (مساوات \حوالہء{8})}\\  \RL{(استمراری  ثانی جزوی تفرقات )}};
 \end{tikzpicture}
 \end{center}
 
 
-\section*{مشقیں 16.7}
+\حصہء{سوالات}
+\جزوحصہء{مسئلہ سٹوکس کے ذریعہ   دائری بہاؤ  کی قیمت کا حصول}
+سوال \حوالہء{1} تا \حوالہء{6} میں مسئلہ سٹوکس استعمال کرتے ہوئے منحنی  \عددی{C} کے ہمراہ  دی گئی سمت  میں  میدان \عددی{\kvec{F}} کے دائری بہاؤ کی قیمت تلاش کریں۔
 
-\subsection*{اسٹوکس کے قضیے کے ذریعے گردشی مقدار (Circulation) کا حساب}
+\ابتدا{سوال}
+\(\kvec{F}=x^2\,\ai+2x\,\aj+z^2\,\ak\)
+مستوی \عددی{xy} میں   \عددی{C} ترخیم \عددی{4x^2+y^2=4}  ہے  جو اوپر سے دیکھتے ہوئے خلاف گھڑی ہے۔
+\انتہا{سوال}
 
-درج ذیل مشقوں (1 تا 6) میں اسٹوکس کے قضیے کے سطحی تکمل (surface integral) کو استعمال کرتے ہوئے سمتیہ فیلڈ \( \mathbf{F} \) کی منحنی \( C \) کے گرد گردش (circulation) معلوم کریں، دی گئی سمت کے مطابق۔
+\ابتدا{سوال}
+\(
+\kvec{F}=2y\,\ai+3x\,\aj-z^2\,\ak
+\)
+مستوی \عددی{xy} میں   \عددی{C}  دائرہ  \عددی{x^2+y^2=9}  ہے  جو اوپر سے دیکھتے ہوئے خلاف گھڑی ہے۔
+\انتہا{سوال}
 
-\begin{enumerate}
-\item
-\begin{align*}
-\mathbf{F} = x^2 \mathbf{i} + 2x \mathbf{j} + z^2 \mathbf{k}
-\end{align*}
-\( C \): بیضوی خطہ \( 4x^2 + y^2 = 4 \)، جو \( xy \)-سطح میں واقع ہے، اور اوپر سے دیکھنے پر مخالف گھڑی سمت (counterclockwise) میں ہے۔
+\ابتدا{سوال}
+\(
+\kvec{F}=y\,\ai+xz\,\aj+x^2\,\ak
+\)
+ مستوی \عددی{x+y+z=1}  سے ثُمن اول  مثلث کاٹتا ہے جس کی سرحد  \عددی{C}  ہے   جو اوپر سے دیکھتے ہوئے خلاف گھڑی ہے۔
+\انتہا{سوال}
 
-\item
-\begin{align*}
-\mathbf{F} = 2y \mathbf{i} + 3x \mathbf{j} - z^2 \mathbf{k}
-\end{align*}
-\( C \): دائرہ \( x^2 + y^2 = 9 \)، جو \( xy \)-سطح میں واقع ہے، اور اوپر سے دیکھنے پر مخالف گھڑی سمت میں ہے۔
+\ابتدا{سوال}
+\(
+\kvec{F}=(y^2+z^2)\,\ai+(x^2+z^2)\,\aj+(x^2+y^2)\,\ak
+\)
+ مستوی \عددی{x+y+z=1}  سے ثُمن اول  مثلث کاٹتا ہے جس کی سرحد  \عددی{C}  ہے   جو اوپر سے دیکھتے ہوئے خلاف گھڑی ہے۔
+\انتہا{سوال}
 
-\item
-\begin{align*}
-\mathbf{F} = y \mathbf{i} + xz \mathbf{j} + x^2 \mathbf{k}
-\end{align*}
-\( C \): مثلث کی حد جو سطح \( x + y + z = 1 \) سے پہلی octant میں کٹی ہوئی ہے، اوپر سے دیکھنے پر مخالف گھڑی سمت میں۔
+\ابتدا{سوال}
+\(
+\kvec{F}=(y^2+z^2)\,\ai+(x^2+y^2)\,\aj+(x^2+y^2)\,\ak
+\)
+مستوی \عددی{xy} میں خطوط \عددی{x=\pm 1} اور \عددی{y=\pm 1}    ایک مربع \عددی{C}   گھیرتے  ہیں  جو اوپر سے دیکھتے ہوئے خلاف گھڑی ہے۔
+\انتہا{سوال}
 
-\item
-\begin{align*}
-\mathbf{F} = (y^2 + z^2)\mathbf{i} + (x^2 + z^2)\mathbf{j} + (x^2 + y^2)\mathbf{k}
-\end{align*}
-\( C \): مثلث کی حد جو سطح \( x + y + z = 1 \) سے پہلی octant میں کٹی ہوئی ہے، اوپر سے دیکھنے پر مخالف گھڑی سمت میں۔
+\ابتدا{سوال}
+\(
+\kvec{F}=x^2y^3\,\ai+\aj+z\,\ak
+\)
+بیلن \عددی{x^2+y^2=4} اور نصف کرہ \عددی{x^2+y^2+z^2=16,\qquad z\ge 0}  کے تقاطع سے حاصل  منحنی \عددی{C} جو اوپر سے دیکھتے ہوئے   خلاف گھڑی  ہے۔
+\انتہا{سوال}
 
-\item
-\begin{align*}
-\mathbf{F} = (y^2 + z^2)\mathbf{i} + (x^2 + y^2)\mathbf{j} + (x^2 + y^2)\mathbf{k}
-\end{align*}
-\( C \): مربع جو خطوط \( x = \pm 1 \) اور \( y = \pm 1 \) سے محدود ہے، \( xy \)-سطح میں واقع ہے، اور اوپر سے دیکھنے پر مخالف گھڑی سمت میں۔
-
-\item
-\begin{align*}
-\mathbf{F} = x^2 y^3 \mathbf{i} + \mathbf{j} + z \mathbf{k}
-\end{align*}
-\( C \): سلنڈر \( x^2 + y^2 = 4 \) اور نصف کرہ \( x^2 + y^2 + z^2 = 16, \; z \ge 0 \) کے تقاطع پر منحنی، اوپر سے دیکھنے پر مخالف گھڑی سمت میں۔
-\end{enumerate}
-
-\subsection*{کرل کے فلوکس (Flux of the Curl)}
-
-\begin{enumerate}
-\setcounter{enumi}{6}
-
-\item
-فرض کریں \( \mathbf{n} \) بیضوی خول (elliptical shell) کا بیرونی واحدی عمودی سمتیہ ہے:
-
-\begin{align*}
-S: \quad 4x^2 + 9y^2 + 36z^2 = 36, \quad z \ge 0
-\end{align*}
-
-اور
-
-\begin{align*}
-\mathbf{F} = y \mathbf{i} + x^2 \mathbf{j} + (x^2 + y^4)^{3/2} \sin(2xyz)\, \mathbf{k}
-\end{align*}
-
-معلوم کریں:
-
-\begin{align*}
-\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, ds
-\end{align*}
-
-(اشارہ: خول کی بنیاد پر بیضوی خط کے لیے ایک پیرامیٹرائزیشن:
-\( x = 3\cos t, \; y = 2\sin t, \; 0 \le t \le 2\pi \))
-
-\item
-
-فرض کریں \( \mathbf{n} \) بیرونی عمودی سمتیہ ہے (اصل سے دور کی سمت میں) پارابولک خول:
-
-\begin{align*}
-S: \quad 4x^2 + y + z^2 = 4, \quad y \ge 0
-\end{align*}
-
-\end{enumerate}
-
-%====================
-%L91585
-
-\subsection*{جاری: مشقیں اور نظری مسائل (Stokes’ Theorem)}
-
-اور دیا گیا ہے:
-
-\begin{align*}
-\mathbf{F} =
-\left(-z + \frac{1}{2 + x}\right)\mathbf{i}
-+
-\left(\tan^{-1} y\right)\mathbf{j}
-+
-\left(x + \frac{1}{4 + z}\right)\mathbf{k}
-\end{align*}
-
-معلوم کریں:
-
-\begin{align*}
-\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, ds
-\end{align*}
-
-\bigskip
-
-\begin{enumerate}
-\setcounter{enumi}{8}
-
-\item
-\( S \): سلنڈر \( x^2 + y^2 = a^2,\; 0 \le z \le h \)، اور اس کا اوپری حصہ \( x^2 + y^2 \le a^2,\; z = h \)
-
-\begin{align*}
-\mathbf{F} = -y \mathbf{i} + x \mathbf{j} + x^2 \mathbf{k}
-\end{align*}
-
-اسٹوکس کے قضیے کو استعمال کرتے ہوئے \( \nabla \times \mathbf{F} \) کے outward flux کو سطح \( S \) کے ذریعے معلوم کریں۔
-
-\item
-حساب کریں:
-
-\begin{align*}
-\iint_S (\nabla \times (y \mathbf{i})) \cdot \mathbf{n}\, ds
-\end{align*}
-
-جہاں \( S \) اکائی نصف کرہ ہے:
-
-\begin{align*}
-x^2 + y^2 + z^2 = 1,\quad z \ge 0
-\end{align*}
-
-\item
-Flux of curl:
-
-\begin{align*}
-\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, ds
-\end{align*}
-
-یہ دکھائیں کہ یہ مقدار ہر ایسی سطح \( S \) کے لیے ایک جیسی ہے جو منحنی \( C \) کو span کرتی ہے اور ایک ہی مثبت orientation دیتی ہے۔
-
-\item
-فرض کریں \( S \) دو سطحوں \( S_1 \) اور \( S_2 \) کا مجموعہ ہے جو ایک ہموار بند منحنی \( C \) پر ملتی ہیں۔ کیا درج ذیل کے بارے میں کچھ کہا جا سکتا ہے؟
-
-\begin{align*}
-\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, ds
-\end{align*}
-
-وجہ بیان کریں۔
-
-\end{enumerate}
-
-\subsection*{اسٹوکس کا قضیہ برائے پیرامیٹرائزڈ سطحیں}
-
-درج ذیل مشقوں (13 تا 18) میں اسٹوکس کے قضیے کے سطحی تکمل کو استعمال کرتے ہوئے سمتیہ فیلڈ کے curl کا flux سطح \( S \) کے ذریعے معلوم کریں۔
-
-\begin{enumerate}
-\setcounter{enumi}{12}
-
-\item
-\begin{align*}
-\mathbf{F} = 2z\mathbf{i} + 3x\mathbf{j} + 5y\mathbf{k}
-\end{align*}
-\begin{align*}
-\mathbf{r}(r,u) = r\cos u\,\mathbf{i} + r\sin u\,\mathbf{j} + (4 - r^2)\mathbf{k}
-\end{align*}
-
-\( 0 \le r \le 2,\; 0 \le u \le 2\pi \)
-
-\item
-\begin{align*}
-\mathbf{F} = (y - z)\mathbf{i} + (z - x)\mathbf{j} + (x + z)\mathbf{k}
-\end{align*}
-\begin{align*}
-\mathbf{r}(r,u) = r\cos u\,\mathbf{i} + r\sin u\,\mathbf{j} + (9 - r^2)\mathbf{k}
-\end{align*}
-
-\( 0 \le r \le 3,\; 0 \le u \le 2\pi \)
-
-\item
-\begin{align*}
-\mathbf{F} = x^2 y\,\mathbf{i} + 2y^3 z\,\mathbf{j} + 3z\,\mathbf{k}
-\end{align*}
-\begin{align*}
-\mathbf{r}(r,u) = r\cos u\,\mathbf{i} + r\sin u\,\mathbf{j} + r\,\mathbf{k}
-\end{align*}
-
-\( 0 \le r \le 1,\; 0 \le u \le 2\pi \)
-
-\item
-\begin{align*}
-\mathbf{F} = (x - y)\mathbf{i} + (y - z)\mathbf{j} + (z - x)\mathbf{k}
-\end{align*}
-\begin{align*}
-\mathbf{r}(r,u) = r\cos u\,\mathbf{i} + r\sin u\,\mathbf{j} + (5 - r)\mathbf{k}
-\end{align*}
-
-\( 0 \le r \le 5,\; 0 \le u \le 2\pi \)
-
-\item
-\begin{align*}
-\mathbf{F} = 3y\mathbf{i} + (5 - 2x)\mathbf{j} + (z^2 - 2)\mathbf{k}
-\end{align*}
-\begin{align*}
-\mathbf{r}(f,u) =
-(2\sqrt{3}\sin f \cos u)\mathbf{i}
-+
-(2\sqrt{3}\sin f \sin u)\mathbf{j}
-+
-(2\sqrt{3}\cos f)\mathbf{k}
-\end{align*}
-
-\( 0 \le f \le \frac{\pi}{2},\; 0 \le u \le 2\pi \)
-
-\item
-\begin{align*}
-\mathbf{F} = y^2\mathbf{i} + z^2\mathbf{j} + x\mathbf{k}
-\end{align*}
-\begin{align*}
-\mathbf{r}(f,u) =
-(2\sin f \cos u)\mathbf{i}
-+
-(2\sin f \sin u)\mathbf{j}
-+
-(2\cos f)\mathbf{k}
-\end{align*}
-
-\( 0 \le f \le \frac{\pi}{2},\; 0 \le u \le 2\pi \)
-
-\end{enumerate}
-
-
+\جزوحصہء{گردش کا بہاؤ}
+%Q7
+\ابتدا{سوال}
+ بیضوی خول \عددی{S:\, 4x^2+9y^2+36z^2=36,\, z\ge 0}  کا بیرونی اکائی عمودی سمتیہ  \عددی{\kvec{n}}ہے۔
+ میدان \عددی{\kvec{F}=y\,\ai+x^2\,\aj+\left(x^2+y^4\right)^{3/2}\sin\!\left(e^{\sqrt{xyz}}\right)\ak.} کے لئے  تکمل
+\عددی{\iint_S \nabla \times \kvec{F}\cdot\kvec{n}\dif\sigma} کی قیمت تلاش کریں۔(اشارہ بیضوی : خول کے تل پر  ایک معلمی روپ \عددی{x=3\cos t}، \عددی{y=2\sin t}، \عددی{0\le t\le 2\pi} ہے۔)
+\انتہا{سوال}
+%Q8
+\ابتدا{سوال}
+قطع مکافی  خول \عددی{S:\, 4x^2+y+z^2=4,\, y\ge 0}  کا بیرونی (مبدا سے دوری کی جانب)  اکائی عمودی سمتیہ  \عددی{\kvec{n}}ہے۔درج ذیل  میدان
+\[\kvec{F}=\left(-z+\frac{1}{2+x}\right)\ai+(\tan^{-1}y)\aj+\left(x+\frac{1}{4+z}\right)\ak\]
+ کے لئے  تکمل  \عددی{\iint_S \nabla\times\kvec{F}\cdot\kvec{n}\dif\sigma} کی قیمت تلاش کریں۔
+\انتہا{سوال}
+%Q9
+%KKK??? am here
