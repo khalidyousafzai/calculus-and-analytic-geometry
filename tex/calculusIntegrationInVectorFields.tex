@@ -2291,16 +2291,16 @@ f(2,3,-1)-f(1,1,1)=2+C-(5+C)=-3
 یوں اگر سمتی رفتار کی اکائی میٹر فی سیکنڈ ہو تب خارجی شرح کی اکائی میٹر فی سیکنڈ ضرب میٹر یعنی مربع میٹر فی سیکنڈ ہو گی۔ باقی تین اطراف کے عمودی باہر رخ خارجی سیال کی شرح بھی اسی طرح حاصل کی جا سکتی ہیں۔ چاروں اطراف کے نتائج کو یہاں پیش کرتے ہیں۔
 \begin{gather}
 \begin{aligned}
-\kvec{F}(x,y+\Delta y)\cdot \aj\Delta x&=N(x,y+\Delta y)\Delta x&&\text{\RL{بالائی}}\\
-\kvec{F}(x,y)\cdot (-\aj)\Delta x&=-N(x,y)\Delta x&&\text{\RL{نچلی}}\\
-\kvec{F}(x+\Delta x,y)\cdot \ai\Delta y&=M(x+\Delta x,y)\Delta y&&\text{\RL{دائیں}}\\
-\kvec{F}(x,y)\cdot (-\ai)\Delta y&=-M(x,y)\Delta y&&\text{\RL{بائیں}}
+\kvec{F}(x,y+\Delta y)\cdot \aj\Delta x&=N(x,y+\Delta y)\Delta x&&\text{\RL{بالا}}\\
+\kvec{F}(x,y)\cdot (-\aj)\Delta x&=-N(x,y)\Delta x&&\text{\RL{نچلا}}\\
+\kvec{F}(x+\Delta x,y)\cdot \ai\Delta y&=M(x+\Delta x,y)\Delta y&&\text{\RL{دایاں}}\\
+\kvec{F}(x,y)\cdot (-\ai)\Delta y&=-M(x,y)\Delta y&&\text{\RL{بایاں}}
 \end{aligned}
 \end{gather}
 مخالف اضلاع کی شرح کے مجموعات درج ذیل ہوں گے۔
 \begin{align}
-[N(x,y+\Delta y)-N(x,y)]\Delta x\approx \big(\frac{\partial N}{\partial y}\Delta y\big)\Delta x&&\text{\RL{نچلی اور بالائی}}\label{مساوات_سمتی_تکمل_نچلی_بالائی}\\
-[M(x+\Delta x,y)-M(x,y)]\Delta y\approx \big(\frac{\partial M}{\partial x}\Delta x\big)\Delta y&&\text{\RL{دائیں اور بائیں}}\label{مساوات_سمتی_تکمل_دایاں_بایاں}
+[N(x,y+\Delta y)-N(x,y)]\Delta x\approx \big(\frac{\partial N}{\partial y}\Delta y\big)\Delta x&&\text{\RL{نچلا اور بالا}}\label{مساوات_سمتی_تکمل_نچلی_بالائی}\\
+[M(x+\Delta x,y)-M(x,y)]\Delta y\approx \big(\frac{\partial M}{\partial x}\Delta x\big)\Delta y&&\text{\RL{دایاں اور بایاں}}\label{مساوات_سمتی_تکمل_دایاں_بایاں}
 \end{align}
 مساوات \حوالہ{مساوات_سمتی_تکمل_نچلی_بالائی} اور مساوات \حوالہ{مساوات_سمتی_تکمل_دایاں_بایاں} کا مجموعہ کل اخراج دیگا:
 \begin{align}
@@ -2398,16 +2398,16 @@ f(2,3,-1)-f(1,1,1)=2+C-(5+C)=-3
 باقی اطراف کی ہمراہ خلاف گھڑی  بہاؤ اسی طرح حاصل کی جا سکتی ہیں۔چاروں اضلاع کے نتائج درج ذیل ہوں گے۔
 \begin{gather}
 \begin{aligned}
-\kvec{F}(x,y+\Delta y)\cdot (-\ai)\Delta x&=-M(x,y+\Delta y)\Delta x&&\text{\RL{بالائی}}\\
-\kvec{F}(x,y)\cdot \ai\Delta x&=M(x,y)\Delta x&&\text{\RL{نچلی}}\\
-\kvec{F}(x+\Delta x,y)\cdot \aj\Delta y&=N(x+\Delta x,y)\Delta y&&\text{\RL{دائیں}}\\
-\kvec{F}(x,y)\cdot (-\aj)\Delta y&=-N(x,y)\Delta y&&\text{\RL{بائیں}}
+\kvec{F}(x,y+\Delta y)\cdot (-\ai)\Delta x&=-M(x,y+\Delta y)\Delta x&&\text{\RL{بالا}}\\
+\kvec{F}(x,y)\cdot \ai\Delta x&=M(x,y)\Delta x&&\text{\RL{نچلا}}\\
+\kvec{F}(x+\Delta x,y)\cdot \aj\Delta y&=N(x+\Delta x,y)\Delta y&&\text{\RL{دایاں}}\\
+\kvec{F}(x,y)\cdot (-\aj)\Delta y&=-N(x,y)\Delta y&&\text{\RL{بایاں}}
 \end{aligned}
 \end{gather}
 ہم مخالف اطراف کے اجزاء کا مجموعہ لیتے ہیں۔
 \begin{align}
--[M(x,y+\Delta y)-M(x,y)]\Delta x&\approx -\big(\frac{\partial M}{\partial y}\Delta y\big)\Delta x&&\text{\RL{بالائی اور نچلی}}\label{مساوات_سمتی_تکمل_بالائی_نچلی_گردش}\\
- [N(x+\Delta x,y)-N(x,y)]\Delta y&\approx \big(\frac{\partial N}{\partial x}\Delta x\big)\Delta x&&\text{\RL{دائیں اور بائیں}}\label{مساوات_سمتی_تکمل_دائیں_بائیں_گردش}
+-[M(x,y+\Delta y)-M(x,y)]\Delta x&\approx -\big(\frac{\partial M}{\partial y}\Delta y\big)\Delta x&&\text{\RL{بالا اور نچلا}}\label{مساوات_سمتی_تکمل_بالائی_نچلی_گردش}\\
+ [N(x+\Delta x,y)-N(x,y)]\Delta y&\approx \big(\frac{\partial N}{\partial x}\Delta x\big)\Delta x&&\text{\RL{دایاں اور بایاں}}\label{مساوات_سمتی_تکمل_دائیں_بائیں_گردش}
 \end{align}
 مساوات \حوالہ{مساوات_سمتی_تکمل_بالائی_نچلی_گردش} اور مساوات \حوالہ{مساوات_سمتی_تکمل_دائیں_بائیں_گردش} کے مجموعہ کو \عددی{\delta x\Delta y} سے تقسیم کر کے مستطیل کی کثافت دائری بہاؤ کی تخمینی قیمت حاصل ہو گی:
 \begin{align*}
@@ -5136,7 +5136,7 @@ S:\quad \mathbf{r}(r,\theta)=r\cos \theta\,\mathbf{i}+r\sin \theta\,\mathbf{j}+(
 
 \ابتدا{سوال}
 مستوی \عددی{xy} میں \عددی{R} ایسا خطہ ہے  جس کو  ٹکڑوں میں  ہموار سادہ بند منحنی  \عددی{C}  گھیرتی ہے۔  فرض کریں  محور \عددی{x} اور محور \عددی{y}   کے لحاظ سے \عددی{R} کے   جمود  بالترتیب \عددی{I_x} اور \عددی{I_y} ہیں۔ درج ذیل تکمل کی قیمت  \عددی{I_x} اور \عددی{I_y} کے روپ میں  تلاش کریں جہاں \عددی{r=\sqrt{x^2+y^2}}  ہے۔
-\[\ointctrclockwise_C \nabla(r^4)\cdot \kvec{n}\dif \sigma\]
+\[\ointctrclockwise_C \nabla(r^4)\cdot \kvec{n}\dif  s\]
 \انتہا{سوال}
 
 \ابتدا{سوال}\موٹا{گردش صفر  تاہم میدان غیر بقائی } \quad

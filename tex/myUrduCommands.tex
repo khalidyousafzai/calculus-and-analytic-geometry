@@ -159,7 +159,8 @@
 %\newcounter{kthcounter}[section]
 %\renewcommand{\thekthcounter}{\arabic{kthcounter}}
 \newcounter{kthcounter}[chapter]
-\renewcommand{\thekthcounter}{\thechapter.\arabic{kthcounter}}
+\renewcommand{\thekthcounter}{\arabic{kthcounter}}
+%\renewcommand{\thekthcounter}{\thechapter.\arabic{kthcounter}}
 
 \newenvironment*{مسئلہ}				
 {\par\noindent\ignorespaces  مسئلہ \refstepcounter{kthcounter} \thekthcounter :\quad}%
