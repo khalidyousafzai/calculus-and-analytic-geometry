@@ -1,0 +1,124 @@
+\documentclass{book}
+\usepackage{pgfplots}
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{compat=1.18}
+
+% =========================================================================
+% 1. MASTER BOOK CONFIGURATION SWITCH
+% =========================================================================
+\newif\ifcolorbook
+\colorbooktrue % <--- Set to 'true' for color/digital, 'false' for print B&W
+
+% =========================================================================
+% 2. THE UNIVERSAL BOOK-WIDE LAYOUT ENGINE
+% =========================================================================
+\ifcolorbook
+    % --- Color Palette (Using ColorBrewer Dark2 & Viridis) ---
+    \pgfplotscreateplotcyclelist{booklines}{
+        {Dark2-A, thick, no markers}, {Dark2-B, thick, no markers},
+        {Dark2-C, thick, no markers}, {Dark2-D, thick, no markers}
+    }
+    \pgfplotsset{
+        masterbookstyle/.style={
+            cycle list name=booklines,
+            colormap/viridis,
+            grid style={solid, gray!15}, % Soft grids for digital viewing
+        },
+        outer3D/.style={shader=faceted, faceted color=none, opacity=0.45},
+        inner3D/.style={shader=faceted, faceted color=none, fill=Dark2-D}
+    }
+\else
+    % --- Monochrome Palette (Highly distinct line styles & shading) ---
+    \pgfplotscreateplotcyclelist{booklines}{
+        {black,       thick, solid, no markers},
+        {black!60,    thick, dashed, no markers},
+        {black,       thick, dotted, no markers},
+        {black!70,    thick, dashdotted, no markers}
+    }
+    \pgfplotsset{
+        masterbookstyle/.style={
+            cycle list name=booklines,
+            colormap/blackwhite,
+            grid style={dashed, black!20}, % Highly readable dashed grid for print
+        },
+        outer3D/.style={shader=faceted, faceted color=black!25, thin, opacity=0.20},
+        inner3D/.style={shader=faceted, faceted color=black, thin, fill=black!75}
+    }
+\fi
+
+% =========================================================================
+% 3. FORCING GLOBALLY BALANCED GRAPHICS (No style collisions)
+% =========================================================================
+\pgfplotsset{
+    % Instantly hooks into every single \begin{axis} automatically
+    every axis/.append style={
+        masterbookstyle,
+        % Core Typography & Positioning
+        tick label style={font=\small}, 
+        label style={font=\small},
+        % Split keys to prevent TikZ / PGFPlots compilation errors
+       legend cell align=left,              
+        legend style={font=\small},          
+        % Clean academic layout aesthetics 
+        axis lines=left,            % Academic standard (L-shaped axis)
+        grid=major,                 % Uniform background grids book-wide
+        enlargelimits=false,        % Prevents data hanging past axis lines
+    }
+}
+
+\begin{document}
+
+% -------------------------------------------------------------------------
+% 2D Line Plot Example
+% -------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    xlabel=$x$, 
+    ylabel=$y$
+]
+    \addplot {x};
+    \addplot {x^2};
+    \addplot {x^3};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Linear versus power rates of change.}
+\end{figure}
+
+% -------------------------------------------------------------------------
+% 3D Transparent Surface Example (Seeing an inner object through an outer shell)
+% -------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    view={60}{30}, 
+    xlabel=$X$, 
+    ylabel=$Y$, 
+    zlabel=$Z$,
+    title={Universal 3D Style}
+]
+    % Inner object must be drawn first in the code layer
+    \addplot3[
+        surf, 
+        inner3D, 
+        domain=-0.6:0.6, 
+        samples=15
+    ] {0.8 * exp(-5*(x^2+y^2))};
+
+    % Outer transparent object drawn second to overlay smoothly
+    \addplot3[
+        surf, 
+        outer3D, 
+        domain=-2:2, 
+        samples=25
+    ] {exp(-0.5*(x^2+y^2))};
+\end{axis}
+\end{tikzpicture}
+\caption{Visualization of an intersecting vector landscape.}
+\end{figure}
+
+\end{document}
+
