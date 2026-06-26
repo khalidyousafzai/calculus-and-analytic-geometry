@@ -88,6 +88,8 @@
 \newcommand{\قولء}[1]{’\ignorespaces#1\ignorespaces‘}
 \newcommand{\قول}[1]{”\ignorespaces#1\ignorespaces“}
 
+\def\اردوعدد#1{\protect\farsidigits{\number#1}}			%to use proper urdu  numerals
+
 
 \renewcommand{\indexname}{فرہنگ}        %does nothing here. must be placed within begin{urdufont} environment to be the last to take effect 
 %===============================
@@ -167,8 +169,17 @@
 {\par\noindent }
 %--------------------
 %--------------------
+
+%the following doesnot have numberin
 \newenvironment*{مسئلہء}				
 {\par\noindent\ignorespaces  مسئلہ  \quad}%
+{\par\noindent }
+%--------------------
+%--------------------
+
+%the following doesnot say مسئلہ
+\newenvironment*{مسئلہءء}				
+{\par\noindent\ignorespaces    \quad}%
 {\par\noindent }
 %--------------------
 %--------------------
