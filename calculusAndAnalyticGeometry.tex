@@ -22,7 +22,7 @@
 
 
 %pathmorphing gives the ripples like look
-\usetikzlibrary{shapes,snakes,3d,shadings,fadings,intersections,calc,decorations.markings,decorations.pathreplacing,external,shapes.misc,decorations.pathmorphing,patterns,shapes.arrows}
+\usetikzlibrary{shapes,snakes,3d, shadings,fadings,intersections,calc,decorations.markings, decorations.pathreplacing, external,shapes.misc,decorations.pathmorphing,patterns,shapes.arrows,matrix}
 
 
 %\tikzexternalize[mode=list and make] %disable to generate figures
@@ -115,8 +115,8 @@ math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
 
 %\includeonly{./tex/calculusIntegrationInVectorFields}
 %\includeonly{,./tex/calculusMultivariableFunctionsAndPartialDerivatives}
-%\includeonly{,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC}
-\includeonly{,./tex/calculusAppendixC}
+%\includeonly{,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH}
+\includeonly{,./tex/calculusAppendixH}
 
 
 \author{
@@ -148,6 +148,7 @@ math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\everymath{\thickmuskip=0mu}    			%avoids space around =  in inline maths. to move it to sty file
 \setlatin
 %\linenumbers
 \makeindex
