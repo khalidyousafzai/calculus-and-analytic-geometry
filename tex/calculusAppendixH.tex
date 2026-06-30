@@ -136,6 +136,29 @@ a_{31}&a_{32}
 \end{array}\right|
 \end{align}
 
+بعض حضرات  \عددی{3} با \عددی{3}  قالب کے مقطع       میں پائے جانے والے چھ حاصل ضرب کو درج ذیل طریقہ کار سے معلوم کرنے   کو ترجیح دیتے ہیں۔
+
+\begin{align}\label{مساوات_ضمیمہ_مقطع_چھ_حاصل_ضرب}
+\begin{array}{ccc|ccc}
+&&&\tikzmark{a4}-&\tikzmark{a5}-&\tikzmark{a6}-\\
+\tikzmark{a1}a_{11}&\tikzmark{a2}  a_{12}&\tikzmark{a3}a_{13}&\tikzmark{aa3}a_{11}&a_{12}&\\
+a_{21}&a_{22}&a_{23}&a_{21}&a_{22}&\\
+\tikzmark{b1}a_{31}&\tikzmark{b2} a_{32}&\tikzmark{b3}a_{33}&a_{31}&a_{32}&\\
+&&\tikzmark{bb4}&\tikzmark{b4}+&\tikzmark{b5}+&\tikzmark{b6}+
+\end{array}
+\end{align}
+\begin{tikzpicture}[remember picture, overlay]
+  \draw[-latex] (a1.north) -- (b4.north);
+  \draw[-latex] (a2.north) -- (b5.north);
+  \draw[-latex] (a3.north) -- (b6.north);
+  \draw[-latex] (b1.south) -- (a4.west);
+  \draw[-latex] (b2.south) -- (a5.west);
+  \draw[-latex] (b3.south) -- (a6.west);
+\draw ($(a6)+(3em,0.2em)$)node{$\Leftarrow$}++(1em,0)node[right]{\RL{ان علامتوں کو تبدیل کریں}};
+\draw ($(b6)+(3em,0.2em)$)node{$\Leftarrow$}++(1em,0)node[right]{\RL{ان علامتوں کو تبدیل نہ کریں}};
+\end{tikzpicture}
+
+
 \جزوحصہء{اصاغر  اور ہمزاد اجزائے   ضربی}
 مساوات \حوالہ{مساوات_ضمیمہ_قالب_مقطع_سادہ} کے دائیں ہاتھ دو رتبی مقاطع  کو ان ارکان کے   \اصطلاح{اصاغر }\فرہنگ{اصاغر}\حاشیہب{minors}\فرہنگ{minors} (صغیر مقطع کی مختصر اصطلاح)    کہتے ہیں جن سے انہیں ضرب کیا گیا ہے۔یوں\\
 \[\left|
@@ -167,7 +190,7 @@ a_{31}&a_{33}
 حاصل ہوتا ہے۔
 \begin{tikzpicture}[remember picture, overlay]
   \draw[thick] (start.north) -- (end.south);
-  \draw[thick] (startL.east) -- (endL.west);
+  \draw[thick] (startL.north) -- ($(endL.south)+(0,0.25em)$);
 \end{tikzpicture}
 
 %================================
@@ -185,7 +208,7 @@ a_{31}&a_{32}
 حاصل ہوتا ہے۔
 \begin{tikzpicture}[remember picture, overlay]
   \draw[thick] (start.north) -- (end.south);
-  \draw[thick] (startL.east) -- (endL.west);
+  \draw[thick] (startL.north) -- ($(endL.south)+(0,0.25em)$);
 \end{tikzpicture}
 
 %=======================
@@ -221,5 +244,422 @@ a_{31}&a_{32}
 
 ہم مساوات \حوالہ{مساوات_ضمیمہ_قالب_مقطع_سادہ}کو ہمزاد اجزائے ضربی کے روپ میں درج لکھ سکتے ہیں۔
 \begin{align}
-A\,\text{}\,=\, a_{11}A_{11}+a_{12}A_{12}+a_{13}A_{13}
+A\,\text{مقطع}\,=\, a_{11}A_{11}+a_{12}A_{12}+a_{13}A_{13}
 \end{align}
+
+
+\ابتدا{مثال}\شناخت{مثال_ضمیمہ_مقطع_دو}
+درج ذیل قالب کا مقطع تلاش کریں۔
+\begin{align*}
+A=
+\left[
+\begin{array}{rrr}
+2&1&3\\
+3&-1&-2\\
+2&3&1
+\end{array}
+\right]
+\end{align*}
+
+\موٹا{حل 1}:\quad
+ہمزاد اجزائے ضربی حاصل کرتے ہیں۔
+\begin{align*}
+A_{11}&=(-1)^{1+1}\left |
+\begin{array}{rr}
+-1&-2\\
+3&1
+\end{array}
+\right |,\quad
+A_{12}=(-1)^{1+2}\left |
+\begin{array}{rr}
+3&-2\\
+2&1
+\end{array}
+\right |,\\
+A_{13}&=(-1)^{1+3}\left |
+\begin{array}{rr}
+3&-1\\
+2&3
+\end{array}
+\right |
+\end{align*}
+مقطع \عددی{A} معلوم کرنے کے لئے \عددی{A} کے پہلی صف کا ہر رکن اپنے ہمزاد جزو ضربی سے ضرب کر کے مجموعہ لیتے ہیں۔
+\begin{align*}
+\,A\text{مقطع}\,&=\,
+2 \left |
+\begin{array}{rr}
+-1&-2\\
+3&1
+\end{array}
+\right |
++(-1) \left |
+\begin{array}{rr}
+3&-2\\
+2&1
+\end{array}
+\right |
++3 \left |
+\begin{array}{rr}
+3&-1\\
+2&3
+\end{array}
+\right |\\
+&=2(-1+6)-1(3+4)+3(9+2)=10-7+33=36
+\end{align*}
+\موٹا{حل 2}:\quad 
+ہم مساوات \حوالہ{مساوات_ضمیمہ_مقطع_چھ_حاصل_ضرب} سے درج ذیل لکھتے ہیں۔
+\begin{align*}
+\begin{array}{rrr|ccc}
+&&&\tikzmark{a4} &\tikzmark{a5}  &\tikzmark{a6} \\
+\tikzmark{a1} 2&\tikzmark{a2}  1 &\tikzmark{a3} 3& 2& 1&\\
+3&-1&-2&3&-1&\\
+\tikzmark{b1}2&\tikzmark{b2} 3&\tikzmark{b3}1&2&3&\\
+&&&\tikzmark{b4} &\tikzmark{b5}&\tikzmark{b6}
+\end{array}
+\end{align*}
+\begin{tikzpicture}[remember picture, overlay]
+  \draw[-latex] (a1.north) -- (b4.north)node[below]{$-2$};
+  \draw[-latex] (a2.north) -- (b5.north)node[below]{$-4$};
+  \draw[-latex] (a3.north) -- (b6.north)node[below,xshift=0.5em]{$27$};
+  \draw[-latex] (b1.west) -- (a4.north)node[above ]{$-6$};
+  \draw[-latex] (b2.west) -- (a5.north)node[above ]{$-12$};
+  \draw[-latex] (b3.west) -- (a6.north)node[above ,xshift=0.5em]{$3$};
+\draw ($(a6)+(3em,0.2em)$)node[yshift=0.75em]{$\Leftarrow$}++(1em,0)node[right,yshift=0.75em]{\RL{ان علامتوں کو تبدیل کریں}};
+\draw ($(b6)+(3em,0.2em)$)node[yshift=-0.70em]{$\Leftarrow$}++(1em,0)node[right,yshift=-0.70em]{\RL{ان علامتوں کو تبدیل نہ کریں}};
+\end{tikzpicture}
+
+\(A\,\text{مقطع}\,=\,-(-6)-(-12)-3+(-2)+(-4)+27=36\)
+
+\انتہا{مثال}
+
+
+\جزوحصہء{دیگر قطار یا دیگر صف پر پھیلانا}
+مکعب قالب  کا مقطع کسی بھی صف یا قطار  کے ہمزاد اجزائے ضربی سے تلاش کیا جا سکتا ہے۔
+
+ہم مثال  \حوالہ{مثال_ضمیمہ_مقطع_دو}  میں مقطع کو  تیسرے قطار  کے ہمزاد اجزائے ضربی سے حاصل کر سکتے تھے۔ یہ عمل درج ذیل ہے۔
+\begin{align*}
++3\left | 
+\begin{array}{rr}
+3&-1\\
+2&3
+\end{array}
+\right |
+-(-2)\left | 
+\begin{array}{rr}
+2&1\\
+2&3
+\end{array}
+\right |
++1&\left | 
+\begin{array}{rr}
+2&1\\
+3&-1
+\end{array}
+\right |\\
+&=3(9+2)+2(6-2)+1(-2-3)=33+8-5=36
+\end{align*}
+
+\جزوحصہء{مقطع کے مفید حقائق}
+\موٹا{حقیقت 1:}\quad
+اگر دو صف (یا دو  قطار)  یکساں  ہوں، مقطع صفر ہو گا۔
+
+\موٹا{حقیقت 2:} \quad
+دو صف (یا دو قطار)   آپس میں بدلنے سے مقطع کی علامت تبدیل ہو گی۔
+
+\موٹا{حقیقت 3:}\quad 
+ایک صف دوسری صف کے ساتھ جمع کرنے یا اس سے منفی کرنے سے مقطع تبدیل نہیں ہوتا۔ اسی طرح ایک قطار دوسری قطار کے ساتھ جمع کرنے یا اس سے منفی کرنے سے مقطع کی قیمت تبدیل نہیں ہوتی۔
+
+
+ہم مثال \حوالہ{مثال_ضمیمہ_مقطع_دو} کے قالب میں دو صف آپس میں تبدیل کر کے مقطع تلاش کر کے دیکھتے  ہیں۔
+\begin{align*}
+\begin{array}{rrr|rrr}
+&&&\tikzmark{a4} &\tikzmark{a5}  &\tikzmark{a6} \\
+\tikzmark{a1} 2&\tikzmark{a2}  1 &\tikzmark{a3} 3& 2& 1&\\
+2&3&1&2&3&\\
+\tikzmark{b1}3&\tikzmark{b2} -1&\tikzmark{b3}-2&3&-1&\\
+&&&\tikzmark{b4} &\tikzmark{b5}&\tikzmark{b6}
+\end{array}
+\end{align*}
+\begin{tikzpicture}[remember picture, overlay]
+  \draw[-latex] (a1.north) -- (b4.north)node[below]{$-12$};
+  \draw[-latex] (a2.north) -- (b5.north)node[below]{$3$};
+  \draw[-latex] (a3.north) -- (b6.north east)node[below,xshift=0.5em]{$-6$};
+  \draw[-latex] (b1.west) -- (a4.north)node[above ]{$27$};
+  \draw[-latex] (b2.south) -- (a5.north)node[above ]{$-2$};
+  \draw[-latex] (b3.south) -- (a6.east)node[above ,yshift=0.4em,xshift=0.5em]{$-4$};
+\end{tikzpicture}
+\[-(27)-(-2)-(-4)+(-12)+(3)+(-6)=-36\]
+آپ نے دیکھا کہ مقطع کی علامت تبدیل ہوئی۔
+
+
+\ابتدا{مثال}
+چھ رتبی مقطع تلاش کریں۔
+\begin{align*}
+D=\left |
+\begin{array}{rrrr}
+1&-2&3&1\\
+2&1&0&2\\
+-1&2&1&-2\\
+0&1&2&1
+\end{array}\right |
+\end{align*}
+\موٹا{حل:}\quad
+ہم  پہلی صف کو دو سے ضرب دے کر دوسری صف سے منفی کرتے ہیں، اور پہلی صف کو تیسری صف کے ساتھ جمع کرتے ہیں۔
+\begin{align*}
+D=\left |
+\begin{array}{rrrr}
+1&-2&3&1\\
+0&5&-6&0\\
+0&0&4&-1\\
+0&1&2&1
+\end{array}\right |
+\end{align*}
+ہم اب پہلی قطار  کے اراکین کو ہمزاد اجزائے ضربی سے ضرب دے کر مقطع حاصل کرتے ہیں۔
+\begin{align*}
+D=\left |
+\begin{array}{rrr}
+5&-6&0\\
+0&4&-1\\
+1&2&1
+\end{array}\right |=5(4+2)-(-6)(0+1)+0=36
+\end{align*}
+\انتہا{مثال}
+
+
+\حصہء{کریمر کا قاعدہ}
+اگر نظام
+\begin{gather}
+\begin{aligned}
+a_{11}x+a_{12}y&=b_1\\
+a_{21}x+a_{22}y&=b_2
+\end{aligned}
+\end{gather}
+ کا مقطع صفر ہو
+\begin{align*}
+D=A\,\text{مقطع}\,=\,
+\left |
+\begin{array}{rr}
+a_{11}&a_{12}\\
+a_{21}&a_{22}
+\end{array}
+\right |=0
+\end{align*}
+تب نظام کا یا   کوئی حل موجود نہیں ہو گا اور یا اس کے لامتناہی حل موجود ہوں گے۔درج ذیل نظام
+\begin{align*}
+x+y&=0\\
+2x+2y&=0
+\end{align*}
+جس کا  مقطع صفر ہے
+\begin{align*}
+D=\left|
+\begin{array}{rr}
+1&1\\
+2&2
+\end{array}
+ \right|=2-2=0
+\end{align*}
+کے لامتناہی حل موجود ہیں۔ ہم  کسی بھی دیے گئے \عددی{y} کے لئے  مطابقتی \عددی{x} تلاش کر سکتے ہیں۔ درج ذیل نظام
+\begin{align*}
+x+y&=0\\
+2x+2y&=2
+\end{align*}
+کا کوئی حل موجود نہیں۔ اگر \عددی{x+y=0}  ہو تب \عددی{2x+2y=2(x+y)} کسی صورت \عددی{2} کے برابر نہیں ہو سکتا۔
+
+\حصہء{سوالات}
+
+\جزوحصہء{مقطع کی قیمت تلاش کریں}
+درج ذیل مقطع تلاش کریں۔
+
+\ابتدا{سوال}
+\(
+\left |
+\begin{array}{rrr}
+2&3&1\\
+4&5&2\\
+1&2&3
+\end{array} \right |
+\)
+\انتہا{سوال}
+\ابتدا{سوال}
+\(
+\left |
+\begin{array}{rrr}
+2&-1&-2\\
+-1&2&1\\
+3&0&-3
+\end{array} \right |
+\)
+\انتہا{سوال}
+\ابتدا{سوال}
+\(
+\left |
+\begin{array}{rrrr}
+1&2&3&4\\
+0&1&2&3\\
+0&0&2&1\\
+0&0&3&2
+\end{array} \right |
+\)
+\انتہا{سوال}
+\ابتدا{سوال}
+\(
+\left |
+\begin{array}{rrrr}
+1&-1&2&3\\
+2&1&2&6\\
+1&0&2&3\\
+-2&2&0&-5
+\end{array} \right |
+\)
+\انتہا{سوال}
+
+درج ذیل مقطع (ا) تیسری صف اور (ب) دوسری قطار  کے ہمزاد اجزائے ضربی  سے تلاش کریں۔
+
+\ابتدا{سوال}
+\(
+\left |
+\begin{array}{rrr}
+2&-1&2\\
+1&0&3\\
+0&2&1
+\end{array} \right |
+\)
+\انتہا{سوال}
+\ابتدا{سوال}
+\(
+\left |
+\begin{array}{rrr}
+1&0&-1\\
+0&2&-2\\
+2&0&1
+\end{array} \right |
+\)
+\انتہا{سوال}
+\ابتدا{سوال}
+\(
+\left |
+\begin{array}{rrrr}
+1&1&0&0\\
+0&0&-2&1\\
+0&-1&0&7\\
+3&0&2&1
+\end{array} \right |
+\)
+\انتہا{سوال}
+\ابتدا{سوال}
+\(
+\left |
+\begin{array}{rrrr}
+0&1&0&0\\
+0&1&1&0\\
+1&1&1&1\\
+1&1&0&0
+\end{array} \right |
+\)
+\انتہا{سوال}
+
+\جزوحصہء{نظام کی مساوات}
+
+کریمر کا قاعدہ  استعمال کر کے  درج ذیل  نظام  کی مساوات حل کریں۔
+
+\ابتدا{سوال}
+\begin{align*}
+x+8y&=4\\
+3x-y&=-13
+\end{align*}
+\انتہا{سوال}
+\ابتدا{سوال}
+\begin{align*}
+2x+3y&=5\\
+3x-y&=2
+\end{align*}
+\انتہا{سوال}
+\ابتدا{سوال}
+\begin{align*}
+4x-3y&=6\\
+3x-2y&=5
+\end{align*}
+\انتہا{سوال}
+\ابتدا{سوال}
+\begin{align*}
+x+y+z&=2\\
+2x-y+z&=0\\
+x+2y-z&=4
+\end{align*}
+\انتہا{سوال}
+\ابتدا{سوال}
+\begin{align*}
+2x+y-z&=2\\
+x-y+z&=7\\
+2x+2y+z&=4
+\end{align*}
+\انتہا{سوال}
+\ابتدا{سوال}
+\begin{align*}
+2x-4y\phantom{+3z}&=6\\
+x+y+z&=1\\
+5y+7z&=10
+\end{align*}
+\انتہا{سوال}
+\ابتدا{سوال}
+\begin{align*}
+x\phantom{+2y}-z&=3\\
+2y-2z&=2\\
+2x\phantom{+2y}+z&=3
+\end{align*}
+\انتہا{سوال}
+\ابتدا{سوال}
+\begin{align*}
+x_1+x_2-x_3+x_4&=2\\
+x_1-x_2+x_3+x_4&=-1\\
+x_1+x_2+x_3-x_4&=2\\
+x_1\phantom{+2x_2}+x_3+x_4&=-1
+\end{align*}
+\انتہا{سوال}
+
+\جزوحصہء{نظریہ اور مثال}
+
+\ابتدا{سوال}
+درج ذیل نظام کے لئے \عددی{h} اور \عددی{k} کی  ایسی  قیمتیں تلاش کریں کہ نظام (ا)   کے حلول   کی تعداد لامتناہی ہو، (ب) کا  کوئی حل نہ ہو۔
+\begin{align*}
+2x+hy&=8\\
+x+3y&=k
+\end{align*}
+\انتہا{سوال}
+\ابتدا{سوال}
+متغیر \عددی{x} کی کس قیمت پر درج ذیل ہو گا۔
+\[
+\left |
+\begin{array}{rrr}
+x&x&1\\
+2&0&5\\
+6&7&1
+\end{array}\right  |=0
+\]
+\انتہا{سوال}
+\ابتدا{سوال}
+فرض کریں \عددی{u}، \عددی{v}، اور \عددی{w}   متغیر \عددی{x} کے تفاعل اور دو مرتبہ قابل تفرق ہیں،   اور \عددی{au+bv+cw=0}  کو مطمئن کرتے ہیں، جہاں \عددی{a}، \عددی{b}، اور \عددی{c}  مستقل ہیں جو ایک ساتھ صفر نہیں ہو سکتے۔ درج ذیل دکھائیں۔
+\[
+\left |
+\begin{array}{lll}
+u&v&w\\
+u'&v'&w'\\
+u''&v''&w''
+\end{array}
+\right |=0
+\]
+\انتہا{سوال}
+\ابتدا{سوال}\ترچھا{جزوی کسر}\quad 
+درج ذیل حاصل تقسیم
+\[\frac{ax+b}{(x-r_1)(x-r_2)}\]
+  کا جزوی کسری پھیلاؤ  تلاش کرنا  \عددی{C} اور \عددی{D} کی ایسی قیمت تلاش کرنے کے مترادف ہے کہ تمام \عددی{x} کے لئے درج ذیل مطمئن ہو۔
+\[\frac{ax+b}{(x-r_1)(x-r_2)}=\frac{C}{x-r_1}+\frac{D}{x-r_2}\]
+
+\begin{enumerate}[a.]
+\item
+خطی مساوات کا  ایسا نظام تلاش کریں   جس سے \عددی{C} اور \عددی{D}  کی قیمتیں حاصل ہوں۔
+\item
+کن شرائط کے تحت جزو (ا) میں نظام  کا حل یکتا ہو گا؟ یعنی  نظام کے عددی سروں کے قالب  کا مقطع  کب صفر نہیں ہو گا؟
+\end{enumerate}
+\انتہا{سوال}
+
