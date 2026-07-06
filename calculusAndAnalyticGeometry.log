@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.6.2)  3 JUL 2026 17:25
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.6.2)  6 JUL 2026 17:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1524,7 +1524,7 @@ xt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 56.
+(Font)              scaled to size 10.0pt on input line 57.
 
 Package fontspec Info: Font family 'Arial(0)' created for font 'Arial' with
 (fontspec)             options [].
@@ -1646,9 +1646,9 @@ Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
 Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
 )
 \verbatim@out=\write4
-runsystem(touch w18-test-2026731045.tex)...disabled (restricted).
+runsystem(touch w18-test-2026761024.tex)...disabled (restricted).
 
-runsystem(rm -f w18-test-2026731045.tex)...disabled (restricted).
+runsystem(rm -f w18-test-2026761024.tex)...disabled (restricted).
 
 runsystem(rm -f "calculusAndAnalyticGeometry.gnuploterrors")...disabled (restri
 cted).
@@ -1705,35 +1705,54 @@ Writing index file calculusAndAnalyticGeometry.idx
 (./tex/calculusMultivariableFunctionsAndPartialDerivatives.aux)
 (./tex/calculusMultipleIntegrals.aux)
 (./tex/calculusIntegrationInVectorFields.aux) (./tex/temp.aux)
-(./tex/calculusAppendixA.aux) (./tex/calculusAppendixB.aux)
-(./tex/calculusAppendixC.aux) (./tex/calculusAppendixD.aux)
-(./tex/calculusAppendixE.aux) (./tex/calculusAppendixF.aux)
-(./tex/calculusAppendixG.aux) (./tex/calculusAppendixH.aux)
-(./tex/calculusAppendixI.aux) (./tex/calculusIntegrationTable.aux))
+(./tex/calculusAppendixA.aux
+
+LaTeX Warning: Label `footdir@1125' multiply defined.
+
+
+LaTeX Warning: Label `footdir@1126' multiply defined.
+
+) (./tex/calculusAppendixB.aux) (./tex/calculusAppendixC.aux
+
+LaTeX Warning: Label `footdir@1129' multiply defined.
+
+
+LaTeX Warning: Label `footdir@1127' multiply defined.
+
+
+LaTeX Warning: Label `footdir@1128' multiply defined.
+
+
+LaTeX Warning: Label `footdir@1130' multiply defined.
+
+) (./tex/calculusAppendixD.aux) (./tex/calculusAppendixE.aux)
+(./tex/calculusAppendixF.aux) (./tex/calculusAppendixG.aux)
+(./tex/calculusAppendixH.aux) (./tex/calculusAppendixI.aux)
+(./tex/calculusIntegrationTable.aux))
 \openout1 = `calculusAndAnalyticGeometry.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 158.
-LaTeX Font Info:    ... okay on input line 158.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 158.
-LaTeX Font Info:    ... okay on input line 158.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 158.
-LaTeX Font Info:    ... okay on input line 158.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 158.
-LaTeX Font Info:    ... okay on input line 158.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 158.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 157.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-58.
+57.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 158.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 158.
-LaTeX Font Info:    ... okay on input line 158.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 158.
-LaTeX Font Info:    ... okay on input line 158.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 158.
-LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
 
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
@@ -1745,7 +1764,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 
-Package chemgreek Info: Activating mapping `fontspec' on line 158.
+Package chemgreek Info: Activating mapping `fontspec' on line 157.
 
 
 *geometry* driver: auto-detecting
@@ -1813,68 +1832,68 @@ xt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 158.
+(Font)              scaled to size 10.0pt on input line 157.
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 170.
+(Font)              scaled to size 17.28pt on input line 169.
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 170.
+(Font)              scaled to size 12.0pt on input line 169.
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 1
-70.
+69.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-170.
+169.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-170.
+169.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-170.
+169.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 17
-0.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 16
+9.
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 170.
+(Font)              scaled to size 12.50409pt on input line 169.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 170.
+(Font)              scaled to size 9.37807pt on input line 169.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 170.
+(Font)              scaled to size 7.29405pt on input line 169.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 170.
+(Font)              scaled to size 12.50409pt on input line 169.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 170.
+(Font)              scaled to size 9.37807pt on input line 169.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 170.
+(Font)              scaled to size 7.29405pt on input line 169.
 LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-170.
+169.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Trying to load font information for U+esint on input line 1
-70.
+69.
 
 (/usr/share/texlive/texmf-dist/tex/latex/esint/uesint.fd
 File: uesint.fd 
 )
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 170.
+(Font)              scaled to size 9.0pt on input line 169.
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 170.
+(Font)              scaled to size 12.0pt on input line 169.
 
 Missing character: There is no ؍ (U+060D) in font Jameel Noori Nastaleeq/OT:scr
 ipt=arab;language=dflt;mapping=tex-text;!
@@ -1889,12 +1908,12 @@ ipt=arab;language=dflt;mapping=tex-text;!
 
 ]
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 172.
+(Font)              scaled to size 24.88pt on input line 171.
 
 
 LaTeX Font Warning: Font shape `TU/JameelNooriNastaleeq(2)/b/n' undefined
 (Font)              using `TU/JameelNooriNastaleeq(2)/m/n' instead on input lin
-e 172.
+e 171.
 
 (./calculusAndAnalyticGeometry.toc
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/b/n' will be
@@ -1938,49 +1957,83 @@ e 162.
 
  (./tex/temp.tex
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 1.
+(Font)              scaled to size 14.4pt on input line 4.
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 1.
+(Font)              scaled to size 14.4pt on input line 4.
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
+(Font)              scaled to size 7.6pt on input line 10.
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 10.
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--17
+[]\TU/JameelNooriNastaleeq(2)/b/n/10 ایک مقدار معلوم روپ بھی پایا جاتا ہے جس می
+ں سطح پر نقطے کا مقام دو متغیرات کا سمتی تفاعل دیتا ہے۔ اس حصے میں سطحی رقبے او
+ر سطحی تکملات کے مطالعہ کو ان[]
+ []
+
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 3.
+(Font)              scaled to size 12.0pt on input line 18.
 
-Underfull \hbox (badness 1728) in paragraph at lines 10--13
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۳:  مستوی $\OML/zplm/m/it/10 x \
-OT1/zplm/m/n/10 + \OT1/ppl/m/n/10 2\OML/zplm/m/it/10 y \OT1/zplm/m/n/10 + \OT1/
-ppl/m/n/10 2\OML/zplm/m/it/10 z \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 5$ \TU/Jamee
-lNooriNastaleeq(2)/b/n/10 سے ایک بیلن ، جس کی دیواریں $\OML/zplm/m/it/10 x \OT1
-/zplm/m/n/10 = \OML/zplm/m/it/10 y[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور $\
-OML/zplm/m/it/10 x \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 2 \OMS/zplm/m/n/10 ^^@ \O
-ML/zplm/m/it/10 y[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 ہیں، جو خطہ کاٹتا ہے اس
- کا رقبہ[]
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+[]\TU/JameelNooriNastaleeq(2)/b/n/10 فرض کریں استمراری سمتی تفاعل جو مستوی $\OM
+L/zplm/m/it/10 uv$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے خطہ $\OML/zplm/m/it/10
+ R$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر معین اور $\OML/zplm/m/it/10 R$ \TU/Ja
+meelNooriNastaleeq(2)/b/n/10 کے اندرونی حصے میں ایک ایک مطابقت رکھتا ہے (شکل ۱۵
+.۵۹[]) کو درج ذیل[]
+ []
+
+LaTeX Font Info:    Font shape `TU/AASameerSagarNastaleeqBold(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 57.
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 57.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 57.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 57.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 57.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 57.
+LaTeX Info: Redefining \rmfamily on input line 57.
+LaTeX Info: Redefining \sffamily on input line 57.
+LaTeX Info: Redefining \ttfamily on input line 57.
+LaTeX Info: Redefining \rmfamily on input line 57.
+LaTeX Info: Redefining \sffamily on input line 57.
+LaTeX Info: Redefining \ttfamily on input line 57.
+LaTeX Info: Redefining \rmfamily on input line 57.
+LaTeX Info: Redefining \sffamily on input line 57.
+LaTeX Info: Redefining \ttfamily on input line 57.
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--58
+[] \TU/JameelNooriNastaleeq(2)/b/n/10 ہم $\OML/cmm/b/it/10 r$ \TU/JameelNooriNa
+staleeq(2)/b/n/10 کے دائرہ کار کو \TU/AASameerSagarNastaleeqBold(0)/m/n/10 سطح 
+[][]$\OML/zplm/m/it/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10 کہتے ہیں جس کی تعر
+یف یا نقشہ کشی $\OML/cmm/b/it/10 r$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے ذریعہ
+ کی جاتی ہے۔ مساوات ۱۵.۱[] اور $\OML/zplm/m/it/10 R$ \TU/JameelNooriNastaleeq(2
+)/b/n/10 کا دائرہ کار مل کر سطح کا \TU/AASameerSagarNastaleeqBold(0)/m/n/10 مقد
+ار معلوم[]
  []
 
 
-Underfull \hbox (badness 1210) in paragraph at lines 38--41
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۱۲:  مستوی $\OML/zplm/m/it/10 xy
-$ \TU/JameelNooriNastaleeq(2)/b/n/10 میں واقع مربع $\OML/zplm/m/it/10 R \OT1/zp
-lm/m/n/10 :  \OT1/ppl/m/n/10 0 \OMS/zplm/m/n/10 ^^T \OML/zplm/m/it/10 x \OMS/zp
-lm/m/n/10 ^^T \OT1/ppl/m/n/10 1,  0 \OMS/zplm/m/n/10 ^^T \OML/zplm/m/it/10 y \O
-MS/zplm/m/n/10 ^^T \OT1/ppl/m/n/10 1$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے اوپ
-ر سطح $\OT1/ppl/m/n/10 2\OML/zplm/m/it/10 x[] \OT1/zplm/m/n/10 + \OT1/ppl/m/n/1
-0 2\OML/zplm/m/it/10 y[] \OMS/zplm/m/n/10 ^^@ \OT1/ppl/m/n/10 3\OML/zplm/m/it/1
-0 z \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 0$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا
- جو حصہ پایا[]
+Underfull \hbox (badness 1466) in paragraph at lines 22--58
+[]\TU/AASameerSagarNastaleeqBold(0)/m/n/10 روپ[][][] []\TU/JameelNooriNastaleeq
+(2)/b/n/10 دیتے ہیں۔ متغیرات $\OML/zplm/m/it/10 u$ \TU/JameelNooriNastaleeq(2)/
+b/n/10 اور $\OML/zplm/m/it/10 v$ \TU/AASameerSagarNastaleeqBold(0)/m/n/10 مقدار
+ معلوم[][][] []\TU/JameelNooriNastaleeq(2)/b/n/10 کہلاتے ہیں جبکہ $\OML/zplm/m/
+it/10 R$ \TU/JameelNooriNastaleeq(2)/b/n/10 کو \TU/AASameerSagarNastaleeqBold(0
+)/m/n/10 مقدار معلوم کا دائرہ کار[][][] []\TU/JameelNooriNastaleeq(2)/b/n/10 کہ
+ا جاتا ہے۔مباحثہ سادہ رکھنے کی خاطر[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--52
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۱۵:  ثمن اول سے مستویات $\OML/zp
-lm/m/it/10 x \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 a$\TU/JameelNooriNastaleeq(2)
-/b/n/10 ، $\OML/zplm/m/it/10 y \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 b$\TU/Jamee
-lNooriNastaleeq(2)/b/n/10 ، اور $\OML/zplm/m/it/10 z \OT1/zplm/m/n/10 = \OML/zp
-lm/m/it/10 c$ \TU/JameelNooriNastaleeq(2)/b/n/10 جو مستطیلی ٹھوس جسم کاٹتی ہیں 
-اس کی سطح پر $\OML/zplm/m/it/10 g\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/
-m/n/10 , \OML/zplm/m/it/10 y\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/
-10 ) = \OML/zplm/m/it/10 xyz$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا[]
+Underfull \hbox (badness 10000) in paragraph at lines 22--58
+[]$\OML/zplm/m/it/10 R$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے اندرون میں $\OML/
+cmm/b/it/10 r$ \TU/JameelNooriNastaleeq(2)/b/n/10 ایک ایک مطابقت رکھتا ہو، یقین
+ی بناتا ہے کہ سطح $\OML/zplm/m/it/10 S$\TU/JameelNooriNastaleeq(2)/b/n/10 خود ک
+و قطع نہیں کرتی۔ دھیان رہے کہ مساوات ۱۵.۱[]درج ذیل تین مقدار معلوم[]
  []
 
-[1709
+[1714
 
 
 
@@ -1997,196 +2050,178 @@ m/n/10 , \OML/zplm/m/it/10 y\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/
 
 
 
+
+
+
+
+] [1715]
+
+Package pgf Warning: No path specified that can be filled on input line 134.
+
+[1716] [1717]
+
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [0.0:0.0]) on input line 376.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+
+Underfull \hbox (badness 1448) in paragraph at lines 383--384
+[][]\TU/JameelNooriNastaleeq(2)/b/n/10 ہمواری کی تعریف میں یہ شرط کہ سمتیہ $\OM
+L/cmm/b/it/10 r[] \OMS/zplm/m/n/10 ^^B \OML/cmm/b/it/10 r[]$ \TU/JameelNooriNas
+taleeq(2)/b/n/10 مقدار معلوم دائرہ کار پر کبھی صفر نہ ہو، اس بات کو یقینی بناتی
+ ہے کہ سمتیات $\OML/cmm/b/it/10 u$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور $\OML
+/cmm/b/it/10 v$ \TU/JameelNooriNastaleeq(2)/b/n/10 نہ صرف غیر[]
+ []
+
+[1718]
+Underfull \hbox (badness 10000) in paragraph at lines 434--451
+[][]\TU/JameelNooriNastaleeq(2)/b/n/10 شکل۱۵.۶۴[]میں $\OT1/zplm/m/n/10 ^^A\OML/
+zplm/m/it/10 ^^[[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 بڑا کرکے دکھایا گیا ہے۔ 
+سمتیہ $\OML/cmm/b/it/10 r[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 u[]\OT1/ppl/m/n/
+10 , \OML/zplm/m/it/10 v[]\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/1
+0 منحنی $\OML/zplm/m/it/10 C[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 کو نقطہ $\OM
+L/zplm/m/it/10 P[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے مقام پر مماس ہے۔ اسی 
+طرح[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--451
+[]$\OML/cmm/b/it/10 r[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 u[]\OT1/ppl/m/n/10 ,
+ \OML/zplm/m/it/10 v[]\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10 من
+حنی $\OML/zplm/m/it/10 C[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 کو نقطہ $\OML/zp
+lm/m/it/10 P[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے مقام پر مماس ہے۔ ان دونوں
+ سمتیات کا صلیبی ضرب $\OML/cmm/b/it/10 r[] \OMS/zplm/m/n/10 ^^B \OML/cmm/b/it/1
+0 r[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 نقطہ $\OML/zplm/m/it/10 P[]$ \TU/Jame
+elNooriNastaleeq(2)/b/n/10 پر سطح کے عمود کا[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--461
+[][]\TU/JameelNooriNastaleeq(2)/b/n/10 ہم سطحی ٹکڑا $\OT1/zplm/m/n/10 ^^A\OML/z
+plm/m/it/10 ^^[[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 کو مماسی مستوی پر موجود ا
+س متوازی الاضلاع سے تخمین دیتے ہیں جس کے اطراف سمتیات $\OT1/zplm/m/n/10 ^^A\OML
+/zplm/m/it/10 u \OML/cmm/b/it/10 r[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور $\
+OT1/zplm/m/n/10 ^^A\OML/zplm/m/it/10 v \OML/cmm/b/it/10 r[]$ \TU/JameelNooriNas
+taleeq(2)/b/n/10 ہیں (شکل[]
+ []
+
+[1719]
+Underfull \hbox (badness 10000) in paragraph at lines 483--484
+[][]\TU/JameelNooriNastaleeq(2)/b/n/10 اگر $\OT1/zplm/m/n/10 ^^A\OML/zplm/m/it/
+10 u$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور $\OT1/zplm/m/n/10 ^^A\OML/zplm/m/i
+t/10 v$ \TU/JameelNooriNastaleeq(2)/b/n/10 آزادانہ طور پر صفر کو پہنچتے ہو، $\O
+ML/cmm/b/it/10 r[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور $\OML/cmm/b/it/10 r[
+]$ \TU/JameelNooriNastaleeq(2)/b/n/10 کی استمرار اس بات کی ضمانت دیتا ہے کہ مسا
+وات 3 میں دیا گیا مجموعہ دوہرا تکمل[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--484
+[]$[][] [][] [] [] \OML/zplm/m/it/10 u [] v$ \TU/JameelNooriNastaleeq(2)/b/n/10
+ کو پہنچے گا۔ یہی دوہرا تکمل سطح $\OML/zplm/m/it/10 S$ \TU/JameelNooriNastaleeq
+(2)/b/n/10 کے رقبے کی تعریف ہے، اور یہ پچھلی تعریفوں کے ساتھ ہم آہنگ ہونے کے سا
+تھ[]
+ []
+
+
+Overfull \hbox (13.2739pt too wide) detected at line 493
+[]
+ []
+
+[1720] [1721] [1722]
+Underfull \vbox (badness 5563) has occurred while \output is active []
+
+ [1723]
+[1724]
+Underfull \vbox (badness 3271) has occurred while \output is active []
+
+ [1725]
+Underfull \hbox (badness 10000) in paragraph at lines 756--757
+[]\TU/JameelNooriNastaleeq(2)/b/n/10 سوال 1 تا 16 میں دی گئی سطح کا مقدار معلوم
+ روپ تلاش کریں۔(درست جواب کے مختلف روپ ممکن ہیں لہٰذا آپ کے جواب کتاب میں دیے ج
+واب سے[]
+ []
+
+[1726]
+Underfull \hbox (badness 10000) in paragraph at lines 828--832
+[]\TU/JameelNooriNastaleeq(2)/b/n/10 سوال 17 تا 26 میں مقدار معلوم روپ استعمال 
+کر کے سطح کے رقبے کو دوہرا تکمل لکھیں۔ اس کے بعد تکمل کی قیمت تلاش کریں۔(تکمل ل
+کھنے کے کئی درست[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 828--832
+[]\TU/JameelNooriNastaleeq(2)/b/n/10 طریقے ہیں لہٰذا آپ کا لکھا ہوا تکمل کتاب م
+یں دیے جواب سے مختلف ہو سکتا ہے۔ تاہم ان کی قیمت وہی ہونی چاہیے جو کتاب میں دی 
+گئی ہے۔) سوال  ۱۵.۱۷:[]
+ []
+
+[1727]
+Missing character: There is no ّ ("651) in font zplmr7m!
+[1728] [1729]
+Underfull \hbox (badness 10000) in paragraph at lines 982--984
+[]\TU/JameelNooriNastaleeq(2)/b/n/10 مقدار معلوم سطح $\OML/cmm/b/it/10 r\OT1/zp
+lm/m/n/10 (\OML/zplm/m/it/10 u\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 v\OT1/zplm/m/
+n/10 ) = \OML/zplm/m/it/10 f\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 u\OT1/ppl/m/n/1
+0 , \OML/zplm/m/it/10 v\OT1/zplm/m/n/10 )\OML/cmm/b/it/10 i \OT1/zplm/m/n/10 + 
+\OML/zplm/m/it/10 g\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 u\OT1/ppl/m/n/10 , \OML/
+zplm/m/it/10 v\OT1/zplm/m/n/10 )\OML/cmm/b/it/10 a[] \OT1/zplm/m/n/10 + \OML/zp
+lm/m/it/10 h\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 u\OT1/ppl/m/n/10 , \OML/zplm/m/
+it/10 v\OT1/zplm/m/n/10 )\OML/cmm/b/it/10 k$ \TU/JameelNooriNastaleeq(2)/b/n/10
+ کے نقطہ[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 982--984
+[]$\OML/zplm/m/it/10 P[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 f\OT1/zplm/m/n/10 (
+\OML/zplm/m/it/10 u[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 v[]\OT1/zplm/m/n/10 )\
+OT1/ppl/m/n/10 , \OML/zplm/m/it/10 g\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 u[]\OT1
+/ppl/m/n/10 , \OML/zplm/m/it/10 v[]\OT1/zplm/m/n/10 )\OT1/ppl/m/n/10 , \OML/zpl
+m/m/it/10 h\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 u[]\OT1/ppl/m/n/10 , \OML/zplm/m
+/it/10 v[]\OT1/zplm/m/n/10 ))$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر مماسی مستو
+ی سے مراد وہ مستوی ہے جو نقطہ $\OML/zplm/m/it/10 P[]$ \TU/JameelNooriNastaleeq(
+2)/b/n/10 پر مماسی سمتیات $\OML/cmm/b/it/10 r[]\OT1/zplm/m/n/10 (\OML/zplm/m/it
+/10 u[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 v[]\OT1/zplm/m/n/10 )$[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 982--984
+[]\TU/JameelNooriNastaleeq(2)/b/n/10 اور $\OML/cmm/b/it/10 r[]\OT1/zplm/m/n/10 
+(\OML/zplm/m/it/10 u[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 v[]\OT1/zplm/m/n/10 )
+$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے صلیبی ضرب سمتیہ $\OML/cmm/b/it/10 r[]\O
+T1/zplm/m/n/10 (\OML/zplm/m/it/10 u[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 v[]\OT
+1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ^^B \OML/cmm/b/it/10 r[]\OT1/zplm/m/n/10 (\OML
+/zplm/m/it/10 u[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 v[]\OT1/zplm/m/n/10 )$ \TU
+/JameelNooriNastaleeq(2)/b/n/10 کو عمودی ہو۔ سوال 49 تا 52 میں نقطہ $\OML/zplm/
+m/it/10 P[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر سطح کے مماسی[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1031--1032
+[][]\TU/JameelNooriNastaleeq(2)/b/n/10 محور $\OML/zplm/m/it/10 z$ \TU/JameelNoo
+riNastaleeq(2)/b/n/10 کے گرد مستوی $\OML/zplm/m/it/10 xz$ \TU/JameelNooriNastal
+eeq(2)/b/n/10 میں دائرہ $\OML/zplm/m/it/10 C$ \TU/JameelNooriNastaleeq(2)/b/n/1
+0 کو خلا میں گھمانے سے اندرسہ حاصل ہو گا۔ (دکھائے گئے شکل سے رجوع کریں۔) اگر $\
+OML/zplm/m/it/10 C$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا رداس[]
+ []
+
+[1730]
+Underfull \hbox (badness 1221) in paragraph at lines 1064--1068
+[][]\TU/JameelNooriNastaleeq(2)/b/n/10 ترخیم $[] \OT1/zplm/m/n/10 + [] = \OT1/p
+pl/m/n/10 1$ \TU/JameelNooriNastaleeq(2)/b/n/10 (حصہ 3.5 میں مثال 13)کا مقدار م
+علوم روپ درج ذیل ہے۔ $\OML/zplm/m/it/10 x \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 
+a [] ^^R\OT1/ppl/m/n/10 ,  \OML/zplm/m/it/10 y \OT1/zplm/m/n/10 =$[]
+ []
+
+) [1731] [1732
 
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 52--56
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۱۶:  مستویات $\OML/zplm/m/it/10 
-x \OT1/zplm/m/n/10 = \OMS/zplm/m/n/10 ^^F\OML/zplm/m/it/10 a$\TU/JameelNooriNas
-taleeq(2)/b/n/10 ، $\OML/zplm/m/it/10 y \OT1/zplm/m/n/10 = \OMS/zplm/m/n/10 ^^F
-\OML/zplm/m/it/10 b$\TU/JameelNooriNastaleeq(2)/b/n/10 ، اور $\OML/zplm/m/it/10
- z \OT1/zplm/m/n/10 = \OMS/zplm/m/n/10 ^^F\OML/zplm/m/it/10 c$ \TU/JameelNooriN
-astaleeq(2)/b/n/10 جو مستطیلی ٹھوس جسم گھیرتی ہیں اس کی سطح پر $\OML/zplm/m/it/
-10 g\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y\
-OT1/ppl/m/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/10 ) = \OML/zplm/m/it/10 xyz$
- \TU/JameelNooriNastaleeq(2)/b/n/10 کا[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۱۷:  مستویات $\OML/zplm/m/it/10 
-x \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 0$\TU/JameelNooriNastaleeq(2)/b/n/10 ، $\O
-ML/zplm/m/it/10 x \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 1$\TU/JameelNooriNastaleeq
-(2)/b/n/10 ، اور $\OML/zplm/m/it/10 z \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 0$ \TU
-/JameelNooriNastaleeq(2)/b/n/10 مکافی بیلن $\OML/zplm/m/it/10 y[] \OT1/zplm/m/n
-/10 + \OT1/ppl/m/n/10 4\OML/zplm/m/it/10 z \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 1
-6$ \TU/JameelNooriNastaleeq(2)/b/n/10 سے جو سطح کاٹتی ہیں اس پر $\OML/zplm/m/it
-/10 g\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y
-\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/10 ) =$[]
- []
-
-Missing character: There is no س ("633) in font zplmr7m!
-Missing character: There is no و ("648) in font zplmr7m!
-Missing character: There is no ا ("627) in font zplmr7m!
-Missing character: There is no ل ("644) in font zplmr7m!
-Missing character: There is no س ("633) in font zplmr7m!
-Missing character: There is no م ("645) in font zplmr7m!
-Missing character: There is no ت ("62A) in font zplmr7m!
-Missing character: There is no ی ("6CC) in font zplmr7m!
-Missing character: There is no م ("645) in font zplmr7m!
-Missing character: There is no ی ("6CC) in font zplmr7m!
-Missing character: There is no د ("62F) in font zplmr7m!
-Missing character: There is no ا ("627) in font zplmr7m!
-Missing character: There is no ن ("646) in font zplmr7m!
-Missing character: There is no س ("633) in font zplmr7m!
-Missing character: There is no ط ("637) in font zplmr7m!
-Missing character: There is no ح ("62D) in font zplmr7m!
-Missing character: There is no ب ("628) in font zplmr7m!
-Missing character: There is no ہ ("6C1) in font zplmr7m!
-Missing character: There is no ا ("627) in font zplmr7m!
-Missing character: There is no ب ("628) in font zplmr7m!
-
-Underfull \hbox (badness 2608) in paragraph at lines 74--76
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 ثمن اول میں کرہ $\OML/zplm/m/it/10 x[] \
-OT1/zplm/m/n/10 + \OML/zplm/m/it/10 y[] \OT1/zplm/m/n/10 + \OML/zplm/m/it/10 z[
-] \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 a[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 
-کے ٹکڑا سے، جس کا رخ مبدا سے دوری جانب ہے، میدان $\OML/cmm/b/it/10 F$ \TU/Jamee
-lNooriNastaleeq(2)/b/n/10 کا گزرتا بہاؤ سوال ۱۵.۲۰[] تا ۱۵.۲۶[] میں[]
- []
-
-
-Underfull \hbox (badness 6893) in paragraph at lines 97--100
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۲۷:  قطع مکافی بیلن $\OML/zplm/m
-/it/10 z \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 4 \OMS/zplm/m/n/10 ^^@ \OML/zplm/m/
-it/10 y[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 سے مستویات $\OML/zplm/m/it/10 x \
-OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 0$\TU/JameelNooriNastaleeq(2)/b/n/10 ، $\OML/
-zplm/m/it/10 x \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 1$\TU/JameelNooriNastaleeq(2)
-/b/n/10 ، اور $\OML/zplm/m/it/10 z \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 0$ \TU/Ja
-meelNooriNastaleeq(2)/b/n/10 جو سطح کاٹتی ہیں اس سے اوپر رخ گزرتا بہاؤ میدان[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--104
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۲۸:  مکافی سطح $\OML/zplm/m/it/1
-0 z \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 x[] \OT1/zplm/m/n/10 + \OML/zplm/m/it/
-10 y[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے نچلے حصے سے مستوی $\OML/zplm/m/it
-/10 z \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 1$ \TU/JameelNooriNastaleeq(2)/b/n/10 
-جو سطح کاٹتی ہے اس سے باہر رخ (محور $\OML/zplm/m/it/10 z$ \TU/JameelNooriNastal
-eeq(2)/b/n/10 سے دور جانب) گزرتا بہاؤ[]
- []
-
-Missing character: There is no ; ("3B) in font nullfont!
-LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 118.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 118.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 118.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 118.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 118.
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--123
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۲۹: []فرض کریں ثمن اول میں بیلن 
-$\OML/zplm/m/it/10 y \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 e[]$ \TU/JameelNooriN
-astaleeq(2)/b/n/10 کا ٹکڑا $\OML/zplm/m/it/10 S$ \TU/JameelNooriNastaleeq(2)/b/
-n/10 مستوی $\OML/zplm/m/it/10 yz$ \TU/JameelNooriNastaleeq(2)/b/n/10 میں واقع م
-ستطیل $\OML/zplm/m/it/10 R[] \OT1/zplm/m/n/10 :  \OT1/ppl/m/n/10 1 \OMS/zplm/m/
-n/10 ^^T \OML/zplm/m/it/10 y \OMS/zplm/m/n/10 ^^T \OT1/ppl/m/n/10 2,  0 \OMS/zp
-lm/m/n/10 ^^T \OML/zplm/m/it/10 z \OMS/zplm/m/n/10 ^^T \OT1/ppl/m/n/10 1$ \TU/J
-ameelNooriNastaleeq(2)/b/n/10 پر محور $\OML/zplm/m/it/10 x$[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--123
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 کے متوازی سایہ ڈالتا ہے (شکل ۱۵.۵۶[])۔ فرض
- کریں $\OML/zplm/m/it/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے اکائی عمودی س
-متیہ $\OML/cmm/b/it/10 n$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا رخ مستوی $\OML/
-zplm/m/it/10 yz$ \TU/JameelNooriNastaleeq(2)/b/n/10 سے دور جانب ہے۔ سطح $\OML/z
-plm/m/it/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10 سے $\OML/cmm/b/it/10 n$ \TU/J
-ameelNooriNastaleeq(2)/b/n/10 کے رخ[]
- []
-
-[1710]
-Underfull \hbox (badness 10000) in paragraph at lines 123--127
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۳۰:  ثمن اول میں بیلن $\OML/zplm
-/m/it/10 y \OT1/zplm/m/n/10 = [] \OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(
-2)/b/n/10 کا ٹکڑا سطح $\OML/zplm/m/it/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10 
-، مستوی $\OML/zplm/m/it/10 xz$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر محور $\OML
-/zplm/m/it/10 y$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے متوازی مستطیل سایہ $\OML
-/zplm/m/it/10 R[] \OT1/zplm/m/n/10 :  \OT1/ppl/m/n/10 1 \OMS/zplm/m/n/10 ^^T \O
-ML/zplm/m/it/10 x \OMS/zplm/m/n/10 ^^T \OML/zplm/m/it/10 e\OT1/ppl/m/n/10 ,  0 
-\OMS/zplm/m/n/10 ^^T$[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 123--127
-[]$\OML/zplm/m/it/10 z \OMS/zplm/m/n/10 ^^T \OT1/ppl/m/n/10 1$ \TU/JameelNooriN
-astaleeq(2)/b/n/10 ڈالتا ہے۔ سطح $\OML/zplm/m/it/10 S$ \TU/JameelNooriNastaleeq
-(2)/b/n/10 کے اکائی عمودی سمتیہ $\OML/cmm/b/it/10 n$ \TU/JameelNooriNastaleeq(2
-)/b/n/10 کا رخ مستوی $\OML/zplm/m/it/10 xz$ \TU/JameelNooriNastaleeq(2)/b/n/10 
-سے دور جانب ہے۔ میدان $\OML/cmm/b/it/10 F \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 2\
-OML/zplm/m/it/10 y\OML/cmm/b/it/10 j \OT1/zplm/m/n/10 + \OML/zplm/m/it/10 z\OML
-/cmm/b/it/10 k$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا $\OML/cmm/b/it/10 n$ \TU/
-JameelNooriNastaleeq(2)/b/n/10 کے رخ $\OML/zplm/m/it/10 S$ \TU/JameelNooriNasta
-leeq(2)/b/n/10 سے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--130
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۳۱:  ثمن اول سے مستویات $\OML/zp
-lm/m/it/10 x \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 a$\TU/JameelNooriNastaleeq(2)
-/b/n/10 ، $\OML/zplm/m/it/10 y \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 a$\TU/Jamee
-lNooriNastaleeq(2)/b/n/10 ، اور $\OML/zplm/m/it/10 z \OT1/zplm/m/n/10 = \OML/zp
-lm/m/it/10 a$ \TU/JameelNooriNastaleeq(2)/b/n/10 مکعب کاٹتی ہیں۔ مکعب کی سطح سے
- باہر رخ میدان $\OML/cmm/b/it/10 F \OT1/zplm/m/n/10 =$[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 130--133
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۳۲:  کرہ $\OML/zplm/m/it/10 x[] 
-\OT1/zplm/m/n/10 + \OML/zplm/m/it/10 y[] \OT1/zplm/m/n/10 + \OML/zplm/m/it/10 z
-[] \OMS/zplm/m/n/10 ^^T \OT1/ppl/m/n/10 25$ \TU/JameelNooriNastaleeq(2)/b/n/10 
-سے مستوی $\OML/zplm/m/it/10 z \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 3$ \TU/JameelN
-ooriNastaleeq(2)/b/n/10 بالائی ٹوپی کاٹتا ہے۔ اس ٹوپی سے باہر رخ میدان $\OML/cm
-m/b/it/10 F \OT1/zplm/m/n/10 =$[]
- []
-
-
-Underfull \hbox (badness 2818) in paragraph at lines 141--144
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۳۵: []مستقل کثافت $\OML/zplm/m/i
-t/10 ^^N$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے مخروط $\OML/zplm/m/it/10 x[] \O
-T1/zplm/m/n/10 + \OML/zplm/m/it/10 y[] \OMS/zplm/m/n/10 ^^@ \OML/zplm/m/it/10 z
-[] \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 0$ \TU/JameelNooriNastaleeq(2)/b/n/10 سے 
-مستویات $\OML/zplm/m/it/10 z \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 1$ \TU/JameelNo
-oriNastaleeq(2)/b/n/10 اور $\OML/zplm/m/it/10 z \OT1/zplm/m/n/10 = \OT1/ppl/m/n
-/10 2$ \TU/JameelNooriNastaleeq(2)/b/n/10 جو باریک خول کاٹتی ہیں اس کا مرکز[]
- []
-
-
-Underfull \hbox (badness 3291) in paragraph at lines 144--166
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۳۶:  مستقل کثافت $\OML/zplm/m/it
-/10 ^^N$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے مخروط $\OT1/ppl/m/n/10 4\OML/zpl
-m/m/it/10 x[] \OT1/zplm/m/n/10 + \OT1/ppl/m/n/10 4\OML/zplm/m/it/10 y[] \OMS/zp
-lm/m/n/10 ^^@ \OML/zplm/m/it/10 z[]\OT1/ppl/m/n/10 ,  \OML/zplm/m/it/10 z \OMS/
-zplm/m/n/10 ^^U \OT1/ppl/m/n/10 0$ \TU/JameelNooriNastaleeq(2)/b/n/10 سے دائری 
-بیلن $\OML/zplm/m/it/10 x[] \OT1/zplm/m/n/10 + \OML/zplm/m/it/10 y[] \OT1/zplm/
-m/n/10 = \OT1/ppl/m/n/10 2\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(2)/b/n/
-10 جو باریک خول (شکل[]
- []
-
-) [1711] [1712]
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/b/n' will be
-(Font)              scaled to size 24.88pt on input line 233.
- (./answer.tex) [1713
-
-
-
-
-] [1794
+(Font)              scaled to size 24.88pt on input line 232.
+ (./answer.tex) [1733] [1794
 
 
 
@@ -2223,16 +2258,23 @@ L3 programming layer <2024-01-22>
  ***********
 
 
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.43996pt have occurred.
+
+
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 70570 strings out of 474878
- 1910337 string characters out of 9512517
- 3521860 words of memory out of 7000000
- 91472 multiletter control sequences out of 15000+600000
- 584846 words of font info for 160 fonts, out of 8000000 for 9000
+ 71252 strings out of 474878
+ 1924447 string characters out of 9512517
+ 3724777 words of memory out of 7000000
+ 92149 multiletter control sequences out of 15000+600000
+ 592696 words of font info for 188 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 117i,13n,121p,2420b,7380s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,15n,121p,2420b,6762s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on calculusAndAnalyticGeometry.pdf (14 pages).
+Output written on calculusAndAnalyticGeometry.pdf (29 pages).
