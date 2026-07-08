@@ -3518,7 +3518,7 @@ axis line style={draw=none}]
 ہم \عددی{(\abs{\nabla f}/\abs{\nabla f\cdot \kvec{p}})\dif A}  کو \عددی{\dif \sigma}  لکھ کر مساوات \حوالہ{مساوات_سمتی_میدان_سطحی_تکمل_تعریف}   کا  تکمل مختصراً  (درج ذیل) لکھ سکتے ہیں ۔
 %eq 10,  p-1100
 \begin{align}\label{مساوات_سمتی_میدان_اکائی_عمودی_دس}
-&\text{\RL{\موٹا{سطحی رقبہ کی تفریق اور سطحی تکملات کا تفریقی روپ }}}\nonumber\\
+&\text{\RL{\موٹا{سطحی رقبہ کی تفریق اور سطحی تکملات کا تفریقی کلیہ }}}\nonumber\\
 \dif \sigma&=\frac{\abs{\nabla f}}{\abs{\nabla f\cdot \kvec{p}}}\dif A &&\quad\quad\iint_S g\dif \sigma\\
 &\text{\small{\RL{سطحی رقبے کی تفریق}}} &&\text{\small{\RL{سطحی تکملات کا تفریقی کلیہ}}}\nonumber
 \end{align}
@@ -4245,7 +4245,7 @@ x^{2}+(y-3)^{2}=9,\qquad 0\le z\le 5
 \end{align*}
 
 \موٹا{حل:} \quad 
-نلکی محدد میں  نقطہ \عددی{(x,y,z)}کے لیے\عددی{x{=}r\cos\phi}،  \عددی{y{=}r\sin\phi}، اور  \عددی{z{=}z}  ہو گا۔بیلن \عددی{x^{2}+(y-3)^{2}{=}9}  (شکل\حوالہ{شکل_سمتی_میدان_بیلن_مثال_پ}) پر   واقع  نقاط کی مساوات وہی ہو گی جو   \عددی{xy}مستوی میں بیلن  کے  تل کی قطبی  مساوات   ہے، یعنی
+نلکی محدد میں  نقطہ \عددی{(x,y,z)}کے لیے\عددی{x{=}r\cos\phi}،  \عددی{y{=}r\sin\phi}، اور  \عددی{z{=}z}  ہو گا۔بیلن \عددی{x^{2}+(y-3)^{2}{=}9}  (شکل\حوالہ{شکل_سمتی_میدان_بیلن_مثال_پ}) پر   واقع  نقاط کی مساوات وہی ہو گی جو   \عددی{xy}مستوی میں بیلن  کے  تل کی  ( رداس کو \عددی{r}  لکھ کر) نلکی محدد مساوات   ہے، یعنی
 \begin{align*}
 x^{2}+(y^{2}-6y+9)&=9\\
 r^{2}-6r\sin\phi&=0
@@ -4415,11 +4415,13 @@ A=\int_{c}^{d}\int_{a}^{b}|\kvec{r}_u \times \kvec{r}_v|\dif u\dif v
 
 ہم حصہ \حوالہ{حصہ_سمتی_میدان_سطحی_رقبہ_سطحی_تکملات} کی طرح  \عددی{|\kvec{r}_u\times \kvec{r}_v |\dif u\dif v} کی جگہ \عددی{\dif \sigma} لکھ کر  اس تکمل کو مختصراً درج ذیل لکھتے ہیں۔
 \begin{align}\label{مساوات_مقدار_معلوم_ٹ}
-\dif \sigma &= \left|\kvec{r}_u \times \kvec{r}_v\right|\,\dif u\,\dif v,\quad \iint\limits_S \dif \sigma &&\text{\RL{سطحی رقبے کی  تفریق اور سطحی رقبے کا تفریقی روپ}}
+&\text{\RL{\موٹا{{سطحی رقبے کی  تفریق اور سطحی رقبے کا تفریقی کلیہ}}}}\nonumber\\
+\dif \sigma &=\left|\kvec{r}_u \times \kvec{r}_v\right|\,\dif u\,\dif v&&\iint\limits_S \dif \sigma\\
+&\text{\RL{سطحی رقبے کی تفریق}}&&\text{\RL{سطحی رقبے کا تفریقی کلیہ}}\nonumber
 \end{align}
 
 
-\ابتدا{مثال} \موٹا{مخروط کا رقبہ (مخروط)}\\
+\ابتدا{مثال}\شناخت{مثال_سمتی_میدان_مخروط_مثال_ت} \موٹا{مخروط کا رقبہ (مخروط)}\\
 مثال \حوالہ{مثال_سمتی_میدان_مخروط_مثال_الف}میں  ہم مخروط (شکل \حوالہ{شکل_سمتی_میدان_مخروط_مثال_الف})  کا درج ذیل  مقدار معلوم روپ  دریافت کر چکے ہیں۔
 \begin{align*}
 \kvec{r}(r,\phi)=(r\cos\phi)\ai+(r\sin\phi)\aj+r\ak,\qquad0\le r\le 1,\qquad 0\le \phi \le 2\pi
@@ -4457,71 +4459,57 @@ A&=\int_{0}^{2\pi}\int_{0}^{1} |\kvec{r}_r \times \kvec{r}_{\phi}|\dif r\dif \ph
 &0\le \theta \le \pi,\qquad 0\le \phi \le 2\pi
 \end{align*}
 
-
-
-
-اب \عددی{\kvec{r}_\phi \times \kvec{r}_\theta} نکالتے ہیں۔
-
+اب \عددی{\kvec{r}_\theta \times \kvec{r}_\phi} نکالتے ہیں۔
 \begin{align*}
-\kvec{r}_\phi \times \kvec{r}_\theta&=
+\kvec{r}_\theta\times \kvec{r}_\phi&=
 \begin{vmatrix}
 \ai & \aj & \ak \\
-a\cos\phi\cos\theta & a\cos\phi\sin\theta & -a\sin\phi \\
--a\sin\phi\sin\theta & a\sin\phi\cos\theta & 0
+a\cos\theta\cos\phi & a\cos\theta\sin\phi & -a\sin\theta \\
+-a\sin\theta\sin\phi & a\sin\theta\cos\phi & 0
 \end{vmatrix}\\
-&=(a^2\sin^2\phi\cos\theta)\ai+(a^2\sin^2\phi\sin\theta)\aj+(a^2\sin\phi\cos\phi)\ak
+&=(a^2\sin^2\theta\cos\phi)\ai+(a^2\sin^2\theta\sin\phi)\aj+(a^2\sin\theta\cos\theta)\ak
 \end{align*}
-
 یوں درج ذیل ہو گا۔
 \begin{align*}
-\left|\kvec{r}_\phi \times \kvec{r}_\theta\right|&=\sqrt{a^4\sin^4\phi\cos^2\theta+a^4\sin^4\phi\sin^2\theta+a^4\sin^2\phi\cos^2\phi}\\
-&=\sqrt{a^4\sin^4\phi+a^2\sin^2\phi\cos^2\phi}=\sqrt{a^4\sin^2\phi(\sin^2\phi+\cos^2\phi)}\\
-&=a^2\sqrt{\sin^2\phi}=a^2\sin\phi.
+\left|\kvec{r}_\theta \times \kvec{r}_\phi\right|&=\sqrt{a^4\sin^4\theta\cos^2\phi+a^4\sin^4\theta\sin^2\phi+a^4\sin^2\theta\cos^2\theta}\\
+&=\sqrt{a^4\sin^4\theta+a^2\sin^2\theta\cos^2\theta}=\sqrt{a^4\sin^2\theta(\sin^2\theta+\cos^2\theta)}\\
+&=a^2\sqrt{\sin^2\theta}=a^2\sin\theta
 \end{align*}
-چونکہ \عددی{0\le \phi \le \pi} پر \عددی{\sin\phi \ge 0} ہو گا لہٰذا سطحی رقبہ درج ذیل ہو گا۔
+چونکہ \عددی{0\le \theta \le \pi} پر \عددی{\sin\theta \ge 0} ہو گا لہٰذا سطحی رقبہ درج ذیل ہو گا۔
 \begin{align*}
-A&=\int_{0}^{2\pi}\int_{0}^{\pi}a^2\sin\phi\,\dif \phi\,\dif\theta\\
-&\int_{0}^{2\pi}\left[-a^2\cos\phi\right]_{0}^{\pi}\,\dif\theta=\int_{0}^{2\pi}2a^2\,\dif \theta=4\pi a^2\quad \text{\RL{مربع اکائیاں}}
+A&=\int_{0}^{2\pi}\int_{0}^{\pi}a^2\sin\theta\,\dif \theta\,\dif\phi\\
+&\int_{0}^{2\pi}\left[-a^2\cos\theta\right]_{0}^{\pi}\,\dif\phi=\int_{0}^{2\pi}2a^2\,\dif \phi=4\pi a^2\quad \text{\RL{مربع اکائیاں}}
 \end{align*}
-یہ نتیجہ کرہ کے معلوم کلیہ  کے مطابق ہے۔
+یہ نتیجہ کرہ کے معلوم کلیہ  کے عین  مطابق ہے۔
 \انتہا{مثال}
 
 
 \حصہء{سطحی تکملات}
-مقدار معلوم سطح کے رقبہ کا کلیہ حاصل کرنے کے بعد اب ہم   تفاعل کا تکمل مقدار معلوم  سطح پر کر سکتے ہیں۔
+مقدار معلوم سطح کے رقبہ کا کلیہ حاصل کرنے کے بعد اب ہم   تفاعل کا تکمل مقدار معلوم  سطح پر  حل کر سکتے ہیں۔
 
 %==================================
 %L 90590
 
-\ابتدا{تعریف}\quad  سطحی تکمل برائے مقدار معلوم  سطح
-
-اگر سطح  \عددی{S}  استمراری ہو  جس  کا مقدار معلوم روپ
-\begin{align*}
-\kvec{r}(u,v) =& f(u,v)\ai + g(u,v)\aj + h(u,v)\ak\\
-&a \le u \le b,\; c \le v \le d
-\end{align*}
-ہو، اور  \عددی{G(x,y,z)}  ایک استمراری تفاعل ہو جو  \عددی{S} پر  معین  ہو، تب  \عددی{S} پر \عددی{G} کا تکمل درج ذیل ہو گا۔
+\ابتدا{تعریف}\موٹا{سطحی تکمل برائے مقدار معلوم  سطح}\\
+اگر سطح  \عددی{S}  استمراری ہو  جس  کا مقدار معلوم روپ \عددی{\kvec{r}(u,v) = f(u,v)\ai + g(u,v)\aj + h(u,v)\ak} ہو جہاں  \عددی{a \le u \le b} اور \عددی{c \le v \le d}  ہیں، اور  \عددی{G(x,y,z)}  استمراری تفاعل ہو جو  \عددی{S} پر  معین  ہو، تب  \عددی{S} پر \عددی{G} کا تکمل درج ذیل ہو گا۔
 \begin{align*}
 \iint_S G(x,y,z)\, \dif \sigma=\int_c^d \int_a^bG\big(f(u,v), g(u,v), h(u,v)\big)\,\left| \kvec{r}_u \times \kvec{r}_v\right| \, \dif u\, \dif v
 \end{align*}
 \انتہا{تعریف}
 
-\ابتدا{مثال}\quad مقدار معلوم روپ کی  سطح پر تکمل
-
+\ابتدا{مثال}\quad مقدار معلوم روپ کی  سطح پر تکمل\\
 تفاعل \عددی{G(x,y,z) = x^2} کا تکمل مخروطی سطح \عددی{z = \sqrt{x^2 + y^2},\, 0 \le z \le 1} پر معلوم کریں۔
 
-حل:\quad
-مثال \حوالہء{1} اور  مثال{4} کا  کام آگے بڑھاتے ہوئے \عددی{|\kvec{r}_r\times \kvec{r}_{\theta}|=\sqrt{2}r} لے کر درج ذیل ہو گا۔
+\موٹا{حل:}\quad
+مثال \حوالہ{مثال_سمتی_میدان_مخروط_مثال_الف} اور  مثال \حوالہ{مثال_سمتی_میدان_مخروط_مثال_ت} کا  کام آگے بڑھاتے ہوئے \عددی{|\kvec{r}_r\times \kvec{r}_{\phi}|=\sqrt{2}r} لے کر درج ذیل ہو گا۔
 \begin{align*}
-\iint_S x^2 \, \dif \sigma&=\int_0^{2\pi} \int_0^1(r^2 \cos^2 u)(\sqrt{2}\, r)\, \dif r\, \dif u&& x=r\cos\theta\\
-&=\sqrt{2}\int_0^{2\pi} \int_0^1r^3 \cos^2 \theta \, \dif r\, \dif \theta\\
-&=\frac{\sqrt{2}}{4}\int_0^{2\pi} \cos^2 \theta \, \dif \theta=\frac{\sqrt{2}}{4}\left[  \frac{\theta}{2}+\frac{1}{4}\sin 2\theta \right]_0^{2\pi}=\frac{\pi\sqrt{2}}{2}
+\iint_S x^2 \, \dif \sigma&=\int_0^{2\pi} \int_0^1(r^2 \cos^2 \phi)(\sqrt{2}\, r)\, \dif r\, \dif \phi&& x=r\cos\phi\\
+&=\sqrt{2}\int_0^{2\pi} \int_0^1r^3 \cos^2 \phi \, \dif r\, \dif \phi\\
+&=\frac{\sqrt{2}}{4}\int_0^{2\pi} \cos^2 \phi \, \dif \phi=\frac{\sqrt{2}}{4}\left[  \frac{\phi}{2}+\frac{1}{4}\sin 2\phi \right]_0^{2\pi}=\frac{\pi\sqrt{2}}{2}
 \end{align*}
 \انتہا{مثال}
 
-\ابتدا{مثال}\quad
-بہاؤ کی تلاش
-
+\ابتدا{مثال} بہاؤ کی تلاش\\
 قطع مکافی بیلن \عددی{y = x^2,\, 0 \le x \le 1,\, 0 \le z \le 4}  سے \عددی{\kvec{F}=yz\ai+x\aj-z^2\ak} کا  باہر رخ گزرتا  بہاؤ تلاش کریں (شکل \حوالہ{شکل_سمتی_میدان_مکافی_بلین_اخراج})۔
 
 \begin{figure}
@@ -4546,56 +4534,41 @@ A&=\int_{0}^{2\pi}\int_{0}^{\pi}a^2\sin\phi\,\dif \phi\,\dif\theta\\
 \end{figure}
 
 
-حل:\quad
-سطح پر  \عددی{x=x}، \عددی{y=x^2}، اور \عددی{z=z} ہیں لہٰذا مقدار معلوم روپ \عددی{\kvec{r}(x,z)=x\ai+x^2\aj+z\ak} ہو گا جہاں \عددی{{0\le x\le1},\,{0\le z\le 4}}ہے۔
-
-مماسی سمتیات کا صلیبی ضرب درج ذیل ہو گا۔
-
+\موٹا{حل:}\quad
+سطح پر  \عددی{x=x}، \عددی{y=x^2}، اور \عددی{z=z} ہیں لہٰذا مقدار معلوم روپ \عددی{\kvec{r}(x,z)=x\ai+x^2\aj+z\ak} ہو گا جہاں \عددی{{0\le x\le1},\,{0\le z\le 4}}ہے۔ مماسی سمتیات کا صلیبی ضرب درج ذیل ہو گا۔
 \begin{align*}
 \kvec{r}_x \times \kvec{r}_z =
 \begin{vmatrix}
 \ai & \aj & \ak \\
 1 & 2x & 0 \\
 0 & 0 & 1
-\end{vmatrix}= 2x\,\ai - \aj
+\end{vmatrix}= 2x\ai - \aj
 \end{align*}
-
 سطح پر باہر رخ عمودی سمتیہ درج ذیل ہے۔
-
 \begin{align*}
-\mathbf{n}=\frac{\kvec{r}_x\times\kvec{r}_z}{|\kvec{r}_x\times\kvec{r}_z|}=
-\frac{2x\,\ai - \aj}{\sqrt{4x^2 + 1}}
+\an=\frac{\kvec{r}_x\times \kvec{r}_z}{|\kvec{r}_x\times \kvec{r}_z|}=\frac{2x\ai-\aj}{\sqrt{4x^2+1}}
 \end{align*}
-
 سطح پر  \عددی{y=x^2} ہے لہٰذا اس پر سمتیہ میدان درج ذیل ہو گا۔
 \begin{align*}
-\mathbf{F} = yz\ai+x\aj-z^2\ak=x^2 z\,\ai + x\,\aj - z^2\,\ak
+\kvec{F} = yz\ai+x\aj-z^2\ak=x^2 z\ai + x\aj - z^2\ak
 \end{align*}
 یوں 
 \begin{align*}
-\mathbf{F} \cdot \mathbf{n}&=\frac{1}{\sqrt{4x^2+1}}((x^2z)(2x)+(x)(-1)+(-z^2)(0))\\
+\kvec{F} \cdot \an&=\frac{1}{\sqrt{4x^2+1}}((x^2z)(2x)+(x)(-1)+(-z^2)(0))\\
 &=\frac{2x^3 z - x}{\sqrt{4x^2 + 1}}
 \end{align*}
-%====================================================
-%L50662
-
 اور \عددی{\kvec{F}} کا  سطح  سے  باہر رخ گزرتا  بہاؤ درج ذیل ہو گا۔
 \begin{align*}
-\iint_S \mathbf{F} \cdot \mathbf{n}\, \dif \sigma &=\int_0^4 \int_0^1\frac{2x^3 z - x}{\sqrt{4x^2 + 1}}
+\iint\limits_S \kvec{F} \cdot \an\, \dif \sigma &=\int_0^4 \int_0^1\frac{2x^3 z - x}{\sqrt{4x^2 + 1}}
 \left| \kvec{r}_x \times \kvec{r}_z \right| \dif x\, \dif z\\
-&=\int_0^4 \int_0^1\frac{2x^3 z - x}{\sqrt{4x^2 + 1}}
-\sqrt{4x^2+1}\dif x\, \dif z\\
+&=\int_0^4 \int_0^1\frac{2x^3 z - x}{\sqrt{4x^2 + 1}}\sqrt{4x^2+1}\dif x\, \dif z\\
 &=\int_0^4 \int_0^1 (2x^3 z - x)\, \dif x\, \dif z=\int_0^4\left[ \frac{x^4 z}{2} - \frac{x^2}{2} \right]_0^1 \dif z\\
 &\int_0^4 \frac{z - 1}{2}\, \dif z=\left.\frac{1}{4} (z - 1)^2\right]_0^4\\
 &=\frac{1}{4}(9)-\frac{1}{4}(1)=2
 \end{align*}
 \انتہا{مثال}
-
-\ابتدا{مثال}\شناخت{مثال_سمتی_میدان_مخروط_مقطوع_سطح}\quad
-مرکز کمیت کی تلاش
-
+\ابتدا{مثال}\شناخت{مثال_سمتی_میدان_مخروط_مقطوع_سطح}مرکز کمیت کی تلاش\\
 مستقل کثافت  \عددی{\delta}  کا باریک خول  مخروط \عددی{z=\sqrt{x^2+y^2}} سے مستویات  \عددی{z=1} اور \عددی{z=2}  کاٹتی ہیں (شکل \حوالہ{شکل_سمتی_میدان_مخروط_مقطوع_سطح})۔ اس خول کا مرکز کمیت تلاش کریں۔ 
-
 \begin{figure}
 \centering
 \begin{tikzpicture}
@@ -4615,52 +4588,51 @@ A&=\int_{0}^{2\pi}\int_{0}^{\pi}a^2\sin\phi\,\dif \phi\,\dif\theta\\
 \caption{سطوح \عددی{z=1} اور \عددی{z=2} مخروط \عددی{z=\sqrt{x^2+y^2}} کو کاٹتی ہیں (برائے مثال \حوالہ{مثال_سمتی_میدان_مخروط_مقطوع_سطح})۔}
 \label{شکل_سمتی_میدان_مخروط_مقطوع_سطح}
 \end{figure}
-حل:\quad
 
-محور \عددی{z} کے گرد  سطح تشاکل ہے لہٰذا \عددی{\bar{x}=0} اور \عددی{\bar{y}=0}  ہو گا۔ ہمیں \عددی{\bar{z} = \frac{M_{xy}}{M}} تلاش کرنی ہے۔ مثال \حوالہء{1} اور مثال \حوالہء{4} کی طرح چلتے ہوئے 
+حل:\quad
+محور \عددی{z} کے لحاظ سے   سطح تشاکل ہے لہٰذا \عددی{\bar{x}=0} اور \عددی{\bar{y}=0}  ہو گا۔ ہمیں \عددی{\bar{z} = \frac{M_{xy}}{M}} تلاش کرنی ہے۔مثال \حوالہ{مثال_سمتی_میدان_مخروط_مثال_الف} اور  مثال \حوالہ{مثال_سمتی_میدان_مخروط_مثال_ت} کی طرح چلتے ہوئے 
 \begin{align*}
-\kvec{r}(r,\theta) =r \cos \theta\, \ai+r \sin \theta\, \aj+r\, \ak,\quad1 \le r \le 2,\; 0 \le \theta \le 2\pi
+\kvec{r}(r,\phi) =r \cos \phi\, \ai+r \sin \phi\, \aj+r\, \ak,\quad1 \le r \le 2,\; 0 \le \phi \le 2\pi
 \end{align*}
 اور
 \begin{align*}
-\left| \kvec{r}_r \times \kvec{r}_{\theta} \right| = \sqrt{2}\, r
+\left| \kvec{r}_r \times \kvec{r}_{\phi} \right| = \sqrt{2}\, r
 \end{align*}
 ہو گا۔ یوں درج ذیل ہو گا۔
-
 \begin{align*}
-M &=
-\iint_S \delta \, \dif \sigma=\int_0^{2\pi} \int_1^2 \delta  \sqrt{2}\, r\, \dif r\, \dif \theta\\
-&=\delta\sqrt{2}\int_0^{2\pi}\left[ \frac{r^2}{2} \right]_1^2 \dif\theta=\delta\sqrt{2}\int_0^{2\pi}\left(2-\frac{1}{2}\right)\dif\theta\\
-&=\delta \sqrt{2}\left[\frac{3\theta}{2}\right]_0^{2\pi}=3\pi\delta\sqrt{2}
+M &=\iint\limits_S \delta \, \dif \sigma=\int_0^{2\pi} \int_1^2 \delta  \sqrt{2}\, r\, \dif r\, \dif \phi\\
+&=\delta\sqrt{2}\int_0^{2\pi}\left[ \frac{r^2}{2} \right]_1^2 \dif\phi=\delta\sqrt{2}\int_0^{2\pi}\left(2-\frac{1}{2}\right)\dif\phi\\
+&=\delta \sqrt{2}\left[\frac{3\phi}{2}\right]_0^{2\pi}=3\pi\delta\sqrt{2}
 \end{align*}
 %
 \begin{align*}
-M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\, r\, \dif r\, \dif\theta\\
-&=\delta\sqrt{2}\int_0^{2\pi}\int_1^2 r^2\dif r\dif\theta =\delta\sqrt{2}\int_0^{2\pi}\left[\frac{r^3}{3}\right]_1^2\dif\theta\\
-&=\delta\sqrt{2}\int_0^{2\pi}\frac{7}{3}\dif\theta=\frac{14}{3}\pi\delta\sqrt{2}
-\end{align*}
-%
-\begin{align*}
-\bar{z}=\frac{M_{xy}}{M}=\frac{14\pi\delta\sqrt{2}}{3(3\pi\delta\sqrt{2})}=\frac{14}{9}
+M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\, r\, \dif r\, \dif\phi\\
+&=\delta\sqrt{2}\int_0^{2\pi}\int_1^2 r^2\dif r\dif\phi =\delta\sqrt{2}\int_0^{2\pi}\left[\frac{r^3}{3}\right]_1^2\dif\phi\\
+&=\delta\sqrt{2}\int_0^{2\pi}\frac{7}{3}\dif\phi=\frac{14}{3}\pi\delta\sqrt{2}\\
+\bar{z}&=\frac{M_{xy}}{M}=\frac{14\pi\delta\sqrt{2}}{3(3\pi\delta\sqrt{2})}=\frac{14}{9}
 \end{align*}
 خول کا مرکز کمیت نقطہ \عددی{(0,0,\tfrac{14}{9})} پر پایا جاتا ہے۔
 \انتہا{مثال}
 %==============================
-
-%L90743
+%answers to parametric section (sec 14.6 of finney  old)
+%at Line 4620
 
 \حصہء{سوالات}
-%L 90941
-
+\ابتدا{سوالات}
 \جزوحصہء{سطح کے  مقدار معلوم روپ کی تلاش}
 
-سوال \حوالہء{1} تا \حوالہء{16} میں دی گئی سطح کا مقدار معلوم روپ تلاش کریں۔(درست جواب کے مختلف  روپ ممکن ہیں لہٰذا آپ کے جواب کتاب  میں دیے جواب سے مختلف ہو سکتے ہیں۔)
+سوال \حوالہ{سوال_مقدار_معلوم_ایک} تا \حوالہ{سوال_مقدار_معلوم_سولہ} میں دی گئی سطح کا مقدار معلوم روپ تلاش کریں۔(درست جواب کے مختلف  روپ ممکن ہیں لہٰذا آپ کے جواب کتاب  میں دیے جواب سے مختلف ہو سکتے ہیں۔)
 
 %1
-\ابتدا{سوال}
+\ابتدا{سوال}\شناخت{سوال_مقدار_معلوم_ایک}
 قطع مکافی سطح \quad
  $z = x^2 + y^2,\, z \le 4$
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+\(\kvec{r}(t,\phi)=r\cos\phi\ai+r\sin\phi\aj+r^2\ak,0\le r\le 2, 0\le \phi\le 2\pi\)
+}}
+\انتہا{جواب}
 %2
 \ابتدا{سوال}
 قطع مکافی سطح \quad
@@ -4721,14 +4693,14 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 مستویات \عددی{y=0} اور \عددی{y=3} کے بیچ بیلن \عددی{(x-2)^2 + z^2 = 4} کا ٹکڑا۔
 \انتہا{سوال}
 %16
-\ابتدا{سوال}\موٹا{دائری بیلنی پٹی}\quad 
+\ابتدا{سوال}\شناخت{سوال_مقدار_معلوم_سولہ}\موٹا{دائری بیلنی پٹی}\quad 
 مستویات \عددی{x=0} اور \عددی{x=10} کے بیچ بیلن \عددی{y^2 + (z-5)^2 = 25} کا ٹکڑا۔
 \انتہا{سوال}
 
-\جزوحصہء{مقدار معلوم روپ سطح کا رقبہ}
-سوال \حوالہء{17} تا \حوالہء{26}  میں مقدار معلوم روپ استعمال کر کے سطح کے رقبے کو دوہرا تکمل   لکھیں۔ اس کے بعد تکمل کی قیمت تلاش کریں۔(تکمل لکھنے کے کئی درست طریقے ہیں لہٰذا آپ کا لکھا ہوا تکمل کتاب میں دیے جواب سے مختلف ہو سکتا ہے۔ تاہم ان کی قیمت وہی ہونی چاہیے جو کتاب میں دی گئی ہے۔)
+\جزوحصہء{مقدار معلوم روپ  سطح کا رقبہ}
+سوال \حوالہ{سوال_مقدار_معلوم_سترہ} تا \حوالہ{سوال_مقدار_معلوم_چبیس}  میں مقدار معلوم روپ استعمال کر کے سطح کے رقبے کو دوہرا تکمل   لکھیں۔ اس کے بعد تکمل کی قیمت تلاش کریں۔(تکمل لکھنے کے کئی درست طریقے ہیں لہٰذا آپ کا لکھا ہوا تکمل کتاب میں دیے جواب سے مختلف ہو سکتا ہے۔ تاہم ان کی قیمت وہی ہونی چاہیے جو کتاب میں دی گئی ہے۔)
 %17
-\ابتدا{سوال}\موٹا{بیلن میں ترچھا مستوی}\quad
+\ابتدا{سوال}\شناخت{سوال_مقدار_معلوم_سترہ}\موٹا{بیلن میں ترچھا مستوی}\quad
 بیلن \عددی{x^2=y^2=1} کے اندر مستوی \عددی{y+2z=2} کا ٹکڑا۔
 \انتہا{سوال}
 %=======================================
@@ -4765,15 +4737,15 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 کرہ \عددی{x^2 + y^2 + z^2 = 2} کا وہ نچلا حصہ جو  اس کرہ سے مخروط \عددی{z=\sqrt{x^2+y^2}} کاٹتا ہے۔
 \انتہا{سوال}
 %26
-\ابتدا{سوال}\موٹا{کروی پٹی}\quad
+\ابتدا{سوال}\شناخت{سوال_مقدار_معلوم_چبیس}\موٹا{کروی پٹی}\quad
 مستویات \عددی{z=-1} اور \عددی{z=\sqrt{3}} کے بیچ کرہ \عددی{x^2 + y^2 + z^2 = 4} کا ٹکڑا۔
 \انتہا{سوال}
 
 \جزوحصہء{مقدار معلوم سطح پر تکمل}
 
-سوال \حوالہء{27} تا \حوالہء{34} میں دیے گئے  تفاعل کا تکمل دی گئی سطح پر حاصل کریں۔
+سوال \حوالہ{سوال_مقدار_معلوم_ستائیس} تا \حوالہ{سوال_مقدار_معلوم_چونتیس} میں دیے گئے  تفاعل کا تکمل دی گئی سطح پر حاصل کریں۔
 %27
-\ابتدا{سوال}\موٹا{قطع مکافی بیلن}\quad
+\ابتدا{سوال}\شناخت{سوال_مقدار_معلوم_ستائیس}\موٹا{قطع مکافی بیلن}\quad
 قطع مکافی بیلن \عددی{y=x^2,\,0\le x\le 2,\, 0\le z \le 3} پر تفاعل \عددی{G(x,y,z)=x}
 \انتہا{سوال}
 %28
@@ -4801,15 +4773,15 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 قطع مکافی گنبد \عددی{z=1-x^2-y^2,\, z\ge 0} پر تفاعل \عددی{H(x,y,z)=x^2\sqrt{5-4z}}
 \انتہا{سوال}
 %34
-\ابتدا{سوال}\موٹا{کروی ٹوپی}\quad
+\ابتدا{سوال}\شناخت{سوال_مقدار_معلوم_چونتیس}\موٹا{کروی ٹوپی}\quad
 کرہ \عددی{x^2+y^2+z^2=4} کا وہ حصہ جو مخروط \عددی{z=\sqrt{x^2+y^2}} سے اوپر پایا جاتا ہو اور تفاعل \عددی{H(x,y,z)=yz}
 \انتہا{سوال}
 
 \جزوحصہء{سطحی مقدار معلوم روپ  اور بہاؤ}
-سوال \حوالہء{35} تا \حوالہء{44} میں مقدار معلوم روپ استعمال کرتے ہوئے دیے گئے رخ میں بہاؤ \عددی{\iint_S \kvec{F}\cdot\kvec{n}\dif\sigma} تلاش کریں۔
+سوال \حوالہ{سوال_مقدار_معلوم_پینتیس} تا \حوالہ{سوال_مقدار_معلوم_چوالیس} میں مقدار معلوم روپ استعمال کرتے ہوئے دیے گئے رخ میں بہاؤ \عددی{\iint_S \kvec{F}\cdot\kvec{n}\dif\sigma} تلاش کریں۔
 
 %==================== 35 ====================
-\ابتدا{سوال}\موٹا{قطع مکافی  بیلن }\quad
+\ابتدا{سوال}\شناخت{سوال_مقدار_معلوم_پینتیس}\موٹا{قطع مکافی  بیلن }\quad
 قطع مکافی بیلن \عددی{z=4-y^2} سے  سطوح \عددی{x=0}، \عددی{x=1}، اور \عددی{z=0}  جو سطح کاٹتی ہیں اس سے  گزرتا باہر رخ (یعنی محور \عددی{x} سے عمودی دور جانب) بہاؤ  میدان  \عددی{\kvec{F} = z^2 \ai + x \aj - 3z \ak}کے لیے تلاش کریں۔
 \انتہا{سوال}
 
@@ -4853,7 +4825,7 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 \انتہا{سوال}
 
 %==================== 44 ====================
-\ابتدا{سوال}\موٹا{قطع مکافی جسم}\quad
+\ابتدا{سوال}\شناخت{سوال_مقدار_معلوم_چوالیس}\موٹا{قطع مکافی جسم}\quad
 میدان $\kvec{F} = 4x \ai + 4y \aj + 2 \ak$ کا  مخروط \عددی{z = \sqrt{x^2 +y^2}} کے اس نچلے  حصے  سے باہر کی سمت (محور \عددی{z}   سے عمودی دور)   گزرتا بہاؤ       تلاش کریں جو مستوی \عددی{z=1}  کاٹتا ہے۔
 \انتہا{سوال}
 
@@ -4878,34 +4850,34 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 مستقل کثافت \عددی{\delta}  کے باریک مخروطی  خول     \عددی{z=\sqrt{x^2+y^2},\,0\le z\le 1}  کا   محور \عددی{z} کے گرد جمودی   معیار اثر تلاش کریں۔
 \انتہا{سوال}
 
+%===========================================================
 \جزوحصہء{مقدار معلوم سطوح کے مماسی مستویات}
 
-مقدار معلوم سطح \عددی{\kvec{r}(u,v)=f(u,v)\ai+g(u,v)\ay+h(u,v)\ak}  کے نقطہ \عددی{P_0(f(u_0,v_0),g(u_0,v_0),h(u_0,v_0))} پر مماسی مستوی سے مراد   وہ مستوی ہے جو نقطہ \عددی{P_0} پر مماسی  سمتیات \عددی{\kvec{r}_u(u_0,v_0)} اور \عددی{\kvec{r}_v(u_0,v_0)} کے صلیبی ضرب
-   سمتیہ  \عددی{\kvec{r}_u(u_0,v_0)\times\kvec{r}_v(u_0,v_0)} کو عمودی ہو۔ سوال \حوالہء{49} تا \حوالہء{52} میں نقطہ \عددی{P_0} پر   سطح کے مماسی مستوی کی مساوات تلاش کریں۔اس کے بعد سطح کی کارتیسی مساوات دریافت کر کے سطح اور مماسی مستوی دونوں کا خاکہ ایک ساتھ کھینچیں۔
+مقدار معلوم سطح \عددی{\kvec{r}(u,v)=f(u,v)\ai+g(u,v)\ay+h(u,v)\ak}  کے نقطہ \عددی{P_0(f(u_0,v_0),g(u_0,v_0),h(u_0,v_0))} پر مماسی مستوی سے مراد   وہ مستوی ہے جو نقطہ \عددی{P_0} پر مماسی  سمتیات \عددی{\kvec{r}_u(u_0,v_0)} اور \عددی{\kvec{r}_v(u_0,v_0)} کے صلیبی ضرب    سمتیہ  \عددی{\kvec{r}_u(u_0,v_0)\times\kvec{r}_v(u_0,v_0)} کو عمودی ہو۔ سوال \حوالہ{سوال_مقدار_معلوم_انچاس} تا \حوالہ{سوال_مقدار_معلوم_باون} میں نقطہ \عددی{P_0} پر   سطح کے مماسی مستوی کی مساوات تلاش کریں۔اس کے بعد سطح کی کارتیسی مساوات دریافت کر کے سطح اور مماسی مستوی دونوں کا خاکہ ایک ساتھ کھینچیں۔
 
 
 %==================== 49 ====================
-\ابتدا{سوال}\موٹا{مخروط}\quad
-مخروط\عددی{\mathbf r(r,\theta)=r\cos \theta\,\ai+r\sin \theta\,\aj+r\,\ak,
-\, r\ge0,\qquad 0\le \theta\le2\pi}
-پر نقطہ \عددی{P_0=(\sqrt{2},\sqrt{2},2)} کے مقام پر ، جو \عددی{(r,\theta)=(2,\pi/4)} کے مطابق ہے۔
+\ابتدا{سوال}\شناخت{سوال_مقدار_معلوم_انچاس}\موٹا{مخروط}\quad
+مخروط\عددی{\kvec{r}(r,\phi)=r\cos \phi\,\ai+r\sin \phi\,\aj+r\,\ak,
+\, r\ge0,\qquad 0\le \phi\le2\pi}
+پر نقطہ \عددی{P_0=(\sqrt{2},\sqrt{2},2)} کے مقام پر ، جو \عددی{(r,\phi)=(2,\pi/4)} کے مطابق ہے۔
 \انتہا{سوال}
 %50
 \ابتدا{سوال}\موٹا{نصف کرہ}\quad
-نصف کرہ\عددی{\mathbf r(\phi,\theta)=4\sin\phi\cos \theta\,\ai+4\sin\phi\sin \theta\,\aj+4\cos\phi\,\ak,}
-جہاں  \عددی{{0\le\phi\le\pi/2}}   اور  \عددی{{0\le \theta\le2\pi}}   ہیں اور  نقطہ \عددی{P_0=(\sqrt2,\sqrt2,2\sqrt3)} ہے ، جو  \عددی{(\phi,\theta)=(\pi/6,\pi/4)} کے مطابق ہے۔
+نصف کرہ\عددی{\kvec{r}(\phi,\theta)=4\sin\phi\cos \theta\,\ai+4\sin\phi\sin \theta\,\aj+4\cos\phi\,\ak,}
+جہاں  \عددی{{0\le\theta\le\pi/2}}   اور  \عددی{{0\le \phi\le2\pi}}   ہیں اور  نقطہ \عددی{P_0=(\sqrt2,\sqrt2,2\sqrt3)} ہے ، 
+جو  \عددی{(\theta,\phi)=(\pi/6,\pi/4)} کے مطابق ہے۔
 \انتہا{سوال}
 %51
 \ابتدا{سوال} \موٹا{دائروی بیلن}\quad
-دائروی بیلن\عددی{\mathbf r(\theta,z)=3\sin(2\theta)\,\ai+6\sin^2\theta\,\aj+z\,\ak,
-\,  0\le \theta\le\pi}
-اور  نقطہ \عددی{P_0=\left(\frac{3\sqrt3}{2},\frac92,0\right)} ہے  ، جو \عددی{(\theta,z)=(\pi/3,0)} کے مطابق ہے(مثال\حوالہء{3 } ملاحظہ کریں)۔
+دائروی بیلن\عددی{\kvec{r}(\phi,z)=3\sin(2\phi)\,\ai+6\sin^2\phi\,\aj+z\,\ak,
+\,  0\le \phi\le\pi}
+اور  نقطہ \عددی{P_0=\left(\frac{3\sqrt3}{2},\frac92,0\right)} ہے  ، جو \عددی{(\phi,z)=(\pi/3,0)} کے مطابق ہے(مثال\حوالہء{3 } ملاحظہ کریں)۔
 \انتہا{سوال}
 %52
-\ابتدا{سوال}\موٹا{قطع مکافی  بیلن}\quad
-قطع  مکافی بیلن\عددی{\mathbf r(x,y)=x\ai+y\aj-x^2\ak,
+\ابتدا{سوال}\شناخت{سوال_مقدار_معلوم_باون}\موٹا{قطع مکافی  بیلن}\quad
+قطع  مکافی بیلن\عددی{\kvec{r}(x,y)=x\ai+y\aj-x^2\ak,
 \, -\infty<x<\infty,\, -\infty<y<\infty}
-
 نقطہ \عددی{P_0=(1,2,-1)} ہے، جو \عددی{(x,y)=(1,2)} کے مطابق ہے۔
 \انتہا{سوال}
 
@@ -4966,7 +4938,7 @@ hide z axis,hide x axis,height=10cm]
 \end{center}
 
 \[
-\mathbf r(u,v)=(R+r\cos u)\cos v\,\ai+(R+r\cos u)\sin v\,\aj+r\sin u\,\ak
+\kvec{r}(u,v)=(R+r\cos u)\cos v\,\ai+(R+r\cos u)\sin v\,\aj+r\sin u\,\ak
 \]
 جہاں \عددی{0\le u\le2\pi} اور \عددی{0\le v\le2\pi} ہیں۔
 
@@ -4982,7 +4954,7 @@ hide z axis,hide x axis,height=10cm]
 \item[(الف)]
  دکھائیں کہ سطح طواف کا مقدار معلوم روپ درج ذیل ہو گا
 \[
-\mathbf r(u,v)=f(u)\ai+g(u)\cos v\,\aj+g(u)\sin v\,\ak
+\kvec{r}(u,v)=f(u)\ai+g(u)\cos v\,\aj+g(u)\sin v\,\ak
 \]
 
 
@@ -5014,22 +4986,26 @@ hide z axis,hide x axis,height=10cm]
 \ابتدا{سوال}\موٹا{ترخیمی سطح کا مقدار معلوم روپ}\quad
 \begin{enumerate}
 \item[(الف)]
-ترخیم \عددی{\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}=1}      (حصہ \حوالہء{3.5} میں مثال \حوالہء{13})کا مقدار معلوم روپ درج ذیل ہے۔\عددی{x=a\cos \theta,\; y=b\sin \theta,\; 0\le \theta\le2\pi}
-کروی محدد کے زاویات \عددی{\theta} اور \عددی{\phi} استعمال کرتے ہوئے ثابت کریں
+ترخیم \عددی{\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}=1}      (حصہ \حوالہ{حصہ_مخروط_مستوی_منحنیات_کے_مقدار_معلوم_روپ} میں مثال \حوالہ{مثال_مخروط_ترخیم_راہ})کا مقدار معلوم روپ \عددی{x=a\cos \phi}،  \عددی{y=b\sin \phi} جہاں \عددی{0\le \phi\le 2\pi} ہے دیا گیا۔ کروی محدد کے زاویات \عددی{\theta} اور \عددی{\phi} استعمال کرتے ہوئے ثابت کریں
  ترخیم  \عددی{\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}+\tfrac{z^2}{c^2}=1}  کا مقدار معلوم روپ درج ذیل ہے۔
 \[
-\mathbf r(\theta,\phi)=a\cos \theta\cos\phi\,\ai+b\sin \theta\cos\phi\,\aj+c\sin\phi\,\ak
+\kvec{r}(\theta,\phi)=a\sin \theta\cos\phi\,\ai+b\sin \theta\sin\phi\,\aj+c\cos\theta\,\ak
 \]
 \item[(ب)]
 ترخیمی سطح  کے رقبے کا  تکمل لکھیں، لیکن اسے حل نہ کریں۔
 \end{enumerate}
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+\(A=\int_0^{2\pi}\int_0^{\pi}[a^2b^2\sin^2\theta\cos^2\theta+b^2c^2\sin^4\theta\cos^2\phi+a^2c^2\sin^2\theta\sin^2\phi]^{1\!/\!2}\dif\theta\dif\phi\)
+}}
+\انتہا{جواب}
 %56
 \ابتدا{سوال}\موٹا{یک  ورقی  قطع زائد سطح}
 \begin{enumerate}
 \item[(الف)] 
 یک ورقی قطع زائد سطح \عددی{x^2+y^2-z^2=1}
-کا مقدار معلوم روپ  دائرہ \عددی{x^2+y^2=r^2}  سے وابسطہ  زاویہ \عددی{\theta} اور  ہذلولی تفاعل  \عددی{r^2-z^2=1}   سے وابسطہ ہذلولی مقدار معلوم  \عددی{u}  استعمال کر کے حاصل  کریں۔ (حصہ \حوالہء{7.8} میں سوال \حوالہء{84} سے رجوع کریں۔)
+کا مقدار معلوم روپ  دائرہ \عددی{x^2+y^2=r^2}  سے وابسطہ  زاویہ \عددی{\phi} اور  ہذلولی تفاعل  \عددی{r^2-z^2=1}   سے وابسطہ ہذلولی مقدار معلوم  \عددی{u}  استعمال کر کے حاصل  کریں۔ (حصہ \حوالہ{حصہ_ماورائی_ہذلولی_تفاعل} میں سوال \حوالہ{سوال_ماورائی_قطع_زائد_تفاعل_نام} سے رجوع کریں۔)
 \item[(ب)] 
 جزو الف کے نتیجہ کو   درج ذیل کے لئے عمومی بنائیں۔
 \[
@@ -5046,27 +5022,29 @@ hide z axis,hide x axis,height=10cm]
 دو ورقی قطع زائد سطح \عددی{\frac{z^2}{c^2}-\frac{x^2}{a^2}-\frac{y^2}{b^2}=1} کا مقدار معلوم روپ تلاش کریں۔
 \انتہا{سوال}
 
-
+\انتہا{سوالات}
 %==========================================================================================
 %=========================================================================================
+%sec 14.7 of finney 5th edition
+
 \حصہ{مسئلہ سٹوکس  }\شناخت{حصہ_سمتی_میدان_مسئلہ_سٹوکس}
 
-ہم نے  حصہ\حوالہء{16.4 } میں دیکھا، دو بعدی میدان \عددی{\mathbf{F} = M\mathbf{i} + N\mathbf{j}}  میں  نقطہ $(x,y)$ پر کثافت  دائری بہاؤ یا   گردش  کا جزو درج ذیل  غیر سمتی  مقدار  \عددی{\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}}  بیان کرتا ہے۔ تین  ابعاد  میں  مستوی میں نقطہ $P$ کے گرد دائری بہاؤ  کو  سمتیہ کے ذریعے بیان کیا جاتا ہے۔یہ سمتیہ اس مستوی  کے عمود ہو گا   جس میں دائری بہاؤ  ہو(شکل\حوالہء{16.59})، اور سمتیہ  کا رخ دائری بہاؤ   کے خط    کے ساتھ دائیں ہاتھ کا تعلق رکھے گا۔سمتیہ کی لمبائی  سیال کے گھومنے کی شرح ظاہر کرتی ہے، جو  \عددی{P}  کے لحاظ سے دائری بہاؤ کا مستوی  جھکانے سے  عموماً  تبدیل ہو گی۔ہم کیا دیکھتے ہیں کہ  جب دائری بہاؤ کا سمتی رفتاری میدان \عددی{\kvec{F}=M\ai+N\aj+P\ak}  ہو،  زیادہ سے زیادہ دائری بہاؤ کا سمتیہ درج ذیل \اصطلاح{گردشی سمتیہ} \فرہنگ{گردشی سمتیہ}\حاشیہب{curl vector}\فرہنگ{curl vector} ہو گا۔
+ہم نے  حصہ\حوالہء{16.4 } میں دیکھا، دو بعدی میدان \عددی{\kvec{F} = M\ai + N\aj}  میں  نقطہ $(x,y)$ پر کثافت  دائری بہاؤ یا   گردش  کا جزو درج ذیل  غیر سمتی  مقدار  \عددی{\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}}  بیان کرتا ہے۔ تین  ابعاد  میں  مستوی میں نقطہ $P$ کے گرد دائری بہاؤ  کو  سمتیہ کے ذریعے بیان کیا جاتا ہے۔یہ سمتیہ اس مستوی  کے عمود ہو گا   جس میں دائری بہاؤ  ہو(شکل\حوالہء{16.59})، اور سمتیہ  کا رخ دائری بہاؤ   کے خط    کے ساتھ دائیں ہاتھ کا تعلق رکھے گا۔سمتیہ کی لمبائی  سیال کے گھومنے کی شرح ظاہر کرتی ہے، جو  \عددی{P}  کے لحاظ سے دائری بہاؤ کا مستوی  جھکانے سے  عموماً  تبدیل ہو گی۔ہم کیا دیکھتے ہیں کہ  جب دائری بہاؤ کا سمتی رفتاری میدان \عددی{\kvec{F}=M\ai+N\aj+P\ak}  ہو،  زیادہ سے زیادہ دائری بہاؤ کا سمتیہ درج ذیل \اصطلاح{گردشی سمتیہ} \فرہنگ{گردشی سمتیہ}\حاشیہب{curl vector}\فرہنگ{curl vector} ہو گا۔
 \begin{align}
-\mathbf{F}\text{گردش}=\left(\frac{\partial P}{\partial y} - \frac{\partial N}{\partial z}\right)\mathbf{i}+
-\left(\frac{\partial M}{\partial z} - \frac{\partial P}{\partial x}\right)\mathbf{j}+
-\left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)\mathbf{k}\tag{1}
+\kvec{F}\text{گردش}=\left(\frac{\partial P}{\partial y} - \frac{\partial N}{\partial z}\right)\ai+
+\left(\frac{\partial M}{\partial z} - \frac{\partial P}{\partial x}\right)\aj+
+\left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)\ak\tag{1}
 \end{align}
 
 یہ معلومات ہمیں\اصطلاح{مسئلہ سٹوکس }\فرہنگ{سٹوکس!مسئلہ}\حاشیہب{Stokes’ Theorem}\فرہنگ{Stokes!theorem}  دیتا ہے، جو مسئلہ گرین کے دائری بہاؤ و گردشی روپ کی  تین بعدی   وسعت ہے۔
 
-دھیان رہے کہ \عددی{(\mathbf{F}\text{گردش}) \cdot \mathbf{k}=\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}} اور \عددی{\mathbf{F} = M(x,y)\mathbf{i} + N(x,y)\mathbf{j}}    کی صورت میں حصہ\حوالہء{16.4 } میں پیش کی گئی   تعریف   بلا تضاد  ہیں۔
+دھیان رہے کہ \عددی{(\kvec{F}\text{گردش}) \cdot \ak=\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}} اور \عددی{\kvec{F} = M(x,y)\ai + N(x,y)\aj}    کی صورت میں حصہ\حوالہء{16.4 } میں پیش کی گئی   تعریف   بلا تضاد  ہیں۔
 
 
 مساوات \حوالہء{1} میں گردش \عددی{\kvec{F}}   کا  کلیہ عموماً        درج ذیل علامتی عامل  کے ذریعے لکھا جاتا ہے۔
 
 \begin{align}
-\nabla =\mathbf{i}\frac{\partial}{\partial x}+\mathbf{j}\frac{\partial}{\partial y}+\mathbf{k}\frac{\partial}{\partial z}\tag{2}
+\nabla =\ai\frac{\partial}{\partial x}+\aj\frac{\partial}{\partial y}+\ak\frac{\partial}{\partial z}\tag{2}
 \end{align}
 %===================================
 %L 90977
@@ -5074,27 +5052,27 @@ hide z axis,hide x axis,height=10cm]
 (علامت $\nabla$ کو  ہم "ڈیل\حاشیہب{del} "  پڑھتے ہیں۔)  یہ عامل استعمال کر کے  گردش \عددی{\kvec{F}} \فرہنگ{گردش!کلیہ}\حاشیہب{curl}\فرہنگ{curl!equation} کو  ہم \عددی{\nabla\times\kvec{F}} لکھتے ہیں۔
 
 \begin{align*}
-\nabla \times \mathbf{F}&=\begin{vmatrix}
-\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\nabla \times \kvec{F}&=\begin{vmatrix}
+\ai & \aj & \ak \\
 \frac{\partial}{\partial x} &
 \frac{\partial}{\partial y} &
 \frac{\partial}{\partial z} \\
 M & N & P
 \end{vmatrix}\\
-&=\left(\frac{\partial P}{\partial y} - \frac{\partial N}{\partial z}\right)\mathbf{i}+
-\left(\frac{\partial M}{\partial z} - \frac{\partial P}{\partial x}\right)\mathbf{j}+
-\left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)\mathbf{k}\\
+&=\left(\frac{\partial P}{\partial y} - \frac{\partial N}{\partial z}\right)\ai+
+\left(\frac{\partial M}{\partial z} - \frac{\partial P}{\partial x}\right)\aj+
+\left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)\ak\\
 &=\kvec{F}\text{گردش}
 \end{align*}
 مختصراً درج ذیل لکھا جائے گا۔
 \begin{align}
-  \mathbf{F}\text{گردش}=\nabla \times \mathbf{F}\tag{3}
+  \kvec{F}\text{گردش}=\nabla \times \kvec{F}\tag{3}
 \end{align}
 %====================================================
 
 \ابتدا{مثال}\موٹا{گردش \عددی{\kvec{F}} کی تلاش}
 
-میدان \عددی{\mathbf{F} = (x^2 - y)\mathbf{i} + 4z\mathbf{j} + x^2\mathbf{k}}   کی گردش تلاش کریں۔
+میدان \عددی{\kvec{F} = (x^2 - y)\ai + 4z\aj + x^2\ak}   کی گردش تلاش کریں۔
 
 \موٹا{حل:}
 
@@ -5102,17 +5080,17 @@ M & N & P
 \kvec{F}\text{گردش}&=\nabla\times \kvec{F}\\
 &=
 \begin{vmatrix}
-\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\ai & \aj & \ak \\
 \frac{\partial}{\partial x} &
 \frac{\partial}{\partial y} &
 \frac{\partial}{\partial z} \\
 x^2 - y & 4z & x^2
 \end{vmatrix}\\
-&=\left(\frac{\partial}{\partial y}(x^2) - \frac{\partial }{\partial z}(4z)\right)\mathbf{i}-
-\left(\frac{\partial }{\partial x}(x^2) - \frac{\partial }{\partial z}(x^2-y)\right)\mathbf{j}+
-\left(\frac{\partial}{\partial x}(4z) - \frac{\partial}{\partial y}(x^2 - y)\right)\mathbf{k}\\
+&=\left(\frac{\partial}{\partial y}(x^2) - \frac{\partial }{\partial z}(4z)\right)\ai-
+\left(\frac{\partial }{\partial x}(x^2) - \frac{\partial }{\partial z}(x^2-y)\right)\aj+
+\left(\frac{\partial}{\partial x}(4z) - \frac{\partial}{\partial y}(x^2 - y)\right)\ak\\
 &=(0 - 4)\ai-(2x - 0)\aj+(0 +1)\ak\\
-&=-4\mathbf{i} - 2x\mathbf{j} + \mathbf{k}
+&=-4\ai - 2x\aj + \ak
 \end{align*}
 \انتہا{مثال}
 
@@ -5120,7 +5098,7 @@ x^2 - y & 4z & x^2
 جیسا کہ ہم دیکھیں گے، عامل  $\nabla$ کے کئی دیگر استعمال پائے جاتے ہیں۔مثلاً  جب  غیر سمتی تفاعل \عددی{f(x,y,z)} پر لگایا جائے،  یہ\اصطلاح{ڈھلوان }\فرہنگ{ڈھلوان!کلیہ}\حاشیہب{gradient}\فرہنگ{gradient!equation} دیگا۔
 
 \begin{align}
-\nabla f=\frac{\partial f}{\partial x}\mathbf{i}+\frac{\partial f}{\partial y}\mathbf{j}+\frac{\partial f}{\partial z}\mathbf{k}
+\nabla f=\frac{\partial f}{\partial x}\ai+\frac{\partial f}{\partial y}\aj+\frac{\partial f}{\partial z}\ak
 \end{align}
 اسے ہم   "ڈھلوان \عددی{f}"یا "ڈیل \عددی{f}" کہیں\حاشیہب{grad f} گے\حاشیہب{del f}۔
 
@@ -5135,15 +5113,15 @@ x^2 - y & 4z & x^2
 \ابتدا{مسئلہ}\موٹا{مسئلہ سٹوکس}
     سمت بند سطح \عددی{S}   کی سرحد پر،      سطح کے عمودی اکائی سمتیہ \عددی{\kvec{n}} لے لحاظ سے خلاف گھڑی  چلتے ہوئے سمتیہ میدان  \عددی{\kvec{F}=M\ai+N\aj+P\ak} کا دائری بہاؤ   \عددی{S} پر \عددی{\nabla\times \kvec{F}\cdot\kvec{n}} کے تکمل کے برابر ہو گا۔
 \begin{align}
- \underbrace{\ointctrclockwise_C \mathbf{F} \cdot \dif \mathbf{r}}_{\text{\RL{خلاف گھڑی دائری بہاؤ}}}=\underbrace{\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, \dif \sigma}_{\text{\RL{تکمل گردش}}}  \tag{4}
+ \underbrace{\ointctrclockwise_C \kvec{F} \cdot \dif \mathbf{r}}_{\text{\RL{خلاف گھڑی دائری بہاؤ}}}=\underbrace{\iint_S (\nabla \times \kvec{F}) \cdot \an\, \dif \sigma}_{\text{\RL{تکمل گردش}}}  \tag{4}
 \end{align}
 \انتہا{مسئلہ}
 
 ہم مساوات \حوالہء{4}  کو دیکھ کر کہہ سکتے ہیں کہ   ایسی دو مختلف سمت  بند سطحیں  \عددی{S_1} اور \عددی{S_2}  جن کی سرحد  \عددی{C} ایک ہو، کے تکمل گردش برابر ہوں گے۔
 
 \begin{align*}
-\iint_{S_1} (\nabla \times \mathbf{F}) \cdot \mathbf{n}_1\, \dif \sigma=
-\iint_{S_2} (\nabla \times \mathbf{F}) \cdot \mathbf{n}_2\, \dif \sigma
+\iint_{S_1} (\nabla \times \kvec{F}) \cdot \an_1\, \dif \sigma=
+\iint_{S_2} (\nabla \times \kvec{F}) \cdot \an_2\, \dif \sigma
 \end{align*}
 
 
@@ -5153,16 +5131,16 @@ x^2 - y & 4z & x^2
 
 اگر  $C$ مستوی  \عددی{xy}  میں   موجود ، خلاف گھڑی سمت بند  منحنی   ہو، اور \عددی{R} مستوی \عددی{xy} میں ایک خطہ ہو جس کو \عددی{C} گھیرتی ہو، تب \عددی{\dif \sigma=\dif x\dif y}  اور درج ذیل ہو گا۔
 \begin{align*}
-(\nabla \times \mathbf{F}) \cdot \mathbf{n}=(\nabla \times \mathbf{F}) \cdot \mathbf{k}=\left(
+(\nabla \times \kvec{F}) \cdot \an=(\nabla \times \kvec{F}) \cdot \ak=\left(
 \frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)
 \end{align*}
 ان حالات میں مساوات سٹوکس درج ذیل صورت اختیار  کرتی ہے
 \begin{align*}
-\ointctrclockwise_C \mathbf{F} \cdot \dif \mathbf{r}=\iint_R\left(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\right)\dif x\dif y
+\ointctrclockwise_C \kvec{F} \cdot \dif \mathbf{r}=\iint_R\left(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\right)\dif x\dif y
 \end{align*}
 جو مسئلہ گرین میں  موجود مساوات کی دائری بہاؤ و گردشی روپ ہے۔اسی طرح انہیں قدموں پر  الٹ  چلتے ہوئے  ہم مسئلہ گرین کے  دائری بہاؤ و گردشی  روپ کو دو بعدی میدان کے لئے  درج ذیل ڈیل علامتیت میں لکھ سکتے ہیں۔
 \begin{align}
-\ointctrclockwise_C \mathbf{F} \cdot \dif \mathbf{r}=\iint_R (\nabla \times \mathbf{F}) \cdot \mathbf{k}\, \dif A \tag{5}
+\ointctrclockwise_C \kvec{F} \cdot \dif \mathbf{r}=\iint_R (\nabla \times \kvec{F}) \cdot \ak\, \dif A \tag{5}
 \end{align}
 شکل\حوالہء{16.61} ملاحظہ کریں۔
 
@@ -5175,15 +5153,15 @@ x^2 - y & 4z & x^2
 \موٹا{حل:}\quad
 مقدار معلوم روپ \عددی{\kvec{r}(\theta)=(3\cos\theta)\ai+(3\sin\theta)\aj,\,0\le \theta\le 2\pi} استعمال کرتے ہوئے اوپر  سے نظارہ کرتے ہوئے \عددی{C} کے گرد خلاف گھڑی دائری بہاؤ تلاش کرتے ہیں۔
 \begin{align*}
-\dif \mathbf{r}&=-3\sin \theta\,\dif \theta\,\mathbf{i}+3\cos \theta\,\dif\theta\,\mathbf{j}\\
-\mathbf{F} &= y\mathbf{i} - x\mathbf{j}=3\sin \theta\,\mathbf{i}-3\cos \theta\,\mathbf{j}\\
-\mathbf{F} \cdot \dif \mathbf{r}&=-9\sin^2 \theta\,\dif\theta-9\cos^2 \theta\,\dif\theta=-9\dif\theta\\
-\ointctrclockwise_C \mathbf{F} \cdot \dif \mathbf{r}&=\int_0^{2\pi} -9\,\dif \theta=-18\pi
+\dif \mathbf{r}&=-3\sin \theta\,\dif \theta\,\ai+3\cos \theta\,\dif\theta\,\aj\\
+\kvec{F} &= y\ai - x\aj=3\sin \theta\,\ai-3\cos \theta\,\aj\\
+\kvec{F} \cdot \dif \mathbf{r}&=-9\sin^2 \theta\,\dif\theta-9\cos^2 \theta\,\dif\theta=-9\dif\theta\\
+\ointctrclockwise_C \kvec{F} \cdot \dif \mathbf{r}&=\int_0^{2\pi} -9\,\dif \theta=-18\pi
 \end{align*}
 
 اب \عددی{\kvec{F}}   کے لئے تکمل گردش تلاش کرتے ہیں۔
 \begin{align*}
-\nabla \times \mathbf{F}&= \left(\frac{\partial P}{\partial y}-\frac{\partial N}{\partial z}\right)\ai+
+\nabla \times \kvec{F}&= \left(\frac{\partial P}{\partial y}-\frac{\partial N}{\partial z}\right)\ai+
  \left(\frac{\partial M}{\partial z}-\frac{\partial P}{\partial x}\right)\aj+
  \left(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\right)\ak\\
 &=(0-0)\ai+(0-0)\aj+(-1-1)\ak=-2\ak\\
@@ -5193,14 +5171,14 @@ x^2 - y & 4z & x^2
 \end{align*}
 یوں درج ذیل ہو گا۔
 \begin{align*}
-\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, \dif\sigma=\iint_{x^2+y^2\le 9} -2\,\dif A=-18\pi
+\iint_S (\nabla \times \kvec{F}) \cdot \an\, \dif\sigma=\iint_{x^2+y^2\le 9} -2\,\dif A=-18\pi
 \end{align*}
 
 اس طرح دائرے کی ہمراہ دائری بہاو  اور گردش کا تکمل نصف کرہ پر  برابر ہیں، جیسا کہ ہونا چاہیے تھا۔
 \انتہا{مثال}
 
 \ابتدا{مثال}\quad \موٹا{دائری بہاؤ کی تلاش}\\
-مستوی \عددی{z=2} مخروط \عددی{z=\sqrt{x^2+y^2}} سے منحنی \عددی{C}  پر ملتا ہے۔ اس منحنی پر ، اوپر سے دیکھتے ہوئے خلاف گھڑی (شکل \حوالہء{16.62})، میدان \عددی{\mathbf{F} = (x^2 - y)\mathbf{i} + 4z\mathbf{j} + x^2\mathbf{k}}  کا ، دائری بہاؤ تلاش کریں۔
+مستوی \عددی{z=2} مخروط \عددی{z=\sqrt{x^2+y^2}} سے منحنی \عددی{C}  پر ملتا ہے۔ اس منحنی پر ، اوپر سے دیکھتے ہوئے خلاف گھڑی (شکل \حوالہء{16.62})، میدان \عددی{\kvec{F} = (x^2 - y)\ai + 4z\aj + x^2\ak}  کا ، دائری بہاؤ تلاش کریں۔
 
 سطح: \quad
 مسئلہ سٹوکس کے استعمال سے ہم دائری بہاؤ سطح پر تکمل سے حاصل کرتے ہیں۔ اوپر سے دیکھتے ہوئے \عددی{C} پر گھڑی خلاف چلنا   \ترچھا{اندرونی }عمود  \عددی{\kvec{n}}  لینے کے مترادف ہے  جس کا  \عددی{z}   جزو مثبت ہو گا۔
@@ -5208,28 +5186,28 @@ x^2 - y & 4z & x^2
 ہم مخروط کا  مقدار معلوم روپ لکھتے  ہیں۔
 
 \begin{align*}
-\mathbf{r}(r,\theta)=r\cos \theta\,\mathbf{i}+r\sin \theta\,\mathbf{j}+r\,\mathbf{k},\quad0 \le r \le 2,\; 0 \le \theta \le 2\pi
+\mathbf{r}(r,\theta)=r\cos \theta\,\ai+r\sin \theta\,\aj+r\,\ak,\quad0 \le r \le 2,\; 0 \le \theta \le 2\pi
 \end{align*}
 اس طرح درج ذیل ہو گا۔
 \begin{align*}
 \kvec{n}&=\frac{\mathbf{r}_r \times \mathbf{r}_{\theta}}{|\mathbf{r}_r \times \mathbf{r}_{\theta}|}=
-\frac{- r\cos \theta\,\mathbf{i}-r\sin \theta\,\mathbf{j}+r\,\mathbf{k}}{r\sqrt{2}}&&
+\frac{- r\cos \theta\,\ai-r\sin \theta\,\aj+r\,\ak}{r\sqrt{2}}&&
 \text{\RL{حصہ \حوالہء{16.6} مثال \حوالہء{4}}}\\
-&=\frac{-\cos \theta\,\mathbf{i} - \sin \theta\,\mathbf{j} + \mathbf{k}}{\sqrt{2}}\\
+&=\frac{-\cos \theta\,\ai - \sin \theta\,\aj + \ak}{\sqrt{2}}\\
 \dif \sigma & = r\sqrt{2}\,\dif r\,\dif \theta&&\text{\RL{حصہ \حوالہء{16.6} مثال \حوالہء{4}}}\\
-\nabla \times \mathbf{F}&=-4\mathbf{i} - 2x\mathbf{j} + \mathbf{k}&&\text{\RL{مثال \حوالہء{1}}}\\
-&=-4\mathbf{i} - 2r\cos \theta\,\mathbf{j} + \mathbf{k}&&  x=r\cos\theta
+\nabla \times \kvec{F}&=-4\ai - 2x\aj + \ak&&\text{\RL{مثال \حوالہء{1}}}\\
+&=-4\ai - 2r\cos \theta\,\aj + \ak&&  x=r\cos\theta
 \end{align*}
 %======================
 %L91195
 یوں
 \begin{align*}
-(\nabla \times \mathbf{F}) \cdot \mathbf{n}&=\frac{1}{\sqrt{2}}\left(4\cos \theta + 2r\cos \theta \sin \theta + 1\right)\\
+(\nabla \times \kvec{F}) \cdot \an&=\frac{1}{\sqrt{2}}\left(4\cos \theta + 2r\cos \theta \sin \theta + 1\right)\\
 &=\frac{1}{\sqrt{2}}\left(4\cos \theta + r\sin 2\theta + 1\right)
 \end{align*}
 اور دائری بہاؤ درج ذیل ہو گا۔
 \begin{align*}
-\ointctrclockwise_C \mathbf{F}\cdot d\mathbf{r}&=\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, \dif \sigma && \text{\RL{مسئلہ سٹوکس مساوات \حوالہء{4}}}\\
+\ointctrclockwise_C \kvec{F}\cdot d\mathbf{r}&=\iint_S (\nabla \times \kvec{F}) \cdot \an\, \dif \sigma && \text{\RL{مسئلہ سٹوکس مساوات \حوالہء{4}}}\\
 &=\int_0^{2\pi}\int_0^2\frac{1}{\sqrt{2}}\left(4\cos \theta + r\sin 2\theta + 1\right)(\sqrt{2}\,r\,\dif r\,\dif \theta)= 4\pi
 \end{align*}
 \انتہا{مثال}
@@ -5277,24 +5255,24 @@ x^2 - y & 4z & x^2
 \end{figure}
 
 \begin{align*}
-\ointctrclockwise_C \mathbf{F}\cdot \dif \mathbf{r}
+\ointctrclockwise_C \kvec{F}\cdot \dif \mathbf{r}
 \end{align*}
 
 مسئلہ سٹوکس کے مطابق   یہ دائری بہاؤ  ، \عددی{C} میں محیط  سطح \عددی{S}  سے گزرتا \عددی{\nabla \times\kvec{F}} کے بہاؤ  کے برابر ہو گا۔
 \begin{align*}
-\ointctrclockwise_C \mathbf{F}\cdot \dif \mathbf{r}=\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, \dif\delta
+\ointctrclockwise_C \kvec{F}\cdot \dif \mathbf{r}=\iint_S (\nabla \times \kvec{F}) \cdot \an\, \dif\delta
 \end{align*}
  ہم  \عددی{\kvec{F}} کے دائرہ کار میں    اٹل  نقطہ $Q$، اور    اس نقطہ پر   مخصوص سمت $\mathbf{u}$ منتخب کرتے  ہیں۔  فرض کریں  $C$ ایک دائرہ ہے جس کا رداس \عددی{\rho} اور مرکز \عددی{Q} ہے اور جس کا مستوی \عددی{\kvec{u}} کو عمودی ہے۔اگر \عددی{Q} پر \عددی{\nabla\times\kvec{F}} استمراری ہو،   \عددی{C} میں محیط دائری قرص \عددی{S} پر \عددی{\nabla\times\kvec{F}} کے \عددی{\kvec{u}} ویں جزو کی اوسط قیمت \عددی{\rho\to 0} کی صورت میں \عددی{Q}  پر \عددی{\nabla\times\kvec{F}} کے \عددی{\kvec{u}} ویں جزو  کو پہنچے گی۔
 \begin{align*}
-(\nabla \times \mathbf{F} \cdot \mathbf{u})_Q=\lim_{\rho\to 0}\frac{1}{\pi \rho^2}\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{u}\, \dif\sigma
+(\nabla \times \kvec{F} \cdot \mathbf{u})_Q=\lim_{\rho\to 0}\frac{1}{\pi \rho^2}\iint_S (\nabla \times \kvec{F}) \cdot \mathbf{u}\, \dif\sigma
 \end{align*}
 آخری مساوات میں سطحی تکمل کی جگہ دائری بہاؤ لکھ کر درج ذیل حاصل ہو گا۔
 \begin{align}
-(\nabla \times \mathbf{F} \cdot \mathbf{u})_Q=\lim_{\rho \to 0}\frac{1}{\pi \rho^2}\ointctrclockwise_C \mathbf{F}\cdot \dif \mathbf{r}\tag{6}
+(\nabla \times \kvec{F} \cdot \mathbf{u})_Q=\lim_{\rho \to 0}\frac{1}{\pi \rho^2}\ointctrclockwise_C \kvec{F}\cdot \dif \mathbf{r}\tag{6}
 \end{align}
-مساوات \حوالہء{6}    کے بائیں ہاتھ کی قیمت اس صورت زیادہ سے زیادہ ہو گی جب \عددی{\kvec{u}} کا رخ $\mathbf{u}$، $\nabla \times \mathbf{F}$ کی سمت میں ہو۔چھوٹے $\rho$ کے لئے مساوات \حوالہء{6}  کے دائیں ہاتھ   کا حد تخمیناً درج ذیل ہو گا، جو  \عددی{C} کے ہمراہ  دائری بہاؤ تقسیمِ رقبہ قرص    (دائری بہاؤ کی کثافت)ہے۔
+مساوات \حوالہء{6}    کے بائیں ہاتھ کی قیمت اس صورت زیادہ سے زیادہ ہو گی جب \عددی{\kvec{u}} کا رخ $\mathbf{u}$، $\nabla \times \kvec{F}$ کی سمت میں ہو۔چھوٹے $\rho$ کے لئے مساوات \حوالہء{6}  کے دائیں ہاتھ   کا حد تخمیناً درج ذیل ہو گا، جو  \عددی{C} کے ہمراہ  دائری بہاؤ تقسیمِ رقبہ قرص    (دائری بہاؤ کی کثافت)ہے۔
 \begin{align*}
-\frac{1}{\pi \rho^2}\ointctrclockwise_C \mathbf{F}\cdot \dif \mathbf{r}
+\frac{1}{\pi \rho^2}\ointctrclockwise_C \kvec{F}\cdot \dif \mathbf{r}
 \end{align*}
 فرض کریں \عددی{Q} پر رداس \عددی{\rho} کی چپو چرخی رکھی جاتی ہے جس کا دھرا  \عددی{\kvec{u}}  کے ہمراہ ہے۔ سیال کا \عددی{C} کے ہمراہ دائری بہاؤ  چپو چرخی کے   گھومنے کی رفتار پر اثر انداز ہو گا۔ جب  دائری بہاؤ تکمل کی قیمت زیادہ سے زیادہ ہو اس صورت چپو چرخی تیز سے تیز گھومے گی؛ یوں  جب دھرا \عددی{\nabla\times\kvec{F}} کے رخ ہو، چپو چرخی تیز سے تیز گھومے گی (شکل \حوالہء{16.63})۔
 %=====================
@@ -5307,7 +5285,7 @@ x^2 - y & 4z & x^2
 چونکہ \عددی{\kvec{F}=\kvec{v}=-\omega y\ai+\omega x\aj} ہے لہٰذا درج ذیل ہو گا۔
 
 \begin{align*}
-\nabla \times \mathbf{F}=
+\nabla \times \kvec{F}=
 \nabla\times\kvec{F}&=\left(\frac{\partial P}{\partial y}-\frac{\partial N}{\partial z}\right)\ai+
 \left(\frac{\partial M}{\partial z}-\frac{\partial P}{\partial x}\right)\aj+
 \left(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\right)\ak\\
@@ -5317,11 +5295,11 @@ x^2 - y & 4z & x^2
 مسئلہ سٹوکس  کے مطابق،    رداس \عددی{\rho} کے دائرہ \عددی{C}   کے ہمراہ، جو مستوی مثلاً مستوی  \عددی{xy}     میں قرص \عددی{S}  کا احاطہ کرتا ہو، کے ہمراہ \عددی{\kvec{F}} کا دائری بہاؤ درج ذیل ہو گا۔
 
 \begin{align*}
-\ointctrclockwise_C \mathbf{F} \cdot \dif \mathbf{r}=\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, \dif \sigma=\iint_S 2\omega \ak\cdot\ak \dif x\dif y=(2\omega)(\pi \rho^2)
+\ointctrclockwise_C \kvec{F} \cdot \dif \mathbf{r}=\iint_S (\nabla \times \kvec{F}) \cdot \an\, \dif \sigma=\iint_S 2\omega \ak\cdot\ak \dif x\dif y=(2\omega)(\pi \rho^2)
 \end{align*}
 یوں درج ذیل ہو گا جو \عددی{\kvec{u}=\ak} لیتے ہوئے مساوات \حوالہء{6}  کے عین مطابق ہے۔
 \begin{align*}
-(\nabla \times \kvec{F})\cdot \ak=2\omega=\frac{1}{\pi\rho^2}\ointctrclockwise_C \mathbf{F} \cdot \dif \mathbf{r}
+(\nabla \times \kvec{F})\cdot \ak=2\omega=\frac{1}{\pi\rho^2}\ointctrclockwise_C \kvec{F} \cdot \dif \mathbf{r}
 \end{align*}
 \انتہا{مثال}
 
@@ -5336,9 +5314,9 @@ x^2 - y & 4z & x^2
 \end{align*}
 سرحد \عددی{C} پر خلاف گھڑی  حرکت کے مترادف ہے۔ مسئلہ سٹوکس استعمال کرنے کے لئے درج ذیل حاصل کرنے ہیں۔
 \begin{align*}
-\kvec{F}\text{گردش}=\nabla \times \mathbf{F}=
+\kvec{F}\text{گردش}=\nabla \times \kvec{F}=
 \begin{vmatrix}
-\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\ai & \aj & \ak \\
 \frac{\partial}{\partial x} &
 \frac{\partial}{\partial y} &
 \frac{\partial}{\partial z} \\
@@ -5348,23 +5326,23 @@ xz & xy & 3xz
 \end{align*}
  مستوی پر\عددی{z = 2 - 2x - y} ہے لہٰذا
 \begin{align*}
-\nabla \times \mathbf{F}
+\nabla \times \kvec{F}
 =
-( x - 3(2 - 2x - y) )\mathbf{j} + y\mathbf{k}=(7x + 3y - 6)\mathbf{j} + y\mathbf{k}
+( x - 3(2 - 2x - y) )\aj + y\ak=(7x + 3y - 6)\aj + y\ak
 \end{align*}
 %===================
 %L91345
 اور
 \begin{align*}
-(\nabla \times \mathbf{F}) \cdot \mathbf{n}=\frac{1}{\sqrt{6}}(7x +3y-6+y)=\frac{1}{\sqrt{6}}(7x + 4y - 6)
+(\nabla \times \kvec{F}) \cdot \an=\frac{1}{\sqrt{6}}(7x +3y-6+y)=\frac{1}{\sqrt{6}}(7x + 4y - 6)
 \end{align*}
 ہو گا۔ سطحی  رقبے کا  چھوٹا ٹکڑا درج ذیل ہو گا۔
 \begin{align*}
-\dif \sigma  = \frac{|\nabla f|}{|\nabla f \cdot \mathbf{k}|}\, \dif A=\frac{\sqrt{6}}{1}\dif x\dif y=\sqrt{6}\dif x\dif y
+\dif \sigma  = \frac{|\nabla f|}{|\nabla f \cdot \ak|}\, \dif A=\frac{\sqrt{6}}{1}\dif x\dif y=\sqrt{6}\dif x\dif y
 \end{align*}
 دائری بہاؤ درج ذیل ہو گا۔
 \begin{align*}
-\ointctrclockwise_C \kvec{F}\cdot \dif \kvec{r}&=\iint_S\nabla \times \mathbf{F}) \cdot \mathbf{n}\, \dif\sigma&&
+\ointctrclockwise_C \kvec{F}\cdot \dif \kvec{r}&=\iint_S\nabla \times \kvec{F}) \cdot \an\, \dif\sigma&&
 \text{\RL{مسئلہ سٹوکس، مساوات \حوالہء{4}}}\\
 &=\int_{0}^{1}\int_{0}^{2-2x}\frac{1}{\sqrt{6}}(7x+4y-6)\sqrt{6}\dif y\dif x=-1
 \end{align*}
@@ -5382,15 +5360,15 @@ xz & xy & 3xz
 سطح  \عددی{S}   کی سرحد \عددی{\Delta}    قسم   \عددی{2} مستویات کے ان کناروں پر مشتمل ہے جو دوسری مستویات سے متصل نہیں۔شکل \حوالہء{16.66} میں مثلثات   \عددی{EAB}، \عددی{BCE}، اور \عددی{CDE} سطح \عددی{S}  کے کچھ حصے کو ظاہر کرتے ہیں جبکہ \عددی{ABCD} سرحد \عددی{\Delta} کے کچھ حصے کو ظاہر کرتا ہے۔ تینوں مثلثات  پر بالترتیب مسئلہ گرین کا اطلاق کر کے نتائج جمع کر کے درج ذیل حاصل ہو گا۔
 \begin{align}
 \left(\ointctrclockwise_{EAB}+\ointctrclockwise_{BCE}+\ointctrclockwise_{CDE}\right) F\cdot \dif \kvec{r}=
-\left( \iint _{EAB}+\iint_{BCE}+\iint_{CDE}\right)\nabla \times \mathbf{F}\cdot \mathbf{n}\, \dif\sigma\tag{7}
+\left( \iint _{EAB}+\iint_{BCE}+\iint_{CDE}\right)\nabla \times \kvec{F}\cdot \an\, \dif\sigma\tag{7}
 \end{align}
 چونکہ مساوات \حوالہء{7} میں  بائیں ہاتھ کے تین لکیری تکملات میں  اندرونی   (متصل  مثلثات کے مشترک)اضلاع  پر  لکیری تکملات  کے جوڑے ایک دوسرے کو کاٹتے ہیں لہٰذا  تینوں   مل کر  کنارہ \عددی{ABCDE} پر   واحد ایک  تکمل دیتے ہیں۔مثال کے طور پر  مثلث \عددی{ABE} کے ضلع  \عددی{BE} پر لکیری تکمل کی علامت \عددی{(\pm)} مثلث \عددی{EBC} کے اسی ضلع پر لکیری تکمل کی علامت  \عددی{(\mp)}کا الٹ ہو گی۔ضلع \عددی{CE} پر بھی ایسا ہو گا۔ یوں مساوات \حوالہء{7}   درج ذیل روپ اختیار کرتی ہے۔
 \begin{align*}
-\ointctrclockwise_{ABCDE} \mathbf{F}\cdot \dif \mathbf{r}=\iint_{ABCDE}\nabla \times \mathbf{F}\cdot \mathbf{n}\, \dif\sigma
+\ointctrclockwise_{ABCDE} \kvec{F}\cdot \dif \mathbf{r}=\iint_{ABCDE}\nabla \times \kvec{F}\cdot \an\, \dif\sigma
 \end{align*}
 تمام اضلاع پر مسئلہ گرین کا اطلاق کر کے درج ذیل حاصل ہو گا جو  درحقیقت کثیر سطحی سطح \عددی{S} کا مسئلہ سٹوکس ہے۔ مزید عمومی  سطوح کے   لئے   ثبوت آپ کو   اعلٰی نصاب  میں  ملیں گے۔
 \begin{align*}
-\ointctrclockwise_{\Delta} \mathbf{F}\cdot \dif\mathbf{r}=\iint_{S}\nabla \times \mathbf{F}\cdot \mathbf{n}\, \dif\sigma
+\ointctrclockwise_{\Delta} \kvec{F}\cdot \dif\mathbf{r}=\iint_{S}\nabla \times \kvec{F}\cdot \an\, \dif\sigma
 \end{align*}
 %=====================
 %L91421
@@ -5406,11 +5384,11 @@ xz & xy & 3xz
 \begin{align*}
 \nabla \times \nabla f =
 \begin{vmatrix}
-\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\ai & \aj & \ak \\
 \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
 \frac{\partial f}{\partial x} & \frac{\partial f}{\partial y} & \frac{\partial f}{\partial z}
 \end{vmatrix}
-=(\, f_{zy} - f_{yz} \,) \mathbf{i}-(\, f_{zx} - f_{xz} \,) \mathbf{j}+(\, f_{yx} - f_{xy} \,) \mathbf{k}
+=(\, f_{zy} - f_{yz} \,) \ai-(\, f_{zx} - f_{xz} \,) \aj+(\, f_{yx} - f_{xy} \,) \ak
 \end{align*}
 ثانی  جزوی تفرق استمراری ہونے کی صورت میں  قوسین میں بند  مختلف اقسام کے ثانی  تفرق  برابر ہوں گے   (حصہ \حوالہء{14.3}، مسئلہ \حوالہء{2}) لہٰذا سمتیہ صفر ہو گا
 
@@ -5427,7 +5405,7 @@ xz & xy & 3xz
 \موٹا{خاکہ}\quad
 مسئلہ \حوالہء{6} کا ثبوت عموماً دو مراحل میں کیا جاتا ہے۔ پہلا مرحلہ سادہ بند منحنیات کے لیے ہو گا۔ اعلٰی ریاضیات کی ایک شاخ \اصطلاح{ربڑی ہندسہ}\فرہنگ{ربڑی ہندسہ}\حاشیہب{topology}\فرہنگ{topology}   کا ایک مسئلہ  کہتا ہے کہ سادہ تعلق کھلے خطہ \عددی{D} میں ہر قابل تفرق   سادہ بند منحنی  \عددی{C}  ایک ہموار دو طرفہ سطح \عددی{S}،   جو \عددی{D} میں پائی جاتی ہو، کی سرحد ہو گی ۔یوں مسئلہ سٹوکس کے تحت درج ذیل ہو گا۔
 \begin{align*}
-\ointctrclockwise_C \mathbf{F} \cdot \dif\mathbf{r}=\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, \dif\sigma= 0
+\ointctrclockwise_C \kvec{F} \cdot \dif\mathbf{r}=\iint_S (\nabla \times \kvec{F}) \cdot \an\, \dif\sigma= 0
 \end{align*}
 
 دوسرا مرحلہ اُن منحنیات کے لیے ہے جو خود کو کاٹتی ہیں، جیسے کہ شکل\حوالہء{16.68 }میں دکھائی گئی ہے۔ ایسی منحنیات کو سادہ  حلقات، جن  کا احاطہ قابل سمت بند سطوح کرتی ہوں،  میں تقسیم کر کے باری باری ایک ایک حلقہ پر مسئلہ سٹوکس کا اطلاق کر کے نتائج کا مجموعہ لیا جاتا ہے۔
@@ -5491,23 +5469,23 @@ xz & xy & 3xz
 \انتہا{سوال}
 %Q9
 \ابتدا{سوال}
-فرض کریں سطح \عددی{S}  بیلن   \عددی{x^2+y^2=a^2,\, 0\le z\le h}  اور اس کا بالائی ڈھکن   \عددی{x^2+y^2\le a^2,\,  z=h}  پر مشتمل ہے۔میدان \عددی{\mathbf{F}=-y\mathbf{i}+x\mathbf{j}+x^2\mathbf{k}} کے لئے سطح \عددی{S} سے \عددی{\nabla\times\mathbf{F}} کا  باہر رخ  بہاؤ  تلاش کریں۔
+فرض کریں سطح \عددی{S}  بیلن   \عددی{x^2+y^2=a^2,\, 0\le z\le h}  اور اس کا بالائی ڈھکن   \عددی{x^2+y^2\le a^2,\,  z=h}  پر مشتمل ہے۔میدان \عددی{\kvec{F}=-y\ai+x\aj+x^2\ak} کے لئے سطح \عددی{S} سے \عددی{\nabla\times\kvec{F}} کا  باہر رخ  بہاؤ  تلاش کریں۔
 \انتہا{سوال}
 
 
 \ابتدا{سوال}
  درج ذیل تکمل کا حساب کریں   جہاں \عددی{S}  نصف کرہ \عددیء{x^2+y^2+z^2=1,\,z\ge0} ہے۔
-\[\iint_S\bigl(\nabla\times(y\mathbf{i})\bigr)\cdot\mathbf{n}\,\dif \sigma\]
+\[\iint_S\bigl(\nabla\times(y\ai)\bigr)\cdot\an\,\dif \sigma\]
 \انتہا{سوال}
 
 \ابتدا{سوال} \موٹا{گردش \عددی{\kvec{F}} کا بہاؤ}\\
 دکھائیں کہ  ان تمام سمت بند  سطوح \عددی{S} کے لئے ، جو  \عددی{C} کا  احاطہ  ہوں اور جن کا  \عددی{C} پر مثبت رخ ایک  ہو،درج ذیل تکمل کی قیمتیں  برابر ہوں  گی۔
-\[\iint_S(\nabla\times\mathbf{F})\cdot\mathbf{n}\,\dif \sigma\]
+\[\iint_S(\nabla\times\kvec{F})\cdot\an\,\dif \sigma\]
 \انتہا{سوال}
 
 \ابتدا{سوال}
- فرض کریں \(\mathbf{F}\)  قابل  سمت بند  سمتی میدان ہے جو   ایسے خطے پر معین ہے جس میں ایک ہموار بند سمت بند سطح \(S\) اور اس کا اندرونی حصہ شامل ہیں۔سطح  \(S\) پر اکائی عمودی سمتیہ میدان \(\mathbf{n}\) ہے۔ مزید فرض کریں کہ \(S\)، دو سطحوں \(S_1\) اور \(S_2\) کا مجموعہ ہے جو آپس میں  ایک ہموار سادہ بند منحنی \(C\)  پر  جڑی ہوئی ہیں۔ کیا درج ذیل کے بارے میں کچھ کہا جا سکتا ہے؟
-\[\iint_S(\nabla\times\mathbf{F})\cdot\mathbf{n}\,\dif \sigma\]
+ فرض کریں \(\kvec{F}\)  قابل  سمت بند  سمتی میدان ہے جو   ایسے خطے پر معین ہے جس میں ایک ہموار بند سمت بند سطح \(S\) اور اس کا اندرونی حصہ شامل ہیں۔سطح  \(S\) پر اکائی عمودی سمتیہ میدان \(\an\) ہے۔ مزید فرض کریں کہ \(S\)، دو سطحوں \(S_1\) اور \(S_2\) کا مجموعہ ہے جو آپس میں  ایک ہموار سادہ بند منحنی \(C\)  پر  جڑی ہوئی ہیں۔ کیا درج ذیل کے بارے میں کچھ کہا جا سکتا ہے؟
+\[\iint_S(\nabla\times\kvec{F})\cdot\an\,\dif \sigma\]
 اپنے جواب کی وجوہات بیان کریں۔
 \انتہا{سوال}
 
@@ -5515,36 +5493,36 @@ xz & xy & 3xz
 سوال \حوالہء{13}تا  \حوالہء{18}میں بیرونی سمت  اکائی عمودی سمتیہ \عددی{\kvec{n}} کے رخ ، سطح \عددی{S} سے گزرتا میدان \عددی{\kvec{F}}  کی گردش کے بہاؤ کی قیمت  مسئلہ سٹوکس کا سطحی تکمل استعمال کر کے تلاش کریں۔
 %Q13
 \ابتدا{سوال}
-\(\mathbf{F}=2z\mathbf{i}+3x\mathbf{j}+5y\mathbf{k}\)\\
+\(\kvec{F}=2z\ai+3x\aj+5y\ak\)\\
 \[
-S:\quad \mathbf{r}(r,\theta)=r\cos \theta\,\mathbf{i}+r\sin \theta\,\mathbf{j}+(4-r^2)\mathbf{k},\qquad
+S:\quad \mathbf{r}(r,\theta)=r\cos \theta\,\ai+r\sin \theta\,\aj+(4-r^2)\ak,\qquad
 0\le r\le2,\,0\le \theta \le 2\pi
 \]
 \انتہا{سوال}
 
 \ابتدا{سوال}
-\(\mathbf{F}=(y-z)\mathbf{i}+(z-x)\mathbf{j}+(x+z)\mathbf{k}\)\\
+\(\kvec{F}=(y-z)\ai+(z-x)\aj+(x+z)\ak\)\\
 \[
- S:\quad  \mathbf{r}(r,\theta) = r\cos \theta\,\mathbf{i} + r\sin \theta\,\mathbf{j} + (9-r^2)\mathbf{k}\qquad
+ S:\quad  \mathbf{r}(r,\theta) = r\cos \theta\,\ai + r\sin \theta\,\aj + (9-r^2)\ak\qquad
  0\le r\le3, \, 0\le \theta \le 2\pi
 \]
 \انتہا{سوال}
 
-\ابتدا{سوال}  \( \mathbf{F} = x^2y\,\mathbf{i} + 2y^3z\,\mathbf{j} + 3z\,\mathbf{k} \)
-\[S:\quad  \mathbf{r}(r,\theta) = r\cos \theta\,\mathbf{i} + r\sin \theta\,\mathbf{j} + r\,\mathbf{k},\qquad 0\le r\le1, \, 0\le \theta\le2\pi \]
+\ابتدا{سوال}  \( \kvec{F} = x^2y\,\ai + 2y^3z\,\aj + 3z\,\ak \)
+\[S:\quad  \mathbf{r}(r,\theta) = r\cos \theta\,\ai + r\sin \theta\,\aj + r\,\ak,\qquad 0\le r\le1, \, 0\le \theta\le2\pi \]
 \انتہا{سوال}
 
-\ابتدا{سوال}  \( \mathbf{F} = (x-y)\mathbf{i} + (y-z)\mathbf{j} + (z-x)\mathbf{k} \)
-\[ S:\quad \mathbf{r}(r,\theta) = r\cos \theta\,\mathbf{i} + r\sin \theta\,\mathbf{j} + (5-r)\mathbf{k},\qquad 0\le r\le5, \, 0\le \theta\le2\pi \]
+\ابتدا{سوال}  \( \kvec{F} = (x-y)\ai + (y-z)\aj + (z-x)\ak \)
+\[ S:\quad \mathbf{r}(r,\theta) = r\cos \theta\,\ai + r\sin \theta\,\aj + (5-r)\ak,\qquad 0\le r\le5, \, 0\le \theta\le2\pi \]
 \انتہا{سوال}
 
-\ابتدا{سوال}  \( \mathbf{F} = 3y\,\mathbf{i} + (5-2x)\mathbf{j} + (z^2-2)\mathbf{k} \)
-\[S:\quad  \mathbf{r}(\phi,\theta) = \sqrt{3}\sin\phi\cos \theta\,\mathbf{i} + \sqrt{3}\sin\phi\sin \theta\,\mathbf{j} + \sqrt{3}\cos\phi\,\mathbf{k}\]
+\ابتدا{سوال}  \( \kvec{F} = 3y\,\ai + (5-2x)\aj + (z^2-2)\ak \)
+\[S:\quad  \mathbf{r}(\phi,\theta) = \sqrt{3}\sin\phi\cos \theta\,\ai + \sqrt{3}\sin\phi\sin \theta\,\aj + \sqrt{3}\cos\phi\,\ak\]
 \[ 0\le\phi\le\frac{\pi}{2}, \, 0\le \theta\le2\pi \]
  \انتہا{سوال} 
 
-\ابتدا{سوال}  \( \mathbf{F} = y^2\mathbf{i} + z^2\mathbf{j} + x\mathbf{k} \)
-  \[S:\quad \mathbf{r}(\phi,\theta) = 2\sin\phi\cos \theta\,\mathbf{i} + 2\sin\phi\sin \theta\,\mathbf{j} + 2\cos\phi\,\mathbf{k}\]
+\ابتدا{سوال}  \( \kvec{F} = y^2\ai + z^2\aj + x\ak \)
+  \[S:\quad \mathbf{r}(\phi,\theta) = 2\sin\phi\cos \theta\,\ai + 2\sin\phi\sin \theta\,\aj + 2\cos\phi\,\ak\]
 \[0\le\phi\le\frac{\pi}{2}, \, 0\le \theta\le2\pi \]
  \انتہا{سوال} 
 
@@ -5554,18 +5532,18 @@ S:\quad \mathbf{r}(r,\theta)=r\cos \theta\,\mathbf{i}+r\sin \theta\,\mathbf{j}+(
 \ابتدا{سوال}\موٹا{ صفر  دائری بہاؤ}\quad
  تماثل \عددی{\nabla\times\nabla f} ( مساوات \حوالہء{8})  اور مسئلہ سٹوکس استعمال کرتے ہوئے دکھائی کہ فضا میں کسی بھی ہموار قابل سمت بند سطح  کی سرحد  کے ہمراہ  درج ذیل میدان کا دائری بہاؤ صفر ہو گا۔
 \begin{enumerate}[a.]
-\item \( \mathbf{F} = 2x\mathbf{i} + 2y\mathbf{j} + 2z\mathbf{k} \) 
-\item \( \mathbf{F} = \nabla(xy^2z^3) \) 
-\item \( \mathbf{F} = \nabla\times (x\mathbf{i}+y\mathbf{j}+z\mathbf{k}) \) 
-\item \( \mathbf{F} = \nabla f \)
+\item \( \kvec{F} = 2x\ai + 2y\aj + 2z\ak \) 
+\item \( \kvec{F} = \nabla(xy^2z^3) \) 
+\item \( \kvec{F} = \nabla\times (x\ai+y\aj+z\ak) \) 
+\item \( \kvec{F} = \nabla f \)
 \end{enumerate}
 \انتہا{سوال}
 
 \ابتدا{سوال} \موٹا{صفر دائری بہاؤ}\quad
-تفاعل \عددی{f(x,y,z)=(x^2+y^2+z^2)^{-1/2}} اور میدان \عددیء{\mathbf{F}=\nabla f} ہیں۔درج ذیل طریقوں  سے  دکھائیں  کہ مستوی \عددی{xy}   میں  دائرہ \عددی{x^2+y^2=a^2}  پر میدان کا  گھڑی وار   دائری بہاؤ صفر ہے۔
+تفاعل \عددی{f(x,y,z)=(x^2+y^2+z^2)^{-1/2}} اور میدان \عددیء{\kvec{F}=\nabla f} ہیں۔درج ذیل طریقوں  سے  دکھائیں  کہ مستوی \عددی{xy}   میں  دائرہ \عددی{x^2+y^2=a^2}  پر میدان کا  گھڑی وار   دائری بہاؤ صفر ہے۔
 \begin{enumerate}[a.]
 \item
-دائرے پر \عددی{\kvec{F}\cdot\dif \kvec{r}} لیں جہاں \عددی{\mathbf{r}(t)=a\cos t\,\mathbf{i}+a\sin t\,\mathbf{j},\, 0\le t\le2\pi} ہے۔
+دائرے پر \عددی{\kvec{F}\cdot\dif \kvec{r}} لیں جہاں \عددی{\mathbf{r}(t)=a\cos t\,\ai+a\sin t\,\aj,\, 0\le t\le2\pi} ہے۔
 \item
 مسئلہ سٹوکس کا استعمال کریں۔
 \end{enumerate}
@@ -5578,11 +5556,11 @@ S:\quad \mathbf{r}(r,\theta)=r\cos \theta\,\mathbf{i}+r\sin \theta\,\mathbf{j}+(
 \انتہا{سوال}
 
 \ابتدا{سوال}
- ثابت کریں اگر\(\mathbf{F}=x\mathbf{i}+y\mathbf{j}+z\mathbf{k}\) ہو تب \(\nabla\times\mathbf{F}=0\)   ہوگا۔
+ ثابت کریں اگر\(\kvec{F}=x\ai+y\aj+z\ak\) ہو تب \(\nabla\times\kvec{F}=0\)   ہوگا۔
 \انتہا{سوال}
 
 \ابتدا{سوال}
- ایسا سمتی میدان معلوم کریں جس کے اجزاء دو مرتبہ قابل تفرق ہوں اور جس کی گردش  \(x\mathbf{i}+y\mathbf{j}+z\mathbf{k}\) ہو، یا ثابت کریں  ایسا کوئی میدان موجود نہیں۔
+ ایسا سمتی میدان معلوم کریں جس کے اجزاء دو مرتبہ قابل تفرق ہوں اور جس کی گردش  \(x\ai+y\aj+z\ak\) ہو، یا ثابت کریں  ایسا کوئی میدان موجود نہیں۔
 \انتہا{سوال}
 
 \ابتدا{سوال}

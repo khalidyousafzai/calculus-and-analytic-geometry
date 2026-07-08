@@ -2,7 +2,7 @@
 %\documentclass[leqno]{book} %the geometry package defines the paper size
 
 % xelatex --shell-escape calculusAndAnalyticGeometry   %must run to avail gnuplot functionality. gnuplot must be installed.
-\typeout{to avail gnuplot functionality must run   "xelatex --shell-escape calculusAndAnalyticGeometry"}
+\typeout{kkk: to avail gnuplot functionality must run   "xelatex --shell-escape calculusAndAnalyticGeometry"}
 
 %===================
 %testing tikz inside book
@@ -74,6 +74,9 @@ math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
 \usepackage{esint}              %added on 2 jan 2023 for sec 14-4 onwards for counterclockwise integrals
 %============================
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%to write answere to the following "answer" file, enclose all questions in ابتدا{سوالات}  ، انتہا{سوالات}   environment 
+%and enclose each answer within  \wf{\unexpanded{}}. this is places inside the  ابتدا{جواب} environment 
+
 \usepackage{newfile}                                                                  %writing answers to the end of the book
 \newwrite\tempfile
 \immediate\openout\tempfile=answer.tex
@@ -117,7 +120,7 @@ math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
 %\includeonly{,./tex/calculusMultivariableFunctionsAndPartialDerivatives}
 %\includeonly{./tex/calculusIntegrationInVectorFields,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI}
 %\includeonly{./tex/calculusIntegrationInVectorFields,./tex/temp}
-%\includeonly{,./tex/temp}
+\includeonly{,./tex/questions}
 
 
 \author{
@@ -202,7 +205,7 @@ math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
 \include{./tex/calculusMultivariableFunctionsAndPartialDerivatives}
 \include{./tex/calculusMultipleIntegrals}
 \include{./tex/calculusIntegrationInVectorFields}
-%\include{./tex/questions}
+\include{./tex/questions}
 %\include{./tex/Cal-14-5b}
 %\include{./tex/temp}
 
@@ -230,6 +233,7 @@ math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
 %============================================================
 
 \chapter*{جوابات}
+\typeout{kkk: am about to put answers at the end of the book}
 \addcontentsline{toc}{chapter}{جوابات}
 \immediate\closeout\tempfile
 \begin{multicols}{2}
@@ -237,7 +241,7 @@ math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
 \input{answer}
 }
 \end{multicols}
-
+\typeout{kkk:  finished putting answers at the end of the book}
 %=======================
 \appendix
 \addcontentsline{toc}{chapter}{ضمیمے}

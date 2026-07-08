@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.6.2)  7 JUL 2026 20:31
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.6.2)  8 JUL 2026 17:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -27,8 +27,8 @@ File: bk10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
 )
-to avail gnuplot functionality must run "xelatex --shell-escape calculusAndAnal
-yticGeometry"
+kkk: to avail gnuplot functionality must run "xelatex --shell-escape calculusAn
+dAnalyticGeometry"
 (/usr/share/texlive/texmf-dist/tex/latex/circuitikz/circuitikz.sty
 Package: circuitikz 2023/12/09{} The CircuiTikz circuit drawing package version
  1.6.6
@@ -1646,9 +1646,9 @@ Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
 Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
 )
 \verbatim@out=\write4
-runsystem(touch w18-test-2026771231.tex)...disabled (restricted).
+runsystem(touch w18-test-2026781037.tex)...disabled (restricted).
 
-runsystem(rm -f w18-test-2026771231.tex)...disabled (restricted).
+runsystem(rm -f w18-test-2026781037.tex)...disabled (restricted).
 
 runsystem(rm -f "calculusAndAnalyticGeometry.gnuploterrors")...disabled (restri
 cted).
@@ -1704,36 +1704,66 @@ Writing index file calculusAndAnalyticGeometry.idx
 (./tex/calculusVectorValuedFunctionsandMotionInSpace.aux)
 (./tex/calculusMultivariableFunctionsAndPartialDerivatives.aux)
 (./tex/calculusMultipleIntegrals.aux)
-(./tex/calculusIntegrationInVectorFields.aux) (./tex/calculusAppendixA.aux)
-(./tex/calculusAppendixB.aux) (./tex/calculusAppendixC.aux)
-(./tex/calculusAppendixD.aux) (./tex/calculusAppendixE.aux)
-(./tex/calculusAppendixF.aux) (./tex/calculusAppendixG.aux)
-(./tex/calculusAppendixH.aux) (./tex/calculusAppendixI.aux)
-(./tex/calculusIntegrationTable.aux))
+(./tex/calculusIntegrationInVectorFields.aux) (./tex/questions.aux
+
+LaTeX Warning: Label `سوال_مقدار_معلوم_ایک' multiply defined.
+
+
+LaTeX Warning: Label `سوال_مقدار_معلوم_سولہ' multiply defined.
+
+
+LaTeX Warning: Label `سوال_مقدار_معلوم_سترہ' multiply defined.
+
+
+LaTeX Warning: Label `سوال_مقدار_معلوم_چبیس' multiply defined.
+
+
+LaTeX Warning: Label `سوال_مقدار_معلوم_ستائیس' multiply defined.
+
+
+LaTeX Warning: Label `سوال_مقدار_معلوم_چونتیس' multiply defined.
+
+
+LaTeX Warning: Label `سوال_مقدار_معلوم_پینتیس' multiply defined.
+
+
+LaTeX Warning: Label `سوال_مقدار_معلوم_چوالیس' multiply defined.
+
+
+LaTeX Warning: Label `سوال_مقدار_معلوم_انچاس' multiply defined.
+
+
+LaTeX Warning: Label `سوال_مقدار_معلوم_باون' multiply defined.
+
+) (./tex/calculusAppendixA.aux) (./tex/calculusAppendixB.aux)
+(./tex/calculusAppendixC.aux) (./tex/calculusAppendixD.aux)
+(./tex/calculusAppendixE.aux) (./tex/calculusAppendixF.aux)
+(./tex/calculusAppendixG.aux) (./tex/calculusAppendixH.aux)
+(./tex/calculusAppendixI.aux) (./tex/calculusIntegrationTable.aux))
 \openout1 = `calculusAndAnalyticGeometry.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 157.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 160.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-57.
+60.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
 
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
@@ -1745,7 +1775,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 
-Package chemgreek Info: Activating mapping `fontspec' on line 157.
+Package chemgreek Info: Activating mapping `fontspec' on line 160.
 
 
 *geometry* driver: auto-detecting
@@ -1813,68 +1843,68 @@ xt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 157.
+(Font)              scaled to size 10.0pt on input line 160.
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 169.
+(Font)              scaled to size 17.28pt on input line 172.
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 169.
+(Font)              scaled to size 12.0pt on input line 172.
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 1
-69.
+72.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-169.
+172.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-169.
+172.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-169.
+172.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 16
-9.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 17
+2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 169.
+(Font)              scaled to size 12.50409pt on input line 172.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 169.
+(Font)              scaled to size 9.37807pt on input line 172.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 169.
+(Font)              scaled to size 7.29405pt on input line 172.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 169.
+(Font)              scaled to size 12.50409pt on input line 172.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 169.
+(Font)              scaled to size 9.37807pt on input line 172.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 169.
+(Font)              scaled to size 7.29405pt on input line 172.
 LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-169.
+172.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Trying to load font information for U+esint on input line 1
-69.
+72.
 
 (/usr/share/texlive/texmf-dist/tex/latex/esint/uesint.fd
 File: uesint.fd 
 )
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 169.
+(Font)              scaled to size 9.0pt on input line 172.
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 169.
+(Font)              scaled to size 12.0pt on input line 172.
 
 Missing character: There is no ؍ (U+060D) in font Jameel Noori Nastaleeq/OT:scr
 ipt=arab;language=dflt;mapping=tex-text;!
@@ -1889,12 +1919,12 @@ ipt=arab;language=dflt;mapping=tex-text;!
 
 ]
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 171.
+(Font)              scaled to size 24.88pt on input line 174.
 
 
 LaTeX Font Warning: Font shape `TU/JameelNooriNastaleeq(2)/b/n' undefined
 (Font)              using `TU/JameelNooriNastaleeq(2)/m/n' instead on input lin
-e 171.
+e 174.
 
 (./calculusAndAnalyticGeometry.toc
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/b/n' will be
@@ -1919,1806 +1949,94 @@ on input line 65.
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/it' will be
 (Font)              scaled to size 10.0pt on input line 65.
  [4] [5]
-Overfull \hbox (0.89157pt too wide) detected at line 132
- [][][]\TU/JameelNooriNastaleeq(2)/b/n/10 ۱۴۸۷[][][]
+Overfull \hbox (0.89157pt too wide) detected at line 129
+ [][][]\TU/JameelNooriNastaleeq(2)/b/n/10 ۱۴۷۴[][][]
  []
 
 [6]
+Overfull \hbox (0.79391pt too wide) detected at line 138
+ [][][]\TU/JameelNooriNastaleeq(2)/b/n/10 ۱۵۷۸[][][]
+ []
+
 
 LaTeX Font Warning: Font shape `TU/JameelNooriNastaleeq(0)/b/n' undefined
 (Font)              using `TU/JameelNooriNastaleeq(0)/m/n' instead on input lin
-e 161.
+e 162.
 
 [7])
 \tf@toc=\write7
 \openout7 = `calculusAndAnalyticGeometry.toc'.
 
  [8]
-\openout2 = `./tex/calculusIntegrationInVectorFields.aux'.
+\openout2 = `./tex/questions.aux'.
 
- (./tex/calculusIntegrationInVectorFields.tex [1582
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-]
-باب \farsidigits{15}.
+ (./tex/questions.tex
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
-(Font)              scaled to size 20.74pt on input line 11.
+(Font)              scaled to size 14.4pt on input line 5.
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/b/n' will be
-(Font)              scaled to size 20.74pt on input line 11.
+(Font)              scaled to size 14.4pt on input line 5.
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/b/n' will be
-(Font)              scaled to size 24.88pt on input line 11.
+(Font)              scaled to size 12.0pt on input line 7.
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+[]\TU/JameelNooriNastaleeq(2)/b/n/10 سوال ۱۵.۱[] تا ۱۵.۱۶[] میں دی گئی سطح کا م
+قدار معلوم روپ تلاش کریں۔(درست جواب کے مختلف روپ ممکن ہیں لہٰذا آپ کے جواب کتاب
+ میں دیے جواب[]
+ []
+
 LaTeX Font Info:    Font shape `TU/AASameerSagarNastaleeqBold(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 12.
-LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 15.
-LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 15.
-LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
-(Font)              scaled to size 7.6pt on input line 16.
-LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 16.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 16.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 16.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 16.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 16.
-LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 16.
-LaTeX Info: Redefining \rmfamily on input line 16.
-LaTeX Info: Redefining \sffamily on input line 16.
-LaTeX Info: Redefining \ttfamily on input line 16.
+(Font)              scaled to size 10.0pt on input line 27.
+[1726
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 اس منحنی کے ساتھ چلتے ہوئے $\OML/zplm/m/it
-/10 f$ \TU/JameelNooriNastaleeq(2)/b/n/10 کی قیمتیں مرکب تفاعل $\OML/zplm/m/it/
-10 f\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 g\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 t\
-OT1/zplm/m/n/10 )\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 h\OT1/zplm/m/n/10 (\OML/zp
-lm/m/it/10 t\OT1/zplm/m/n/10 )\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 k\OT1/zplm/m/
-n/10 (\OML/zplm/m/it/10 t\OT1/zplm/m/n/10 ))$ \TU/JameelNooriNastaleeq(2)/b/n/1
-0 دیگا۔ نقطہ $\OML/zplm/m/it/10 a$ \TU/JameelNooriNastaleeq(2)/b/n/10 سے $\OML/
-zplm/m/it/10 b$ \TU/JameelNooriNastaleeq(2)/b/n/10 تک لمبائی قوس کے لحاظ سے اس 
-مرکب[]
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 تفاعل کے تکمل کو قوس کے ساتھ $\OML/zplm/m/
-it/10 f$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا \TU/AASameerSagarNastaleeqBold(0
-)/m/n/10 لکیری تکمل[][][] []\TU/JameelNooriNastaleeq(2)/b/n/10 کہتے ہیں۔ تین بع
-دی جیومیٹری کے باوجود، لکیری تکمل حقیقی اعداد کے وقفہ پر حقیقی قیمت تفاعل کا سا
-دہ[]
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--19
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 لکیری تکمل کی اہمیت اس کے استعمال میں ہے
-۔ ان تکملات کی مدد سے ہم متغیر قوتوں کی فضا میں راہ پر کام اور قوس کے ساتھ یا س
-رحد پار کرتی سیال کی شرح بہاؤ کا[]
- []
 
-LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 40.
 
-Underfull \hbox (badness 1394) in paragraph at lines 41--42
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 فرض کریں تفاعل $\OML/zplm/m/it/10 f\OT1/zp
-lm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y\OT1/ppl/m/n
-/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10
- کے دائرہ کار میں منحنی $\OML/cmm/b/it/10 r\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 
-t\OT1/zplm/m/n/10 ) = \OML/zplm/m/it/10 g\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 t\
-OT1/zplm/m/n/10 )\OML/cmm/b/it/10 i \OT1/zplm/m/n/10 + \OML/zplm/m/it/10 h\OT1/
-zplm/m/n/10 (\OML/zplm/m/it/10 t\OT1/zplm/m/n/10 )\OML/cmm/b/it/10 j \OT1/zplm/
-m/n/10 + \OML/zplm/m/it/10 k\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 t\OT1/zplm/m/n/
-10 )\OML/cmm/b/it/10 k\OT1/ppl/m/n/10 ,  \OML/zplm/m/it/10 a \OMS/zplm/m/n/10 ^
-^T \OML/zplm/m/it/10 t \OMS/zplm/m/n/10 ^^T \OML/zplm/m/it/10 b$[]
- []
 
-[1583]
-Underfull \hbox (badness 10000) in paragraph at lines 44--46
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 اگر $\OML/zplm/m/it/10 f$ \TU/JameelNooriN
-astaleeq(2)/b/n/10 استمراری ہو اور $\OML/zplm/m/it/10 g$\TU/JameelNooriNastalee
-q(2)/b/n/10 ، $\OML/zplm/m/it/10 h$\TU/JameelNooriNastaleeq(2)/b/n/10 ، اور $\O
-ML/zplm/m/it/10 k$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے اول تفرق استمراری ہوں 
-تب جیسے جیسے $\OML/zplm/m/it/10 n$ \TU/JameelNooriNastaleeq(2)/b/n/10 بڑھایا جا
-ئے، $\OT1/zplm/m/n/10 ^^A\OML/zplm/m/it/10 s[]$ \TU/JameelNooriNastaleeq(2)/b/n
-/10 صفر تک پہنچے گی اور مساوات ۱۵.۱[] کا مجموعہ[]
- []
 
-[1584]
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 اگر متناہی تعداد کی منحنیات $\OML/zplm/m/i
-t/10 C[]$\TU/JameelNooriNastaleeq(2)/b/n/10 ، $\OML/zplm/m/it/10 C[]$\TU/Jameel
-NooriNastaleeq(2)/b/n/10 ، $[] $، $\OML/zplm/m/it/10 C[]$ \TU/JameelNooriNastal
-eeq(2)/b/n/10 کو ایک دوسرے کے ساتھ جوڑ کر منحنی $\OML/zplm/m/it/10 C$ \TU/Jamee
-lNooriNastaleeq(2)/b/n/10 حاصل کی جائے تب $\OML/zplm/m/it/10 C$ \TU/JameelNoori
-Nastaleeq(2)/b/n/10 پر تفاعل کا تکمل ان منحنیات[]
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--126
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 مثال  ۱۵.۲: []مبدا سے نقطہ $\OT1/zplm/m/n/
-10 (\OT1/ppl/m/n/10 1, 1, 1\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/
-10 تک راہ $\OML/zplm/m/it/10 C[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور $\OML/
-zplm/m/it/10 C[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر چل کر پہنچا جاتا ہے (شک
-ل ۱۵.۳[])۔ یوں $\OML/zplm/m/it/10 C$ \TU/JameelNooriNastaleeq(2)/b/n/10 ان کا ا
-شتراک $\OML/zplm/m/it/10 C[] \OMS/zplm/m/n/10 [ \OML/zplm/m/it/10 C[]$ \TU/Jame
-elNooriNastaleeq(2)/b/n/10 ہو گا۔[]
- []
 
-[1585]
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 یہاں مثال ۱۵.۱[] اور مثال ۱۵.۲[] کے نتائ
-ج پر غور کرتے ہیں۔اول، دیکھیں کہ موزوں منحنی کے اجزاء $\OML/zplm/m/it/10 f$ \TU
-/JameelNooriNastaleeq(2)/b/n/10 میں پر کرتے ہی $\OML/zplm/m/it/10 t$ \TU/Jameel
-NooriNastaleeq(2)/b/n/10 کے لحاظ سے ایک سادہ تکمل حاصل[]
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 ہوتا ہے۔ دوم، $\OML/zplm/m/it/10 C[] \OMS/
-zplm/m/n/10 [ \OML/zplm/m/it/10 C[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر $\OM
-L/zplm/m/it/10 f$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا تکمل لینے کے لئے $\OML/
-zplm/m/it/10 C[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور $\OML/zplm/m/it/10 C[]
-$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر $\OML/zplm/m/it/10 f$ \TU/JameelNooriNa
-staleeq(2)/b/n/10 کے علیحدہ علیحدہ تکملات لے کر نتائج کا مجموعہ لیا جاتا ہے۔سوم
-، مثال ۱۵.۱[][]
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 میں $\OML/zplm/m/it/10 C$ \TU/JameelNooriN
-astaleeq(2)/b/n/10 اور مثال ۱۵.۲[] میں $\OML/zplm/m/it/10 C[] \OMS/zplm/m/n/10 
-[ \OML/zplm/m/it/10 C[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر تکمل کے نتائج ای
-ک دوسرے سے مختلف تھے۔ عموماً تفاعل کے لئے دو نقطوں کے بیچ مختلف راہ پر تکملات ک
-ے[]
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 ہم اسپرنگ اور تار کو فضا میں ہموار منحنی پ
-ر استمراری کمیتی کثافت $\OML/zplm/m/it/10 ^^N\OT1/zplm/m/n/10 (\OML/zplm/m/it/1
-0 x\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 z\O
-T1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10 کی تقسیم تصور کرتے ہیں۔ یو
-ں اسپرنگ یا تار کی کمیت، مرکز کمیت، اور ان[]
- []
 
-[1586]
-Underfull \hbox (badness 10000) in paragraph at lines 170--172
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 حل: ہم اسپرنگ کا خاکہ بناتے ہیں۔ تشاکلی 
-کی بنا اس کا مرکز کمیت محور $\OML/zplm/m/it/10 z$ \TU/JameelNooriNastaleeq(2)/b
-/n/10 پر نقطہ $\OT1/zplm/m/n/10 (\OT1/ppl/m/n/10 0, 0, \OML/zplm/m/it/10 ^^Y\OT
-1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر پایا جائے گا۔ باقی حساب 
-کے لئے ہم $[]$ تلاش[]
- []
 
-[1587] [1588]
-
-Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
-ng it (it is [0.0:0.0]) on input line 243.
-
- [warning /pgfplots/warning/approx empty range enlarged]
-LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 243.
-
-Package pgfplots Warning: Axis range for axis x is approximately empty; enlargi
-ng it (it is [0.0:0.0]) on input line 253.
-
- [warning /pgfplots/warning/approx empty range enlarged]
-
-Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
-ng it (it is [0.0:0.0]) on input line 263.
-
- [warning /pgfplots/warning/approx empty range enlarged]
-
-Overfull \hbox (5.07332pt too wide) in paragraph at lines 260--265
- [][][][][][][][] 
- []
-
-
-Overfull \hbox (5.07129pt too wide) in paragraph at lines 270--277
- [][][][][][][][] 
- []
-
-
-Package pgfplots Warning: Axis range for axis x is approximately empty; enlargi
-ng it (it is [1.0000000000:1.0000000000]) on input line 285.
-
- [warning /pgfplots/warning/approx empty range enlarged]
-
-Package pgfplots Warning: Axis range for axis y is approximately empty; enlargi
-ng it (it is [1.0000000000:1.0000000000]) on input line 285.
-
- [warning /pgfplots/warning/approx empty range enlarged]
-
-Overfull \hbox (10.80898pt too wide) in paragraph at lines 282--287
- [][][][][][][][] 
- []
-
-
-Package pgfplots Warning: Axis range for axis x is approximately empty; enlargi
-ng it (it is [0.0:0.0]) on input line 295.
-
- [warning /pgfplots/warning/approx empty range enlarged]
-
-Package pgfplots Warning: Axis range for axis y is approximately empty; enlargi
-ng it (it is [0.0:0.0]) on input line 305.
-
- [warning /pgfplots/warning/approx empty range enlarged]
-
-Package pgfplots Warning: Axis range for axis y is approximately empty; enlargi
-ng it (it is [0.0:0.0]) on input line 315.
-
- [warning /pgfplots/warning/approx empty range enlarged]
-
-Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
-ng it (it is [0.0:0.0]) on input line 315.
-
- [warning /pgfplots/warning/approx empty range enlarged]
-[1589]
-Overfull \hbox (6.39041pt too wide) in paragraph at lines 435--442
- [][][][][][][][] 
- []
-
-[1590]
-Underfull \hbox (badness 3965) in paragraph at lines 508--515
-[]   \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۲۴:  ایک پتلی تار جس کی کثافت 
-$\OML/zplm/m/it/10 ^^N\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/n/10 , \O
-ML/zplm/m/it/10 y\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/10 ) = \OT1
-/ppl/m/n/10 15[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 ہے منحنی $\OML/cmm/b/it/10
- r\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 t\OT1/zplm/m/n/10 ) = (\OML/zplm/m/it/10 
-t[] \OMS/zplm/m/n/10 ^^@ \OT1/ppl/m/n/10 1\OT1/zplm/m/n/10 )\OML/cmm/b/it/10 j 
-\OT1/zplm/m/n/10 +$[]
- []
-
-[1591]
-Underfull \hbox (badness 10000) in paragraph at lines 592--593
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 قوت کے خلاف ایک مقام سے دوسری مقام کسی جسم
- کو منتقل کرنے (جیسا قوت ثقل کے خلاف خلاء میں سواری بھیجنے) یا سمتی میدان میں ا
-یک جسم کو کسی راہ پر[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 592--593
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 حرکت دینے (جیسا مسرع کسی ذرے کی توانائی بڑ
-ھاتا ہو) کے لئے درکار کام اس طرح کے تکملات سے حاصل کیے جاتے ہیں۔ منحنیات عبور ک
-رتا ہوا سیال کے[]
- []
-
-[1592]
-LaTeX Info: Redefining \rmfamily on input line 595.
-LaTeX Info: Redefining \sffamily on input line 595.
-LaTeX Info: Redefining \ttfamily on input line 595.
-
-Underfull \hbox (badness 10000) in paragraph at lines 595--596
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 مستوی یا فضا میں دائرہ کار پر \TU/AASameer
-SagarNastaleeqBold(0)/m/n/10 سمتی میدان[][][] []\TU/JameelNooriNastaleeq(2)/b/n
-/10 سے مراد ایسا تفاعل ہے جو دائرہ کار کے ہر نقطہ کو ایک سمتیہ مختص کرتا ہو۔سہ 
-ابعادی سمتیات کے میدان کا ایک[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 598--600
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 استمراری جزوی تفاعل $\OML/zplm/m/it/10 M$\
-TU/JameelNooriNastaleeq(2)/b/n/10 ، $\OML/zplm/m/it/10 N$\TU/JameelNooriNastale
-eq(2)/b/n/10 ، $\OML/zplm/m/it/10 P$ \TU/JameelNooriNastaleeq(2)/b/n/10 کی صورت
- میں یہ میدان استمراری ہو گا، قابل تفرق $\OML/zplm/m/it/10 M$\TU/JameelNooriNas
-taleeq(2)/b/n/10 ، $\OML/zplm/m/it/10 N$\TU/JameelNooriNastaleeq(2)/b/n/10 ، $\
-OML/zplm/m/it/10 P$ \TU/JameelNooriNastaleeq(2)/b/n/10 کی صورت میں یہ میدان قاب
-ل تفرق ہو گا،[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 602--604
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 غیر سمتی تفاعل کے ہم قد سطح کے ہر نقطہ کے 
-ساتھ تفاعل کا سمتیہ ڈھلوان منسلک کرنے سے سطح پر سہ ابعادی میدان حاصل ہو گا۔ متح
-رک سیال کے ہر نقطہ کے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 602--604
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 ساتھ سمتی رفتاری سمتیہ منسلک کرنے سے فضا م
-یں اس خطہ پر سہ ابعادی میدان حاصل ہو گا۔ بشمول ان کے چند میدان شکل ۱۵.۱۶[] تا ش
-کل ۱۵.۲۰[] میں دکھائے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 624--624
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 شكل ۱۵.۱۶: |گول انداز کے سمتی رفتاری سمت
-یات $\OML/cmm/b/it/10 v\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 t\OT1/zplm/m/n/10 )$
- \TU/JameelNooriNastaleeq(2)/b/n/10 سمتی[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 657--657
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 شكل ۱۵.۱۷: |لمبی نالی میں سیال کی حرکت۔س
-متیات[]
- []
-
-
-Underfull \hbox (badness 3049) in paragraph at lines 657--657
-[]$\OML/cmm/b/it/10 v \OT1/zplm/m/n/10 = (\OML/zplm/m/it/10 a[] \OMS/zplm/m/n/1
-0 ^^@ \OML/zplm/m/it/10 ^^Z[]\OT1/zplm/m/n/10 )\OML/cmm/b/it/10 k$ \TU/JameelNo
-oriNastaleeq(2)/b/n/10 کی دم مستوی $\OML/zplm/m/it/10 xy$ \TU/JameelNooriNastal
-eeq(2)/b/n/10 میں اور سر[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 706--706
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 شكل ۱۵.۱۹: |مستوی میں مختلف نقاط پر رداس
-ی میدان[]
- []
-
-
-Underfull \hbox (badness 6825) in paragraph at lines 706--706
-[]$\OML/cmm/b/it/10 F \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 x\OML/cmm/b/it/10 i 
-\OT1/zplm/m/n/10 + \OML/zplm/m/it/10 y\OML/cmm/b/it/10 j$ \TU/JameelNooriNastal
-eeq(2)/b/n/10 جہاں تیر دار لکیر کی دم اس نقطہ پر[]
- []
-
-
-Underfull \hbox (badness 3302) in paragraph at lines 735--735
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 شكل ۱۵.۲۰: |اکائی سمتیات $\OML/cmm/b/it/
-10 F \OT1/zplm/m/n/10 = []$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا چکری[]
- []
-
-
-LaTeX Warning: Float too large for page by 9.746pt on input line 738.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 743--744
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 وہ میدان ترسیم کرنے کے لئے جن کے کلیات م
-علوم ہوں، ہم دائرہ کار میں چند نقطے منتخب کر کے ان نقطوں پر نقطوں کے ساتھ منسلک
- سمتیات کا خاکہ بناتے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 743--744
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 ہیں۔ دھیان رہے کہ روایتی طور پر اس نقطہ پر
-، جہاں سمتی تفاعل کی قیمت حاصل کی گئی ہو، سمتیہ ظاہر کرنے والی تیر دار لکیر کی 
-دم رکھی جاتی ہے نا کہ سر۔ تعین[]
- []
-
-
-Underfull \hbox (badness 1946) in paragraph at lines 743--744
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 گر سمتیات (باب ۱۲[]) کے لئے ایسا نہیں کیا 
-جاتا ہے بلکہ تعین گر سمتیات کو ظاہر کرنے والی تیر دار لکیر کی دم کو مبدا پر رکھ
-ا جاتا ہے جبکہ اس کا سر سیارہ یا گول انداز[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 747.
-LaTeX Info: Redefining \sffamily on input line 747.
-LaTeX Info: Redefining \ttfamily on input line 747.
-[1593] [1594]
-Underfull \hbox (badness 3849) in paragraph at lines 786--789
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 تعریف :  ہموار منحنی $\OML/cmm/b/it/10 r\O
-T1/zplm/m/n/10 (\OML/zplm/m/it/10 t\OT1/zplm/m/n/10 ) = \OML/zplm/m/it/10 g\OT1
-/zplm/m/n/10 (\OML/zplm/m/it/10 t\OT1/zplm/m/n/10 )\OML/cmm/b/it/10 i \OT1/zplm
-/m/n/10 + \OML/zplm/m/it/10 h\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 t\OT1/zplm/m/n
-/10 )\OML/cmm/b/it/10 j \OT1/zplm/m/n/10 + \OML/zplm/m/it/10 k\OT1/zplm/m/n/10 
-(\OML/zplm/m/it/10 t\OT1/zplm/m/n/10 )\OML/cmm/b/it/10 k$ \TU/JameelNooriNastal
-eeq(2)/b/n/10 پر $\OML/zplm/m/it/10 a$ \TU/JameelNooriNastaleeq(2)/b/n/10 تا $\
-OML/zplm/m/it/10 b$ \TU/JameelNooriNastaleeq(2)/b/n/10 قوت $\OML/cmm/b/it/10 F 
-\OT1/zplm/m/n/10 = \OML/zplm/m/it/10 M\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1
-/ppl/m/n/10 , \OML/zplm/m/it/10 y\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 z\OT1/zplm
-/m/n/10 )\OML/cmm/b/it/10 i \OT1/zplm/m/n/10 +$[]
- []
-
-Missing character: There is no ِ ("650) in font zplmr7m!
-
-Underfull \hbox (badness 10000) in paragraph at lines 819--837
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 کے دلائل وہی ہیں۔ ہم منحنی کو چھوٹے قطعات 
-میں تقسیم کر کے، ہر قطع پر کام کو تخمیناً مستقل قوت ضرب فاصلہ لے کر، نتائج کے م
-جموعہ کو منحنی پر کام کی[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 819--837
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 تخمینی قیمت حاصل کرتے ہیں، اور قطعات کی تع
-داد زیادہ سے زیادہ کر کے ہر قطع کی لمبائی کم سے کم کرتے ہوئے، تخمینی مجموعات کی
- تحدیدی قیمت کو کام کی[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 819--837
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 پر نقطہ $\OML/zplm/m/it/10 c[]$ \TU/Jameel
-NooriNastaleeq(2)/b/n/10 منتخب کرتے ہیں۔ قطع $\OML/zplm/m/it/10 I$ \TU/JameelNo
-oriNastaleeq(2)/b/n/10 کی خانہ بندی منحنی کی خانہ بندی تعین (پیدا) کرتی ہے، جہا
-ں تعین گر سمتیہ $\OML/cmm/b/it/10 r$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا سر ن
-قطہ $\OML/zplm/m/it/10 N[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر ہو گا اور ذیل
-ی قطع[]
- []
-
-[1595]
-Underfull \hbox (badness 10000) in paragraph at lines 847--849
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 اس تکمل سے حاصل عدد کی علامت، $\OML/zplm/m
-/it/10 t$ \TU/JameelNooriNastaleeq(2)/b/n/10 بڑھانے سے حاصل پر چلنے کے، رخ پر م
-نحصر ہو گی۔ منحنی پر چلنے کا رخ الٹ کرنے سے $\OML/cmm/b/it/10 T$ \TU/JameelNoor
-iNastaleeq(2)/b/n/10 کا رخ الٹ ہو گا جس کی بنا[]
- []
-
-[1596] [1597] [1598]
-LaTeX Info: Redefining \rmfamily on input line 926.
-LaTeX Info: Redefining \sffamily on input line 926.
-LaTeX Info: Redefining \ttfamily on input line 926.
-LaTeX Info: Redefining \rmfamily on input line 926.
-LaTeX Info: Redefining \sffamily on input line 926.
-LaTeX Info: Redefining \ttfamily on input line 926.
- [1599]
-Underfull \hbox (badness 10000) in paragraph at lines 981--982
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 میدان کے غیر سمتی جزو) کے لکیری تکمل سے حا
-صل ہو گی۔ اس تکمل کی قیمت کو $\OML/zplm/m/it/10 C$ \TU/JameelNooriNastaleeq(2)/
-b/n/10 عبور کرتا ہوا $\OML/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا
- بہاؤ (یا \TU/AASameerSagarNastaleeqBold(0)/m/n/10 نفاذ[]\TU/JameelNooriNastale
-eq(2)/b/n/10 ) کہتے ہیں۔ برقی یا مقناطیسی میدان $\OML/cmm/b/it/10 F$[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 984.
-LaTeX Info: Redefining \sffamily on input line 984.
-LaTeX Info: Redefining \ttfamily on input line 984.
-
-Overfull \hbox (6.70302pt too wide) in paragraph at lines 995--1003
- [][][][][][] 
- []
-
-
-Overfull \hbox (6.70302pt too wide) in paragraph at lines 1007--1015
- [][][][][][] 
- []
-
-
-Underfull \hbox (badness 7203) in paragraph at lines 990--1022
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 منحنی کو عبور کرتے ہوئے بہاؤ (نفاذ) اور 
-دائری بہاؤ میں فرق سے واقف ہونا ضروری ہے۔ منحنی $\OML/zplm/m/it/10 C$ \TU/Jamee
-lNooriNastaleeq(2)/b/n/10 کو عبور کرتا ہوا $\OML/cmm/b/it/10 F$ \TU/JameelNoori
-Nastaleeq(2)/b/n/10 کے بہاؤ سے مراد منحنی پر $\OML/cmm/b/it/10 F \OMS/zplm/m/n/
-10 ^^A \OML/cmm/b/it/10 n$[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 990--1022
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 (منحنی کے بیرونی عمود کے رخ $\OML/cmm/b/it
-/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے غیر سمتی جزو) کا تکمل ہے۔ بند منحن
-ی $\OML/zplm/m/it/10 C$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے گرد $\OML/cmm/b/i
-t/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے دائری بہاؤ سے مراد منحنی پر $\OML
-/cmm/b/it/10 F \OMS/zplm/m/n/10 ^^A \OML/cmm/b/it/10 T$ \TU/JameelNooriNastalee
-q(2)/b/n/10 (منحنی کے اکائی[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 990--1022
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 مماس کے رخ $\OML/cmm/b/it/10 F$ \TU/Jameel
-NooriNastaleeq(2)/b/n/10 کے غیر سمتی جزو) کا تکمل ہے۔ منحنی عبور کرتا ہوا بہاؤ 
-سے مراد $\OML/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے عمودی جزو کا
- تکمل جبکہ دائری بہاؤ سے مراد $\OML/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)/
-b/n/10 کے مماسی جزو کا[]
- []
-
-[1600]
-Underfull \hbox (badness 1057) in paragraph at lines 1027--1029
-[]$\OML/cmm/b/it/10 k$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور $\OML/cmm/b/it/10
- k \OMS/zplm/m/n/10 ^^B \OML/cmm/b/it/10 T$ \TU/JameelNooriNastaleeq(2)/b/n/10 
-پائے جاتے ہیں۔ان میں کونسا بیرونی اکائی سمتیہ دے گا؟ مقدار معلوم $\OML/zplm/m/i
-t/10 t$ \TU/JameelNooriNastaleeq(2)/b/n/10 بڑھانے سے $\OML/zplm/m/it/10 C$ \TU/
-JameelNooriNastaleeq(2)/b/n/10 پر چلنے کے رخ پر اس کا جواب منحصر ہو گا۔ اگر[]
- []
-
-
-Underfull \hbox (badness 2486) in paragraph at lines 1027--1029
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 منحنی پر حرکت گھڑی وار ہو تب $\OML/cmm/b/i
-t/10 k \OMS/zplm/m/n/10 ^^B \OML/cmm/b/it/10 T$ \TU/JameelNooriNastaleeq(2)/b/n
-/10 بیرونی اکائی سمتیہ دے گا جبکہ خلاف گھڑی حرکت کی صورت میں $\OML/cmm/b/it/10 
-T \OMS/zplm/m/n/10 ^^B \OML/cmm/b/it/10 k$ \TU/JameelNooriNastaleeq(2)/b/n/10 ب
-یرونی اکائی سمتیہ دے گا (شکل[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1045--1047
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 یاد رہے کہ $\OML/zplm/m/it/10 C$ \TU/Jamee
-lNooriNastaleeq(2)/b/n/10 پر خلاف گھڑی چلتے ہوئے بند تکمل $[]$ کی قیمت حاصل کی 
-جائے گی۔ اس تکمل کے حصول کی خاطر ہم $\OML/zplm/m/it/10 M$\TU/JameelNooriNastale
-eq(2)/b/n/10 ، $[] \OML/zplm/m/it/10 y$\TU/JameelNooriNastaleeq(2)/b/n/10 ، $\O
-ML/zplm/m/it/10 N$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور $[] \OML/zplm/m/it/10
- x$ \TU/JameelNooriNastaleeq(2)/b/n/10 کو مقدار[]
- []
-
-[1601]
-Underfull \hbox (badness 10000) in paragraph at lines 1061--1063
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 دائرہ کو عبور کرتا ہوا $\OML/cmm/b/it/10 F
-$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا بہاؤ $\OML/zplm/m/it/10 ^^Y$ \TU/Jameel
-NooriNastaleeq(2)/b/n/10 ہے۔چونکہ نتیجہ مثبت ہے لہٰذا دائرے سے کل بہاؤ کا رخ با
-ہر کو ہو گا۔ دائرے میں دخول کی صورت میں نتیجہ منفی ہوتا۔[]
- []
-
-[1602] [1603]
-Underfull \hbox (badness 2359) in paragraph at lines 1208--1217
-[]   \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۱۸:  ایک مثلث جس کے راس $\OT1/
-zplm/m/n/10 (\OT1/ppl/m/n/10 0, 0\OT1/zplm/m/n/10 )$\TU/JameelNooriNastaleeq(2)
-/b/n/10 ، $\OT1/zplm/m/n/10 (\OT1/ppl/m/n/10 1, 0\OT1/zplm/m/n/10 )$ \TU/Jameel
-NooriNastaleeq(2)/b/n/10 اور $\OT1/zplm/m/n/10 (\OT1/ppl/m/n/10 0, 1\OT1/zplm/m
-/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10 ہیں پر $[][]\OT1/zplm/m/n/10 (\OML/
-zplm/m/it/10 x \OMS/zplm/m/n/10 ^^@ \OML/zplm/m/it/10 y\OT1/zplm/m/n/10 ) [] \O
-ML/zplm/m/it/10 x \OT1/zplm/m/n/10 + (\OML/zplm/m/it/10 x \OT1/zplm/m/n/10 + \O
-ML/zplm/m/it/10 y\OT1/zplm/m/n/10 ) [] \OML/zplm/m/it/10 y$ \TU/JameelNooriNast
-aleeq(2)/b/n/10 کی قیمت[]
- []
-
-[1604]
-Underfull \hbox (badness 10000) in paragraph at lines 1303--1312
-[]   \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۳۰:  ایک مثلث، جس کے راس $\OT1
-/zplm/m/n/10 (\OT1/ppl/m/n/10 1, 0\OT1/zplm/m/n/10 )$\TU/JameelNooriNastaleeq(2
-)/b/n/10 ، $\OT1/zplm/m/n/10 (\OT1/ppl/m/n/10 0, 1\OT1/zplm/m/n/10 )$ \TU/Jamee
-lNooriNastaleeq(2)/b/n/10 اور $\OT1/zplm/m/n/10 (\OMS/zplm/m/n/10 ^^@\OT1/ppl/m
-/n/10 1, 0\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10 ہیں، سے خارجی 
-بہاؤ سوال ۱۵.۲۹[] کے میدان کے لئے تلاش[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1379--1383
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 سوال ۱۵.۳۷[] تا سوال ۱۵.۴۰[] میں فضا کے کس
-ی خطہ میں سمتی رفتاری میدان $\OML/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)/b/
-n/10 سیال کے بہاؤ کو ظاہر کرتا ہے۔دی گئی منحنی کی ہمراہ بہاؤ، بڑھتے $\OML/zplm/
-m/it/10 t$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے رخ[]
- []
-
-
-Overfull \hbox (33.13873pt too wide) in paragraph at lines 1416--1423
- [][][][][][][][] 
- []
-
-[1605] [1606]
-Underfull \hbox (badness 10000) in paragraph at lines 1535--1536
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 پر۔اس حصہ میں تکمل کام کی راہ سے آزادی کے 
-تصور پر غور کیا جائے گا اور ایسے میدانوں کی خواص پر غور کیا جائے گا جن میں تکمل
- کام کی قیمت راہ کے تابع نہیں[]
- []
-
-
-Underfull \hbox (badness 3078) in paragraph at lines 1538--1539
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 فضا میں کھلا خطہ $\OML/zplm/m/it/10 D$ \TU
-/JameelNooriNastaleeq(2)/b/n/10 پر معین میدان $\OML/cmm/b/it/10 F$ \TU/JameelNo
-oriNastaleeq(2)/b/n/10 ایک ذرہ کو $\OML/zplm/m/it/10 D$ \TU/JameelNooriNastalee
-q(2)/b/n/10 میں نقطہ $\OML/zplm/m/it/10 A$ \TU/JameelNooriNastaleeq(2)/b/n/10 س
-ے نقطہ $\OML/zplm/m/it/10 B$ \TU/JameelNooriNastaleeq(2)/b/n/10 منتقل کرتا ہے۔ 
-عموماً تکمل کام $[] \OML/cmm/b/it/10 F \OMS/zplm/m/n/10 ^^A [] \OML/cmm/b/it/10
- r$ \TU/JameelNooriNastaleeq(2)/b/n/10 کی قیمت منتقلی کی راہ پر[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 1541.
-LaTeX Info: Redefining \sffamily on input line 1541.
-LaTeX Info: Redefining \ttfamily on input line 1541.
-LaTeX Info: Redefining \rmfamily on input line 1541.
-LaTeX Info: Redefining \sffamily on input line 1541.
-LaTeX Info: Redefining \ttfamily on input line 1541.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1540--1542
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 تعریف :  فضا میں کھلا خطہ $\OML/zplm/m/it/
-10 D$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر $\OML/cmm/b/it/10 F$ \TU/JameelNoor
-iNastaleeq(2)/b/n/10 کو ایک معین میدان لیتے ہوئے تصور کریں کہ $\OML/zplm/m/it/1
-0 D$ \TU/JameelNooriNastaleeq(2)/b/n/10 میں ہر دو نقطوں $\OML/zplm/m/it/10 A$ \
-TU/JameelNooriNastaleeq(2)/b/n/10 اور $\OML/zplm/m/it/10 B$ \TU/JameelNooriNast
-aleeq(2)/b/n/10 کے بیچ ہر ممکنہ راہ پر تکمل کام[]
- []
-
-[1607]
-LaTeX Info: Redefining \rmfamily on input line 1548.
-LaTeX Info: Redefining \sffamily on input line 1548.
-LaTeX Info: Redefining \ttfamily on input line 1548.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1552--1553
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 برقی مخفی قوہ ایک غیر سمتی تفاعل ہے جس ک
-ا میدان ڈھلوان ایک برقی میدان ہوتا ہے۔ ثقلی مخفی قوہ ایک غیر سمتی تفاعل ہے جس ک
-ا میدان ڈھلوان ایک ثقلی[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1552--1553
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 میدان ہوتا ہے، وغیرہ وغیرہ۔ جیسا ہم اب دیک
-ھیں گے، میدان $\OML/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا مخفی ق
-وہ تفاعل $\OML/zplm/m/it/10 f$ \TU/JameelNooriNastaleeq(2)/b/n/10 جاننے کے بعد 
-$\OML/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کی دائرہ کار میں تمام ت
-کملات کام کی قیمتیں درج[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1562--1563
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 بقائی میدان کی دیگر قابل ذکر خواص پر، آگ
-ے چلتے ہوئے ساتھ ساتھ، غور کیا جائے گا۔ مثلاً، $\OML/zplm/m/it/10 D$ \TU/Jameel
-NooriNastaleeq(2)/b/n/10 پر بقائی $\OML/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq
-(2)/b/n/10 کی صورت میں $\OML/zplm/m/it/10 D$ \TU/JameelNooriNastaleeq(2)/b/n/10
- میں ہر بند راہ پر تکمل کام[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1562--1563
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 صفر ہو گا۔مساوات ۱۵.۱[] اور اس کی مضمرات ک
-ی درستگی برقرار رکھنے کی خاطر ہمیں اس مساوات میں مستعمل منحنی، میدان، اور دائرہ
- کار پر شرائط مسلط کرنی ہوں[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 1564.
-LaTeX Info: Redefining \sffamily on input line 1564.
-LaTeX Info: Redefining \ttfamily on input line 1564.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1564--1565
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 ہم فرض کرتے ہیں کہ تمام منحنیات \TU/AASa
-meerSagarNastaleeqBold(0)/m/n/10 ٹکڑوں میں ہموار[][]  \TU/JameelNooriNastaleeq(
-2)/b/n/10 ہیں،یعنی، انہیں متناہی تعداد کی ہموار منحنیات کو ایک دوسرے کے ساتھ جو
-ڑ کر، حصہ[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1564--1565
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 ۱۲.۱[] کی طرح ،حاصل کیا گیا ہے۔مزید ہم فرض
- کرتے ہیں کہ $\OML/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے اجزاء ک
-ے یک رتبی استمراری تفرق پائے جاتے ہیں۔استمرار کی اس شرح کے بعد[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 1566.
-LaTeX Info: Redefining \sffamily on input line 1566.
-LaTeX Info: Redefining \ttfamily on input line 1566.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1566--1567
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 ہم فضا میں $\OML/zplm/m/it/10 D$ \TU/Jam
-eelNooriNastaleeq(2)/b/n/10 کو ایک \TU/JameelNooriNastaleeq(2)/m/n/9 کھلا \TU/J
-ameelNooriNastaleeq(2)/b/n/10 خطہ فرض کرتے ہیں۔ یوں $\OML/zplm/m/it/10 D$ \TU/J
-ameelNooriNastaleeq(2)/b/n/10 میں ہر نقطہ ایک ایسے گیند کے مرکز پر پایا جائے گا
- جو مکمل طور پر $\OML/zplm/m/it/10 D$ \TU/JameelNooriNastaleeq(2)/b/n/10 میں پا
-یا جاتا ہو۔ مزید ہم فرض[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1566--1567
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 کرتے ہیں کہ $\OML/zplm/m/it/10 D$ \TU/AASa
-meerSagarNastaleeqBold(0)/m/n/10 تعلق (دار)[][][] []\TU/JameelNooriNastaleeq(2)
-/b/n/10 خطہ ہے۔ کھلا خطہ میں تعلق دار سے مراد ایسا خطہ ہے، جس میں ہر دو نقطوں ک
-و ایک ایسی مسلسل راہ سے جوڑا جا سکتا ہے جو[]
- []
-
-[1608]
-Underfull \hbox (badness 10000) in paragraph at lines 1569--1570
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 بقائی میدان میں لکیری تکملات کی قیمتیں درج
- ذیل نتیجہ کی مدد سے باآسانی حاصل کی جا سکتی ہیں۔اس نتیجہ کے تحت تکمل کی قیمت ص
-رف ابتدائی اور اختتام[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1571--1572
-[][]
- []
-
-[1609]
-Underfull \hbox (badness 10000) in paragraph at lines 1599--1601
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 اس طرح تکمل کام کی قیمت $\OML/zplm/m/it/10
- A$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور $\OML/zplm/m/it/10 B$ \TU/JameelNoor
-iNastaleeq(2)/b/n/10 پر $\OML/zplm/m/it/10 f$ \TU/JameelNooriNastaleeq(2)/b/n/1
-0 کی قیمتوں پر منحصر ہو گی نا کہ ان کے بیچ راہ پر۔ یوں مسئلہ کے دوسرا جزو کے سا
-تھ ساتھ پہلا مضمر جزو بھی ثابت[]
- []
-
-
-Underfull \hbox (badness 7944) in paragraph at lines 1660--1662
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 ہم دکھانا چاہتے ہیں کہ $\OML/zplm/m/it/10 
-D$ \TU/JameelNooriNastaleeq(2)/b/n/10 میں کسی بھی دو نقاط $\OML/zplm/m/it/10 A$
- \TU/JameelNooriNastaleeq(2)/b/n/10 اور $\OML/zplm/m/it/10 B$ \TU/JameelNooriNa
-staleeq(2)/b/n/10 کے بیچ کسی بھی دو راہوں $\OML/zplm/m/it/10 C[]$ \TU/JameelNoo
-riNastaleeq(2)/b/n/10 اور $\OML/zplm/m/it/10 C[]$ \TU/JameelNooriNastaleeq(2)/b
-/n/10 پر $\OML/cmm/b/it/10 F \OMS/zplm/m/n/10 ^^A [] \OML/cmm/b/it/10 r$ \TU/Ja
-meelNooriNastaleeq(2)/b/n/10 کے تکملات کی قیمتیں ایک دوسرے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1660--1662
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 جیسی ہوں گی۔ہم شکل ۱۵.۲۹[] میں $\OML/zplm/
-m/it/10 C[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا رخ الٹ کر کے $\OML/zplm/m/it
-/10 B$ \TU/JameelNooriNastaleeq(2)/b/n/10 سے $\OML/zplm/m/it/10 A$ \TU/JameelNo
-oriNastaleeq(2)/b/n/10 تک راہ کو $\OMS/zplm/m/n/10 ^^@\OML/zplm/m/it/10 C[]$ \T
-U/JameelNooriNastaleeq(2)/b/n/10 لکھتے ہیں۔راہ $\OML/zplm/m/it/10 C[]$ \TU/Jame
-elNooriNastaleeq(2)/b/n/10 اور راہ $\OMS/zplm/m/n/10 ^^@\OML/zplm/m/it/10 C[]$ 
-\TU/JameelNooriNastaleeq(2)/b/n/10 مل کر بند راہ $\OML/zplm/m/it/10 C$ \TU/Jame
-elNooriNastaleeq(2)/b/n/10 دیتے[]
- []
-
-[1610] [1611]
-Underfull \hbox (badness 10000) in paragraph at lines 1728--1730
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 ثبوت پرکھ :  ہم دکھاتے ہیں کہ بقائی $\OML/
-cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے لئے مساوات ۱۵.۳[] ہر صورت 
-مطمئن ہو گا۔ایسا مخفی قوہ تفاعل $\OML/zplm/m/it/10 f$ \TU/JameelNooriNastaleeq(
-2)/b/n/10 پایا جائے گا جو درج ذیل کو مطمئن کرے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1738--1738
-[][][]\TU/JameelNooriNastaleeq(2)/m/n/9 استمراری ہونے کی بدولت مدغم جزوی تفرق[]
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1738--1738
-[][][]\TU/JameelNooriNastaleeq(2)/m/n/9 استمراری ہونے کی بدولت مدغم جزوی تفرق[]
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1738--1738
-[][][]\TU/JameelNooriNastaleeq(2)/m/n/9 استمراری ہونے کی بدولت مدغم جزوی تفرق[]
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1738--1738
-[][][]\TU/JameelNooriNastaleeq(2)/m/n/9 استمراری ہونے کی بدولت مدغم جزوی تفرق[]
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1738--1738
-[][][]\TU/JameelNooriNastaleeq(2)/m/n/9 استمراری ہونے کی بدولت مدغم جزوی تفرق[]
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1738--1738
-[][][]\TU/JameelNooriNastaleeq(2)/m/n/9 استمراری ہونے کی بدولت مدغم جزوی تفرق[]
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1738--1738
-[][][]\TU/JameelNooriNastaleeq(2)/m/n/9 استمراری ہونے کی بدولت مدغم جزوی تفرق[]
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1738--1738
-[][][]\TU/JameelNooriNastaleeq(2)/m/n/9 استمراری ہونے کی بدولت مدغم جزوی تفرق[]
-[]
- []
-
-[1612]
-Underfull \hbox (badness 10000) in paragraph at lines 1775--1777
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 ہم نے تکمل کے مستقل کو $\OML/zplm/m/it/10 
-g\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 y\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 z\OT1
-/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10 لکھا ہے چونکہ اس کی قیمت $\O
-ML/zplm/m/it/10 y$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور $\OML/zplm/m/it/10 z$
- \TU/JameelNooriNastaleeq(2)/b/n/10 کے ساتھ تبدیل ہو سکتی ہے۔اس مساوات سے ہم $[
-]$ تلاش کر کے[]
- []
-
-[1613]
-Underfull \hbox (badness 1286) in paragraph at lines 1815--1817
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 میں کرنا زیادہ مناسب ثابت ہوتا ہے (حصہ ۱۵.
-۲[])۔ جہاں $\OML/zplm/m/it/10 M [] x \OT1/zplm/m/n/10 + \OML/zplm/m/it/10 N [] 
-y \OT1/zplm/m/n/10 + \OML/zplm/m/it/10 P [] z$ \TU/JameelNooriNastaleeq(2)/b/n/
-10 تفاعل $\OML/zplm/m/it/10 f$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا تفریقی روپ
- ہو وہاں ان تکملات کا حل نسبتاً[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 1828.
-LaTeX Info: Redefining \sffamily on input line 1828.
-LaTeX Info: Redefining \ttfamily on input line 1828.
-[1614]
-Underfull \hbox (badness 7291) in paragraph at lines 1844--1846
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 مثال  ۱۵.۴: []دکھائیں کہ $\OML/zplm/m/it/1
-0 y [] x \OT1/zplm/m/n/10 + \OML/zplm/m/it/10 x [] y \OT1/zplm/m/n/10 + \OT1/pp
-l/m/n/10 4 [] \OML/zplm/m/it/10 z$ \TU/JameelNooriNastaleeq(2)/b/n/10 قطعی تفرق
-ی ہے اور درج ذیل تکمل کی قیمت قطع $\OT1/zplm/m/n/10 (\OT1/ppl/m/n/10 1, 1, 1\OT
-1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10 تا $\OT1/zplm/m/n/10 (\OT1/
-ppl/m/n/10 2, 3, \OMS/zplm/m/n/10 ^^@\OT1/ppl/m/n/10 1\OT1/zplm/m/n/10 )$ \TU/J
-ameelNooriNastaleeq(2)/b/n/10 پر[]
- []
-
-[1615] [1616] [1617]
-Underfull \hbox (badness 10000) in paragraph at lines 2121--2125
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۳۱:  مستوی $\OML/zplm/m/it/10 xy
-$ \TU/JameelNooriNastaleeq(2)/b/n/10 میں $\OT1/zplm/m/n/10 (\OMS/zplm/m/n/10 ^^
-@\OT1/ppl/m/n/10 1, 1\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10 تا 
-$\OT1/zplm/m/n/10 (\OT1/ppl/m/n/10 1, 1\OT1/zplm/m/n/10 )$ \TU/JameelNooriNasta
-leeq(2)/b/n/10 راہ $\OML/zplm/m/it/10 C$\TU/JameelNooriNastaleeq(2)/b/n/10 ، نق
-طہ $\OT1/zplm/m/n/10 (\OMS/zplm/m/n/10 ^^@\OT1/ppl/m/n/10 1, 1\OT1/zplm/m/n/10 
-)$ \TU/JameelNooriNastaleeq(2)/b/n/10 تا $\OT1/zplm/m/n/10 (\OT1/ppl/m/n/10 0, 
-0\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور نقطہ $\OT1/zplm/m/n
-/10 (\OT1/ppl/m/n/10 0, 0\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10
- تا $\OT1/zplm/m/n/10 (\OT1/ppl/m/n/10 1, 1\OT1/zplm/m/n/10 )$ \TU/JameelNooriN
-astaleeq(2)/b/n/10 قطعات پر[]
- []
-
-[1618]
-Underfull \hbox (badness 10000) in paragraph at lines 2152--2161
-[]   \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۳۴:  مبدا سے $\OML/zplm/m/it/1
-0 s[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور $\OML/zplm/m/it/10 s[]$ \TU/Jamee
-lNooriNastaleeq(2)/b/n/10 فاصلوں پر بالترتیب نقاط $\OML/zplm/m/it/10 N[]$ \TU/J
-ameelNooriNastaleeq(2)/b/n/10 اور $\OML/zplm/m/it/10 N[]$ \TU/JameelNooriNastal
-eeq(2)/b/n/10 پائے جاتے ہیں۔ دکھائیں کہ سوال ۱۵.۳۳[] کے ثقلی میدان میں $\OML/zp
-lm/m/it/10 N[]$[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2175--2179
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۳۷:  آپ کو دو نقطوں کے بیچ وہ را
-ہ تلاش کرنی ہے جس پر چلتے ہوئے $\OML/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)
-/b/n/10 کم سے کم کام کرے گا۔ آپ جانتے ہیں کہ $\OML/cmm/b/it/10 F$ \TU/JameelNoo
-riNastaleeq(2)/b/n/10 بقائی ہے۔ آپ کا[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2179--2188
-[]   \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۳۸:  آپ تجرباتی طور جانتے ہیں 
-کہ $\OML/zplm/m/it/10 A$ \TU/JameelNooriNastaleeq(2)/b/n/10 سے $\OML/zplm/m/it/
-10 B$ \TU/JameelNooriNastaleeq(2)/b/n/10 تک راہ $\OML/zplm/m/it/10 C[]$ \TU/Jam
-eelNooriNastaleeq(2)/b/n/10 کی ہمراہ $\OML/cmm/b/it/10 F$ \TU/JameelNooriNastal
-eeq(2)/b/n/10 کا کام راہ $\OML/zplm/m/it/10 C[]$ \TU/JameelNooriNastaleeq(2)/b/
-n/10 کی ہمراہ کام کا نصف ہے۔ آپ $\OML/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2
-)/b/n/10 کے بارے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2194--2195
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 ہم اب ایک ایسا مسئلہ پیش کرتے ہیں جو مستوی
- خطہ کی سرحد کی ہمراہ یا اس کو عبور کرتے ہوئے داب نا پذیر سیال کی بہاؤ اور خطہ 
-کے اندر اس کی حرکت کے بیچ[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2194--2195
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 تعلق پیش کرتا ہے۔ پھیلاو اور گردش کے تصورا
-ت سیال کے سرحدی رویہ اور اندرونی رویہ کے بیچ تعلق پیش کرنا ممکن بناتے ہیں۔ سیال
- کی سمتی رفتار میدان کا[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2196--2197
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 مسئلہ گرین کہتا ہے کہ، چند ایسے شرائط مط
-مئن ہونے کی صورت میں جو عملی استعمال میں عموماً پورے ہوتے ہیں، مستوی خطہ کی سرح
-د سے خارجی بہاؤ سرحد کے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2196--2197
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 اندر میدان کے پھیلاو کے دوہرا تکمل کے براب
-ر ہو گا۔ اس مسئلے کا دوسرا روپ کہتا ہے کہ خطہ کی سرحد کی ہمراہ خلاف گھڑی دائری 
-بہاؤ اس خطہ میں میدان کی[]
- []
-
-[1619]
-Underfull \hbox (badness 1057) in paragraph at lines 2198--2199
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 مسئلہ گرین، علم احصاء کے عظیم مسائل میں 
-سے ایک ہے۔ یہ گہرا اور حیرت کن ہے اور اس کے دور رس نتائج پائے جاتے ہیں۔ خالص ری
-اضیات میں مسئلہ گرین[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2198--2199
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 کی اہمیت، احصاء کے بنیادی مسئلہ کے برابر ہ
-ے۔ عملی ریاضیات میں مسئلہ گرین کا تین ابعادی روپ برقی، مقناطیسی، اور سیالی حرکی
-ات کے مسائل کا بنیاد مہیا کرتا[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2200--2201
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 ہم سیال کی حرکت کی سمتی رفتار میدان کی ب
-ات اس لئے کرتے ہیں کہ سیال کی حرکت کا ذہنی خاکہ بنانا آسان ہوتا ہے۔ یاد رہے کہ 
-مسئلہ گرین کسی بھی سمتی[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2204--2205
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 مسئلہ گرین کے لئے ہمیں دو نئے تصورات کی ضر
-ورت پیش آتی ہے۔ پہلا تصور، ایک نقطہ پر سمتی میدان کی کثافت بہاؤ ہے جس کو ریاضیا
-ت میں سمتی میدان کا[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2215--2217
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 کے یک رتبی جزوی تفرق استمراری ہیں۔ خطہ $\O
-ML/zplm/m/it/10 R$ \TU/JameelNooriNastaleeq(2)/b/n/10 میں $\OT1/zplm/m/n/10 (\O
-ML/zplm/m/it/10 x\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y\OT1/zplm/m/n/10 )$ \TU/J
-ameelNooriNastaleeq(2)/b/n/10 ایک نقطہ ہے اور $\OML/zplm/m/it/10 A$ \TU/JameelN
-ooriNastaleeq(2)/b/n/10 ایک ایسا چھوٹا مستطیل ہے جو مکمل طور پر $\OML/zplm/m/it
-/10 R$ \TU/JameelNooriNastaleeq(2)/b/n/10 میں پایا جاتا ہے اور[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2215--2217
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 جس کا ایک راس $\OT1/zplm/m/n/10 (\OML/zplm
-/m/it/10 x\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y\OT1/zplm/m/n/10 )$ \TU/JameelNo
-oriNastaleeq(2)/b/n/10 ہے (شکل ۱۵.۳۱[])۔ اس مستطیل کے اطراف محددی محور کے متواز
-ی ہیں اور ان کی لمبائیاں $\OT1/zplm/m/n/10 ^^A\OML/zplm/m/it/10 x$ \TU/JameelNo
-oriNastaleeq(2)/b/n/10 اور $\OT1/zplm/m/n/10 ^^A\OML/zplm/m/it/10 y$ \TU/Jameel
-NooriNastaleeq(2)/b/n/10 ہیں۔ مستطیل کی[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2219--2221
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 یوں اگر سمتی رفتار کی اکائی میٹر فی سیکنڈ 
-ہو تب خارجی شرح کی اکائی میٹر فی سیکنڈ ضرب میٹر یعنی مربع میٹر فی سیکنڈ ہو گی۔ 
-باقی تین اطراف کے عمودی باہر رخ[]
- []
-
-[1620]
-LaTeX Info: Redefining \rmfamily on input line 2247.
-LaTeX Info: Redefining \sffamily on input line 2247.
-LaTeX Info: Redefining \ttfamily on input line 2247.
-
-Underfull \hbox (badness 10000) in paragraph at lines 2288--2288
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 شكل ۱۵.۳۲: |داب نا پذیر سیال کے بہاؤ کی 
-صورت میں مستوی خطہ کو پار کرتے ہوئے ”منبع” پر ، جہاں نظام میں سیال داخل ہوگا ،پ
-ھیلاؤ مثبت ہو گا، جبکہ[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2292--2293
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 اگر نقطہ $\OT1/zplm/m/n/10 (\OML/zplm/m/
-it/10 x[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y[]\OT1/zplm/m/n/10 )$ \TU/JameelN
-ooriNastaleeq(2)/b/n/10 پر باریک سوراخ سے سیال خطہ میں داخل ہو تب اس سوراخ سے خ
-طہ میں سیال پھیلے گا (جس کی بنا اس کو پھیلاؤ نام دیا گیا ہے)۔ چھوٹے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2292--2293
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 مستطیل میں نقطہ $\OT1/zplm/m/n/10 (\OML/zp
-lm/m/it/10 x[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y[]\OT1/zplm/m/n/10 )$ \TU/Ja
-meelNooriNastaleeq(2)/b/n/10 پر سوراخ سے خطہ میں سیال داخل ہونے کی صورت میں پھی
-لاو مثبت ہو گا جبکہ اس نقطہ پر سوراخ کے ذریعہ خطہ سے سیال کے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2308--2309
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 مسئلہ گرین کے لئے درکار دوسرا نیا تصور ایک
- نقطہ پر سمتی میدان $\OML/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کی 
-کثافت دائری بہاؤ ہے جس کو ریاضیات میں $\OML/cmm/b/it/10 F$ \TU/JameelNooriNasta
-leeq(2)/b/n/10 کی \TU/JameelNooriNastaleeq(2)/m/n/9 گردش \TU/JameelNooriNastale
-eq(2)/b/n/10 کہتے ہیں۔ اس کو حاصل[]
- []
-
-[1621]
-Underfull \hbox (badness 10000) in paragraph at lines 2323--2324
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 رقبہ $\OML/zplm/m/it/10 A$ \TU/JameelNoo
-riNastaleeq(2)/b/n/10 کے گرد خلاف گھڑی $\OML/cmm/b/it/10 F$ \TU/JameelNooriNast
-aleeq(2)/b/n/10 کا دائری بہاؤ مستطیل $\OML/zplm/m/it/10 A$ \TU/JameelNooriNasta
-leeq(2)/b/n/10 کی اطراف کی ہمراہ بہاؤ کی شرح کا مجموعہ ہو گا۔اکائی مماسی سمتیہ 
-$\OML/cmm/b/it/10 i$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے رخ سمتی رفتار $\OML/
-cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا[]
- []
-
-[1622]
-Underfull \hbox (badness 6995) in paragraph at lines 2344--2346
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 آخر میں ہم $\OT1/zplm/m/n/10 ^^A\OML/zplm/
-m/it/10 x$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور $\OT1/zplm/m/n/10 ^^A\OML/zpl
-m/m/it/10 y$ \TU/JameelNooriNastaleeq(2)/b/n/10 کو صفر تک پہنچا کر نقطہ $\OT1/z
-plm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y\OT1/zplm/m
-/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر $\OML/cmm/b/it/10 F$ \TU/JameelN
-ooriNastaleeq(2)/b/n/10 کی \TU/JameelNooriNastaleeq(2)/m/n/9 کثافت دائری بہاؤ \
-TU/JameelNooriNastaleeq(2)/b/n/10 کی تعریف اخذ کرتے ہیں جس کو ریاضیات میں $\OML
-/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کی \TU/JameelNooriNastaleeq(
-2)/m/n/9 گردش \TU/JameelNooriNastaleeq(2)/b/n/10 کہتے[]
- []
-
-LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 2386.
-
-Underfull \hbox (badness 10000) in paragraph at lines 2428--2428
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 شكل ۱۵.۳۴: |مستوی خطہ پر داب نا پذیر سیا
-ل کے بہاؤ میں کسی نقطہ پر سیال کے گھومنے کی شرح کی ناپ کو گردش کہتے ہیں۔ جن نقط
-وں پر سیال خلاف گھڑی[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 2433.
-LaTeX Info: Redefining \sffamily on input line 2433.
-LaTeX Info: Redefining \ttfamily on input line 2433.
-[1623]
-LaTeX Info: Redefining \rmfamily on input line 2457.
-LaTeX Info: Redefining \sffamily on input line 2457.
-LaTeX Info: Redefining \ttfamily on input line 2457.
-
-Underfull \hbox (badness 10000) in paragraph at lines 2457--2458
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 مسئلہ گرین کا ایک روپ کہتا ہے کہ موزوں حال
-ات میں مستوی میں \TU/AASameerSagarNastaleeqBold(0)/m/n/10 سادہ [][][][] \TU/Jam
-eelNooriNastaleeq(2)/b/n/10 بند منحنی سے سمتی میدان کا خارجی بہاؤ، اس منحنی میں
- محیط خطہ پر میدان کے پھیلاو[]
- []
-
-
-Underfull \hbox (badness 3746) in paragraph at lines 2481--2481
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 شكل ۱۵.۳۵: |مسئلہ گرین کے ثبوت میں ہم دو
- قسم کی بند منحنیات ، سادہ اور غیر سادہ، میں فرق کرتے ہیں۔سادہ منحنی اپنے آپ پر
- نہیں گزرتی۔یوں دائرہ ایک[]
- []
-
-
-Underfull \hbox (badness 6380) in paragraph at lines 2493--2494
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 مسئلہ گرین کا دوسرا روپ کہتا ہے کہ ایک س
-ادہ بند منحنی کی ہمراہ، خلاف گھڑی ایک میدان کا دائری بہاؤ، اس منحنی میں محیط خط
-ہ پر میدان کی گردش کے دہرا تکمل[]
- []
-
-[1624]
-Underfull \hbox (badness 1024) in paragraph at lines 2511--2512
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 مسئلہ گرین کے دو روپ ایک دوسرے کے معادل 
-ہیں۔ میدان $\OML/cmm/b/it/10 G[] \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 N\OML/cmm
-/b/it/10 i \OMS/zplm/m/n/10 ^^@ \OML/zplm/m/it/10 M\OML/cmm/b/it/10 j$ \TU/Jame
-elNooriNastaleeq(2)/b/n/10 پر مساوات ۱۵.۱۱[] کا اطلاق مساوات ۱۵.۱۲[] دے گی جبکہ
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2513--2515
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 مسئلہ گرین کے لئے ضروری ہے دو مفروضے مطم
-ئن ہوتے ہوں۔ اول ہمیں $\OML/zplm/m/it/10 M$ \TU/JameelNooriNastaleeq(2)/b/n/10 
-اور $\OML/zplm/m/it/10 N$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر ایسا شرائط مسلط
- کرنے ہوں گے کہ مسئلہ گرین میں پائے جانے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2513--2515
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 تفرق استمراری ہوں گے۔ دوم، ہمیں منحنی $\OM
-L/zplm/m/it/10 C$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر ہندسی شرائط مسلط کرنے ہ
-وں گے۔ منحنی سادہ، بند اور ایسے ٹکڑوں پر مشتمل ہونی چاہیے جن کی ہمراہ $\OML/zpl
-m/m/it/10 M$[]
- []
-
-[1625]
-Underfull \hbox (badness 10000) in paragraph at lines 2555--2558
-[]$\OML/zplm/m/it/10 C$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے بہت سارے مختلف تک
-ملات کی قیمت حاصل کرنی ہو گی۔ لیکن، اگر $\OML/zplm/m/it/10 C$ \TU/JameelNooriNa
-staleeq(2)/b/n/10 ایسے خطہ $\OML/zplm/m/it/10 R$ \TU/JameelNooriNastaleeq(2)/b/
-n/10 کی حد بندی کرتی ہو، جس پر مسئلہ گرین کا اطلاق ہوتا ہو، ہم مسئلہ[]
- []
-
-[1626]
-Underfull \hbox (badness 10000) in paragraph at lines 2590--2592
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 حل: لکیری تکمل سے بہاو حاصل کرنے کے لئے 
-چار تکملات کی ضرورت پیش آئے گی؛ چوکور کے ہر ضلع کے لئے ایک تکمل کرنا ہوگا۔ مسئل
-ہ گرین سے ہم[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2604--2605
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 فرض کریں مستوی $\OML/zplm/m/it/10 xy$ \TU/
-JameelNooriNastaleeq(2)/b/n/10 میں $\OML/zplm/m/it/10 C$ \TU/JameelNooriNastale
-eq(2)/b/n/10 ایسی ہموار، سادہ، منحنی ہے جس کو محور کے متوازی کوئی لکیر دو سے زی
-ادہ نقطوں پر نہیں کاٹتی۔ فرض کریں، منحنی $\OML/zplm/m/it/10 C$ \TU/JameelNooriN
-astaleeq(2)/b/n/10 خطہ[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2604--2605
-[]$\OML/zplm/m/it/10 R$ \TU/JameelNooriNastaleeq(2)/b/n/10 گھیرتی ہے، اور ایسے 
-کھلا خطہ میں جس میں $\OML/zplm/m/it/10 C$ \TU/JameelNooriNastaleeq(2)/b/n/10 او
-ر $\OML/zplm/m/it/10 R$ \TU/JameelNooriNastaleeq(2)/b/n/10 دونوں پائے جاتے ہوں 
-$\OML/zplm/m/it/10 M$\TU/JameelNooriNastaleeq(2)/b/n/10 ، $\OML/zplm/m/it/10 N$
-\TU/JameelNooriNastaleeq(2)/b/n/10 ، اور ان کے یک گنّا جزوی تفرق ہر نقطہ پر است
-مراری ہیں۔ ہم[]
- []
-
-[1627]
-Overfull \hbox (5.35107pt too wide) in paragraph at lines 2612--2629
-[][][][][][][] []
- []
-
-
-Overfull \hbox (27.99667pt too wide) in paragraph at lines 2633--2650
-[][][][][][][] []
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1628]
-Underfull \hbox (badness 10000) in paragraph at lines 2673--2674
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 مساوات ۱۵.۱۵[] ہمیں مساوات ۱۵.۱۳[]میں در
-کار نتائج کا نصف حصہ دیتی ہے۔ جیسا شکل ۱۵.۳۷[] عندیہ دیتی ہے، اس کا دوسرا نصف ح
-صہ، $[]$ کا تکمل ، پہلے[]
- []
-
-[1629]
-Overfull \hbox (0.57475pt too wide) in paragraph at lines 2747--2757
- [][][][][][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2802--2803
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 شکل ۱۵.۳۹[]طرز کے خطوں کو بھی اتنی ہی آ
-سانی سے نپٹا جا سکتا ہے۔ مساوات ۱۵.۱۳[]کا اطلاق اب بھی ہوگا۔ شکل ۱۵.۴۰[] میں گھ
-وڑے کے نعل کی شکل کا خطہ[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2802--2803
-[]$\OML/zplm/m/it/10 R$ \TU/JameelNooriNastaleeq(2)/b/n/10 دکھایا گیا ہے؛ اور ہ
-م دیکھتے ہیں کہ خطہ $\OML/zplm/m/it/10 R[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 
-، خطہ $\OML/zplm/m/it/10 R[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور ان کی سرحد
- اکٹھا کرتے ہوئے مساوات ۱۵.۱۳[] کا اطلاق ہوگا۔ مسئلہ گرین کا اطلاق $\OML/zplm/m
-/it/10 C[]$\TU/JameelNooriNastaleeq(2)/b/n/10 ،[]
- []
-
-[1630] [1631]
-Underfull \hbox (badness 10000) in paragraph at lines 2806--2808
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 ان مساوات کو آپس میں جمع کرتے ہوئے ہم دیک
-ھتے ہیں کہ محور $\OML/zplm/m/it/10 y$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر $\O
-ML/zplm/m/it/10 C[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے لئے $\OML/zplm/m/it/
-10 b$ \TU/JameelNooriNastaleeq(2)/b/n/10 تا $\OML/zplm/m/it/10 a$ \TU/JameelNoo
-riNastaleeq(2)/b/n/10 لکیری تکمل کو $\OML/zplm/m/it/10 C[]$ \TU/JameelNooriNast
-aleeq(2)/b/n/10 پر اسی قطع پر لیکن مخالف رخ کا تکمل کاٹتا[]
- []
-
-
-Overfull \hbox (26.20718pt too wide) in paragraph at lines 2851--2859
- [][][][][][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2868--2869
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 مختلف سرحدوں پر لکیری تکملات جمع کر کے ا
-یک سرحد پر تکمل کے حصول کی ترکیب کو متناہی تعداد کے ذیلی خطوں تک وسعت دی جا سکت
-ی ہے۔ شکل۱۵.۴۱[]-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2868--2869
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 ا میں مخالف گھڑی سمت بند سرحد $\OML/zplm/m
-/it/10 C[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 ربع اول میں واقع خطہ $\OML/zplm/
-m/it/10 R[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 کو گھیرتی ہے۔ باقی تین ربعات کے
- لئے بھی ایسا ہو گا: خطہ $\OML/zplm/m/it/10 R[]$ \TU/JameelNooriNastaleeq(2)/b/
-n/10 کی سرحد $\OML/zplm/m/it/10 C[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 ہو گی،[
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 129--133
+[]\TU/JameelNooriNastaleeq(2)/b/n/10 سوال ۱۵.۱۷[] تا ۱۵.۲۶[] میں مقدار معلوم رو
+پ استعمال کر کے سطح کے رقبے کو دوہرا تکمل لکھیں۔ اس کے بعد تکمل کی قیمت تلاش کر
+یں۔(تکمل لکھنے کے کئی[]
  []
 
-[1632]
-LaTeX Info: Redefining \rmfamily on input line 2876.
-LaTeX Info: Redefining \sffamily on input line 2876.
-LaTeX Info: Redefining \ttfamily on input line 2876.
- [1633] [1634]
-Overfull \hbox (185.2302pt too wide) in paragraph at lines 2962--2963
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 ========================================
-======================================================= []
- []
-
-[1635] [1636] [1637]
-Underfull \hbox (badness 10000) in paragraph at lines 3103--3107
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۳۱: []مستوی $\OML/zplm/m/it/10 x
-y$ \TU/JameelNooriNastaleeq(2)/b/n/10 میں خطہ $\OML/zplm/m/it/10 R$ \TU/JameelN
-ooriNastaleeq(2)/b/n/10 جو ٹکڑوں میں ہموار سادہ بند منحنی $\OML/zplm/m/it/10 C$
- \TU/JameelNooriNastaleeq(2)/b/n/10 میں گھیرا ہوا ہے کا رقبہ $\OML/zplm/m/it/10
- A$ \TU/JameelNooriNastaleeq(2)/b/n/10 ہے اور خطے کے وسطانی مرکز کا $\OML/zplm/
-m/it/10 x$ \TU/JameelNooriNastaleeq(2)/b/n/10 محدد $[]$[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3120--3123
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۳۴:  مستوی میں ان تمام ہموار ساد
-ہ بند منحنیات میں سے، جو خلاف گھڑی سمت بند ہوں، وہ تلاش کریں جس پر چلتے ہوئے در
-ج ذیل کا سرانجام[]
- []
-
-[1638]
-Underfull \hbox (badness 10000) in paragraph at lines 3125--3139
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۳۵: []خطہ $\OML/zplm/m/it/10 R$ 
-\TU/JameelNooriNastaleeq(2)/b/n/10 پر، جس میں متناہی تعداد کے سوراخ ہوں، اور جس
- کی سرحدی منحنیات ہموار، سادہ، اور بند ہوں پر مسئلہ گرین کا اطلاق ہو گا[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3144--3145
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 فرض کریں مستوی میں $\OML/zplm/m/it/10 K$
- \TU/JameelNooriNastaleeq(2)/b/n/10 ایسی ہموار سادہ بند منحنی ہے جو $\OT1/zplm/
-m/n/10 (\OT1/ppl/m/n/10 0, 0\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n
-/10 سے نہیں گزرتی۔ مسئلہ گرین استعمال کر کے دکھائیں کہ درج ذیل تکمل کی دو ممکنہ
-[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 3150.
-LaTeX Info: Redefining \sffamily on input line 3150.
-LaTeX Info: Redefining \ttfamily on input line 3150.
-
-Underfull \hbox (badness 10000) in paragraph at lines 3147--3151
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۳۶:  مستوی سیلان کے انفرادی ذرات
- کی حرکت کی نمائندگی ہموار منحنیات کرتی ہیں جو \TU/AASameerSagarNastaleeqBold(0
-)/m/n/10 خطوط رو[][][] []\TU/JameelNooriNastaleeq(2)/b/n/10 کہلاتی ہیں۔سیالی سی
-لان کے سمتی رفتار[]
- []
-
-[1639]
-Underfull \hbox (badness 10000) in paragraph at lines 3161--3164
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۴۰:  کیا بقائی میدان کے دائری بہ
-اؤ کے بارے میں مسئلہ گرین کوئی معلومات دیتا ہے؟ کیا یہ کسی دوسری حقیقت ، جو آپ 
-جانتے ہو، کے مطابق[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3167--3168
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 کمپیوٹر اور مسئلہ گرین استعمال کر کے سوال 
-۱۵.۴۱[] تا ۱۵.۴۴[] میں میدان $\OML/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)/b
-/n/10 کا خلاف گھڑی دائری بہاؤ سادہ بند منحنی $\OML/zplm/m/it/10 C$ \TU/JameelNo
-oriNastaleeq(2)/b/n/10 کے ہمراہ تلاش کریں۔کمپیوٹر پر درج[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 3200.
-LaTeX Info: Redefining \sffamily on input line 3200.
-LaTeX Info: Redefining \ttfamily on input line 3200.
-
-Underfull \hbox (badness 10000) in paragraph at lines 3200--3201
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 ہم مستوی میں خطہ پر تفاعل کا تکمل لینا جان
-تے ہیں لیکن ایسی صورت میں کیا ہوگا جب تفاعل ایک قوسی سطح پر پایا جاتا ہو؟ ایسی 
-صورت میں تکمل کیسے حاصل ہو گا؟[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3200--3201
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 ایسا تکمل ، جو \TU/AASameerSagarNastaleeqB
-old(0)/m/n/10 سطحی تکمل[][][] []\TU/JameelNooriNastaleeq(2)/b/n/10 کہلاتا ہے ، 
-کی قیمت تلاش کرنے کی خاطر اس کو ، سطح کے نیچے محددی مستوی پر ( شکل ۱۵.۴۵[])، دہ
-را تکمل کے روپ میں لکھا جاتا[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 3226.
-LaTeX Info: Redefining \sffamily on input line 3226.
-LaTeX Info: Redefining \ttfamily on input line 3226.
-[1640]
-Underfull \hbox (badness 10000) in paragraph at lines 3259--3260
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 ہم خطہ$\OML/zplm/m/it/10 R$ \TU/JameelNo
-oriNastaleeq(2)/b/n/10 کی خانہ بندی چھوٹے چھوٹے مستطیلوں $\OT1/zplm/m/n/10 ^^A\
-OML/zplm/m/it/10 A[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 میں ہم یوں کرتے ہیں جی
-سے $\OML/zplm/m/it/10 R$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر تکمل کی تعریف پی
-ش کرنا چاہتے ہوں۔ یہ$\OML/zplm/m/it/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے
- رقبہ کی[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3259--3260
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 تعریف پیش کرنے کا کا پہلا قدم ہے۔ ہر ایک$\
-OT1/zplm/m/n/10 ^^A\OML/zplm/m/it/10 A$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے ب
-الکل اوپر کچھ بلندی پر سطح$\OT1/zplm/m/n/10 ^^A\OML/zplm/m/it/10 ^^[[]$ \TU/Jam
-eelNooriNastaleeq(2)/b/n/10 پایا جاتا ہے، جس کو ہم مماسی سطح کے چھوٹے حصہ$\OT1/
-zplm/m/n/10 ^^A\OML/zplm/m/it/10 P[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 سے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3259--3260
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 تخمین دے سکتے ہیں ۔ اس کی وضاحت کرتے ہیں۔ 
-رقبہ$\OT1/zplm/m/n/10 ^^A\OML/zplm/m/it/10 A[]$ \TU/JameelNooriNastaleeq(2)/b/n
-/10 کے اگلے بائیں کونے$\OML/zplm/m/it/10 C[]$ \TU/JameelNooriNastaleeq(2)/b/n/1
-0 کے بالکل اوپر نقطہ$\OML/zplm/m/it/10 T[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x
-[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 z[
-]\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر سطح کے مماس[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3290--3290
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 شكل ۱۵.۴۷: |گزشتہ شکل کی تفصیل بڑی کر کے
- دکھائی گئی ہے۔ چونکہ سمتیہ $\OML/cmm/b/it/10 u[] \OMS/zplm/m/n/10 ^^B \OML/cmm
-/b/it/10 v[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 (جو شکل میں نہیں دکھایا گیا) ا
-ور سمتیہ $\OMS/zplm/m/n/10 r\OML/zplm/m/it/10 f$ \TU/JameelNooriNastaleeq(2)/b/
-n/10 دونوں سطح[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3296--3298
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 شکل ۱۵.۴۷[] میں$\OT1/zplm/m/n/10 ^^A\OML
-/zplm/m/it/10 ^^[[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور$\OT1/zplm/m/n/10 ^^
-A\OML/zplm/m/it/10 P[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 بڑھا چڑھا کر پیش کیے
- گئے ہیں، جہاں$\OML/zplm/m/it/10 T[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر ڈھل
-وان سمتیہ $\OMS/zplm/m/n/10 r\OML/zplm/m/it/10 f\OT1/zplm/m/n/10 (\OML/zplm/m/i
-t/10 x[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y[]\OT1/ppl/m/n/10 , \OML/zplm/m/it
-/10 z[]\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور$\OML/zplm/m/i
-t/10 R$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا عمودی اکائی[]
- []
-
-
-Underfull \hbox (badness 4096) in paragraph at lines 3296--3298
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 میں$\OT1/zplm/m/n/10 ^^A\OML/zplm/m/it/10 
-P[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے کناروں پر پائے جاتے ہیں۔ یوں$\OML/cm
-m/b/it/10 u[] \OMS/zplm/m/n/10 ^^B \OML/cmm/b/it/10 v[]$ \TU/JameelNooriNastale
-eq(2)/b/n/10 اور$\OMS/zplm/m/n/10 r\OML/zplm/m/it/10 f$ \TU/JameelNooriNastalee
-q(2)/b/n/10 دونوں مماسی مستوی کو عمودی ہیں۔سمتیہ $\OML/cmm/b/it/10 u[]$ \TU/Jam
-eelNooriNastaleeq(2)/b/n/10 اور سمتیہ $\OML/cmm/b/it/10 v[]$\TU/JameelNooriNast
-aleeq(2)/b/n/10 دونوں سمتیہ[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3299--3300
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 اعلٰی سمتی ہندسہ سے ہم جانتے ہیں کہ کسی 
-بھی مستوی پر، جس کا عمود$\OML/cmm/b/it/10 p$ \TU/JameelNooriNastaleeq(2)/b/n/10
- ہو ، ایسے مستطیل کی تظلیل کا رقبہ$\OMS/zplm/m/n/10 j\OT1/zplm/m/n/10 (\OML/cmm
-/b/it/10 u[] \OMS/zplm/m/n/10 ^^B \OML/cmm/b/it/10 v[]\OT1/zplm/m/n/10 ) \OMS/z
-plm/m/n/10 ^^A \OML/cmm/b/it/10 p\OMS/zplm/m/n/10 j$ \TU/JameelNooriNastaleeq(2
-)/b/n/10 ہوگا جس کو$\OML/cmm/b/it/10 u[]$[]
- []
-
-[1641]
-Underfull \hbox (badness 10000) in paragraph at lines 3329--3331
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 سطحی رقبے $\OML/zplm/m/it/10 S$ \TU/Jameel
-NooriNastaleeq(2)/b/n/10 کا تخمین نظر آتا ہے۔ ہم یہ بھی دیکھ سکتے ہیں کہ خطہ$\O
-ML/zplm/m/it/10 R$ \TU/JameelNooriNastaleeq(2)/b/n/10 کو مزید چھوٹے خانوں میں ت
-قسیم کرنے سے یہ تخمین بہتر ہوگی۔ درحقیقت ، مساوات[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 3334.
-LaTeX Info: Redefining \sffamily on input line 3334.
-LaTeX Info: Redefining \ttfamily on input line 3334.
-[1642] [1643] [1644] [1645]
-Underfull \hbox (badness 10000) in paragraph at lines 3490--3491
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 ہم $\OML/zplm/m/it/10 S$ \TU/JameelNoori
-Nastaleeq(2)/b/n/10 کے نیچے ، زمینی مستوی پر خطہ $\OML/zplm/m/it/10 R$ \TU/Jame
-elNooriNastaleeq(2)/b/n/10 کو چھوٹے چھوٹے مستطیلوں میں بالکل اسی طرح تقسیم کرتے
- ہیں جیسا $\OML/zplm/m/it/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا سطحی رقبہ
- تلاش کرنے کے لیے کیا جاتا[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3492--3494
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 ہم سطحی رقبے کی تعریف کے طرز پر چل رہے ہ
-یں، تاہم یہاں ایک اضافی قدم لیتے ہیں: ہم $\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x
-[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 z[
-]\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر $\OML/zplm/m/it/10 g
-$ \TU/JameelNooriNastaleeq(2)/b/n/10 کی قیمت معلوم کر کے رقبہ $\OT1/zplm/m/n/10
- ^^A\OML/zplm/m/it/10 ^^[[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3492--3494
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 کُل بار کو تخمیناً حاصل ضرب $\OML/zplm/m/i
-t/10 g\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/1
-0 y[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 z[]\OT1/zplm/m/n/10 )^^A\OML/zplm/m/it
-/10 P[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 سے ظاہر کرتے ہیں ۔اس کی وجہ درج ذیل
- ہے: خطہ $\OML/zplm/m/it/10 R$ \TU/JameelNooriNastaleeq(2)/b/n/10 کو کافی چھوٹے
- چھوٹے مستطیلوں میں[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3492--3494
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 تقسیم کرنے کی صورت میں پورے $\OT1/zplm/m/n
-/10 ^^A\OML/zplm/m/it/10 ^^[[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر $\OML/zpl
-m/m/it/10 g$ \TU/JameelNooriNastaleeq(2)/b/n/10 کی قیمت تقریباً مستقل ہوگی ، او
-ر $\OT1/zplm/m/n/10 ^^A\OML/zplm/m/it/10 P[]$ \TU/JameelNooriNastaleeq(2)/b/n/1
-0 تقریباً $\OT1/zplm/m/n/10 ^^A\OML/zplm/m/it/10 ^^[[]$\TU/JameelNooriNastaleeq
-(2)/b/n/10 کے کے برابر ہو گا ۔ یوں $\OML/zplm/m/it/10 S$ \TU/JameelNooriNastale
-eq(2)/b/n/10 پر کُل بار تخمیناً درج[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3498--3500
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 اگر سطح$\OML/zplm/m/it/10 S$ \TU/JameelN
-ooriNastaleeq(2)/b/n/10 کو ظاہر کرنے والا تفاعل$\OML/zplm/m/it/10 f$ \TU/Jameel
-NooriNastaleeq(2)/b/n/10 اور اس کے یک رتبی جزوی تفرق استمراری ہو ں ، اور $\OML/
-zplm/m/it/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر $\OML/zplm/m/it/10 g$ \TU
-/JameelNooriNastaleeq(2)/b/n/10 استمراری ہو ، تب $\OML/zplm/m/it/10 R$ \TU/Jame
-elNooriNastaleeq(2)/b/n/10 کی خانہ بندی ہمیشہ کی طرح[]
- []
-
-
-Underfull \vbox (badness 3229) has occurred while \output is active []
-
- [1646]
-LaTeX Info: Redefining \rmfamily on input line 3513.
-LaTeX Info: Redefining \sffamily on input line 3513.
-LaTeX Info: Redefining \ttfamily on input line 3513.
-
-Underfull \hbox (badness 10000) in paragraph at lines 3515--3516
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 مختلف عملی استعمال میں مساوات ۱۵.۹[] کا 
-تکمل مختلف معنی رکھتا ہے ۔ اگر $\OML/zplm/m/it/10 g$ \TU/JameelNooriNastaleeq(2
-)/b/n/10 کی قیمت مستقل طور پر $\OT1/ppl/m/n/10 1$ \TU/JameelNooriNastaleeq(2)/b
-/n/10 ہو ، تکمل $\OML/zplm/m/it/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا رقب
-ہ دے گا۔ اگر $\OML/zplm/m/it/10 g$ \TU/JameelNooriNastaleeq(2)/b/n/10 ایک باریک
- خول ،[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3526--3527
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 سطحی تکملات دیگر دہرا تکملات کی طرح رویہ
- رکھتے ہیں: دو تفاعلات کا تکمل ان تفاعلات کے انفرادی تکملات کا مجموعہ ہوگا وغیر
-ہ وغیرہ۔ دائرہ کار کی جمع پذیری[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 3530.
-LaTeX Info: Redefining \sffamily on input line 3530.
-LaTeX Info: Redefining \ttfamily on input line 3530.
-
-Underfull \hbox (badness 3601) in paragraph at lines 3529--3531
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 کلیدی تصور یہ ہے کہ اگر $\OML/zplm/m/it/10
- S$ \TU/JameelNooriNastaleeq(2)/b/n/10 کو ہموار منحنیات ، متناہی تعداد کی غیر م
-نطبق ، ہموار قطعات میں خانہ بند کرتی ہوں (یعنی اگر $\OML/zplm/m/it/10 S$ \TU/AA
-SameerSagarNastaleeqBold(0)/m/n/10 ٹکڑوں میں ہموار[][][] []\TU/JameelNooriNasta
-leeq(2)/b/n/10 ہو ) تب[]
- []
-
-
-Underfull \hbox (badness 1412) in paragraph at lines 3534--3536
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 مثال  ۱۵.۳: []ربع اول سے مستویات $\OML/zpl
-m/m/it/10 x \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 1$ \TU/JameelNooriNastaleeq(2)/b
-/n/10 ، $\OML/zplm/m/it/10 y \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 1$\TU/JameelNoo
-riNastaleeq(2)/b/n/10 ، اور $\OML/zplm/m/it/10 z \OT1/zplm/m/n/10 = \OT1/ppl/m/
-n/10 1$ \TU/JameelNooriNastaleeq(2)/b/n/10 ایک مکعب کاٹتی ہیں (شکل ۱۵.۵۱[])۔ اس
- مکعب کی سطح پر[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3561--3563
-[][]\TU/AASameerSagarNastaleeqBold(0)/m/n/10 حل: \TU/JameelNooriNastaleeq(2)/b/
-n/10 ہم باری باری مکعب کی چھ سطحوں پر $\OML/zplm/m/it/10 xyz$ \TU/JameelNooriNa
-staleeq(2)/b/n/10 کا تکمل لے کر تمام نتائج کا مجموعہ لیتے ہیں ۔ محددی مستویات م
-یں پائے جانے والے اطراف میں[]
- []
-
-[1647]
-LaTeX Info: Redefining \rmfamily on input line 3584.
-LaTeX Info: Redefining \sffamily on input line 3584.
-LaTeX Info: Redefining \ttfamily on input line 3584.
-LaTeX Info: Redefining \rmfamily on input line 3584.
-LaTeX Info: Redefining \sffamily on input line 3584.
-LaTeX Info: Redefining \ttfamily on input line 3584.
-
-Underfull \hbox (badness 2626) in paragraph at lines 3584--3585
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 وہ ہموار سطح $\OML/zplm/m/it/10 S$\TU/Jame
-elNooriNastaleeq(2)/b/n/10 ، جس پر عمودی اکائی سمتیات کا ایسا میدان $\OML/cmm/b
-/it/10 n$ \TU/JameelNooriNastaleeq(2)/b/n/10 متعارف کیا جا سکتا ہو جو مقام کے س
-اتھ استمراری تبدیل ہو، \TU/AASameerSagarNastaleeqBold(0)/m/n/10 قابل سمت بند []
-[][] []\TU/JameelNooriNastaleeq(2)/b/n/10 یا  \TU/AASameerSagarNastaleeqBold(0)
-/m/n/10 دو طرفہ[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3584--3585
-[][][][]  []\TU/JameelNooriNastaleeq(2)/b/n/10 کہلاتی ہے ۔ قابل سمت بند سطح کا 
-ہر ذیلی ٹکڑا قابل سمت بند ہوگا ۔ کرہ اور فضا میں دیگر بند سطحیں( ایسی ہموار سطح
-یں جو ٹھوس اجسام کو احاطہ کرتی ہوں) قابل[]
- []
-
-[1648]
-LaTeX Info: Redefining \rmfamily on input line 3586.
-LaTeX Info: Redefining \sffamily on input line 3586.
-LaTeX Info: Redefining \ttfamily on input line 3586.
-LaTeX Info: Redefining \rmfamily on input line 3586.
-LaTeX Info: Redefining \sffamily on input line 3586.
-LaTeX Info: Redefining \ttfamily on input line 3586.
-LaTeX Info: Redefining \rmfamily on input line 3616.
-LaTeX Info: Redefining \sffamily on input line 3616.
-LaTeX Info: Redefining \ttfamily on input line 3616.
-
-Underfull \hbox (badness 1102) in paragraph at lines 3616--3617
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 شکل ۱۵.۵۳[] میں  \TU/AASameerSagarNastal
-eeqBold(0)/m/n/10 موبیوس پٹی [][][] []\TU/JameelNooriNastaleeq(2)/b/n/10 دکھائے
- گئی ہے جو نا قابل سمت بند ہے ۔آپ کسی بھی نقطہ سے آغاز کر کے استمراری اکائی عمو
-دی میدان بنانا شروع کریں۔[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3616--3617
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 اکائی عمودی سمتیہ $\OML/cmm/b/it/10 n$ \TU
-/JameelNooriNastaleeq(2)/b/n/10 کو سطح پر استمراری حرکت دینے سے آپ ابتدائی نقطے
- تک یوں پہنچ سکتے ہیں کہ $\OML/cmm/b/it/10 n$ \TU/JameelNooriNastaleeq(2)/b/n/1
-0 کا رخ ابتدائی رخ کا مخالف ہو ۔ ایک نقطے پر سمتیہ بیک[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3620--3621
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 فرض کریں قابل سمت بند سطح $\OML/zplm/m/it/
-10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر استمراری سمتی میدان $\OML/cmm/b/it/
-10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 ہے ، اور سطح پر منتخب اکائی عمودی میدا
-ن $\OML/cmm/b/it/10 n$ \TU/JameelNooriNastaleeq(2)/b/n/10 ہے ۔ہم $\OML/zplm/m/i
-t/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر $\OML/cmm/b/it/10 F \OMS/zplm/m/n
-/10 ^^A \OML/cmm/b/it/10 n$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے تکمل کو $\OML
-/zplm/m/it/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3629--3630
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 یہ تعریف مسطح منحنی $\OML/zplm/m/it/10 C
-$ \TU/JameelNooriNastaleeq(2)/b/n/10 کو پار کرتے، دو ابعادی میدان$\OML/cmm/b/it
-/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے بہاؤ کی تعریف کے عین مطابق ہے ۔مست
-وی میں بہاؤ کو ، منحنی $\OML/zplm/m/it/10 C$ \TU/JameelNooriNastaleeq(2)/b/n/10
- کو$\OML/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے عمودی غیر[]
- []
-
-[1649]
-Underfull \hbox (badness 10000) in paragraph at lines 3636--3637
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 گر$\OML/cmm/b/it/10 F$ \TU/JameelNooriNa
-staleeq(2)/b/n/10 تین ابعادی سیالی بہاؤ کا سمتی رفتار میدان ہو ، تب $\OML/zplm/
-m/it/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10 سے ( گزرتا ) $\OML/cmm/b/it/10 F$
- \TU/JameelNooriNastaleeq(2)/b/n/10 کا بہاؤ ، منتخب مثبت رخ میں $\OML/zplm/m/it
-/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10 سے گزرتے سیال کی خالص شرح دے گا[]
- []
-
-[1650] [1651] [1652] [1653] [1654]
-Missing character: There is no ; ("3B) in font nullfont!
-
-Underfull \hbox (badness 10000) in paragraph at lines 3914--3919
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۳۰:  ثمن اول میں بیلن $\OML/zplm
-/m/it/10 y \OT1/zplm/m/n/10 = [] \OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(
-2)/b/n/10 کا ٹکڑا سطح $\OML/zplm/m/it/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10 
-، مستوی $\OML/zplm/m/it/10 xz$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر محور $\OML
-/zplm/m/it/10 y$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے متوازی مستطیل سایہ[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3914--3919
-[]$[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 ڈالتا ہے۔ سطح $\OML/zplm/m/it/10 S$ \
-TU/JameelNooriNastaleeq(2)/b/n/10 کے اکائی عمودی سمتیہ $\OML/cmm/b/it/10 n$ \TU
-/JameelNooriNastaleeq(2)/b/n/10 کا رخ مستوی $\OML/zplm/m/it/10 xz$ \TU/JameelNo
-oriNastaleeq(2)/b/n/10 سے دور جانب ہے۔ میدان[]
- []
-
-
-Underfull \hbox (badness 2635) in paragraph at lines 3919--3923
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۳۱:  ثمن اول سے مستویات $\OML/zp
-lm/m/it/10 x \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 a$\TU/JameelNooriNastaleeq(2)
-/b/n/10 ، $\OML/zplm/m/it/10 y \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 a$\TU/Jamee
-lNooriNastaleeq(2)/b/n/10 ، اور $\OML/zplm/m/it/10 z \OT1/zplm/m/n/10 = \OML/zp
-lm/m/it/10 a$ \TU/JameelNooriNastaleeq(2)/b/n/10 مکعب کاٹتی ہیں۔ مکعب کی سطح سے
- باہر رخ میدان[]
- []
-
-[1655]
-Underfull \hbox (badness 10000) in paragraph at lines 3984--3986
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 مستقل کثافت $\OML/zplm/m/it/10 ^^N$ \TU/
-JameelNooriNastaleeq(2)/b/n/10 اور رداس $\OML/zplm/m/it/10 a$ \TU/JameelNooriNa
-staleeq(2)/b/n/10 کے باریک کروی خول کا جمودی معیار اثر قطر کے لحاظ سے تلاش کریں
-۔ (نصف کرہ کے لئے نتیجہ حاصل کر کے دگنا[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3996--3997
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 رداس $\OML/zplm/m/it/10 a$ \TU/JameelNoo
-riNastaleeq(2)/b/n/10 اور قد $\OML/zplm/m/it/10 h$ \TU/JameelNooriNastaleeq(2)/
-b/n/10 کے مخروط کو رداس $\OML/zplm/m/it/10 a$ \TU/JameelNooriNastaleeq(2)/b/n/1
-0 کے نصف کرہ کے ساتھ جوڑنے سے سطح $\OML/zplm/m/it/10 S$ \TU/JameelNooriNastalee
-q(2)/b/n/10 بنتی ہے جو آئس کریم کے مخروط سے مشابہ ہے۔ کلیہ پاپس اور[]
- []
-
-[1656] [1657]
-Underfull \hbox (badness 10000) in paragraph at lines 4074--4076
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 ایک مقدار معلوم روپ بھی پایا جاتا ہے جس می
-ں سطح پر نقطے کا مقام دو متغیرات کا سمتی تفاعل دیتا ہے۔ اس حصے میں سطحی رقبے او
-ر سطحی تکملات کے مطالعہ کو ان[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4078--4079
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 فرض کریں استمراری سمتی تفاعل جو مستوی $\OM
-L/zplm/m/it/10 uv$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے خطہ $\OML/zplm/m/it/10
- R$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر معین اور $\OML/zplm/m/it/10 R$ \TU/Ja
-meelNooriNastaleeq(2)/b/n/10 کے اندرونی حصے میں ایک ایک مطابقت رکھتا ہے (شکل ۱۵
-.۵۹[]) کو درج ذیل[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 4116.
-LaTeX Info: Redefining \sffamily on input line 4116.
-LaTeX Info: Redefining \ttfamily on input line 4116.
-LaTeX Info: Redefining \rmfamily on input line 4116.
-LaTeX Info: Redefining \sffamily on input line 4116.
-LaTeX Info: Redefining \ttfamily on input line 4116.
-LaTeX Info: Redefining \rmfamily on input line 4116.
-LaTeX Info: Redefining \sffamily on input line 4116.
-LaTeX Info: Redefining \ttfamily on input line 4116.
-
-Underfull \hbox (badness 10000) in paragraph at lines 4081--4117
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 ہم $\OML/cmm/b/it/10 r$ \TU/JameelNooriNa
-staleeq(2)/b/n/10 کے دائرہ کار کو \TU/AASameerSagarNastaleeqBold(0)/m/n/10 سطح 
-[][]$\OML/zplm/m/it/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10 کہتے ہیں جس کی تعر
-یف یا نقشہ کشی $\OML/cmm/b/it/10 r$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے ذریعہ
- کی جاتی ہے۔ مساوات ۱۵.۱[] اور $\OML/zplm/m/it/10 R$ \TU/JameelNooriNastaleeq(2
-)/b/n/10 کا دائرہ کار مل کر سطح کا \TU/AASameerSagarNastaleeqBold(0)/m/n/10 مقد
-ار معلوم[]
- []
-
-
-Underfull \hbox (badness 2556) in paragraph at lines 4081--4117
-[]\TU/AASameerSagarNastaleeqBold(0)/m/n/10 روپ[][][] []\TU/JameelNooriNastaleeq
-(2)/b/n/10 دیتے ہیں۔ متغیرات $\OML/zplm/m/it/10 u$ \TU/JameelNooriNastaleeq(2)/
-b/n/10 اور $\OML/zplm/m/it/10 v$ \TU/AASameerSagarNastaleeqBold(0)/m/n/10 مقدار
- معلوم[][][] []\TU/JameelNooriNastaleeq(2)/b/n/10 کہلاتے ہیں جبکہ $\OML/zplm/m/
-it/10 R$ \TU/JameelNooriNastaleeq(2)/b/n/10 کو \TU/AASameerSagarNastaleeqBold(0
-)/m/n/10 مقدار معلوم کا دائرہ کار[][][] []\TU/JameelNooriNastaleeq(2)/b/n/10 کہ
-ا جاتا ہے۔مباحثہ سادہ رکھنے کی خاطر[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4081--4117
-[]$\OML/zplm/m/it/10 R$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے اندرون میں $\OML/
-cmm/b/it/10 r$ \TU/JameelNooriNastaleeq(2)/b/n/10 ایک ایک مطابقت رکھتا ہو، یقین
-ی بناتا ہے کہ سطح $\OML/zplm/m/it/10 S$\TU/JameelNooriNastaleeq(2)/b/n/10 خود ک
-و قطع نہیں کرتی۔ دھیان رہے کہ مساوات ۱۵.۱[]درج ذیل تین مقدار معلوم[]
- []
-
-[1658] [1659]
-
-Package pgf Warning: No path specified that can be filled on input line 4188.
-
-
-Overfull \hbox (37.74239pt too wide) in paragraph at lines 4168--4192
- [][][][][][][][] 
- []
-
-
-Underfull \hbox (badness 7238) in paragraph at lines 4192--4192
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 شكل ۱۵.۶۱: |کروی محدد استعمال میں مثال ۱
-۵.۲[] کے کرہ کا مقدار معلوم[]
- []
-
-
-Overfull \hbox (38.99524pt too wide) in paragraph at lines 4199--4222
- [][][][][][][][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4222--4222
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 شكل ۱۵.۶۲: |نلکی محدد استعمال میں مثال ۱
-۵.۳[] کے بیلن کا مقدار معلوم[]
- []
-
-
-Underfull \hbox (badness 2050) in paragraph at lines 4230--4233
-[][]\TU/AASameerSagarNastaleeqBold(0)/m/n/10 حل: \TU/JameelNooriNastaleeq(2)/b/
-n/10 کروی محدد میں عمومی نقطہ $\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/
-n/10 , \OML/zplm/m/it/10 y\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/10
- )$\TU/JameelNooriNastaleeq(2)/b/n/10 کے لیے $\OML/zplm/m/it/10 x[]a [] ^^R [] 
-^^^$ \TU/JameelNooriNastaleeq(2)/b/n/10 ، جبکہ $\OML/zplm/m/it/10 y[]a [] ^^R [
-] ^^^$\TU/JameelNooriNastaleeq(2)/b/n/10 ، اور $\OML/zplm/m/it/10 z[]a [] ^^R$\
-TU/JameelNooriNastaleeq(2)/b/n/10 ہو گا[]
- []
-
-[1660]
-Underfull \hbox (badness 3919) in paragraph at lines 4247--4249
-[][]\TU/AASameerSagarNastaleeqBold(0)/m/n/10 حل:  \TU/JameelNooriNastaleeq(2)/b
-/n/10 نلکی محدد میں نقطہ $\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/n/10 
-, \OML/zplm/m/it/10 y\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/10 )$\T
-U/JameelNooriNastaleeq(2)/b/n/10 کے لیے$\OML/zplm/m/it/10 x[]r [] ^^^$\TU/Jamee
-lNooriNastaleeq(2)/b/n/10 ، $\OML/zplm/m/it/10 y[]r [] ^^^$\TU/JameelNooriNasta
-leeq(2)/b/n/10 ، اور $\OML/zplm/m/it/10 z[]z$ \TU/JameelNooriNastaleeq(2)/b/n/1
-0 ہو گا۔بیلن $\OML/zplm/m/it/10 x[] \OT1/zplm/m/n/10 + (\OML/zplm/m/it/10 y \OM
-S/zplm/m/n/10 ^^@ \OT1/ppl/m/n/10 3\OT1/zplm/m/n/10 )[][]\OT1/ppl/m/n/10 9$[]
- []
-
-[1661]
-
-Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
-ng it (it is [0.0:0.0]) on input line 4333.
-
- [warning /pgfplots/warning/approx empty range enlarged]
-
-Underfull \hbox (badness 1448) in paragraph at lines 4340--4341
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 ہمواری کی تعریف میں یہ شرط کہ سمتیہ $\OM
-L/cmm/b/it/10 r[] \OMS/zplm/m/n/10 ^^B \OML/cmm/b/it/10 r[]$ \TU/JameelNooriNas
-taleeq(2)/b/n/10 مقدار معلوم دائرہ کار پر کبھی صفر نہ ہو، اس بات کو یقینی بناتی
- ہے کہ سمتیات $\OML/cmm/b/it/10 u$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور $\OML
-/cmm/b/it/10 v$ \TU/JameelNooriNastaleeq(2)/b/n/10 نہ صرف غیر[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4342--4345
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 ۱۵.۶۳[])۔ مستطیل $\OT1/zplm/m/n/10 ^^A\OML
-/zplm/m/it/10 A[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا ہر پہلو سطح $\OML/zplm
-/m/it/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر ایک منحنی پر نقش ہو جاتا ہے، 
-اور یہ چار منحنیات مل کر سطح پر ایک” چھوٹا خمیدہ رقبہ ” $\OT1/zplm/m/n/10 ^^A\O
-ML/zplm/m/it/10 S[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے گرد[]
- []
-
-
-Overfull \hbox (3.04378pt too wide) in paragraph at lines 4353--4364
- [][][][][][][][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4384--4384
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 شكل ۱۵.۶۵: |مستطیل جس کے اضلاع $\OT1/zpl
-m/m/n/10 ^^A\OML/zplm/m/it/10 u\OML/cmm/b/it/10 r[]$ \TU/JameelNooriNastaleeq(2
-)/b/n/10 اور $\OT1/zplm/m/n/10 ^^A\OML/zplm/m/it/10 v\OML/cmm/b/it/10 r[]$ \TU/
-JameelNooriNastaleeq(2)/b/n/10 ہیں[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4389--4393
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 شکل۱۵.۶۴[]میں $\OT1/zplm/m/n/10 ^^A\OML/
-zplm/m/it/10 ^^[[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 بڑا کرکے دکھایا گیا ہے۔ 
-سمتیہ$\OML/cmm/b/it/10 r[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 u[]\OT1/ppl/m/n/1
-0 , \OML/zplm/m/it/10 v[]\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10
- منحنی $\OML/zplm/m/it/10 C[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 کو نقطہ $\OML
-/zplm/m/it/10 P[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے مقام پر مماس ہے۔ اسی[]
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4389--4393
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 طرح$\OML/cmm/b/it/10 r[]\OT1/zplm/m/n/10 (
-\OML/zplm/m/it/10 u[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 v[]\OT1/zplm/m/n/10 )$
- \TU/JameelNooriNastaleeq(2)/b/n/10 منحنی $\OML/zplm/m/it/10 C[]$ \TU/JameelNoo
-riNastaleeq(2)/b/n/10 کو نقطہ $\OML/zplm/m/it/10 P[]$ \TU/JameelNooriNastaleeq(
-2)/b/n/10 کے مقام پر مماس ہے۔ ان سمتیات کا صلیبی ضرب$\OML/cmm/b/it/10 r[] \OMS/
-zplm/m/n/10 ^^B \OML/cmm/b/it/10 r[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 نقطہ $
-\OML/zplm/m/it/10 P[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر سطح کے عمود کا[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4394--4395
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 ہم سطحی ٹکڑا $\OT1/zplm/m/n/10 ^^A\OML/z
-plm/m/it/10 ^^[[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 کو مماسی مستوی پر موجود ا
-س متوازی الاضلاع سے تخمین دیتے ہیں جس کے اطراف سمتیات $\OT1/zplm/m/n/10 ^^A\OML
-/zplm/m/it/10 u \OML/cmm/b/it/10 r[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور$\O
-T1/zplm/m/n/10 ^^A\OML/zplm/m/it/10 v \OML/cmm/b/it/10 r[]$ \TU/JameelNooriNast
-aleeq(2)/b/n/10 ہیں (شکل[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4397--4399
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 مستوی $\OML/zplm/m/it/10 uv$ \TU/JameelNoo
-riNastaleeq(2)/b/n/10 میں $\OML/zplm/m/it/10 R$ \TU/JameelNooriNastaleeq(2)/b/n
-/10 کی خانہ بندی چھوٹے مستطیل رقبوں $\OT1/zplm/m/n/10 ^^A\OML/zplm/m/it/10 A[]$
- \TU/JameelNooriNastaleeq(2)/b/n/10 سے کر کے سطح $\OML/zplm/m/it/10 S$ \TU/Jame
-elNooriNastaleeq(2)/b/n/10 کی خانہ بندی کی جا سکتی ہے جو $\OT1/zplm/m/n/10 ^^A\
-OML/zplm/m/it/10 ^^[[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 سطحی ٹکڑوں پر مبنی ہ
-و[]
- []
-
-[1662]
-Underfull \hbox (badness 10000) in paragraph at lines 4401--4403
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 اگر $\OT1/zplm/m/n/10 ^^A\OML/zplm/m/it/10
- u$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور $\OT1/zplm/m/n/10 ^^A\OML/zplm/m/it/
-10 v$ \TU/JameelNooriNastaleeq(2)/b/n/10 آزادانہ طور پر صفر کو پہنچتے ہو، $\OML
-/cmm/b/it/10 r[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور $\OML/cmm/b/it/10 r[]$
- \TU/JameelNooriNastaleeq(2)/b/n/10 کا استمرار اس بات کی ضمانت دیتا ہے کہ مساوا
-ت ۱۵.۳[] میں دیا گیا مجموعہ دوہرے تکمل[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4401--4403
-[]$[][] [][] [] [] \OML/zplm/m/it/10 u [] v$ \TU/JameelNooriNastaleeq(2)/b/n/10
- کو پہنچے گا۔ یہی دوہرا تکمل سطح $\OML/zplm/m/it/10 S$ \TU/JameelNooriNastaleeq
-(2)/b/n/10 کے رقبے کی تعریف ہے، اور یہ پچھلی تعریفوں کے ساتھ ہم آہنگ ہونے کے سا
-تھ[]
- []
-
-[1663] [1664] [1665]
-Underfull \vbox (badness 5563) has occurred while \output is active []
-
- [1666]
-[1667]
-Underfull \vbox (badness 3271) has occurred while \output is active []
-
- [1668]
-Underfull \hbox (badness 10000) in paragraph at lines 4657--4658
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 سوال 1 تا 16 میں دی گئی سطح کا مقدار معلوم
- روپ تلاش کریں۔(درست جواب کے مختلف روپ ممکن ہیں لہٰذا آپ کے جواب کتاب میں دیے ج
-واب سے[]
- []
 
-[1669]
-Underfull \hbox (badness 10000) in paragraph at lines 4729--4733
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 سوال 17 تا 26 میں مقدار معلوم روپ استعمال 
-کر کے سطح کے رقبے کو دوہرا تکمل لکھیں۔ اس کے بعد تکمل کی قیمت تلاش کریں۔(تکمل ل
-کھنے کے کئی درست[]
+Underfull \hbox (badness 10000) in paragraph at lines 129--133
+[]\TU/JameelNooriNastaleeq(2)/b/n/10 درست طریقے ہیں لہٰذا آپ کا لکھا ہوا تکمل ک
+تاب میں دیے جواب سے مختلف ہو سکتا ہے۔ تاہم ان کی قیمت وہی ہونی چاہیے جو کتاب می
+ں دی گئی ہے۔) سوال[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4729--4733
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 طریقے ہیں لہٰذا آپ کا لکھا ہوا تکمل کتاب م
-یں دیے جواب سے مختلف ہو سکتا ہے۔ تاہم ان کی قیمت وہی ہونی چاہیے جو کتاب میں دی 
-گئی ہے۔) سوال  ۱۵.۱۷:[]
+Underfull \hbox (badness 10000) in paragraph at lines 199--203
+[]\TU/JameelNooriNastaleeq(2)/b/n/10 سوال ۱۵.۲۷[] تا ۱۵.۳۴[] میں دیے گئے تفاعل 
+کا تکمل دی گئی سطح پر حاصل کریں۔ سوال  ۱۵.۲۷: []\TU/AASameerSagarNastaleeqBold(
+0)/m/n/10 قطع مکافی بیلن \TU/JameelNooriNastaleeq(2)/b/n/10 قطع مکافی بیلن[]
  []
 
-[1670]
+[1727]
 Missing character: There is no ّ ("651) in font zplmr7m!
-[1671] [1672]
-Underfull \hbox (badness 10000) in paragraph at lines 4883--4885
+[1728]
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
+(Font)              scaled to size 7.6pt on input line 319.
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 319.
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
 []\TU/JameelNooriNastaleeq(2)/b/n/10 مقدار معلوم سطح $\OML/cmm/b/it/10 r\OT1/zp
 lm/m/n/10 (\OML/zplm/m/it/10 u\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 v\OT1/zplm/m/
 n/10 ) = \OML/zplm/m/it/10 f\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 u\OT1/ppl/m/n/1
@@ -3731,7 +2049,7 @@ it/10 v\OT1/zplm/m/n/10 )\OML/cmm/b/it/10 k$ \TU/JameelNooriNastaleeq(2)/b/n/10
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4883--4885
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
 []$\OML/zplm/m/it/10 P[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 f\OT1/zplm/m/n/10 (
 \OML/zplm/m/it/10 u[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 v[]\OT1/zplm/m/n/10 )\
 OT1/ppl/m/n/10 , \OML/zplm/m/it/10 g\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 u[]\OT1
@@ -3744,19 +2062,19 @@ m/m/it/10 h\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 u[]\OT1/ppl/m/n/10 , \OML/zplm/m
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4883--4885
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
 []\TU/JameelNooriNastaleeq(2)/b/n/10 اور $\OML/cmm/b/it/10 r[]\OT1/zplm/m/n/10 
 (\OML/zplm/m/it/10 u[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 v[]\OT1/zplm/m/n/10 )
 $ \TU/JameelNooriNastaleeq(2)/b/n/10 کے صلیبی ضرب سمتیہ $\OML/cmm/b/it/10 r[]\O
 T1/zplm/m/n/10 (\OML/zplm/m/it/10 u[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 v[]\OT
 1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ^^B \OML/cmm/b/it/10 r[]\OT1/zplm/m/n/10 (\OML
 /zplm/m/it/10 u[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 v[]\OT1/zplm/m/n/10 )$ \TU
-/JameelNooriNastaleeq(2)/b/n/10 کو عمودی ہو۔ سوال 49 تا 52 میں نقطہ $\OML/zplm/
-m/it/10 P[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر سطح کے مماسی[]
+/JameelNooriNastaleeq(2)/b/n/10 کو عمودی ہو۔ سوال ۱۵.۴۹[] تا ۱۵.۵۲[] میں نقطہ $
+\OML/zplm/m/it/10 P[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر سطح کے[]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 4920--4921
+[1729]
+Underfull \hbox (badness 10000) in paragraph at lines 355--356
 [][]\TU/JameelNooriNastaleeq(2)/b/n/10 محور $\OML/zplm/m/it/10 z$ \TU/JameelNoo
 riNastaleeq(2)/b/n/10 کے گرد مستوی $\OML/zplm/m/it/10 xz$ \TU/JameelNooriNastal
 eeq(2)/b/n/10 میں دائرہ $\OML/zplm/m/it/10 C$ \TU/JameelNooriNastaleeq(2)/b/n/1
@@ -3764,907 +2082,16 @@ eeq(2)/b/n/10 میں دائرہ $\OML/zplm/m/it/10 C$ \TU/JameelNooriNastaleeq(2
 OML/zplm/m/it/10 C$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا رداس[]
  []
 
-
-Underfull \vbox (badness 4479) has occurred while \output is active []
-
- [1673]
-[1674]
-Underfull \hbox (badness 1226) in paragraph at lines 5017--5020
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 ترخیم $[] \OT1/zplm/m/n/10 + [] = \OT1/p
-pl/m/n/10 1$ \TU/JameelNooriNastaleeq(2)/b/n/10 (حصہ 3.5 میں مثال 13)کا مقدار م
-علوم روپ درج ذیل ہے۔$\OML/zplm/m/it/10 x \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 a
- [] ^^R\OT1/ppl/m/n/10 ,  \OML/zplm/m/it/10 y \OT1/zplm/m/n/10 =$[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 5054.
-LaTeX Info: Redefining \sffamily on input line 5054.
-LaTeX Info: Redefining \ttfamily on input line 5054.
-
-Underfull \hbox (badness 2875) in paragraph at lines 5054--5055
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 ہم نے حصہ16.4  میں دیکھا، دو بعدی میدان $\
-OT1/zplm/b/n/10 F \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 M\OT1/zplm/b/n/10 i \OT1
-/zplm/m/n/10 + \OML/zplm/m/it/10 N\OT1/zplm/b/n/10 j$ \TU/JameelNooriNastaleeq(
-2)/b/n/10 میں نقطہ $\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/n/10 , \OML
-/zplm/m/it/10 y\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر کثافت 
-دائری بہاؤ یا گردش کا جزو درج ذیل غیر سمتی[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5054--5055
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 مقدار $[] \OMS/zplm/m/n/10 ^^@ []$ \TU/Jam
-eelNooriNastaleeq(2)/b/n/10 بیان کرتا ہے۔ تین ابعاد میں مستوی میں نقطہ $\OML/zp
-lm/m/it/10 P$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے گرد دائری بہاؤ کو سمتیہ کے 
-ذریعے بیان کیا جاتا ہے۔یہ سمتیہ اس مستوی کے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5054--5055
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 عمود ہو گا جس میں دائری بہاؤ ہو(شکل16.59)،
- اور سمتیہ کا رخ دائری بہاؤ کے خط کے ساتھ دائیں ہاتھ کا تعلق رکھے گا۔سمتیہ کی ل
-مبائی سیال کے گھومنے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5054--5055
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 کی شرح ظاہر کرتی ہے، جو $\OML/zplm/m/it/10
- P$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے لحاظ سے دائری بہاؤ کا مستوی جھکانے سے
- عموماً تبدیل ہو گی۔ہم کیا دیکھتے ہیں کہ جب دائری بہاؤ کا سمتی رفتاری میدان[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 5061.
-LaTeX Info: Redefining \sffamily on input line 5061.
-LaTeX Info: Redefining \ttfamily on input line 5061.
-[1675]
-LaTeX Info: Redefining \rmfamily on input line 5074.
-LaTeX Info: Redefining \sffamily on input line 5074.
-LaTeX Info: Redefining \ttfamily on input line 5074.
-LaTeX Info: Redefining \rmfamily on input line 5074.
-LaTeX Info: Redefining \sffamily on input line 5074.
-LaTeX Info: Redefining \ttfamily on input line 5074.
-
-Overfull \hbox (37.45906pt too wide) detected at line 5116
-[]
- []
-
-[1676]
-LaTeX Info: Redefining \rmfamily on input line 5120.
-LaTeX Info: Redefining \sffamily on input line 5120.
-LaTeX Info: Redefining \ttfamily on input line 5120.
-LaTeX Info: Redefining \rmfamily on input line 5125.
-LaTeX Info: Redefining \sffamily on input line 5125.
-LaTeX Info: Redefining \ttfamily on input line 5125.
-LaTeX Info: Redefining \rmfamily on input line 5125.
-LaTeX Info: Redefining \sffamily on input line 5125.
-LaTeX Info: Redefining \ttfamily on input line 5125.
-LaTeX Info: Redefining \rmfamily on input line 5130.
-LaTeX Info: Redefining \sffamily on input line 5130.
-LaTeX Info: Redefining \ttfamily on input line 5130.
-
-Underfull \hbox (badness 10000) in paragraph at lines 5130--5133
-[]\TU/AASameerSagarNastaleeqBold(0)/m/n/10 مسئلہ سٹوکس [][][]  []\TU/JameelNoor
-iNastaleeq(2)/b/n/10 کہتا ہے کہ ایسی صورتوں میں جو عملاً عام طور پائی جاتی ہیں،
- فضا میں سمت بند سطح کی سرحد پر، سطح کے عمودی اکائی سمتیہ $\OML/cmm/b/it/10 n$ 
-\TU/JameelNooriNastaleeq(2)/b/n/10 لے لحاظ سے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5135--5137
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 مسئلہ  ۵: \TU/AASameerSagarNastaleeqBold(0
-)/m/n/10 مسئلہ سٹوکس \TU/JameelNooriNastaleeq(2)/b/n/10 سمت بند سطح $\OML/zplm/
-m/it/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10 کی سرحد پر، سطح کے عمودی اکائی سم
-تیہ $\OML/cmm/b/it/10 n$ \TU/JameelNooriNastaleeq(2)/b/n/10 لے لحاظ سے خلاف گھڑ
-ی چلتے ہوئے سمتیہ میدان[]
- []
-
-[1677]
-Underfull \hbox (badness 10000) in paragraph at lines 5150--5151
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 دونوں تکمل گردش اس لئے ایک دوسرے کے براب
-ر ہوں گے کیونکہ دونوں مساوات 4 کے بائیں ہاتھ کے برابر ہیں، بشرطیکہ اکائی عمودی 
-سمتیات $\OML/cmm/b/it/10 n[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5152--5153
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 مسئلہ سٹوکس میں موجود تکملات کی وجودیت ی
-قینی بنانے کے لئے ضرور ی ہے کہ $\OML/cmm/b/it/10 F$\TU/JameelNooriNastaleeq(2)/
-b/n/10 ، $\OML/zplm/m/it/10 C$\TU/JameelNooriNastaleeq(2)/b/n/10 ، اور $\OML/zp
-lm/m/it/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر ریاضیاتی شرائط مسلط ہوں گے۔
- درکار عمومی شرائط کہتے[]
- []
-
-[1678]
-Overfull \hbox (45.98605pt too wide) detected at line 5193
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5205--5207
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 سطح:  مسئلہ سٹوکس کے استعمال سے ہم دائری
- بہاؤ سطح پر تکمل سے حاصل کرتے ہیں۔ اوپر سے دیکھتے ہوئے $\OML/zplm/m/it/10 C$ \
-TU/JameelNooriNastaleeq(2)/b/n/10 پر گھڑی خلاف چلنا \TU/JameelNooriNastaleeq(2)
-/m/n/9 اندرونی \TU/JameelNooriNastaleeq(2)/b/n/10 عمود $\OML/cmm/b/it/10 n$ \TU
-/JameelNooriNastaleeq(2)/b/n/10 لینے[]
- []
-
-[1679] [1680]
-Underfull \hbox (badness 10000) in paragraph at lines 5286--5288
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 ہم $\OML/cmm/b/it/10 F$ \TU/JameelNooriNas
-taleeq(2)/b/n/10 کے دائرہ کار میں اٹل نقطہ $\OML/zplm/m/it/10 Q$\TU/JameelNoori
-Nastaleeq(2)/b/n/10 ، اور اس نقطہ پر مخصوص سمت $\OT1/zplm/b/n/10 u$ \TU/JameelN
-ooriNastaleeq(2)/b/n/10 منتخب کرتے ہیں۔ فرض کریں $\OML/zplm/m/it/10 C$ \TU/Jame
-elNooriNastaleeq(2)/b/n/10 ایک دائرہ ہے جس کا رداس $\OML/zplm/m/it/10 ^^Z$ \TU/
-JameelNooriNastaleeq(2)/b/n/10 اور مرکز $\OML/zplm/m/it/10 Q$ \TU/JameelNooriNa
-staleeq(2)/b/n/10 ہے اور[]
- []
-
-
-Underfull \hbox (badness 4403) in paragraph at lines 5286--5288
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 جس کا مستوی $\OML/cmm/b/it/10 u$ \TU/Jamee
-lNooriNastaleeq(2)/b/n/10 کو عمودی ہے۔اگر $\OML/zplm/m/it/10 Q$ \TU/JameelNoori
-Nastaleeq(2)/b/n/10 پر $\OMS/zplm/m/n/10 r ^^B \OML/cmm/b/it/10 F$ \TU/JameelNo
-oriNastaleeq(2)/b/n/10 استمراری ہو، $\OML/zplm/m/it/10 C$ \TU/JameelNooriNastal
-eeq(2)/b/n/10 میں محیط دائری قرص $\OML/zplm/m/it/10 S$ \TU/JameelNooriNastaleeq
-(2)/b/n/10 پر $\OMS/zplm/m/n/10 r ^^B \OML/cmm/b/it/10 F$ \TU/JameelNooriNastal
-eeq(2)/b/n/10 کے $\OML/cmm/b/it/10 u$ \TU/JameelNooriNastaleeq(2)/b/n/10 ویں جز
-و کی اوسط قیمت[]
- []
-
-
-Underfull \hbox (badness 4779) in paragraph at lines 5294--5296
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 مساوات 6 کے بائیں ہاتھ کی قیمت اس صورت زیا
-دہ سے زیادہ ہو گی جب $\OML/cmm/b/it/10 u$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا
- رخ $\OT1/zplm/b/n/10 u$\TU/JameelNooriNastaleeq(2)/b/n/10 ، $\OMS/zplm/m/n/10 
-r ^^B \OT1/zplm/b/n/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کی سمت میں ہو۔چھوٹ
-ے $\OML/zplm/m/it/10 ^^Z$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے لئے مساوات 6 کے
- دائیں[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5298--5302
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 فرض کریں $\OML/zplm/m/it/10 Q$ \TU/JameelN
-ooriNastaleeq(2)/b/n/10 پر رداس $\OML/zplm/m/it/10 ^^Z$ \TU/JameelNooriNastalee
-q(2)/b/n/10 کی چپو چرخی رکھی جاتی ہے جس کا دھرا $\OML/cmm/b/it/10 u$ \TU/Jameel
-NooriNastaleeq(2)/b/n/10 کے ہمراہ ہے۔ سیال کا $\OML/zplm/m/it/10 C$ \TU/JameelN
-ooriNastaleeq(2)/b/n/10 کے ہمراہ دائری بہاؤ چپو چرخی کے گھومنے کی رفتار پر اثر[
-]
- []
-
-
-Underfull \hbox (badness 1565) in paragraph at lines 5298--5302
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 انداز ہو گا۔ جب دائری بہاؤ تکمل کی قیمت زی
-ادہ سے زیادہ ہو اس صورت چپو چرخی تیز سے تیز گھومے گی؛ یوں جب دھرا $\OMS/zplm/m/
-n/10 r ^^B \OML/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے رخ ہو، چپو
- چرخی تیز[]
- []
-
-
-Underfull \hbox (badness 1622) in paragraph at lines 5317--5318
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 مسئلہ سٹوکس کے مطابق، رداس $\OML/zplm/m/
-it/10 ^^Z$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے دائرہ $\OML/zplm/m/it/10 C$ \T
-U/JameelNooriNastaleeq(2)/b/n/10 کے ہمراہ، جو مستوی مثلاً مستوی $\OML/zplm/m/it
-/10 xy$ \TU/JameelNooriNastaleeq(2)/b/n/10 میں قرص $\OML/zplm/m/it/10 S$ \TU/Ja
-meelNooriNastaleeq(2)/b/n/10 کا احاطہ کرتا ہو، کے ہمراہ $\OML/cmm/b/it/10 F$ \T
-U/JameelNooriNastaleeq(2)/b/n/10 کا دائری بہاؤ درج ذیل[]
- []
-
-[1681] [1682]
-Underfull \hbox (badness 10000) in paragraph at lines 5374--5375
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 فرض کریں $\OML/zplm/m/it/10 S$ \TU/JameelN
-ooriNastaleeq(2)/b/n/10 کثیر سطحی سطح ہے جو محدود تعداد کے مسطح حصوں پر مشتمل ہ
-ے (مثلاً شکل16.66)۔ ہم $\OML/zplm/m/it/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10
- کے علیحدہ علیحدہ حصوں پر مسئلہ گرین کا اطلاق[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5382--5383
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 سطح $\OML/zplm/m/it/10 S$ \TU/JameelNoor
-iNastaleeq(2)/b/n/10 کی سرحد $\OT1/zplm/m/n/10 ^^A$ \TU/JameelNooriNastaleeq(2)
-/b/n/10 قسم $\OT1/ppl/m/n/10 2$ \TU/JameelNooriNastaleeq(2)/b/n/10 مستویات کے ا
-ن کناروں پر مشتمل ہے جو دوسری مستویات سے متصل نہیں۔شکل 16.66 میں مثلثات $\OML/z
-plm/m/it/10 EAB$\TU/JameelNooriNastaleeq(2)/b/n/10 ،[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5382--5383
-[]$\OML/zplm/m/it/10 BCE$\TU/JameelNooriNastaleeq(2)/b/n/10 ، اور $\OML/zplm/m/
-it/10 CDE$ \TU/JameelNooriNastaleeq(2)/b/n/10 سطح $\OML/zplm/m/it/10 S$ \TU/Jam
-eelNooriNastaleeq(2)/b/n/10 کے کچھ حصے کو ظاہر کرتے ہیں جبکہ $\OML/zplm/m/it/10
- ABCD$ \TU/JameelNooriNastaleeq(2)/b/n/10 سرحد $\OT1/zplm/m/n/10 ^^A$ \TU/Jamee
-lNooriNastaleeq(2)/b/n/10 کے کچھ حصے کو ظاہر کرتا ہے۔ تینوں مثلثات پر بالترتیب 
-مسئلہ[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5386--5388
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 چونکہ مساوات 7 میں بائیں ہاتھ کے تین لکیری
- تکملات میں اندرونی (متصل مثلثات کے مشترک)اضلاع پر لکیری تکملات کے جوڑے ایک دوس
-رے کو کاٹتے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5386--5388
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 ہیں لہٰذا تینوں مل کر کنارہ $\OML/zplm/m/i
-t/10 ABCDE$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر واحد ایک تکمل دیتے ہیں۔مثال ک
-ے طور پر مثلث $\OML/zplm/m/it/10 ABE$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے ضلع
- $\OML/zplm/m/it/10 BE$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر لکیری تکمل کی علا
-مت $\OT1/zplm/m/n/10 (\OMS/zplm/m/n/10 ^^F\OT1/zplm/m/n/10 )$[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5390--5392
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 تمام اضلاع پر مسئلہ گرین کا اطلاق کر کے در
-ج ذیل حاصل ہو گا جو درحقیقت کثیر سطحی سطح $\OML/zplm/m/it/10 S$ \TU/JameelNoori
-Nastaleeq(2)/b/n/10 کا مسئلہ سٹوکس ہے۔ مزید عمومی سطوح کے لئے ثبوت آپ کو[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5398--5399
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 مسئلہ گرین کو وسعت دینے کے طرز پر مسئلہ سٹ
-وکس کو ایسی سمت بند سطح $\OML/zplm/m/it/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/1
-0 تک وسعت دی جا سکتی ہے جس میں ایک یا ایک سے زیادہ سوراخ ہوں (شکل[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5398--5399
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 16.67)۔سطح $\OML/zplm/m/it/10 S$ \TU/Jamee
-lNooriNastaleeq(2)/b/n/10 پر $\OMS/zplm/m/n/10 r ^^B \OML/cmm/b/it/10 F$ \TU/Ja
-meelNooriNastaleeq(2)/b/n/10 کے عمودی جزو کا سطح تکمل تمام سرحدی منحنیات پر $\O
-ML/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے مماسی جزو کے لکیری تکمل
-ات کے مجموعہ کے برابر ہو گا،[]
- []
-
-[1683]
-Underfull \hbox (badness 10000) in paragraph at lines 5404--5406
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 یہ تماثل جو ہر اس تفاعل $\OML/zplm/m/it/10
- f\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y\OT
-1/ppl/m/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(
-2)/b/n/10 کے لئے کارآمد ہے جس کے دوہرے جزوی تفرق استمراری ہوں، کہتا ہے کہ تفاعل
- $\OML/zplm/m/it/10 f\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/n/10 , \OM
-L/zplm/m/it/10 y\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/10 )$ \TU/Ja
-meelNooriNastaleeq(2)/b/n/10 کے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5418--5419
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 ہم نے حصہ 16.3 میں دیکھا کہ کھلے خطہ $\OML
-/zplm/m/it/10 D$ \TU/JameelNooriNastaleeq(2)/b/n/10 میں میدان $\OML/cmm/b/it/10
- F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا بقائی ہونا اس کے مترادف ہے کہ $\OML/z
-plm/m/it/10 D$ \TU/JameelNooriNastaleeq(2)/b/n/10 میں ہر بند راہ پر $\OML/cmm/b
-/it/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا لکیری تکمل صفر ہو۔یہ از خود،[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 5428.
-LaTeX Info: Redefining \sffamily on input line 5428.
-LaTeX Info: Redefining \ttfamily on input line 5428.
-
-Underfull \hbox (badness 10000) in paragraph at lines 5425--5429
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 کا ایک مسئلہ کہتا ہے کہ سادہ تعلق کھلے خ
-طہ $\OML/zplm/m/it/10 D$ \TU/JameelNooriNastaleeq(2)/b/n/10 میں ہر قابل تفرق سا
-دہ بند منحنی $\OML/zplm/m/it/10 C$ \TU/JameelNooriNastaleeq(2)/b/n/10 ایک ہموار
- دو طرفہ سطح $\OML/zplm/m/it/10 S$\TU/JameelNooriNastaleeq(2)/b/n/10 ، جو $\OML
-/zplm/m/it/10 D$ \TU/JameelNooriNastaleeq(2)/b/n/10 میں پائی جاتی ہو، کی سرحد ہ
-و گی[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5433--5434
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 دوسرا مرحلہ اُن منحنیات کے لیے ہے جو خود
- کو کاٹتی ہیں، جیسے کہ شکل16.68 میں دکھائی گئی ہے۔ ایسی منحنیات کو سادہ حلقات، 
-جن کا احاطہ قابل سمت بند[]
- []
-
-[1684] [1685]
-Underfull \hbox (badness 2426) in paragraph at lines 5482--5485
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۷:  بیضوی خول $\OML/zplm/m/it/10 
-S \OT1/zplm/m/n/10 :  \OT1/ppl/m/n/10 4\OML/zplm/m/it/10 x[] \OT1/zplm/m/n/10 +
- \OT1/ppl/m/n/10 9\OML/zplm/m/it/10 y[] \OT1/zplm/m/n/10 + \OT1/ppl/m/n/10 36\O
-ML/zplm/m/it/10 z[] \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 36,  \OML/zplm/m/it/10 z
- \OMS/zplm/m/n/10 ^^U \OT1/ppl/m/n/10 0$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا 
-بیرونی اکائی عمودی سمتیہ $\OML/cmm/b/it/10 n$\TU/JameelNooriNastaleeq(2)/b/n/10
- ہے۔[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5508--5510
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۱۲:  فرض کریں $\OT1/zplm/b/n/10 F
-$ \TU/JameelNooriNastaleeq(2)/b/n/10 قابل سمت بند سمتی میدان ہے جو ایسے خطے پر 
-معین ہے جس میں ایک ہموار بند سمت بند سطح $\OML/zplm/m/it/10 S$ \TU/JameelNooriN
-astaleeq(2)/b/n/10 اور اس کا اندرونی حصہ شامل[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5508--5510
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 ہیں۔سطح $\OML/zplm/m/it/10 S$ \TU/JameelNo
-oriNastaleeq(2)/b/n/10 پر اکائی عمودی سمتیہ میدان $\OT1/zplm/b/n/10 n$ \TU/Jame
-elNooriNastaleeq(2)/b/n/10 ہے۔ مزید فرض کریں کہ $\OML/zplm/m/it/10 S$\TU/Jameel
-NooriNastaleeq(2)/b/n/10 ، دو سطحوں $\OML/zplm/m/it/10 S[]$ \TU/JameelNooriNast
-aleeq(2)/b/n/10 اور $\OML/zplm/m/it/10 S[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 
-کا مجموعہ ہے جو آپس میں ایک ہموار سادہ بند منحنی $\OML/zplm/m/it/10 C$ \TU/Jame
-elNooriNastaleeq(2)/b/n/10 پر جڑی ہوئی[]
- []
-
-[1686]
-Underfull \hbox (badness 10000) in paragraph at lines 5515--5519
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5525--5527
-[][]
- []
-
-[1687] [1688]
-Underfull \hbox (badness 10000) in paragraph at lines 5592--5594
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۲۵:  مستوی $\OML/zplm/m/it/10 xy$
- \TU/JameelNooriNastaleeq(2)/b/n/10 میں $\OML/zplm/m/it/10 R$ \TU/JameelNooriNa
-staleeq(2)/b/n/10 ایسا خطہ ہے جس کو ٹکڑوں میں ہموار سادہ بند منحنی $\OML/zplm/m
-/it/10 C$ \TU/JameelNooriNastaleeq(2)/b/n/10 گھیرتی ہے۔ فرض کریں محور $\OML/zpl
-m/m/it/10 x$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور محور $\OML/zplm/m/it/10 y$ 
-\TU/JameelNooriNastaleeq(2)/b/n/10 کے لحاظ سے[]
- []
-
-
-Underfull \hbox (badness 3514) in paragraph at lines 5601--5603
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 (میدان $\OML/cmm/b/it/10 F$ \TU/JameelNoor
-iNastaleeq(2)/b/n/10 کا دائرہ کار یہاں سادہ تعلق خطہ نہیں لہٰذا مسئلہ 6 کا اطلا
-ق نہیں ہوگا۔ محور $\OML/zplm/m/it/10 z$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے ہ
-مراہ میدان $\OML/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 معین نہیں لہ
-ٰذا ایسا کوئی طریقہ ممکن نہیں کہ[]
- []
-
-
-Underfull \hbox (badness 3158) in paragraph at lines 5609--5610
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 مستوی میں مسئلہ گرین کہتا ہے کہ سادہ بند م
-نحنی کے پار سمتی میدان کا خالص بیرونی بہاؤ منحنی میں محیط خطے پر میدان کے پھیلا
-ؤ پر تکمل سے حاصل کیا جا سکتا ہے۔[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5609--5610
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 تین ابعاد میں متعلقہ مسئلہ، جو مسئلہ پھیلا
-ؤ کہلاتا ہے، کے تحت فضا میں بند سطح سے سمتیہ میدان کا باہر رخ گزرتا بہاؤ سطح می
-ں محیط خطے پر میدان کے پھیلاؤ کے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5609--5610
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 تکمل سے حاصل کیا جا سکتا ہے۔اس حصے میں ہم 
-مسئلہ پھیلاؤ ثابت کرتے ہیں، اور دکھاتے ہیں یہ بہاؤ کی قیمت کی تلاش کیسے آسان بن
-اتا ہے۔ ہم برقی میدان میں[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5609--5610
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 بہاؤ کا قانون گاوس اور ماقوا حرکیات کی است
-مراری مساوات بھی اخذ کرتے ہیں۔ آخر میں ہم باب کے سمتی تکملی مسائل کو ایک بنیادی
- مسئلہ کے روپ میں پیش[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 5612.
-LaTeX Info: Redefining \sffamily on input line 5612.
-LaTeX Info: Redefining \ttfamily on input line 5612.
-[1689]
-Underfull \hbox (badness 10000) in paragraph at lines 5618--5619
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 تین ابعاد میں پھیلاؤ $\OML/cmm/b/it/10 F
-$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا وہی طبیعی مفہوم ہے جو دو ابعاد میں ہے۔ 
-اگر $\OML/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 سیال کے بہاؤ کا سمت
-ی میدان رفتار ہو، نقطہ $\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/n/10 , 
-\OML/zplm/m/it/10 y\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/10 )$ \TU
-/JameelNooriNastaleeq(2)/b/n/10 پر بہاؤ $\OML/cmm/b/it/10 F$\TU/JameelNooriNast
-aleeq(2)/b/n/10 کی قیمت اس[]
- []
-
-
-Underfull \hbox (badness 3826) in paragraph at lines 5635--5636
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 مسئلہ پھیلاؤ کہتا ہے مناسب شرائط کے تحت، (
-باہر رخ سمت بند) بند سطح سے سمتی میدان کا باہر گزرتا بہاؤ سطح میں محیط خطہ پر م
-یدان کے پھیلاؤ کے تہرا تکمل کے[]
- []
-
-[1690]
-Underfull \hbox (badness 10000) in paragraph at lines 5691--5692
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 نہیں پایا جاتا، مثلاً ٹھوس مکعب، کرہ، یا ت
-رخیمی جسم، اور $\OML/zplm/m/it/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10 ٹکڑوں م
-یں ہموار سطح ہے۔ اس کے ساتھ ساتھ ہم فرض کرتے ہیں کہ $\OML/zplm/m/it/10 xy$ \TU/
-JameelNooriNastaleeq(2)/b/n/10 مستوی پر $\OML/zplm/m/it/10 D$ \TU/JameelNooriNa
-staleeq(2)/b/n/10 کا تظلیل[]
- []
-
-[1691] [1692]
-Underfull \hbox (badness 10000) in paragraph at lines 5745--5746
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 مساوات ۱۵.۱[] اور مساوات ۱۵.۲[] کے ثبوت 
-اسی طرز پر حاصل ہوں گے؛ یا مساوات ۱۵.۳[] میں بالترتیب $\OML/zplm/m/it/10 x$\TU/
-JameelNooriNastaleeq(2)/b/n/10 ، $\OML/zplm/m/it/10 y$\TU/JameelNooriNastaleeq(
-2)/b/n/10 ، $\OML/zplm/m/it/10 z$\TU/JameelNooriNastaleeq(2)/b/n/10 ؛ $\OML/zpl
-m/m/it/10 M$\TU/JameelNooriNastaleeq(2)/b/n/10 ، $\OML/zplm/m/it/10 N$\TU/Jamee
-lNooriNastaleeq(2)/b/n/10 ، $\OML/zplm/m/it/10 P$\TU/JameelNooriNastaleeq(2)/b/
-n/10 ؛ $\OML/zplm/m/it/10 ^^K$\TU/JameelNooriNastaleeq(2)/b/n/10 ، $\OML/zplm/m
-/it/10 ^^L$\TU/JameelNooriNastaleeq(2)/b/n/10 ،$\OML/zplm/m/it/10 ^^M$[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5748--5749
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 مسئلہ پھیلاؤ کو ایسے خطوں تک وسعت دی جا سک
-تی ہے جنہیں محدود تعداد کے مذکورہ سادہ قسم کے خطوں میں تقسیم کیا جا سکتا ہے یا 
-ایسے خطوں تک جنہیں کسی[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5748--5749
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 طرح سادہ خطوں کی حد تصور کیا جا سکتا ہے۔مث
-ال کے طور پر،دو ہم مرکز کرّات کے بیچ خطہ $\OML/zplm/m/it/10 D$ \TU/JameelNooriN
-astaleeq(2)/b/n/10 ہے جہاں $\OML/zplm/m/it/10 D$ \TU/JameelNooriNastaleeq(2)/b/
-n/10 کے اندر اور اس کے تحدیدی سطوح پر $[]$[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5748--5749
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 کے جزوی تفرق استمراری ہیں۔استوائی مستوی پر
- $\OML/zplm/m/it/10 D$ \TU/JameelNooriNastaleeq(2)/b/n/10 کو دو حصوں میں تقسیم 
-کر کے دونوں نصف حصوں پر مسئلہ پھیلاؤ کا اطلاق کریں۔نچلا نصف حصہ $\OML/zplm/m/it
-/10 D[]$[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5751--5753
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 اکائی عمودی سمتیہ $\OML/cmm/b/it/10 n[]$ \
-TU/JameelNooriNastaleeq(2)/b/n/10 کا رخ نچلے نصف حصہ $\OML/zplm/m/it/10 D[]$ \T
-U/JameelNooriNastaleeq(2)/b/n/10 کے بیرونی سطح پر مبدا سے دوری جانب ہے، چھلے پر
- یہ $\OML/cmm/b/it/10 k$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے برابر ہے، اور ان
-درونی سطح پر اس کا رخ مبدا[]
- []
-
-
-Underfull \hbox (badness 6428) in paragraph at lines 5755--5757
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 بالائی نصف حصہ $\OML/zplm/m/it/10 D[]$ \TU
-/JameelNooriNastaleeq(2)/b/n/10 کی سطح $\OML/zplm/m/it/10 S[]$ \TU/JameelNooriN
-astaleeq(2)/b/n/10 پر چلتے ہوئے عمادی اکائی سمتیہ $\OML/cmm/b/it/10 n[]$ \TU/Ja
-meelNooriNastaleeq(2)/b/n/10 پر نظر رکھیں۔ بیرونی کرہ پر اس کا رخ مبدا سے دور ج
-انب ہے، چھلا پر یہ $\OMS/zplm/m/n/10 ^^@\OML/cmm/b/it/10 k$ \TU/JameelNooriNast
-aleeq(2)/b/n/10 کے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5755--5757
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 برابر ہے، جبکہ اندرونی کرہ پر اس کا رخ مبد
-ا کی جانب ہے۔ مساوات ۱۵.۴[] اور مساوات ۱۵.۵[] جمع کرتے ہوئے ، چھلے پر $\OML/cmm
-/b/it/10 n[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور $\OML/cmm/b/it/10 n[]$ \TU
-/JameelNooriNastaleeq(2)/b/n/10 کی علامتیں الٹ ہونے[]
- []
-
-[1693]
-Underfull \hbox (badness 3039) in paragraph at lines 5786--5787
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 اس طرح $\OML/zplm/m/it/10 D$ \TU/JameelN
-ooriNastaleeq(2)/b/n/10 پر $\OMS/zplm/m/n/10 r ^^A \OML/cmm/b/it/10 F$ \TU/Jame
-elNooriNastaleeq(2)/b/n/10 کا تکمل صفر ہے اور $\OML/zplm/m/it/10 D$ \TU/JameelN
-ooriNastaleeq(2)/b/n/10 کی سرحد کو باہر رخ عبور کرتا ہوا صافی بہاؤ صفر ہو گا۔ ا
-س مثال سے مزید معلومات بھی حاصل ہوتی ہیں۔[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5786--5787
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 اندرونی کرہ $\OML/zplm/m/it/10 S[]$ \TU/Ja
-meelNooriNastaleeq(2)/b/n/10 کو پار کرتا ہوا جو بہاؤ $\OML/zplm/m/it/10 D$ \TU/
-JameelNooriNastaleeq(2)/b/n/10 سے خارج ہوتا ہے کی علامت اس بہاؤ کے الٹ ہو گی جو
- بیرونی کرہ $\OML/zplm/m/it/10 S[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 کو عبور 
-کرتا ہوا $\OML/zplm/m/it/10 D$ \TU/JameelNooriNastaleeq(2)/b/n/10 سے خارج ہوتا 
-ہے (یاد[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5786--5787
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 رہے ان بہاؤ کا مجموعہ صفر ہے)۔ یوں مبدا سے
- دوری کے رخ $\OML/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا بہاؤ جو 
-$\OML/zplm/m/it/10 S[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 کو عبور کرتا ہے $\OM
-L/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے اس بہاؤ کے برابر ہو گا ج
-و مبدا سے دوری کے رخ[]
- []
-
-[1694]
-Underfull \hbox (badness 10000) in paragraph at lines 5813--5814
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 جو مبدا کو گھیرتی ہو (اور جس پر مسئلہ پھیل
-اؤ کا اطلاق ہوتا ہو)، $\OML/cmm/b/it/10 E$ \TU/JameelNooriNastaleeq(2)/b/n/10 ک
-ا باہر رخ بہاؤ $\OML/zplm/m/it/10 q\OT1/zplm/m/n/10 /\OML/zplm/m/it/10 ^^O[]$ \
-TU/JameelNooriNastaleeq(2)/b/n/10 ہو گا۔اس کی وجہ جاننے کی خاطر مبدا پر مرکوز ا
-تنے بڑے کرہ $\OML/zplm/m/it/10 S[]$[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5820--5822
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 ہو گا، اور مبدا سے دوری کے رخ $\OML/zplm/m
-/it/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10 کو عبور کرتا ہوا $\OML/cmm/b/it/10
- E$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا بہاؤ لازماً مبدا سے دوری کے رخ $\OML/
-zplm/m/it/10 S[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 کو عبور کرتے ہوئے $\OML/cm
-m/b/it/10 E$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے بہاؤ کے برابر ہو گا، جو[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5820--5822
-[]$\OML/zplm/m/it/10 q\OT1/zplm/m/n/10 /\OML/zplm/m/it/10 ^^O[]$ \TU/JameelNoor
-iNastaleeq(2)/b/n/10 ہے۔یہ فقرہ، جو قانون گاوس کہلاتا ہے، یہاں فرض کئے گئے بار 
-سے زیادہ عمومی تقسیم بار کے لئے بھی درست ہے، جیسا آپ طبیعیات کے کسی بھی[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 5827.
-LaTeX Info: Redefining \sffamily on input line 5827.
-LaTeX Info: Redefining \ttfamily on input line 5827.
-
-Underfull \hbox (badness 10000) in paragraph at lines 5827--5828
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 فرض کریں فضا میں خطہ $\OML/zplm/m/it/10 D$
- \TU/JameelNooriNastaleeq(2)/b/n/10 بند ، سمت بند سطح $\OML/zplm/m/it/10 S$ \TU
-/JameelNooriNastaleeq(2)/b/n/10 میں محدود ہے۔ اگر نقطہ $\OT1/zplm/m/n/10 (\OML/
-zplm/m/it/10 x\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y\OT1/ppl/m/n/10 , \OML/zplm/
-m/it/10 z\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور وقت $\OML/z
-plm/m/it/10 t$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر $\OML/zplm/m/it/10 D$ \TU/
-JameelNooriNastaleeq(2)/b/n/10 میں بہتے ہوئے سیال کی سمتی رفتاری میدان[]
- []
-
-[1695]
-Underfull \hbox (badness 10000) in paragraph at lines 5836--5838
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 اس کی وجہ جاننے کی خاطر، سطح پر رقبے کا ٹک
-ڑا $\OT1/zplm/m/n/10 ^^A\OML/zplm/m/it/10 ^^[$ \TU/JameelNooriNastaleeq(2)/b/n/
-10 لیں (شکل 16.75)۔ قلیل زمانی وقفہ $\OT1/zplm/m/n/10 ^^A\OML/zplm/m/it/10 t$ \
-TU/JameelNooriNastaleeq(2)/b/n/10 میں، اس ٹکڑے کو $\OT1/zplm/m/n/10 ^^A\OML/zpl
-m/m/it/10 H$ \TU/JameelNooriNastaleeq(2)/b/n/10 حجم عبور کرتا ہے جو تخمیناً اس[
-]
- []
-
-[1696]
-LaTeX Info: Redefining \rmfamily on input line 5873.
-LaTeX Info: Redefining \sffamily on input line 5873.
-LaTeX Info: Redefining \ttfamily on input line 5873.
-
-Underfull \hbox (badness 10000) in paragraph at lines 5873--5874
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 اب مرکز $\OML/zplm/m/it/10 Q$ \TU/Jameel
-NooriNastaleeq(2)/b/n/10 کو ایک ہی مقام پر رکھتے ہوئے $\OML/zplm/m/it/10 B$ \TU
-/JameelNooriNastaleeq(2)/b/n/10 کے رداس کو صفر کے قریب پہنچائیں۔ مساوات ۱۵.۶[] 
-کا بایاں ہاتھ $\OT1/zplm/m/n/10 (\OMS/zplm/m/n/10 r ^^A \OML/cmm/b/it/10 F\OT1/
-zplm/m/n/10 )[]$ \TU/JameelNooriNastaleeq(2)/b/n/10 کو، جبکہ اس کا دایاں[]
- []
-
-[1697]
-Underfull \hbox (badness 10000) in paragraph at lines 5919--5920
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 اسی طرح دو ابعادی مستوی میں خطہ پر مسئلہ
- گرین کے عمودی (بہاؤ) روپ کو مسئلہ پھیلاؤ فضا میں تین ابعادی خطہ پر عمومیت دیتا
- ہے۔ ہر ایک صورت میں ، خطے[]
- []
-
-
-Underfull \hbox (badness 4144) in paragraph at lines 5919--5920
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 کے اندرون پر $\OMS/zplm/m/n/10 r ^^A \OML/
-cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کا تکمل، سرحد کو عبور کرتا ہو
-ا میدان کے کُل بہاؤ کے برابر ہو گا۔ابھی مزید معلومات باقی ہے۔ ان تمام نتائج کو 
-ایک بنیادی مسئلے کے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5919--5920
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 مختلف روپ تصور کیا جا سکتا ہے۔ حصہ ۵.۷[] م
-یں تکمل کا بنیادی مسئلہ پیش کیا گیا جو کہتا ہے اگر $\OT1/zplm/m/n/10 (\OML/zplm
-/m/it/10 a\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 b\OT1/zplm/m/n/10 )$ \TU/JameelNo
-oriNastaleeq(2)/b/n/10 پر $\OML/zplm/m/it/10 f\OT1/zplm/m/n/10 (\OML/zplm/m/it/
-10 x\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10 قابل تفرق اور $\OT1/
-zplm/m/n/10 [\OML/zplm/m/it/10 a\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 b\OT1/zplm/
-m/n/10 ]$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر استمراری ہو[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5932--5934
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 تکمل کا بنیادی مسئلہ، مسئلہ گرین کا عمودی 
-روپ، اور مسئلہ پھیلاؤ تینوں کہتے ہیں کہ تفرقی عامل $\OMS/zplm/m/n/10 r^^A$ \TU/
-JameelNooriNastaleeq(2)/b/n/10 جو کسی خطے میں میدان $\OML/cmm/b/it/10 F$ \TU/Ja
-meelNooriNastaleeq(2)/b/n/10 پر عمل کرتا ہو اس خطے کی[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5932--5934
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 سرحد پر میدان کے عمودی اجزاء کے مجموعے کے 
-برابر ہو گا۔ (یہاں ہم مسئلہ گرین میں موجود لکیری تکمل اور مسئلہ پھیلاؤ میں موجو
-د سطحی تکمل سے مراد سرحد[]
- []
-
-[1698]
-Underfull \hbox (badness 10000) in paragraph at lines 5936--5937
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 مسئلہ سٹوکس اور مسئلہ گرین کا مماسی روپ 
-دونوں کہتے ہیں جب چیزیں درست سمت بند ہوں،گردش میدان کے عمودی جزو کا تکمل اور سط
-ح کی سرحد پر میدان[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5975--5976
-[][]
- []
-
-[1699] [1700]
-Underfull \hbox (badness 10000) in paragraph at lines 6028--6029
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6073--6075
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۲۱:  سمتی میدان $\OML/cmm/b/it/10
- F$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے اجزاء کے یک رتبی تفرق فضا کے ایک ایسے
- حصہ میں استمراری ہیں جس کے اندر ہموار بند سطح $\OML/zplm/m/it/10 S$ \TU/Jameel
-NooriNastaleeq(2)/b/n/10 میں محدود خطہ $\OML/zplm/m/it/10 D$[]
- []
-
-[1701]
-LaTeX Info: Redefining \rmfamily on input line 6105.
-LaTeX Info: Redefining \sffamily on input line 6105.
-LaTeX Info: Redefining \ttfamily on input line 6105.
-
-Underfull \hbox (badness 10000) in paragraph at lines 6109--6112
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 فرض کریں ہموار سطح $\OML/zplm/m/it/10 S$
- \TU/JameelNooriNastaleeq(2)/b/n/10 ، جس کا منتخب اکائی عمودی سمتیہ $\OML/cmm/b
-/it/10 n$ \TU/JameelNooriNastaleeq(2)/b/n/10 ہے، محدود خطہ $\OML/zplm/m/it/10 D
-$ \TU/JameelNooriNastaleeq(2)/b/n/10 کو گھیرتی ہے اور $\OML/zplm/m/it/10 f$ \TU
-/JameelNooriNastaleeq(2)/b/n/10 اس پورے خطے میں ہارمونی ہے۔ دکھائیں کہ $\OML/zp
-lm/m/it/10 S$[]
- []
-
-[1702]
-Underfull \hbox (badness 4967) in paragraph at lines 6123--6125
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۲۹: []\TU/AASameerSagarNastaleeqB
-old(0)/m/n/10 گرین کا کلیہ اول \TU/JameelNooriNastaleeq(2)/b/n/10 ٹکڑوں میں ہمو
-ار بند سطح $\OML/zplm/m/it/10 S$ \TU/JameelNooriNastaleeq(2)/b/n/10 میں بند پور
-ے خطے $\OML/zplm/m/it/10 D$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر غیر سمتی تفاع
-لات $\OML/zplm/m/it/10 f$ \TU/JameelNooriNastaleeq(2)/b/n/10 اور $\OML/zplm/m/i
-t/10 g$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے یک رتبی اور دو رتبی[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 6128.
-LaTeX Info: Redefining \sffamily on input line 6128.
-LaTeX Info: Redefining \ttfamily on input line 6128.
-
-Underfull \hbox (badness 3179) in paragraph at lines 6131--6133
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۳۰: \TU/AASameerSagarNastaleeqBol
-d(0)/m/n/10 گرین کا کلیہ دوم \TU/JameelNooriNastaleeq(2)/b/n/10 (\TU/JameelNoor
-iNastaleeq(2)/m/n/9 سوال ۱۵.۲۹[] کو آگے بڑھاتے ہیں۔\TU/JameelNooriNastaleeq(2)/
-b/n/10 ) مساوات ۱۵.۷[] میں $\OML/zplm/m/it/10 f$ \TU/JameelNooriNastaleeq(2)/b/
-n/10 اور $\OML/zplm/m/it/10 g$ \TU/JameelNooriNastaleeq(2)/b/n/10 کی جگہیں آپس 
-میں تبدیل کر کے اسی قسم کا[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 6136.
-LaTeX Info: Redefining \sffamily on input line 6136.
-LaTeX Info: Redefining \ttfamily on input line 6136.
-LaTeX Info: Redefining \rmfamily on input line 6140.
-LaTeX Info: Redefining \sffamily on input line 6140.
-LaTeX Info: Redefining \ttfamily on input line 6140.
-[1703]
-Underfull \hbox (badness 10000) in paragraph at lines 6153--6157
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۳۲: \TU/AASameerSagarNastaleeqBo
-ld(0)/m/n/10 نفوذ حر کی مساوات \TU/JameelNooriNastaleeq(2)/b/n/10 فرض کریں فضا 
-میں خطہ $\OML/zplm/m/it/10 D$ \TU/JameelNooriNastaleeq(2)/b/n/10 میں مکین ٹھوس 
-جسم کے نقطہ $\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/n/10 , \OML/zplm/m
-/it/10 y\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/10 )$ \TU/JameelNoor
-iNastaleeq(2)/b/n/10 کا درجہ حرارت لمحہ $\OML/zplm/m/it/10 t$ \TU/JameelNooriNa
-staleeq(2)/b/n/10 پر تفاعل[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6153--6157
-[]$\OML/zplm/m/it/10 T\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 t\OT1/ppl/m/n/10 , \O
-ML/zplm/m/it/10 x\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y\OT1/ppl/m/n/10 , \OML/zp
-lm/m/it/10 z\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10 دیتا ہو جس ک
-ے دوہرے تفرق استمراری ہیں۔ جسم کی حری استعداد $\OML/zplm/m/it/10 c$ \TU/JameelN
-ooriNastaleeq(2)/b/n/10 اور کمیتی کثافت $\OML/zplm/m/it/10 ^^Z$ \TU/JameelNoori
-Nastaleeq(2)/b/n/10 ہے۔مقدار $\OML/zplm/m/it/10 c^^ZT$ \TU/JameelNooriNastaleeq
-(2)/b/n/10 جسم کی فی اکائی حجم حری[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 6161.
-LaTeX Info: Redefining \sffamily on input line 6161.
-LaTeX Info: Redefining \ttfamily on input line 6161.
-LaTeX Info: Redefining \rmfamily on input line 6161.
-LaTeX Info: Redefining \sffamily on input line 6161.
-LaTeX Info: Redefining \ttfamily on input line 6161.
-LaTeX Info: Redefining \rmfamily on input line 6163.
-LaTeX Info: Redefining \sffamily on input line 6163.
-LaTeX Info: Redefining \ttfamily on input line 6163.
-[1704]
-Underfull \hbox (badness 10000) in paragraph at lines 6206--6209
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۴۶:  سمت بند سطح سے کیا مراد ہے؟
-سمت بند سطح کو عبور کرتے ہوئے، تین بعدی سمتی میدان کے بہاؤ کی قیمت کیسے تلاش کی
- جاتی ہے؟ مثال[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6242--6244
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۵۵: []مبدا کو نقطہ $\OT1/zplm/m/n
-/10 (\OT1/ppl/m/n/10 1, 1, 1\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n
-/10 سے فضا میں جوڑنے کے دو راستے شکل میں دکھائے گئے ہیں۔ باری باری ان راہ پر[]
- []
-
-[1705]
-Underfull \hbox (badness 10000) in paragraph at lines 6269--6271
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۵۶:  مبدا کو نقطہ $\OT1/zplm/m/n/
-10 (\OT1/ppl/m/n/10 1, 1, 1\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/
-10 سے فضا میں جوڑنے کے تین راستے شکل میں دکھائے گئے ہیں۔ باری باری ان راہ پر[]
- []
-
-
-Overfull \hbox (11.06616pt too wide) in paragraph at lines 6274--6286
-[][][][][] []
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1706]
-LaTeX Info: Redefining \rmfamily on input line 6320.
-LaTeX Info: Redefining \sffamily on input line 6320.
-LaTeX Info: Redefining \ttfamily on input line 6320.
-
-[1707]
-Underfull \hbox (badness 10000) in paragraph at lines 6367--6368
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 نصف کرہ کے اندر موجود بیلن کے ٹکڑے کا رق
-بہ تلاش کریں۔ (اشارہ: مستوی $\OML/zplm/m/it/10 xy$ \TU/JameelNooriNastaleeq(2)/
-b/n/10 پر قائمہ تظلیل لیں۔ یا تکمل $[] \OML/zplm/m/it/10 h [] s$ \TU/JameelNoor
-iNastaleeq(2)/b/n/10 تلاش کریں جہاں کرہ کے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6386--6389
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۷۲:  حکومت پاکستان معدنیات کی تل
-اش کی غرض سے خطوط طول بلد $\OT1/ppl/m/n/10 62[]13[]0[]$ \TU/JameelNooriNastalee
-q(2)/b/n/10 اور $\OT1/ppl/m/n/10 69[]13[]0[]$ \TU/JameelNooriNastaleeq(2)/b/n/1
-0 کے درمیان اور شمالی خطوط[]
- []
-
-[1708]
-Underfull \hbox (badness 10000) in paragraph at lines 6392--6393
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 مشق 19 تا 24 میں سطوح کے مقدار معلوم روپ ت
-لاش کریں۔ (چونکہ ایسا کرنے کے کئی طریقے ہیں لہٰذا آپ کے جواب، کتاب میں دیے گئے 
-جواب سے[]
- []
-
-[1709] [1710] [1711]
-Underfull \hbox (badness 10000) in paragraph at lines 6548--6549
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 فرض کریں $\OML/cmm/b/it/10 n$ \TU/Jameel
-NooriNastaleeq(2)/b/n/10 ایسے بند منحنی $\OML/zplm/m/it/10 C$ \TU/JameelNooriNa
-staleeq(2)/b/n/10 کا باہر رخ عمودی اکائی سمتیہ ہے جس پر مسئلہ گرین کا اطلاق ہو 
-تا ہے۔ دکھائیں یہ ممکن نہیں کہ $\OML/zplm/m/it/10 C$ \TU/JameelNooriNastaleeq(2
-)/b/n/10 کے ہر نقطے پر $\OML/cmm/b/it/10 n$[]
- []
-
-[1712]
-Underfull \hbox (badness 10000) in paragraph at lines 6611--6613
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 ایسے سمتی میدان $\OML/cmm/b/it/10 F\OT1/
-zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y\OT1/ppl/m
-/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/
-10 کی مثال پیش کریں جو صرف ایک نقطہ پر $\OT1/cmr/bx/n/10 0$ \TU/JameelNooriNast
-aleeq(2)/b/n/10 ہو اور جس کا گردش $\OML/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq
-(2)/b/n/10 ہر نقطے پر غیر صفر ہو۔ اس نقطے کی نشاندہی[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6613--6615
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 ایسے سمتی میدان $\OML/cmm/b/it/10 F\OT1/
-zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y\OT1/ppl/m
-/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/
-10 کی مثال پیش کریں جو صرف ایک لکیر پر $\OT1/cmr/bx/n/10 0$ \TU/JameelNooriNast
-aleeq(2)/b/n/10 ہو اور جس کا گردش $\OML/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq
-(2)/b/n/10 ہر مقام پر غیر صفر ہو۔ اس لکیر کی نشاندہی[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6615--6616
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 ایسے سمتی میدان $\OML/cmm/b/it/10 F\OT1/
-zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y\OT1/ppl/m
-/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/
-10 کی مثال پیش کریں جو ایک سطح پر $\OT1/cmr/bx/n/10 0$ \TU/JameelNooriNastaleeq
-(2)/b/n/10 ہو اور جس کا گردش $\OML/cmm/b/it/10 F$ \TU/JameelNooriNastaleeq(2)/b
-/n/10 ہر مقام پر غیر صفر ہو۔ اس سطح کی نشاندہی کریں اور[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6620--6623
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۷:  رداس $\OML/zplm/m/it/10 R$ \
-TU/JameelNooriNastaleeq(2)/b/n/10 کے کروی خول کے نقطہ $\OT1/zplm/m/n/10 (\OML/z
-plm/m/it/10 x\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y\OT1/ppl/m/n/10 , \OML/zplm/m
-/it/10 z\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10 پر کمیتی کثافت $
-\OML/zplm/m/it/10 ^^N\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/n/10 , \OM
-L/zplm/m/it/10 y\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/10 )$ \TU/Ja
-meelNooriNastaleeq(2)/b/n/10 سطح پر اٹل نقطہ $\OT1/zplm/m/n/10 (\OML/zplm/m/it/
-10 a\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 b\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 c\
-OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10 سے اس نقطے تک[]
- []
-
-
-Overfull \vbox (0.70995pt too high) has occurred while \output is active []
-
-
-[1713]
-Underfull \hbox (badness 4713) in paragraph at lines 6626--6630
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۹:  ایسے تمام مستطیل خطے $\OT1/p
-pl/m/n/10 0 \OMS/zplm/m/n/10 ^^T \OML/zplm/m/it/10 x \OMS/zplm/m/n/10 ^^T \OML/
-zplm/m/it/10 a$\TU/JameelNooriNastaleeq(2)/b/n/10 ، $\OT1/ppl/m/n/10 0 \OMS/zpl
-m/m/n/10 ^^T \OML/zplm/m/it/10 y \OMS/zplm/m/n/10 ^^T \OML/zplm/m/it/10 b$ \TU/
-JameelNooriNastaleeq(2)/b/n/10 تلاش کریں جس کے چار اطراف سے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6638--6639
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 دھاگے کو محدود تعداد کے چھوٹے چھوٹے ٹکڑو
-ں میں تقسیم کر کے دکھائیں کہ دھاگے کو سیدھا نیچے $\OML/zplm/m/it/10 x$ \TU/Jame
-elNooriNastaleeq(2)/b/n/10 محور تک کھینچتے ہوئے ثقلی کشش درج ذیل کام[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6650--6651
-[][]\TU/JameelNooriNastaleeq(2)/b/n/10 چادر کو محدود تعداد کے چھوٹے چھوٹے ٹکڑوں
- میں تقسیم کر کے دکھائیں کہ چادر کو سیدھا نیچے $\OML/zplm/m/it/10 xy$ \TU/Jamee
-lNooriNastaleeq(2)/b/n/10 مستوی تک کھینچتے ہوئے ثقلی کشش درج ذیل کام[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6657--6660
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۱۳: \TU/AASameerSagarNastaleeqBo
-ld(0)/m/n/10 اصول آرشمیدسی \TU/JameelNooriNastaleeq(2)/b/n/10 اگر کوئی جسم مثلا
-ً ایک گیند سیال میں رکھا جائے، یہ یا ڈوب کر تل تک پہنچتا ہے، تیرتا ہے، یا کچھ ف
-اصلے تک ڈوب کر[]
- []
-
-[1714]
-Underfull \hbox (badness 10000) in paragraph at lines 6676--6679
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۱۵: \TU/AASameerSagarNastaleeqBo
-ld(0)/m/n/10 قانون فیراڈے \TU/JameelNooriNastaleeq(2)/b/n/10 نظریہ برقناطیسیت ک
-ے ایک اصول کے تحت اگر نقطہ $\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/n/1
-0 , \OML/zplm/m/it/10 y\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/10 )$
- \TU/JameelNooriNastaleeq(2)/b/n/10 اور لمحہ $\OML/zplm/m/it/10 t$ \TU/JameelNo
-oriNastaleeq(2)/b/n/10 پر برقی میدان اور مقناطیسی میدان[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6676--6679
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 کرتے ہوئے $\OML/zplm/m/it/10 t$ \TU/Jameel
-NooriNastaleeq(2)/b/n/10 اٹل رکھا جاتا ہے اور $\OML/zplm/m/it/10 @\OML/cmm/b/it
-/10 B \OT1/zplm/m/n/10 / \OML/zplm/m/it/10 @t$ \TU/JameelNooriNastaleeq(2)/b/n/
-10 کی قیمت تلاش کرتے ہوئے $\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/n/10
- , \OML/zplm/m/it/10 y\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/10 )$ 
-\TU/JameelNooriNastaleeq(2)/b/n/10 اٹل رکھا جاتا ہے۔ مسئلہ سٹوکس استعمال کرتے ہ
-وئے فیراڈے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6679--6681
-[]\TU/JameelNooriNastaleeq(2)/b/n/10 جہاں $\OML/zplm/m/it/10 C$ \TU/JameelNoori
-Nastaleeq(2)/b/n/10 دائری برقی تار کو ظاہر کرتا ہے جس میں سطح کے عمودی اکائی سم
-تیہ $\OML/cmm/b/it/10 n$ \TU/JameelNooriNastaleeq(2)/b/n/10 کے لحاظ سے خلاف گھڑ
-ی برقی رو رواں ہے جو $\OML/zplm/m/it/10 C$ \TU/JameelNooriNastaleeq(2)/b/n/10 پ
-ر درج ذیل برقی دباؤ پیدا[]
- []
-
-LaTeX Info: Redefining \rmfamily on input line 6682.
-LaTeX Info: Redefining \sffamily on input line 6682.
-LaTeX Info: Redefining \ttfamily on input line 6682.
-
-Underfull \hbox (badness 10000) in paragraph at lines 6688--6691
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۱۷:  ثابت کریں اگر سمت بند سطح $
-\OML/zplm/m/it/10 S$\TU/JameelNooriNastaleeq(2)/b/n/10 ، جس کی تحدیدی سرحد $\OM
-L/zplm/m/it/10 C$ \TU/JameelNooriNastaleeq(2)/b/n/10 ہو، پر $\OML/zplm/m/it/10 
-f\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y\OT1
-/ppl/m/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(2
-)/b/n/10 اور $\OML/zplm/m/it/10 g\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/
-m/n/10 , \OML/zplm/m/it/10 y\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/
-10 )$ \TU/JameelNooriNastaleeq(2)/b/n/10 استمراری قابل تفرق غیر[]
- []
-
-
-Overfull \vbox (0.70995pt too high) has occurred while \output is active []
-
-
-[1715]
-Underfull \hbox (badness 1442) in paragraph at lines 6704--6707
-[] \TU/JameelNooriNastaleeq(2)/b/n/10 سوال  ۱۵.۲۱:  فضا میں خطہ $\OML/zplm/m/it
-/10 D$\TU/JameelNooriNastaleeq(2)/b/n/10 سمت بند سطح $\OML/zplm/m/it/10 S$ \TU/
-JameelNooriNastaleeq(2)/b/n/10 جس کا باہر رخ عمودی اکائی سمتیہ $\OML/cmm/b/it/1
-0 n$ \TU/JameelNooriNastaleeq(2)/b/n/10 ہے میں محصور ہے۔ دکھائیں کہ خطے کا حجم 
-$\OML/zplm/m/it/10 H$ \TU/JameelNooriNastaleeq(2)/b/n/10 درج ذیل تماثل کو[]
- []
-
-) [1716] (./answer.tex
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 385.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 385.
+[1730] [1731]) [1732]
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/b/n' will be
+(Font)              scaled to size 24.88pt on input line 235.
+
+kkk: am about to put answers at the end of the book
+(./answer.tex
 LaTeX Font Info:    Font shape `TU/AASameerSagarNastaleeqBold(0)/m/n' will be
 (Font)              scaled to size 9.0pt on input line 1.
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
@@ -4672,27 +2099,54 @@ LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/b/n' will be
 (Font)              scaled to size 9.0pt on input line 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--136
-[][]\TU/JameelNooriNastaleeq(2)/b/n/9 (ا) دائری بہاؤ اول $\OT1/ppl/m/n/9 0$\TU/
-JameelNooriNastaleeq(2)/b/n/9 ، دائری بہاؤ دوم $\OT1/ppl/m/n/9 2\OML/zplm/m/it/
-9 ^^Y$\TU/JameelNooriNastaleeq(2)/b/n/9 ، بہاؤ اول $\OT1/ppl/m/n/9 2\OML/zplm/m
-/it/9 ^^Y$\TU/JameelNooriNastaleeq(2)/b/n/9 ، بہاؤ[]
+Underfull \hbox (badness 10000) in paragraph at lines 14--17
+[]$\OML/cmm/b/it/9 r\OT1/zplm/m/n/9 (\OML/zplm/m/it/9 ^^R\OT1/ppl/m/n/9 , \OML/
+zplm/m/it/9 ^^^\OT1/zplm/m/n/9 ) = \OT1/ppl/m/n/9 3 [] \OML/zplm/m/it/9 ^^R [] 
+^^^\OML/cmm/b/it/9 i \OT1/zplm/m/n/9 +$[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--136
-[]\TU/JameelNooriNastaleeq(2)/b/n/9 دوم $\OT1/ppl/m/n/9 0$\TU/JameelNooriNastal
-eeq(2)/b/n/9 ؛ (ب) دائری بہاؤ اول $\OT1/ppl/m/n/9 0$\TU/JameelNooriNastaleeq(2)
-/b/n/9 ، دائری بہاؤ دوم $\OT1/ppl/m/n/9 8\OML/zplm/m/it/9 ^^Y$\TU/JameelNooriNa
-staleeq(2)/b/n/9 ، بہاؤ اول[]
+Underfull \hbox (badness 10000) in paragraph at lines 18--21
+[][]$\OML/cmm/b/it/9 r\OT1/zplm/m/n/9 (\OML/zplm/m/it/9 ^^R\OT1/ppl/m/n/9 , \OM
+L/zplm/m/it/9 ^^^\OT1/zplm/m/n/9 ) = [] [] \OML/zplm/m/it/9 ^^R [] ^^^\OML/cmm/
+b/it/9 i \OT1/zplm/m/n/9 +$[]
  []
 
-[1717
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--37
+[][]$\OML/cmm/b/it/9 r\OT1/zplm/m/n/9 (\OML/zplm/m/it/9 u\OT1/ppl/m/n/9 , \OML/
+zplm/m/it/9 v\OT1/zplm/m/n/9 ) = \OT1/ppl/m/n/9 4 [][] \OML/zplm/m/it/9 v\OML/c
+mm/b/it/9 i \OT1/zplm/m/n/9 + \OML/zplm/m/it/9 u\OML/cmm/b/it/9 j \OT1/zplm/m/n
+/9 +$[]
+ []
+
+
+Overfull \hbox (10.58815pt too wide) in paragraph at lines 62--65
+[][]$[][] \OML/zplm/m/it/9 x[] [] ^^[ \OT1/zplm/m/n/9 = [][] [][] [][] \OML/zpl
+m/m/it/9 ^^R [][] ^^^ [] ^^R [] ^^^ \OT1/zplm/m/n/9 =$[]
+ []
+
+
+Underfull \hbox (badness 6252) in paragraph at lines 66--67
+[][]$\OML/zplm/m/it/9 A \OT1/zplm/m/n/9 = [][] [][][\OML/zplm/m/it/9 a[]b[] [][
+] ^^R [][] ^^R \OT1/zplm/m/n/9 +$[]
+ []
+
+
+Overfull \hbox (29.47299pt too wide) in paragraph at lines 66--67
+[]$\OML/zplm/m/it/9 b[]c[] [][] ^^R [][] ^^^ \OT1/zplm/m/n/9 + \OML/zplm/m/it/9
+ a[]c[] [][] ^^R [][] ^^^\OT1/zplm/m/n/9 ][] [] \OML/zplm/m/it/9 ^^R [] ^^^$ []
+
+ []
+
+)
+kkk: finished putting answers at the end of the book
+[1733
 
 
 
 
-]) [1718] [1794
+] [1794
 
 
 
@@ -4705,11 +2159,11 @@ staleeq(2)/b/n/9 ، بہاؤ اول[]
 
 
 
-] (./calculusAndAnalyticGeometry.aux
-(./tex/calculusPreface.aux) (./tex/prefaceFirstBook.aux)
-(./tex/calculusPreliminaries.aux) (./tex/calculusLimitsAndContinuity.aux)
-(./tex/calculusDerivatives.aux) (./tex/calculusApplicationsOfDerivatives.aux)
-(./tex/calculusIntegration.aux) (./tex/calculusApplicationsOfIntegrals.aux)
+] (./calculusAndAnalyticGeometry.aux (./tex/calculusPreface.aux)
+(./tex/prefaceFirstBook.aux) (./tex/calculusPreliminaries.aux)
+(./tex/calculusLimitsAndContinuity.aux) (./tex/calculusDerivatives.aux)
+(./tex/calculusApplicationsOfDerivatives.aux) (./tex/calculusIntegration.aux)
+(./tex/calculusApplicationsOfIntegrals.aux)
 (./tex/calculusTranscendentalFunctions.aux)
 (./tex/calculusTechniquesOfIntegration.aux) (./tex/calculusInfiniteSeries.aux)
 (./tex/calculusConicSectionsParametrizedCurvesPolarCoordinates.aux)
@@ -4717,32 +2171,31 @@ staleeq(2)/b/n/9 ، بہاؤ اول[]
 (./tex/calculusVectorValuedFunctionsandMotionInSpace.aux)
 (./tex/calculusMultivariableFunctionsAndPartialDerivatives.aux)
 (./tex/calculusMultipleIntegrals.aux)
-(./tex/calculusIntegrationInVectorFields.aux) (./tex/calculusAppendixA.aux)
-(./tex/calculusAppendixB.aux) (./tex/calculusAppendixC.aux)
-(./tex/calculusAppendixD.aux) (./tex/calculusAppendixE.aux)
-(./tex/calculusAppendixF.aux) (./tex/calculusAppendixG.aux)
-(./tex/calculusAppendixH.aux) (./tex/calculusAppendixI.aux)
-(./tex/calculusIntegrationTable.aux))
+(./tex/calculusIntegrationInVectorFields.aux) (./tex/questions.aux)
+(./tex/calculusAppendixA.aux) (./tex/calculusAppendixB.aux)
+(./tex/calculusAppendixC.aux) (./tex/calculusAppendixD.aux)
+(./tex/calculusAppendixE.aux) (./tex/calculusAppendixF.aux)
+(./tex/calculusAppendixG.aux) (./tex/calculusAppendixH.aux)
+(./tex/calculusAppendixI.aux) (./tex/calculusIntegrationTable.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 
 
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.43996pt have occurred.
-
-
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 73610 strings out of 474878
- 1973849 string characters out of 9512517
- 4410151 words of memory out of 7000000
- 94500 multiletter control sequences out of 15000+600000
- 597084 words of font info for 207 fonts, out of 8000000 for 9000
+ 70189 strings out of 474878
+ 1901986 string characters out of 9512517
+ 3634185 words of memory out of 7000000
+ 91085 multiletter control sequences out of 15000+600000
+ 582521 words of font info for 157 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 117i,20n,121p,2420b,6784s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,9n,121p,2420b,6098s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on calculusAndAnalyticGeometry.pdf (146 pages).
+Output written on calculusAndAnalyticGeometry.pdf (17 pages).
