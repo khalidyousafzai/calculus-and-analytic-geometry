@@ -705,8 +705,8 @@ C_3:\quad \kvec{r}(t)&=t\ai+\aj+\ak,\quad 0\le t\le 1
 \end{tikzpicture}
 \caption{
 مستوی میں مختلف نقاط پر  رداسی میدان \عددی{\kvec{F}=x\ai+y\aj} جہاں تیر دار لکیر کی دم اس نقطہ پر رکھی جاتی ہے جہاں کا سمتیہ درکار ہو۔}
-\end{minipage}
 \label{شکل_سمتی_تکمل_رداسی_میدان}
+\end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[declare function={fx(\x,\y)=-0.75*\y;fy(\x,\y)=0.75*\x;}]
@@ -5891,6 +5891,21 @@ S:\quad \kvec{r}(r,\theta)=r\cos \theta\,\ai+r\sin \theta\,\aj+(4-r^2)\ak,\qquad
 \ابتدا{سوال}
 مستوی \عددی{2x+2y+z=2}  میں  \عددی{C} ایک سادہ بند ہموار منحنی ہے جس کی سمت بندی  یہاں دکھائی گئی ہے۔ دکھائیں کہ درج ذیل کی قیمت  \عددی{C} میں محیط خطے کے رقبے پر منحصر ہے نا کہ \عددی{C} کی شکل و صورت یا مقام پر۔
 \[\ointctrclockwise\limits_C\left(2y\,dx+3z\,dy-x\,dz\right)\]
+\begin{center}
+\begin{tikzpicture}
+\pgfmathsetmacro{\kang}{20}
+\pgfmathsetmacro{\klen}{2}
+\pgfmathsetmacro{\kH}{2}
+%\draw[gray,thick](0,0)grid (3,3);
+%\draw[thin,step=0.1] (0,0) grid (3,3);
+\draw[thick](0,0)coordinate(kD)--++(\kang:\klen)coordinate(kA)--++(0,\kH)coordinate(kB)node[below right]{$2x+2y+z=2$}--++(\kang:-\klen)coordinate(kC)--(0,0);
+\draw[-stealth](35:0.5)node[circ]{}node[above]{$1$}--++(-135:0.75)node[left]{$x$};
+\draw[-stealth](kA)++(-0.25,0.25)node[circ]{}node[above]{$1$}--++(1,0)node[right]{$y$};
+\draw[-stealth]($(kB)!0.5!(kC)$)++(0,-0.5)coordinate(kCen)node[circ]{}node[right]{$2$}--++(0,0.75)node[left]{$z$};
+\draw[thick,->-=0.5]plot[smooth cycle,tension=0.9]coordinates {(1,2.2)(0.5,1.5)(0.7,0.7)(1.5,1.75)};
+\path[](0.5,1.5)node[left]{$C$};
+\end{tikzpicture}
+\end{center}
 \انتہا{سوال}
 
 \ابتدا{سوال}
