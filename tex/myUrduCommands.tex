@@ -355,3 +355,16 @@
 %{\par\noindent\ignorespacesafterend}
 %==================
 
+%the following is the environment for end of chapter questions 
+%it too accepts the answer environment above
+\newenvironment*{سوالاتباب}				
+{\noindent\ignorespaces\wf{
+\موٹا{مشق برائے باب} 
+\thechapter
+\quad
+\موٹا{صفحہ}
+\thepage}
+\wf{\unexpanded{\begin{description}\setlength{\parskip}{0pt} \setlength{\itemsep}{0pt plus 1pt}}}
+}%
+{\wf{\unexpanded{\end{description}}}\par\noindent\ignorespacesafterend}
+%==================
