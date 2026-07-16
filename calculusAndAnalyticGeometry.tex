@@ -115,11 +115,12 @@ math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
 
 %\includeonly{,./tex/calculusIntegrationInVectorFields,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI,./tex/calculusIntegrationTable}%
 
-\includeonly{./tex/calculusIntegrationInVectorFields}
+%\includeonly{./tex/calculusIntegrationInVectorFields}
 %\includeonly{,./tex/calculusMultivariableFunctionsAndPartialDerivatives}
 %\includeonly{./tex/calculusIntegrationInVectorFields,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI}
-%\includeonly{./tex/calculusIntegrationInVectorFields,./tex/temp}
-%\includeonly{,./tex/temp}
+\includeonly{./tex/calculusConicSectionsParametrizedCurvesPolarCoordinates}
+%\includeonly{,,./tex/calculusAppendixC}
+%\includeonly{,./tex/test}
 
 
 \author{
@@ -150,6 +151,7 @@ math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
 \makeatother
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setlatin
 %\linenumbers
 \makeindex
@@ -202,14 +204,9 @@ math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
 \include{./tex/calculusVectorValuedFunctionsandMotionInSpace}
 \include{./tex/calculusMultivariableFunctionsAndPartialDerivatives}
 \include{./tex/calculusMultipleIntegrals}
-\include{./tex/calculusIntegrationInVectorFields}
+%\include{./tex/calculusIntegrationInVectorFields}
 %\include{./tex/questions}
-%\include{./tex/Cal-14-5b}
-%\include{./tex/temp}
-
-
-
-%\immediate\closeout\tempfileTerms
+%\include{./tex/test}
 
 %=========================================================
 %\addcontentsline{toc}{chapter}{حوالہ}     %it is standard not to include References in toc. 
@@ -229,17 +226,6 @@ math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
 %\end{otherlanguage}
 %\end{thebibliography}
 %============================================================
-
-\chapter*{جوابات}
-\typeout{kkk: am about to put answers at the end of the book}
-\addcontentsline{toc}{chapter}{جوابات}
-\immediate\closeout\tempfile
-\begin{multicols}{2}
-{\small
-\input{answer}
-}
-\end{multicols}
-\typeout{kkk:  finished putting answers at the end of the book}
 %=======================
 \appendix
 \addcontentsline{toc}{chapter}{ضمیمے}
@@ -267,6 +253,18 @@ math-micro=\textup{µ},text-micro=µ,math-ohm  =\upOmega,text-degree=°,
 %\include{./tex/emtLinearAlgebra}
 %\include{./tex/emtCoordinatesRelations}
 %================
+%\immediate\closeout\tempfileTerms
+
+\chapter*{جوابات}
+\typeout{kkk: am about to put answers at the end of the book}
+\addcontentsline{toc}{chapter}{جوابات}
+\immediate\closeout\tempfile
+\begin{multicols}{2}
+{\small
+\input{answer}
+}
+\end{multicols}
+\typeout{kkk:  finished putting answers at the end of the book}
 
 %=================
 

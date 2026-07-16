@@ -1,10 +1,6 @@
-%done till start of ex14.4 questions.
-%audio of ex14.4 is missing. must do its audio
-%use \limits_a^b  in all integrals and use \\ointctrclockwise instead of \voint??
-%sec 14.6 (parametric) finished completely. corrected urdu, entered equations, figures, questions, answers, references.
-%sec 14.7 onwards is AI generated and is a mess. needs through review.
-
-%table 14.1 and 14.2 are not in table form. to put these in table form just like 14.3 that i have already done
+%chapter completed. edited, figures, questions, answers added.
+%table 14.1 and 14.2 needs toprule and bottomrule
+%the question counter needs to be reset for the last End Of Chapter Questions (beyond P1720)
 
 \باب{سمتی میدان میں تکمل}\شناخت{باب_سمتی_میدان_میں_تکمل}
 \موٹا{ایک جائزہ}\quad
@@ -19,13 +15,13 @@
 \centering
 \begin{tikzpicture}[font=\small,declare function={fx(\x)=sin(\x)+1/3*cos(3*\x);fy(\t)=cos(\t);fz(\t)=\t/100;}]
 \coordinate (O) at (-0.5,-1);
-\draw[smooth, domain=5:120]plot ({\x/30},{fx(\x)});
+\draw[thick,smooth, domain=5:120]plot ({\x/30},{fx(\x)});
 \foreach \t in {1,3.2,4.6,7,9,11}{\path[| mark=0.5] ({(\t-0.1)/3},{fx((\t-0.1)*10)}) -- ({(\t+0.1)/3},{fx((\t+0.1)*10)});}
 \draw[] ({7.5/3},{fx(7.5*10)})node[circ]{}node[right,yshift=-1ex]{$(x_k,y_k,z_k)$};
 \draw[-stealth](O)--++(-0.5,-0.5)node[left]{$x$};
 \draw[-stealth](O)--++(3,0)node[right]{$y$};
 \draw[-stealth](O)--++(0,2)node[left]{$z$};
-\draw[-latex](O)--({4/3},{fx(4*10)})node[pos=0.5,below]{$\kvec{r}$};
+\draw[thick,-latex](O)--({4/3},{fx(4*10)})node[pos=0.5,below]{$\kvec{r}$};
 \draw[] ({1/3},{fx(1*10)})node[xshift=-2ex,yshift=2ex]{$t=a$};
 \draw[] ({11/3},{fx(11*10)})node[xshift=2ex,yshift=2ex]{$t=b$};
 \draw[decorate,decoration={brace,amplitude=5pt, raise=5pt}] ({7/3},{fx(7*10)})--({9/3},{fx(9*10)})node[above left,shift={(145:5pt)}]{$\Delta s_k$};
@@ -70,7 +66,7 @@ s(t)=\int_a^t \abs{\kvec{v}(\tau)} \dif \tau\quad\text{\small\RL{حصہ \حوا�
 
 دھیان رہے کہ مستقل تفاعل \عددی{f=1} کی صورت میں مذکورہ بالا تکمل \عددی{C} کی لمبائی دیگا۔
 
-%====================
+
 \ابتدا{مثال}\شناخت{مثال_میدان_راہ_الف}
 مبدا سے  نقطہ \عددی{(1,1,1)} تک قطع پر \عددی{f(x,y,z)=x-3y^2+z} تکمل کریں (شکل \حوالہ{شکل_مثال_میدان_راہ_الف})۔
 
@@ -84,15 +80,15 @@ s(t)=\int_a^t \abs{\kvec{v}(\tau)} \dif \tau\quad\text{\small\RL{حصہ \حوا�
 &=\sqrt{3}\int_0^1 (2t-3t^2)\dif t=\sqrt{3}\big[t^2-t^3\big]_0^1=0
 \end{align*} 
 \انتہا{مثال}
-%===================
+
 \begin{figure}
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[]
 \begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
-\addplot3[]plot coordinates {(0,0,0)(1,1,1)}node[pos=1,circ]{}node[pos=1,right]{$(1,1,1)$}node[pos=0.5,above]{$C$};
-\addplot3[dashed]plot coordinates {(1,1,1)(1,1,0)(0,0,0)};
+\addplot3[thick]plot coordinates {(0,0,0)(1,1,1)}node[pos=1,circ]{}node[pos=1,right]{$(1,1,1)$}node[pos=0.5,above]{$C$};
+\addplot3[thick,dashed]plot coordinates {(1,1,1)(1,1,0)(0,0,0)};
 \addplot3[]plot coordinates {(1,1,0)}node[right]{$(1,1,0)$};
 \end{axis}
 \end{tikzpicture}
@@ -103,8 +99,8 @@ s(t)=\int_a^t \abs{\kvec{v}(\tau)} \dif \tau\quad\text{\small\RL{حصہ \حوا�
 \centering
 \begin{tikzpicture}[]
 \begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},zmax=0.75]
-\addplot3[]plot coordinates {(0,0,0)(1,1,0)}node[pos=0,circ]{}node[pos=0,pin=135:{$(0,0,0)$}]{}node[pos=1,circ]{}node[pos=1,right]{$(1,1,0)$}node[pos=0.5,below]{$C_1$};
-\addplot3[]plot coordinates {(1,1,0)(1,1,1)}node[pos=1,circ]{}node[pos=1,right]{$(1,1,1)$}node[pos=0.75,right]{$C_2$};
+\addplot3[thick]plot coordinates {(0,0,0)(1,1,0)}node[pos=0,circ]{}node[pos=0,pin=135:{$(0,0,0)$}]{}node[pos=1,circ]{}node[pos=1,right]{$(1,1,0)$}node[pos=0.5,below]{$C_1$};
+\addplot3[thick]plot coordinates {(1,1,0)(1,1,1)}node[pos=1,circ]{}node[pos=1,right]{$(1,1,1)$}node[pos=0.75,right]{$C_2$};
 \end{axis}
 \end{tikzpicture}
 \caption{تکمل کی راہ (مثال \حوالہ{مثال_میدان_راہ_ب})۔}
@@ -136,34 +132,44 @@ C_2:\quad \kvec{r}(t)&=\ai+\aj+t\ak,\, 0\le t\le 1;\, \abs{\kvec{v}}=\sqrt{0^2+0
 &=\sqrt{2}\big[\frac{t^2}{2}-t^3\big]_0^1+\big[\frac{t^2}{2}-2t\big]_0^1=-\frac{\sqrt{2}}{2}-\frac{3}{2}
 \end{align*}
 \انتہا{مثال}
-%=======================
+
 
 یہاں   مثال \حوالہ{مثال_میدان_راہ_الف} اور مثال \حوالہ{مثال_میدان_راہ_ب} کے نتائج پر غور کرتے ہیں۔اول، دیکھیں کہ  موزوں منحنی کے اجزاء \عددی{f} میں پر کرتے ہی  \عددی{t} کے لحاظ سے ایک  سادہ تکمل حاصل ہوتا ہے۔ دوم،  \عددی{C_1\cup C_2} پر \عددی{f} کا تکمل لینے کے لئے \عددی{C_1} اور \عددی{C_2} پر \عددی{f} کے علیحدہ علیحدہ تکملات لے کر نتائج  کا مجموعہ لیا جاتا ہے۔سوم،      مثال \حوالہ{مثال_میدان_راہ_الف} میں \عددی{C}  اور مثال \حوالہ{مثال_میدان_راہ_ب} میں \عددی{C_1\cup C_2} پر تکمل کے نتائج ایک دوسرے سے مختلف تھے۔ عموماً تفاعل کے لئے دو نقطوں کے بیچ مختلف راہ پر تکملات کے نتائج ایک دوسرے سے مختلف ہوں گے۔ البتہ بعض تفاعل کے لئے تکمل کی قیمت پر راہ کا کوئی اثر نہیں ہوتا ہے۔
 
 \جزوحصہء{کمیت اور معیار اثر کا حساب}
-ہم اسپرنگ اور تار کو فضا میں ہموار منحنی پر  استمراری کمیتی کثافت \عددی{\delta(x,y,z)} کی تقسیم تصور کرتے ہیں۔ یوں اسپرنگ یا تار کی کمیت، مرکز کمیت، اور ان کے معیار اثر اور  رداس دوار کا حساب    درج ذیل  کلیات سے کیا جائے گا۔ یہی کلیات باریک (پتلی) تار کے لئے بھی کارآمد ہوں گے۔
+ہم اسپرنگ اور تار کو فضا میں ہموار منحنی پر  استمراری کمیتی کثافت \عددی{\delta(x,y,z)} کی تقسیم تصور کرتے ہیں۔ یوں اسپرنگ یا تار کی کمیت، مرکز کمیت، اور ان کے معیار اثر اور  رداس دوار کا حساب جدول \حوالہ{جدول_سمتی_میدان_کمیت_معیار_اثر} میں پیش کلیات سے کیا جائے گا۔ یہی کلیات باریک (پتلی) تار کے لئے بھی کارآمد ہوں گے۔
+\begin{table}
+\caption{
+فضا میں ہموار منحنی \عددی{C} کے ہمراہ  اسپرنگ، باریک سلاخ، اور تار کی کمیت اور معیار اثر کے کلیات۔
+}
+\label{جدول_سمتی_میدان_کمیت_معیار_اثر}
 \begin{description}
-\item{کیمت:}\quad
-\(M=\int\limits_S \delta(x,y,z) \dif s\)
-\item{محددی مستویات کے لحاظ سے اول معیار اثر:}
+\item
+{\موٹا{کمیت:}}
+\[M=\int\limits_S \delta(x,y,z) \dif s\]
+\item
+{\موٹا{محددی مستویات کے لحاظ سے اول معیار اثر:}}
 \[M_{yz}=\int_C x\delta \dif s,\quad M_{xz}=\int_C y\delta \dif s,\quad M_{xy}=\int_Cz\delta \dif s\]
-\item{مرکز کمیت کے محدد:}
+\item
+{\موٹا{مرکز کمیت کے محدد:}}
 \[\bar{x}=\frac{M_{yz}}{M},\quad \bar{y}=\frac{M_{xz}}{M},\quad \bar{z}=\frac{M_{xy}}{M}\]
-\item{معیار اثر:}
+\item
+{\موٹا{معیار اثر:}} جہاں  لکیر \عددی{L} سے نقطہ \عددی{(x,y,z)} تک فاصلہ \عددی{r(x,y,z)} ہے۔
 \begin{align*}
 I_x&=\int_C(y^2+z^2)\delta \dif s & I_y&=\int_C(x^2+z^2)\delta \dif s\\
 I_z&=\int_C(x^2+y^2)\delta \dif s& I_L&=\int_C r^2\delta \dif s
 \end{align*}
-جہاں  لکیر \عددی{L} سے نقطہ \عددی{(x,y,z)} تک فاصلہ \عددی{r(x,y,z)} ہے۔
-\item{لکیر \عددی{L} کے لحاظ سے رداس دور:}\quad
-\(R_L=\sqrt{\frac{I_L}{M}}\)
+\item
+{\موٹا{لکیر \عددی{L} کے لحاظ سے رداس دوار:}}
+\[R_L=\sqrt{\frac{I_L}{M}}\]
 \end{description}
+\end{table}
 
-%==================================
+
 \ابتدا{مثال}\شناخت{مثال_سمتی_تکمل_اسپرنگ}
-ایک اسپرنگ درج ذیل پیچدار منحنی کے ساتھ ساتھ پایا جاتا ہے (شکل \حوالہ{شکل_مثال_سمتی_تکمل_اسپرنگ})۔
+ایک اسپرنگ درج ذیل پیچدار منحنی کے ہمراہ پایا جاتا ہے (شکل \حوالہ{شکل_مثال_سمتی_تکمل_اسپرنگ})۔
 \[\kvec{r}(t)=(\cos t)\ai+(\sin t)\aj+t\,\ak,\quad 0\le t\le 2\pi\]
-اس اسپرنگ کی کثافت مستقل تفاعل \عددی{\delta=1} ہے۔ اس اسپرنگ کی کمیت اور مرکز کمیت  اور محور \عددی{z} کے لحاظ سے   جمودی معیار اثر اور رداس دوار معلوم کریں۔
+ اسپرنگ کی کثافت مستقل  \عددی{\delta=1} ہے۔  اسپرنگ کی کمیت اور مرکز کمیت  اور محور \عددی{z} کے لحاظ سے   جمودی معیار اثر اور رداس دوار معلوم کریں۔
 
 حل:\quad
 ہم اسپرنگ کا خاکہ بناتے ہیں۔ تشاکلی کی بنا اس کا مرکز کمیت محور \عددی{z} پر  نقطہ \عددی{(0,0,\pi)} پر پایا جائے گا۔  باقی حساب کے لئے ہم \عددی{\abs{\kvec{v}(t)}} تلاش کرتے ہیں:
@@ -171,7 +177,7 @@ I_z&=\int_C(x^2+y^2)\delta \dif s& I_L&=\int_C r^2\delta \dif s
 \abs{\kvec{v}(t)}&=\sqrt{\big(\frac{\dif x}{\dif t}\big)^2+\big(\frac{\dif y}{\dif t}\big)^2+\big(\frac{\dif z}{\dif t}\big)^2}\\
 &=\sqrt{(-4\sin 4t)^2+(4\cos 4t)^2+1}=\sqrt{17}
 \end{align*}
-اب مذکورہ بالا کلیات استعمال کرتے ہوئے درج ذیل حاصل ہو گا۔
+اب جدول \حوالہ{جدول_سمتی_میدان_کمیت_معیار_اثر}  میں پیش کلیات استعمال کرتے ہوئے درج ذیل حاصل ہو گا۔
 \begin{align*}
 M&=\int\limits_{\text{پیچدار}} \delta \dif s=\int_0^{2\pi} (1)\sqrt{17}\dif t=2\pi\sqrt{17}\\
 I_z&=\int\limits_{\text{پیچدار}} (x^2+y^2)\delta \dif s=\int_0^{2\pi}(\cos^2 4t+\sin^2 4t)(1)(\sqrt{17})\dif t\\
@@ -180,16 +186,17 @@ R_z&=\sqrt{\frac{I_z}{M}}=\sqrt{\frac{2\pi\sqrt{17}}{2\pi\sqrt{17}}}=1
 \end{align*}
 دھیان رہے کہ محور \عددی{z} کے لحاظ سے رداس دوار عین اس بیلن کے رداس  جتنا ہے جس پر اسپرنگ لپیٹا گیا ہے۔
 \انتہا{مثال}
-%=====================
+
 
 \begin{figure}
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=cos(deg(4*\t));fy(\t)=sin(deg(4*\t));fz(\z)=\t;}]
-\begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={1},ytick={\empty},ztick={pi,2*pi},zticklabels={$\pi$,$2\pi$},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=west},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
-\addplot3[domain=0:2*pi,variable=\t,samples y=0,samples=100]({fx(t)},{fy(t)},{fz(t)});
+\begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={1},ytick={\empty},ztick={pi,2*pi},zticklabels={$\pi$,$2\pi$},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlarge z limits=0.5]
+\addplot3[thick,domain=0:2*pi,variable=\t,samples y=0,samples=100]({fx(t)},{fy(t)},{fz(t)});
 \addplot3[]plot coordinates {(0,0,pi)}node[circ]{};
+\addplot3[thick]plot coordinates {(1,0,2*pi)(0,0,2*pi)};
 \end{axis}
 \end{tikzpicture}
 \caption{اسپرنگ برائے مثال \حوالہ{مثال_سمتی_تکمل_اسپرنگ}}
@@ -199,7 +206,7 @@ R_z&=\sqrt{\frac{I_z}{M}}=\sqrt{\frac{2\pi\sqrt{17}}{2\pi\sqrt{17}}}=1
 \centering
 \begin{tikzpicture}[declare function={fy(\t)=cos(deg(\t));fz(\t)=sin(deg(\t));}]
 \begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={\empty},ytick={-1,1},ztick={0.57,1},zticklabels={$0.57$,$1$},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},]
-\addplot3[domain=0:pi,variable=\t,samples y=0,smooth]({0},{fy(t)},{fz(t)});
+\addplot3[thick,domain=0:pi,variable=\t,samples y=0,smooth]({0},{fy(t)},{fz(t)});
 \addplot3[]plot coordinates {(0.1,0,0)}node[right,xshift=2ex]{$y^2+z^2=1,\, z\ge 0$};
 \addplot3[]plot coordinates {(0,0,0.57)}node[circ]{};
 \end{axis}
@@ -225,7 +232,7 @@ M_{xy}&=\int_0^C z\delta \dif s=\int_C z(2-z)\dif s=\int_0^{\pi} (\sin t)(2-\sin
 \end{align*}
 یوں مرکز کمیت تقریباً \عددی{(0,0,0.57)} ہو گا۔
 \انتہا{مثال}
-%==================
+
 
 \جزوحصہء{سوالات}
 \ابتدا{سوالات}
@@ -237,7 +244,7 @@ M_{xy}&=\int_0^C z\delta \dif s=\int_C z(2-z)\dif s=\int_0^{\pi} (\sin t)(2-\sin
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=2*cos(deg(\t));fy(\t)=2*sin(deg(\t));fz(\t)=0;}]
 \begin{axis}[clip=false,width=4cm, font=\tiny,view/h=120,axis lines=middle,xtick={2},ytick={2},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},xmax=2.25,ymax=2.125]
-\addplot3[domain=0:2*pi,variable=\t,samples y=0,->-=0.2]({fx(t)},{fy(t)},{fz(t)});
+\addplot3[thick,domain=0:2*pi,variable=\t,samples y=0,->-=0.2]({fx(t)},{fy(t)},{fz(t)});
 \end{axis}
 \end{tikzpicture}
 \caption{}
@@ -247,7 +254,7 @@ M_{xy}&=\int_0^C z\delta \dif s=\int_C z(2-z)\dif s=\int_0^{\pi} (\sin t)(2-\sin
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=0;fy(\t)=(\t^2-1);fz(\t)=2*\t;}]
 \begin{axis}[clip=false,width=4cm, font=\tiny,view/h=120,axis lines=middle,xtick={\empty},ytick={-1},ztick={-2,2},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},zmin=-2.5,zmax=2.5]
-\addplot3[domain=-1:1,variable=\t,samples y=0,->-=0.25]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=1,circ]{};
+\addplot3[thick,domain=-1:1,variable=\t,samples y=0,->-=0.25]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=1,circ]{};
 \end{axis}
 \end{tikzpicture}
 \caption{}
@@ -257,7 +264,7 @@ M_{xy}&=\int_0^C z\delta \dif s=\int_C z(2-z)\dif s=\int_0^{\pi} (\sin t)(2-\sin
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=\t;fy(\t)=1-\t;fz(\t)=0;}]
 \begin{axis}[clip=false,width=4cm, font=\tiny,view/h=110,axis lines=middle,xtick={1},ytick={1},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},xmax=1.25,ymax=1.125]
-\addplot3[domain=0:1,variable=\t,samples y=0,->-=0.5]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=1,circ]{};
+\addplot3[thick,domain=0:1,variable=\t,samples y=0,->-=0.5]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=1,circ]{};
 \end{axis}
 \end{tikzpicture}
 \caption{}
@@ -267,9 +274,9 @@ M_{xy}&=\int_0^C z\delta \dif s=\int_C z(2-z)\dif s=\int_0^{\pi} (\sin t)(2-\sin
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=\t;fy(\t)=\t;fz(\t)=\t;}]
 \begin{axis}[clip=false,width=4cm, font=\tiny,view/h=110,axis lines=middle,xtick={2},ytick={2},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},xmax=2.5]
-\addplot3[domain=0:2,variable=\t,samples y=0,->-=0.5]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=1,circ]{}node[pos=1,right]{$(2,2,2)$};
-\addplot3[dashed]plot coordinates{(2,2,2)(2,2,0)(2,0,0)};
-\addplot3[dashed]plot coordinates{(2,2,0)(0,2,0)};
+\addplot3[thick,domain=0:2,variable=\t,samples y=0,->-=0.5]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=1,circ]{}node[pos=1,right]{$(2,2,2)$};
+\addplot3[thick,dashed]plot coordinates{(2,2,2)(2,2,0)(2,0,0)};
+\addplot3[thick,dashed]plot coordinates{(2,2,0)(0,2,0)};
 \end{axis}
 \end{tikzpicture}
 \caption{}
@@ -279,7 +286,7 @@ M_{xy}&=\int_0^C z\delta \dif s=\int_C z(2-z)\dif s=\int_0^{\pi} (\sin t)(2-\sin
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=1;fy(\t)=1;fz(\t)=\t;}]
 \begin{axis}[clip=false,width=4cm, font=\tiny,view/h=110,axis lines=middle,xtick={1},ytick={1},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
-\addplot3[domain=-1:1,variable=\t,samples y=0,->-=0.5]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=0,right]{$(1,1,-1)$}node[pos=1,circ]{}node[pos=1,above]{$(1,1,1)$};
+\addplot3[thick,domain=-1:1,variable=\t,samples y=0,->-=0.5]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=0,right]{$(1,1,-1)$}node[pos=1,circ]{}node[pos=1,above]{$(1,1,1)$};
 \end{axis}
 \end{tikzpicture}
 \caption{}
@@ -289,7 +296,7 @@ M_{xy}&=\int_0^C z\delta \dif s=\int_C z(2-z)\dif s=\int_0^{\pi} (\sin t)(2-\sin
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=0;fy(\t)=\t;fz(\t)=(2-2*\t);}]
 \begin{axis}[clip=false,width=4cm, font=\tiny,view/h=110,axis lines=middle,xtick={\empty},ytick={1},ztick={2},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},ymax=1.25,zmax=2.5]
-\addplot3[domain=0:1,variable=\t,samples y=0,->-=0.5]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=1,circ]{};
+\addplot3[thick,domain=0:1,variable=\t,samples y=0,->-=0.5]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=1,circ]{};
 \end{axis}
 \end{tikzpicture}
 \caption{}
@@ -299,7 +306,7 @@ M_{xy}&=\int_0^C z\delta \dif s=\int_C z(2-z)\dif s=\int_0^{\pi} (\sin t)(2-\sin
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=2*cos(deg(\t));fy(\t)=0;fz(\t)=2*sin(deg(\t));}]
 \begin{axis}[clip=false,width=4cm, font=\tiny,view/h=135,axis lines=middle,xtick={-2,2},ytick={\empty},ztick={2},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},xmin=-2.5,xmax=2.5,zmax=2.5]
-\addplot3[domain=0:pi,variable=\t,samples y=0,->-=0.25]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=1,circ]{};
+\addplot3[thick,domain=0:pi,variable=\t,samples y=0,->-=0.25]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=1,circ]{};
 \end{axis}
 \end{tikzpicture}
 \caption{}
@@ -309,7 +316,7 @@ M_{xy}&=\int_0^C z\delta \dif s=\int_C z(2-z)\dif s=\int_0^{\pi} (\sin t)(2-\sin
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=\t;fy(\t)=0;fz(\t)=0;}]
 \begin{axis}[clip=false,width=4cm, font=\tiny,view/h=135,axis lines=middle,xtick={-1,1},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},xmin=-1.25,xmax=1.25]
-\addplot3[domain=-1:1,variable=\t,samples y=0,->-=0.85]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=1,circ]{};
+\addplot3[thick,domain=-1:1,variable=\t,samples y=0,->-=0.85]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=1,circ]{};
 \end{axis}
 \end{tikzpicture}
 \caption{}
@@ -611,7 +618,7 @@ C_3:\quad \kvec{r}(t)&=t\ai+\aj+\ak,\quad 0\le t\le 1
 \pgfmathsetmacro{\td}{0.75*2/9.8}
 \pgfmathsetmacro{\te}{1.0*2/9.8}
 \begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
-\addplot[domain=0:2/9.8,variable =\t] ({fx(t)},{fy(t)});
+\addplot[thick,domain=0:2/9.8,variable =\t] ({fx(t)},{fy(t)});
 \addplot[-latex,line width=1mm, gray]plot coordinates {({fx(\ta)},{fy(\ta)})({fx(\ta)+0.02*gx(\ta)},{fy(\ta)+0.02*gy(\ta)})};
 \addplot[-latex,line width=1mm, gray]plot coordinates {({fx(\tb)},{fy(\tb)})({fx(\tb)+0.02*gx(\tb)},{fy(\tb)+0.02*gy(\tb)})};
 \addplot[-latex,line width=1mm, gray]plot coordinates {({fx(\tc)},{fy(\tc)})({fx(\tc)+0.03*gx(\tc)},{fy(\tc)+0.02*gy(\tc)})};
@@ -624,31 +631,34 @@ C_3:\quad \kvec{r}(t)&=t\ai+\aj+\ak,\quad 0\le t\le 1
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[declare function={fx(\t)=cos(\t);fy(\t)=sin(\t);gz(\x,\y)=1-\x^2-\y^2;}]
-\begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
-\addplot3[domain=0:360,variable =\t] ({fx(t)},{fy(t)},{0});
-\addplot3[domain=0:360,variable =\t] ({fx(t)},{fy(t)},{1.25});
-\addplot3[]plot coordinates {({fx(110)},{fy(110)},{0})({fx(110)},{fy(110)},{1.25})};
-\addplot3[]plot coordinates {({fx(110+180)},{fy(110+180)},{0})({fx(110+180)},{fy(110+180)},{1.25})};
-\addplot3[-latex]plot coordinates {(0,0,0)(0,0,{gz(0,0)})};
-\addplot3[-latex]plot coordinates {(-0.25,0,0)(-0.25,0,{gz(-0.25,0)})};
-\addplot3[-latex]plot coordinates {(-0.5,0,0)(-0.5,0,{gz(-0.5,0)})};
-\addplot3[-latex]plot coordinates {(-0.75,0,0)(-0.75,0,{gz(-0.75,0)})};
-\addplot3[-latex]plot coordinates {(0.25,0,0)(00.25,0,{gz(0.25,0)})};
-\addplot3[-latex]plot coordinates {(0.5,0,0)(00.5,0,{gz(0.5,0)})};
-\addplot3[-latex]plot coordinates {(0.75,0,0)(00.75,0,{gz(0.75,0)})};
+\begin{tikzpicture}[declare function={fx(\t)=cos(\t);fy(\t)=sin(\t);gz(\x,\y)=1-\x^2-\y^2;hx(\r,\t)=\r*cos(\t);hy(\r,\t)=\r*sin(\t);hz(\r,\t)=1-\r^2;}]
+\begin{axis}[clip=false,view={110}{30},small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\addplot3[thick,domain=0:360,variable =\t] ({fx(t)},{fy(t)},{0});
+\addplot3[thick,domain=0:360,variable =\t] ({fx(t)},{fy(t)},{1.25});
+\addplot3[thick]plot coordinates {({fx(110)},{fy(110)},{0})({fx(110)},{fy(110)},{1.25})};
+\addplot3[thick]plot coordinates {({fx(110+180)},{fy(110+180)},{0})({fx(110+180)},{fy(110+180)},{1.25})};
+\addplot3[]plot coordinates {({fx(90)},{fy(90)},{1.15})}node[pin=10:{$x^2+y^2\le a^2$}]{};
+\addplot3[thick,dashed,domain=-1:1,domain y=0:360,samples y=1] ({hx(x,110)},{hy(x,110)},{hz(x,110)})node[pos=0.85,pin={[pin edge={-,solid}]15:{$z=a^2-\rho^2$}}]{};
+
+\addplot3[-latex,thick]plot coordinates {(0,0,0)(0,0,{gz(0,0)})};
+\addplot3[-latex,thick]plot coordinates {(-0.25,0,0)(-0.25,0,{gz(-0.25,0)})};
+\addplot3[-latex,thick]plot coordinates {(-0.5,0,0)(-0.5,0,{gz(-0.5,0)})};
+\addplot3[-latex,thick]plot coordinates {(-0.75,0,0)(-0.75,0,{gz(-0.75,0)})};
+\addplot3[-latex,thick]plot coordinates {(0.25,0,0)(00.25,0,{gz(0.25,0)})};
+\addplot3[-latex,thick]plot coordinates {(0.5,0,0)(00.5,0,{gz(0.5,0)})};
+\addplot3[-latex,thick]plot coordinates {(0.75,0,0)(00.75,0,{gz(0.75,0)})};
 %
-\addplot3[-latex]plot coordinates {(0,-0.25,0)(0,-0.25,{gz(0,-0.25)})};
-\addplot3[-latex]plot coordinates {(0,-0.5,0)(0,-0.5,{gz(0,-0.5)})};
-\addplot3[-latex]plot coordinates {(0,-0.75,0)(0,-0.75,{gz(0,-0.75)})};
-\addplot3[-latex]plot coordinates {(0,0.25,0)(0,0.25,{gz(0,0.25)})};
-\addplot3[-latex]plot coordinates {(0,0.5,0)(0,0.5,{gz(0,0.5)})};
-\addplot3[-latex]plot coordinates {(0,0.75,0)(0,0.75,{gz(0,0.75)})};
+\addplot3[-latex,thick]plot coordinates {(0,-0.25,0)(0,-0.25,{gz(0,-0.25)})};
+\addplot3[-latex,thick]plot coordinates {(0,-0.5,0)(0,-0.5,{gz(0,-0.5)})};
+\addplot3[-latex,thick]plot coordinates {(0,-0.75,0)(0,-0.75,{gz(0,-0.75)})};
+\addplot3[-latex,thick]plot coordinates {(0,0.25,0)(0,0.25,{gz(0,0.25)})};
+\addplot3[-latex,thick]plot coordinates {(0,0.5,0)(0,0.5,{gz(0,0.5)})};
+\addplot3[-latex,thick]plot coordinates {(0,0.75,0)(0,0.75,{gz(0,0.75)})};
 %
-\addplot3[-latex]plot coordinates {(-0.5,-0.5,0)(-0.5,-0.5,{gz(-0.5,-0.5)})};
-\addplot3[-latex]plot coordinates {(0.5,-0.5,0)(0.5,-0.5,{gz(0.5,-0.5)})};
-\addplot3[-latex]plot coordinates {(0.5,0.5,0)(0.5,0.5,{gz(0.5,0.5)})};
-\addplot3[-latex]plot coordinates {(-0.5,0.5,0)(-0.5,0.5,{gz(-0.5,0.5)})};
+\addplot3[-latex,thick]plot coordinates {(-0.5,-0.5,0)(-0.5,-0.5,{gz(-0.5,-0.5)})};
+\addplot3[-latex,thick]plot coordinates {(0.5,-0.5,0)(0.5,-0.5,{gz(0.5,-0.5)})};
+\addplot3[-latex,thick]plot coordinates {(0.5,0.5,0)(0.5,0.5,{gz(0.5,0.5)})};
+\addplot3[-latex,thick]plot coordinates {(-0.5,0.5,0)(-0.5,0.5,{gz(-0.5,0.5)})};
 \end{axis}
 \end{tikzpicture}
 \caption{
@@ -736,6 +746,7 @@ C_3:\quad \kvec{r}(t)&=t\ai+\aj+\ak,\quad 0\le t\le 1
 \end{figure}
 
 
+
 %
 
 وہ میدان ترسیم کرنے کے لئے جن کے کلیات معلوم ہوں، ہم دائرہ کار میں چند نقطے منتخب کر کے ان نقطوں پر نقطوں کے ساتھ منسلک سمتیات  کا خاکہ بناتے ہیں۔ دھیان رہے کہ روایتی طور پر اس نقطہ پر، جہاں سمتی تفاعل کی قیمت حاصل کی گئی ہو،  سمتیہ ظاہر کرنے والی تیر دار لکیر  کی دم  رکھی جاتی ہے نا کہ سر۔ تعین گر سمتیات (باب \حوالہ{سمتی_قیمت_تفاعل_اور_فضا_میں_حرکت}) کے لئے ایسا نہیں کیا جاتا ہے بلکہ تعین گر سمتیات کو ظاہر کرنے والی تیر دار لکیر کی دم کو مبدا پر رکھا جاتا ہے جبکہ اس کا سر  سیارہ یا گول انداز کے مقام پر رکھا جاتا ہے۔
@@ -748,14 +759,14 @@ C_3:\quad \kvec{r}(t)&=t\ai+\aj+\ak,\quad 0\le t\le 1
 \end{align*}
  کا میدان ہے۔
 \انتہا{تعریف}
-%=======================
+
 \ابتدا{مثال}
 تفاعل \عددی{f(x,y,z)=xyz} کا میدان ڈھلوان تلاش کریں۔
 
 حل:\quad
 تفاعل \عددی{f} کے میدان ڈھلوان سے مراد میدان \عددی{\kvec{F}=\nabla f=yz\ai+xz\aj+xy\ak} ہے۔
 \انتہا{مثال}
-%=====================
+
 
  ہم  دیکھیں گے کہ انجینئری، ریاضیات، طبیعیات، وغیرہ میں میدان ڈھلوان  خصوصی اہمیت رکھتے ہیں۔
 
@@ -771,9 +782,9 @@ C_3:\quad \kvec{r}(t)&=t\ai+\aj+\ak,\quad 0\le t\le 1
 \begin{tikzpicture}
 %\draw[step=1,thick,black] (0,0) grid (6,2);
 %\draw[xstep=0.1,ystep=0.1,thin] (0,0) grid (6,2);
-\draw(0,0)node[circ]{}node[above,xshift=-1ex]{$A$}node[right]{$t=a$}to [out=45, in=180](3,2) to [out=0,in=90](4,1)to [out=-90,in=0](3,0) to [out=180,in=180](3,1.5)to [out=0,in=135](3.95,1)  (4.05,0.9) to [out=-45,in=180](5,0)to[out=0,in=-135](6,1)node[circ]{}node[above]{$B$}node[right]{$t=b$};
-\draw[-latex](3.72,1.7)node[circ]{}--++(-50:1)node[right]{$\kvec{T}$};
-\draw[-latex](3.72,1.7)--++(10:0.75)node[right]{$\kvec{F}$};
+\draw[thick](0,0)node[circ]{}node[above,xshift=-1ex]{$A$}node[right]{$t=a$}to [out=45, in=180](3,2) to [out=0,in=90](4,1)to [out=-90,in=0](3,0) to [out=180,in=180](3,1.5)to [out=0,in=135](3.95,1)  (4.05,0.9) to [out=-45,in=180](5,0)to[out=0,in=-135](6,1)node[circ]{}node[above]{$B$}node[right]{$t=b$};
+\draw[-latex,thick](3.72,1.7)node[circ]{}--++(-50:1)node[right]{$\kvec{T}$};
+\draw[-latex,thick](3.72,1.7)--++(10:0.75)node[right]{$\kvec{F}$};
 \end{tikzpicture}
 \caption{
 ہموار راہ \عددی{\kvec{r}(t)=g(t)\ai+h(t)\aj+k(t)\ak} پر \عددی{A} سے \عددی{B} تک استمراری قوت \عددی{\kvec{F}} کا کام \عددی{t=a} تا \عددی{t=b} راہ کی ہمراہ \عددی{\kvec{F}\cdot\kvec{T}} کا تکمل ہو گا۔}
@@ -788,12 +799,12 @@ C_3:\quad \kvec{r}(t)&=t\ai+\aj+\ak,\quad 0\le t\le 1
 W=\int_{t=1}^{t=b}\kvec{F}\cdot \kvec{T}\dif s
 \end{align}
 \انتہا{تعریف}
-%=======================
+
 \begin{figure}
 \centering
 \begin{tikzpicture}[font=\small,declare function={fx(\x)=-sin(\x);}]
 \coordinate (O) at (0,0);
-\draw[smooth, domain=0:200]plot ({\x/30},{fx(\x)});
+\draw[thick,smooth, domain=0:200]plot ({\x/30},{fx(\x)});
 \foreach \t in {0,6,9,20}{\path[| mark=0.5] ({(\t-0.1)/3},{fx((\t-0.1)*10)}) -- ({(\t+0.1)/3},{fx((\t+0.1)*10)});}
 \draw[]plot ({70/30},{fx(70)})node[circ]{}node[below,xshift=1ex]{$t=c_k$};
 \draw[]plot ({0/30},{fx(0)})node[above]{$t=t_a$};
@@ -801,7 +812,7 @@ W=\int_{t=1}^{t=b}\kvec{F}\cdot \kvec{T}\dif s
 \draw[]plot ({60/30},{fx(60)})node[pin=-135:{$N_k(g(t_k),h(t_k),k(t_k))$}]{};
 \draw[]plot ({90/30},{fx(90)})node[pin=-45:{$N_{k+1}(g(t_{k+1}),h(t_{k+1}),k(t_{k+1}))$}]{};
 \draw[decorate,decoration={brace,amplitude=5pt, raise=5pt}] ({60/30},{fx(60)})--({90/30},{fx(90)})node[pos=0.5,above,shift={(60:0.3)}]{$\Delta s_k$};
-\draw[] (1,1)--(5,1);
+\draw[thick] (1,1)--(5,1);
 \path[| mark=0] ({1},{1})node[below]{$a$} -- ({1+0.1},{1});
 \path[| mark=0] ({5},{1})node[below]{$b$} -- ({5+0.1},{1});
 \path[| mark=0] ({60/30},{1})node[below]{$t_k$} -- ({62/30},{1});
@@ -819,11 +830,11 @@ W=\int_{t=1}^{t=b}\kvec{F}\cdot \kvec{T}\dif s
 \centering
 \begin{tikzpicture}[font=\small,declare function={fx(\x)=-3*sin(\x);}]
 \coordinate (O) at (0,0);
-\draw[smooth, domain=55:95]plot ({\x/10},{fx(\x)});
+\draw[thick,smooth, domain=55:95]plot ({\x/10},{fx(\x)});
 \foreach \t/\pos/\l in {6/below/{N_k},9/above/{N_{k+1}}}{\path[| mark=0.5] ({(\t-0.1)},{fx((\t-0.1)*10)}) -- ({(\t+0.1)},{fx((\t+0.1)*10)})node[pos=0.5,\pos]{$\l$};}
 \draw[]({70/10},{fx(70)})node[circ]{}node[pin=100:{$t=c_k$}]{};
-\draw[-latex] ({70/10},{fx(70)})--++(30:1.25)coordinate(kT)node[pos=0.75,above left]{$\kvec{F}_k$};
-\draw[-latex] ({70/10},{fx(70)})coordinate(kL)--++(-10:1.75)coordinate(kR)node[below]{$\kvec{T}_k$};
+\draw[-latex,thick] ({70/10},{fx(70)})--++(30:1.25)coordinate(kT)node[pos=0.75,above left]{$\kvec{F}_k$};
+\draw[-latex,thick] ({70/10},{fx(70)})coordinate(kL)--++(-10:1.75)coordinate(kR)node[below]{$\kvec{T}_k$};
 \draw[dashed](kT)--($(kL)!(kT)!(kR)$)coordinate(kM);
 \draw[decorate,decoration={brace,amplitude=5pt, raise=5pt}] (kM)--(kL)node[pos=0.5,below,shift={(-90:0.3)}]{$\kvec{F}_k\cdot\kvec{T}_k$};
 \end{tikzpicture}
@@ -846,42 +857,48 @@ W=\int_{t=1}^{t=b}\kvec{F}\cdot \kvec{T}\dif s
 اس تکمل سے حاصل عدد کی علامت، \عددی{t} بڑھانے سے حاصل  پر چلنے کے، رخ پر منحصر ہو گی۔ منحنی پر چلنے کا رخ الٹ کرنے سے \عددی{\kvec{T}} کا رخ الٹ ہو گا جس کی بنا \عددی{\kvec{F}\cdot\kvec{T}} اور تکمل کی علامت الٹ ہو گی۔ 
 
 \جزوحصہء{علامتیت اور قیمت کا حصول}
-تکمل کام (مساوات \حوالہ{مساوات_سمتی_میدان_کام_کی_تعریف}) کو لکھنے کے چھ طریقے درج ذیل ہیں۔
-\begin{gather}
-\begin{aligned}\label{مساوات_سمتی_تکمل_متعدد_روپ_کام}
-W&=\int_{t=a}^{t=b}\kvec{F}\cdot\kvec{T}\dif s&&\text{\RL{تعریف}}\\
-&=\int_{t=a}^{t=b}\kvec{F}\cdot\dif \kvec{r}&&\text{\RL{مختصر تفریقی روپ}}\\
-&=\int_{t=a}^{t=b}\kvec{F}\cdot\frac{\dif \kvec{r}}{\dif t}\dif t&&
-\text{\RL{پھیلا کر \عددی{\dif t}  شامل کیا گیا ہے}}\\
-&=\int_{t=a}^{t=b}\big(M\frac{\dif g}{\dif t}+N\frac{\dif h}{\dif t}+P\frac{\dif k}{\dif t}\big)\dif t&&\text{\RL{مقدار معلوم \عددی{t} اور سمتی رفتار \عددی{\frac{\dif\kvec{r}}{\dif t}} اجاگر کیے گئے}}\\
-&=\int_{t=a}^{t=b}\big(M\frac{\dif x}{\dif t}+N\frac{\dif y}{\dif t}+P\frac{\dif z}{\dif t}\big)\dif t&&\text{\RL{جزوی تفاعل اجاگر کیے گئے}}\\
-&=\int_{t=a}^{t=b} M\dif x+N\dif y+P\dif z&&\text{\RL{\عددی{\dif t} منسوخ کر کے عمومی روپ حاصل کی گئی}}
-\end{aligned}
-\end{gather}
+تکمل کام (مساوات \حوالہ{مساوات_سمتی_میدان_کام_کی_تعریف})  لکھنے کے چھ طریقے  جدول \حوالہ{جدول_سمتی_تکمل_متعدد_روپ_کام} میں پیش  ہیں۔
 
-مساوات \حوالہ{مساوات_سمتی_تکمل_متعدد_روپ_کام} کے کلیات کی  قیمتوں کا حصول،  بظاہر مختلف روپ  کے باوجود،  ایک ہی طرح کیا جاتا ہے۔ 
+\begin{table}
+\caption{تکمل کام لکھنے کے چھ  طریقے۔}
+\label{جدول_سمتی_تکمل_متعدد_روپ_کام}
+\begin{align*}
+W&=\int_{t=a}^{t=b}\kvec{F}\cdot\kvec{T}\dif s&&\text{\RL{تعریف}}\\
+&=\int_{a}^{b}\kvec{F}\cdot\dif \kvec{r}&&\text{\RL{مختصر تفریقی روپ}}\\
+&=\int_{a}^{b}\kvec{F}\cdot\frac{\dif \kvec{r}}{\dif t}\dif t&&
+\begin{tabular}{r}
+\text{\RL{پھیلا کر \عددی{\dif t}  شامل کیا گیا؛ مقدار معلوم \عددی{t}}}\\
+\text{\RL{ اور سمتی رفتار \عددی{\frac{\dif\kvec{r}}{\dif t}} اجاگر کیے گئے}}
+\end{tabular}\\
+&=\int_{a}^{b}\big(M\frac{\dif g}{\dif t}+N\frac{\dif h}{\dif t}+P\frac{\dif k}{\dif t}\big)\dif t&&\text{\RL{جزوی تفاعل اجاگر کیے گئے}}\\
+&=\int_{a}^{b}\big(M\frac{\dif x}{\dif t}+N\frac{\dif y}{\dif t}+P\frac{\dif z}{\dif t}\big)\dif t&&\text{\RL{\عددی{\kvec{r}} کے اجزاء استعمال کیے گئے}}\\
+&=\int_{a}^{b} M\dif x+N\dif y+P\dif z&&\text{\RL{\عددی{\dif t} منسوخ کر کے عمومی روپ حاصل کیا گیا}}
+\end{align*}
+\end{table}
+
+جدول \حوالہ{جدول_سمتی_تکمل_متعدد_روپ_کام}   کے  کلیات کی  قیمتوں کا حصول،  بظاہر مختلف روپ  کے باوجود،  ایک ہی طرح کیا جاتا ہے۔ 
 
 \موٹا{تکمل کام کی قیمت کا حصول}\\
 تکمل کام کی قیمت حاصل کرنے کے اقدام درج ذیل ہیں۔
 \begin{enumerate}[1.]
 \item
-منحنی پر \عددی{\kvec{F}} کی قیمت مقدار معلوم \عددی{t} کے تفاعل کی روپ میں لکھیں۔
+منحنی پر \عددی{\kvec{F}} کی قیمت مقدار معلوم \عددی{t} کے تفاعل کے  روپ میں لکھیں۔
 \item
 تفرق \عددی{\frac{\dif \kvec{r}}{\dif t}} تلاش کریں۔
 \item\عددی{\kvec{F}} اور \عددی{\frac{\dif\kvec{r}}{\dif t}} کا غیر سمتی ضرب لیں۔
 \item\عددی{t=a} سے \عددی{t=b} تک تکمل کریں۔
 \end{enumerate}
 
-%==================
+
 \ابتدا{مثال}\شناخت{مثال_سمتی_تکمل_منحنی_قوسی}
 منحنی \عددی{\kvec{r}(t)=t\ai+t^2\aj+t^3\ak,\,0\le t\le 1} کی ہمراہ  \عددی{(0,0,0)} سے  \عددی{(1,1,1)}  تک \عددی{\kvec{F}=(y-x^2)\ai+(z-y^2)\aj+(x-z^2)\ak} کا کام  تلاش کریں (شکل \حوالہ{شکل_مثال_سمتی_تکمل_منحنی_قوسی})۔
 \begin{figure}
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=\t;fy(\t)=\t^2;fz(\t)=\t^3;}]
 \begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
-\addplot3[domain=0:1,variable =\t,samples y=0]({fx(t)},{fy(t)},{fz(t)})node[circ]{}node[right]{$(1,1,1)$}node[pos=0.8,pin={[fill=white]110:{$\kvec{r}=t\ai+t^2\aj+t^3\ak$}}]{};
-\addplot3[dashed]plot coordinates {({fx(1)},{fy(1)},{fz(1)})({fx(1)},{fy(1)},{0})({0},{fy(1)},{0})};
-\addplot3[dashed]plot coordinates {({fx(1)},{fy(1)},{0})({fx(1)},{0},{0})}node[pos=0,right,yshift=-1ex]{$(1,1,0)$};
+\addplot3[thick,domain=0:1,variable =\t,samples y=0]({fx(t)},{fy(t)},{fz(t)})node[circ]{}node[right]{$(1,1,1)$}node[pos=0.8,pin={[fill=white]110:{$\kvec{r}=t\ai+t^2\aj+t^3\ak$}}]{};
+\addplot3[dashed,thick]plot coordinates {({fx(1)},{fy(1)},{fz(1)})({fx(1)},{fy(1)},{0})({0},{fy(1)},{0})};
+\addplot3[dashed,thick]plot coordinates {({fx(1)},{fy(1)},{0})({fx(1)},{0},{0})}node[pos=0,right,yshift=-1ex]{$(1,1,0)$};
 \end{axis}
 \end{tikzpicture}
 \caption{منحنی برائے مثال \حوالہ{مثال_سمتی_تکمل_منحنی_قوسی}}
@@ -910,7 +927,7 @@ W&=\int_{t=a}^{t=b}\kvec{F}\cdot\kvec{T}\dif s&&\text{\RL{تعریف}}\\
 &=\big[\frac{2}{5}t^5-\frac{2}{6}t^6+\frac{3}{4}t^4-\frac{3}{9}t^9\big]_0^1=\frac{29}{60}
 \end{align*}
 \انتہا{مثال}
-%============
+
 
 \جزوحصہء{تکمل ہمراہ بہاؤ اور دائری بہاؤ}
 فرض کریں \عددی{\kvec{F}=M\ai+N\aj+P\ak} میدان قوت کی بجائے  فضا کے ایک خطہ (مثلاً پانی سے چلنے والے جنریٹر کا چرخی خانہ   یا سمندری طاس) میں بہتا ہوا سیال کے سمتی رفتاری میدان  کو ظاہر کرتا ہے ۔ ایسی صورت میں منحنی کی ہمراہ 
@@ -923,7 +940,7 @@ W&=\int_{t=a}^{t=b}\kvec{F}\cdot\kvec{T}\dif s&&\text{\RL{تعریف}}\\
 \end{align}
 اس تکمل کو \اصطلاح{تکمل ہمراہ بہاؤ}\فرہنگ{تکمل!ہمراہ بہاؤ}\حاشیہب{flow integral}\فرہنگ{flow!integral} کہتے ہیں۔ بند منحنی کی صورت میں اس بہاؤ کو  منحنی کے گرد منحنی کی ہمراہ \اصطلاح{دائری بہاؤ}\فرہنگ{دائری بہاؤ}\حاشیہب{circulation}\فرہنگ{circulation} کہتے ہیں۔
 \انتہا{تعریف}
-%========================
+
 
 تکمل ہمراہ بہاؤ کی قیمت  بھی تکمل کام کی قیمت کی طرح حاصل کی جاتی ہے۔
 
@@ -953,7 +970,7 @@ W&=\int_{t=a}^{t=b}\kvec{F}\cdot\kvec{T}\dif s&&\text{\RL{تعریف}}\\
 &=\big[\frac{\cos^2t}{2} +\sin t\big]_0^{\pi/2}=\big(0+\frac{\pi}{2}\big)-\big(\frac{1}{2}+0\big)=\frac{\pi}{2}-\frac{1}{2}
 \end{align*}
 \انتہا{مثال}
-%==================== 
+
 \ابتدا{مثال}
 میدان \عددی{\kvec{F}=(x-y)\ai+x\aj} کا دائرہ \عددی{\kvec{r}(t)=(\cos t)\ai+(\sin t)\aj,\, 0\le t\le 2\pi} کی ہمراہ دائرہ کے گرد دائری بہاؤ تلاش کریں۔
 
@@ -973,7 +990,7 @@ W&=\int_{t=a}^{t=b}\kvec{F}\cdot\kvec{T}\dif s&&\text{\RL{تعریف}}\\
 \end{align*}
 \end{enumerate}
 \انتہا{مثال}
-%==================
+
 
 \جزوحصہء{مستوی منحنی کو عبور کرتا ہوا  بہاؤ}
 مستوی \عددی{xy} میں ہموار بند منحنی \عددی{C} میں محیط خطہ سے سیال کے اخراج و دخول کی شرح  \عددی{C} پر  \عددی{\kvec{F}\cdot\kvec{n}} ( منحنی کے بیرونی  عمودی اکائی سمتیہ  کے رخ رفتاری میدان کے غیر سمتی جزو)  کے لکیری تکمل سے حاصل ہو گی۔ اس تکمل کی قیمت کو  \عددی{C} عبور کرتا ہوا \عددی{\kvec{F}} کا بہاؤ (یا \اصطلاح{نفاذ}\فرہنگ{نفاذ}) کہتے ہیں۔ برقی یا مقناطیسی میدان \عددی{\kvec{F}} کی صورت میں بھی اس تکمل کی قیمت کو \عددی{C} عبور کرتا ہوا بہاؤ یا نفاذ کہیں گے اگرچہ ان میں کوئی بہتا ہوا سیال نہیں پایا جاتا ہے۔
@@ -992,10 +1009,10 @@ W&=\int_{t=a}^{t=b}\kvec{F}\cdot\kvec{T}\dif s&&\text{\RL{تعریف}}\\
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=3+2*cos(\t);fy(\t)=1.5+sin(\t);fz(\t)=0;}]
 \begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},zmin=0,zmax=0.75]
-\addplot3[,-<-=0.25,-<-=0.75,domain=0:360,variable =\t,samples y=0]({fx(t)},{fy(t)},{fz(t)})node[pos=0.25,right]{$C$};
-\addplot3[-latex]plot coordinates {({fx(0)},{fy(0)},{fz(0)})({fx(0)},{fy(0)},{0.25})}node[pos=0.75,right]{$\ak$};
-\addplot3[-latex]plot coordinates {({fx(0)},{fy(0)},{fz(0)})(5,0.75,0)}node[below]{$\kvec{T}$};
-\addplot3[-latex]plot coordinates {({fx(0)},{fy(0)},{fz(0)})(7,1.5,0)}node[below]{$\ak\times \kvec{T}$};
+\addplot3[thick,-<-=0.25,-<-=0.75,domain=0:360,variable =\t,samples y=0]({fx(t)},{fy(t)},{fz(t)})node[pos=0.25,right]{$C$};
+\addplot3[-latex,thick]plot coordinates {({fx(0)},{fy(0)},{fz(0)})({fx(0)},{fy(0)},{0.25})}node[pos=0.75,right]{$\ak$};
+\addplot3[-latex,thick]plot coordinates {({fx(0)},{fy(0)},{fz(0)})(5,0.75,0)}node[below]{$\kvec{T}$};
+\addplot3[-latex,thick]plot coordinates {({fx(0)},{fy(0)},{fz(0)})(7,1.5,0)}node[below]{$\ak\times \kvec{T}$};
 \end{axis}
 \end{tikzpicture}
 \caption{گھڑی وار حرکت کے لئے \عددی{\ak\times\kvec{T}} باہر رخ ہو گا۔}
@@ -1004,10 +1021,10 @@ W&=\int_{t=a}^{t=b}\kvec{F}\cdot\kvec{T}\dif s&&\text{\RL{تعریف}}\\
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=3+2*cos(\t);fy(\t)=1.5+sin(\t);fz(\t)=0;}]
 \begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},zmin=0,zmax=0.75]
-\addplot3[,->-=0.25,->-=0.75,domain=0:360,variable =\t,samples y=0]({fx(t)},{fy(t)},{fz(t)})node[pos=0.25,right]{$C$};
-\addplot3[-latex]plot coordinates {({fx(0)},{fy(0)},{fz(0)})({fx(0)},{fy(0)},{0.25})}node[pos=0.75,right]{$\ak$};
-\addplot3[-latex]plot coordinates {({fx(0)},{fy(0)},{fz(0)})(5,2.25,0)}node[below]{$\kvec{T}$};
-\addplot3[-latex]plot coordinates {({fx(0)},{fy(0)},{fz(0)})(7,1.5,0)}node[below]{$\kvec{T}\times \ak$};
+\addplot3[thick,->-=0.25,->-=0.75,domain=0:360,variable =\t,samples y=0]({fx(t)},{fy(t)},{fz(t)})node[pos=0.25,right]{$C$};
+\addplot3[-latex,thick]plot coordinates {({fx(0)},{fy(0)},{fz(0)})({fx(0)},{fy(0)},{0.25})}node[pos=0.75,right]{$\ak$};
+\addplot3[-latex,thick]plot coordinates {({fx(0)},{fy(0)},{fz(0)})(5,2.25,0)}node[below]{$\kvec{T}$};
+\addplot3[-latex,thick]plot coordinates {({fx(0)},{fy(0)},{fz(0)})(7,1.5,0)}node[below]{$\kvec{T}\times \ak$};
 \end{axis}
 \end{tikzpicture}
 \caption{خلاف گھڑی حرکت کے لئے \عددی{\kvec{T}\times\ak} باہر رخ ہو گا۔}
@@ -1041,7 +1058,7 @@ x=g(t),\quad y=h(t),\quad a\le t\le b
 \begin{align}\label{مساوات_سمتی_تکمل_نفاذ}
 \int_C\kvec{F}\cdot\kvec{n}\dif s=\oint_C M\dif y-N\dif x
 \end{align}
- یاد رہے کہ \عددی{C} پر خلاف گھڑی چلتے ہوئے  بند تکمل \عددی{\oint} کی قیمت حاصل کی جائے گی۔ اس تکمل کے حصول کی خاطر ہم \عددی{M}، \عددی{\dif y}، \عددی{N} اور \عددی{\dif x} کو مقدار معلوم \عددی{t} کی روپ میں لکھ کر \عددی{t=a} تا \عددی{t=b} تکمل لیتے ہیں۔ہمیں بہاؤ (نفاذ) تلاش کرنے کے لئے  \عددی{\kvec{n}} یا \عددی{\dif s} جاننے کی ضرورت پیش نہیں آتی ہے۔ منحنی \عددی{C} پر خلاف گھڑی ٹھیک ایک بار چلتے ہوئے  کوئی بھی ہموار مقدار معلوم روپ \عددی{x=g(t)}، \عددی{y=h(t)}، جہاں \عددی{a\le t\le b} ہو، استعمال کیا جا سکتا ہے۔
+ یاد رہے کہ \عددی{C} پر خلاف گھڑی چلتے ہوئے  بند تکمل \عددی{\oint} کی قیمت حاصل کی جائے گی۔ اس تکمل کے حصول کی خاطر ہم \عددی{M}، \عددی{\dif y}، \عددی{N} اور \عددی{\dif x} کو مقدار معلوم \عددی{t} کے روپ میں لکھ کر \عددی{t=a} تا \عددی{t=b} تکمل لیتے ہیں۔ہمیں بہاؤ (نفاذ) تلاش کرنے کے لئے  \عددی{\kvec{n}} یا \عددی{\dif s} جاننے کی ضرورت پیش نہیں آتی ہے۔ منحنی \عددی{C} پر خلاف گھڑی ٹھیک ایک بار چلتے ہوئے  کوئی بھی ہموار مقدار معلوم روپ \عددی{x=g(t)}، \عددی{y=h(t)}، جہاں \عددی{a\le t\le b} ہو، استعمال کیا جا سکتا ہے۔
 
 \ابتدا{مثال}
 مستوی \عددی{xy} میں دائرہ \عددی{x^2+y^2=1} کو پار کرتا ہوا \عددی{\kvec{F}=(x-y)\ai+x\aj} کا بہاؤ (نفاذ) تلاش کریں۔
@@ -1059,7 +1076,7 @@ N&=x=\cos t,&&\dif x=\dif\,(\cos t)=-\sin t\dif t
 \end{align*}
 دائرہ کو عبور کرتا ہوا \عددی{\kvec{F}} کا بہاؤ \عددی{\pi} ہے۔چونکہ نتیجہ مثبت ہے لہٰذا دائرے سے کل بہاؤ کا رخ باہر کو ہو گا۔ دائرے میں دخول کی صورت میں نتیجہ منفی ہوتا۔
 \انتہا{مثال}
-%===========
+
 
 \جزوحصہء{سوالات}
 \ابتدا{سوالات}
@@ -1069,54 +1086,50 @@ N&=x=\cos t,&&\dif x=\dif\,(\cos t)=-\sin t\dif t
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_میدان_ڈھلوان_الف}
 \(f(x,y,z)=(x^2+y^2+z^2)^{-1/2}\)
 \انتہا{سوال}
-%==================
+
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(\nabla f=\tfrac{-x\ai-y\aj-z\ak}{(x^2+y^2+z^2)^{3/2}}\)}}
 \انتہا{جواب}
-%=====================
+
 \ابتدا{سوال}
 \(f(x,y,z)=\ln \sqrt{x^2+y^2+z^2}\)
 \انتہا{سوال}
-%==================
+
 \ابتدا{سوال}
 \(g(x,y,z)=e^z-\ln \sqrt{x^2+y^2}\)
 \انتہا{سوال}
-%==================
+
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(\nabla g=-\tfrac{2x}{x^2+y^2}\ai-\tfrac{2y}{x^2+y^2}\aj+e^z\ak\)}}
 \انتہا{جواب}
-%=====================
+
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_میدان_ڈھلوان_ب}
 \(g(x,y,z)=xy+yz+xz\)
 \انتہا{سوال}
-%==================
 \ابتدا{سوال}
 مستوی میں سمتی میدان کا  ایسا کلیہ \عددی{\kvec{F}=M(x,y)\ai+N(x,y)\aj} پیش کریں کہ \عددی{\kvec{F}} کی مقدار مبدا سے \عددی{(x,y)} تک فاصلہ کے مربع  کا بالعکس متناسب  ہو اور \عددی{\kvec{F}} کا رخ  مبدا کے رخ ہو۔ (یہ میدان مبدا پر غیر معین ہے۔) 
 \انتہا{سوال}
-%=====================
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(\kvec{F}=\tfrac{-kx}{(x^2+y^2)^{3/2}}\ai-\tfrac{ky}{(x^2+y^2)^{3/2}}\aj, k>0\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 مستوی میں میدان کا  ایسا کلیہ \عددی{\kvec{F}=M(x,y)\ai+N(x,y)\aj} پیش کریں کہ \عددی{(0,0)} پر  \عددی{\kvec{F}=\kvec{0}} ہو جبکہ کسی دوسرے نقطہ \عددی{(a,b)} پر \عددی{\abs{\kvec{F}}=\sqrt{a^2+b^2}} اور    دائرہ \عددی{x^2+y^2=a^2+b^2} کو  میدان گھڑی وار مماسی ہو۔
 \انتہا{سوال}
-%=====================
 \موٹا{کام}\\
 سوال \حوالہ{سوال_سمتی_تکمل_کام_الف} تا سوال \حوالہ{سوال_سمتی_تکمل_کام_ب} میں  \عددی{(0,0,0)} تا \عددی{(1,1,1)} قوت \عددی{\kvec{F}} کا کام درج ذیل راہوں پر تلاش کریں (شکل \حوالہ{شکل_سمتی_تکمل_ایک_نقطہ_سے_دوسری_تک_راہ})۔
 \begin{figure}
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=\t;fy(\t)=\t^2;fz(\t)=\t^3;}]
 \begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
-\addplot3[domain=0:1,variable =\t,samples y=0]({fx(t)},{fy(t)},{fz(t)})node[circ]{}node[right]{$(1,1,1)$}node[pos=0.25,below]{$C_2$}node[pos=0,above left]{$(0,0,0)$};
-\addplot3[]plot coordinates {({fx(1)},{fy(1)},{fz(1)})({fx(1)},{fy(1)},{0})}node[pos=0.6,right]{$C_4$};
-\addplot3[dashed]plot coordinates {({fx(1)},{fy(1)},{0})({0},{fy(1)},{0})};
-\addplot3[dashed]plot coordinates {({fx(1)},{fy(1)},{0})({fx(1)},{0},{0})}node[pos=0,right,yshift=-1ex]{$(1,1,0)$};
-\addplot3[]plot coordinates {(0,0,0)({fx(1)},{fy(1)},{0})}node[pos=0.5,below]{$C_3$};
-\addplot3[]plot coordinates {(0,0,0)({fx(1)},{fy(1)},{fz(1)})}node[pos=0.5,above]{$C_1$};
+\addplot3[thick,domain=0:1,variable =\t,samples y=0]({fx(t)},{fy(t)},{fz(t)})node[circ]{}node[right]{$(1,1,1)$}node[pos=0.25,below]{$C_2$}node[pos=0,above left]{$(0,0,0)$};
+\addplot3[thick]plot coordinates {({fx(1)},{fy(1)},{fz(1)})({fx(1)},{fy(1)},{0})}node[pos=0.6,right]{$C_4$};
+\addplot3[thick,dashed]plot coordinates {({fx(1)},{fy(1)},{0})({0},{fy(1)},{0})};
+\addplot3[thick,dashed]plot coordinates {({fx(1)},{fy(1)},{0})({fx(1)},{0},{0})}node[pos=0,right,yshift=-1ex]{$(1,1,0)$};
+\addplot3[thick]plot coordinates {(0,0,0)({fx(1)},{fy(1)},{0})}node[pos=0.5,below]{$C_3$};
+\addplot3[thick]plot coordinates {(0,0,0)({fx(1)},{fy(1)},{fz(1)})}node[pos=0.5,above]{$C_1$};
 \end{axis}
 \end{tikzpicture}
 \caption{}
@@ -1135,111 +1148,87 @@ N&=x=\cos t,&&\dif x=\dif\,(\cos t)=-\sin t\dif t
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_کام_الف}
 \(\kvec{F}=3y\ai+2x\aj+4z\ak\)
 \انتہا{سوال}
-%========================
 \ابتدا{جواب}
 \wf{\unexpanded{
 (ا) \عددی{\tfrac{9}{2}}، (ب) \عددی{\tfrac{13}{3}}، (ج) \عددی{\tfrac{9}{2}}}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 \(\kvec{F}=\tfrac{1}{1+x^2}\aj\)
 \انتہا{سوال}
-%========================
 \ابتدا{سوال}
 \(\kvec{F}=\sqrt{z}\ai-2x\aj+\sqrt{y}\ak\)
 \انتہا{سوال}
-%========================
 \ابتدا{جواب}
 \wf{\unexpanded{
 (ا) \عددی{\tfrac{1}{3}}، (ب) \عددی{-\tfrac{1}{5}}، (ج) \عددی{0}}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 \(\kvec{F}=xy\ai+yz\aj+xz\ak\)
 \انتہا{سوال}
-%========================
 \ابتدا{سوال}
 \(\kvec{F}=(3x^2-3x)\ai+3z\aj+\ak\)
 \انتہا{سوال}
-%========================
 \ابتدا{جواب}
 \wf{\unexpanded{
 (ا) \عددی{2}، (ب) \عددی{\tfrac{3}{2}}، (ج) \عددی{\tfrac{1}{2}}}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_کام_ب}
 \(\kvec{F}=(y+z)\ai+(z+x)\aj+(x+y)\ak\)
 \انتہا{سوال}
-%========================
 سوال \حوالہ{سوال_سمتی_تکمل_بڑھتا_رخ_کام_الف} تا سوال \حوالہ{سوال_سمتی_تکمل_بڑھتا_رخ_کام_ب} میں بڑھتے \عددی{t} رخ \عددی{\kvec{F}} کا کام تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_بڑھتا_رخ_کام_الف}
 \(\kvec{F}=xy\ai+y\aj-yz\ak,\, \kvec{r}(t)=t\ai+t^2\aj+t\ak,\, 0\le t\le 1\)
 \انتہا{سوال}
-%=====================
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(\tfrac{1}{2}\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 \(\kvec{F}=2y\ai+3x\aj+(x+y)\ak,\)\\
 \( \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj+\tfrac{t}{6}\ak,\, 0\le t\le 2\pi\)
 \انتہا{سوال}
-%=====================
 \ابتدا{سوال}
 \(\kvec{F}=z\ai+x\aj+y\ak,\, \kvec{r}(t)=(\sin t)\ai+(\cos t)\aj+t\ak,\, 0\le t\le 2\pi\)
 \انتہا{سوال}
-%=====================
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(-\pi\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_بڑھتا_رخ_کام_ب}
 \(\kvec{F}=6z\ai+y^2\aj+12x\ak,\, \kvec{r}(t)=(\sin t)\ai+(\cos t)\aj+\tfrac{t}{6}\ak,\, 0\le t\le 2\pi\)
 \انتہا{سوال}
-%=====================
 \موٹا{لکیری تکمل اور مستوی میں سمتی میدان}\\
 \ابتدا{سوال}
 نقطہ \عددی{(-1,1)} سے \عددی{(2,4)} تک منحنی \عددی{y=x^2} پر \عددی{\int_Cxy\dif x+(x+y)\dif y} کی قیمت تلاش کریں۔
 \انتہا{سوال}
-%=========================
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(\tfrac{207}{12}\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 ایک مثلث جس کے راس \عددی{(0,0)}، \عددی{(1,0)} اور \عددی{(0,1)} ہیں پر  \عددی{\int_C(x-y)\dif x+(x+y)\dif y} کی قیمت خلاف گھڑی چلتے ہوئے  تلاش کریں۔
 \انتہا{سوال}
-%=====================
 \ابتدا{سوال}
 نقطہ \عددی{(4,2)} سے \عددی{(1,-1)} تک منحنی \عددی{x=y^2} پر چلتے ہوئے سمتی میدان \عددی{\kvec{F}=x^2\ai-y\aj} کے لئے \عددی{\int_C\kvec{F}\cdot\kvec{T}\dif s} کی قیمت تلاش کریں۔ 
 \انتہا{سوال}
-%=====================
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(-\tfrac{39}{2}\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 نقطہ \عددی{(1,0)} سے \عددی{(0,1)} تک اکائی دائرہ \عددی{x^2+y^2=1} پر خلاف گھڑی چلتے ہوئے سمتی میدان \عددی{\kvec{F}=y\ai-x\aj} کے لئے \عددی{\int_C\kvec{F}\cdot\dif \kvec{\kvec{r}}} کی قیمت  تلاش کریں۔ 
 \انتہا{سوال}
-%=====================
 \ابتدا{سوال}
 نقطہ \عددی{(1,1)} سے \عددی{(2,3)} تک سیدھی لکیر پر  قوت \عددی{\kvec{F}=xy\ai+(y-x)\aj} کا  کام دریافت کریں۔ 
 \انتہا{سوال}
-%=====================
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(\tfrac{25}{6}\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 تفاعل \عددی{f(x,y)=(x+y)^2} کی ڈھلوان کا کام دائرہ \عددی{x^2+y^2=4} پر خلاف گھڑی نقطہ \عددی{(2,0)} سے چلتے ہوئے ایک چکر کے لئے   تلاش کریں۔
 \انتہا{سوال}
-%=====================
 \ابتدا{سوال}
 میدان \عددی{\kvec{F}_1=x\ai+y\ai} اور \عددی{\kvec{F}_2=-y\ai+x\aj} کی دائری بہاؤ درج ذیل منحنیات کی ہمراہ تلاش کریں اور ان منحنیات کو عبور کرتا ہوا بہاؤ تلاش کریں۔ 
 \begin{enumerate}[a.]
@@ -1249,45 +1238,36 @@ N&=x=\cos t,&&\dif x=\dif\,(\cos t)=-\sin t\dif t
 ترخیم \عددی{\kvec{r}(t)=(\cos t)\ai+(4\sin t)\aj,\, 0\le t\le 2\pi}
 \end{enumerate}
 \انتہا{سوال}
-%=====================
 \ابتدا{جواب}
 \wf{\unexpanded{
 (ا) دائری بہاؤ اول \عددی{0}، دائری بہاؤ دوم \عددی{2\pi}، بہاؤ اول \عددی{2\pi}، بہاؤ دوم \عددی{0}؛ (ب) دائری بہاؤ اول \عددی{0}، دائری بہاؤ دوم \عددی{8\pi}، بہاؤ اول \عددی{8\pi}، بہاؤ دوم \عددی{0} }}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 دائرہ \عددی{\kvec{r}(t)=(a\cos t)\ai+(a\sin t)\aj,\, 0\le t\le 2\pi} کو عبور کرتا ہوا بہاؤ  درج ذیل میدان کے لئے حاصل کریں۔
 \[\kvec{F}_1=2x\ai-3y\aj,\quad \kvec{F}_2=2x\ai+(x-y)\aj\]
 \انتہا{سوال}
-%===========================
 سوال \حوالہ{سوال_سمتی_تکمل_نصف_دائری_قوس_الف} تا سوال \حوالہ{سوال_سمتی_تکمل_نصف_دائری_قوس_ب} میں  نصف دائری قوس \عددی{\kvec{r}_1(t)=(a\cos t)\ai+(a\sin t)\aj,\, 0\le t\le \pi} اور قطع \عددی{\kvec{r}_2(t)=t\ai,\, -a\le t\le a} پر  مشتمل نصف دائری راہ  کی ہمراہ بہاؤ اور اس کو عبور کرتا ہوا بہاؤ، میدان \عددی{\kvec{F}} کے لئے  تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_نصف_دائری_قوس_الف}
 \(\kvec{F}=x\ai+y\aj\)
 \انتہا{سوال}
-%====================
 \ابتدا{جواب}
 \wf{\unexpanded{
 دائری بہاؤ \عددی{0}، بہاؤ  \عددی{a^2\pi}}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 \(\kvec{F}=x^2\ai+y^2\aj\)
 \انتہا{سوال}
-%====================
 \ابتدا{سوال}
 \(\kvec{F}=-y\ai+x\aj\)
 \انتہا{سوال}
-%====================
 \ابتدا{جواب}
 \wf{\unexpanded{
  دائری بہاؤ \عددی{a^2\pi}، بہاؤ  \عددی{0}}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_نصف_دائری_قوس_ب}
 \(\kvec{F}=-y^2\ai+x^2\aj\)
 \انتہا{سوال}
-%====================
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_کئی_راہ}
  سمتی رفتاری میدان \عددی{\kvec{F}=(x+y)\ai-(x^2+y^2)\aj}  کے بہاؤ کے تکمل کی قیمت درج ذیل راہ کی ہمراہ مستوی \عددی{xy} میں نقطہ \عددی{(1,0)} سے \عددی{(-1,0)}  تک  تلاش کریں۔
 \begin{enumerate}[a.]
@@ -1299,21 +1279,17 @@ N&=x=\cos t,&&\dif x=\dif\,(\cos t)=-\sin t\dif t
 نقطہ \عددی{(1,0)} تا \عددی{(0,-1)} اور اس کے بعد \عددی{(0,-1)} سے \عددی{(-1,0)} تک لکیری قطع۔
 \end{enumerate}
 \انتہا{سوال}
-%===================
 \ابتدا{جواب}
 \wf{\unexpanded{
 (ا)  \عددی{-\tfrac{\pi}{2}}، (ب) \عددی{0}، (ج) \عددی{1}}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 ایک مثلث، جس کے راس \عددی{(1,0)}، \عددی{(0,1)} اور \عددی{(-1,0)} ہیں، سے خارجی بہاؤ  سوال \حوالہ{سوال_سمتی_تکمل_کئی_راہ} کے میدان کے لئے تلاش کریں۔
 \انتہا{سوال}
-%==================
 \موٹا{مستوی میں میدان کی تلاش اور  خاکہ}\\
 \ابتدا{سوال}
 چکری میدان \عددی{\kvec{F}=\tfrac{-y}{\sqrt{x^2+y^2}}\ai+\tfrac{x}{\sqrt{x^2+y^2}}\aj} بمع  افقی اور انتصابی اجزاء کا خاکہ دائرہ \عددی{x^2+y^2=4} کے مختلف نقطوں پر بنائیں۔
 \انتہا{سوال}
-%===================
 \ابتدا{جواب}
 \wf{\unexpanded{
 \begin{center}
@@ -1348,63 +1324,50 @@ N&=x=\cos t,&&\dif x=\dif\,(\cos t)=-\sin t\dif t
 \ابتدا{سوال}
 رداسی میدان \عددی{\kvec{F}=x\ai+y\aj} بمع  افقی اور انتصابی اجزاء کا خاکہ دائرہ \عددی{x^2+y^2=1} کے مختلف نقطوں پر بنائیں۔
 \انتہا{سوال}
-%===================
 \ابتدا{سوال}
 (ا) مستوی \عددی{xy} میں  میدان \عددی{\kvec{G}=P(x,y)\ai+Q(x,y)\aj} تلاش کریں جس کی قیمت نقطہ \عددی{(a,b)\ne (0,0)} پر \عددی{\sqrt{a^2+b^2}}، رخ خلاف گھڑی اور  دائرہ \عددی{x^2+y^2=a^2+b^2} کو مماسی ہو۔ نقطہ \عددی{(0,0)} پر میدان غیر معین ہے۔  (ب) میدان \عددی{\kvec{G}} اور چکری میدان \عددی{\kvec{F}=\tfrac{-y}{\sqrt{x^2+y^2}}\ai+\tfrac{x}{\sqrt{x^2+y^2}}\aj} کے بیچ کیا تعلق پایا جاتا ہے؟
 \انتہا{سوال}
-%===================
 \ابتدا{جواب}
 \wf{\unexpanded{
 (ا) \عددی{\kvec{G}=-y\ai+x\aj}، \\
 (ب) \عددی{\kvec{G}=\sqrt{x^2+y^2}\kvec{F}}}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 (ا) مستوی \عددی{xy} میں ایسا میدان \عددی{\kvec{G}=P(x,y)\ai+Q(x,y)\aj} تلاش کریں جو \عددی{(a,b)\ne (0,0)} پر دائرہ \عددی{x^2+y^2=a^2+b^2} کو مماسی ہو، اس کی مطلق قیمت اکائی ہو اور اس کا رخ گھڑی وار ہو۔  (ب) میدان \عددی{\kvec{G}} اور چکری میدان \عددی{\kvec{F}=\tfrac{-y}{\sqrt{x^2+y^2}}\ai+\tfrac{x}{\sqrt{x^2+y^2}}\aj} کے بیچ کیا تعلق پایا جاتا ہے؟
 \انتہا{سوال}
-%====================
 \ابتدا{سوال}
 مستوی \عددی{xy} میں ایسا میدان \عددی{\kvec{F}=M(x,y)\ai+N(x,y)\aj} تلاش کریں جو  \عددی{(x,y)\ne (0,0)} پر مبدا کے رخ ہو اور اس کی مطلق قیمت اکائی ہو۔  نقطہ \عددی{(0,0)} پر میدان غیر معین ہے۔
 \انتہا{سوال}
-%====================
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(\kvec{F}=\tfrac{-x\ai-y\aj}{\sqrt{x^2+y^2}}\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 مستوی \عددی{xy} میں ایسا میدان \عددی{\kvec{F}=M(x,y)\ai+N(x,y)\aj} تلاش کریں جو  \عددی{(x,y)\ne (0,0)} پر مبدا کے رخ ہو اور   \عددی{\abs{\kvec{F}}} کی قیمت  (ا) مبدا سے \عددی{(x,y)}  تک فاصلہ کے برابر ہو، (ب) مبدا سے \عددی{(x,y)}  تک فاصلہ کے بالعکس متناسب ہو۔ نقطہ \عددی{(0,0)} پر میدان غیر معین ہے۔
 \انتہا{سوال}
-%====================
 \موٹا{فضا میں راہ کی ہمراہ تکمل بہاؤ}\\
 سوال \حوالہ{سوال_سمتی_تکمل_ہمراہ_بہاؤ_الف} تا سوال \حوالہ{سوال_سمتی_تکمل_ہمراہ_بہاؤ_ب} میں فضا کے کسی خطہ میں سمتی رفتاری میدان \عددی{\kvec{F}} سیال کے بہاؤ کو ظاہر کرتا ہے۔دی گئی منحنی کی ہمراہ بہاؤ، بڑھتے \عددی{t} کے رخ  تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_ہمراہ_بہاؤ_الف}
 \(\kvec{F}=-4xy\ai+8y\aj+2\ak,\, \kvec{r}(t)=t\ai+t^2\aj+\ak,\, 0\le t\le 2\)
 \انتہا{سوال}
-%====================
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(48\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 \(\kvec{F}=x^2\ai+yz\aj+y^2\ak,\, \kvec{r}(t)=3t\aj+4t\ak,\, 0\le t\le 1\)
 \انتہا{سوال}
-%====================
 \ابتدا{سوال}
 \(\kvec{F}=(x-z)\ai+x\ak,\, \kvec{r}(t)=(\cos t)\ai+(\sin t)\ak,\, 0\le t\le \pi\)
 \انتہا{سوال}
-%====================
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(\pi\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_ہمراہ_بہاؤ_ب}
 \(\kvec{F}=-y\ai+x\aj+2\ak,\)\\\( \kvec{r}(t)=(-2\cos t)\ai+(2\sin t)\aj+2t\ak,\, 0\le t\le 2\pi\)
 \انتہا{سوال}
-%====================
 \ابتدا{سوال}
 بڑھتے \عددی{t}  رخ چلتے ہوئے درج ذیل تین عدد بند راہ پر \عددی{\kvec{F}=2x\ai+2z\aj+2y\ak} کا دائری بہاؤ تلاش کریں (شکل \حوالہ{شکل_سوال_سمتی_تکمل_تین_راہ_تکونی})۔
 \begin{figure}
@@ -1413,9 +1376,9 @@ N&=x=\cos t,&&\dif x=\dif\,(\cos t)=-\sin t\dif t
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=cos(deg(\t));fy(\t)=sin(deg(\t));fz(\t)=\t;}]
 \begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=north},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},xmax=1.25]
-\addplot3[->-=0.85,domain=0:pi/2,variable =\t,samples y=0]({fx(t)},{fy(t)},{fz(t)})node[circ]{}node[right]{$(0,1,\tfrac{\pi}{2})$}node[pos=0.75,below]{$C_1$}node[pos=0,circ]{}node[pos=0,left]{$(1,0,0)$};
-\addplot3[->-=0.5]plot coordinates {({fx(pi/2)},{fy(pi/2)},{fz(pi/2)})({fx(pi/2)},{fy(pi/2)},{0})}node[pos=0.5,right]{$C_2$}node[pos=1,above right]{$(0,1,0)$};
-\addplot3[->-=0.5]plot coordinates {({fx(pi/2)},{fy(pi/2)},{0})({1},{0},{0})}node[pos=0.75,below]{$C_3$}node[pos=1,left]{$(1,0,0)$};
+\addplot3[thick,->-=0.85,domain=0:pi/2,variable =\t,samples y=0]({fx(t)},{fy(t)},{fz(t)})node[circ]{}node[right]{$(0,1,\tfrac{\pi}{2})$}node[pos=0.75,below]{$C_1$}node[pos=0,circ]{}node[pos=0,left]{$(1,0,0)$};
+\addplot3[thick,->-=0.5]plot coordinates {({fx(pi/2)},{fy(pi/2)},{fz(pi/2)})({fx(pi/2)},{fy(pi/2)},{0})}node[pos=0.5,right]{$C_2$}node[pos=1,above right]{$(0,1,0)$};
+\addplot3[thick,->-=0.5]plot coordinates {({fx(pi/2)},{fy(pi/2)},{0})({1},{0},{0})}node[pos=0.75,below]{$C_3$}node[pos=1,left]{$(1,0,0)$};
 \end{axis}
 \end{tikzpicture}
 \caption{}
@@ -1427,13 +1390,13 @@ N&=x=\cos t,&&\dif x=\dif\,(\cos t)=-\sin t\dif t
 \pgfmathsetmacro{\k}{0.4}
 \pgfmathsetmacro{\ks}{1}
 \pgfmathsetmacro{\ke}{1}
-\begin{axis}[clip=false,view={80}{30},small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=north},zlabel style={anchor=east},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},xmin=0,ymin=-1.25,zmin=0]
-\addplot3[domain=-\ks:\ke,variable =\t,samples y=0]({fx(t)},{fy(t)},{0});
-\addplot3[domain=-\ks:\ke,variable =\t,samples y=0]({fx(t)},{fy(t)},{1})node[pos=0,right]{$y=x^2$};
-\addplot3[]plot coordinates {({fx(-\ks)},{fy(-\ks)},{0})({fx(-\ks)},{fy(-\ks)},{1})};
-\addplot3[]plot coordinates {({fx(\ke)},{fy(\ke)},{0})({fx(\ke)},{fy(\ke)},{1})};
-\addplot3[]plot coordinates {(-1,-1,-1)(1,-1,1) (1,2,1) (-1,2,-1)(-1,-1,-1)};
-\addplot3[->-=0.5,domain=0:1,thick,samples y=0]({x},{x^2},{x})node[circ]{}node[above,xshift=2ex]{$(1,1,1)$};
+\begin{axis}[clip=false,view={80}{30},small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=north},zlabel style={anchor=east},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},xmin=0,ymin=-1.25,zmin=0,enlarge x limits=0.2]
+\addplot3[thick,domain=-\ks:\ke,variable =\t,samples y=0]({fx(t)},{fy(t)},{0});
+\addplot3[thick,domain=-\ks:\ke,variable =\t,samples y=0]({fx(t)},{fy(t)},{1})node[pos=0,right]{$y=x^2$};
+\addplot3[thick]plot coordinates {({fx(-\ks)},{fy(-\ks)},{0})({fx(-\ks)},{fy(-\ks)},{1})};
+\addplot3[thick]plot coordinates {({fx(\ke)},{fy(\ke)},{0})({fx(\ke)},{fy(\ke)},{1})};
+\addplot3[thick]plot coordinates {(-1,-1,-1)(1,-1,1) (1,2,1) (-1,2,-1)(-1,-1,-1)};
+\addplot3[thick,->-=0.5,domain=0:1,thick,samples y=0]({x},{x^2},{x})node[circ]{}node[above,xshift=2ex]{$(1,1,1)$};
 \addplot3[]plot coordinates {(1,2,1)}node[right]{$z=x$};
 \end{axis}
 \end{tikzpicture}
@@ -1448,25 +1411,20 @@ C_2:\quad \kvec{r}(t)&=\aj+\tfrac{\pi}{2}(1-t)\ak,&& 0\le t\le 1\\
 C_3:\quad \kvec{r}(t)&=t\ai+(1-t)\aj,&& 0\le t\le 1
 \end{align*}
 \انتہا{سوال}
-%===============
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(0\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_ترخیم_پر_بہاؤ}
 مستوی \عددی{2x+3y-z=0} اور بیلن \عددی{x^2+y^2=12} ایک دوسرے کو ترخیم \عددی{C} پر قطع کرتے ہیں۔ بغیر کوئی تکمل  حل کیے   دکھائیں کہ میدان \عددی{\kvec{F}=x\ai+y\aj+z\ak} کا \عددی{C} پر دونوں رخ چلتے ہوئے دائری بہاؤ صفر کے برابر ہے۔
 \انتہا{سوال}
-%=============
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_دو_سطحیں}
 فضا میں ایک سیال کے بہاؤ کا سمتی رفتار کا میدان \عددی{\kvec{F}=xy\ai+y\aj-yz\ak} ہے۔بیلن \عددی{y=x^2} اور مستوی \عددی{z=x} کی تقاطع لکیر کی ہمراہ نقطہ \عددی{(0,0,0)} سے \عددی{(1,1,1)} تک  بہاؤ تلاش کریں (شکل \حوالہ{شکل_سوال_سمتی_تکمل_دو_سطحیں})۔ (اشارہ: \عددی{t=x} کو مقدار معلوم لیں۔)
 \انتہا{سوال}
-%=============
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(\tfrac{1}{2}\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 میدان \عددی{\kvec{F}=\nabla (xy^2z^3)} کا بہاؤ درج ذیل کی ہمراہ تلاش کریں۔
 \begin{enumerate}[a.]
@@ -1477,17 +1435,14 @@ C_3:\quad \kvec{r}(t)&=t\ai+(1-t)\aj,&& 0\le t\le 1
 
 \end{enumerate}
 \انتہا{سوال}
-%==================
 \موٹا{نظریہ اور مثالیں}\\
 \ابتدا{سوال}
 فرض کریں \عددی{a\le t\le b}  کے لئے \عددی{f(t)} قابل تفرق اور مثبت ہے۔ مزید \عددی{\kvec{F}=y\ai} ہے جبکہ  راہ   \عددی{\kvec{r}(t)=t\ai+f(t)\aj, \, a\le t\le b} کو \عددی{C} ظاہر کرتی ہے۔ کیا محور \عددی{t}، لکیر \عددی{t=a}، \عددی{t=b} اور ترسیم \عددی{f} کے بیچ رقبہ اور  تکمل کام \عددی{\int_C \kvec{F}\cdot \dif \kvec{r}}  کا  ایک دوسرے کے ساتھ  کوئی تعلق پایا جاتا ہے؟ اپنے جواب کی وجہ پیش کریں۔
 \انتہا{سوال}
-%======================
 \ابتدا{سوال}
 ایک ذرہ نقطہ \عددی{(a,f(a))} سے \عددی{(b,f(b))} تک ہموار منحنی \عددی{y=f(x)} پر حرکت کرتا ہے۔ محرک قوت ہر نقطہ پر مبدا سے دوری کے رخ ہے  جبکہ اس کی مطلق قیمت  مستقل \عددی{k} ہے۔ دکھائیں کہ یہ قوت درج ذیل کام کرتی ہے۔
 \[\int_C\kvec{F}\cdot \kvec{T}\dif s=k\big[\sqrt{b^2+(f(b))^2}-\sqrt{a^2+(f(a))^2}\big]\]  
 \انتہا{سوال}
-%====================
 \موٹا{کمپیوٹر کا استعمال}
 سوال \حوالہ{سوال_سمتی_تکمل_کمپیوٹر_کام_الف} تا سوال \حوالہ{سوال_سمتی_تکمل_کمپیوٹر_کام_ب} میں کمپیوٹر کی مدد سے درج ذیل اقدام کرتے ہوئے دی گئی راہ پر قوت \عددی{\kvec{F}} کا کام تلاش کریں۔
 \begin{enumerate}[a.]
@@ -1502,31 +1457,26 @@ C_3:\quad \kvec{r}(t)&=t\ai+(1-t)\aj,&& 0\le t\le 1
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_کمپیوٹر_کام_الف}
 \(\kvec{F}=xy^6\ai+3x(xy^5+2)\aj;\, \kvec{r}(t)=2\cos t\ai+\sin t\aj,\, 0\le t\le 2\pi\)
 \انتہا{سوال}
-%=====================
 \ابتدا{سوال}
 \(\kvec{F}=\tfrac{3}{1+x^2}\ai+\tfrac{2}{1+y^2}aj;\, \kvec{r}(t)=\cos t\ai+\sin t\aj,\, 0\le t\le \pi\)
 \انتہا{سوال}
-%==============
 \ابتدا{سوال}
 \(\kvec{F}=(y+yz\cos xyz)\ai+(x^2+xz\cos xyz)\aj+(z+xy\cos xyz)\ak;\)\\
 \( \kvec{r}(t)=2\cos t\ai+3\sin t\aj+\ak,\, 0\le t\le 2\pi\)
 \انتہا{سوال}
-%============================
+%========
 \ابتدا{سوال}
 \(\kvec{F}=2xy\ai-y^2\aj+ze^x\ak;\)\\
 \( \kvec{r}(t)=-t\ai+\sqrt{t}\aj+3t\ak,\, 0\le t\le 4\)
 \انتہا{سوال}
-%=====================
 \ابتدا{سوال}
 \(\kvec{F}=(2y+\sin x)\ai+(z^2+\tfrac{1}{3}\cos y)\aj+x^4\ak;\)\\
 \( \kvec{r}(t)=\sin t \ai+\cos t\aj+\sin 2t\ak,\, -\tfrac{\pi}{2}\le t\le \tfrac{\pi}{2}\)
 \انتہا{سوال}
-%=====================
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_کمپیوٹر_کام_ب}
 \(\kvec{F}=x^2y\ai+\tfrac{1}{3}x^3\aj+xy\ak;\)\\
 \( \kvec{r}(t)=\cos t\ai+\sin t\aj+(2\sin^2 t-1)\ak,\, 0\le t\le 2\pi\)
 \انتہا{سوال}
-%=====================
 \انتہا{سوالات}
 
 \حصہ{راہ سے آزادی، تفاعل خفی توانائی، اور بقائی میدان}\شناخت{حصہ_راہ_آزادی_تفاعل_خفی_توانائی_بقائی}
@@ -1538,14 +1488,12 @@ C_3:\quad \kvec{r}(t)&=t\ai+(1-t)\aj,&& 0\le t\le 1
 \ابتدا{تعریف}
 فضا میں کھلا خطہ \عددی{D} پر \عددی{\kvec{F}} کو ایک  معین میدان لیتے ہوئے تصور کریں کہ \عددی{D} میں ہر دو نقطوں \عددی{A} اور \عددی{B} کے بیچ ہر ممکنہ راہ پر تکمل کام \عددی{\int_A^B\kvec{F}\cdot\dif\kvec{r}} کی قیمت ایک جیسی ہے۔ تب تکمل \عددی{\int\kvec{F}\cdot\dif\kvec{r}} خطہ \عددی{D} میں \اصطلاح{راہ سے آزاد}\فرہنگ{راہ سے آزاد}\حاشیہب{path independent}\فرہنگ{path independent} ہو گا اور میدان \عددی{\kvec{F}} خطہ \عددی{D} پر \اصطلاح{بقائی}\فرہنگ{بقائی}\حاشیہب{conservative}\فرہنگ{conservative} ہو گا۔
 \انتہا{تعریف}
-%======================
 
 عملی زندگی میں عموماً میدان \عددی{\kvec{F}} صرف اور صرف اس صورت بقائی ہو گا جب  \عددی{D} پر \عددی{\kvec{F}=\nabla f} ہو جہاں \عددی{f} ایک غیر سمتی تفاعل ہے۔ ایسی صورت میں تفاعل \عددی{f} کو \عددی{\kvec{F}} کا مخفی قوہ تفاعل کہتے ہیں۔   
 
 \ابتدا{تعریف}
 اگر \عددی{D}پر میدان \عددی{\kvec{F}} معین ہو اور \عددی{\kvec{F}=\nabla f} ہو جہاں \عددی{f} خطہ \عددی{D} پر ایک غیر سمتی تفاعل ہو تب \عددی{f} کو \عددی{\kvec{F}} کا \اصطلاح{مخفی قوہ تفاعل}\فرہنگ{مخفی قوہ تفاعل}\حاشیہب{potential function}\فرہنگ{potential function} کہتے ہیں۔
 \انتہا{تعریف}
-%======================
 
 برقی مخفی قوہ ایک غیر سمتی تفاعل ہے جس کا میدان ڈھلوان  ایک برقی میدان ہوتا ہے۔  ثقلی مخفی قوہ ایک غیر سمتی تفاعل ہے جس کا میدان ڈھلوان ایک  ثقلی میدان ہوتا ہے، وغیرہ وغیرہ۔ جیسا ہم اب دیکھیں گے،  میدان \عددی{\kvec{F}} کا مخفی قوہ تفاعل \عددی{f} جاننے کے بعد \عددی{\kvec{F}} کی دائرہ کار میں تمام تکملات کام  کی قیمتیں درج ذیل سے حاصل کی جا سکتی ہیں۔
 \begin{align}\label{مساوات_سمتی_تکمل_مخفی_قوہ_استعمال}
@@ -1580,7 +1528,7 @@ C_3:\quad \kvec{r}(t)&=t\ai+(1-t)\aj,&& 0\le t\le 1
 \end{align*}
 \end{enumerate}
 \انتہا{مسئلہ}
-%========= 
+%= 
 \ابتدا{ثبوت}\موٹا{کہ \عددی{\kvec{F}=\nabla f} سے مراد تکمل کی قیمت کا راہ سے آزاد ہونا ہے}\\
 فرض کریں \عددی{D} میں \عددی{A} اور \عددی{B} دو نقطے ہیں اور \عددی{D} میں \عددی{A} سے \عددی{B} تک
  ہموار راہ درج ذیل ہے۔
@@ -1597,7 +1545,6 @@ C_3:\quad \kvec{r}(t)&=t\ai+(1-t)\aj,&& 0\le t\le 1
 \end{align*}
 اس طرح تکمل کام کی قیمت \عددی{A} اور \عددی{B} پر \عددی{f} کی قیمتوں پر منحصر ہو گی نا کہ ان کے بیچ راہ پر۔ یوں مسئلہ کے دوسرا  جزو  کے ساتھ ساتھ پہلا مضمر جزو بھی ثابت ہوتا ہے۔ ہم الٹ مضمر  کا زیادہ پیچیدہ ثبوت پیش نہیں کرتے ہیں۔
 \انتہا{ثبوت}
-%==================
 
 \ابتدا{مثال}
 نقاط \عددی{(-1,3,9)} اور \عددی{(1,6,-4)} کے بیچ ہموار منحنی \عددی{C} پر چلتے  ہوئے درج ذیل بقائی میدان کا کم تلاش کریں۔
@@ -1614,7 +1561,6 @@ C_3:\quad \kvec{r}(t)&=t\ai+(1-t)\aj,&& 0\le t\le 1
 &=-24+27=3
 \end{align*}
 \انتہا{مثال}
-%=====================
 \ابتدا{مسئلہ}\شناخت{مسئلہ_سمتی_تکمل_بند_راہ_صفر}
 درج ذیل فقرے  معادل ہیں۔
 \begin{enumerate}[a.]
@@ -1624,14 +1570,13 @@ C_3:\quad \kvec{r}(t)&=t\ai+(1-t)\aj,&& 0\le t\le 1
 خطہ \عددی{D} پر میدان \عددی{\kvec{F}} بقائی ہے۔
 \end{enumerate}
 \انتہا{مسئلہ}
-%=============
 \begin{figure}
 \centering
 \begin{subfigure}[c]{0.45\textwidth}
 \centering
 \begin{tikzpicture}
-\draw[->-=0.5](0,0)node[left]{$A$} to [out=0,in=-160]node[pos=0.5,below right]{$C_1$}(2,1)node[right]{$B$};
-\draw[->-=0.5](0,0) to [out=90,in=160]node[pos=0.5,above left]{$C_2$}(2,1);
+\draw[thick,->-=0.5](0,0)node[left]{$A$} to [out=0,in=-160]node[pos=0.5,below right]{$C_1$}(2,1)node[right]{$B$};
+\draw[thick,->-=0.5](0,0) to [out=90,in=160]node[pos=0.5,above left]{$C_2$}(2,1);
 \end{tikzpicture}
 \end{subfigure}\hfill
 \begin{subfigure}[c]{0.10\textwidth}
@@ -1646,8 +1591,8 @@ C_3:\quad \kvec{r}(t)&=t\ai+(1-t)\aj,&& 0\le t\le 1
 \begin{subfigure}[c]{0.45\textwidth}
 \centering
 \begin{tikzpicture}
-\draw[->-=0.5](0,0)node[left]{$A$} to [out=0,in=-160]node[pos=0.5,below right]{$C_1$}(2,1)node[right]{$B$};
-\draw[-<-=0.5](0,0) to [out=90,in=160]node[pos=0.5,above left]{$-C_2$}(2,1);
+\draw[thick,->-=0.5](0,0)node[left]{$A$} to [out=0,in=-160]node[pos=0.5,below right]{$C_1$}(2,1)node[right]{$B$};
+\draw[thick,-<-=0.5](0,0) to [out=90,in=160]node[pos=0.5,above left]{$-C_2$}(2,1);
 \end{tikzpicture}
 \end{subfigure}
 \caption{
@@ -1662,7 +1607,7 @@ C_3:\quad \kvec{r}(t)&=t\ai+(1-t)\aj,&& 0\le t\le 1
 \end{align*}
 یوں \عددی{C_1} اور \عددی{C_2} پر تکمل کی قیمتیں ایک دوسرے جیسی  ہیں۔
 \انتہا{ثبوت}
-%========================
+%====
 \begin{figure}
 \centering
 \pgfmathsetmacro{\ka}{-10}
@@ -1670,8 +1615,8 @@ C_3:\quad \kvec{r}(t)&=t\ai+(1-t)\aj,&& 0\le t\le 1
 \begin{subfigure}[c]{0.45\textwidth}
 \centering
 \begin{tikzpicture}
-\draw[->-=0.5](0,0)node[circ]{}node[below]{$A$} to [out=\ka,in=\ka]node[pos=0.5,below]{$C_1$}(2,1)node[circ]{}node[above]{$B$};
-\draw[->-=0.5](2,1) to [out=\kaa,in=\kaa]node[pos=0.4,above,xshift=-1ex]{$C_2$}(0,0);
+\draw[thick,->-=0.5](0,0)node[circ]{}node[below]{$A$} to [out=\ka,in=\ka]node[pos=0.5,below]{$C_1$}(2,1)node[circ]{}node[above]{$B$};
+\draw[thick,->-=0.5](2,1) to [out=\kaa,in=\kaa]node[pos=0.4,above,xshift=-1ex]{$C_2$}(0,0);
 \end{tikzpicture}
 \end{subfigure}\hfill
 \begin{subfigure}[c]{0.10\textwidth}
@@ -1686,8 +1631,8 @@ C_3:\quad \kvec{r}(t)&=t\ai+(1-t)\aj,&& 0\le t\le 1
 \begin{subfigure}[c]{0.45\textwidth}
 \centering
 \begin{tikzpicture}
-\draw[->-=0.5](0,0)node[circ]{}node[below]{$A$} to [out=\ka,in=\ka]node[pos=0.5,below]{$C_1$}(2,1)node[circ]{}node[above]{$B$};
-\draw[-<-=0.5](2,1) to [out=\kaa,in=\kaa]node[pos=0.4,above,xshift=-1ex]{$-C_2$}(0,0);
+\draw[thick,->-=0.5](0,0)node[circ]{}node[below]{$A$} to [out=\ka,in=\ka]node[pos=0.5,below]{$C_1$}(2,1)node[circ]{}node[above]{$B$};
+\draw[thick,-<-=0.5](2,1) to [out=\kaa,in=\kaa]node[pos=0.4,above,xshift=-1ex]{$-C_2$}(0,0);
 \end{tikzpicture}
 \end{subfigure}
 \caption{
@@ -1700,7 +1645,6 @@ C_3:\quad \kvec{r}(t)&=t\ai+(1-t)\aj,&& 0\le t\le 1
 \oint_C\kvec{F}\cdot\dif\kvec{r}&=\int_{C_1}\kvec{F}\cdot\dif\kvec{r}+\int_{C_2}\kvec{F}\cdot\dif\kvec{r}=\int_A^B\kvec{F}\cdot\dif\kvec{r}-\int_B^A\kvec{F}\cdot\dif\kvec{r}=0
 \end{align*}
 \انتہا{ثبوت}
-%====================
 مسئلہ \حوالہ{مسئلہ_سمتی_تکمل_بنیادی_مسئلہ} اور مسئلہ \حوالہ{مسئلہ_سمتی_تکمل_بند_راہ_صفر} کے نتائج کو  یکجا  کرتے ہیں۔
 \begin{align*}
 \oint_C\kvec{F}\cdot\dif\kvec{r}=0\,\text{\RL{\(D\)\, میں کسی بھی بند راہ پر}}\quad \Leftrightarrow \quad \text{\RL{\(D\)\, پر \, \(\kvec{F}\)\, بقائی ہے}}\quad \Leftrightarrow\quad   \kvec{F}=\nabla f \,\text{\RL{\(D\)\, پر}}
@@ -1722,7 +1666,6 @@ C_3:\quad \kvec{r}(t)&=t\ai+(1-t)\aj,&& 0\le t\le 1
 \frac{\partial P}{\partial y}=\frac{\partial N}{\partial z},\quad \frac{\partial M}{\partial z}=\frac{\partial P}{\partial x}, \quad \text{اور}\quad \frac{\partial N}{\partial x}=\frac{\partial M}{\partial y}
 \end{align}
 \انتہا{پرکھ}
-%=====================
 \ابتدا{ثبوت پرکھ}
 ہم دکھاتے ہیں کہ بقائی \عددی{\kvec{F}} کے لئے  مساوات \حوالہ{مساوات_سمتی_تکمل_بقائی_جزوی_پرکھ} ہر صورت مطمئن ہو گا۔ایسا مخفی قوہ تفاعل \عددی{f} پایا جائے گا جو درج ذیل کو مطمئن کرے گا۔
 \begin{align*}
@@ -1738,7 +1681,7 @@ C_3:\quad \kvec{r}(t)&=t\ai+(1-t)\aj,&& 0\le t\le 1
 
 ثبوت کا دوسرا حصہ، جس سے مراد لیا جا سکتا ہے کہ مساوات \حوالہ{مساوات_سمتی_تکمل_بقائی_جزوی_پرکھ} کہتی ہے کہ \عددی{\kvec{F}} بقائی ہو گا، مسئلہ سٹوکس کا نتیجہ ہے۔
 \انتہا{ثبوت پرکھ}
-%=======================
+%===
 
 یہ جانتے ہوئے کہ \عددی{\kvec{F}} بقائی ہے، ہم عموماً مخفی قوہ تفاعل \عددی{f} دریافت کرنا چاہیں گے جو مساوات \عددی{\nabla f=\kvec{F}} یعنی
 \begin{align*}
@@ -1794,7 +1737,6 @@ f(x,y,z)=e^x\cos y+xyz+\frac{z^2}{2}+C
 \end{align*}
 یوں  مستقل \عددی{C} کی لامتناہی ممکنہ منفرد قیمتیں منتخب کر کے  \عددی{\kvec{F}} کے لامتناہی تعداد کے مخفی قوہ تفاعل حاصل ہوں گے۔ 
 \انتہا{مثال}
-%======================
 \ابتدا{مثال}
 دکھائیں کہ \عددی{\kvec{F}=(2x-3)\ai-z\aj+(\cos z)\ak} غیر بقائی ہے۔
 
@@ -1805,7 +1747,6 @@ f(x,y,z)=e^x\cos y+xyz+\frac{z^2}{2}+C
 \end{align*}
 حاصل کرتے ہیں۔یہ قیمتیں ایک دوسرے سے مختلف ہیں لہٰذا \عددی{\kvec{F}} غیر بقائی ہو گا۔ پرکھ کے باقی اجزاء کو دیکھنے کی ضرورت نہیں ہے۔
 \انتہا{مثال}
-%====================
 \جزوحصہء{قطعی تفرقی روپ}
 جیسا ہم اگلے حصہ میں دیکھیں گے، تکمل کام اور تکمل دائری بہاؤ کا اظہار \قول{تفرقی} روپ
 \begin{align*}
@@ -1828,7 +1769,6 @@ f(x,y,z)=e^x\cos y+xyz+\frac{z^2}{2}+C
 M\dif x+N\dif y+P\dif z=\frac{\partial f}{\partial x}\dif x+\frac{\partial f}{\partial y}\dif y+\frac{\partial f}{\partial z}\dif z=\dif f
 \end{align*}
 \انتہا{تعریف}
-%=================
 دھیان رہے کہ \عددی{D} میں  \عددی{M\dif x+N\dif y+P\dif z=\dif  f} کی صورت میں \عددی{D} پر \عددی{f} کا میدان ڈھلوان \عددی{\kvec{F}=M\ai+N\aj+P\ak} ہو گا۔ اسی طرح اگر \عددی{\kvec{F}=\nabla f} ہو تب روپ \عددی{M\dif x+N\dif y+P\dif z=\dif  f} قطعی تفرقی ہو گا۔یوں \عددی{\kvec{F}} کے بقائی ہونا کا  پرکھ ہی اس روپ کے قطعی تفرقی ہونے کا پرکھ ہو گا۔  
 
 \ابتدا{پرکھ}\موٹا{ قطعی تفرقی پرکھ برائے \عددی{M\dif x+N\dif y+P\dif z=\dif  f}}\\
@@ -1838,7 +1778,6 @@ M\dif x+N\dif y+P\dif z=\frac{\partial f}{\partial x}\dif x+\frac{\partial f}{\p
 \end{align}
 یہ اس بات کا معادل ہے کہ میدان \عددی{\kvec{F}=M\ai+N\aj+P\ak} بقائی ہے۔
 \انتہا{پرکھ}
-%==================
 \ابتدا{مثال}\شناخت{مثال_سمتی_تکمل_لکیری_تکمل}
 دکھائیں کہ \عددی{y\dif x+x\dif y+4\dif z} قطعی تفرقی ہے اور درج ذیل تکمل کی قیمت قطع \عددی{(1,1,1)} تا \عددی{(2,3,-1)} پر حاصل کریں۔
 \begin{align*}
@@ -1887,7 +1826,6 @@ f(x,y,z)=xy+4z+C
 f(2,3,-1)-f(1,1,1)=2+C-(5+C)=-3
 \end{align*}
 \انتہا{مثال}
-%================
 
 \جزوحصہء{سوالات}
 \ابتدا{سوالات}
@@ -1897,151 +1835,128 @@ f(2,3,-1)-f(1,1,1)=2+C-(5+C)=-3
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_کونسا_بقائی_الف}
 \(\kvec{F}=yz\ai+xz\aj+xy\ak\)
 \انتہا{سوال}
-%=================
 \ابتدا{جواب}
 \wf{\unexpanded{
 بقائی}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 \(\kvec{F}=(y\sin z)\ai+(x\sin z)\aj+(xy\cos z)\ak\)
 \انتہا{سوال}
-%=================
 \ابتدا{سوال}
 \(\kvec{F}=y\ai+(x+z)\aj-y\ak\)
 \انتہا{سوال}
-%=================
 \ابتدا{جواب}
 \wf{\unexpanded{
 غیر بقائی}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 \(\kvec{F}=-y\ai+x\aj\)
 \انتہا{سوال}
-%=================
 \ابتدا{سوال}
 \(\kvec{F}=(y+z+\ai+z\aj+(x+y)\ak\)
 \انتہا{سوال}
-%=================
 \ابتدا{جواب}
 \wf{\unexpanded{
 غیر بقائی}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_کونسا_بقائی_ب}
 \(\kvec{F}=(e^x \cos y)\ai-(e^x\sin y)\aj+z\ak\)
 \انتہا{سوال}
-%=================
 \موٹا{مخفی قوہ تفاعل کی تلاش}\\
 سوال \حوالہ{سوال_سمتی_تکمل_مخفی_قوہ_تفاعل_تلاش_الف} تا سوال \حوالہ{سوال_سمتی_تکمل_مخفی_قوہ_تفاعل_تلاش_ب} میں میدان \عددی{\kvec{F}} کا مخفی قوہ تفاعل \عددی{f} تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_مخفی_قوہ_تفاعل_تلاش_الف}
 \(\kvec{F}=2x\ai+3y\aj+4z\ak\)
 \انتہا{سوال}
-%=====================
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(f(x,y,z)=x^2+\tfrac{3y^2}{2}+2z^2+C\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 \(\kvec{F}=(y+z)\ai+(x+z)\aj+(x+y)\ak\)
 \انتہا{سوال}
-%=====================
 \ابتدا{سوال}
 \(\kvec{F}=e^{y+2z}(\ai+x\aj+2x\ak)\)
 \انتہا{سوال}
-%=====================
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(f(x,y,z)=xe^{y+2z}+C\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 \(\kvec{F}=(y\sin z)\ai+(x\sin z)\aj+(xy\cos z)\ak\)
 \انتہا{سوال}
-%=====================
 \ابتدا{سوال}\(\kvec{F}=(\ln x+\sec^2(x+y))\ai+\big(\sec^2(x+y)+\frac{y}{y^2+z^2}\big)\aj+\frac{z}{y^2+z^2}\ak\)
 \انتہا{سوال}
-%=====================
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(f(x,y,z)=x\ln x-x+\tan(x+y)+\tfrac{1}{2}\ln(y^2+z^2)+C\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_مخفی_قوہ_تفاعل_تلاش_ب}
 {\small{\(\kvec{F}=\frac{y}{1+x^2y^2}\ai+\big(\frac{x}{1+x^2y^2}+\frac{z}{\sqrt{1-y^2z^2}}\big)\aj+\big(\frac{y}{\sqrt{1-y^2z^2}}+\frac{1}{z}\big)\ak\)}}
 \انتہا{سوال}
-%============================
+%========
 \موٹا{لکیری تکملات کی قیمتوں کا حصول}\\
 سوال \حوالہ{سوال_سمتی_تکمل_لکیری_تکمل_کی_قیمت_الف} تا سوال \حوالہ{سوال_سمتی_تکمل_لکیری_تکمل_کی_قیمت_ب} میں دکھائیں کہ متکمل قطعی تفرقی ہے۔اس کے بعد لکیری تکمل کی قیمت حاصل کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_لکیری_تکمل_کی_قیمت_الف}
 \(\int_{(0,0,0)}^{(2,3,-6)}2x\dif x+2y\dif y+2z\dif z\)
 \انتہا{سوال}
-%===========================
+%=======
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(49\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 \(\int_{(1,1,2)}^{(3,5,0)}yz\dif x+xz\dif y+xy\dif z\)
 \انتہا{سوال}
-%===========================
+%=======
 \ابتدا{سوال}
 \(\int_{(0,0,0)}^{(1,2,3)}2xy\dif x+(x^2-z^2)\dif y-2yz\dif z\)
 \انتہا{سوال}
-%===========================
+%=======
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(-16\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 \(\int_{(0,0,0)}^{(3,3,1)}2x\dif x-y^2\dif y-\frac{4}{1+z^2}\dif z\)
 \انتہا{سوال}
-%===========================
+%=======
 \ابتدا{سوال}
 \(\int_{(1,0,0)}^{(0,1,1)}\sin y\cos x\dif x+\cos y\sin x\dif y+\dif z\)
 \انتہا{سوال}
-%===========================
+%=======
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(1\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 \(\int_{(0,2,1)}^{(1,\pi/2,2)}2\cos y\dif x+\big(\frac{1}{y}-2x\sin y\big)\dif y+\frac{1}{z}\dif z\)
 \انتہا{سوال}
-%===========================
+%=======
 \ابتدا{سوال}
 \(\int_{(1,1,1)}^{(1,2,3)}3x^2\dif x+\frac{z^2}{y}\dif y+2z\ln y\dif z\)
 \انتہا{سوال}
-%===========================
+%=======
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(9\ln 2\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 \(\int_{(1,2,1)}^{(2,1,1)}(2x\ln y-yz)\dif x+\big(\frac{x^2}{y}-xz\big)\dif y-xy\dif z\)
 \انتہا{سوال}
-%===========================
+%=======
 \ابتدا{سوال}
 \(\int_{(1,1,1)}^{(2,2,2)}\frac{\dif x}{y}+\big(\frac{1}{z}-\frac{x}{y^2}\big)\dif y-\frac{y}{z^2}\dif z\)
 \انتہا{سوال}
-%===========================
+%=======
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(0\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_لکیری_تکمل_کی_قیمت_ب}
 \(\int_{(-1,-1,-1)}^{(2,2,2)}\frac{2x\dif x+2y\dif y+2z\dif z}{x^2+y^2+z^2}\)
 \انتہا{سوال}
-%=====================
 \ابتدا{سوال}
 نقطہ \عددی{(1,1,1)} سے \عددی{(2,3,-1)} تک قطع کی مقدار معلوم مساواتیں دریافت کر کے اس پر میدان \عددی{\kvec{F}=y\ai+x\aj+4\ak} کی لکیری تکمل
 \begin{align*}
@@ -2050,45 +1965,37 @@ f(2,3,-1)-f(1,1,1)=2+C-(5+C)=-3
  کی قیمت تلاش کریں۔چونکہ \عددی{\kvec{F}} بقائی میدان ہے لہٰذا تکمل کی قیمت راہ سے بے نیاز ہو گی۔
 درج ذیل لکیری تکمل مثال \حوالہ{مثال_سمتی_تکمل_لکیری_تکمل}
 \انتہا{سوال}
-%======================
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(-3\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 نقطہ \عددی{(0,0,0)} سے \عددی{(0,3,4)} تک  قطع \عددی{C} کی ہمراہ درج ذیل تکمل کی قیمت تلاش کریں۔
 \begin{align*}
 \int_C x^2\dif x+yz\dif y+\frac{y^2}{2}\dif z
 \end{align*}
 \انتہا{سوال}
-%==================
 \موٹا{نظریہ، عملی استعمال اور مثالیں}\\
 دکھائیں کہ سوال \حوالہ{سوال_سمتی_تکمل_دو_سوالات_الف} اور سوال \حوالہ{سوال_سمتی_تکمل_دو_سوالات_ب} میں  تکمل کی قیمت  راہ \عددی{A} تا \عددی{B} پر منحصر نہیں ہے۔
 
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_دو_سوالات_الف}
 \(\int_A^Bz^2\dif x+2y\dif y+2xz\dif z\)
 \انتہا{سوال}
-%==================
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_دو_سوالات_ب}
 \(\int_A^B \frac{x\dif x+y\dif y+z\dif z}{\sqrt{x^2+y^2+z^2}}\)
 \انتہا{سوال}
-%====================
 سوال \حوالہ{سوال_سمتی_تکمل_روپ_دو_الف} اور سوال \حوالہ{سوال_سمتی_تکمل_روپ_دو_ب} میں \عددی{\kvec{F}} کو \عددی{\nabla f} روپ میں لکھیں۔
 
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_روپ_دو_الف}
 \(\kvec{F}=\frac{2x}{y}\ai+\big(\frac{1-x^2}{y^2}\big)\aj\)
 \انتہا{سوال}
-%=================
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(\kvec{F}=\nabla(\tfrac{x^2-1}{y})\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_روپ_دو_ب}
 \(\kvec{F}=(e^x\ln y)\ai+\big(\frac{e^x}{y}+\sin z\big)\aj+(y\cos z)\ak\)
 \انتہا{سوال}
-%=====================
 \ابتدا{سوال}
 نقطہ \عددی{(1,0,0)} سے \عددی{(1,0,1)} تک درج ذیل راہ کی ہمراہ \عددی{\kvec{F}=(x^2+y)\ai+(y^2+x)\aj+ze^z\ak} کا کام تلاش کریں۔
 \begin{enumerate}[a.]
@@ -2100,12 +2007,10 @@ f(2,3,-1)-f(1,1,1)=2+C-(5+C)=-3
 محور \عددی{x} پر  \عددی{(1,0,0)} سے \عددی{(0,0,0)} کے بعد \عددی{(0,0,0)} سے \عددی{(1,0,1)} تک قطع مکافی \عددی{z=x^2,\, y=0} 
 \end{enumerate}
 \انتہا{سوال}
-%====================
 \ابتدا{جواب}
 \wf{\unexpanded{
 (ا) \عددی{1}، (ب) \عددی{1}، (ج) \عددی{1}}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 قوت \عددی{\kvec{F}=e^{yz}\ai+(xze^{yz}+z\cos y)\aj+(xye^{yz}+\sin y)\ak} کا کا م نقطہ \عددی{(1,0,1)} تا \عددی{(1,\tfrac{\pi}{2},0)} درج ذیل راہ کی ہمراہ تلاش کریں۔
 \begin{enumerate}[a.]
@@ -2117,7 +2022,6 @@ f(2,3,-1)-f(1,1,1)=2+C-(5+C)=-3
 نقطہ \عددی{(1,0,1)} تا \عددی{(1,0,0)} قطع کے بعد محور \عددی{x} پر \عددی{(1,0,0)} سے مبدا اور آخر میں قطع مکافی \عددی{y=\tfrac{\pi x^2}{2},\, z=0}  
 \end{enumerate}
 \انتہا{سوال}
-%=================
 \ابتدا{سوال}
 مستوی \عددی{xy} میں \عددی{(-1,1)} تا \عددی{(1,1)} راہ \عددی{C}،  نقطہ \عددی{(-1,1)} تا \عددی{(0,0)} اور نقطہ \عددی{(0,0)} تا \عددی{(1,1)} قطعات پر مشتمل ہے جبکہ \عددی{\kvec{F}=\nabla (x^3y^2)} ہے۔ تکمل \عددی{\int_C \kvec{F}\cdot\dif\kvec{r}} کی قیمت درج ذیل دو طریقوں سے تلاش کریں۔
 \begin{enumerate}[a.]
@@ -2127,12 +2031,10 @@ f(2,3,-1)-f(1,1,1)=2+C-(5+C)=-3
 اس حقیقت کو برائے کار لائیں کہ \عددی{\kvec{F}} کا مخفی قوہ تفاعل \عددی{f(x,y)=x^3y^2}  ہے۔
 \end{enumerate}
 \انتہا{سوال}
-%=====================
 \ابتدا{جواب}
 \wf{\unexpanded{
 (ا) \عددی{2}، (ب) \عددی{2}}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 مستوی \عددی{xy} میں درج ذیل راہ \عددی{C} کی ہمراہ \عددی{\int_C2x\cos y\dif x-x^2\sin y\dif y} کی قیمت تلاش کریں۔
 \begin{enumerate}[a.]
@@ -2144,47 +2046,39 @@ f(2,3,-1)-f(1,1,1)=2+C-(5+C)=-3
 ستارہ نما \عددی{\kvec{r}(t)=(\cos^3t)\ai+(\sin^3t)\aj,\,0\le t\le 2\pi} پر نقطہ \عددی{(1,0)} سے خلاف گھڑی واپس نقطہ \عددی{(1,0)} تک۔
 \end{enumerate}
 \انتہا{سوال}
-%======================
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_ثقلی_میدان_کا_مخفی_قوہ}
 ثقلی میدان \عددی{\kvec{F}=-GmM\tfrac{x\ai+y\aj+z\ak}{(x^2+y^2+z^2)^{3/2}}} کا مخفی قوہ تفاعل تلاش کریں۔
 \انتہا{سوال}
-%=========================
+%=====
 \ابتدا{جواب}
 \wf{\unexpanded{
 \(f(x,y,z)=\tfrac{GmM}{(x^2+y^2+z^2)^{1/2}}\)}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 مبدا سے \عددی{s_1} اور \عددی{s_2} فاصلوں پر بالترتیب نقاط \عددی{N_1} اور \عددی{N_2} پائے جاتے ہیں۔ دکھائیں کہ سوال \حوالہ{سوال_سمتی_تکمل_ثقلی_میدان_کا_مخفی_قوہ} کے ثقلی میدان میں \عددی{N_1} سے \عددی{N_2} تک ایک ذرہ کو منتقل کرنے کے لئے \عددی{GmM\big(\tfrac{1}{s_2}-\tfrac{1}{s_1}\big)} کام درکار ہو گا۔
 \انتہا{سوال}
-%=======================
+%===
 \ابتدا{سوال}
 (ا) روپ \عددی{(ay^2+2czx)\dif x+y(bx+cz)\dif y+(ay^2+cx^2)\dif z} قطعی تفرقی ہونے کی صورت میں مستقل \عددی{a}، \عددی{b} اور  \عددی{c}  کا تعلق تلاش کریں۔ (ب) \عددی{b} اور \عددی{c} کی کن قیمتوں کے لئے درج ذیل  میدان ڈھلوان ہو گا؟
 \[\kvec{F}=(y^2+2czx)\ai+y(bx+cz)\aj+(y^2+cx^2)\ak\]
 \انتہا{سوال}
-%====================
 \ابتدا{جواب}
 \wf{\unexpanded{
 (ا) \عددی{c=b=2a}، (ب) \عددی{c=b=2}}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 فرض کریں \عددی{\kvec{F}=\nabla f} بقائی سمتی میدان ہے اور \عددی{g(x,y,z)=\int_{(0,0,0)}^{(x,y,z)}\kvec{F}\cdot\dif\kvec{r}} ہے۔دکھائیں کہ \عددی{\nabla g=\kvec{F}} ہو گا۔
 \انتہا{سوال}
-%==============
 \ابتدا{سوال}
 آپ کو دو نقطوں کے بیچ وہ راہ تلاش کرنی ہے جس پر چلتے ہوئے \عددی{\kvec{F}} کم سے کم کام کرے گا۔ آپ جانتے ہیں کہ \عددی{\kvec{F}} بقائی ہے۔ آپ کا جواب کیا ہو گا؟ اپنے جواب کی وجہ پیش کریں۔
 \انتہا{سوال}
-%===================
 \ابتدا{جواب}
 \wf{\unexpanded{
 چونکہ میدان بقائی ہے لہٰذا کام راہ پر منحصر نہیں ہو گا۔}}
 \انتہا{جواب}
-%=====================
 \ابتدا{سوال}
 آپ تجرباتی طور جانتے ہیں کہ \عددی{A} سے \عددی{B} تک راہ \عددی{C_1} کی ہمراہ \عددی{\kvec{F}} کا کام راہ \عددی{C_2} کی ہمراہ کام کا نصف ہے۔ آپ \عددی{\kvec{F}} کے بارے میں کیا کہہ سکتے ہیں؟ اپنے جواب کی وجہ پیش کریں۔
 \انتہا{سوال}
-%===============
 \انتہا{سوالات}
 
 
@@ -2204,7 +2098,7 @@ f(2,3,-1)-f(1,1,1)=2+C-(5+C)=-3
 \begin{figure}
 \centering
 \begin{tikzpicture}
-\draw(0,0)node[below]{$(x,y)$}node[circ]{}--++(4,0)node[circ]{}node[midway, below]{$\Delta x$}node[xshift=-1em,yshift=1em]{$A$}node[below]{$(x+\Delta x, y)$}--++(0,1)node[midway,right]{$\Delta y$}node[above]{$(x+\Delta x,y+\Delta y)$}--++(-4,0)node[midway,above]{$\Delta y$}node[circ]{}node[above]{$(x,y+\Delta y)$}--++(0,-1)node[midway,left]{$\Delta y$};
+\draw[thick](0,0)node[below]{$(x,y)$}node[circ]{}--++(4,0)node[circ]{}node[midway, below]{$\Delta x$}node[xshift=-1em,yshift=1em]{$A$}node[below]{$(x+\Delta x, y)$}--++(0,1)node[midway,right]{$\Delta y$}node[above]{$(x+\Delta x,y+\Delta y)$}--++(-4,0)node[midway,above]{$\Delta y$}node[circ]{}node[above]{$(x,y+\Delta y)$}--++(0,-1)node[midway,left]{$\Delta y$};
 \end{tikzpicture}
 \caption{نقطہ \عددی{(x,y)} پر سمتی میدان کی کثافت بہاؤ  (پھیلاؤ)کی تعریف کے لئے درکار مستطیل۔}
 \label{شکل_سمتی_تکمل_بند_راہ_مستطیل}
@@ -2247,7 +2141,6 @@ f(2,3,-1)-f(1,1,1)=2+C-(5+C)=-3
 \text{\RL{پھیلاو \(\kvec{F}\)}}=\frac{\partial M}{\partial x}+\frac{\partial N}{\partial y}
 \end{align} 
 \انتہا{تعریف}
-%====================
 
 \begin{figure}
 \centering
@@ -2300,7 +2193,6 @@ f(2,3,-1)-f(1,1,1)=2+C-(5+C)=-3
 &=2x-x-2y=3x-2y
 \end{align*}
 \انتہا{مثال}
-%====================
 
 \جزوحصہء{ایک نقطہ پر کثافت دائری بہاؤ: گردش}
 مسئلہ گرین کے لئے درکار دوسرا نیا تصور ایک نقطہ پر سمتی میدان \عددی{\kvec{F}} کی کثافت دائری بہاؤ ہے جس کو ریاضیات میں \عددی{\kvec{F}} کی \ترچھا{گردش} کہتے ہیں۔ اس کو حاصل کرنے کی خاطر ہم وہی سمتی میدان
@@ -2312,7 +2204,7 @@ f(2,3,-1)-f(1,1,1)=2+C-(5+C)=-3
 \begin{figure}
 \centering
 \begin{tikzpicture}
-\draw[->-=0.2,->-=0.45,->-=0.7,->-=0.95](0,0)node[below]{$(x,y)$}node[circ]{}--++(4,0)node[circ]{}node[midway, below]{$\Delta x$}node[xshift=-1em,yshift=1em]{$A$}node[below]{$(x+\Delta x, y)$}--++(0,1)node[midway,right]{$\Delta y$}node[above]{$(x+\Delta x,y+\Delta y)$}--++(-4,0)node[midway,above]{$\Delta y$}node[circ]{}node[above]{$(x,y+\Delta y)$}--++(0,-1)node[midway,left]{$\Delta y$};
+\draw[thick,->-=0.2,->-=0.45,->-=0.7,->-=0.95](0,0)node[below]{$(x,y)$}node[circ]{}--++(4,0)node[circ]{}node[midway, below]{$\Delta x$}node[xshift=-1em,yshift=1em]{$A$}node[below]{$(x+\Delta x, y)$}--++(0,1)node[midway,right]{$\Delta y$}node[above]{$(x+\Delta x,y+\Delta y)$}--++(-4,0)node[midway,above]{$\Delta y$}node[circ]{}node[above]{$(x,y+\Delta y)$}--++(0,-1)node[midway,left]{$\Delta y$};
 \end{tikzpicture}
 \caption{نقطہ \عددی{(x,y)} پر کثافت دائری بہاؤ  (گردش)کی تعریف کے لئے درکار مستطیل۔}
 \label{شکل_سمتی_تکمل_بند_راہ_مستطیل_دائری_بہاؤ}
@@ -2364,20 +2256,20 @@ f(2,3,-1)-f(1,1,1)=2+C-(5+C)=-3
 \pgfmathsetmacro{\kAngGG}{\kAngB+180+20}
 \pgfmathsetmacro{\kAngHH}{330}
 
-\draw(0,0)--++(\kAng:\kRa)coordinate (A);
-\draw[fill=lgray](A)--++(0,-0.5*\kW)--++(\kAng:\kL)--++(0,\kW)--++(\kAng:-\kL)--++(0,-0.5*\kW);
-\draw(0,0)--++(\kAng:-\kRa)coordinate (A);
-\draw[fill=lgray](A)--++(0,-0.5*\kW)--++(\kAng:-\kL)--++(0,\kW)--++(\kAng:\kL)--++(0,-0.5*\kW);
-\draw(0,0)--++(\kAngB:\kRaa)coordinate (A);
-\draw[fill=lgray](A)--++(0,-0.5*\kW)--++(\kAngB:\kLa)--++(0,\kW)--++(\kAngB:-\kLa)--++(0,-0.5*\kW);
-\draw(0,0)--++(\kAngB:-\kRaa)coordinate (A);
-\draw[fill=lgray](A)--++(0,-0.5*\kW)--++(\kAngB:-\kLa)--++(0,\kW)--++(\kAngB:\kLa)--++(0,-0.5*\kW);
+\draw[thick](0,0)--++(\kAng:\kRa)coordinate (A);
+\draw[thick,fill=lgray](A)--++(0,-0.5*\kW)--++(\kAng:\kL)--++(0,\kW)--++(\kAng:-\kL)--++(0,-0.5*\kW);
+\draw[thick](0,0)--++(\kAng:-\kRa)coordinate (A);
+\draw[thick,fill=lgray](A)--++(0,-0.5*\kW)--++(\kAng:-\kL)--++(0,\kW)--++(\kAng:\kL)--++(0,-0.5*\kW);
+\draw[thick](0,0)--++(\kAngB:\kRaa)coordinate (A);
+\draw[thick,fill=lgray](A)--++(0,-0.5*\kW)--++(\kAngB:\kLa)--++(0,\kW)--++(\kAngB:-\kLa)--++(0,-0.5*\kW);
+\draw[thick](0,0)--++(\kAngB:-\kRaa)coordinate (A);
+\draw[thick,fill=lgray](A)--++(0,-0.5*\kW)--++(\kAngB:-\kLa)--++(0,\kW)--++(\kAngB:\kLa)--++(0,-0.5*\kW);
 \draw(0,0)node[below,xshift=0.6em,yshift=-0.5em]{$(x_0,y_0)$}node[circ]{}--++(0,1.5)node[above]{عمودی محور};
- \draw[-latex]([shift={(110:{0.4cm and 0.2cm})}]0,0.75)  arc (100:430:0.4 cm and 0.2cm);
- \draw[-latex]([shift={(\kAngAA:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngAA:\kAngBB:1.75 cm and 1.25cm);
- \draw[-latex]([shift={(\kAngCC:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngCC:\kAngDD:1.75 cm and 1.25cm);
-\draw[-latex]([shift={(\kAngEE:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngEE:\kAngFF:1.75 cm and 1.25cm);
- \draw[-latex]([shift={(\kAngGG:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngGG:\kAngHH:1.75 cm and 1.25cm);
+ \draw[-latex,thick]([shift={(110:{0.4cm and 0.2cm})}]0,0.75)  arc (100:430:0.4 cm and 0.2cm);
+ \draw[-latex,thick]([shift={(\kAngAA:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngAA:\kAngBB:1.75 cm and 1.25cm);
+ \draw[-latex,thick]([shift={(\kAngCC:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngCC:\kAngDD:1.75 cm and 1.25cm);
+\draw[-latex,thick]([shift={(\kAngEE:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngEE:\kAngFF:1.75 cm and 1.25cm);
+ \draw[-latex,thick]([shift={(\kAngGG:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngGG:\kAngHH:1.75 cm and 1.25cm);
 \end{tikzpicture}
 \caption*{
 $\text{\RL{گردش \(\kvec{F}\)}}(x_0,y_0)>0$\\
@@ -2403,20 +2295,20 @@ $\text{\RL{گردش \(\kvec{F}\)}}(x_0,y_0)>0$\\
 \pgfmathsetmacro{\kAngGG}{\kAngB+180+20}
 \pgfmathsetmacro{\kAngHH}{330}
 
-\draw(0,0)--++(\kAng:\kRa)coordinate (A);
-\draw[fill=lgray](A)--++(0,-0.5*\kW)--++(\kAng:\kL)--++(0,\kW)--++(\kAng:-\kL)--++(0,-0.5*\kW);
-\draw(0,0)--++(\kAng:-\kRa)coordinate (A);
-\draw[fill=lgray](A)--++(0,-0.5*\kW)--++(\kAng:-\kL)--++(0,\kW)--++(\kAng:\kL)--++(0,-0.5*\kW);
-\draw(0,0)--++(\kAngB:\kRaa)coordinate (A);
-\draw[fill=lgray](A)--++(0,-0.5*\kW)--++(\kAngB:\kLa)--++(0,\kW)--++(\kAngB:-\kLa)--++(0,-0.5*\kW);
-\draw(0,0)--++(\kAngB:-\kRaa)coordinate (A);
-\draw[fill=lgray](A)--++(0,-0.5*\kW)--++(\kAngB:-\kLa)--++(0,\kW)--++(\kAngB:\kLa)--++(0,-0.5*\kW);
+\draw[thick](0,0)--++(\kAng:\kRa)coordinate (A);
+\draw[thick,fill=lgray](A)--++(0,-0.5*\kW)--++(\kAng:\kL)--++(0,\kW)--++(\kAng:-\kL)--++(0,-0.5*\kW);
+\draw[thick](0,0)--++(\kAng:-\kRa)coordinate (A);
+\draw[thick,fill=lgray](A)--++(0,-0.5*\kW)--++(\kAng:-\kL)--++(0,\kW)--++(\kAng:\kL)--++(0,-0.5*\kW);
+\draw[thick](0,0)--++(\kAngB:\kRaa)coordinate (A);
+\draw[thick,fill=lgray](A)--++(0,-0.5*\kW)--++(\kAngB:\kLa)--++(0,\kW)--++(\kAngB:-\kLa)--++(0,-0.5*\kW);
+\draw[thick](0,0)--++(\kAngB:-\kRaa)coordinate (A);
+\draw[thick,fill=lgray](A)--++(0,-0.5*\kW)--++(\kAngB:-\kLa)--++(0,\kW)--++(\kAngB:\kLa)--++(0,-0.5*\kW);
 \draw(0,0)node[below,xshift=0.6em,yshift=-0.5em]{$(x_0,y_0)$}node[circ]{}--++(0,1.5)node[above]{عمودی محور};
- \draw[latex-]([shift={(110:{0.4cm and 0.2cm})}]0,0.75)  arc (100:430:0.4 cm and 0.2cm);
- \draw[latex-]([shift={(\kAngAA:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngAA:\kAngBB:1.75 cm and 1.25cm);
- \draw[latex-]([shift={(\kAngCC:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngCC:\kAngDD:1.75 cm and 1.25cm);
-\draw[latex-]([shift={(\kAngEE:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngEE:\kAngFF:1.75 cm and 1.25cm);
- \draw[latex-]([shift={(\kAngGG:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngGG:\kAngHH:1.75 cm and 1.25cm);
+ \draw[thick,latex-]([shift={(110:{0.4cm and 0.2cm})}]0,0.75)  arc (100:430:0.4 cm and 0.2cm);
+ \draw[thick,latex-]([shift={(\kAngAA:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngAA:\kAngBB:1.75 cm and 1.25cm);
+ \draw[thick,latex-]([shift={(\kAngCC:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngCC:\kAngDD:1.75 cm and 1.25cm);
+\draw[thick,latex-]([shift={(\kAngEE:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngEE:\kAngFF:1.75 cm and 1.25cm);
+ \draw[thick,latex-]([shift={(\kAngGG:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngGG:\kAngHH:1.75 cm and 1.25cm);
 \end{tikzpicture}
 \caption*{
 $\text{\RL{گردش \(\kvec{F}\)}}(x_0,y_0)<0$\\
@@ -2433,7 +2325,7 @@ $\text{\RL{گردش \(\kvec{F}\)}}(x_0,y_0)<0$\\
 \text{\RL{گردش \(\kvec{F}\)}}=\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}
 \end{align}
 \انتہا{تعریف}
-%========================
+
 
 مستوی \عددی{xy} میں نہایت کم گہرائی کے رواں پانی میں نقطہ \عددی{(x_0,y_0)} پر گردش یا کثافت دائری بہاؤ، اس نقطہ پر نسب چرخی، جس کا محور مستوی کو عمودی ہو، کی حرکت کی رفتار اور رخ کی پیمائش ہو گی (شکل \حوالہ{شکل_سمتی_تکمل_گردش_تعریف_مثبت})۔
 
@@ -2449,7 +2341,7 @@ $\text{\RL{گردش \(\kvec{F}\)}}(x_0,y_0)<0$\\
 \text{\RL{گردش \(\kvec{F}\)}}=\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}=\frac{\partial}{\partial x}(xy-y^2)+\frac{\partial}{\partial y}(x^2-y)=y+1
 \end{align*}
 \انتہا{مثال}
-%====================
+
 
 \جزوحصہء{مستوی میں مسئلہ گرین}
 مسئلہ گرین کا ایک روپ کہتا ہے کہ موزوں حالات میں مستوی میں  \اصطلاح{سادہ }\فرہنگ{منحنی!سادہ}\فرہنگ{curve!simple}\حاشیہب{simple}بند منحنی سے سمتی میدان کا خارجی بہاؤ، اس منحنی میں محیط خطہ پر میدان کے پھیلاو کے دہرا تکمل کے برابر ہو گا۔ مساوات \حوالہ{مساوات_سمتی_تکمل_عبور_کرتا_بہاؤ_تعریف} اور مساوات \حوالہ{مساوات_سمتی_تکمل_نفاذ} میں بہاؤ کے کلیات پر دوبارہ نظر ڈالیں (شکل \حوالہ{شکل_مستوی_سمتی_تکمل_بند_منحنیات_اقسام})۔
@@ -2459,21 +2351,21 @@ $\text{\RL{گردش \(\kvec{F}\)}}(x_0,y_0)<0$\\
 \begin{subfigure}{0.30\textwidth}
 \centering
 \begin{tikzpicture}
-\draw(0,0) circle (0.7 cm);
+\draw[thick](0,0) circle (0.7 cm);
 \draw(0,-0.75cm)node[below]{سادہ};
 \end{tikzpicture}
 \end{subfigure}\hfill
 \begin{subfigure}{0.30\textwidth}
 \centering
 \begin{tikzpicture}
-\draw(0,0)coordinate (A) to [out=90,in=180] (1,1.5) to [out=0,in=90] (2,0)coordinate (B) to [out=-90,in=0] (1,0.5) to [out=180,in=-90] (0,0);
+\draw[thick](0,0)coordinate (A) to [out=90,in=180] (1,1.5) to [out=0,in=90] (2,0)coordinate (B) to [out=-90,in=0] (1,0.5) to [out=180,in=-90] (0,0);
 \draw($(A)!0.5!(B)$) node[below]{سادہ};
 \end{tikzpicture}
 \end{subfigure}\hfill
 \begin{subfigure}{0.30\textwidth}
 \centering
 \begin{tikzpicture}
-\draw(0,0) to [out=90,in=180] (0.75,1) to [out=0,in=180]  (1.5,-0.6) to [out=0,in=-90] (2,0) to [out=90,in=0] (1.75,0.7) to[out=180,in=0] (0.5,-0.25) node[below]{غیر سادہ}  to [out=180,in=-90] (0,0);
+\draw[thick](0,0) to [out=90,in=180] (0.75,1) to [out=0,in=180]  (1.5,-0.6) to [out=0,in=-90] (2,0) to [out=90,in=0] (1.75,0.7) to[out=180,in=0] (0.5,-0.25) node[below]{غیر سادہ}  to [out=180,in=-90] (0,0);
 \end{tikzpicture}
 \end{subfigure}
 \caption{مسئلہ گرین کے ثبوت میں ہم دو قسم کی  بند منحنیات ، سادہ اور غیر سادہ، میں فرق کرتے ہیں۔سادہ منحنی اپنے آپ پر نہیں گزرتی۔یوں دائرہ ایک سادہ منحنی ہے جبکہ "8"شکل کی  منحنی غیر سادہ ہے۔}
@@ -2486,7 +2378,7 @@ $\text{\RL{گردش \(\kvec{F}\)}}(x_0,y_0)<0$\\
 \text{\RL{اخراجی بہاؤ}}&\phantom{=\oint_C M\dif y-N\dif x=\int\int}\text{\RL{تکمل پھیلاو}}\nonumber
 \end{align}
 \انتہا{مسئلہ}
-%====================
+
 
 مسئلہ گرین کا دوسرا روپ کہتا ہے کہ  ایک سادہ بند منحنی کی ہمراہ، خلاف گھڑی ایک میدان کا دائری بہاؤ، اس منحنی میں محیط خطہ پر میدان کی گردش کے دہرا تکمل کے برابر ہو گا۔ 
 
@@ -2498,7 +2390,7 @@ $\text{\RL{گردش \(\kvec{F}\)}}(x_0,y_0)<0$\\
 \end{align}
 \hfill\qedsymbol
 \انتہا{مسئلہ}
-%=======================
+
 
 
 میدان \عددی{\kvec{F}=M\ai+N\aj} کے لئے  مساوات \حوالہ{مساوات_سمتی_تکمل_تکمل_بہاؤ_تعریف} میں دائری بہاؤ کے لئے دیا گیا تکمل درج ذیل معادل روپ اختیار کرے گا۔
@@ -2603,7 +2495,7 @@ C:\quad \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj,\quad 0\le t\le 2\pi
 \begin{align}\label{مساوات_سمتی_تکمل_خصوصی_پر_ثبوت}
 \ointctrclockwise\limits_C M \dif x + N \dif y = \iint_R \big(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\big) \dif x \dif y 
 \end{align}
-================
+
 \begin{figure}
 \centering
 \begin{minipage}{0.45\textwidth}
@@ -2612,14 +2504,14 @@ C:\quad \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj,\quad 0\le t\le 2\pi
  enlarge y limits=0.1,xtick={f(170),f(350),f(50)} ,xticklabels={$a$,$b$,$x$}, ytick={\empty},extra x tick style={xticklabel style={yshift=0.5ex,anchor=south}},
 %extra x ticks={-0.7},extra x tick labels={$a$}
 ]
-\addplot[no markers, domain=0:360,smooth , postaction = {decorate}, decoration = {markings, mark = at position 0.4 with {\arrow{Stealth[length = 2mm, bend]}}, mark = at position 0.85 with {\arrow{Stealth[length = 2mm, bend]}}}] ({f(x)},{g(x)});
-\addplot[only marks,mark=*,samples at={170,350}] ({f(x)},{g(x)});
-\addplot[]coordinates {({f(50)},{g(50)})} node[above ,xshift=1em]{\small $P_2(x,f_2(x))$};
-\addplot[dashed]coordinates {({f(50)},{g(50)}) ({f(50)},0)}{};
-\addplot[dashed]coordinates {({f(170)},{g(170)}) ({f(170)},0)}{};
-\addplot[dashed]coordinates {({f(350)},{g(350)}) ({f(350)},0)}{};
-\addplot[dashed]coordinates {({f(120)},{g(120)})}node[above,rotate=45]{\small $C_2:y=f_2(x)$};
-\addplot[dashed]coordinates {({f(210)},{g(210)})}node[below,xshift=1.6em]{\small $C_1:y=f_1(x)$};
+\addplot[thick,no markers, domain=0:360,smooth , postaction = {decorate}, decoration = {markings, mark = at position 0.4 with {\arrow{Stealth[length = 2mm, bend]}}, mark = at position 0.85 with {\arrow{Stealth[length = 2mm, bend]}}}] ({f(x)},{g(x)});
+\addplot[thick,only marks,mark=*,samples at={170,350}] ({f(x)},{g(x)});
+\addplot[thick,]coordinates {({f(50)},{g(50)})} node[above ,xshift=1em]{\small $P_2(x,f_2(x))$};
+\addplot[thick,dashed]coordinates {({f(50)},{g(50)}) ({f(50)},0)}{};
+\addplot[thick,dashed]coordinates {({f(170)},{g(170)}) ({f(170)},0)}{};
+\addplot[thick,dashed]coordinates {({f(350)},{g(350)}) ({f(350)},0)}{};
+\addplot[thick,dashed]coordinates {({f(120)},{g(120)})}node[above,rotate=45]{\small $C_2:y=f_2(x)$};
+\addplot[thick,dashed]coordinates {({f(210)},{g(210)})}node[below,xshift=1.6em]{\small $C_1:y=f_1(x)$};
 \addplot[]coordinates {({f(270)},{g(270)})}node[right,fill=white,xshift=0.7em,yshift=-0.5em]{\small $P_1(x,f_1(x))$};
 \addplot[dashed]coordinates {({f(120)},{g(120)})}node[xshift=3em]{\small $R$};
 \end{axis}
@@ -2633,23 +2525,23 @@ C:\quad \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj,\quad 0\le t\le 2\pi
  enlarge y limits=0.1,ytick={g(220),g(40),g(330)} ,yticklabels={$c$,$d$,$y$}, xtick={\empty},extra x tick style={xticklabel style={yshift=0.5ex,anchor=south}},
 %extra x ticks={-0.7},extra x tick labels={$a$}
 ]
-\addplot[no markers, domain=0:360,smooth , postaction = {decorate}, decoration = {markings, mark = at position 0.4 with {\arrow{Stealth[length = 2mm, bend]}}, mark = at position 0.85 with {\arrow{Stealth[length = 2mm, bend]}}}] ({f(x)},{g(x)});
+\addplot[thick,no markers, domain=0:360,smooth , postaction = {decorate}, decoration = {markings, mark = at position 0.4 with {\arrow{Stealth[length = 2mm, bend]}}, mark = at position 0.85 with {\arrow{Stealth[length = 2mm, bend]}}}] ({f(x)},{g(x)});
 \addplot[only marks,mark=*,samples at={40,220}] ({f(x)},{g(x)});
 \addplot[]coordinates {({f(330)},{g(330)})}node[right,]{\small $Q_2(x,f_1(x))$};
 \addplot[]coordinates {({f(120)},{g(120)})} node[right]{\small $Q_1(x,f_2(x))$};
-\addplot[dashed]coordinates {({f(40)},{g(40)}) (0,{g(40)})}{};
-\addplot[dashed]coordinates {({f(220)},{g(220)}) (0,{g(220)})}{};
-\addplot[dashed]coordinates {({f(330)},{g(330)}) (0,{g(330)})}{};
-\addplot[dashed]coordinates {({f(290)},{g(290)})}node[below,rotate=45]{\small $C_2':x=g_2(x)$};
-\addplot[dashed]coordinates {({f(120)},{g(120)})}node[above,rotate=45,fill=white,yshift=0.5em]{\small $C_1':x=g_1(x)$};
-\addplot[dashed]coordinates {({f(120)},{g(120)})}node[xshift=2em,yshift=-3em]{\small $R$};
+\addplot[thick,dashed]coordinates {({f(40)},{g(40)}) (0,{g(40)})}{};
+\addplot[thick,dashed]coordinates {({f(220)},{g(220)}) (0,{g(220)})}{};
+\addplot[thick,dashed]coordinates {({f(330)},{g(330)}) (0,{g(330)})}{};
+\addplot[thick,dashed]coordinates {({f(290)},{g(290)})}node[below,rotate=45]{\small $C_2':x=g_2(x)$};
+\addplot[thick,dashed]coordinates {({f(120)},{g(120)})}node[above,rotate=45,fill=white,yshift=0.5em]{\small $C_1':x=g_1(x)$};
+\addplot[thick,dashed]coordinates {({f(120)},{g(120)})}node[xshift=2em,yshift=-3em]{\small $R$};
 \end{axis}
 \end{tikzpicture}
 \caption{منحنی \عددی{C_1'} جو \عددی{x=g_1(y)}  کی ترسیم ہے اور \عددی{C_2'} جو \عددی{x=g_2(y)} کی ترسیم ہے ، مل کر  سرحدی منحنی \عددی{C} دیتی ہیں۔}
 \label{شکل_سمتی_میدان_تکمل_گرین_مخصوص_خطے_دوم}
 \end{minipage}
 \end{figure}
-===================
+
 
  ثابت کرنا چاہتے  ہیں۔     شکل      \حوالہ{شکل_سمتی_میدان_تکمل_گرین_مخصوص_خطے} میں  \عددی{C}  دو سمت بند حصوں کا مجموعہ    دکھایا گیا ہے۔  
 \begin{align*}
@@ -2699,11 +2591,11 @@ extra y tick style={
         tick label style={
             yshift={\ticknum == 0 ? -10pt : 20pt},
             yshift={\ticknum == 1 ? -10pt : -10pt}}}]
-\addplot[no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.17 with {\arrow{Stealth[length = 2mm, bend]}}, mark = at position 0.42 with {\arrow{Stealth[length = 2mm, bend]}},mark = at position 0.67 with {\arrow{Stealth[length = 2mm, bend]}},mark = at position 0.92 with {\arrow{Stealth[length = 2mm, bend]}}}
+\addplot[thick,no markers,  postaction = {decorate}, decoration = {markings, mark = at position 0.17 with {\arrow{Stealth[length = 2mm, bend]}}, mark = at position 0.42 with {\arrow{Stealth[length = 2mm, bend]}},mark = at position 0.67 with {\arrow{Stealth[length = 2mm, bend]}},mark = at position 0.92 with {\arrow{Stealth[length = 2mm, bend]}}}
 ] coordinates {(1,1) (3,1) (3,2) (1,2) (1,1)};
-\addplot[dashed]coordinates {(1,0)(1,1)};
-\addplot[dashed]coordinates {(3,0)(3,1)};
-\addplot[dashed]coordinates {(0,1)(1,1)};
+\addplot[thick,dashed]coordinates {(1,0)(1,1)};
+\addplot[thick,dashed]coordinates {(3,0)(3,1)};
+\addplot[thick,dashed]coordinates {(0,1)(1,1)};
 \addplot[dashed]coordinates {(0,2)(1,2)};
 \addplot[]coordinates {(2,1.5)}node[]{$R$};
 \addplot[draw=none]coordinates {(2,1)}node[below]{$C_1:y=c$};
@@ -2774,7 +2666,7 @@ extra y tick style={
 \caption{دیگر خطے جن پر مسئلہ گرین کا اطلاق ہوگا۔}
 \label{شکل_سمتی_میدان_تکمل_مستطیل_دیگر_خطے_گرین}
 \end{figure}
-%====================
+
 \begin{figure}
 \centering
 \begin{tikzpicture}[declare function={fa(\x)=2*cos(\x);ga(\x)=2*sin(\x);fb(\x)=1*cos(\x);gb(\x)=1*sin(\x);}]
@@ -2957,22 +2849,34 @@ extra y tick style={
 \end{align*}
  اور ایک مرتبہ \عددی{  K}  پر خلاف گھڑی  چکر کاٹنے سے   \عددی{\theta} کی قیمت  \عددی{2\pi} بڑھتی ہے۔
  
-===============================================================================================
 
 
 \حصہء{سوالات}\شناخت{سوالات_سمتی_میدان_چوتھا_حصہ}
+\ابتدا{سوالات}
 \جزوحصہء{مسئلہ گرین کی تصدیق}
 سوال \حوالہ{سوال_سمتی_تکمل_مسئلہ_گرین_الف} تا سوال \حوالہ{سوال_سمتی_تکمل_مسئلہ_گرین_د} میں میدان  \عددی{\kvec{F}= M\ai + N \aj} کے لیے مساوات   \حوالہ{مساوات_سمتی_تکمل_اخراج_اور_تکمل_پھیلاو}  اور  مساوات  \حوالہ{مساوات_سمتی_تکمل_اخراج_اور_تکمل_گردش}  کے دونوں اطراف کی قیمتیں تلاش کر کے مسئلہ  گرین کی تصدیق کریں۔ دونوں صورتوں میں تکمل کا دائرہ کار قرص    \عددی{R: x^2 + y^2 \le a^2} اور  محدود کار  دائرہ   \عددی{C: r = (a \cos t)\ai + (a \sin t)\aj, 0 \le t \le 2\pi} لیں۔
 
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_مسئلہ_گرین_الف}
 \(\kvec{F} = -y\ai + x\aj\)
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+بہاؤ \عددی{0} ، دائری بہاؤ \عددی{2\pi a^2}
+}}
+\انتہا{جواب}
 \ابتدا{سوال}
 \(\kvec{F} = y\ai\)
 \انتہا{سوال}
+%Q3
 \ابتدا{سوال}
 \(\kvec{F} = 2x\ai - 3y\aj\)
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+بہاؤ \عددی{-\pi a^2} ، دائری بہاؤ \عددی{0}
+}}
+\انتہا{جواب}
+%Q4
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_مسئلہ_گرین_د}
 \(\kvec{F} = -x^2y\ai + xy^2\aj\)
 \انتہا{سوال}
@@ -2982,27 +2886,57 @@ extra y tick style={
 
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_دائری_بہاو_الف}\عددی{\kvec{F} = (x - y)\ai + (y - x)\aj }  اور \عددی{C} کو  چوکور   \عددی{x=0}، \عددی{x=1}، \عددی{y=0}، \عددی{y=1}  محدود کرتا ہے۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+بہاؤ \عددی{2} ، دائری بہاؤ \عددی{0}
+}}
+\انتہا{جواب}
+%Q6
 \ابتدا{سوال}\عددی{\kvec{F} = (x^2 + 4y)\ai + (x + y^2)\aj}  اور \عددی{C}کو  چوکور  \عددی{x=0}، \عددی{x=1}، \عددی{y=0}، \عددی{y=1} محدود کرتا ہے۔
 \انتہا{سوال}
 \ابتدا{سوال}\عددی{\kvec{F} = (y^2 - x^2)\ai + (x^2 + y^2)\aj}   اور \عددی{C}کو   مثلث   \عددی{y=0}، \عددی{x=3}، \عددی{y=x}  محدود کرتا ہے۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+بہاؤ \عددی{-9} ، دائری بہاؤ \عددی{9}
+}}
+\انتہا{جواب}
+%Q8
 \ابتدا{سوال}\عددی{\kvec{F} = (x + y)\ai - (x^2 + y^2)\aj}    اور \عددی{C}کو   مثلث   \عددی{y=0}، \عددی{x=1}، \عددی{y=x}  محدود کرتا ہے۔
 \انتہا{سوال}
 \ابتدا{سوال}\عددی{\kvec{F} = (x + e^x \sin y)\ai + (x + e^x \cos y)\aj} اور \عددی{C}  دو چشمہ \عددی{r^2=\cos 2\theta} کا دایاں ہاتھ گھیر ہے۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+بہاؤ \عددی{\tfrac{1}{2}} ، دائری بہاؤ \عددی{\tfrac{1}{2}}
+}}
+\انتہا{جواب}
+%Q10
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_دائری_بہاو_ٹ}\عددی{\kvec{F} = \big(\tan^{-1} \frac{y}{x}\big)\ai + \ln(x^2 + y^2 )\aj} اور \عددی{C} اس خطے کی سرحد ہے جس کو قطبی محدد عدم مساوات \عددی{1\le r\le 2}، \عددی{0\le \theta\le \pi}  تعین کرتی  ہیں۔
 \انتہا{سوال}
 %Q11, sectio 14.4 finney, p1180
 \ابتدا{سوال}
 ربع اول میں منحنیات \عددی{y=x^2} اور \عددی{y=x} کے بیچ خطے  کی سرحد پر خلاف گھڑی چلتے ہوئے میدان \عددی{\kvec{F}=xy\ai+y^2\aj}  کا دائری بہاؤ اور خطے سے باہر رخ گزرنے والا بہاؤ تلاش کریں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+بہاؤ \عددی{\tfrac{1}{5}} ، دائری بہاؤ \عددی{-\tfrac{1}{12}}
+}}
+\انتہا{جواب}
+%Q12
 \ابتدا{سوال}
 ربع اول سے  لکیر \عددی{x=\pi\!/\!2} اور \عددی{y=\pi\!/\!2}  مربع  کاٹتی ہیں۔میدان \عددی{\kvec{F}=(-\sin y)\ai+(x\cos y)\aj} کا  اس  مربع  پر  خلاف گھڑی دائری بہاؤ اور خطے سے   باہر رخ گزرنے والا  بہاؤ تلاش کریں۔
 \انتہا{سوال}
+%Q13
 \ابتدا{سوال}
 قلب نما \عددی{r=a(1+\cos \theta)\,a>0}  سے درج ذیل  میدان  کا باہر رخ  گزرنے والا بہاؤ تلاش کریں۔
 \[\kvec{F}=\left(3xy-\frac{x}{1+y^2}\right)\ai+(e^x+\tan^{-1}y)\aj\]
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$0$
+}}
+\انتہا{جواب}
 %Q14
 \ابتدا{سوال}
 جس خطے کو اوپر سے منحنی \عددی{y=3-x^2} اور نیچے سے منحنی \عددی{y=x^4+1} گھیرتی ہیں اس کی سرحد پر خلاف گھڑی  چلتے ہوئے  
@@ -3017,6 +2951,12 @@ extra y tick style={
 \(\kvec{F}=2xy^3\ai+4x^2y^2\aj\)\\
 ربع اول میں محور \عددی{x}، لکیر \عددی{x=1}، اور منحنی \عددی{y=x^3}  کے بیچ  مثلث نما  خطے کی سرحد \عددی{C} ہے۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{2}{33}$
+}}
+\انتہا{جواب}
+%Q16
 \ابتدا{سوال}\شناخت{سوال_سمتی_میدان_کام_قوت_ب}
 \(\kvec{F}=(4x-2y)\ai+(2x-4y)\aj\)\\
 دائرہ \عددی{(x-2)^2+(y-2)^2=4} راہ \عددی{C} ہے۔
@@ -3029,6 +2969,12 @@ extra y tick style={
 \(\ointctrclockwise_C (y^2\dif x+x^2\dif y)\)\\
 مثلث \عددی{C} کو \عددی{x=0}، \عددی{x+y=1}، اور \عددی{y=0} گھیرتی ہیں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$0$
+}}
+\انتہا{جواب}
+%Q18
 \ابتدا{سوال}
 \(\ointctrclockwise_C (3y\dif x+2x\dif y)\)\\
 خطہ \عددی{0\le x\le \pi}، \عددی{0\le y\le \sin x} کی سرحد \عددی{C} ہے۔
@@ -3037,6 +2983,12 @@ extra y tick style={
 \(\ointctrclockwise_C(6y+x)\dif x+(y+2x)\dif y\)\\
 دائرہ \عددی{(x-2)^2+(y-3)^2=4} راہ \عددی{C} ہے۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$-16\pi$
+}}
+\انتہا{جواب}
+%Q20
 \ابتدا{سوال}\شناخت{سوال_سمتی_میدان_کام_ت}
 \(\ointctrclockwise_C (2x+y^2)\dif x+(2xy+3y)\dif y\)\\
 مستوی میں کوئی بھی ایسی  بند  راہ \عددی{C} جس پر مسئلہ گرین کا اطلاق ہوتا ہو۔
@@ -3058,12 +3010,24 @@ R\,\text{\RL{رقبہ}}\,&=\iint_R\dif y\dif x=\iint_R\left(\frac{1}{2}+\frac{1}
 \ابتدا{سوال}\شناخت{سوال_سمتی_میدان_رقبے_اکیس}
 دائرہ \عددی{\kvec{r}(t)=(a\cos t)\ai+(a\sin t)\aj,\, 0\le t\le 2\pi}
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\pi a^2$
+}}
+\انتہا{جواب}
+%Q22
 \ابتدا{سوال}
 ترخیم \عددی{\kvec{r}(t)=(a\cos t)\ai+(b\sin t)\aj,\, 0\le t\le 2\pi}
 \انتہا{سوال}
 \ابتدا{سوال}
 ستارہ نما  (صفحہ \حوالہصفحہ{شکل_مثال_مخروط_ستارہ_نما_لمبائی} پر شکل \حوالہ{شکل_مثال_مخروط_ستارہ_نما_لمبائی}) \عددی{\kvec{r}(t)=(\cos^3 t)\ai+(\sin^3 t)\aj,\, 0\le t\le 2\pi}
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{3}{8}\pi$
+}}
+\انتہا{جواب}
+%Q24
 \ابتدا{سوال}\شناخت{سوال_سمتی_میدان_رقبے_چوبیس}
 منحنی  \عددی{\kvec{r}(t)=t^2\ai+((t^3\!/\!3)-t)\aj,\, -\sqrt{3}\le t\le \sqrt{t}}
 \انتہا{سوال}
@@ -3079,6 +3043,11 @@ R\,\text{\RL{رقبہ}}\,&=\iint_R\dif y\dif x=\iint_R\left(\frac{1}{2}+\frac{1}
 \فاصلہء(\عددی{h} اور \عددی{k} مستقل ہیں)
 \end{enumerate}
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+ا) \عددی{0}، ب) \عددی{(h-k)(\text{\RL{خطے کا رقبہ}})}
+}}
+\انتہا{جواب}
 \ابتدا{سوال}
 دکھائیں کہ مربع کی سرحد پر  درج ذیل تکمل کی قیمت مربع کے رقبے پر منحصر ہے نا کہ مستوی میں  مربع  کے مقام پر۔
 \[\ointctrclockwise_C xy^2\dif x+(x^2y+2x)\dif y\]
@@ -3143,6 +3112,11 @@ R\,\text{\RL{رقبہ}}\,&=\iint_R\dif y\dif x=\iint_R\left(\frac{1}{2}+\frac{1}
 \[\ointctrclockwise_K \nabla f\cdot\an\dif s\]
 \end{enumerate}
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+ا) \عددی{0}
+}}
+\انتہا{جواب}
 %Q36
 \ابتدا{سوال}
 مستوی  سیلان کے انفرادی ذرات کی حرکت کی نمائندگی       ہموار منحنیات کرتی ہیں جو  \اصطلاح{خطوط رو}\فرہنگ{خطوط رو}\حاشیہب{streamlines}\فرہنگ{streamlines}   کہلاتی ہیں۔سیالی سیلان کے سمتی رفتار  سمتیات \عددی{\kvec{F}=M(x,y)\ai+N(x,y)\aj}  ، خطوط  رو کو مماسی  ہیں۔دکھائیں اگر سیلان سادہ تعلق خطے \عددی{R}  (جس میں سوراخ یا    غیر موجود نقطے نہیں پائے جاتے) میں واقع ہو، اور پورے \عددی{R} میں \عددی{M_x+N_y\ne 0} ہو، تب \عددی{R} میں کوئی ایک خط رو بھی بند  نہیں ہو گا۔ دوسرے لفظوں میں، سیال کا کوئی ذرہ \عددی{R} میں بند راہ پر نہیں چلتا۔ شرط \عددی{M_x+N_y\ne 0} کو   بند  راہ کی عدم موجودگی کا شرط کہتے ہیں۔
@@ -3189,11 +3163,10 @@ R\,\text{\RL{رقبہ}}\,&=\iint_R\dif y\dif x=\iint_R\left(\frac{1}{2}+\frac{1}
 مثلث جس کے راس \عددی{(0,0)}، \عددی{(2,0)}، اور \عددی{(0,4)} ہیں منحنی \عددی{C} ہے۔
 \انتہا{سوال}
 
-%=======================================================
+\انتہا{سوالات}
 
 %what follows is section 14.5 p1096
-%sec 14.5 Surface Area and Surface Integrals
-%=======================================================
+
 \حصہ{سطحی رقبہ اور سطحی تکملات}\شناخت{حصہ_سمتی_میدان_سطحی_رقبہ_سطحی_تکملات}
 ہم مستوی  میں   خطہ پر تفاعل کا تکمل لینا جانتے ہیں لیکن ایسی صورت میں کیا ہوگا جب تفاعل ایک قوسی سطح پر پایا جاتا ہو؟    ایسی صورت میں تکمل کیسے حاصل  ہو گا؟ ایسا تکمل  ، جو\اصطلاح{ سطحی تکمل}\فرہنگ{سطحی تکمل}\حاشیہب{surface integral}\فرہنگ{surface integral} کہلاتا ہے ، کی قیمت تلاش کرنے کی خاطر      اس کو ، سطح کے نیچے محددی مستوی  پر   ( شکل  \حوالہ{شکل_سمتی_میدان_سطح_پر_تفاعل_سایہ})، دہرا تکمل  کے روپ میں لکھا جاتا ہے۔ حصہ  \حوالہ{حصہ_سمتی_میدان_مسئلہ_سٹوکس}  اور حصہ \حوالہ{حصہ_سمتی_میدان_مسئلہ_پھیلاؤ}   میں ہم دیکھیں گے کہ سطحی تکملات کی مدد سے مسئلہ گرین کو تین ابعاد میں عمومیت دی جا سکتی ہے۔ 
 
@@ -3350,7 +3323,7 @@ axis line style={draw=none}
  
   ہم نے \عددی{\nabla f} کو استمراری تصور کر کے اور پورے \عددی{R} پر \عددی{\nabla f \cdot \ne 0} تصور کر کے  مساوات \حوالہ{مساوات_سمتی_تکمل_سطحی_رقبہ_تعریفی_تکمل}  حاصل کی۔ جب بھی یہ تکمل موجود ہو ، اس کی قیمت کو سطح \عددی{f (x, y, z) = c} کے اس حصہ کے رقبے کی تعریف لی جاتی ہے جو \عددی{R} کے      اوپر      (بلندی پر) پایا جاتا ہو۔ 
 
-%================================
+
 \ابتدا{مثال} \شناخت{مثال_سمتی_میدان_تکمل_قطع_مکافی_مجسم}
 قطع مکافی      \عددی{x^2 + y^2 - z = 0} کے نچلے حصے سے  مستوی  \عددی{z = 4} ایک سطح کاٹتا ہے۔ اس سطح  کا رقبہ تلاش کریں۔ 
 
@@ -3543,13 +3516,13 @@ enlarge y limits=0.2, enlarge z limits=0.2,
 ,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},
 %axis line style={draw=none}
 ]
-\addplot3[] coordinates {(1,0,0) (1,1,0) (0,1,0) (0,1,1) (1,1,1) (1,0,1)};
-\addplot3[] coordinates {(0,0,1) (0,1,1)};
-\addplot3[] coordinates {(1,1,0) (1,1,1)};
-\addplot3[] coordinates {(0,0,1) (1,0,1)  (1,0,0)};
-\addplot3[]coordinates {(0.25,0.5,1)} coordinate (kT)node[pin=45:{\RL{سطح الف}}]{};
-\addplot3[]coordinates {(1,0.15,0.5)} coordinate (kF)node[pin=145:{\RL{سطح ب}}]{};
-\addplot3[]coordinates {(0.25,1,0.5)} coordinate (kR)node[pin=30:{\RL{سطح ج}}]{};
+\addplot3[thick] coordinates {(1,0,0) (1,1,0) (0,1,0) (0,1,1) (1,1,1) (1,0,1)};
+\addplot3[thick] coordinates {(0,0,1) (0,1,1)};
+\addplot3[thick] coordinates {(1,1,0) (1,1,1)};
+\addplot3[thick] coordinates {(0,0,1) (1,0,1)  (1,0,0)};
+\addplot3[thick]coordinates {(0.25,0.5,1)} coordinate (kT)node[pin=45:{\RL{سطح الف}}]{};
+\addplot3[thick]coordinates {(1,0.15,0.5)} coordinate (kF)node[pin=145:{\RL{سطح ب}}]{};
+\addplot3[thick]coordinates {(0.25,1,0.5)} coordinate (kR)node[pin=30:{\RL{سطح ج}}]{};
 \end{axis}
 \end{tikzpicture}
 \caption{مکعب پر تفاعل کا تکمل حاصل کرنے کے لئے مکعب کے  چھ اطراف  پر تکمل لے کر  نتائج جمع کریں(مثال \حوالہ{مثال_سمتی_میدان_کعبی_بار})۔}
@@ -3591,7 +3564,7 @@ xyz&=xy(1)=xy
  \tdplotsetmaincoords{0}{0}
  \begin{tikzpicture}[scale=1,tdplot_main_coords]
     \shade[tdplot_screen_coords,ball color = white] (0,0) circle (1);    
-\draw[-latex] (30:1)--++(30:0.5)node[right]{$\kvec{n}$}node[below right]{ \RL{مثبت رخ}};
+\draw[thick,-latex] (30:1)--++(30:0.5)node[right]{$\kvec{n}$}node[below right]{ \RL{مثبت رخ}};
 \end{tikzpicture}
 \caption{ہموار بند سطح ہمیشہ قابل سمت بند ہو گی۔ہر نقطے پر  باہر رخ اکائی عمودی سمتیہ  مثبت رخ دیگا۔}
 \label{شکل_سمتی_میدان_قابل_سمت_بند}
@@ -3599,11 +3572,11 @@ xyz&=xy(1)=xy
 \begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}
-\draw  (0,0) to [out=-90,in=180](1,-0.75) to [out=0,in=-90](2,0) to [out=90,in=0](1,1) to [out=180,in=90](0.125,0.25) to [out=-90,in=180](1,-0.5) to [out=0,in=-90](1.75,0) to [out=90,in=0](1,0.75) to [out=180,in=70](0.135,0.125);
-\draw(0,0) to [out=90,in=-110]++(0.05,0.25) to [out=70,in=-110](0.195,0.55);
-\draw[-latex](0.125,0)--++(170:0.5);
+\draw[thick]  (0,0) to [out=-90,in=180](1,-0.75) to [out=0,in=-90](2,0) to [out=90,in=0](1,1) to [out=180,in=90](0.125,0.25) to [out=-90,in=180](1,-0.5) to [out=0,in=-90](1.75,0) to [out=90,in=0](1,0.75) to [out=180,in=70](0.135,0.125);
+\draw[thick](0,0) to [out=90,in=-110]++(0.05,0.25) to [out=70,in=-110](0.195,0.55);
+\draw[thick,-latex](0.125,0)--++(170:0.5);
 %
-\draw[dashed]  (0.125,0) to [out=-90,in=180](1,-0.625) to [out=0,in=-90](1.875,0) to [out=90,in=0](1,0.875) to [out=180,in=70](0.125,0.25);
+\draw[thick,dashed]  (0.125,0) to [out=-90,in=180](1,-0.625) to [out=0,in=-90](1.875,0) to [out=90,in=0](1,0.875) to [out=180,in=70](0.125,0.25);
 \end{tikzpicture}%
 \caption{موبیوس پٹی ناقابل سمت بند ہے۔}
 \label{شکل_سمتی_میدان_موبیوس_پٹی}
@@ -3788,24 +3761,42 @@ M_{xy}&=\iint_S z\delta \dif \sigma=\delta \iint_R z\frac{a}{z}\dif \sigma=\delt
 %-------------------------------
 %sec 14.5 questions
 \حصہء{سوالات}
-
+\ابتدا{سوالات}
 \جزوحصہء{سطحی رقبہ}
 
 \ابتدا{سوال}
 مکافی جسم \عددی{x^2+y^2-z=0} سے مستوی \عددی{z=2}  جو  سطح  کاٹتی ہے اس  کا رقبہ تلاش کریں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{13}{3}\pi$
+}}
+\انتہا{جواب}
+%Q2
 \ابتدا{سوال}
 مکافی جسم \عددی{x^2+y^2-z=0} سے مستویات \عددی{z=2} اور \عددی{z=6}   جو   پٹی کاٹتی ہے اس  کا رقبہ تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{سوال}
 مستوی \عددی{x+2y+2z=5} سے ایک بیلن ، جس کی دیواریں \عددی{x=y^2} اور \عددی{x=2-y^2} ہیں،  جو خطہ کاٹتا ہے اس کا رقبہ تلاش کریں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$4$
+}}
+\انتہا{جواب}
+%Q4
 \ابتدا{سوال}
 سطح \عددی{x^2-2z=0} کے اس حصے کا رقبہ تلاش کریں جو مستوی \عددی{xy}  میں واقع  اس مثلث  کے اوپر پایا جاتا ہے جس کو لکیر \عددی{x=\sqrt{3}}، \عددی{y=0}، اور \عددی{y=x} گھیرتی ہیں۔
 \انتہا{سوال}
 \ابتدا{سوال}
 سطح \عددی{x^2-2y-2z=0} کے اس حصے کا رقبہ تلاش کریں جو مستوی \عددی{xy}  میں واقع  اس مثلث  کے اوپر پایا جاتا ہے جس کو لکیر \عددی{x{=}2}،  \عددی{y=0}، اور \عددی{y=3x} گھیرتی ہیں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$6\sqrt{6}-2\sqrt{2}$
+}}
+\انتہا{جواب}
+%Q6
 \ابتدا{سوال}
 کرہ \عددی{x^2+y^2+z^2=2} سے مخروط \عددی{z=\sqrt{x^2+y^2}} جو ٹوپی کاٹتا ہے اس کا رقبہ تلاش کریں۔
 \انتہا{سوال}
@@ -3813,18 +3804,36 @@ M_{xy}&=\iint_S z\delta \dif \sigma=\delta \iint_R z\frac{a}{z}\dif \sigma=\delt
 \ابتدا{سوال}
 مستوی \عددی{z=cx} سے  بیلن  \عددی{x^2+y^2=1} جو  ترخیم کاٹتا ہے اس کا رقبہ تلاش کریں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\pi\sqrt{c^2+1}$
+}}
+\انتہا{جواب}
+%Q8
 \ابتدا{سوال}
 بیلن \عددی{x^2+z^2=1} کے اس بالائی حصے کا رقبہ تلاش کریں جو  مستویات \عددی{x=\pm 1\!/\!2} اور \عددی{y=\pm 1\!/\!2} کے بیچ پایا جاتا ہے۔
 \انتہا{سوال}
 \ابتدا{سوال}
 مستوی \عددی{yz} میں واقع    چھلا \عددی{1\le y^2+z^2\le 4}  کے اوپر مکافی جسم \عددی{x=4-y^2-z^2}  کا جو حصہ پایا جاتا ہے اس کا رقبہ تلاش کریں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{\pi}{6}(17\sqrt{17}-5\sqrt{5})$
+}}
+\انتہا{جواب}
+%Q10
 \ابتدا{سوال}
 مکافی سطح \عددی{x^2+y+z^2=2} سے مستوی \عددی{y=0} جو سطح کاٹتی ہے اس کا رقبہ تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{سوال}
 مستوی \عددی{xy} میں واقع مربع \عددی{R:\,1\le x\le 2,\, 0\le y\le 1} کے اوپر سطح \عددی{x^2-2\ln x+\sqrt{15}y-z=0} کا جو حصہ پایا جاتا ہے اس کا رقبہ تلاش کریں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$3+2\ln 2$
+}}
+\انتہا{جواب}
+%Q12
 \ابتدا{سوال}
 مستوی \عددی{xy} میں واقع مربع \عددی{R:\,0\le x\le 1,\, 0\le y\le 1} کے اوپر سطح \عددی{2x^{3/2}+2y^{3/2}-3z=0}    کا جو حصہ پایا جاتا ہے اس کا رقبہ تلاش کریں۔
 \انتہا{سوال}
@@ -3833,12 +3842,24 @@ M_{xy}&=\iint_S z\delta \dif \sigma=\delta \iint_R z\frac{a}{z}\dif \sigma=\delt
 \ابتدا{سوال}
 ثمن اول سے مستویات \عددی{x=a}، \عددی{y=a}، اور \عددی{z=a} جو مکعب کاٹتی ہیں اس کی سطح پر  \عددی{g(x,y,z)=x+y+z} کا تکمل حاصل کریں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$9a^3$
+}}
+\انتہا{جواب}
+%Q14
 \ابتدا{سوال}
 ثمن اول سے  محددی  مستویات اور  مستویات  \عددی{x=2} اور \عددی{y+z=1}  جو پچر کاٹتی ہیں اس کی سطح پر \عددی{g(x,y,z)=y+z} کا تکمل حاصل کریں۔
 \انتہا{سوال}
 \ابتدا{سوال}
 ثمن اول سے مستویات \عددی{x=a}، \عددی{y=b}، اور \عددی{z=c} جو  مستطیلی  ٹھوس جسم کاٹتی ہیں اس کی سطح پر \عددی{g(x,y,z)=xyz} کا تکمل لیں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{abc}{4}(ab+ac+bc)$
+}}
+\انتہا{جواب}
+%Q16
 %Q16
 \ابتدا{سوال}
  مستویات \عددی{x=\pm a}، \عددی{y=\pm b}، اور \عددی{z=\pm c}  جو مستطیلی  ٹھوس جسم گھیرتی ہیں اس کی سطح پر \عددی{g(x,y,z)=xyz} کا تکمل لیں۔
@@ -3846,6 +3867,12 @@ M_{xy}&=\iint_S z\delta \dif \sigma=\delta \iint_R z\frac{a}{z}\dif \sigma=\delt
 \ابتدا{سوال}
 تفاعل \عددی{g(x,y,z)=x+y+z} کا تکمل ثمن اول  میں واقع مستوی \عددی{2x+2y+z=2} کے ٹکڑے پر حاصل کریں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$2$
+}}
+\انتہا{جواب}
+%Q18
 \ابتدا{سوال}
     تفاعل  \عددی{g(x,y,z)=x\sqrt{y^2+4}} کا تکمل اس  سطح پر لیں جو  مستویات \عددی{x=0}، \عددی{x=1}، اور \عددی{z=0}  مکافی   بیلن \عددی{y^2+4z=16} سے  کاٹتی ہیں۔
 \انتہا{سوال}
@@ -3858,6 +3885,12 @@ M_{xy}&=\iint_S z\delta \dif \sigma=\delta \iint_R z\frac{a}{z}\dif \sigma=\delt
 \(\kvec{F}(x,y,z)=-\ai+2\aj+3\ak\)\\
 مستطیل سطح \عددی{z=0,\, 0\le x\le 2,\, 0\le y\le 3} جس کا رخ \عددی{\ak} ہے سطح \عددی{S} ہے۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$18$
+}}
+\انتہا{جواب}
+%Q20
 \ابتدا{سوال}\شناخت{سوال_سمتی_میدان_سطح_بہا_ب}
 \(\kvec{F}(x,y,z)=yx^2\ai-2\aj+xz\ak\)\\
 مستطیل سطح \عددی{y=0,\, -1\le x\le 2,\, 2\le z\le 7} جس کا رخ \عددی{-\aj} ہے سطح \عددی{S} ہے۔
@@ -3869,24 +3902,48 @@ M_{xy}&=\iint_S z\delta \dif \sigma=\delta \iint_R z\frac{a}{z}\dif \sigma=\delt
 \ابتدا{سوال}\شناخت{سوال_سمتی_میدان_کرہ_بہا_الف}
 \(\kvec{F}(x,y,z)=z\ak\)
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{\pi a^3}{6}$
+}}
+\انتہا{جواب}
+%Q22
 \ابتدا{سوال}
 \(\kvec{F}(x,y,z)=-y\ai+x\aj\)
 \انتہا{سوال}
 \ابتدا{سوال}
 \(\kvec{F}(x,y,z)=y\ai-x\aj+\ak\)
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{\pi a^2}{4}$
+}}
+\انتہا{جواب}
+%Q24
 \ابتدا{سوال}
 \(\kvec{F}(x,y,z)=zx\ai+zy\aj+z^2\ak\)
 \انتہا{سوال}
 \ابتدا{سوال}
 \(\kvec{F}(x,y,z)=x\ai+y\aj+z\ak\)
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{\pi a^3}{2}$
+}}
+\انتہا{جواب}
+%Q26
 \ابتدا{سوال}\شناخت{سوال_سمتی_میدان_کرہ_بہا_ب}
 \(\kvec{F}(x,y,z)=\frac{x\ai+y\aj+z\ak}{\sqrt{x^2+y^2+z^2}}\)
 \انتہا{سوال}
 \ابتدا{سوال}
 قطع مکافی  بیلن \عددی{z=4-y^2} سے مستویات \عددی{x=0}، \عددی{x=1}، اور \عددی{z=0}   جو سطح  کاٹتی ہیں اس سے اوپر رخ گزرتا بہاؤ میدان \عددی{\kvec{F}(x,y,z)=z^2\ai+x\aj-3z\ak} کے لئے تلاش کریں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$-32$
+}}
+\انتہا{جواب}
+%Q28
 %Q28
 \ابتدا{سوال}
 مکافی سطح \عددی{z=x^2+y^2}  کے نچلے حصے سے مستوی \عددی{z=1}  جو  سطح  کاٹتی ہے اس سے  باہر رخ (محور \عددی{z} سے دور جانب)  گزرتا بہاؤ میدان \عددی{\kvec{F}(x,y,z)=4x\ai+4y\aj+2\ak} کے لئے  تلاش کریں۔
@@ -3910,6 +3967,11 @@ M_{xy}&=\iint_S z\delta \dif \sigma=\delta \iint_R z\frac{a}{z}\dif \sigma=\delt
 \label{شکل_سمتی_میدان_خطہ_سوال}
 \end{figure}
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$-4$
+}}
+\انتہا{جواب}
 %Q30
 \ابتدا{سوال}
 ثمن اول میں بیلن \عددی{y=\ln x} کا ٹکڑا سطح \عددی{S} ، مستوی \عددی{xz} پر محور \عددی{y} کے متوازی  مستطیل سایہ
@@ -3919,6 +3981,12 @@ M_{xy}&=\iint_S z\delta \dif \sigma=\delta \iint_R z\frac{a}{z}\dif \sigma=\delt
 ثمن اول سے مستویات \عددی{x=a}، \عددی{y=a}، اور \عددی{z=a}  مکعب کاٹتی ہیں۔ مکعب کی سطح سے باہر رخ میدان
  \عددی{{\kvec{F}=2xy\ai+2yz\aj+2xz\ak} } کا بہاؤ تلاش کریں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$3a^4$
+}}
+\انتہا{جواب}
+%Q32
 \ابتدا{سوال}
 کرہ \عددی{x^2+y^2+z^2\le 25}  سے مستوی \عددی{z=3}    بالائی ٹوپی کاٹتا ہے۔میدان  \عددی{{\kvec{F}=xz\ai+yz\aj+\ak} } کا بہاؤ   اس ٹوپی سے باہر رخ  تلاش کریں۔
 \انتہا{سوال}
@@ -3927,12 +3995,24 @@ M_{xy}&=\iint_S z\delta \dif \sigma=\delta \iint_R z\frac{a}{z}\dif \sigma=\delt
 \ابتدا{سوال}
 کرہ \عددی{x^2+y^2+z^2=a^2} کے اس حصہ کا، جو ثمن اول میں پایا جاتا ہے،  وسطانی  مرکز تلاش کریں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$(\tfrac{a}{2},\tfrac{a}{2},\tfrac{a}{2})$
+}}
+\انتہا{جواب}
+%Q34
 \ابتدا{سوال}
 بیلن \عددی{y^2+z^2=9,\, z\ge 0} سے مستویات \عددی{x=0} اور \عددی{x=3} جو سطح کاٹتی ہیں  (یہ   مثال\حوالہ{مثال_سمتی_میدان_بیلنی_چادر} کی سطح سے مشابہت رکھتی ہے)اس کا   وسطانی  مرکز تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{سوال}\شناخت{سوال_سمتی_میدان_بیلن_مخروط}
 مستقل کثافت \عددی{\delta}  کے مخروط \عددی{x^2+y^2-z^2=0} سے مستویات \عددی{z=1} اور \عددی{z=2} جو   باریک خول کاٹتی ہیں اس کا مرکز کمیت، اور محور \عددی{z} کے لحاظ سے جمودی  معیار اثر اور رداس  دوار تلاش کریں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$(\bar{x},\bar{y},\bar{z})=(0,0,\tfrac{14}{9}), I_z=\tfrac{15\pi\sqrt{2}}{2}\delta,\\  R_z=\tfrac{\sqrt{10}}{2}$
+}}
+\انتہا{جواب}
+%Q36
 \ابتدا{سوال}
 مستقل کثافت \عددی{\delta}  کے  مخروط  \عددی{4x^2+4y^2-z^2,\, z\ge 0} سے   دائری بیلن \عددی{x^2+y^2=2x}   جو باریک خول (شکل \حوالہ{شکل_سمتی_میدان_بیلن_مخروط})  کاٹتا ہے اس کا محور \عددی{z} کے لحاظ سے جمودی  معیار اثر تلاش کریں۔
 \begin{figure}
@@ -3984,6 +4064,12 @@ M_{xy}&=\iint_S z\delta \dif \sigma=\delta \iint_R z\frac{a}{z}\dif \sigma=\delt
 مسئلہ متوازی محور  (سوالات \حوالہ{سوالات_کثیر_التکمل_پانچ}) اور جزو الف کا نتیجہ  استعمال کر کے  خول کے  مماسی لکیر کے لحاظ سے خول کا  جمودی  معیار اثر تلاش کریں۔
 \end{enumerate}
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+ا) \عددی{\tfrac{8\pi}{3}a^4\delta}، ب) \عددی{\tfrac{20\pi}{3}a^4\delta}
+}}
+\انتہا{جواب}
+%Q38
 \ابتدا{سوال}
 \begin{enumerate}[a.]
 \item
@@ -4038,26 +4124,43 @@ A=\iint_{R_{xz}}\sqrt{f_x^2+f_z^2+1}\dif x\dif z
 \ابتدا{سوال}\شناخت{سوال_سمتی_میدان_خصوصی_کلیہ_الف}
 مکافی سطح \عددی{z=x^2+y^2} کے زیریں  حصے  سے مستوی \عددی{z=3} جو  سطح  کاٹتا ہے۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{\pi}{6}(13\sqrt{13}-1)$
+}}
+\انتہا{جواب}
+%Q40
 \ابتدا{سوال}
 مکفی سطح \عددی{x=1-y^2-z^2} کی نوک سے مستوی \عددی{yz} جو سطح کاٹتا  ہے۔
 \انتہا{سوال}
 \ابتدا{سوال}
 مستوی \عددی{xy} میں  دائرہ \عددی{x^2+y^2=1} اور   ترخیم \عددی{9x^2+4y^2=36} کے بیچ   خطے کے اوپر مخروط \عددی{z=\sqrt{x^2+y^2}} کا ٹکڑا۔ (\ترچھا{اشارہ:}  ہندسہ  کے کلیات استعمال کر کے خطے کا رقبہ تلاش کریں۔)
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$5\pi\sqrt{2}$
+}}
+\انتہا{جواب}
+%Q42
 \ابتدا{سوال}
 مستوی \عددی{2x+6y+3z=6} سے ثمن اول  کے مستویات جو مثلث کاٹتی ہیں۔ باری باری  ایک کلیہ استعمال کر کے رقبہ تین مختلف طریقوں سے تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{سوال}
 ثمن اول میں بیلن \عددی{y=(2\!/\!3)z^{3/2}} سے مستویات \عددی{x=1} اور \عددی{y=16\!/\!3} جو سطح کاٹتی ہیں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{2}{3}(5\sqrt{5}-1)$
+}}
+\انتہا{جواب}
 \ابتدا{سوال}\شناخت{سوال_سمتی_میدان_خصوصی_کلیہ_ب}
  مستوی \عددی{xz}  کے ربع  اول  سے  مکافی \عددی{x=4-z^2}  جو خطہ کاٹتا ہے اس  کے اوپر   مستوی \عددی{y+z=4} کا ٹکڑا۔
 \انتہا{سوال}
-%=========================================================================================
-%===============================================================
+
+\انتہا{سوالات}
+
+
 %sec 15.6 of my book,
-%added figures in text and exercises,
-%theory editing pending. was AI generated. is a mess. All references needs entry.
 \حصہ{مقدار معلوم سطحیں}\شناخت{حصہ_مقدار_معلوم_روپ}
 ہم  مستوی میں منحنیات کو ذیل  تین مختلف طریقوں سے بیان  کر چکے ہیں۔
 \begin{align*}
@@ -4103,7 +4206,7 @@ xmin=0,ymin=0,zmin=0,]
 \begin{tikzpicture}
 \draw[-stealth](0,0)--(4,0)node[right]{$u$};
 \draw[-stealth](0,0)--(0,3)node[right]{$v$};
-\draw plot[,smooth cycle,tension=0.8] coordinates {(0.75,1)(2,-0.25)(3,2)(2,3)(1,2)}--cycle;
+\draw[thick] plot[,smooth cycle,tension=0.8] coordinates {(0.75,1)(2,-0.25)(3,2)(2,3)(1,2)}--cycle;
 \draw[thick](2.5,-0.2)--(2.5,3.25)node[above,xshift=2em]{$u=\text{مستقل}$};
 \draw[thick](0,1)--(3.2,1)node[right]{$v=\text{مستقل}$};
 \draw(2.5,1)node[circle, fill=black, minimum size=2.5pt, inner sep=0pt, outer sep=0pt]{}node[above left]{$(u,v)$};
@@ -4320,9 +4423,9 @@ xtick={1,2,3.5,4},ytick={1,1.5,2.25,3},xticklabels={$a$,$u_0$,,$b$},yticklabels=
 xticklabel style={yshift=0, anchor=north},
 yticklabel style={, anchor=east},
 hide z axis,width=5cm]
-\addplot3[]coordinates {(1,1,0)(4,1,0)(4,3,0)(1,3,0) (1,1,0)};
+\addplot3[thick]coordinates {(1,1,0)(4,1,0)(4,3,0)(1,3,0) (1,1,0)};
 \addplot3[]coordinates{(4,3,0)}node[below left]{{$R$}};
-\addplot3[]coordinates {(2,1.5,0)(3.5,1.5,0)(3.5,2.25,0)(2,2.25,0) (2,1.5,0)}node[pos=0,above right]{$\Delta A_{uv}$}node[pos=0,circ]{};
+\addplot3[thick]coordinates {(2,1.5,0)(3.5,1.5,0)(3.5,2.25,0)(2,2.25,0) (2,1.5,0)}node[pos=0,above right]{$\Delta A_{uv}$}node[pos=0,circ]{};
 \addplot3[dashed]coordinates {(0,1.5,0)(2,1.5,0)};
 \addplot3[dashed]coordinates {(0,2.25,0)(2,2.25,0)};
 \addplot3[dashed]coordinates {(2,0,0)(2,1.5,0)};
@@ -4342,7 +4445,7 @@ hide z axis,width=5cm]
  \عددی{\Delta A_{uv}}  کا ہر پہلو سطح \عددی{S} پر ایک منحنی  پر نقش  ہو جاتا ہے، اور یہ چار منحنیات مل کر سطح پر ایک" چھوٹا خمیدہ رقبہ " \عددی{\Delta S_{uv}}   کے گرد گھیرا  بناتی ہیں۔ شکل کے مطابق \عددی{v=v_0}   ضلع  منحنی \عددی{C_1}  پر نقش ہے،  \عددی{u=u_0} منحنی \عددی{C_2} پر، اور  ان کا مشترک   راس  \عددی{(u_0,v_0)}   نقطہ \عددی{P_0} پر نقش ہے۔
 
 
-%====================================================
+
 
 \begin{figure}
 \begin{minipage}{0.45\textwidth}
@@ -4384,10 +4487,9 @@ hide z axis,width=5cm]
 \end{minipage}
 \end{figure}
 
-شکل\حوالہ{شکل_سمتی_میدان_چھوٹا_بڑا}میں \عددی{\Delta \sigma_{uv}} بڑا کرکے دکھایا گیا ہے۔ سمتیہ\عددی{\kvec{r}_u(u_0,v_0)}
-منحنی \عددی{C_1}  کو نقطہ \عددی{P_0} کے مقام پر مماس ہے۔ اسی طرح\عددی{\kvec{r}_v(u_0,v_0)}
-منحنی \عددی{C_2} کو نقطہ \عددی{P_0} کے مقام پر مماس ہے۔ ان  سمتیات کا صلیبی  ضرب\عددی{\kvec{r}_u \times \kvec{r}_v}
-نقطہ \عددی{P_0} پر سطح کے عمود کا متوازی ہوگا۔ (یہاں ہم یہ مفروضہ استعمال کرتے ہیں کہ سطح \عددی{S} ہموار ہے، تاکہ یہ یقینی بنایا جا سکے کہ\عددی{\kvec{r}_u \times \kvec{r}_v \neq \kvec{0}} ہو۔)
+شکل\حوالہ{شکل_سمتی_میدان_چھوٹا_بڑا}میں \عددی{\Delta \sigma_{uv}} بڑا کرکے دکھایا گیا ہے۔ 
+سمتیہ\عددی{\kvec{r}_u(u_0,v_0)} منحنی \عددی{C_1}  کو نقطہ \عددی{P_0} کے مقام پر مماس ہے۔ 
+اسی طرح\عددی{\kvec{r}_v(u_0,v_0)} منحنی \عددی{C_2} کو نقطہ \عددی{P_0} کے مقام پر مماس ہے۔ ان  سمتیات کا صلیبی  ضرب\عددی{\kvec{r}_u \times \kvec{r}_v} نقطہ \عددی{P_0} پر سطح کے عمود کا متوازی ہوگا۔ (یہاں ہم یہ مفروضہ استعمال کرتے ہیں کہ سطح \عددی{S} ہموار ہے، تاکہ یہ یقینی بنایا جا سکے کہ\عددی{\kvec{r}_u \times \kvec{r}_v \neq \kvec{0}} ہو۔)
 
  ہم سطحی  ٹکڑا \عددی{\Delta \sigma_{uv}} کو مماسی مستوی  پر موجود اس متوازی الاضلاع سے تخمین دیتے  ہیں جس کے اطراف  سمتیات \عددی{\Delta u\,\kvec{r}_u} اور\عددی{\Delta v\,\kvec{r}_v} ہیں (شکل \حوالہ{شکل_سمتی_میدان_چھوٹا_تخمیناً})۔اس متوازی الاضلاع کا رقبہ  درج ذیل ہے۔
 \begin{align}\label{مساوات_مقدار_معلوم_ب}
@@ -4425,7 +4527,7 @@ A=\int_{c}^{d}\int_{a}^{b}|\kvec{r}_u \times \kvec{r}_v|\dif u\dif v
 \kvec{r}(r,\phi)=(r\cos\phi)\ai+(r\sin\phi)\aj+r\ak,\qquad0\le r\le 1,\qquad 0\le \phi \le 2\pi
 \end{align*}
 
-%========================================
+
 %Line 90532
 مساوات \حوالہ{مساوات_مقدار_معلوم_ت} استعمال  کرنے کے لیے ہم  پہلے \عددی{\kvec{r}_r \times \kvec{r}_\phi} حاصل کرتے ہیں۔
 \begin{align*}
@@ -4484,7 +4586,7 @@ A&=\int_{0}^{2\pi}\int_{0}^{\pi}a^2\sin\theta\,\dif \theta\,\dif\phi\\
 \حصہء{سطحی تکملات}
 مقدار معلوم سطح کے رقبہ کا کلیہ حاصل کرنے کے بعد اب ہم   تفاعل کا تکمل مقدار معلوم  سطح پر  حل کر سکتے ہیں۔
 
-%==================================
+
 %L 90590
 
 \ابتدا{تعریف}\موٹا{سطحی تکمل برائے مقدار معلوم  سطح}\\
@@ -4569,11 +4671,11 @@ A&=\int_{0}^{2\pi}\int_{0}^{\pi}a^2\sin\theta\,\dif \theta\,\dif\phi\\
 \begin{figure}
 \centering
 \begin{tikzpicture}
-\draw[dashed,domain=0:180, smooth, variable=\x] plot ({cos(\x)},{1+0.2*sin(\x)});
-\draw[domain=180:360, smooth, variable=\x] plot ({cos(\x)},{1+0.2*sin(\x)});
-\draw[domain=0:360, smooth, variable=\x] plot ({1.25*cos(\x)},{1.75+0.2*sin(\x)});
-\draw(-1,1)--(-1.25,1.75);
-\draw(1,1)--(1.25,1.75)node[pos=0.5,right]{$z=\sqrt{x^2+y^2}$};
+\draw[thick,dashed,domain=0:180, smooth, variable=\x] plot ({cos(\x)},{1+0.2*sin(\x)});
+\draw[thick,domain=180:360, smooth, variable=\x] plot ({cos(\x)},{1+0.2*sin(\x)});
+\draw[thick,domain=0:360, smooth, variable=\x] plot ({1.25*cos(\x)},{1.75+0.2*sin(\x)});
+\draw[thick](-1,1)--(-1.25,1.75);
+\draw[thick](1,1)--(1.25,1.75)node[pos=0.5,right]{$z=\sqrt{x^2+y^2}$};
 \draw[-stealth](0,0)--++(-135:1)node[left]{$x$};
 \draw[-stealth](0,0)--++(1.5,0)node[right]{$y$};
 \draw[](0,0)--(0,0.8);
@@ -4610,17 +4712,16 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 \end{align*}
 خول کا مرکز کمیت نقطہ \عددی{(0,0,\tfrac{14}{9})} پر پایا جاتا ہے۔
 \انتہا{مثال}
-%==============================
-%answers to parametric section (sec 14.6 of finney  old)
-%at Line 4620
 
-\حصہ{سوالات}
+%answers to parametric section (sec 14.6 of finney  old)
+
+\حصہء{سوالات}
 \ابتدا{سوالات}
 \جزوحصہء{سطح کے  مقدار معلوم روپ کی تلاش}
 
 سوال \حوالہ{سوال_مقدار_معلوم_ایک} تا \حوالہ{سوال_مقدار_معلوم_سولہ} میں دی گئی سطح کا مقدار معلوم روپ تلاش کریں۔(درست جواب کے مختلف  روپ ممکن ہیں لہٰذا آپ کے جواب کتاب  میں دیے جواب سے مختلف ہو سکتے ہیں۔)
 
-%1
+%Q1
 \ابتدا{سوال}\شناخت{سوال_مقدار_معلوم_ایک}
 قطع مکافی سطح \quad
  $z = x^2 + y^2,\, z \le 4$
@@ -4748,7 +4849,6 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 \(\int_0^{2\pi}\int_0^1\tfrac{\sqrt{5}}{2}r\dif r\dif \phi=\tfrac{\pi\sqrt{5}}{2}\)
 }}
 \انتہا{جواب}
-%=======================================
 %18
 \ابتدا{سوال}\موٹا{بیلن کے اندر مستوی}\quad
 بیلن \عددی{x^2 + y^2 = 4} کے اندر مستوی \عددی{z = -x} کا ٹکڑا۔
@@ -4867,7 +4967,7 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 \جزوحصہء{سطحی مقدار معلوم روپ  اور بہاؤ}
 سوال \حوالہ{سوال_مقدار_معلوم_پینتیس} تا \حوالہ{سوال_مقدار_معلوم_چوالیس} میں مقدار معلوم روپ استعمال کرتے ہوئے دیے گئے رخ میں بہاؤ \عددی{\iint_S \kvec{F}\cdot\kvec{n}\dif\sigma} تلاش کریں۔
 
-%==================== 35 ====================
+%Q35
 \ابتدا{سوال}\شناخت{سوال_مقدار_معلوم_پینتیس}\موٹا{قطع مکافی  بیلن }\quad
 قطع مکافی بیلن \عددی{z=4-y^2} سے  سطوح \عددی{x=0}، \عددی{x=1}، اور \عددی{z=0}  جو سطح کاٹتی ہیں اس سے  گزرتا باہر رخ (یعنی محور \عددی{x} سے عمودی دور جانب) بہاؤ  میدان  \عددی{\kvec{F} = z^2 \ai + x \aj - 3z \ak}کے لیے تلاش کریں۔
 \انتہا{سوال}
@@ -4876,11 +4976,11 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 \( -32\)
 }}
 \انتہا{جواب}
-%==================== 36 ====================
+%Q36
 \ابتدا{سوال}\موٹا{قطع مکافی  بیلن }\quad
 قطع مکافی بیلن \عددی{y=x^2,\, -1\le x\le 1} سے  سطوح \عددی{z=0}، اور \عددی{z=2}   سطح کاٹتی ہیں ۔ اس سطح   سے   باہر رخ  گزرتا  بہاؤ  (یعنی  مستوی  \عددی{yz}  کو قائمہ)   میدان  \عددی{\kvec{F} = x^2 \aj - xz \ak}کے لیے تلاش کریں۔
 \انتہا{سوال}
-%==================== 37 ====================
+%Q37
 \ابتدا{سوال}\موٹا{کرہ }\quad
 مبدا سے دوری کی جانب  ، ثُمن اول میں موجود    کرہ \عددی{x^2 + y^2 + z^2 = a^2}  کے    حصہ سے  ، میدان $\kvec{F}= z \ak$ کا بہاؤ       دریافت کریں۔
 \انتہا{سوال}
@@ -4889,12 +4989,12 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 \( \pi a^3\!/\!6\)
 }}
 \انتہا{جواب}
-%==================== 38 ====================
+%Q38
 \ابتدا{سوال}\موٹا{کرہ}\quad
 مبدا سے دوری کی جانب  ،     کرہ \عددی{x^2 + y^2 + z^2 = a^2}   سے    گزرتا بہاؤ، میدان $\kvec{F}= x\ai+y\aj+z\ak$ کے لئے  دریافت کریں۔
 \انتہا{سوال}
 
-%==================== 39 ====================
+%Q39
 \ابتدا{سوال}\موٹا{مستوی}\quad
 میدان $\kvec{F}= 2xy \ai + 2yz \aj + 2xz \ak$ کا اوپر کی سمت بہاؤ  مستوی   \عددی{x+y+z=2a}  کے اس حصے پر تلاش کریں جو مستوی \عددی{xy} میں موجود چکور \عددی{0\le x\le a,\, 0\le y\le a}  کے اوپر  پایا جاتا ہے۔
 \انتہا{سوال}
@@ -4903,12 +5003,12 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 \( 13a^4\!/\!6\)
 }}
 \انتہا{جواب}
-%==================== 40 ====================
+%Q40
 \ابتدا{سوال}\موٹا{بیلن }\quad
 میدان $\kvec{F} = x \ai + y \aj + z \ak$ کا باہر کی سمت گزرتا  بہاؤ   بیلن \عددی{x^2 + y^2 = 1,\, 0 \le z \le a}  کے  اس حصے کے  لئے تلاش کریں جسے مستویات \عددی{z=0} اور \عددی{z=a} گھیرتی ہیں۔
 \انتہا{سوال}
 
-%==================== 41 ====================
+%Q41
 \ابتدا{سوال}\موٹا{مخروط}\quad
 میدان $\kvec{f}= xy \ai - z \ak$ کا مخروط \عددی{z = \sqrt{x^2 + y^2},\, 0 \le z \le 1}  سے  باہر کی سمت (محور \عددی{z}   سے عمودی دور)   گزرتا بہاؤ     تلاش کریں۔
 \انتہا{سوال}
@@ -4917,11 +5017,11 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 \( 2\pi\!/\!3\)
 }}
 \انتہا{جواب}
-%==================== 42 ====================
+%Q42
 \ابتدا{سوال}\موٹا{مخروط}\quad
 میدان $\kvec{F} = y^2 \ai + xz \aj - \ak$ کا  مخروط \عددی{z = 2 - x^2 - y^2, 0 \le z \le 2} سے باہر کی سمت (محور \عددی{z}   سے عمودی دور)   گزرتا بہاؤ       تلاش کریں۔
 \انتہا{سوال}
-%==================== 43 ====================
+%Q43
 \ابتدا{سوال}\موٹا{ مخروطی  مقطوع}\quad
 میدان $\kvec{F} = -x \ai - y \aj + z^2 \ak$ کا  مخروط \عددی{z = \sqrt{x^2 +y^2}} کے اس حصے  سے باہر کی سمت (محور \عددی{z}   سے عمودی دور)   گزرتا بہاؤ       تلاش کریں جو مستویات \عددی{z=1} اور \عددی{z=2} کے بیچ پایا جاتا ہے۔
 \انتہا{سوال}
@@ -4930,7 +5030,7 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 \( -73\pi\!/\!6\)
 }}
 \انتہا{جواب}
-%==================== 44 ====================
+%Q44
 \ابتدا{سوال}\شناخت{سوال_مقدار_معلوم_چوالیس}\موٹا{قطع مکافی جسم}\quad
 میدان $\kvec{F} = 4x \ai + 4y \aj + 2 \ak$ کا  مخروط \عددی{z = \sqrt{x^2 +y^2}} کے اس نچلے  حصے  سے باہر کی سمت (محور \عددی{z}   سے عمودی دور)   گزرتا بہاؤ       تلاش کریں جو مستوی \عددی{z=1}  کاٹتا ہے۔
 \انتہا{سوال}
@@ -4965,13 +5065,13 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 مستقل کثافت \عددی{\delta}  کے باریک مخروطی  خول     \عددی{z=\sqrt{x^2+y^2},\,0\le z\le 1}  کا   محور \عددی{z} کے گرد جمودی   معیار اثر تلاش کریں۔
 \انتہا{سوال}
 
-%===========================================================
+
 \جزوحصہء{مقدار معلوم سطوح کے مماسی مستویات}
 
 مقدار معلوم سطح \عددی{\kvec{r}(u,v)=f(u,v)\ai+g(u,v)\ay+h(u,v)\ak}  کے نقطہ \عددی{P_0(f(u_0,v_0),g(u_0,v_0),h(u_0,v_0))} پر مماسی مستوی سے مراد   وہ مستوی ہے جو نقطہ \عددی{P_0} پر مماسی  سمتیات \عددی{\kvec{r}_u(u_0,v_0)} اور \عددی{\kvec{r}_v(u_0,v_0)} کے صلیبی ضرب    سمتیہ  \عددی{\kvec{r}_u(u_0,v_0)\times\kvec{r}_v(u_0,v_0)} کو عمودی ہو۔ سوال \حوالہ{سوال_مقدار_معلوم_انچاس} تا \حوالہ{سوال_مقدار_معلوم_باون} میں نقطہ \عددی{P_0} پر   سطح کے مماسی مستوی کی مساوات تلاش کریں۔اس کے بعد سطح کی کارتیسی مساوات دریافت کر کے سطح اور مماسی مستوی دونوں کا خاکہ ایک ساتھ کھینچیں۔
 
 
-%==================== 49 ====================
+%Q49
 \ابتدا{سوال}\شناخت{سوال_مقدار_معلوم_انچاس}\موٹا{مخروط}\quad
 مخروط\عددی{\kvec{r}(r,\phi)=r\cos \phi\,\ai+r\sin \phi\,\aj+r\,\ak,
 \, r\ge0,\qquad 0\le \phi\le2\pi}
@@ -5175,7 +5275,6 @@ hide z axis,hide x axis,height=10cm]
 \انتہا{سوال}
 
 \انتہا{سوالات}
-%=========================================================================================
 %sec 14.7 of finney 5th edition
 
 
@@ -5206,8 +5305,7 @@ hide z axis,hide x axis,height=10cm]
 \begin{align}
 \nabla =\ai\frac{\partial}{\partial x}+\aj\frac{\partial}{\partial y}+\ak\frac{\partial}{\partial z}
 \end{align}
-%===================================
-%L 90977
+
 
 (علامت \عددی{\nabla} کو  ہم "ڈیل\حاشیہب{del} "  پڑھتے ہیں۔)  یہ عامل استعمال کر کے  گردش \عددی{\kvec{F}} \فرہنگ{گردش!کلیہ}\حاشیہب{curl}\فرہنگ{curl!equation} کو  ہم \عددی{\nabla\times\kvec{F}} لکھتے ہیں۔
 
@@ -5226,7 +5324,7 @@ M & N & P
 \begin{align}
   \kvec{F}\text{گردش}=\nabla \times \kvec{F}
 \end{align}
-%====================================================
+
 
 \ابتدا{مثال}\شناخت{سمتی_میدان_مقدار_معلوم_مثال_الف} گردش \عددی{\kvec{F}} کی تلاش\\
 میدان \عددی{\kvec{F} = (x^2 - y)\ai + 4z\aj + x^2\ak}   کی گردش تلاش کریں۔
@@ -5343,8 +5441,7 @@ x^2 - y & 4z & x^2
 
 \ابتدا{مثال}   نصف کرہ کے لئے مساوات سٹوکس کی تصدیق\\
 نصف کرہ \عددی{S:\, x^2+y^2+z^2=9,\, z\ge 0}  کو گھیرنے والے دائرہ \عددی{C:\, x^2+y^2=9,\,z=0} اور میدان \عددی{\kvec{F}=y\ai-x\aj} کے لئے مساوات \حوالہ{مساوات_سمتی_میدان_مسئلہ_سٹوکس_تعریف}  کی قیمت تلاش کریں۔
-%=====================
-%L 91122
+
 
 \موٹا{حل:}\quad
 مقدار معلوم روپ \عددی{\kvec{r}(\phi)=(3\cos\phi)\ai+(3\sin\phi)\aj,\,0\le \phi \le 2\pi} استعمال کرتے ہوئے اوپر  سے نظارہ کرتے ہوئے \عددی{C} کے گرد خلاف گھڑی دائری بہاؤ تلاش کرتے ہیں۔
@@ -5481,7 +5578,7 @@ x^2 - y & 4z & x^2
 \frac{1}{\pi \rho^2}\ointctrclockwise\limits_C \kvec{F}\cdot \dif \kvec{r}
 \end{align*}
 فرض کریں \عددی{Q} پر رداس \عددی{\rho} کی چپو چرخی رکھی جاتی ہے جس کا دھرا  \عددی{\kvec{u}}  کے ہمراہ ہے۔ سیال کا \عددی{C} کے ہمراہ دائری بہاؤ  چپو چرخی کے   گھومنے کی رفتار پر اثر انداز ہو گا۔ جب  دائری بہاؤ تکمل کی قیمت زیادہ سے زیادہ ہو اس صورت چپو چرخی تیز سے تیز گھومے گی؛ یوں  جب دھرا \عددی{\nabla\times\kvec{F}} کے رخ ہو، چپو چرخی تیز سے تیز گھومے گی (شکل \حوالہ{شکل_سمتی_میدان_سٹوکس_چپو_چرخی})۔
-%=====================
+
 
 \ابتدا{مثال}  \شناخت{مثال_سمتی_میدان_سیال_برقرار_بیلنی}کثافت دائری بہاؤ اور \عددی{\nabla\times\kvec{F}} کا تعلق\\
 اٹل کثافت کا سیال محور \عددی{z} کے گرد \عددی{\kvec{v}=\omega(-y\ai+x\aj)}  سمتی رفتار سے گھوم رہا ہے جہاں \عددی{\omega} ایک مثبت  مستقل جس کو گھومنے  کا\اصطلاح{زاویائی رفتار }\فرہنگ{زاویائی!رفتار}کہتے ہیں(شکل \حوالہ{شکل_سمتی_گردش_سیال_بیلنی})۔  اگر \عددی{\kvec{F}=\kvec{v}} ہو،  \عددی{\nabla\times \kvec{F}} کیا ہو گا اور کثافت دائری بہاؤ کے ساتھ اس کا تعلق کیا ہو گا؟
@@ -5585,8 +5682,7 @@ xz & xy & 3xz
 =
 ( x - 3(2 - 2x - y) )\aj + y\ak=(7x + 3y - 6)\aj + y\ak
 \end{align*}
-%===================
-%L91345
+
 اور
 \begin{align*}
 (\nabla \times \kvec{F}) \cdot \an=\frac{1}{\sqrt{6}}(7x +3y-6+y)=\frac{1}{\sqrt{6}}(7x + 4y - 6)
@@ -5658,7 +5754,7 @@ xz & xy & 3xz
 \begin{align*}
 \ointctrclockwise\limits_{\Delta} \kvec{F}\cdot \dif\kvec{r}=\iint\limits_{S}\nabla \times \kvec{F}\cdot \an\, \dif\sigma
 \end{align*}
-%=====================
+
 
 \جزوحصہء{مسئلہ سٹوکس برائے سوراخ دار سطوح}
 مسئلہ گرین کو وسعت  دینے  کے طرز پر ،  مسئلہ سٹوکس کو  ایسی  سمت بند  سطح \عددی{S} تک وسعت دی جا سکتی ہے جس میں ایک یا ایک سے زیادہ سوراخ ہوں (شکل \حوالہ{شکل_سوراخ_دور_سٹوکس})۔سطح \عددی{S} پر \عددی{\nabla\times\kvec{F}}  کے عمودی جزو کا   سطحی تکمل  اور  تمام سرحدی منحنیات پر \عددی{\kvec{F}} کے مماسی جزو کے لکیری تکملات کا مجموعہ ایک دوسرے کے  برابر ہو گا، جہاں   \عددی{S} کی سمت بندی کو مد نظر  رکھ کر منحنیات پر چلنا ہو گا۔
@@ -5742,7 +5838,7 @@ xz & xy & 3xz
 
 
 
-\حصہ{سوالات}
+\حصہء{سوالات}
 \ابتدا{سوالات}
 \جزوحصہء{مسئلہ سٹوکس کے ذریعہ   دائری بہاؤ  کی قیمت کا حصول}
 سوال \حوالہ{سوال_سٹوکس_ایک} تا \حوالہ{سوال_سٹوکس_چھ} میں مسئلہ سٹوکس استعمال کرتے ہوئے منحنی  \عددی{C} کے ہمراہ  دی گئی سمت  میں  میدان \عددی{\kvec{F}} کے دائری بہاؤ کی قیمت تلاش کریں۔
@@ -5931,10 +6027,6 @@ S:\quad \kvec{r}(r,\theta)=r\cos \theta\,\ai+r\sin \theta\,\aj+(4-r^2)\ak,\qquad
 (میدان \عددی{\kvec{F}} کا دائرہ کار یہاں سادہ  تعلق خطہ نہیں لہٰذا مسئلہ \حوالہ{مسئلہ_سمتی_میدان_بند_حلقہ_خاصیت}   کا اطلاق  نہیں ہوگا۔ محور \عددی{z} کے ہمراہ میدان  \عددی{\kvec{F}}  معین نہیں لہٰذا ایسا کوئی طریقہ ممکن نہیں کہ  \عددی{\kvec{F}} کے دائرہ کار سے باہر نکلے بغیر ہم \عددی{C} کو    ایک نقطے میں سمیٹ  لیں۔)
 \انتہا{سوال}
 \انتہا{سوالات}
-%=========================================
-%==============================================
-
-%sec on universal theorem goes here
 
 
 \حصہ{مسئلہ  پھیلاؤ اور  ایک مربوط نظریہ}\شناخت{حصہ_سمتی_میدان_مسئلہ_پھیلاؤ}
@@ -6473,13 +6565,8 @@ f(b)-f(a)&=f(b)\ai\cdot\ai+f(a)\ai\cdot(-\ai)\\
   تفرقی عامل کے زیر اثر  میدان  کا  خطے میں تکمل اور خطے کی سرحد پر، عامل کے لحاظ سے موزوں،    میدان کے  اجزاء کا مجموعہ برابر ہو گا۔
 \انتہا{قانونء}
 
-%=========================================================
-%===========================================
-%===========================================
-%questions of last sec goes here
 
-
-\حصہ{سوالات}
+\حصہء{سوالات}
 \ابتدا{سوالات}
 \جزوحصہء{پھیلاؤ کی قیمت کی تلاش}
 سوال \حوالہ{سوال_پھیلاؤ_ایک}  تا سوال \حوالہ{سوال_پھیلاؤ_چار}  میں میدان کا پھیلاؤ تلاش کریں۔
@@ -6763,7 +6850,6 @@ $12\pi(4\sqrt{2}-1)$
 \انتہا{سوال}
 \انتہا{سوالات}
 
-%========================================================================================
 %Questions for the entire chapter
 \حصہء{نظرثانی کی خاطر چند سوالات}
 \ابتدا{سوال}
@@ -6833,11 +6919,7 @@ $12\pi(4\sqrt{2}-1)$
 مسئلہ گرین، مسئلہ سٹوکس، اور مسئلہ پھیلاؤ کو کیسے ایک ہی بنیادی مسئلے کے مختلف روپ تصور کیا جا سکتا ہے؟
 \انتہا{سوال}
 
-%============================================
-%=========================================
-%===========================================
-
-\حصہ{مشق}
+\حصہء{مشق}
 \ابتدا{سوالاتباب}
 \جزوحصہء{لکیری تکمل کی قیمت}
 %Q1
@@ -6869,7 +6951,7 @@ $12\pi(4\sqrt{2}-1)$
 پہلی راہ: \عددی{2\sqrt{3}}، دوسری راہ:\عددی{1+3\sqrt{2}}
 }}
 \انتہا{جواب}
-%================
+
 %Q2
 \ابتدا{سوال}
 مبدا کو نقطہ \عددی{(1,1,1)}  سے فضا میں جوڑنے کے تین راستے شکل میں دکھائے گئے ہیں۔ باری باری ان راہ پر \عددی{{f(x,y,z)=x^2+y-z}} کا تکمل لیں۔
@@ -7203,8 +7285,9 @@ $f(x,y,z)=y^2+yz+2x+z$
 مشق \حوالہ{مشق_سمتی_میدان_چکردار_زینہ}  میں چکردار   زینہ کی  قوسی  سرحد کے ہمراہ \عددی{(1,0,0)} سے \عددی{(1,0,2\pi)} تک۔
 \end{enumerate}
 \انتہا{سوال}
-%==========================================
-%Q39, Q40   below missing in 11th edition
+
+%Q39, Q40   below missing in 11th edition. i suspect these might be wrong, so am removing from inclusion in the book.
+\begin{comment}
 \ابتدا{سوال}
 فرض کریں  مستوی \عددی{xy} سے گزرنے والے سیال کا  سمتی رفتار  سمتیہ \عددی{\kvec{F}(x,y)=(x+y)\ai-(x^2+y^2)\aj} ہے۔ درج ذیل راہ  کے ہمراہ  \عددی{(1,0)} تا \عددی{(-1,0)} بہاؤ تلاش کریں۔
 \begin{enumerate}[a.]
@@ -7227,7 +7310,8 @@ $f(x,y,z)=y^2+yz+2x+z$
 پیچ دار لکیر \عددی{\kvec{r}_1(t)=(\cos t)\ai+(\sin t)\aj+t\ak} جہاں \عددی{0\le t\le \pi\!/\!2} ہے اور 
 قطع \عددی{\kvec{r}_2(t)=\aj+\tfrac{\pi}{2}(1-t)\ak,\, 0\le t\le 1}، اور قطع \عددی{\kvec{r}_3(t)=t\ai+(1-t)\aj,\, 0\le t\le 1}  پر مشتمل بند راہ پر \عددی{\kvec{F}=2x\ai+2z\aj+2y\ak} کا دائری بہاؤ تلاش  کریں۔
 \انتہا{سوال}
-%============================================
+\end{comment}
+
 مشق \حوالہ{سوال_سمتی_انتالیس}  اور \حوالہ{سوال_سمتی_چالیس} میں مسئلہ سٹوکس کا تکمل استعمال کر کے  \عددی{C} پر دی گئی سمت چلتے ہوئے  میدان \عددی{\kvec{F}} کا دائری بہاؤ تلاش کریں۔
 
 %Q41
@@ -7377,9 +7461,8 @@ $\pi$
 نصف کرہ \عددی{x^2+y^2+z^2=a^2,\,z\ge 0} سے اوپر رخ \عددی{\kvec{F}=(3z+1)\ak} کا بہاؤ (ا) مسئلہ پھیلاؤ استعمال کر کے اور (ب) بہاؤ کا تکمل   حل  کے تلاش کریں۔
 \انتہا{سوال}
 \انتہا{سوالاتباب}
-%==================================================
-%===========================================
-\حصہ{اضافی اور اعلٰی مشقیں}
+
+
 \ابتدا{سوالاتباب}
 \جزوحصہء{مسئلہ گرین کے  استعمال   سے رقبہ کی تلاش}
 

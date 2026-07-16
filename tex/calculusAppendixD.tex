@@ -2,11 +2,57 @@
 
 تکمل \عددی{\int_a^b f(x)\dif x} کی تخمین کا سمسن قاعدہ \عددی{f} کی ترسیم کو مکافی      قوسوں سے تخمین دینے پر منحصر ہے۔
 
-شکل \حوالہء{A9} میں مکافی کے نیچے سایہ دار خطے کا رقبہ درج ذیل ہے۔
+\begin{figure}
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={fx(\x)=\x;fy(\x)=3-(\x-0.25)^2;}]
+\begin{axis}[hide y axis=true, clip=false,small,view/h=120,axis lines=middle,xlabel={$x$},ylabel={$y$},zlabel={$z$},xtick={-0.75,0.25,1.25},ytick={\empty},ztick={\empty},xticklabels={$x_0$,$x_1$,$x_2$}, xlabel style={anchor=west},ylabel style={anchor=east}]
+\addplot[thick,domain=-1:1.5]({fx(\x)},{fy(\x)})node[pos=0.35,pin=135:{\text{\RL{قطع مکافی}}}]{};
+\addplot[] coordinates {({fx(-0.75)},{fy(-0.75)}) ({fx(-0.75)},{0})}node[pos=0,left,yshift=-0.5em]{$(x_0,y_0)$};
+\addplot[] coordinates {({fx(0.25)},{fy(0.25)}) ({fx(0.25)},{0})}node[pos=0,above]{$(x_1,y_1)$};
+\addplot[] coordinates {({fx(1.25)},{fy(1.25)}) ({fx(1.25)},{0})}node[pos=0,right]{$(x_2,y_2)$};
+\addplot[name path=kcur, thick,smooth,tension=0.4]coordinates{(-1.5,2.5)({fx(-0.75)},{fy(-0.75)})  ({fx(0.25)},{fy(0.25)}) (0.75,3) ({fx(1.25)},{fy(1.25)}) (2,-0.5) (5,-1.25)};
+\addplot[]coordinates{(-0.25,0)}node[above]{$h$};
+\addplot[]coordinates{(0.75,0)}node[above]{$h$};
+\path[name path=kA] (2.25,0)--(2.25,-1.25);
+\path[name path=kB] (3.25,0)--(3.25,-1.25);
+\path[name path=kC] (4.25,0)--(4.25,-1.25);
+\draw[name intersections={of={kcur and kA}}] (2.25,0)--(intersection-1)node[below,yshift=-0.5em]{$y=f(x)$};
+\draw[name intersections={of={kcur and kB}}] (3.25,0)--(intersection-1);
+\draw[name intersections={of={kcur and kC}}] (4.25,0)--(intersection-1);
+\addplot[name path=kcur,draw=none,mark=none,domain=-0.75:1.25]({fx(\x)},{fy(\x)});
+\addplot[draw=none,mark=none,name path=kaxis]coordinates {(-0.75,0)(1.25,0)};
+\addplot[llgray] fill between [of=kcur and kaxis];
+\end{axis}
+\end{tikzpicture}
+\caption{سمسن کا قاعدہ منحنی کے چھوٹے  چھوٹے قطعات کو قطع مکافی سے تخمین دیتا ہے۔}
+\label{شکل_ضمیمہ_چار_اے_نو}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[declare function={fx(\x)=\x;fy(\x)=3-(\x-0.25)^2;}]
+\begin{axis}[hide y axis=true, clip=false,small,view/h=120,axis lines=middle,xlabel={$x$},ylabel={$y$},zlabel={$z$},xtick={-0.75,0.25,1.25},ytick={\empty},ztick={\empty},xticklabels={$-h$,$0$,$h$}, xlabel style={anchor=west},ylabel style={anchor=east}]
+\addplot[thick,domain=-1:1.5]({fx(\x)},{fy(\x)})node[pos=0.35,pin={[align=center,pin distance={1cm}]90:{\text{\RL{قطع مکافی}}\\ $y=Ax^2+Bx+C$}}]{};
+\addplot[] coordinates {({fx(-0.75)},{fy(-0.75)}) ({fx(-0.75)},{0})}node[pos=0,left]{$(-h,y_0)$}node[pos=0.5,left]{$y_0$};
+\addplot[] coordinates {({fx(0.25)},{fy(0.25)}) ({fx(0.25)},{0})}node[pos=0,above]{$(0,y_1)$};
+\addplot[] coordinates {({fx(1.25)},{fy(1.25)}) ({fx(1.25)},{0})}node[pos=0,right]{$(h,y_2)$}node[pos=0.5,left]{$y_2$};
+\addplot[]coordinates{({0.25},{0.5*fy(-0.75)})}node[left]{$y_1$};
+\addplot[name path=kcur,draw=none,mark=none,domain=-0.75:1.25]({fx(\x)},{fy(\x)});
+\addplot[draw=none,mark=none,name path=kaxis]coordinates {(-0.75,0)(1.25,0)};
+\addplot[llgray] fill between [of=kcur and kaxis];
+\end{axis}
+\end{tikzpicture}
+\caption
+{سایہ دار رقبہ تلاش کرنے کے لئے \عددی{-h} تا \عددی{h} تکمل لے کر \عددی{\tfrac{h}{3}(y_0+4y_1+y_2)} حاصل ہو گا۔}
+\label{شکل_ضمیمہ_چار_اے_دس}
+\end{minipage}
+\end{figure}
+
+شکل \حوالہ{شکل_ضمیمہ_چار_اے_نو}  میں مکافی کے نیچے سایہ دار خطے کا رقبہ درج ذیل ہے۔
 \[\text{رقبہ}=\frac{h}{3}(y_0+4y_1+y_2)\]
 اس کلیہ کو \اصطلاح{سمسن کا ایک تہائی کا قاعدہ }\حاشیہب{Simson's one-third rule}\فرہنگ{سمسن! ایک تہائی  کا قاعدہ}\فرہنگ{Simson's one-third rule}کہتے ہیں۔
 
-آئیں  یہ  کلیہ  اخذ کریں۔ الجبرا سادہ رکھنے کی غرض سے شکل \حوالہء{A10} میں پیش  محددی نظام  استعمال کیا جائے گا۔مکافی کے نیچے رقبہ محور \عددی{y} کے مقام پر منحصر نہیں تاہم  اس محور   کا عمودی پیمانہ برقرار رکھنا ضروری ہے۔ مکافی کی مساوات \عددی{y=Ax^2+Bx+C} روپ رکھتی ہے لہٰذا \عددی{x=-h} تا \عددی{x=h} اس کے نیچے رقبہ درج ذیل ہو گا۔
+آئیں  یہ  کلیہ  اخذ کریں۔ الجبرا سادہ رکھنے کی غرض سے شکل \حوالہ{شکل_ضمیمہ_چار_اے_دس}  میں پیش  محددی نظام  استعمال کیا جائے گا۔مکافی کے نیچے رقبہ محور \عددی{y} کے مقام پر منحصر نہیں تاہم  اس محور   کا عمودی پیمانہ برقرار رکھنا ضروری ہے۔ مکافی کی مساوات \عددی{y=Ax^2+Bx+C} روپ رکھتی ہے لہٰذا \عددی{x=-h} تا \عددی{x=h} اس کے نیچے رقبہ درج ذیل ہو گا۔
 \begin{align*}
 \text{رقبہ}=\int_{-h}^{h} (Ax^2+Bx+C)\dif x&=\left[\frac{Ax^3}{3}+\frac{Bx^2}{2}+Cx\right]_{-h}^{h}\\
 &=\frac{2Ah^3}{3}+2Ch\\

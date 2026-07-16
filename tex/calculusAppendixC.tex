@@ -27,8 +27,19 @@ m+n=p\quad  \text{اور}\quad mn=q
 ب) تقسیم
 \end{enumerate}
 \end{multicols}
+%
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\kL}{2}
+\draw[thick](0,0)--++(\kL,0)node[pos=0.5,below]{$1$}--++(0,\kL)node[pos=0.5,right]{$1$}--++(-\kL,0)--++(0,-\kL);
+\draw[thick](0,0)--(\kL,\kL)node[pos=0.5,shift={(-0.7em,0.6em)}]{$\sqrt{2}$};
+\end{tikzpicture}
+\caption{اکائی مربع کے ضلع کی لمبائی  غیر ناطق  ہو گی۔}
+\label{شکل_ضمیمہ_تین_ایک}
+\end{figure}
 
-اکائی مربع کا ہندسہ (شکل \حوالہء{2}) اور مسئلہ فیثاغورث سے ہم جانتے ہیں کہ وہ  ہندسی  بناؤٹ کی مدد سے لمبائی کی کسی بنیادی اکائی کے لحاظ سے   \عددی{\sqrt{2}}  اکائی لمبائی  کی لکیر کھینچ سکتے تھے۔ یوں ہم کہہ سکتے ہیں کہ ہندسی  بناؤٹ سے وہ درج ذیل مساوات حل کر سکتے تھے۔
+اکائی مربع کا ہندسہ (شکل \حوالہ{شکل_ضمیمہ_تین_ایک}) اور مسئلہ فیثاغورث سے ہم جانتے ہیں کہ وہ  ہندسی  بناؤٹ کی مدد سے لمبائی کی کسی بنیادی اکائی کے لحاظ سے   \عددی{\sqrt{2}}  اکائی لمبائی  کی لکیر کھینچ سکتے تھے۔ یوں ہم کہہ سکتے ہیں کہ ہندسی  بناؤٹ سے وہ درج ذیل مساوات حل کر سکتے تھے۔
 \[x^2=2\]
 تاہم  ان کو معلوم ہوا کہ   \عددی{\sqrt{2}} لمبائی کی لکیر اور \عددی{1} لمبائی کی لکیر    متبائن  مقادیر ہیں۔ یعنی   \عددی{\sqrt{2}/1}   کو کسی دوسری زیادہ بنیادی اکائی لمبائی    کے دو عدد صحیح   مضرب کی نسبت  نہیں لکھا جا سکتا۔یوں ایک پڑھا لکھا شخص مساوات \عددی{x^2=2} کا حل ناطق عدد کی صورت میں دریافت نہیں کر سکتا تھا۔
 
@@ -183,7 +194,25 @@ x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}
 اس کو مستوی \عددی{xy}  میں مبدا سے نقطہ \عددی{P} تک سمتیہ \عددی{\koverrightharp{OP}}سے ظاہر کیا جاتا ہے۔
 \end{enumerate}
 دونوں اظہار میں محور \عددی{x} \اصطلاح{حقیقی محور}\فرہنگ{حقیقی!محور}\حاشیہب{real axis}\فرہنگ{real!axis} اور 
- محور \عددی{y} \اصطلاح{خیالی  محور}\فرہنگ{خیالی!محور}\حاشیہب{imaginary axis}\فرہنگ{imaginary!axis} اور  کہلاتے ہیں۔ دونوں اظہار \عددی{x+iy} کے\اصطلاح{اغگن خاکے  }\فرہنگ{اغگن خاکے}\حاشیہب{Argand diagrams}\فرہنگ{Argand diagrams} (شکل \حوالہء{A.3})ہیں۔
+ محور \عددی{y} \اصطلاح{خیالی  محور}\فرہنگ{خیالی!محور}\حاشیہب{imaginary axis}\فرہنگ{imaginary!axis} اور  کہلاتے ہیں۔ دونوں اظہار \عددی{x+iy} کے\اصطلاح{اغگن خاکے  }\فرہنگ{اغگن خاکے}\حاشیہب{Argand diagrams}\فرہنگ{Argand diagrams} (شکل \حوالہ{شکل_ضمیمہ_تین_دو})ہیں۔
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\kL}{2}
+\pgfmathsetmacro{\kang}{45}
+\draw[-stealth](0,0)--++(2.5,0)node[right]{$x$};
+\draw[-stealth](0,0)--++(0,1.75)node[left]{$y$};
+\draw[thick,-stealth](0,0)node[below left]{$O$}--++(\kang:2)coordinate(kP)node[circ]{}node[right]{$P(x,y)$}node[pos=0.5,above]{$\kvec{r}$};
+\draw[-stealth] (0.75,0) arc (0:\kang:0.75)node[pos=0.6,right]{$\theta$};
+\draw[](1,0)node[below]{$x$};
+\draw[dashed](kP)--($(0,0)!(kP)!(4,0)$)node[pos=0.5,right]{$y$};
+\end{tikzpicture}
+\caption{
+اغگن خاکہ میں \عددی{z=x+iy} کو  نقطہ \عددی{P(x,y)} اور سمتیہ \عددی{\vec{OP}}   ظاہر کیا جاتا ہے۔
+}
+\label{شکل_ضمیمہ_تین_دو}
+\end{figure}
 
 قطبی محدد میں \عددی{x} اور \عددی{y} کی قیمت درج ذیل ہو گی
 \begin{align*}
@@ -208,7 +237,35 @@ z=x+iy=r(\cos \theta+i\sin\theta)
 \[e^{i\theta}=\cos\theta+i\sin\theta\]
 کی مدد سے مساوات \حوالہ{مساوات_ضمیمہ_مخلوط_دس} درج ذیل لکھی جا سکتی ہے۔
 \[z=re^{i\theta}\]
-اس سے  مخلوط اعداد کے حاصل ضرب، حاصل تقسیم، طاقت، اور جذر  کے  درج ذیل قواعد پیدا ہوتے ہیں۔اس سے \عددی{e^{i\theta}} کے  اغگن خاکے بھی حاصل ہوتے ہیں۔ مساوات  \حوالہ{مساوات_ضمیمہ_مخلوط_دس} میں \عددی{r=1} لینے سے  \عددی{\cos\theta+i\sin\theta} ملتا ہے لہٰذا  ہم کہتے ہیں \عددی{e^{i\theta}}   کو اکائی  سمتیہ ظاہر کرتا ہ جو مثبت محور \عددی{x} کے ساتھ زاویہ \عددی{\theta} بناتا ہے (شکل \حوالہء{A.4})۔
+اس سے  مخلوط اعداد کے حاصل ضرب، حاصل تقسیم، طاقت، اور جذر  کے  درج ذیل قواعد پیدا ہوتے ہیں۔اس سے \عددی{e^{i\theta}} کے  اغگن خاکے بھی حاصل ہوتے ہیں۔ مساوات  \حوالہ{مساوات_ضمیمہ_مخلوط_دس} میں \عددی{r=1} لینے سے  \عددی{\cos\theta+i\sin\theta} ملتا ہے لہٰذا  ہم کہتے ہیں \عددی{e^{i\theta}}   کو اکائی  سمتیہ ظاہر کرتا ہ جو مثبت محور \عددی{x} کے ساتھ زاویہ \عددی{\theta} بناتا ہے (شکل \حوالہ{شکل_ضمیمہ_تین_چار})۔
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\kr}{1.5}
+\pgfmathsetmacro{\kang}{45}
+\draw[-stealth](0,0)--++(2.5,0)node[right]{$x$};
+\draw[-stealth](0,0)--++(0,1.75)node[left]{$y$};
+\draw[](0,0) circle (\kr);
+\draw[thick](0,0)--++(\kang:\kr)node[circ]{}node[right]{$(\cos\theta,\sin\theta)$}node[pin={[xshift=1em]90:{$e^{i\theta=\cos\theta+i\sin\theta}$}}]{};
+\draw[thick,-stealth] (0.7,0) arc (0:\kang:0.7)node[pos=0.7,right,xshift=0.5em,fill=white]{$\theta=z\,\text{\RL{دلیل}}$};
+\draw[](0,-\kr)node[below]{(ب)};
+\end{tikzpicture}\hfill
+\begin{tikzpicture}
+\pgfmathsetmacro{\kr}{1.5}
+\pgfmathsetmacro{\kang}{45}
+\draw[-stealth](0,0)--++(2.5,0)node[right]{$x$};
+\draw[-stealth](0,0)--++(0,1.75)node[left]{$y$};
+\draw[](0,0) circle (\kr);
+\draw[thick,-stealth](0,0)--++(\kang:\kr)node[pos=0.6,rotate=\kang, above]{$r=1$}node[pos=0.75,pin={[pin edge={-}]30:{$e^{i\theta}=\cos\theta+i\sin\theta$}}]{};
+\draw[thick,-stealth] (0.7,0) arc (0:\kang:0.7)node[pos=0.7,right,xshift=0.5em,fill=white]{$\theta=z\,\text{\RL{دلیل}}$};
+\draw[](0,-\kr)node[below]{(ا)};
+\end{tikzpicture}
+\caption{
+اغگن خاکہ \عددی{e^{i\theta}=\cos\theta+i\sin\theta} کو  بطور (ا)  سمتیہ، اور (ب)  ایک نقطہ ظاہر کرتا ہے۔
+}
+\label{شکل_ضمیمہ_تین_چار}
+\end{figure}
 
 \جزوحصہء{حاصل ضرب}
 دو مخلوط اعداد کو ضرب کرنے کے لئے ان کی مطلق قیمتوں کو آپس   میں ضرب کیا جاتا ہے جبکہ ان کے زاویوں کو  آپس میں جمع کیا جاتا  ہے۔ہم    دو مخلوط اعداد:
@@ -226,16 +283,70 @@ z_1=r_1e^{i\theta_1},\quad   z_2=r_2e^{i\theta_2}
 (z_1z_2)\text{دلیل}&=\theta_1+\theta_2=z_1 \text{دلیل}+z_2\text{دلیل}
 \end{aligned}
 \end{equation}
-یوں دو مخلوط اعداد کا حاصل ضرب  ایسے سمتیہ سے ظاہر  ہو گا جس کی لمبائی   مخلوط اعداد کی مطلق قیمتوں  کا حاصل ضرب  اور  دلیل اعداد کی دلائل کا مجموعہ  (شکل \حوالہء{A5}) ہو۔ مزید سمتیہ کو \عددی{e^{i\theta}} سے ضرب دینا سمتیہ  کو خلاف گھڑی زاویہ \عددی{\theta} گھمانے کے مترادف ہے۔سمتیہ کو \عددی{i} سے ضرب دینا خلاف گھڑی \عددی{90^{\circ}} گھماتا  ہے، \عددی{-1} سے ضرب \عددی{180^{\circ}} ، اور \عددی{-i} سے ضرب \عددی{270^{\circ}} خلاف گھڑی گھماتا ہے، وغیرہ۔
+یوں دو مخلوط اعداد کا حاصل ضرب  ایسے سمتیہ سے ظاہر  ہو گا جس کی لمبائی   مخلوط اعداد کی مطلق قیمتوں  کا حاصل ضرب  اور  دلیل اعداد کی دلائل کا مجموعہ  (شکل \حوالہ{شکل_ضمیمہ_تین_پانچ}) ہو۔ مزید سمتیہ کو \عددی{e^{i\theta}} سے ضرب دینا سمتیہ  کو خلاف گھڑی زاویہ \عددی{\theta} گھمانے کے مترادف ہے۔سمتیہ کو \عددی{i} سے ضرب دینا خلاف گھڑی \عددی{90^{\circ}} گھماتا  ہے، \عددی{-1} سے ضرب \عددی{180^{\circ}} ، اور \عددی{-i} سے ضرب \عددی{270^{\circ}} خلاف گھڑی گھماتا ہے، وغیرہ۔
 
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\krA}{2}
+\pgfmathsetmacro{\kangA}{30}
+\pgfmathsetmacro{\krB}{1.5}
+\pgfmathsetmacro{\kangB}{80}
+\pgfmathsetmacro{\krC}{\krA*\krB}
+\pgfmathsetmacro{\kangC}{\kangA+\kangB}
+\draw[-stealth](0,0)--++(2,0)node[right]{$x$};
+\draw[-stealth](0,0)--++(0,3)node[above]{$y$};
+\draw[thick,-stealth](0,0)--++(\kangA:\krA)node[right]{$z_1$}node[pos=0.7,above]{$r_1$};
+\draw[-stealth](1,0) arc (0:\kangA:1)node[pos=0.6,right]{$\theta_1$};
+\path[thick,-stealth](0,0)--++(\kangB:\krB)node[pos=0.7,left,fill=white]{$r_2$};
+\draw[thick,-stealth](0,0)--++(\kangB:\krB)node[right]{$z_2$};
+\draw[-stealth](0.7,0) arc (0:\kangB:0.7)node[pos=0.6,above]{$\theta_2$};
+\draw[thick,-stealth](0,0)--++(\kangC:\krC)node[above]{$z_1z_2$}node[pos=0.5,left]{$r_1r_2$};
+\draw[] (\kangB:\krB)++(\kangB:0.4)--++(\kangB:0.5);
+\draw[-stealth](\kangB:2.25) arc (\kangB:\kangC:2.25)node[pos=0.7,above]{$\theta_1$};
+\end{tikzpicture}
+\caption{
+مخلوط اعداد \عددی{z_1} اور \عددی{z_2}  ضرب دینے سے \عددی{|z_1z_2|=r_1\cdot r_2} اور \عددی{(z_1z_2)\,\text{دلیل}=\theta_1+\theta_2} حاصل ہو گا۔
+}
+\label{شکل_ضمیمہ_تین_پانچ}
+\end{figure}
 \ابتدا{مثال}
-فرض کریں \عددی{z_1=1+i}  اور \عددی{z_2=\sqrt{3}-i} ہیں۔ ہمیں ان کے اغگن خاکوں (شکل \حوالہء{A.6}) سے   مطلق قیمتیں اور دلائل کی قیمتیں دیکھ کر درج لکھتے ہیں۔
+فرض کریں \عددی{z_1=1+i}  اور \عددی{z_2=\sqrt{3}-i} ہیں۔ ہمیں ان کے اغگن خاکوں (شکل \حوالہ{شکل_ضمیمہ_تین_چھ}) سے   مطلق قیمتیں اور دلائل کی قیمتیں دیکھ کر درج لکھتے ہیں۔
 \[z_1=\sqrt{2}e^{i\pi/4},\quad z_2=2e^{-i\pi/6}\]
 یوں درج ذیل ہو گا۔
 \begin{align*}
 z_1z_2&=2\sqrt{2}e^{(\dfrac{i\pi}{4}-\dfrac{i\pi}{6})}=2\sqrt{2}e^{\dfrac{i\pi}{12}}\\
 &=2\sqrt{2}\big(\cos \dfrac{\pi}{12}+i\sin\dfrac{\pi}{12}\big)\approx 2.73+0.73i
 \end{align*}
+\begin{figure}
+\centering
+\begin{tikzpicture}[scale=2]
+\pgfmathsetmacro{\krA}{sqrt(2)}
+\pgfmathsetmacro{\kangA}{45}
+\pgfmathsetmacro{\krB}{2}
+\pgfmathsetmacro{\kangB}{-30}
+\pgfmathsetmacro{\krC}{\krA*\krB}
+\pgfmathsetmacro{\kangC}{\kangA+\kangB}
+\draw[-stealth](0,0)--++(4,0)node[right]{$x$};
+\draw[-stealth](0,-1.25)--(0,1.25)node[above]{$y$};
+\draw[thick,-stealth](0,0)--++(\kangA:\krA)coordinate(A)node[right]{$z_1=1+i$}node[pos=0.7,above,xshift=-0.5em]{$\sqrt{2}$};
+\draw[-stealth](0.7,0) arc (0:\kangA:0.7)node[pos=0.7,right]{$\tfrac{\pi}{4}$};
+\path[thick,-stealth](0,0)--++(\kangB:\krB)node[pos=0.7,below]{$2$};
+\draw[thick,-stealth](0,0)--++(\kangB:\krB)coordinate(B)node[right]{$z_2=\sqrt{3}-i$};
+\draw[-stealth](0.85,0) arc (0:\kangB:0.85)node[pos=0.6,right]{$-\tfrac{\pi}{6}$};
+\draw[thick,-stealth](0,0)--++(\kangC:\krC)coordinate(C)node[above]{$z_1z_2$}node[pos=0.75,above]{$2\sqrt{2}$};
+\draw[-stealth](1,0) arc (0:\kangC:1)node[pos=0.5,right]{$\tfrac{\pi}{12}$};
+\draw[dashed](A)--($(0,0)!(A)!(2,0)$);
+\draw[dashed](B)--($(0,0)!(B)!(2,0)$)node[pos=0.5,right]{$1$};
+\draw[dashed](C)--($(0,0)!(C)!(2,0)$)node[pos=0.5,right]{$\sqrt{3}-1$}node[below]{$1+\sqrt{3}$};
+\draw[thin](0,1)node[left]{$1$}--++(0.1,0);
+\draw[thin](0,-1)node[left]{$-1$}--++(0.1,0);
+\end{tikzpicture}
+\caption{
+دو  مخلوط اعداد آپس میں ضرب کرنے کے لئے  ان کی مطلق قیمتوں کو آپس میں ضرب کریں اور ان کے دلائل آپس میں جمع کریں۔
+}
+\label{شکل_ضمیمہ_تین_چھ}
+\end{figure}
 \انتہا{مثال}
 
 
@@ -306,13 +417,75 @@ z^n=\big(re^{i\theta}\big)^n&=r^ne^{i(\theta+\theta+\cdots+\theta)},\quad   \tex
 اپنی آسانی کی خاطر ہم درج ذیل لیتے ہیں۔
 \[k=0,1,2,\cdots,n-1\]
 
-مخلوط عدد \عددی{re^{i\theta}} کے تمام  \عددی{n}    جذر ، مبدا پر مرکوز ایسے  دائرے پر پائے جاتے ہیں جس کا رداس \عددی{r} کا \عددی{n} ویں جذر ہے۔ ان میں ایک کا دلیل \عددی{\alpha=\theta\!/\!n} کے برابر ہے۔ باقی جذر  دائرے پر ایک دوسرے سے یکساں فاصلے پر پائے جاتے ہیں جہاں دو قریبی جذر کے بیچ زاویہ \عددی{2\pi\!/\!n} ہو گا۔ شکل \حوالہء{A.7} میں  مخلوط عدد \عددی{z=re^{i\theta}} کے کعبی جذر \عددی{w_0}، \عددی{w_1}، اور \عددی{w_2}   کے محل و وقوع  دکھائے گئے ہیں۔
+مخلوط عدد \عددی{re^{i\theta}} کے تمام  \عددی{n}    جذر ، مبدا پر مرکوز ایسے  دائرے پر پائے جاتے ہیں جس کا رداس \عددی{r} کا \عددی{n} ویں جذر ہے۔ ان میں ایک کا دلیل \عددی{\alpha=\theta\!/\!n} کے برابر ہے۔ باقی جذر  دائرے پر ایک دوسرے سے یکساں فاصلے پر پائے جاتے ہیں جہاں دو قریبی جذر کے بیچ زاویہ \عددی{2\pi\!/\!n} ہو گا۔ شکل \حوالہ{شکل_ضمیمہ_تین_سات} میں  مخلوط عدد \عددی{z=re^{i\theta}} کے کعبی جذر \عددی{w_0}، \عددی{w_1}، اور \عددی{w_2}   کے محل و وقوع  دکھائے گئے ہیں۔
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[scale=2]
+\pgfmathsetmacro{\kr}{1.5}
+\pgfmathsetmacro{\kang}{60}
+\pgfmathsetmacro{\krA}{1}
+\pgfmathsetmacro{\kangA}{\kang/3}
+\pgfmathsetmacro{\krB}{\krA}
+\pgfmathsetmacro{\kangB}{\kangA+120}
+\pgfmathsetmacro{\krC}{\krA}
+\pgfmathsetmacro{\kangC}{\kangA+240}
+\pgfmathsetmacro{\kangD}{\kangA-120}
+\draw[-stealth](0,0)--++(1.25,0)node[right]{$x$};
+\draw[-stealth](0,-1.25)--(0,1.5)node[above]{$y$};
+\draw[thick,-stealth](0,0)--++(\kang:\kr)node[right]{$z=re^{i\theta}$}node[pos=0.55,left]{$r$};
+\draw[-stealth] (0.5,0) arc (0:\kang:0.5)node[pos=0.5,above]{$\theta$};
+\draw[thick,-stealth](0,0)--++(\kangA:\krA)node[right]{$w_0$};
+\draw[-stealth] (0.7,0) arc (0:\kangA:0.7)node[pos=0,below]{$\tfrac{\theta}{3}$};
+\draw[thick,-stealth](0,0)--++(\kangB:\krB)node[left,yshift=0.5em]{$w_1$}node[pos=0.4,below left,yshift=0.5em]{$r^{1/3}$};
+\draw[stealth-stealth] (\kangA:1) arc (\kangA:\kangB:1)node[pos=0.75,fill=white]{$\tfrac{2\pi}{3}$};
+\draw[thick,-stealth](0,0)--++(\kangC:\krC)node[below]{$w_2$};
+\draw[stealth-stealth]  (\kangB:1) arc (\kangB:\kangC:1)node[pos=0.5,fill=white]{$\tfrac{2\pi}{3}$};
+\draw[stealth-stealth]  (\kangA:1) arc (\kangA:\kangD:1)node[pos=0.5,fill=white]{$\tfrac{2\pi}{3}$};
+\end{tikzpicture}
+\caption{
+مخلوط عدد \عددی{z=re^{i\theta}} کے تین کعبی جذر۔
+}
+\label{شکل_ضمیمہ_تین_سات}
+\end{figure}
+\begin{figure}
+\centering
+\begin{tikzpicture}[scale=2]
+\pgfmathsetmacro{\krA}{1}
+\pgfmathsetmacro{\kangA}{45}
+\pgfmathsetmacro{\krB}{\krA}
+\pgfmathsetmacro{\kangB}{\kangA+90}
+\pgfmathsetmacro{\krC}{\krA}
+\pgfmathsetmacro{\kangC}{\kangA+180}
+\pgfmathsetmacro{\krD}{\krA}
+\pgfmathsetmacro{\kangD}{\kangA-90}
+\pgfmathsetmacro{\kangE}{\kangC+90}
+\draw[-stealth](0,0)--++(1.25,0)node[right]{$x$};
+\draw[-stealth](0,-1.25)--(0,1.5)node[above]{$y$};
+\draw[thick,-stealth](0,0)--++(\kangA:\krA)node[right]{$w_0$};
+\draw[-stealth] (0.6,0) arc (0:\kangA:0.6)node[pos=0.5,right]{$\tfrac{\pi}{4}$};
+\draw[thick,-stealth](0,0)--++(\kangB:\krB)node[left,yshift=0.5em]{$w_1$}node[pos=0.6,below]{$2$};
+\draw[stealth-stealth] (\kangA:1) arc (\kangA:\kangB:1)node[pos=0.75,fill=white]{$\tfrac{\pi}{2}$};
+\draw[thick,-stealth](0,0)--++(\kangC:\krC)node[below,xshift=-0.25em]{$w_2$};
+\draw[stealth-stealth]  (\kangB:1) arc (\kangB:\kangC:1)node[pos=0.25,fill=white]{$\tfrac{\pi}{2}$};
+\draw[stealth-stealth]  (\kangC:1) arc (\kangC:\kangE:1)node[pos=0.75,fill=white]{$\tfrac{\pi}{2}$};
+\draw[stealth-stealth]  (\kangA:1) arc (\kangA:\kangD:1)node[pos=0.75,fill=white]{$\tfrac{\pi}{2}$};
+\draw[thick,-stealth](0,0)--++(\kangD:\krD)node[right,yshift=-0.5em]{$w_3$};
+\draw[dashed](-1,0)--++(-0.5,0)coordinate[pos=0.8](kP);
+\draw(kP)node[below,xshift=-0.25em]{$-16$}--++(0,0.1);
+\end{tikzpicture}
+\caption{
+عدد \عددی{-16} کے  چار چوتھویں جذر۔
+}
+\label{شکل_ضمیمہ_تین_آٹھ}
+\end{figure}
+
 
 \ابتدا{مثال}
 عدد \عددی{-16} کی تمام  چوتھی جذریں  تلاش کریں۔
 
 \موٹا{حل:}\quad
-سب سے پہلے  عدد \عددی{-16} کا  اغگن خاکہ (شکل \حوالہء{A8}) بنا کر اس کا  قطبی روپ \عددی{re^{i\theta}}  تلاش کرتے ہیں۔ یہاں \عددی{{z=-16}}، \عددی{{r=+16}}، اور \عددی{\theta=\pi} ہیں۔ عدد \عددی{16e^{i\pi}} کا  ایک  چوتھواں جذر \عددی{2e^{i\pi/4}} ہے۔ باقی جذر جاننے کے  لئے  ہم  پہلے جذر کی  دلیل کے ساتھ یک بعد دیگرے \عددی{2\pi/4=\pi/2} جمع کرتے ہیں۔یوں 
+سب سے پہلے  عدد \عددی{-16} کا  اغگن خاکہ (شکل \حوالہ{شکل_ضمیمہ_تین_آٹھ}) بنا کر اس کا  قطبی روپ \عددی{re^{i\theta}}  تلاش کرتے ہیں۔ یہاں \عددی{{z=-16}}، \عددی{{r=+16}}، اور \عددی{\theta=\pi} ہیں۔ عدد \عددی{16e^{i\pi}} کا  ایک  چوتھواں جذر \عددی{2e^{i\pi/4}} ہے۔ باقی جذر جاننے کے  لئے  ہم  پہلے جذر کی  دلیل کے ساتھ یک بعد دیگرے \عددی{2\pi/4=\pi/2} جمع کرتے ہیں۔یوں 
 \[\sqrt[4]{16e^{i\pi}}=2e^{i(\dfrac{\pi}{4}, \dfrac{3\pi}{4}, \dfrac{5\pi}{4}, \dfrac{7\pi}{4})}\]
 ہو گا لہٰذا چار جذر درج ذیل ہوں گے۔
 \begin{align*}
@@ -335,8 +508,8 @@ w_3&=2\big[\cos\dfrac{7\pi}{4}+i\sin\dfrac{7\pi}{4}\big]=\sqrt{2}(1-i)
 
 اس مسئلے کا ثبوت مخلوط متغیر کے تفاعلات کے نظریہ کی  تقریباً ہر کتاب میں دیکھا جا سکتا ہے۔
 
-\حصہء{سوالات}
-
+\حصہ{سوالات}
+\ابتدا{سوالات}
 \جزوحصہء{مخلوط اعداد  پر عملیات}
 
 \ابتدا{سوال}کمپیوٹر مخلوط اعداد کیسے ضرب کرتا  ہے۔\\
@@ -353,6 +526,12 @@ w_3&=2\big[\cos\dfrac{7\pi}{4}+i\sin\dfrac{7\pi}{4}\big]=\sqrt{2}(1-i)
 \end{multicols}
 (مخلوط اعداد  کا حاصل ضرب کمپیوٹر اس طرح حاصل کرتا ہے۔)
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+ا) \عددی{(14,8)}، ب) \عددی{(-1,8)}، ج) \عددی{(0,-5)}
+}}
+\انتہا{جواب}
+%Q2
 \ابتدا{سوال}
  درج ذیل حل کر کے حقیقی اعداد \عددی{x} اور \عددی{y}  تلاش کریں۔
 \begin{enumerate}[a.]
@@ -368,7 +547,7 @@ w_3&=2\big[\cos\dfrac{7\pi}{4}+i\sin\dfrac{7\pi}{4}\big]=\sqrt{2}(1-i)
 \جزوجزوحصہء{ترسیم اور ہندسہ}
 
 \ابتدا{سوال}
-درج ذیل  مخلوط اعداد میں کتنوں کو  کو ہندسہ کے ذریعہ \عددی{z=x+iy}   سے حاصل کیا جا سکتا ہے۔ خاکے کھینچیں۔
+درج ذیل  مخلوط اعداد میں کتنوں کو   ہندسہ کے ذریعہ \عددی{z=x+iy}   سے حاصل کیا جا سکتا ہے۔ خاکے کھینچیں۔
 \begin{multicols}{2}
 \begin{enumerate}[a.]
 \item
@@ -383,13 +562,19 @@ w_3&=2\big[\cos\dfrac{7\pi}{4}+i\sin\dfrac{7\pi}{4}\big]=\sqrt{2}(1-i)
 \end{multicols}
 
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+ا)  حقیقی محور  میں  \عددی{z} کا عکس لے کر۔ ب)  خیالی محور میں \عددی{z} کا عکس لے کر۔ ج) مبدا میں \عددی{z} کا عکس لے کر۔ د) حقیقی محور میں \عددی{z} کا عکس لے کر سمتیہ کی لمبائی کو \عددی{1\!/\!|z|^2} سے ضرب دے کر۔
+}}
+\انتہا{جواب}
+%Q4
 \ابتدا{سوال}
 دکھائیں کہ اغگن خاکے میں دو نقطوں \عددی{z_1} اور \عددی{z_2} کے بیچ فاصلہ \عددی{|z_1-z_2|} ہو گا۔
 \انتہا{سوال}
 
-سوال \حوالہء{5} تا \حوالہء{10} میں شرائط پر پورا اترنے والے   نقاط \عددی{z=x+iy} ترسیم کریں۔
+سوال \حوالہ{سوال_ضمیمہ_تین_پانچ} تا \حوالہ{سوال_ضمیمہ_تین_دس}  میں شرائط پر پورا اترنے والے   نقاط \عددی{z=x+iy} ترسیم کریں۔
 
-\ابتدا{سوال}
+\ابتدا{سوال}\شناخت{سوال_ضمیمہ_تین_پانچ}
 \begin{multicols}{3}
 \begin{enumerate}[a.]
 \item
@@ -401,34 +586,64 @@ w_3&=2\big[\cos\dfrac{7\pi}{4}+i\sin\dfrac{7\pi}{4}\big]=\sqrt{2}(1-i)
 \end{enumerate}
 \end{multicols}
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+ا) دائرہ \عددی{x^2+y^2=4} پر نقطے۔ ب)    دائرہ \عددی{x^2+y^2=4}  کے اندرون میں نقطے۔ ج)  دائرہ \عددی{x^2+y^2=4}   سے باہر  نقطے۔
+}}
+\انتہا{جواب}
+%Q6
 \ابتدا{سوال}
 \(|z-1|=2\)
 \انتہا{سوال}
 \ابتدا{سوال}
 \(|z+1|=1\)
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+اس دائرے پر نقطے جس کا رداس \عددی{1}  اور مرکز \عددی{(-1,0)} ہو۔
+}}
+\انتہا{جواب}
+%Q8
 \ابتدا{سوال}
 \(|z+1|=|z-1|\)
 \انتہا{سوال}
 \ابتدا{سوال}
 \(|z+i|=|z-1|\)
 \انتہا{سوال}
-\ابتدا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+لکیر \عددی{y=-x} پر نقطے۔
+}}
+\انتہا{جواب}
+%Q10
+\ابتدا{سوال}\شناخت{سوال_ضمیمہ_تین_دس}
 \(|z+1|\ge |z|\)
 \انتہا{سوال}
 
-سوال \حوالہء{11} تا \حوالہء{14} میں مخلوط اعداد کو \عددی{re^{i\theta}} کے روپ میں لکھیں، جہاں \عددی{r\ge 0} اور \عددی{-\pi<\theta<\pi} ہے۔ہر عدد کا اغگن خاکہ بنائیں۔
+سوال \حوالہ{سوال_ضمیمہ_تین_گیارہ}  تا \حوالہ{سوال_ضمیمہ_تین_چودہ}  میں مخلوط اعداد کو \عددی{re^{i\theta}} کے روپ میں لکھیں، جہاں \عددی{r\ge 0} اور \عددی{-\pi<\theta<\pi} ہے۔ہر عدد کا اغگن خاکہ بنائیں۔
 
-\ابتدا{سوال}
+\ابتدا{سوال}\شناخت{سوال_ضمیمہ_تین_گیارہ}
 \((1+\sqrt{-3})^2\)
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$4e^{2\pi i\!/\!3}$
+}}
+\انتہا{جواب}
+%Q12
 \ابتدا{سوال}
 \(\dfrac{1+i}{1-i}\)
 \انتہا{سوال}
 \ابتدا{سوال}
 \(\dfrac{1+i\sqrt{3}}{1-i\sqrt{3}}\)
 \انتہا{سوال}
-\ابتدا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$1e^{2\pi i\!/\!3}$
+}}
+\انتہا{جواب}
+%Q14
+\ابتدا{سوال}\شناخت{سوال_ضمیمہ_تین_چودہ}
 \((2+3i)(1-2i)\)
 \انتہا{سوال}
 
@@ -437,25 +652,28 @@ w_3&=2\big[\cos\dfrac{7\pi}{4}+i\sin\dfrac{7\pi}{4}\big]=\sqrt{2}(1-i)
 \ابتدا{سوال}
 اغگن خاکے کی مدد سے دکھائیں کہ  سمتیات جمع کرنے  کا متوازی الاضلاع قاعدہ ہی  مخلوط اعداد  جمع کرنے کا قاعدہ     ہے۔
 \انتہا{سوال}
-\ابتدا{سوال}\شناخت{سوال_ضمیمہ_مخلوط_سترہ}
+%Q16
+\ابتدا{سوال}\شناخت{سوال_ضمیمہ_مخلوط_سولہ}
 دکھائیں کہ دو مخلوط اعداد \عددی{z_1} اور \عددی{z_2}  کے مجموعہ (حاصل ضرب، یا حاصل تقسیم)  کا جوڑی دار وہی ہو گا جو ان اعداد   کے جوڑی دار کا مجموعہ (حاصل ضرب، یا حاصل تقسیم) ہو گا۔
 \انتہا{سوال}
 \ابتدا{سوال}
 \ترچھا{حقیقی عددی سر والے  کثیر رکنیوں  کے مخلوط جذر ،مخلوط جوڑی دار  جوڑیوں میں پائے جاتے ہیں۔}
 \begin{enumerate}[a.]
 \item
-اگر درج ذیل کثیر رکنی   کے عددی سر \عددی{a_0}، \نقطے، \عددی{a_n} حقیقی  ہوں  تب سوال \حوالہ{سوال_ضمیمہ_مخلوط_سترہ} کے نتیجہ کو وسعت دیتے ہوئے دکھائیں کہ    \عددی{f(\bar{z})=\overline{f(z)}} ہو گا۔
+اگر درج ذیل کثیر رکنی   کے عددی سر \عددی{a_0}، \نقطے، \عددی{a_n} حقیقی  ہوں  تب سوال \حوالہ{سوال_ضمیمہ_مخلوط_سولہ} کے نتیجہ کو وسعت دیتے ہوئے دکھائیں کہ    \عددی{f(\bar{z})=\overline{f(z)}} ہو گا۔
 \[f(z)=a_0z^n+a_1z^{n-1}+\cdots+a_{n-1}z+a_0\]
 \item
 اگر کثیر رکنی \عددی{f(z)} کے عددی سر (جزو  الف کی طرح) حقیقی ہوں اور مساوات   \عددی{f(z)=0}  کا  ایک جذر \عددی{z} ہو،  دکھائیں کہ  \عددی{\bar{z}} بھی اس مساوات کا جذر ہو گا۔ (اشارہ: \عددی{f(z)=u+iv=0} لیں؛ یوں \عددی{u} اور \عددی{v} دونوں صفر ہوں گے؛ اب اس حقیقت کو بروئے کار لائیں کہ \عددی{f(\bar{z})=\overline{f(z)}=u-iv} ہو گا۔)
 \end{enumerate}
 \انتہا{سوال}
+%Q18
 \ابتدا{سوال}
 دکھائیں کہ \عددی{|\bar{z}|=|z|} ہو گا۔
 \انتہا{سوال}
 \ابتدا{سوال}
 اگر \عددی{z} اور \عددی{\bar{z}} برابر ہوں، مخلوط مستوی میں نقطہ \عددی{z} کے مقام کے بارے میں  کیا کہا جا سکتا ہے؟
 \انتہا{سوال}
+%Q20
 \ابتدا{سوال}
 مخلوط عدد \عددی{z} کے حقیقی حصے کو \عددی{\operatorname{Re}(z)} اور خیالی حصے کو \عددی{\operatorname{Im}(z)} سے ظاہر کرتے ہوئے دکھائیں کہ درج ذیل تعلقات  کو  مخلوط اعداد \عددی{z_1} ،\عددی{z_2}، اور \عددی{z_3} مطمئن کرتے ہیں۔
 \begin{enumerate}[a.]
@@ -472,12 +690,18 @@ w_3&=2\big[\cos\dfrac{7\pi}{4}+i\sin\dfrac{7\pi}{4}\big]=\sqrt{2}(1-i)
 \end{enumerate}
 \انتہا{سوال}
 
-مسئلہ ڈی موےور استعمال کر کے سوال \حوالہء{21} اور سوال \حوالہء{22} میں تکونیاتی تفاعلات کا اظہار \عددی{\cos\theta} اور \عددی{ \sin\theta} کے روپ میں  کریں۔
+مسئلہ ڈی موےور استعمال کر کے سوال \حوالہ{سوال_ضمیمہ_تین_اکیس}  اور سوال \حوالہ{سوال_ضمیمہ_تین_بائیس} میں تکونیاتی تفاعلات کا اظہار \عددی{\cos\theta} اور \عددی{ \sin\theta} کے روپ میں  کریں۔
 
-\ابتدا{سوال}
+\ابتدا{سوال}\شناخت{سوال_ضمیمہ_تین_اکیس}
 \(\cos 4\theta\)
 \انتہا{سوال}
-\ابتدا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\cos^4\theta-6\cos^2\theta\sin^2\theta+\sin^4\theta$
+}}
+\انتہا{جواب}
+%Q22
+\ابتدا{سوال}\شناخت{سوال_ضمیمہ_تین_بائیس}
 \(\sin 4\theta\)
 \انتہا{سوال}
 
@@ -486,25 +710,49 @@ w_3&=2\big[\cos\dfrac{7\pi}{4}+i\sin\dfrac{7\pi}{4}\big]=\sqrt{2}(1-i)
 \ابتدا{سوال}
 عدد \عددی{1} کے تین  کعبی جذر تلاش کریں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$1,\, -\tfrac{1}{2}\pm\tfrac{\sqrt{3}}{2}i$
+}}
+\انتہا{جواب}
+%Q24
 \ابتدا{سوال}
 عدد \عددی{i} کے دو  جذر   المربع تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{سوال}
 عدد \عددی{-8i} کے تین  کعبی جذر تلاش کریں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$2i,\, -\sqrt{3}-\i,\, \sqrt{3}-i$
+}}
+\انتہا{جواب}
+%Q26
 \ابتدا{سوال}
 عدد \عددی{64} کے چھ چھٹے جذر تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{سوال}
 مساوات  \عددی{z^4-2z^2+4=0} کے چار حل  تلاش کریں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{\sqrt{6}}{2}\pm\tfrac{\sqrt{2}}{2}i,\, -\tfrac{\sqrt{6}}{2}\pm\tfrac{\sqrt{2}}{2}i$
+}}
+\انتہا{جواب}
+%Q28
 \ابتدا{سوال}
 مساوات  \عددی{z^6+2z^3+2=0} کے چھ حل  تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{سوال}
 مساوات  \عددی{x^4+4x^2+16=0} کے  تمام  حل  تلاش کریں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$1\pm\sqrt{3}i,\, -a\pm\sqrt{3}i$
+}}
+\انتہا{جواب}
 \ابتدا{سوال}
 مساوات  \عددی{x^4+1=0}  حل   کریں۔
 \انتہا{سوال}
 
+\انتہا{سوالات}

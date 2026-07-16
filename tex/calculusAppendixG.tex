@@ -1,14 +1,49 @@
 \باب{جزئیتی تقسیم کا قانون برائے سمتی ضرب   }\شناخت{ضمیمہ_ز}
 
-اس ضمیمہ میں    درج ذیل جزئیتی تقسیم کا قانون  (حصہ \حوالہء{10.4}، مساوات \حوالہء{6})  ثابت کیا جائے گا۔
+اس ضمیمہ میں    درج ذیل جزئیتی تقسیم کا قانون  (حصہ \حوالہ{حصہ_صلیبی_ضرب}، مساوات \حوالہ{مساوات_سمتیہ_سمتی_قاعدہ_تقسیم_الف})  ثابت کیا جائے گا۔
 \begin{align}\label{مساوات_ضمیمہ_جزئیتی_تقسیم_الف}
 \kvec{A}\times (\kvec{B}+\kvec{C})=\kvec{A}\times \kvec{B}+\kvec{A}\times\kvec{C}
 \end{align}
 
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\kA}{8}
+\pgfmathsetmacro{\kB}{3.5}
+\pgfmathsetmacro{\kH}{3}
+\pgfmathsetmacro{\kangA}{350}
+\pgfmathsetmacro{\kangB}{45}
+\pgfmathsetmacro{\krA}{2.5}
+\pgfmathsetmacro{\krB}{1.5}
+\pgfmathsetmacro{\krC}{2.75}
+\pgfmathsetmacro{\kkangA}{90}
+\pgfmathsetmacro{\kkangB}{135}
+\pgfmathsetmacro{\kkangC}{\kangA}
+\draw[] (\kangB:-0.5*\kB)coordinate(kF)++(\kangA:-0.5*\kA)node[shift={(2em,0.5em)}]{$M$}--++(\kangA:\kA)--++(\kangB:\kB)--++(\kangA:-\kA)--++(\kangB:-\kB);
+\path[fill=white](kF)--++(90:\kH)--++(\kangB:\kB)--++(-90:\kH)node[pos=0.25,left]{$M'$}--cycle;
+\draw[](kF)--++(90:\kH)--++(\kangB:\kB)--++(-90:\kH);
+\draw[lgray,name path=kcrease](kF)--++(\kangB:\kB);
+\draw[](0,0)node[above right,fill=white]{$O$};
+\draw[thick,-stealth](0,0)--++(\kkangA:\krA)node[above right]{$\kvec{A}$};
+\draw[thick,-stealth](0,0)--++(\kkangB:\krB)coordinate(kPB)node[pos=0.9,above]{$\kvec{B}$};
+\draw[thick,-stealth](0,0)--++(\kkangC:\krC)node[rotate=\kkangC,above,xshift=1em]{$\kvec{A}\times \kvec{B}$};
+\path[name path=kdrop](kPB)--++(-90:2.5);
+\draw[name intersections={of=kcrease and kdrop}] (kPB)--(intersection-1);
+\draw[thick,-stealth](0,0)--(intersection-1)node[pos=0.5,below,yshift=-0.5em]{$\kvec{B}'$};
+\draw[thick,-stealth](0,0)--++(\kangA:1.75)node[above]{$\kvec{B}''$};
+\draw[-stealth](\kangB:-0.5) to [out=-10,in=-130] node[pos=0.4,right,yshift=-0.5em]{$90^{\circ}$}(\kkangC:0.5); 
+\draw[-stealth](\kkangA:0.5) arc (\kkangA:\kkangB:0.5)node[pos=0.5,above]{$\theta$};
+\draw[-stealth](kPB)++(-90:0.5) arc (-90:-45:0.5)node[pos=0.5,below]{$\theta$};
+\end{tikzpicture}
+\caption{
+\عددی{\kvec{A}\times\kvec{B}=|\kvec{A}|\kvec{B}''} ہو گا۔
+}
+\label{شکل_ضمیمہ_سات_الف}
+\end{figure}
 \ابتدا{ثبوتءء}\موٹا{ثبوت}\\
-مساوات \حوالہ{مساوات_ضمیمہ_جزئیتی_تقسیم_الف} ثابت کرنے کی خاطر ہم \عددی{\kvec{A}\times\kvec{B}} کا خاکہ نئے انداز سے  بناتے ہیں۔ ہم مشترک نقطہ \عددی{O} سے \عددی{\kvec{A}} اور \عددی{\kvec{B}} کھینچ کر مستوی \عددی{M}  ،نقطہ   \عددی{O}  پر \عددی{\kvec{A}} کو قائمہ ، بناتے ہیں (شکل \حوالہء{A11})۔  ہم \عددی{M} پر \عددی{\kvec{B}} کا قائمہ تظلیل لیتے ہیں جو سمتیہ \عددی{\kvec{B}'}  ہو گا،   اور جس کی لمبائی  \عددی{|\kvec{B}|\sin\theta} ہو گی۔ ہم \عددی{\kvec{B}'}  کو \عددی{\kvec{A}} کے گرد مثبت سمت میں  \عددی{90^{\circ}} گھما کر سمتیہ \عددی{\kvec{B}''} حاصل کرتے ہیں۔آخر میں ہم   \عددی{\kvec{B}''} کو \عددی{\kvec{A}} کی لمبائی سے ضرب دیتے ہیں۔یوں حاصل سمتیہ \عددی{|\kvec{A}|\kvec{B}''}   درحقیقت \عددی{\kvec{A}\times\kvec{B}} کے برابر ہو گا، چونکہ اس کی بناؤٹ (شکل \حوالہء{A11})   یوں کی گئی کہ  \عددی{\kvec{B}''} کا رخ  وہی ہو جو  \عددی{\kvec{A}\times\kvec{B}}  کا رخ  ہے اور ساتھ ہی درج ذیل بھی ہے۔
+مساوات \حوالہ{مساوات_ضمیمہ_جزئیتی_تقسیم_الف} ثابت کرنے کی خاطر ہم \عددی{\kvec{A}\times\kvec{B}} کا خاکہ نئے انداز سے  بناتے ہیں۔ ہم مشترک نقطہ \عددی{O} سے \عددی{\kvec{A}} اور \عددی{\kvec{B}} کھینچ کر مستوی \عددی{M}  ،نقطہ   \عددی{O}  پر \عددی{\kvec{A}} کو قائمہ ، بناتے ہیں (شکل \حوالہ{شکل_ضمیمہ_سات_الف})۔  ہم \عددی{M} پر \عددی{\kvec{B}} کا قائمہ تظلیل لیتے ہیں جو سمتیہ \عددی{\kvec{B}'}  ہو گا،   اور جس کی لمبائی  \عددی{|\kvec{B}|\sin\theta} ہو گی۔ ہم \عددی{\kvec{B}'}  کو \عددی{\kvec{A}} کے گرد مثبت سمت میں  \عددی{90^{\circ}} گھما کر سمتیہ \عددی{\kvec{B}''} حاصل کرتے ہیں۔آخر میں ہم   \عددی{\kvec{B}''} کو \عددی{\kvec{A}} کی لمبائی سے ضرب دیتے ہیں۔یوں حاصل سمتیہ \عددی{|\kvec{A}|\kvec{B}''}   درحقیقت \عددی{\kvec{A}\times\kvec{B}} کے برابر ہو گا، چونکہ اس کی بناؤٹ (شکل \حوالہ{شکل_ضمیمہ_سات_الف})   یوں کی گئی کہ  \عددی{\kvec{B}''} کا رخ  وہی ہو جو  \عددی{\kvec{A}\times\kvec{B}}  کا رخ  ہے اور ساتھ ہی درج ذیل بھی ہے۔
 \[|\kvec{A}||\kvec{B}''|=|\kvec{A}|\kvec{B}'|=|\kvec{A}||\kvec{B}|\sin\theta=|\kvec{A}\times\kvec{B}|\]
-اب درج  ذیل میں سے ہر ایک عمل  ایسے   مثلث پر کرنے سے،   جس کا مستوی \عددی{\kvec{A}} کو عمودی نہ ہو،  ایک نیا مثلث پیدا ہو گا۔ اگر ہم ایسے مثلث سے شروع کریں جس کے اضلاع \عددی{\kvec{B}}، \عددی{\kvec{C}}، اور \عددی{\kvec{B}+\kvec{C}} ہوں (شکل \حوالہء{A12}) اور  یہ  تین اقدام     لاگو کریں تو  یک بعد دیگرے درج ذیل حاصل ہو گا۔
+اب درج  ذیل میں سے ہر ایک عمل  ایسے   مثلث پر کرنے سے،   جس کا مستوی \عددی{\kvec{A}} کو عمودی نہ ہو،  ایک نیا مثلث پیدا ہو گا۔ اگر ہم ایسے مثلث سے شروع کریں جس کے اضلاع \عددی{\kvec{B}}، \عددی{\kvec{C}}، اور \عددی{\kvec{B}+\kvec{C}} ہوں (شکل \حوالہ{شکل_ضمیمہ_سات_ب}) اور  یہ  تین اقدام     لاگو کریں تو  یک بعد دیگرے درج ذیل حاصل ہو گا۔
 \begin{enumerate}[1.]
 \item
 ایک مثلث جس کے اضلاع \عددی{\kvec{B}'}، \عددی{\kvec{C}'}، اور \عددی{(\kvec{B}+\kvec{C})'} ہوں گے جہاں درج ذیل سمتی مساوات مطمئن ہو گی۔
@@ -16,7 +51,7 @@
 \item
 ایک مثلث جس کے اضلاع \عددی{\kvec{B}''}، \عددی{\kvec{C}''}، اور \عددی{(\kvec{B}+\kvec{C})''} ہوں گے جہاں درج ذیل سمتی مساوات مطمئن ہو گی۔
 \[\kvec{B}''+\kvec{C}''=(\kvec{B}+\kvec{C})''\]
-(جہاں سمتیات وہی ہیں جو شکل \حوالہء{A11} میں دکھائے گئے ہیں۔)
+(جہاں سمتیات وہی ہیں جو شکل \حوالہ{شکل_ضمیمہ_سات_الف}  میں دکھائے گئے ہیں۔)
 \item
 ایک مثلث جس کے اضلاع \عددی{|\kvec{A}|\kvec{B}''}، \عددی{|\kvec{A}|\kvec{C}''}، اور \عددی{|\kvec{A}|(\kvec{B}+\kvec{C})''} ہوں گے جہاں درج ذیل سمتی مساوات مطمئن ہو گی۔
 \begin{align}\label{مساوات_ضمیمہ_جزئیتی_ب}
@@ -28,4 +63,38 @@
 \[\kvec{A}\times\kvec{B}+\kvec{A}\times\kvec{C}=\kvec{A}\times(\kvec{B}+\kvec{C})\]
 جو وہ قانون ہے جس کا ثبوت درکار تھا۔
 \end{enumerate}
+%
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\kA}{8}
+\pgfmathsetmacro{\kB}{3.5}
+\pgfmathsetmacro{\kangA}{350}
+\pgfmathsetmacro{\kangB}{45}
+\pgfmathsetmacro{\krA}{2.5}
+\pgfmathsetmacro{\krB}{2}
+\pgfmathsetmacro{\kkangA}{125}
+\pgfmathsetmacro{\kkangB}{160}
+\draw[] (\kangB:-0.5*\kB)coordinate(kF)++(\kangA:-0.5*\kA)node[shift={(2em,0.5em)}]{$M$}--++(\kangA:\kA)--++(\kangB:\kB)--++(\kangA:-\kA)--++(\kangB:-\kB);
+\draw[thick,-stealth](\kangA:2.5)coordinate(kO)--++(0,2)coordinate(kuu)node[right]{$\kvec{u}$};
+\draw[thick,-stealth](kO)--++(\kkangA:\krA)coordinate(kv)node[pos=0.5,above,xshift=0.25em]{$\kvec{v}$};
+\draw[thick,-stealth](kv)--++(\kkangB:\krB)coordinate(kw)node[pos=0.5,above]{$\kvec{w}$};
+\draw[thick,-stealth](kO)--(kw)node[pos=0.6,rotate=-40,below]{$\kvec{v}+\kvec{w}$};
+\path[name path=vH](kO)--++(160:2);
+\path[name path=vV](kv)--++(-90:2);
+\draw[thick,-stealth,name intersections={of=vH and vV}] (kO)--(intersection-1)node[pos=0.85,below]{$\kvec{v}'$};
+\draw[dashed](kv)--(intersection-1)coordinate(kvv);
+\path[name path=wH](kO)--++(190:4);
+\path[name path=wV](kw)--++(-90:4);
+\draw[thick,-stealth,name intersections={of=wH and wV}] (kO)--(intersection-1)node[pos=0.5,below]{$(\kvec{v}+\kvec{w})'$};
+\draw[dashed](kw)--(intersection-1)coordinate(kww);
+\draw[thick,-stealth](kvv)--(intersection-1)node[pos=0.75,above]{$\kvec{w}'$};
+\RightAngle[0.15]{(kuu)}{(kO)}{(kww)}
+\RightAngle[0.2]{(kuu)}{(kO)}{(kvv)}
+\end{tikzpicture}
+\caption{
+سمتیات \عددی{\kvec{v}}، \عددی{\kvec{w}}، \عددی{\kvec{v}+\kvec{w}}، اور \عددی{\kvec{u}} کے عمودی مستوی پر ان کے تظلیل۔
+}
+\label{شکل_ضمیمہ_سات_ب}
+\end{figure}
 \انتہا{ثبوتءء}
