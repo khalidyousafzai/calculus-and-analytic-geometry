@@ -887,7 +887,7 @@ $y^2=12x$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt(12*\x);}]
 \begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-3},ytick={3}]
 \addplot[domain=0:0.2]{f(x)};
@@ -911,7 +911,7 @@ $x^2=-8y$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=-1/8*(\x)^2;}]
 \begin{axis}[width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={2},ytick={2},y tick label style={yshift=0.5ex}]
 \addplot[domain=-3:3]{f(x)}node[pos=0.25,below,yshift=-0.5ex]{$x^2=-8y$};
@@ -932,7 +932,7 @@ $y=4x^2$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=4*(\x)^2;}]
 \pgfmathsetmacro{\d}{1/16}
 \begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={0.25},ytick={0.25},xticklabels={$\tfrac{1}{4}$},yticklabels={$\tfrac{1}{4}$}]
@@ -954,7 +954,7 @@ $x=-3y^2$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt(-1/3*\x);}]
 \pgfmathsetmacro{\d}{1/12}
 \pgfmathsetmacro{\yt}{1/6}
@@ -982,7 +982,7 @@ $16x^2+25y^2=400$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=4/5*sqrt(25-(\x)^2);}]
 \begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-3,3},ytick={-4,4}]
 \addplot[domain=-4.8:4.8]{f(x)}node[pos=0.8,above,xshift=1ex]{$\tfrac{x^2}{25}+\tfrac{y^2}{16}=1$};
@@ -1007,7 +1007,7 @@ $2x^2+y^2=2$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt(2-2*(\x)^2);}]
 \pgfmathsetmacro{\k}{sqrt(2)}
 \begin{axis}[axis equal,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-1,1},ytick={-1,1}]
@@ -1034,7 +1034,7 @@ $3x^2+2y^2=6$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt(3/2)*sqrt(2-(\x)^2);}]
 \pgfmathsetmacro{\k}{sqrt(2)}
 \pgfmathsetmacro{\kk}{sqrt(3)}
@@ -1062,7 +1062,7 @@ $6x^2+9y^2=54$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt(6/9)*sqrt(9-(\x)^2);}]
 \pgfmathsetmacro{\k}{sqrt(9)}
 \pgfmathsetmacro{\kk}{sqrt(6)}
@@ -1112,7 +1112,7 @@ $x^2-y^2=1$
 \ابتدا{جواب}
 \wf{\unexpanded{
 متقارب \عددی{y=\pm x}  ہیں۔
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt((\x)^2-1);fa(\x)=\x;}]
 \pgfmathsetmacro{\f}{sqrt(2)}
 \begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-\f,\f,1,-1},xticklabels={\llap{$-\sqrt{2}$},\rlap{$\sqrt{2}$},\llap{$1$},},ytick={\empty}]
@@ -1139,7 +1139,7 @@ $y^2-x^2=8$
 \ابتدا{جواب}
 \wf{\unexpanded{
 متقارب \عددی{y=\pm x} ہیں۔
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt((\x)^2+8);fa(\x)=\x;}]
 \pgfmathsetmacro{\f}{4}
 \pgfmathsetmacro{\k}{sqrt(8)}
@@ -1165,7 +1165,7 @@ $8x^2-2y^2=16$
 \ابتدا{جواب}
 \wf{\unexpanded{
 متقارب \عددی{y=\pm 2x} ہیں۔
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=1/2*sqrt((\x)^2+8);fa(\x)=2*\x;}]
 \pgfmathsetmacro{\f}{sqrt(10)}
 \pgfmathsetmacro{\k}{sqrt(2)}
@@ -1193,7 +1193,7 @@ $8y^2-2x^2=16$
 \ابتدا{جواب}
 \wf{\unexpanded{
 متقارب \عددی{y=\pm \tfrac{x}{2}} ہیں۔
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=1/2*sqrt((\x)^2+8);fa(\x)=1/2*\x;}]
 \pgfmathsetmacro{\f}{sqrt(10)}
 \pgfmathsetmacro{\k}{sqrt(2)}
@@ -1252,7 +1252,7 @@ $\tfrac{x^2}{9}-\tfrac{y^2}{16}=1$
 \ابتدا{جواب}
 \wf{\unexpanded{
 (الف) راس \عددی{(1,-2)}، ماسکہ \عددی{(3,-2)}، ناظمہ \عددی{{x{=}-1}}؛ (ب) \\
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=1+1/8*(\x+2)^2;}]
 \begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={1,2,3},ytick={-4,-2,2}]
 \addplot[domain=-4:4]({f(x)},x)node[above left]{$(y+2)^2=8(x-1)$};
@@ -1273,7 +1273,7 @@ $\tfrac{x^2}{9}-\tfrac{y^2}{16}=1$
 \ابتدا{جواب}
 \wf{\unexpanded{
 (الف) ماسکے \عددی{(4\pm\sqrt{7},3)}، راس \عددی{(8,3)} اور \عددی{(0,3)}، مرکز \عددی{(4,3)}؛ (ب)\\
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \begin{tikzpicture}[font=\tiny,declare function={fp(\x)=3+3/4*sqrt(16-(\x-4)^2);fn(\x)=3-3/4*sqrt(16-(\x-4)^2);}]
 \begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={4,8},ytick={6}]
 \addplot[domain=0.2:8-0.2]{fp(x)}node[pos=0.6,above]{$\tfrac{(x-4)^2}{16}+\tfrac{(y-3)^2}{9}=1$};
@@ -1306,7 +1306,7 @@ $\tfrac{x^2}{9}-\tfrac{y^2}{16}=1$
 \wf{\unexpanded{
 (الف) مرکز \عددی{(2,0)}، ماسکے \عددی{(7,0)} اور \عددی{(-3,0)}، راس \عددی{(6,0)} اور \عددی{(-2,0)}،\\
  متقارب \عددی{y=\pm\tfrac{3}{4}(x-2)}؛  (ب) \\
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \begin{tikzpicture}[font=\tiny,declare function={fp(\x)=2+4/3*sqrt(9+(\x)^2);fn(\x)=2-4/3*sqrt(9+(\x)^2);fa(\x)=3/4*(\x-2);}]
 \pgfmathsetmacro{\k}{5}
 \begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={\empty},ytick={\empty}]
@@ -1530,7 +1530,7 @@ $9x^2+16y^2\le 144$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=1/4*sqrt(144-9*(\x)^2);}]
 \begin{axis}[axis on top=true,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={4},ytick={3}]
@@ -1558,7 +1558,7 @@ $x^2+4y^2\ge 4\quad\text{اور}\quad 4x^2+9y^2\le 36$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\tiny,declare function={fa(\x)=1/4*sqrt(4-(\x)^2);fb(\x)=1/3*sqrt(36-4*(\x)^2);}]
 \pgfmathsetmacro{\k}{2}
@@ -1597,7 +1597,7 @@ $4y^2-x^2\ge 4$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=1/2*sqrt(4+(\x)^2);}]
 \begin{axis}[axis on top=true,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true]
@@ -3717,7 +3717,7 @@ $x=\cos t,\quad y=\sin t,\quad 0\le t\le \pi$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(1-(\x)^2);}]
 \pgfmathsetmacro{\k}{1}
@@ -3743,7 +3743,7 @@ $x=\sin(2\pi(1-t)),\quad y=\cos(2\pi(1-t)),\quad 0\le t\le 1$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(1-(\x)^2);}]
 \pgfmathsetmacro{\k}{1}
@@ -3769,7 +3769,7 @@ $x=4\cos t,\quad y=2\sin t,\quad 0\le t\le 2\pi$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=1/2*sqrt(16-(\x)^2);}]
 \pgfmathsetmacro{\k}{4}
@@ -3795,7 +3795,7 @@ $x=4\cos t,\quad y=5\sin t,\quad 0\le t\le \pi$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=5/4*sqrt(16-(\x)^2);}]
 \pgfmathsetmacro{\k}{4}
@@ -3821,7 +3821,7 @@ $x=3t,\quad y=9t^2,\quad -\infty<t<\infty$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=(\x)^2;}]
 \pgfmathsetmacro{\k}{2}
@@ -3842,7 +3842,7 @@ $x=t,\quad y=\sqrt{t},\quad t\ge 0$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(\x);}]
 \pgfmathsetmacro{\k}{4}
@@ -3864,7 +3864,7 @@ $x=-\sec t,\quad y=\tan t,\quad -\tfrac{\pi}{2}<t<\tfrac{\pi}{2}$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(1+(\x)^2);}]
 \pgfmathsetmacro{\k}{1}
@@ -3886,7 +3886,7 @@ $x=2t-5,\quad y=4t-7,\quad -\infty<t<\infty$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=2*\x+3;}]
 \pgfmathsetmacro{\k}{1}
@@ -3907,7 +3907,7 @@ $x=t,\quad y=1-t,\quad 0\le t\le 1$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=1-\x;}]
 \pgfmathsetmacro{\k}{2}
@@ -3930,7 +3930,7 @@ $x=t,\quad y=\sqrt{1-t^2},\quad -t\le t\le 0$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(1-(\x)^2);}]
 \pgfmathsetmacro{\k}{1}
@@ -3955,7 +3955,7 @@ $x=t^2,\quad y=\sqrt{t^4+1},\quad t\ge 0$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(1+(\x)^2);}]
 \pgfmathsetmacro{\k}{1}
@@ -3977,7 +3977,7 @@ $x=-\cosh t,\quad y=\sinh t,\quad -\infty<t<\infty$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(1+(\x)^2);}]
 \pgfmathsetmacro{\k}{1}
@@ -5483,7 +5483,7 @@ $r=2$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{ 
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=2*cos(\x);g(\x)=2*sin(\x);}]
 \pgfmathsetmacro{\k}{360}
@@ -5504,7 +5504,7 @@ $r\ge 1$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{ 
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=cos(\x);g(\x)=sin(\x);}]
 \pgfmathsetmacro{\k}{1.5}
@@ -5527,7 +5527,7 @@ $0\le \theta\le \tfrac{\pi}{6},\quad r\ge 0$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{ 
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize]
 \pgfmathsetmacro{\kx}{cos(30)}
@@ -5551,7 +5551,7 @@ $\theta=\tfrac{\pi}{3},\quad -1\le r\le 3$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{ 
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=0.6*cos(\x);g(\x)=0.6*sin(\x);}]
 \pgfmathsetmacro{\kxa}{-1*cos(60)}
@@ -5576,7 +5576,7 @@ $\theta=\tfrac{\pi}{2},\quad r\ge 0$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{ 
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=0.6*cos(\x);g(\x)=0.6*sin(\x);}]
 \pgfmathsetmacro{\kxa}{-1*cos(60)}
@@ -5600,7 +5600,7 @@ $0\le \theta\le \pi,\quad r=1$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{ 
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=cos(\x);g(\x)=sin(\x);}]
 \begin{axis}[axis equal,axis on top,clip=false,width=4cm, axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1},ytick={\empty}, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true]
@@ -5620,7 +5620,7 @@ $\tfrac{\pi}{4}\le \theta \le \tfrac{3\pi}{4},\quad 0\le r\le 1$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{ 
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=cos(\x);g(\x)=sin(\x);}]
 \begin{axis}[axis equal,axis on top,clip=false,width=4cm, axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={1}, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true]
@@ -5642,7 +5642,7 @@ $-\tfrac{\pi}{2}\le \theta \le \tfrac{\pi}{2},\quad 1\le r\le 2$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{ 
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=cos(\x);g(\x)=sin(\x);}]
 \begin{axis}[axis equal,axis on top,clip=false,width=4cm, axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1,2},xticklabels={\llap{$1$},\rlap{$2$}},ytick={1,2}, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true]
@@ -6333,85 +6333,41 @@ r&=-2\pm2\sqrt{2}
 \label{شکل_مثال_مخروط_مبہم_نقطہ_تقاطع}
 \end{figure}
 
-%KKK??? am here. done sec 10.6 answers on 16 july 2026
+
+%sec 10.7 questions start here
+%sec 10.7 questions start here
 
 \حصہء{سوالات}
+\ابتدا{سوالات}
 \موٹا{تشاکلی اور قطبی ترسیمات}\\
 سوال \حوالہ{سوال_مخروط_تشاکلی_پہچان_الف} تا سوال \حوالہ{سوال_مخروط_تشاکلی_پہچان_ج} میں منحنی کی تشاکلی پہچانئے۔ اس کے بعد منحنی ترسیم کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_تشاکلی_پہچان_الف}
-$r=1+\cos\theta$\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_تشاکلی_پہچان_الف}
+$r=1+\cos\theta$
 \انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$r=2-2\cos\theta$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_تشاکلی_پہچان_ب}
-$r=1-\sin\theta$\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_تشاکلی_پہچان_ب}
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$r=1+\sin\theta$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_تشاکلی_پہچان_پ}
-$r=2+\sin\theta$\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_تشاکلی_پہچان_پ}
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$r=1+2\sin\theta$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_تشاکلی_پہچان_ت}
-$r=\sin\tfrac{\theta}{2}$\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_تشاکلی_پہچان_ت}
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$r=\cos\tfrac{\theta}{2}$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_تشاکلی_پہچان_ٹ}
-$r^2=\cos\theta$\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_تشاکلی_پہچان_ٹ}
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-$r^2=\sin\theta$
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_تشاکلی_پہچان_ث}
-$r^2=-\sin\theta$\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_تشاکلی_پہچان_ث}
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_تشاکلی_پہچان_ج}
-$r^2=-\cos\theta$
-\انتہا{سوال}
-%=====================
-\begin{figure}
-\centering
-\begin{minipage}{0.3\textwidth}
+\ابتدا{جواب}
+\wf{\unexpanded{
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=1+cos(\x);}]
 \begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true]
 \addplot[smooth,data cs=polar,domain=0:360]{f(x)}node[pos=0.25,above right]{$r=1+\cos\theta$};
 \end{axis}
 \end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_تشاکلی_پہچان_الف}
-\end{minipage}\hfill
-\begin{minipage}{0.3\textwidth}
+\end{minipage}
+}}
+\انتہا{جواب}
+%=====================
+\ابتدا{سوال}
+$r=2-2\cos\theta$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_تشاکلی_پہچان_ب}
+$r=1-\sin\theta$
+\انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=1-sin(\x);}]
 \begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true]
@@ -6419,10 +6375,20 @@ $r^2=-\cos\theta$
 \addplot[data cs=polar]plot coordinates {(90,0.25)}node[above right]{$r=1-\sin\theta$};
 \end{axis}
 \end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_تشاکلی_پہچان_ب}
-\end{minipage}\hfill
-\begin{minipage}{0.3\textwidth}
+\end{minipage}
+}}
+\انتہا{جواب}
+%=====================
+\ابتدا{سوال}
+$r=1+\sin\theta$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_تشاکلی_پہچان_پ}
+$r=2+\sin\theta$
+\انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=2+sin(\x);}]
 \begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true]
@@ -6430,14 +6396,20 @@ $r^2=-\cos\theta$
 \addplot[]plot coordinates {(0,1)}node[left]{$r=2+\sin\theta$};
 \end{axis}
 \end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_تشاکلی_پہچان_پ}
 \end{minipage}
-\end{figure}
-%====================================================
-\begin{figure}
-\centering
-\begin{minipage}{0.3\textwidth}
+}}
+\انتہا{جواب}
+%=====================
+\ابتدا{سوال}
+$r=1+2\sin\theta$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_تشاکلی_پہچان_ت}
+$r=\sin\tfrac{\theta}{2}$
+\انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sin(1/2*\x);}]
 \begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true]
@@ -6445,10 +6417,20 @@ $r^2=-\cos\theta$
 \addplot[]plot coordinates {(0,0.9)}node[right]{$r=\sin\tfrac{\theta}{2}$};
 \end{axis}
 \end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_تشاکلی_پہچان_ت}
-\end{minipage}\hfill
-\begin{minipage}{0.3\textwidth}
+\end{minipage}
+}}
+\انتہا{جواب}
+%=====================
+\ابتدا{سوال}
+$r=\cos\tfrac{\theta}{2}$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_تشاکلی_پہچان_ٹ}
+$r^2=\cos\theta$
+\انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(cos(\x));}]
 \begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true]
@@ -6457,10 +6439,20 @@ $r^2=-\cos\theta$
 \addplot[]plot coordinates {(0,0.75)}node[right]{$r^2=\cos\theta$};
 \end{axis}
 \end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_تشاکلی_پہچان_ٹ}
-\end{minipage}\hfill
-\begin{minipage}{0.3\textwidth}
+\end{minipage}
+}}
+\انتہا{جواب}
+%=====================
+\ابتدا{سوال}
+$r^2=\sin\theta$
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_تشاکلی_پہچان_ث}
+$r^2=-\sin\theta$
+\انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(-sin(\x));}]
 \begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true]
@@ -6469,29 +6461,38 @@ $r^2=-\cos\theta$
 \addplot[]plot coordinates {(0,1)}node[above right]{$r^2=-\sin\theta$};
 \end{axis}
 \end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_تشاکلی_پہچان_ث}
 \end{minipage}
-\end{figure}
-%======================================
+}}
+\انتہا{جواب}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_تشاکلی_پہچان_ج}
+$r^2=-\cos\theta$
+\انتہا{سوال}
+
 %========================================
 سوال \حوالہ{سوال_مخروط_دو+چشمہ_الف} تا سوال \حوالہ{سوال_مخروط_دو+چشمہ_ب}  میں دی گئی دو چشمہ ترسیم کریں۔ان منحنیات کی تشاکلی پہچانئے۔ 
-
+%%?
 \ابتدا{سوال}\شناخت{سوال_مخروط_دو+چشمہ_الف}
-$r^2=4\cos2\theta$\\
-جواب:\quad
-محور \عددی{x}، محور \عددی{y}، مبدا
+$r^2=4\cos2\theta$
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+محور \عددی{x}، محور \عددی{y}، مبدا
+}}
+\انتہا{جواب}
 %==================
 \ابتدا{سوال}
 $r^2=4\sin2\theta$
 \انتہا{سوال}
 %==================
 \ابتدا{سوال}
-$r^2=-\sin2\theta$\\
-جواب:\quad
-مبدا
+$r^2=-\sin2\theta$
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+مبدا
+}}
+\انتہا{جواب}
 %==================
 \ابتدا{سوال}\شناخت{سوال_مخروط_دو+چشمہ_ب}
 $r^2=-\cos2\theta$
@@ -6502,28 +6503,11 @@ $r^2=-\cos2\theta$
 سوال \حوالہ{سوال_مخروط_قطبی_ڈھلوان_الف} تا سوال \حوالہ{سوال_مخروط_قطبی_ڈھلوان_پ} میں دیے گئے نقطوں پر منحنی کی ڈھلوان مساوات \حوالہ{مساوات_مخروط_قطبی_ڈھلوان_الف} کی مدد سے دریافت کریں۔ منحنی  کو ترسیم کر کے ان نقطوں پر مماس بھی کھینچیں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_ڈھلوان_الف}
-قطب نما: \عددی{r=-1+\cos\theta}؛  \عددی{\theta=\pm\tfrac{\pi}{2}}\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_قطبی_ڈھلوان_الف}، \عددی{(-1,\tfrac{\pi}{2})} پر ڈھلوان \عددی{-1} اور \عددی{(-1,-\tfrac{\pi}{2})} پر \عددی{1} ہے۔
+قطب نما: \عددی{r=-1+\cos\theta}؛  \عددی{\theta=\pm\tfrac{\pi}{2}}
 \انتہا{سوال}
-%====================
-\ابتدا{سوال}
-قطب نما: \عددی{r=-1+\sin\theta}؛  \عددی{\theta=0,\,\pi}
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_ڈھلوان_ب}
-چار گل: \عددی{r=\sin2\theta}؛ \عددی{\theta=\pm \tfrac{\pi}{4},\, \pm\tfrac{3\pi}{4}}\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_قطبی_ڈھلوان_ب}، \عددی{(1,\tfrac{\pi}{4})} پر \عددی{-1}، \عددی{(-1,-\tfrac{\pi}{4})} پر \عددی{1}، \عددی{(-1,\tfrac{3\pi}{4})} پر \عددی{1}، \عددی{(1,-\tfrac{3\pi}{4})} پر \عددی{-1}
-\انتہا{سوال}
-%===================
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_ڈھلوان_پ}
-چار گل: \عددی{r=\cos2\theta}؛ \عددی{\theta=0,\,\pm\tfrac{\pi}{2},\,\pi}
-\انتہا{سوال}
-%================
-\begin{figure}
-\centering
-\begin{minipage}{0.3\textwidth}
+\ابتدا{جواب}
+\wf{\unexpanded{
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=-1+cos(\x);ma(\x)=\x+1;mb(\x)=-\x-1;}]
 \begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ytick={\empty}]
@@ -6535,10 +6519,21 @@ $r^2=-\cos2\theta$
 \addplot[domain=-0.4:0.3]{mb(x)};
 \end{axis}
 \end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_قطبی_ڈھلوان_الف}
-\end{minipage}\hfill
-\begin{minipage}{0.3\textwidth}
+\end{minipage}\\
+ \عددی{(-1,\tfrac{\pi}{2})} پر ڈھلوان \عددی{-1} اور \عددی{(-1,-\tfrac{\pi}{2})} پر \عددی{1} ہے۔
+}}
+\انتہا{جواب}
+%====================
+\ابتدا{سوال}
+قطب نما: \عددی{r=-1+\sin\theta}؛  \عددی{\theta=0,\,\pi}
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_ڈھلوان_ب}
+چار گل: \عددی{r=\sin2\theta}؛ \عددی{\theta=\pm \tfrac{\pi}{4},\, \pm\tfrac{3\pi}{4}}
+\انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sin(2*\x);ma(\x)=0.7071-(\x-0.7071);mb(\x)=0.7071+(\x+0.7071); mc(\x)=-0.7071+(\x-0.7071);md(\x)=-0.7071-(\x+0.7071);}]
 \begin{axis}[axis equal,clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ytick={\empty}]
@@ -6554,38 +6549,25 @@ $r^2=-\cos2\theta$
 \addplot[domain=-0.4:-1]{md(x)};
 \end{axis}
 \end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_قطبی_ڈھلوان_ب}
-\end{minipage}
-\end{figure}
-%============================================
+\end{minipage}\\
+ \عددی{(1,\tfrac{\pi}{4})} پر \عددی{-1}، \عددی{(-1,-\tfrac{\pi}{4})} پر \عددی{1}، \عددی{(-1,\tfrac{3\pi}{4})} پر \عددی{1}، \عددی{(1,-\tfrac{3\pi}{4})} پر \عددی{-1}
+}}
+\انتہا{جواب}
+%===================
+\ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_ڈھلوان_پ}
+چار گل: \عددی{r=\cos2\theta}؛ \عددی{\theta=0,\,\pm\tfrac{\pi}{2},\,\pi}
+\انتہا{سوال}
+%================
 %===========================================
 
 \موٹا{گھونگے}\\
 سوال \حوالہ{سوال_مخروط_گھونگے_الف} تا سوال \حوالہ{سوال_مخروط_گھونگے_ج} میں دیے گھونگے ترسیم کریں۔ آپ کو اس نام کی سمجھ سوال \حوالہ{سوال_مخروط_گھونگے_الف} ترسیم کر کے آئے گی۔ گھونوں کی مساوات کی عمومی صورت \عددی{r=a\pm b\cos\theta} یا \عددی{r=a\pm b\sin\theta} ہوتی ہے۔ ان کے چار بنیادی اشکال ہیں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_گھونگے_الف}
-اندرونی گھیرے والے گھونگے: (ا) \عددی{r=\tfrac{1}{2}+\cos\theta}، (ب) \عددی{r=\tfrac{1}{2}+\sin\theta}\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_گھونگے_الف}
+اندرونی گھیرے والے گھونگے: (ا) \عددی{r=\tfrac{1}{2}+\cos\theta}، (ب) \عددی{r=\tfrac{1}{2}+\sin\theta}
 \انتہا{سوال}
-%=======================
-\ابتدا{سوال}
-قلب نما: (ا) \عددی{r=1-\cos\theta}، (ب) \عددی{r=-1+\sin\theta}
-\انتہا{سوال}
-%===================
-\ابتدا{سوال}\شناخت{سوال_مخروط_گھونگے_ب}
-ٹوئے والے گھونگے: (ا) \عددی{r=\tfrac{3}{2}+\cos\theta}، (ب) \عددی{r=\tfrac{3}{2}-\sin\theta}\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_گھونگے_ب}
-\انتہا{سوال}
-%===================
-\ابتدا{سوال}\شناخت{سوال_مخروط_گھونگے_ج}
-چپٹے گھونگے: (ا) \عددی{r=2+\cos\theta}، (ب) \عددی{r=-2+\sin\theta}
-\انتہا{سوال}
-%===================
-\begin{figure}
-\centering
+\ابتدا{جواب}
+\wf{\unexpanded{
 \begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=1/2+cos(\x);}]
@@ -6600,9 +6582,19 @@ $r^2=-\cos2\theta$
 \addplot[]plot coordinates{(0,0.75)}node[right,fill=white]{$r=\tfrac{1}{2}+\sin\theta$};
 \end{axis}
 \end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_گھونگے_الف}
-\end{minipage}\hfill
+\end{minipage}
+}}
+\انتہا{جواب}
+%=======================
+\ابتدا{سوال}
+قلب نما: (ا) \عددی{r=1-\cos\theta}، (ب) \عددی{r=-1+\sin\theta}
+\انتہا{سوال}
+%===================
+\ابتدا{سوال}\شناخت{سوال_مخروط_گھونگے_ب}
+ٹوئے والے گھونگے: (ا) \عددی{r=\tfrac{3}{2}+\cos\theta}، (ب) \عددی{r=\tfrac{3}{2}-\sin\theta}
+\انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
 \begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=3/2+cos(\x);}]
@@ -6617,35 +6609,21 @@ $r^2=-\cos2\theta$
 \addplot[]plot coordinates{(0,-1.5)}node[right,fill=white]{$r=\tfrac{3}{2}-\sin\theta$};
 \end{axis}
 \end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_گھونگے_ب}
 \end{minipage}
-\end{figure}
-
+}}
+\انتہا{جواب}
+%===================
+\ابتدا{سوال}\شناخت{سوال_مخروط_گھونگے_ج}
+چپٹے گھونگے: (ا) \عددی{r=2+\cos\theta}، (ب) \عددی{r=-2+\sin\theta}
+\انتہا{سوال}
 %=====================================
+
 \موٹا{قطبی عدم مساوات کی ترسیم}\\
 \ابتدا{سوال}\شناخت{سوال_مخروط_عدم_قطبی_مساوات_الف}
-ایک خطہ جس کو عدم مساوات \عددی{-1\le r\le 2} اور \عددی{-\tfrac{\pi}{2}\le\theta\le\tfrac{\pi}{2}} بیان کرتی ہیں کا خاکہ بنائیں۔ \\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_عدم_قطبی_مساوات_الف}
+ایک خطہ جس کو عدم مساوات \عددی{-1\le r\le 2} اور \عددی{-\tfrac{\pi}{2}\le\theta\le\tfrac{\pi}{2}} بیان کرتی ہیں کا خاکہ بنائیں۔ 
 \انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-ایک خطہ جس کو عدم مساوات \عددی{0\le r\le 2\sec\theta} اور \عددی{-\tfrac{\pi}{4}\le\theta\le\tfrac{\pi}{4}} بیان کرتی ہیں کا خاکہ بنائیں۔ 
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_عدم_قطبی_مساوات_ب}
-ایک خطہ جس کو عدم مساوات \عددی{0\le r\le 2-2-\cos\theta} بیان کرتی ہے کا خاکہ بنائیں۔ \\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_عدم_قطبی_مساوات_ب}
-\انتہا{سوال}
-%=====================
-\ابتدا{سوال}
-ایک خطہ جس کو عدم مساوات \عددی{0\le r^2\le\cos\theta} بیان کرتی ہے کا خاکہ بنائیں۔ 
-\انتہا{سوال}
-%=====================
-\begin{figure}
-\centering
+\ابتدا{جواب}
+\wf{\unexpanded{
 \begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=cos(\x);g(\x)=sin(\x);}]
@@ -6658,9 +6636,19 @@ $r^2=-\cos2\theta$
 \addplot[lgray]fill between [of={b and d}];
 \end{axis}
 \end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_عدم_قطبی_مساوات_الف}
-\end{minipage}\hfill
+\end{minipage}
+}}
+\انتہا{جواب}
+%=====================
+\ابتدا{سوال}
+ایک خطہ جس کو عدم مساوات \عددی{0\le r\le 2\sec\theta} اور \عددی{-\tfrac{\pi}{4}\le\theta\le\tfrac{\pi}{4}} بیان کرتی ہیں کا خاکہ بنائیں۔ 
+\انتہا{سوال}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_عدم_قطبی_مساوات_ب}
+ایک خطہ جس کو عدم مساوات \عددی{0\le r\le 2-2-\cos\theta} بیان کرتی ہے کا خاکہ بنائیں۔ 
+\انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
 \begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=2-2*cos(\x);}]
@@ -6668,13 +6656,15 @@ $r^2=-\cos2\theta$
 \addplot[fill=lgray,data cs=polar,smooth,domain=0:360]{f(x)}node[pos=0.25,above left]{$0\le r\le 2-2\cos\theta$};
 \end{axis}
 \end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_عدم_قطبی_مساوات_ب}
 \end{minipage}
-\end{figure}
-
-
+}}
+\انتہا{جواب}
+%=====================
+\ابتدا{سوال}
+ایک خطہ جس کو عدم مساوات \عددی{0\le r^2\le\cos\theta} بیان کرتی ہے کا خاکہ بنائیں۔ 
+\انتہا{سوال}
 %===========================
+
 \موٹا{تقاطع}\\
 \ابتدا{سوال}
 دکھائیں کہ نقطہ \عددی{(2,\tfrac{3\pi}{4})} منحنی \عددی{r=2\sin2\theta} پر پایا جاتا ہے۔
@@ -6688,40 +6678,52 @@ $r^2=-\cos2\theta$
 سوال \حوالہ{سوال_مخروط_نقاط_تقاطع_الف} تا سوال \حوالہ{سوال_مخروط_نقاط_تقاطع_ب} میں نقاط تقاطع تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_نقاط_تقاطع_الف}
-$r=1+\cos\theta,\quad r=1-\cos\theta$\\
-جواب:\quad 
-$(0,0),\, (1,\tfrac{\pi}{2}),\, (1,\tfrac{3\pi}{2})$
+$r=1+\cos\theta,\quad r=1-\cos\theta$
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{ 
+$(0,0),\, (1,\tfrac{\pi}{2}),\, (1,\tfrac{3\pi}{2})$
+}}
+\انتہا{جواب}
 %=====================
 \ابتدا{سوال}
 $r=1+\sin\theta,\quad r=1-\sin\theta$
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
-$r=2\sin\theta,\quad r=2\sin2\theta$\\
-جواب:\quad 
-$(0,0),\, (\sqrt{3},\tfrac{\pi}{3}),\, (-\sqrt{3},-\tfrac{\pi}{3})$
+$r=2\sin\theta,\quad r=2\sin2\theta$
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{ 
+$(0,0),\, (\sqrt{3},\tfrac{\pi}{3}),\, (-\sqrt{3},-\tfrac{\pi}{3})$
+}}
+\انتہا{جواب}
 %=====================
 \ابتدا{سوال}
 $r=\cos\theta,\quad r=1-\cos\theta$
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
-$r=\sqrt{2},\quad r^2=4\sin\theta$\\
-جواب:\quad 
-$(\sqrt{2},\pm \tfrac{\pi}{6}),\, (\sqrt{2},\pm \tfrac{5\pi}{6})$
+$r=\sqrt{2},\quad r^2=4\sin\theta$
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{ 
+$(\sqrt{2},\pm \tfrac{\pi}{6}),\, (\sqrt{2},\pm \tfrac{5\pi}{6})$
+}}
+\انتہا{جواب}
 %=====================
 \ابتدا{سوال}
 $r^2=\sqrt{2}\sin\theta,\quad r^2=\sqrt{2}\cos\theta$
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
-$r=1,\quad r^2=2\sin2\theta$\\
-جواب:\quad 
-$(1,\tfrac{\pi}{12}),\, (1,\tfrac{5\pi}{12}),\, (1,\tfrac{13\pi}{12}),\,(1,\tfrac{17\pi}{12})$
+$r=1,\quad r^2=2\sin2\theta$
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{ 
+$(1,\tfrac{\pi}{12}),\, (1,\tfrac{5\pi}{12}),\, (1,\tfrac{13\pi}{12}),\,(1,\tfrac{17\pi}{12})$
+}}
+\انتہا{جواب}
 %=====================
 \ابتدا{سوال}\شناخت{سوال_مخروط_نقاط_تقاطع_ب}
 $r^2=\sqrt{2}\cos2\theta,\quad r^2=\sqrt{2}\sin2\theta$
@@ -6749,10 +6751,13 @@ $r=1,\quad r^2=2\sin2\theta$
 
 \موٹا{کمپیوٹر کا استعمال}\\
 \ابتدا{سوال}
-(ا) \عددی{r=-1-\cos\theta} اور (ب) \عددی{r=1+\cos\theta} میں کس کی ترسیم \عددی{r=1-\cos\theta} کی ترسیم کی طرح ہے؟\\
-جواب:\quad 
-الف
+(ا) \عددی{r=-1-\cos\theta} اور (ب) \عددی{r=1+\cos\theta} میں کس کی ترسیم \عددی{r=1-\cos\theta} کی ترسیم کی طرح ہے؟
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{ 
+الف
+}}
+\انتہا{جواب}
 %=======================
 \ابتدا{سوال}
 (ا) \عددی{r=-\sin(2\theta+\tfrac{\pi}{2})} اور (ب) \عددی{r=-\cos\tfrac{\theta}{2}} میں کس کی ترسیم \عددی{r=\cos2\theta} کی ترسیم کی طرح ہے؟
@@ -6818,15 +6823,22 @@ r^2&=-4\cos\theta
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
-چار گل \عددی{r=\cos2\theta} کی اس پھول کی پتی کی زیادہ سے زیادہ چوڑائی دریافت کریں جو \عددی{x} محور پر پایا جاتا ہے۔\\
-جواب:\quad 
-$2y=\tfrac{2\sqrt{6}}{9}$
+چار گل \عددی{r=\cos2\theta} کی اس پھول کی پتی کی زیادہ سے زیادہ چوڑائی دریافت کریں جو \عددی{x} محور پر پایا جاتا ہے۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{ 
+$2y=\tfrac{2\sqrt{6}}{9}$
+}}
+\انتہا{جواب}
 %=============
 \ابتدا{سوال}
 محور \عددی{x} سے قلب نما \عددی{r=2(1+\cos\theta)} کا زیادہ سے زیادہ قد دریافت کریں۔
 \انتہا{سوال}
-%==============
+
+\انتہا{سوالات}
+%sec 10.7 questions end here
+
+%sec 10.7 questions end here
 
 
 \حصہ{مخروط حصوں کے قطبی مساوات}\شناخت{حصہ_مخرط_حصوں_کے_قطبی_مساوات}
@@ -7239,26 +7251,34 @@ k=39.44\big(\frac{1}{0.25}-0.25\big)=147.9
 فلکی اکائیاں حاصل کرتے ہیں۔
 \انتہا{مثال}
 %====================
-
+%sec 10.8 questions start here
+%sec 10.8 questions start here
 \حصہء{سوالات}
+\ابتدا{سوالات}
 \موٹا{خطوط}\\
 سوال \حوالہ{سوال_مخروط_خط_قطبی_کارتیسی_الف}  تا سوال \حوالہ{سوال_مخروط_خط_قطبی_کارتیسی_ت} میں دیے خطوط کی قطبی اور کارتیسی مساوات تلاش کریں۔ 
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_خط_قطبی_کارتیسی_الف}
-خط شکل \حوالہ{شکل_سوال_مخروط_خط_قطبی_کارتیسی_الف} میں ترسیم کیا گیا ہے۔\\
-جواب:\quad
-$r\cos(\theta-\tfrac{\pi}{6})=5,\quad y=-\sqrt{3}x+10$
+خط شکل \حوالہ{شکل_سوال_مخروط_خط_قطبی_کارتیسی_الف} میں ترسیم کیا گیا ہے۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$r\cos(\theta-\tfrac{\pi}{6})=5,\quad y=-\sqrt{3}x+10$
+}}
+\انتہا{جواب}
 %========================
 \ابتدا{سوال}\شناخت{سوال_مخروط_خط_قطبی_کارتیسی_ب}
 خط شکل \حوالہ{شکل_سوال_مخروط_خط_قطبی_کارتیسی_ب} میں ترسیم کیا گیا ہے۔
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}\شناخت{سوال_مخروط_خط_قطبی_کارتیسی_پ}
-خط شکل \حوالہ{شکل_سوال_مخروط_خط_قطبی_کارتیسی_پ} میں ترسیم کیا گیا ہے۔\\
-جواب:\quad
-$r\cos(\theta-\tfrac{4\pi}{3})=3,\quad y=-\tfrac{\sqrt{3}}{3}x-2\sqrt{3}$
+خط شکل \حوالہ{شکل_سوال_مخروط_خط_قطبی_کارتیسی_پ} میں ترسیم کیا گیا ہے۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$r\cos(\theta-\tfrac{4\pi}{3})=3,\quad y=-\tfrac{\sqrt{3}}{3}x-2\sqrt{3}$
+}}
+\انتہا{جواب}
 %========================
 \ابتدا{سوال}\شناخت{سوال_مخروط_خط_قطبی_کارتیسی_ت}
 خط شکل \حوالہ{شکل_سوال_مخروط_خط_قطبی_کارتیسی_ت} میں ترسیم کیا گیا ہے۔
@@ -7331,20 +7351,26 @@ $r\cos(\theta-\tfrac{4\pi}{3})=3,\quad y=-\tfrac{\sqrt{3}}{3}x-2\sqrt{3}$
 سوال \حوالہ{سوال_مخروط_قطبی_ترسیم_کارتیسی_معلوم_الف} تا سوال \حوالہ{سوال_مخروط_قطبی_ترسیم_کارتیسی_معلوم_ب} میں دی مساوات کو ترسیم کریں اور ان کی کارتیسی مساوات معلوم کریں۔ 
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_ترسیم_کارتیسی_معلوم_الف}
-$r\cos(\theta-\tfrac{\pi}{4})=\sqrt{2}$\\
-جواب:\quad
-$y=2-x$
+$r\cos(\theta-\tfrac{\pi}{4})=\sqrt{2}$
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$y=2-x$
+}}
+\انتہا{جواب}
 %======================
 \ابتدا{سوال}
 $r\cos(\theta+\tfrac{3\pi}{4})=1$
 \انتہا{سوال}
 %======================
 \ابتدا{سوال}
-$r\cos(\theta-\tfrac{2\pi}{3})=3$\\
-جواب:\quad
-$y=\tfrac{\sqrt{3}}{3}x+2\sqrt{3}$
+$r\cos(\theta-\tfrac{2\pi}{3})=3$
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$y=\tfrac{\sqrt{3}}{3}x+2\sqrt{3}$
+}}
+\انتہا{جواب}
 %======================
 \ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_ترسیم_کارتیسی_معلوم_ب}
 $r\cos(\theta+\tfrac{\pi}{3})=2$
@@ -7354,20 +7380,26 @@ $r\cos(\theta+\tfrac{\pi}{3})=2$
 سوال \حوالہ{سوال_مخروط_کارتیسی_سے_قطبی_معلوم_الف} تا سوال \حوالہ{سوال_مخروط_کارتیسی_سے_قطبی_معلوم_ب} میں دی گئی کارتیسی مساوات کی قطبی روپ (\عددی{r\cos(\theta-\theta_0)=r_0}) تلاش کریں۔ 
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_کارتیسی_سے_قطبی_معلوم_الف}
-$\sqrt{2}x+\sqrt{2}y=6$\\
-جواب:\quad
-$r\cos(\theta-\tfrac{\pi}{4})=3$
+$\sqrt{2}x+\sqrt{2}y=6$
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$r\cos(\theta-\tfrac{\pi}{4})=3$
+}}
+\انتہا{جواب}
 %=======================
 \ابتدا{سوال}
 $\sqrt{3}x-y=1$
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
-$y=-5$\\
-جواب:\quad
-$r\cos(\theta+\tfrac{\pi}{2})=5$
+$y=-5$
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$r\cos(\theta+\tfrac{\pi}{2})=5$
+}}
+\انتہا{جواب}
 %=======================
 \ابتدا{سوال}\شناخت{سوال_مخروط_کارتیسی_سے_قطبی_معلوم_ب}
 $x=-4$
@@ -7377,20 +7409,26 @@ $x=-4$
 سوال \حوالہ{سوال_مخروط_دائرے_کی_قطبی_الف} تا سوال \حوالہ{سوال_مخروط_دائرے_کی_قطبی_ت} میں دی گئی دائروں کی قطبی مساوات دریافت کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_دائرے_کی_قطبی_الف}
-دائرہ شکل \حوالہ{شکل_سوال_مخروط_دائرے_کی_قطبی_الف}\\
-جواب:\quad
-$r=8\cos\theta$
+دائرہ شکل \حوالہ{شکل_سوال_مخروط_دائرے_کی_قطبی_الف}
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$r=8\cos\theta$
+}}
+\انتہا{جواب}
 %========================
 \ابتدا{سوال}\شناخت{سوال_مخروط_دائرے_کی_قطبی_ب}
 دائرہ شکل \حوالہ{شکل_سوال_مخروط_دائرے_کی_قطبی_ب}
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}\شناخت{سوال_مخروط_دائرے_کی_قطبی_پ}
-دائرہ شکل \حوالہ{شکل_سوال_مخروط_دائرے_کی_قطبی_پ}\\
-جواب:\quad
-$r=2\sqrt{2}\sin\theta$
+دائرہ شکل \حوالہ{شکل_سوال_مخروط_دائرے_کی_قطبی_پ}
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$r=2\sqrt{2}\sin\theta$
+}}
+\انتہا{جواب}
 %========================
 \ابتدا{سوال}\شناخت{سوال_مخروط_دائرے_کی_قطبی_ت}
 دائرہ شکل \حوالہ{شکل_سوال_مخروط_دائرے_کی_قطبی_ت}
@@ -7447,20 +7485,26 @@ $r=2\sqrt{2}\sin\theta$
 سوال \حوالہ{سوال_مخروط_قطبی_دائرے_ترسیم_الف} تا سوال \حوالہ{سوال_مخروط_قطبی_دائرے_ترسیم_ب} میں دیے گئے دائرے ترسیم کریں۔ ان کے مرکز کے قطبی محدد اور رداس لکھیں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_دائرے_ترسیم_الف}
-$r=4\cos\theta$\\
-جواب:\quad
-$C(2,0),\quad 2$
+$r=4\cos\theta$
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$C(2,0),\quad 2$
+}}
+\انتہا{جواب}
 %=====================
 \ابتدا{سوال}
 $r=6\sin\theta$
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
-$r=-2\cos\theta$\\
-جواب:\quad
-$C(1,\pi),\quad 1$
+$r=-2\cos\theta$
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$C(1,\pi),\quad 1$
+}}
+\انتہا{جواب}
 %=====================
 \ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_دائرے_ترسیم_ب}
 $r=-8\sin\theta$
@@ -7470,40 +7514,52 @@ $r=-8\sin\theta$
 سوال \حوالہ{سوال_مخروط_قطبی_پیچیدہ_الف} تا سوال \حوالہ{سوال_مخروط_قطبی_پیچیدہ_ب} کے قطبی مساوات معلوم کریں۔ 
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_پیچیدہ_الف}
-$(x-6)^2+y^2=36$\\
-جواب:\quad
-$r=12\cos\theta$
+$(x-6)^2+y^2=36$
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$r=12\cos\theta$
+}}
+\انتہا{جواب}
 %========================
 \ابتدا{سوال}
 $(x+2)^2+y^2=4$
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}
-$x^2+(y-5)^2=25$\\
-جواب:\quad
-$r=10\sin\theta$
+$x^2+(y-5)^2=25$
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$r=10\sin\theta$
+}}
+\انتہا{جواب}
 %========================
 \ابتدا{سوال}
 $x^2+(y+7)^2=49$
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}
-$x^2+2x+y^2=0$\\
-جواب:\quad
-$(x+1)^2+y^2=1,\quad r=-2\cos\theta$
+$x^2+2x+y^2=0$
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$(x+1)^2+y^2=1,\quad r=-2\cos\theta$
+}}
+\انتہا{جواب}
 %========================
 \ابتدا{سوال}
 $x^2-16x+y^2=0$
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}
-$x^2+y^2+y=0$\\
-جواب:\quad
-$x^2+(y+\tfrac{1}{2})^2=\tfrac{1}{4},\quad r=-\sin\theta$
+$x^2+y^2+y=0$
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$x^2+(y+\tfrac{1}{2})^2=\tfrac{1}{4},\quad r=-\sin\theta$
+}}
+\انتہا{جواب}
 %========================
 \ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_پیچیدہ_ب}
 $x^2+y^2-\tfrac{4}{3}y=0$
@@ -7515,40 +7571,52 @@ $x^2+y^2-\tfrac{4}{3}y=0$
 سوال \حوالہ{سوال_مخروط_سنک_ناظمہ_قطبی_الف} تا سوال \حوالہ{سوال_مخروط_سنک_ناظمہ_قطبی_ب} میں مخروط حصوں کی سنک دی گئی ہے۔ مخروط حصے کا ایک ماسکہ مبدا پر واقع ہے اور اس کا مطابقتی ناظمہ بھی دیا گیا ہے۔ اس مخروط حصے کی قطبی مساوات تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_سنک_ناظمہ_قطبی_الف}
-$e=1,\quad x=2$\\
-جواب:\quad
-$r=\tfrac{2}{1+\cos\theta}$
+$e=1,\quad x=2$
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$r=\tfrac{2}{1+\cos\theta}$
+}}
+\انتہا{جواب}
 %=======================
 \ابتدا{سوال}
 $e=1,\quad y=2$
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
-$e=5,\quad y=-6$\\
-جواب:\quad
-$r=\tfrac{30}{1-5\sin\theta}$
+$e=5,\quad y=-6$
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$r=\tfrac{30}{1-5\sin\theta}$
+}}
+\انتہا{جواب}
 %=======================
 \ابتدا{سوال}
 $e=2,\quad x=4$
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
-$e=\tfrac{1}{2},\quad x=1$\\
-جواب:\quad
-$r=\tfrac{1}{2+\cos\theta}$
+$e=\tfrac{1}{2},\quad x=1$
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$r=\tfrac{1}{2+\cos\theta}$
+}}
+\انتہا{جواب}
 %=======================
 \ابتدا{سوال}
 $e=\tfrac{1}{4},\quad x=-2$
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
-$e=\tfrac{1}{5},\quad y=-10$\\
-جواب:\quad
-$r=\tfrac{10}{5-\sin\theta}$
+$e=\tfrac{1}{5},\quad y=-10$
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$r=\tfrac{10}{5-\sin\theta}$
+}}
+\انتہا{جواب}
 %=======================
 \ابتدا{سوال}\شناخت{سوال_مخروط_سنک_ناظمہ_قطبی_ب}
 $e=\tfrac{1}{3},\quad y=6$
@@ -7559,48 +7627,11 @@ $e=\tfrac{1}{3},\quad y=6$
 سوال \حوالہ{سوال_مخروط_ترخیم_قطع_مکافی_الف} تا سوال \حوالہ{سوال_مخروط_ترخیم_قطع_مکافی_ٹ} کے قطع مکافی اور ترخیمات کو ترسیم کریں۔ مبدا پر واقع ماسکہ کا مطابقتی ناظمہ بھی ترسیم کریں۔ ہر مخروط حصے کی قطبی مساوات تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_قطع_مکافی_الف}
-$r=\tfrac{1}{1+\cos\theta}$\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_ترخیم_قطع_مکافی_الف}
+$r=\tfrac{1}{1+\cos\theta}$
 \انتہا{سوال}
-%====================
-\ابتدا{سوال}
-$r=\tfrac{6}{2+\cos\theta}$
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_قطع_مکافی_ب}
-$r=\tfrac{25}{10-5\cos\theta}$\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_ترخیم_قطع_مکافی_ب}
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-$r=\tfrac{4}{2-2\cos\theta}$
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_قطع_مکافی_پ}
-$r=\tfrac{400}{16+8\sin\theta}$\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_ترخیم_قطع_مکافی_پ}
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}
-$r=\tfrac{12}{3+3\sin\theta}$
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_قطع_مکافی_ت}
-$r=\tfrac{8}{2-2\sin\theta}$\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_ترخیم_قطع_مکافی_ت}
-\انتہا{سوال}
-%====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_قطع_مکافی_ٹ}
-$r=\tfrac{4}{2-\sin\theta}$
-\انتہا{سوال}
-%====================
-\begin{figure}
-\centering
-\begin{minipage}{0.22\textwidth}
+\ابتدا{جواب}
+\wf{\unexpanded{
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=1/(1+cos(\x));}]
 \begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-2,-1,1}]
@@ -7609,10 +7640,20 @@ $r=\tfrac{4}{2-\sin\theta}$
 \addplot[]plot coordinates {(1,-2)(1,2)}node[pos=0,below]{$x=1$};
 \end{axis}
 \end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_ترخیم_قطع_مکافی_الف}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
+\end{minipage}
+}}
+\انتہا{جواب}
+%====================
+\ابتدا{سوال}
+$r=\tfrac{6}{2+\cos\theta}$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_قطع_مکافی_ب}
+$r=\tfrac{25}{10-5\cos\theta}$
+\انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=25/(10-5*cos(\x));}]
 \begin{axis}[clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={\empty},ytick={\empty}]
@@ -7623,10 +7664,20 @@ $r=\tfrac{4}{2-\sin\theta}$
 \addplot[] plot coordinates {(-5/3,0)}node[circ]{}node[above,xshift=-2ex]{$(\tfrac{5}{3},\pi)$};
 \end{axis}
 \end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_ترخیم_قطع_مکافی_ب}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
+\end{minipage}
+}}
+\انتہا{جواب}
+%====================
+\ابتدا{سوال}
+$r=\tfrac{4}{2-2\cos\theta}$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_قطع_مکافی_پ}
+$r=\tfrac{400}{16+8\sin\theta}$
+\انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=400/(16+8*sin(\x));}]
 \begin{axis}[clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={\empty},ytick={\empty}]
@@ -7637,10 +7688,20 @@ $r=\tfrac{4}{2-\sin\theta}$
 \addplot[] plot coordinates {(0,50/3)}node[circ]{}node[above left]{$(\tfrac{50}{3},\tfrac{\pi}{2})$};
 \end{axis}
 \end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_ترخیم_قطع_مکافی_پ}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
+\end{minipage}
+}}
+\انتہا{جواب}
+%====================
+\ابتدا{سوال}
+$r=\tfrac{12}{3+3\sin\theta}$
+\انتہا{سوال}
+%====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_قطع_مکافی_ت}
+$r=\tfrac{8}{2-2\sin\theta}$
+\انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=8/(2-2*sin(\x));}]
 \begin{axis}[clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={\empty},ytick={\empty}]
@@ -7649,28 +7710,26 @@ $r=\tfrac{4}{2-\sin\theta}$
 \addplot[]plot coordinates {(-10,-4)(10,-4)}node[pos=0,yshift=1ex]{$y=-4$};
 \end{axis}
 \end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_ترخیم_قطع_مکافی_ت}
 \end{minipage}
-\end{figure}
+}}
+\انتہا{جواب}
+%====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_قطع_مکافی_ٹ}
+$r=\tfrac{4}{2-\sin\theta}$
+\انتہا{سوال}
+%====================
+
 %=====================
 \موٹا{عدم مساوات کی ترسیمات}\\
 
 سوال \حوالہ{سوال_مخروط_عدم_مساوات_ترسیم_الف} اور سوال \حوالہ{سوال_مخروط_عدم_مساوات_ترسیم_ب} میں عدم مساوات کو ترسیم کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_عدم_مساوات_ترسیم_الف}
-$0\le r\le 2\cos\theta$\\
-جواب:\quad
-شکل \حوالہ{شکل_سوال_مخروط_عدم_مساوات_ترسیم_الف}
+$0\le r\le 2\cos\theta$
 \انتہا{سوال}
-%=====================
-\ابتدا{سوال}\شناخت{سوال_مخروط_عدم_مساوات_ترسیم_ب}
-$-3\cos\theta\le r\le 0$
-\انتہا{سوال}
-%=====================
-\begin{figure}
-\centering
-\begin{minipage}{0.22\textwidth}
+\ابتدا{جواب}
+\wf{\unexpanded{
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=2*cos(\x);}]
 \begin{axis}[axis on top,clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true,xtick={2},xticklabels={\rlap{$2$}},ytick={\empty}]
@@ -7678,24 +7737,13 @@ $-3\cos\theta\le r\le 0$
 \addplot[]plot coordinates {(1,1)}node[above,xshift=2ex]{$0\le r\le 2\cos\theta$};
 \end{axis}
 \end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_عدم_مساوات_ترسیم_الف}
-\end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
-\centering
-\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=4*sin(\x);g(\x)=sqrt(3)*sec(\x);}]
-\begin{axis}[axis on top,clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true,xtick={2},xticklabels={\rlap{$2$}},ytick={\empty}]
-\addplot[data cs=polar,smooth,domain=0:360]{f(x)};
-\addplot[data cs=polar,smooth,domain=-20:70]{g(x)}node[above]{$r\sqrt{3}\sec\theta$};
-\addplot[]plot coordinates {(-1,4)}node[left]{$r=4\sin\theta$};
-\addplot[]plot coordinates {(sqrt(3),3)}node[circ]{}node[right]{$(2\sqrt{3},\tfrac{\pi}{3}),\, (\sqrt{3},3)$};
-\addplot[]plot coordinates {(sqrt(3),1)}node[circ]{}node[right]{$(2,\tfrac{\pi}{6}),\, (\sqrt{3},1)$};
-\end{axis}
-\end{tikzpicture}
-\caption{}
-\label{شکل_سوال_مخروط_قطبی_دائرہ_بائیں}
 \end{minipage}
-\end{figure}
+}}
+\انتہا{جواب}
+%=====================
+\ابتدا{سوال}\شناخت{سوال_مخروط_عدم_مساوات_ترسیم_ب}
+$-3\cos\theta\le r\le 0$
+\انتہا{سوال}
 
 %======================
 
@@ -7747,23 +7795,32 @@ $r=\tfrac{1}{1+2\cos\theta}$
 \موٹا{نظریہ اور مثالیں}\\
 \ابتدا{سوال}\ترچھا{حضیض شمسی اور اوج شمسی}\\
 ایک سیارہ اپنے سورج کے گرد ایک ترخیم پر گھومتا ہے جس کے نصف محور اکبر کی لمبائی \عددی{a} ہے۔
+\begin{center}
+\begin{tikzpicture}[declare function={fx(\t)=2*cos(\t);fy(\t)=sin(\t);}]
+\draw[thick,->-=0.25] plot[smooth,domain=0:360, variable=\t] ({fx(\t)},{fy(\t)});
+\draw[thin](-2,0)--(2,0);
+\draw[](-1,0)node[circ]{}node[below]{$-a$};
+\draw[](1,0)node[circ]{}node[below]{سورج};
+\draw[] ({fx(45)},{fy(45)})node[circ]{}coordinate(kP);
+\draw[thick,](1,0)--(kP)coordinate[pos=0.4](kE)node[circ]{}node[above]{سیارہ};
+\draw[thick,-stealth] (1.4,0) to  [out=90,in=-30](kE);
+\draw[](1,0)++(22:0.5)node[shift={(25:0.25em)}]{$\theta$};
+\draw[](2,0)node[pin={[align=center]30:{\text{\RL{حضیض شمسی}}\\ \text{\RL{(سورج کے قریب تر)}}}}]{};
+\draw[](-2,0)node[pin={[align=center]150:{\text{\RL{اوج شمسی}}\\ \text{\RL{(سورج  سے دور  تر)}}}}]{};
+\end{tikzpicture}
+\end{center}
+
+%
 \begin{enumerate}[a.]
 \item
 دکھائیں کہ جب سیارہ سورج کے قریب تر ہو تب \عددی{r=a(1-e)} ہو گا اور جب یہ سورج سے دور تر ہو تب \عددی{r=a(1+e)} ہو گا۔
 \item
-جدول \حوالہ{جدول_مخروط_نظام_شمسی_تفصیل}-ا کی مدد سے معلوم کریں کہ ہماری نظام شمسی میں ہر سیارہ سورج کے کتنے نزدیک اور اس سے کتنا دور ہو سکتا ہے۔
+ جدول   \حوالہ{جدول_سوالات_سورج_سیارے} کی مدد سے معلوم کریں کہ ہماری نظام شمسی میں ہر سیارہ سورج کے کتنے نزدیک اور اس سے کتنا دور ہو سکتا ہے۔
 \end{enumerate}
-جواب:\quad
-(ب) جدول \حوالہ{جدول_مخروط_نظام_شمسی_تفصیل}-ب
-\انتہا{سوال}
-%====================
+%
 \begin{table}
-\caption{نظام شمسی}
-\label{جدول_مخروط_نظام_شمسی_تفصیل}
-\centering
-\begin{subtable}{0.45\textwidth}
-\caption{نظام شمسی میں سیاروں کی سنک اور نصف محور اکبر}
-\label{جدول_مخروط_نظام_شمسی}
+\caption{سیاروں کے مدار کی معلومات۔}
+\label{جدول_سوالات_سورج_سیارے}
 \centering
 \begin{tabular}{ccc}
 \toprule
@@ -7780,10 +7837,12 @@ $r=\tfrac{1}{1+2\cos\theta}$
 پلوٹو&  $39.44$   &  $0.2481$\\
 \bottomrule
 \end{tabular}
-\end{subtable}\hfill
-\begin{subtable}{0.45\textwidth}
-\caption{نظام شمسی میں حضیض شمسی اور اوج شمسی۔}
-\label{جدول_مخروط_نظام_شمس_ب}
+\end{table}
+\انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+(ب) 
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tabular}{ccc}
 \toprule
@@ -7800,30 +7859,49 @@ $r=\tfrac{1}{1+2\cos\theta}$
 پلوٹو&  $29.6549$   &  $49.2251$\\
 \bottomrule
 \end{tabular}
-\end{subtable}
-\end{table}
+\end{minipage}
+}}
+\انتہا{جواب}
 %===========================
 
 
-\ابتدا{سوال}\ترچھا{سیاروں کی مدار پر حرکت}\\
-ہم نے مثال \حوالہ{مثال_مخروط_مدار_پلوٹو} میں پلوٹو کے مدار کی قطبی مساوات معلوم کی۔ جدول \حوالہ{جدول_مخروط_نظام_شمسی_تفصیل}-ا کی مدد سے دیگر سیاروں کے مدار کی مساوات تلاش کریں۔
+\ابتدا{سوال}\ترچھا{سیاروں کے مدار پر حرکت}\\
+ہم نے مثال \حوالہ{مثال_مخروط_مدار_پلوٹو} میں پلوٹو کے مدار کی قطبی مساوات معلوم کی۔ جدول \حوالہ{جدول_سوالات_سورج_سیارے} کی مدد سے دیگر سیاروں کے مدار کی مساوات تلاش کریں۔
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
-(الف) منحنیات \عددی{r=4\sin\theta} اور \عددی{r=\sqrt{3}\sec\theta} کی کارتیسی مساواتیں تلاش کریں۔  (ب) ان دنوں منحنیات کو ایک ساتھ ترسیم کر کے ان کے نقطہ تقاطع کو کارتیسی اور قطبی محدد میں ظاہر کریں۔ \\
-جواب:\quad
-(ا) \عددی{x^2+(y-2)^2=4,\,x=\sqrt{3}}، (ب) شکل \حوالہ{شکل_سوال_مخروط_قطبی_دائرہ_بائیں}
+(الف) منحنیات \عددی{r=4\sin\theta} اور \عددی{r=\sqrt{3}\sec\theta} کی کارتیسی مساواتیں تلاش کریں۔  (ب) ان دنوں منحنیات کو ایک ساتھ ترسیم کر کے ان کے نقطہ تقاطع کو کارتیسی اور قطبی محدد میں ظاہر کریں۔ 
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+(ا) \عددی{x^2+(y-2)^2=4,\,x=\sqrt{3}}، (ب) 
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=4*sin(\x);g(\x)=sqrt(3)*sec(\x);}]
+\begin{axis}[axis on top,clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true,xtick={2},xticklabels={\rlap{$2$}},ytick={\empty}]
+\addplot[data cs=polar,smooth,domain=0:360]{f(x)};
+\addplot[data cs=polar,smooth,domain=-20:70]{g(x)}node[above]{$r\sqrt{3}\sec\theta$};
+\addplot[]plot coordinates {(-1,4)}node[left]{$r=4\sin\theta$};
+\addplot[]plot coordinates {(sqrt(3),3)}node[circ]{}node[right]{$(2\sqrt{3},\tfrac{\pi}{3}),\, (\sqrt{3},3)$};
+\addplot[]plot coordinates {(sqrt(3),1)}node[circ]{}node[right]{$(2,\tfrac{\pi}{6}),\, (\sqrt{3},1)$};
+\end{axis}
+\end{tikzpicture}
+\end{minipage}
+}}
+\انتہا{جواب}
 %=====================
 \ابتدا{سوال}
 (الف) منحنیات \عددی{r=8\cos\theta} اور \عددی{r=2\sec\theta} کی کارتیسی مساواتیں تلاش کریں۔  (ب) ان دنوں منحنیات کو ایک ساتھ ترسیم کر کے ان کے نقطہ تقاطع کو کارتیسی اور قطبی محدد میں ظاہر کریں۔ 
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
-ایک قطع مکافی کا ماسکہ \عددی{(0,0)} پر ہے جبکہ اس کا ناظمہ \عددی{r\cos\theta=4} ہے۔ اس کی قطبی مساوات تلاش کریں۔\\
-جواب:\quad
-$r=\tfrac{4}{1+\cos\theta}$
+ایک قطع مکافی کا ماسکہ \عددی{(0,0)} پر ہے جبکہ اس کا ناظمہ \عددی{r\cos\theta=4} ہے۔ اس کی قطبی مساوات تلاش کریں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$r=\tfrac{4}{1+\cos\theta}$
+}}
+\انتہا{جواب}
 %============================
 \ابتدا{سوال}
 ایک قطع مکافی کا ماسکہ \عددی{(0,0)} پر ہے جبکہ اس کا ناظمہ \عددی{r\cos(\theta-\tfrac{\pi}{2})=2} ہے۔ اس کی قطبی مساوات تلاش کریں۔
@@ -7840,9 +7918,12 @@ e=\frac{r_{\text{بلندتر}}-r_\text{\RL{کمتر}}}{r_{\text{بلندتر}}+
 \item
 \ترچھا{ترخیم کی ترسیم بذریعہ دھاگہ۔} آپ کے پاس \عددی{\SI{10}{\centi\meter}} لمبائی کا ایک دھاگہ ہے جس کے  سر پنیوں کے ساتھ بندھے ہوئے ہیں۔ آپ صفحہ \حوالہصفحہ{شکل_مخروط_ترخیم_کی_تعریف} پر شکل \حوالہ{شکل_مخروط_ترخیم_کی_تعریف} میں دکھائی گئی ترکیب استعمال کر کے ایک ترخیم ترسیم کریں جس کی سنک \عددی{0.2} ہو۔ یہ ترخیم سیارہ مریخ کا مدار دے گا۔
 \end{enumerate}
-جواب:\quad
-(ب) پنیا \عددی{2} سنٹی میٹر دور ہونی چاہیے۔ 
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+(ب) پنیا \عددی{2} سنٹی میٹر دور ہونی چاہیے۔ 
+}}
+\انتہا{جواب}
 %=================
 \ابتدا{سوال}\ترچھا{ہالی دم دار ستارہ} (مثال \حوالہ{مثال_مخروط_ہالی_دم_دار_ستارہ_الف} دیکھیں۔)\\
 \begin{enumerate}[a.]
@@ -7857,22 +7938,28 @@ e=\frac{r_{\text{بلندتر}}-r_\text{\RL{کمتر}}}{r_{\text{بلندتر}}+
 سوال \حوالہ{سوال_مخروط_منحنی_خاکہ_مساوات_الف} تا سوال \حوالہ{سوال_مخروط_منحنی_خاکہ_مساوات_ب} میں دی گئی منحنی کی قطبی مساوات تلاش کریں۔ منحنی کا خاکہ کھینچیں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_منحنی_خاکہ_مساوات_الف}
-$x^2+y^2-2ay=0$\\
-جواب:\quad
+$x^2+y^2-2ay=0$
+\انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
 $r=2a\sin\theta$\quad
 دائرہ
-\انتہا{سوال}
+}}
+\انتہا{جواب}
 %====================
 \ابتدا{سوال}
 $y^2=4ax+4a^2$
 \انتہا{سوال}
 %====================
 \ابتدا{سوال}
-$x\cos\alpha+y\sin\alpha=p\quad (\alpha, p \text{مستقل})$\\
-جواب:\quad
+$x\cos\alpha+y\sin\alpha=p\quad (\alpha, p \text{مستقل})$
+\انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
 $r\cos(\theta-\alpha)=p$\quad
 خط
-\انتہا{سوال}
+}}
+\انتہا{جواب}
 %====================
 \ابتدا{سوال}\شناخت{سوال_مخروط_منحنی_خاکہ_مساوات_ب}
 $(x^2+y^2)^2+2ax(x^2+y^2)-a^2y^2=0$
@@ -7907,7 +7994,12 @@ r=\frac{a(1-e^2)}{1+e\cos\theta}
 آپ\عددی{a=2} لیں۔ اب \عددی{e} کی قیمت \عددی{\tfrac{9}{10}}، \عددی{\tfrac{8}{10}}، \عددی{\tfrac{7}{10}}، \نقطے، \عددی{\tfrac{1}{10}}، \عددی{\tfrac{1}{20}} اور \عددی{\tfrac{1}{50}} لینے سے ترسیم  پر کیا اثر ہو گا؟
 \end{enumerate}
 \انتہا{سوال}
-%=======================
+
+\انتہا{سوالات}
+
+%sec 10.8 questions end here
+%sec 10.8 questions end here
+
 
 \حصہ{قطبی محدد میں تکمل}\شناخت{حصہ_مخروط_قطبی_محدد_میں_تکمل}
 اس حصہ میں قطبی محدد استعمال کرتے ہوئے مستوی خطوں کا رقبہ، منحنیات کی لمبائی، اور سطح طواف کا رقبہ حاصل کرنا سکھایا جائے گا۔
@@ -8234,36 +8326,47 @@ S&=\int_{\alpha}^{\beta}2\pi r\cos\theta\sqrt{r^2+\big(\frac{\dif r}{\dif\theta}
 \end{align*}
 \انتہا{مثال}
 %====================
-
+%sec 10.9 questions start here
+%sec 10.9 questions start here
 \حصہء{سوالات}
+\ابتدا{سوالات}
 \موٹا{قطبی منحنیات کے اندر رقبہ}\\
 سوال \حوالہ{سوال_مخروط_منحنیات_اندر_رقبہ_الف} تا سوال \حوالہ{سوال_مخروط_منحنیات_اندر_رقبہ_ب} میں خطوں کے  رقبے تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_منحنیات_اندر_رقبہ_الف}
-چپٹا گھونگا\عددی{r=4+2\cos\theta} کے اندر۔\\
-جواب:\quad
-$18\pi$
+چپٹا گھونگا\عددی{r=4+2\cos\theta} کے اندر۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$18\pi$
+}}
+\انتہا{جواب}
 %===================
 \ابتدا{سوال}
 قلب نما \عددی{r=a(1+\cos\theta),\, a>0} کے اندر۔
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
-چار  گل \عددی{r=\cos2\theta} کے ایک پتا کے اندر۔\\
-جواب:\quad
-$\tfrac{\pi}{8}$
+چار  گل \عددی{r=\cos2\theta} کے ایک پتا کے اندر۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{\pi}{8}$
+}}
+\انتہا{جواب}
 %==================
 \ابتدا{سوال}
 دو چشمہ \عددی{r^2=2a^2\cos2\theta,\, a>0} کے اندر۔
 \انتہا{سوال}
 %=============
 \ابتدا{سوال}
-دو چشمہ \عددی{r^2=4\sin 2\theta} کے ایک گھیر کے اندر۔\\
-جواب:\quad
-$2$
+دو چشمہ \عددی{r^2=4\sin 2\theta} کے ایک گھیر کے اندر۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$2$
+}}
+\انتہا{جواب}
 %===================
 \ابتدا{سوال}\شناخت{سوال_مخروط_منحنیات_اندر_رقبہ_ب}
 شش گل \عددی{r^2=2\sin3\theta} کے اندر۔
@@ -8274,60 +8377,78 @@ $2$
 سوال \حوالہ{سوال_مخروط_مشترک_قطبی_رقبہ_الف} تا سوال \حوالہ{سوال_مخروط_مشترک_قطبی_رقبہ_ب} میں مشترکہ قطبی خطے کا رقبہ تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_مشترک_قطبی_رقبہ_الف}
-دائرہ \عددی{r=2\cos\theta} اور \عددی{r=2\sin\theta} کا مشترکہ رقبہ۔\\
-جواب:\quad
-$\tfrac{\pi}{2}-1$
+دائرہ \عددی{r=2\cos\theta} اور \عددی{r=2\sin\theta} کا مشترکہ رقبہ۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{\pi}{2}-1$
+}}
+\انتہا{جواب}
 %==================
 \ابتدا{سوال}
 دائرہ \عددی{r=1,} اور \عددی{ r=2\sin\theta} کا مشترکہ رقبہ۔
 \انتہا{سوال}
 %==================
 \ابتدا{سوال}
-دائرہ \عددی{r=2} اور قلب نما \عددی{r=2(1-\cos\theta)} کا مشترکہ رقبہ۔\\
-جواب:\quad
-$5\pi-8$
+دائرہ \عددی{r=2} اور قلب نما \عددی{r=2(1-\cos\theta)} کا مشترکہ رقبہ۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$5\pi-8$
+}}
+\انتہا{جواب}
 %==================
 \ابتدا{سوال}
 قلب نما \عددی{r=2(1+\cos\theta)} اور \عددی{r=2(1-\cos\theta)} کا مشترکہ رقبہ۔
 \انتہا{سوال}
 %==================
 \ابتدا{سوال}
-دائرہ \عددی{r=\sqrt{3}} کے باہر اور \عددی{r^2=6\cos2\theta} کے اندر۔\\
-جواب:\quad
-$3\sqrt{3}-\pi$
+دائرہ \عددی{r=\sqrt{3}} کے باہر اور \عددی{r^2=6\cos2\theta} کے اندر۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$3\sqrt{3}-\pi$
+}}
+\انتہا{جواب}
 %==================
 \ابتدا{سوال}
 دائرہ \عددی{r=3a\cos\theta} کے اندر اور قلب نما \عددی{r=a(1+\cos\theta),\, a>0} کے باہر رقبہ۔ 
 \انتہا{سوال}
 %=================
 \ابتدا{سوال}
-دائرہ \عددی{r=-2\cos\theta} کے اندر اور دائرہ \عددی{r=1} کے باہر رقبہ۔\\
-جواب:\quad
-$\tfrac{\pi}{3}+\tfrac{\sqrt{3}}{2}$
+دائرہ \عددی{r=-2\cos\theta} کے اندر اور دائرہ \عددی{r=1} کے باہر رقبہ۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{\pi}{3}+\tfrac{\sqrt{3}}{2}$
+}}
+\انتہا{جواب}
 %==================
 \ابتدا{سوال}
 (ا) گھونگا \عددی{r=2\cos\theta+1} کے بیرونی گھیر کا رقبہ (شکل \حوالہ{شکل_مثال_مخروط_رقبہ_چھوٹا_گھیرا})۔  (ب) گھونگا \عددی{r=2\cos\theta+1} کے اندرونی گھیر کے باہر اور بیرونی گھیر کے اندر رقبہ۔
 \انتہا{سوال}
 %==================
 \ابتدا{سوال}
-دائرہ \عددی{r=6} کے اندر خط \عددی{r=3\csc\theta} سے اوپر  رقبہ۔\\
-جواب:\quad
-$12\pi-9\sqrt{3}$
+دائرہ \عددی{r=6} کے اندر خط \عددی{r=3\csc\theta} سے اوپر  رقبہ۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$12\pi-9\sqrt{3}$
+}}
+\انتہا{جواب}
 %=================
 \ابتدا{سوال}\شناخت{سوال_مخروط_مشترک_قطبی_رقبہ_ب}
 گھونگا\عددی{r^2=6\cos2\theta} کے اندر اور خط \عددی{r=\tfrac{3}{2}\sec\theta} کے دائیں جانب رقبہ۔
 \انتہا{سوال}
 %======================
 \ابتدا{سوال}\شناخت{سوال_مخروط_سایہ_دار_خطہ_قطبی}
-(ا) سایہ دار خطہ شکل \حوالہ{شکل_سوال_مخروط_سایہ_دار_خطہ_قطبی} میں دکھایا گیا ہے۔ اس  کا رقبہ تلاش کریں۔ (ب) ایسا معلوم ہوتا ہے کہ \عددی{r=\tan\theta,\, -\tfrac{\pi}{2}<\theta<\tfrac{\pi}{2}} لکیر \عددی{x=1} اور لکیر \عددی{x=-1} کا متقاربی خط ہو سکتا ہے۔ کیا ایسا ہے؟ اپنے جواب کی وجہ پیش کریں۔\\
-جواب:\quad
-$\tfrac{3}{2}-\tfrac{\pi}{4}$
+(ا) سایہ دار خطہ شکل \حوالہ{شکل_سوال_مخروط_سایہ_دار_خطہ_قطبی} میں دکھایا گیا ہے۔ اس  کا رقبہ تلاش کریں۔ (ب) ایسا معلوم ہوتا ہے کہ \عددی{r=\tan\theta,\, -\tfrac{\pi}{2}<\theta<\tfrac{\pi}{2}} لکیر \عددی{x=1} اور لکیر \عددی{x=-1} کا متقاربی خط ہو سکتا ہے۔ کیا ایسا ہے؟ اپنے جواب کی وجہ پیش کریں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{3}{2}-\tfrac{\pi}{4}$
+}}
+\انتہا{جواب}
 %================
 \begin{figure}
 \centering
@@ -8388,50 +8509,65 @@ $\tfrac{3}{2}-\tfrac{\pi}{4}$
 سوال \حوالہ{سوال_مخروط_قطبی_منحنی_لمبائی_الف} تا سوال \حوالہ{سوال_مخروط_قطبی_منحنی_لمبائی_ب} میں منحنی کی لمبائی تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_منحنی_لمبائی_الف}
-پیچ دار منحنی \عددی{r=\theta^2,\quad 0\le\theta\le \sqrt{5}}\\
-جواب:\quad
-$\tfrac{19}{3}$
+پیچ دار منحنی \عددی{r=\theta^2,\quad 0\le\theta\le \sqrt{5}}
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{19}{3}$
+}}
+\انتہا{جواب}
 %======================
 \ابتدا{سوال}
 پیچ دار منحنی \عددی{r=\tfrac{e^{\theta}}{\sqrt{2}},\quad 0\le \theta\le \pi}
 \انتہا{سوال}
 %======================
 \ابتدا{سوال}
-قلب نما \عددی{r=1+\cos\theta}\\
-جواب:\quad
-$8$
+قلب نما \عددی{r=1+\cos\theta}
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$8$
+}}
+\انتہا{جواب}
 %======================
 \ابتدا{سوال}
 منحنی \عددی{r=a\sin^2\tfrac{\theta}{2},\,0\le\theta\le\pi,\, a>0}
 \انتہا{سوال}
 %==================
 \ابتدا{سوال}
-قطع مکافی \عددی{r=\tfrac{6}{1+\cos\theta},\,0\le\theta\le\tfrac{\pi}{2}}\\
-جواب:\quad
-$3(\sqrt{2}+\ln(1+\sqrt{2}))$
+قطع مکافی \عددی{r=\tfrac{6}{1+\cos\theta},\,0\le\theta\le\tfrac{\pi}{2}}
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$3(\sqrt{2}+\ln(1+\sqrt{2}))$
+}}
+\انتہا{جواب}
 %=================
 \ابتدا{سوال}
 قطع مکافی \عددی{r=\tfrac{2}{1-\cos\theta},\, \tfrac{\pi}{2}\le\theta\le\pi}
 \انتہا{سوال}
 %=================
 \ابتدا{سوال}
-منحنی \عددی{r=\cos^3\tfrac{\theta}{3},\, 0\le\theta\le\tfrac{\pi}{4}}\\
-جواب:\quad
-$\tfrac{\pi}{8}+\tfrac{3}{8}$
+منحنی \عددی{r=\cos^3\tfrac{\theta}{3},\, 0\le\theta\le\tfrac{\pi}{4}}
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\tfrac{\pi}{8}+\tfrac{3}{8}$
+}}
+\انتہا{جواب}
 %=================
 \ابتدا{سوال}
 منحنی \عددی{r=\sqrt{1+\sin2\theta},\,0\le\theta\le\sqrt{2}\pi}
 \انتہا{سوال}
 %===================
 \ابتدا{سوال}\شناخت{سوال_مخروط_قطبی_منحنی_لمبائی_ب}
-منحنی \عددی{r=\sqrt{1+\cos2\theta},\, 0\le\theta\le\sqrt{2}\pi}\\
-جواب:\quad
-$2\pi$
+منحنی \عددی{r=\sqrt{1+\cos2\theta},\, 0\le\theta\le\sqrt{2}\pi}
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$2\pi$
+}}
+\انتہا{جواب}
 %==================
 \ابتدا{سوال}\ترچھا{دائرے کا محیط}\\
 نیا کلیہ سیکھنے کے بعد بہتر ہوتا ہے کہ اس کو جانے پہچانے مسئلوں پر لاگو کیا جائے۔ قوس لمبائی کا کلیہ مساوات \حوالہ{مساوات_مخروط_لمبائی_قوس_قطبی_کلیہ} استعمال کرتے ہوئے درج ذیل دائروں کے محیط کی لمبائیاں تلاش کریں۔
@@ -8452,10 +8588,13 @@ $r=a\sin\theta$
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_سطح_طواف_قطبی_الف}
 محور \عددی{y}،
-$r=\sqrt{\cos2\theta},\, 0\le\theta\le\tfrac{\pi}{4}$\quad\\
-جواب:\quad
-$\pi\sqrt{2}$
+$r=\sqrt{\cos2\theta},\, 0\le\theta\le\tfrac{\pi}{4}$\quad
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$\pi\sqrt{2}$
+}}
+\انتہا{جواب}
 %=================
 \ابتدا{سوال}
 محور \عددی{x}،
@@ -8465,10 +8604,13 @@ $r=\sqrt{2}e^{\theta/2},\, 0\le\theta\le\tfrac{\pi}{2}$\quad
 %=================
 \ابتدا{سوال}
 محور \عددی{x}،
-$r^2=\cos2\theta$\quad\\
-جواب:\quad
-$2\pi(2-\sqrt{2})$
+$r^2=\cos2\theta$\quad
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$2\pi(2-\sqrt{2})$
+}}
+\انتہا{جواب}
 %==================
 \ابتدا{سوال}\شناخت{سوال_مخروط_سطح_طواف_قطبی_ب}
 محور \عددی{y}،
@@ -8524,14 +8666,20 @@ r_{\text{اوسط}}=\frac{1}{\beta-\alpha}\int_{\alpha}^{\beta}f(\theta)\dif\the
 جہاں تمام تکمل کے حدود \عددی{\alpha} اور \عددی{\beta} ہیں۔
 
 \ابتدا{سوال}
-قلب نما \عددی{r=a(1+\cos\theta)} کے اندر خطہ کا وسطانیہ دریافت کریں۔\\
-جواب:\quad
-$(\tfrac{5}{6}a,0)$
+قلب نما \عددی{r=a(1+\cos\theta)} کے اندر خطہ کا وسطانیہ دریافت کریں۔
 \انتہا{سوال}
+\ابتدا{جواب}
+\wf{\unexpanded{
+$(\tfrac{5}{6}a,0)$
+}}
+\انتہا{جواب}
 %==============
 \ابتدا{سوال}
 نصف دائری خطہ \عددی{0\le r\le a,\, 0\le\theta\le \pi} کا وسطانیہ دریافت کریں۔ 
 \انتہا{سوال}
-%===================
 
+\انتہا{سوالات}
+
+%sec 10.9 questions end here
+%sec 10.9 questions end here
 
