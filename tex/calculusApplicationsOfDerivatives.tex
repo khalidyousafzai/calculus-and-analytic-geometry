@@ -3245,9 +3245,9 @@ $y=x^2-4x+3$
 \wf{\unexpanded{
 \begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1,3}]
-\addplot[domain=-0.5:4]{x^2-4*x+3}node[left,font=\tiny]{$y=x^2-4x+3$};
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1,3}]
+\addplot[domain=-0.5:4]{x^2-4*x+3}node[left,font=\small]{$y=x^2-4x+3$};
 \draw(axis cs:2,-1)node[circ]{}node[below,align=center]{$(2,-1)$\\  \RL{مقامی کم سے کم}};
 \end{axis}
 \end{tikzpicture}
@@ -3264,13 +3264,13 @@ $y=x^3-3x+3$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-1,1},ytick={1,3,5},ymax=6]
-\addplot[domain=-2.25:2]{x^3-3*x+3}node[above,font=\tiny]{$y=x^3-3x+3$};
-\draw(axis cs:-1,5)node[circ]{}node[above,align=center]{\RL{مقامی زیادہ سے زیادہ}\\ $(-1,5)$};
-\draw(axis cs:1,1)node[circ]{}node[above]{$(1,1)$}node[right]{ \RL{مقامی کم سے کم}};
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-1,1},ytick={1,3,5},ymax=6]
+\addplot[domain=-2.25:2]{x^3-3*x+3}node[above,font=\small]{$y=x^3-3x+3$};
+\draw(axis cs:-1,5)node[circ]{}node[above,xshift=-0.5em,align=center]{\RL{مقامی زیادہ سے زیادہ}\\ $(-1,5)$};
+\draw(axis cs:1,1)node[circ]{}node[above]{$(1,1)$}node[right,xshift=1em]{ \RL{مقامی کم سے کم}};
 \draw(axis cs:0,3)node[circ]{}node[right]{\RL{تصریف}};
 \end{axis}
 \end{tikzpicture}
@@ -3287,13 +3287,13 @@ $y=-2x^3+6x^2-3$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ytick={1,5}]
-\addplot[domain=-1:3]{-2*x^3+6*x^2-3}node[left,xshift=3mm,fill=white,font=\tiny]{$y=-2x^3+6x^2-3$};
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ytick={1,5}]
+\addplot[domain=-1:3]{-2*x^3+6*x^2-3}node[left,xshift=2.5em,fill=white,font=\small]{$y=-2x^3+6x^2-3$};
 \draw(axis cs:2,5)node[circ]{}node[above,align=center]{\RL{مقامی زیادہ سے زیادہ} \\ $(2,5)$ };
-\draw(axis cs:0,-3)node[circ]{}node[below,align=center]{$(0,-3)$\\  \RL{مقامی کم سے کم}};
+\draw(axis cs:0,-3)node[circ]{}node[below,xshift=-0.5em,align=center]{$(0,-3)$\\  \RL{مقامی کم سے کم}};
 \draw(axis cs:1,1)node[circ]{}node[above left]{$(1,1)$}node[right]{تصریف};
 \end{axis}
 \end{tikzpicture}
@@ -3310,11 +3310,11 @@ $y=(x-2)^3+1$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xmin=0,ytick={1,5}]
-\addplot[domain=0.5:3.5]{(x-2)^3+1}node[left,xshift=3mm,fill=white,font=\tiny]{$y=(x-2)^3+1$};
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xmin=0,ytick={1,5}]
+\addplot[domain=0.5:3.5]{(x-2)^3+1}node[left,xshift=3mm,fill=white,font=\small]{$y=(x-2)^3+1$};
 \draw(axis cs:2,1)node[circ]{}node[above left,align=center]{تصریف\\ $(2,1)$};
 \end{axis}
 \end{tikzpicture}
@@ -3332,11 +3332,11 @@ $y=x^4-2x^2=x^2(x^2-2)$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-2,-1,1,2},ytick={-1,1},yticklabels={,$1$},ymin=-1.25]
-\addplot[domain=-1.5:1.5]{x^4-2*x^2}node[above,font=\tiny]{$y=x^4-2x^2$};
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-2,-1,1,2},ytick={-1,1},yticklabels={,$1$},ymin=-1.25]
+\addplot[domain=-1.5:1.5]{x^4-2*x^2}node[above,font=\small]{$y=x^4-2x^2$};
 \draw(axis cs:0,0)node[circ]{}node[above,align=center]{\RL{مقامی زیادہ سے زیادہ}\\ $(0,0)$};
 \draw(axis cs:-1,-1)node[circ]{}node[below,xshift=-3mm,align=center]{$(-1,-1)$\\  \RL{مقامی کم سے کم}};
 \draw(axis cs:1,-1)node[circ]{}node[below,xshift=3mm,align=center]{$(1,-1)$\\  \RL{مقامی کم سے کم}};
@@ -3359,11 +3359,11 @@ $y=4x^3-x^4=x^3(4-x)$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ytick={16,27},ymax=30,xmax=5]
-\addplot[domain=-1.25:4.2]{4*x^3-x^4}node[left,font=\tiny]{$y=4x^3-x^4$};
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ytick={16,27},ymax=30,xmax=5]
+\addplot[domain=-1.25:4.2]{4*x^3-x^4}node[left,font=\small]{$y=4x^3-x^4$};
 \draw(axis cs:3,27)node[circ]{}node[above,align=center]{\RL{مقامی زیادہ سے زیادہ}\\ $(0,0)$};
 \draw(axis cs:0,0)node[circ]{}node[above left,align=center]{تصریف\\ $(0,0)$};
 \draw(axis cs:2,16)node[circ]{}node[above left]{\RL{تصریف}} node[below right]{$(2,16)$};
@@ -3382,11 +3382,11 @@ $y=x^5-5x^4=x^4(x-5)$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ytick={-256,-162},ymin=-300,xmax=6,xtick={3,4,5}]
-\addplot[domain=-2:5.1]{x^5-5*x^4}node[above,font=\tiny]{$y=x^5-5x^4$};
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ytick={-256,-162},ymin=-300,xmax=6,xtick={3,4,5}]
+\addplot[domain=-2:5.1]{x^5-5*x^4}node[above,font=\small]{$y=x^5-5x^4$};
 \draw(axis cs:0,0)node[circ]{}node[above left,align=right]{\RL{مقامی زیادہ سے زیادہ}\\ $(0,0)$};
 \draw(axis cs:4,-256)node[circ]{}node[below,align=center]{$(4,-256)$\\  \RL{مقامی کم سے کم}};
 \draw(axis cs:3,-162)node[circ]{}node[left,align=center]{$(3,-162)$\\  \RL{تصریف}};
@@ -3405,11 +3405,11 @@ $y=x+\sin x,\, 0\le x\le 2\pi$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={3.142,6.28},xticklabels={$\pi$,$2\pi$},ytick={3.142,6.28},yticklabels={$\pi$,$2\pi$}]
-\addplot[domain=0:6.3]{x+sin(deg(x))}node[pos=0.75,left,font=\tiny]{$y=x+\sin x$};
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={3.142,6.28},xticklabels={$\pi$,$2\pi$},ytick={3.142,6.28},yticklabels={$\pi$,$2\pi$}]
+\addplot[domain=0:6.3]{x+sin(deg(x))}node[pos=0.75,left,font=\small]{$y=x+\sin x$};
 \draw(axis cs:6.28,6.28)node[circ]{}node[left,align=center]{\RL{مقامی زیادہ سے زیادہ}\\ $(2\pi,2\pi)$};
 \draw(axis cs:0,0)node[circ]{}node[above right]{$(0,0)$  \RL{مقامی کم سے کم}};
 \draw(axis cs:3.142,3.142)node[circ]{}node[below,align=center]{$(\pi,\pi)$\\  \RL{تصریف}};
@@ -3429,14 +3429,14 @@ $y=x^{1/5}$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
 \addplot[domain=0:0.2]{x^(1/5)};
 \addplot[domain=0:0.2]({-x},{-x^(1/5)});
 \addplot[domain=0.2:3]({-x},{-x^(1/5)});
-\addplot[domain=0.2:3]{x^(1/5)}node[above,font=\tiny]{$y=x^{1/5}$};
+\addplot[domain=0.2:3]{x^(1/5)}node[above,font=\small]{$y=x^{1/5}$};
 \draw(axis cs:0,0)node[circ]{}node[below right,align=center]{$(0,0)$\\ \RL{تصریف}};
 \end{axis}
 \end{tikzpicture}
@@ -3453,14 +3453,14 @@ $y=x^{2/5}$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ymin=-0.25,xtick={-4,4}]
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},ymin=-0.25,xtick={-4,4}]
 \addplot[domain=0:0.2]({-x},{x^(2/5)});
 \addplot[domain=0:0.2]{x^(2/5)};
 \addplot[domain=0.2:4.5]({-x},{x^(2/5)});
-\addplot[domain=0.2:4.5]{x^(2/5)}node[above,font=\tiny]{$y=x^{2/5}$};
+\addplot[domain=0.2:4.5]{x^(2/5)}node[above,font=\small]{$y=x^{2/5}$};
 \draw(axis cs:0,0)node[circ]{}node[below right,align=center]{$(0,0)$\\ کنگرہ\\  \RL{مقامی کم سے کم}};
 \end{axis}
 \end{tikzpicture}
@@ -3477,14 +3477,14 @@ $y=2x-3x^{2/3}$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
 \addplot[domain=0:0.2]({-x},{-2*x-3*x^(2/3)});
 \addplot[domain=0:0.2]{2*x-3*x^(2/3)};
 \addplot[domain=0.2:0.5]({-x},{-2*x-3*x^(2/3)});
-\addplot[domain=0.2:5]{2*x-3*x^(2/3)}node[above left,yshift=0mm,font=\tiny]{$y=2x-3x^{2/3}$};
+\addplot[domain=0.2:5]{2*x-3*x^(2/3)}node[above left,yshift=0mm,font=\small]{$y=2x-3x^{2/3}$};
 \draw(axis cs:0,0)node[circ]{}node[above right,align=left]{ کنگرہ\\  \RL{مقامی زیادہ سے زیادہ}\\$(0,0)$};
 \draw(axis cs:1,-1)node[circ]{}node[below,align=center]{$(1,-1)$\\  \RL{مقامی کم سے کم}};
 \end{axis}
@@ -3502,14 +3502,14 @@ $y=x^{2/3}(\tfrac{5}{2}-x)$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1,2,3},ytick={3},xmin=-2]
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1,2,3},ytick={3},xmin=-2]
 \addplot[domain=0:0.2]({-x},{x^(2/3)*(5/2+x)});
 \addplot[domain=0:0.2]{x^(2/3)*(5/2-x)};
 \addplot[domain=0.2:1.25]({-x},{x^(2/3)*(5/2+x)});
-\addplot[domain=0.2:3.5]{x^(2/3)*(5/2-x)}node[left,font=\tiny]{$y=x^{2/3}(\tfrac{5}{2}-x)$};
+\addplot[domain=0.2:3.5]{x^(2/3)*(5/2-x)}node[left,font=\small]{$y=x^{2/3}(\tfrac{5}{2}-x)$};
 \draw(axis cs:1,1.5)node[circ]{}node[above right,align=left]{\RL{مقامی زیادہ سے زیادہ}\\$(1,\tfrac{3}{2})$};
 \draw(axis cs:0,0)node[circ]{}node[below left,align=center]{$(0,0)$\\  \RL{مقامی کم سے کم}\\ کنگرہ};
 \draw(axis cs:-0.5,1.89)node[circ]{}node[left,align=center]{$(-\tfrac{1}{2},\tfrac{3}{\sqrt[3]{4}})$\\ تصریف};
@@ -3528,10 +3528,10 @@ $y=x\sqrt{8-x^2}$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-2.828,2.828},xticklabels={,},ytick={-4,4},xmin=-4,xmax=4,ymin=-5,ymax=5]
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-2.828,2.828},xticklabels={,},ytick={-4,4},xmin=-4,xmax=4,ymin=-5,ymax=5]
 \addplot[domain=-2.828:-2.828+0.2]{x*sqrt(8-x^2)};
 \addplot[domain=2.828-0.2:2.828]{x*sqrt(8-x^2)};
 \addplot[domain=-2.828+0.2:2.828-0.2]{x*sqrt(8-x^2)};
@@ -3540,7 +3540,7 @@ $y=x\sqrt{8-x^2}$
 \draw(axis cs:2.828,0)node[below,align=center]{$(2\sqrt{2},0)$\\ \RL{مقامی کم سے کم}};
 \draw(axis cs:-2,-4)node[circ]{}node[below,align=center]{$(-2,-4)$\\ \RL{مقامی کم سے کم}};
 \draw(axis cs:0,0)node[circ]{}node[below left,align=center]{$(0,0)$\\ تصریف};
-\draw(axis cs:2,-4.5)node[font=\tiny]{$y=x\sqrt{8-x^2}$};
+\draw(axis cs:2,-4.5)node[font=\small]{$y=x\sqrt{8-x^2}$};
 \end{axis}
 \end{tikzpicture}
 \end{minipage}
@@ -3556,14 +3556,14 @@ $y=\tfrac{x^2-3}{x-2},\, x\ne 2$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south}]
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south}]
 \draw[dashed](axis cs:2,-6)--(axis cs:2,15);
+\draw(axis cs:1,2)node[circ]{}node[right,yshift=0.5em,fill=white,align=left]{\RL{مقامی زیادہ سے زیادہ}\\$(1,2)$};
 \addplot[domain=-4:1.9]{(x^2-3)/(x-2)};
 \addplot[domain=2.1:6]{(x^2-3)/(x-2)}node[pos=0,right]{$y=\frac{x^2-3}{x-2}$};
-\draw(axis cs:1,2)node[circ]{}node[right,align=left]{\RL{مقامی زیادہ سے زیادہ}\\$(1,2)$};
 \draw(axis cs:3,6)node[circ]{}node[above right,align=left]{\RL{مقامی کم سے کم}\\ $(3,6)$};
 \end{axis}
 \end{tikzpicture}
@@ -3580,16 +3580,16 @@ $y=\abs{x^2-1}$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-2,2},ymin=-0.2,ytick={1,3}]
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-2,2},ymin=-0.2,ytick={1,3}]
 \addplot[domain=-1.2:-0.8]{abs(x^2-1))};
 \addplot[domain=0.8:1.2]{abs(x^2-1))};
 \addplot[domain=-2.25:-1.2,smooth]{abs(x^2-1))};
 \addplot[domain=-0.8:0.8,smooth]{abs(x^2-1))};
-\addplot[domain=1.2:2.25,smooth]{abs(x^2-1))}node[left]{$y=\abs{x^2-1}$};
-\draw(axis cs:0,1)node[circ]{}node[above,align=center]{\RL{مقامی زیادہ سے زیادہ}\\$(0,1)$};
+\addplot[domain=1.2:2.25,smooth]{abs(x^2-1))}node[above]{$y=\abs{x^2-1}$};
+\draw(axis cs:0,1)node[circ]{}node[above,fill=white,yshift=0.5em,align=center]{\RL{مقامی زیادہ سے زیادہ}\\$(0,1)$};
 \draw(axis cs:-1,0)node[below,align=center]{$(-1,0)$\\ \RL{مقامی کم سے کم}};
 \draw(axis cs:1,0)node[circ]{}node[below,align=center]{$(1,0)$\\ \RL{مقامی کم سے کم}};
 \end{axis}
@@ -3607,10 +3607,10 @@ $y=\sqrt{\abs{x}}=\begin{cases} \sqrt{-x},&x\le 0\\ \sqrt{x},& x>0 \end{cases}$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-2,2},ymin=-0.2]
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-2,2},ymin=-0.2]
 \addplot[domain=-0.5:0.5]{sqrt(abs(x))};
 \addplot[domain=-4:-0.5]{sqrt(abs(x))};
 \addplot[domain=0.5:4]{sqrt(abs(x))}node[left]{$y=\sqrt{\abs{x}}$};
@@ -3635,17 +3635,18 @@ $y'=2+x-x^2$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+$y"=1-2x$\\
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny,declare function={f(\x)=2*\x+1/2*\x^2-1/3*\x^3;}]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty}, axis line style={draw=none}]
+\begin{tikzpicture}[font=\small,declare function={f(\x)=2*\x+1/2*\x^2-1/3*\x^3;}]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty}, axis line style={draw=none}]
 \pgfmathsetmacro{\kA}{f(-1)}
 \pgfmathsetmacro{\kB}{f(1/2)}
 \pgfmathsetmacro{\kC}{f(2)}
 \addplot[domain=-2:3]{f(x)};
 \draw(axis cs:-1,-1.166)node[circ]{}node[below,align=center]{$x=-1$\\ \RL{مقامی کم سے کم}\\ کنگرہ};
 \draw(axis cs:0.5,1.08)node[circ]{}node[right,align=center]{$x=\tfrac{1}{2}$\\  تصریف};
-\draw(axis cs:2,3.33)node[circ]{}node[below,align=center]{$x=2$\\  \RL{مقامی زیادہ سے زیادہ}};
+\draw(axis cs:2,3.33)node[circ]{}node[left,xshift=-1em,align=center]{$x=2$\\  \RL{مقامی زیادہ سے زیادہ}};
 \end{axis}
 \end{tikzpicture}
 \end{minipage}
@@ -3661,10 +3662,11 @@ $y'=x(x-3)^2$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+$y"=3(x-3)(x-1)$\\
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south}, axis line style={draw=none},xtick={\empty},ytick={\empty}]
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south}, axis line style={draw=none},xtick={\empty},ytick={\empty}]
 \addplot[domain=-1:4]{1/4*x^4-2*x^3+4.5*x^2};
 \draw(axis cs:0,0)node[circ]{}node[below,align=center]{$x=0$\\ \RL{مقامی کم سے کم}\\ کنگرہ};
 \draw(axis cs:1,2.75)node[circ]{}node[right,align=center]{$x=1$\\  تصریف};
@@ -3684,10 +3686,11 @@ $y'=x(x^2-12)$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+$y"=3(x-2)(x+2)$\\
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},axis line style={draw=none}]
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},axis line style={draw=none}]
 \addplot[domain=-4.3:4.3,smooth]{1/4*x^4-6*x^2};
 \draw(axis cs:-3.46,-36)node[circ]{}node[below,align=center]{$x=-2\sqrt{3}$\\ \RL{مقامی کم سے کم}};
 \draw(axis cs:0,0)node[circ]{}node[above,align=center]{\RL{مقامی زیادہ سے زیادہ}\\ $x=0$};
@@ -3709,10 +3712,11 @@ $y'=(8x-5x^2)(4-x)^2$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+$y"=4(4-x)(5x^2-16x+8)$\\
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},axis line style={draw=none}]
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},axis line style={draw=none}]
 \addplot[domain=-0.2:5,smooth]{-x^5+12*x^4-48*x^3+64*x^2};
 \draw(axis cs:0,0)node[circ]{}node[below,align=center]{$x=0$\\  \RL{مقامی کم سے کم}};
 \draw(axis cs:0.62,14.85)node[circ]{}node[left,align=center]{$x=\tfrac{8-2\sqrt{6}}{5}$\\  تصریف};
@@ -3735,10 +3739,11 @@ $y'=\sec^2 x,\, -\tfrac{\pi}{2}<x<\tfrac{\pi}{2}$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+$y"=2\sec^2 x\tan x$\\
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},axis line style={draw=none}]
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},axis line style={draw=none}]
 \addplot[domain=-1.2:1.2,smooth]{(2*tan(deg(x))};
 \draw(0,0)node[circ]{}node[below]{$x=0$}node[above left]{\text{\RL{لامتناہی}}};
 \end{axis}
@@ -3756,10 +3761,11 @@ $y'=\cot \tfrac{\theta}{2},\, 0<\theta<2\pi$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+$y"=-\tfrac{1}{2}\cosec^2\tfrac{\theta}{2},\, 0<\theta<2\pi$\\
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},axis line style={draw=none}]
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},axis line style={draw=none}]
 \addplot[domain=2:4.2,smooth]{2*ln(sin(deg(x/2)))};
 \draw(axis cs:3.142,0)node[circ]{}node[below,align=center]{$\theta=\pi$\\  \RL{مقامی زیادہ سے زیادہ}};
 \end{axis}
@@ -3777,10 +3783,11 @@ $y'=\tan^2\theta-1,\, -\tfrac{\pi}{2}<\theta<\tfrac{\pi}{2}$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+$y"=2\tan \theta \sec^2\theta,\, -\tfrac{\pi}{2}<\theta<\tfrac{\pi}{2}$\\
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},axis line style={draw=none}]
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},axis line style={draw=none}]
 \addplot[domain=-1.2:1.2,smooth]{tan(deg(x))-2*x};
 \draw(axis cs:-0.786,0.57)node[circ]{}node[right,xshift=3mm,align=center]{$\theta=-\tfrac{\pi}{4}$\\  \RL{مقامی زیادہ سے زیادہ}};
 \draw(axis cs:0.786,-0.57)node[circ]{}node[below,align=center]{$\theta=\tfrac{\pi}{4}$\\  \RL{مقامی کم سے کم}};
@@ -3800,10 +3807,11 @@ $y'=\cos t,\, 0\le t \le 2\pi$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+$y"=-\sin t,\, 0\le t\le 2\pi$\\
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}[font=\tiny]
-\begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},axis line style={draw=none}]
+\begin{tikzpicture}[font=\small]
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel style={at={(current axis.right of origin)},anchor=south east},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},axis line style={draw=none}]
 \addplot[domain=0:6.284,smooth]{sin(deg(x))};
 \draw(axis cs:0,0)node[circ]{}node[below,align=center]{$t=0$\\  \RL{مقامی کم سے کم}};
 \draw(axis cs:1.571,1)node[circ]{}node[above,align=center]{$t=\tfrac{\pi}{2}$\\  \RL{مقامی زیادہ سے زیادہ}};
@@ -3826,10 +3834,11 @@ $y'=(x+1)^{-2/3}$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+$y"=-\tfrac{2}{3}(x+1)^{-5/3}$\\
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}
-\begin{axis}[width=4cm,font=\tiny,axis lines=middle,xtick={\empty},ytick={\empty},axis line style={draw=none}]
+\begin{axis}[width=5cm,font=\small,axis lines=middle,xtick={\empty},ytick={\empty},axis line style={draw=none}]
 \addplot[domain=-1:-0.9]{3*(x+1)^(1/3)}coordinate[pos=0](kA);
 \addplot[domain=-0.9:1.5]{3*(x+1)^(1/3)};
 \addplot[domain=1:1.1]({-x},{-3*(x-1)^(1/3)})coordinate[pos=0](kB);
@@ -3851,10 +3860,11 @@ $y'=x^{-2/3}(x-1)$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+$y"=\tfrac{1}{3}x^{-2/3}+\tfrac{2}{3}x^{-5/3}$\\
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}
-\begin{axis}[clip=false,width=4cm,font=\tiny,axis lines=middle,xtick={\empty},ytick={\empty},axis line style={draw=none}]
+\begin{axis}[clip=false,width=5cm,font=\small,axis lines=middle,xtick={\empty},ytick={\empty},axis line style={draw=none}]
 \addplot[domain=0:0.08]({-x},{3/4*x^(4/3)+3*x^(1/3)});
 \addplot[domain=0:0.08]{3/4*x^(4/3)-3*x^(1/3)};
 \addplot[domain=0.08:2.5]({-x},{3/4*x^(4/3)+3*x^(1/3)});
@@ -3873,14 +3883,15 @@ $y'=x^{-4/5}(x+1)$
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}\شناخت{سوال_استعمال_خاکہ_ث}
-$y'=2\abs{x}=\begin{cases} -2x,&x\le 0\\ 2x,&x>0 \end{cases}$
+$y'=2\abs{x}=\begin{cases} -2x,&x\le 0\\  2x,&x>0 \end{cases}$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+$y''=\begin{cases} -2,&x< 0\\ 2,&x>0 \end{cases}$\\
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}
-\begin{axis}[clip=false,width=4cm,font=\tiny,axis lines=middle,xtick={\empty},ytick={\empty},axis line style={draw=none}]
+\begin{axis}[clip=false,width=5cm,font=\small,axis lines=middle,xtick={\empty},ytick={\empty},axis line style={draw=none}]
 \addplot[domain=-2:0]{-x^2};
 \addplot[domain=0:2]{x^2};
 \draw(axis cs:0,0)node[circ]{}node[below,align=center]{$x=0$\\   تصریف};
@@ -3904,10 +3915,10 @@ $y'=\begin{cases}-x^2,&x\le 0\\ x^2,&x>0 \end{cases}$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[declare function={f(\x)=\x^3-\x+3;}]
-\begin{axis}[clip=false,width=4cm,font=\tiny,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty}]
+\begin{axis}[clip=false,width=5cm,font=\small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty}]
 \pgfmathsetmacro{\kA}{f(1/sqrt(3))}
 \pgfmathsetmacro{\kB}{f(-1/sqrt(3))}
 \addplot[domain=-1.3:1.3]{3*x^2-1}node[pos=0,left]{$y=f'(x)$};
@@ -3931,13 +3942,13 @@ $y'=\begin{cases}-x^2,&x\le 0\\ x^2,&x>0 \end{cases}$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[declare function={f(\x)=0.5+cos(deg(\x));}]
 \pgfmathsetmacro{\kA}{f(pi/2)}
 \pgfmathsetmacro{\kB}{f(3/2*pi)}
 \pgfmathsetmacro{\kC}{f(pi)}
-\begin{axis}[clip=false,width=4cm,font=\tiny,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty},ymax=2,ymin=-1.5,xmax=7]
+\begin{axis}[clip=false,width=5cm,font=\small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={\empty},ymax=2,ymin=-1.5,xmax=7]
 \addplot[domain=0:6.284]{-sin(deg(x))}node[pos=0.25,below,xshift=2mm]{$y=f'(x)$};
 \addplot[domain=0:6.284]{-cos(deg(x))}node[below]{$y=f''(x)$};
 \draw(axis cs:0,1.5)node[circ]{}node[left]{$N$};
@@ -4272,13 +4283,13 @@ $y=x^5-5x^4-240$
 \ابتدا{جواب}
 \wf{\unexpanded{
 \عددی{y'=0} اور \عددی{y''=0} کے صفر بالترتیب نقطہ انتہا اور نقطہ تصریف ہیں۔\\
-\begin{minipage}{0.3\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\small]
 \begin{axis}[small,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$}]
-\addplot[domain=-1:4]{20*x^2*(x-3)}node[pos=0.9,left,font=\tiny]{$y''=20x^2(x-3)$};
-\addplot[domain=-1:4.5]{5*x^3*(x-4)}node[pos=0.33,below,font=\tiny]{$y'=5x^3(x-4)$};
-\addplot[domain=-1:5]{x^5-5*x^4-240}node[pos=0.9,left,font=\tiny]{$y=x^5-5x^4-240$};
+\addplot[domain=-1:4]{20*x^2*(x-3)}node[pos=0.9,left,font=\small]{$y''=20x^2(x-3)$};
+\addplot[domain=-1:4.5]{5*x^3*(x-4)}node[pos=0.33,below,font=\small]{$y'=5x^3(x-4)$};
+\addplot[domain=-1:5]{x^5-5*x^4-240}node[pos=0.9,left,font=\small]{$y=x^5-5x^4-240$};
 \end{axis}
 \end{tikzpicture}
 \end{minipage}
@@ -4295,13 +4306,13 @@ $y=\tfrac{4}{5}x^5+16x^2-25$
 \ابتدا{جواب}
 \wf{\unexpanded{
 \عددی{y'=0} اور \عددی{y''=0} کے صفر بالترتیب نقطہ انتہا اور نقطہ تصریف ہیں۔ تصریف \عددی{x=-\sqrt[3]{2}} پر اور مقامی زیادہ سے زیادہ \عددی{x=-2} پر ہیں۔ \\
-\begin{minipage}{0.3\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\small]
 \begin{axis}[clip=false,small,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},ytick={-100,100}]
-\addplot[domain=-1.7:1.5]{16*(x^3+2)}node[pos=0,below,font=\tiny]{$y''=16(x^3+2)$};
-\addplot[domain=-2.5:1.8]{4*x*(x^3+8)}node[pos=0,right,font=\tiny]{$y'=4x(x^3+8)$};
-\addplot[domain=-2.6:2]{4/5*x^5+16*x^2-25}node[pos=0.4,below right,font=\tiny]{$y=\tfrac{4}{5}x^5+16x^2-25$};
+\addplot[domain=-1.7:1.5]{16*(x^3+2)}node[pos=0,below,font=\small]{$y''=16(x^3+2)$};
+\addplot[domain=-2.5:1.8]{4*x*(x^3+8)}node[pos=0,right,font=\small]{$y'=4x(x^3+8)$};
+\addplot[domain=-2.6:2]{4/5*x^5+16*x^2-25}node[pos=0.4,below right,font=\small]{$y=\tfrac{4}{5}x^5+16x^2-25$};
 \end{axis}
 \end{tikzpicture}
 \end{minipage}
@@ -4379,7 +4390,7 @@ $y=\tfrac{x^4}{4}-\tfrac{x^3}{3}-4x^2+12x+20$
 
 \انتہا{سوالات}
 %===========================
-%sec 4.4 questions end here
+
 %sec 4.4 questions end here
 
 \حصہ{\عددی{x\to \mp \infty} پر حد، متقارب اور   غالب اجزاء}\شناخت{حصہ_استعمال_تفرق_حد_متقارب_اور_غالب_اجزاء}
