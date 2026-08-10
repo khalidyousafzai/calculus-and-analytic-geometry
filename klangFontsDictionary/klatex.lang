@@ -343,6 +343,32 @@ This file is placed in    khalid\.local\share\gtksourceview-3.0\language-specs\k
 	<keyword>حری</keyword>
 	<keyword>رسی</keyword>
         </context>
+
+<context id="kTechMasculineCoinedMulti" style-ref="kTechnicalMasculineCoined">
+         <keyword>برقی\s+دباؤ</keyword>
+         <keyword>وتری\s+قطعہ</keyword>
+        <keyword>مسئلہ\s+اوسط\s+قیمت</keyword>
+	<keyword>نقطہ\s+انتہا</keyword>
+	<keyword>نقاط\s+انتہا</keyword>
+	<keyword>نقطہ\s+اقل</keyword>
+	<keyword>نقاط\s+اقل</keyword>
+	<keyword>نقطہ\s+اعظم</keyword>
+	<keyword>نقاط\s+اعظم</keyword>
+	<keyword>نقطہ\s+فاصل</keyword>
+	<keyword>نقاط\s+فاصل</keyword>
+	<keyword>نقطہ\s+تصریف</keyword>
+	<keyword>نقاط\s+تصریف</keyword>
+           <keyword>حاصل\s+تقسیم</keyword>
+    <keyword>حاصل\s+ضرب</keyword>
+    <keyword>حاصل\s+جمع</keyword>
+    <keyword>حاصل\s+منفی</keyword>
+    <keyword>حاصل\s+تفریق</keyword>
+</context>
+
+<context id="kTechFeminineCoinedMulti" style-ref="kTechnicalFeminineCoined">
+    <keyword>کثیر\s+رکنی</keyword>
+    <keyword>برقی\s+رو</keyword>
+</context>
         
 <!-- the following list coined as "technical masculine nouns". they shall always be used in their technical sense only. Theses words loose their normal meaning on entering this list.
 -->
@@ -393,16 +419,7 @@ This file is placed in    khalid\.local\share\gtksourceview-3.0\language-specs\k
 <!-- the following two retains the colours of their counter part as can be seen from style-ref=kTechnicalMasculineCoined
 -->
 
-<context id="kTechMasculineCoinedMulti" style-ref="kTechnicalMasculineCoined">
-    <keyword>برقی\s+دباؤ</keyword>
-    <keyword>وتری\s+قطعہ</keyword>
-    <keyword>مسئلہ\s+اوسط\s+قیمت</keyword>
-</context>
 
-<context id="kTechFeminineCoinedMulti" style-ref="kTechnicalFeminineCoined">
-    <keyword>کثیر\s+رکنی</keyword>
-    <keyword>برقی\s+رو</keyword>
-</context>
 
 
     <context id="kMas" style-ref="kMasculine">
@@ -1511,7 +1528,7 @@ This file is placed in    khalid\.local\share\gtksourceview-3.0\language-specs\k
 <keyword>ذوزنقہ</keyword>
 <keyword>ذوزنقے</keyword>
 <keyword>پترا</keyword>
-<keyword>فیثا غورث</keyword>
+<keyword>فیثاغورث</keyword>
 <keyword>مسالہ</keyword>
 <keyword>پھیر</keyword>
 <keyword>مصعد</keyword>
@@ -1668,6 +1685,7 @@ This file is placed in    khalid\.local\share\gtksourceview-3.0\language-specs\k
 <keyword>اتراؤ</keyword>
 <keyword>چڑھاؤ</keyword>
 <keyword>کنگرہ</keyword>
+<keyword>ممیز</keyword>
 
         </context>
 
@@ -2587,15 +2605,6 @@ This file is placed in    khalid\.local\share\gtksourceview-3.0\language-specs\k
 	<keyword>صفر</keyword>
 	<keyword>صفرے</keyword>
 	<keyword>صفروں</keyword>
-	<keyword>نقطہ\s+انتہا</keyword>
-	<keyword>نقاط\s+انتہا</keyword>
-	<keyword>نقطہ\s+اقل</keyword>
-	<keyword>نقاط\s+اقل</keyword>
-	<keyword>نقطہ\s+اعظم</keyword>
-	<keyword>نقاط\s+اعظم</keyword>
-	<keyword>نقطہ\s+فاصل</keyword>
-	<keyword>نقاط\s+فاصل</keyword>
-
 
         </context>
 
@@ -2857,20 +2866,21 @@ This file is placed in    khalid\.local\share\gtksourceview-3.0\language-specs\k
                     <keyword>usepackage</keyword>
                 </context>
 
-                <context ref="kMas"/>
-                <context ref="kFem"/>
-                <context ref="kTechMasculine"/>
-                <context ref="kTechFeminine"/>
-                <context ref="kGen"/>
-                <context ref="kSpellWrongMasculine"/>
-                <context ref="kSpellWrongFeminine"/>
-                <context ref="kTechMasculineCoined"/>
-                 <context ref="kTechMasculineCoinedMulti"/>
-                <context ref="kTechFeminineCoined"/>
-                <context ref="kTechFeminineCoinedMulti"/>
-                <context ref="kPink"/>
-                <context ref="kRed"/>
-                <context ref="kChang"/>
+<!-- the words are searched according to the following order, with the first colour taking precedence.
+-->
+
+<context ref="kTechMasculine"/>
+<context ref="kTechFeminine"/>
+<context ref="kGen"/>
+<context ref="kSpellWrongMasculine"/>
+<context ref="kSpellWrongFeminine"/>
+<context ref="kTechMasculineCoinedMulti"/>
+<context ref="kTechMasculineCoined"/>
+<context ref="kTechFeminineCoined"/>
+<context ref="kTechFeminineCoinedMulti"/>
+<context ref="kPink"/>
+<context ref="kRed"/>
+<context ref="kChang"/>
 
 
 
