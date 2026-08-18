@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.6.2)  17 AUG 2026 20:31
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.6.2)  18 AUG 2026 18:35
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1609,9 +1609,9 @@ Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
 Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
 )
 \verbatim@out=\write4
-runsystem(touch w18-test-20268171231.tex)...executed.
+runsystem(touch w18-test-20268181115.tex)...executed.
 
-runsystem(rm -f w18-test-20268171231.tex)...executed.
+runsystem(rm -f w18-test-20268181115.tex)...executed.
 
 runsystem(rm -f "calculusAndAnalyticGeometry.gnuploterrors")...executed.
 
@@ -1665,11 +1665,18 @@ Writing index file calculusAndAnalyticGeometry.idx
 (./tex/calculusMultivariableFunctionsAndPartialDerivatives.aux)
 (./tex/calculusMultipleIntegrals.aux)
 (./tex/calculusIntegrationInVectorFields.aux) (./tex/test.aux)
-(./tex/calculusAppendixA.aux) (./tex/calculusAppendixB.aux)
-(./tex/calculusAppendixC.aux) (./tex/calculusAppendixD.aux)
-(./tex/calculusAppendixE.aux) (./tex/calculusAppendixF.aux)
-(./tex/calculusAppendixG.aux) (./tex/calculusAppendixH.aux)
-(./tex/calculusAppendixI.aux) (./tex/calculusIntegrationTable.aux))
+(./tex/calculusAppendixA.aux
+
+LaTeX Warning: Label `footdir@1149' multiply defined.
+
+
+LaTeX Warning: Label `footdir@1150' multiply defined.
+
+) (./tex/calculusAppendixB.aux) (./tex/calculusAppendixC.aux)
+(./tex/calculusAppendixD.aux) (./tex/calculusAppendixE.aux)
+(./tex/calculusAppendixF.aux) (./tex/calculusAppendixG.aux)
+(./tex/calculusAppendixH.aux) (./tex/calculusAppendixI.aux)
+(./tex/calculusIntegrationTable.aux))
 \openout1 = `calculusAndAnalyticGeometry.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 158.
@@ -2110,7 +2117,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 10--11
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 استعمال تکنیکی الفاظ ہی استعمال کئے جائیں۔
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 استعمال تکنیکی الفاظ ہی استعمال کیے جائیں۔
 جہاں ایسے الفاظ موجود نہ تھے وہاں روز مرہ میں استعمال ہونے والے الفاظ چنے گئے۔ت
 کنیکی اصطلاحات کی چنائی کے[]
  []
@@ -13166,7 +13173,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1159--1160
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1179--1179
+Underfull \hbox (badness 10000) in paragraph at lines 1180--1180
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 شكل ۶.۲۶: |عمودی تراش $\OML/zplm/m/it/10
  R\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )$ \TU/JameelNooriNasta
 leeq(0)/b/n/10 کا رقبہ $\OML/zplm/m/it/10 S\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 
@@ -13175,29 +13182,29 @@ x\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 متغیر $\OML/zplm/m/
  []
 
 
-Overfull \hbox (42.51956pt too wide) in paragraph at lines 1185--1217
+Overfull \hbox (42.51956pt too wide) in paragraph at lines 1186--1218
  [][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1217--1217
+Underfull \hbox (badness 10000) in paragraph at lines 1218--1218
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 شكل ۶.۲۷: |سطح $\OML/zplm/m/it/10 x[]$ \
 TU/JameelNooriNastaleeq(0)/b/n/10 اور $\OML/zplm/m/it/10 x[]$ \TU/JameelNooriNa
 staleeq(0)/b/n/10 کے بیچ کتلا کو بڑا کر کے دکھایا گیا ہے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1162--1221
+Underfull \hbox (badness 10000) in paragraph at lines 1162--1222
 []\TU/JameelNooriNastaleeq(0)/b/n/10 فرض کریں ہم شکل ۶.۲۶[] میں دکھائے گئے ٹھوس
  جسم کا حجم دریافت کرنا چاہتے ہیں۔ بند وقفہ $\OT1/zplm/m/n/10 [\OML/zplm/m/it/1
 0 a\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 b\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNast
 aleeq(0)/b/n/10 کے ہر نقطہ $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/
-n/10 پر جسم کا عمودی تراش خطہ $\OML/zplm/m/it/10 R\OT1/zplm/m/n/10 (\OML/zplm/m
+n/10 پر جسم کی عمودی تراش خطہ $\OML/zplm/m/it/10 R\OT1/zplm/m/n/10 (\OML/zplm/m
 /it/10 x\OT1/zplm/m/n/10 )$[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1162--1221
+Underfull \hbox (badness 10000) in paragraph at lines 1162--1222
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہے جس کا رقبہ $\OML/zplm/m/it/10 S\OT1/zpl
 m/m/n/10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/
 n/10 ہے۔ یوں $\OML/zplm/m/it/10 S$ \TU/JameelNooriNastaleeq(0)/b/n/10 متغیر $\O
@@ -13207,7 +13214,7 @@ ML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کا حقیقی قیمت �
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1222--1223
+Underfull \hbox (badness 10000) in paragraph at lines 1223--1224
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 ہم محور $\OML/zplm/m/it/10 x$ \TU/Jameel
 NooriNastaleeq(0)/b/n/10 کے لحاظ سے وقفہ $\OT1/zplm/m/n/10 [\OML/zplm/m/it/10 a
 \OT1/ppl/m/n/10 , \OML/zplm/m/it/10 b\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNastale
@@ -13217,17 +13224,16 @@ t/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے عمودی مستویات سے �
  []
 
 
-Underfull \hbox (badness 4416) in paragraph at lines 1222--1223
+Underfull \hbox (badness 10000) in paragraph at lines 1223--1224
 []\TU/JameelNooriNastaleeq(0)/b/n/10 نقطہ $\OML/zplm/m/it/10 x[]$ \TU/JameelNoo
 riNastaleeq(0)/b/n/10 اور $\OML/zplm/m/it/10 x[]$ \TU/JameelNooriNastaleeq(0)/b
 /n/10 پر مستویات کے بیچ $\OML/zplm/m/it/10 k$ \TU/JameelNooriNastaleeq(0)/b/n/1
 0 واں کتلے کا حجم تقریباً اس بیلن جتنا ہو گا جو ان مستویات کے بیچ واقع ہے اور ج
-س کا عمودی تراش خطہ $\OML/zplm/m/it/10 R\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x[]
-\OT1/zplm/m/n/10 )$[]
+س کی عمودی تراش خطہ[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1231--1233
+Underfull \hbox (badness 10000) in paragraph at lines 1232--1234
 []\TU/JameelNooriNastaleeq(0)/b/n/10 یہ وقفہ $\OT1/zplm/m/n/10 [\OML/zplm/m/it/
 10 a\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 b\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNas
 taleeq(0)/b/n/10 پر تفاعل $\OML/zplm/m/it/10 S\OT1/zplm/m/n/10 (\OML/zplm/m/it/
@@ -13238,12 +13244,12 @@ n/10 , \OML/zplm/m/it/10 b\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNastaleeq(0)/b/n/1
  []
 
 [542]
-Underfull \hbox (badness 10000) in paragraph at lines 1244--1245
+Underfull \hbox (badness 10000) in paragraph at lines 1245--1246
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1256--1258
+Underfull \hbox (badness 10000) in paragraph at lines 1257--1259
 []\TU/JameelNooriNastaleeq(0)/b/n/10 مثال  ۶.۶: []ایک ہرم کا قد $\OT1/ppl/m/n/1
 0 3 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور اس کے چوکور بنیاد کا ضلع $\OT1/pp
 l/m/n/10 3 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے۔ ہرم کی چوٹی سے $\OML/zplm/
@@ -13252,19 +13258,19 @@ m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 میٹر نیچے ہرم کا رق
  []
 
 [543]
-Overfull \hbox (17.4416pt too wide) in paragraph at lines 1299--1317
+Overfull \hbox (17.4416pt too wide) in paragraph at lines 1300--1318
  [][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1321--1323
+Underfull \hbox (badness 10000) in paragraph at lines 1322--1324
 []\TU/JameelNooriNastaleeq(0)/b/n/10 مثال  ۶.۷: []رداس $\OT1/ppl/m/n/10 3$ \TU/
 JameelNooriNastaleeq(0)/b/n/10 کے بیلن کو دو مستوی سے کاٹ کر قوسی پچر بنایا جات
 ا ہے۔ایک مستوی بیلن کے محور پر عمودی ہے جبکہ دوسرا مستوی پہلے مستوی کو[]
  []
 
 [544]
-Underfull \hbox (badness 10000) in paragraph at lines 1347--1349
+Underfull \hbox (badness 10000) in paragraph at lines 1348--1350
 []\TU/JameelNooriNastaleeq(0)/b/n/10 محور $\OML/zplm/m/it/10 x$ \TU/JameelNoori
 Nastaleeq(0)/b/n/10 پر واقع یکساں قد کے ایسے دو اجسام جن کے ہر $\OML/zplm/m/it/
 10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر عمودی تراش کے رقبے برابر ہوں، ان کے
@@ -13272,32 +13278,32 @@ Nastaleeq(0)/b/n/10 پر واقع یکساں قد کے ایسے دو اجسام 
  []
 
 [545]
-Overfull \hbox (24.95108pt too wide) in paragraph at lines 1428--1440
+Overfull \hbox (24.95108pt too wide) in paragraph at lines 1427--1439
  [][][][][][] 
  []
 
 
-Overfull \hbox (6.59924pt too wide) in paragraph at lines 1445--1455
+Overfull \hbox (6.59924pt too wide) in paragraph at lines 1444--1454
  [][][][][][] 
  []
 
 
-Overfull \hbox (10.41153pt too wide) in paragraph at lines 1460--1473
+Overfull \hbox (10.41153pt too wide) in paragraph at lines 1459--1472
  [][][][][][] 
  []
 
 
-Overfull \hbox (6.59924pt too wide) in paragraph at lines 1478--1488
+Overfull \hbox (6.59924pt too wide) in paragraph at lines 1477--1487
  [][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1560--1562
+Underfull \hbox (badness 10000) in paragraph at lines 1559--1561
 [][]
  []
 
 [546]
-Underfull \hbox (badness 10000) in paragraph at lines 1571--1575
+Underfull \hbox (badness 10000) in paragraph at lines 1570--1574
 [][]
  []
 
@@ -13305,22 +13311,22 @@ Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1655--1659
+Underfull \hbox (badness 10000) in paragraph at lines 1654--1658
 [][]
  []
 
 [547]
-Underfull \hbox (badness 10000) in paragraph at lines 1668--1673
+Underfull \hbox (badness 10000) in paragraph at lines 1667--1672
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ایک چوکور جس کا ضلع $\OML/zplm/m/it/10 s$ 
 \TU/JameelNooriNastaleeq(0)/b/n/10 ہے لکیر $\OML/zplm/m/it/10 L$ \TU/JameelNoor
 iNastaleeq(0)/b/n/10 کے عمودی مستوی میں واقع ہے۔چوکور کا ایک راس $\OML/zplm/m/i
 t/10 L$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر واقع ہے۔ یہ چوکور $\OML/zplm/m/it
 /10 L$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر $\OML/zplm/m/it/10 h$ \TU/JameelNo
-oriNastaleeq(0)/b/n/10 فاصلہ طے کرتے ہوئے ایک[]
+oriNastaleeq(0)/b/n/10 فاصلہ طے کرنے کے دوران[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1719--1719
+Underfull \hbox (badness 10000) in paragraph at lines 1718--1718
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 شكل ۶.۳۶: |وقفہ $\OT1/zplm/m/n/10 [\OML/
 zplm/m/it/10 a\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 b\OT1/zplm/m/n/10 ]$ \TU/Jame
 elNooriNastaleeq(0)/b/n/10 پر کسی بھی $\OML/zplm/m/it/10 x$ \TU/JameelNooriNast
@@ -13328,18 +13334,18 @@ aleeq(0)/b/n/10 پر دونوں خطوں کی چوڑائی ایک[]
  []
 
 
-Overfull \hbox (25.28284pt too wide) in paragraph at lines 1727--1749
+Overfull \hbox (25.28284pt too wide) in paragraph at lines 1726--1748
  [][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1749--1749
+Underfull \hbox (badness 10000) in paragraph at lines 1748--1748
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 شكل ۶.۳۷: |کرہ اور بیلن دونوں میں سے مخر
 وط منفی کر کے دونوں[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1688--1755
+Underfull \hbox (badness 10000) in paragraph at lines 1687--1754
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کوالئیرے نے طالب علمی کے دوران دریافت کیا 
 کہ اگر دو مستوی خطوں کو محور $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/
 b/n/10 کے یکساں وقفہ پر یوں رکھنا ممکن ہو کہ کسی بھی $\OML/zplm/m/it/10 x$ \TU/
@@ -13347,13 +13353,19 @@ JameelNooriNastaleeq(0)/b/n/10 پر دونوں خطوں کی[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1688--1755
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 چوڑائی ایک دوسرے جیسی ہو تب دونوں خطوں کا 
-رقبہ ایک دوسرے جیسا ہو گا (شکل ۶.۳۶[])۔ ٹھوس اجسام کے لئے یہی مسئلہ کوالئیرے نے
- کبھی ثابت نہیں[]
+Underfull \hbox (badness 10000) in paragraph at lines 1687--1754
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 چوڑائی یکساں ہو تب دونوں خطوں کا رقبہ یکسا
+ں ہو گا (شکل ۶.۳۶[])۔ ٹھوس اجسام کے لئے کوالئیرے نے یہی مسئلہ کبھی ثابت نہیں کی
+ا۔ اگر شکل ۶.۷۱[] میں[]
  []
 
 [548]
+Underfull \hbox (badness 10000) in paragraph at lines 1755--1759
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 نصف کرہ کی عمودی تراش حاصل ہوتی ہے۔ مخروط 
+کو نوک کے بل رکھا تصور کریں (شکل ۶.۳۷[])۔اس حقیقت کو استعمال کرتے ہوئے نصف کرہ 
+کا حجم تلاش[]
+ []
+
 LaTeX Info: Redefining \rmfamily on input line 1768.
 LaTeX Info: Redefining \sffamily on input line 1768.
 LaTeX Info: Redefining \ttfamily on input line 1768.
@@ -13404,7 +13416,7 @@ Overfull \hbox (1.8062pt too wide) in paragraph at lines 2048--2072
 
 Underfull \hbox (badness 10000) in paragraph at lines 2080--2082
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہم منحنی اور لکیر کے بیچ خطے کا خاکہ بنا ک
-ر جسم طواف کا خاکہ بناتے ہیں اور عمودی تراش کی نمائندہ رداس کی نشاندہی کرتے ہیں
+ر جسم طواف کا خاکہ بناتے ہیں اور عمودی تراش کے نمائندہ رداس کی نشاندہی کرتے ہیں
  (شکل ۶.۴۳[])۔جسم کا حجم درج[]
  []
 
@@ -13418,9 +13430,9 @@ Overfull \hbox (37.50136pt too wide) in paragraph at lines 2118--2140
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2146--2147
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 اگر گھمائے جانے والا خطہ محور طواف کو قطع 
-نہ کرتا ہو اور نا ہی محور طواف کو مس کرتا ہو تب جسم طواف میں سوراخ پایا جائے گا
- (شکل ۶.۴۴[])۔ایسے جسم کا[]
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 اگر گھمایا جانے والا خطہ محور طواف کو قطع 
+نہ کرتا ہو اور نہ ہی محور طواف کو مس کرتا ہو تب جسم طواف میں سوراخ پایا جائے گا
+ (شکل ۶.۴۴[])۔ایسے جسم کا بیرونی[]
  []
 
 
@@ -13442,122 +13454,122 @@ Overfull \hbox (10.7834pt too wide) in paragraph at lines 2184--2215
  []
 
 [554]
-Overfull \hbox (6.29385pt too wide) in paragraph at lines 2254--2270
+Overfull \hbox (6.29385pt too wide) in paragraph at lines 2255--2271
  [][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2308--2309
+Underfull \hbox (badness 10000) in paragraph at lines 2309--2310
 [][]
  []
 
 [555] [556]
-Overfull \hbox (32.06375pt too wide) in paragraph at lines 2418--2432
+Overfull \hbox (32.06375pt too wide) in paragraph at lines 2419--2433
  [][][][][][] 
  []
 
 
-Overfull \hbox (26.30487pt too wide) in paragraph at lines 2436--2462
+Overfull \hbox (26.30487pt too wide) in paragraph at lines 2437--2463
  [][][][][][] 
  []
 
-Package pgfplots info on input line 2485: fill between: activating layered grap
+Package pgfplots info on input line 2486: fill between: activating layered grap
 hics
-Package pgfplots info on input line 2485: Setting layers 'axis background,axis 
+Package pgfplots info on input line 2486: Setting layers 'axis background,axis 
 grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
 s foreground'...
-Package pgfplots info on input line 2485: the combination of 'axis on top' and 
+Package pgfplots info on input line 2486: the combination of 'axis on top' and 
 'activate layers' implies 'set layers=axis on top'. Deactivate 'axis on top' if
  you want other layers.
-Package pgfplots info on input line 2485: Setting layers 'axis background,pre m
+Package pgfplots info on input line 2486: Setting layers 'axis background,pre m
 ain,main,axis grid,axis ticks,axis lines,axis tick labels,axis descriptions,axi
 s foreground'...
 
-Overfull \hbox (8.54382pt too wide) in paragraph at lines 2479--2487
+Overfull \hbox (8.54382pt too wide) in paragraph at lines 2480--2488
  [][][][][][][][] 
  []
 
-Package pgfplots info on input line 2499: fill between: activating layered grap
+Package pgfplots info on input line 2500: fill between: activating layered grap
 hics
-Package pgfplots info on input line 2499: Setting layers 'axis background,axis 
+Package pgfplots info on input line 2500: Setting layers 'axis background,axis 
 grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
 s foreground'...
-Package pgfplots info on input line 2499: the combination of 'axis on top' and 
+Package pgfplots info on input line 2500: the combination of 'axis on top' and 
 'activate layers' implies 'set layers=axis on top'. Deactivate 'axis on top' if
  you want other layers.
-Package pgfplots info on input line 2499: Setting layers 'axis background,pre m
+Package pgfplots info on input line 2500: Setting layers 'axis background,pre m
 ain,main,axis grid,axis ticks,axis lines,axis tick labels,axis descriptions,axi
 s foreground'...
 
-Overfull \hbox (10.01273pt too wide) in paragraph at lines 2492--2501
+Overfull \hbox (10.01273pt too wide) in paragraph at lines 2493--2502
  [][][][][][][][] 
  []
 
-Package pgfplots info on input line 2513: fill between: activating layered grap
+Package pgfplots info on input line 2514: fill between: activating layered grap
 hics
-Package pgfplots info on input line 2513: Setting layers 'axis background,axis 
+Package pgfplots info on input line 2514: Setting layers 'axis background,axis 
 grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
 s foreground'...
-Package pgfplots info on input line 2513: the combination of 'axis on top' and 
+Package pgfplots info on input line 2514: the combination of 'axis on top' and 
 'activate layers' implies 'set layers=axis on top'. Deactivate 'axis on top' if
  you want other layers.
-Package pgfplots info on input line 2513: Setting layers 'axis background,pre m
+Package pgfplots info on input line 2514: Setting layers 'axis background,pre m
 ain,main,axis grid,axis ticks,axis lines,axis tick labels,axis descriptions,axi
 s foreground'...
 
-Overfull \hbox (8.54353pt too wide) in paragraph at lines 2506--2515
+Overfull \hbox (8.54353pt too wide) in paragraph at lines 2507--2516
  [][][][][][][][] 
  []
 
-Package pgfplots info on input line 2528: fill between: activating layered grap
+Package pgfplots info on input line 2529: fill between: activating layered grap
 hics
-Package pgfplots info on input line 2528: Setting layers 'axis background,axis 
+Package pgfplots info on input line 2529: Setting layers 'axis background,axis 
 grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
 s foreground'...
-Package pgfplots info on input line 2528: the combination of 'axis on top' and 
+Package pgfplots info on input line 2529: the combination of 'axis on top' and 
 'activate layers' implies 'set layers=axis on top'. Deactivate 'axis on top' if
  you want other layers.
-Package pgfplots info on input line 2528: Setting layers 'axis background,pre m
+Package pgfplots info on input line 2529: Setting layers 'axis background,pre m
 ain,main,axis grid,axis ticks,axis lines,axis tick labels,axis descriptions,axi
 s foreground'...
 
-Overfull \hbox (8.54492pt too wide) in paragraph at lines 2520--2530
+Overfull \hbox (8.54492pt too wide) in paragraph at lines 2521--2531
  [][][][][][][][] 
  []
 
 [557] [558] [559]
-Package pgfplots info on input line 2688: fill between: activating layered grap
+Package pgfplots info on input line 2689: fill between: activating layered grap
 hics
-Package pgfplots info on input line 2688: Setting layers 'axis background,axis 
+Package pgfplots info on input line 2689: Setting layers 'axis background,axis 
 grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
 s foreground'...
 
-Overfull \hbox (11.04846pt too wide) in paragraph at lines 2678--2690
+Overfull \hbox (11.04846pt too wide) in paragraph at lines 2679--2691
  [][][][][][][][] 
  []
 
-Package pgfplots info on input line 2702: fill between: activating layered grap
+Package pgfplots info on input line 2703: fill between: activating layered grap
 hics
-Package pgfplots info on input line 2702: Setting layers 'axis background,axis 
+Package pgfplots info on input line 2703: Setting layers 'axis background,axis 
 grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
 s foreground'...
 
-Overfull \hbox (17.64728pt too wide) in paragraph at lines 2695--2704
+Overfull \hbox (17.64728pt too wide) in paragraph at lines 2696--2705
  [][][][][][][][] 
  []
 
 [560]
-Underfull \hbox (badness 10000) in paragraph at lines 2860--2869
+Underfull \hbox (badness 10000) in paragraph at lines 2861--2870
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۱۱۲:  ایک مثلث جس کے راس $\OT1/
 zplm/m/n/10 (\OT1/ppl/m/n/10 0, 0\OT1/zplm/m/n/10 )$\TU/JameelNooriNastaleeq(0)
 /b/n/10 ، $\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 b\OT1/ppl/m/n/10 , 0\OT1/zplm/m/
-n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور $\OT1/zplm/m/n/10 (\OT1/ppl/m/n/
-10 0, \OML/zplm/m/it/10 h\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10
- ہیں میں محیط خطے کو درج ذیل کے گرد گھمایا جاتا ہے۔ جسم طواف کا حجم[]
+n/10 )$\TU/JameelNooriNastaleeq(0)/b/n/10 ، اور $\OT1/zplm/m/n/10 (\OT1/ppl/m/n
+/10 0, \OML/zplm/m/it/10 h\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/1
+0 ہیں میں محیط خطے کو درج ذیل کے گرد گھمایا جاتا ہے۔ جسم طواف کا حجم[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2875--2879
+Underfull \hbox (badness 10000) in paragraph at lines 2876--2880
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۱۱۳: []ایک برتن کو رداس $\OT1/ppl
 /m/n/10 16 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے کرہ کا حصہ تصور کیا جا سکت
 ا ہے۔برتن کی گہرائی $\OT1/ppl/m/n/10 9 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہ
@@ -13565,16 +13577,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 2875--2879
  []
 
 
-Overfull \hbox (11.03906pt too wide) in paragraph at lines 2911--2922
+Overfull \hbox (11.03906pt too wide) in paragraph at lines 2912--2923
  [][][][][][][][] 
  []
 
 [561]
-LaTeX Info: Redefining \rmfamily on input line 2952.
-LaTeX Info: Redefining \sffamily on input line 2952.
-LaTeX Info: Redefining \ttfamily on input line 2952.
+LaTeX Info: Redefining \rmfamily on input line 2953.
+LaTeX Info: Redefining \sffamily on input line 2953.
+LaTeX Info: Redefining \ttfamily on input line 2953.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2953--2962
+Underfull \hbox (badness 10000) in paragraph at lines 2954--2963
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۱۱۸:  (ا) نصف کروی برتن جس کا ر
 داس $\OML/zplm/m/it/10 a$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے میں پانی کی گہر
 ائی $\OML/zplm/m/it/10 h$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے۔ پانی کی مقدار 
@@ -13582,7 +13594,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2953--2962
  []
 
 [562]
-Underfull \hbox (badness 10000) in paragraph at lines 3030--3031
+Underfull \hbox (badness 10000) in paragraph at lines 3032--3033
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کا حجم درکار ہے۔ ہم وقفہ $\OT1/zplm/m/n/10
  [\OML/zplm/m/it/10 a\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 b\OT1/zplm/m/n/10 ]$ \
 TU/JameelNooriNastaleeq(0)/b/n/10 کی خانہ بندی $\OML/zplm/m/it/10 P$ \TU/Jameel
@@ -13592,7 +13604,7 @@ eelNooriNastaleeq(0)/b/n/10 اور قد[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3030--3031
+Underfull \hbox (badness 10000) in paragraph at lines 3032--3033
 []$\OML/zplm/m/it/10 f\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 c[]\OT1/zplm/m/n/10 )
 $ \TU/JameelNooriNastaleeq(0)/b/n/10 ہو گا، جہاں نمائندہ مستطیل کے قاعدے کا وسط
  $\OML/zplm/m/it/10 c[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے (شکل ۶.۵۷[])۔ہم 
@@ -13601,19 +13613,19 @@ oriNastaleeq(0)/b/n/10 کے گرد گھمانے[]
  []
 
 [563]
-Overfull \hbox (40.57945pt too wide) in paragraph at lines 3103--3123
+Overfull \hbox (40.57945pt too wide) in paragraph at lines 3105--3125
  [][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3159--3164
+Underfull \hbox (badness 10000) in paragraph at lines 3161--3166
 []\TU/AASameerSagarNastaleeqBold(0)/m/n/10 پہلا قدم: \TU/JameelNooriNastaleeq(0
 )/b/n/10 خطے کا خاکہ بنا کر محور گردش کے متوازی اس پر قطعہ دکھائیں۔ قطعہ کا قد 
 (خول کا قد) اور محور گردش سے قطعہ کے فاصلہ (رداس خول) کی[]
  []
 
 [564]
-Underfull \hbox (badness 10000) in paragraph at lines 3172--3173
+Underfull \hbox (badness 10000) in paragraph at lines 3174--3175
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 محور $\OML/zplm/m/it/10 y$ \TU/JameelNoo
 riNastaleeq(0)/b/n/10 کے گرد خطہ گھمانے سے حاصل جسم طواف کا حجم مساوات ۱[] سے ح
 اصل کیا جا سکتا ہے۔اگر ہم خطے کو محور $\OML/zplm/m/it/10 x$ \TU/JameelNooriNast
@@ -13621,12 +13633,12 @@ aleeq(0)/b/n/10 کے گرد گھما کر جسم طواف حاصل کریں[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3174--3175
+Underfull \hbox (badness 10000) in paragraph at lines 3176--3177
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3182--3183
+Underfull \hbox (badness 10000) in paragraph at lines 3184--3185
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ایک ٹھوس بیلن جس کا رداس $\OML/zplm/m/it/1
 0 R[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور قد $\OML/zplm/m/it/10 h$ \TU/Jame
 elNooriNastaleeq(0)/b/n/10 ہو کا حجم $\OML/zplm/m/it/10 ^^YR[]h$ \TU/JameelNoor
@@ -13635,99 +13647,67 @@ lNooriNastaleeq(0)/b/n/10 کا ٹھوس بیلن کاٹا جائے تب حاصل
  []
 
 
-Overfull \hbox (26.68178pt too wide) in paragraph at lines 3225--3252
+Overfull \hbox (26.68178pt too wide) in paragraph at lines 3227--3254
  [][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3258--3259
+Underfull \hbox (badness 10000) in paragraph at lines 3260--3261
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 ایک خول جس کا اوسط رداس $\OML/zplm/m/it/
 10 x$\TU/JameelNooriNastaleeq(0)/b/n/10 ، موٹائی $[] \OML/zplm/m/it/10 x$ \TU/J
-ameelNooriNastaleeq(0)/b/n/10 اور قد $\OML/zplm/m/it/10 f\OT1/zplm/m/n/10 (\OML
-/zplm/m/it/10 x\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہو کو شکل
- ۶.۵۹[]-ب میں کھول کر پٹی کی شکل دی گئی ہے۔ اس پٹی کا حجم درج ذیل ہو گا جو خول[
-]
+ameelNooriNastaleeq(0)/b/n/10 ، اور قد $\OML/zplm/m/it/10 f\OT1/zplm/m/n/10 (\O
+ML/zplm/m/it/10 x\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہو کو ش
+کل ۶.۵۹[]-ب میں کھول کر پٹی کی شکل دی گئی ہے۔ اس پٹی کا حجم درج ذیل ہو گا جو[]
  []
 
 [565]
-Underfull \hbox (badness 10000) in paragraph at lines 3267--3273
-[]\TU/AASameerSagarNastaleeqBold(0)/m/n/10 پہلا قدم: \TU/JameelNooriNastaleeq(0
-)/b/n/10 خطے کا خاکہ بنائیں اور اس پر محور گردش کے متوازی قطعہ دکھائیں۔ قطعہ کی
- لمبائی (قد خول) اور محور طواف سے اس کا فاصلہ (رداس خول) کی[]
- []
-
-Missing character: There is no ر ("631) in font zplmr7m!
-Missing character: There is no د ("62F) in font zplmr7m!
-Missing character: There is no ا ("627) in font zplmr7m!
-Missing character: There is no س ("633) in font zplmr7m!
-Missing character: There is no خ ("62E) in font zplmr7m!
-Missing character: There is no و ("648) in font zplmr7m!
-Missing character: There is no ل ("644) in font zplmr7m!
-Missing character: There is no ق ("642) in font zplmr7m!
-Missing character: There is no د ("62F) in font zplmr7m!
-Missing character: There is no خ ("62E) in font zplmr7m!
-Missing character: There is no و ("648) in font zplmr7m!
-Missing character: There is no ل ("644) in font zplmr7m!
-Missing character: There is no ر ("631) in font zplmr7m!
-Missing character: There is no د ("62F) in font zplmr7m!
-Missing character: There is no ا ("627) in font zplmr7m!
-Missing character: There is no س ("633) in font zplmr7m!
-Missing character: There is no خ ("62E) in font zplmr7m!
-Missing character: There is no و ("648) in font zplmr7m!
-Missing character: There is no ل ("644) in font zplmr7m!
-Missing character: There is no ق ("642) in font zplmr7m!
-Missing character: There is no د ("62F) in font zplmr7m!
-Missing character: There is no خ ("62E) in font zplmr7m!
-Missing character: There is no و ("648) in font zplmr7m!
-Missing character: There is no ل ("644) in font zplmr7m!
-
-Overfull \hbox (30.79112pt too wide) in paragraph at lines 3285--3304
+Overfull \hbox (30.79112pt too wide) in paragraph at lines 3288--3307
  [][][][][][] 
  []
 
 
-Overfull \hbox (3.67043pt too wide) in paragraph at lines 3308--3340
+Overfull \hbox (3.67043pt too wide) in paragraph at lines 3311--3343
  [][][][][][] 
  []
 
 [566]
-Underfull \hbox (badness 10000) in paragraph at lines 3350--3352
+Underfull \hbox (badness 10000) in paragraph at lines 3353--3355
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 خطے کا خاکہ بنا کر اس میں محور طواف کے م
-توازی قطعہ بنائیں۔ قطعہ کا قد یا لمبائی (قد خول)، محور طواف سے قطعہ کا فاصلہ (ر
-داس خول) اور قطعہ کی موٹائی[]
+توازی قطعہ بنائیں۔ قطعہ کے قد یا لمبائی (قد خول)، محور طواف سے قطعہ کے فاصلہ (ر
+داس خول) اور قطعہ کی[]
  []
 
 
-Underfull \hbox (badness 5637) in paragraph at lines 3362--3368
+Underfull \hbox (badness 10000) in paragraph at lines 3365--3371
 []\TU/AASameerSagarNastaleeqBold(0)/m/n/10 پہلا قدم: \TU/JameelNooriNastaleeq(0
-)/b/n/10 خطے پر محور طواف کے متوازی قطعہ بنائیں۔ قطعہ کا قد (قد خول)، محور طواف
- سے قطعہ کا فاصلہ (رداس خول) اور قطعہ کی موٹائی (چوڑائی خول[]
+)/b/n/10 خطے پر محور طواف کے متوازی قطعہ بنائیں۔ قطعہ کے قد (قد خول)، محور طواف
+ سے قطعہ کے فاصلہ (رداس خول) اور قطعہ کی موٹائی (چوڑائی[]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [567]
-Underfull \hbox (badness 10000) in paragraph at lines 3542--3543
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 اور ب میں محور $\OML/zplm/m/it/10 y$ \TU/J
-ameelNooriNastaleeq(0)/b/n/10 کے گرد خطہ گھمایا گیا ہے جبکہ شکل-ج اور د میں محو
-ر $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے گرد خطہ گھمایا گی
-ا ہے۔ دونوں صورتوں میں حجم کو ترکیب چھلا اور ترکیب خول[]
+Underfull \hbox (badness 5878) in paragraph at lines 3545--3546
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 ب میں محور $\OML/zplm/m/it/10 y$ \TU/Jamee
+lNooriNastaleeq(0)/b/n/10 کے گرد خطہ گھمایا گیا ہے جبکہ شکل-ج اور د میں محور $\
+OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے گرد خطہ گھمایا گیا ہے
+۔ دونوں صورتوں میں حجم کو ترکیب چھلا اور ترکیب خول سے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3542--3543
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 سے حل کیا گیا ہے۔ اس مخصوص خطے کے لئے دونو
-ں محور طواف کے لئے دونوں تراکیب کارآمد ہیں لیکن ایسا ہر صورت میں نہیں ہو گا۔مثا
-ل کے طور پر محور[]
+Underfull \hbox (badness 10000) in paragraph at lines 3545--3546
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 حل کیا گیا ہے۔ اس مخصوص خطے کے لئے دونوں م
+حور طواف کے لئے دونوں تراکیب کارآمد ہیں لیکن ایسا ہر مرتبہ نہیں ہو گا۔مثال کے ط
+ور پر محور $\OML/zplm/m/it/10 y$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے گرد[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3542--3543
-[]$\OML/zplm/m/it/10 y$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے گرد گھماتے ہوئے ت
-رکیب چھلا میں ہمیں $\OML/zplm/m/it/10 y$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے 
-لحاظ سے تکمل حل کرنا ہو گا۔البتہ عین ممکن ہے کہ متکمل کو $\OML/zplm/m/it/10 y$ 
-\TU/JameelNooriNastaleeq(0)/b/n/10 کی صورت میں لکھنا ممکن نہ ہو۔ایسی[]
+Underfull \hbox (badness 10000) in paragraph at lines 3545--3546
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 گھماتے ہوئے ترکیب چھلا میں ہمیں $\OML/zplm
+/m/it/10 y$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے لحاظ سے تکمل حل کرنا ہو گا۔ال
+بتہ عین ممکن ہے کہ متکمل کو $\OML/zplm/m/it/10 y$ \TU/JameelNooriNastaleeq(0)/b
+/n/10 کی صورت میں لکھنا ممکن نہ ہو۔ایسی صورت میں[]
  []
 
 
@@ -13735,159 +13715,178 @@ Underfull \vbox (badness 7685) has occurred while \output is active []
 
  [568]
 [569]
-Overfull \hbox (2.3963pt too wide) in paragraph at lines 3623--3632
+Overfull \hbox (2.3963pt too wide) in paragraph at lines 3627--3636
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (2.40009pt too wide) in paragraph at lines 3641--3652
+Overfull \hbox (2.40009pt too wide) in paragraph at lines 3645--3656
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (10.58441pt too wide) in paragraph at lines 3657--3665
+Overfull \hbox (10.58441pt too wide) in paragraph at lines 3661--3669
  [][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3682--3683
-[][]\TU/JameelNooriNastaleeq(0)/b/n/10 سوال ۶.۱۲۶[] تا سوال ۶.۱۳۳[] میں دیے منح
-نیات اور لکیروں میں محیط خطے کو محور $\OML/zplm/m/it/10 y$ \TU/JameelNooriNasta
-leeq(0)/b/n/10 کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔ اس جسم کا حجم ترکیب خو
-ل سے[]
+Underfull \hbox (badness 10000) in paragraph at lines 3686--3687
+[][]\TU/JameelNooriNastaleeq(0)/b/n/10 سوال ۶.۱۲۶[] تا سوال ۶.۱۳۳[] میں دی گئی 
+منحنیات اور لکیروں میں محیط خطے کو محور $\OML/zplm/m/it/10 y$ \TU/JameelNooriNa
+staleeq(0)/b/n/10 کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔ اس جسم کا حجم ترکیب
+ خول[]
  []
 
 [570] [571]
-Package pgfplots info on input line 3836: fill between: activating layered grap
+Package pgfplots info on input line 3840: fill between: activating layered grap
 hics
-Package pgfplots info on input line 3836: Setting layers 'axis background,axis 
+Package pgfplots info on input line 3840: Setting layers 'axis background,axis 
 grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
 s foreground'...
-Package pgfplots info on input line 3836: the combination of 'axis on top' and 
+Package pgfplots info on input line 3840: the combination of 'axis on top' and 
 'activate layers' implies 'set layers=axis on top'. Deactivate 'axis on top' if
  you want other layers.
-Package pgfplots info on input line 3836: Setting layers 'axis background,pre m
+Package pgfplots info on input line 3840: Setting layers 'axis background,pre m
 ain,main,axis grid,axis ticks,axis lines,axis tick labels,axis descriptions,axi
 s foreground'...
-Package pgfplots info on input line 3850: fill between: activating layered grap
+Package pgfplots info on input line 3854: fill between: activating layered grap
 hics
-Package pgfplots info on input line 3850: Setting layers 'axis background,axis 
+Package pgfplots info on input line 3854: Setting layers 'axis background,axis 
 grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
 s foreground'...
-Package pgfplots info on input line 3850: the combination of 'axis on top' and 
+Package pgfplots info on input line 3854: the combination of 'axis on top' and 
 'activate layers' implies 'set layers=axis on top'. Deactivate 'axis on top' if
  you want other layers.
-Package pgfplots info on input line 3850: Setting layers 'axis background,pre m
+Package pgfplots info on input line 3854: Setting layers 'axis background,pre m
 ain,main,axis grid,axis ticks,axis lines,axis tick labels,axis descriptions,axi
 s foreground'...
 
-Underfull \hbox (badness 10000) in paragraph at lines 3857--3858
+Underfull \hbox (badness 10000) in paragraph at lines 3861--3862
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 سوال ۶.۱۴۴[] تا سوال ۶.۱۴۴[] میں خطوں کو
  محور طواف کے گرد گھما کر حاصل جسم طواف کا حجم معلوم کریں۔ آپ ترکیب چھلا یا ترک
 یب خول استعمال کر سکتے[]
  []
 
 
-Overfull \hbox (8.98111pt too wide) in paragraph at lines 3928--3934
+Underfull \hbox (badness 5105) in paragraph at lines 3863--3865
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۱۴۴: []تکون جس کے راس $\OT1/zplm/m
+/n/10 (\OT1/ppl/m/n/10 1, 1\OT1/zplm/m/n/10 )$\TU/JameelNooriNastaleeq(0)/b/n/1
+0 ، $\OT1/zplm/m/n/10 (\OT1/ppl/m/n/10 1, 2\OT1/zplm/m/n/10 )$ \TU/JameelNooriN
+astaleeq(0)/b/n/10 ، اور $\OT1/zplm/m/n/10 (\OT1/ppl/m/n/10 2, 2\OT1/zplm/m/n/1
+0 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہیں۔ (ا) محور $\OML/zplm/m/it/10 x$ \TU
+/JameelNooriNastaleeq(0)/b/n/10 کے گرد، (ب) محور $\OML/zplm/m/it/10 y$ \TU/Jame
+elNooriNastaleeq(0)/b/n/10 کے گرد، (ج) لکیر $\OML/zplm/m/it/10 x \OT1/zplm/m/n/
+10 =$[]
+ []
+
+
+Overfull \hbox (8.98111pt too wide) in paragraph at lines 3932--3938
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (10.63675pt too wide) in paragraph at lines 3939--3947
+Overfull \hbox (10.63675pt too wide) in paragraph at lines 3943--3951
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (2.92642pt too wide) in paragraph at lines 3952--3959
+Overfull \hbox (2.92642pt too wide) in paragraph at lines 3956--3963
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (11.26839pt too wide) in paragraph at lines 3964--3972
+Overfull \hbox (11.26839pt too wide) in paragraph at lines 3968--3976
  [][][][][][][][] 
  []
 
 [572]
-Underfull \hbox (badness 10000) in paragraph at lines 4011--4016
+Underfull \hbox (badness 10000) in paragraph at lines 4015--4020
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۱۵۶: []محور $\OML/zplm/m/it/10 x$
  \TU/JameelNooriNastaleeq(0)/b/n/10 کے گرد شکل ۶.۷۳[] میں دکھایا گیا خطہ گھما ک
 ر جسم طواف پیدا کیا جاتا ہے۔ کس ترکیب (قرص، چھلا، خول) کو استعمال کرتے ہوئے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4016--4025
+Underfull \hbox (badness 10000) in paragraph at lines 4020--4029
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۱۵۷: []محور $\OML/zplm/m/it/10 
 y$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے گرد شکل ۶.۷۴[] میں دکھایا گیا خطہ گھما
  کر جسم طواف پیدا کیا جاتا ہے۔ کس ترکیب (قرص، چھلا، خول) کو استعمال کرتے ہوئے[]
 
  []
 
+
+Underfull \hbox (badness 4291) in paragraph at lines 4048--4049
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 نقشہ پر سڑک کی لمبائی جاننے کی خاطر ہم فیت
+ہ استعمال کرتے ہوئے نقشے پر سڑک کی منحنی پر قریب قریب نقطوں کے مابین قطعات کو س
+یدھا تصور کرتے ہوئے ان[]
+ []
+
 [573]
-Underfull \hbox (badness 10000) in paragraph at lines 4045--4046
+Underfull \hbox (badness 10000) in paragraph at lines 4050--4051
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 احصاء کو استعمال کرتے ہوئے ہم نقطوں کو ق
 ریب سے قریب رکھ کر بہتر نتائج حاصل کرتے ہیں۔ ان نقطوں کو سیدھے قطعات سے جوڑ کر 
 کثیر الاضلاع حاصل[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4045--4046
+Underfull \hbox (badness 10000) in paragraph at lines 4050--4051
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہو گا۔ زیادہ سے زیادہ قطعات لینے سے کثیر ا
 لاضلاع کی لمبائی، اصل منحنی کی لمبائی کے زیادہ قریب ہو گی۔کثیر الاضلاع کی لمبائ
 ی کی حد کو تکمل سے حاصل کیا جا[]
  []
 
 
-Overfull \hbox (0.57608pt too wide) in paragraph at lines 4053--4061
+Overfull \hbox (0.57608pt too wide) in paragraph at lines 4058--4067
  [][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4061--4061
+Underfull \hbox (badness 10000) in paragraph at lines 4067--4067
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 شكل ۶.۷۵: |منحنی $\OML/zplm/m/it/10 AB$ 
 \TU/JameelNooriNastaleeq(0)/b/n/10 کے قطعہ $\OML/zplm/m/it/10 PQ$ \TU/JameelNoo
 riNastaleeq(0)/b/n/10 کی لمبائی[]
  []
 
 
-Overfull \hbox (0.54102pt too wide) in paragraph at lines 4066--4083
+Overfull \hbox (0.54102pt too wide) in paragraph at lines 4072--4089
  [][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4091--4093
+Underfull \hbox (badness 10000) in paragraph at lines 4097--4099
 []\TU/JameelNooriNastaleeq(0)/b/n/10 وقفہ $\OT1/zplm/m/n/10 [\OML/zplm/m/it/10 
 a\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 b\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNastal
 eeq(0)/b/n/10 کی خانہ بندی باریک کرنے سے حاصل مجموعہ تخمیناً زیادہ بہتر ہو گا۔ 
-ہم دکھانا چاہیں گے کہ خانہ بندی کا معیار صفر تک پہنچانے سے مساوات ۱[] کا[]
+ہم دکھانا چاہیں گے کہ خانہ بندی کا معیار صفر کے قریب تر کرنے سے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4091--4093
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 مجموعہ قابل معلوم حد دیگا۔ ایسا کرنے کی خا
-طر ہم مساوات ۱[] کو ایسی روپ میں لکھتے ہیں کہ اس پر مسئلہ ۵.۱[] (صفحہ ۴۵۷[]) کا
- اطلاق ممکن ہو۔ ہم تفرق کے مسئلہ[]
+Underfull \hbox (badness 10000) in paragraph at lines 4097--4099
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 مساوات ۱[] کا مجموعہ قابل معلوم حد دیگا۔ ا
+یسا کرنے کی خاطر ہم مساوات ۱[] کو ایسے روپ میں لکھتے ہیں کہ اس پر مسئلہ ۵.۱[] (
+صفحہ ۴۵۷[]) کا اطلاق ہو۔ ہم تفرق کے[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 4095.
-LaTeX Info: Redefining \sffamily on input line 4095.
-LaTeX Info: Redefining \ttfamily on input line 4095.
-LaTeX Info: Redefining \rmfamily on input line 4095.
-LaTeX Info: Redefining \sffamily on input line 4095.
-LaTeX Info: Redefining \ttfamily on input line 4095.
+LaTeX Info: Redefining \rmfamily on input line 4101.
+LaTeX Info: Redefining \sffamily on input line 4101.
+LaTeX Info: Redefining \ttfamily on input line 4101.
+LaTeX Info: Redefining \rmfamily on input line 4101.
+LaTeX Info: Redefining \sffamily on input line 4101.
+LaTeX Info: Redefining \ttfamily on input line 4101.
 [574]
-Underfull \hbox (badness 10000) in paragraph at lines 4098--4099
+Underfull \hbox (badness 10000) in paragraph at lines 4104--4105
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 اگر $\OML/zplm/m/it/10 f$ \TU/JameelNoor
 iNastaleeq(0)/b/n/10 ہموار ہو تب مسئلہ اوسط قیمت کے تحت $\OML/zplm/m/it/10 P$ \
 TU/JameelNooriNastaleeq(0)/b/n/10 اور $\OML/zplm/m/it/10 Q$ \TU/JameelNooriNast
 aleeq(0)/b/n/10 کے بیچ منحنی پر ایک ایسا نقطہ $\OT1/zplm/m/n/10 (\OML/zplm/m/it
 /10 c[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 f\OT1/zplm/m/n/10 (\OML/zplm/m/it/10
  c[]\OT1/zplm/m/n/10 ))$ \TU/JameelNooriNastaleeq(0)/b/n/10 پایا جائے گا جہاں م
-نحنی کا مماس قطعہ $\OML/zplm/m/it/10 PQ$ \TU/JameelNooriNastaleeq(0)/b/n/10 کا[
+نحنی کا مماس قطعہ $\OML/zplm/m/it/10 PQ$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے[
 ]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4106--4108
+Underfull \hbox (badness 10000) in paragraph at lines 4112--4114
 []\TU/JameelNooriNastaleeq(0)/b/n/10 چونکہ $\OT1/zplm/m/n/10 [\OML/zplm/m/it/10
  a\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 b\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNasta
 leeq(0)/b/n/10 پر $[]$ استمراری ہے لہٰذا خانہ بندی کا معیار صفر کے قریب تر کرنے
@@ -13895,51 +13894,43 @@ leeq(0)/b/n/10 پر $[]$ استمراری ہے لہٰذا خانہ بندی کا
  []
 
 [575]
-Underfull \hbox (badness 10000) in paragraph at lines 4138--4139
+Underfull \hbox (badness 10000) in paragraph at lines 4144--4145
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کبھی کبھار منحنی پر $[]$ غیر موجود لیکن $[
 ]$ موجود ہو گا اور ہم $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 
 کو $\OML/zplm/m/it/10 y$ \TU/JameelNooriNastaleeq(0)/b/n/10 کا تفاعل لکھ کر منح
-نی کی لمبائی مساوات ۲[] کی درج ذیل مشابہ سے حاصل کر پاتے[]
+نی کی لمبائی مساوات ۲[] کے درج ذیل مشابہ سے حاصل کر پاتے[]
  []
 
 [576]
-Overfull \hbox (1.48906pt too wide) in paragraph at lines 4179--4185
+Overfull \hbox (1.48906pt too wide) in paragraph at lines 4185--4191
  [][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4205--4207
+Underfull \hbox (badness 10000) in paragraph at lines 4211--4213
 []\TU/JameelNooriNastaleeq(0)/b/n/10 عموماً تفارق کے بجائے تفرقات میں لکھی جاتی
  ہے۔ ایسا با ضابطہ طور پر کرنے کے لئے تفارق کو تفرقات کا حاصل تقسیم تصور کریں۔ی
 وں پہلے تکمل میں درج[]
  []
 
 [577]
-Underfull \hbox (badness 1067) in paragraph at lines 4217--4219
+Underfull \hbox (badness 10000) in paragraph at lines 4223--4225
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ظاہر ہے کہ $[] \OML/zplm/m/it/10 x$ \TU/Ja
 meelNooriNastaleeq(0)/b/n/10 اور $[] \OML/zplm/m/it/10 y$ \TU/JameelNooriNastal
 eeq(0)/b/n/10 کو ایک ہی متغیر کے لحاظ سے لکھنا ضروری ہے اور مساوات ۵[] میں دیا 
-تکمل حل کرنے کے لئے تکمل کے موزوں حد بھی جاننا ضروری[]
+گیا تکمل حل کرنے کے لئے تکمل کی موزوں حدیں جاننا[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4220--4221
+Underfull \hbox (badness 10000) in paragraph at lines 4226--4227
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 ہم مساوات ۵[] کو مزید چھوٹا کر سکتے ہیں۔
 $[] \OML/zplm/m/it/10 x[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور $[] \OML/zplm
 /m/it/10 y[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کو ایک چھوٹے مثلث کے اضلاع تصو
-ر کریں۔مسئلہ فیثاغورث سے اس مثلث کا وتر[]
+ر کریں۔مسئلہ فیثاغورث کے تحت اس مثلث کا وتر[]
  []
 
 
-Underfull \hbox (badness 4505) in paragraph at lines 4220--4221
-[]$[] \OML/zplm/m/it/10 s \OT1/zplm/m/n/10 = []$ \TU/JameelNooriNastaleeq(0)/b/
-n/10 ہو گا (شکل ۶.۷۸[])۔ تفریق $[] \OML/zplm/m/it/10 s$ \TU/JameelNooriNastalee
-q(0)/b/n/10 کو اب قوس کی تفرقی لمبائی تصور کیا جا سکتا ہے جس کا موزوں حدود کے ب
-یچ تکمل[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4231--4271
+Underfull \hbox (badness 10000) in paragraph at lines 4237--4277
 []\TU/JameelNooriNastaleeq(0)/b/n/10 برف کی روئی پر صفحہ ۲۵۳[] پر غور کیا گیا۔ 
 لامتناہی تکونی کثیر الاضلاع کی ترتیب $\OML/zplm/m/it/10 C[]\OT1/ppl/m/n/10 ,  \
 OML/zplm/m/it/10 C[]\OT1/ppl/m/n/10 ,  []  , \OML/zplm/m/it/10 C[]\OT1/ppl/m/n/
@@ -13948,14 +13939,14 @@ L/zplm/m/it/10 K$[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4231--4271
+Underfull \hbox (badness 10000) in paragraph at lines 4237--4277
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کہتے ہیں۔ شکل ۶.۷۹[] میں اس ترتیب کی پہلی 
 تین صورتیں دکھائی گئی ہیں۔ بناوٹ کے دوران ہر نیا متعارف کردہ راس بعد کے تمام من
 حنیات میں بطور راس پایا[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4231--4271
+Underfull \hbox (badness 10000) in paragraph at lines 4237--4277
 []\TU/JameelNooriNastaleeq(0)/b/n/10 جاتا ہے اور تحدیدی منحنی $\OML/zplm/m/it/1
 0 K$ \TU/JameelNooriNastaleeq(0)/b/n/10 میں بطور نقطہ نظر آتا ہے۔ یوں ہر منحنی 
 $\OML/zplm/m/it/10 C$ \TU/JameelNooriNastaleeq(0)/b/n/10 از خود منحنی $\OML/zpl
@@ -13965,25 +13956,25 @@ m/m/it/10 C[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4272--4273
+Underfull \hbox (badness 10000) in paragraph at lines 4278--4279
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 آئیں $\OML/zplm/m/it/10 C[]$ \TU/JameelN
 ooriNastaleeq(0)/b/n/10 کی تحدیدی لمبائی تلاش کریں۔ اگر ابتدائی مثلث الاضلاع کے
  ضلع کی لمبائی $\OT1/ppl/m/n/10 1$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہو تب $\O
-ML/zplm/m/it/10 C[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی کل لمبائی $\OT1/ppl/
-m/n/10 3$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہو گی۔$\OML/zplm/m/it/10 C[]$ \TU/
-JameelNooriNastaleeq(0)/b/n/10 سے $\OML/zplm/m/it/10 C[]$[]
+ML/zplm/m/it/10 C[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی کُل لمبائی $\OT1/ppl
+/m/n/10 3$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہو گی۔$\OML/zplm/m/it/10 C[]$ \TU
+/JameelNooriNastaleeq(0)/b/n/10 سے $\OML/zplm/m/it/10 C[]$[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4272--4273
+Underfull \hbox (badness 10000) in paragraph at lines 4278--4279
 []\TU/JameelNooriNastaleeq(0)/b/n/10 حاصل کرتے ہوئے ہم $\OML/zplm/m/it/10 C[]$ 
 \TU/JameelNooriNastaleeq(0)/b/n/10 کے ہر ضلع کی جگہ چار اضلاع بناتے ہیں جہاں ہر
- ضلع ابتدائی ضلع کا $[]$ واں حصہ ہے۔یوں $\OML/zplm/m/it/10 C[]$ \TU/JameelNoori
-Nastaleeq(0)/b/n/10 کی کل لمبائی[]
+ ضلع ابتدائی ضلعے کا $[]$ واں حصہ ہے۔یوں $\OML/zplm/m/it/10 C[]$ \TU/JameelNoor
+iNastaleeq(0)/b/n/10 کی کُل لمبائی[]
  []
 
 
-Underfull \hbox (badness 3078) in paragraph at lines 4272--4273
+Underfull \hbox (badness 3078) in paragraph at lines 4278--4279
 []$\OT1/ppl/m/n/10 3 \OMS/zplm/m/n/10 ^^B \OT1/ppl/m/n/10 4 \OMS/zplm/m/n/10 ^^
 B [] \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 3\OT1/zplm/m/n/10 ([])$ \TU/JameelNoori
 Nastaleeq(0)/b/n/10 ہو گی۔ اسی طرح $\OML/zplm/m/it/10 C[]$ \TU/JameelNooriNasta
@@ -13992,7 +13983,7 @@ eelNooriNastaleeq(0)/b/n/10 کی لمبائی کو $[]$ سے ضرب دینا ہ�
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4279--4281
+Underfull \hbox (badness 10000) in paragraph at lines 4285--4287
 []\TU/JameelNooriNastaleeq(0)/b/n/10 منحنی $\OML/zplm/m/it/10 C[]$ \TU/JameelNo
 oriNastaleeq(0)/b/n/10 کی لمبائی تقریباً $\OT1/ppl/m/n/10 40$ \TU/JameelNooriNa
 staleeq(0)/b/n/10 ہے جبکہ $\OML/zplm/m/it/10 C[]$ \TU/JameelNooriNastaleeq(0)/b
@@ -14001,15 +13992,15 @@ staleeq(0)/b/n/10 ہے جبکہ $\OML/zplm/m/it/10 C[]$ \TU/JameelNooriNastaleeq
  []
 
 [578]
-Underfull \hbox (badness 3029) in paragraph at lines 4282--4283
+Underfull \hbox (badness 10000) in paragraph at lines 4288--4289
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 لمبائی کی تعریف ہموار منحنیات کے لئے پیش
- کی گئی تھی جن کا ہر نقطہ پر مماس استمراری مڑتا ہے۔ برف کی روئی اتنی نا ہموار ہ
-ے کہ لمبائی کا کلیے کا اس پر اطلاق کرنا[]
+ کی گئی تھی جن کا ہر نقطے پر مماس استمراری مڑتا ہے۔ برف کی روئی اتنی نا ہموار ہ
+ے کہ لمبائی کے کلیہ کا اس پر اطلاق[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 4284.
-LaTeX Info: Redefining \sffamily on input line 4284.
-LaTeX Info: Redefining \ttfamily on input line 4284.
+LaTeX Info: Redefining \rmfamily on input line 4290.
+LaTeX Info: Redefining \sffamily on input line 4290.
+LaTeX Info: Redefining \ttfamily on input line 4290.
 [579] [580]
 NOTE: coordinate (1Y9.9998401e-1],3Y0.0e0]) has been dropped because it is unbo
 unded (in y). (see also unbounded coords=jump). 
@@ -14020,45 +14011,38 @@ unded (in y). (see also unbounded coords=jump).
 NOTE: coordinate (2Y9.9998401e-1],3Y0.0e0]) has been dropped because it is unbo
 unded (in y). (see also unbounded coords=jump). 
 
-Overfull \hbox (5.71631pt too wide) in paragraph at lines 4474--4482
+Overfull \hbox (5.71631pt too wide) in paragraph at lines 4480--4488
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (26.61375pt too wide) in paragraph at lines 4500--4515
+Overfull \hbox (26.61375pt too wide) in paragraph at lines 4506--4521
  [][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4520--4522
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 آپ سوچ رہے ہوں گے کہ کیوں اب تک لمبائی قوس
- میں زیادہ تر منحنیات کی مساواتیں پیچیدہ تھیں۔ اس کی وجہ لمبائی قوس کے تکمل میں
+Underfull \hbox (badness 10000) in paragraph at lines 4526--4528
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 آپ سوچ رہے ہوں گے کہ اب تک لمبائی قوس میں 
+زیادہ تر منحنیات کی مساواتیں کیوں پیچیدہ تھیں۔ اس کی وجہ لمبائی قوس کے تکمل میں
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4520--4522
+Underfull \hbox (badness 10000) in paragraph at lines 4526--4528
 []$[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے جو عموماً مکمل مربع نہیں ہوتا اور 
-جس کی وجہ سے متکمل کا ضد تفرق ہم حاصل نہیں کر پاتے ہیں۔ حقیقت میں عموماً یہی جذ
+جس کی وجہ سے متکمل کا ضد تفرق ہم حاصل نہیں کر پاتے۔ حقیقت میں عموماً یہی جذر غی
 ر[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4520--4522
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 غیر بنیادی تکمل کا باعث بنتا ہے۔ اسی لئے، 
-سوال ۶.۱۸۱[] اور سوال ۶.۱۸۲[] کی طرح، لمبائی قوس اور سطحی رقبہ کے تکمل عموماً ا
-عدادی طریقوں سے حل کئے جاتے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4527--4529
+Underfull \hbox (badness 10000) in paragraph at lines 4533--4535
 []\TU/JameelNooriNastaleeq(0)/b/n/10 مستوی چادر سے نالیدار چادر بناتے ہوئے چادر
- کی چوڑائی یا لمبائی تبدیل نہیں ہوتی ہے۔ درکار مستوی چادر کی چوڑائی معلوم کریں۔
- اعدادی تراکیب استعمال[]
+ کی چوڑائی یا لمبائی تبدیل نہیں ہوتی۔ درکار مستوی چادر کی چوڑائی معلوم کریں۔ اع
+دادی تراکیب استعمال کرتے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4529--4538
+Underfull \hbox (badness 10000) in paragraph at lines 4535--4544
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۱۸۲: []آپ کے انجینئری ادارے کو 
 سرنگ بنانے کا کام ملا ہے۔ سرنگ کی لمبائی $\OT1/ppl/m/n/10 100 m$ \TU/JameelNoor
 iNastaleeq(0)/b/n/10 جبکہ اس کی چوڑائی $\OT1/ppl/m/n/10 20 m$ \TU/JameelNooriNa
@@ -14066,7 +14050,15 @@ staleeq(0)/b/n/10 ہے (شکل ۶.۸۲[])۔[]
  []
 
 
-Underfull \hbox (badness 3590) in paragraph at lines 4544--4549
+Underfull \hbox (badness 1117) in paragraph at lines 4535--4544
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 سرنگ کی عمودی تراش $\OML/zplm/m/it/10 y \O
+T1/zplm/m/n/10 = \OT1/ppl/m/n/10 8 []\OT1/zplm/m/n/10 ([])$ \TU/JameelNooriNast
+aleeq(0)/b/n/10 کے مطابق ہے۔مکمل ہونے کے بعد سرنگ کو اندر سے پانی روک مسالہ کیا
+ جائے گا جس پر $\OT1/ppl/m/n/10 2000$[]
+ []
+
+
+Underfull \hbox (badness 3590) in paragraph at lines 4550--4555
 []\TU/JameelNooriNastaleeq(0)/b/n/10 فرض کریں $\OT1/zplm/m/n/10 [\OML/zplm/m/it
 /10 a\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 b\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNa
 staleeq(0)/b/n/10 پر $\OML/zplm/m/it/10 f$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہ
@@ -14079,54 +14071,57 @@ m/it/10 b\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی خانہ ب
 aleeq(0)/b/n/10 پر مماسی[]
  []
 
-[581] [582]
-LaTeX Info: Redefining \rmfamily on input line 4616.
-LaTeX Info: Redefining \sffamily on input line 4616.
-LaTeX Info: Redefining \ttfamily on input line 4616.
+[581]
+LaTeX Info: Redefining \rmfamily on input line 4623.
+LaTeX Info: Redefining \sffamily on input line 4623.
+LaTeX Info: Redefining \ttfamily on input line 4623.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4616--4617
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 بچپن میں آپ نے دوستوں کے ساتھ مل کر رسی گھ
-ماتے ہوئے رسی کے اوپر سے چھلانگیں ضرور لگائی ہوں گی۔ یہ رسی فضا میں پھیر کر ایک
- سطح بناتی ہے جس کو[]
+Underfull \hbox (badness 10000) in paragraph at lines 4623--4624
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 بچپن میں آپ نے دوستوں کے ساتھ مل کر رسّی گ
+ھماتے ہوئے رسّی کے اوپر سے چھلانگیں ضرور لگائی ہوں گی۔ یہ رسّی فضا میں پھیر کر 
+ایک سطح بناتی ہے جس کو[]
  []
 
-
-Underfull \hbox (badness 1394) in paragraph at lines 4616--4617
-[]\TU/AASameerSagarNastaleeqBold(0)/m/n/10 سطح طواف[][][][] []\TU/JameelNooriNa
-staleeq(0)/b/n/10 کہتے ہیں۔ سطح طواف کا رقبہ رسی کی لمبائی اور رسی کے ہر حصے کی
- جھول پر منحصر ہو گا۔ اس حصہ میں سطح طواف کا رقبہ اور سطح کو پیدا کرنے والی منح
-نی[]
- []
-
-
-Overfull \hbox (14.1216pt too wide) in paragraph at lines 4624--4649
+[582]
+Overfull \hbox (14.1216pt too wide) in paragraph at lines 4631--4657
  [][][][][][] 
  []
 
 
-Underfull \hbox (badness 1769) in paragraph at lines 4649--4649
+Underfull \hbox (badness 1769) in paragraph at lines 4657--4657
 [][]\TU/JameelNooriNastaleeq(0)/m/n/9 (ا) |غیر منفی تفاعل کی ترسیم کو محور $\OM
 L/zplm/m/it/9 x$ \TU/JameelNooriNastaleeq(0)/m/n/9 کے گرد گھمانے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4673--4673
+Underfull \hbox (badness 10000) in paragraph at lines 4681--4681
 [][]\TU/JameelNooriNastaleeq(0)/m/n/9 (ب) |لکیری قطعہ $\OML/zplm/m/it/9 PQ$ \TU
 /JameelNooriNastaleeq(0)/m/n/9 مخروط مقطوع پیدا کرتا[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4619--4699
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 خانہ بندی کر کے نقاط خانہ بندی استعمال کرت
-ے ہوئے ترسیم کو چھوٹے حصوں میں تقسیم کرتے ہیں۔ شکل ۶.۸۳[]-ا میں نمائندہ حصہ $\O
-ML/zplm/m/it/10 PQ$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور اس کی پیدا کردہ[]
+Underfull \hbox (badness 2913) in paragraph at lines 4626--4707
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 فرض کریں ہم غیر منفی تفاعل $\OML/zplm/m/it
+/10 y \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 f\OT1/zplm/m/n/10 (\OML/zplm/m/it/10
+ x\OT1/zplm/m/n/10 )\OT1/ppl/m/n/10 ,  \OML/zplm/m/it/10 a \OMS/zplm/m/n/10 ^^T
+ \OML/zplm/m/it/10 x \OMS/zplm/m/n/10 ^^T \OML/zplm/m/it/10 b$ \TU/JameelNooriN
+astaleeq(0)/b/n/10 کو $\OML/zplm/m/it/10 x$\TU/JameelNooriNastaleeq(0)/b/n/10 م
+حور کے گرد گھما کر پیدا ہونے والی سطح طواف کا سطحی رقبہ[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 4700.
-LaTeX Info: Redefining \sffamily on input line 4700.
-LaTeX Info: Redefining \ttfamily on input line 4700.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4700--4701
+Underfull \hbox (badness 3780) in paragraph at lines 4626--4707
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 جاننا چاہتے ہیں۔ ہم $\OT1/zplm/m/n/10 [\OM
+L/zplm/m/it/10 a\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 b\OT1/zplm/m/n/10 ]$ \TU/Ja
+meelNooriNastaleeq(0)/b/n/10 کی خانہ بندی کر کے نقاط خانہ بندی استعمال کرتے ہوئ
+ے ترسیم کو چھوٹے حصوں میں تقسیم کرتے ہیں۔ شکل ۶.۸۳[]-ا میں نمائندہ[]
+ []
+
+LaTeX Info: Redefining \rmfamily on input line 4708.
+LaTeX Info: Redefining \sffamily on input line 4708.
+LaTeX Info: Redefining \ttfamily on input line 4708.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4708--4709
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 قوس $\OML/zplm/m/it/10 PQ$ \TU/JameelNoo
 riNastaleeq(0)/b/n/10 محور $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/
 n/10 کے گرد گھومتے ہوئے مخروط سطح پیدا کرتی ہے جس کو بڑا کر کے شکل ۶.۸۳[]-ب میں
@@ -14135,16 +14130,7 @@ n/10 کے گرد گھومتے ہوئے مخروط سطح پیدا کرتی ہے 
  []
 
 [583]
-Underfull \hbox (badness 10000) in paragraph at lines 4714--4716
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 ہم توقع کرتے ہیں کہ $\OT1/zplm/m/n/10 [\OM
-L/zplm/m/it/10 a\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 b\OT1/zplm/m/n/10 ]$ \TU/Ja
-meelNooriNastaleeq(0)/b/n/10 کی زیادہ باریک خانہ بندی سے تخمین بہتر ہو گی۔ ہم د
-کھانا چاہتے ہیں کہ خانہ بندی کا معیار صفر تک پہنچنے سے مساوات ۱[] میں دیا گیا[]
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4717--4718
+Underfull \hbox (badness 10000) in paragraph at lines 4725--4726
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 یہ دکھانے کی خاطر ہم مساوات ۱[] کو وقفہ 
 $\OT1/zplm/m/n/10 [\OML/zplm/m/it/10 a\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 b\OT1
 /zplm/m/n/10 ]$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر کسی تفاعل کا ریمان مجموعہ
@@ -14152,17 +14138,17 @@ $\OT1/zplm/m/n/10 [\OML/zplm/m/it/10 a\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 b\OT1
  []
 
 
-Overfull \hbox (22.44753pt too wide) in paragraph at lines 4723--4745
+Overfull \hbox (22.44753pt too wide) in paragraph at lines 4731--4753
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (9.96635pt too wide) in paragraph at lines 4750--4772
+Overfull \hbox (9.96635pt too wide) in paragraph at lines 4758--4780
  [][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4778--4779
+Underfull \hbox (badness 10000) in paragraph at lines 4786--4787
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 اگر $\OML/zplm/m/it/10 f$ \TU/JameelNoor
 iNastaleeq(0)/b/n/10 ہموار ہو تب مسئلہ اوسط قیمت کے تحت $\OML/zplm/m/it/10 P$ \
 TU/JameelNooriNastaleeq(0)/b/n/10 اور $\OML/zplm/m/it/10 Q$ \TU/JameelNooriNast
@@ -14173,36 +14159,50 @@ pl/m/n/10 , \OML/zplm/m/it/10 f\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 c[]\OT1/zplm
  []
 
 [584]
-Underfull \hbox (badness 10000) in paragraph at lines 4790--4791
-[][]\TU/JameelNooriNastaleeq(0)/b/n/10 بری خبر یہ ہے کہ مساوات ۲[] میں $\OML/zp
-lm/m/it/10 x[]$\TU/JameelNooriNastaleeq(0)/b/n/10 ، $\OML/zplm/m/it/10 x[]$ \TU
-/JameelNooriNastaleeq(0)/b/n/10 اور $\OML/zplm/m/it/10 c[]$ \TU/JameelNooriNast
-aleeq(0)/b/n/10 ایک دوسرے سے مختلف ہیں اور انہیں ایک دوسرے جیسا کسی صورت نہیں ب
-نایا جا سکتا ہے لہٰذا[]
+LaTeX Info: Redefining \rmfamily on input line 4798.
+LaTeX Info: Redefining \sffamily on input line 4798.
+LaTeX Info: Redefining \ttfamily on input line 4798.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4798--4799
+[][]\TU/JameelNooriNastaleeq(0)/b/n/10 بُری خبر یہ ہے کہ مساوات ۲[] میں $\OML/z
+plm/m/it/10 x[]$\TU/JameelNooriNastaleeq(0)/b/n/10 ، $\OML/zplm/m/it/10 x[]$\TU
+/JameelNooriNastaleeq(0)/b/n/10 ، اور $\OML/zplm/m/it/10 c[]$ \TU/JameelNooriNa
+staleeq(0)/b/n/10 ایک دوسرے سے مختلف ہیں اور انہیں ایک جیسا کسی صورت نہیں بنایا
+ جا سکتا لہٰذا مساوات ۲[] میں[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4790--4791
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 مساوات ۲[] میں دیا گیا مجموعہ ریمان مجموعہ
- نہیں ہے۔ اچھی خبر یہ ہے کہ اس سے کوئی فرق نہیں پڑتا۔ اعلیٰ احصاء کا مسئلہ بلس 
-کہتا ہے کہ وقفہ $\OT1/zplm/m/n/10 [\OML/zplm/m/it/10 a\OT1/ppl/m/n/10 , \OML/zp
-lm/m/it/10 b\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی خانہ[]
+Underfull \hbox (badness 3148) in paragraph at lines 4798--4799
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 دیا گیا مجموعہ ریمان مجموعہ نہیں ہے۔ اچھی 
+خبر یہ ہے کہ اس سے کوئی فرق نہیں پڑتا۔ اعلیٰ احصاء کا \TU/AASameerSagarNastalee
+qBold(0)/m/n/10 مسئلہ بلس [][][] []\TU/JameelNooriNastaleeq(0)/b/n/10 کہتا ہے ک
+ہ وقفہ $\OT1/zplm/m/n/10 [\OML/zplm/m/it/10 a\OT1/ppl/m/n/10 , \OML/zplm/m/it/1
+0 b\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی خانہ بندی کا معیار
+[]
  []
 
 [585]
-Overfull \hbox (10.78358pt too wide) in paragraph at lines 4854--4865
+Overfull \hbox (10.78358pt too wide) in paragraph at lines 4862--4873
  [][][][][][][][] 
  []
 
 [586]
-Underfull \hbox (badness 10000) in paragraph at lines 4950--4950
+Underfull \hbox (badness 10000) in paragraph at lines 4959--4959
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 شكل ۶.۸۸: |قوس $\OML/zplm/m/it/10 AB$ \T
 U/JameelNooriNastaleeq(0)/b/n/10 کو محور طواف کے گرد گھما کر حاصل سطح[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4974--4975
+Underfull \hbox (badness 10000) in paragraph at lines 4984--4985
 [][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4987--4989
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 کسی مخصوص مسئلے میں آپ قوسچہ کی تفرقی لمبا
+ئی $[] \OML/zplm/m/it/10 s$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور رداس $\OML/z
+plm/m/it/10 ^^Z$ \TU/JameelNooriNastaleeq(0)/b/n/10 کو کسی مشترکہ متغیر کی صورت
+ میں لکھ کر تکمل کی حدود بھی اسی متغیر کے روپ میں مہیا[]
  []
 
 [587]
@@ -14210,42 +14210,42 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [588]
 [589]
-Underfull \hbox (badness 10000) in paragraph at lines 5101--5104
+Underfull \hbox (badness 10000) in paragraph at lines 5111--5114
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال ۶.۲۰۳[] تا سوال ۶.۲۱۲[] میں منحنی کو
- دیے گئے محور کے گرد گھما کر سطح طواف پیدا کیا جاتا ہے۔ اس سطح کا رقبہ معلوم کر
-یں۔ بہتر ہو گا کہ آپ دیے گئے منحنی[]
+ دیے گئے محور کے گرد گھما کر سطح طواف پیدا کیا جاتا ہے۔ سطح کا رقبہ معلوم کریں۔
+ بہتر ہو گا کہ آپ دیے گئے منحنی کو[]
  []
 
 
-Overfull \hbox (6.45253pt too wide) in paragraph at lines 5177--5192
+Overfull \hbox (6.45253pt too wide) in paragraph at lines 5187--5202
  [][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5221--5225
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 مخروط کا قد $\OML/zplm/m/it/10 h$ \TU/Jame
-elNooriNastaleeq(0)/b/n/10 اور اس کے تلا کا رداس $\OML/zplm/m/it/10 r$ \TU/Jame
-elNooriNastaleeq(0)/b/n/10 ہے لہٰذا اس کے ترچھا قد $[]$ ہو گا۔ تکمل سے مخروط کے
- پہلو کا رقبہ دریافت کر کے اس کلیہ کی تصدیق[]
+Underfull \hbox (badness 10000) in paragraph at lines 5231--5235
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 جہاں مخروط کا قد $\OML/zplm/m/it/10 h$ \TU
+/JameelNooriNastaleeq(0)/b/n/10 اور اس کے قاعدے کا رداس $\OML/zplm/m/it/10 r$ \
+TU/JameelNooriNastaleeq(0)/b/n/10 ہے لہٰذا اس کا ترچھا قد $[]$ ہو گا۔ تکمل سے م
+خروط کے پہلو کا رقبہ دریافت کر کے اس کلیے[]
  []
 
 [590]
-Overfull \hbox (20.36583pt too wide) in paragraph at lines 5244--5254
+Overfull \hbox (20.36583pt too wide) in paragraph at lines 5254--5264
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (8.49118pt too wide) in paragraph at lines 5258--5275
+Overfull \hbox (8.49118pt too wide) in paragraph at lines 5268--5285
 [][][][][][][] []
  []
 
 
-Overfull \hbox (12.04784pt too wide) in paragraph at lines 5279--5297
+Overfull \hbox (12.04784pt too wide) in paragraph at lines 5289--5307
 [][][][][][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5238--5303
+Underfull \hbox (badness 10000) in paragraph at lines 5248--5313
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ایک برتن کو رداس $\OT1/ppl/m/n/10 16 []$ \
 TU/JameelNooriNastaleeq(0)/b/n/10 کے کرہ کا حصہ تصور کیا جا سکتا ہے (شکل ۶.۹۳[]
 )۔برتن کی گہرائی $\OT1/ppl/m/n/10 9 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے۔ب
@@ -14253,21 +14253,21 @@ TU/JameelNooriNastaleeq(0)/b/n/10 کے کرہ کا حصہ تصور کیا جا �
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5238--5303
+Underfull \hbox (badness 10000) in paragraph at lines 5248--5313
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہے۔ کچے رنگ کی $\OT1/ppl/m/n/10 0.5 []$ \T
 U/JameelNooriNastaleeq(0)/b/n/10 موٹی تہہ برتن پر چھڑک کر پکائی جاتی ہے۔ پانچ ہ
 زار برتن کے لئے درکار کچے رنگ کا حجم معلوم کریں۔ رنگ کے ضیاع کو[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5303--5312
+Underfull \hbox (badness 10000) in paragraph at lines 5313--5322
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ڈبل روٹی اندر سے نرم اور باہر سے کرارا ہوت
-ی ہے۔کیا آپ جانتے ہیں کہ کروی ڈبل روٹی کے ایک جتنی موٹی کتلوں میں ایک جتنا کرار
-ا حصہ پایا جاتا ہے (شکل[]
+ی ہے۔کیا آپ جانتے ہیں کہ کروی ڈبل روٹی کے یکساں موٹے کتلوں میں ایک جتنا کرارا ح
+صہ پایا جاتا ہے (شکل[]
  []
 
 
-Underfull \hbox (badness 2980) in paragraph at lines 5303--5312
+Underfull \hbox (badness 2980) in paragraph at lines 5313--5322
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ۶.۹۴[])؟ یہ دیکھنے کی خاطر نصف دائرہ $\OML
 /zplm/m/it/10 y \OT1/zplm/m/n/10 = []$ \TU/JameelNooriNastaleeq(0)/b/n/10 کو مح
 ور $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے گرد گھما کر کرہ 
@@ -14276,24 +14276,24 @@ Underfull \hbox (badness 2980) in paragraph at lines 5303--5312
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5303--5312
+Underfull \hbox (badness 10000) in paragraph at lines 5313--5322
 []\TU/JameelNooriNastaleeq(0)/b/n/10 دائرے کی قوس $\OML/zplm/m/it/10 AB$ \TU/Ja
 meelNooriNastaleeq(0)/b/n/10 ہے۔ دکھائیں کہ نصف دائرے کو محور $\OML/zplm/m/it/1
 0 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے گرد گھمانے سے $\OML/zplm/m/it/10 AB$
- \TU/JameelNooriNastaleeq(0)/b/n/10 سے حاصل رقبہ کی قیمت $\OML/zplm/m/it/10 h$ 
-\TU/JameelNooriNastaleeq(0)/b/n/10 کے مقام پر منحصر نہیں ہے۔[]
+ \TU/JameelNooriNastaleeq(0)/b/n/10 سے حاصل رقبے کی قیمت $\OML/zplm/m/it/10 h$ 
+\TU/JameelNooriNastaleeq(0)/b/n/10 کے مقام پر منحصر نہیں۔[]
  []
 
 [591]
-Underfull \hbox (badness 10000) in paragraph at lines 5312--5316
+Underfull \hbox (badness 10000) in paragraph at lines 5322--5326
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۱۹: []دو متوازی سطحیں جن کے مابی
-ن فاصلہ $\OML/zplm/m/it/10 h$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے رداس $\OML/
-zplm/m/it/10 R$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے کروی سطح سے ایک پٹی کاٹتے
- ہیں (شکل ۶.۹۵[])۔ دکھائیں کہ اس پٹی کا رقبہ[]
+ن فاصلہ $\OML/zplm/m/it/10 h$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے، رداس $\OML
+/zplm/m/it/10 R$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے کروی سطح سے ایک پٹی کاٹت
+ی ہیں (شکل ۶.۹۵[])۔ دکھائیں کہ اس پٹی کا رقبہ[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5388--5392
+Underfull \hbox (badness 10000) in paragraph at lines 5398--5402
 []\TU/JameelNooriNastaleeq(0)/b/n/10 وقفہ $\OT1/zplm/m/n/10 [\OML/zplm/m/it/10 
 a\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 b\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNastal
 eeq(0)/b/n/10 پر تفاعل $\OML/zplm/m/it/10 f$ \TU/JameelNooriNastaleeq(0)/b/n/10
@@ -14301,72 +14301,70 @@ eeq(0)/b/n/10 پر تفاعل $\OML/zplm/m/it/10 f$ \TU/JameelNooriNastaleeq(0)/
 کرتا ہو وہاں ہم مساوات ۳[] کی جگہ درج ذیل[]
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 5415--5419
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 سوال ۶.۲۲۳[] تا سوال ۶.۲۲۳[] میں محور $\OM
+L/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے گرد دی گئی منحنیات گھما
+نے سے سطح طواف پیدا ہوں گی۔ ان سطح طواف کے رقبے اعدادی تراکیب سے $\OT1/ppl/m/n/
+10 2$[]
+ []
+
 [592]
-Underfull \hbox (badness 10000) in paragraph at lines 5434--5438
+Underfull \hbox (badness 10000) in paragraph at lines 5444--5448
 []\TU/JameelNooriNastaleeq(0)/b/n/10 فرض کریں $\OT1/zplm/m/n/10 [\OML/zplm/m/it
 /10 a\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 b\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNa
 staleeq(0)/b/n/10 پر $\OML/zplm/m/it/10 f$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہ
 موار ہے۔ وقفہ $\OT1/zplm/m/n/10 [\OML/zplm/m/it/10 a\OT1/ppl/m/n/10 , \OML/zplm
 /m/it/10 b\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی خانہ بندی ک
-ریں اور $\OML/zplm/m/it/10 k$ \TU/JameelNooriNastaleeq(0)/b/n/10 ویں ذیلی وقفہ 
+ریں اور $\OML/zplm/m/it/10 k$ \TU/JameelNooriNastaleeq(0)/b/n/10 واں ذیلی وقفہ 
 $\OT1/zplm/m/n/10 [\OML/zplm/m/it/10 x[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 x[]
 \OT1/zplm/m/n/10 ]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے وسطی نقطہ $\OML/zplm/
 m/it/10 m[] \OT1/zplm/m/n/10 =$[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5463--5464
+Underfull \hbox (badness 10000) in paragraph at lines 5475--5476
 []\TU/JameelNooriNastaleeq(0)/b/n/10 بہت سارے ساخت اور میکانی نظام کا رویہ ایسا
  ہوتا ہے جیسا ان کی کمیت ایک نقطہ میں سموئی ہو جس کو مرکز کمیت کہتے ہیں۔ اس نقط
 ہ کا مقام جاننا اہم ہے جسے[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 5482.
-LaTeX Info: Redefining \sffamily on input line 5482.
-LaTeX Info: Redefining \ttfamily on input line 5482.
+LaTeX Info: Redefining \rmfamily on input line 5494.
+LaTeX Info: Redefining \sffamily on input line 5494.
+LaTeX Info: Redefining \ttfamily on input line 5494.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5482--5483
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 ہر کمیت $\OML/zplm/m/it/10 m[]$ \TU/Jameel
-NooriNastaleeq(0)/b/n/10 پر نیچے رخ قوت $\OML/zplm/m/it/10 m[]g$ \TU/JameelNoor
-iNastaleeq(0)/b/n/10 عمل کرتا ہے جہاں $\OML/zplm/m/it/10 g$ \TU/JameelNooriNast
-aleeq(0)/b/n/10 ثقلی اسراع ہے (قوت $\OML/zplm/m/it/10 m[]g$ \TU/JameelNooriNast
-aleeq(0)/b/n/10 کو کمیت $\OML/zplm/m/it/10 k[]$ \TU/JameelNooriNastaleeq(0)/b/n
-/10 کا وزن کہتے ہیں)۔ہر ایسی قوت محور کو مبدا[]
+Underfull \hbox (badness 10000) in paragraph at lines 5494--5495
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 گرد گھمانے کی کوشش کرتی ہے۔ گھومنے کے اس ا
+ثر کو \TU/AASameerSagarNastaleeqBold(0)/m/n/10 قوت مروڑ[][][] []\TU/JameelNoori
+Nastaleeq(0)/b/n/10 کہتے ہیں۔ قوت $\OML/zplm/m/it/10 m[]g$ \TU/JameelNooriNasta
+leeq(0)/b/n/10 کو مبدا سے فاصلہ $\OML/zplm/m/it/10 x[]$ \TU/JameelNooriNastalee
+q(0)/b/n/10 سے ضرب دینے سے قوت مروڑ کی[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5482--5483
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 کے گرد گھمانے کی کوشش کرتی ہے۔ گھومنے کے ا
-س اثر کو \TU/AASameerSagarNastaleeqBold(0)/m/n/10 قوت مروڑ[][][] []\TU/JameelNo
-oriNastaleeq(0)/b/n/10 کہتے ہیں۔ قوت $\OML/zplm/m/it/10 m[]g$ \TU/JameelNooriNa
-staleeq(0)/b/n/10 کو مبدا سے فاصلہ $\OML/zplm/m/it/10 x[]$ \TU/JameelNooriNasta
-leeq(0)/b/n/10 سے ضرب دینے سے قوت مروڑ[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5482--5483
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 کی مقدار حاصل ہوتی ہے جہاں فاصلہ مثبت یا م
-نفی ممکن ہے۔مبدا سے بائیں جانب کمیت منفی (گھڑی مخالف) قوت مروڑ پیدا کرتا ہے جبک
-ہ مبدا سے دائیں جانب[]
+Underfull \hbox (badness 10000) in paragraph at lines 5494--5495
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 مقدار حاصل ہوتی ہے جہاں فاصلہ مثبت یا منفی
+ ممکن ہے۔مبدا سے بائیں جانب کمیت منفی (گھڑی مخالف) قوت مروڑ پیدا کرتا ہے جبکہ م
+بدا سے دائیں جانب[]
  []
 
 [593]
-LaTeX Info: Redefining \rmfamily on input line 5484.
-LaTeX Info: Redefining \sffamily on input line 5484.
-LaTeX Info: Redefining \ttfamily on input line 5484.
+LaTeX Info: Redefining \rmfamily on input line 5496.
+LaTeX Info: Redefining \sffamily on input line 5496.
+LaTeX Info: Redefining \ttfamily on input line 5496.
  [594]
-LaTeX Info: Redefining \rmfamily on input line 5535.
-LaTeX Info: Redefining \sffamily on input line 5535.
-LaTeX Info: Redefining \ttfamily on input line 5535.
+LaTeX Info: Redefining \rmfamily on input line 5547.
+LaTeX Info: Redefining \sffamily on input line 5547.
+LaTeX Info: Redefining \ttfamily on input line 5547.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5538--5539
+Underfull \hbox (badness 10000) in paragraph at lines 5550--5551
 []\TU/JameelNooriNastaleeq(0)/b/n/10 بہت سارے موقعوں پر ہمیں سلاخ یا پتلی پٹی ک
 ی کمیت کا مرکز مطلوب ہوتا ہے۔ایسی صورتوں میں اگر ہم تقسیم کمیت کو استمراری تفاع
 ل کی صورت میں لکھ سکیں[]
  []
 
 [595]
-Underfull \hbox (badness 10000) in paragraph at lines 5578--5580
+Underfull \hbox (badness 10000) in paragraph at lines 5590--5592
 []\TU/JameelNooriNastaleeq(0)/b/n/10 مساوات ۲[] کا آخری شمار کنندہ بند وقفہ $\O
 T1/zplm/m/n/10 [\OML/zplm/m/it/10 a\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 b\OT1/zp
 lm/m/n/10 ]$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر استمراری تفاعل $\OML/zplm/m/
@@ -14377,58 +14375,58 @@ eelNooriNastaleeq(0)/b/n/10 کا ریمان مجموعہ[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5585--5586
+Underfull \hbox (badness 10000) in paragraph at lines 5597--5598
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5594--5595
+Underfull \hbox (badness 10000) in paragraph at lines 5606--5607
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 مساوات ۳[] کے حصول میں کثافت کی بات کی گ
 ئی۔ عام طور کثافت سے مراد کمیت فی اکائی حجم ہوتا ہے البتہ بعض اوقات ہم وہ اکائی
 اں استعمال کرتے ہیں جن کی[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5594--5595
+Underfull \hbox (badness 10000) in paragraph at lines 5606--5607
 []\TU/JameelNooriNastaleeq(0)/b/n/10 پیمائش نسبتاً زیادہ آسان ہو۔یوں تار، سلاخ 
 اور پٹی کے لئے ہم کمیت فی اکائی لمبائی کو کثافت کہتے ہیں جبکہ مستوی سطحوں کے لئ
 ے کمیت فی اکائی رقبہ کو کثافت[]
  []
 
 [596]
-Underfull \hbox (badness 10000) in paragraph at lines 5624--5624
+Underfull \hbox (badness 10000) in paragraph at lines 5636--5636
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 شكل ۶.۹۸: |مستقل کثافت کے پتلے سیدھے سلا
 خ کا مرکز کمیت دونوں[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5640--5640
+Underfull \hbox (badness 10000) in paragraph at lines 5652--5652
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 شكل ۶.۹۹: |متغیر موٹائی کے سیدھے سلاخ کو
  متغیر کثافت کا سیدھا[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5644--5646
+Underfull \hbox (badness 10000) in paragraph at lines 5656--5658
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ایک سلاخ جس کی لمبائی $\OT1/ppl/m/n/10 10 
 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے بائیں سے دائیں چلتے ہوئے موٹا ہوتا ہے 
 (شکل ۶.۹۹[]) لہٰذا اس کی کثافت مستقل ہونے کے بجائے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5677--5677
+Underfull \hbox (badness 10000) in paragraph at lines 5689--5689
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 شكل ۶.۱۰۰: |ہر کمیت $\OML/zplm/m/it/10 m
 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 کا ہر انفرادی محور کے لحاظ سے معیار اثر 
 ہو[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5701--5701
+Underfull \hbox (badness 10000) in paragraph at lines 5713--5713
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 شكل ۶.۱۰۱: |دو بعدی کمیتوں کا جھرمٹ اپنے
  مرکز کمیت پر متوازن ہو[]
  []
 
 [597]
-Underfull \hbox (badness 10000) in paragraph at lines 5706--5707
+Underfull \hbox (badness 10000) in paragraph at lines 5718--5719
 []\TU/JameelNooriNastaleeq(0)/b/n/10 فرض کریں ایک مستوی میں متناہی تعداد میں کم
 یت پائے جاتے ہیں۔یوں نقطہ $\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x[]\OT1/ppl/m/n/
 10 , \OML/zplm/m/it/10 y[]\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/1
@@ -14437,7 +14435,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5706--5707
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5709--5711
+Underfull \hbox (badness 10000) in paragraph at lines 5721--5723
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہر کمیت $\OML/zplm/m/it/10 m[]$ \TU/Jameel
 NooriNastaleeq(0)/b/n/10 کا دونوں محور کے لحاظ سے معیار اثر ہو گا۔ محور $\OML/z
 plm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے لحاظ سے اس کا معیار اثر $\
@@ -14446,11 +14444,11 @@ ML/zplm/m/it/10 y$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے لحاظ سے اس ک
 ر[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 5726.
-LaTeX Info: Redefining \sffamily on input line 5726.
-LaTeX Info: Redefining \ttfamily on input line 5726.
+LaTeX Info: Redefining \rmfamily on input line 5738.
+LaTeX Info: Redefining \sffamily on input line 5738.
+LaTeX Info: Redefining \ttfamily on input line 5738.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5725--5727
+Underfull \hbox (badness 10000) in paragraph at lines 5737--5739
 []\TU/JameelNooriNastaleeq(0)/b/n/10 منسوخ کر کے صفر قوت مروڑ پیدا کرتے ہیں۔ تو
 ازن کے اعتبار سے یوں معلوم ہوتا ہے کہ اس نظام کی پوری کمیت نقطہ $\OT1/zplm/m/n/
 10 ([]\OT1/ppl/m/n/10 , []\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/1
@@ -14458,7 +14456,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5725--5727
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5750--5750
+Underfull \hbox (badness 10000) in paragraph at lines 5762--5762
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 شكل ۶.۱۰۲: |چادر کو انتصابی پتلی پٹیوں م
 یں تقسیم کیا گیا ہے۔ نمائندہ پٹی کا کسی ایک انفرادی محور کے لحاظ سے معیار اثر و
 ہی ہو گا جو پٹی کی کمیت $[] \OML/zplm/m/it/10 m$ \TU/JameelNooriNastaleeq(0)/b/
@@ -14466,21 +14464,21 @@ n/10 کو پٹی کی[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5729--5754
+Underfull \hbox (badness 10000) in paragraph at lines 5741--5766
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کئی بار ہمیں پتلی مستوی چادر کا مرکز کمیت 
 درکار ہوتا ہے۔ ایسی صورت میں ہم فرض کرتے ہیں کہ کمیت کی تقسیم استمراری ہے لہٰذا
  $[]$ اور $[]$ کے کلیات میں[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5729--5754
+Underfull \hbox (badness 10000) in paragraph at lines 5741--5766
 []\TU/JameelNooriNastaleeq(0)/b/n/10 متناہی مجموعوں کے بجائے تکمل پائے جاتے ہیں
 ۔آئیں اس پر غور کرتے ہیں۔ فرض کریں مستوی $\OML/zplm/m/it/10 xy$ \TU/JameelNoori
 Nastaleeq(0)/b/n/10 میں ایک پتلی چادر پائی جاتی ہے۔ چادر کو کسی ایک محور[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5729--5754
+Underfull \hbox (badness 10000) in paragraph at lines 5741--5766
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کے متوازی باریک پٹیوں میں تقسیم کریں (شکل 
 ۶.۱۰۲[] میں پٹیاں محور $\OML/zplm/m/it/10 y$ \TU/JameelNooriNastaleeq(0)/b/n/10
  کے متوازی ہیں)۔ کسی ایک نمائندہ پٹی کی کمیت کا مرکز $\OT1/zplm/m/n/10 ([]\OT1/
@@ -14489,7 +14487,7 @@ ppl/m/n/10 , []\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہو گا�
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5729--5754
+Underfull \hbox (badness 10000) in paragraph at lines 5741--5766
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کی کمیت $\OT1/zplm/m/n/10 ^^A\OML/zplm/m/i
 t/10 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 کو نقطہ $\OT1/zplm/m/n/10 ([]\OT1/pp
 l/m/n/10 , []\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر منجمد تص
@@ -14500,21 +14498,21 @@ iNastaleeq(0)/b/n/10 کے لحاظ سے پٹی کا معیار اثر[]
  []
 
 [598]
-Underfull \hbox (badness 10000) in paragraph at lines 5756--5758
+Underfull \hbox (badness 10000) in paragraph at lines 5768--5770
 []\TU/JameelNooriNastaleeq(0)/b/n/10 یک بعدی صورت کی طرح یہاں بھی ریمان مجموعے 
 پائے جاتے ہیں جن کی قیمتیں، پٹی کی چوڑائی کم سے کم کرنے سے قطعی تکملات کی قیمتی
 ں ہوں گی۔ ان[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5772--5773
+Underfull \hbox (badness 10000) in paragraph at lines 5784--5785
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 ان تکملات کی حصول کے لئے ہم چادر کو محدد
 ی مستوی میں رکھ کر کسی ایک محدد کے متوازی ایک نمائندہ پٹی کا خاکہ بناتے ہیں۔ اس
  پٹی کی کمیت اور مرکز کمیت[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5772--5773
+Underfull \hbox (badness 10000) in paragraph at lines 5784--5785
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کے محدد $\OT1/zplm/m/n/10 ([]\OT1/ppl/m/n/
 10 , []\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 کو $\OML/zplm/m/i
 t/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور $\OML/zplm/m/it/10 y$ \TU/Jameel
@@ -14526,35 +14524,35 @@ NooriNastaleeq(0)/b/n/10 ،[]
 [599]
 
 LaTeX Warning: The counter will not be printed.
-             The label is:  on input line 5781.
+             The label is:  on input line 5793.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5795--5798
+Underfull \hbox (badness 10000) in paragraph at lines 5807--5810
 [][]
  []
 
 [600]
 
 LaTeX Warning: The counter will not be printed.
-             The label is:  on input line 5829.
+             The label is:  on input line 5841.
 
 
-Overfull \hbox (15.24649pt too wide) in paragraph at lines 5870--5876
+Overfull \hbox (15.24649pt too wide) in paragraph at lines 5882--5888
  [][][][][][] 
  []
 
 
-Overfull \hbox (15.24649pt too wide) in paragraph at lines 5880--5896
+Overfull \hbox (15.24649pt too wide) in paragraph at lines 5892--5908
  [][][][][][] 
  []
 
 
-Overfull \hbox (15.24649pt too wide) in paragraph at lines 5900--5920
+Overfull \hbox (15.24649pt too wide) in paragraph at lines 5912--5932
  [][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5926--5927
+Underfull \hbox (badness 10000) in paragraph at lines 5938--5939
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 اگر پتلی چادر میں کمیت کی تقسیم تشاکلی ہ
 و تب کمیت کا مرکز محور تشاکل پر پایا جائے گا۔ اگر تشاکل کے دو محور پائے جاتے ہو
 ں تب مرکز کمیت دونوں محور کے نقطہ[]
@@ -14563,10 +14561,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 5926--5927
 [601]
 
 LaTeX Warning: The counter will not be printed.
-             The label is:  on input line 5940.
+             The label is:  on input line 5952.
 
 [602]
-Overfull \hbox (4.86652pt too wide) in paragraph at lines 6008--6026
+Overfull \hbox (4.86652pt too wide) in paragraph at lines 6020--6038
  [][][][][][] 
  []
 
@@ -14576,25 +14574,25 @@ Underfull \vbox (badness 1824) has occurred while \output is active []
  [603]
 
 LaTeX Warning: The counter will not be printed.
-             The label is:  on input line 6058.
+             The label is:  on input line 6070.
 
 
-Overfull \hbox (12.12163pt too wide) in paragraph at lines 6081--6100
+Overfull \hbox (12.12163pt too wide) in paragraph at lines 6093--6112
  [][][][][][] 
  []
 
-LaTeX Info: Redefining \rmfamily on input line 6121.
-LaTeX Info: Redefining \sffamily on input line 6121.
-LaTeX Info: Redefining \ttfamily on input line 6121.
+LaTeX Info: Redefining \rmfamily on input line 6133.
+LaTeX Info: Redefining \sffamily on input line 6133.
+LaTeX Info: Redefining \ttfamily on input line 6133.
 
-Underfull \hbox (badness 10000) in paragraph at lines 6121--6122
+Underfull \hbox (badness 10000) in paragraph at lines 6133--6134
 []\TU/JameelNooriNastaleeq(0)/b/n/10 مستقل کثافت کی صورت میں $[]$ اور $[]$ کی ک
 لیات میں نسب نما اور شمار کنندہ میں پائے جانے والے $\OML/zplm/m/it/10 ^^N$ \TU/
 JameelNooriNastaleeq(0)/b/n/10 ایک دوسرے کو منسوخ کرتے ہیں۔یوں $[]$ اور $[]$[]
  []
 
 
-Underfull \hbox (badness 4193) in paragraph at lines 6121--6122
+Underfull \hbox (badness 4193) in paragraph at lines 6133--6134
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کی نقطہ نظر سے $\OML/zplm/m/it/10 ^^N$ \TU
 /JameelNooriNastaleeq(0)/b/n/10 کو شروع سے اکائی تصور کیا جا سکتا ہے۔ مستقل کثا
 فت کی صورت میں کسی چیز کی کمیت کا مرکز اس چیز کی شکل و صورت پر منحصر ہو گا نا ک
@@ -14602,7 +14600,7 @@ Underfull \hbox (badness 4193) in paragraph at lines 6121--6122
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6121--6122
+Underfull \hbox (badness 10000) in paragraph at lines 6133--6134
 []\TU/JameelNooriNastaleeq(0)/b/n/10 مادے پر جس سے یہ چیز بنی ہو۔ایسی صورت میں 
 مرکز کمیت کو عموماً \TU/AASameerSagarNastaleeqBold(0)/m/n/10 وسطانی مرکز[][][] 
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کہتے ہیں۔ یوں اگر آپ سے کہا جائے کہ تکون، 
@@ -14610,7 +14608,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6121--6122
  []
 
 [604]
-Underfull \hbox (badness 10000) in paragraph at lines 6127--6131
+Underfull \hbox (badness 10000) in paragraph at lines 6139--6143
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۲۸:  ایک بچہ جس کی کمیت $\OT1/ppl
 /m/n/10 40 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور دوسرا بچہ جس کی کمیت $\OT
 1/ppl/m/n/10 50 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے ہنڈولا پر جھول رہے ہی
@@ -14618,14 +14616,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 6127--6131
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6140--6144
+Underfull \hbox (badness 10000) in paragraph at lines 6152--6156
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۳۰: []لوہے کی ایک پتلی سلاخ کو و
 سط سے $\OT1/ppl/m/n/10 90[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 زاویہ پر موڑ پر
  فریم بنایا جاتا ہے (شکل ۶.۱۰۶[])۔ فریم کی کمیت کا مرکز تلاش کریں۔ (اشارہ۔[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6144--6153
+Underfull \hbox (badness 10000) in paragraph at lines 6156--6165
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۳۱: []لوہے کی ایک پتلی سلاخ کو
  $\OT1/ppl/m/n/10 90[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر موڑ کر فریم بنایا
  جاتا ہے جہاں ایک بازو کی لمبائی دوسرے بازو کی لمبائی سے دگنی ہے (شکل ۶.۱۰۷[])۔
@@ -14633,40 +14631,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 6144--6153
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6153--6179
+Underfull \hbox (badness 10000) in paragraph at lines 6165--6191
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال ۶.۲۳۲[] تا سوال ۶.۲۳۹[] میں محور $\O
 ML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے مختلف وقفوں پر پڑی ہوئ
 ی پتلی سلاخ کی کثافتی تفاعل دیے گئے ہیں۔مساوات ۳[] استعمال کرتے ہوئے مبدا کے[]
  []
 
 [605] [606]
-Underfull \hbox (badness 10000) in paragraph at lines 6351--6399
+Underfull \hbox (badness 10000) in paragraph at lines 6363--6411
 []\TU/JameelNooriNastaleeq(0)/b/n/10 تکون کے راس کے مخالف ضلع کے وسط تک قطعہ کو
  وسطانیہ کہتے ہیں۔ آپ کو یاد ہو گا کہ ضلع سے $[]$ فاصلہ پر وسطانیے ایک دوسرے کو
  قطع کرتے ہیں (شکل[]
  []
 
 [607]
-Overfull \hbox (6.45645pt too wide) in paragraph at lines 6488--6498
+Overfull \hbox (6.45645pt too wide) in paragraph at lines 6500--6510
  [][][][][][][][] 
  []
 
 [608]
-Underfull \hbox (badness 10000) in paragraph at lines 6543--6547
+Underfull \hbox (badness 10000) in paragraph at lines 6555--6559
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۶۸: []مستقل کثافت کی باریک تار س
 ے، محور $\OML/zplm/m/it/10 y$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے لحاظ سے تشا
 کلی، دائری قوس بنایا جاتا ہے جس کا مرکز مبدا پر ہے (شکل ۶.۱۱۱[])۔ اس کے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6577--6578
+Underfull \hbox (badness 10000) in paragraph at lines 6589--6590
 []\TU/JameelNooriNastaleeq(0)/b/n/10 روزمرہ زندگی میں کام سے مراد وہ عمل ہے جو 
 جسمانی یا ذہنی قوت سے سرانجام دیا جائے۔ سائنس میں کام کی تعریف اس سے مختلف ہے۔ 
 اس حصہ میں کام کی[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6580--6581
+Underfull \hbox (badness 10000) in paragraph at lines 6592--6593
 []\TU/JameelNooriNastaleeq(0)/b/n/10 جب کوئی جسم جس پر مستقل قوت $\OML/zplm/m/i
 t/10 F$ \TU/JameelNooriNastaleeq(0)/b/n/10 عمل کرتی ہو، قوت کی سمت میں سیدھی لک
 یر پر فاصل $\OML/zplm/m/it/10 d$ \TU/JameelNooriNastaleeq(0)/b/n/10 حرکت کرے تب
@@ -14674,25 +14672,25 @@ t/10 F$ \TU/JameelNooriNastaleeq(0)/b/n/10 عمل کرتی ہو، قوت کی س
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6583--6585
+Underfull \hbox (badness 10000) in paragraph at lines 6595--6597
 []\TU/JameelNooriNastaleeq(0)/b/n/10 آپ دیکھ سکتے ہیں کہ سائنس میں لفظ کام کی م
 عنی روزمرہ زندگی میں استعمال معنی سے مختلف ہے۔ اگر آپ کسی گاڑی کو سڑک پر دکھا ل
 گا کر ایک جگہ سے دوسری[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6583--6585
+Underfull \hbox (badness 10000) in paragraph at lines 6595--6597
 []\TU/JameelNooriNastaleeq(0)/b/n/10 جگہ منتقل کریں تب آپ کی روزمرہ خیال کے مطا
 بق آپ نے کام کیا اور مساوات ۱[] کے تحت بھی آپ نے کام کیا۔ اس کے برعکس اگر آپ پو
 را دن گاڑی کو دکھا[]
  []
 
 [609]
-LaTeX Info: Redefining \rmfamily on input line 6586.
-LaTeX Info: Redefining \sffamily on input line 6586.
-LaTeX Info: Redefining \ttfamily on input line 6586.
+LaTeX Info: Redefining \rmfamily on input line 6598.
+LaTeX Info: Redefining \sffamily on input line 6598.
+LaTeX Info: Redefining \ttfamily on input line 6598.
 
-Underfull \hbox (badness 7814) in paragraph at lines 6586--6587
+Underfull \hbox (badness 7814) in paragraph at lines 6598--6599
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 مساوات ۱[] سے واضح ہے کہ قوت کی اکائی کو
  فاصلہ کی اکائی سے ضرب دینے سے کام کی اکائی حاصل ہو گی۔ بین الاقوامی نظام اکائی
  میں قوت کی اکائی نیوٹن $\OT1/ppl/m/n/10 N$ \TU/JameelNooriNastaleeq(0)/b/n/10 
@@ -14700,7 +14698,7 @@ Underfull \hbox (badness 7814) in paragraph at lines 6586--6587
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6586--6587
+Underfull \hbox (badness 10000) in paragraph at lines 6598--6599
 []\TU/JameelNooriNastaleeq(0)/b/n/10 فاصلہ کی اکائی میٹر $\OT1/ppl/m/n/10 m$ \T
 U/JameelNooriNastaleeq(0)/b/n/10 ہے لہٰذا اس نظام میں کام کی اکائی نیوٹن میٹر $
 \OT1/ppl/m/n/10 N \OMS/zplm/m/n/10 ^^A \OT1/ppl/m/n/10 m$ \TU/JameelNooriNastal
@@ -14710,7 +14708,7 @@ n/10 J$ \TU/JameelNooriNastaleeq(0)/b/n/10 سے ظاہر کیا جاتا[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6598--6599
+Underfull \hbox (badness 10000) in paragraph at lines 6610--6611
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 فرض کریں کہ محور $\OML/zplm/m/it/10 x$ \
 TU/JameelNooriNastaleeq(0)/b/n/10 سے اس لکیر کو ظاہر کرنا ممکن ہے جس پر قوت عمل
  کرتی ہے اور قوت کی مقدار $\OML/zplm/m/it/10 F$ \TU/JameelNooriNastaleeq(0)/b/n
@@ -14719,7 +14717,7 @@ TU/JameelNooriNastaleeq(0)/b/n/10 سے اس لکیر کو ظاہر کرنا مم
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6598--6599
+Underfull \hbox (badness 10000) in paragraph at lines 6610--6611
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کوئی نقطہ $\OML/zplm/m/it/10 c[]$ \TU/Jame
 elNooriNastaleeq(0)/b/n/10 منتخب کرتے ہیں۔ اگر ذیلی وقفہ چھوٹا ہو تب $\OML/zplm
 /m/it/10 x[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 سے $\OML/zplm/m/it/10 x[]$ \TU
@@ -14728,7 +14726,7 @@ elNooriNastaleeq(0)/b/n/10 منتخب کرتے ہیں۔ اگر ذیلی وقفہ
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6598--6599
+Underfull \hbox (badness 10000) in paragraph at lines 6610--6611
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کم ہو گی جس کو رد کیا جا سکتا ہے۔یوں $\OML
 /zplm/m/it/10 x[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 سے $\OML/zplm/m/it/10 x[]
 $ \TU/JameelNooriNastaleeq(0)/b/n/10 تک حرکت کے دوران کام کی قیمت تخمیناً $\OML
@@ -14738,15 +14736,15 @@ $ \TU/JameelNooriNastaleeq(0)/b/n/10 تک حرکت کے دوران کام کی �
  []
 
 [610]
-Underfull \hbox (badness 10000) in paragraph at lines 6621--6623
+Underfull \hbox (badness 10000) in paragraph at lines 6633--6635
 []\TU/JameelNooriNastaleeq(0)/b/n/10 مثال  ۶.۳۲: []گاؤں میں کنواں سے پانی نکالن
 ے کے لئے بوکا استعمال کیا جاتا ہے۔ کھوہ کی گہرائی $\OT1/ppl/m/n/10 20 m$\TU/Jam
 eelNooriNastaleeq(0)/b/n/10 ، خالی بوکا کی کمیت $\OT1/ppl/m/n/10 2 []$ \TU/Jame
-elNooriNastaleeq(0)/b/n/10 اور رسی کی کمیت[]
+elNooriNastaleeq(0)/b/n/10 اور رسّی کی کمیت[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6621--6623
+Underfull \hbox (badness 10000) in paragraph at lines 6633--6635
 []$\OT1/ppl/m/n/10 0.1 [] m[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے۔ بوکا میں 
 ابتدائی طور پر $\OT1/ppl/m/n/10 10 L$ \TU/JameelNooriNastaleeq(0)/b/n/10 پانی ہ
 وتا ہے۔چونکہ بوکا سے پانی رستا ہے لہٰذا جتنی دیر میں بوکے کو نیچے سے اوپر کھینچ
@@ -14754,12 +14752,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 6621--6623
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6631--6632
+Underfull \hbox (badness 10000) in paragraph at lines 6643--6644
 [][]
  []
 
 
-Underfull \hbox (badness 1005) in paragraph at lines 6634--6636
+Underfull \hbox (badness 1005) in paragraph at lines 6646--6648
 [][]\TU/JameelNooriNastaleeq(0)/m/n/9 صرف پانی: \TU/JameelNooriNastaleeq(0)/b/n
 /10 پانی اٹھانے کے لئے درکار قوت پانی کے وزن جتنا ہو گا جو ابتدا میں $\OT1/zplm
 /m/n/10 (\OT1/ppl/m/n/10 10\OT1/zplm/m/n/10 )(\OT1/ppl/m/n/10 9.8\OT1/zplm/m/n/
@@ -14768,14 +14766,14 @@ Underfull \hbox (badness 1005) in paragraph at lines 6634--6636
  []
 
 [611]
-LaTeX Info: Redefining \rmfamily on input line 6670.
-LaTeX Info: Redefining \sffamily on input line 6670.
-LaTeX Info: Redefining \ttfamily on input line 6670.
-LaTeX Info: Redefining \rmfamily on input line 6674.
-LaTeX Info: Redefining \sffamily on input line 6674.
-LaTeX Info: Redefining \ttfamily on input line 6674.
+LaTeX Info: Redefining \rmfamily on input line 6682.
+LaTeX Info: Redefining \sffamily on input line 6682.
+LaTeX Info: Redefining \ttfamily on input line 6682.
+LaTeX Info: Redefining \rmfamily on input line 6686.
+LaTeX Info: Redefining \sffamily on input line 6686.
+LaTeX Info: Redefining \ttfamily on input line 6686.
 
-Underfull \hbox (badness 10000) in paragraph at lines 6673--6675
+Underfull \hbox (badness 10000) in paragraph at lines 6685--6687
 []\TU/AASameerSagarNastaleeqBold(0)/m/n/10 مستقلہ اسپرنگ[] $\OML/zplm/m/it/10 k
 $ \TU/JameelNooriNastaleeq(0)/b/n/10 جو اسپرنگ کی خاصیت ہے کو \TU/AASameerSagar
 NastaleeqBold(0)/m/n/10 مقیاس لچک[][][] []\TU/JameelNooriNastaleeq(0)/b/n/10 کہ
@@ -14783,31 +14781,31 @@ NastaleeqBold(0)/m/n/10 مقیاس لچک[][][] []\TU/JameelNooriNastaleeq(0)/b/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6673--6675
+Underfull \hbox (badness 10000) in paragraph at lines 6685--6687
 []\TU/JameelNooriNastaleeq(0)/b/n/10 اسپرنگ کی دھاتی تار کو بگاڑ نہ دے قانون ہک
  (مساوات ۴[]) بہترین نتائج دیتا ہے۔ اس حصہ میں ہم فرض کرتے ہیں کہ لاگو قوت اسپر
 نگ کو خراب نہیں کرتی[]
  []
 
 
-Overfull \hbox (4.2224pt too wide) in paragraph at lines 6691--6706
+Overfull \hbox (4.2224pt too wide) in paragraph at lines 6703--6718
  [][][][][][] 
  []
 
 [612]
-Underfull \hbox (badness 10000) in paragraph at lines 6736--6737
+Underfull \hbox (badness 10000) in paragraph at lines 6748--6749
 [][]
  []
 
 [613]
-Underfull \hbox (badness 10000) in paragraph at lines 6778--6779
+Underfull \hbox (badness 10000) in paragraph at lines 6790--6791
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کسی برتن یا حوض سے پانی کی نکاسی کے لئے کت
 نا کام درکار ہو گا؟ ہم پانی کو افقی تہوں میں تقسیم کرتے ہوئے ایک ایک تہہ کو برت
 ن سے باہر نکالتے ہیں۔یوں اگر[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6778--6779
+Underfull \hbox (badness 10000) in paragraph at lines 6790--6791
 []\TU/JameelNooriNastaleeq(0)/b/n/10 تہہ کی موٹائی $[] \OML/zplm/m/it/10 y$ \TU
 /JameelNooriNastaleeq(0)/b/n/10 اور اس کے سطحی رقبہ $\OML/zplm/m/it/10 S$ \TU/J
 ameelNooriNastaleeq(0)/b/n/10 ہو تب اس کی کمیت $\OML/zplm/m/it/10 ^^ZS [] y$ \T
@@ -14817,7 +14815,7 @@ eelNooriNastaleeq(0)/b/n/10 ہو گا جہاں پانی کی کثافت کو $\O
  []
 
 
-Underfull \hbox (badness 2600) in paragraph at lines 6783--6785
+Underfull \hbox (badness 2600) in paragraph at lines 6795--6797
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہم حوض کو کارتیسی محدد پر تصور کرتے ہوئے و
 قفہ $\OT1/zplm/m/n/10 [\OT1/ppl/m/n/10 0, 10\OT1/zplm/m/n/10 ]$ \TU/JameelNoori
 Nastaleeq(0)/b/n/10 کی خانہ بندی کر کے پانی کو تہہ در تہہ تقسیم کرتے ہیں (شکل ۶
@@ -14826,7 +14824,7 @@ Nastaleeq(0)/b/n/10 کی خانہ بندی کر کے پانی کو تہہ در �
  []
 
 [614]
-Underfull \hbox (badness 10000) in paragraph at lines 6808--6810
+Underfull \hbox (badness 10000) in paragraph at lines 6820--6822
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ایک کلو واٹ طاقت کا بجلی کا پمپ ایک سیکنڈ 
 میں $\OT1/ppl/m/n/10 1000 J$ \TU/JameelNooriNastaleeq(0)/b/n/10 کام کرتا ہے۔اس 
 پمپ کو یہ حوض خالی کرنے کے لئے تقریباً $\OT1/ppl/m/n/10 19$ \TU/JameelNooriNast
@@ -14835,14 +14833,14 @@ aleeq(0)/b/n/10 گھنٹے اور $\OT1/ppl/m/n/10 15$ \TU/JameelNooriNastaleeq(
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6869--6871
+Underfull \hbox (badness 10000) in paragraph at lines 6881--6883
 []\TU/JameelNooriNastaleeq(0)/b/n/10 مثال  ۶.۳۶: []ایک مخروط حوض جس کو شکل ۶.۱۱
 ۵[] میں دکھایا گیا ہے کنارے سے $\OT1/ppl/m/n/10 0.5 m$ \TU/JameelNooriNastaleeq
 (0)/b/n/10 نیچے تک زیتون کی تیل سے بھرا ہوا ہے۔ زیتون کی تیل کی[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6872--6874
+Underfull \hbox (badness 10000) in paragraph at lines 6884--6886
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہم وقفہ $\OT1/zplm/m/n/10 [\OT1/ppl/m/n/10
  0, 3\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی خانہ بندی کرتے ہ
 وئے خانہ بندی کے نقطوں پر افقی سطحیں تصور کرتے ہوئے تیل کو باریک تہوں میں تقسیم
@@ -14851,7 +14849,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6872--6874
  []
 
 [615]
-Underfull \hbox (badness 1292) in paragraph at lines 6888--6890
+Underfull \hbox (badness 1292) in paragraph at lines 6900--6902
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کام درکار ہو گا جو وقفہ $\OT1/zplm/m/n/10 
 [\OT1/ppl/m/n/10 0, 3\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر 
 تفاعل $[]\OT1/zplm/m/n/10 (\OT1/ppl/m/n/10 3.5 \OMS/zplm/m/n/10 ^^@ \OML/zplm/m
@@ -14860,7 +14858,7 @@ n/10 کا ریمان مجموعہ ہے۔ تیل کو حوض کے کنارے تک
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 6902--6906
+Underfull \hbox (badness 1466) in paragraph at lines 6914--6918
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۷۰:  اگر مثال ۶.۳۲[] میں بوکا کا 
 حجم $\OT1/ppl/m/n/10 20 L$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہو لیکن اس میں سو
 راخ بھی بڑا ہو تا کہ اب بھی بوکا کو کنواں سے نکالتے ہوئے بوکا خالی ہو جاتا ہو۔ 
@@ -14868,7 +14866,7 @@ Underfull \hbox (badness 1466) in paragraph at lines 6902--6906
  []
 
 
-Underfull \hbox (badness 2903) in paragraph at lines 6906--6915
+Underfull \hbox (badness 2903) in paragraph at lines 6918--6927
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۷۱:  فرض کریں کہ مثال ۶.۳۲[] م
 یں بوکا کو اس رفتار سے اوپر کھینچا جاتا ہے کہ آخر میں بوکا میں $\OT1/ppl/m/n/10
  4 L$ \TU/JameelNooriNastaleeq(0)/b/n/10 پانی ہوتا ہے۔ پانی نکالنے میں کتنا کام
@@ -14876,30 +14874,30 @@ Underfull \hbox (badness 2903) in paragraph at lines 6906--6915
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6906--6915
+Underfull \hbox (badness 10000) in paragraph at lines 6918--6927
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6919--6928
+Underfull \hbox (badness 10000) in paragraph at lines 6931--6940
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۷۳:  ریت کو تھیلے میں ڈال کر $
 \OT1/ppl/m/n/10 6 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 بلند چھت تک برقرار رفتا
 ر سے کھینچ کر پہنچایا جاتا ہے۔ تھیلے میں سوراخ سے ریت کا اخراج ہوتا ہے جس[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6919--6928
+Underfull \hbox (badness 10000) in paragraph at lines 6931--6940
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کو مستقل تصور کیا جا سکتا ہے۔ ابتدائی طور 
 پر تھیلا میں $\OT1/ppl/m/n/10 50 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 ریت ہوت
-ی ہے جو آخر میں آدھی رہ جاتی ہے۔ رسی اور تھیلا کی کمیت کو نظر انداز کرتے ہوئے[]
-
+ی ہے جو آخر میں آدھی رہ جاتی ہے۔ رسّی اور تھیلا کی کمیت کو نظر انداز کرتے ہوئے[
+]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 6931.
-LaTeX Info: Redefining \sffamily on input line 6931.
-LaTeX Info: Redefining \ttfamily on input line 6931.
+LaTeX Info: Redefining \rmfamily on input line 6943.
+LaTeX Info: Redefining \sffamily on input line 6943.
+LaTeX Info: Redefining \ttfamily on input line 6943.
 
-Underfull \hbox (badness 10000) in paragraph at lines 6928--6932
+Underfull \hbox (badness 10000) in paragraph at lines 6940--6944
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۷۴:  آج کل بالخصوص بلند عمارتوں 
 میں سیڑھیوں کے ساتھ ساتھ \TU/AASameerSagarNastaleeqBold(0)/m/n/10 مصعد[][]  \TU
 /JameelNooriNastaleeq(0)/b/n/10 بھی پائے جاتے ہیں۔ مصعد کو چھت پر رکھے ہوئے موٹ
@@ -14907,26 +14905,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 6928--6932
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6928--6932
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 سے چلایا جاتا ہے۔ کئی لڑیوں پر مشتمل رسی ک
-ی کثافت $\OT1/ppl/m/n/10 6 [] m[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہونے کی ص
-ورت میں صرف رسی کو زمین سے $\OT1/ppl/m/n/10 60 m$ \TU/JameelNooriNastaleeq(0)/b
-/n/10 بلند عمارت کی چھت تک[]
+Underfull \hbox (badness 10000) in paragraph at lines 6940--6944
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 سے چلایا جاتا ہے۔ کئی لڑیوں پر مشتمل رسّی 
+کی کثافت $\OT1/ppl/m/n/10 6 [] m[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہونے کی 
+صورت میں صرف رسّی کو زمین سے $\OT1/ppl/m/n/10 60 m$ \TU/JameelNooriNastaleeq(0)
+/b/n/10 بلند عمارت کی چھت تک[]
  []
 
 [616]
-Underfull \hbox (badness 10000) in paragraph at lines 6941--6945
+Underfull \hbox (badness 10000) in paragraph at lines 6953--6957
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۷۶: []ایک بیلن جس کا رقبہ عمودی 
 تراش $\OML/zplm/m/it/10 S$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے میں موجود گیس 
 پر میکانی دباو ڈالا جاتا ہے (شکل ۶.۱۱۶[])۔ اگر گیس کا حجم $\OML/zplm/m/it/10 V$
  \TU/JameelNooriNastaleeq(0)/b/n/10 اور اس کا دباو $\OML/zplm/m/it/10 p$[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 6972.
-LaTeX Info: Redefining \sffamily on input line 6972.
-LaTeX Info: Redefining \ttfamily on input line 6972.
+LaTeX Info: Redefining \rmfamily on input line 6984.
+LaTeX Info: Redefining \sffamily on input line 6984.
+LaTeX Info: Redefining \ttfamily on input line 6984.
 
-Underfull \hbox (badness 3849) in paragraph at lines 6971--6973
+Underfull \hbox (badness 3849) in paragraph at lines 6983--6985
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۷۷:  اگر گیس کا ابتدائی حجم $\OML
 /zplm/m/it/10 V[] \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 1500 [][]$\TU/JameelNooriN
 astaleeq(0)/b/n/10 ، ابتدائی دباو $\OT1/ppl/m/n/10 103 360 N m[]$ \TU/JameelNoo
@@ -14935,7 +14933,7 @@ iNastaleeq(0)/b/n/10 ہو[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6973--6978
+Underfull \hbox (badness 10000) in paragraph at lines 6985--6990
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۷۸:  ایک اسپرنگ جس کی قدرتی لمبائ
 ی $\OT1/ppl/m/n/10 2 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے کی لمبائی کو $\OT
 1/ppl/m/n/10 5 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 بنانے کے لئے درکار کام $\O
@@ -14944,7 +14942,7 @@ T1/ppl/m/n/10 1800 J$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے۔ اس اسپرن�
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6978--6987
+Underfull \hbox (badness 10000) in paragraph at lines 6990--6999
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۷۹:  ایک اسپرنگ جس کی قدرتی لم
 بائی $\OT1/ppl/m/n/10 30 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے پر $\OT1/ppl
 /m/n/10 400 N$ \TU/JameelNooriNastaleeq(0)/b/n/10 قوت لاگو کرتے ہوئے اس کو کھین
@@ -14953,7 +14951,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6978--6987
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6978--6987
+Underfull \hbox (badness 10000) in paragraph at lines 6990--6999
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہے۔ (ا) مقیاس لچک تلاش کریں۔ (ب) اسپرنگ کی
  لمبائی کو $\OT1/ppl/m/n/10 35 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 کرنے کے ل
 ئے کتنی قوت درکار ہو گی؟ (ج) قدرتی لمبائی سے $\OT1/ppl/m/n/10 600 N$ \TU/Jameel
@@ -14961,7 +14959,7 @@ NooriNastaleeq(0)/b/n/10 قوت[]
  []
 
 [617]
-Underfull \hbox (badness 10000) in paragraph at lines 6991--7000
+Underfull \hbox (badness 10000) in paragraph at lines 7003--7012
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۸۱:  اگر $\OT1/ppl/m/n/10 90 N
 $ \TU/JameelNooriNastaleeq(0)/b/n/10 کی قوت اسپرنگ کی لمبائی کو قدرتی لمبائی سے
  $\OT1/ppl/m/n/10 1 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 زیادہ کرتی ہو تب اسپر
@@ -14969,14 +14967,14 @@ $ \TU/JameelNooriNastaleeq(0)/b/n/10 کی قوت اسپرنگ کی لمبائی 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7000--7004
+Underfull \hbox (badness 10000) in paragraph at lines 7012--7016
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۸۲:  ریل گاڑی کے ڈبوں پر نسب اسپ
 رنگ ان ڈبوں کو ایک دوسرے سے دور رکھتے ہیں اور ان کی ٹکراؤ کو محفوظ بناتے ہیں۔ ا
 یسا ایک اسپرنگ[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7000--7004
+Underfull \hbox (badness 10000) in paragraph at lines 7012--7016
 []\TU/JameelNooriNastaleeq(0)/b/n/10 جس کی قدرتی لمبائی $\OT1/ppl/m/n/10 20 []$
  \TU/JameelNooriNastaleeq(0)/b/n/10 ہے پر $\OT1/ppl/m/n/10 100 000 N$ \TU/Jamee
 lNooriNastaleeq(0)/b/n/10 کی قوت لاگو کرنے سے اسپرنگ کی کم سے کم لمبائی $\OT1/p
@@ -14985,7 +14983,7 @@ pl/m/n/10 12 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 حاصل ہوتی ہے۔ (ا
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7004--7013
+Underfull \hbox (badness 10000) in paragraph at lines 7016--7025
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۸۳:  گھریلو استعمال کے ترازو پ
 ر $\OT1/ppl/m/n/10 74 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 کا شخص کھڑا ہونے س
 ے ترازو $\OT1/ppl/m/n/10 1.5 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 دبتا ہے۔ فر
@@ -14993,21 +14991,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 7004--7013
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7018--7020
+Underfull \hbox (badness 10000) in paragraph at lines 7030--7032
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۸۴: []بارانی علاقوں میں بارش کے پ
 انی کو زیر زمین حوض میں ذخیرہ کیا جاتا ہے۔ زیر زمین حوض جس کو شکل ۶.۱۱۷[] میں د
 کھایا گیا ہے پانی سے بھرا[]
  []
 
 
-Underfull \hbox (badness 1648) in paragraph at lines 7018--7020
+Underfull \hbox (badness 1648) in paragraph at lines 7030--7032
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہوا ہے۔ حوض کو خالی کرتے ہوئے پانی کو سطح 
 زمین پر لایا جاتا ہے۔(ا) حوض کو خالی کرنے کے لئے کتنا کام کرنا ہو گا؟ (ب) $\OT1
 /ppl/m/n/10 0.25 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 کا پمپ حوض کو کتنی[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7018--7020
+Underfull \hbox (badness 10000) in paragraph at lines 7030--7032
 []\TU/JameelNooriNastaleeq(0)/b/n/10 دیر میں خالی کرے گا؟ (ج) دکھائیں کہ ابتدائ
 ی $\OT1/ppl/m/n/10 5$ \TU/JameelNooriNastaleeq(0)/b/n/10 گھنٹوں میں تقریباً آدھ
 ا حوض خالی ہو جائے گا۔ (د) خط استوا پر جزو-ب کا جواب کیا ہو گا؟ قطبین پر یہ جوا
@@ -15015,31 +15013,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 7018--7020
  []
 
 
-Overfull \hbox (6.95041pt too wide) in paragraph at lines 7032--7050
+Overfull \hbox (6.95041pt too wide) in paragraph at lines 7044--7062
  [][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7020--7075
+Underfull \hbox (badness 10000) in paragraph at lines 7032--7087
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۸۵: []زیر زمین حوض جس کو شکل ۶
 .۱۱۸[] میں دکھایا گیا ہے پانی سے بھرا ہوا ہے۔ حوض کا کنارہ سطح زمین سے $\OT1/pp
 l/m/n/10 4 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 نیچے ہے۔ حوض کو خالی[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7020--7075
+Underfull \hbox (badness 10000) in paragraph at lines 7032--7087
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کرتے ہوئے پانی کو سطح زمین پر لایا جاتا ہے
 ۔(ا) حوض کو خالی کرنے کے لئے کتنا کام کرنا ہو گا؟ (ب) $\OT1/ppl/m/n/10 0.25 []$
  \TU/JameelNooriNastaleeq(0)/b/n/10 کا پمپ حوض کو کتنی دیر میں خالی کرے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7020--7075
+Underfull \hbox (badness 10000) in paragraph at lines 7032--7087
 [][]
  []
 
 [618]
-Underfull \hbox (badness 10000) in paragraph at lines 7088--7092
+Underfull \hbox (badness 10000) in paragraph at lines 7100--7104
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۸۸:  ایک بیلنی حوض جس کا رداس $\
 OT1/ppl/m/n/10 4 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور قد $\OT1/ppl/m/n/10 
 10 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے مٹی کے تیل سے بھرا ہوا ہے۔ مٹی کے ت
@@ -15047,21 +15045,21 @@ OT1/ppl/m/n/10 4 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور قد $\OT1/ppl/m/n
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7092--7101
+Underfull \hbox (badness 10000) in paragraph at lines 7104--7113
 []\TU/JameelNooriNastaleeq(0)/b/n/10 طرح بھرا جا سکتا ہے۔ (ا) پمپ کے خارجی پائپ
  کو حوض کے کنارے پر رکھ کر حوض کو بھرا جا سکتا ہے۔ (ب) حوض کے نچلی سر پر موجود 
 نل کے ذریعہ پانی کو[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7101--7154
+Underfull \hbox (badness 10000) in paragraph at lines 7113--7166
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۹۰: []ایک مشروب جس کی کثافت $\OT
 1/ppl/m/n/10 0.769 g [][]$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے سے مخروط مقطوع
  ڈبیا بھرا ہوا ہے (۶.۱۲۰[])۔اس ڈبیا کا بالائی رداس[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7101--7154
+Underfull \hbox (badness 10000) in paragraph at lines 7113--7166
 []$\OT1/ppl/m/n/10 4.5 []$\TU/JameelNooriNastaleeq(0)/b/n/10 ، زیریں رداس $\OT1
 /ppl/m/n/10 3 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور گہرائی $\OT1/ppl/m/n/1
 0 15 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے۔ مشروب کو چسنا کے ذریعہ پیا جاتا
@@ -15070,17 +15068,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 7101--7154
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7154--7163
+Underfull \hbox (badness 10000) in paragraph at lines 7166--7175
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۹۱:  فرض کریں مثال ۶.۳۶[] میں 
 مخروط حوض دودھ سے بھرا ہوا ہے جس کی کثافت $\OT1/ppl/m/n/10 1032 [] m[]$ \TU/Jam
 eelNooriNastaleeq(0)/b/n/10 ہے۔ (ا) دودھ کو حوض کے[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 7166.
-LaTeX Info: Redefining \sffamily on input line 7166.
-LaTeX Info: Redefining \ttfamily on input line 7166.
+LaTeX Info: Redefining \rmfamily on input line 7178.
+LaTeX Info: Redefining \sffamily on input line 7178.
+LaTeX Info: Redefining \ttfamily on input line 7178.
 
-Underfull \hbox (badness 2735) in paragraph at lines 7163--7168
+Underfull \hbox (badness 2564) in paragraph at lines 7175--7180
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۹۲:  \TU/AASameerSagarNastaleeqB
 old(0)/m/n/10 بے زنگ فولاد[][][] []\TU/JameelNooriNastaleeq(0)/b/n/10 کا بڑا حو
 ض بنانے کے لئے آپ منحنی $\OML/zplm/m/it/10 y \OT1/zplm/m/n/10 = \OML/zplm/m/it/
@@ -15090,25 +15088,25 @@ zplm/m/it/10 y$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے[]
  []
 
 
-Underfull \hbox (badness 4608) in paragraph at lines 7163--7168
+Underfull \hbox (badness 4608) in paragraph at lines 7175--7180
 []\TU/JameelNooriNastaleeq(0)/b/n/10 گرد گھماتے ہو۔ یہ حوض سمندری پانی سے بھرا 
 ہوا ہے جس کی کثافت تقریباً $\OT1/ppl/m/n/10 10 000 N m[]$ \TU/JameelNooriNastal
 eeq(0)/b/n/10 ہے۔ حوض کو خالی کرنے کی خاطر اس پانی کو حوض کے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7168--7177
+Underfull \hbox (badness 10000) in paragraph at lines 7180--7189
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۹۳: []نصف کروی حوض جس کا رداس 
 $\OT1/ppl/m/n/10 5 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے پانی سے بھرا ہوا ہے
  (شکل ۶.۱۲۱[])۔پانی کو حوض کے بالائی کنارے سے $\OT1/ppl/m/n/10 4 m$ \TU/JameelN
 ooriNastaleeq(0)/b/n/10 بلندی تک[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 7231.
-LaTeX Info: Redefining \sffamily on input line 7231.
-LaTeX Info: Redefining \ttfamily on input line 7231.
+LaTeX Info: Redefining \rmfamily on input line 7243.
+LaTeX Info: Redefining \sffamily on input line 7243.
+LaTeX Info: Redefining \ttfamily on input line 7243.
 
-Underfull \hbox (badness 10000) in paragraph at lines 7177--7232
+Underfull \hbox (badness 10000) in paragraph at lines 7189--7244
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۹۴: []نصف کروی حوض جس کا رداس $\
 OT1/ppl/m/n/10 4 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے کو شکل ۶.۱۲۲[] میں دک
 ھایا گیا ہے جو \TU/AASameerSagarNastaleeqBold(0)/m/n/10 بنزین[][]  \TU/JameelNo
@@ -15116,7 +15114,7 @@ oriNastaleeq(0)/b/n/10 سے بھرا ہوا ہے۔ بنزین کی کثافت[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7232--7241
+Underfull \hbox (badness 10000) in paragraph at lines 7244--7253
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۹۵:  آپ کے گاؤں میں پانی کی فر
 اہمی کے لئے $\OT1/ppl/m/n/10 8 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 قد کا ایک 
 حوض تعمیر کیا جاتا ہے جس کا تلا زمین سے $\OT1/ppl/m/n/10 20 m$ \TU/JameelNooriN
@@ -15124,7 +15122,7 @@ astaleeq(0)/b/n/10 بلندی پر ہے۔زیر زمین[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7232--7241
+Underfull \hbox (badness 10000) in paragraph at lines 7244--7253
 []\TU/JameelNooriNastaleeq(0)/b/n/10 پانی کی سطح $\OT1/ppl/m/n/10 100 m$ \TU/Ja
 meelNooriNastaleeq(0)/b/n/10 نیچے ہے۔ پانی کو $\OT1/ppl/m/n/10 10 []$ \TU/Jamee
 lNooriNastaleeq(0)/b/n/10 رداس کے پائپ سے $\OT1/ppl/m/n/10 3 []$ \TU/JameelNoor
@@ -15133,20 +15131,20 @@ iNastaleeq(0)/b/n/10 پمپ کی مدد سے حوض کی تلا میں نل کے
  []
 
 [619]
-Underfull \hbox (badness 10000) in paragraph at lines 7252--7254
+Underfull \hbox (badness 10000) in paragraph at lines 7264--7266
 []\TU/JameelNooriNastaleeq(0)/b/n/10 حقیقت میں مصنوعی سیارہ ایک راکٹ پر نسب ہو 
 گا جس کو یہاں نظر انداز کیا گیا ہے۔ اس تکمل کی قیمت تلاش کریں۔ تکمل کا زیریں حد
  سطح زمین کو ظاہر کرتا ہے[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 7262.
-LaTeX Info: Redefining \sffamily on input line 7262.
-LaTeX Info: Redefining \ttfamily on input line 7262.
-LaTeX Info: Redefining \rmfamily on input line 7262.
-LaTeX Info: Redefining \sffamily on input line 7262.
-LaTeX Info: Redefining \ttfamily on input line 7262.
+LaTeX Info: Redefining \rmfamily on input line 7274.
+LaTeX Info: Redefining \sffamily on input line 7274.
+LaTeX Info: Redefining \ttfamily on input line 7274.
+LaTeX Info: Redefining \rmfamily on input line 7274.
+LaTeX Info: Redefining \sffamily on input line 7274.
+LaTeX Info: Redefining \ttfamily on input line 7274.
 
-Underfull \hbox (badness 5862) in paragraph at lines 7254--7263
+Underfull \hbox (badness 5862) in paragraph at lines 7266--7275
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۹۷: \TU/JameelNooriNastaleeq(0
 )/m/n/9 منفی برقیوں (الیکٹرانوں) کو ایک دوسرے کے قریب ہونے پر مجبور کرنا۔ \TU/J
 ameelNooriNastaleeq(0)/b/n/10 دو منفی برقیے جن کے بیچ فاصلہ $\OML/zplm/m/it/10 
@@ -15154,7 +15152,7 @@ r$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہو کے مابین درج ذیل قوت 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7270--7271
+Underfull \hbox (badness 10000) in paragraph at lines 7282--7283
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 فرض کریں ایک برقیہ $\OT1/zplm/m/n/10 (\O
 T1/ppl/m/n/10 1, 0\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور دو
 سرا $\OT1/zplm/m/n/10 (\OMS/zplm/m/n/10 ^^@\OT1/ppl/m/n/10 1, 0\OT1/zplm/m/n/10
@@ -15165,7 +15163,7 @@ iNastaleeq(0)/b/n/10 تک منتقل کرنے کے لئے کتنی[]
  []
 
 [620]
-Underfull \hbox (badness 5008) in paragraph at lines 7272--7277
+Underfull \hbox (badness 5008) in paragraph at lines 7284--7289
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۲۹۸: []اگر متغیر قوت $\OML/zplm/m/
 it/10 F\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )$ \TU/JameelNoori
 Nastaleeq(0)/b/n/10 ایک جسم جس کی کمیت $\OML/zplm/m/it/10 m$ \TU/JameelNooriNas
@@ -15175,15 +15173,15 @@ lm/m/it/10 x[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 تک منتقل کرتی ہے
 ی رفتار $\OML/zplm/m/it/10 v$ \TU/JameelNooriNastaleeq(0)/b/n/10 کو $[]$[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 7284.
-LaTeX Info: Redefining \sffamily on input line 7284.
-LaTeX Info: Redefining \ttfamily on input line 7284.
+LaTeX Info: Redefining \rmfamily on input line 7296.
+LaTeX Info: Redefining \sffamily on input line 7296.
+LaTeX Info: Redefining \ttfamily on input line 7296.
 [621]
-LaTeX Info: Redefining \rmfamily on input line 7344.
-LaTeX Info: Redefining \sffamily on input line 7344.
-LaTeX Info: Redefining \ttfamily on input line 7344.
+LaTeX Info: Redefining \rmfamily on input line 7356.
+LaTeX Info: Redefining \sffamily on input line 7356.
+LaTeX Info: Redefining \ttfamily on input line 7356.
 
-Underfull \hbox (badness 10000) in paragraph at lines 7344--7345
+Underfull \hbox (badness 10000) in paragraph at lines 7356--7357
 []\TU/JameelNooriNastaleeq(0)/b/n/10 شکل ۶.۱۲۳[] میں ساکن سیال کو ایک برتن میں 
 دکھایا گیا ہے جہاں تلا کا رقبہ $\OML/zplm/m/it/10 S$\TU/JameelNooriNastaleeq(0)
 /b/n/10 ، سیال کی گہرائی $\OML/zplm/m/it/10 h$ \TU/JameelNooriNastaleeq(0)/b/n/
@@ -15193,7 +15191,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7344--7345
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7394--7396
+Underfull \hbox (badness 10000) in paragraph at lines 7406--7408
 []\TU/JameelNooriNastaleeq(0)/b/n/10 مثال  ۶.۳۷: []ایک بیلنی حوض میں پانی کی گہ
 رائی $\OT1/ppl/m/n/10 40 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے جبکہ حوض کا ر
 داس $\OT1/ppl/m/n/10 25 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے (شکل ۶.۱۲۴[])۔
@@ -15201,7 +15199,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7394--7396
  []
 
 [622]
-Underfull \hbox (badness 10000) in paragraph at lines 7413--7414
+Underfull \hbox (badness 10000) in paragraph at lines 7425--7426
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 اس مثال میں پٹی کے نچلے حصے کی گہرائی $\
 OT1/ppl/m/n/10 40 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور بالائی حصے کی گہرائ
 ی $\OT1/ppl/m/n/10 39 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 تھی لہٰذا ان پر فشا
@@ -15209,7 +15207,7 @@ OT1/ppl/m/n/10 40 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور بالائی حص
  []
 
 
-Underfull \hbox (badness 6157) in paragraph at lines 7416--7444
+Underfull \hbox (badness 6157) in paragraph at lines 7428--7456
 []\TU/JameelNooriNastaleeq(0)/b/n/10 باریک افقی پٹیوں میں تقسیم کرتے ہیں۔ ایک ن
 مائندہ پٹی جو $\OML/zplm/m/it/10 y$ \TU/JameelNooriNastaleeq(0)/b/n/10 سے $\OML
 /zplm/m/it/10 y \OT1/zplm/m/n/10 + ^^A\OML/zplm/m/it/10 y$ \TU/JameelNooriNasta
@@ -15218,16 +15216,16 @@ meelNooriNastaleeq(0)/b/n/10 ہو گی جبکہ اس پٹی کے نچلی ضلع
 /m/it/10 L\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 y\OT1/zplm/m/n/10 )$[]
  []
 
-[623]
-Underfull \hbox (badness 10000) in paragraph at lines 7453--7455
+
+Underfull \hbox (badness 10000) in paragraph at lines 7465--7467
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہو گی جو $\OT1/zplm/m/n/10 [\OML/zplm/m/it
 /10 a\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 b\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNa
 staleeq(0)/b/n/10 پر استمراری تفاعل کا ریمان مجموعہ ہے۔ ہم توقع کرتے ہیں کہ خان
 ہ بندی کا معیار صفر تک پہنچنے سے یہ مجموعہ بہتر سے بہتر نتیجہ دے گا۔ ہم ان[]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 7464--7466
+[623]
+Underfull \hbox (badness 10000) in paragraph at lines 7476--7478
 []\TU/JameelNooriNastaleeq(0)/b/n/10 مثال  ۶.۳۸: []ایک مساوی الساقین مثلث تختی 
 جس کا تلا $\OT1/ppl/m/n/10 4 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور قد $\OT1
 /ppl/m/n/10 2 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے ایک پانی کے تالاب میں یو
@@ -15235,14 +15233,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 7464--7466
  []
 
 [624]
-Underfull \hbox (badness 10000) in paragraph at lines 7572--7573
+Underfull \hbox (badness 10000) in paragraph at lines 7584--7585
 []\TU/JameelNooriNastaleeq(0)/b/n/10 اگر ہمیں سیال میں ڈوبے انتصابی تختی کا وسط
 انی مرکز معلوم ہو تب ہم اس تختی کے ایک طرف پر قوت سیال با آسانی معلوم کر سکتے ہ
 یں (شکل ۶.۱۲۸[])۔[]
  []
 
-[625]
-Underfull \hbox (badness 10000) in paragraph at lines 7580--7582
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [625]
+Underfull \hbox (badness 10000) in paragraph at lines 7592--7594
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سیال میں ڈوبی انتصابی تختی کے ایک طرف پر ق
 وت سیال $\OML/zplm/m/it/10 F$ \TU/JameelNooriNastaleeq(0)/b/n/10 معلوم کرنے کی 
 لئے $\OML/zplm/m/it/10 ^^Zg$\TU/JameelNooriNastaleeq(0)/b/n/10 ، تختی کے وسطانی
@@ -15251,64 +15252,64 @@ aleeq(0)/b/n/10 کا حاصل[]
  []
 
 [626]
-Underfull \hbox (badness 10000) in paragraph at lines 7602--7603
+Underfull \hbox (badness 10000) in paragraph at lines 7614--7615
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 مساوات ۶[] کہتی ہے کہ سیال میں ڈوبی انتص
 ابی تختی پر قوت سیال وہی ہو گا جو تختی کے پورے رقبے کو تختی کے وسطانی مرکز، جو 
 $[]$ گہرائی پر ہے، منتقل کرنے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7602--7603
+Underfull \hbox (badness 10000) in paragraph at lines 7614--7615
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سے حاصل ہو گا۔عموماً اشکال کا وسطانی مرکز 
 جدول سے دیکھا جا سکتا ہے اور یوں مساوات ۶[] قوت سیال معلوم کرنے کا ایک آسان ذری
 عہ بنتا ہے۔ ظاہر ہے کہ[]
  []
 
 
-Underfull \hbox (badness 4752) in paragraph at lines 7602--7603
+Underfull \hbox (badness 4752) in paragraph at lines 7614--7615
 []\TU/JameelNooriNastaleeq(0)/b/n/10 وسطانی مرکز حاصل کرتے ہوئے کسی نے مساوات ۵
 [] کی تکمل کی طرح کا تکمل حل کرتے ہوئے وسطانی مرکز حاصل کیا ہو گا۔ چونکہ اس وقت
  آپ سیکھ رہے ہیں[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7619--7628
+Underfull \hbox (badness 10000) in paragraph at lines 7631--7640
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۳۰۸: []مثلث تختی کی ایک طرف پر 
 مثال ۶.۳۸[] میں قوت سیال دریافت کیا گیا۔ اس تختی پر شکل ۶.۱۲۹[] کا محدد استعمال
  کرتے ہوئے قوت سیال[]
  []
 
 
-Overfull \hbox (5.23587pt too wide) in paragraph at lines 7634--7652
+Overfull \hbox (5.23587pt too wide) in paragraph at lines 7646--7664
  [][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7676--7678
+Underfull \hbox (badness 10000) in paragraph at lines 7688--7690
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۳۰۹: []مثلث تختی کی ایک طرف پر مثا
 ل ۶.۳۸[] میں قوت سیال دریافت کیا گیا۔ اس تختی پر شکل ۶.۱۳۰[] کا محدد استعمال کر
 تے ہوئے قوت سیال[]
  []
 
 [627]
-Overfull \hbox (19.23041pt too wide) in paragraph at lines 7713--7725
+Overfull \hbox (19.23041pt too wide) in paragraph at lines 7725--7737
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (9.39902pt too wide) in paragraph at lines 7747--7755
+Overfull \hbox (9.39902pt too wide) in paragraph at lines 7759--7767
  [][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7701--7761
+Underfull \hbox (badness 10000) in paragraph at lines 7713--7773
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۳۱۳: []اگر گزشتہ سوال میں تختی 
 کو تلا کے گرد آدھا چکر گھمایا جائے تب اس کا کچھ حصہ پانی سے باہر ہو گا (شکل ۶.۱
 ۳۲[])۔ اب تختی کی ایک طرف[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7790--7794
+Underfull \hbox (badness 10000) in paragraph at lines 7802--7806
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۳۱۶:  مچھلیاں دیکھنے کے لئے ایک م
 چھلی گھر کی دیوار میں $\OT1/ppl/m/n/10 2 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 
 چوڑا اور $\OT1/ppl/m/n/10 1 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 اونچا شیشہ نس
@@ -15317,7 +15318,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7790--7794
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7813--7822
+Underfull \hbox (badness 10000) in paragraph at lines 7825--7834
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۳۱۹:  زیتون کی تیل کے ڈبے کا تل
 ا $\OT1/ppl/m/n/10 14 \OMS/zplm/m/n/10 ^^B \OT1/ppl/m/n/10 12 []$ \TU/JameelNoo
 riNastaleeq(0)/b/n/10 اور قد $\OT1/ppl/m/n/10 26.5 []$ \TU/JameelNooriNastaleeq
@@ -15325,26 +15326,26 @@ riNastaleeq(0)/b/n/10 اور قد $\OT1/ppl/m/n/10 26.5 []$ \TU/JameelNooriNasta
  []
 
 [628]
-Underfull \hbox (badness 10000) in paragraph at lines 7826--7835
+Underfull \hbox (badness 10000) in paragraph at lines 7838--7847
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۳۲۱:  دودھ کی فراہمی کے لئے ٹرک
  پر نسب $\OT1/ppl/m/n/10 2 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 قطر کا افقی بی
 لنی حوض استعمال کیا جاتا ہے۔ آدھے بھرے حوض کے ایک سر پر قوت سیال[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7835--7839
+Underfull \hbox (badness 10000) in paragraph at lines 7847--7851
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۳۲۲: []ایک مکعب حوض کی دیوار میں 
 قطع مکافی کھڑکی دی گئی ہے جو $\OT1/ppl/m/n/10 150 000 N$ \TU/JameelNooriNastale
 eq(0)/b/n/10 کی قوت برداشت کر سکتی ہے (شکل ۶.۱۳۴[])۔ اس حوض[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7906--7906
+Underfull \hbox (badness 10000) in paragraph at lines 7918--7918
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 شكل ۶.۱۳۵: |حوض میں چوکور کھڑکی (سوال[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7911--7913
+Underfull \hbox (badness 10000) in paragraph at lines 7923--7925
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۳۲۳: []پانی کی ایک مکعب حوض کی دیو
 ار میں $\OT1/ppl/m/n/10 1 \OMS/zplm/m/n/10 ^^B \OT1/ppl/m/n/10 1 m$ \TU/JameelN
 ooriNastaleeq(0)/b/n/10 چوکور کھڑکی دی گئی ہے جو $\OT1/ppl/m/n/10 40 000 N$ \TU
@@ -15352,21 +15353,21 @@ ooriNastaleeq(0)/b/n/10 چوکور کھڑکی دی گئی ہے جو $\OT1/ppl/m/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7919--7923
+Underfull \hbox (badness 10000) in paragraph at lines 7931--7935
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۳۲۴: []پانی کے حوض کو شکل ۶.۱۳۶[]
  میں دکھایا گیا ہے۔ حوض کے آخری تکونی سر $\OT1/ppl/m/n/10 1 200 000 N$ \TU/Jame
 elNooriNastaleeq(0)/b/n/10 قوت برداشت کر سکتے ہیں۔ حوض میں[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7923--7967
+Underfull \hbox (badness 10000) in paragraph at lines 7935--7979
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۳۲۵: []ایک مستطیل تالاب شکل ۶.۱
 ۳۷[] میں دکھایا گیا ہے جس کی ایک طرف میں تکونی کھڑکی دی گئی ہے جو $\OT1/ppl/m/n
 /10 62 000 N$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی قوت برداشت[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7967--7971
+Underfull \hbox (badness 10000) in paragraph at lines 7979--7983
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۳۲۶: []ایک انتصابی تختی جس کا قد 
 $\OML/zplm/m/it/10 a$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور چوڑائی $\OML/zplm/
 m/it/10 b$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے کو کثافت $\OML/zplm/m/it/10 ^^
@@ -15375,11 +15376,11 @@ Z$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے سیال میں ڈبویا جاتا �
  []
 
 [629]
-LaTeX Info: Redefining \rmfamily on input line 8014.
-LaTeX Info: Redefining \sffamily on input line 8014.
-LaTeX Info: Redefining \ttfamily on input line 8014.
+LaTeX Info: Redefining \rmfamily on input line 8026.
+LaTeX Info: Redefining \sffamily on input line 8026.
+LaTeX Info: Redefining \ttfamily on input line 8026.
 
-Underfull \hbox (badness 7522) in paragraph at lines 8014--8015
+Underfull \hbox (badness 7522) in paragraph at lines 8026--8027
 []\TU/JameelNooriNastaleeq(0)/b/n/10 تفاعل $\OML/zplm/m/it/10 v\OT1/zplm/m/n/10
  (\OML/zplm/m/it/10 t\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 کا 
 تکمل اس دورانیے میں طے شدہ فاصلہ دے گا۔ اگر جسم اس دورانیے میں سمت تبدیل کرتا ہ
@@ -15387,7 +15388,7 @@ Underfull \hbox (badness 7522) in paragraph at lines 8014--8015
  []
 
 [630]
-Underfull \hbox (badness 7540) in paragraph at lines 8016--8017
+Underfull \hbox (badness 7540) in paragraph at lines 8028--8029
 []$\OML/zplm/m/it/10 t[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 تا $\OML/zplm/m/it
 /10 t[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 جسم کی سمتی رفتار $\OML/zplm/m/it/1
 0 v\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 t\OT1/zplm/m/n/10 )$ \TU/JameelNooriNast
@@ -15398,7 +15399,7 @@ aleeq(0)/b/n/10 میں تبدیلی قابل نظر انداز ہو گی لہٰ�
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8027--8029
+Underfull \hbox (badness 10000) in paragraph at lines 8039--8041
 []\TU/JameelNooriNastaleeq(0)/b/n/10 مساوات ۱[] میں مجموعہ، وقفہ $\OT1/zplm/m/n
 /10 [\OML/zplm/m/it/10 a\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 b\OT1/zplm/m/n/10 ]
 $ \TU/JameelNooriNastaleeq(0)/b/n/10 پر تفاعل رفتار $[]$ کا ریمان مجموعہ ہے۔ ہم
@@ -15406,12 +15407,12 @@ $ \TU/JameelNooriNastaleeq(0)/b/n/10 پر تفاعل رفتار $[]$ کا ریم
  []
 
 [631]
-Underfull \hbox (badness 10000) in paragraph at lines 8052--8053
+Underfull \hbox (badness 10000) in paragraph at lines 8064--8065
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8062--8064
+Underfull \hbox (badness 10000) in paragraph at lines 8074--8076
 []\TU/JameelNooriNastaleeq(0)/b/n/10 اس دورانیے میں جسم $\OT1/ppl/m/n/10 5 m$ \
 TU/JameelNooriNastaleeq(0)/b/n/10 آگے اور $\OT1/ppl/m/n/10 10 m$ \TU/JameelNoor
 iNastaleeq(0)/b/n/10 پیچھے سفر کرتا ہے۔ یوں یہ $\OT1/ppl/m/n/10 15 m$ \TU/Jamee
@@ -15420,45 +15421,45 @@ lNooriNastaleeq(0)/b/n/10 فاصل طے کرتا ہے جبکہ اس کا ہٹا�
  []
 
 
-Overfull \hbox (15.81763pt too wide) in paragraph at lines 8071--8078
+Overfull \hbox (15.81763pt too wide) in paragraph at lines 8083--8090
  [][][][][][] 
  []
 
 
-Overfull \hbox (12.87279pt too wide) in paragraph at lines 8083--8090
+Overfull \hbox (12.87279pt too wide) in paragraph at lines 8095--8102
  [][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8097--8098
+Underfull \hbox (badness 10000) in paragraph at lines 8109--8110
 []\TU/JameelNooriNastaleeq(0)/b/n/10 آپ جانتے ہیں کہ چننے کے بعد سیب کا ذائقہ و
 قت کے ساتھ تبدیل ہوتا ہے۔ سیب میں شکر وقت کے ساتھ نشاستہ میں تبدیل ہوتا ہے۔ سیب
  میں نشاستہ کی[]
  []
 
 
-Underfull \hbox (badness 1688) in paragraph at lines 8097--8098
+Underfull \hbox (badness 10000) in paragraph at lines 8109--8110
 []\TU/JameelNooriNastaleeq(0)/b/n/10 مقدار معلوم کرنے کے لئے ہم سیب کا ایک باری
-ک کتلے کو خوردبین میں دیکھتے ہیں۔ نشاستہ کے ہر دانہ کا سطح عمودی تراش خوردبین م
-یں صاف نظر آتا ہے لہٰذا کتلے[]
+ک کتلے کو خوردبین میں دیکھتے ہیں۔ نشاستہ کے ہر دانہ کی سطح عمودی تراش خوردبین م
+یں صاف نظر آتا ہے لہٰذا[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8097--8098
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 کی سطح میں نشاستہ کے رقبہ عمودی تراش کا تن
-اسب معلوم کیا جا سکتا ہے۔ یہ دو بعدی تناسب سیب میں نشاستہ کے تین بعدی تناسب کے 
-برابر ہو گا۔ دو بعدی اور[]
+Underfull \hbox (badness 10000) in paragraph at lines 8109--8110
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 کتلے کی سطح میں نشاستہ کے رقبہ عمودی تراش 
+کا تناسب معلوم کیا جا سکتا ہے۔ یہ دو بعدی تناسب سیب میں نشاستہ کے تین بعدی تناس
+ب کے برابر ہو گا۔ دو بعدی[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8099--8100
+Underfull \hbox (badness 10000) in paragraph at lines 8111--8112
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 فرض کریں ہم کسی ٹھوس جسم میں دانہ دار ما
 دہ کی تناسب جاننا چاہتے ہیں۔ ہم ٹھوس جسم سے موزوں نمونہ حاصل کرتے ہیں جس کو کاٹ
  کر ایک مکعب حاصل[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8099--8100
+Underfull \hbox (badness 10000) in paragraph at lines 8111--8112
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کیا جاتا ہے۔ اس مکعب کا ضلع $\OML/zplm/m/i
 t/10 L$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے۔ اس مکعب کو شکل ۶.۱۳۹[] میں دکھای
 ا گیا ہے جہاں مکعب کا ضلع محور $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0
@@ -15467,7 +15468,7 @@ t/10 L$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے۔ اس مکعب کو شکل ۶.�
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8099--8100
+Underfull \hbox (badness 10000) in paragraph at lines 8111--8112
 []\TU/JameelNooriNastaleeq(0)/b/n/10 اس مکعب کو کتلوں میں تقسیم کرتے ہیں۔ فرض ک
 ریں $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر دانہ دار مادے ک
 ے رقبے کا تناسب $\OML/zplm/m/it/10 r\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/z
@@ -15478,7 +15479,7 @@ astaleeq(0)/b/n/10 متغیر $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/
  []
 
 
-Underfull \hbox (badness 2495) in paragraph at lines 8101--8102
+Underfull \hbox (badness 2495) in paragraph at lines 8113--8114
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 اب وقفہ $\OT1/zplm/m/n/10 [\OT1/ppl/m/n/
 10 0, \OML/zplm/m/it/10 L\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNastaleeq(0)/b/n/10
  کی خانہ بندی کریں۔نقطہ خانہ بندی پر محور $\OML/zplm/m/it/10 x$ \TU/JameelNoori
@@ -15488,7 +15489,7 @@ m/m/n/10 ^^A\OML/zplm/m/it/10 x[]$[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8101--8102
+Underfull \hbox (badness 10000) in paragraph at lines 8113--8114
 []\TU/JameelNooriNastaleeq(0)/b/n/10 قاعدہ $\OML/zplm/m/it/10 x[]$ \TU/JameelNo
 oriNastaleeq(0)/b/n/10 پر ہو گا۔ ان سطحوں کے بیچ دانہ دار مادہ کی حجمی تناسب وہ
 ی ہو گی جو $\OML/zplm/m/it/10 x[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر سطح می
@@ -15496,7 +15497,7 @@ oriNastaleeq(0)/b/n/10 پر ہو گا۔ ان سطحوں کے بیچ دانہ د�
  []
 
 [632]
-Underfull \hbox (badness 10000) in paragraph at lines 8109--8111
+Underfull \hbox (badness 10000) in paragraph at lines 8121--8123
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہو گی جو وقفہ $\OT1/zplm/m/n/10 [\OT1/ppl/
 m/n/10 0, \OML/zplm/m/it/10 L\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNastaleeq(0)/b/
 n/10 پر تفاعل $\OML/zplm/m/it/10 r\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/zpl
@@ -15506,70 +15507,82 @@ m/m/n/10 )\OML/zplm/m/it/10 L[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کا ریم�
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8115--8116
+Underfull \hbox (badness 10000) in paragraph at lines 8127--8128
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 اس مقدار کو مکعب کے حجم $\OML/zplm/m/it/
 10 L[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 سے تقسیم کرنے سے مکعب میں دانہ دار م
 ادہ کی تناسب حاصل ہو گی۔ اگر ہم نے موزوں نمونی مکعب منتخب کیا ہو تب پورے[]
  []
 
 [633]
-LaTeX Info: Redefining \rmfamily on input line 8122.
-LaTeX Info: Redefining \sffamily on input line 8122.
-LaTeX Info: Redefining \ttfamily on input line 8122.
+LaTeX Info: Redefining \rmfamily on input line 8134.
+LaTeX Info: Redefining \sffamily on input line 8134.
+LaTeX Info: Redefining \ttfamily on input line 8134.
 
-Underfull \hbox (badness 10000) in paragraph at lines 8124--8202
+Underfull \hbox (badness 1005) in paragraph at lines 8133--8135
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 یہ \TU/AASameerSagarNastaleeqBold(0)/m/n/1
+0 قاعدہ دولس[][][] []\TU/JameelNooriNastaleeq(0)/b/n/10 ہے جسے فرانسیسی ماہر ار
+ضیات اشیلہ ارنسٹ دولس$\OT1/zplm/m/n/10 [\OT1/ppl/m/n/10 1817 \OMS/zplm/m/n/10 ^
+^@ \OT1/ppl/m/n/10 1881\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNastaleeq(0)/b/n/10 ن
+ے دریافت کیا۔ یوں وقفہ $\OT1/zplm/m/n/10 [\OT1/ppl/m/n/10 0, \OML/zplm/m/it/10 
+L\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر $\OML/zplm/m/it/10 r
+\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastale
+eq(0)/b/n/10 کی اوسط[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8136--8214
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 جناب دولس پتھر میں دانہ دار مادہ کی تناس
 ب میں دلچسپی رکھتے تھے۔ وہ نمونی پتھر کی ایک سطح کو اچھی طرح چمکدار بنا کر سطح 
 کے برابر مومی کاغذ کو چمکیلی سطح پر رکھ[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8124--8202
+Underfull \hbox (badness 10000) in paragraph at lines 8136--8214
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کر دانہ دار خطوں کی نشاندہی کرتے۔کاغذ کا و
 زن کرنے کے بعد، دانہ دار خطوں کو کاغذ سے کاٹ کر کاغذ کا وزن دوبارہ کرتے۔ یوں دا
 نہ دار خطوں کے رقبہ کا[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8204--8205
+Underfull \hbox (badness 10000) in paragraph at lines 8216--8217
 []\TU/JameelNooriNastaleeq(0)/b/n/10 بعض اوقات ریمان مجموعہ سے حاصل تکمل ہمارے 
 کسی کام کے نہیں ہوتا ہے۔ اس کا دارومدار مسئلے کی نمونہ کشی پر منحصر ہے۔بعض طریق
 ہ کار موزوں اور بعض[]
  []
 
 [634]
-Underfull \hbox (badness 10000) in paragraph at lines 8212--8213
+Underfull \hbox (badness 10000) in paragraph at lines 8224--8225
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 آئیں شکل ۶.۱۴۰[]-ب کی طرح بیلنی پٹیاں لے
  کر ریمان مجموعہ حاصل کر کے دیکھیں۔ یہ ریمان مجموعہ بھی مرتکز ہوتا ہے جو درج ذی
 ل نسبتاً آسان تکمل دیتا[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8215--8217
+Underfull \hbox (badness 10000) in paragraph at lines 8227--8229
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہم کہہ سکتے ہیں کہ حجم کی تلاش میں ہم نے ب
 یلنی پٹیاں استعمال کیں لہٰذا یہاں بھی ان کا استعمال درست ہو گا۔ حقیقت میں مساوا
 ت ۵[] کوئی پیش گوئی نہیں کرتا ہے[]
  []
 
 
-Underfull \hbox (badness 1286) in paragraph at lines 8215--8217
+Underfull \hbox (badness 1286) in paragraph at lines 8227--8229
 []\TU/JameelNooriNastaleeq(0)/b/n/10 اور نا ہی اس سے کبھی درست نتائج حاصل ہوتا 
 ہیں جو دیگر تراکیب سے حاصل جوابات کے ساتھ مشابہت رکھتے ہوں۔ نمونہ کشی کے دوران 
 موازنہ کے قدم پر یہ[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8218--8271
+Underfull \hbox (badness 10000) in paragraph at lines 8230--8283
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 یاد رہے کہ اگر آپ ایک بہت اچھا نظر آنے و
 الے تکمل حاصل کرنے میں کامیاب ہوں، اس کا یہ مطلب نہیں ہے کہ حاصل تکمل درست نتائ
 ج بھی دے گا۔[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 8273.
-LaTeX Info: Redefining \sffamily on input line 8273.
-LaTeX Info: Redefining \ttfamily on input line 8273.
+LaTeX Info: Redefining \rmfamily on input line 8285.
+LaTeX Info: Redefining \sffamily on input line 8285.
+LaTeX Info: Redefining \ttfamily on input line 8285.
 
-Underfull \hbox (badness 1742) in paragraph at lines 8275--8277
+Underfull \hbox (badness 1742) in paragraph at lines 8287--8289
 []\TU/JameelNooriNastaleeq(0)/b/n/10 مسئلہ  ۶.۱: \TU/AASameerSagarNastaleeqBold
 (0)/m/n/10 مسئلہ پاپس برائے حجم \TU/JameelNooriNastaleeq(0)/b/n/10 اگر کسی مستو
 ی خطہ کو سطح مستوی میں لکیر کے گرد گھمایا جائے جہاں خطے کو لکیر قطع نہ کرتی ہو 
@@ -15577,7 +15590,7 @@ Underfull \hbox (badness 1742) in paragraph at lines 8275--8277
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8275--8277
+Underfull \hbox (badness 10000) in paragraph at lines 8287--8289
 []\TU/JameelNooriNastaleeq(0)/b/n/10 خطے کا رقبہ ضرب وہ فاصلہ جو ایک چکر کے دور
 ان وسطانی نقطہ طے کرتا ہو کے برابر ہو گا۔ اگر خطے کا رقبہ $\OML/zplm/m/it/10 S$
  \TU/JameelNooriNastaleeq(0)/b/n/10 اور وسطانی نقطے کا محور سے فاصلہ $\OML/zplm
@@ -15585,33 +15598,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 8275--8277
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8280--8284
+Underfull \hbox (badness 10000) in paragraph at lines 8292--8296
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 ثبوت : []ہم محور طواف کو محور $\OML/zplm/
 m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور خطہ $\OML/zplm/m/it/10 R$ \TU
 /JameelNooriNastaleeq(0)/b/n/10 کو ربع اول میں لیتے ہیں۔ ہم $\OML/zplm/m/it/10 
 y$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر، محور $\OML/zplm/m/it/10 y$ \TU/Jameel
-NooriNastaleeq(0)/b/n/10 کے عمودی، خطہ کے عمودی تراش کی لمبائی کو $\OML/zplm/m/
+NooriNastaleeq(0)/b/n/10 کے عمودی، خطہ کی عمودی تراش کی لمبائی کو $\OML/zplm/m/
 it/10 L\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 y\OT1/zplm/m/n/10 )$ \TU/JameelNoori
 Nastaleeq(0)/b/n/10 سے[]
  []
 
 [635]
-Overfull \hbox (23.25151pt too wide) in paragraph at lines 8300--8313
+Overfull \hbox (23.25151pt too wide) in paragraph at lines 8312--8325
  [][][][][][][][] 
  []
 
-LaTeX Info: Redefining \rmfamily on input line 8340.
-LaTeX Info: Redefining \sffamily on input line 8340.
-LaTeX Info: Redefining \ttfamily on input line 8340.
+LaTeX Info: Redefining \rmfamily on input line 8352.
+LaTeX Info: Redefining \sffamily on input line 8352.
+LaTeX Info: Redefining \ttfamily on input line 8352.
 [636]
-Underfull \hbox (badness 10000) in paragraph at lines 8388--8390
+Underfull \hbox (badness 10000) in paragraph at lines 8400--8402
 []\TU/JameelNooriNastaleeq(0)/b/n/10 اگر ایک ہموار مستوی منحنی کی قوس کو ایسی ل
 کیر کے گرد ایک بار گھمایا جائے جو اس قوس کو قطع نہ کرتی ہو تب قوس کی لمبائی ضرب
  ایک چکر کے دوران قوس کی[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8388--8390
+Underfull \hbox (badness 10000) in paragraph at lines 8400--8402
 []\TU/JameelNooriNastaleeq(0)/b/n/10 وسطانی مرکز کا طے شدہ فاصلہ، طواف قوس سے پ
 یدا سطح کا رقبہ ہو گا۔ اگر محور طواف سے وسطانی مرکز کا فاصلہ $\OML/zplm/m/it/10
  ^^Z$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور قوس کی لمبائی $\OML/zplm/m/it/10 L
@@ -15619,7 +15632,7 @@ $ \TU/JameelNooriNastaleeq(0)/b/n/10 ہو تب درج ذیل لکھا[]
  []
 
 [637]
-Underfull \hbox (badness 10000) in paragraph at lines 8420--8423
+Underfull \hbox (badness 10000) in paragraph at lines 8432--8435
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال ۶.۳۲۸[] تا سوال ۶.۳۳۵[] میں ایک جسم م
 حددی لکیر پر سمتی رفتار $\OML/zplm/m/it/10 v\OT1/zplm/m/n/10 (\OML/zplm/m/it/10
  t\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 سے حرکت کرتا ہے۔ (ا) س
@@ -15627,44 +15640,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 8420--8423
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8424--8426
+Underfull \hbox (badness 10000) in paragraph at lines 8436--8438
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8435--8439
+Underfull \hbox (badness 10000) in paragraph at lines 8447--8451
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8448--8452
+Underfull \hbox (badness 10000) in paragraph at lines 8460--8464
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8461--8465
+Underfull \hbox (badness 10000) in paragraph at lines 8473--8477
 [][]
  []
 
 [638]
-Underfull \hbox (badness 10000) in paragraph at lines 8513--8517
+Underfull \hbox (badness 10000) in paragraph at lines 8525--8529
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۳۳۸: []دو اجسام محددی لکیر پر حرک
 ت کرتے ہیں۔ ان اجسام کی سمتی رفتاروں کو شکل ۶.۱۴۵[] میں دکھایا گیا ہے۔ دیے گئے 
 وقفے کے لئے اجسام کتنا[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8513--8517
+Underfull \hbox (badness 10000) in paragraph at lines 8525--8529
 [][]
  []
 
 
-Overfull \hbox (1.3256pt too wide) in paragraph at lines 8528--8535
+Overfull \hbox (1.3256pt too wide) in paragraph at lines 8540--8547
  [][][][][][] 
  []
 
 
-Overfull \hbox (12.70479pt too wide) in paragraph at lines 8539--8546
+Overfull \hbox (12.70479pt too wide) in paragraph at lines 8551--8558
  [][][][][][] 
  []
 
@@ -15672,26 +15685,26 @@ Overfull \hbox (12.70479pt too wide) in paragraph at lines 8539--8546
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [639]
-Underfull \hbox (badness 10000) in paragraph at lines 8571--8573
+Underfull \hbox (badness 10000) in paragraph at lines 8583--8585
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8582--8586
+Underfull \hbox (badness 10000) in paragraph at lines 8594--8598
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۳۴۲:  ہر وہ جسم جو مائع میں تیرتا
  ہو اپنی کمیت کے برابر مائع کی جگہ لیتا ہے (اصول آرشمیدسی)۔ یوں ہٹائے گئے مائع 
 کی کمیت معلوم کر کے اس جسم[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8582--8586
+Underfull \hbox (badness 10000) in paragraph at lines 8594--8598
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کی کمیت معلوم کی جا سکتی ہے۔ ایک کشتی کی ک
 میت جاننے کی خاطر ہم خط آب کو $\OT1/ppl/m/n/10 10$ \TU/JameelNooriNastaleeq(0)/
 b/n/10 برابر حصوں میں تقسیم کر کے نقطہ خانہ بندی پر کشتی کے ڈوبے ہوئے حصے کا[]
  []
 
 
-Underfull \hbox (badness 1394) in paragraph at lines 8582--8586
+Underfull \hbox (badness 1394) in paragraph at lines 8594--8598
 []\TU/JameelNooriNastaleeq(0)/b/n/10 رقبہ عمودی تراش $\OML/zplm/m/it/10 S\OT1/z
 plm/m/n/10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/
 b/n/10 معلوم کرتے ہیں۔ اس کے بعد قاعدہ سمسن استعمال کر کے $\OML/zplm/m/it/10 S\
@@ -15700,7 +15713,7 @@ q(0)/b/n/10 کے تکمل کی تخمین تلاش کرتے ہیں۔ نقاط خ
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8600--8610
+Underfull \hbox (badness 10000) in paragraph at lines 8612--8622
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۳۴۳:  ایک چوکور خطہ کے راس $\OT1/z
 plm/m/n/10 (\OT1/ppl/m/n/10 0, 2\OT1/zplm/m/n/10 )$\TU/JameelNooriNastaleeq(0)/
 b/n/10 ، $\OT1/zplm/m/n/10 (\OT1/ppl/m/n/10 2, 0\OT1/zplm/m/n/10 )$\TU/JameelNo
@@ -15712,12 +15725,12 @@ $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے گرد گھما ک
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8600--8610
+Underfull \hbox (badness 10000) in paragraph at lines 8612--8622
 [][]
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 8610--8619
+Underfull \hbox (badness 1107) in paragraph at lines 8622--8631
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۳۴۴:  لکیر $\OT1/ppl/m/n/10 2\O
 ML/zplm/m/it/10 x \OT1/zplm/m/n/10 + \OML/zplm/m/it/10 y \OT1/zplm/m/n/10 = \OT
 1/ppl/m/n/10 6$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور محددی لکیروں کے بیچ تکون
@@ -15726,19 +15739,19 @@ meelNooriNastaleeq(0)/b/n/10 کے گرد گھما کر جسم طواف پیدا 
  []
 
 
-Underfull \hbox (badness 2277) in paragraph at lines 8610--8619
+Underfull \hbox (badness 2277) in paragraph at lines 8622--8631
 []\TU/JameelNooriNastaleeq(0)/b/n/10 اس جسم کا حجم مسئلہ پاپس کی مدد سے معلوم ک
 ریں۔ (جیسا آپ صفحہ ۶۰۷[] پر سوال ۶.۲۵۶[] میں دیکھ چکے ہیں، تکون کے تین وسطانیوں
  کا نقطہ تقاطع تکون کا وسطانی[]
  []
 
 [640]
-Underfull \hbox (badness 10000) in paragraph at lines 8619--8623
+Underfull \hbox (badness 10000) in paragraph at lines 8631--8635
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8632--8636
+Underfull \hbox (badness 10000) in paragraph at lines 8644--8648
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۶.۳۴۷: []رداس $\OML/zplm/m/it/10 a$
  \TU/JameelNooriNastaleeq(0)/b/n/10 کے کرہ کا سطحی رقبہ $\OT1/ppl/m/n/10 4\OML/
 zplm/m/it/10 ^^Ya[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہوتا ہے۔ اس حقیقت کو اس
@@ -15747,22 +15760,22 @@ $[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8632--8636
+Underfull \hbox (badness 10000) in paragraph at lines 8644--8648
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8645--8649
+Underfull \hbox (badness 10000) in paragraph at lines 8657--8661
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8658--8662
+Underfull \hbox (badness 10000) in paragraph at lines 8670--8674
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8671--8675
+Underfull \hbox (badness 10000) in paragraph at lines 8683--8687
 [][]
  []
 
@@ -16964,7 +16977,7 @@ LaTeX Info: Redefining \sffamily on input line 5557.
 LaTeX Info: Redefining \ttfamily on input line 5557.
 
 Underfull \hbox (badness 10000) in paragraph at lines 5557--5558
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 ماہرین عموماً اس کام کو سرانجام کرنے کے کئ
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 ماہرین عموماً اس کام کو سرانجام کرنے کے لئ
 ے درکار قدموں کی گنتی کرتے ہیں۔ ایک ہی کام سرانجام دینے کے دو مختلف لائحہ کار ک
 ی کارگزاری میں بہت زیادہ[]
  []
@@ -19746,7 +19759,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2861--2865
 
 Underfull \hbox (badness 10000) in paragraph at lines 2861--2865
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کر اس کے اندر چوکور حاصل کیا جاتا ہے۔ اس ط
-رح یکے بعد دیگرے ہر چوکور کے اندر دوسرا چوکور بناتے ہوئے لامتناہی چوکور حاصل کئ
+رح یکے بعد دیگرے ہر چوکور کے اندر دوسرا چوکور بناتے ہوئے لامتناہی چوکور حاصل کی
 ے جاتے ہیں۔ ان تمام[]
  []
 
@@ -21133,7 +21146,7 @@ Overfull \hbox (4.0841pt too wide) in paragraph at lines 100--111
 Underfull \hbox (badness 10000) in paragraph at lines 146--147
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 جدول ۱۰.۱[] کے کلیات پر حصہ ۱.۴[] میں دی
 ے گئے کلیات انتقال لاگو کرتے ہوئے دیگر مقامات پر واقع قطع مکافی کے مساوات حاصل 
-کئے جا سکتے ہیں۔ (سوال[]
+کیے جا سکتے ہیں۔ (سوال[]
  []
 
 [1031]
@@ -21478,13 +21491,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 1749--1753
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۱۰.۸۹: []پانی کی سطح کو پہلے $\OML/
 zplm/m/it/10 A$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور بعد میں $\OML/zplm/m/it/
 10 B$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر چھو کر شکل ۱۰.۲۱[] میں دکھائے گئے ا
-مواج پیدا کئے گئے۔ جیسے جیسے یہ امواج پھیلتے ہیں، ان کا نقطہ[]
+مواج پیدا کیے گئے۔ جیسے جیسے یہ امواج پھیلتے ہیں، ان کا نقطہ[]
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1749--1753
 []\TU/JameelNooriNastaleeq(0)/b/n/10 تقاطع ایک منحنی بناتا ہے جو قطع زائد کی طر
-ح معلوم ہوتا ہے۔ کیا ایسا حقیقتاً ہو گا؟ یہ جاننے کے کئے ہم $\OML/zplm/m/it/10 
+ح معلوم ہوتا ہے۔ کیا ایسا حقیقتاً ہو گا؟ یہ جاننے کے کیے ہم $\OML/zplm/m/it/10 
 A$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور $\OML/zplm/m/it/10 B$ \TU/JameelNoori
 Nastaleeq(0)/b/n/10 پر مرکز دائروں کو امواج کا نمونہ لے سکتے[]
  []
@@ -23148,7 +23161,7 @@ $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے لحاظ سے با
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--3
 []\TU/JameelNooriNastaleeq(0)/b/n/10 اس حصہ میں سمتیات اور سہ بعدی محددی نظام م
-تعارف کئے جائیں گے۔ جیسا ایک متغیر کے تفاعل پر غور کے لئے محددی مستوی موزوں ہے،
+تعارف کیے جائیں گے۔ جیسا ایک متغیر کے تفاعل پر غور کے لئے محددی مستوی موزوں ہے،
  اسی طرح دو (یا[]
  []
 
@@ -24690,7 +24703,8 @@ iNastaleeq(0)/b/n/10 کے[]
 Underfull \hbox (badness 10000) in paragraph at lines 7194--7204
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۱۱.۳۷۸:  محور $\OML/zplm/m/it/10 
 z$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے عمودی سطحیں ترخیمی سطح کے دونوں سروں س
-ے برابر حصے کاٹ کر دکھائی گئی ڈرمی پیدا کرتی ہیں۔ محور $$ کے قائمہ عمودی[]
+ے برابر حصے کاٹ کر دکھائی گئی ڈرمی پیدا کرتی ہیں۔ محور $\OML/zplm/m/it/10 z$ \T
+U/JameelNooriNastaleeq(0)/b/n/10 کے قائمہ ، عمودی[]
  []
 
 
@@ -24751,18 +24765,18 @@ Overfull \hbox (6.60817pt too wide) in paragraph at lines 7418--7432
  []
 
 [1221]
-Overfull \hbox (26.33884pt too wide) in paragraph at lines 7480--7499
+Overfull \hbox (26.33884pt too wide) in paragraph at lines 7480--7500
  [][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7499--7499
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 نلکی کو ظاہر کرتی ہے جس کا عمودی تراش محور
+Underfull \hbox (badness 10000) in paragraph at lines 7500--7500
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 نلکی کو ظاہر کرتی ہے جس کی عمودی تراش محور
  $\OML/zplm/m/it/10 z$ \TU/JameelNooriNastaleeq(0)/b/n/10 کو قائمہ ہے (مثال[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7528--7530
+Underfull \hbox (badness 10000) in paragraph at lines 7529--7531
 []\TU/JameelNooriNastaleeq(0)/b/n/10 اس مساوات میں صرف $\OML/zplm/m/it/10 ^^Z$ 
 \TU/JameelNooriNastaleeq(0)/b/n/10 اور $\OML/zplm/m/it/10 ^^^$ \TU/JameelNooriN
 astaleeq(0)/b/n/10 متغیرات پائے جاتے ہیں جبکہ $\OML/zplm/m/it/10 z$ \TU/JameelN
@@ -24771,7 +24785,7 @@ ooriNastaleeq(0)/b/n/10 متغیر اس میں نہیں پایا جاتا ہے۔
  []
 
 [1222]
-Underfull \hbox (badness 4279) in paragraph at lines 7570--7571
+Underfull \hbox (badness 4279) in paragraph at lines 7571--7572
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کروی محدد میں نقطہ $\OML/zplm/m/it/10 N$\T
 U/JameelNooriNastaleeq(0)/b/n/10 کو زاویوں اور لمبائی سے تعین کیا جاتا ہے (شکل 
 ۱۱.۶۶[])۔ نقطہ $\OML/zplm/m/it/10 N$ \TU/JameelNooriNastaleeq(0)/b/n/10 کا پہلا
@@ -24781,7 +24795,7 @@ OML/zplm/m/it/10 N$[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7570--7571
+Underfull \hbox (badness 10000) in paragraph at lines 7571--7572
 []\TU/JameelNooriNastaleeq(0)/b/n/10 تک فاصلہ دیتا ہے۔نلکی محدد کے $\OML/zplm/m
 /it/10 ^^Z$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے برعکس $\OML/zplm/m/it/10 r$ \
 TU/JameelNooriNastaleeq(0)/b/n/10 ہر صورت غیر منفی ہو گا۔ دوسرا محدد $\OML/zplm
@@ -24790,23 +24804,23 @@ zplm/m/it/10 z$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے ساتھ زاویہ ہے
  []
 
 [1223]
-LaTeX Info: Redefining \rmfamily on input line 7604.
-LaTeX Info: Redefining \sffamily on input line 7604.
-LaTeX Info: Redefining \ttfamily on input line 7604.
+LaTeX Info: Redefining \rmfamily on input line 7605.
+LaTeX Info: Redefining \sffamily on input line 7605.
+LaTeX Info: Redefining \ttfamily on input line 7605.
 
-Underfull \hbox (badness 10000) in paragraph at lines 7641--7641
+Underfull \hbox (badness 10000) in paragraph at lines 7642--7642
 [][]\TU/JameelNooriNastaleeq(2)/b/n/9 (ب) |مثبت محور $\OML/zplm/m/it/9 z$ \TU/J
 ameelNooriNastaleeq(2)/b/n/9 کے ساتھ مستقل زاویہ ترخیم[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7657--7657
+Underfull \hbox (badness 10000) in paragraph at lines 7658--7658
 [][]\TU/JameelNooriNastaleeq(2)/b/n/9 (ج) |مثبت محور $\OML/zplm/m/it/9 x$ \TU/J
 ameelNooriNastaleeq(2)/b/n/9 کے ساتھ مستقل زاویہ انتصابی[]
  []
 
 [1224]
-Underfull \hbox (badness 1314) in paragraph at lines 7738--7740
+Underfull \hbox (badness 1314) in paragraph at lines 7739--7741
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہے۔یوں مثبت محور $\OML/zplm/m/it/10 z$ \TU
 /JameelNooriNastaleeq(0)/b/n/10 اور ترخیم کے بیچ زاویہ $[]$ ہو گا۔ترخیم ان نقطو
 ں پر مبنی ہے جن کے کروی محدد $\OML/zplm/m/it/10 ^^R$ \TU/JameelNooriNastaleeq(0
@@ -24815,28 +24829,28 @@ n/10 =$[]
  []
 
 [1225]
-Underfull \hbox (badness 5504) in paragraph at lines 7753--7756
+Underfull \hbox (badness 5504) in paragraph at lines 7754--7757
 []\TU/JameelNooriNastaleeq(0)/b/n/10 فضا میں نقطہ کے محدد، سوال ۱۱.۳۹۵[] تا سوا
 ل ۱۱.۴۰۴[] میں کسی ایک محددی نظام میں دیے گئے ہیں۔ اس نقطہ کے محدد باقی دو محدد
 ی نظاموں میں تلاش کریں۔[]
  []
 
 [1226]
-Underfull \hbox (badness 10000) in paragraph at lines 7838--7840
+Underfull \hbox (badness 10000) in paragraph at lines 7839--7841
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال ۱۱.۴۰۵[] تا سوال ۱۱.۴۳۰[] میں کسی ایک
  محددی نظام (کارتیسی، نلکی، کروی) میں دی گئی مساوات اور عدم مساوات کو باقی دو م
 حددی نظام میں لکھیں۔ ان[]
  []
 
 [1227] [1228]
-Underfull \hbox (badness 10000) in paragraph at lines 8193--8196
+Underfull \hbox (badness 10000) in paragraph at lines 8194--8197
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 دی گئی مساوات کو نلکی یا کروی محدد سے کا
 رتیسی محدد میں تبدیل کریں۔اس مساوات کی سادہ صورت حاصل کریں۔مساوات کی سادہ صورت 
 حاصل[]
  []
 
 
-Underfull \hbox (badness 2913) in paragraph at lines 8193--8196
+Underfull \hbox (badness 2913) in paragraph at lines 8194--8197
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کرتے ہوئے آپ کو قلم و کاغذ کی ضرورت پیش آ 
 سکتی ہے۔ کرہ کی اس مساوات کی صورت $\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x \OMS/z
 plm/m/n/10 ^^@ \OML/zplm/m/it/10 x[]\OT1/zplm/m/n/10 )[] + (\OML/zplm/m/it/10 y
@@ -25160,12 +25174,12 @@ ML/zplm/m/it/10 xy$ \TU/JameelNooriNastaleeq(0)/b/n/10 میں مختلف منح�
  []
 
 [1243]
-Underfull \hbox (badness 1789) in paragraph at lines 585--587
+Underfull \hbox (badness 1168) in paragraph at lines 585--587
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال ۱۲.۹[] تا سوال ۱۲.۱۴[] میں لمحہ $\OML
 /zplm/m/it/10 t$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر ایک ذرے کا تعین گر سمتیہ
  $\OML/cmm/b/it/10 r\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 t\OT1/zplm/m/n/10 )$ \T
 U/JameelNooriNastaleeq(0)/b/n/10 ہے۔اس ذرے کی سمتی رفتار اور اسراع تلاش کریں۔ د
-ئے گئے لمحہ پر اس کی رفتار[]
+یے گئے لمحہ پر اس کی رفتار[]
  []
 
 
@@ -26264,10 +26278,10 @@ $[]$ کتنا ہو گا؟ زمین کے گرد مصنوعی سیاروں کے ل
  []
 
 
-Underfull \hbox (badness 3189) in paragraph at lines 3769--3773
+Underfull \hbox (badness 5359) in paragraph at lines 3769--3773
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۱۲.۱۸۱:  فرض کریں ایک مستوی میں متح
 رک ذرے کا تعین گر سمتیہ $\OML/cmm/b/it/10 r$ \TU/JameelNooriNastaleeq(0)/b/n/10
- ہے اور یہ سمتیہ $[]$ کی شرح سے رقبہ واضح کرتا ہے۔محدد متعارف کئے[]
+ ہے اور یہ سمتیہ $[]$ کی شرح سے رقبہ واضح کرتا ہے۔محدد متعارف کیے[]
  []
 
 
@@ -29192,7 +29206,7 @@ t/10 z$ \TU/JameelNooriNastaleeq(0)/b/n/10 دریافت[]
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 7539--7541
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 کئے جاتے ہیں، بیلن پر اس دائرہ کار جس پر $
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 کیے جاتے ہیں، بیلن پر اس دائرہ کار جس پر $
 \OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y\OT1/
 ppl/m/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)
 /b/n/10 مطلوب ہے، ایک دوسرے جیسے ہیں۔ یوں جو نقاط $\OML/zplm/m/it/10 k$ \TU/Jam
@@ -30298,7 +30312,7 @@ it/10 I$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے۔ جمودی معیار اثر 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1732--1733
 []\TU/JameelNooriNastaleeq(0)/b/n/10 دکھایا گیا شہتیر استعمال کرتے ہیں نا کہ ای
-سے شہتیر جن کا عمودی تراش چوکور ہو (شکل ۱۴.۱۹[]-ب)۔ شہتیر کے بالائی اور زیریں ک
+سے شہتیر جن کی عمودی تراش چوکور ہو (شکل ۱۴.۱۹[]-ب)۔ شہتیر کے بالائی اور زیریں ک
 گر زیادہ تر کمیت کو افقی محور سے[]
  []
 
@@ -31554,7 +31568,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5971--5972
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 6016--6019
-[] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال ۱۴.۲۸۵[] تا سوال ۱۴.۲۹۰[] میں دئے گئ
+[] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال ۱۴.۲۸۵[] تا سوال ۱۴.۲۹۰[] میں دیے گئ
 ے ٹھوس جس کے حجم کے کروی تکمل (ا) کی حدیں تلاش کریں۔ (ب) کروی تکمل حل کرتے ہوئے
  جسم کا حجم[]
  []
@@ -34607,7 +34621,7 @@ m/b/it/10 E$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے بہاؤ کے برابر ہ
 Underfull \hbox (badness 10000) in paragraph at lines 6399--6401
 []$\OML/zplm/m/it/10 q\OT1/zplm/m/n/10 /\OML/zplm/m/it/10 ^^O[]$ \TU/JameelNoor
 iNastaleeq(0)/b/n/10 ہے۔یہ فقرہ، جو \TU/AASameerSagarNastaleeqBold(0)/m/n/10 قا
-نون گاوس[][][] []\TU/JameelNooriNastaleeq(0)/b/n/10 کہلاتا ہے، یہاں فرض کئے گئے
+نون گاوس[][][] []\TU/JameelNooriNastaleeq(0)/b/n/10 کہلاتا ہے، یہاں فرض کیے گئے
  بار سے زیادہ عمومی تقسیم بار کے لئے بھی درست ہے، جیسا آپ طبیعیات کے کسی[]
  []
 
@@ -39702,11 +39716,14 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
  101469 strings out of 474878
- 2563361 string characters out of 9512517
- 5121748 words of memory out of 7000000
+ 2563360 string characters out of 9512517
+ 5117788 words of memory out of 7000000
  122278 multiletter control sequences out of 15000+600000
  603869 words of font info for 240 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
