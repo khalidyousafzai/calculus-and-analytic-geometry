@@ -1,686 +1,1420 @@
- {\urduTechTermsfont {حصہ}} \protect ۶.\protect ۱\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۵۳۷
+ {\urduTechTermsfont {حصہ}} \protect ۱.\protect ۱\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۱۰
 \begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
 \item [
-\protect ۶.\protect ۱)
+\protect ۱.\protect ۱)
 ]
- $\tfrac {\pi }{2}$ 
+ یک بہ یک 
 \item [
-\protect ۶.\protect ۳)
+\protect ۱.\protect ۳)
 ]
- $\tfrac {1}{12}$ 
+ غیر یک بہ یک 
 \item [
-\protect ۶.\protect ۵)
+\protect ۱.\protect ۵)
 ]
- $\tfrac {128}{15}$ 
+ یک بہ یک 
 \item [
-\protect ۶.\protect ۷)
+\protect ۱.\protect ۷)
 ]
- $\tfrac {5}{6}$ 
+ دائرہ کار \عددی {(0,1]}، سعت \عددی {[0,\infty )}\\ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\tiny ,declare function={f(\x )=1/(\x ^2+1);m(\x )=\x ;}] \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1},ytick={1},enlargelimits=true,ymin=0] \addplot [domain=0:2]{f(x)}node[pos=0.85,above]{$y=f(x)$}; \addplot [domain=0:2]({f(x)},x)node[pos=0.85,right]{$y=f^{-1}(x)$}; \addplot [domain=0:2]{m(x)}node[pos=0.8,below right]{$y=x$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۶.\protect ۹)
+\protect ۱.\protect ۹)
 ]
- $\tfrac {38}{3}$ 
+ دائرہ کار \عددی {[-1,1]}، سعت \عددی {-\tfrac {\pi }{2},\tfrac {\pi }{2}} \\ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\tiny ,declare function={f(\x )=sin(deg(\x ));m(\x )=\x ;}] \pgfmathsetmacro {\k }{1/2*pi} \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-\k ,\k },xticklabels={$-\tfrac {\pi }{2}$,$\tfrac {\pi }{2}$},ytick={-1,1},enlargelimits=true] \addplot [domain=-1/2*pi:1/2*pi]{f(x)}node[right]{$y=f(x)$}; \addplot [domain=-1/2*pi:1/2*pi]({f(x)},x)node[above]{$y=f^{-1}(x)$}; \addplot [domain=-1/2*pi:1/2*pi]{m(x)}node[right]{$y=x$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۶.\protect ۱۱)
+\protect ۱.\protect ۱۱)
 ]
- $\tfrac {49}{6}$ 
+ لکیر \عددی {y=x} کے لحاظ سے تشاکلی ہے۔ \\ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\tiny ,declare function={f(\x )=sqrt(1-\x ^2);m(\x )=\x ;}] \pgfmathsetmacro {\k }{1/2*pi} \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1},ytick={1},enlargelimits=true] \addplot [domain=0:0.9]{f(x)}node[pos=0.5,above right]{$\begin {aligned}y&=f(x)\\ 0&\le x\le 1\end {aligned}$}; \addplot [domain=0.9:1]{f(x)}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۶.\protect ۱۳)
+\protect ۱.\protect ۱۳)
 ]
- $\tfrac {32}{3}$ 
+ $f^{-1}(x)=\sqrt {x-1}$ 
 \item [
-\protect ۶.\protect ۱۵)
+\protect ۱.\protect ۱۵)
 ]
- $\tfrac {48}{5}$ 
+ $f^{-1}(x)=\sqrt [3]{x+1}$ 
 \item [
-\protect ۶.\protect ۱۷)
+\protect ۱.\protect ۱۷)
 ]
- $\tfrac {8}{3}$ 
+ $f^{-1}(x)=\sqrt {x}-1$ 
 \item [
-\protect ۶.\protect ۱۹)
+\protect ۱.\protect ۱۹)
 ]
- $8$ 
+ $f^{-1}(x)=\sqrt [5]{x}$ دائرہ کار \عددی {-\infty <x<\infty }، سعت \عددی {-\infty <y<\infty } 
 \item [
-\protect ۶.\protect ۲۱)
+\protect ۱.\protect ۲۱)
 ]
- $\tfrac {5}{3}$ تین نقاط تقاطع پائے جاتے ہیں۔ 
+ $f^{-1}(x)=\sqrt [3]{x-1}$ دائرہ کار \عددی {-\infty <x<\infty }، سعت \عددی {-\infty <y<\infty } 
 \item [
-\protect ۶.\protect ۲۳)
+\protect ۱.\protect ۲۳)
 ]
- $18$ 
+ $f^{-1}(x)=\tfrac {1}{\sqrt {x}}$ دائرہ کار \عددی {x>0}، سعت \عددی {y>0} 
 \item [
-\protect ۶.\protect ۲۵)
+\protect ۱.\protect ۲۵)
 ]
- $\tfrac {243}{8}$ 
+ (ا) \عددی {f^{-1}(x)=\tfrac {x}{2}-\tfrac {3}{2}}\\ (ب) \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\tiny ,declare function={f(\x )=2*\x +3;}] \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}, xtick={-1.5,3},xticklabels={$-\tfrac {3}{2}$,$3$},ytick={-1.5,3},yticklabels={$-\tfrac {3}{2}$,$3$}, enlargelimits=true] \addplot [domain=-1.7:0.5]{f(x)}node[right]{$y=f(x)=2x+3$}; \addplot [domain=-1.7:0.5]({f(x)},x)node[above,]{$y=f^{-1}(x)=\tfrac {x}{2}-\tfrac {3}{2}$}; \end {axis} \end {tikzpicture} \end {minipage}\\ (ج) \عددی {2,\tfrac {1}{2}} 
 \item [
-\protect ۶.\protect ۲۷)
+\protect ۱.\protect ۲۷)
 ]
- $\tfrac {8}{3}$ 
+ (ا) \عددی {f^{-1}(x)=-\tfrac {x}{4}+\tfrac {5}{4}}\\ (ب) \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\tiny ,declare function={f(\x )=-4*\x +5;}] \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}, xtick={1.25,5},xticklabels={$\tfrac {5}{4}$,$5$},ytick={1.25,5},yticklabels={$\tfrac {5}{4}$,$5$}, enlargelimits=true] \addplot [domain=-0.5:1.5]{f(x)}node[pos=0.25,right]{$y=f(x)=-4x+5$}; \addplot [domain=-0.25:1.5]({f(x)},x)node[pos=0.5,above right]{$y=f^{-1}(x)=-\tfrac {x}{4}+\tfrac {5}{4}$}; \end {axis} \end {tikzpicture} \end {minipage}\\ (ج) \عددی {-4,-\tfrac {1}{4}} 
 \item [
-\protect ۶.\protect ۲۹)
+\protect ۱.\protect ۲۹)
+]
+ (ب) \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\tiny ,declare function={f(\x )=\x ^3;}] \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}, xtick={-1,1},ytick={-1,1}, enlargelimits=true] \addplot [domain=0:1.25]{f(x)}node[above]{$y=f(x)=x^3$}; \addplot [domain=0:1.25](-x,{-f(x)}); \addplot [domain=0:1.25]({f(x)},x)node[below,xshift=3ex]{$y=f^{-1}(x)=x^{1/3}$}; \addplot [domain=0:1.25]({-f(x)},-x); \end {axis} \end {tikzpicture} \end {minipage}\\ (ج) \عددی {(1,1)} پر \عددی {f} کا ڈھلوان \عددی {3} ہے؛ \عددی {(1,1)} پر \عددی {g} کا ڈھلوان \عددی {\tfrac {1}{3}} ہے؛ \عددی {-1,-1} پر \عددی {f} کا ڈھلوان \عددی {3} اور \عددی {(-1,-1)} پر \عددی {g} ڈھلوان \عددی {\tfrac {1}{3}} ہے۔ (د) \عددی {x=0} پر \عددی {y=x^3} کا مماس \عددی {y=0} ہے؛ \عددی {x=0} پر \عددی {y=\sqrt [3]{x}} کا مماس \عددی {x=0} ہے۔ 
+\item [
+\protect ۱.\protect ۳۱)
+]
+ $\tfrac {1}{9}$ 
+\item [
+\protect ۱.\protect ۳۳)
+]
+ $3$ 
+\item [
+\protect ۱.\protect ۳۵)
+]
+ (ا) \عددی {f^{-1}(x)=\tfrac {x}{m}}، (ب) \عددی {f^{-1}} کی ترسیم مبدا سے گزرتی ہے اور اس کا ڈھلوان \عددی {\tfrac {1}{m}} ہے۔ 
+\item [
+\protect ۱.\protect ۳۷)
+]
+ (ا) \عددی {f^{-1}(x)=x-1}، (ب) \عددی {f^{-1}(x)=x-b}، \عددی {f^{-1}} کی ترسیم \عددی {f} کی ترسیم کے متوازی ہے۔\عددی {f^{-1}} اور \عددی {f} کی ترسیمات لکیر \عددی {y=x} کے مخالف اطراف پر اور اس لکیر سے برابر فاصلہ پر ہیں۔ (ج) ترسیمات ایک دوسرے کے متوازی ہوں گے اور لکیر \عددی {y=x} کے مخالف اطراف اور برابر فاصلہ پر ہوں گے۔ 
+\item [
+\protect ۱.\protect ۴۱)
+]
+ بڑھتا، لہٰذا یک بہ یک؛ \عددی {\tfrac {\dif f^{-1}}{\dif x}=\tfrac {1}{9}x^{-2/3}} 
+\item [
+\protect ۱.\protect ۴۳)
+]
+ گھٹتا، لہٰذا یک بہ یک؛ \عددی {\tfrac {\dif f^{-1}}{\dif x}=-\tfrac {1}{3}x^{-2/3}} 
+\end {description}
+ {\urduTechTermsfont {حصہ}} \protect ۱.\protect ۲\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۲۶
+\begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
+\item [
+\protect ۱.\protect ۶۳)
+]
+ (ا) \عددی {\ln 3-2\ln 2}، (ب) \عددی {2(\ln 2-\ln 3)}، (ج) \عددی {-\ln 2}، (د) \عددی {\tfrac {2}{3}\ln 3}، (ہ) \عددی {\ln 3+\tfrac {1}{2}\ln 2}، (و) \عددی {\tfrac {1}{2}(3\ln 3-\ln 2)} 
+\item [
+\protect ۱.\protect ۶۵)
+]
+ (ا) \عددی {\ln 5}، (ب) \عددی {\ln (x-3)}، (ج) \عددی {\ln (t^2)} 
+\item [
+\protect ۱.\protect ۶۷)
+]
+ $\tfrac {1}{x}$ 
+\item [
+\protect ۱.\protect ۶۹)
+]
+ $\tfrac {2}{t}$ 
+\item [
+\protect ۱.\protect ۷۱)
+]
+ $-\tfrac {1}{x}$ 
+\item [
+\protect ۱.\protect ۷۳)
+]
+ $\tfrac {1}{\theta +1}$ 
+\item [
+\protect ۱.\protect ۷۵)
+]
+ $\tfrac {3}{x}$ 
+\item [
+\protect ۱.\protect ۷۷)
+]
+ $2\ln t+(\ln t)^2$ 
+\item [
+\protect ۱.\protect ۷۹)
+]
+ $x^3\ln x$ 
+\item [
+\protect ۱.\protect ۸۱)
+]
+ $\tfrac {1-\ln t}{t^2}$ 
+\item [
+\protect ۱.\protect ۸۳)
+]
+ $\tfrac {1}{x(1+\ln x)^2}$ 
+\item [
+\protect ۱.\protect ۸۵)
+]
+ $\tfrac {1}{x\ln x}$ 
+\item [
+\protect ۱.\protect ۸۷)
+]
+ $2\cos (\ln \theta )$ 
+\item [
+\protect ۱.\protect ۸۹)
+]
+ $-\tfrac {3x+2}{2x(x+1)}$ 
+\item [
+\protect ۱.\protect ۹۱)
+]
+ $\tfrac {2}{t(1-\ln t)^2}$ 
+\item [
+\protect ۱.\protect ۹۳)
+]
+ $\tfrac {\tan (\ln \theta )}{\theta }$ 
+\item [
+\protect ۱.\protect ۹۵)
+]
+ $\tfrac {10x}{x^2+1}+\tfrac {1}{2(1-x)}$ 
+\item [
+\protect ۱.\protect ۹۷)
+]
+ $2x\ln \abs {x}-x\ln \tfrac {\abs {x}}{\sqrt {2}}$ 
+\item [
+\protect ۱.\protect ۹۹)
+]
+ $\tfrac {1}{2}\sqrt {x(x+1)}\big (\tfrac {1}{x}+\tfrac {1}{x+1}\big )=\tfrac {2x+1}{2\sqrt {x(x+1)}}$ 
+\item [
+\protect ۱.\protect ۱۰۱)
+]
+ $\tfrac {1}{2}\sqrt {\tfrac {t}{t+1}}\big (\tfrac {1}{t}-\tfrac {1}{t+1}\big )=\tfrac {1}{2\sqrt {t}(t+1)^{3/2}}$ 
+\item [
+\protect ۱.\protect ۱۰۳)
+]
+ $\sqrt {\theta +3}(\sin \theta )\big (\tfrac {1}{2(\theta +3)}+\cot \theta \big )$ 
+\item [
+\protect ۱.\protect ۱۰۵)
+]
+ $t(t+1)(t+2)[\tfrac {1}{t}+\tfrac {1}{t+1}+\tfrac {1}{t+2}]=3t^2+6t+2$ 
+\item [
+\protect ۱.\protect ۱۰۷)
+]
+ $\tfrac {\theta +5}{\theta \cos \theta }[\tfrac {1}{\theta +5}-\tfrac {1}{\theta }+\tan \theta ]$ 
+\item [
+\protect ۱.\protect ۱۰۹)
+]
+ $\tfrac {x\sqrt {x^2+1}}{(x+1)^{2/3}}[\tfrac {1}{x}+\tfrac {x}{x^2+1}-\tfrac {2}{3(x+1)}]$ 
+\item [
+\protect ۱.\protect ۱۱۱)
+]
+ $\tfrac {1}{3}\sqrt [3]{\tfrac {x(x-2)}{x^2+1}}\big (\tfrac {1}{x}+\tfrac {1}{x-2}-\tfrac {2x}{x^2+1}\big )$ 
+\item [
+\protect ۱.\protect ۱۱۳)
+]
+ $\ln \big (\tfrac {2}{3}\big )$ 
+\item [
+\protect ۱.\protect ۱۱۵)
+]
+ $\ln \abs {y^2-25}+C$ 
+\item [
+\protect ۱.\protect ۱۱۷)
+]
+ $\ln 3$ 
+\item [
+\protect ۱.\protect ۱۱۹)
+]
+ $(\ln 2)^2$ 
+\item [
+\protect ۱.\protect ۱۲۱)
+]
+ $\tfrac {1}{\ln 4}$ 
+\item [
+\protect ۱.\protect ۱۲۳)
+]
+ $\ln \abs {6+3\tan t}+C$ 
+\item [
+\protect ۱.\protect ۱۲۵)
+]
+ $\ln 2$ 
+\item [
+\protect ۱.\protect ۱۲۷)
+]
+ $\ln 27$ 
+\item [
+\protect ۱.\protect ۱۲۹)
+]
+ $\ln (1+\sqrt {x})+C$ 
+\item [
+\protect ۱.\protect ۱۳۱)
+]
+ (ا)\عددی {x=0} پر بلند تر \عددی {0} اور \عددی {x=\tfrac {\pi }{3}} پر کم تر \عددی {-\ln 2}؛ (ب) \عددی {x=1} پر بلند تر \عددی {1} اور \عددی {x=\tfrac {1}{2}} پر کم تر \عددی {\cos (\ln 2)} 
+\item [
+\protect ۱.\protect ۱۳۳)
+]
+ $\ln 16$ 
+\item [
+\protect ۱.\protect ۱۳۵)
+]
+ $4\pi \ln 4$ 
+\item [
+\protect ۱.\protect ۱۳۷)
+]
+ $\pi \ln 16$ 
+\item [
+\protect ۱.\protect ۱۳۹)
+]
+ (ا) \عددی {6+\ln 2}، (ب) \عددی {8+\ln 9} 
+\item [
+\protect ۱.\protect ۱۴۱)
+]
+ (ا) \عددی {\bar {x}\approx 1.44,\, \bar {y}\approx 0.36} 
+\item [
+\protect ۱.\protect ۱۴۳)
+]
+ $y=x+\ln \abs {x}+2$ 
+\item [
+\protect ۱.\protect ۱۴۵)
+]
+ (ب)\عددی {0.00469} 
+\item [
+\protect ۱.\protect ۱۴۷)
+]
+ $2$ 
+\end {description}
+ {\urduTechTermsfont {حصہ}} \protect ۱.\protect ۳\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۳۸
+\begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
+\item [
+\protect ۱.\protect ۱۵۳)
+]
+ (ا) \عددی {7.2}، (ب) \عددی {\tfrac {1}{x^2}}، (ج) \عددی {\tfrac {x}{y}} 
+\item [
+\protect ۱.\protect ۱۵۵)
+]
+ (ا) \عددی {1}، (ب) \عددی {1}، (ج) \عددی {-x^2-y^2} 
+\item [
+\protect ۱.\protect ۱۵۷)
+]
+ $e^{2t+4}$ 
+\item [
+\protect ۱.\protect ۱۵۹)
+]
+ $e^{5t}+40$ 
+\item [
+\protect ۱.\protect ۱۶۱)
+]
+ $y=2xe^x+1$ 
+\item [
+\protect ۱.\protect ۱۶۳)
+]
+ (ا) \عددی {k=\ln 2}، (ب) \عددی {k=\tfrac {1}{10}\ln 2}،\\ (ج) \عددی {k=1000\ln a} 
+\item [
+\protect ۱.\protect ۱۶۵)
+]
+ (ا) \عددی {t=-10\ln 3}، (ب) \عددی {t=-\tfrac {\ln 2}{k}}، \\(ج) \عددی {t=\tfrac {\ln 0.4}{\ln 0.2}} 
+\item [
+\protect ۱.\protect ۱۶۷)
+]
+ $4(\ln x)^2$ 
+\item [
+\protect ۱.\protect ۱۶۹)
+]
+ $-5e^{-5x}$ 
+\item [
+\protect ۱.\protect ۱۷۱)
+]
+ $-7e^{5-7x}$ 
+\item [
+\protect ۱.\protect ۱۷۳)
+]
+ $xe^x$ 
+\item [
+\protect ۱.\protect ۱۷۵)
+]
+ $x^2e^x$ 
+\item [
+\protect ۱.\protect ۱۷۷)
+]
+ $2e^{\theta }\cos \theta $ 
+\item [
+\protect ۱.\protect ۱۷۹)
+]
+ $2\theta e^{\,-\theta ^{\,2}}\sin (e^{\,-\theta ^{\,2}})$ 
+\item [
+\protect ۱.\protect ۱۸۱)
+]
+ $\tfrac {1-t}{t}$ 
+\item [
+\protect ۱.\protect ۱۸۳)
+]
+ $\tfrac {1}{1+e^{\theta }}$ 
+\item [
+\protect ۱.\protect ۱۸۵)
+]
+ $e^{\cos t}(1-t\sin t)$ 
+\item [
+\protect ۱.\protect ۱۸۷)
+]
+ $\tfrac {\sin x}{x}$ 
+\item [
+\protect ۱.\protect ۱۸۹)
+]
+ $\tfrac {ye^y\cos x}{1-ye^y\sin x}$ 
+\item [
+\protect ۱.\protect ۱۹۱)
+]
+ $\tfrac {2e^{2x}-\cos (x+3y)}{3\cos (x+3y)}$ 
+\item [
+\protect ۱.\protect ۱۹۳)
+]
+ $\tfrac {1}{3}e^{3x}-5e^{-x}+C$ 
+\item [
+\protect ۱.\protect ۱۹۵)
+]
+ $1$ 
+\item [
+\protect ۱.\protect ۱۹۷)
+]
+ $8e^{x+1}+C$ 
+\item [
+\protect ۱.\protect ۱۹۹)
 ]
  $2$ 
 \item [
-\protect ۶.\protect ۳۱)
+\protect ۱.\protect ۲۰۱)
 ]
- $\tfrac {104}{15}$ 
+ $2e^{\,\sqrt {r}}+C$ 
 \item [
-\protect ۶.\protect ۳۳)
+\protect ۱.\protect ۲۰۳)
 ]
- $\tfrac {56}{15}$ 
+ $-e^{-t^2}+C$ 
 \item [
-\protect ۶.\protect ۳۵)
+\protect ۱.\protect ۲۰۵)
 ]
- $4$ 
+ $-e^{1/x}+C$ 
 \item [
-\protect ۶.\protect ۳۷)
+\protect ۱.\protect ۲۰۷)
 ]
- $\tfrac {4}{3}-\tfrac {4}{\pi }$ 
+ $e$ 
 \item [
-\protect ۶.\protect ۳۹)
+\protect ۱.\protect ۲۰۹)
 ]
- $\tfrac {\pi }{2}$ 
+ $\tfrac {1}{\pi }e^{\,\sec \pi t}+C$ 
 \item [
-\protect ۶.\protect ۴۱)
+\protect ۱.\protect ۲۱۱)
+]
+ $1$ 
+\item [
+\protect ۱.\protect ۲۱۳)
+]
+ $\ln (1+e^r)+C$ 
+\item [
+\protect ۱.\protect ۲۱۵)
+]
+ $y=1-\cos (e^t-2)$ 
+\item [
+\protect ۱.\protect ۲۱۷)
+]
+ $y=2(e^{-x}+x)-1$ 
+\item [
+\protect ۱.\protect ۲۱۹)
+]
+ نقطہ \عددی {x=0} پر مطلق اعظم \عددی {1}؛ نقطہ \عددی {x=\ln 2} پر مطلق اقل \عددی {2-2\ln 2} 
+\item [
+\protect ۱.\protect ۲۲۱)
+]
+ \عددی {x=\tfrac {1}{\sqrt {e}}} پر مطلق اعظم \عددی {\tfrac {1}{2e}} 
+\item [
+\protect ۱.\protect ۲۲۳)
 ]
  $2$ 
 \item [
-\protect ۶.\protect ۴۳)
+\protect ۱.\protect ۲۲۵)
+]
+ $y=e^{x/2}-1$ 
+\item [
+\protect ۱.\protect ۲۲۷)
+]
+ (ا) \عددی {\tfrac {\dif }{\dif x}(x\ln x-x+C)=x\cdot \tfrac {1}{x}+\ln x-1+0=\ln x}، (ب) \عددی {\tfrac {1}{e-1}} 
+\item [
+\protect ۱.\protect ۲۲۹)
+]
+ (ب) حتمی خلل تقریباً \عددی {0.02140} 
+\item [
+\protect ۱.\protect ۲۳۱)
+]
+ $\num {2.71828183}$ 
+\end {description}
+ {\urduTechTermsfont {حصہ}} \protect ۱.\protect ۴\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۴۷
+\begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
+\item [
+\protect ۱.\protect ۲۳۵)
+]
+ ا) \عددی {7}، ب) \عددی {\sqrt {2}}، ج) \عددی {75}، د) \عددی {2}، ھ) \عددی {0.5}، و) \عددی {-1} 
+\item [
+\protect ۱.\protect ۲۳۷)
+]
+ ا) \عددی {\sqrt {x}}، ب) \عددی {x^2}، ج) \عددی {\sin x} 
+\item [
+\protect ۱.\protect ۲۳۹)
+]
+ ا) \عددی {\tfrac {\ln 3}{\ln 2}}، ب) \عددی {3}، ج) \عددی {2} 
+\item [
+\protect ۱.\protect ۲۴۱)
+]
+ $x=12$ 
+\item [
+\protect ۱.\protect ۲۴۳)
+]
+ \عددی {x=3} یا \عددی {x=2} 
+\item [
+\protect ۱.\protect ۲۴۵)
+]
+ $2^x\ln x$ 
+\item [
+\protect ۱.\protect ۲۴۷)
+]
+ $(\tfrac {\ln 5}{2\sqrt {s}})5^{\sqrt {s}}$ 
+\item [
+\protect ۱.\protect ۲۴۹)
+]
+ $\pi x^{\pi -1}$ 
+\item [
+\protect ۱.\protect ۲۵۱)
+]
+ $-\sqrt {2}\cos \theta ^{(\sqrt {2}-1)}\sin \theta $ 
+\item [
+\protect ۱.\protect ۲۵۳)
+]
+ $7^{\sec \theta }(\ln 7)^2 (\sec \theta \tan \theta )$ 
+\item [
+\protect ۱.\protect ۲۵۵)
+]
+ $(3\cos 3t)(2^{\sin 3t})\ln 2$ 
+\item [
+\protect ۱.\protect ۲۵۷)
+]
+ $\tfrac {1}{\theta \ln 2}$ 
+\item [
+\protect ۱.\protect ۲۵۹)
+]
+ $\tfrac {3}{x\ln 4}$ 
+\item [
+\protect ۱.\protect ۲۶۱)
+]
+ $\tfrac {2(\ln r)}{r(\ln 2)(\ln 4)}$ 
+\item [
+\protect ۱.\protect ۲۶۳)
+]
+ $\tfrac {-2}{(x+1)(x-1)}$ 
+\item [
+\protect ۱.\protect ۲۶۵)
+]
+ $\sin (\log _7 \theta )+\tfrac {1}{\ln 7}\cos (\log _7\theta )$ 
+\item [
+\protect ۱.\protect ۲۶۷)
+]
+ $\tfrac {1}{\ln 5}$ 
+\item [
+\protect ۱.\protect ۲۶۹)
+]
+ $\tfrac {1}{t}(\log _2 3)3^{\log _2 t}$ 
+\item [
+\protect ۱.\protect ۲۷۱)
+]
+ $\tfrac {1}{t}$ 
+\item [
+\protect ۱.\protect ۲۷۳)
+]
+ $(x+1)^x (\tfrac {x}{x+1}+\ln (x+1))$ 
+\item [
+\protect ۱.\protect ۲۷۵)
+]
+ $(\sqrt {t})^t (\tfrac {\ln t}{2}+\tfrac {1}{2})$ 
+\item [
+\protect ۱.\protect ۲۷۷)
+]
+ $(\sin x)^x (\ln \sin x+x\cot x)$ 
+\item [
+\protect ۱.\protect ۲۷۹)
+]
+ $(x^{\ln x})(\tfrac {\ln x^2}{x})$ 
+\item [
+\protect ۱.\protect ۲۸۱)
+]
+ $\tfrac {5^x}{\ln 5}+C$ 
+\item [
+\protect ۱.\protect ۲۸۳)
+]
+ $\tfrac {1}{2\ln 2}$ 
+\item [
+\protect ۱.\protect ۲۸۵)
+]
+ $\tfrac {1}{\ln 2}$ 
+\item [
+\protect ۱.\protect ۲۸۷)
+]
+ $\tfrac {6}{\ln 7}$ 
+\item [
+\protect ۱.\protect ۲۸۹)
+]
+ $32760$ 
+\item [
+\protect ۱.\protect ۲۹۱)
+]
+ $\tfrac {3x^{(\sqrt {3}+1)}}{\sqrt {3}+1}+C$ 
+\item [
+\protect ۱.\protect ۲۹۳)
+]
+ $3^{\sqrt {2}+1}$ 
+\item [
+\protect ۱.\protect ۲۹۵)
+]
+ $\tfrac {1}{\ln 10}(\tfrac {(\ln x)^2}{2})+C$ 
+\item [
+\protect ۱.\protect ۲۹۷)
+]
+ $2(\ln 2)^2$ 
+\item [
+\protect ۱.\protect ۲۹۹)
+]
+ $\tfrac {3\ln 2}{2}$ 
+\item [
+\protect ۱.\protect ۳۰۱)
+]
+ $\ln 10$ 
+\item [
+\protect ۱.\protect ۳۰۳)
+]
+ $(\ln 10)\ln |\ln x|+C$ 
+\item [
+\protect ۱.\protect ۳۰۵)
+]
+ $\ln (\ln x),\, x>1$ 
+\item [
+\protect ۱.\protect ۳۰۷)
+]
+ $-\ln x$ 
+\item [
+\protect ۱.\protect ۳۰۹)
+]
+ $2\ln 5$ 
+\item [
+\protect ۱.\protect ۳۱۱)
+]
+ $[10^{-7.44},10^{-7.37}]$ 
+\item [
+\protect ۱.\protect ۳۱۳)
+]
+ $k=10$ 
+\item [
+\protect ۱.\protect ۳۱۵)
+]
+ ا) \عددی {10^{-7}}، ب) \عددی {7} ، ج) \عددی {1:1} 
+\item [
+\protect ۱.\protect ۳۱۷)
+]
+ $x\approx -0.76666$ 
+\item [
+\protect ۱.\protect ۳۱۹)
+]
+ ا) \عددی {L(x)=1+(\ln 2)x\approx 0.69x+1} 
+\item [
+\protect ۱.\protect ۳۲۱)
+]
+ ا) \عددی {1.89279}، ب) \عددی {-0.35621}، ج) \عددی {0.94575}، د) \عددی {-2.80735}، ھ) \عددی {5.29595}، و) \عددی {0.97041}، ز) \عددی {-1.03972}، ح) \عددی {-1.61181} 
+\end {description}
+ {\urduTechTermsfont {حصہ}} \protect ۱.\protect ۵\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۶۱
+\begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
+\item [
+\protect ۱.\protect ۳۲۳)
+]
+ (ا) \عددی {\num {-0.00001}}، (ب) \عددی {10.536} سال، (ج) \عددی {\SI {82}{\percent }} 
+\item [
+\protect ۱.\protect ۳۲۵)
+]
+ $\SI {54.88}{\gram }$ 
+\item [
+\protect ۱.\protect ۳۲۷)
+]
+ $\SI {19.93}{\meter }$ 
+\item [
+\protect ۱.\protect ۳۲۹)
+]
+ $2.8147497\times 10^{14}$ 
+\item [
+\protect ۱.\protect ۳۳۱)
+]
+ (ا) \عددی {8} سال، (ب) \عددی {32.02} سال 
+\item [
+\protect ۱.\protect ۳۳۳)
+]
+ \عددی {15.28} سال 
+\item [
+\protect ۱.\protect ۳۳۵)
+]
+ (ا) \عددی {A_0e^{0.2}}، (ب) \عددی {17.33} سال، (ج) \عددی {27.74} سال 
+\item [
+\protect ۱.\protect ۳۳۷)
+]
+ $\SI {4.50}{\percent }$ 
+\item [
+\protect ۱.\protect ۳۳۹)
+]
+ \عددی {0.585} دن 
+\item [
+\protect ۱.\protect ۳۴۳)
+]
+ (ا)\عددی {17.5} منٹ، (ب) \عددی {13.26} منٹ 
+\item [
+\protect ۱.\protect ۳۴۵)
+]
+ $\SI {-3}{\celsius }$ 
+\item [
+\protect ۱.\protect ۳۴۷)
+]
+ تقریباً \عددی {6658} سال 
+\item [
+\protect ۱.\protect ۳۴۹)
+]
+ \عددی {41} سال پرانا 
+\end {description}
+ {\urduTechTermsfont {حصہ}} \protect ۱.\protect ۶\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۷۱
+\begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
+\item [
+\protect ۱.\protect ۳۵۰)
+]
+ $\tfrac {1}{4}$ 
+\item [
+\protect ۱.\protect ۳۵۲)
+]
+ $-\tfrac {23}{7}$ 
+\item [
+\protect ۱.\protect ۳۵۴)
+]
+ $\tfrac {5}{7}$ 
+\item [
+\protect ۱.\protect ۳۵۶)
+]
+ $0$ 
+\item [
+\protect ۱.\protect ۳۵۸)
+]
+ $-16$ 
+\item [
+\protect ۱.\protect ۳۶۰)
+]
+ $-2$ 
+\item [
+\protect ۱.\protect ۳۶۲)
+]
+ $\tfrac {1}{4}$ 
+\item [
+\protect ۱.\protect ۳۶۴)
+]
+ $2$ 
+\item [
+\protect ۱.\protect ۳۶۶)
+]
+ $3$ 
+\item [
+\protect ۱.\protect ۳۶۸)
+]
+ $-1$ 
+\item [
+\protect ۱.\protect ۳۷۰)
+]
+ $\ln 3$ 
+\item [
+\protect ۱.\protect ۳۷۲)
+]
+ $\tfrac {1}{\ln 2}$ 
+\item [
+\protect ۱.\protect ۳۷۴)
+]
+ $\ln 2$ 
+\item [
+\protect ۱.\protect ۳۷۶)
+]
+ $1$ 
+\item [
+\protect ۱.\protect ۳۷۸)
 ]
  $\tfrac {1}{2}$ 
 \item [
-\protect ۶.\protect ۴۵)
+\protect ۱.\protect ۳۸۰)
+]
+ $\ln 2$ 
+\item [
+\protect ۱.\protect ۳۸۲)
+]
+ $0$ 
+\item [
+\protect ۱.\protect ۳۸۴)
+]
+ $-\tfrac {1}{2}$ 
+\item [
+\protect ۱.\protect ۳۸۶)
+]
+ $\ln 2$ 
+\item [
+\protect ۱.\protect ۳۸۸)
+]
+ $-1$ 
+\item [
+\protect ۱.\protect ۳۹۰)
 ]
  $1$ 
 \item [
-\protect ۶.\protect ۴۷)
+\protect ۱.\protect ۳۹۲)
 ]
- (ا) \عددی {(\mp \sqrt {c},c)}، (ب) \عددی {c=4^{2/3}}، (ج) \عددی {c{=}4^{2/3}} 
+ $\tfrac {1}{e}$ 
 \item [
-\protect ۶.\protect ۴۹)
+\protect ۱.\protect ۳۹۴)
 ]
- $\tfrac {11}{3}$ 
+ $1$ 
 \item [
-\protect ۶.\protect ۵۱)
+\protect ۱.\protect ۳۹۶)
 ]
- $\tfrac {3}{4}$ 
+ $\tfrac {1}{e}$ 
 \item [
-\protect ۶.\protect ۵۳)
+\protect ۱.\protect ۳۹۸)
 ]
- کوئی نہیں 
+ $e^{1/2}$ 
+\item [
+\protect ۱.\protect ۴۰۰)
+]
+ $1$ 
+\item [
+\protect ۱.\protect ۴۰۲)
+]
+ $3$ 
+\item [
+\protect ۱.\protect ۴۰۴)
+]
+ $1$ 
+\item [
+\protect ۱.\protect ۴۰۶)
+]
+ (ب) درست 
+\item [
+\protect ۱.\protect ۴۰۸)
+]
+ (د) درست
+\item [
+\protect ۱.\protect ۴۱۰)
+]
+ $c=\tfrac {25}{10}$ 
 \end {description}
- {\urduTechTermsfont {حصہ}} \protect ۶.\protect ۲\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۵۴۵
+ {\urduTechTermsfont {حصہ}} \protect ۱.\protect ۷\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۸۴
 \begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
 \item [
-\protect ۶.\protect ۵۹)
+\protect ۱.\protect ۴۲۴)
 ]
- (ا) \عددی {S(x)=\pi (1-x^2)}، \\ (ب) \عددی {S(x)=4(1-x^2)}،\\ (ج) \عددی {S(x)=2(1-x^2)}، \\ (د) \عددی {S(x)=\sqrt {3}(1-x^2)} 
+ (ا) آہستہ (ب) آہستہ (ج) آہستہ (د) تیز (ہ) آہستہ (و) آہستہ\\ (ز) ایک سا (ح) آہستہ 
 \item [
-\protect ۶.\protect ۶۱)
+\protect ۱.\protect ۴۲۶)
 ]
- $16$ 
+ (ا) ایک سا (ب) تیز (ج) ایک سا (د) ایک سا (ہ) آہستہ \\ (و) تیز (ز) آہستہ (ح) ایک سا 
 \item [
-\protect ۶.\protect ۶۳)
+\protect ۱.\protect ۴۲۸)
 ]
- $\tfrac {16}{3}$ 
+ (ا) ایک سا (ب) ایک سا (ج) ایک سا(د) تیز \\ (ہ) تیز (و) ایک سا (ز) آہستہ (ح) تیز 
 \item [
-\protect ۶.\protect ۶۵)
+\protect ۱.\protect ۴۳۰)
 ]
- (ا) \عددی {2\sqrt {3}}، (ب) \عددی {8} 
+ د، ا، ج، ب 
 \item [
-\protect ۶.\protect ۶۷)
+\protect ۱.\protect ۴۳۲)
 ]
- $8\pi $ 
+ (ا) غلط (ب) غلط (ج) درست (د) درست\\ (ہ) درست (و) درست (ز) غلط (ح) درست 
 \item [
-\protect ۶.\protect ۶۹)
+\protect ۱.\protect ۴۳۶)
 ]
- (ا) \عددی {s^2h}، (ب) \عددی {s^2h} 
+ جب \عددی {f} کا درجہ \عددی {g} کے درجہ سے کم یا اس کے برابر ہو۔ 
+\item [
+\protect ۱.\protect ۴۳۸)
+]
+ زیادہ درجے کی کثیررکنی، کم درجے کی کثیررکنی سے زیادہ تیز بڑھتی ہے۔ ایک سے درجہ کی کثیررکنی کی شرح نمو برابر ہوتی ہے۔ 
+\item [
+\protect ۱.\protect ۴۴۴)
+]
+ (ب) $\ln (e^{\num {17000000}}){=}\num {17000000}<\\(e^{17\times 10^6})^{1/10^6}=e^{17}\approx \num {24154952.75}$\\ (ج) \عددی {x\approx 3.4306311\times 10^{15}}، (د) نقطہ تقاطع \عددی {x\approx 3.4306311\times 10^{15}} ہے۔ 
+\item [
+\protect ۱.\protect ۴۴۶)
+]
+ (ا) جو \عددی {O(n\log _2n)} قدم چلتا ہے۔ 
+\item [
+\protect ۱.\protect ۴۴۸)
+]
+ ترتیبی تلاش کو دس لاکھ قدم چلنا پڑھ سکتا ہے جبکہ ثنائی تلاش میں زیادہ سے زیادہ \عددی {20} قدم چلنا ہو گا۔ 
 \end {description}
- {\urduTechTermsfont {حصہ}} \protect ۶.\protect ۳\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۵۵۷
+ {\urduTechTermsfont {حصہ}} \protect ۱.\protect ۸\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۹۸
 \begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
 \item [
-\protect ۶.\protect ۷۳)
+\protect ۱.\protect ۴۵۰)
+]
+ (ا) \عددی {\tfrac {\pi }{4}}، (ب) \عددی {-\tfrac {\pi }{3}}، (ج) \عددی {\tfrac {\pi }{6}} 
+\item [
+\protect ۱.\protect ۴۵۲)
+]
+ (ا) \عددی {-\tfrac {\pi }{6}}، (ب) \عددی {\tfrac {\pi }{4}}، (ج) \عددی {-\tfrac {\pi }{3}} 
+\item [
+\protect ۱.\protect ۴۵۴)
+]
+ (ا) \عددی {\tfrac {\pi }{3}}، (ب) \عددی {\tfrac {3\pi }{4}}، (ج) \عددی {\tfrac {\pi }{6}} 
+\item [
+\protect ۱.\protect ۴۵۶)
+]
+ (ا) \عددی {\tfrac {3\pi }{4}}، (ب) \عددی {\tfrac {\pi }{6}}، (ج) \عددی {\tfrac {2\pi }{3}} 
+\item [
+\protect ۱.\protect ۴۵۸)
+]
+ (ا) \عددی {\tfrac {\pi }{4}}، (ب) \عددی {-\tfrac {\pi }{3}}، (ج) \عددی {\tfrac {\pi }{6}} 
+\item [
+\protect ۱.\protect ۴۶۰)
+]
+ (ا) \عددی {\tfrac {3\pi }{4}}، (ب) \عددی {\tfrac {\pi }{6}}، (ج) \عددی {\tfrac {2\pi }{3}} 
+\item [
+\protect ۱.\protect ۴۶۲)
+]
+ $\cos \alpha =\tfrac {12}{13},\,\tan \alpha =\tfrac {5}{12},\\ \sec \alpha =\tfrac {13}{12},\, \csc \alpha =\tfrac {13}{5},\,\cot \alpha =\tfrac {12}{5}$ 
+\item [
+\protect ۱.\protect ۴۶۴)
+]
+ $\sin \alpha =\tfrac {2}{\sqrt {5}},\,\cos \alpha =-\tfrac {1}{\sqrt {5}},\\ \tan \alpha =-2,\,\csc \alpha =\tfrac {\sqrt {5}}{2},\, \cot \alpha =-\tfrac {1}{2}$ 
+\item [
+\protect ۱.\protect ۴۶۶)
+]
+ $\tfrac {1}{\sqrt {2}}$ 
+\item [
+\protect ۱.\protect ۴۶۸)
+]
+ $-\tfrac {1}{\sqrt {3}}$ 
+\item [
+\protect ۱.\protect ۴۷۰)
+]
+ $\tfrac {4+\sqrt {3}}{2\sqrt {3}}$ 
+\item [
+\protect ۱.\protect ۴۷۲)
+]
+ $1$ 
+\item [
+\protect ۱.\protect ۴۷۴)
+]
+ $-\sqrt {2}$ 
+\item [
+\protect ۱.\protect ۴۷۶)
+]
+ $\tfrac {\pi }{6}$ 
+\item [
+\protect ۱.\protect ۴۷۷)
+]
+ (جواب \عددی {-\tfrac {\pi }{4}} نہیں ہے۔) 
+\item [
+\protect ۱.\protect ۴۷۸)
+]
+ $\tfrac {\sqrt {x^2+4}}{2}$ 
+\item [
+\protect ۱.\protect ۴۸۰)
+]
+ $\sqrt {9y^2-1}$ 
+\item [
+\protect ۱.\protect ۴۸۲)
+]
+ $\sqrt {1-x^2}$ 
+\item [
+\protect ۱.\protect ۴۸۴)
+]
+ $\tfrac {\sqrt {x^2-2x}}{x-1}$ 
+\item [
+\protect ۱.\protect ۴۸۶)
+]
+ $\tfrac {\sqrt {9-4y^2}}{3}$ 
+\item [
+\protect ۱.\protect ۴۸۸)
+]
+ $\tfrac {\sqrt {x^2-16}}{x}$ 
+\item [
+\protect ۱.\protect ۴۹۰)
+]
+ $\tfrac {\pi }{2}$ 
+\item [
+\protect ۱.\protect ۴۹۲)
+]
+ $\tfrac {\pi }{2}$ 
+\item [
+\protect ۱.\protect ۴۹۴)
+]
+ $\tfrac {\pi }{2}$ 
+\item [
+\protect ۱.\protect ۴۹۶)
+]
+ $0$ 
+\item [
+\protect ۱.\protect ۵۰۰)
+]
+ $\theta =\cos ^{-1}(\tfrac {1}{\sqrt {3}})\approx 54.7^{\circ }$ 
+\item [
+\protect ۱.\protect ۵۰۶)
+]
+ (ا) معین؛ ایسا زاویہ پایا جاتا ہے جس کا ٹینجنٹ \عددی { 2} کے برابر ہے۔ \\ (ب) غیر معین؛ ایسا کوئی زاویہ نہیں پایا جاتا ہے جس کا کوسائن \عددی {2} کے برابر ہو۔ 
+\item [
+\protect ۱.\protect ۵۰۸)
+]
+ (ا) غیر معین؛ کسی زاویے کا سیکنٹ \عددی {0} نہیں ہے۔ (ب) غیر معین؛ کسی زاویے کا سائن \عددی {\sqrt {2}} نہیں ہے۔ 
+\item [
+\protect ۱.\protect ۵۱۰)
+]
+ (ا) \عددی {0.84107}، (ب) \عددی {-0.72973}، (ج) \عددی {0.46365} 
+\item [
+\protect ۱.\protect ۵۱۲)
+]
+ (ا) دائرہ کار: تمام حقیقی اعداد ماسوائے وہ جن کی روپ \عددی {\tfrac {\pi }{2}+k\pi } ہو جہاں \عددی {k} عدد صحیح ہے؛ سعت: \عددی {-\tfrac {\pi }{2}<y<\tfrac {\pi }{2}}\\ (ب) دائرہ کار:\عددی {-\infty <x<\infty }؛\\ سعت \عددی {-\infty \le y\le \infty } 
+\item [
+\protect ۱.\protect ۵۱۴)
+]
+ (ا) دائرہ کار: \عددی {-\infty <x<\infty }؛ سعت \عددی {0\le y\le \pi } (ب) دائرہ کار: \عددی {-1\le x\le 1}؛ \\ سعت \عددی {-1\le y\le 1} 
+\item [
+\protect ۱.\protect ۵۱۶)
+]
+ ترسیمات بالکل ایک سی ہیں۔ 
+\end {description}
+ {\urduTechTermsfont {حصہ}} \protect ۱.\protect ۹\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۱۱۰
+\begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
+\item [
+\protect ۱.\protect ۵۱۸)
+]
+ $\tfrac {-2x}{\sqrt {1-x^4}}$ 
+\item [
+\protect ۱.\protect ۵۲۰)
+]
+ $\tfrac {\sqrt {2}}{\sqrt {1-2t^2}}$ 
+\item [
+\protect ۱.\protect ۵۲۲)
+]
+ $\tfrac {1}{\abs {2s+1}\sqrt {s^2+s}}$ 
+\item [
+\protect ۱.\protect ۵۲۴)
+]
+ $\tfrac {-2x}{(x^2+1)\sqrt {x^4+2x^2}}$ 
+\item [
+\protect ۱.\protect ۵۲۶)
+]
+ $\tfrac {-1}{\sqrt {1-t^2}}$ 
+\item [
+\protect ۱.\protect ۵۲۸)
+]
+ $\tfrac {-1}{2\sqrt {t}(1+t)}$ 
+\item [
+\protect ۱.\protect ۵۳۰)
+]
+ $\tfrac {1}{\tan ^{-1}(x(1+x^2))}$ 
+\item [
+\protect ۱.\protect ۵۳۲)
+]
+ $\tfrac {-e^t}{\abs {e^t}\sqrt {(e^t)^2-1}}=\tfrac {-1}{\sqrt {e^{2t}-1}}$ 
+\item [
+\protect ۱.\protect ۵۳۴)
+]
+ $\tfrac {-2s^2}{\sqrt {1-s^2}}$ 
+\item [
+\protect ۱.\protect ۵۳۶)
+]
+ $0$ 
+\item [
+\protect ۱.\protect ۵۳۸)
+]
+ $\sin ^{-1}x$ 
+\item [
+\protect ۱.\protect ۵۴۰)
+]
+ $\sin ^{-1}\tfrac {x}{7}+C$ 
+\item [
+\protect ۱.\protect ۵۴۲)
+]
+ $\tfrac {1}{\sqrt {17}}\tan ^{-1}\tfrac {x}{\sqrt {17}}+C$ 
+\item [
+\protect ۱.\protect ۵۴۴)
+]
+ $\tfrac {1}{\sqrt {2}}\sec ^{-1}\abs {\tfrac {5x}{\sqrt {2}}}+C$ 
+\item [
+\protect ۱.\protect ۵۴۶)
 ]
  $\tfrac {2\pi }{3}$ 
 \item [
-\protect ۶.\protect ۷۵)
+\protect ۱.\protect ۵۴۸)
 ]
- $4-\pi $ 
+ $\tfrac {\pi }{16}$ 
 \item [
-\protect ۶.\protect ۷۷)
+\protect ۱.\protect ۵۵۰)
 ]
- $\tfrac {32\pi }{5}$ 
+ $-\tfrac {\pi }{12}$ 
 \item [
-\protect ۶.\protect ۷۹)
+\protect ۱.\protect ۵۵۲)
 ]
- $36\pi $ 
+ $\tfrac {3}{2}\sin ^{-1}2(r-1)+C$ 
 \item [
-\protect ۶.\protect ۸۱)
+\protect ۱.\protect ۵۵۴)
+]
+ $\tfrac {\sqrt {2}}{2}\tan ^{-1}(\tfrac {x-1}{\sqrt {2}})+C$ 
+\item [
+\protect ۱.\protect ۵۵۶)
+]
+ $\tfrac {1}{4}\sec ^{-1}\abs {\tfrac {2x-1}{2}}+C$ 
+\item [
+\protect ۱.\protect ۵۵۸)
 ]
  $\pi $ 
 \item [
-\protect ۶.\protect ۸۳)
+\protect ۱.\protect ۵۶۰)
 ]
- $\pi \big (\tfrac {\pi }{2}+2\sqrt {2}-\tfrac {11}{3}\big )$ 
+ $\tfrac {\pi }{12}$ 
 \item [
-\protect ۶.\protect ۸۵)
+\protect ۱.\protect ۵۶۲)
 ]
- $2\pi $ 
+ $\tfrac {1}{2}\sin ^{-1}y^2+C$ 
 \item [
-\protect ۶.\protect ۸۷)
+\protect ۱.\protect ۵۶۴)
 ]
- $2\pi $ 
+ $\sin ^{-1}(x-2)+C$ 
 \item [
-\protect ۶.\protect ۸۹)
+\protect ۱.\protect ۵۶۶)
 ]
- $3\pi $ 
+ $\pi $ 
 \item [
-\protect ۶.\protect ۹۱)
+\protect ۱.\protect ۵۶۸)
 ]
- $\pi ^2-2\pi $ 
+ $\tfrac {1}{2}\tan ^{-1}(\tfrac {y-1}{2})+C$ 
 \item [
-\protect ۶.\protect ۹۳)
-]
- $\tfrac {2\pi }{3}$ 
-\item [
-\protect ۶.\protect ۹۵)
+\protect ۱.\protect ۵۷۰)
 ]
  $2\pi $ 
 \item [
-\protect ۶.\protect ۹۷)
+\protect ۱.\protect ۵۷۲)
 ]
- $\tfrac {117\pi }{5}$ 
+ $\sec ^{-1}\abs {x+1}+C$ 
 \item [
-\protect ۶.\protect ۹۹)
+\protect ۱.\protect ۵۷۴)
 ]
- $\pi (\pi -2)$ 
+ $e^{\sin ^{-1}x}+C$ 
 \item [
-\protect ۶.\protect ۱۰۱)
+\protect ۱.\protect ۵۷۶)
 ]
- $\tfrac {4\pi }{3}$ 
+ $\tfrac {1}{3}(\sin ^{-1}x)^3+C$ 
 \item [
-\protect ۶.\protect ۱۰۳)
+\protect ۱.\protect ۵۷۸)
 ]
- $8\pi $ 
+ $\ln \abs {\tan ^{-1}y}+C$ 
 \item [
-\protect ۶.\protect ۱۰۵)
+\protect ۱.\protect ۵۸۰)
 ]
- $\sqrt {3}\pi $ 
+ $\sqrt {3}-1$ 
 \item [
-\protect ۶.\protect ۱۰۷)
+\protect ۱.\protect ۵۸۲)
 ]
- $\tfrac {7\pi }{6}$ 
+ $5$ 
 \item [
-\protect ۶.\protect ۱۰۹)
-]
- (ا) \عددی {8\pi }، (ب) \عددی {\tfrac {32\pi }{5}}، (ج) \عددی {\tfrac {8\pi }{3}}، (د) \عددی {\tfrac {224\pi }{15}} 
-\item [
-\protect ۶.\protect ۱۱۱)
-]
- (ا) \عددی {\tfrac {16\pi }{15}}، (ب) \عددی {\tfrac {56\pi }{15}}، (ج) \عددی {\tfrac {64\pi }{15}} 
-\item [
-\protect ۶.\protect ۱۱۳)
-]
- $H=1053\pi \,\si {\centi \meter \cubed }$ 
-\item [
-\protect ۶.\protect ۱۱۵)
-]
- (ا) \عددی {c=\tfrac {2}{\pi }}، (ب) \عددی {c=0} 
-\item [
-\protect ۶.\protect ۱۱۷)
-]
- $H=2a^2b\pi ^2$ 
-\item [
-\protect ۶.\protect ۱۱۹)
-]
- (ب) \عددی {H=\tfrac {\pi r^2h}{3}} 
-\end {description}
- {\urduTechTermsfont {حصہ}} \protect ۶.\protect ۴\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۵۶۸
-\begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
-\item [
-\protect ۶.\protect ۱۲۰)
-]
- $6\pi $ 
-\item [
-\protect ۶.\protect ۱۲۲)
-]
- $2\pi $ 
-\item [
-\protect ۶.\protect ۱۲۴)
-]
- $\tfrac {14\pi }{3}$ 
-\item [
-\protect ۶.\protect ۱۲۶)
-]
- $8\pi $ 
-\item [
-\protect ۶.\protect ۱۲۸)
-]
- $\tfrac {5\pi }{6}$ 
-\item [
-\protect ۶.\protect ۱۳۰)
-]
- $\tfrac {128\pi }{5}$ 
-\item [
-\protect ۶.\protect ۱۳۲)
-]
- $3\pi $ 
-\item [
-\protect ۶.\protect ۱۳۴)
-]
- $\tfrac {16\pi }{15}(3\sqrt {2}+5)$ 
-\item [
-\protect ۶.\protect ۱۳۶)
-]
- $\tfrac {8\pi }{3}$ 
-\item [
-\protect ۶.\protect ۱۳۸)
-]
- $\tfrac {4\pi }{3}$ 
-\item [
-\protect ۶.\protect ۱۴۰)
-]
- $\tfrac {16\pi }{3}$ 
-\item [
-\protect ۶.\protect ۱۴۲)
-]
- (ا) \عددی {\tfrac {6\pi }{5}}، (ب) \عددی {\tfrac {4\pi }{5}}، (ج) \عددی {2\pi }، (د) \عددی {2\pi } 
-\item [
-\protect ۶.\protect ۱۴۴)
-]
- (ا) \عددی {\tfrac {5\pi }{3}}، (ب) \عددی {\tfrac {4\pi }{3}}، (ج) \عددی {2\pi }، (د) \عددی {\tfrac {2\pi }{3}} 
-\item [
-\protect ۶.\protect ۱۴۶)
-]
- (ا) \عددی {\tfrac {11\pi }{15}}، (ب) \عددی {\tfrac {97\pi }{105}}، (ج) \عددی {\tfrac {121\pi }{210}}، (د) \عددی {\tfrac {23\pi }{30}} 
-\item [
-\protect ۶.\protect ۱۴۸)
-]
- (ا) \عددی {\tfrac {512\pi }{21}}، (ب) \عددی {\tfrac {832\pi }{21}} 
-\item [
-\protect ۶.\protect ۱۵۰)
-]
- (ا) \عددی {\tfrac {\pi }{6}}، (ب) \عددی {\tfrac {\pi }{6}} 
-\item [
-\protect ۶.\protect ۱۵۲)
-]
- \عددی {\tfrac {9\pi }{16}} 
-\item [
-\protect ۶.\protect ۱۵۴)
-]
- (ب) \عددی {4\pi } 
-\item [
-\protect ۶.\protect ۱۵۶)
-]
- قرص: دو تکمل؛ چھلا: دو تکمل؛ خول: ایک تکمل 
-\item [
-\protect ۶.\protect ۱۵۸)
-]
- $3x$ 
-\end {description}
- {\urduTechTermsfont {حصہ}} \protect ۶.\protect ۵\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۵۷۹
-\begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
-\item [
-\protect ۶.\protect ۱۵۹)
-]
- (ا) \عددی {\int _{-1}^2\sqrt {1+4x^2}\dif x}، (ج) \عددی {\approx 6.13} 
-\item [
-\protect ۶.\protect ۱۶۱)
-]
- (ا) \عددی {\int _0^{\pi }\sqrt {1+\cos ^2y}\dif y}، (ج) \عددی {\approx 3.82} 
-\item [
-\protect ۶.\protect ۱۶۳)
-]
- (ا) \عددی {\int _{-1}^3\sqrt {1+(y+1)^2}\dif y}، (ج) \عددی {\approx 9.29} 
-\item [
-\protect ۶.\protect ۱۶۵)
-]
- (ا) \عددی {\int _0^{\pi /6}\sec x\dif x}، (ج) \عددی {\approx 0.55} 
-\item [
-\protect ۶.\protect ۱۶۷)
-]
- $12$ 
-\item [
-\protect ۶.\protect ۱۶۹)
-]
- $\tfrac {53}{6}$ 
-\item [
-\protect ۶.\protect ۱۷۱)
-]
- $\tfrac {123}{32}$ 
-\item [
-\protect ۶.\protect ۱۷۳)
-]
- $\tfrac {99}{8}$ 
-\item [
-\protect ۶.\protect ۱۷۵)
+\protect ۱.\protect ۵۸۴)
 ]
  $2$ 
 \item [
-\protect ۶.\protect ۱۷۷)
+\protect ۱.\protect ۵۹۰)
 ]
- (ا) \عددی {y=\sqrt {x}} یا \عددی {y=-\sqrt {x}+2}، (ب) دو 
+ $y=\sin ^{-1}(x)$ 
 \item [
-\protect ۶.\protect ۱۷۹)
+\protect ۱.\protect ۵۹۲)
 ]
- $1$ 
+ $y=\sec ^{-1}(x)+\tfrac {2\pi }{3},\quad x>1$ 
 \item [
-\protect ۶.\protect ۱۸۱)
+\protect ۱.\protect ۵۹۴)
 ]
- $\SI {50.44}{\centi \meter }$ 
+\^^M$3\sqrt {5}\,\si {\meter }$ 
+\item [
+\protect ۱.\protect ۵۹۶)
+]
+ جی ہاں، \عددی {\sin ^{-1}(x)} اور \عددی {\cos ^{-1}(x)} میں فرق مستقل \عددی {\tfrac {\pi }{2}} ہے۔ 
+\item [
+\protect ۱.\protect ۶۰۶)
+]
+ $\tfrac {\pi ^2}{2}$ 
+\item [
+\protect ۱.\protect ۶۰۸)
+]
+ (ا) \عددی {\tfrac {\pi ^2}{2}} (ب) \عددی {2\pi } 
 \end {description}
- {\urduTechTermsfont {حصہ}} \protect ۶.\protect ۶\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۵۸۹
+ {\urduTechTermsfont {حصہ}} \protect ۱.\protect ۱۰\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۱۲۶
 \begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
 \item [
-\protect ۶.\protect ۱۹۱)
+\protect ۱.\protect ۶۱۴)
 ]
- (ا) \عددی {2\pi \int _0^{\pi /4}\tan x\sqrt {1+\sec ^4x}\dif x}، \\ (ج) \عددی {\approx 3.84} 
+ $\cosh x=\tfrac {5}{4},\,\tanh x=-\tfrac {3}{5},\\ \coth x=-\tfrac {5}{3},\,\sech x=\tfrac {4}{5},\\ \csch x=-\tfrac {4}{3}$ 
 \item [
-\protect ۶.\protect ۱۹۳)
+\protect ۱.\protect ۶۱۶)
 ]
- (ا) \عددی {2\pi \int _1^2\tfrac {1}{y}\sqrt {1+y^{-4}}\dif y}، (ج) \عددی {\approx 5.02} 
+ $\sinh x=\tfrac {8}{15},\,\tanh x=\tfrac {8}{17},\\ \coth x=\tfrac {17}{8},\,\sech x=\tfrac {15}{17},\\ \csch x=\tfrac {15}{8}$ 
 \item [
-\protect ۶.\protect ۱۹۵)
+\protect ۱.\protect ۶۱۸)
 ]
- (ا) \عددی {2\pi \int _0^4(3-\sqrt {x})^2\sqrt {1+(1-3x^{-1/2})^2}\dif x}، (ج) \عددی {\approx 63.37} 
+ $x+\tfrac {1}{x}$ 
 \item [
-\protect ۶.\protect ۱۹۷)
+\protect ۱.\protect ۶۲۰)
 ]
- (ا) \عددی {2\pi \int _0^{\pi /3}(\int _0^y\tan t\dif t)\sec y\dif y}، \\ (ج) \عددی {\approx 2.08} 
+ $e^{5x}$ 
 \item [
-\protect ۶.\protect ۱۹۹)
+\protect ۱.\protect ۶۲۲)
 ]
- $4\pi \sqrt {5}$ 
+ $e^{4x}$ 
 \item [
-\protect ۶.\protect ۲۰۱)
+\protect ۱.\protect ۶۲۶)
 ]
- $3\pi \sqrt {5}$ 
+ $2\cosh \tfrac {x}{3}$ 
 \item [
-\protect ۶.\protect ۲۰۳)
+\protect ۱.\protect ۶۲۸)
 ]
- $\tfrac {98\pi }{81}$ 
+ $\sech ^2\sqrt {t}+\tfrac {\tanh \sqrt {t}}{\sqrt {t}}$ 
 \item [
-\protect ۶.\protect ۲۰۵)
+\protect ۱.\protect ۶۳۰)
+]
+ $\coth z$ 
+\item [
+\protect ۱.\protect ۶۳۲)
+]
+ $(\ln \sech \theta )(\sech \theta \tanh \theta )$ 
+\item [
+\protect ۱.\protect ۶۳۴)
+]
+ $\tanh ^3v$ 
+\item [
+\protect ۱.\protect ۶۳۶)
+]
+ $2$ 
+\item [
+\protect ۱.\protect ۶۳۸)
+]
+ $\tfrac {1}{2\sqrt {x(1+x)}}$ 
+\item [
+\protect ۱.\protect ۶۴۰)
+]
+ $\tfrac {1}{1+\theta }-\tanh ^{-1}\theta $ 
+\item [
+\protect ۱.\protect ۶۴۲)
+]
+ $\tfrac {1}{2\sqrt {t}}-\coth ^{-1}\sqrt {t}$ 
+\item [
+\protect ۱.\protect ۶۴۴)
+]
+ $-\sech ^{-1}x$ 
+\item [
+\protect ۱.\protect ۶۴۶)
+]
+ $\tfrac {\ln 2}{\sqrt {1+(1/2)^{2\theta }}}$ 
+\item [
+\protect ۱.\protect ۶۴۸)
+]
+ $\abs {\sec x}$ 
+\item [
+\protect ۱.\protect ۶۵۴)
+]
+ $\tfrac {\cosh 2x}{2}+C$ 
+\item [
+\protect ۱.\protect ۶۵۶)
+]
+ $12\sinh (\tfrac {x}{2}-\ln 3)+C$ 
+\item [
+\protect ۱.\protect ۶۵۸)
+]
+ $7\ln \abs {e^{x/7}+e^{-x/7}}+C$ 
+\item [
+\protect ۱.\protect ۶۶۰)
+]
+ $\tanh (x-\tfrac {1}{2})+C$ 
+\item [
+\protect ۱.\protect ۶۶۲)
+]
+ $-2\sech \sqrt {t}+C$ 
+\item [
+\protect ۱.\protect ۶۶۴)
+]
+ $\ln \tfrac {5}{2}$ 
+\item [
+\protect ۱.\protect ۶۶۶)
+]
+ $\tfrac {3}{32}+\ln 2$ 
+\item [
+\protect ۱.\protect ۶۶۸)
+]
+ $e-e^{-1}$ 
+\item [
+\protect ۱.\protect ۶۷۰)
+]
+ $\tfrac {3}{4}$ 
+\item [
+\protect ۱.\protect ۶۷۲)
+]
+ $\tfrac {3}{8}+\ln \sqrt {2}$ 
+\item [
+\protect ۱.\protect ۶۷۴)
+]
+ $\ln \tfrac {2}{3}$ 
+\item [
+\protect ۱.\protect ۶۷۶)
+]
+ $-\tfrac {\ln 3}{2}$ 
+\item [
+\protect ۱.\protect ۶۷۸)
+]
+ $\ln 3$ 
+\item [
+\protect ۱.\protect ۶۸۰)
+]
+ (ا) \عددی {\sinh ^{-1}(\sqrt {3})} (ب) \عددی {\ln (\sqrt {3}+2)} 
+\item [
+\protect ۱.\protect ۶۸۲)
+]
+ (ا) \عددی {\coth ^{-1}(2)-\coth ^{-1}(\tfrac {5}{4})} (ب) \عددی {\tfrac {1}{2}\ln (\tfrac {1}{3})} 
+\item [
+\protect ۱.\protect ۶۸۴)
+]
+ (ا) \عددی {-\sech ^{-1}(\tfrac {12}{13})+\sech ^{-1}(\tfrac {4}{5})} \\ (ب) \عددی {-\ln (\tfrac {1+\sqrt {1-(12/13)^2}}{12/13})+\ln (\tfrac {1+\sqrt {1-(4/5)^2}}{4/5})=-\ln (\tfrac {3}{2})+\ln (2)=\ln (\tfrac {4}{3})} 
+\item [
+\protect ۱.\protect ۶۸۶)
+]
+ (ا) \عددی {0} (ب) \عددی {0} 
+\item [
+\protect ۱.\protect ۶۸۸)
+]
+ (ب) \عددی {f(x)=\tfrac {2f(x)}{2}+0=f(x)}، \عددی {f(x)=0+\tfrac {2f(x)}{2}=f(x)} 
+\item [
+\protect ۱.\protect ۶۹۰)
+]
+ (ب) \عددی {v=\sqrt {\tfrac {gm}{k}}}، (ج) \عددی {v=\SI {54.6}{\meter \per \second }} 
+\item [
+\protect ۱.\protect ۶۹۲)
+]
+ $y=\sech ^{-1}(x)-\sqrt {1-x^2}$ 
+\item [
+\protect ۱.\protect ۶۹۴)
 ]
  $2\pi $ 
 \item [
-\protect ۶.\protect ۲۰۷)
+\protect ۱.\protect ۶۹۶)
 ]
- $\tfrac {\pi (\sqrt {8}-1)}{9}$ 
+ (ا) \عددی {\tfrac {6}{5}} (ب) \عددی {\tfrac {\sinh ab}{a}} 
 \item [
-\protect ۶.\protect ۲۰۹)
+\protect ۱.\protect ۶۹۸)
 ]
- $\tfrac {35\pi \sqrt {5}}{3}$ 
+ (ا) \عددی {\bar {x}=0,\,\bar {y}=\tfrac {5}{8}+\tfrac {\ln 4}{3}\approx 1.09} \\ ب) \begin {center} \begin {tikzpicture}[declare function={fx(\x )=\x ;fy(\x )=cosh(\x );}] \begin {axis}[width=0.45\textwidth ,clip=false,view/h=110,small,axis lines=middle,xtick={-0.693,0.693},xticklabels={$-\ln 2$,$\ln 2$},ytick={\empty },ztick={\empty },enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=west},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}] \addplot [domain=-0.693:0.693]({fx(x)},{fy(x)})node[pos=0,circ]{}node[pos=1,circ]{}node[pos=0,below left]{$(-\ln 2,1.25)$}node[pos=1,below right]{$(\ln 2,1.25)$}node[pos=0.75,below right]{$y=\cosh x$}; \addplot []coordinates {(0,1.09)}node[circ]{}node[above right]{$(0,1.09)$}; \end {axis} \end {tikzpicture} \end {center} 
 \item [
-\protect ۶.\protect ۲۱۱)
+\protect ۱.\protect ۷۰۲)
 ]
- $\tfrac {253\pi }{20}$ 
-\item [
-\protect ۶.\protect ۲۱۵)
-]
- (ا) \عددی {2\pi \int _{-\pi /2}^{\pi /2}(\cos x)\sqrt {1+\sin ^2x}\dif x}، (ب) \عددی {\approx 14.4236} 
-\item [
-\protect ۶.\protect ۲۱۷)
-]
- $\SI {452.4}{\liter }$ 
-\item [
-\protect ۶.\protect ۲۲۱)
-]
- $5\sqrt {2}\pi $ 
-\item [
-\protect ۶.\protect ۲۲۳)
-]
- $14.4$ 
-\item [
-\protect ۶.\protect ۲۲۵)
-]
- $54.9$ 
+ (ج) \عددی {a\approx 0.1785413} (د) \عددی {\SI {32.93}{\newton }} 
 \end {description}
- {\urduTechTermsfont {حصہ}} \protect ۶.\protect ۷\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۶۰۵
+ {\urduTechTermsfont {حصہ}} \protect ۱.\protect ۱۱\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۱۴۵
 \begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
 \item [
-\protect ۶.\protect ۲۲۸)
+\protect ۱.\protect ۷۱۱)
 ]
- $\tfrac {8}{5}\,\si {\meter }$ 
+ $y=\tan (x^2+C)$ 
 \item [
-\protect ۶.\protect ۲۳۰)
+\protect ۱.\protect ۷۱۳)
 ]
- $(\tfrac {L}{4},\tfrac {L}{4})$ 
+ $\tfrac {2}{3}y^{3/2}-x^{1/2}=C$ 
 \item [
-\protect ۶.\protect ۲۳۲)
+\protect ۱.\protect ۷۱۵)
 ]
- $M_0=8,\,M=8,\,\bar {x}=1$ 
+ $e^y-e^x=C$ 
 \item [
-\protect ۶.\protect ۲۳۴)
+\protect ۱.\protect ۷۱۷)
 ]
- $M_0=\tfrac {15}{2},\,M=\tfrac {9}{2},\,\bar {x}=\tfrac {5}{3}$ 
+ $y=\tfrac {e^x+C}{x}$ 
 \item [
-\protect ۶.\protect ۲۳۶)
+\protect ۱.\protect ۷۱۹)
 ]
- $M_0=\tfrac {73}{6},\,M=5,\,\bar {x}=\tfrac {73}{30}$ 
+ $y=\tfrac {C-\cos x}{x^3},\, x>0$ 
 \item [
-\protect ۶.\protect ۲۳۸)
+\protect ۱.\protect ۷۲۱)
 ]
- $M_0=3,\,M=3,\,\bar {x}=1$ 
+ $y=\tfrac {1}{2}-\tfrac {1}{x}+\tfrac {C}{x^2},\,x>0$ 
 \item [
-\protect ۶.\protect ۲۴۰)
+\protect ۱.\protect ۷۲۳)
 ]
- $\bar {x}=0,\,\bar {y}=\tfrac {12}{5}$ 
+ $y=\tfrac {1}{2}xe^{x/2}+Ce^{x/2}$ 
 \item [
-\protect ۶.\protect ۲۴۲)
+\protect ۱.\protect ۷۲۵)
 ]
- $\bar {x}=1,\,\bar {y}=-\tfrac {3}{5}$ 
+ $y=x^2e^{-2x}+Ce^{-2x}$ 
 \item [
-\protect ۶.\protect ۲۴۴)
+\protect ۱.\protect ۷۲۷)
 ]
- $\bar {x}=\tfrac {16}{105},\,\bar {y}=\tfrac {8}{15}$ 
+ $-e^{-y}-e^{\sin x}=C$ 
 \item [
-\protect ۶.\protect ۲۴۶)
+\protect ۱.\protect ۷۲۹)
 ]
- $\bar {x}=0,\,\bar {y}=\tfrac {\pi }{8}$ 
+ $s=\tfrac {t^3}{3(t-1)^4}-\tfrac {t}{(t-1)^4}+\tfrac {C}{(t-1)^4}$ 
 \item [
-\protect ۶.\protect ۲۴۸)
+\protect ۱.\protect ۷۳۱)
 ]
- $\bar {x}=1,\,\bar {y}-\tfrac {2}{5}$ 
+ $2\tan \sqrt {x}=t+C$ 
 \item [
-\protect ۶.\protect ۲۵۰)
+\protect ۱.\protect ۷۳۳)
 ]
- $\bar {x}=\bar {y}=\tfrac {2}{4-\pi }$ 
+ $r=\csc \theta (\ln \abs {\sec \theta }+C)$ 
 \item [
-\protect ۶.\protect ۲۵۲)
+\protect ۱.\protect ۷۳۵)
 ]
- $\bar {x}=\tfrac {3}{2},\,\bar {y}=\tfrac {1}{2}$ 
+ $y=-e^{-x}\sech x+C\sech x$ 
 \item [
-\protect ۶.\protect ۲۵۴)
+\protect ۱.\protect ۷۳۷)
 ]
- (الف) \عددی {\tfrac {224\pi }{3}}، (ب) \عددی {\bar {x}=2,\,\bar {y}=0}، (ج) \begin {center} \begin {tikzpicture}[declare function={fx(\x )=\x ;fy(\x )=4/(sqrt(\x ));}] \begin {axis}[clip=false,view/h=110,small,axis lines=middle,xtick={1,4},ytick={-4,4},ztick={\empty }, xticklabels={\llap {$1$},\rlap {$4$}},yticklabels={$-4$,$4$},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=west},ylabel style={anchor=east},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}] \addplot [thick,domain=1:4,samples y=0]({fx(x)},{fy(x)})node[pos=0.65,above right]{$y=\frac {4}{\sqrt {x}}$}; \addplot [thick,domain=1:4,samples y=0]({fx(x)},{-fy(x)})node[pos=0.65,below right]{$y=-\frac {4}{\sqrt {x}}$}; \addplot [] coordinates {(1,-4)(1,4)}; \addplot [] coordinates {(4,{-fy(4)})(4,{fy(4)})}; \addplot [] coordinates {(2,0)}node[circ]{}node[above]{$(2,0)$}; \end {axis} \end {tikzpicture} \end {center} 
+ $y=\tfrac {3}{2}-\tfrac {1}{2}e^{-2t}$ 
 \item [
-\protect ۶.\protect ۲۵۸)
+\protect ۱.\protect ۷۳۹)
 ]
- $\bar {x}=\bar {y}=\tfrac {1}{3}$ 
+ $y=-\tfrac {1}{\theta }\cos \theta +\tfrac {\pi }{2\theta }$ 
 \item [
-\protect ۶.\protect ۲۶۰)
+\protect ۱.\protect ۷۴۱)
 ]
- $\bar {x}=\tfrac {a}{3},\,\bar {y}=\tfrac {b}{3}$ 
+ $y=6e^{x^2}-\tfrac {e^{x^2}}{x+1}$ 
 \item [
-\protect ۶.\protect ۲۶۲)
+\protect ۱.\protect ۷۴۳)
 ]
- $\tfrac {13\delta }{6}$ 
+ $y=y_0e^{kt}$ 
 \item [
-\protect ۶.\protect ۲۶۴)
+\protect ۱.\protect ۷۴۵)
 ]
- $\bar {x}=0,\,\bar {y}=\tfrac {a\pi }{4}$ 
+ (الف) غلط (ب) درست 
+\item [
+\protect ۱.\protect ۷۴۷)
+]
+ (ا) \عددی {c=\tfrac {G}{100Vk}+(c_0-\tfrac {G}{100Vk})e^{-kt}}، (ب) \عددی {\tfrac {G}{100Vk}} 
+\item [
+\protect ۱.\protect ۷۴۹)
+]
+ \عددی {40} منٹ 
+\item [
+\protect ۱.\protect ۷۵۱)
+]
+ (ا) \عددی {\SI {168}{\meter }}، (ب) تقریباً \عددی {70} سیکنڈ 
+\item [
+\protect ۱.\protect ۷۵۳)
+]
+ \عددی {t=\tfrac {L}{R}\ln 2} سیکنڈ بعد 
+\item [
+\protect ۱.\protect ۷۵۵)
+]
+ (ا) \عددی {i=\tfrac {V}{R}-\tfrac {V}{R}e^{-3}\approx 0.95\tfrac {V}{R}}، (ب) \عددی {\SI {86}{\percent }} 
+\item [
+\protect ۱.\protect ۷۵۷)
+]
+ (ا) \عددی {\SI {2}{\kilo \gram \per \minute }}، (ب) \عددی {100+t} لٹر، \\ (ج) \عددی {\tfrac {4y}{100+t}\,\si {\kilo \gram \per \minute }}،\\ (د) \عددی {\tfrac {\dif y}{\dif t}=2-\tfrac {4y}{100+t},\, y(0)=25}،\\ \عددی {y(t)=\tfrac {2}{5}(100+t)-\tfrac {15}{(1+t/100)^4}}،\\ (ہ) \عددی {\SI {0.35}{\kilo \gram \per \liter }} 
 \end {description}
- {\urduTechTermsfont {حصہ}} \protect ۶.\protect ۸\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۶۱۶
+ {\urduTechTermsfont {حصہ}} \protect ۱.\protect ۱۲\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۱۵۷
 \begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
 \item [
-\protect ۶.\protect ۲۷۰)
+\protect ۱.\protect ۷۶۱)
 ]
- $\SI {1960}{\joule }$ 
+ $y_{\text {تحلیلی}}=\tfrac {x}{2}-\tfrac {4}{x},\, y_1=-0.25,\\ y_2=0.3,\, y_3=0.75$ 
 \item [
-\protect ۶.\protect ۲۷۲)
+\protect ۱.\protect ۷۶۳)
 ]
- $\SI {780}{\joule }$ 
+ $y_{\text {\RL {تحلیلی}}}=3e^{x(x+2)},\, y_1=4.2,\\ y_2=6.216,\, y_3=9.697$ 
 \item [
-\protect ۶.\protect ۲۷۴)
+\protect ۱.\protect ۷۶۵)
 ]
- $\SI {1764}{\joule }$ 
+ $y_{\text {\RL {تحلیلی}}}=e^{x^2}+1,\, y_1=2.0,\\ y_2=2.0202,\, y_3=2.0618$ 
 \item [
-\protect ۶.\protect ۲۷۸)
+\protect ۱.\protect ۷۶۷)
 ]
- $\SI {400}{\newton \per \meter }$ 
+ \عددی {y\approx \num {2.48832}}، ٹھیک جواب \عددی {e} ہے۔ 
 \item [
-\protect ۶.\protect ۲۸۰)
+\protect ۱.\protect ۷۶۹)
 ]
- \عددی {\SI {4}{\centi \meter }}، \عددی {\SI {0.08}{\joule }} 
+ \عددی {y\approx -0.2272}، \\ ٹھیک جواب \عددی {\tfrac {1}{1-2\sqrt {5}}\approx -0.2880} ہے۔ 
 \item [
-\protect ۶.\protect ۲۸۲)
+\protect ۱.\protect ۷۷۱)
 ]
- (ا) \عددی {\SI {1.25e6}{\newton \per \meter }}، (ب) \عددی {\SI {62.5}{\joule }}، \عددی {\SI {187.5}{\joule }} 
+ ب 
 \item [
-\protect ۶.\protect ۲۸۴)
+\protect ۱.\protect ۷۷۳)
 ]
- (ا) \عددی {\SI {18.375e6}{\joule }}، (ب) \عددی {20} گھنٹے اور \عددی {25} منٹ۔ (د) \عددی {20} گھنٹے اور \عددی {22.5} منٹ، \عددی {20} گھنٹے اور \عددی {29} منٹ۔ 
-\item [
-\protect ۶.\protect ۲۸۶)
-]
- $\SI {38484510}{\joule }$ 
-\item [
-\protect ۶.\protect ۲۸۸)
-]
- $\SI {19.95e6}{\joule }$ 
-\item [
-\protect ۶.\protect ۲۹۰)
-]
- $\SI {0.43}{\joule }$ 
-\item [
-\protect ۶.\protect ۲۹۲)
-]
- $\SI {21446605.9}{\joule }$ 
-\item [
-\protect ۶.\protect ۲۹۴)
-]
- $\SI {4027512}{\joule }$ 
-\item [
-\protect ۶.\protect ۲۹۶)
-]
- $\SI {5.144e10}{\joule }$ 
-\item [
-\protect ۶.\protect ۳۰۰)
-]
- $\SI {117.6}{\joule }$ 
-\item [
-\protect ۶.\protect ۳۰۲)
-]
- $\SI {67901}{\joule }$ 
-\item [
-\protect ۶.\protect ۳۰۴)
-]
- $\SI {56.25}{\joule }$ 
-\end {description}
- {\urduTechTermsfont {حصہ}} \protect ۶.\protect ۹\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۶۲۷
-\begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
-\item [
-\protect ۶.\protect ۳۰۶)
-]
- $\SI {1.23e9}{\newton }$ 
-\item [
-\protect ۶.\protect ۳۰۷)
-]
- $\SI {6.08e7}{\newton }$ 
-\item [
-\protect ۶.\protect ۳۱۰)
-]
- $\SI {163333}{\newton }$ 
-\item [
-\protect ۶.\protect ۳۱۲)
-]
- (ا) \عددی {\SI {182933}{\newton }}، (ب) \عددی {\SI {188238}{\newton }} 
-\item [
-\protect ۶.\protect ۳۱۴)
-]
- (ا) \عددی {\SI {58800}{\newton }}، (ب) \عددی {\SI {61.9}{\centi \meter }}، (ج) چونکہ فشار صرف گہرائی پر منحصر ہے لہٰذا لمبائی کا قوت سیال پر کوئی اثر نہیں ہو گا۔ 
-\item [
-\protect ۶.\protect ۳۱۶)
-]
- $\SI {15126.3}{\newton }$ 
-\item [
-\protect ۶.\protect ۳۱۸)
-]
- $\SI {20.2}{\newton }$ 
-\item [
-\protect ۶.\protect ۳۲۰)
-]
- $\SI {102.08}{\newton }$ 
-\item [
-\protect ۶.\protect ۳۲۲)
-]
- (ا) \عددی {\SI {22827}{\newton }}، (ب) \عددی {\SI {2.6544}{\meter }} 
-\item [
-\protect ۶.\protect ۳۲۴)
-]
- $\SI {1133.77}{\meter \cubed }$ 
-\item [
-\protect ۶.\protect ۳۲۶)
-]
- $\tfrac {wb}{2}$ 
-\end {description}
- {\urduTechTermsfont {حصہ}} \protect ۶.\protect ۱۰\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۶۳۸
-\begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
-\item [
-\protect ۶.\protect ۳۲۸)
-]
- (ب) \عددی {\SI {20}{\meter }}، (ج) \عددی {\SI {0}{\meter }} 
-\item [
-\protect ۶.\protect ۳۳۰)
-]
- (ب) \عددی {\SI {6}{\meter }}، (ج) \عددی {\SI {2}{\meter }} 
-\item [
-\protect ۶.\protect ۳۳۲)
-]
- (ب) \عددی {\SI {245}{\meter }}، (ج) \عددی {\SI {0}{\meter }} 
-\item [
-\protect ۶.\protect ۳۳۴)
-]
- (ب) \عددی {\SI {6}{\meter }}، (ج) \عددی {\SI {4}{\meter }} 
-\item [
-\protect ۶.\protect ۳۳۶)
-]
- (ب) \عددی {2<t<4}، (ج) \عددی {\SI {6}{\meter }}، (د) \عددی {\tfrac {22}{3}\,\si {\meter }} 
-\item [
-\protect ۶.\protect ۳۳۸)
-]
- (ا) کُل فاصلہ \عددی {7}، ہٹاؤ \عددی {3}؛ (ب) کُل فاصلہ \عددی {19.5}، ہٹاؤ \عددی {-4.5} 
-\item [
-\protect ۶.\protect ۳۴۰)
-]
- $\sqrt {3}\pi $ 
-\item [
-\protect ۶.\protect ۳۴۲)
-]
- (ا) \عددی {\SI {82.67}{\meter \cubed }}، (ب) \عددی {\SI {85071}{\kilo \gram }} 
-\item [
-\protect ۶.\protect ۳۴۳)
-]
- \عددی {H=32\pi }، \عددی {S=32\sqrt {2}\pi } 
-\item [
-\protect ۶.\protect ۳۴۵)
-]
- $4\pi ^2$ 
-\item [
-\protect ۶.\protect ۳۴۷)
-]
- \عددی {\bar {x}=0}، \عددی {\bar {y}=\tfrac {2a}{\pi }} 
-\item [
-\protect ۶.\protect ۳۴۹)
-]
- \عددی {\bar {x}=0}، \عددی {\bar {y}=\tfrac {4b}{3\pi }} 
-\item [
-\protect ۶.\protect ۳۵۱)
-]
- $\tfrac {\sqrt {2}\pi a^3(4+3\pi )}{6}$ 
-\item [
-\protect ۶.\protect ۳۵۳)
-]
- $\tfrac {2a^3}{3}$ 
+ الف 
 \end {description}
