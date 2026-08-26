@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.6.2)  25 AUG 2026 16:23
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.6.2)  26 AUG 2026 16:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1609,9 +1609,9 @@ Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
 Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
 )
 \verbatim@out=\write4
-runsystem(touch w18-test-2026825983.tex)...disabled (restricted).
+runsystem(touch w18-test-20268261016.tex)...disabled (restricted).
 
-runsystem(rm -f w18-test-2026825983.tex)...disabled (restricted).
+runsystem(rm -f w18-test-20268261016.tex)...disabled (restricted).
 
 runsystem(rm -f "calculusAndAnalyticGeometry.gnuploterrors")...disabled (restri
 cted).
@@ -1661,7 +1661,14 @@ Writing index file calculusAndAnalyticGeometry.idx
 (./tex/calculusApplicationsOfDerivatives.aux) (./tex/calculusIntegration.aux)
 (./tex/calculusApplicationsOfIntegrals.aux)
 (./tex/calculusTranscendentalFunctions.aux)
-(./tex/calculusTechniquesOfIntegration.aux) (./tex/calculusInfiniteSeries.aux)
+(./tex/calculusTechniquesOfIntegration.aux
+
+LaTeX Warning: Label `footdir@575' multiply defined.
+
+
+LaTeX Warning: Label `footdir@576' multiply defined.
+
+) (./tex/calculusInfiniteSeries.aux)
 (./tex/calculusConicSectionsParametrizedCurvesPolarCoordinates.aux)
 (./tex/calculusVectorsAndAnalyticGeometryInSpace.aux)
 (./tex/calculusVectorValuedFunctionsandMotionInSpace.aux)
@@ -2766,14 +2773,82 @@ plm/m/it/10 ky$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے برابر ہو گی۔ی
  []
 
 [702]
-Underfull \hbox (badness 10000) in paragraph at lines 4302--4304
+Underfull \hbox (badness 10000) in paragraph at lines 4302--4303
+[][]\TU/JameelNooriNastaleeq(0)/b/n/10 سادہ الفاظ میں ہم کہنا چاہ رہے ہیں کہ اگ
+ر آبادی کے ایک ٹولا میں، جس میں $\OML/zplm/m/it/10 m$ \TU/JameelNooriNastaleeq(
+0)/b/n/10 افراد ہوں ، سالانہ (یا کسی بھی مخصوص دارانیے میں) $\OML/zplm/m/it/10 
+c$ \TU/JameelNooriNastaleeq(0)/b/n/10 بچے پیدا ہوتے ہوں[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4302--4303
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 تب ہم توقع کرتے ہیں کہ $\OML/zplm/m/it/10 
+m$ \TU/JameelNooriNastaleeq(0)/b/n/10 افراد پر مشتمل اس آبادی کے کسی دوسرے ٹولا
+ میں بھی اسی دوران $\OML/zplm/m/it/10 c$ \TU/JameelNooriNastaleeq(0)/b/n/10 بچے
+ پیدا ہوں گے۔ دونوں ٹولوں کو ملا کر ہم کہہ سکتے[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4302--4303
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 ہیں کہ اس دورانیے میں $\OT1/ppl/m/n/10 2\O
+ML/zplm/m/it/10 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 افراد کے مجموعی ٹولے میں 
+$\OT1/ppl/m/n/10 2\OML/zplm/m/it/10 c$ \TU/JameelNooriNastaleeq(0)/b/n/10 بچے پ
+یدا ہوں گے، یعنی شرح پیدائش دگنی ہو گی۔اسی طرح $\OT1/ppl/m/n/10 3\OML/zplm/m/it
+/10 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 افراد کے ٹولا میں ہم توقع[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4302--4303
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 کرتے ہیں کہ اس دورانیے میں $\OT1/ppl/m/n/1
+0 3\OML/zplm/m/it/10 c$ \TU/JameelNooriNastaleeq(0)/b/n/10 بچے پیدا ہوں گے، یعن
+ی شرح پیدائش تین گنا ہو گی۔ہم دیکھ سکتے ہیں کہ بچے پیدا ہونے کی شرح ٹولا میں اف
+راد کی تعداد کے[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4304--4306
 []\TU/JameelNooriNastaleeq(0)/b/n/10 مثال  ۷.۳۵: []بیماری پھیلنے کا ایک نمونہ ف
 رض کرتا ہے کہ بیمار ہونے والوں کی شرح $[]$ اس وقت بیماروں کی تعداد $\OML/zplm/m
 /it/10 y$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے راست متناسب ہے۔ یوں جتنے[]
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 4307--4308
+[][]\TU/JameelNooriNastaleeq(0)/b/n/10 اس عمل کو سمجھنے کی کوشش کرتے ہیں۔ہم فرض
+ کرتے ہیں کہ ایک آبادی میں رہنے سہنے کا انداز سب کا ایک جیسے ہے۔اس آبادی میں اگ
+ر $\OML/zplm/m/it/10 n$ \TU/JameelNooriNastaleeq(0)/b/n/10 بیمار افراد کی ٹولی[
+]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4307--4308
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 کسی مخصوص دورانیے میں $\OML/zplm/m/it/10 c
+$ \TU/JameelNooriNastaleeq(0)/b/n/10 افراد کو بیماری منتقل کرتی ہو تب $\OML/zpl
+m/m/it/10 n$ \TU/JameelNooriNastaleeq(0)/b/n/10 بیماروں کی دوسری ٹولی بھی $\OML
+/zplm/m/it/10 c$ \TU/JameelNooriNastaleeq(0)/b/n/10 افراد کو بیماری منتقل کرے گ
+ی، یعنی مجموعی طور پر $\OT1/ppl/m/n/10 2\OML/zplm/m/it/10 n$ \TU/JameelNooriNas
+taleeq(0)/b/n/10 بیمار[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4307--4308
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 افراد اسی دورانیے میں $\OT1/ppl/m/n/10 2\O
+ML/zplm/m/it/10 c$ \TU/JameelNooriNastaleeq(0)/b/n/10 افراد کو بیماری منتقل کرت
+ے ہیں، یعنی بیماری منتقل کرنے کی شرح دگنی ہو گی۔ اسی طرح $\OT1/ppl/m/n/10 3\OML
+/zplm/m/it/10 n$ \TU/JameelNooriNastaleeq(0)/b/n/10 بیمار افراد اسی دورانیے میں
+ $\OT1/ppl/m/n/10 3\OML/zplm/m/it/10 c$ \TU/JameelNooriNastaleeq(0)/b/n/10 کو[]
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4307--4308
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 بیماری منتقل کریں گے، یعنی بیماری منتقل کر
+نے کی شرح تین گنا ہو گی۔ آپ دیکھ سکتے ہیں کہ بیماری منتقل کرنے کی شرح موجودہ بی
+مار افراد کی تعداد کے راست[]
+ []
+
 [703]
-Underfull \hbox (badness 10000) in paragraph at lines 4349--4350
+Underfull \hbox (badness 10000) in paragraph at lines 4353--4354
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 ربا پر کاروبار کرنے والا بنک ایک شخص کو 
 $\OML/zplm/m/it/10 A[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 روپیہ سود پر دیتا ہے
 ۔ایک سال بعد اس شخص پر $\OML/zplm/m/it/10 r \OMS/zplm/m/n/10 ^^B \OML/zplm/m/it
@@ -2782,7 +2857,7 @@ $\OML/zplm/m/it/10 A[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 روپیہ سود پ�
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4349--4350
+Underfull \hbox (badness 10000) in paragraph at lines 4353--4354
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کرتا۔ یوں دوسرے سال کی ابتدا میں اس شخص پر
  $\OML/zplm/m/it/10 A[]\OT1/zplm/m/n/10 (\OT1/ppl/m/n/10 1 \OT1/zplm/m/n/10 + \
 OML/zplm/m/it/10 r\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 قرضہ ہ
@@ -2791,35 +2866,87 @@ m/it/10 r$[]
  []
 
 
-Underfull \hbox (badness 1824) in paragraph at lines 4359--4361
-[][]\TU/JameelNooriNastaleeq(0)/b/n/10 اب بنک کہہ سکتا ہے کہ سال میں ایک بار کے
- بجائے وہ ماہوار $[]$ شرح سے سود وصول کرے گا (جو ظاہری طور پر ربا کی وہی شرح مع
-لوم ہوتی ہے)۔یوں پہلے[]
+Underfull \hbox (badness 10000) in paragraph at lines 4363--4365
+[][]\TU/JameelNooriNastaleeq(0)/b/n/10 اب بنک کہہ سکتا ہے کہ سال میں ایک مرتبہ 
+کے بجائے وہ ماہوار $[]$ شرح سے سود وصول کرے گا (جو ظاہری طور پر ربا کی وہی شرح 
+معلوم ہوتی[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4363--4365
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 ہے)۔یوں پہلے مہینے کے آخر میں واجب الادا ر
+با کی مقدار $[]\OML/zplm/m/it/10 A[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور قر
+ضہ $\OML/zplm/m/it/10 A[] \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 A[]\OT1/zplm/m/n
+/10 (\OT1/ppl/m/n/10 1 \OT1/zplm/m/n/10 + [])$ \TU/JameelNooriNastaleeq(0)/b/n/
+10 ہو گا۔ اسی طرح دوسرے مہینے[]
+ []
+
+
+Underfull \hbox (badness 2005) in paragraph at lines 4363--4365
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 کے آخر میں قرضہ $\OML/zplm/m/it/10 A[] \OT
+1/zplm/m/n/10 = \OML/zplm/m/it/10 A[]\OT1/zplm/m/n/10 (\OT1/ppl/m/n/10 1 \OT1/z
+plm/m/n/10 + [])[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہو گا۔ایک سال بعد قرضہ $
+\OML/zplm/m/it/10 A[] \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 A[]\OT1/zplm/m/n/10 
+(\OT1/ppl/m/n/10 1 \OT1/zplm/m/n/10 + [])[]$ \TU/JameelNooriNastaleeq(0)/b/n/10
+ اور $\OML/zplm/m/it/10 t$ \TU/JameelNooriNastaleeq(0)/b/n/10 سال بعد قرضہ[]
  []
 
 [704]
-Underfull \hbox (badness 1596) in paragraph at lines 4374--4376
+Underfull \hbox (badness 1596) in paragraph at lines 4378--4380
 []\TU/JameelNooriNastaleeq(0)/b/n/10 درج بالا حد کے حصول میں نا قابل معلوم روپ 
 $\OT1/ppl/m/n/10 1[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 حاصل ہوتا ہے۔ایسی حد ک
 ی تلاش حصہ ۷.۶[] میں سکھائی جائے گی جہاں مثال ۷.۴۹[] میں آپ دیکھیں گے[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 4379.
-LaTeX Info: Redefining \sffamily on input line 4379.
-LaTeX Info: Redefining \ttfamily on input line 4379.
+LaTeX Info: Redefining \rmfamily on input line 4383.
+LaTeX Info: Redefining \sffamily on input line 4383.
+LaTeX Info: Redefining \ttfamily on input line 4383.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4381--4383
+Underfull \hbox (badness 10000) in paragraph at lines 4385--4386
+[][]\TU/JameelNooriNastaleeq(0)/b/n/10 اس عمل پر دوبارہ نظر ثانی کرتے ہیں۔ اگر 
+بنک ایک شخص کو $\OML/zplm/m/it/10 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 روپیہ ق
+رضہ سود پر دے کر سالانہ (یا کسی دوسرے مخصوص دورانیہ میں) $\OML/zplm/m/it/10 c$ 
+\TU/JameelNooriNastaleeq(0)/b/n/10 روپیہ سود لیتا[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4385--4386
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 ہو تب بنک دوسرے شخص کو بھی $\OML/zplm/m/it
+/10 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 روپیہ قرضہ سود پر دے کر اسی دورانیے م
+یں اس شخص سے $\OML/zplm/m/it/10 c$ \TU/JameelNooriNastaleeq(0)/b/n/10 روپیہ سود
+ لے گا۔یوں اگر بنک مجموعی طور پر $\OT1/ppl/m/n/10 2\OML/zplm/m/it/10 m$[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4385--4386
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 روپیہ قرضہ سود پر دے، وہ اسی دورانیے میں $
+\OT1/ppl/m/n/10 2\OML/zplm/m/it/10 c$ \TU/JameelNooriNastaleeq(0)/b/n/10 روپیہ 
+سود کی مد میں وصول کرے گا، یعنی وصولی کی شرح دگنی ہو گی۔ اسی طرح $\OT1/ppl/m/n/
+10 3\OML/zplm/m/it/10 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 روپیہ قرض دے کر[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4385--4386
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 بنک اسی دورانیے میں $\OT1/ppl/m/n/10 3\OML
+/zplm/m/it/10 c$ \TU/JameelNooriNastaleeq(0)/b/n/10 روپیہ سود وصول کرے گا، یعنی
+ شرح وصولی تین گنا ہو گی۔ ہم دیکھتے ہیں کہ شرح وصولی عین قرض کے راست متناسب ہے،
+ یعنی[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4394--4396
 []\TU/JameelNooriNastaleeq(0)/b/n/10 مثال  ۷.۳۶:  آپ آج بنک سے مسلسل سود در سود
  کی سالانہ $\OT1/ppl/m/n/10 15 %$ \TU/JameelNooriNastaleeq(0)/b/n/10 شرح پر $\O
 T1/ppl/m/n/10 100 000$ \TU/JameelNooriNastaleeq(0)/b/n/10 روپیہ حاصل کرتے ہیں۔ 
 پانچ سال بعد آپ کو کتنی مقدار[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 4396.
-LaTeX Info: Redefining \sffamily on input line 4396.
-LaTeX Info: Redefining \ttfamily on input line 4396.
+[705]
+LaTeX Info: Redefining \rmfamily on input line 4409.
+LaTeX Info: Redefining \sffamily on input line 4409.
+LaTeX Info: Redefining \ttfamily on input line 4409.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4395--4397
+Underfull \hbox (badness 10000) in paragraph at lines 4408--4410
 []\TU/JameelNooriNastaleeq(0)/b/n/10 مثال  ۷.۳۷:  سالانہ \TU/AASameerSagarNasta
 leeqBold(0)/m/n/10 افراط زر[][][] []\TU/JameelNooriNastaleeq(0)/b/n/10 سے مراد 
 ایک سال میں روپیہ کی قدر میں کمی ہے۔ یوں $\OT1/ppl/m/n/10 10 %$ \TU/JameelNoori
@@ -2827,29 +2954,30 @@ Nastaleeq(0)/b/n/10 افراط زر کا مطلب ہے کہ ایک سال بعد
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4398--4399
+Underfull \hbox (badness 10000) in paragraph at lines 4411--4412
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 ایک شخص $\OT1/ppl/m/n/10 5 000 000$ \TU/
 JameelNooriNastaleeq(0)/b/n/10 روپیہ بنک میں پانچ سال کے لیے جمع کرتا ہے۔بنک ہر
  مہینہ اس شخص کو $\OT1/ppl/m/n/10 40 000$ \TU/JameelNooriNastaleeq(0)/b/n/10 رو
 پیہ دیگا اور پانچ سال کے آخر میں اس کو[]
  []
 
-[705]
-Underfull \hbox (badness 10000) in paragraph at lines 4408--4410
+
+Underfull \hbox (badness 10000) in paragraph at lines 4421--4423
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہو گی۔ یاد رہے کہ ہر مہینہ روپیہ کی قدر کم
  ہو گی لہٰذا پہلے مہینہ کے $\OT1/ppl/m/n/10 40000$ \TU/JameelNooriNastaleeq(0)/
 b/n/10 اور آخری مہینہ کے $\OT1/ppl/m/n/10 40000$ \TU/JameelNooriNastaleeq(0)/b/
 n/10 روپیہ کی قدر ایک جیسی نہیں ہوں گی۔ہم[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 4423.
-LaTeX Info: Redefining \sffamily on input line 4423.
-LaTeX Info: Redefining \ttfamily on input line 4423.
-LaTeX Info: Redefining \rmfamily on input line 4423.
-LaTeX Info: Redefining \sffamily on input line 4423.
-LaTeX Info: Redefining \ttfamily on input line 4423.
+[706]
+LaTeX Info: Redefining \rmfamily on input line 4436.
+LaTeX Info: Redefining \sffamily on input line 4436.
+LaTeX Info: Redefining \ttfamily on input line 4436.
+LaTeX Info: Redefining \rmfamily on input line 4436.
+LaTeX Info: Redefining \sffamily on input line 4436.
+LaTeX Info: Redefining \ttfamily on input line 4436.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4423--4424
+Underfull \hbox (badness 10000) in paragraph at lines 4436--4437
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ایک ایٹم اپنی کمیت کا کچھ حصہ خارج کر کے د
 وسرے ایٹم میں تبدیل ہوتا ہے۔ اس عمل کو \TU/AASameerSagarNastaleeqBold(0)/m/n/10
  تابکاری تحلیل[][][] []\TU/JameelNooriNastaleeq(0)/b/n/10 کہتے ہیں اور جس ایٹم 
@@ -2857,83 +2985,87 @@ Underfull \hbox (badness 10000) in paragraph at lines 4423--4424
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4425--4426
+Underfull \hbox (badness 10000) in paragraph at lines 4438--4439
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 تجربہ سے دیکھا گیا ہے کہ اکائی وقت میں خ
 ارج ہونے والے ذرات کی تعداد، اس وقت تابکار ایٹموں کی تعداد کے تقریباً راست تناس
 ب ہوتا ہے۔ یوں تابکار تحلیل[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4430--4431
+Underfull \hbox (badness 10000) in paragraph at lines 4443--4444
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 تابکاری کی شرح کو بغیر تجربہ بھی سمجھا ج
-ا سکتا ہے۔ فرض کریں تابکار عنصر کے ایک چھوٹے ٹکڑے سے، جس کی کمیت $\OT1/zplm/m/n
-/10 ^^A\OML/zplm/m/it/10 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے، فی سیکنڈ $\O
-ML/zplm/m/it/10 c$ \TU/JameelNooriNastaleeq(0)/b/n/10 ذرات خارج[]
+ا سکتا ہے۔ فرض کریں تابکار عنصر کے ایک چھوٹے ٹکڑے سے، جس کی کمیت $\OML/zplm/m/i
+t/10 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے، فی سیکنڈ $\OML/zplm/m/it/10 c$ \
+TU/JameelNooriNastaleeq(0)/b/n/10 ذرات خارج ہوتے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4430--4431
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 ہوتے ہیں۔یوں ہم توقع کریں گے کہ اس کے کسی 
-دوسرے ٹکڑے سے ، جس کی کمیت $\OT1/zplm/m/n/10 ^^A\OML/zplm/m/it/10 m$ \TU/Jameel
-NooriNastaleeq(0)/b/n/10 ہو، اسی شرح سے ذرات خارج ہوں گے۔یوں دونوں ٹکڑوں[]
+Underfull \hbox (badness 10000) in paragraph at lines 4443--4444
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 ہیں۔یوں ہم توقع کریں گے کہ اس کے کسی دوسرے
+ ٹکڑے سے ، جس کی کمیت بھی $\OML/zplm/m/it/10 m$ \TU/JameelNooriNastaleeq(0)/b/n
+/10 ہو، اسی شرح سے ذرات خارج ہوں گے۔یوں دونوں ٹکڑوں کا[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4430--4431
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 کا مجموعی فی سیکنڈ اخراج دگنا ہو گا۔ دوسرے
- لفظوں میں ، کمیت دگنی کرنے سے فی سیکنڈ ذرات کا اخراج دگنا ہو گا۔اسی طرح $\OML/
-zplm/m/it/10 n$ \TU/JameelNooriNastaleeq(0)/b/n/10 ٹکڑوں سے، جہاں ہر ٹکڑے کی[]
+Underfull \hbox (badness 10000) in paragraph at lines 4443--4444
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 مجموعی فی سیکنڈ اخراج $\OT1/zplm/m/n/10 (\
+OT1/ppl/m/n/10 2\OML/zplm/m/it/10 c\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq
+(0)/b/n/10 یعنی دگنا ہو گا۔ دوسرے لفظوں میں ، کمیت دگنی کرنے سے (جو موجود ایٹمو
+ں کی تعداد دگنی کرنے کے مترادف ہے) فی سیکنڈ[]
  []
 
-[706]
-LaTeX Info: Redefining \rmfamily on input line 4433.
-LaTeX Info: Redefining \sffamily on input line 4433.
-LaTeX Info: Redefining \ttfamily on input line 4433.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4432--4434
+Underfull \hbox (badness 1406) in paragraph at lines 4443--4444
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 ذرات کا اخراج دگنا ہو گا۔اسی طرح $\OML/zpl
+m/m/it/10 n$ \TU/JameelNooriNastaleeq(0)/b/n/10 ٹکڑوں سے، جہاں ہر ٹکڑے کی انفرا
+دی کمیت $\OML/zplm/m/it/10 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہو، فی سیکنڈ ا
+خراج $\OML/zplm/m/it/10 n$ \TU/JameelNooriNastaleeq(0)/b/n/10 گنا ہو گا۔ یوں ہم
+ دیکھتے ہیں کہ فی سیکنڈ اخراج[]
+ []
+
+LaTeX Info: Redefining \rmfamily on input line 4446.
+LaTeX Info: Redefining \sffamily on input line 4446.
+LaTeX Info: Redefining \ttfamily on input line 4446.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4445--4447
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کسی عنصر کے آدھے ایٹموں کو تابکاری کے ذریع
 ہ تبدیل ہونے کے لیے درکار وقت کو اس عنصر کی \TU/AASameerSagarNastaleeqBold(0)/m
 /n/10 نصف حیات[][][] []\TU/JameelNooriNastaleeq(0)/b/n/10 کہتے ہیں۔ کسی بھی عنص
 ر کی نصف حیات،[]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 4454--4455
+[707]
+Underfull \hbox (badness 10000) in paragraph at lines 4467--4468
 [][]
  []
 
-[707]
-Underfull \hbox (badness 10000) in paragraph at lines 4464--4466
+
+Underfull \hbox (badness 10000) in paragraph at lines 4476--4478
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کاربن ۱۴ جس کی نصف حیات $\OT1/ppl/m/n/10 5
-700$ \TU/JameelNooriNastaleeq(0)/b/n/10 سال ہے، کو عموماً قدیم اشیاء کی عمر معل
-وم کرنے کے لیے استعمال کیا جاتا ہے۔ ایک نمونہ میں $\OT1/ppl/m/n/10 10 %$ \TU/Ja
+700$ \TU/JameelNooriNastaleeq(0)/b/n/10 سال ہے، کو قدیم اشیاء کی عمر معلوم کرنے
+ کے لیے عموماً استعمال کیا جاتا ہے۔ ایک نمونہ میں $\OT1/ppl/m/n/10 10 %$ \TU/Ja
 meelNooriNastaleeq(0)/b/n/10 تابکار کاربن کے[]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 4483--4484
+[708]
+Underfull \hbox (badness 10000) in paragraph at lines 4495--4496
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 کاربن ۱۴ کے علاوہ دیگر تابکار عناصر کو ب
-ھی تعین زمان کے لیے استعمال کیا جا سکتا ہے۔ یورینیم (جس کی نصف حیات $\OT1/ppl/m
-/n/10 4.5$ \TU/JameelNooriNastaleeq(0)/b/n/10 ارب سال ہے) کو $\OT1/ppl/m/n/10 2
-$ \TU/JameelNooriNastaleeq(0)/b/n/10 ارب سال[]
+ھی تعین زمان کے لیے استعمال کیا جا سکتا ہے۔ یورینیم (جس کی نصف حیات ۴.۵ ارب سال
+ ہے) کو ۲ ارب سال پرانی[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4486--4487
+Underfull \hbox (badness 10000) in paragraph at lines 4499--4500
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کوئی بھی گرم جسم کچھ دیر میں ٹھنڈا ہو کر ا
-رد گرد ماحول کے درجہ حرارت پر آن پہنچتا ہے۔ جسم کے درجہ حرارت میں تبدیلی کی شرح
-، جسم اور ماحول کے درجہ[]
+ردگرد ماحول کے درجہ حرارت پر آن پہنچتا ہے۔ جسم کے درجہ حرارت میں تبدیلی کی شرح،
+ جسم اور ماحول کے درجہ[]
  []
 
+LaTeX Info: Redefining \rmfamily on input line 4515.
+LaTeX Info: Redefining \sffamily on input line 4515.
+LaTeX Info: Redefining \ttfamily on input line 4515.
 
-Underfull \vbox (badness 1888) has occurred while \output is active []
-
- [708]
-LaTeX Info: Redefining \rmfamily on input line 4502.
-LaTeX Info: Redefining \sffamily on input line 4502.
-LaTeX Info: Redefining \ttfamily on input line 4502.
-
-Underfull \hbox (badness 10000) in paragraph at lines 4508--4510
+Underfull \hbox (badness 10000) in paragraph at lines 4521--4523
 []\TU/JameelNooriNastaleeq(0)/b/n/10 مثال  ۷.۴۱:  ایک انڈے کو $\OT1/ppl/m/n/10 
 98 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر ابالنے کے بعد $\OT1/ppl/m/n/10 18 
 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 گرم پانی سے بھرے ہوئے بالٹی میں ڈالا جات
@@ -2941,28 +3073,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 4508--4510
  []
 
 [709]
-Underfull \hbox (badness 10000) in paragraph at lines 4549--4558
+Underfull \hbox (badness 10000) in paragraph at lines 4562--4571
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سطح سمندر سے $\OML/zplm/m/it/10 h$ \TU/Jam
 eelNooriNastaleeq(0)/b/n/10 بلندی پر فضائی دباو $\OML/zplm/m/it/10 p$ \TU/Jamee
-lNooriNastaleeq(0)/b/n/10 کی تبدیلی کی شرح $[]$ عموماً $\OML/zplm/m/it/10 p$ \T
-U/JameelNooriNastaleeq(0)/b/n/10 کی راست متناسب تصور کی جاتی ہے۔ سطح سمندر پر ف
-ضائی دباو[]
+lNooriNastaleeq(0)/b/n/10 کی تبدیلی کی شرح $[]$ عموماً $\OML/zplm/m/it/10 p$\TU
+/JameelNooriNastaleeq(0)/b/n/10 کے راست متناسب تصور کی جاتی ہے۔ سطح سمندر پر فض
+ائی دباو[]
  []
 
 [710]
-Underfull \hbox (badness 10000) in paragraph at lines 4576--4578
+Underfull \hbox (badness 10000) in paragraph at lines 4589--4591
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4578--4587
+Underfull \hbox (badness 10000) in paragraph at lines 4591--4600
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۷.۳۲۶:  خام شکر کو ایک مرحلہ سے گ
-زارا جاتا ہے جس میں شکر کے مالیکیول کی ساخت تبدیل ہوتی ہے۔ اس عمل کے شروع ہونے 
-کے بعد کسی بھی[]
+زارا جاتا ہے ، جس میں شکر کے سالمہ کی ساخت تبدیل ہوتی ہے۔ اس عمل کے شروع ہونے ک
+ے بعد کسی بھی[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4578--4587
+Underfull \hbox (badness 10000) in paragraph at lines 4591--4600
 []\TU/JameelNooriNastaleeq(0)/b/n/10 لمحہ پر تبدیلی کی شرح، خام مال کی باقی مقد
 ار کے راست تناسب ہوتی ہے۔ اگر $\OT1/ppl/m/n/10 1000 []$ \TU/JameelNooriNastalee
 q(0)/b/n/10 خام مال سے شروع کرتے ہوئے ابتدائی $\OT1/ppl/m/n/10 10$ \TU/JameelNo
@@ -2970,62 +3102,51 @@ oriNastaleeq(0)/b/n/10 گھنٹوں بعد باقی[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4593--4595
+Underfull \hbox (badness 10000) in paragraph at lines 4606--4608
 []\TU/JameelNooriNastaleeq(0)/b/n/10 آپ تجربہ سے جانتے ہیں کہ سطح سے $\OT1/ppl/
 m/n/10 6 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 نیچے روشنی کی شدت آدھی ہے۔ آپ سط
-حی روشنی کے $[]$ حصہ میں کام کر سکتے ہیں۔ یوں کتنی گہرائی تک آپ[]
+حی روشنی کی شدت کے $[]$ حصہ میں کام کر سکتے ہیں۔ یوں کتنی گہرائی[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4593--4595
+Underfull \hbox (badness 10000) in paragraph at lines 4606--4608
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4608--4612
+Underfull \hbox (badness 10000) in paragraph at lines 4621--4625
 []\TU/JameelNooriNastaleeq(0)/b/n/10 میں تبدیل ہوتا ہے۔ $\OT1/ppl/m/n/10 24$ \T
 U/JameelNooriNastaleeq(0)/b/n/10 گھنٹوں بعد کتنے جرثومے پائے جائیں گے؟ (اگرچہ ب
-یمار شخص کی جسم میں ہر گھنٹہ متعدد جرثومے مارے جاتے ہیں۔ اس مثال سے[]
+یمار شخص کے جسم میں ہر گھنٹہ متعدد جرثومے مارے جاتے ہیں۔ اس مثال سے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4608--4612
+Underfull \hbox (badness 10000) in paragraph at lines 4621--4625
 [][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4612--4621
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 تجربہ گاہ میں ایک قسم کی جرثوموں کو افزائش
- کے لیے بہترین ماحول مہیا کیا جاتا ہے تا کہ ان کی تعداد قوت نمائی بڑھ سکے۔$\OT1
-/ppl/m/n/10 3$ \TU/JameelNooriNastaleeq(0)/b/n/10 گھنٹوں بعد جرثوموں کی تعداد[]
-
  []
 
 [711]
-Underfull \hbox (badness 1655) in paragraph at lines 4642--4644
-[][]\TU/JameelNooriNastaleeq(0)/b/n/10 قوت نمائی اضافہ $\OML/zplm/m/it/10 y \OT
-1/zplm/m/n/10 = \OML/zplm/m/it/10 y[]e[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 تص
-ور کریں جہاں $\OML/zplm/m/it/10 t$ \TU/JameelNooriNastaleeq(0)/b/n/10 وقت کو او
-ر $\OML/zplm/m/it/10 y$ \TU/JameelNooriNastaleeq(0)/b/n/10 تعداد کو ظاہر کرتی ہ
-ے۔ وقت کو سالوں میں لیتے ہوئے $\OML/zplm/m/it/10 k$ \TU/JameelNooriNastaleeq(0)
-/b/n/10 کی قیمت تلاش[]
+Underfull \hbox (badness 10000) in paragraph at lines 4625--4634
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 تجربہ گاہ میں ایک قسم کے جرثوموں کی افزائش
+ کے لیے بہترین ماحول مہیا کیا جاتا ہے تاکہ ان کی تعداد قوت نمائی بڑھ سکے۔$\OT1/
+ppl/m/n/10 3$ \TU/JameelNooriNastaleeq(0)/b/n/10 گھنٹوں بعد جرثوموں کی تعداد[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4646--4650
+Underfull \hbox (badness 10000) in paragraph at lines 4659--4663
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4650--4659
+Underfull \hbox (badness 10000) in paragraph at lines 4663--4672
 []\TU/JameelNooriNastaleeq(0)/b/n/10 فروخت میں اضافہ پیدا کرنے کی خاطر آپ کا اد
 ارہ قیمت میں چھوٹ کو خریداری کے ساتھ یوں منسلک کرتا ہے کہ ایک شے کی قیمت $\OML/
-zplm/m/it/10 p\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )$ \TU/Jame
-elNooriNastaleeq(0)/b/n/10 خریدی گئی اشیاء[]
+zplm/m/it/10 p\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )$\TU/Jamee
+lNooriNastaleeq(0)/b/n/10 ، خریدی گئی اشیاء[]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 4692--4696
+[712]
+Underfull \hbox (badness 10000) in paragraph at lines 4705--4709
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۷.۳۳۷:  ایک شخص نے بنک میں رقم کو $
 \OT1/ppl/m/n/10 100$ \TU/JameelNooriNastaleeq(0)/b/n/10 سال کے لیے جمع کیا۔ سو 
 سال بعد اس کے خاندان کو $\OT1/ppl/m/n/10 90$ \TU/JameelNooriNastaleeq(0)/b/n/10
@@ -3033,36 +3154,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 4692--4696
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4692--4696
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4696--4705
-[]   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۷.۳۳۸:  ایک شخص نے بنک میں رقم کو
- $\OT1/ppl/m/n/10 100$ \TU/JameelNooriNastaleeq(0)/b/n/10 سال کے لیے جمع کیا۔ س
-و سال بعد اس کے خاندان کو $\OT1/ppl/m/n/10 131$ \TU/JameelNooriNastaleeq(0)/b/n
-/10 گنا رقم حاصل ہوتی ہے۔ مسلسل سود[]
- []
-
-[712]
 Underfull \hbox (badness 10000) in paragraph at lines 4705--4709
 [][]
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 4709--4718
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 پولونیم 210 کی نصف حیات $\OT1/ppl/m/n/10 1
-39$ \TU/JameelNooriNastaleeq(0)/b/n/10 دن ہے۔ اگر آپ کے پاس پولونیم 210 کے نمون
-ہ میں $\OT1/ppl/m/n/10 95 %$ \TU/JameelNooriNastaleeq(0)/b/n/10 مواد تابکاری کی
- وجہ سے تبدیل ہو جائے تب یہ نمونہ[]
+[]   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۷.۳۳۸:  ایک شخص نے بنک میں رقم کو
+ $\OT1/ppl/m/n/10 100$ \TU/JameelNooriNastaleeq(0)/b/n/10 سال کے لیے جمع کیا۔ س
+و سال بعد اس کے خاندان کو $\OT1/ppl/m/n/10 131$ \TU/JameelNooriNastaleeq(0)/b/n
+/10 گنا رقم حاصل ہوتی ہے۔ مسلسل سود[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 4721.
-LaTeX Info: Redefining \sffamily on input line 4721.
-LaTeX Info: Redefining \ttfamily on input line 4721.
 
 Underfull \hbox (badness 10000) in paragraph at lines 4718--4722
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4722--4731
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 پولونیم ۲۱۰ کی نصف حیات $\OT1/ppl/m/n/10 1
+39$ \TU/JameelNooriNastaleeq(0)/b/n/10 دن ہے۔ اگر آپ کے پاس پولونیم ۲۱۰کے نمونہ
+ میں $\OT1/ppl/m/n/10 95 %$ \TU/JameelNooriNastaleeq(0)/b/n/10 مواد تابکاری کی 
+وجہ سے تبدیل ہو جائے تب یہ نمونہ آپ[]
+ []
+
+LaTeX Info: Redefining \rmfamily on input line 4734.
+LaTeX Info: Redefining \sffamily on input line 4734.
+LaTeX Info: Redefining \ttfamily on input line 4734.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4731--4735
 []\TU/JameelNooriNastaleeq(0)/b/n/10 دن ہے۔ کاربن 12 کی اوسط حیات تقریباً $\OT1
 /ppl/m/n/10 8000$ \TU/JameelNooriNastaleeq(0)/b/n/10 سال ہے۔ دکھائیں کہ کسی بھی
  تابکار مادّہ کی تین اوسط حیات کے برابر وقت میں $\OT1/ppl/m/n/10 95 %$ \TU/Jame
@@ -3070,96 +3191,135 @@ elNooriNastaleeq(0)/b/n/10 مادّہ تبدیل ہو[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4722--4726
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 کیلی فورنیم 252 کو [] میں ایجاد کیا گیا۔ ا
+Underfull \hbox (badness 10000) in paragraph at lines 4735--4739
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 کیلیفورنیم ۲۵۲ کو [] میں دریافت کیا گیا۔ ا
 ب تک مغربی دنیا میں اس عنصر کے صرف $\OT1/ppl/m/n/10 8 g$ \TU/JameelNooriNastale
 eq(0)/b/n/10 جمع کیے گئے ہیں۔ اس کی قیمت سونے سے $\OT1/ppl/m/n/10 654$ \TU/Jame
 elNooriNastaleeq(0)/b/n/10 گنا زیادہ[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4737--4739
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 ایک کمرہ جس کا درجہ حرارت $\OT1/ppl/m/n/10
- 20 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے میں ایک پیالی یخنی کا درجہ حرارت 
-دس منٹ میں $\OT1/ppl/m/n/10 90 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 سے گر کر 
-$\OT1/ppl/m/n/10 60 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہوتا ہے۔ نیوٹن کا قا
-نون[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4754--4758
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 ایک جگ جو $\OT1/ppl/m/n/10 46 []$ \TU/Jame
-elNooriNastaleeq(0)/b/n/10 درجہ حرارت پانی سے بھرا ہوا ہے کو فریج میں رکھا جاتا
- ہے۔ دس منٹ بعد اس کا درجہ حرارت $\OT1/ppl/m/n/10 39 []$ \TU/JameelNooriNastale
-eq(0)/b/n/10 ہوتا ہے۔ مزید دس منٹ[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4754--4758
-[][]
+Underfull \hbox (badness 8019) in paragraph at lines 4750--4752
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 ایک کمرہ ، جس کا درجہ حرارت $\OT1/ppl/m/n/
+10 20 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے، میں ایک پیالی یخنی کا درجہ حرا
+رت دس منٹ میں $\OT1/ppl/m/n/10 90 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 سے گر 
+کر $\OT1/ppl/m/n/10 60 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہو جاتا ہے۔ نیوٹن
+ کا قانون[]
  []
 
 [713]
 Underfull \hbox (badness 10000) in paragraph at lines 4758--4767
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 چاندی کے سلاخ کا موجودہ درجہ حرارت، کمرے ک
-ے درجہ حرارت سے $\OT1/ppl/m/n/10 60 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 زیاد
-ہ ہے۔ بیس منٹ پہلے اس کا درجہ حرارت، کمرے کے درجہ حرارت[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4758--4767
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 سے $\OT1/ppl/m/n/10 70 []$ \TU/JameelNoori
-Nastaleeq(0)/b/n/10 زیادہ تھا۔ (ا) پندرہ منٹ کے بعد اس کا درجہ حرارت، کمرے سے ک
-تنا زیادہ ہو گا؟ (ب) دو گھنٹوں بعد کتنا ہو گا؟ (ج) کتنی دیر بعد کمرے سے[]
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 المونیم کا شہتیر باہر سے کمرے کے اندر لایا
+ جاتا ہے۔اندر درجہ حرارت $\OT1/ppl/m/n/10 20 []$ \TU/JameelNooriNastaleeq(0)/b/
+n/10 ہے ، جبکہ باہر موسم ٹھنڈا ہے۔دس منٹ بعد شہتیر کا درجہ حرارت $\OT1/ppl/m/n/
+10 2 []$[]
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 4767--4771
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 ایک جگ، جو $\OT1/ppl/m/n/10 46 []$ \TU/Jam
+eelNooriNastaleeq(0)/b/n/10 درجہ حرارت پانی سے بھرا ہوا ہے ، کو فریج میں رکھا ج
+اتا ہے۔ دس منٹ بعد اس کا درجہ حرارت $\OT1/ppl/m/n/10 39 []$ \TU/JameelNooriNast
+aleeq(0)/b/n/10 ہوتا ہے۔ مزید دس منٹ[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4767--4771
+[][]
+ []
+
+
+Underfull \hbox (badness 6110) in paragraph at lines 4771--4780
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 چاندی کی سلاخ کا موجودہ درجہ حرارت، کمرے ک
+ے درجہ حرارت سے $\OT1/ppl/m/n/10 60 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 زیاد
+ہ ہے۔ بیس منٹ قبل اس کا درجہ حرارت، کمرے کے درجہ حرارت سے[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4771--4780
+[]$\OT1/ppl/m/n/10 70 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 زیادہ تھا۔ (ا) پند
+رہ منٹ کے بعد اس کا درجہ حرارت، کمرے سے کتنا زیادہ ہو گا؟ (ب) دو گھنٹوں بعد کتن
+ا ہو گا؟ (ج) کتنی دیر بعد کمرے سے سلاخ کا[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4780--4784
 []\TU/JameelNooriNastaleeq(0)/b/n/10 زمانہ قدیم میں ایک آتش فشاں کے پھٹنے سے قر
 یبی درخت جل جاتے ہیں اور آتش فشاں میں ایک جھیل بن جاتا ہے۔ اس جھیل میں موجود کو
 ئلہ میں زندہ[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4767--4771
+Underfull \hbox (badness 10000) in paragraph at lines 4780--4784
 [][]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 4782.
-LaTeX Info: Redefining \sffamily on input line 4782.
-LaTeX Info: Redefining \ttfamily on input line 4782.
+LaTeX Info: Redefining \rmfamily on input line 4795.
+LaTeX Info: Redefining \sffamily on input line 4795.
+LaTeX Info: Redefining \ttfamily on input line 4795.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4788--4792
+Underfull \hbox (badness 10000) in paragraph at lines 4801--4805
 [][]
  []
 
+[714]
+LaTeX Info: Redefining \rmfamily on input line 4821.
+LaTeX Info: Redefining \sffamily on input line 4821.
+LaTeX Info: Redefining \ttfamily on input line 4821.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4806--4807
+Underfull \hbox (badness 10000) in paragraph at lines 4821--4822
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ایسا کسر جس کا نسب نما اور شمار کنندہ دونو
-ں تحدیدی نقطہ پر صفر کو پہنچتے ہوں، کی حد تلاش کرنے کا قاعدہ یعقوب برنولی نے در
-یافت کیا جس کو \TU/AASameerSagarNastaleeqBold(0)/m/n/10 قاعدہ لھوپیٹال[]
+ں تحدیدی نقطہ پر صفر کے قریب تر پہنچتے ہوں، کی حد تلاش کرنے کا قاعدہ یعقوب برنو
+لی نے دریافت کیا جس کو \TU/AASameerSagarNastaleeqBold(0)/m/n/10 قاعدہ[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 4809.
-LaTeX Info: Redefining \sffamily on input line 4809.
-LaTeX Info: Redefining \ttfamily on input line 4809.
+LaTeX Info: Redefining \rmfamily on input line 4824.
+LaTeX Info: Redefining \sffamily on input line 4824.
+LaTeX Info: Redefining \ttfamily on input line 4824.
 
-Underfull \hbox (badness 7869) in paragraph at lines 4809--4810
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 گا چونکہ ایسا کرنے سے $[]$ ملتا ہے جو بے م
-عنی ہے اور جس کو \TU/AASameerSagarNastaleeqBold(0)/m/n/10 غیر معین روپ[][][] []
-\TU/JameelNooriNastaleeq(0)/b/n/10 کہتے ہیں۔ اب تک ہم دیکھ چکے ہیں کہ جو حد غیر
- معین روپ دیں ان کی حد[]
+Underfull \hbox (badness 7273) in paragraph at lines 4824--4825
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 اگر نقطہ $\OML/zplm/m/it/10 x \OT1/zplm/m/
+n/10 = \OML/zplm/m/it/10 a$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر تفاعل $\OML/z
+plm/m/it/10 f\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )$ \TU/Jamee
+lNooriNastaleeq(0)/b/n/10 اور $\OML/zplm/m/it/10 g\OT1/zplm/m/n/10 (\OML/zplm/m
+/it/10 x\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی قیمتیں صفر ہو
+ں تب $\OML/zplm/m/it/10 x \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 a$ \TU/JameelNoo
+riNastaleeq(0)/b/n/10 رکھتے ہوئے $[][] []$ کا حصول[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4809--4810
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 تلاش کرنی کبھی آسان اور کبھی مشکل ہوتی ہے۔
-ہم نے حصہ ۳.۴[] میں کافی محنت کے بعد $[][] []$ کی قیمت حاصل کی۔ اس کے برعکس تفر
-ق[]
+Underfull \hbox (badness 1253) in paragraph at lines 4824--4825
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 ممکن نہیں ہو گا ، چونکہ ایسا کرنے سے $[]$ 
+ملتا ہے جو بے معنی ہے اور جس کو \TU/AASameerSagarNastaleeqBold(0)/m/n/10 غیر مع
+ین روپ[][][] []\TU/JameelNooriNastaleeq(0)/b/n/10 کہتے ہیں۔ اب تک ہم دیکھ چکے ہ
+یں کہ جو حد غیر معین روپ[]
  []
 
-[714] [715] [716] [717]
-Underfull \hbox (badness 10000) in paragraph at lines 4942--4943
+
+Underfull \hbox (badness 7221) in paragraph at lines 4824--4825
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 دیتی ہیں، ان کی حد تلاش کرنا کبھی آسان اور
+ کبھی مشکل ہوتا ہے۔ہم نے حصہ ۳.۴[] میں کافی محنت کے بعد $[][] []$ کی قیمت حاصل 
+کی۔ اس کے[]
+ []
+
+[715]
+Underfull \hbox (badness 10000) in paragraph at lines 4859--4860
+[][]\TU/JameelNooriNastaleeq(0)/b/n/10 ہم دیکھتے ہیں کہ مثال ۷.۴۲[] کے جزو-ج می
+ں قاعدہ لھوپیٹال کے استعمال کے باوجود $[]$ حاصل ہوتا ہے۔ قاعدہ لھوپیٹال کا پائی
+دار روپ کہتا ہے جب تک یہ[]
+ []
+
+[716] [717]
+Underfull \hbox (badness 1496) in paragraph at lines 4921--4922
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 بعض اوقات ہم غیر معین روپ $\OT1/ppl/m/n/10
+ 0 \OMS/zplm/m/n/10 ^^A 1$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور $\OMS/zplm/m/
+n/10 1 ^^@ 1$ \TU/JameelNooriNastaleeq(0)/b/n/10 کو الجبرا کی مدد سے $[]$ یا $[
+]$ لکھ سکتے ہیں۔ یاد رہے ہم ہرگز نہیں کہہ رہے کہ $\OT1/ppl/m/n/10 0 \OMS/zplm/m
+/n/10 ^^A 1$ \TU/JameelNooriNastaleeq(0)/b/n/10 یا[]
+ []
+
+[718]
+Underfull \hbox (badness 10000) in paragraph at lines 4957--4958
 []\TU/JameelNooriNastaleeq(0)/b/n/10 بعض اوقات ایسے حد جو نا قابل معلوم روپ $\O
 T1/ppl/m/n/10 1[]$\TU/JameelNooriNastaleeq(0)/b/n/10 ، $\OT1/ppl/m/n/10 0[]$ \T
 U/JameelNooriNastaleeq(0)/b/n/10 یا $\OMS/zplm/m/n/10 1[]$ \TU/JameelNooriNasta
@@ -3167,20 +3327,20 @@ leeq(0)/b/n/10 دیتے ہوں کا لوگارتھم پہلے لینے سے حد
 ہم قاعدہ لھوپیٹال سے[]
  []
 
-[718] [719] [720] [721] [722]
-Underfull \hbox (badness 10000) in paragraph at lines 5337--5341
+[719] [720] [721] [722]
+Underfull \hbox (badness 10000) in paragraph at lines 5352--5356
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال ۷.۴۰۲[] تا سوال ۷.۴۰۵[] میں قاعدہ لھو
 پیٹال سے حد تلاش کرنا ممکن نہیں ہو گا۔ آپ گول دائرے میں گھومتے رہیں گے۔ کسی دوس
 رے طریقہ سے حد[]
  []
 
 [723] [724]
-Underfull \hbox (badness 10000) in paragraph at lines 5490--5491
+Underfull \hbox (badness 10000) in paragraph at lines 5505--5506
 [][]
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 5498--5500
+Underfull \hbox (badness 1173) in paragraph at lines 5513--5515
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 تفاعل $\OML/zplm/m/it/10 f\OT1/zplm/m/n/
 10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 ) = (\OT1/ppl/m/n/10 1 \OT1/zplm/m/n/10
  + \OT1/ppl/m/n/10 1\OT1/zplm/m/n/10 /\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )[]$ 
@@ -3190,12 +3350,12 @@ Underfull \hbox (badness 1173) in paragraph at lines 5498--5500
  []
 
 [725]
-Underfull \hbox (badness 10000) in paragraph at lines 5549--5552
+Underfull \hbox (badness 10000) in paragraph at lines 5564--5567
 [][]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 5560--5562
+[726]
+Underfull \hbox (badness 10000) in paragraph at lines 5575--5577
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 جزو-ج میں اپنے جواب کو مزید بہتر بنانے ک
 ی خاطر $\OML/zplm/m/it/10 f[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کو ترسیم کر ک
 ے دیکھیں کہ یہ محور $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کو
@@ -3203,22 +3363,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 5560--5562
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5566--5569
+Underfull \hbox (badness 10000) in paragraph at lines 5581--5584
 [][]
  []
 
-[726] [727]
-Overfull \hbox (11.05254pt too wide) in paragraph at lines 5626--5635
+[727]
+Overfull \hbox (11.05254pt too wide) in paragraph at lines 5641--5650
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (11.05989pt too wide) in paragraph at lines 5640--5649
+Overfull \hbox (11.05989pt too wide) in paragraph at lines 5655--5664
  [][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 5621--5653
+Underfull \hbox (badness 2012) in paragraph at lines 5636--5668
 []\TU/JameelNooriNastaleeq(0)/b/n/10 لحاظ سے $\OT1/ppl/m/n/10 2[]$ \TU/JameelNo
 oriNastaleeq(0)/b/n/10 زیادہ تیزی سے بڑھتا ہے۔ درحقیقت $\OML/zplm/m/it/10 x \OM
 S/zplm/m/n/10 ! 1$ \TU/JameelNooriNastaleeq(0)/b/n/10 کرنے سے تفاعل $\OT1/ppl/m
@@ -3228,7 +3388,7 @@ NooriNastaleeq(0)/b/n/10 کے کسی بھی طاقت (مثلاً[]
  []
 
 
-Underfull \hbox (badness 5008) in paragraph at lines 5663--5664
+Underfull \hbox (badness 5008) in paragraph at lines 5678--5679
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 اس کے برعکس $\OML/zplm/m/it/10 x \OMS/zp
 lm/m/n/10 ! 1$ \TU/JameelNooriNastaleeq(0)/b/n/10 کرنے سے لوگارتھمی تفاعل $\OML
 /zplm/m/it/10 y \OT1/zplm/m/n/10 = [][] \OML/zplm/m/it/10 x$ \TU/JameelNooriNas
@@ -3238,14 +3398,14 @@ taleeq(0)/b/n/10 اور $\OML/zplm/m/it/10 y \OT1/zplm/m/n/10 = [] \OML/zplm/m/i
  []
 
 [728]
-Underfull \hbox (badness 10000) in paragraph at lines 5665--5666
+Underfull \hbox (badness 10000) in paragraph at lines 5680--5681
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 قوت نما، کثیررکنی اور لوگارتھمی تفاعل کا
  ایک دوسرے کے ساتھ مذکورہ بالا موازنہ کو زیادہ درستگی سے بیان کرنے کی خاطر ہم ا
 یک تعریف پیش کرتے[]
  []
 
-
-Underfull \hbox (badness 1655) in paragraph at lines 5694--5696
+[729]
+Underfull \hbox (badness 1655) in paragraph at lines 5709--5711
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہے جو غیر صفر اور متناہی حد ہے۔ زیادہ تیزی
  سے بڑھنے کے عمومی مطلب کو ہم اس لیے نظر انداز کرتے ہیں کہ جب ہم کہیں کہ $\OML/
 zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی بڑی قیمتوں کے لیے $\OML/z
@@ -3253,7 +3413,7 @@ plm/m/it/10 f$[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5694--5696
+Underfull \hbox (badness 10000) in paragraph at lines 5709--5711
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کے بڑھنے کی شرح $\OML/zplm/m/it/10 g$ \TU/
 JameelNooriNastaleeq(0)/b/n/10 کے بڑھنے کی شرح سے زیادہ ہے تب اس سے مراد ”$\OML
 /zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی بڑی قیمتوں کے لیے $\OML/
@@ -3261,29 +3421,30 @@ zplm/m/it/10 f$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے لحاظ سے $\OML/zplm
 0 g$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی قیمت قابل نظر انداز ہے،“[]
  []
 
-[729] [730] [731]
-LaTeX Info: Redefining \rmfamily on input line 5803.
-LaTeX Info: Redefining \sffamily on input line 5803.
-LaTeX Info: Redefining \ttfamily on input line 5803.
+[730] [731]
+LaTeX Info: Redefining \rmfamily on input line 5818.
+LaTeX Info: Redefining \sffamily on input line 5818.
+LaTeX Info: Redefining \ttfamily on input line 5818.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5803--5804
+Underfull \hbox (badness 10000) in paragraph at lines 5818--5819
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ماہرین عموماً اس کام کو سرانجام کرنے کے لی
 ے درکار قدموں کی گنتی کرتے ہیں۔ ایک ہی کام سرانجام دینے کے دو مختلف لائحہ کار ک
 ی کارگزاری میں بہت زیادہ[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 5805.
-LaTeX Info: Redefining \sffamily on input line 5805.
-LaTeX Info: Redefining \ttfamily on input line 5805.
+[732]
+LaTeX Info: Redefining \rmfamily on input line 5820.
+LaTeX Info: Redefining \sffamily on input line 5820.
+LaTeX Info: Redefining \ttfamily on input line 5820.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5805--5806
+Underfull \hbox (badness 10000) in paragraph at lines 5820--5821
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 ایک لغت میں کسی ایک حرف سے شروع ہونے وال
 ے الفاظ کی تعداد $\OT1/ppl/m/n/10 26 000$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے
 ۔ آپ اس حرف سے شروع ہونے والے ایک لفظ کو دو طریقوں سے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5805--5806
+Underfull \hbox (badness 10000) in paragraph at lines 5820--5821
 []\TU/JameelNooriNastaleeq(0)/b/n/10 تلاش کر سکتے ہیں۔ پہلی ترکیب میں آپ پہلے ل
 فظ سے شروع کرتے ہوئے یک بہ یک لفظ پڑھ کر درکار لفظ تک پہنچتے ہیں۔ اس ترکیب کو \
 TU/AASameerSagarNastaleeqBold(0)/m/n/10 ترتیبی تلاش[][][] []\TU/JameelNooriNast
@@ -3291,53 +3452,52 @@ aleeq(0)/b/n/10 کہتے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5805--5806
+Underfull \hbox (badness 10000) in paragraph at lines 5820--5821
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہیں جو لغت میں ترتیب سے الفاظ لکھے گئے ہون
 ے سے استفادہ نہیں کرتا ہے۔ اس ترتیب میں آپ ہر صورت لفظ تلاش کر پائیں گے (یا جان
  جائیں گے کہ یہ لفظ[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5807--5808
+Underfull \hbox (badness 10000) in paragraph at lines 5822--5823
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 اس سے بہتر ترکیب میں آپ لغت کے عین وسط (
 ایک دو الفاظ آگے پیچھے ہو سکتے ہیں) میں ایک لفظ کو دیکھتے ہیں۔ چونکہ لغت میں ال
 فاظ ترتیب سے ہیں لہٰذا آپ[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5807--5808
+Underfull \hbox (badness 10000) in paragraph at lines 5822--5823
 []\TU/JameelNooriNastaleeq(0)/b/n/10 معلوم کر پائیں گے کہ آیا درکار لفظ پہلی نص
 ف یا دوسری نصف حصہ میں ہے۔ لغت کی اس نصف حصہ کو رد کریں جس میں لفظ موجود نہیں ہ
 ے۔یوں پہلی قدم[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5807--5808
+Underfull \hbox (badness 10000) in paragraph at lines 5822--5823
 []\TU/JameelNooriNastaleeq(0)/b/n/10 میں $\OT1/ppl/m/n/10 13 000$ \TU/JameelNoo
 riNastaleeq(0)/b/n/10 الفاظ سے چھٹکارا حاصل ہوتا ہے۔ اب منتخب حصہ کے نصف میں جا
  کر دیکھیں کہ درکار لفظ کس جانب پایا جاتا ہے۔ یوں دوسرے قدم میں[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5807--5808
+Underfull \hbox (badness 10000) in paragraph at lines 5822--5823
 []$\OT1/ppl/m/n/10 6500$ \TU/JameelNooriNastaleeq(0)/b/n/10 الفاظ سے چھٹکارا حا
 صل ہوتا ہے۔ اسی طرح ہر قدم پر آدھے حصے کو رد کرتے ہوئے چلتے جائیں جب تک آپ درکا
 ر لفظ تلاش نہیں کر پاتے یا الفاظ ختم[]
  []
 
-[732]
-LaTeX Info: Redefining \rmfamily on input line 5811.
-LaTeX Info: Redefining \sffamily on input line 5811.
-LaTeX Info: Redefining \ttfamily on input line 5811.
+LaTeX Info: Redefining \rmfamily on input line 5826.
+LaTeX Info: Redefining \sffamily on input line 5826.
+LaTeX Info: Redefining \ttfamily on input line 5826.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5810--5812
+Underfull \hbox (badness 10000) in paragraph at lines 5825--5827
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہوتا ہے لہٰذا آپ کو زیادہ سے زیادہ $\OT1/p
 pl/m/n/10 15$ \TU/JameelNooriNastaleeq(0)/b/n/10 قدم چل کر درکار لفظ مل جائے گا
  یا آپ جان جائیں گے کہ یہ لفظ لغت میں موجود نہیں ہے۔ اس ترتیب کو[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5813--5814
+Underfull \hbox (badness 10000) in paragraph at lines 5828--5829
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 ایک سلسلہ جس کی لمبائی $\OML/zplm/m/it/1
 0 n$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہو میں کسی جزو کی تلاش کے لیے ترتیبی تل
 اش کو $\OML/zplm/m/it/10 n$ \TU/JameelNooriNastaleeq(0)/b/n/10 قدم درکار ہو سکت
@@ -3345,7 +3505,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5813--5814
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5813--5814
+Underfull \hbox (badness 10000) in paragraph at lines 5828--5829
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ($[][] \OML/zplm/m/it/10 n$ \TU/JameelNoor
 iNastaleeq(0)/b/n/10 کا عدد صحیح چھت تفاعل) بار دو حصوں میں تقسیم کی ضرورت پیش 
 آئے گی۔ یوں ثنائی تلاش میں $[][] \OML/zplm/m/it/10 n$ \TU/JameelNooriNastaleeq(
@@ -3353,7 +3513,7 @@ iNastaleeq(0)/b/n/10 کا عدد صحیح چھت تفاعل) بار دو حصو�
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5815--5816
+Underfull \hbox (badness 10000) in paragraph at lines 5830--5831
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 بڑے $\OML/zplm/m/it/10 O$ \TU/JameelNoor
 iNastaleeq(0)/b/n/10 روپ میں اس تمام کو نہایت خوش اسلوبی سے ظاہر کیا جا سکتا ہے
 ۔ ترتیبی سلسلہ میں ترتیبی تلاش کو $\OML/zplm/m/it/10 O\OT1/zplm/m/n/10 (\OML/zp
@@ -3362,7 +3522,7 @@ lm/m/it/10 n\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے لگ ب�
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5815--5816
+Underfull \hbox (badness 10000) in paragraph at lines 5830--5831
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ثنائی تلاش کو $\OML/zplm/m/it/10 O\OT1/zpl
 m/m/n/10 ([][] \OML/zplm/m/it/10 n\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(
 0)/b/n/10 کے لگ بھگ قدم درکار ہوں گے۔ ہماری مثال میں ان دو میں بہت زیادہ فرق پا
@@ -3371,17 +3531,17 @@ m/m/n/10 ([][] \OML/zplm/m/it/10 n\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(
  []
 
 [733] [734]
-Underfull \hbox (badness 10000) in paragraph at lines 6091--6096
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6109--6111
+Underfull \hbox (badness 10000) in paragraph at lines 6106--6111
 [][]
  []
 
 [735]
-Underfull \hbox (badness 1205) in paragraph at lines 6150--6152
+Underfull \hbox (badness 10000) in paragraph at lines 6124--6126
+[][]
+ []
+
+
+Underfull \hbox (badness 1205) in paragraph at lines 6165--6167
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 اگرچہ $\OML/zplm/m/it/10 x[]$ \TU/Jameel
 NooriNastaleeq(0)/b/n/10 کی قیمت آخر کار $[] \OML/zplm/m/it/10 x$ \TU/JameelNoo
 riNastaleeq(0)/b/n/10 کی قیمت سے زیادہ ہو گی، وہاں تک پہنچنے کے لیے آپ کو محور 
@@ -3390,7 +3550,7 @@ $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر بہت دور جا
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6152--6154
+Underfull \hbox (badness 10000) in paragraph at lines 6167--6169
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 تفاعل $\OML/zplm/m/it/10 x[]$ \TU/Jameel
 NooriNastaleeq(0)/b/n/10 کو بھی $[] \OML/zplm/m/it/10 x$ \TU/JameelNooriNastale
 eq(0)/b/n/10 سے بڑھنے کے لیے بہت وقت درکار ہو گا۔ کیلکولیٹر استعمال کرتے ہوئے $
@@ -3398,58 +3558,58 @@ eq(0)/b/n/10 سے بڑھنے کے لیے بہت وقت درکار ہو گا۔ ک
  پر $\OML/zplm/m/it/10 x[]$[]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 6167--6170
+[736]
+Underfull \hbox (badness 10000) in paragraph at lines 6182--6185
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6171--6173
+Underfull \hbox (badness 10000) in paragraph at lines 6186--6188
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۷.۴۴۶: [](ا) آپ کمپیوٹر کی مدد سے ای
 ک کام سرانجام دینا چاہتے ہیں۔ آپ کے پاس تین الخوارزم موجود ہیں جن کے لیے کمپیوٹ
 ر کو درکار قدموں کی[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6175--6177
+Underfull \hbox (badness 10000) in paragraph at lines 6190--6192
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6189--6193
+Underfull \hbox (badness 10000) in paragraph at lines 6204--6208
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۷.۴۴۸:  ایک مرتب سلسلہ جس میں دس لا
 کھ اجزاء پائے جاتے ہیں میں سے آپ کو ایک جزو تلاش کرنا ہے۔ ترتیبی تلاش کے لیے کت
 نے قدم درکار[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6189--6193
+Underfull \hbox (badness 10000) in paragraph at lines 6204--6208
 [][]
  []
 
-[736]
-Underfull \hbox (badness 6316) in paragraph at lines 6193--6202
+
+Underfull \hbox (badness 6316) in paragraph at lines 6208--6217
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۷.۴۴۹:  ایک مرتب سلسلہ میں $\OT1/
 ppl/m/n/10 450 000$ \TU/JameelNooriNastaleeq(0)/b/n/10 اجزاء پائے جاتے ہیں جن م
 یں سے آپ کو ایک جزو کی تلاش ہے۔ ترتیبی تلاش اور ثنائی تلاش کرتے[]
  []
 
 
-Underfull \hbox (badness 4556) in paragraph at lines 6211--6212
+Underfull \hbox (badness 4556) in paragraph at lines 6226--6227
 []\TU/JameelNooriNastaleeq(0)/b/n/10 اور تفرقی مساوات کے حل میں عموماً پائے جات
 ے ہیں۔ اس حصہ میں ان تفاعل کی تعریف پیش کی جائے گی، ان کو ترسیم کرنا سکھایا جائ
 ے گا اور ان کی قیمت حاصل[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6214--6233
+Underfull \hbox (badness 10000) in paragraph at lines 6229--6248
 []\TU/JameelNooriNastaleeq(0)/b/n/10 چھ بنیادی تکونیاتی تفاعل کی قیمتیں دہراتی 
 ہیں لہٰذا یہ یک بہ یک تفاعل نہیں ہیں البتہ ان کے دائرہ کار کو ایسے وقفوں پر پاب
 ند کیا جا سکتا ہے جہاں یہ یک بہ یک ہوں[]
  []
 
 [737]
-Underfull \hbox (badness 10000) in paragraph at lines 6242--6244
+Underfull \hbox (badness 10000) in paragraph at lines 6257--6259
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہم کہیں گے ”$\OML/zplm/m/it/10 x$ \TU/Jame
 elNooriNastaleeq(0)/b/n/10 کا معکوس سائن $\OML/zplm/m/it/10 y$ \TU/JameelNooriN
 astaleeq(0)/b/n/10 کے برابر ہے“، وغیرہ۔ یاد رہے کہ ان معکوس تفاعل میں $\OMS/zpl
@@ -3458,7 +3618,10 @@ m/m/n/10 ^^@\OT1/ppl/m/n/10 1$ \TU/JameelNooriNastaleeq(0)/b/n/10 سے مراد 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6252--6253
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [738]
+Underfull \hbox (badness 10000) in paragraph at lines 6267--6268
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 ان تعلقات کو استعمال کر کے $[][] \OML/zp
 lm/m/it/10 x$\TU/JameelNooriNastaleeq(0)/b/n/10 ، $[][] \OML/zplm/m/it/10 x$ \T
 U/JameelNooriNastaleeq(0)/b/n/10 اور $[][] \OML/zplm/m/it/10 x$ \TU/JameelNoori
@@ -3468,7 +3631,7 @@ Nastaleeq(0)/b/n/10 اور[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6255--6256
+Underfull \hbox (badness 10000) in paragraph at lines 6270--6271
 []\TU/JameelNooriNastaleeq(0)/b/n/10 متغیر $\OML/zplm/m/it/10 x$ \TU/JameelNoor
 iNastaleeq(0)/b/n/10 کے معکوس سائن یعنی $[][] \OML/zplm/m/it/10 x$ \TU/JameelNo
 oriNastaleeq(0)/b/n/10 سے مراد وہ زاویہ ہے جس کا سائن $\OML/zplm/m/it/10 x$ \TU
@@ -3477,38 +3640,38 @@ oriNastaleeq(0)/b/n/10 سے مراد وہ زاویہ ہے جس کا سائن $\O
  []
 
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 6282.
+(Font)              scaled to size 7.0pt on input line 6297.
 
-Overfull \hbox (15.16084pt too wide) in paragraph at lines 6272--6284
+Overfull \hbox (15.16084pt too wide) in paragraph at lines 6287--6299
  [][][][][][] 
  []
 
 
-Overfull \hbox (4.74123pt too wide) in paragraph at lines 6288--6299
+Overfull \hbox (4.74123pt too wide) in paragraph at lines 6303--6314
  [][][][][][] 
  []
 
 
-Overfull \hbox (10.23451pt too wide) in paragraph at lines 6372--6386
+Overfull \hbox (10.23451pt too wide) in paragraph at lines 6387--6401
  [][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6391--6392
+Underfull \hbox (badness 10000) in paragraph at lines 6406--6407
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 معکوس سائن کی مخصوص قیمتوں کو قائمہ مثلث
  سے شکل ۷.۶۰[] میں حاصل کرنا دکھایا گیا ہے۔ اس طرح درج ذیل دیگر قیمتیں بھی حاصل
  کی جا سکتی ہیں۔ یاد[]
  []
 
-[738] [739]
-Underfull \hbox (badness 10000) in paragraph at lines 6444--6445
+
+Underfull \hbox (badness 10000) in paragraph at lines 6459--6460
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 معکوس کوسائن کی مخصوص قیمتوں کو قائمہ مث
 لث سے شکل ۷.۶۱[] میں حاصل کرنا دکھایا گیا ہے۔ اس طرح درج ذیل دیگر قیمتیں بھی حا
 صل کی جا سکتی ہیں۔ یاد[]
  []
 
-[740]
-Underfull \hbox (badness 10000) in paragraph at lines 6467--6510
+[739] [740] [741]
+Underfull \hbox (badness 10000) in paragraph at lines 6482--6525
 []\TU/JameelNooriNastaleeq(0)/b/n/10 اگرچہ شکل ۷.۴۰[] میں دی گئی مثلث سے یہ ثاب
 ت نہیں کیا جا سکتا ہے لیکن مساوات ۷[] وقفہ $\OT1/zplm/m/n/10 [\OMS/zplm/m/n/10 
 ^^@\OT1/ppl/m/n/10 1, 1\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNastaleeq(0)/b/n/10 م
@@ -3516,23 +3679,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 6467--6510
 ت ہے۔ یہ حقیقت[]
  []
 
-[741]
+[742]
 NOTE: coordinate (5Y0.0e0],2Y1.57079e0]) has been dropped because it is unbound
 ed (in x). (see also unbounded coords=jump). 
 NOTE: coordinate (4Y0.0e0],1Y1.5707835e0]) has been dropped because it is unbou
 nded (in x). (see also unbounded coords=jump). 
 
-Overfull \hbox (4.95116pt too wide) in paragraph at lines 6560--6571
+Overfull \hbox (4.95116pt too wide) in paragraph at lines 6575--6586
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (19.75899pt too wide) in paragraph at lines 6576--6586
+Overfull \hbox (19.75899pt too wide) in paragraph at lines 6591--6601
  [][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6591--6593
+Underfull \hbox (badness 10000) in paragraph at lines 6606--6608
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 انتباہ:  متغیر $\OML/zplm/m/it/10 x$ \TU
 /JameelNooriNastaleeq(0)/b/n/10 کی منفی قیمتوں کے لیے $[][] \OML/zplm/m/it/10 x
 $ \TU/JameelNooriNastaleeq(0)/b/n/10 کی تعریف پر اتفاق نہیں پایا جاتا ہے۔ہم ربع
@@ -3540,12 +3703,16 @@ $ \TU/JameelNooriNastaleeq(0)/b/n/10 کی تعریف پر اتفاق نہیں پ
  بیچ زاویہ لیں گے۔ اس[]
  []
 
-[742] [743] [744] [745] [746] [747] [748]
-LaTeX Info: Redefining \rmfamily on input line 7164.
-LaTeX Info: Redefining \sffamily on input line 7164.
-LaTeX Info: Redefining \ttfamily on input line 7164.
 
-Underfull \hbox (badness 10000) in paragraph at lines 7163--7165
+Underfull \vbox (badness 2165) has occurred while \output is active []
+
+ [743]
+[744] [745] [746] [747] [748]
+LaTeX Info: Redefining \rmfamily on input line 7179.
+LaTeX Info: Redefining \sffamily on input line 7179.
+LaTeX Info: Redefining \ttfamily on input line 7179.
+
+Underfull \hbox (badness 10000) in paragraph at lines 7178--7180
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۷.۴۹۸: []آپ کے اسکول کے تدریسی کمروں
  میں لکھائی کا \TU/AASameerSagarNastaleeqBold(0)/m/n/10 تختہ سیاہ[][]  \TU/Jame
 elNooriNastaleeq(0)/b/n/10 زمین سے $\OT1/ppl/m/n/10 1.25 m$ \TU/JameelNooriNast
@@ -3554,52 +3721,52 @@ aleeq(0)/b/n/10 کی اونچائی سے شروع ہوتا ہے جبکہ اس ک
  []
 
 
-Underfull \hbox (badness 2253) in paragraph at lines 7163--7165
+Underfull \hbox (badness 2253) in paragraph at lines 7178--7180
 []\TU/JameelNooriNastaleeq(0)/b/n/10 میٹر ہے۔ آپ تختہ سیاہ سے $\OML/zplm/m/it/1
 0 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 میٹر کے فاصلہ پر ہیں ۔ دکھائیں کہ آپ کا
  دیکھنے کا زاویہ $\OML/zplm/m/it/10 ^^K \OT1/zplm/m/n/10 = [][] [] \OMS/zplm/m/
 n/10 ^^@ [][] []$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے (شکل[]
  []
 
-
-Overfull \hbox (50.82469pt too wide) in paragraph at lines 7172--7184
+[749]
+Overfull \hbox (50.82469pt too wide) in paragraph at lines 7187--7199
  [][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7184--7184
+Underfull \hbox (badness 10000) in paragraph at lines 7199--7199
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 شكل ۷.۵۰: |تدریسی کمرہ میں تختہ سیاہ (سو
 ال[]
  []
 
-Package pgfplots info on input line 7196: fill between: activating layered grap
+Package pgfplots info on input line 7211: fill between: activating layered grap
 hics
-Package pgfplots info on input line 7196: Setting layers 'axis background,axis 
+Package pgfplots info on input line 7211: Setting layers 'axis background,axis 
 grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
 s foreground'...
-Package pgfplots info on input line 7196: the combination of 'axis on top' and 
+Package pgfplots info on input line 7211: the combination of 'axis on top' and 
 'activate layers' implies 'set layers=axis on top'. Deactivate 'axis on top' if
  you want other layers.
-Package pgfplots info on input line 7196: Setting layers 'axis background,pre m
+Package pgfplots info on input line 7211: Setting layers 'axis background,pre m
 ain,main,axis grid,axis ticks,axis lines,axis tick labels,axis descriptions,axi
 s foreground'...
 
-Overfull \hbox (12.33714pt too wide) in paragraph at lines 7189--7198
+Overfull \hbox (12.33714pt too wide) in paragraph at lines 7204--7213
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (1.73578pt too wide) in paragraph at lines 7242--7257
+Overfull \hbox (1.73578pt too wide) in paragraph at lines 7257--7272
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (4.15002pt too wide) in paragraph at lines 7277--7290
+Overfull \hbox (4.15002pt too wide) in paragraph at lines 7292--7305
  [][][][][][][][] 
  []
 
-[749]
-Underfull \hbox (badness 1147) in paragraph at lines 7305--7309
+
+Underfull \hbox (badness 1147) in paragraph at lines 7320--7324
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۷.۵۰۴: []تماثل $[][] \OML/zplm/m/it
 /10 x \OT1/zplm/m/n/10 + [][] \OML/zplm/m/it/10 x \OT1/zplm/m/n/10 = []$ \TU/Ja
 meelNooriNastaleeq(0)/b/n/10 کو $\OT1/ppl/m/n/10 0 \OML/zplm/m/it/10 < x < \OT1
@@ -3607,34 +3774,37 @@ meelNooriNastaleeq(0)/b/n/10 کو $\OT1/ppl/m/n/10 0 \OML/zplm/m/it/10 < x < \OT
 گیا۔ اس کی[]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 7382--7383
+[750]
+Underfull \hbox (badness 10000) in paragraph at lines 7397--7398
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 سوال ۷.۵۱۲[] تا سوال ۷.۵۱۴[] میں ہر ایک 
 مرکب تفاعل کا دائرہ کار اور سعت تلاش کریں۔ ان مرکب تفاعل کو علیحدہ علیحدہ ترسیم
  کریں۔ کیا انفرادی ترسیمات[]
  []
 
-[750]
-Underfull \hbox (badness 10000) in paragraph at lines 7433--7434
+[751]
+Underfull \hbox (badness 10000) in paragraph at lines 7448--7449
 []\TU/JameelNooriNastaleeq(0)/b/n/10 معکوس تکونیاتی تفاعل مختلف اقسام کے تفاعل،
  جو انجینئری، طبیعیات اور ریاضیات میں رونما ہوتے ہیں، کے ضد تفرق مہیا کرتے ہیں۔
  اس حصہ میں ہم معکوس[]
  []
 
-[751]
-Underfull \hbox (badness 10000) in paragraph at lines 7463--7464
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [752]
+Underfull \hbox (badness 10000) in paragraph at lines 7478--7479
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 آئیں مساوات ۱[] اور مساوات ۵[] کو حاصل ک
 رتے ہیں۔ مساوات ۳[] کو بھی اسی طرح حاصل کیا جا سکتا ہے۔ مساوات ۲[]، مساوات ۴[] 
 اور مساوات ۶[] کو موزوں تماثل[]
  []
 
 
-Overfull \hbox (7.59747pt too wide) in paragraph at lines 7471--7482
+Overfull \hbox (7.59747pt too wide) in paragraph at lines 7486--7497
  [][][][][][][][] 
  []
 
-[752]
-Underfull \hbox (badness 10000) in paragraph at lines 7530--7532
+[753]
+Underfull \hbox (badness 10000) in paragraph at lines 7545--7547
 []\TU/JameelNooriNastaleeq(0)/b/n/10 درج بالا میں تیسرے قدم پر چونکہ $[] \OML/z
 plm/m/it/10 > \OT1/ppl/m/n/10 1$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے لہٰذا $\
 OML/zplm/m/it/10 y$ \TU/JameelNooriNastaleeq(0)/b/n/10 وقفہ $\OT1/zplm/m/n/10 (
@@ -3644,19 +3814,19 @@ plm/m/n/10 /\OT1/ppl/m/n/10 2, \OML/zplm/m/it/10 ^^Y\OT1/zplm/m/n/10 )$ \TU/Jam
 eelNooriNastaleeq(0)/b/n/10 میں پایا جائے گا جس کی وجہ سے[]
  []
 
-[753] [754] [755]
-Underfull \hbox (badness 10000) in paragraph at lines 7629--7631
+[754] [755] [756]
+Underfull \hbox (badness 10000) in paragraph at lines 7644--7646
 []\TU/JameelNooriNastaleeq(0)/b/n/10 یہاں ریاضی فقرہ $[]$ مساوات ۸[] تا مساوات 
 ۱۰[] میں سے کسی بھی تکمل میں پائے جانے والے ریاضیاتی عبارت کی طرح نہیں ہے لہٰذا
  ہم اس کا[]
  []
 
-[756]
+[757]
 Underfull \vbox (badness 3977) has occurred while \output is active []
 
- [757]
-[758] [759] [760] [761]
-Underfull \hbox (badness 10000) in paragraph at lines 8208--8217
+ [758]
+[759] [760] [761] [762]
+Underfull \hbox (badness 10000) in paragraph at lines 8223--8232
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۷.۵۹۵: []متغیر $\OML/zplm/m/it/10
  x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کو کونسی قیمت شکل ۷.۶۰[] میں $\OML/zplm/
 m/it/10 ^^R$ \TU/JameelNooriNastaleeq(0)/b/n/10 کو بڑے سے بڑا بناتی ہے؟ $\OML/z
@@ -3664,12 +3834,12 @@ plm/m/it/10 ^^R$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی بڑی سے بڑی قی
 ں۔ شروع اس سے کریں کہ[]
  []
 
-[762] [763] [764]
-LaTeX Info: Redefining \rmfamily on input line 8420.
-LaTeX Info: Redefining \sffamily on input line 8420.
-LaTeX Info: Redefining \ttfamily on input line 8420.
+[763] [764] [765]
+LaTeX Info: Redefining \rmfamily on input line 8435.
+LaTeX Info: Redefining \sffamily on input line 8435.
+LaTeX Info: Redefining \ttfamily on input line 8435.
 
-Underfull \hbox (badness 10000) in paragraph at lines 8419--8421
+Underfull \hbox (badness 10000) in paragraph at lines 8434--8436
 []\TU/JameelNooriNastaleeq(0)/b/n/10 قوت نمائی تفاعل $\OML/zplm/m/it/10 e[]$ \T
 U/JameelNooriNastaleeq(0)/b/n/10 کا جفت اور طاق حصہ، جنہیں بالترتیب $\OML/zplm/
 m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کا ہذلولی کوسائن اور ہذلولی سائن 
@@ -3677,26 +3847,26 @@ m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کا ہذلولی کوسائن ا�
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8423--8424
+Underfull \hbox (badness 10000) in paragraph at lines 8438--8439
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہذلولی کوسائن اور ہذلولی سائن کی تعریف جدو
 ل ۷.۸[] کی پہلی دو مساواتیں پیش کرتی ہیں۔ اس جدول میں ہذلولی ٹینجنٹ، ہذلولی کوٹ
 ینجنٹ، ہذلولی سیکنٹ، اور[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8423--8424
+Underfull \hbox (badness 10000) in paragraph at lines 8438--8439
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہذلولی کوسیکنٹ کی تعریف بھی پیش کی گئی ہیں
 ۔ جیسا کہ ہم دیکھیں گے، ہذلولی تفاعل ان تکونیاتی تفاعل کے ساتھ کافی ملتے جلتے ہ
 یں جن کے توسط سے ان کے نام[]
  []
 
-[765]
-Overfull \hbox (9.04234pt too wide) in paragraph at lines 8457--8464
+[766]
+Overfull \hbox (9.04234pt too wide) in paragraph at lines 8472--8479
  [][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8528--8529
+Underfull \hbox (badness 10000) in paragraph at lines 8543--8544
 []\TU/JameelNooriNastaleeq(0)/b/n/10 چھ بنیادی ہذلولی تفاعل، قابل تفرق تفاعل $\
 OML/zplm/m/it/10 e[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور $\OML/zplm/m/it/10
  e[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے ناطق مجموعے ہیں، لہٰذا یہ ہر اس نقط
@@ -3704,36 +3874,36 @@ OML/zplm/m/it/10 e[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور $\OML/zplm/m/it/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8528--8529
+Underfull \hbox (badness 10000) in paragraph at lines 8543--8544
 []\TU/JameelNooriNastaleeq(0)/b/n/10 تکونیاتی تفاعل کے ساتھ مشابہت نظر آتی ہے۔ 
 جدول ۷.۱۰[]-ا کے کلیات تفرق سے جدول ۷.۱۰[]-ب کے کلیات تکمل حاصل ہوتے ہیں۔ تکونی
 اتی تفاعل کی[]
  []
 
-[766] [767] [768] [769]
-Overfull \hbox (2.33966pt too wide) in paragraph at lines 8613--8620
+[767] [768] [769] [770]
+Overfull \hbox (2.33966pt too wide) in paragraph at lines 8628--8635
  [][][][][][] 
  []
 
 
-Overfull \hbox (9.38867pt too wide) in paragraph at lines 8624--8631
+Overfull \hbox (9.38867pt too wide) in paragraph at lines 8639--8646
  [][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8631--8631
+Underfull \hbox (badness 10000) in paragraph at lines 8646--8646
 [][]\TU/JameelNooriNastaleeq(2)/m/n/9 (ب) |ہذلولی کوسائن اور معکوس ہذلولی کوسائ
 ن کے ترسیمات۔ یہ دونوں لکیر[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8642--8642
+Underfull \hbox (badness 10000) in paragraph at lines 8657--8657
 [][]\TU/JameelNooriNastaleeq(2)/m/n/9 (ج) |ہذلولی سیکنٹ اور معکوس ہذلولی سیکنٹ 
 کے ترسیمات۔ یہ دونوں لکیر[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8695--8696
+Underfull \hbox (badness 10000) in paragraph at lines 8710--8711
 []\TU/JameelNooriNastaleeq(0)/b/n/10 چند کارآمد تماثل کو جدول ۷.۱۱[] میں پیش کی
 ا گیا ہے۔ تفاعل $[][] \OML/zplm/m/it/10 x$\TU/JameelNooriNastaleeq(0)/b/n/10 ، 
 $[][] \OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور $[][] \OML/zp
@@ -3741,8 +3911,8 @@ lm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی قیمتیں جانتے ہ
 کے[]
  []
 
-[770] [771] [772] [773] [774] [775] [776] [777]
-Underfull \hbox (badness 10000) in paragraph at lines 9324--9326
+[771] [772] [773] [774] [775] [776] [777] [778]
+Underfull \hbox (badness 10000) in paragraph at lines 9339--9341
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۷.۶۸۸:  (ا) مبدا کے لحاظ سے تشاکلی و
 قفہ پر معین تفاعل $\OML/zplm/m/it/10 f$ \TU/JameelNooriNastaleeq(0)/b/n/10 (یعن
 ی ایسا تفاعل جو $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر معی
@@ -3751,62 +3921,62 @@ taleeq(0)/b/n/10 پر بھی معین ہو) کے لیے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9328--9330
+Underfull \hbox (badness 10000) in paragraph at lines 9343--9345
 []\TU/JameelNooriNastaleeq(0)/b/n/10 اس کے بعد دکھائیں کہ $[]$ جفت اور $[]$ طاق
  ہو گا۔ (ب) اگر $\OML/zplm/m/it/10 f$ \TU/JameelNooriNastaleeq(0)/b/n/10 از خود
  جفت یا طاق ہو تح مساوات ۱[] کافی سادہ صورت[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9339--9343
+Underfull \hbox (badness 10000) in paragraph at lines 9354--9358
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۷.۶۹۰:  ایک جسم پر، جس کی کمیت $\OM
 L/zplm/m/it/10 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے، ساکن حال سے ثقلی کشش ک
 ی وجہ سے زمین کی طرف گرتے ہوئے سمتی رفتار $\OML/zplm/m/it/10 v$ \TU/JameelNoori
 Nastaleeq(0)/b/n/10 کے مربع کے[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 9346.
-LaTeX Info: Redefining \sffamily on input line 9346.
-LaTeX Info: Redefining \ttfamily on input line 9346.
+LaTeX Info: Redefining \rmfamily on input line 9361.
+LaTeX Info: Redefining \sffamily on input line 9361.
+LaTeX Info: Redefining \ttfamily on input line 9361.
 
-Underfull \hbox (badness 10000) in paragraph at lines 9345--9347
+Underfull \hbox (badness 10000) in paragraph at lines 9360--9362
 []\TU/JameelNooriNastaleeq(0)/b/n/10 جہاں $\OML/zplm/m/it/10 k$ \TU/JameelNoori
 Nastaleeq(0)/b/n/10 ایک ایسا مستقل ہے جس کی قیمت کا دارومدار جسم کے \TU/AASamee
 rSagarNastaleeqBold(0)/m/n/10 ہوائی حرکیات[][]  \TU/JameelNooriNastaleeq(0)/b/n
 /10 کے خواص اور ہوا کی کثافت پر منحصر ہو گی۔ (ہم فرض کرتے ہیں کہ جسم[]
  []
 
-[778]
-LaTeX Info: Redefining \rmfamily on input line 9356.
-LaTeX Info: Redefining \sffamily on input line 9356.
-LaTeX Info: Redefining \ttfamily on input line 9356.
+[779]
+LaTeX Info: Redefining \rmfamily on input line 9371.
+LaTeX Info: Redefining \sffamily on input line 9371.
+LaTeX Info: Redefining \ttfamily on input line 9371.
 
-Underfull \hbox (badness 10000) in paragraph at lines 9370--9372
+Underfull \hbox (badness 10000) in paragraph at lines 9385--9387
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہے۔ دکھائیں کہ دونوں صورتوں میں اس جسم کی 
 اسراع $[]$ فاصلہ $\OML/zplm/m/it/10 s$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے را
 ست متناسب ہو گی، البتہ پہلی صورت میں یہ مبدا کی جانب اور دوسری[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9372--9376
+Underfull \hbox (badness 10000) in paragraph at lines 9387--9391
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۷.۶۹۲:  ایک ٹریکٹر ٹرالی محور $\OML
 /zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر چلتے ہوئے مبدا تک پہنچ ک
 ر محور $\OML/zplm/m/it/10 y$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے رخ مڑتی ہے۔ 
 ٹرالی کے پہیوں سے ٹریکٹر تک فاصلہ کو اکائی تصور[]
  []
 
-[779]
-Overfull \hbox (29.6276pt too wide) in paragraph at lines 9425--9446
+[780]
+Overfull \hbox (29.6276pt too wide) in paragraph at lines 9440--9461
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (7.07703pt too wide) in paragraph at lines 9451--9470
+Overfull \hbox (7.07703pt too wide) in paragraph at lines 9466--9485
  [][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9504--9505
+Underfull \hbox (badness 10000) in paragraph at lines 9519--9520
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 اس آخری مساوات کو $\OML/zplm/m/it/10 S\O
 T1/zplm/m/n/10 (\OML/zplm/m/it/10 u\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq
 (0)/b/n/10 کے لیے حل کریں۔ $\OML/zplm/m/it/10 S\OT1/zplm/m/n/10 (\OT1/ppl/m/n/1
@@ -3816,44 +3986,44 @@ T1/zplm/m/n/10 (\OML/zplm/m/it/10 u\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq
 ئے[]
  []
 
-Package pgfplots info on input line 9522: fill between: activating layered grap
+Package pgfplots info on input line 9537: fill between: activating layered grap
 hics
-Package pgfplots info on input line 9522: Setting layers 'axis background,axis 
+Package pgfplots info on input line 9537: Setting layers 'axis background,axis 
 grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
 s foreground'...
-Package pgfplots info on input line 9522: the combination of 'axis on top' and 
+Package pgfplots info on input line 9537: the combination of 'axis on top' and 
 'activate layers' implies 'set layers=axis on top'. Deactivate 'axis on top' if
  you want other layers.
-Package pgfplots info on input line 9522: Setting layers 'axis background,pre m
+Package pgfplots info on input line 9537: Setting layers 'axis background,pre m
 ain,main,axis grid,axis ticks,axis lines,axis tick labels,axis descriptions,axi
 s foreground'...
 
-Overfull \hbox (23.91441pt too wide) in paragraph at lines 9512--9524
+Overfull \hbox (23.91441pt too wide) in paragraph at lines 9527--9539
  [][][][][][] 
  []
 
-Package pgfplots info on input line 9544: fill between: activating layered grap
+Package pgfplots info on input line 9559: fill between: activating layered grap
 hics
-Package pgfplots info on input line 9544: Setting layers 'axis background,axis 
+Package pgfplots info on input line 9559: Setting layers 'axis background,axis 
 grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
 s foreground'...
-Package pgfplots info on input line 9544: the combination of 'axis on top' and 
+Package pgfplots info on input line 9559: the combination of 'axis on top' and 
 'activate layers' implies 'set layers=axis on top'. Deactivate 'axis on top' if
  you want other layers.
-Package pgfplots info on input line 9544: Setting layers 'axis background,pre m
+Package pgfplots info on input line 9559: Setting layers 'axis background,pre m
 ain,main,axis grid,axis ticks,axis lines,axis tick labels,axis descriptions,axi
 s foreground'...
 
-Overfull \hbox (12.22992pt too wide) in paragraph at lines 9528--9546
+Overfull \hbox (12.22992pt too wide) in paragraph at lines 9543--9561
  [][][][][][] 
  []
 
-[780]
-LaTeX Info: Redefining \rmfamily on input line 9554.
-LaTeX Info: Redefining \sffamily on input line 9554.
-LaTeX Info: Redefining \ttfamily on input line 9554.
+[781]
+LaTeX Info: Redefining \rmfamily on input line 9569.
+LaTeX Info: Redefining \sffamily on input line 9569.
+LaTeX Info: Redefining \ttfamily on input line 9569.
 
-Underfull \hbox (badness 10000) in paragraph at lines 9552--9555
+Underfull \hbox (badness 10000) in paragraph at lines 9567--9570
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۷.۷۰۰: []فرض کریں دو کھمبوں کے بیچ ب
 جلی کی تار لٹکی ہوئی ہے (شکل ۷.۶۷[])۔ اس تار کی فی اکائی لمبائی کمیت $\OML/zplm
 /m/it/10 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے اور تار کی سب سے کم اونچائی[]
@@ -3861,7 +4031,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9552--9555
  []
 
 
-Underfull \hbox (badness 2221) in paragraph at lines 9552--9555
+Underfull \hbox (badness 2221) in paragraph at lines 9567--9570
 []\TU/JameelNooriNastaleeq(0)/b/n/10 والے نقطہ پر افقی تناو $\OML/zplm/m/it/10 
 H$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے۔ ہم محدد یوں منتخب کرتے ہیں کہ قوسی تا
 ر کا نچلا حصہ مبدا سے $[]$ بلند ہو جہاں $\OML/zplm/m/it/10 g \OT1/zplm/m/n/10 =
@@ -3869,7 +4039,7 @@ H$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے۔ ہم محدد یوں منتخب ک�
  []
 
 
-Underfull \hbox (badness 1953) in paragraph at lines 9571--9607
+Underfull \hbox (badness 1953) in paragraph at lines 9586--9622
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۷.۷۰۲: \TU/JameelNooriNastaleeq(2)/
 m/n/9 جھول اور افقی تناو \TU/JameelNooriNastaleeq(0)/b/n/10 ایک تار جس کی لمبائ
 ی $\OT1/ppl/m/n/10 10 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور کمیت $\OT1/ppl/
@@ -3877,33 +4047,33 @@ m/n/10 0.6 [] m[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے کو ایک جتنے 
 ں کے سروں سے باندھا گیا ہے۔[]
  []
 
-[781]
-Underfull \hbox (badness 7814) in paragraph at lines 9640--9641
+[782]
+Underfull \hbox (badness 7814) in paragraph at lines 9655--9656
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کیا۔ جیسا کہ ہم نے دیکھا یہ مسئلہ نمو آباد
 ی، تابکار تحلیل، انتقال حرارت اور دیگر اعمال کی نمونہ کشی کرتا ہے۔ اس حصہ میں ہ
 م ابتدائی قیمت مسئلہ $[] \OT1/zplm/m/n/10 =$[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 9643.
-LaTeX Info: Redefining \sffamily on input line 9643.
-LaTeX Info: Redefining \ttfamily on input line 9643.
-[782]
-LaTeX Info: Redefining \rmfamily on input line 9651.
-LaTeX Info: Redefining \sffamily on input line 9651.
-LaTeX Info: Redefining \ttfamily on input line 9651.
- [783]
-LaTeX Info: Redefining \rmfamily on input line 9685.
-LaTeX Info: Redefining \sffamily on input line 9685.
-LaTeX Info: Redefining \ttfamily on input line 9685.
+LaTeX Info: Redefining \rmfamily on input line 9658.
+LaTeX Info: Redefining \sffamily on input line 9658.
+LaTeX Info: Redefining \ttfamily on input line 9658.
+[783]
+LaTeX Info: Redefining \rmfamily on input line 9666.
+LaTeX Info: Redefining \sffamily on input line 9666.
+LaTeX Info: Redefining \ttfamily on input line 9666.
  [784]
-LaTeX Info: Redefining \rmfamily on input line 9726.
-LaTeX Info: Redefining \sffamily on input line 9726.
-LaTeX Info: Redefining \ttfamily on input line 9726.
-LaTeX Info: Redefining \rmfamily on input line 9726.
-LaTeX Info: Redefining \sffamily on input line 9726.
-LaTeX Info: Redefining \ttfamily on input line 9726.
+LaTeX Info: Redefining \rmfamily on input line 9700.
+LaTeX Info: Redefining \sffamily on input line 9700.
+LaTeX Info: Redefining \ttfamily on input line 9700.
+ [785]
+LaTeX Info: Redefining \rmfamily on input line 9741.
+LaTeX Info: Redefining \sffamily on input line 9741.
+LaTeX Info: Redefining \ttfamily on input line 9741.
+LaTeX Info: Redefining \rmfamily on input line 9741.
+LaTeX Info: Redefining \sffamily on input line 9741.
+LaTeX Info: Redefining \ttfamily on input line 9741.
 
-Underfull \hbox (badness 10000) in paragraph at lines 9725--9727
+Underfull \hbox (badness 10000) in paragraph at lines 9740--9742
 []\TU/JameelNooriNastaleeq(0)/b/n/10 جس میں $\OML/zplm/m/it/10 P$ \TU/JameelNoo
 riNastaleeq(0)/b/n/10 اور $\OML/zplm/m/it/10 Q$ \TU/JameelNooriNastaleeq(0)/b/n
 /10 متغیر $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے تفاعل ہوں
@@ -3913,12 +4083,12 @@ Bold(0)/m/n/10 معیاری روپ[][][] []\TU/JameelNooriNastaleeq(0)/b/n/10 ہ
 رہے کہ اس[]
  []
 
-[785]
-LaTeX Info: Redefining \rmfamily on input line 9757.
-LaTeX Info: Redefining \sffamily on input line 9757.
-LaTeX Info: Redefining \ttfamily on input line 9757.
+[786]
+LaTeX Info: Redefining \rmfamily on input line 9772.
+LaTeX Info: Redefining \sffamily on input line 9772.
+LaTeX Info: Redefining \ttfamily on input line 9772.
 
-Underfull \hbox (badness 10000) in paragraph at lines 9756--9758
+Underfull \hbox (badness 10000) in paragraph at lines 9771--9773
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کے دونوں اطراف کو اس مثبت تفاعل $\OML/zplm
 /m/it/10 v\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )$ \TU/JameelNo
 oriNastaleeq(0)/b/n/10 سے ضرب دیتے ہیں جو بائیں ہاتھ کو حاصل ضرب $\OML/zplm/m/i
@@ -3928,7 +4098,7 @@ t/10 v\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9756--9758
+Underfull \hbox (badness 10000) in paragraph at lines 9771--9773
 []$\OML/zplm/m/it/10 v\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )$ 
 \TU/JameelNooriNastaleeq(0)/b/n/10 کو مساوات ۳[] کا \TU/AASameerSagarNastaleeqB
 old(0)/m/n/10 جزو تکمل[][][] []\TU/JameelNooriNastaleeq(0)/b/n/10 کہتے ہیں۔ ہم 
@@ -3938,8 +4108,8 @@ old(0)/m/n/10 جزو تکمل[][][] []\TU/JameelNooriNastaleeq(0)/b/n/10 کہت�
 oriNastaleeq(0)/b/n/10 جانتے ہوئے تفرقی مساوات کے حل پر بات[]
  []
 
-[786]
-Underfull \hbox (badness 10000) in paragraph at lines 9771--9772
+[787]
+Underfull \hbox (badness 10000) in paragraph at lines 9786--9787
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 کیا $\OML/zplm/m/it/10 P\OT1/zplm/m/n/10
  (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 مسا
 وات کے حل میں نہیں پایا جاتا ہے؟ درحقیقت $\OML/zplm/m/it/10 P\OT1/zplm/m/n/10 (
@@ -3950,7 +4120,7 @@ plm/m/it/10 x\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے انت�
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9787--9789
+Underfull \hbox (badness 10000) in paragraph at lines 9802--9804
 []\TU/JameelNooriNastaleeq(0)/b/n/10 یوں ایسا $\OML/zplm/m/it/10 v\OT1/zplm/m/n
 /10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 
 جو مساوات ۵[] کو مطمئن کرتا ہو ہمیں مساوات ۴[] کے ذریعہ مساوات ۳[] کا حل دیگا۔ 
@@ -3958,22 +4128,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 9787--9789
 ت کی ضرورت نہیں ہے بلکہ[]
  []
 
-[787] [788]
-Underfull \hbox (badness 10000) in paragraph at lines 9877--9878
+[788] [789]
+Underfull \hbox (badness 10000) in paragraph at lines 9892--9893
 []\TU/JameelNooriNastaleeq(0)/b/n/10 بعض اوقات جب باقی قوتوں کو رد کرنا ممکن ہو
 ، یہ کہنا درست ہو گا کہ حرکت کرتے ہوئے جسم پر لاگو مزاحمت اس کی سمتی رفتار کے ر
 است متناسب ہو[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9877--9878
+Underfull \hbox (badness 10000) in paragraph at lines 9892--9893
 []\TU/JameelNooriNastaleeq(0)/b/n/10 گی۔ایک گاڑی جس کا انجن بند ہو اور یہ رک رہ
 ی ہو، ایسی ایک مثال ہے۔ ایسا جسم جتنا آہستہ چل رہا ہو، اس پر ہوائی مزاحمت اتنی 
 کم ہو گی۔ اس عمل کو ریاضی کا[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9877--9878
+Underfull \hbox (badness 10000) in paragraph at lines 9892--9893
 []\TU/JameelNooriNastaleeq(0)/b/n/10 جامہ پہنانے کی خاطر ہم جسم کو کمیت $\OML/z
 plm/m/it/10 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 سے ظاہر کرتے ہیں جو محددی لکی
 ر پر حرکت کرتا ہے۔ لمحہ $\OML/zplm/m/it/10 t$ \TU/JameelNooriNastaleeq(0)/b/n/1
@@ -3982,8 +4152,8 @@ plm/m/it/10 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 سے ظاہر کرتے ہیں 
 ی[]
  []
 
-[789]
-Underfull \hbox (badness 1466) in paragraph at lines 9890--9891
+[790]
+Underfull \hbox (badness 1466) in paragraph at lines 9905--9906
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 ہم مساوات ۹[] سے کیا سیکھ سکتے ہیں؟ ہم د
 یکھتے ہیں کہ اگر $\OML/zplm/m/it/10 m$ \TU/JameelNooriNastaleeq(0)/b/n/10 بہت ز
 یادہ ہو، مثلاً ریت سے بھرا ہوا ٹرک، تب اس جسم کو رکنے کے لیے بہت زیادہ وقت درکا
@@ -3991,31 +4161,31 @@ Underfull \hbox (badness 1466) in paragraph at lines 9890--9891
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9892--9893
+Underfull \hbox (badness 10000) in paragraph at lines 9907--9908
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 فرض کریں ایک جسم صرف ہوائی مزاحمت کی موج
 ودگی میں رک رہا ہے اور یہ قوت جسم کی رفتار کے راست متناسب ہے۔ یہ جسم کتنا فاصلہ
  طے کرے گا؟ یہ[]
  []
 
-[790]
-Underfull \hbox (badness 3049) in paragraph at lines 9919--9920
+[791]
+Underfull \hbox (badness 3049) in paragraph at lines 9934--9935
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 چونکہ صرف ریاضیات میں ہم وقت کو لامتناہی
  تک بڑھا سکتے ہیں لہٰذا یہ ایک فرضی فاصلہ ہے۔ حقیقی فاصل اس سے کم ہو گا۔ ہاں یہ
  درست ہو گا کہ بھاری جسم کو[]
  []
 
 
-Overfull \hbox (21.56378pt too wide) in paragraph at lines 9951--9955
+Overfull \hbox (21.56378pt too wide) in paragraph at lines 9966--9970
  [][][][][][] 
  []
 
 
-Overfull \hbox (11.44391pt too wide) in paragraph at lines 9959--9964
+Overfull \hbox (11.44391pt too wide) in paragraph at lines 9974--9979
  [][][][][][] 
  []
 
-[791]
-Underfull \hbox (badness 10000) in paragraph at lines 9992--9993
+[792]
+Underfull \hbox (badness 10000) in paragraph at lines 10007--10008
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 مساوات ۱۳[] درحقیقت دو مختلف حل کا مجموع
 ہ ہے۔ اس کا پہلا جزو $[]$ \TU/AASameerSagarNastaleeqBold(0)/m/n/10 برقرار حال ح
 ل \TU/JameelNooriNastaleeq(0)/b/n/10 ہے جبکہ اس کا دوسرا جزو $\OMS/zplm/m/n/10 
@@ -4023,8 +4193,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 9992--9993
 ]
  []
 
-[792] [793] [794]
-Underfull \hbox (badness 10000) in paragraph at lines 10297--10301
+[793] [794] [795]
+Underfull \hbox (badness 10000) in paragraph at lines 10312--10316
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ایک مریض کو مستقل شرح سے گلوکوز کی خوراک د
 رون وریدی کھلائی جاتی ہے۔ وقت کے لحاظ سے خون میں گلوکوز کی ارتکاز $\OML/zplm/m/
 it/10 c\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 t\OT1/zplm/m/n/10 )$ \TU/JameelNoori
@@ -4032,7 +4202,7 @@ Nastaleeq(0)/b/n/10 کو درج ذیل تفرقی[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10303--10305
+Underfull \hbox (badness 10000) in paragraph at lines 10318--10320
 []\TU/JameelNooriNastaleeq(0)/b/n/10 فی منٹ ملی گرام میں گلوکوز کی شرح $\OML/zp
 lm/m/it/10 G$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے جبکہ بدن میں خون کا حجم $\O
 ML/zplm/m/it/10 V$ \TU/JameelNooriNastaleeq(0)/b/n/10 لٹر ہے جو بالغ شخص کے لیے
@@ -4042,7 +4212,7 @@ TU/JameelNooriNastaleeq(0)/b/n/10 کو ملی گرام فی دس[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10303--10305
+Underfull \hbox (badness 10000) in paragraph at lines 10318--10320
 []\TU/JameelNooriNastaleeq(0)/b/n/10 مربع سنٹی میٹر ناپا جاتا ہے۔جزو $\OMS/zplm
 /m/n/10 ^^@\OML/zplm/m/it/10 kc$ \TU/JameelNooriNastaleeq(0)/b/n/10 کو اس لیے ش
 امل کیا گیا ہے کہ گلوکوز مسلسل دیگر اجزاء میں تبدیل ہو گا اور اس تبدیلی کی شرح 
@@ -4050,7 +4220,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10303--10305
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10303--10305
+Underfull \hbox (badness 10000) in paragraph at lines 10318--10320
 []\TU/JameelNooriNastaleeq(0)/b/n/10 والی گلوکوز کے راست متناسب ہو گی۔ (ا) $\OM
 L/zplm/m/it/10 c\OT1/zplm/m/n/10 (\OT1/ppl/m/n/10 0\OT1/zplm/m/n/10 )$ \TU/Jame
 elNooriNastaleeq(0)/b/n/10 کو $\OML/zplm/m/it/10 c[]$ \TU/JameelNooriNastaleeq(
@@ -4059,7 +4229,7 @@ OML/zplm/m/it/10 c\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 t\OT1/zplm/m/n/10 )$[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10305--10314
+Underfull \hbox (badness 10000) in paragraph at lines 10320--10329
 []\TU/JameelNooriNastaleeq(0)/b/n/10 آپ بنک سے $\OT1/ppl/m/n/10 1000$ \TU/Jamee
 lNooriNastaleeq(0)/b/n/10 روپیہ قرضہ لیتے ہیں اور ہر سال مزید $\OT1/ppl/m/n/10 
 1000$ \TU/JameelNooriNastaleeq(0)/b/n/10 روپیہ بنک سے قرض کرتے ہیں۔ آپ کو $\OT1
@@ -4067,22 +4237,22 @@ lNooriNastaleeq(0)/b/n/10 روپیہ قرضہ لیتے ہیں اور ہر سال
 نا ہو[]
  []
 
-[795]
-Underfull \hbox (badness 10000) in paragraph at lines 10318--10322
+[796]
+Underfull \hbox (badness 10000) in paragraph at lines 10333--10337
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ایک پانی سے بھرے ہوئے انتصابی بیلنی حوض کی
  تہہ میں نصب نلکی کو کھول کر حوض خالی کا جاتا ہے۔ شروع میں پانی کی نکاسی تیز ہو
 تی ہے لیکن جیسے جیسے پانی کی[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 10340.
-LaTeX Info: Redefining \sffamily on input line 10340.
-LaTeX Info: Redefining \ttfamily on input line 10340.
-[796]
-LaTeX Info: Redefining \rmfamily on input line 10408.
-LaTeX Info: Redefining \sffamily on input line 10408.
-LaTeX Info: Redefining \ttfamily on input line 10408.
+LaTeX Info: Redefining \rmfamily on input line 10355.
+LaTeX Info: Redefining \sffamily on input line 10355.
+LaTeX Info: Redefining \ttfamily on input line 10355.
+[797]
+LaTeX Info: Redefining \rmfamily on input line 10423.
+LaTeX Info: Redefining \sffamily on input line 10423.
+LaTeX Info: Redefining \ttfamily on input line 10423.
 
-Underfull \hbox (badness 1622) in paragraph at lines 10405--10409
+Underfull \hbox (badness 2452) in paragraph at lines 10420--10424
 []\TU/JameelNooriNastaleeq(0)/b/n/10 مستقل $[]$ کو مہندس $\OML/zplm/m/it/10 RL$
  \TU/JameelNooriNastaleeq(0)/b/n/10 دور کا \TU/AASameerSagarNastaleeqBold(0)/m/
 n/10 وقتی مستقل[][][] []\TU/JameelNooriNastaleeq(0)/b/n/10 کہتے ہیں۔ تقریباً $\
@@ -4091,15 +4261,15 @@ OT1/ppl/m/n/10 3$ \TU/JameelNooriNastaleeq(0)/b/n/10 وقتی مستقل دور�
 10 قیمت تک پہنچ پاتا[]
  []
 
-[797]
-Underfull \hbox (badness 10000) in paragraph at lines 10436--10440
+[798]
+Underfull \hbox (badness 10000) in paragraph at lines 10451--10455
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ایک کیمیا جو مائع (یا گیس) کی صورت میں ہے 
 کو ایک برتن میں ڈالا جاتا ہے جس میں پہلے سے کوئی مائع (یا گیس) موجود ہے اور عین
  ممکن ہے کہ اسی کیمیا کی[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10455--10457
+Underfull \hbox (badness 10000) in paragraph at lines 10470--10472
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۷.۷۵۷:  ایک حوض میں ابتدائی طور پر $
 \OT1/ppl/m/n/10 500$ \TU/JameelNooriNastaleeq(0)/b/n/10 لٹر نمکین پانی پایا جات
 ا ہے جس میں $\OT1/ppl/m/n/10 25 []$ \TU/JameelNooriNastaleeq(0)/b/n/10 نمک حل ہ
@@ -4107,15 +4277,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 10455--10457
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10455--10457
+Underfull \hbox (badness 10000) in paragraph at lines 10470--10472
 []\TU/JameelNooriNastaleeq(0)/b/n/10 شرح سے نمکین پانی داخلی ہوتا ہے جس میں $\O
 T1/ppl/m/n/10 0.4 [] L[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 نمک ملا ہوا ہے جبک
 ہ حوض سے نمکین پانی کا انخلا $\OT1/ppl/m/n/10 4 L [][]$ \TU/JameelNooriNastalee
 q(0)/b/n/10 ہے۔ حوض میں نمکین[]
  []
 
-[798]
-Underfull \hbox (badness 10000) in paragraph at lines 10469--10480
+[799]
+Underfull \hbox (badness 10000) in paragraph at lines 10484--10495
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۷.۷۵۸:  تیل صاف سازی کے کارخانہ م
 یں ایک حوض میں $\OT1/ppl/m/n/10 10 000 L$ \TU/JameelNooriNastaleeq(0)/b/n/10 تی
 ل پایا جاتا ہے جس میں ابتدائی طور پر $\OT1/ppl/m/n/10 50 []$ \TU/JameelNooriNas
@@ -4123,7 +4293,7 @@ taleeq(0)/b/n/10 اضافی مادّہ شامل[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10469--10480
+Underfull \hbox (badness 10000) in paragraph at lines 10484--10495
 []\TU/JameelNooriNastaleeq(0)/b/n/10 رکھا جاتا ہے۔ حوض سے مرکب کے انعکاس کی شرح
  $\OT1/ppl/m/n/10 225 L [][]$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے۔ اس عمل کے 
 شروع ہونے کے $\OT1/ppl/m/n/10 20$ \TU/JameelNooriNastaleeq(0)/b/n/10 منٹ بعد حو
@@ -4131,7 +4301,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10469--10480
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10480--10484
+Underfull \hbox (badness 10000) in paragraph at lines 10495--10499
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۷.۷۵۹:  ایک حوض میں $\OT1/ppl/m/n/1
 0 500 L$ \TU/JameelNooriNastaleeq(0)/b/n/10 خالص پانی پایا جاتا ہے۔ ایک محلول ج
 س میں $\OT1/ppl/m/n/10 0.1 [] L[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 پایا کھاد
@@ -4139,14 +4309,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 10480--10484
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10480--10484
+Underfull \hbox (badness 10000) in paragraph at lines 10495--10499
 []\TU/JameelNooriNastaleeq(0)/b/n/10 شرح سے حوض میں شامل کیا جاتا ہے۔ حوض سے مح
 لول کا انعکاس $\OT1/ppl/m/n/10 15 L [][]$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے
 ۔ حوض میں کھاد کی اعظم مقدار معلوم کریں اور اس مقدار تک[]
  []
 
 
-Underfull \hbox (badness 6348) in paragraph at lines 10484--10488
+Underfull \hbox (badness 6348) in paragraph at lines 10499--10503
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۷.۷۶۰:  دفتر کے ایک کمرے میں ابتدائ
 ی طور پر $\OT1/ppl/m/n/10 150 m[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 صاف ہوا پ
 ائی جاتی ہے۔ لمحہ $\OML/zplm/m/it/10 t \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 0$ \T
@@ -4154,24 +4324,24 @@ U/JameelNooriNastaleeq(0)/b/n/10 پر قریبی کمرے میں موجود اف
  []
 
 
-Underfull \hbox (badness 1728) in paragraph at lines 10484--10488
+Underfull \hbox (badness 1728) in paragraph at lines 10499--10503
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سگریٹ نوشی شروع کرتے ہیں جس کی وجہ سے $\OT
 1/ppl/m/n/10 4 %$ \TU/JameelNooriNastaleeq(0)/b/n/10 زہریلی کاربن مونو اکسائڈ $
 \OT1/ppl/m/n/10 0.01 m[] [][]$ \TU/JameelNooriNastaleeq(0)/b/n/10 شرح سے اس کمر
 ے میں داخل ہوتی ہے جہاں[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 10496.
-LaTeX Info: Redefining \sffamily on input line 10496.
-LaTeX Info: Redefining \ttfamily on input line 10496.
-LaTeX Info: Redefining \rmfamily on input line 10496.
-LaTeX Info: Redefining \sffamily on input line 10496.
-LaTeX Info: Redefining \ttfamily on input line 10496.
-LaTeX Info: Redefining \rmfamily on input line 10496.
-LaTeX Info: Redefining \sffamily on input line 10496.
-LaTeX Info: Redefining \ttfamily on input line 10496.
+LaTeX Info: Redefining \rmfamily on input line 10511.
+LaTeX Info: Redefining \sffamily on input line 10511.
+LaTeX Info: Redefining \ttfamily on input line 10511.
+LaTeX Info: Redefining \rmfamily on input line 10511.
+LaTeX Info: Redefining \sffamily on input line 10511.
+LaTeX Info: Redefining \ttfamily on input line 10511.
+LaTeX Info: Redefining \rmfamily on input line 10511.
+LaTeX Info: Redefining \sffamily on input line 10511.
+LaTeX Info: Redefining \ttfamily on input line 10511.
 
-Underfull \hbox (badness 10000) in paragraph at lines 10496--10497
+Underfull \hbox (badness 10000) in paragraph at lines 10511--10512
 []\TU/JameelNooriNastaleeq(0)/b/n/10 صورت میں ہم عموماً کمپیوٹر استعمال کرتے ہو
 ئے موزوں وقفہ پر ہر $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے
  لیے $\OML/zplm/m/it/10 y$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی تخمینی قیمت تل
@@ -4180,7 +4350,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10496--10497
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10496--10497
+Underfull \hbox (badness 10000) in paragraph at lines 10511--10512
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہیں اور اس حل کو حاصل کرنے کے طریقہ کو \TU
 /AASameerSagarNastaleeqBold(0)/m/n/10 اعدادی ترکیب[][][] []\TU/JameelNooriNasta
 leeq(0)/b/n/10 کہتے ہیں۔ اعدادی تراکیب عموماً بہت کم وقت میں درست نتائج دیتے ہی
@@ -4188,14 +4358,14 @@ leeq(0)/b/n/10 کہتے ہیں۔ اعدادی تراکیب عموماً بہت �
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10496--10497
+Underfull \hbox (badness 10000) in paragraph at lines 10511--10512
 []\TU/JameelNooriNastaleeq(0)/b/n/10 تحلیلی حل نا ممکن، غیر ضروری یا پیچیدہ ہو،
  وہاں اعدادی تراکیب کو ترجیح دی جاتی ہے۔ اس حصہ میں ہم ایسے ایک ترکیب پر غور کر
 تے ہیں جس کو \TU/AASameerSagarNastaleeqBold(0)/m/n/10 ترکیب[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10499--10500
+Underfull \hbox (badness 10000) in paragraph at lines 10514--10515
 []\TU/JameelNooriNastaleeq(0)/b/n/10 گزرے گا اور اس نقطہ ہر حل کا ڈھلوان $\OML/
 zplm/m/it/10 f\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x[]\OT1/ppl/m/n/10 , \OML/zpl
 m/m/it/10 y[]\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہو گا۔ ہم $
@@ -4207,7 +4377,7 @@ f\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 y\OT1
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10499--10500
+Underfull \hbox (badness 10000) in paragraph at lines 10514--10515
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سیدھے خطوط بنا کر اس ڈھلوان کو تصویری جامہ
  پہنا سکتے ہیں۔ نقطہ $\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/ppl/m/n/10 , \O
 ML/zplm/m/it/10 y\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 سے گزرت
@@ -4218,36 +4388,36 @@ ML/zplm/m/it/10 y\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 سے گ�
 Overfull \vbox (0.55507pt too high) has occurred while \output is active []
 
 
-[799]
+[800]
 
 Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
-ng it (it is [0.0:0.0]) on input line 10510.
+ng it (it is [0.0:0.0]) on input line 10525.
 
  [warning /pgfplots/warning/approx empty range enlarged]
 
 Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
-ng it (it is [0.0:0.0]) on input line 10526.
+ng it (it is [0.0:0.0]) on input line 10541.
 
  [warning /pgfplots/warning/approx empty range enlarged]
 
-Underfull \hbox (badness 10000) in paragraph at lines 10501--10533
+Underfull \hbox (badness 10000) in paragraph at lines 10516--10548
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 قلم و کاغذ کے ساتھ میدان ڈھلوان بنانا تھ
 کا دینے والا کام ہے۔ اس کتاب میں تمام مثالوں میں میدان ڈھلوان کمپیوٹر کی مدد سے
  بنائے گئے۔ آئیں کمپیوٹر کی مدد[]
  []
 
-[800]
-Overfull \hbox (10.76167pt too wide) in paragraph at lines 10564--10577
+[801]
+Overfull \hbox (10.76167pt too wide) in paragraph at lines 10579--10592
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (7.97998pt too wide) in paragraph at lines 10582--10597
+Overfull \hbox (7.97998pt too wide) in paragraph at lines 10597--10612
  [][][][][][][][] 
  []
 
-[801] [802]
-Underfull \hbox (badness 10000) in paragraph at lines 10697--10731
+[802] [803]
+Underfull \hbox (badness 10000) in paragraph at lines 10712--10746
 []\TU/JameelNooriNastaleeq(0)/b/n/10 جدول ۷.۱۵[] میں نتائج اور تحلیلی بالکل ٹھی
 ک حل کے ساتھ موازنہ کیا گیا ہے۔ آپ دیکھ سکتے ہیں کہ قدموں کی تعداد $\OT1/ppl/m/
 n/10 10$ \TU/JameelNooriNastaleeq(0)/b/n/10 سے $\OT1/ppl/m/n/10 20$ \TU/JameelN
@@ -4255,28 +4425,28 @@ ooriNastaleeq(0)/b/n/10 کرنے سے خلل کم ہوتا[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10734--10735
+Underfull \hbox (badness 10000) in paragraph at lines 10749--10750
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 ایسا معلوم ہوتا ہے کہ ترکیب یولر میں قدم
 وں کی تعداد مزید بڑھا کر اس سے بھی بہتر نتیجہ حاصل ہو گا۔ حقیقت میں ایسا کرنے س
 ے نا صرف کمپیوٹر کو حل حاصل[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10736--10737
+Underfull \hbox (badness 10000) in paragraph at lines 10751--10752
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 خلل اور اس کو کم کرنے کے طریقوں پر یہاں 
 غور نہیں کیا جائے گا۔ انہیں سمجھنے کے لیے مزید اعلیٰ درجے کی نصاب درکار ہو گی۔ 
 ترکیب یولر سے زیادہ بہتر[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10736--10737
+Underfull \hbox (badness 10000) in paragraph at lines 10751--10752
 []\TU/JameelNooriNastaleeq(0)/b/n/10 اعدادی تراکیب پائے جاتے ہیں جنہیں تفرقی مس
 اوات پڑھنے کے دوران سیکھیں گے۔ اعدادی ترکیب میں قدموں کی تعداد اور خلل کے تعلق 
 پر غور کرنے کے[]
  []
 
-[803] [804]
-Underfull \hbox (badness 10000) in paragraph at lines 10742--10745
+[804] [805]
+Underfull \hbox (badness 10000) in paragraph at lines 10757--10760
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال ۷.۷۶۱[] تا سوال ۷.۷۶۶[] میں ترکیب یول
 ر سے دیے گئے ابتدائی قیمت مسئلہ کے اولین تین تخمینی قیمتیں تلاش کریں۔دیا گیا قد
 م استعمال کریں۔ مسئلے کا[]
@@ -4284,49 +4454,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 10742--10745
 
 
 Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
-ng it (it is [0.0:0.0]) on input line 10828.
+ng it (it is [0.0:0.0]) on input line 10843.
 
  [warning /pgfplots/warning/approx empty range enlarged]
 
 Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
-ng it (it is [0.0:0.0]) on input line 10846.
+ng it (it is [0.0:0.0]) on input line 10861.
 
  [warning /pgfplots/warning/approx empty range enlarged]
 
 Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
-ng it (it is [0.0:0.0]) on input line 10864.
+ng it (it is [0.0:0.0]) on input line 10879.
 
  [warning /pgfplots/warning/approx empty range enlarged]
 
 Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
-ng it (it is [0.0:0.0]) on input line 10883.
+ng it (it is [0.0:0.0]) on input line 10898.
 
  [warning /pgfplots/warning/approx empty range enlarged]
 
 Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
-ng it (it is [0.0:0.0]) on input line 10928.
+ng it (it is [0.0:0.0]) on input line 10943.
 
  [warning /pgfplots/warning/approx empty range enlarged]
 
 Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
-ng it (it is [0.0:0.0]) on input line 10938.
+ng it (it is [0.0:0.0]) on input line 10953.
 
  [warning /pgfplots/warning/approx empty range enlarged]
-[805] [806] [807]
-Underfull \hbox (badness 10000) in paragraph at lines 11008--11011
+[806] [807] [808]
+Underfull \hbox (badness 10000) in paragraph at lines 11023--11026
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال ۷.۷۸۵[] اور سوال ۷.۷۸۶[] کا بنیادی ت
 فاعل کی صورت میں صریح حل نہیں پایا جاتا ہے۔ان تفرقی مساوات پر ترسیمی غور کریں۔ 
 مذکورہ بالا جزو-الف تا[]
  []
 
 
-Underfull \hbox (badness 1694) in paragraph at lines 11030--11032
+Underfull \hbox (badness 1694) in paragraph at lines 11045--11047
 []\TU/JameelNooriNastaleeq(0)/b/n/10 (ب) متغیرات کی علیحدگی کے بعد کمپیوٹر کے ر
 یاضی پروگرام کی مدد سے تکمل کرتے ہوئے خفی حل تلاش کریں۔ (ج) جزو-ب کے نتیجہ کو م
 ستقل $\OML/zplm/m/it/10 C \OT1/zplm/m/n/10 =$[]
  []
 
-) [808] [1680
+) [809] [1680
 
 
 
@@ -4533,14 +4703,17 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 71071 strings out of 474878
- 1922447 string characters out of 9512517
- 3631346 words of memory out of 7000000
- 91973 multiletter control sequences out of 15000+600000
+ 71073 strings out of 474878
+ 1922471 string characters out of 9512517
+ 3631387 words of memory out of 7000000
+ 91975 multiletter control sequences out of 15000+600000
  593106 words of font info for 198 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,21n,121p,2420b,5451s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on calculusAndAnalyticGeometry.pdf (181 pages).
+Output written on calculusAndAnalyticGeometry.pdf (182 pages).
