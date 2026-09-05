@@ -1,6 +1,6 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.6.2)  4 SEP 2026 15:42
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.6.2)  5 SEP 2026 16:42
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **calculusAndAnalyticGeometry
 (./calculusAndAnalyticGeometry.tex
@@ -1609,17 +1609,20 @@ Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
 Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
 )
 \verbatim@out=\write4
-runsystem(touch w18-test-202694942.tex)...executed.
+runsystem(touch w18-test-2026951002.tex)...disabled (restricted).
 
-runsystem(rm -f w18-test-202694942.tex)...executed.
+runsystem(rm -f w18-test-2026951002.tex)...disabled (restricted).
 
-runsystem(rm -f "calculusAndAnalyticGeometry.gnuploterrors")...executed.
+runsystem(rm -f "calculusAndAnalyticGeometry.gnuploterrors")...disabled (restri
+cted).
 
-Package gnuplottex Info: Automatically converting gnuplot files on input line 1
-12.
+
+
+Package gnuplottex Warning: Shell escape not enabled.
+(gnuplottex)                You'll need to convert the graphs yourself.
+
 \c@fignum=\count405
-)
-(/usr/share/texlive/texmf-dist/tex/latex/esint/esint.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/esint/esint.sty
 Package: esint 
 \symlargesymbolsA=\mathgroup11
 )
@@ -3108,55 +3111,39 @@ LaTeX Info: Redefining \rmfamily on input line 4667.
 LaTeX Info: Redefining \sffamily on input line 4667.
 LaTeX Info: Redefining \ttfamily on input line 4667.
  [968]
-Underfull \hbox (badness 10000) in paragraph at lines 4721--4746
+Underfull \hbox (badness 10000) in paragraph at lines 4723--4748
 []\TU/JameelNooriNastaleeq(0)/b/n/10 گزشتہ قدم سے چھوٹا یا اس کے برابر ہو گا۔ چ
 ونکہ $\OML/zplm/m/it/10 n$ \TU/JameelNooriNastaleeq(0)/b/n/10 بڑھانے سے $\OML/z
 plm/m/it/10 n$ \TU/JameelNooriNastaleeq(0)/b/n/10 واں جزو صفر تک پہنچتا ہے لہٰذ
-ا ہر اگلا قدم چھوتا ہوتا جائے گا اور ہم حد $\OML/zplm/m/it/10 L$ \TU/JameelNoor
+ا ہر اگلا قدم چھوٹا ہوتا جائے گا اور ہم حد $\OML/zplm/m/it/10 L$ \TU/JameelNoor
 iNastaleeq(0)/b/n/10 کی ایک جانب[]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 4721--4746
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 اور دوسری جانب قدم رکھتے ہوئے $\OML/zplm/m
-/it/10 L$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے نزدیک تر ہوتے جائیں گے۔ یکے بعد
- دیگرے ہر دو مجموعوں $\OML/zplm/m/it/10 s[]$ \TU/JameelNooriNastaleeq(0)/b/n/10
- اور $\OML/zplm/m/it/10 s[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے بیچ حد $\OML
-/zplm/m/it/10 L$ \TU/JameelNooriNastaleeq(0)/b/n/10 پایا جائے گا لہٰذا حد[]
- []
-
 [969]
-Underfull \hbox (badness 4291) in paragraph at lines 4756--4758
+Underfull \hbox (badness 4217) in paragraph at lines 4758--4760
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہو گا جس میں مطلق خلل کی قیمت $\OML/zplm/m
 /it/10 u[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 سے کم ہو گی جو پہلے غیر مستعمل ج
 زو کی عددی قیمت ہے۔ مزید باقی $\OML/zplm/m/it/10 L \OMS/zplm/m/n/10 ^^@ \OML/zp
-lm/m/it/10 s[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی علامت وہی ہو گی جو پہلی غ
+lm/m/it/10 s[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی علامت وہی ہو گی جو پہلے غ
 یر[]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 4765--4767
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 یہ مسئلہ کہتا ہے کہ تسلسل کے آٹھ اجزاء لین
-ے سے ہم مثبت مقدار رد کرتے ہیں جس کی قیمت $[]$ سے کم ہو گی۔ ابتدائی آٹھ اجزاء ک
-ا مجموعہ[]
- []
-
 [970]
-LaTeX Info: Redefining \rmfamily on input line 4776.
-LaTeX Info: Redefining \sffamily on input line 4776.
-LaTeX Info: Redefining \ttfamily on input line 4776.
-LaTeX Info: Redefining \rmfamily on input line 4791.
-LaTeX Info: Redefining \sffamily on input line 4791.
-LaTeX Info: Redefining \ttfamily on input line 4791.
+LaTeX Info: Redefining \rmfamily on input line 4778.
+LaTeX Info: Redefining \sffamily on input line 4778.
+LaTeX Info: Redefining \ttfamily on input line 4778.
+LaTeX Info: Redefining \rmfamily on input line 4793.
+LaTeX Info: Redefining \sffamily on input line 4793.
+LaTeX Info: Redefining \ttfamily on input line 4793.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4797--4798
+Underfull \hbox (badness 10000) in paragraph at lines 4799--4800
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 مطلق ارتکاز دو وجوہات کی وجہ سے اہم ہے۔ 
-پہلی وجہ یہ ہے کہ ہمارے پاس مثبت اجزاء کے تسلسل کے ارتکاز کا اچھے پرکھ ہیں۔ دوس
-ری وجہ یہ کہ کہ مطلق[]
+پہلی وجہ یہ ہے کہ ہمارے پاس مثبت اجزاء کے تسلسل کے ارتکاز کی اچھی پرکھیں ہیں۔ د
+وسری وجہ یہ ہے کہ مطلق[]
  []
 
 [971] [972]
-Underfull \hbox (badness 10000) in paragraph at lines 4854--4856
+Underfull \hbox (badness 10000) in paragraph at lines 4856--4858
 []\TU/JameelNooriNastaleeq(0)/b/n/10 اگر $[][] \OML/zplm/m/it/10 a[]$ \TU/Jamee
 lNooriNastaleeq(0)/b/n/10 مطلق مرتکز ہو اور ترتیب $\OMS/zplm/m/n/10 f\OML/zplm/
 m/it/10 a[]\OMS/zplm/m/n/10 g$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے اجزاء کی ت
@@ -3166,67 +3153,85 @@ NooriNastaleeq(0)/b/n/10 لکھا جائے تب $[] \OML/zplm/m/it/10 b[]$[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4867--4869
+Underfull \hbox (badness 10000) in paragraph at lines 4869--4871
 []\TU/JameelNooriNastaleeq(0)/b/n/10 مطلق مرتکز ہے۔ اس کی ترتیب نو کرتے ہوئے اب
 تدائی جزو مثبت اور اس کے بعد دو منفی اجزاء منتخب کیے جا سکتے ہیں۔اس کے بعد تین 
 مثبت اور چار منفی اجزاء[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4871--4873
+Underfull \hbox (badness 1931) in paragraph at lines 4869--4871
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 منتخب کیے جا سکتے ہیں، وغیرہ ۔ یوں ایک ہی 
+علامت کے $\OML/zplm/m/it/10 k$ \TU/JameelNooriNastaleeq(0)/b/n/10 اجزاء کے بعد 
+الٹ علامت کے $\OML/zplm/m/it/10 k \OT1/zplm/m/n/10 + \OT1/ppl/m/n/10 1$ \TU/Jam
+eelNooriNastaleeq(0)/b/n/10 اجزاء ہوں گے۔ ایسے تسلسل کے ابتدائی دس اجزاء درج[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4873--4875
 []\TU/JameelNooriNastaleeq(0)/b/n/10 مسئلہ ترتیب نو کے تحت دونوں تسلسل ایک ہی ع
 دد پر مرتکز ہوں گے۔ اس مثال میں (اگر ہم جانتے کہ ایسا ممکن ہے) ہم خوشی سے دوسرے
  تسلسل کی جگہ پہلا[]
  []
 
 [973]
-Underfull \hbox (badness 10000) in paragraph at lines 4887--4890
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 مجموعہ $\OMS/zplm/m/n/10 ^^@1$ \TU/JameelN
-ooriNastaleeq(0)/b/n/10 کو منفرج ہے۔ ہم جتنے زیادہ طاق اجزاء کے بعد مجموعہ کیوں
- نہ لیں، آخر کار یہ تواتر سے پائے جانے والے اجزاء کا مجموعہ کسی بھی مقررہ قیمت[
-]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4887--4890
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 سے بڑا ہو گا۔ اسی طرح ہم جتنے زیادہ منفی ا
-جزاء کے بعد مجموعہ کیوں نہ لیں، آخر کار تواتر سے پائے جانے والے جفت اجزاء کا یہ
- مجموعہ کسی بھی مقررہ منفی[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4887--4890
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 قیمت سے زیادہ منفی ہو گا۔ اگر ہم چاہیں، ہم
- پہلے اتنے طاق اجزاء جمع کر سکتے ہیں کہ ان کا مجموعہ مثلاً $\OT1/zplm/m/n/10 +\
-OT1/ppl/m/n/10 3$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہو اور اس کے بعد صرف جفت ا
-جزاء جمع کرتے[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4887--4890
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 ہوئے مجموعے کو $\OMS/zplm/m/n/10 ^^@\OT1/p
-pl/m/n/10 4$ \TU/JameelNooriNastaleeq(0)/b/n/10 تک پہنچائیں۔ اس کے بعد ہم غیر ا
-ستعمال شدہ منفی اجزاء شامل کرتے ہوئے کُل$\OT1/zplm/m/n/10 +\OT1/ppl/m/n/10 5$ \
-TU/JameelNooriNastaleeq(0)/b/n/10 حاصل کر کے اس کے ساتھ اتنے منفی[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4890--4892
+Underfull \hbox (badness 10000) in paragraph at lines 4889--4892
 [][]$[][]\OT1/zplm/m/n/10 (\OMS/zplm/m/n/10 ^^@\OT1/ppl/m/n/10 1\OT1/zplm/m/n/1
-0 )[]/\OML/zplm/m/it/10 n$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی ترتیب سے $\OT1
-/ppl/m/n/10 1$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر ارتکاز: ہم ترتیب نو سے کسی
- بھی مخصوص قیمت پر بدلتے ہارمونی تسلسل کو مرتکز کر سکتے ہیں۔[]
+0 )[]/\OML/zplm/m/it/10 n$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی ترتیب نو سے ان
+فراج:  اجزاء $[] \OT1/ppl/m/n/10 1\OT1/zplm/m/n/10 /(\OT1/ppl/m/n/10 2\OML/zplm
+/m/it/10 n \OMS/zplm/m/n/10 ^^@ \OT1/ppl/m/n/10 1\OT1/zplm/m/n/10 )$ \TU/Jameel
+NooriNastaleeq(0)/b/n/10 کا مجموعہ $\OT1/zplm/m/n/10 +\OMS/zplm/m/n/10 1$ \TU/J
+ameelNooriNastaleeq(0)/b/n/10 کو منفرج جبکہ $[]\OT1/zplm/m/n/10 (\OMS/zplm/m/n/
+10 ^^@\OT1/ppl/m/n/10 1\OT1/zplm/m/n/10 /[])$[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4890--4892
+Underfull \hbox (badness 10000) in paragraph at lines 4889--4892
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 کا مجموعہ $\OMS/zplm/m/n/10 ^^@1$ \TU/Jame
+elNooriNastaleeq(0)/b/n/10 کو منفرج ہے۔ ہم جتنے زیادہ طاق (مثبت) اجزاء رد کرنے 
+کے بعد مجموعہ کیوں نہ لیں، ہم اتنے مزید مثبت اجزاء ساتھ جمع کر سکتے ہیں کہ[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4889--4892
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 مجموعہ کسی بھی مقررہ قیمت سے بڑا ہو۔ اسی ط
+رح ہم جتنے زیادہ منفی (جفت) اجزاء رد کرنے کے بعد مجموعہ کیوں نہ لیں، آخر کار تو
+اتر سے پائے جانے والے[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4889--4892
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 جفت اجزاء کا یہ مجموعہ کسی بھی مقررہ منفی 
+قیمت سے زیادہ منفی ہو گا۔ اگر ہم چاہیں، ہم پہلے اتنے طاق اجزاء جمع کر سکتے ہیں 
+کہ ان کا مجموعہ مثلاً $\OT1/zplm/m/n/10 +\OT1/ppl/m/n/10 3$ \TU/JameelNooriNast
+aleeq(0)/b/n/10 ہو اور[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4889--4892
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 اس کے بعد صرف جفت اجزاء جمع کرتے ہوئے مجمو
+عے کو $\OMS/zplm/m/n/10 ^^@\OT1/ppl/m/n/10 4$ \TU/JameelNooriNastaleeq(0)/b/n/1
+0 تک پہنچائیں۔ اس کے بعد ہم غیر استعمال شدہ منفی اجزاء شامل کرتے ہوئے کُل$\OT1/
+zplm/m/n/10 +\OT1/ppl/m/n/10 5$[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4889--4892
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 حاصل کر کے اس کے ساتھ اتنے منفی اجزاء شامل
+ کریں کہ $\OMS/zplm/m/n/10 ^^@\OT1/ppl/m/n/10 6$ \TU/JameelNooriNastaleeq(0)/b/
+n/10 حاصل ہو، وغیرہ۔ اس طرح ہم دونوں طرف جھولوں کو اختیاری طور پر بڑا کر سکتے[]
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4892--4894
 []\TU/JameelNooriNastaleeq(0)/b/n/10 فرض کریں ہم $\OT1/ppl/m/n/10 1$ \TU/Jameel
 NooriNastaleeq(0)/b/n/10 پر مرتکز تسلسل حاصل کرنا چاہتے ہیں۔ ہم پہلے جزو $[]$ س
 ے شروع کر کے $[]$ منفی کرتے ہیں۔ اس کے بعد $[]$ اور $[]$ جمع کرتے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4890--4892
+Underfull \hbox (badness 10000) in paragraph at lines 4892--4894
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہوئے مجموعہ کو واپس $\OT1/ppl/m/n/10 1$ \T
 U/JameelNooriNastaleeq(0)/b/n/10 یا اس سے اوپر تک لاتے ہیں۔ اس کے بعد ہم متواتر
  منفی اجزاء جمع کرتے ہوئے مجموعہ $\OT1/ppl/m/n/10 1$ \TU/JameelNooriNastaleeq(0
@@ -3234,58 +3239,84 @@ U/JameelNooriNastaleeq(0)/b/n/10 یا اس سے اوپر تک لاتے ہیں۔ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4890--4892
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 اجزاء جمع اور منفی کیے جاتے ہیں۔ جب مجموعہ
- $\OT1/ppl/m/n/10 1$ \TU/JameelNooriNastaleeq(0)/b/n/10 سے تجاوز کرے، ہم منفی ا
-جزاء جمع کرتے ہیں حتٰی کہ مجموعہ $\OT1/ppl/m/n/10 1$ \TU/JameelNooriNastaleeq(0
-)/b/n/10 یا اس سے کم ہو جائے۔ اس کے بعد ہم[]
+Underfull \hbox (badness 10000) in paragraph at lines 4892--4894
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 اجزاء جمع اور منفی کرتے رہتے ہیں۔ جب مجموع
+ہ $\OT1/ppl/m/n/10 1$ \TU/JameelNooriNastaleeq(0)/b/n/10 سے تجاوز کرے، ہم منفی 
+اجزاء جمع کرتے ہیں حتٰی کہ مجموعہ $\OT1/ppl/m/n/10 1$ \TU/JameelNooriNastaleeq(
+0)/b/n/10 یا اس سے کم ہو جائے۔ اس کے بعد[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4899--4900
+Underfull \hbox (badness 10000) in paragraph at lines 4892--4894
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 کرنے سے اصل تسلسل کے جفت اور طاق اجزاء کی 
+قیمتیں $\OT1/ppl/m/n/10 0$ \TU/JameelNooriNastaleeq(0)/b/n/10 تک پہنچتی ہیں لہٰ
+ذا نئی تسلسل کا جزوی مجموعہ $\OT1/ppl/m/n/10 1$ \TU/JameelNooriNastaleeq(0)/b/n
+/10 کے قریب تر ہوتا جائے گا لہٰذا نئے تسلسل کا[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4901--4902
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 آپ نے دیکھا کہ مشروط مرتکز تسلسل کی ترتی
 ب نو کر کے لامتناہی تعداد کے اجزاء جمع کرتے ہوئے اصل تسلسل سے بہت مختلف مجموعہ 
 حاصل کیا جا سکتا ہے۔[]
  []
 
 [974] [975] [976] [977]
-Underfull \hbox (badness 10000) in paragraph at lines 5262--5266
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 مسئلہ ۹.۹[] کہتا ہے کہ جب مسئلہ ۹.۸[] کے ش
+Underfull \hbox (badness 10000) in paragraph at lines 5256--5265
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 مسئلہ ۹.۸[] کی شرائط کو مطمئن کرنے والے بد
+لتے تسلسل کی حد $\OML/zplm/m/it/10 L$ \TU/JameelNooriNastaleeq(0)/b/n/10 کسی بھ
+ی دو یکے بعد دیگرے جزوی مجموعوں کے بیچ پائی جاتی ہے۔ یوں ہم $\OML/zplm/m/it/10 
+L$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی اندازاً قیمت[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5265--5269
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 مسئلہ ۹.۹[] کہتا ہے کہ جب مسئلہ ۹.۸[] کی ش
 رائط مطمئن کرنے والے تسلسل کے مجموعہ کو تخمیناً اس کے جزوی مجموعہ سے ظاہر کیا ج
 ائے تب تسلسل کے باقی اجزاء[]
  []
 
 [978]
-Underfull \hbox (badness 10000) in paragraph at lines 5302--5306
+Underfull \hbox (badness 10000) in paragraph at lines 5305--5309
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۹.۴۱۹:  آپ چاہتے ہیں کہ مثال ۹.۴۶[]
  میں ترتیب نو سے ایسا تسلسل حاصل کریں جس کا مجموعہ $\OMS/zplm/m/n/10 ^^@[]$ \TU
-/JameelNooriNastaleeq(0)/b/n/10 ہو۔نئے تسلسل کو $\OMS/zplm/m/n/10 ^^@[]$ \TU/Ja
-meelNooriNastaleeq(0)/b/n/10 سے شروع[]
+/JameelNooriNastaleeq(0)/b/n/10 ہو۔نئے تسلسل کو پہلے منفی جزو سے شروع[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5302--5306
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 کریں۔جب بھی مجموعہ $\OMS/zplm/m/n/10 ^^@[]
-$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے برابر یا اس سے کم ہو، یکے بعد دیگرے مثب
-ت اجزاء شامل کریں حتٰی کہ مجموعہ $\OMS/zplm/m/n/10 ^^@[]$ \TU/JameelNooriNastal
-eeq(0)/b/n/10 سے بڑا ہو۔ اس کے بعد منفی اجزاء[]
+Underfull \hbox (badness 10000) in paragraph at lines 5305--5309
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 کریں جو $\OMS/zplm/m/n/10 ^^@[]$ \TU/Jamee
+lNooriNastaleeq(0)/b/n/10 ہے۔جب بھی مجموعہ $\OMS/zplm/m/n/10 ^^@[]$ \TU/JameelN
+ooriNastaleeq(0)/b/n/10 کے برابر یا اس سے کم ہو، یکے بعد دیگرے مثبت اجزاء شامل 
+کریں حتٰی کہ مجموعہ $\OMS/zplm/m/n/10 ^^@[]$ \TU/JameelNooriNastaleeq(0)/b/n/10
+ سے بڑا ہو۔ اس کے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5302--5306
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 شامل کریں حتٰی کہ مجموعہ $\OMS/zplm/m/n/10
- ^^@[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے برابر یا اس سے کم ہو۔ اسی طرح چلت
-ے جائیں حتٰی کہ جزوی مجموعات $\OMS/zplm/m/n/10 ^^@[]$ \TU/JameelNooriNastaleeq(
-0)/b/n/10 سے تین مرتبہ تجاوز کر جائیں اور یہیں رک[]
+Underfull \hbox (badness 10000) in paragraph at lines 5305--5309
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 بعد منفی اجزاء شامل کریں حتٰی کہ مجموعہ $\
+OMS/zplm/m/n/10 ^^@[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے برابر یا اس سے کم 
+ہو۔ اسی طرح چلتے جائیں حتٰی کہ جزوی مجموعے $\OMS/zplm/m/n/10 ^^@[]$ \TU/JameelN
+ooriNastaleeq(0)/b/n/10 سے تین مرتبہ تجاوز کر جائیں[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5306--5309
+Underfull \hbox (badness 10000) in paragraph at lines 5305--5309
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 اور یہیں رک جائیں یا اس سے ایک قدم پہلے رک
+ جائیں۔ اگر ابتدائی $\OML/zplm/m/it/10 n$ \TU/JameelNooriNastaleeq(0)/b/n/10 نئ
+ے اجزاء کا مجموعہ $\OML/zplm/m/it/10 s[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہو
+ تب نقاط $\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 n\OT1/ppl/m/n/10 , \OML/zplm/m/it
+/10 s[]\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 ترسیم کر کے جزوی 
+مجموعوں کا رویہ[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5309--5312
 [][]
  []
 
 
-Underfull \hbox (badness 1931) in paragraph at lines 5318--5320
+Underfull \hbox (badness 1931) in paragraph at lines 5321--5323
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 جزو-الف کی بحث کے تحت اگر $[][] \OML/zpl
 m/m/it/10 a[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 مطلق مرتکز ہو تب $[][] \OML/z
 plm/m/it/10 b[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 مرتکز اور $[][] \OML/zplm/m
@@ -3294,61 +3325,61 @@ eeq(0)/b/n/10 ہو گا۔ اب[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5331--5333
+Underfull \hbox (badness 10000) in paragraph at lines 5334--5336
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 دوسرے لفظوں میں مطلق مرتکز تسلسل کی صورت
- میں اس کے مثبت اجزاء مرتکز تسلسل بناتے ہیں اور اس کے منفی اجزاء مرتکز تسلسل بن
-اتے ہیں۔مزید[]
+ میں اس کے مثبت اجزاء مرتکز تسلسل بناتے ہیں اور اس کے منفی اجزاء بھی مرتکز تسلس
+ل بناتے[]
  []
 
 [979]
-Underfull \hbox (badness 10000) in paragraph at lines 5363--5364
+Underfull \hbox (badness 10000) in paragraph at lines 5367--5368
 []\TU/JameelNooriNastaleeq(0)/b/n/10 اب چونکہ ہم لامتناہی تسلسل کا ارتکاز پرکھ 
-سکتے ہیں لہٰذا ہم اب لامتناہی کثیر رکنی کا مطالعہ کر سکتے ہیں جن کا ذکر حصہ ۹.۳
-[] کی شروع میں کیا گیا۔ تعریف کی رو[]
+سکتے ہیں لہٰذا ہم اب لامتناہی کثیر رکنی کا مطالعہ کر سکتے ہیں جس کا ذکر حصہ ۹.۳
+[] کے شروع میں کیا گیا۔ تعریف کی رو[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5363--5364
+Underfull \hbox (badness 10000) in paragraph at lines 5367--5368
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سے ان کثیر رکنیوں کو کسی متغیر، مثلاً $\OM
-L/zplm/m/it/10 x$\TU/JameelNooriNastaleeq(0)/b/n/10 ، کے طاقتوں کا لامتناہی تسل
+L/zplm/m/it/10 x$\TU/JameelNooriNastaleeq(0)/b/n/10 ، کی طاقتوں کا لامتناہی تسل
 سل لکھا جاتا ہے لہٰذا ہم ان کثیر رکنیوں کو طاقتی تسلسل کہتے ہیں۔ کثیر رکنیوں کی
  طرح، طاقتی[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 5369.
-LaTeX Info: Redefining \sffamily on input line 5369.
-LaTeX Info: Redefining \ttfamily on input line 5369.
+LaTeX Info: Redefining \rmfamily on input line 5373.
+LaTeX Info: Redefining \sffamily on input line 5373.
+LaTeX Info: Redefining \ttfamily on input line 5373.
 [980]
-LaTeX Info: Redefining \rmfamily on input line 5377.
-LaTeX Info: Redefining \sffamily on input line 5377.
-LaTeX Info: Redefining \ttfamily on input line 5377.
-LaTeX Info: Redefining \rmfamily on input line 5377.
-LaTeX Info: Redefining \sffamily on input line 5377.
-LaTeX Info: Redefining \ttfamily on input line 5377.
+LaTeX Info: Redefining \rmfamily on input line 5381.
+LaTeX Info: Redefining \sffamily on input line 5381.
+LaTeX Info: Redefining \ttfamily on input line 5381.
+LaTeX Info: Redefining \rmfamily on input line 5381.
+LaTeX Info: Redefining \sffamily on input line 5381.
+LaTeX Info: Redefining \ttfamily on input line 5381.
 
-Overfull \hbox (39.50992pt too wide) in paragraph at lines 5400--5409
+Overfull \hbox (39.50992pt too wide) in paragraph at lines 5404--5414
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (24.04059pt too wide) in paragraph at lines 5414--5423
+Overfull \hbox (24.04059pt too wide) in paragraph at lines 5419--5429
  [][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5395--5427
-[][]\TU/JameelNooriNastaleeq(0)/b/n/10 اب تک مساوات ۲[] کو ہم دائیں ہاتھ تسلسل 
-کے مجموعہ کا کلیہ استعمال کرتے آ رہے ہیں۔ ہم اب اپنی توجہ کا مرکز تبدیل کرتے ہی
-ں۔ ہم دائیں ہاتھ تسلسل کے[]
+Underfull \hbox (badness 10000) in paragraph at lines 5399--5433
+[][]\TU/JameelNooriNastaleeq(0)/b/n/10 اب تک مساوات ۲[] کو ہم دائیں ہاتھ پر دیے
+ گئے تسلسل کے مجموعہ کا کلیہ استعمال کرتے آ رہے ہیں۔ ہم اب اپنی توجہ کا مرکز تب
+دیل کرتے ہیں۔ ہم دائیں ہاتھ کے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5395--5427
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 جزوی مجموعات کو کثیر رکنیاں $\OML/zplm/m/i
-t/10 P[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )$ \TU/JameelNoor
-iNastaleeq(0)/b/n/10 تصور کرتے ہیں جو بائیں ہاتھ تفاعل کی تخمین دیتے ہیں۔ صفر ک
-ے قریب $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی قیمتوں کے لی
-ے تفاعل کی قیمت[]
+Underfull \hbox (badness 10000) in paragraph at lines 5399--5433
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 تسلسل کے جزوی مجموعوں کو کثیر رکنیاں $\OML
+/zplm/m/it/10 P[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )$ \TU/J
+ameelNooriNastaleeq(0)/b/n/10 تصور کرتے ہیں جو بائیں ہاتھ پر دیے گئے تفاعل کی ت
+خمین دیتی ہیں۔ صفر کے قریب $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/
+n/10 کی قیمتوں کے[]
  []
 
 [981]
@@ -3356,21 +3387,28 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [982]
 [983]
-Underfull \hbox (badness 10000) in paragraph at lines 5524--5526
+Underfull \hbox (badness 10000) in paragraph at lines 5511--5514
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 قدم ب: اگر مطلق ارتکاز کا وقفہ متناہی ہو ت
+ب ہر آخری نقطے پر ارتکاز یا انفراج کے لیے تسلسل کو پرکھیں (جیسا کہ مثال ۹.۴۹[]-
+ا اور ب میں کیا گیا)۔ آپ[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5530--5532
 []\TU/JameelNooriNastaleeq(0)/b/n/10 جزو $[]$ سے قبل متناہی تعداد کے اجزاء پائے
  جاتے ہیں اور ان کا مجموعہ متناہی ہے۔ مساوات ۵[] کی وجہ سے جزو $[]$ اور اس کے ب
 عد تمام[]
  []
 
 [984]
-LaTeX Info: Redefining \rmfamily on input line 5550.
-LaTeX Info: Redefining \sffamily on input line 5550.
-LaTeX Info: Redefining \ttfamily on input line 5550.
-LaTeX Info: Redefining \rmfamily on input line 5550.
-LaTeX Info: Redefining \sffamily on input line 5550.
-LaTeX Info: Redefining \ttfamily on input line 5550.
+LaTeX Info: Redefining \rmfamily on input line 5556.
+LaTeX Info: Redefining \sffamily on input line 5556.
+LaTeX Info: Redefining \ttfamily on input line 5556.
+LaTeX Info: Redefining \rmfamily on input line 5556.
+LaTeX Info: Redefining \sffamily on input line 5556.
+LaTeX Info: Redefining \ttfamily on input line 5556.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5550--5551
+Underfull \hbox (badness 10000) in paragraph at lines 5556--5557
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 پہلی صورت میں ارتکاز کے نقطوں کا سلسلہ م
 تناہی وقفہ ہے جس کو \TU/AASameerSagarNastaleeqBold(0)/m/n/10 وقفہ ارتکاز[][] \T
 U/JameelNooriNastaleeq(0)/b/n/10 کہتے ہیں۔ ہم مذکورہ بالا مثالوں سے جانتے ہیں ک
@@ -3378,7 +3416,7 @@ U/JameelNooriNastaleeq(0)/b/n/10 کہتے ہیں۔ ہم مذکورہ بالا م
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5550--5551
+Underfull \hbox (badness 10000) in paragraph at lines 5556--5557
 []\TU/JameelNooriNastaleeq(0)/b/n/10 یا بند ہو سکتا ہے اور یہ دیے گئے تسلسل پر 
 منحصر ہو گا۔ وقفہ ارتکاز جس قسم کا بھی ہو، $\OML/zplm/m/it/10 R$ \TU/JameelNoor
 iNastaleeq(0)/b/n/10 کو تسلسل کا \TU/AASameerSagarNastaleeqBold(0)/m/n/10 رداس 
@@ -3386,36 +3424,45 @@ iNastaleeq(0)/b/n/10 کو تسلسل کا \TU/AASameerSagarNastaleeqBold(0)/m/n/
 ]
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 5556--5557
+[]\TU/JameelNooriNastaleeq(0)/b/n/10 سلسلہ، جن کے لیے تسلسل مرتکز ہو، کی کمتر ب
+الائی حد بندی $\OML/zplm/m/it/10 a \OT1/zplm/m/n/10 + \OML/zplm/m/it/10 R$ \TU/
+JameelNooriNastaleeq(0)/b/n/10 ہو گی۔ اس وقفہ کے اندرونی ہر نقطہ پر ارتکاز مطلق
+ ہو گا۔اگر $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی تمام قیم
+توں کے[]
+ []
+
 [985]
-Underfull \hbox (badness 2582) in paragraph at lines 5569--5570
+Underfull \hbox (badness 2582) in paragraph at lines 5576--5577
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 انتباہ: ضروری نہیں کہ جزو در جزو تفرق دی
 گر تسلسل کے لیے بھی قابل استعمال ہو۔ مثال کے طور پر تکونیاتی تسلسل $[][] []$ تم
 ام $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے لیے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5576--5578
+Underfull \hbox (badness 10000) in paragraph at lines 5583--5585
 [][]
  []
 
 [986] [987]
-Underfull \hbox (badness 10000) in paragraph at lines 5630--5631
+Underfull \hbox (badness 10000) in paragraph at lines 5637--5638
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 دھیان رہے کہ اس مثال میں ابتدائی (اصل) ت
 سلسل دیے گئے وقفہ کے دونوں آخری سروں پر بھی مرتکز ہے لیکن مسئلہ ۹.۱۳[] صرف اس و
 قفہ کے اندر تسلسل[]
  []
 
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(2)/b/n' will be
-(Font)              scaled to size 9.0pt on input line 5652.
+(Font)              scaled to size 9.0pt on input line 5659.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5653--5654
+Underfull \hbox (badness 10000) in paragraph at lines 5660--5661
 []\TU/JameelNooriNastaleeq(0)/b/n/10 تسلسل کئی طریقوں سے تکمل کی طرح ہوتے ہیں۔ 
 جیسے بنیادی تفاعل کی صورت میں صریح ضد تفرق رکھنے والے تفاعل کی تعداد قابل تکمل 
 تفاعل کی تعداد سے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5653--5654
+Underfull \hbox (badness 10000) in paragraph at lines 5660--5661
 []\TU/JameelNooriNastaleeq(0)/b/n/10 بہت کم ہے، $\OML/zplm/m/it/10 x$ \TU/Jamee
 lNooriNastaleeq(0)/b/n/10 کی صورت میں طاقتی تسلسل جو صریحاً بنیادی تفاعل کے سات
 ھ $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 وقفہ پر اتفاق کرتے ہ
@@ -3423,7 +3470,7 @@ lNooriNastaleeq(0)/b/n/10 کی صورت میں طاقتی تسلسل جو صری
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5653--5654
+Underfull \hbox (badness 10000) in paragraph at lines 5660--5661
 []\TU/JameelNooriNastaleeq(0)/b/n/10 جو کسی $\OML/zplm/m/it/10 x$ \TU/JameelNoo
 riNastaleeq(0)/b/n/10 وقفہ پر منفرج ہوں۔ جیسے مطلق تکمل کے مطالعہ میں اعدادی تک
 مل مدد گار ثابت ہوتا ہے، اسی طرح مطالعہ تسلسل میں کمپیوٹر ترسیمات کارآمد ثابت[]
@@ -3431,53 +3478,45 @@ riNastaleeq(0)/b/n/10 وقفہ پر منفرج ہوں۔ جیسے مطلق تکم
  []
 
 [988]
-Underfull \hbox (badness 10000) in paragraph at lines 5661--5662
+Underfull \hbox (badness 10000) in paragraph at lines 5668--5669
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 البتہ نہایت آہستہ مرتکز یا منفرج تسلسل ک
 ی صورت میں کمپیوٹر مدد گار ثابت نہیں ہوتا ہے بلکہ اس کے نتائج بالکل غلط ہو سکتے
  ہیں۔ مثال کے طور پر تسلسل[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5661--5662
+Underfull \hbox (badness 10000) in paragraph at lines 5668--5669
 []$[][] []$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے جزوی مجموعات کا حساب کرنے کی 
 کوشش کریں۔ یہاں اجزاء نہایت چھوٹے ہیں اور سیکڑوں اجزاء کا مجموعہ بھی نہایت چھوٹ
 ا ہے جس[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 5663.
-LaTeX Info: Redefining \sffamily on input line 5663.
-LaTeX Info: Redefining \ttfamily on input line 5663.
+LaTeX Info: Redefining \rmfamily on input line 5670.
+LaTeX Info: Redefining \sffamily on input line 5670.
+LaTeX Info: Redefining \ttfamily on input line 5670.
 [989]
-Underfull \hbox (badness 10000) in paragraph at lines 5714--5717
+Underfull \hbox (badness 10000) in paragraph at lines 5721--5724
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال ۹.۴۲۴[] تا سوال ۹.۴۵۵[] میں (الف) تسل
 سل کا رداس اور وقفہ ارتکاز تلاش کریں۔ $\OML/zplm/m/it/10 x$ \TU/JameelNooriNast
 aleeq(0)/b/n/10 کی کن قیمتوں کے لیے تسلسل (ب) مطلق مرتکز(ج) مشروط[]
  []
 
 [990] [991] [992]
-Underfull \hbox (badness 10000) in paragraph at lines 5975--5977
-[]\TU/JameelNooriNastaleeq(0)/b/n/10 اس کا مجموعہ کتنا ہے؟ اس تسلسل کا جزو در ج
-زو تفرق لینے سے کونسا تسلسل حاصل ہوتا ہے؟ یہ نیا تسلسل $\OML/zplm/m/it/10 x$ \T
-U/JameelNooriNastaleeq(0)/b/n/10 کی کن قیمتوں کے لیے مرتکز ہو گا؟ اس کا مجموعہ 
-کیا[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5977--5986
+Underfull \hbox (badness 1675) in paragraph at lines 5984--5993
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۹.۴۶۳:  اگر آپ سوال ۹.۴۶۲[] کا تس
-لسل جزو در جزو تکمل کریں تب کونسا تسلسل حاصل ہو گا؟ $\OML/zplm/m/it/10 x$ \TU/J
-ameelNooriNastaleeq(0)/b/n/10 کی کن قیمتوں کے لیے یہ نیا تسلسل مرتکز ہو گا؟[]
+لسل جزو در جزو تکمل کریں تب کون سا تسلسل حاصل ہو گا؟ $\OML/zplm/m/it/10 x$ \TU/
+JameelNooriNastaleeq(0)/b/n/10 کی کن قیمتوں کے لیے یہ نیا تسلسل مرتکز ہو گا؟[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5999--6000
+Underfull \hbox (badness 10000) in paragraph at lines 6006--6007
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 ضرب تسلسل اور جزو-الف کا نتیجہ استعمال ک
 رتے ہوئے $\OT1/ppl/m/n/10 2 [] \OML/zplm/m/it/10 x [] x$ \TU/JameelNooriNastale
 eq(0)/b/n/10 کے تسلسل کے ابتدائی چھ اجزاء حاصل کریں۔ جزو-ب کے نتیجہ کے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6020--6021
+Underfull \hbox (badness 10000) in paragraph at lines 6027--6028
 [][]$\OML/zplm/m/it/10 e[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے تسلسل میں $\O
 ML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی جگہ $\OMS/zplm/m/n/10 
 ^^@\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر کر کے $\OML/zplm/
@@ -3487,7 +3526,7 @@ lm/m/it/10 e[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے تسلسل کو $\OML/zp
  []
 
 [993]
-Underfull \hbox (badness 10000) in paragraph at lines 6065--6067
+Underfull \hbox (badness 10000) in paragraph at lines 6072--6074
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 دکھائیں کہ کھلے وقفہ $\OT1/zplm/m/n/10 (
 \OMS/zplm/m/n/10 ^^@\OML/zplm/m/it/10 c\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 c\OT
 1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 میں تمام $\OML/zplm/m/it/10
@@ -3497,14 +3536,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 6065--6067
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6069--6073
+Underfull \hbox (badness 10000) in paragraph at lines 6076--6080
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۹.۴۶۹:  تسلسل $[][] []$ کا مجموعہ ت
 لاش کرنے کی خاطر $[]$ کو ہندسی تسلسل کی صورت میں لکھ کر دونوں اطراف کا $\OML/zp
 lm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے ساتھ[]
  []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 6069--6073
+Underfull \hbox (badness 1158) in paragraph at lines 6076--6080
 []\TU/JameelNooriNastaleeq(0)/b/n/10 تفرق لیں، دونوں اطراف کو $\OML/zplm/m/it/1
 0 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 سے ضرب دے کر دونوں اطراف کا تفرق لیں او
 ر آخر کار دونوں اطراف کو $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/
@@ -3513,7 +3552,7 @@ astaleeq(0)/b/n/10 پر[]
  []
 
 [994]
-Underfull \hbox (badness 10000) in paragraph at lines 6101--6102
+Underfull \hbox (badness 10000) in paragraph at lines 6108--6109
 []\TU/JameelNooriNastaleeq(0)/b/n/10 اس حصہ میں دکھایا جائے گا کہ وہ تفاعل جو ل
 امتناہی گنا قابل تفرق ہوں طاقتی تسلسل پیدا کرتے ہیں جنہیں ٹیلر تسلسل کہتے ہیں۔ 
 عموماً ایسے تسلسل، پیداکار تفاعل[]
@@ -3521,14 +3560,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 6101--6102
 
 Missing character: There is no ِ ("650) in font zplmr7m!
 
-Underfull \hbox (badness 10000) in paragraph at lines 6104--6105
+Underfull \hbox (badness 10000) in paragraph at lines 6111--6112
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہم جانتے ہیں کہ اپنے وقفہ ارتکاز کے اندر ط
 اقتی تسلسل کا مجموعہ استمراری تفاعل ہوتا ہے جس کے تفارق ہر درجے کے پائے جاتے ہی
 ں۔ لیکن کیا ہم یہی کچھ[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6104--6105
+Underfull \hbox (badness 10000) in paragraph at lines 6111--6112
 []\TU/JameelNooriNastaleeq(0)/b/n/10 دوسری رخ بھی کہہ سکتے ہیں؟ یعنی کیا ایسا ت
 فاعل $\OML/zplm/m/it/10 f\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 
 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 جس کے وقفہ $\OML/zplm/m/it/10 I$ \TU/Jame
@@ -3537,7 +3576,7 @@ elNooriNastaleeq(0)/b/n/10 ہر رتبہ کے تفارق پائے جاتے ہو�
  []
 
 
-Underfull \hbox (badness 4582) in paragraph at lines 6130--6132
+Underfull \hbox (badness 4582) in paragraph at lines 6137--6139
 []\TU/JameelNooriNastaleeq(0)/b/n/10 حاصل ہوتا ہے۔ یہ کلیہ وقفہ $\OML/zplm/m/it
 /10 I$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر $\OML/zplm/m/it/10 f$ \TU/JameelNo
 oriNastaleeq(0)/b/n/10 کو مرتکز کسی بھی طاقتی تسلسل $[][] \OML/zplm/m/it/10 a[]
@@ -3547,14 +3586,14 @@ OT1/zplm/m/n/10 )[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے ضرائب کا ا�
  []
 
 [995]
-LaTeX Info: Redefining \rmfamily on input line 6143.
-LaTeX Info: Redefining \sffamily on input line 6143.
-LaTeX Info: Redefining \ttfamily on input line 6143.
-LaTeX Info: Redefining \rmfamily on input line 6147.
-LaTeX Info: Redefining \sffamily on input line 6147.
-LaTeX Info: Redefining \ttfamily on input line 6147.
+LaTeX Info: Redefining \rmfamily on input line 6150.
+LaTeX Info: Redefining \sffamily on input line 6150.
+LaTeX Info: Redefining \ttfamily on input line 6150.
+LaTeX Info: Redefining \rmfamily on input line 6154.
+LaTeX Info: Redefining \sffamily on input line 6154.
+LaTeX Info: Redefining \ttfamily on input line 6154.
  [996]
-Underfull \hbox (badness 1742) in paragraph at lines 6184--6186
+Underfull \hbox (badness 1742) in paragraph at lines 6191--6193
 []\TU/JameelNooriNastaleeq(0)/b/n/10 اگر $\OML/zplm/m/it/10 a$ \TU/JameelNooriN
 astaleeq(0)/b/n/10 پر $\OML/zplm/m/it/10 f$ \TU/JameelNooriNastaleeq(0)/b/n/10 
 کے بلند رتبی تفارق پائے جاتے ہوں تب ہر پائے جانے والے تفرق کے لیے اس کی بلند رت
@@ -3562,7 +3601,7 @@ astaleeq(0)/b/n/10 پر $\OML/zplm/m/it/10 f$ \TU/JameelNooriNastaleeq(0)/b/n/10
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6189--6191
+Underfull \hbox (badness 10000) in paragraph at lines 6196--6198
 []\TU/JameelNooriNastaleeq(0)/b/n/10 تعریف :  فرض کریں کسی وقفہ، جس کے اندرون م
 یں نقطہ $\OML/zplm/m/it/10 a$ \TU/JameelNooriNastaleeq(0)/b/n/10 پایا جاتا ہو، 
 میں تفاعل $\OML/zplm/m/it/10 f$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے $\OML/zpl
@@ -3571,17 +3610,17 @@ OML/zplm/m/it/10 k \OT1/zplm/m/n/10 =$[]
  []
 
 [997] [998]
-Overfull \hbox (20.9202pt too wide) in paragraph at lines 6235--6243
+Overfull \hbox (20.9202pt too wide) in paragraph at lines 6242--6250
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (2.62679pt too wide) in paragraph at lines 6248--6260
+Overfull \hbox (2.62679pt too wide) in paragraph at lines 6255--6267
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (3.15936pt too wide) detected at line 6286
+Overfull \hbox (3.15936pt too wide) detected at line 6293
 []
  []
 
@@ -3590,11 +3629,11 @@ Underfull \vbox (badness 3029) has occurred while \output is active []
 
  [999]
 [1000] [1001] [1002]
-LaTeX Info: Redefining \rmfamily on input line 6578.
-LaTeX Info: Redefining \sffamily on input line 6578.
-LaTeX Info: Redefining \ttfamily on input line 6578.
+LaTeX Info: Redefining \rmfamily on input line 6585.
+LaTeX Info: Redefining \sffamily on input line 6585.
+LaTeX Info: Redefining \ttfamily on input line 6585.
  [1003]
-Underfull \hbox (badness 10000) in paragraph at lines 6635--6638
+Underfull \hbox (badness 10000) in paragraph at lines 6642--6645
 []\TU/JameelNooriNastaleeq(0)/b/n/10 اگر $\OT1/zplm/m/n/10 [\OML/zplm/m/it/10 a
 \OT1/ppl/m/n/10 , \OML/zplm/m/it/10 b\OT1/zplm/m/n/10 ]$ \TU/JameelNooriNastale
 eq(0)/b/n/10 یا $\OT1/zplm/m/n/10 [\OML/zplm/m/it/10 b\OT1/ppl/m/n/10 , \OML/zp
@@ -3611,14 +3650,14 @@ taleeq(0)/b/n/10 قابل تفرق[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6645--6647
+Underfull \hbox (badness 10000) in paragraph at lines 6652--6654
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 مسئلہ ٹیلر درحقیقت مسئلہ اوسط قیمت کی عم
 ومی شکل ہے (سوال ۹.۵۴۸[])۔ مسئلہ اوسط قیمت کی عمومی صورت مسئلہ ٹیلر ہے۔ اس حصہ 
 کے آخر میں مسئلہ ٹیلر کا[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6648--6649
+Underfull \hbox (badness 10000) in paragraph at lines 6655--6656
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 مسئلہ ٹیلر کو استعمال کرتے ہوئے ہم عموما
 ً $\OML/zplm/m/it/10 a$ \TU/JameelNooriNastaleeq(0)/b/n/10 کو مستقل جبکہ $\OML/
 zplm/m/it/10 b$ \TU/JameelNooriNastaleeq(0)/b/n/10 کو غیر تابع متغیر رکھنا چاہت
@@ -3628,7 +3667,7 @@ zplm/m/it/10 b$ \TU/JameelNooriNastaleeq(0)/b/n/10 کو غیر تابع متغی
  []
 
 [1004]
-Underfull \hbox (badness 4217) in paragraph at lines 6668--6670
+Underfull \hbox (badness 4217) in paragraph at lines 6675--6677
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ذرہ رک کر اس قابل ذکر مساوات پر غور کریں۔ 
 یہ کلیہ وقفہ $\OML/zplm/m/it/10 I$ \TU/JameelNooriNastaleeq(0)/b/n/10 پر کسی بھ
 ی $\OML/zplm/m/it/10 n$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے لیے $\OML/zplm/m/
@@ -3636,11 +3675,11 @@ it/10 f$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی اسی رتبے کی تخمین
 ی ہے اور اس تخمین سے پیدا خلل[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 6671.
-LaTeX Info: Redefining \sffamily on input line 6671.
-LaTeX Info: Redefining \ttfamily on input line 6671.
+LaTeX Info: Redefining \rmfamily on input line 6678.
+LaTeX Info: Redefining \sffamily on input line 6678.
+LaTeX Info: Redefining \ttfamily on input line 6678.
 
-Underfull \hbox (badness 1308) in paragraph at lines 6671--6672
+Underfull \hbox (badness 1308) in paragraph at lines 6678--6679
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 مساوات ۱[] کو \TU/AASameerSagarNastaleeq
 Bold(0)/m/n/10 کلیہ ٹیلر[][] \TU/JameelNooriNastaleeq(0)/b/n/10 کہتے ہیں۔ تفاعل
  $\OML/zplm/m/it/10 R[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )$
@@ -3655,7 +3694,7 @@ ameerSagarNastaleeqBold(0)/m/n/10 رتبی باقی \TU/JameelNooriNastaleeq(0)/
  []
 
 
-Underfull \hbox (badness 2772) in paragraph at lines 6687--6689
+Underfull \hbox (badness 2772) in paragraph at lines 6694--6696
 []\TU/JameelNooriNastaleeq(0)/b/n/10 دیتے ہیں۔ چونکہ $\OML/zplm/m/it/10 e[]$ \T
 U/JameelNooriNastaleeq(0)/b/n/10 متغیر $\OML/zplm/m/it/10 x$ \TU/JameelNooriNas
 taleeq(0)/b/n/10 کے ساتھ بڑھتا تفاعل ہے، لہٰذا $\OML/zplm/m/it/10 e[] \OT1/zplm
@@ -3667,7 +3706,7 @@ astaleeq(0)/b/n/10 بھی منفی اور[]
  []
 
 [1005]
-Underfull \hbox (badness 10000) in paragraph at lines 6708--6709
+Underfull \hbox (badness 10000) in paragraph at lines 6715--6716
 []\TU/JameelNooriNastaleeq(0)/b/n/10 عموماً $\OML/zplm/m/it/10 R[]\OT1/zplm/m/n
 /10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 
 کا اندازہ مثال ۹.۵۸[] کی طرح لگایا جا سکتا ہے۔اندازہ لگانے کی یہ ترکیب اتنی آسا
@@ -3675,14 +3714,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 6708--6709
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6721--6722
+Underfull \hbox (badness 10000) in paragraph at lines 6728--6729
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 مسئلہ اندازہ باقی اور مسئلہ ٹیلر استعمال
  کرتے ہوئے ہم اب ارتکاز کے مسائل حل کر سکتے ہیں۔ جیسا آپ دیکھیں گے، ہم ان سے کس
 ی تفاعل کو تخمیناً ٹیلر کثیر رکنی[]
  []
 
 [1006] [1007]
-Underfull \hbox (badness 10000) in paragraph at lines 6790--6792
+Underfull \hbox (badness 10000) in paragraph at lines 6797--6799
 []\TU/JameelNooriNastaleeq(0)/b/n/10 چونکہ $[] \OML/zplm/m/it/10 x$ \TU/JameelN
 ooriNastaleeq(0)/b/n/10 کا تسلسل تمام $\OML/zplm/m/it/10 x$ \TU/JameelNooriNast
 aleeq(0)/b/n/10 کے لیے مرتکز ہے لہٰذا یہ نیا تسلسل بھی تمام $\OML/zplm/m/it/10 
@@ -3691,7 +3730,7 @@ x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے لیے مرتکز ہو گا۔سوال
  []
 
 [1008]
-Underfull \hbox (badness 10000) in paragraph at lines 6796--6797
+Underfull \hbox (badness 10000) in paragraph at lines 6803--6804
 []\TU/JameelNooriNastaleeq(0)/b/n/10 تمام $\OML/zplm/m/it/10 x$ \TU/JameelNoori
 Nastaleeq(0)/b/n/10 کے لیے $\OML/zplm/m/it/10 e[]$ \TU/JameelNooriNastaleeq(0)/
 b/n/10 کا مکلارن تسلسل $\OML/zplm/m/it/10 e[]$ \TU/JameelNooriNastaleeq(0)/b/n/
@@ -3700,47 +3739,47 @@ b/n/10 کا مکلارن تسلسل $\OML/zplm/m/it/10 e[]$ \TU/JameelNooriNasta
  []
 
 [1009]
-Underfull \hbox (badness 10000) in paragraph at lines 6835--6835
+Underfull \hbox (badness 10000) in paragraph at lines 6842--6842
 [][]\TU/JameelNooriNastaleeq(2)/b/n/9 محفوظ رہنے کے لیے نیچے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6835--6835
+Underfull \hbox (badness 10000) in paragraph at lines 6842--6842
 [][]\TU/JameelNooriNastaleeq(2)/b/n/9 محفوظ رہنے کے لیے نیچے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6835--6835
+Underfull \hbox (badness 10000) in paragraph at lines 6842--6842
 [][]\TU/JameelNooriNastaleeq(2)/b/n/9 محفوظ رہنے کے لیے نیچے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6835--6835
+Underfull \hbox (badness 10000) in paragraph at lines 6842--6842
 [][]\TU/JameelNooriNastaleeq(2)/b/n/9 محفوظ رہنے کے لیے نیچے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6835--6835
+Underfull \hbox (badness 10000) in paragraph at lines 6842--6842
 [][]\TU/JameelNooriNastaleeq(2)/b/n/9 محفوظ رہنے کے لیے نیچے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6835--6835
+Underfull \hbox (badness 10000) in paragraph at lines 6842--6842
 [][]\TU/JameelNooriNastaleeq(2)/b/n/9 محفوظ رہنے کے لیے نیچے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6835--6835
+Underfull \hbox (badness 10000) in paragraph at lines 6842--6842
 [][]\TU/JameelNooriNastaleeq(2)/b/n/9 محفوظ رہنے کے لیے نیچے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6835--6835
+Underfull \hbox (badness 10000) in paragraph at lines 6842--6842
 [][]\TU/JameelNooriNastaleeq(2)/b/n/9 محفوظ رہنے کے لیے نیچے[]
  []
 
 
-Underfull \hbox (badness 2103) in paragraph at lines 6835--6837
+Underfull \hbox (badness 2103) in paragraph at lines 6842--6844
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہو تب خلل $\OT1/ppl/m/n/10 3 \OMS/zplm/m/n
 /10 ^^B \OT1/ppl/m/n/10 10[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 سے کم یا اس کے
  برابر ہو گا۔ مسئلہ بدلتے تسلسل کا اندازہ ہمیں وہ کچھ بتاتا ہے جو مسئلہ اندازہ 
@@ -3748,14 +3787,14 @@ Underfull \hbox (badness 2103) in paragraph at lines 6835--6837
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6877--6878
+Underfull \hbox (badness 10000) in paragraph at lines 6884--6885
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ٹیلر تسلسلوں کے وقفات ارتکاز کے تقاطع پر، 
 ٹیلر تسلسلوں کو جمع، منفی اور مستقل سے ضرب دیا جا سکتا ہے۔ یوں حاصل تسلسل بھی ٹ
 یلر تسلسل ہوں گے۔ تفاعل[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6877--6878
+Underfull \hbox (badness 10000) in paragraph at lines 6884--6885
 []\TU/JameelNooriNastaleeq(0)/b/n/10 نتیجہ کو $\OT1/ppl/m/n/10 2$ \TU/JameelNoo
 riNastaleeq(0)/b/n/10 سے تقسیم کرنے سے $[]$ کا مکلارن تسلسل حاصل ہو گا۔ $[] \OM
 L/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور $[] \OML/zplm/m/it/10 
@@ -3764,16 +3803,16 @@ x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے مکلارن تسلسلوں کو جز
  []
 
 [1010]
-LaTeX Info: Redefining \rmfamily on input line 6900.
-LaTeX Info: Redefining \sffamily on input line 6900.
-LaTeX Info: Redefining \ttfamily on input line 6900.
+LaTeX Info: Redefining \rmfamily on input line 6907.
+LaTeX Info: Redefining \sffamily on input line 6907.
+LaTeX Info: Redefining \ttfamily on input line 6907.
  [1011] [1012] [1013]
-Underfull \hbox (badness 10000) in paragraph at lines 7084--7087
+Underfull \hbox (badness 10000) in paragraph at lines 7091--7094
 [][]
  []
 
 
-Underfull \hbox (badness 3780) in paragraph at lines 7088--7090
+Underfull \hbox (badness 3780) in paragraph at lines 7095--7097
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۹.۵۲۸:  خلل کی مقدار $\OT1/ppl/m/n/1
 0 5 \OMS/zplm/m/n/10 ^^B \OT1/ppl/m/n/10 10[]$ \TU/JameelNooriNastaleeq(0)/b/n/
 10 سے بڑھائے بغیر $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی ک
@@ -3783,7 +3822,7 @@ $\OML/zplm/m/it/10 x \OMS/zplm/m/n/10 ^^@ []$ \TU/JameelNooriNastaleeq(0)/b/n/1
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7138--7142
+Underfull \hbox (badness 10000) in paragraph at lines 7145--7149
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۹.۵۳۶:  تفاعل $[]\OT1/zplm/m/n/10 (
 \OT1/ppl/m/n/10 1 \OT1/zplm/m/n/10 + \OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )$ \TU
 /JameelNooriNastaleeq(0)/b/n/10 کو $\OML/zplm/m/it/10 x$ \TU/JameelNooriNastale
@@ -3794,7 +3833,7 @@ b/n/10 سے تجاوز نہیں کرے[]
  []
 
 [1014]
-Underfull \hbox (badness 10000) in paragraph at lines 7175--7179
+Underfull \hbox (badness 10000) in paragraph at lines 7182--7186
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال ۹.۵۴۰[] تا سوال ۹.۵۴۳[] میں کسی نقطہ 
 پر تفاعل $\OML/zplm/m/it/10 f\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n
 /10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے مکلارن تسلسل کی قیمت دی گئی ہے۔ تف
@@ -3802,7 +3841,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7175--7179
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7208--7217
+Underfull \hbox (badness 10000) in paragraph at lines 7215--7224
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۹.۵۴۵:  تفاعل $\OML/zplm/m/it/10 
 e[] [] x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے مکلارن تسلسل کے ابتدائی پانچ غی
 ر صفر اجزاء دریافت کرنے کی خاطر $\OML/zplm/m/it/10 e[]$ \TU/JameelNooriNastalee
@@ -3811,12 +3850,12 @@ q(0)/b/n/10 اور $[] \OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 �
  []
 
 [1015]
-Underfull \hbox (badness 10000) in paragraph at lines 7264--7272
+Underfull \hbox (badness 10000) in paragraph at lines 7271--7279
 [][]
  []
 
 
-Underfull \hbox (badness 2941) in paragraph at lines 7274--7276
+Underfull \hbox (badness 2941) in paragraph at lines 7281--7283
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 فرض کریں $\OML/zplm/m/it/10 n$ \TU/Jamee
 lNooriNastaleeq(0)/b/n/10 اعشاریہ مقامات تک درستگی تک $\OML/zplm/m/it/10 ^^Y$ \
 TU/JameelNooriNastaleeq(0)/b/n/10 کی تخمین $\OML/zplm/m/it/10 P$ \TU/JameelNoor
@@ -3827,7 +3866,7 @@ iNastaleeq(0)/b/n/10 ہے۔ دکھائیں کہ $\OML/zplm/m/it/10 P \OT1/zplm/m
  []
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 7278--7282
+Underfull \hbox (badness 1735) in paragraph at lines 7285--7289
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۹.۵۵۴: []تفاعل $\OML/zplm/m/it/10 f
 \OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 ) = [][] \OML/zplm/m/it/1
 0 a[]x[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کا پیدا کردہ مکلارن تسلسل $[][] \O
@@ -3836,12 +3875,12 @@ ML/zplm/m/it/10 a[]x[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہے۔ ایک تفا�
  []
 
 [1016]
-Underfull \hbox (badness 10000) in paragraph at lines 7302--7305
+Underfull \hbox (badness 10000) in paragraph at lines 7309--7312
 [][]
  []
 
 [1017]
-Underfull \hbox (badness 10000) in paragraph at lines 7367--7371
+Underfull \hbox (badness 10000) in paragraph at lines 7374--7378
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۹.۵۶۲:  تفاعل $\OML/zplm/m/it/10 e[
 ]$ \TU/JameelNooriNastaleeq(0)/b/n/10 اور $[] \OML/zplm/m/it/10 x$ \TU/JameelNo
 oriNastaleeq(0)/b/n/10 کے مکلارن تسلسلوں کو آپس میں ضرب کرتے ہوئے $\OML/zplm/m/
@@ -3850,7 +3889,7 @@ m/m/it/10 x[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 تک[]
  []
 
 
-Underfull \hbox (badness 1881) in paragraph at lines 7367--7371
+Underfull \hbox (badness 1881) in paragraph at lines 7374--7378
 []\TU/JameelNooriNastaleeq(0)/b/n/10 اجزاء تلاش کریں۔ یہ تسلسل $\OML/zplm/m/it/
 10 e[] \OMS/zplm/m/n/10 ^^A \OML/zplm/m/it/10 e[] \OT1/zplm/m/n/10 = \OML/zplm/
 m/it/10 e[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کا خیالی حصہ ہو گا۔ اس حقیقت کو
@@ -3858,14 +3897,14 @@ m/it/10 e[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کا خیالی حصہ ہو گا
  []
 
 [1018]
-Underfull \hbox (badness 10000) in paragraph at lines 7422--7423
+Underfull \hbox (badness 10000) in paragraph at lines 7429--7430
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کمپیوٹر کی مدد لیتے ہوئے سوال ۹.۵۶۶[] تا س
 وال ۹.۵۷۱[] میں دیے تفاعل اور وقفات کے لیے درج ذیل اقدام سے سوال-ا اور سوال-ب ک
 ے جوابات حاصل[]
  []
 
 
-Underfull \hbox (badness 1303) in paragraph at lines 7429--7431
+Underfull \hbox (badness 1303) in paragraph at lines 7436--7438
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 ہر ایک ٹیلر کثیر رکنی کے لیے باقی جزو سے
  وابستہ $\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 n \OT1/zplm/m/n/10 + \OT1/ppl/m/n/
 10 1\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 واں تفرق $\OML/zplm/
@@ -3875,7 +3914,7 @@ ooriNastaleeq(0)/b/n/10 حاصل کریں۔ اس تفرق کو دیے گئے و�
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7431--7433
+Underfull \hbox (badness 10000) in paragraph at lines 7438--7440
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 ہر ایک کثیر رکنی کے لیے باقی $\OML/zplm/
 m/it/10 R[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )$ \TU/JameelN
 ooriNastaleeq(0)/b/n/10 تلاش کریں۔ قدم-3 میں اندازً حاصل $\OML/zplm/m/it/10 M$ 
@@ -3885,53 +3924,53 @@ OML/zplm/m/it/10 c\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10 کی ج
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7469--7470
+Underfull \hbox (badness 10000) in paragraph at lines 7476--7477
 []\TU/JameelNooriNastaleeq(0)/b/n/10 اس حصہ میں ثنائی تسلسل متعارف کرایا جائے گ
 ا جو طاقت اور جذر کا اندازہ کرنے میں مددگار ثابت ہوتا ہے۔ مزید ابتدائی قیمت مسئ
 لے کے حل کو تخمیناً تسلسل سے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7469--7470
+Underfull \hbox (badness 10000) in paragraph at lines 7476--7477
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ظاہر کرنا اور غیر بنیادی تکمل کے قیمت کے ح
 صول میں تسلسل کا کردار دکھایا جائے گا۔ ایسے حد جو غیر معین صورت دیتے ہوں کا حل 
 بھی سکھایا جائے گا۔ ہم[]
  []
 
 [1019]
-LaTeX Info: Redefining \rmfamily on input line 7477.
-LaTeX Info: Redefining \sffamily on input line 7477.
-LaTeX Info: Redefining \ttfamily on input line 7477.
+LaTeX Info: Redefining \rmfamily on input line 7484.
+LaTeX Info: Redefining \sffamily on input line 7484.
+LaTeX Info: Redefining \ttfamily on input line 7484.
  [1020] [1021]
-Underfull \hbox (badness 10000) in paragraph at lines 7533--7534
+Underfull \hbox (badness 10000) in paragraph at lines 7540--7541
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ابتدائی قیمت مسئلے کے حل کی سادہ صورت حاصل
  کرنے میں ناکامی کی صورت میں ہم حل کے بارے میں معلومات دیگر طریقوں سے حاصل کرنے
  کی کوشش[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7533--7534
+Underfull \hbox (badness 10000) in paragraph at lines 7540--7541
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کرتے ہیں۔ ایک طریقہ ہے کہ ہم حل کی طاقتی ت
 سلسل روپ حاصل کریں۔ اگر ہم ایسا کر پائیں تو ہمیں حل کی تخمینی کثیر رکنی حاصل ہو
  گی۔حقیقت میں عموماً[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7533--7534
+Underfull \hbox (badness 10000) in paragraph at lines 7540--7541
 []\TU/JameelNooriNastaleeq(0)/b/n/10 ہمیں یہی درکار ہوتا ہے۔ ہماری پہلی مثال (م
 ثال ۹.۶۷[]) یک رتبی خطی تفرقی مساوات ہے جس کو ہم حصہ ۷.۱۱[] کے تراکیب سے حل کر 
 سکتے ہیں۔ اس مثال[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7533--7534
+Underfull \hbox (badness 10000) in paragraph at lines 7540--7541
 []\TU/JameelNooriNastaleeq(0)/b/n/10 میں ہم فرض کرتے ہیں کہ ہم دیے گئے تفرقی مس
 اوات کو حل کرنا نہیں جانتے ہیں اور اس کو طاقتی تسلسل کے مدد سے حل کرتے ہیں۔ اگل
 ی مثال (مثال ۹.۶۸[])[]
  []
 
 [1022] [1023]
-Underfull \hbox (badness 10000) in paragraph at lines 7608--7610
+Underfull \hbox (badness 10000) in paragraph at lines 7615--7617
 []\TU/JameelNooriNastaleeq(0)/b/n/10 دھیان رہے کہ مساوات ۹[] میں $\OML/zplm/m/i
 t/10 x[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 کا ضریب $\OML/zplm/m/it/10 a[]$ \T
 U/JameelNooriNastaleeq(0)/b/n/10 ہے۔ اگر $\OML/zplm/m/it/10 y$ \TU/JameelNooriN
@@ -3940,7 +3979,7 @@ astaleeq(0)/b/n/10 اور اس کے دو گنا تفرق، مساوات ۶[] ک�
  []
 
 [1024]
-Underfull \hbox (badness 10000) in paragraph at lines 7647--7649
+Underfull \hbox (badness 10000) in paragraph at lines 7654--7656
 []\TU/JameelNooriNastaleeq(0)/b/n/10 جہاں پہلا تسلسل $\OML/zplm/m/it/10 a[]$ \T
 U/JameelNooriNastaleeq(0)/b/n/10 سے ضرب اور دوسرا تسلسل $\OML/zplm/m/it/10 a[]$
  \TU/JameelNooriNastaleeq(0)/b/n/10 سے ضرب ہوا ہے۔ جیسا نسبتی پرکھ سے ظاہر ہے، 
@@ -3949,14 +3988,14 @@ U/JameelNooriNastaleeq(0)/b/n/10 سے ضرب اور دوسرا تسلسل $\OML/
  []
 
 [1025]
-Underfull \hbox (badness 10000) in paragraph at lines 7704--7706
+Underfull \hbox (badness 10000) in paragraph at lines 7711--7713
 []\TU/JameelNooriNastaleeq(0)/b/n/10 کے دونوں اطراف کا تکمل لے کر اسی تسلسل کو 
 دوبارہ حاصل کرتے ہیں، جہاں آخری جزو تسلسل کا باقی ہے جس کو بطور ثنائی تسلسل جمع
  کیا گیا ہے اور اس ثنائی[]
  []
 
 [1026]
-Underfull \hbox (badness 4181) in paragraph at lines 7716--7718
+Underfull \hbox (badness 4181) in paragraph at lines 7723--7725
 []\TU/JameelNooriNastaleeq(0)/b/n/10 گر $[] \OMS/zplm/m/n/10 ^^T \OT1/ppl/m/n/1
 0 1$ \TU/JameelNooriNastaleeq(0)/b/n/10 ہو تب اس عدم مساوات کا دایاں ہاتھ $\OML
 /zplm/m/it/10 n \OMS/zplm/m/n/10 ! 1$ \TU/JameelNooriNastaleeq(0)/b/n/10 کرتے ہ
@@ -3965,27 +4004,27 @@ lNooriNastaleeq(0)/b/n/10 کے لیے[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7726--7727
+Underfull \hbox (badness 10000) in paragraph at lines 7733--7734
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 ہم $[][] \OML/zplm/m/it/10 x$ \TU/Jameel
 NooriNastaleeq(0)/b/n/10 کا مکلارن تسلسل بلا واسطہ اس لیے دریافت نہیں کرتے ہیں 
 کہ $[][] \OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے بلند رتبی ت
 فارق کے کلیات پیچیدہ ہوتے ہیں۔ مذکورہ بالا[]
  []
 
-LaTeX Info: Redefining \rmfamily on input line 7732.
-LaTeX Info: Redefining \sffamily on input line 7732.
-LaTeX Info: Redefining \ttfamily on input line 7732.
+LaTeX Info: Redefining \rmfamily on input line 7739.
+LaTeX Info: Redefining \sffamily on input line 7739.
+LaTeX Info: Redefining \ttfamily on input line 7739.
 
-Underfull \hbox (badness 10000) in paragraph at lines 7731--7733
+Underfull \hbox (badness 10000) in paragraph at lines 7738--7740
 []\TU/JameelNooriNastaleeq(0)/b/n/10 حاصل ہوتا ہے جسے \TU/AASameerSagarNastalee
-qBold(0)/m/n/10 کلیہ لیبنٹز[][] \TU/JameelNooriNastaleeq(0)/b/n/10 کہتے ہیں۔ یہ
- تسلسل بہت آہستہ مرتکز ہے لہٰذا یہ $\OML/zplm/m/it/10 ^^Y$ \TU/JameelNooriNasta
-leeq(0)/b/n/10 کی قیمت حاصل کرنے کے لیے زیادہ مفید ثابت نہیں ہوتا ہے۔ $\OML/zpl
-m/m/it/10 ^^Y$[]
+qBold(0)/m/n/10 کلیہ لیبنز[][] \TU/JameelNooriNastaleeq(0)/b/n/10 کہتے ہیں۔ یہ 
+تسلسل بہت آہستہ مرتکز ہے لہٰذا یہ $\OML/zplm/m/it/10 ^^Y$ \TU/JameelNooriNastal
+eeq(0)/b/n/10 کی قیمت حاصل کرنے کے لیے زیادہ مفید ثابت نہیں ہوتا ہے۔ $\OML/zplm
+/m/it/10 ^^Y$[]
  []
 
 [1027]
-Underfull \hbox (badness 10000) in paragraph at lines 7776--7777
+Underfull \hbox (badness 10000) in paragraph at lines 7783--7784
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 ہم تسلسل استعمال کر کے نا صرف $[][]\OT1/
 zplm/m/n/10 ([] \OMS/zplm/m/n/10 ^^@ []\OT1/zplm/m/n/10 )$ \TU/JameelNooriNasta
 leeq(0)/b/n/10 کی قیمت تلاش کر پاتے ہیں بلکہ اس عمل میں $[] \OML/zplm/m/it/10 x
@@ -3993,12 +4032,12 @@ $ \TU/JameelNooriNastaleeq(0)/b/n/10 کا تخمینی کلیہ بھی حاصل 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7781--7782
+Underfull \hbox (badness 10000) in paragraph at lines 7788--7789
 [][]
  []
 
 [1028]
-Overfull \hbox (38.41016pt too wide) detected at line 7810
+Overfull \hbox (38.41016pt too wide) detected at line 7817
 []
  []
 
@@ -4006,12 +4045,12 @@ Overfull \hbox (38.41016pt too wide) detected at line 7810
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1029]
-Overfull \hbox (10.07616pt too wide) detected at line 7821
+Overfull \hbox (10.07616pt too wide) detected at line 7828
 []
  []
 
 [1030] [1031]
-Underfull \hbox (badness 10000) in paragraph at lines 8051--8053
+Underfull \hbox (badness 10000) in paragraph at lines 8058--8060
 []\TU/JameelNooriNastaleeq(0)/b/n/10 سوال ۹.۶۰۴[] تا سوال ۹.۶۰۷[] میں تسلسل است
 عمال کرتے ہوئے، خلل کو $\OT1/ppl/m/n/10 10[]$ \TU/JameelNooriNastaleeq(0)/b/n/1
 0 کم رکھتے ہوئے تکمل کی قیمت کا اندازہ لگائیں۔ (جوابات $\OT1/ppl/m/n/10 5$ \TU/
@@ -4019,7 +4058,7 @@ JameelNooriNastaleeq(0)/b/n/10 اعشاریہ تک[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8081--8082
+Underfull \hbox (badness 10000) in paragraph at lines 8088--8089
 [][]\TU/JameelNooriNastaleeq(0)/b/n/10 سوال ۹.۶۰۸[] تا سوال ۹.۶۱۱[] میں تسلسل ا
 ستعمال کرتے ہوئے، خلل کو $\OT1/ppl/m/n/10 10[]$ \TU/JameelNooriNastaleeq(0)/b/n
 /10 کم رکھتے ہوئے تکمل کی قیمت کا اندازہ لگائیں۔ (جوابات $\OT1/ppl/m/n/10 10$ \
@@ -4027,7 +4066,7 @@ TU/JameelNooriNastaleeq(0)/b/n/10 اعشاریہ تک[]
  []
 
 [1032] [1033]
-Underfull \hbox (badness 1275) in paragraph at lines 8227--8231
+Underfull \hbox (badness 1275) in paragraph at lines 8234--8238
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۹.۶۲۹:  خلل کی مقدار کو $\OT1/ppl/m
 /n/10 10[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 سے کم رکھتے ہوئے $[]\OT1/zplm/m/
 n/10 (\OT1/ppl/m/n/10 1.1\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10
@@ -4037,14 +4076,14 @@ n/10 (\OT1/ppl/m/n/10 1.1\OT1/zplm/m/n/10 )$ \TU/JameelNooriNastaleeq(0)/b/n/10
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8231--8235
+Underfull \hbox (badness 10000) in paragraph at lines 8238--8242
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۹.۶۳۰:  خلل کی مقدار کو $\OT1/ppl/m
 /n/10 10[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 سے کم رکھتے ہوئے $[]$ کی قیمت حا
 صل کرنے کے لیے مسئلہ بدلتے تسلسل کا اندازہ کے تحت[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8244--8248
+Underfull \hbox (badness 10000) in paragraph at lines 8251--8255
 [] \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۹.۶۳۲:  خلل کی مقدار کو $\OT1/ppl/m
 /n/10 10[]$ \TU/JameelNooriNastaleeq(0)/b/n/10 رکھنے کے لیے درج ذیل مساوات کے د
 ائیں ہاتھ میں ہر $[][] \OML/zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 
@@ -4052,7 +4091,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8244--8248
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8252--8261
+Underfull \hbox (badness 10000) in paragraph at lines 8259--8268
 []   \TU/JameelNooriNastaleeq(0)/b/n/10 سوال  ۹.۶۳۳:  تفاعل $[] \OML/zplm/m/it/
 10 t$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے مکلارن تسلسل کے ابتدائی تین غیر صفر
  اجزاء کا تکمل $\OT1/ppl/m/n/10 0$ \TU/JameelNooriNastaleeq(0)/b/n/10 تا $\OML/
@@ -4061,7 +4100,7 @@ zplm/m/it/10 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 لیتے ہوئے $[] [] \OML
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8267--8269
+Underfull \hbox (badness 10000) in paragraph at lines 8274--8276
 []\TU/JameelNooriNastaleeq(0)/b/n/10 استعمال کرتے ہوئے $[][] \OML/zplm/m/it/10 
 x$ \TU/JameelNooriNastaleeq(0)/b/n/10 کے مکلارن تسلسل کے ابتدائی چار غیر صفر اج
 زاء تلاش کریں۔رداس ارتکاز کتنا ہو گا؟ (ب) تفاعل $[][] \OML/zplm/m/it/10 x$ \TU/
@@ -10516,10 +10555,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 69113 strings out of 474878
- 1876353 string characters out of 9512517
- 2734479 words of memory out of 7000000
- 90011 multiletter control sequences out of 15000+600000
+ 69112 strings out of 474878
+ 1876320 string characters out of 9512517
+ 2734448 words of memory out of 7000000
+ 90010 multiletter control sequences out of 15000+600000
  589664 words of font info for 187 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,20n,121p,2420b,2699s stack positions out of 10000i,1000n,20000p,200000b,200000s
