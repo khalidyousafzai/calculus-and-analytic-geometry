@@ -1,1117 +1,907 @@
- {\urduTechTermsfont {حصہ}} \protect ۹.\protect ۱\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۹۰۵
+ {\urduTechTermsfont {حصہ}} \protect ۱۰.\protect ۱\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۱۰۵۰
 \begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
 \item [
-\protect ۹.\protect ۱)
+\protect ۱۰.\protect ۱)
 ]
- $a_1=0,\, a_2=-\tfrac {1}{4},\,a_3=-\tfrac {2}{9},\,a_4=-\tfrac {3}{16}$ 
+ \عددی {y^2=8x}، ماسکہ \عددی {F(2,0)} اور ناظمہ \عددی {x=-2} 
 \item [
-\protect ۹.\protect ۳)
+\protect ۱۰.\protect ۳)
 ]
- $a_1=1,\,a_2=-\tfrac {1}{3},\,a_3=\tfrac {1}{5},\,a_4=-\tfrac {1}{7}$ 
+ \عددی {x^2=-6y}، ماسکہ \عددی {F(0,-\tfrac {3}{2})} اور ناظمہ \عددی {y=\tfrac {3}{2}} 
 \item [
-\protect ۹.\protect ۵)
+\protect ۱۰.\protect ۵)
 ]
- $a_1=\tfrac {1}{2},\,a_2=\tfrac {1}{2},\,a_3=\tfrac {1}{2},\,a_4=\tfrac {1}{2}$ 
+ \عددی {\tfrac {x^2}{4}-\tfrac {y^2}{9}=1}، ماسکے \عددی {F(\pm \sqrt {13},0)}، رؤوس \عددی {V(\pm 2,0)} اور متقارب \عددی {y=\pm \tfrac {3}{2}x} 
 \item [
-\protect ۹.\protect ۷)
+\protect ۱۰.\protect ۷)
 ]
- $1,\tfrac {3}{2},\tfrac {7}{4},\tfrac {15}{8},\tfrac {31}{16},\tfrac {63}{32},\tfrac {127}{64},\tfrac {255}{128},\tfrac {511}{256},\tfrac {1023}{512}$ 
+ \عددی {\tfrac {x^2}{2}+y^2=1}، ماسکے \عددی {F(\pm 1,0)}، رؤوس \عددی {V(\pm \sqrt {2},0)} 
 \item [
-\protect ۹.\protect ۹)
+\protect ۱۰.\protect ۹)
 ]
- $2,1,-\tfrac {1}{2},-\tfrac {1}{4},\tfrac {1}{8},\tfrac {1}{16},-\tfrac {1}{32},-\tfrac {1}{64},\tfrac {1}{128},\tfrac {1}{256}$ 
+ \begin {minipage}{0.45\textwidth } \begin {tikzpicture}[font=\tiny ,declare function={f(\x )=sqrt(12*\x );}] \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-3},ytick={3}] \addplot [domain=0:0.2]{f(x)}; \addplot [domain=0.2:4]{f(x)}node[pos=0.75,below right]{$y^2=12x$}; \addplot [domain=0:0.2]{-f(x)}; \addplot [domain=0.2:4]{-f(x)}; \addplot []plot coordinates {(-3,-7)(-3,7)}node[pos=0.85,right]{$x=-3$}; \addplot []plot coordinates {(3,0)}node[circ]{}node[below]{$F(3,0)$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۱۱)
+\protect ۱۰.\protect ۱۱)
 ]
- $1,1,2,3,5,8,13,21,34,55$ 
+ \begin {minipage}{0.45\textwidth } \begin {tikzpicture}[font=\tiny ,declare function={f(\x )=-1/8*(\x )^2;}] \begin {axis}[width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={2},ytick={2},y tick label style={yshift=0.5ex}] \addplot [domain=-3:3]{f(x)}node[pos=0.25,below,yshift=-0.5ex]{$x^2=-8y$}; \addplot []plot coordinates {(-3,2)(3,2)}node[pos=0.85,below]{$y=2$}; \addplot []plot coordinates {(0,-2)}node[circ]{}node[right]{$F(0,-2)$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۱۳)
+\protect ۱۰.\protect ۱۳)
 ]
- $a_n=(-1)^{n+1},\, n\ge 1$ 
+ \begin {minipage}{0.45\textwidth } \begin {tikzpicture}[font=\tiny ,declare function={f(\x )=4*(\x )^2;}] \pgfmathsetmacro {\d }{1/16} \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={0.25},ytick={0.25},xticklabels={$\tfrac {1}{4}$},yticklabels={$\tfrac {1}{4}$}] \addplot [domain=-0.3:0.3]{f(x)}node[left]{$y=4x^2$}; \addplot []plot coordinates {(-0.3,-\d )(0.3,-\d )}node[pos=0.15,below]{$y=-\tfrac {1}{16}$}; \addplot []plot coordinates {(0,\d )}node[circ]{}node[right]{$F(0,\tfrac {1}{16})$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۱۵)
+\protect ۱۰.\protect ۱۵)
 ]
- $a_n=(-1)^{n+1}(n)^2,\, n\ge 1$ 
+ \begin {minipage}{0.45\textwidth } \begin {tikzpicture}[font=\tiny ,declare function={f(\x )=sqrt(-1/3*\x );}] \pgfmathsetmacro {\d }{1/12} \pgfmathsetmacro {\yt }{1/6} \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={\d },ytick={-\yt ,\yt },xticklabels={\hspace *{2ex}$\tfrac {1}{12}$},yticklabels={$-\tfrac {1}{6}$,$\tfrac {1}{6}$}] \addplot [domain=-0.15:0]{f(x)}node[pos=0,below]{$x=-3y^2$}; \addplot [domain=-0.15:0]{-f(x)}; \addplot []plot coordinates {(\d ,-0.2)(\d ,0.2)}node[above]{$x=\tfrac {1}{12}$}; \addplot []plot coordinates {(-\d ,0)}node[circ]{}node[below]{$F(-\tfrac {1}{12},0)$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۱۷)
+\protect ۱۰.\protect ۱۷)
 ]
- $a_n=n^2-1,\, n\ge 1$ 
+ \begin {minipage}{0.45\textwidth } \begin {tikzpicture}[font=\tiny ,declare function={f(\x )=4/5*sqrt(25-(\x )^2);}] \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-3,3},ytick={-4,4}] \addplot [domain=-4.8:4.8]{f(x)}node[pos=0.8,above,xshift=1ex]{$\tfrac {x^2}{25}+\tfrac {y^2}{16}=1$}; \addplot [domain=-4.8:4.8]{-f(x)}; \addplot [domain=-5:-4.8]{f(x)}; \addplot [domain=-5:-4.8]{-f(x)}; \addplot [domain=4.8:5]{f(x)}; \addplot [domain=4.8:5]{-f(x)}; \addplot []plot coordinates {(-3,0)}node[above]{$F_1$} {(3,0)}node[above]{$F_2$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۱۹)
+\protect ۱۰.\protect ۱۹)
 ]
- $a_n=4n-3,\, n\ge 1$ 
+ \begin {minipage}{0.45\textwidth } \begin {tikzpicture}[font=\tiny ,declare function={f(\x )=sqrt(2-2*(\x )^2);}] \pgfmathsetmacro {\k }{sqrt(2)} \begin {axis}[axis equal,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-1,1},ytick={-1,1}] \addplot [domain=-0.8:0.8]{f(x)}node[pos=0.75,above,xshift=3ex]{$x^2+\tfrac {y^2}{2}=1$}; \addplot [domain=-0.8:0.8]{-f(x)}; \addplot [domain=-1:-0.8]{f(x)}; \addplot [domain=0.8:1]{f(x)}; \addplot [domain=-1:-0.8]{-f(x)}; \addplot [domain=0.8:1]{-f(x)}; \addplot []plot coordinates {(0,1)}node[right]{$F_1$} {(0,-1)}node[right]{$F_2$}; \addplot []plot coordinates {(0,\k )}node[shift={(-2ex,0.25ex)}]{$\sqrt {2}$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۲۱)
+\protect ۱۰.\protect ۲۱)
 ]
- $a_n=\tfrac {1+(-1)^{n+1}}{2},\, n\ge 1$ 
+ \begin {minipage}{0.45\textwidth } \begin {tikzpicture}[font=\tiny ,declare function={f(\x )=sqrt(3/2)*sqrt(2-(\x )^2);}] \pgfmathsetmacro {\k }{sqrt(2)} \pgfmathsetmacro {\kk }{sqrt(3)} \begin {axis}[axis equal,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={\empty },ytick={-1,1}] \addplot [domain=-\k +0.2:\k -0.2]{f(x)}node[pos=0.75,above,xshift=3ex]{$\tfrac {x^2}{2}+\tfrac {y^2}{3}=1$}; \addplot [domain=-\k +0.2:\k -0.2]{-f(x)}; \addplot [domain=-\k :-\k +0.2]{f(x)}; \addplot [domain=\k -0.2:\k ]{f(x)}; \addplot [domain=-\k :-\k +0.2]{-f(x)}; \addplot [domain=\k -0.2:\k ]{-f(x)}; \addplot []plot coordinates {(0,1)}node[right]{$F_1$} {(0,-1)}node[right]{$F_2$}; \addplot []plot coordinates {(\k ,0)}node[shift={(1ex,-1ex)}]{$\sqrt {2}$} {(0,\kk )}node[shift={(-2ex,0.25ex)}]{$\sqrt {3}$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۲۳)
+\protect ۱۰.\protect ۲۳)
 ]
- $N=692,\, a_n=\sqrt [n]{0.5},\,L=1$ 
+ \begin {minipage}{0.45\textwidth } \begin {tikzpicture}[font=\tiny ,declare function={f(\x )=sqrt(6/9)*sqrt(9-(\x )^2);}] \pgfmathsetmacro {\k }{sqrt(9)} \pgfmathsetmacro {\kk }{sqrt(6)} \pgfmathsetmacro {\kkk }{sqrt(3)} \begin {axis}[axis equal,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-\kkk ,\kkk },xticklabels={$-\sqrt {3}$,$\sqrt {3}$},ytick={\empty }] \addplot [domain=-\k +0.2:\k -0.2]{f(x)}node[pos=0.75,above,xshift=3ex]{$\tfrac {x^2}{9}+\tfrac {y^2}{6}=1$}; \addplot [domain=-\k +0.2:\k -0.2]{-f(x)}; \addplot [domain=-\k :-\k +0.2]{f(x)}; \addplot [domain=\k -0.2:\k ]{f(x)}; \addplot [domain=-\k :-\k +0.2]{-f(x)}; \addplot [domain=\k -0.2:\k ]{-f(x)}; \addplot []plot coordinates {(-\kkk ,0)}node[above]{$F_1$} {(\kkk ,0)}node[above]{$F_2$}; \addplot []plot coordinates {(0,\kk )}node[shift={(-2ex,0.25ex)}]{$\sqrt {6}$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۲۵)
+\protect ۱۰.\protect ۲۵)
 ]
- $N=65,\, a_n=(0.9)^n,\, L=0$ 
+ $\tfrac {x^2}{4}+\tfrac {y^2}{2}=1$ 
 \item [
-\protect ۹.\protect ۲۷)
+\protect ۱۰.\protect ۲۷)
 ]
- (ب) \عددی {\sqrt {3}} 
+ متقارب \عددی {y=\pm x} ہیں۔ \begin {minipage}{0.45\textwidth } \begin {tikzpicture}[font=\tiny ,declare function={f(\x )=sqrt((\x )^2-1);fa(\x )=\x ;}] \pgfmathsetmacro {\f }{sqrt(2)} \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-\f ,\f ,1,-1},xticklabels={\llap {$-\sqrt {2}$},\rlap {$\sqrt {2}$},\llap {$1$},},ytick={\empty }] \addplot [domain=-3:1]{f(x)}; \addplot [domain=-3:1]{-f(x)}; \addplot [domain=1:3]{f(x)}node[pos=0.9,below,xshift=2ex]{$x^2-y^2=1$}; \addplot [domain=1:3]{-f(x)}; \addplot [dashed,domain=-3:3]{fa(x)}; \addplot [dashed,domain=-3:3]{-fa(x)}; \addplot []plot coordinates {(-\f ,0)}node[above,xshift=-1ex]{$F_1$} {(\f ,0)}node[above,xshift=1ex]{$F_2$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۱)
+\protect ۱۰.\protect ۲۹)
 ]
- غیر گھٹتی، محدود 
+ متقارب \عددی {y=\pm x} ہیں۔ \begin {minipage}{0.45\textwidth } \begin {tikzpicture}[font=\tiny ,declare function={f(\x )=sqrt((\x )^2+8);fa(\x )=\x ;}] \pgfmathsetmacro {\f }{4} \pgfmathsetmacro {\k }{sqrt(8)} \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ytick={-\f ,\f },xtick={\empty }] \addplot [domain=-4:4]{f(x)}node[above]{$\tfrac {y^2}{8}-\tfrac {x^2}{8}=1$}; \addplot [domain=-4:4]{-f(x)}; \addplot [dashed,domain=-4:4]{fa(x)}; \addplot [dashed,domain=-4:4]{-fa(x)}; \addplot []plot coordinates {(0,-\f )}node[right]{$F_2$} {(0,\f )}node[right]{$F_1$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۳)
+\protect ۱۰.\protect ۳۱)
 ]
- غیر گھٹتی نہیں ہے، محدود 
+ متقارب \عددی {y=\pm 2x} ہیں۔ \begin {minipage}{0.45\textwidth } \begin {tikzpicture}[font=\tiny ,declare function={f(\x )=1/2*sqrt((\x )^2+8);fa(\x )=2*\x ;}] \pgfmathsetmacro {\f }{sqrt(10)} \pgfmathsetmacro {\k }{sqrt(2)} \pgfmathsetmacro {\kk }{sqrt(8)} \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-\f ,\f },xticklabels={$-\sqrt {10}$,$\sqrt {10}$},xmax=3,ytick={\empty }] \addplot [domain=-3:3]({f(x)},x)node[above,xshift={2ex}]{$\tfrac {x^2}{2}-\tfrac {y^2}{8}=1$}; \addplot [domain=-3:3]({-f(x)},x); \addplot [dashed,domain=-\k :\k ]{fa(x)}; \addplot [dashed,domain=-\k :\k ]{-fa(x)}; \addplot []plot coordinates {(-\f ,0)}node[above]{$F_1$} {(\f ,0)}node[above]{$F_2$}; \addplot []plot coordinates {(\k ,0)}node[shift={(-1ex,1ex)}]{$\sqrt {2}$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۵)
+\protect ۱۰.\protect ۳۳)
 ]
- مرتکز، غیر گھٹتی، غیر گھٹتی ترتیب کا مسئلہ 
+ متقارب \عددی {y=\pm \tfrac {x}{2}} ہیں۔ \begin {minipage}{0.45\textwidth } \begin {tikzpicture}[font=\tiny ,declare function={f(\x )=1/2*sqrt((\x )^2+8);fa(\x )=1/2*\x ;}] \pgfmathsetmacro {\f }{sqrt(10)} \pgfmathsetmacro {\k }{sqrt(2)} \pgfmathsetmacro {\kk }{sqrt(8)} \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ytick={-\f ,\f },yticklabels={$-\sqrt {10}$,$\sqrt {10}$},ymin=-3,ymax=3,xtick={\empty }] \addplot [domain=-3:3]{f(x)}node[above,xshift={2ex}]{$\tfrac {y^2}{2}-\tfrac {x^2}{8}=1$}; \addplot [domain=-3:3]{-f(x)}; \addplot [dashed,domain=-3:3]{fa(x)}; \addplot [dashed,domain=-3:3]{-fa(x)}; \addplot []plot coordinates {(0,-\f )}node[right]{$F_2$} {(0,\f )}node[right]{$F_1$}; \addplot []plot coordinates {(0,\k )}node[shift={(-1ex,-1ex)}]{$\sqrt {2}$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۷)
+\protect ۱۰.\protect ۳۵)
 ]
- مرتکز، غیر گھٹتی، غیر گھٹتی ترتیب کا مسئلہ 
+ $y^2-x^2=1$ 
 \item [
-\protect ۹.\protect ۳۹)
+\protect ۱۰.\protect ۳۷)
 ]
- منفرج، انفراج کی تعریف 
+ $\tfrac {x^2}{9}-\tfrac {y^2}{16}=1$ 
 \item [
-\protect ۹.\protect ۴۳)
+\protect ۱۰.\protect ۳۹)
 ]
- مرتکز 
+ (الف) راس \عددی {(1,-2)}، ماسکہ \عددی {(3,-2)}، ناظمہ \عددی {{x{=}-1}}؛ (ب) \\ \begin {minipage}{0.45\textwidth } \begin {tikzpicture}[font=\tiny ,declare function={f(\x )=1+1/8*(\x +2)^2;}] \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={1,2,3},ytick={-4,-2,2}] \addplot [domain=-4:4]({f(x)},x)node[above left]{$(y+2)^2=8(x-1)$}; \addplot []plot coordinates {(1,-2)}node[circ]{}node[pin=-45:{$V(1,-2)$}]{} {(3,-2)}node[circ]{}node[right]{$F(3,-2)$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۴۵)
+\protect ۱۰.\protect ۴۱)
 ]
- مرتکز 
+ (الف) ماسکے \عددی {(4\pm \sqrt {7},3)}، رؤوس \عددی {(8,3)} اور \عددی {(0,3)}، مرکز \عددی {(4,3)}؛ (ب)\\ \begin {minipage}{0.45\textwidth } \begin {tikzpicture}[font=\tiny ,declare function={fp(\x )=3+3/4*sqrt(16-(\x -4)^2);fn(\x )=3-3/4*sqrt(16-(\x -4)^2);}] \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={4,8},ytick={6}] \addplot [domain=0.2:8-0.2]{fp(x)}node[pos=0.6,above]{$\tfrac {(x-4)^2}{16}+\tfrac {(y-3)^2}{9}=1$}; \addplot [domain=0.2:8-0.2]{fn(x)}; \addplot [domain=0:0.2]{fp(x)}; \addplot [domain=7.8:8]{fp(x)}; \addplot [domain=0:0.2]{fn(x)}; \addplot [domain=7.8:8]{fn(x)}; \addplot []plot coordinates {(4-sqrt(7),3)}node[circ]{}node[pin={[pin distance=0.15cm]80:{$F_1(4-\sqrt {7},3)$}}]{}; \addplot []plot coordinates {(4+sqrt(7),3)}node[circ]{}node[pin={[pin distance=0.15cm]-110:{$F_2(4+\sqrt {7},3)$}}]{}; \addplot []plot coordinates {(4,3)}node[circ]{}node[above,xshift=2ex]{$C(4,3)$}; \addplot []plot coordinates {(0,3)}node[circ]{}node[left]{$(0,3)$}; \addplot []plot coordinates {(8,3)}node[circ]{}node[right]{$(8,3)$}; \end {axis} \end {tikzpicture} \end {minipage} 
+\item [
+\protect ۱۰.\protect ۴۳)
+]
+ (الف) مرکز \عددی {(2,0)}، ماسکے \عددی {(7,0)} اور \عددی {(-3,0)}، رؤوس \عددی {(6,0)} اور \عددی {(-2,0)}،\\ متقاربات \عددی {y=\pm \tfrac {3}{4}(x-2)}؛ (ب) \\ \begin {minipage}{0.45\textwidth } \begin {tikzpicture}[font=\tiny ,declare function={fp(\x )=2+4/3*sqrt(9+(\x )^2);fn(\x )=2-4/3*sqrt(9+(\x )^2);fa(\x )=3/4*(\x -2);}] \pgfmathsetmacro {\k }{5} \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={\empty },ytick={\empty }] \addplot [domain=-\k :\k ]({fp(x)},x)node[above]{$\tfrac {(x-2)^2}{16}-\tfrac {y^2}{9}=1$}; \addplot [domain=-\k :\k ]({fn(x)},x); \addplot [dashed,domain=-5:9]{fa(x)}; \addplot [dashed,domain=-5:9]{-fa(x)}node[pos=0,above,xshift={-1ex}]{$y=-\tfrac {3}{4}(x-2)$}; \addplot []plot coordinates {(-3,0)}node[circ]{}node[above left]{$(-3,0)$}; \addplot []plot coordinates {(7,0)}node[circ]{}node[above right]{$(7,0)$}; \addplot []plot coordinates {(-2,0)}node[circ]{}node[pin=-135:{$(-2,0)$}]{}; \addplot []plot coordinates {(6,0)}node[circ]{}node[pin=-45:{$(6,0)$}]{}; \end {axis} \end {tikzpicture} \end {minipage} 
+\item [
+\protect ۱۰.\protect ۴۵)
+]
+ \عددی {(y+3)^2=4(x+2)}، راس \عددی {V(-2,-3)}، ماسکہ \عددی {F(-1,-3)}، ناظمہ \عددی {x=-3} 
+\item [
+\protect ۱۰.\protect ۴۷)
+]
+ \عددی {(x-1)^2=8(y+7)}، راس \عددی {V(1,-7)}، ماسکہ \عددی {F(1,-5)}، ناظمہ \عددی {y=-9} 
+\item [
+\protect ۱۰.\protect ۴۹)
+]
+ \عددی {\tfrac {(x+2)^2}{6}+\tfrac {(y+1)^2}{9}=1}، \عددی {F(-2,\pm \sqrt {3}-1)}، \عددی {V(-2,\pm 3-1)}، \عددی {C(-2,-1)} 
+\item [
+\protect ۱۰.\protect ۵۱)
+]
+ \عددی {\tfrac {(x-2)^2}{3}+\tfrac {(y-3)^2}{2}=1}، \عددی {F(3,3)} اور \عددی {F(1,3)}، \عددی {V(\pm \sqrt {3}+2,3)}، \عددی {C(2,3)} 
+\item [
+\protect ۱۰.\protect ۵۳)
+]
+ \عددی {\tfrac {(x-2)^2}{4}-\tfrac {(y-2)^2}{5}=1}، \عددی {C(2,2)}، \عددی {F(5,2)} اور \عددی {F(-1,2)}، \عددی {V(4,2)} اور \عددی {V(0,2)}، متقارب \عددی {y-2=\pm \tfrac {\sqrt {5}}{2}(x-2)} 
+\item [
+\protect ۱۰.\protect ۵۵)
+]
+ \عددی {(y+1)^2-(x+1)^2=1}، \عددی {C(-1,-1)}، \عددی {F(-1,\sqrt {2}-1)} اور \عددی {F(-1,-\sqrt {2}-1)}، \عددی {V(-1,0)}، \عددی {V(-1,-2)}، \\ متقارب \عددی {y+1=\pm (x+1)} 
+\item [
+\protect ۱۰.\protect ۵۷)
+]
+ \عددی {C(-2,0)}، \عددی {a=4} 
+\item [
+\protect ۱۰.\protect ۵۹)
+]
+ \عددی {V(-1,1)}، \عددی {F(-1,0)} 
+\item [
+\protect ۱۰.\protect ۶۱)
+]
+ ترخیم \عددی {\tfrac {(x+2)^2}{5}+y^2=1}، \عددی {C(-2,0)}، \عددی {F(0,0)} اور \عددی {F(-4,0)}، \عددی {V(\sqrt {5}-2,0)} اور \عددی {V(-\sqrt {5}-2,0)} 
+\item [
+\protect ۱۰.\protect ۶۳)
+]
+ ترخیم \عددی {\tfrac {(x-1)^2}{5}+(y-1)^2=1}، \عددی {C(1,1)}، \عددی {F(2,1)} اور \عددی {F(0,1)}، \عددی {V(\sqrt {2}+1,1)} اور \عددی {V(-\sqrt {2}+1,1)} 
+\item [
+\protect ۱۰.\protect ۶۵)
+]
+ قطع زائد \عددی {(x-1)^2-(y-2)^2=1}، \عددی {C(1,2)}، \عددی {F(1+\sqrt {2},2)} اور \عددی {F(1-\sqrt {2},2)}، \عددی {V(2,2)} اور \عددی {V(0,2)}،\\ متقارب \عددی {y-2=\pm (x-1)} 
+\item [
+\protect ۱۰.\protect ۶۷)
+]
+ قطع زائد، \عددی {\tfrac {(y-3)^2}{6}-\tfrac {x^2}{3}=1}، \عددی {C(0,3)}، \عددی {F(0,6)} اور \عددی {F(0,0)}، \عددی {V(0,\sqrt {6}+3)} اور \عددی {V(0,-\sqrt {6}+3)}، \\ متقارب \عددی {y=\sqrt {2}x+3} اور \عددی {y=-\sqrt {2}x+3} 
+\item [
+\protect ۱۰.\protect ۶۹)
+]
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\tiny ,declare function={f(\x )=1/4*sqrt(144-9*(\x )^2);}] \begin {axis}[axis on top=true,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={4},ytick={3}] \addplot [name path=a,domain=-4+0.2:4-0.2]{f(x)}node[pos=0.75,above right]{$9x^2+16y^2\le 144$}; \addplot [name path=aa,domain=-4+0.2:4-0.2]{-f(x)}; \addplot [name path=b,domain=-4:-4+0.2]{f(x)}; \addplot [name path=c,domain=4-0.2:4]{f(x)}; \addplot [name path=bb,domain=-4:-4+0.2]{-f(x)}; \addplot [name path=cc,domain=4-0.2:4]{-f(x)}; \addplot [llgray] fill between [of={a and aa}]; \addplot [llgray] fill between [of={b and bb}]; \addplot [llgray] fill between [of={c and cc}]; \end {axis} \end {tikzpicture} \end {minipage} 
+\item [
+\protect ۱۰.\protect ۷۱)
+]
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\tiny ,declare function={fa(\x )=1/4*sqrt(4-(\x )^2);fb(\x )=1/3*sqrt(36-4*(\x )^2);}] \pgfmathsetmacro {\k }{2} \pgfmathsetmacro {\kk }{3} \begin {axis}[axis on top=true,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={3},ytick={3}] \addplot [name path=a,domain=-\kk +0.2:\kk -0.2]{fb(x)}node[pos=0.75,above right]{$4x^2+9y^2\le 36$}node[pos=0.25,above left]{$x^2+4y^2\ge 4$}; \addplot [name path=aa,domain=-\kk +0.2:\kk -0.2]{-fb(x)}; \addplot [name path=b,domain=-\kk :-\kk +0.2]{fb(x)}; \addplot [name path=c,domain=\kk -0.2:\kk ]{fb(x)}; \addplot [name path=bb,domain=-\kk :-\kk +0.2]{-fb(x)}; \addplot [name path=cc,domain=\kk -0.2:\kk ]{-fb(x)}; \addplot [llgray] fill between [of={a and aa}]; \addplot [llgray] fill between [of={b and bb}]; \addplot [llgray] fill between [of={c and cc}]; \addplot [name path=a,domain=-\k +0.2:\k -0.2]{fa(x)}; \addplot [name path=aa,domain=-\k +0.2:\k -0.2]{-fa(x)}; \addplot [name path=b,domain=-\k :-\k +0.2]{fa(x)}; \addplot [name path=c,domain=\k -0.2:\k ]{fa(x)}; \addplot [name path=bb,domain=-\k :-\k +0.2]{-fa(x)}; \addplot [name path=cc,domain=\k -0.2:\k ]{-fa(x)}; \addplot [white] fill between [of={a and aa}]; \addplot [white] fill between [of={b and bb}]; \addplot [white] fill between [of={c and cc}]; \end {axis} \end {tikzpicture} \end {minipage} 
+\item [
+\protect ۱۰.\protect ۷۳)
+]
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\tiny ,declare function={f(\x )=1/2*sqrt(4+(\x )^2);}] \begin {axis}[axis on top=true,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true] \addplot [name path=a,domain=-4:4]{f(x)}node[pos=0.85,below]{$4y^2-x^2\ge 4$}; \addplot [name path=aa,domain=-4:4]{-f(x)}; \addplot [name path=t,draw=none] plot coordinates {(-4,3)(4,3)}; \addplot [name path=b,draw=none] plot coordinates {(-4,-3)(4,-3)}; \addplot [llgray] fill between [of={t and b}]; \addplot [white] fill between [of={a and aa}]; \end {axis} \end {tikzpicture} \end {minipage} 
+\item [
+\protect ۱۰.\protect ۷۷)
+]
+ $3x^2+3y^2-7x-7y+4=0$ 
+\item [
+\protect ۱۰.\protect ۷۹)
+]
+ $(x+2)^2+(y-1)^2=13$\quad نقطہ دائرے کے اندر ہے۔ 
+\item [
+\protect ۱۰.\protect ۸۱)
+]
+ (ب)\عددی {1:1} 
+\item [
+\protect ۱۰.\protect ۸۳)
+]
+ لمبائی \عددی {2\sqrt {2}}، چوڑائی \عددی {\sqrt {2}}، رقبہ \عددی {4} 
+\item [
+\protect ۱۰.\protect ۸۵)
+]
+ \عددی {24\pi } 
+\item [
+\protect ۱۰.\protect ۸۷)
+]
+ \عددی {(0,\tfrac {16}{3\pi })} 
 \end {description}
- {\urduTechTermsfont {حصہ}} \protect ۹.\protect ۲\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۹۱۹
+ {\urduTechTermsfont {حصہ}} \protect ۱۰.\protect ۲\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۱۰۶۲
 \begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
 \item [
-\protect ۹.\protect ۶۹)
+\protect ۱۰.\protect ۹۱)
 ]
- مرتکز، \عددی {2} 
+ $e=\tfrac {3}{5},\, F(\pm 3,0),\, x=\pm \tfrac {25}{3}$ 
 \item [
-\protect ۹.\protect ۷۱)
+\protect ۱۰.\protect ۹۳)
 ]
- مرتکز، \عددی {-1} 
+ $e=\tfrac {1}{\sqrt {2}},\, F(0,\pm 1),\, y=\pm 2$ 
 \item [
-\protect ۹.\protect ۷۳)
+\protect ۱۰.\protect ۹۵)
 ]
- مرتکز، \عددی {-5} 
+ $e=\tfrac {1}{\sqrt {3}},\, F(0,\pm 1),\,y=\pm 3$ 
 \item [
-\protect ۹.\protect ۷۵)
+\protect ۱۰.\protect ۹۷)
 ]
- منفرج 
+ $e=\tfrac {\sqrt {3}}{3},\, F(\pm \sqrt {3},0),\, x=\pm 3\sqrt {3}$ 
 \item [
-\protect ۹.\protect ۷۷)
+\protect ۱۰.\protect ۹۹)
 ]
- منفرج 
+ $\tfrac {x^2}{27}+\tfrac {y^2}{36}=1$ 
 \item [
-\protect ۹.\protect ۷۹)
+\protect ۱۰.\protect ۱۰۱)
 ]
- مرتکز، \عددی {\tfrac {1}{2}} 
+ $\tfrac {x^2}{4851}+\tfrac {y^2}{4900}=1$ 
 \item [
-\protect ۹.\protect ۸۱)
+\protect ۱۰.\protect ۱۰۳)
 ]
- مرتکز، \عددی {0} 
+ $e=\tfrac {\sqrt {5}}{3},\, \tfrac {x^2}{9}+\tfrac {y^2}{4}=1$ 
 \item [
-\protect ۹.\protect ۸۳)
+\protect ۱۰.\protect ۱۰۵)
 ]
- مرتکز، \عددی {\sqrt {2}} 
+ $e=\tfrac {1}{2},\, \tfrac {x^2}{64}+\tfrac {y^2}{48}=1$ 
 \item [
-\protect ۹.\protect ۸۵)
+\protect ۱۰.\protect ۱۰۹)
 ]
- مرتکز، \عددی {1} 
+ $\tfrac {(x-1)^2}{4}+\tfrac {(y-4)^2}{9}=1,\, F(1,4\pm \sqrt {5}),\\ e=\tfrac {\sqrt {5}}{3},\, y=4\pm \tfrac {9\sqrt {5}}{5}$ 
 \item [
-\protect ۹.\protect ۸۷)
+\protect ۱۰.\protect ۱۱۱)
 ]
- مرتکز، \عددی {0} 
+ $a=0,\, b=-4,\, c=0,\, e=\tfrac {\sqrt {3}}{2}$ 
 \item [
-\protect ۹.\protect ۸۹)
+\protect ۱۰.\protect ۱۱۳)
 ]
- مرتکز، \عددی {0} 
+ $e=\sqrt {2},\, F(\pm \sqrt {2},0),\,x=\pm \tfrac {1}{\sqrt {2}}$ 
 \item [
-\protect ۹.\protect ۹۱)
+\protect ۱۰.\protect ۱۱۵)
 ]
- مرتکز، \عددی {0} 
+ $e=\sqrt {2},\, F(0,\pm 4),\, y=\pm 2$ 
 \item [
-\protect ۹.\protect ۹۳)
+\protect ۱۰.\protect ۱۱۷)
 ]
- مرتکز، \عددی {1} 
+ $e=\sqrt {5},\, F(\pm \sqrt {10},0),x=\pm \tfrac {2}{\sqrt {10}}$ 
 \item [
-\protect ۹.\protect ۹۵)
+\protect ۱۰.\protect ۱۱۹)
 ]
- مرتکز، \عددی {e^7} 
+ $e=\sqrt {5},\, F(0,\pm \sqrt {10}),\,y=\pm \tfrac {2}{\sqrt {10}}$ 
 \item [
-\protect ۹.\protect ۹۷)
+\protect ۱۰.\protect ۱۲۱)
 ]
- مرتکز، \عددی {1} 
+ $y^2-\tfrac {x^2}{8}=1$ 
 \item [
-\protect ۹.\protect ۹۹)
+\protect ۱۰.\protect ۱۲۳)
 ]
- مرتکز، \عددی {1} 
+ $x^2-\tfrac {y^2}{8}=1$ 
 \item [
-\protect ۹.\protect ۱۰۱)
+\protect ۱۰.\protect ۱۲۵)
 ]
- منفرج 
+ $e=\sqrt {2},\,\tfrac {x^2}{8}-\tfrac {y^2}{8}=1$ 
 \item [
-\protect ۹.\protect ۱۰۳)
+\protect ۱۰.\protect ۱۲۷)
 ]
- مرتکز، \عددی {4} 
+ $e=2,\,x^2-\tfrac {y^2}{3}=1$ 
 \item [
-\protect ۹.\protect ۱۰۵)
+\protect ۱۰.\protect ۱۲۹)
 ]
- مرتکز، \عددی {0} 
-\item [
-\protect ۹.\protect ۱۰۷)
-]
- منفرج 
-\item [
-\protect ۹.\protect ۱۰۹)
-]
- مرتکز، \عددی {e^{-1}} 
-\item [
-\protect ۹.\protect ۱۱۱)
-]
- مرتکز، \عددی {e^{2/3}} 
-\item [
-\protect ۹.\protect ۱۱۳)
-]
- مرتکز، \عددی {x}، \عددی {(x>0)} 
-\item [
-\protect ۹.\protect ۱۱۵)
-]
- مرتکز، \عددی {0} 
-\item [
-\protect ۹.\protect ۱۱۷)
-]
- مرتکز، \عددی {1} 
-\item [
-\protect ۹.\protect ۱۱۹)
-]
- مرتکز، \عددی {\tfrac {1}{2}} 
-\item [
-\protect ۹.\protect ۱۲۱)
-]
- مرتکز، \عددی {\tfrac {\pi }{2}} 
-\item [
-\protect ۹.\protect ۱۲۳)
-]
- مرتکز، \عددی {0} 
-\item [
-\protect ۹.\protect ۱۲۵)
-]
- مرتکز، \عددی {0} 
-\item [
-\protect ۹.\protect ۱۲۷)
-]
- مرتکز، \عددی {\tfrac {1}{2}} 
-\item [
-\protect ۹.\protect ۱۲۹)
-]
- مرتکز، \عددی {0} 
-\item [
-\protect ۹.\protect ۱۳۱)
-]
- $x_n=2^{n-2}$ 
-\item [
-\protect ۹.\protect ۱۳۳)
-]
- (الف) \عددی {f(x)=x^2-2,\, 1.414213562\approx \sqrt {2}}،\\ (ب) \عددی {f(x)=\tan (x)-1,\, 0.7853981635\approx \tfrac {\pi }{4}}، (ج) \عددی {f(x)=e^x}، منفرج 
-\item [
-\protect ۹.\protect ۱۳۵)
-]
- (ب) \عددی {1} 
-\item [
-\protect ۹.\protect ۱۴۳)
-]
- $1$ 
-\item [
-\protect ۹.\protect ۱۴۵)
-]
- $-0.73908456$ 
-\item [
-\protect ۹.\protect ۱۴۷)
-]
- $0.853748068$ 
-\item [
-\protect ۹.\protect ۱۵۱)
-]
- $-3$ 
+ $\tfrac {(y-6)^2}{36}-\tfrac {(x-1)^2}{45}=1$ 
 \end {description}
- {\urduTechTermsfont {حصہ}} \protect ۹.\protect ۳\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۹۳۵
+ {\urduTechTermsfont {حصہ}} \protect ۱۰.\protect ۳\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۱۰۷۲
 \begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
 \item [
-\protect ۹.\protect ۱۵۳)
+\protect ۱۰.\protect ۱۳۳)
 ]
- $3,\quad s_n=\tfrac {2(1-(1/3)^n)}{1-(1/3)}$ 
+ قطع زائد 
 \item [
-\protect ۹.\protect ۱۵۵)
+\protect ۱۰.\protect ۱۳۵)
 ]
- $\tfrac {2}{3},\quad s_n=\tfrac {1-(-1/2)^n}{1-(-1/2)}$ 
+ ترخیم 
 \item [
-\protect ۹.\protect ۱۵۷)
+\protect ۱۰.\protect ۱۳۷)
 ]
- $\tfrac {1}{2},\quad s_n=\tfrac {1}{2}-\tfrac {1}{n+2}$ 
+ قطع مکافی 
 \item [
-\protect ۹.\protect ۱۵۹)
+\protect ۱۰.\protect ۱۳۹)
 ]
- $\tfrac {4}{5},\quad 1-\tfrac {1}{4}+\tfrac {1}{16}-\tfrac {1}{64}+\cdots $ 
+ قطع مکافی 
 \item [
-\protect ۹.\protect ۱۶۱)
+\protect ۱۰.\protect ۱۴۱)
 ]
- $\tfrac {7}{3},\quad \tfrac {7}{4}+\tfrac {7}{16}+\tfrac {7}{64}+\cdots $ 
+ قطع زائد 
 \item [
-\protect ۹.\protect ۱۶۳)
+\protect ۱۰.\protect ۱۴۳)
 ]
- $\tfrac {23}{2},\quad (5+1)+(\tfrac {5}{2}+\tfrac {1}{3})+(\tfrac {5}{4}+\tfrac {1}{9})+(\tfrac {5}{8}+\tfrac {1}{27})+\cdots $ 
+ قطع زائد 
 \item [
-\protect ۹.\protect ۱۶۵)
+\protect ۱۰.\protect ۱۴۵)
 ]
- $\tfrac {17}{6},\quad (1+1)+(\tfrac {1}{2}-\tfrac {1}{5})+(\tfrac {1}{4}+\tfrac {1}{25})+(\tfrac {1}{8}-\tfrac {1}{125})+\cdots $ 
+ ترخیم 
 \item [
-\protect ۹.\protect ۱۶۷)
+\protect ۱۰.\protect ۱۴۷)
 ]
- $1$ 
+ ترخیم 
 \item [
-\protect ۹.\protect ۱۶۹)
+\protect ۱۰.\protect ۱۴۹)
 ]
- $5$ 
+ $x'^2-y'^2=4$\quad قطع زائد 
 \item [
-\protect ۹.\protect ۱۷۱)
+\protect ۱۰.\protect ۱۵۱)
 ]
- مرتکز، \عددی {1} 
+ $4x'^2+16y'^2=0$\quad قطع مکافی 
 \item [
-\protect ۹.\protect ۱۷۳)
+\protect ۱۰.\protect ۱۵۳)
 ]
- مرتکز، \عددی {-\tfrac {1}{\ln 2}} 
+ $y'^2=1$\quad متوازی لکیریں 
 \item [
-\protect ۹.\protect ۱۷۵)
+\protect ۱۰.\protect ۱۵۵)
 ]
- مرتکز، \عددی {2+\sqrt {2}} 
+ $2\sqrt {2}x'^2+8\sqrt {2}y'^2=0$\quad قطع مکافی 
 \item [
-\protect ۹.\protect ۱۷۷)
+\protect ۱۰.\protect ۱۵۷)
 ]
- مرتکز، \عددی {1} 
+ $4x'^2+2y'^2=19$\quad ترخیم 
 \item [
-\protect ۹.\protect ۱۷۹)
+\protect ۱۰.\protect ۱۵۹)
 ]
- منفرج 
+ $\sin \alpha =\tfrac {1}{\sqrt {5}},\,\cos \alpha =\tfrac {2}{\sqrt {5}}$\quad \text {یا}\\ $\sin \alpha =-\tfrac {2}{\sqrt {5}},\, \cos \alpha =\tfrac {1}{\sqrt {5}}$ 
 \item [
-\protect ۹.\protect ۱۸۱)
+\protect ۱۰.\protect ۱۶۱)
 ]
- مرتکز، \عددی {\tfrac {e^2}{e^2-1}} 
+ $A'=0.88,\, B'=0.00,\, C'=3.10,\\ D'=0.74,\, E'=-1.20,\, F'=-3,$ \\ $0.88x'^2+3.01y'^2+0.74x'-\\ \quad 1.20y'-3=0$ ترخیم 
 \item [
-\protect ۹.\protect ۱۸۳)
+\protect ۱۰.\protect ۱۶۳)
 ]
- مرتکز، \عددی {\tfrac {2}{9}} 
+ $A'=0.00,\, B'=0.00,\, C'=5.00,\\ D'=0,\, E'=0,\, F'=-5,$\\ $5.00y'^2-5=0$\quad \text {یا}\\ $y'=\pm 1$\quad متوازی لکیریں 
 \item [
-\protect ۹.\protect ۱۸۵)
+\protect ۱۰.\protect ۱۶۵)
 ]
- مرتکز، \عددی {\tfrac {3}{2}} 
+ $A'=5.05,\, B'=0.00,\, C'=-0.05,\\ D'=-5.07,\, E'=-6.18,\, F'=-1$\\ $5.05x'^2-0.05y'^2-5.07x'-\\ 6.18y'-1=0$\quad قطع زائد 
 \item [
-\protect ۹.\protect ۱۸۷)
+\protect ۱۰.\protect ۱۶۷)
 ]
- منفرج 
+ (الف) \عددی {\tfrac {x'^2}{b^2}+\tfrac {y'^2}{a^2}=1}، (ب) \عددی {\tfrac {y'^2}{a^2}-\tfrac {x'^2}{b^2}=1}، (ج) \عددی {x'^2+y'^2=a^2}، (د) \عددی {y'=-\tfrac {1}{m}x'} (ہ) \عددی {y'=-\tfrac {1}{m}x'+\tfrac {b}{m}} 
 \item [
-\protect ۹.\protect ۱۸۹)
+\protect ۱۰.\protect ۱۶۹)
 ]
- منفرج 
+ (الف) \عددی {x'^2-y'^2=2}، (ب) \عددی {x'^2-y'^2=2a} 
 \item [
-\protect ۹.\protect ۱۹۱)
+\protect ۱۰.\protect ۱۷۵)
 ]
- مرتکز، \عددی {\tfrac {\pi }{\pi -e}} 
+ (الف) قطع مکافی 
 \item [
-\protect ۹.\protect ۱۹۳)
+\protect ۱۰.\protect ۱۷۷)
 ]
- $a=1,\,r=-x$\quad \عددی {\abs {x}<1} کے لیے \عددی {\tfrac {1}{1+x}} پر مرتکز۔ 
-\item [
-\protect ۹.\protect ۱۹۵)
-]
- $a=3,\,\,r=\tfrac {x-1}{2}$\quad \عددی {(-1,3)} میں \عددی {x} کے لیے \عددی {\tfrac {6}{3-x}} پر مرتکز۔ 
-\item [
-\protect ۹.\protect ۱۹۷)
-]
- $\abs {x}<\tfrac {1}{2},\,\, \tfrac {1}{1-2x}$ 
-\item [
-\protect ۹.\protect ۱۹۹)
-]
- $-2<x<0,\,\,\tfrac {1}{2+x}$ 
-\item [
-\protect ۹.\protect ۲۰۱)
-]
- \عددی {x\ne (2k+1)\tfrac {\pi }{2}} جہاں \عددی {k} عدد صحیح ہے؛ \عددی {\tfrac {1}{1-\sin x}} 
-\item [
-\protect ۹.\protect ۲۰۳)
-]
- $\tfrac {23}{99}$ 
-\item [
-\protect ۹.\protect ۲۰۵)
-]
- $\tfrac {7}{9}$ 
-\item [
-\protect ۹.\protect ۲۰۷)
-]
- $\tfrac {1}{15}$ 
-\item [
-\protect ۹.\protect ۲۰۹)
-]
- $\tfrac {41251}{33300}$ 
-\item [
-\protect ۹.\protect ۲۱۱)
-]
- (الف) \عددی {\sum _{n=-2}^{\infty }\tfrac {1}{(n+4)(n+5)}}، (ب) \عددی {\sum _{n=0}^{\infty }\tfrac {1}{(n+2)(n+3)}}، (ج) \عددی {\sum _{n=5}^{\infty }\tfrac {1}{(n-3)(n-2)}} 
-\item [
-\protect ۹.\protect ۲۱۳)
-]
- (الف) جواب مختلف ہو سکتے ہیں، (ب) جواب مختلف ہو سکتے ہیں، (ج) جواب مختلف ہو سکتے ہیں۔ 
-\item [
-\protect ۹.\protect ۲۲۱)
-]
- (الف) \عددی {r=\tfrac {3}{5}}، (ب) \عددی {r=-\tfrac {3}{10}} 
-\item [
-\protect ۹.\protect ۲۲۳)
-]
- $\abs {r}<1,\, \tfrac {1+2r}{1-r^2}$ 
-\item [
-\protect ۹.\protect ۲۲۵)
-]
- $\SI {28}{\meter }$ 
-\item [
-\protect ۹.\protect ۲۲۷)
-]
- $\SI {8}{\meter \squared }$ 
-\item [
-\protect ۹.\protect ۲۲۹)
-]
- (الف) \عددی {3(\tfrac {4}{3})^{n-1}}، (ب) \عددی {A_n=A+\tfrac {1}{3}A+\tfrac {1}{3}(\tfrac {4}{9})A+\cdots +\tfrac {1}{3}(\tfrac {4}{9})^{n-2}A}،\\ \عددی {\lim _{n\to \infty }A_n=\tfrac {2\sqrt {3}}{5}} 
+ (الف) قطع زائد، (ب) \\ \begin {minipage}{0.45\textwidth } \begin {tikzpicture}[font=\small ,declare function={f(\x )=-2*\x /(\x -1);fa(\x )=-2*\x +3;fb(\x )=-2*\x -3;}] \begin {axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}] \addplot [smooth,domain=1.25:4]{f(x)}; \addplot [smooth,domain=-4:0.8]{f(x)}node[pos=0.9,right,xshift=3ex]{$y=\frac {2x}{x-1}$}; \addplot [dashed]plot coordinates {(1,-10)(1,7)}; \addplot [domain=-1.25:4]{fa(x)}node[pos=0,left]{$y=-2x+3$}; \addplot [domain=-2.25:2]{fb(x)}node[pos=0,left]{$y=-2x-3$}; \end {axis} \end {tikzpicture} \end {minipage}\\ (ج) \عددی {y=-2x-3}، \عددی {y=-2x+3} 
 \end {description}
- {\urduTechTermsfont {حصہ}} \protect ۹.\protect ۴\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۹۴۵
+ {\urduTechTermsfont {حصہ}} \protect ۱۰.\protect ۴\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۱۰۸۵
 \begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
 \item [
-\protect ۹.\protect ۲۳۱)
+\protect ۱۰.\protect ۱۸۲)
 ]
- مرتکز؛ ہندسی تسلسل، \عددی {r=\tfrac {1}{10}<1} 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=sqrt(1-(\x )^2);}] \pgfmathsetmacro {\k }{1} \begin {axis}[clip=false,axis equal,axis lines=middle, width=4cm,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1},xticklabels={\rlap {$1$}}, ytick={\empty },enlargelimits=true, ymax=1.25] \addplot [-<-=0.85,domain=-\k +0.15:\k -0.15]{f(x)}node[pos=0.75,above right]{$x^2+y^2=1$}; \addplot [domain=-\k :-\k +0.15]{f(x)}node[pos=0,circ]{}node[pos=0,above left]{$t=\pi $}; \addplot [domain=\k -0.15:\k ]{f(x)}node[pos=1,circ]{}node[pos=1,above right]{$t=0$}; \addplot [dashed,domain=-\k +0.15:\k -0.15]{-f(x)}; \addplot [dashed,domain=-\k :-\k +0.15]{-f(x)}; \addplot [dashed,domain=\k -0.15:\k ]{-f(x)}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۲۳۳)
+\protect ۱۰.\protect ۱۸۴)
 ]
- منفرج؛ \عددی {\lim _{n\to \infty }\tfrac {n}{n+1}=1\ne 0} 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=sqrt(1-(\x )^2);}] \pgfmathsetmacro {\k }{1} \begin {axis}[clip=false,axis equal,axis lines=middle, width=4cm,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1},xticklabels={\rlap {$1$}},ytick={\empty }, enlargelimits=true, ymax=\k +0.25] \addplot [-<-=0.25,domain=-\k +0.15:\k -0.15]{f(x)}node[pos=0.75,right]{$x^2+y^2=1$}node[pos=0.5,circ]{}node[pos=0.5,above right]{$t=0.1$}; \addplot [domain=-\k :-\k +0.15]{f(x)}; \addplot [domain=\k -0.15:\k ]{f(x)}; \addplot [domain=-\k +0.15:\k -0.15]{-f(x)}; \addplot [domain=-\k :-\k +0.15]{-f(x)}; \addplot [domain=\k -0.15:\k ]{-f(x)}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۲۳۵)
+\protect ۱۰.\protect ۱۸۶)
 ]
- منفرج؛ \عددی {p} تسلسل، \عددی {p<1} 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=1/2*sqrt(16-(\x )^2);}] \pgfmathsetmacro {\k }{4} \begin {axis}[clip=false,axis lines=middle, width=4cm,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={4},xticklabels={\rlap {$4$}}, ytick={2},enlargelimits=true] \addplot [-<-=0.85,domain=-\k +0.15:\k -0.15]{f(x)}node[pos=0.75,above right]{$\tfrac {x^2}{16}+\tfrac {y^2}{4}=1$}; \addplot [domain=-\k :-\k +0.15]{f(x)}; \addplot [domain=\k -0.15:\k ]{f(x)}node[pos=1,circ]{}node[pos=1,above left]{$t=0,\,2\pi $}; \addplot [domain=-\k +0.15:\k -0.15]{-f(x)}; \addplot [domain=-\k :-\k +0.15]{-f(x)}; \addplot [domain=\k -0.15:\k ]{-f(x)}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۲۳۷)
+\protect ۱۰.\protect ۱۸۸)
 ]
- مرتکز؛ ہندسی تسلسل، \عددی {r=\tfrac {1}{8}<1} 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=5/4*sqrt(16-(\x )^2);}] \pgfmathsetmacro {\k }{4} \begin {axis}[axis equal,clip=false,axis lines=middle, width=4cm,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={4},xticklabels={\rlap {$4$}}, ytick={5},enlargelimits=true] \addplot [-<-=0.85,domain=-\k +0.5:\k -0.5]{f(x)}node[pos=0.75,above right]{$\tfrac {x^2}{16}+\tfrac {y^2}{25}=1$}; \addplot [domain=-\k :-\k +0.5]{f(x)}node[pos=0,circ]{}node[pos=0,above left]{$t=\pi $}; \addplot [domain=\k -0.5:\k ]{f(x)}node[pos=1,circ]{}node[pos=1,above right]{$t=0$}; \addplot [dashed,domain=-\k +0.2:\k -0.2]{-f(x)}; \addplot [dashed,domain=-\k :-\k +0.2]{-f(x)}; \addplot [dashed,domain=\k -0.2:\k ]{-f(x)}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۲۳۹)
+\protect ۱۰.\protect ۱۹۰)
 ]
- منفرج؛ تکملی پرکھ 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=(\x )^2;}] \pgfmathsetmacro {\k }{2} \begin {axis}[clip=false,axis lines=middle, width=4cm,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1}, ytick={1},enlargelimits=true] \addplot [->-=0.25,->-=0.75,domain=-\k :\k ]{f(x)}node[pos=0.95,left]{$y=x^2$}node[pos=0.25,left]{$t<0$}node[pos=0.75,right]{$t>0$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۲۴۱)
+\protect ۱۰.\protect ۱۹۲)
 ]
- مرتکز؛ ہندسی تسلسل، \عددی {r=\tfrac {2}{3}<1} 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=sqrt(\x );}] \pgfmathsetmacro {\k }{4} \begin {axis}[clip=false,axis lines=middle, width=4cm,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1}, ytick={1},enlargelimits=true] \addplot [domain=0:0.2]{f(x)}node[pos=0,circ]{}node[pos=0,above left]{$t=0$}; \addplot [->-=0.25,domain=0.2:\k ]{f(x)}node[pos=0.75,above]{$y=\sqrt {x}$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۲۴۳)
+\protect ۱۰.\protect ۱۹۴)
 ]
- منفرج؛ تکملی پرکھ 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=sqrt(1+(\x )^2);}] \pgfmathsetmacro {\k }{1} \begin {axis}[clip=false,axis lines=middle, width=4cm,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1}, ytick={1},enlargelimits=true] \addplot [->-=0.25,->-=0.75,domain=-\k :\k ]({-f(x)},x)node[pos=0.95,above]{$x^2-y^2=1$}node[pos=0.5,circ]{}node[pos=0.5,above right]{$t=0$}; \addplot [dashed,domain=-\k :\k ]({f(x)},x); \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۲۴۵)
+\protect ۱۰.\protect ۱۹۶)
 ]
- منفرج؛ \عددی {\lim _{n\to \infty }\tfrac {2^n}{n+1}\ne 0} 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=2*\x +3;}] \pgfmathsetmacro {\k }{1} \begin {axis}[clip=false,axis lines=middle, width=4cm,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-1.5},xticklabels={$-\tfrac {3}{2}$}, ytick={3},enlargelimits=true] \addplot [->-=0.5,domain=-2:0.5]{f(x)}node[pos=0.5,left]{$y=2x+3$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۲۴۷)
+\protect ۱۰.\protect ۱۹۸)
 ]
- منفرج؛ \عددی {\lim _{n\to \infty }(\tfrac {\sqrt {n}}{\ln n})\ne 0} 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=1-\x ;}] \pgfmathsetmacro {\k }{2} \begin {axis}[clip=false,axis lines=middle, width=4cm,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1}, ytick={1},enlargelimits=true] \addplot [->-=0.5,domain=0:1]{f(x)}node[pos=0.4,right]{$y=1-x$}node[pos=0,circ]{}node[pos=0,right]{$t=0$}node[pos=1,circ]{}node[pos=1,above right]{$t=1$}; \addplot [dashed,domain=-0.25:0]{f(x)}; \addplot [dashed,domain=1:1.25]{f(x)}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۲۴۹)
+\protect ۱۰.\protect ۲۰۰)
 ]
- منفرج؛ ہندسی تسلسل، \عددی {r=\tfrac {1}{\ln 2}>1} 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=sqrt(1-(\x )^2);}] \pgfmathsetmacro {\k }{1} \begin {axis}[axis equal,axis lines=middle, width=4cm,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-1,1}, ytick={\empty },enlargelimits=true] \addplot [domain=-\k :-\k +0.2]{f(x)}node[pos=0,circ]{}node[pos=0,above left]{$t=-1$}; \addplot [->-=0.25,domain=-\k +0.2:0]{f(x)}node[pos=1,circ]{}node[pos=1,left]{$t=0$}; \addplot [dashed,domain=0:\k -0.2]{f(x)}; \addplot [dashed,domain=\k -0.2:\k ]{f(x)}; \addplot []plot coordinates {(0,0.5)}node[fill=white]{$y=\sqrt {1-x^2}$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۲۵۱)
+\protect ۱۰.\protect ۲۰۲)
 ]
- مرتکز؛ تکملی پرکھ 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=sqrt(1+(\x )^2);}] \pgfmathsetmacro {\k }{1} \begin {axis}[clip=false,axis lines=middle, width=4cm,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty }, ytick={1},enlargelimits=true] \addplot [->-=0.5,domain=0:\k ]{f(x)}node[above]{$y=\sqrt {1+x^2}$}node[pos=0,circ]{}node[pos=0,above left]{$t=0$}; \addplot [dashed,domain=-\k :0]{f(x)}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۲۵۳)
+\protect ۱۰.\protect ۲۰۴)
 ]
- منفرج؛ \عددی {n} واں جزو پرکھ 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=sqrt(1+(\x )^2);}] \pgfmathsetmacro {\k }{1} \begin {axis}[clip=false,axis lines=middle, width=4cm,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-1,1}, ytick={\empty },enlargelimits=true] \addplot [->-=0.25,->-=0.75,domain=-\k :\k ]({-f(x)},x)node[pos=0.5,circ]{}node[pos=0.5,above right]{$t=0$}node[above]{$x^2-y^2=1$}; \addplot [dashed,domain=-\k :\k ]({f(x)},x); \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۲۵۵)
+\protect ۱۰.\protect ۲۰۶)
 ]
- مرتکز؛ تکملی پرکھ 
+ (ا) \عددی {{x=a\cos t, y=-a\sin t, 0\le t\le 2\pi }} (ب) \عددی {{x=a\cos t,\, y=a\sin t,\, 0\le t\le 2\pi }} (ج) \عددی {{x=a\cos t,\, y=-a\sin t,\, 0\le t\le 4\pi }} (د) \عددی {{x=a\cos t,\, y=a\sin t,\, 0\le t\le 4\pi }} 
 \item [
-\protect ۹.\protect ۲۵۷)
+\protect ۱۰.\protect ۲۰۸)
 ]
- مرتکز؛ تکملی پرکھ 
+ $x=\tfrac {-at}{\sqrt {1+t^2}},\, y=\tfrac {a}{\sqrt {1+t^2}},\, -\infty <t<\infty $ 
 \item [
-\protect ۹.\protect ۲۵۹)
+\protect ۱۰.\protect ۲۱۰)
 ]
- مرتکز؛ تکملی پرکھ 
+ $x=2\cos t,\, y=2\sin ^2t,\, 0<t<\pi $ 
 \item [
-\protect ۹.\protect ۲۶۱)
+\protect ۱۰.\protect ۲۱۲)
 ]
- (الف) \عددی {a=1} 
+ (ب) \عددی {x=x_1t,\, y=y_1t} آپ کا جواب مختلف ہو سکتا ہے، (ج) \عددی {x=-1+t,\, y=t} آپ کا جواب مختلف ہو سکتا ہے۔ 
 \item [
-\protect ۹.\protect ۲۶۳)
+\protect ۱۰.\protect ۲۱۴)
 ]
- (ب) تقریباً \عددی {41.55} 
+ $x=(a-b)\cos \theta +b\cos \big (\tfrac {a-b}{b}\theta \big ),\\ y=(a-b)\sin \theta -b\sin \big (\tfrac {a-b}{b}\theta \big )$ 
 \item [
-\protect ۹.\protect ۲۶۵)
+\protect ۱۰.\protect ۲۱۶)
 ]
- درست ہے۔ 
+ $x=a\sin ^2t\tan t,\, y=a\sin ^2t$ 
+\item [
+\protect ۱۰.\protect ۲۱۸)
+]
+ $(1,1)$ 
 \end {description}
- {\urduTechTermsfont {حصہ}} \protect ۹.\protect ۵\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۹۵۵
+ {\urduTechTermsfont {حصہ}} \protect ۱۰.\protect ۵\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۱۰۹۷
 \begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
 \item [
-\protect ۹.\protect ۲۷۳)
+\protect ۱۰.\protect ۲۳۰)
 ]
- منفرج،\عددی {\sum \tfrac {1}{\sqrt {n}}} کے ساتھ تقابل حد 
+ $y=-x+2\sqrt {2},\, \frac {\dif ^{\,2}y}{\dif x^2}=-\sqrt {2}$ 
 \item [
-\protect ۹.\protect ۲۷۵)
+\protect ۱۰.\protect ۲۳۲)
 ]
- مرتکز، \عددی {\sum \tfrac {1}{2^n}} کے ساتھ تقابل 
+ $y=-\tfrac {1}{2}x+2\sqrt {2},\, \frac {\dif ^{\,2}y}{\dif x^2}=-\frac {\sqrt {2}}{4}$ 
 \item [
-\protect ۹.\protect ۲۷۷)
+\protect ۱۰.\protect ۲۳۴)
 ]
- منفرج، \عددی {n} واں جزو پرکھ 
+ $y=x+\frac {1}{4},\, \frac {\dif ^{\,2}y}{\dif x^2}=-2$ 
 \item [
-\protect ۹.\protect ۲۷۹)
+\protect ۱۰.\protect ۲۳۶)
 ]
- مرتکز، $(\tfrac {n}{3n+1})^n<(\tfrac {n}{3n})^n=(\tfrac {1}{3})^n$ 
+ $y=2x-\sqrt {3},\, \frac {\dif ^{\,2}y}{\dif x^2}=-3\sqrt {3}$ 
 \item [
-\protect ۹.\protect ۲۸۱)
+\protect ۱۰.\protect ۲۳۸)
 ]
- منفرج، \عددی {\sum \tfrac {1}{n}} کے ساتھ بلا واسطہ تقابل 
+ $y=x-4,\, \frac {\dif ^{\,2}y}{\dif x^2}=\tfrac {1}{2}$ 
 \item [
-\protect ۹.\protect ۲۸۳)
+\protect ۱۰.\protect ۲۴۰)
 ]
- مرتکز، \عددی {\sum \tfrac {1}{n^2}} کے ساتھ تقابل حد 
+ $y=\sqrt {3}x-\tfrac {\pi \sqrt {3}}{3}+2,\, \frac {\dif ^{\,2}y}{\dif x^2}=-4$ 
 \item [
-\protect ۹.\protect ۲۸۵)
+\protect ۱۰.\protect ۲۴۲)
 ]
- منفرج، \عددی {\sum \tfrac {1}{n}} کے ساتھ تقابل حد 
+ $0$ 
 \item [
-\protect ۹.\protect ۲۸۷)
+\protect ۱۰.\protect ۲۴۴)
 ]
- منفرج،\عددی {\sum \tfrac {1}{n}} کے ساتھ تقابل حد 
+ $-6$ 
 \item [
-\protect ۹.\protect ۲۸۹)
+\protect ۱۰.\protect ۲۴۶)
 ]
- منفرج، تکملی پرکھ 
+ $4$ 
 \item [
-\protect ۹.\protect ۲۹۱)
+\protect ۱۰.\protect ۲۴۸)
 ]
- مرتکز، \عددی {\sum \tfrac {1}{n^{3/2}}} کے ساتھ تقابل 
+ $12$ 
 \item [
-\protect ۹.\protect ۲۹۳)
+\protect ۱۰.\protect ۲۵۰)
 ]
- مرتکز، $\tfrac {1}{n2^n}\le \tfrac {1}{2^n}$ 
+ $\pi ^2$ 
 \item [
-\protect ۹.\protect ۲۹۵)
+\protect ۱۰.\protect ۲۵۲)
 ]
- مرتکز، $\tfrac {1}{3^{n-1}+1}<\tfrac {1}{3^{n-1}}$ 
+ $8\pi ^2$ 
 \item [
-\protect ۹.\protect ۲۹۷)
+\protect ۱۰.\protect ۲۵۴)
 ]
- منفرج، \عددی {\sum \tfrac {1}{n}} کے ساتھ تقابل حد 
+ $\tfrac {52\pi }{3}$ 
 \item [
-\protect ۹.\protect ۲۹۹)
+\protect ۱۰.\protect ۲۵۶)
 ]
- مرتکز، \عددی {\sum \tfrac {1}{n^2}} کے ساتھ تقابل 
+ $3\pi \sqrt {5}$ 
 \item [
-\protect ۹.\protect ۳۰۱)
+\protect ۱۰.\protect ۲۵۸)
 ]
- مرتکز، $\tfrac {\tan ^{-1}n}{n^{1.1}}<\tfrac {\pi /2}{n^{1.1}}$ 
+ (ا) \عددی {(\bar {x},\bar {y})=(\tfrac {12}{\pi }-\tfrac {24}{\pi ^2},\tfrac {24}{\pi ^2}-2)}، (ب) وسطانی مرکز \عددی {(1.4,0.4)} 
 \item [
-\protect ۹.\protect ۳۰۳)
+\protect ۱۰.\protect ۲۶۰)
 ]
- مرتکز، \عددی {\sum \tfrac {1}{n^2}} کے ساتھ تقابل 
+ (ا) \عددی {(\bar {x},\bar {y})=(\tfrac {1}{3},\pi -\tfrac {4}{3})} 
 \item [
-\protect ۹.\protect ۳۰۵)
+\protect ۱۰.\protect ۲۶۲)
 ]
- منفرج، چونکہ $3n>n\sqrt [n]{n}\implies \tfrac {1}{3n}<\tfrac {1}{n\sqrt [n]{n}}$ سے مراد \عددی {\sum _{n=1}^{\infty }\tfrac {1}{n\sqrt [n]{n}}} کا انفراج ہے۔ 
+ (ا) \عددی {\pi }، (ب) \عددی {\pi } 
 \item [
-\protect ۹.\protect ۳۰۷)
+\protect ۱۰.\protect ۲۶۶)
 ]
- مرتکز، \عددی {\sum \tfrac {1}{n^2}} کے ساتھ تقابل حد 
+ \عددی {3\pi a^2} 
+\item [
+\protect ۱۰.\protect ۲۶۸)
+]
+ \عددی {\tfrac {64\pi }{3}} 
+\item [
+\protect ۱۰.\protect ۲۷۰)
+]
+ \عددی {(\tfrac {\sqrt {2}}{2},1)}، \عددی {t=0} پر \عددی {y=2x}، \عددی {t=\pi } پر \عددی {y=-2x} 
 \end {description}
- {\urduTechTermsfont {حصہ}} \protect ۹.\protect ۶\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۹۶۵
+ {\urduTechTermsfont {حصہ}} \protect ۱۰.\protect ۶\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۱۱۰۸
 \begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
 \item [
-\protect ۹.\protect ۳۱۴)
+\protect ۱۰.\protect ۲۸۷)
 ]
- مرتکز، نسبتی پرکھ 
+ ا اور ہ؛ ب اور ز؛ ج اور ح؛ د اور و 
 \item [
-\protect ۹.\protect ۳۱۶)
+\protect ۱۰.\protect ۲۸۹)
 ]
- منفرج، نسبتی پرکھ 
+ \begin {minipage}{0.22\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ] \pgfmathsetmacro {\k }{pi/2} \begin {axis}[clip=false,width=4cm, axis lines=middle,xlabel={$x$},ylabel={$y$},enlargelimits=true,xtick={\empty },ytick={\empty }, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}] \addplot []plot coordinates {(-2,0)}node[circ]{}node[below]{$(-2,0)$}; \addplot []plot coordinates {(2,0)}node[circ]{}node[below]{$(2,0)$}; \addplot []plot coordinates {(0,-2)}node[circ]{}node[right]{$(-2,\tfrac {\pi }{2})$}; \addplot []plot coordinates {(0,2)}node[circ]{}node[right]{$(2,\tfrac {\pi }{2})$}; \end {axis} \end {tikzpicture} \end {minipage}\\ (ا) \عددی {(2,\tfrac {\pi }{2}+2n\pi )} اور\\ \عددی {(-2,\tfrac {\pi }{2}+(2n+1)\pi )} \\ جہاں \عددی {n} عدد صحیح ہے۔\\ (ب) \عددی {(2,2n\pi )} اور\\ \عددی {(-2,(2n+1)\pi )} جہاں\\ \عددی {n} عدد صحیح ہے۔\\ (ج) \عددی {(2,\tfrac {3\pi }{2}+2n\pi )} اور \\ \عددی {(-2,\tfrac {3\pi }{2}+(2n+1)\pi )} \\ جہاں \عددی {n} عدد صحیح ہے۔\\ (د) \عددی {(2,(2n+1)\pi )} اور \\ \عددی {(-2,2n\pi )} جہاں \عددی {n} عدد صحیح ہے۔ 
 \item [
-\protect ۹.\protect ۳۱۸)
+\protect ۱۰.\protect ۲۹۱)
 ]
- مرتکز، نسبتی پرکھ 
+ (ا) \عددی {(3,0)}، (ب) \عددی {(-3,0)}، (ج) \عددی {(-1,\sqrt {3})}، (د) \عددی {(1,\sqrt {3})}، (ہ) \عددی {(3,0)}، (و) \عددی {(1,\sqrt {3})}، (ز) \عددی {(-3,0)}، (ح) \عددی {(-1,\sqrt {3})} 
 \item [
-\protect ۹.\protect ۳۲۰)
+\protect ۱۰.\protect ۲۹۳)
 ]
- مرتکز، \عددی {\sum \tfrac {3}{1.25^n}} کے ساتھ تقابل 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=2*cos(\x );g(\x )=2*sin(\x );}] \pgfmathsetmacro {\k }{360} \begin {axis}[axis equal,clip=false,width=4cm, axis lines=middle,xlabel={$x$},ylabel={$y$},enlargelimits=true,xtick={2},ytick={2}, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}] \addplot [domain=0:\k ]({f(x)},{g(x)})node[pos=0.15,above right]{$r=2$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۲۲)
+\protect ۱۰.\protect ۲۹۵)
 ]
- منفرج، $\lim _{n\to \infty }(1-\tfrac {3}{n})^n=e^{-3}\ne 0$ 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=cos(\x );g(\x )=sin(\x );}] \pgfmathsetmacro {\k }{1.5} \begin {axis}[axis on top,axis equal,clip=false,width=4cm, axis lines=middle,xlabel={$x$},ylabel={$y$},enlargelimits=true,xtick={1},ytick={\empty }, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}] \addplot [fill=lgray,draw=none]plot coordinates {(-\k ,-\k )(\k ,-\k )(\k ,\k )(-\k ,\k )(-\k ,-\k )}; \addplot [fill=white,domain=0:360]({f(x)},{g(x)}); \addplot [] plot coordinates {(1.25,0.25)}node[pin=45:{$r\ge 1$}]{}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۲۴)
+\protect ۱۰.\protect ۲۹۷)
 ]
- مرتکز، \عددی {\sum \tfrac {1}{n^2}} کے ساتھ تقابل 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ] \pgfmathsetmacro {\kx }{cos(30)} \pgfmathsetmacro {\ky }{sin(30)} \begin {axis}[axis on top,clip=false,width=4cm, axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty },ytick={\empty }, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}] \addplot [-latex,name path=a]plot coordinates {(0,0) (\kx ,\ky )}node[pos=0.7,left]{$\begin {aligned} 0\le &\theta \le \tfrac {\pi }{6} \\ r&\ge 0 \end {aligned}$}; \path [name path=xaxis](axis cs:0,0)--(axis cs:\kx ,0); \addplot [lgray] fill between [of=a and xaxis]; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۲۶)
+\protect ۱۰.\protect ۲۹۹)
 ]
- منفرج، \عددی {\sum \tfrac {1}{2n}} کے ساتھ تقابل 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=0.6*cos(\x );g(\x )=0.6*sin(\x );}] \pgfmathsetmacro {\kxa }{-1*cos(60)} \pgfmathsetmacro {\kya }{-1*sin(60)} \pgfmathsetmacro {\kxb }{3*cos(60)} \pgfmathsetmacro {\kyb }{3*sin(60)} \begin {axis}[axis on top,clip=false,width=4cm, axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-1,2},ytick={-1,3}, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xmin=-1.1,xmax=2.2,ymax=3.2] \addplot []plot coordinates {(\kxa ,\kya )(\kxb ,\kyb )}node[pos=0,circ]{}node[pos=1,circ]{}node[pos=1,above]{$\begin {aligned} \theta &=\tfrac {\pi }{3}\\ -1&\le r\le 3 \end {aligned}$}; \addplot [-stealth,domain=0:60]({f(x)},{g(x)})node[pos=0.75,right]{$\theta $}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۲۸)
+\protect ۱۰.\protect ۳۰۱)
 ]
- منفرج، \عددی {\sum \tfrac {1}{n}} کے ساتھ تقابل 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=0.6*cos(\x );g(\x )=0.6*sin(\x );}] \pgfmathsetmacro {\kxa }{-1*cos(60)} \pgfmathsetmacro {\kya }{-1*sin(60)} \pgfmathsetmacro {\kxb }{3*cos(60)} \pgfmathsetmacro {\kyb }{3*sin(60)} \begin {axis}[axis on top,clip=false,width=4cm, axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty },ytick={\empty }, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ymax=1.25] \addplot [-stealth,thick]plot coordinates {(0,0)(0,1)}node[pos=0,circ]{}node[pos=0.5,right]{$\begin {aligned} \theta &=\tfrac {\pi }{2}\\ r&\ge 0\end {aligned}$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۳۰)
+\protect ۱۰.\protect ۳۰۳)
 ]
- مرتکز، نسبتی پرکھ 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=cos(\x );g(\x )=sin(\x );}] \begin {axis}[axis equal,axis on top,clip=false,width=4cm, axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1},ytick={\empty }, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true] \addplot [domain=0:180]({f(x)},{g(x)})node[pos=0.25,above right]{$\begin {aligned}r&=1\\ 0&\le \theta \le \pi \end {aligned}$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۳۲)
+\protect ۱۰.\protect ۳۰۵)
 ]
- مرتکز، نسبتی پرکھ 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=cos(\x );g(\x )=sin(\x );}] \begin {axis}[axis equal,axis on top,clip=false,width=4cm, axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty },ytick={1}, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true] \addplot [name path=c,domain=45:135]({f(x)},{g(x)})node[pos=0.25,above right]{$\begin {aligned}\tfrac {\pi }{4}&\le \theta \le \tfrac {3\pi }{4}\\ 0&\le r\le 1 \end {aligned}$}; \addplot [name path=b]plot coordinates {({cos(135)},{sin(135)})(0,0) ({cos(45)},{sin(45)})}; \addplot [lgray]fill between[of=b and c]; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۳۴)
+\protect ۱۰.\protect ۳۰۷)
 ]
- مرتکز، نسبتی پرکھ 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=cos(\x );g(\x )=sin(\x );}] \begin {axis}[axis equal,axis on top,clip=false,width=4cm, axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={1,2},xticklabels={\llap {$1$},\rlap {$2$}},ytick={1,2}, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true] \addplot [name path=b,domain=-90:90]({2*f(x)},{2*g(x)})node[pos=0.75,above right]{$\begin {aligned}-\tfrac {\pi }{2}&\le \theta \le \tfrac {\pi }{2}\\ 1&\le r\le 2 \end {aligned}$}; \addplot [name path=c,domain=-90:90]({f(x)},{g(x)}); \addplot [lgray]fill between[of=b and c]; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۳۶)
+\protect ۱۰.\protect ۳۰۹)
 ]
- مرتکز، نسبتی پرکھ 
+ \عددی {x=2}، نقطہ \عددی {(2,0)} سے گزرتی انتصابی خط 
 \item [
-\protect ۹.\protect ۳۳۸)
+\protect ۱۰.\protect ۳۱۱)
 ]
- مرتکز، \عددی {\sum \tfrac {1}{n^2}} کے ساتھ تقابل 
+ \عددی {y=0}، محور \عددی {x} 
 \item [
-\protect ۹.\protect ۳۴۰)
+\protect ۱۰.\protect ۳۱۳)
 ]
- مرتکز، نسبتی پرکھ 
+ \عددی {y=4}، نقطہ \عددی {(0,4)} سے گزرتی افقی خط 
 \item [
-\protect ۹.\protect ۳۴۲)
+\protect ۱۰.\protect ۳۱۵)
 ]
- منفرج، نسبتی پرکھ 
+ \عددی {x+y=1}، لکیر، جہاں \عددی {m=-1} اور \عددی {b=1} ہیں۔ 
 \item [
-\protect ۹.\protect ۳۴۴)
+\protect ۱۰.\protect ۳۱۷)
 ]
- مرتکز، نسبتی پرکھ 
+ \عددی {x^2+y^2=1}، دائرہ، رداس \عددی {1}، مرکز \عددی {(0,0)} 
 \item [
-\protect ۹.\protect ۳۴۶)
+\protect ۱۰.\protect ۳۱۹)
 ]
- مرتکز، نسبتی پرکھ 
+ \عددی {y-2x=5}، لکیر، \عددی {m=2}، \عددی {b=5} 
 \item [
-\protect ۹.\protect ۳۴۸)
+\protect ۱۰.\protect ۳۲۱)
 ]
- منفرج، $a_n=(\tfrac {1}{3})^{(1/n!)}\to 1$ 
+ \عددی {y^2=x}، قطع مکافی، راس \عددی {(0,0)}، دائیں کھلتا ہے۔ 
 \item [
-\protect ۹.\protect ۳۵۰)
+\protect ۱۰.\protect ۳۲۳)
 ]
- مرتکز، نسبتی پرکھ 
+ \عددی {y=e^x}، قدرتی قوت نمائی تفاعل۔ 
 \item [
-\protect ۹.\protect ۳۵۲)
+\protect ۱۰.\protect ۳۲۵)
 ]
- منفرج، نسبتی پرکھ 
+ \عددی {x+y=\pm 1}، دو متوازی سیدھی لکیریں جن کی ڈھلوان \عددی {m=-1} اور \عددی {b=\pm 1} ہیں۔ 
 \item [
-\protect ۹.\protect ۳۵۴)
+\protect ۱۰.\protect ۳۲۷)
 ]
- مرتکز، نسبتی پرکھ 
+ \عددی {(x+2)^2+y^2=4}، دائرہ، رداس \عددی {2}، مرکز \عددی {(-2,0)} 
 \item [
-\protect ۹.\protect ۳۵۶)
+\protect ۱۰.\protect ۳۲۹)
 ]
- مرتکز نسبتی پرکھ 
+ \عددی {x^2+(y-4)^2=16}، دائرہ، رداس \عددی {4}، مرکز \عددی {(0,4)} 
 \item [
-\protect ۹.\protect ۳۶۰)
+\protect ۱۰.\protect ۳۳۱)
 ]
- جی ہاں 
+ \عددی {(x-1)^2+(y-1)^2=2}، دائرہ، رداس \عددی {\sqrt {2}}، مرکز \عددی {(1,1)} 
+\item [
+\protect ۱۰.\protect ۳۳۳)
+]
+ \عددی {\sqrt {3}y+x=4} 
+\item [
+\protect ۱۰.\protect ۳۳۵)
+]
+ \عددی {r\cos \theta =7} 
+\item [
+\protect ۱۰.\protect ۳۳۷)
+]
+ \عددی {\theta =\tfrac {\pi }{4}} 
+\item [
+\protect ۱۰.\protect ۳۳۹)
+]
+ \عددی {r=2} یا \عددی {r=-2} 
+\item [
+\protect ۱۰.\protect ۳۴۱)
+]
+ \عددی {4r^2\cos ^2\theta +9r^2\sin ^2\theta =36} 
+\item [
+\protect ۱۰.\protect ۳۴۳)
+]
+ \عددی {r\sin ^2\theta =4\cos \theta } 
+\item [
+\protect ۱۰.\protect ۳۴۵)
+]
+ \عددی {r=4\sin \theta } 
+\item [
+\protect ۱۰.\protect ۳۴۷)
+]
+ \عددی {r^2=6r\cos \theta -2r\sin \theta -6} 
+\item [
+\protect ۱۰.\protect ۳۴۹)
+]
+ \عددی {(0,\theta )} جہاں \عددی {\theta } زاویہ ہے۔ 
 \end {description}
- {\urduTechTermsfont {حصہ}} \protect ۹.\protect ۷\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۹۷۴
+ {\urduTechTermsfont {حصہ}} \protect ۱۰.\protect ۷\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۱۱۱۸
 \begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
 \item [
-\protect ۹.\protect ۳۶۱)
+\protect ۱۰.\protect ۳۵۱)
 ]
- مسئلہ \حوالہ {مسئلہ_تسلسل_بدلتا_تسلسل_پرکھ} کے تحت ارتکاز 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=1+cos(\x );}] \begin {axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true] \addplot [smooth,data cs=polar,domain=0:360]{f(x)}node[pos=0.25,above right]{$r=1+\cos \theta $}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۶۳)
+\protect ۱۰.\protect ۳۵۳)
 ]
- انفراج؛ \عددی {a_n\not \to 0} 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=1-sin(\x );}] \begin {axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true] \addplot [smooth,data cs=polar,domain=0:360]{f(x)}; \addplot [data cs=polar]plot coordinates {(90,0.25)}node[above right]{$r=1-\sin \theta $}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۶۵)
+\protect ۱۰.\protect ۳۵۵)
 ]
- مسئلہ \حوالہ {مسئلہ_تسلسل_بدلتا_تسلسل_پرکھ} کے تحت ارتکاز 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=2+sin(\x );}] \begin {axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true] \addplot [smooth,data cs=polar,domain=0:360]{f(x)}; \addplot []plot coordinates {(0,1)}node[left]{$r=2+\sin \theta $}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۶۷)
+\protect ۱۰.\protect ۳۵۷)
 ]
- انفراج؛ \عددی {a_n\to \tfrac {1}{2}} 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=sin(1/2*\x );}] \begin {axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true] \addplot [samples=100,data cs=polar,domain=0:720]{f(x)}; \addplot []plot coordinates {(0,0.9)}node[right]{$r=\sin \tfrac {\theta }{2}$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۶۹)
+\protect ۱۰.\protect ۳۵۹)
 ]
- مسئلہ \حوالہ {مسئلہ_تسلسل_بدلتا_تسلسل_پرکھ} کے تحت ارتکاز 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=sqrt(cos(\x ));}] \begin {axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true] \addplot [smooth,data cs=polar,domain=-90:90]{f(x)}; \addplot [smooth,data cs=polar,domain=90:270]{f(x-180)}; \addplot []plot coordinates {(0,0.75)}node[right]{$r^2=\cos \theta $}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۷۱)
+\protect ۱۰.\protect ۳۶۱)
 ]
- مطلق مرتکز۔مطلق قیمتوں کا تسلسل مرتکز ہندسی تسلسل ہے۔ 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=sqrt(-sin(\x ));}] \begin {axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true] \addplot [smooth,data cs=polar,domain=180:360]{f(x)}; \addplot [smooth,data cs=polar,domain=0:180]{f(x-180)}; \addplot []plot coordinates {(0,1)}node[above right]{$r^2=-\sin \theta $}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۷۳)
+\protect ۱۰.\protect ۳۶۳)
 ]
- مشروط ارتکاز۔ \عددی {\tfrac {1}{\sqrt {n}}\to 0} لیکن \عددی {\sum _{n=1}^{\infty }\tfrac {1}{\sqrt {n}}} منفرج ہے۔ 
+ محور \عددی {x}، محور \عددی {y}، مبدا 
 \item [
-\protect ۹.\protect ۳۷۵)
+\protect ۱۰.\protect ۳۶۵)
 ]
- مطلق مرتکز۔ \عددی {\sum _{n=1}^{\infty }\tfrac {1}{n^2}} کے ساتھ موازنہ کریں۔ 
+ مبدا 
 \item [
-\protect ۹.\protect ۳۷۷)
+\protect ۱۰.\protect ۳۶۷)
 ]
- مشروط مرتکز۔ \عددی {\tfrac {1}{n+3}\to 0} ہے لیکن \عددی {\sum _{n=1}^{\infty }\tfrac {1}{n+3}} منفرج ہے۔ (\عددی {\sum _{n=1}^{\infty }\tfrac {1}{n}} کے ساتھ موازنہ کریں۔) 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=-1+cos(\x );ma(\x )=\x +1;mb(\x )=-\x -1;}] \begin {axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ytick={\empty }] \addplot [smooth,data cs=polar,domain=0:360]{f(x)}; \addplot []plot coordinates {(1,0.5)}node[]{$r=-1+\cos \theta $}; \addplot [mark=*]plot coordinates {(0,1)}node[left]{$(-1,-\tfrac {\pi }{2})$}; \addplot [mark=*]plot coordinates {(0,-1)}node[left]{$(-1,\tfrac {\pi }{2})$}; \addplot [domain=-0.4:0.3]{ma(x)}; \addplot [domain=-0.4:0.3]{mb(x)}; \end {axis} \end {tikzpicture} \end {minipage}\\ \عددی {(-1,\tfrac {\pi }{2})} پر ڈھلوان \عددی {-1} اور \عددی {(-1,-\tfrac {\pi }{2})} پر \عددی {1} ہے۔ 
 \item [
-\protect ۹.\protect ۳۷۹)
+\protect ۱۰.\protect ۳۶۹)
 ]
- انفراج: \عددی {\tfrac {3+n}{5+n}\to 1} 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=sin(2*\x );ma(\x )=0.7071-(\x -0.7071);mb(\x )=0.7071+(\x +0.7071); mc(\x )=-0.7071+(\x -0.7071);md(\x )=-0.7071-(\x +0.7071);}] \begin {axis}[axis equal,clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ytick={\empty }] \addplot [smooth,data cs=polar,domain=0:360]{f(x)}; \addplot []plot coordinates {(0.5,0)}node[above right]{$r=\sin 2\theta $}; \addplot [mark=*]plot coordinates {(0.7071,0.7071)}node[right]{$(1,\tfrac {\pi }{4})$}; \addplot [mark=*]plot coordinates {(0.7071,-0.7071)}node[right]{$(-1,\tfrac {3\pi }{4})$}; \addplot [mark=*]plot coordinates {(-0.7071,0.7071)}node[left]{$(-1,-\tfrac {\pi }{4})$}; \addplot [mark=*]plot coordinates {(-0.7071,-0.7071)}node[left]{$(1,-\tfrac {3\pi }{4})$}; \addplot [domain=0.4:1]{ma(x)}; \addplot [domain=-0.4:-1]{mb(x)}; \addplot [domain=0.4:1]{mc(x)}; \addplot [domain=-0.4:-1]{md(x)}; \end {axis} \end {tikzpicture} \end {minipage}\\ \عددی {(1,\tfrac {\pi }{4})} پر \عددی {-1}، \عددی {(-1,-\tfrac {\pi }{4})} پر \عددی {1}، \عددی {(-1,\tfrac {3\pi }{4})} پر \عددی {1}، \عددی {(1,-\tfrac {3\pi }{4})} پر \عددی {-1} 
 \item [
-\protect ۹.\protect ۳۸۱)
+\protect ۱۰.\protect ۳۷۱)
 ]
- مشروط مرتکز۔ \عددی {(\tfrac {1}{n^2}-\tfrac {1}{n})\to 0} لیکن \عددی {\tfrac {1+n}{n^2}>\tfrac {1}{n}} ہے۔ 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=1/2+cos(\x );}] \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ytick={\empty }] \addplot [samples=100,data cs=polar,domain=0:360]{f(x)}; \addplot []plot coordinates{(0,0.5)}node[right]{$r=\tfrac {1}{2}+\cos \theta $}; \end {axis} \end {tikzpicture}\begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=1/2+sin(\x );}] \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ytick={\empty }] \addplot [samples=100,data cs=polar,domain=0:360]{f(x)}; \addplot []plot coordinates{(0,0.75)}node[right,fill=white]{$r=\tfrac {1}{2}+\sin \theta $}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۸۳)
+\protect ۱۰.\protect ۳۷۳)
 ]
- مطلق ارتکاز؛ جذری پرکھ 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=3/2+cos(\x );}] \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ytick={\empty }] \addplot [samples=100,data cs=polar,domain=0:360]{f(x)}; \addplot []plot coordinates{(0,0.5)}node[right]{$r=\tfrac {3}{2}+\cos \theta $}; \end {axis} \end {tikzpicture}\begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=3/2-sin(\x );}] \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,ytick={\empty }] \addplot [samples=100,data cs=polar,domain=0:360]{f(x)}; \addplot []plot coordinates{(0,-1.5)}node[right,fill=white]{$r=\tfrac {3}{2}-\sin \theta $}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۸۵)
+\protect ۱۰.\protect ۳۷۵)
 ]
- مطلق ارتکاز۔ تکملی پرکھ 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=cos(\x );g(\x )=sin(\x );}] \begin {axis}[axis equal,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={\empty },ytick={\empty }, axis on top] \addplot [name path=a,smooth,domain=-90:90]({2*f(x)},{2*g(x)})node[pos=0.75,right]{$r=2$}; \addplot [name path=b,smooth,domain=90:270]({f(x)},{g(x)})node[pos=0.25,left]{$r=-1$}; \addplot [name path=c]plot coordinates {(0,-2)(0,2)}; \addplot [name path=d]plot coordinates {(0,-1)(0,1)}; \addplot [lgray]fill between [of={a and c}]; \addplot [lgray]fill between [of={b and d}]; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۸۷)
+\protect ۱۰.\protect ۳۷۷)
 ]
- منفرج؛ \عددی {a_n\not \to 0} 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=2-2*cos(\x );}] \begin {axis}[axis equal,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true, axis on top] \addplot [fill=lgray,data cs=polar,smooth,domain=0:360]{f(x)}node[pos=0.25,above left]{$0\le r\le 2-2\cos \theta $}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۳۸۹)
+\protect ۱۰.\protect ۳۸۱)
 ]
- مطلق مرتکز۔ نسبتی پرکھ 
+ $(0,0),\, (1,\tfrac {\pi }{2}),\, (1,\tfrac {3\pi }{2})$ 
 \item [
-\protect ۹.\protect ۳۹۱)
+\protect ۱۰.\protect ۳۸۳)
 ]
- مطلق مرتکز: \عددی {\tfrac {1}{n^2+2n+1}<\tfrac {1}{n^2}} 
+ $(0,0),\, (\sqrt {3},\tfrac {\pi }{3}),\, (-\sqrt {3},-\tfrac {\pi }{3})$ 
 \item [
-\protect ۹.\protect ۳۹۳)
+\protect ۱۰.\protect ۳۸۵)
 ]
- مطلق ارتکاز (مرتکز \عددی {p} تسلسل): $\abs {\tfrac {\cos n\pi }{n\sqrt {n}}}=\abs {\tfrac {(-1)^{n+1}}{n^{3/2}}}=\tfrac {1}{n^{3/2}}$ 
+ $(\sqrt {2},\pm \tfrac {\pi }{6}),\, (\sqrt {2},\pm \tfrac {5\pi }{6})$ 
 \item [
-\protect ۹.\protect ۳۹۵)
+\protect ۱۰.\protect ۳۸۷)
 ]
- مطلق مرتکز۔ جذری پرکھ 
+ $(1,\tfrac {\pi }{12}),\, (1,\tfrac {5\pi }{12}),\, (1,\tfrac {13\pi }{12}),\,(1,\tfrac {17\pi }{12})$ 
 \item [
-\protect ۹.\protect ۳۹۷)
+\protect ۱۰.\protect ۳۹۳)
 ]
- منفرج: \عددی {a_n\to \infty } 
+ الف 
 \item [
-\protect ۹.\protect ۳۹۹)
+\protect ۱۰.\protect ۴۰۱)
 ]
- مشروط مرتکز: \عددی {\sqrt {n+1}-\sqrt {n}=\tfrac {1}{\sqrt {n}+\sqrt {n+1}}\to 0} لیکن مطلق قیمتوں کا تسلسل منفرج ہوتا ہے۔ (\عددی {\sum \tfrac {1}{n}} کے ساتھ موازنہ کریں۔) 
-\item [
-\protect ۹.\protect ۴۰۱)
-]
- منفرج: \عددی {a_n\to \tfrac {1}{2}\ne 0} 
-\item [
-\protect ۹.\protect ۴۰۳)
-]
- مطلق مرتکز: $\sech n=\tfrac {2}{e^n+e^{-n}}=\tfrac {2e^n}{e^{2n}+1}<\tfrac {2e^n}{e^{2n}}=\tfrac {2}{e^n}$ اور \عددی {\tfrac {2}{e^n}} مرتکز ہندسی تسلسل کا ایک جزو ہے۔ 
-\item [
-\protect ۹.\protect ۴۰۵)
-]
- $\abs {\text {خلل}}<0.2$ 
-\item [
-\protect ۹.\protect ۴۰۷)
-]
- $\abs {\text {خلل}}<2\times 10^{-11}$ 
-\item [
-\protect ۹.\protect ۴۰۹)
-]
- \عددی {0.54030} 
-\item [
-\protect ۹.\protect ۴۱۱)
-]
- (الف) \عددی {a_n\ge a_{n+1}} (ب) \عددی {-\tfrac {1}{2}} 
+ $2y=\tfrac {2\sqrt {6}}{9}$ 
 \end {description}
- {\urduTechTermsfont {حصہ}} \protect ۹.\protect ۸\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۹۹۰
+ {\urduTechTermsfont {حصہ}} \protect ۱۰.\protect ۸\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۱۱۲۹
 \begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
 \item [
-\protect ۹.\protect ۴۲۴)
+\protect ۱۰.\protect ۴۰۳)
 ]
- (الف) \عددی {1,\,-1<x<1} (ب) \عددی {-1<x<1} (ج) کوئی نہیں 
+ $r\cos (\theta -\tfrac {\pi }{6})=5,\quad y=-\sqrt {3}x+10$ 
 \item [
-\protect ۹.\protect ۴۲۶)
+\protect ۱۰.\protect ۴۰۵)
 ]
- (الف) \عددی {\tfrac {1}{4},\, -\tfrac {1}{2}<x<0} (ب) \عددی {-\tfrac {1}{2}<x<0} (ج) کوئی نہیں 
+ $r\cos (\theta -\tfrac {4\pi }{3})=3,\quad y=-\tfrac {\sqrt {3}}{3}x-2\sqrt {3}$ 
 \item [
-\protect ۹.\protect ۴۲۸)
+\protect ۱۰.\protect ۴۰۷)
 ]
- (الف) \عددی {10,\,-8<x<12} (ب) \عددی {-8<x<12} (ج) کوئی نہیں 
+ $y=2-x$ 
 \item [
-\protect ۹.\protect ۴۳۰)
+\protect ۱۰.\protect ۴۰۹)
 ]
- (الف) \عددی {1,\, -1<x<1} (ب) \عددی {-1<x<1} (ج) کوئی نہیں 
+ $y=\tfrac {\sqrt {3}}{3}x+2\sqrt {3}$ 
 \item [
-\protect ۹.\protect ۴۳۲)
+\protect ۱۰.\protect ۴۱۱)
 ]
- (الف) \عددی {3,\, [-3,3]} (ب) \عددی {[-3,3]} (ج) کوئی نہیں 
+ $r\cos (\theta -\tfrac {\pi }{4})=3$ 
 \item [
-\protect ۹.\protect ۴۳۴)
+\protect ۱۰.\protect ۴۱۳)
 ]
- (الف) تمام \عددی {x} کے لیے \عددی {\infty } (ب) تمام \عددی {x} کے لیے (ج) کوئی نہیں 
+ $r\cos (\theta +\tfrac {\pi }{2})=5$ 
 \item [
-\protect ۹.\protect ۴۳۶)
+\protect ۱۰.\protect ۴۱۵)
 ]
- (الف) تمام \عددی {x} کے لیے \عددی {\infty } (ب) تمام \عددی {x} کے لیے (ج) کوئی نہیں 
+ $r=8\cos \theta $ 
 \item [
-\protect ۹.\protect ۴۳۸)
+\protect ۱۰.\protect ۴۱۷)
 ]
- (الف) \عددی {1,\, -1\le x<1} (ب) \عددی {-1<x<1} (ج) \عددی {x=-1} 
+ $r=2\sqrt {2}\sin \theta $ 
 \item [
-\protect ۹.\protect ۴۴۰)
+\protect ۱۰.\protect ۴۱۹)
 ]
- (الف) \عددی {5,\, -8<x<2} (ب) \عددی {-8<x<2} (ج) کوئی نہیں 
+ $C(2,0),\quad 2$ 
 \item [
-\protect ۹.\protect ۴۴۲)
+\protect ۱۰.\protect ۴۲۱)
 ]
- (الف) \عددی {3,\, -3<x<3} (ب) \عددی {-3<x<3} (ج) کوئی نہیں 
+ $C(1,\pi ),\quad 1$ 
 \item [
-\protect ۹.\protect ۴۴۴)
+\protect ۱۰.\protect ۴۲۳)
 ]
- (الف) \عددی {1,\, -1<x<1} (ب) \عددی {-1<x<1} (ج) کوئی نہیں 
+ $r=12\cos \theta $ 
 \item [
-\protect ۹.\protect ۴۴۶)
+\protect ۱۰.\protect ۴۲۵)
 ]
- (الف) \عددی {0,\, x=0} (ب) \عددی {x=0} (ج) کوئی نہیں 
+ $r=10\sin \theta $ 
 \item [
-\protect ۹.\protect ۴۴۸)
+\protect ۱۰.\protect ۴۲۷)
 ]
- (الف) \عددی {2,\, -4<x\le 0} (ب) \عددی {-4<x<0} (ج) \عددی {x=0} 
+ $(x+1)^2+y^2=1,\quad r=-2\cos \theta $ 
 \item [
-\protect ۹.\protect ۴۵۰)
+\protect ۱۰.\protect ۴۲۹)
 ]
- (الف) \عددی {1,\,-1\le x\le 1} (ب) \عددی {-1\le x\le 1} (ج) کوئی نہیں 
+ $x^2+(y+\tfrac {1}{2})^2=\tfrac {1}{4},\quad r=-\sin \theta $ 
 \item [
-\protect ۹.\protect ۴۵۲)
+\protect ۱۰.\protect ۴۳۱)
 ]
- (الف) \عددی {\tfrac {1}{4},\,1\le x\le \tfrac {3}{2}} (ب) \عددی {1\le x\le \tfrac {3}{2}} (ج) کوئی نہیں 
+ $r=\tfrac {2}{1+\cos \theta }$ 
 \item [
-\protect ۹.\protect ۴۵۴)
+\protect ۱۰.\protect ۴۳۳)
 ]
- (الف) \عددی {1,\, (-1-\pi )\le x< (1-\pi )} \\ (ب) \عددی {(-1-\pi )<x<(1-\pi )} (ج) \عددی {x=-1-\pi } 
+ $r=\tfrac {30}{1-5\sin \theta }$ 
 \item [
-\protect ۹.\protect ۴۵۶)
+\protect ۱۰.\protect ۴۳۵)
 ]
- \عددی {-1<x<3,\,\tfrac {4}{3+2x-x^2}} 
+ $r=\tfrac {1}{2+\cos \theta }$ 
 \item [
-\protect ۹.\protect ۴۵۸)
+\protect ۱۰.\protect ۴۳۷)
 ]
- \عددی {0<x<16,\,\tfrac {2}{4-\sqrt {x}}} 
+ $r=\tfrac {10}{5-\sin \theta }$ 
 \item [
-\protect ۹.\protect ۴۶۰)
+\protect ۱۰.\protect ۴۳۹)
 ]
- \عددی {-\sqrt {2}<x<\sqrt {2},\, \tfrac {3}{2-x^2}} 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=1/(1+cos(\x ));}] \begin {axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-2,-1,1}] \addplot [data cs=polar,domain=-120:120]{f(x)}node[above]{$r=\tfrac {1}{1+\cos \theta }$}; \addplot []plot coordinates {(0.5,0)}node[circ]{}node[pin=90:{$(\tfrac {1}{2},0)$}]{}; \addplot []plot coordinates {(1,-2)(1,2)}node[pos=0,below]{$x=1$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۴۶۲)
+\protect ۱۰.\protect ۴۴۱)
 ]
- $1<x<5,\,\tfrac {2}{x-1},\, 1<x<5,\,\tfrac {-2}{(x-1)^2}$ 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=25/(10-5*cos(\x ));}] \begin {axis}[clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={\empty },ytick={\empty }] \addplot [data cs=polar,domain=0:360]{f(x)}node[pos=0.25,above right]{$r=\tfrac {25}{10-5\cos \theta }$}; \addplot []plot coordinates {(5/3,0)}node[circ]{}node[above]{$(\tfrac {5}{3},0)$}; \addplot []plot coordinates {(-5,-2)(-5,2)}node[pos=0,below]{$x=-5$}; \addplot [] plot coordinates {(5,0)}node[circ]{}node[above right]{$(5,0)$}; \addplot [] plot coordinates {(-5/3,0)}node[circ]{}node[above,xshift=-2ex]{$(\tfrac {5}{3},\pi )$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۴۶۴)
+\protect ۱۰.\protect ۴۴۳)
 ]
- (الف) \عددی {\cos x=1-\tfrac {x^2}{2!}+\tfrac {x^4}{4!}-\tfrac {x^6}{6!}+\tfrac {x^8}{8!}-\tfrac {x^{10}}{10!}+\cdots } ؛ تمام \عددی {x} کے لیے مرتکز ہے\\ (ب) اور (ج) $2x-\tfrac {2^3x^3}{3!}+\tfrac {2^5x^5}{5!}-\tfrac {2^7x^7}{7!}+\tfrac {2^9x^9}{9!}-\tfrac {2^{11}x^{11}}{11!}+\cdots $ 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=400/(16+8*sin(\x ));}] \begin {axis}[clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={\empty },ytick={\empty }] \addplot [data cs=polar,domain=0:360]{f(x)}node[pos=0.2,right,xshift=1ex,yshift=1ex]{$r=\tfrac {400}{16+8\sin \theta }$}; \addplot []plot coordinates {(0,-50/3)}node[circ]{}node[pin=-45:{$(\tfrac {50}{3},\tfrac {3\pi }{2})$}]{}; \addplot []plot coordinates {(-40,50)(40,50)}node[pos=1,above]{$y=50$}; \addplot [] plot coordinates {(0,-50)}node[circ]{}node[below left]{$(50,\tfrac {3\pi }{2})$}; \addplot [] plot coordinates {(0,50/3)}node[circ]{}node[above left]{$(\tfrac {50}{3},\tfrac {\pi }{2})$}; \end {axis} \end {tikzpicture} \end {minipage} 
 \item [
-\protect ۹.\protect ۴۶۶)
+\protect ۱۰.\protect ۴۴۵)
 ]
- (الف) $\tfrac {x^2}{2}+\tfrac {x^4}{12}+\tfrac {x^6}{45}+\tfrac {17x^8}{2520}+\tfrac {31x^{10}}{14175},\,-\tfrac {\pi }{2}<x<\tfrac {\pi }{2}$ \\ (ب) $1+x^2+\tfrac {2x^4}{3}+\tfrac {17x^6}{45}+\tfrac {62x^8}{315}+\cdots ,\, -\tfrac {\pi }{2}<x<\tfrac {\pi }{2}$ 
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=8/(2-2*sin(\x ));}] \begin {axis}[clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={\empty },ytick={\empty }] \addplot [data cs=polar,domain=135:405]{f(x)}node[above]{$r=\tfrac {8}{2-2\sin \theta }$}; \addplot []plot coordinates {(0,-2)}node[circ]{}node[right]{$(2,\tfrac {3\pi }{2})$}; \addplot []plot coordinates {(-10,-4)(10,-4)}node[pos=0,yshift=1ex]{$y=-4$}; \end {axis} \end {tikzpicture} \end {minipage} 
+\item [
+\protect ۱۰.\protect ۴۴۷)
+]
+ \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=2*cos(\x );}] \begin {axis}[axis on top,clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true,xtick={2},xticklabels={\rlap {$2$}},ytick={\empty }] \addplot [data cs=polar,fill=lgray,smooth,domain=0:360]{f(x)}; \addplot []plot coordinates {(1,1)}node[above,xshift=2ex]{$0\le r\le 2\cos \theta $}; \end {axis} \end {tikzpicture} \end {minipage} 
+\item [
+\protect ۱۰.\protect ۴۵۹)
+]
+ (ب) \begin {minipage}{0.45\textwidth } \centering \begin {tabular}{ccc} \toprule سیارہ& حضیض شمسی (فلکی اکائیاں) & اوج شمسی (فلکی اکائیاں)\\ \midrule عطارہ&$0.3075$& $0.4667$\\ زھرہ&$0.7184$ & $0.7282$\\ زمین& $0.9833$ & $1.0167$\\ مریخ& $1.3817$ & $1.6663$ \\ مشتری& $4.9512$ & $5.4548$\\ زحل& $9.0210$ & $10.0570$\\ یورانس& $18.2977$ & $20.0623$\\ نیپچون& $29.8135$ & $30.3065$\\ پلوٹو& $29.6549$ & $49.2251$\\ \bottomrule \end {tabular} \end {minipage} 
+\item [
+\protect ۱۰.\protect ۴۶۱)
+]
+ (ا) \عددی {x^2+(y-2)^2=4,\,x=\sqrt {3}}، (ب) \begin {minipage}{0.45\textwidth } \centering \begin {tikzpicture}[font=\scriptsize ,declare function={f(\x )=4*sin(\x );g(\x )=sqrt(3)*sec(\x );}] \begin {axis}[axis on top,clip=false,axis equal,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west}, ylabel style={at={(current axis.above origin)},anchor=south}, enlargelimits=true,xtick={2},xticklabels={\rlap {$2$}},ytick={\empty }] \addplot [data cs=polar,smooth,domain=0:360]{f(x)}; \addplot [data cs=polar,smooth,domain=-20:70]{g(x)}node[above]{$r\sqrt {3}\sec \theta $}; \addplot []plot coordinates {(-1,4)}node[left]{$r=4\sin \theta $}; \addplot []plot coordinates {(sqrt(3),3)}node[circ]{}node[right]{$(2\sqrt {3},\tfrac {\pi }{3}),\, (\sqrt {3},3)$}; \addplot []plot coordinates {(sqrt(3),1)}node[circ]{}node[right]{$(2,\tfrac {\pi }{6}),\, (\sqrt {3},1)$}; \end {axis} \end {tikzpicture} \end {minipage} 
+\item [
+\protect ۱۰.\protect ۴۶۳)
+]
+ $r=\tfrac {4}{1+\cos \theta }$ 
+\item [
+\protect ۱۰.\protect ۴۶۵)
+]
+ (ب) پنیا \عددی {2} سنٹی میٹر دور ہونی چاہیے۔ 
+\item [
+\protect ۱۰.\protect ۴۶۷)
+]
+ $r=2a\sin \theta $\quad دائرہ 
+\item [
+\protect ۱۰.\protect ۴۶۹)
+]
+ $r\cos (\theta -\alpha )=p$\quad خط 
 \end {description}
- {\urduTechTermsfont {حصہ}} \protect ۹.\protect ۹\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۱۰۰۱
+ {\urduTechTermsfont {حصہ}} \protect ۱۰.\protect ۹\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۱۱۴۳
 \begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
 \item [
-\protect ۹.\protect ۴۷۲)
+\protect ۱۰.\protect ۴۷۳)
 ]
- \عددی {P_0(x)=0}، \عددی {P_1(x)=x-1}، \عددی {P_2(x)=(x-1)-\tfrac {1}{2}(x-1)^2} \\ \عددی {P_3(x)=(x-1)-\tfrac {1}{2}(x-1)^2+\tfrac {1}{3}(x-1)^3} 
+ $18\pi $ 
 \item [
-\protect ۹.\protect ۴۷۴)
+\protect ۱۰.\protect ۴۷۵)
 ]
- \عددی {P_0(x)=\tfrac {1}{2}}، \عددی {P_1(x)=\tfrac {1}{2}-\tfrac {1}{4}(x-2)}، \عددی {P_2(x)=\tfrac {1}{2}-\tfrac {1}{4}(x-2)+\tfrac {1}{8}(x-2)^2}،\\ \عددی {P_3(x)=\tfrac {1}{2}-\tfrac {1}{4}(x-2)+\tfrac {1}{8}(x-2)^2-\tfrac {1}{16}(x-2)^3} 
+ $\tfrac {\pi }{8}$ 
 \item [
-\protect ۹.\protect ۴۷۶)
-]
- \عددی {P_0(x)=\tfrac {\sqrt {2}}{2}}، \عددی {P_1(x)=\tfrac {\sqrt {2}}{2}+\tfrac {\sqrt {2}}{2}(x-\tfrac {\pi }{4})}،\\ \عددی {P_2(x)=\tfrac {\sqrt {2}}{2}+\tfrac {\sqrt {2}}{2}(x-\tfrac {\pi }{4})-\tfrac {\sqrt {2}}{4}(x-\tfrac {\pi }{4})^2}، \\ \عددی {P_3(x)=\tfrac {\sqrt {2}}{2}+\tfrac {\sqrt {2}}{2}(x-\tfrac {\pi }{4})-\tfrac {\sqrt {2}}{4}(x-\tfrac {\pi }{4})^2-\tfrac {\sqrt {2}}{12}(x-\tfrac {\pi }{4})^3} 
-\item [
-\protect ۹.\protect ۴۷۸)
-]
- \عددی {P_0(x)=2}،\عددی {P_1(x)=2+\tfrac {1}{4}(x-4)}،\\ \عددی {P_2(x)=2+\tfrac {1}{4}(x-4)-\tfrac {1}{64}(x-4)^2}، \\ \عددی {P_3(x)=2+\tfrac {1}{4}(x-4)-\tfrac {1}{64}(x-4)^2+\tfrac {1}{512}(x-4)^3} 
-\item [
-\protect ۹.\protect ۴۸۰)
-]
- $\sum \limits _{n=0}^{\infty }\tfrac {(-x)^n}{n!}=1-x+\tfrac {x^2}{2!}-\tfrac {x^3}{3!}+\tfrac {x^4}{4!}-\cdots $ 
-\item [
-\protect ۹.\protect ۴۸۲)
-]
- $\sum \limits _{n=0}^{\infty }(-1)^nx^n=1-x+x^2-x^3+\cdots $ 
-\item [
-\protect ۹.\protect ۴۸۴)
-]
- $\sum \limits _{n=0}^{\infty }\tfrac {(-1)^n3^{2n+1}x^{2n+1}}{(2n+1)!}$ 
-\item [
-\protect ۹.\protect ۴۸۶)
-]
- $7\sum \limits _{n=0}^{\infty }\tfrac {(-1)^nx^{2n}}{(2n)!}$ 
-\item [
-\protect ۹.\protect ۴۸۸)
-]
- $\sum \limits _{n=0}^{\infty }\tfrac {x^{2n}}{(2n)!}$ 
-\item [
-\protect ۹.\protect ۴۹۰)
-]
- $x^4-2x^3-5x+4$ 
-\item [
-\protect ۹.\protect ۴۹۲)
-]
- $8+10(x-2)+6(x-2)^2+(x-2)^3$ 
-\item [
-\protect ۹.\protect ۴۹۴)
-]
- $21-36(x+2)+25(x+2)^2-8(x+2)^3+(x+2)^4$ 
-\item [
-\protect ۹.\protect ۴۹۶)
-]
- $\sum \limits _{n=0}^{\infty }(-1)^n(n+1)(x-1)^n$ 
-\item [
-\protect ۹.\protect ۴۹۸)
-]
- $\sum \limits _{n=0}^{\infty }\tfrac {e^2}{n!}(x-2)^n$ 
-\item [
-\protect ۹.\protect ۵۰۴)
-]
- $L(x)=0,\, Q(x)=-\tfrac {x^2}{2}$ 
-\item [
-\protect ۹.\protect ۵۰۶)
-]
- $L(x)=1,\, Q(x)=1+\tfrac {x^2}{2}$ 
-\item [
-\protect ۹.\protect ۵۰۸)
-]
- $L(x)=x,\, Q(x)=x$ 
-\end {description}
- {\urduTechTermsfont {حصہ}} \protect ۹.\protect ۱۰\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۱۰۱۳
-\begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
-\item [
-\protect ۹.\protect ۵۱۰)
-]
- $\sum \limits _{n=0}^{\infty }\tfrac {(-5x)^n}{n!}=1-5x+\tfrac {5^2x^2}{2!}-\tfrac {5^3x^3}{3!}+\cdots $ 
-\item [
-\protect ۹.\protect ۵۱۲)
-]
- $\sum \limits _{n=0}^{\infty }\tfrac {5(-1)^n(-x)^{2n+1}}{(2n+1)!}=\sum \limits _{n=0}^{\infty }\tfrac {5(-1)^{n+1}x^{2n+1}}{(2n+1)!}=-5x+\tfrac {5x^3}{3!}-\tfrac {5x^5}{5!}+\tfrac {5x^7}{7!}+\cdots $ 
-\item [
-\protect ۹.\protect ۵۱۴)
-]
- $\sum \limits _{n=0}^{\infty }\tfrac {(-1)^nx^n}{(2n)!}$ 
-\item [
-\protect ۹.\protect ۵۱۶)
-]
- $\sum \limits _{n=0}^{\infty }\tfrac {x^{n+1}}{n!}=x+x^2+\tfrac {x^3}{2!}+\tfrac {x^4}{3!}+\tfrac {x^5}{4!}+\cdots $ 
-\item [
-\protect ۹.\protect ۵۱۸)
-]
- $\sum \limits _{n=2}^{\infty }\tfrac {(-1)^nx^{2n}}{(2n)!}=\tfrac {x^4}{4!}-\tfrac {x^6}{6!}+\tfrac {x^8}{8!}-\tfrac {x^{10}}{10!}+\cdots $ 
-\item [
-\protect ۹.\protect ۵۲۰)
-]
- $x-\tfrac {\pi ^2x^3}{2!}+\tfrac {\pi ^4x^5}{4!}-\tfrac {\pi ^6x^7}{6!}+\cdots =\sum \limits _{n=0}^{\infty }\tfrac {(-1)^n\pi ^{2n}x^{2n+1}}{(2n)!}$ 
-\item [
-\protect ۹.\protect ۵۲۲)
-]
- $1+\sum \limits _{n=1}^{\infty }\tfrac {(-1)^n(2x)^{2n}}{2\cdot (2n)!}=1-\tfrac {(2x)^2}{2\cdot 2!}+\tfrac {(2x)^4}{2\cdot 4!}-\tfrac {(2x)^6}{2\cdot 6!}+\cdots $ 
-\item [
-\protect ۹.\protect ۵۲۴)
-]
- $\sum \limits _{n=0}^{\infty }(2x)^{n+2}=2^2x^2+2^3x^3+2^4x^3+\cdots $ 
-\item [
-\protect ۹.\protect ۵۲۶)
-]
- $\sum \limits _{n=1}^{\infty }nx^{n-1}=1+2x+3x^2+4x^3+\cdots $ 
-\item [
-\protect ۹.\protect ۵۲۸)
-]
- $\abs {x}<(0.06)^{1/5}<0.56968$ 
-\item [
-\protect ۹.\protect ۵۳۰)
-]
- $\abs {\text {خلل}}<\tfrac {(10^{-3})^3}{6}<1.67\times 10^{-10},\quad -10^{-3}<x<0$ 
-\item [
-\protect ۹.\protect ۵۳۲)
-]
- $\abs {\text {خلل}}<\tfrac {(3^{0.1})(0.1)^3}{6}<1.87\times 10^{-5}$ 
-\item [
-\protect ۹.\protect ۵۳۴)
-]
- $\num {0.000293653}$ 
-\item [
-\protect ۹.\protect ۵۳۶)
-]
- $\abs {x}<0.02$ 
-\item [
-\protect ۹.\protect ۵۴۰)
-]
- $\sin x,\quad x=0.1;\, \sin (0.1)$ 
-\item [
-\protect ۹.\protect ۵۴۲)
-]
- $\tan ^{-1}x,\quad x=\tfrac {\pi }{3};\, \sqrt {3}$ 
-\item [
-\protect ۹.\protect ۵۴۴)
-]
- $e^x\sin x=x+x^2+\tfrac {x^3}{3}-\tfrac {x^5}{30}-\tfrac {x^6}{90}+\cdots $ 
-\item [
-\protect ۹.\protect ۵۵۲)
-]
- (الف) \عددی {Q(x)=1+kx+\tfrac {k(k-1)}{2}x^2}، (ب) \عددی {0\le x\le 100^{-1/3}} 
-\item [
-\protect ۹.\protect ۵۵۸)
-]
- (ا) \عددی {-1}، (ب) \عددی {(1/\sqrt {2})(1+i)}، (ج) \عددی {-i} 
-\item [
-\protect ۹.\protect ۵۶۲)
-]
- $x+x^2+\tfrac {1}{3}x^3-\tfrac {1}{30}x^5+\cdots $\quad \quad تمام \عددی {x} کے لیے مرتکز ہے۔ 
-\end {description}
- {\urduTechTermsfont {حصہ}} \protect ۹.\protect ۱۱\hskip 1em\relax {\urduTechTermsfont {صفحہ}} \protect ۱۰۳۱
-\begin {description}\setlength {\parskip }{0pt} \setlength {\itemsep }{0pt plus 1pt}
-\item [
-\protect ۹.\protect ۵۷۲)
-]
- $1+\tfrac {x}{2}-\tfrac {x^2}{8}+\tfrac {x^3}{16}$ 
-\item [
-\protect ۹.\protect ۵۷۴)
-]
- $1+\tfrac {1}{2}x+\tfrac {3}{8}x^2+\tfrac {5}{16}x^3+\cdots $ 
-\item [
-\protect ۹.\protect ۵۷۶)
-]
- $1-x+\tfrac {3x^2}{4}-\tfrac {x^3}{2}$ 
-\item [
-\protect ۹.\protect ۵۷۸)
-]
- $1-\tfrac {x^3}{2}+\tfrac {3x^6}{8}-\tfrac {5x^9}{16}$ 
-\item [
-\protect ۹.\protect ۵۸۰)
-]
- $1+\tfrac {1}{2x}-\tfrac {1}{8x^2}+\tfrac {1}{16x^3}$ 
-\item [
-\protect ۹.\protect ۵۸۲)
-]
- $(1+x)^4=1+4x+6x^2+4x^3+x^4$ 
-\item [
-\protect ۹.\protect ۵۸۴)
-]
- $(1-2x)^3=1-6x+12x^2-8x^3$ 
-\item [
-\protect ۹.\protect ۵۸۶)
-]
- $y=\sum _{n=0}^{\infty }\tfrac {(-1)^n}{n!}x^n=e^{-x}$ 
-\item [
-\protect ۹.\protect ۵۸۸)
-]
- $y=\sum _{n=1}^{\infty }\tfrac {x^n}{n!}=e^x-1$ 
-\item [
-\protect ۹.\protect ۵۹۰)
-]
- $y=\sum _{n=2}^{\infty }\tfrac {x^n}{n!}=e^x-x-1$ 
-\item [
-\protect ۹.\protect ۵۹۲)
-]
- $y=\sum _{n=0}^{\infty }\tfrac {x^{2n}}{2^nn!}=e^{x^2/2}$ 
-\item [
-\protect ۹.\protect ۵۹۴)
-]
- $y=\sum _{n=0}^{\infty }2x^n=\tfrac {2}{1-x}$ 
-\item [
-\protect ۹.\protect ۵۹۶)
-]
- $y=\sum _{n=0}^{\infty }\tfrac {x^{2n+1}}{(2n+1)!}=\sinh x$ 
-\item [
-\protect ۹.\protect ۵۹۸)
-]
- $y=2+x-2\sum _{n=1}^{\infty }\tfrac {(-1)^{n+1}x^{2n}}{(2n)!}$ 
-\item [
-\protect ۹.\protect ۶۰۰)
-]
- $y=\sum _{n=0}^{\infty }\tfrac {-2(x-2)^{2n+1}}{(2n+1)!}$ 
-\item [
-\protect ۹.\protect ۶۰۲)
-]
- $y=a+bx+\tfrac {1}{6}x^3-\tfrac {ax^4}{3\cdot 4}-\tfrac {bx^5}{4\cdot 5}-\tfrac {x^7}{6\cdot 6\cdot 7}+\tfrac {ax^8}{3\cdot 4\cdot 7\cdot 8}+\tfrac {bx^9}{4\cdot 5\cdot 8\cdot 9}+\cdots $\\ اور \عددی {n\ge 6} کے لیے \عددی {a_n=(n-2)(n-3)a_{n-4}} ہوں گے۔ 
-\item [
-\protect ۹.\protect ۶۰۴)
-]
- $\num {0.00267}$ 
-\item [
-\protect ۹.\protect ۶۰۶)
-]
- $\num {0.1}$ 
-\item [
-\protect ۹.\protect ۶۰۸)
-]
- $\num {0.099944461}$ 
-\item [
-\protect ۹.\protect ۶۱۰)
-]
- $\num {0.100001}$ 
-\item [
-\protect ۹.\protect ۶۱۲)
-]
- $\tfrac {1}{13\cdot 6!}\approx \num {0.00011}$ 
-\item [
-\protect ۹.\protect ۶۱۴)
-]
- $\tfrac {t^3}{3}-\tfrac {t^7}{7\cdot 3!}+\tfrac {t^{11}}{11\cdot 5!}$ 
-\item [
-\protect ۹.\protect ۶۱۶)
-]
- (الف) \عددی {\tfrac {x^2}{2}-\tfrac {x^4}{12}}، (ب) \عددی {\tfrac {x^2}{2}-\tfrac {x^4}{3\cdot 4}+\tfrac {x^6}{5\cdot 6}-\tfrac {x^8}{7\cdot 8}+\cdots +(-1)^{15}\tfrac {x^{32}}{31\cdot 32}} 
-\item [
-\protect ۹.\protect ۶۱۸)
-]
- $\tfrac {1}{2}$ 
-\item [
-\protect ۹.\protect ۶۲۰)
-]
- $-\tfrac {1}{24}$ 
-\item [
-\protect ۹.\protect ۶۲۲)
-]
- $\tfrac {1}{3}$ 
-\item [
-\protect ۹.\protect ۶۲۴)
-]
- $-1$ 
-\item [
-\protect ۹.\protect ۶۲۶)
+\protect ۱۰.\protect ۴۷۷)
 ]
  $2$ 
 \item [
-\protect ۹.\protect ۶۳۰)
+\protect ۱۰.\protect ۴۷۹)
 ]
- \عددی {500} اجزاء 
+ $\tfrac {\pi }{2}-1$ 
 \item [
-\protect ۹.\protect ۶۳۲)
+\protect ۱۰.\protect ۴۸۱)
 ]
- \عددی {3} اجزاء 
+ $5\pi -8$ 
 \item [
-\protect ۹.\protect ۶۳۴)
+\protect ۱۰.\protect ۴۸۳)
 ]
- (الف)\عددی {x+\tfrac {x^3}{6}+\tfrac {3x^5}{40}+\tfrac {5x^7}{112}}؛ رداس ارتکاز \عددی {1} ہے، (ب) \عددی {\tfrac {\pi }{2}-x-\tfrac {x^3}{6}-\tfrac {3x^5}{40}-\tfrac {5x^7}{112}} 
+ $3\sqrt {3}-\pi $ 
 \item [
-\protect ۹.\protect ۶۳۶)
+\protect ۱۰.\protect ۴۸۵)
 ]
- $1-2x+3x^2-4x^3+\cdots $ 
+ $\tfrac {\pi }{3}+\tfrac {\sqrt {3}}{2}$ 
+\item [
+\protect ۱۰.\protect ۴۸۷)
+]
+ $12\pi -9\sqrt {3}$ 
+\item [
+\protect ۱۰.\protect ۴۸۹)
+]
+ $\tfrac {3}{2}-\tfrac {\pi }{4}$ 
+\item [
+\protect ۱۰.\protect ۴۹۱)
+]
+ $\tfrac {19}{3}$ 
+\item [
+\protect ۱۰.\protect ۴۹۳)
+]
+ $8$ 
+\item [
+\protect ۱۰.\protect ۴۹۵)
+]
+ $3(\sqrt {2}+\ln (1+\sqrt {2}))$ 
+\item [
+\protect ۱۰.\protect ۴۹۷)
+]
+ $\tfrac {\pi }{8}+\tfrac {3}{8}$ 
+\item [
+\protect ۱۰.\protect ۴۹۹)
+]
+ $2\pi $ 
+\item [
+\protect ۱۰.\protect ۵۰۱)
+]
+ $\pi \sqrt {2}$ 
+\item [
+\protect ۱۰.\protect ۵۰۳)
+]
+ $2\pi (2-\sqrt {2})$ 
+\item [
+\protect ۱۰.\protect ۵۰۹)
+]
+ $(\tfrac {5}{6}a,0)$ 
 \end {description}

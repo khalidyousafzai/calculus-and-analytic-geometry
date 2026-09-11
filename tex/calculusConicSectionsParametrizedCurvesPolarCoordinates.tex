@@ -1,17 +1,251 @@
 \باب{مخروطی حصے، منحنی مقدار معلوم اور قطبی محدد}
 
 \جزوحصہء{جائزہ}
-حرکت پر غور احصاء کی مدد سے کیا جا سکتا ہے۔ اس حصہ میں ہم وقت کے ساتھ ایک ذرے کے بدلتے مقام پر غور کریں گے۔ ہم  مخروطی حصوں کی مساوات سے شروع کرتے ہیں چونکہ بالعکس مربع قوت کی وجہ سے سیارے، مصنوعی سیارے، اور دیگر اجسام  مخروطی راہ پر حرکت کرتے ہیں۔ جیسا ہم باب \حوالہ{سمتی_قیمت_تفاعل_اور_فضا_میں_حرکت} میں دیکھیں گے، اگر ہمیں معلوم ہو کہ ایک جسم مخروطی راہ پر حرکت کر رہا ہے  تب ہم اس کی رفتار اور اس پر عمل کرنے والی قوت دریافت کر سکتے ہیں۔  قطبی محدد سیاروں کی حرکت پر غور کو بہت آسان بناتا ہے لہٰذا ہم اس نئے محدد میں منحنیات، تفرق اور تکمل پر بھی غور کریں گے۔
+حرکت پر غور احصاء کی مدد سے کیا جا سکتا ہے۔ اس حصے میں ہم وقت کے ساتھ ایک جسم کے بدلتے مقام پر غور کریں گے۔      بالعکس مربع قوت کی  بنا پر  حرکت پذیر  سیارے، مصنوعی سیارے، اور دیگر اجسام   مخروطی راہ  اختیار  کرتے ہیں لہٰذا  ہم  مخروطی حصوں کی مساوات سے شروع کرتے ہیں جو ان راہوں  کو بیان کرتی ہیں۔ جیسا ہم باب \حوالہ{سمتی_قیمت_تفاعل_اور_فضا_میں_حرکت} میں دیکھیں گے، اگر ہمیں معلوم ہو کہ ایک جسم مخروطی راہ پر حرکت کر رہا ہے  تب ہم اس کی رفتار اور اس پر عمل کرنے والی قوت دریافت کر سکتے ہیں۔  قطبی محدد سیاروں کی حرکت پر غور کو بہت آسان بناتا ہے لہٰذا ہم اس نئے محدد میں منحنیات، تفرق،  اور تکمل پر بھی غور کریں گے۔
+
+
+
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.30\textwidth}
+\centering
+\pgfmathsetmacro{\kR}{1.5}
+\pgfmathsetmacro{\kr}{0.20*\kR}
+\pgfmathsetmacro{\kH}{1.5}
+\pgfmathsetmacro{\kL}{2.25}
+\pgfmathsetmacro{\kW}{1.5}
+\pgfmathsetmacro{\kang}{30}
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);fz(\r,\t)=\kH*\r/\kR;}]
+\draw[,thick] (0,\kH) circle (\kR cm and \kr cm);
+\draw[,thick] (0,-\kH)++(180:\kR cm) arc (180:360:\kR cm and \kr cm);
+\draw[,thick,dashed] (0,-\kH)++(0:\kR cm) arc (0:180:\kR cm and \kr cm);
+\draw[,thick] (0,0.5*\kH)++(180:0.5*\kR cm and 0.5*\kr cm)coordinate(kA) arc (180:360:0.5*\kR cm and 0.5*\kr cm);
+\draw[,thick,dashed] (0,0.5*\kH)++(0:0.5*\kR cm and 0.5*\kr cm)coordinate(kB) arc (0:180:0.5*\kR cm and 0.5*\kr cm);
+\draw[,thick,name path=kLSlant](-\kR,\kH)--(kA);
+\draw[,thick,name path=kRSlant](\kR,\kH)--(kB);
+\draw[,thick](\kang:-0.5*\kW)++(-0.5*\kL,0.5*\kH)coordinate(kkA);
+\path[name path=kLUp](kkA)--++(\kang:\kW);
+\draw[,thick,name path= kplane ,name intersections={of={kLUp and kLSlant}}](intersection-1)--(kkA)--++(\kL,0)--++(\kang:\kW)coordinate(kBR);
+\path[name path=kback](kBR)--++(-\kL,0);
+\draw[,thick,name intersections={of=kback and kRSlant}](kBR)--(intersection-1);
+\path[name path=kSlantL](-\kR,-\kH)--(\kR,\kH);
+\path[red,name path=kSlantR](\kR,-\kH)--(-\kR,\kH);
+\draw[,thick,name intersections={of=kSlantL and kplane}] (-\kR,-\kH)--(intersection-1);
+\draw[,thick,name intersections={of=kSlantR and kplane}] (\kR,-\kH)--(intersection-2);
+\end{tikzpicture}
+\caption{دائرہ: مخروط کا محور مستوی  پر عمودی ہے}
+\end{subfigure}%
+\begin{subfigure}{0.30\textwidth}
+\centering
+\pgfmathsetmacro{\kR}{1.5}
+\pgfmathsetmacro{\kr}{0.20*\kR}
+\pgfmathsetmacro{\kH}{1.5}
+\pgfmathsetmacro{\kL}{2.25}
+\pgfmathsetmacro{\kW}{2}
+\pgfmathsetmacro{\kang}{30}
+\pgfmathsetmacro{\kangL}{20}
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);fz(\r,\t)=\kH*\r/\kR;}]
+\draw[,thick] (0,\kH) circle (\kR cm and \kr cm);
+\draw[,thick] (0,-\kH)++(180:\kR cm) arc (180:360:\kR cm and \kr cm);
+\draw[,thick,dashed] (0,-\kH)++(0:\kR cm) arc (0:180:\kR cm and \kr cm);
+\path(-0.2,0.5*\kH)coordinate(kCenter);
+\draw[thick,name path=kellipse,rotate around={-20:(kCenter)}, thick] (kCenter)++(220:0.5*\kR cm and 0.75*\kr cm) arc (220:340:0.5*\kR cm and 0.75*\kr cm);
+\draw[thick,name path=kellipse,rotate around={-20:(kCenter)}, thick,dashed] (kCenter)++(-20:0.5*\kR cm and 0.75*\kr cm) arc (-20:220:0.5*\kR cm and 0.75*\kr cm);
+\path[name path=AA](\kR,\kH)--(-\kR,-\kH);
+\path[name path=BB](-\kR,\kH)--(\kR,-\kH);
+\draw[,thick,name path=kRSlant,name intersections={of=AA and kellipse}] (\kR,\kH)--(intersection-1);
+\draw[,thick] (0,0.5*\kH)++(180:0.5*\kR cm and 0.5*\kr cm)coordinate(kA);
+\draw[,thick,name path=kLSlant](-\kR,\kH)--(kA);
+%\draw[,thick,name path=kRSlant](\kR,\kH)--(kB);
+\path[thick](\kang:-0.5*\kW)++(-0.4*\kL,0.75*\kH)coordinate(kkA);
+\path[name path=kLUp](kkA)--++(\kang:\kW);
+\draw[,thick,name path= kplane ,name intersections={of={kLUp and kLSlant}}](intersection-1)--(kkA)--++(-\kangL:\kL)--++(\kang:\kW)coordinate(kBR);
+\path[name path=kback](kBR)--++(180-\kangL:\kL);
+\draw[,thick,name intersections={of=kback and kRSlant}](kBR)--(intersection-1);
+\path[name path=kSlantL](-\kR,-\kH)--(\kR,\kH);
+\path[red,name path=kSlantR](\kR,-\kH)--(-\kR,\kH);
+\draw[,thick,name intersections={of=kSlantL and kplane}] (-\kR,-\kH)--(intersection-1);
+\draw[,thick,name intersections={of=kSlantR and kplane}] (\kR,-\kH)--(intersection-2);
+\end{tikzpicture}
+\caption{ترخیم}
+\end{subfigure}%
+\begin{subfigure}{0.30\textwidth}
+\centering
+\pgfmathsetmacro{\kR}{1.5}
+\pgfmathsetmacro{\kr}{0.20*\kR}
+\pgfmathsetmacro{\kH}{1.5}
+\pgfmathsetmacro{\kL}{2}
+\pgfmathsetmacro{\kW}{1.25}
+\pgfmathsetmacro{\kang}{30}
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);fz(\r,\t)=\kH*\r/\kR;}]
+\draw[,thick] (0,\kH) circle (\kR cm and \kr cm);
+\draw[,thick] (0,-\kH)++(180:\kR cm) arc (180:360:\kR cm and \kr cm);
+\draw[,thick,dashed] (0,-\kH)++(0:\kR cm) arc (0:180:\kR cm and \kr cm);
+\path[thick,name path=kLSlant](-\kR,\kH)--(\kR,-\kH);
+\path[thick,name path=kRSlant](\kR,\kH)--(-\kR,-\kH);
+\path[thick](\kang:-0.5*\kW)++(-0.5*\kL,0)coordinate(kkA);
+\draw[,thick](kkA)--++(\kang:\kW)coordinate(kLB);
+\path[name path=kbackL] (kLB)--++(\kL,0);
+\draw[,name intersections={of=kbackL and kLSlant}] (kLB)--(intersection-1);
+\draw[,thick,name path=kfront](kkA)--++(\kL,0)--++(\kang:\kW)coordinate(kBB);
+\draw[,name intersections={of=kbackL and kRSlant}] (kBB)--(intersection-1);
+\draw[,thick](-\kR,\kH)--(0,0)node[circ]{};
+\draw[,thick](\kR,\kH)--(0,0);
+\draw[,thick,name intersections={of={kfront and kLSlant}}] (\kR,-\kH)--(intersection-1);
+\draw[,thick,name intersections={of={kfront and kRSlant}}] (-\kR,-\kH)--(intersection-1);
+\end{tikzpicture}
+\caption{نقطہ: مستوی،   ترخیم کے راس سے گزرتا ہے}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\centering
+\pgfmathsetmacro{\kR}{1.5}
+\pgfmathsetmacro{\kr}{0.20*\kR}
+\pgfmathsetmacro{\kRR}{0.72*\kR}
+\pgfmathsetmacro{\krr}{0.3*\kR}
+\pgfmathsetmacro{\kH}{1.5}
+\pgfmathsetmacro{\kL}{3.5}
+\pgfmathsetmacro{\kW}{2.5}
+\pgfmathsetmacro{\kang}{40}
+\pgfmathsetmacro{\kangL}{50}
+\pgfmathsetmacro{\kangB}{55}
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);fz(\r,\t)=\kH*\r/\kR;}]
+\draw[,thick] (0,\kH) circle (\kR cm and \kr cm);
+\draw[,thick] (0,-\kH)++(180:\kR cm and \kr cm) arc (180:315:\kR cm and \kr cm);
+\draw[,thick,dashed] (0,-\kH)++(-45:\kR cm and \kr cm) arc (-45:180:\kR cm and \kr cm);
+\path(0,\kH)coordinate(kCenter);
+\path[name path=kellipse,rotate around={-\kangL:(kCenter)}, thick] (kCenter)++(-90:\kRR cm and \krr cm) arc (-90:90:\kRR cm and \krr cm);
+\draw[,thick,rotate around={-\kangL:(kCenter)}, thick] (kCenter)++(-90:\kRR cm and \krr cm) arc (-90:0:\kRR cm and \krr cm);
+\draw[,thick,dashed,rotate around={-\kangL:(kCenter)}, thick] (kCenter)++(0:\kRR cm and \krr cm) arc (0:\kangB:\kRR cm and \krr cm);
+\draw[,thick,rotate around={-\kangL:(kCenter)}, thick] (kCenter)++(\kangB:\kRR cm and \krr cm) arc (\kangB:90:\kRR cm and \krr cm);
+\path[thick](\kang:-0.5*\kW)++(0,\kH)coordinate(kkA);
+\path[name path=kLUp](kkA)--++(\kang:\kW);
+\draw[,thick,name path= kplane ](kkA)--++(-\kangL:\kL)--++(\kang:\kW)coordinate(kBR)--++(180-\kangL:\kL)--(kkA);
+\path[name path=kSlantL](-\kR,-\kH)--(\kR,\kH);
+\path[red,name path=kSlantR](\kR,-\kH)--(-\kR,\kH);
+\draw[,thick,name intersections={of=kSlantL and kplane}] (-\kR,-\kH)--(intersection-1);
+\draw[,thick,name intersections={of=kSlantR and kplane}] (-\kR,\kH)--(intersection-1);
+\path[name path=kBack,red](\kR,\kH)--(-\kR,-\kH);
+\draw[,name intersections={of=kBack and kellipse}] (\kR,\kH)--(intersection-1);
+\end{tikzpicture}
+\caption{قطع مکافی:مستوی،  ترخیم کے کنارے کے  متوازی ہے}
+\end{subfigure}%
+\begin{subfigure}{0.45\textwidth}
+\centering
+\pgfmathsetmacro{\kR}{1.5}
+\pgfmathsetmacro{\kr}{0.20*\kR}
+\pgfmathsetmacro{\kRR}{0.65*\kR}
+\pgfmathsetmacro{\krr}{0.2*\kR}
+\pgfmathsetmacro{\kH}{1.5}
+\pgfmathsetmacro{\kL}{2*\kH}
+\pgfmathsetmacro{\kW}{2.5}
+\pgfmathsetmacro{\kang}{40}
+\pgfmathsetmacro{\kangL}{90}
+\pgfmathsetmacro{\kangB}{55}
+\pgfmathsetmacro{\kangC}{275}
+\pgfmathsetmacro{\kangD}{15}
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);fz(\r,\t)=\kH*\r/\kR;}]
+\draw[,thick] (0,\kH) circle (\kR cm and \kr cm);
+\draw[,thick] (0,-\kH)++(180:\kR cm and \kr cm) arc (180:250:\kR cm and \kr cm);
+\draw[,thick] (0,-\kH)++(\kangC:\kR cm and \kr cm)coordinate(kTipC) arc (\kangC:360:\kR cm and \kr cm)coordinate(kTipCC);
+\draw[,thick,dashed] (0,-\kH)++(0:\kR cm and \kr cm) arc (0:55:\kR cm and \kr cm);
+\draw[,thick,dashed] (0,-\kH)++(45:\kR cm and \kr cm) arc (45:180:\kR cm and \kr cm);
+\path(0.3*\kR,\kH)coordinate(kCenter);
+\path[name path=kellipse,rotate around={-\kangL:(kCenter)}, thick] (kCenter)++(-90:\kRR cm and \krr cm) arc (-90:90:\kRR cm and \krr cm);
+\draw[,thick,rotate around={-\kangL:(kCenter)}, thick] (kCenter)++(-90+\kangD:\kRR cm and \krr cm) arc (-90+\kangD:0+\kangD:\kRR cm and \krr cm);
+\draw[,thick,dashed,rotate around={-\kangL:(kCenter)}, thick] (kCenter)++(0+\kangD:\kRR cm and \krr cm)coordinate(kTipA) arc (0:90+\kangD:\kRR cm and \krr cm);
+\draw[,thick](kTipA)--(\kR,\kH);
+\path(0.3*\kR,-\kH)coordinate(kCenter);
+\path[name path=kellipse,rotate around={\kangL:(kCenter)}, thick] (kCenter)++(-90:\kRR cm and \krr cm) arc (-90:90:\kRR cm and \krr cm);
+\draw[,thick,dashed,rotate around={\kangL:(kCenter)}, thick] (kCenter)++(-90+\kangD:\kRR cm and \krr cm) arc (-90+\kangD:0+\kangD:\kRR cm and \krr cm)coordinate[pos=1](kTipA);
+\draw[,thick,rotate around={\kangL:(kCenter)}, thick] (kCenter)++(0+\kangD:\kRR cm and \krr cm) arc (0:90+\kangD:\kRR cm and \krr cm);
+\draw[,thick](kTipA)--++(0.1,0.0)--(\kR,-\kH);
+\path[thick](\kang:-0.5*\kW)++(0.30*\kR,\kH)coordinate(kkA);
+\draw[,thick,name path= kplane ](kkA)--++(-\kangL:\kL)--++(\kang:1.1*\kW)coordinate(kBR)--++(180-\kangL:\kL)--(kkA);
+\path[name path=kLSL](-\kR,\kH)--(\kR,-\kH);
+\path[name path=kLSR](\kR,\kH)--(-\kR,-\kH);
+\draw[,thick,name intersections={of=kLSL and kplane}] (-\kR,\kH)--(intersection-1);
+\draw[,thick,name intersections={of=kLSR and kplane}] (-\kR,-\kH)--(intersection-1);
+%\path[fill=white](kTipA)--(kTipC)--(kTipCC);           %clears lowest 
+\end{tikzpicture}
+\caption{قطع زائد:مستوی،  ترخیم کے محور  کے  متوازی ہے}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\centering
+\pgfmathsetmacro{\kR}{1.5}
+\pgfmathsetmacro{\kr}{0.20*\kR}
+\pgfmathsetmacro{\kRR}{0.72*\kR}
+\pgfmathsetmacro{\krr}{0.3*\kR}
+\pgfmathsetmacro{\kH}{1.5}
+\pgfmathsetmacro{\kL}{3.5}
+\pgfmathsetmacro{\kW}{2.5}
+\pgfmathsetmacro{\kang}{40}
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);fz(\r,\t)=\kH*\r/\kR;}]
+\draw[,thick] (0,-\kH)++(180:\kR cm and \kr cm) arc (180:315:\kR cm and \kr cm);
+\draw[,thick,dashed] (0,-\kH)++(-45:\kR cm and \kr cm) arc (-45:180:\kR cm and \kr cm);
+\path(-\kR,\kH)++(\kang:0.5*\kW)coordinate(kBackL);
+\path(\kR,-\kH)++(\kang:-0.5*\kW)coordinate(kFrontR);
+\draw[,thick,fill=white,name path=kplane](kBackL)--++(\kang:-\kW)--(kFrontR)--++(\kang:\kW)--(kBackL);
+\path[fill=white](0,0)--(\kR,\kH) arc (0:180:\kR cm and \kr cm)--(0,0);
+\draw[,thick,fill=white] (0,\kH) circle (\kR cm and \kr cm);
+\draw[,thick](-\kR,\kH)--(\kR,-\kH);
+\draw[,thick](\kR,\kH)--(0,0);
+\path[name path=kLow](0,0)--(-\kR,-\kH);
+\draw[,name intersections={of=kplane and kLow}] (-\kR,-\kH)--(intersection-1);
+\end{tikzpicture}
+\caption{ایک لکیر:مستوی،  ترخیم کے کنارے کو مماس ہے}
+\end{subfigure}%
+\begin{subfigure}{0.45\textwidth}
+\centering
+\pgfmathsetmacro{\kR}{1.5}
+\pgfmathsetmacro{\kr}{0.20*\kR}
+\pgfmathsetmacro{\kRR}{0.72*\kR}
+\pgfmathsetmacro{\krr}{0.3*\kR}
+\pgfmathsetmacro{\kH}{1.5}
+\pgfmathsetmacro{\kL}{3.5}
+\pgfmathsetmacro{\kW}{2.5}
+\pgfmathsetmacro{\kang}{40}
+\begin{tikzpicture}[font=\small,declare function={fx(\r,\t)=\r*cos(\t);fy(\r,\t)=\r*sin(\t);fz(\r,\t)=\kH*\r/\kR;}]
+\path[thick,name path=klowArc] (0,-\kH)++(180:\kR cm and \kr cm) arc (180:360:\kR cm and \kr cm);
+\draw[,thick] (0,-\kH)++(180:\kR cm and \kr cm) arc (180:230:\kR cm and \kr cm);
+\path[thick,dashed,name path=klowArcB] (0,-\kH)++(0:\kR cm and \kr cm) arc (0:180:\kR cm and \kr cm);
+\path(0,\kH)++(\kang:0.5*\kW)coordinate(kBackL);
+\path(0,-\kH)++(\kang:-0.5*\kW)coordinate(kFrontR);
+\draw[,thick,name path=kplane](kBackL)--++(\kang:-\kW)--(kFrontR)--++(\kang:\kW)--(kBackL);
+\path[fill=white]  (0,\kH)++(257:\kR cm and \kr cm)coordinate(TM) arc (257:360:\kR cm and \kr cm) --(0,0) --(TM);
+\path[fill=white,name path=lowerK]  (0,-\kH)++(257:\kR cm and \kr cm)coordinate(TM) arc (257:360:\kR cm and \kr cm) --(0,0) --(TM);
+\draw[,thick,dashed,name intersections={of=lowerK and kplane}](intersection-1)--(intersection-2);
+\draw[,thick] (0,-\kH)++(257:\kR cm and \kr cm) arc (257:360:\kR cm and \kr cm);
+\draw[,thick,fill=white,name path=kcir] (0,\kH) circle (\kR cm and \kr cm);
+\draw[,thick](0,0)--(\kR,\kH);
+\draw[,thick](0,0)--(\kR,-\kH);
+\path[name path=kAAA](0,0)--(-\kR,\kH);
+\path[name path=kBBB](0,0)--(-\kR,-\kH);
+\draw[,thick,name intersections={of=kplane and klowArc}] (0,0)--(intersection-2);
+\draw[,thick,dashed,name intersections={of=kplane and klowArcB}] (0,0)--(intersection-2);
+\draw[,thick,name intersections={of=kplane and kcir}] (intersection-1)--(intersection-2) (intersection-2)--(0,0);
+\path[name path=lowSB](intersection-1)coordinate(top)--(0,0);
+\draw[,thick,dashed,name intersections={of=lowSB and kcir}] (0,0)--(intersection-1);
+\draw[,thick](intersection-1)--(top);
+\draw[,thick,name intersections={of=kplane and kAAA}] (-\kR,\kH)--(intersection-1);
+\draw[,thick,name intersections={of=kplane and kBBB}] (-\kR,-\kH)--(intersection-1);
+\draw[,thick,dashed] (0,-\kH)++(0:\kR cm and \kr cm) arc (0:180:\kR cm and \kr cm);
+\end{tikzpicture}
+\caption{دو متقاطع لکیریں}
+\end{subfigure}
+\caption{دہرا ترخیم کو مستوی مختلف مقامات اور زاویوں سے قطع کر  کے قطع مکافی، قطع زائد وغیرہ پیدا کرتا ہے۔ }
+\label{شکل_ترخیمی_منحنیات}
+\end{figure}
 
 \حصہ{مخروطی حصے اور دو قدری مساواتیں}\شناخت{حصہ_مخروط_حصے_دو_قدری_مساواتیں}
-اس حصہ میں دکھایا جائے گا کہ مخروطی حصوں کو کس  طرح محددی سطح پر بطور دو قدری مساوات پیش کیا جاتا ہے۔ دوہرے مخروط کو سطح سے کاٹ کر مخروطی منحنیات پیدا کی جاتی ہیں اور اسی کی وجہ سے مخروطی حصہ کی اصطلاح پیدا ہوئی۔
+اس حصے میں دکھایا جائے گا کہ مخروطی حصوں کو کس  طرح محددی سطح پر بطور دو قدری مساوات پیش کیا جاتا ہے۔ دوہرے مخروط کو سطح سے کاٹ کر مخروطی منحنیات پیدا کی جاتی ہیں اور اسی کی وجہ سے مخروطی حصہ کی اصطلاح پیدا ہوئی (شکل \حوالہ{شکل_ترخیمی_منحنیات})۔
 
 \جزوحصہء{دائرہ}
 \ابتدا{تعریف}
-ایک مستوی میں رہتے ہوئے اس مستوی میں کسی مقررہ نقطہ سے مستقل فاصلے پر تمام نقطوں کے سلسلہ کو \اصطلاح{دائرہ}\فرہنگ{دائرہ}\حاشیہب{circle}\فرہنگ{circle} کہتے ہیں۔ اس مقررہ نقطہ کو دائرے کا \اصطلاح{مرکز}\فرہنگ{مرکز}\حاشیہب{center}\فرہنگ{center} کہتے ہیں جبکہ اس مستقل فاصلہ کو \اصطلاح{رداس}\فرہنگ{رداس}\حاشیہب{radius}\فرہنگ{radius} کہتے ہیں۔ 
+ایک مستوی میں رہتے ہوئے کسی مقررہ نقطہ سے مستقل فاصلے پر تمام نقطوں کے سلسلہ کو \اصطلاح{دائرہ}\فرہنگ{دائرہ}\حاشیہب{circle}\فرہنگ{circle} کہتے ہیں۔ اس مقررہ نقطہ کو دائرے کا \اصطلاح{مرکز}\فرہنگ{مرکز}\حاشیہب{center}\فرہنگ{center} کہتے ہیں جبکہ اس مستقل فاصلہ کو \اصطلاح{رداس}\فرہنگ{رداس}\حاشیہب{radius}\فرہنگ{radius} کہتے ہیں۔ 
 \انتہا{تعریف}
  
- دائرے کے معیاری مساوات جنہیں حصہ \حوالہ{حصہ_ابتدا_ترسیم_کی_منتقلی} میں فاصلہ کی مساوات \عددی{d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}} سے اخذ کیا گیا درج ذیل ہیں۔
+ دائرے کی  معیاری مساوات جنہیں حصہ \حوالہ{حصہ_ابتدا_ترسیم_کی_منتقلی} میں فاصلے  کی مساوات \عددی{d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}} سے اخذ کیا گیا ہے  درج ذیل ہیں۔
 \begin{align*}
 x^2+y^2&=a^2&&\text{\RL{رداس \عددی{a} اور مرکز \عددی{(0,0)}}}\\
 (x-h)^2+(y-k)^2&=a^2&&\text{\RL{رداس \عددی{a} اور مرکز \عددی{(h,k)}}}
@@ -19,22 +253,22 @@ x^2+y^2&=a^2&&\text{\RL{رداس \عددی{a} اور مرکز \عددی{(0,0)}}}
 
 \جزوحصہء{قطع مکافی}
 \ابتدا{تعریف}
-ایک سطح میں رہتے ہوئے کسی مقررہ سیدھی لکیر اور مقررہ نقطہ (جو اس مقررہ سیدھی لکیر پر نہیں پایا جاتا ہو) سے مستقل فاصلہ پر پائے جانے والے تمام نقطوں کے سلسلہ کو \اصطلاح{قطع مکافی}\فرہنگ{قطع مکافی}\حاشیہب{parabola}\فرہنگ{parabola} کہتے ہیں۔مقررہ نقطے کو قطع مکافی کا \عددی{ماسکہ}\فرہنگ{ماسکہ}\حاشیہب{focus}\فرہنگ{focus} کہتے ہیں جبکہ مقررہ لکیر کو \اصطلاح{ناظمہ}\فرہنگ{ناظمہ}\حاشیہب{directrix}\فرہنگ{directrix} کہتے ہیں۔ 
+ایک سطح میں رہتے ہوئے کسی مقررہ سیدھی لکیر اور مقررہ نقطہ (جو اس مقررہ سیدھی لکیر پر نہیں پایا جاتا ہو) سے مستقل فاصلے پر پائے جانے والے تمام نقطوں کے سلسلہ کو \اصطلاح{قطع مکافی}\فرہنگ{قطع مکافی}\حاشیہب{parabola}\فرہنگ{parabola} کہتے ہیں۔مقررہ نقطہ  کو قطع مکافی کا \عددی{ماسکہ}\فرہنگ{ماسکہ}\حاشیہب{focus}\فرہنگ{focus} کہتے ہیں جبکہ مقررہ لکیر کو \اصطلاح{ناظمہ}\فرہنگ{ناظمہ}\حاشیہب{directrix}\فرہنگ{directrix} کہتے ہیں۔ 
 \انتہا{تعریف}
 %==============
 
-جب ماسکہ کسی محددی محور پر ہو اور ناظمہ اس محددی محور کے متوازی ہو تب قطع مکافی کی مساوات سادہ ترین ہوتی ہے۔مثال کے طور پر، فرض کریں کہ ماسکہ محور \عددی{y} پر نقطہ \عددی{F(0,p)} پر پایا جاتا ہے اور لکیر \عددی{y=-p} ناظمہ (شکل \حوالہ{شکل_مخروط_قطع_مکافی_الف})  ہے۔ یوں شکل \حوالہ{شکل_مخروط_قطع_مکافی_الف} میں نقطہ \عددی{N(x,y)} صرف اور صرف اس صورت اس قطع مکافی پر پایا جائے گا جب \عددی{NF=NQ} ہو۔ فاصلہ کے کلیہ سے
+جب ماسکہ کسی محددی محور پر ہو اور ناظمہ اس محددی محور کے متوازی ہو تب قطع مکافی کی مساوات سادہ ترین ہوتی ہے۔مثال کے طور پر، فرض کریں کہ ماسکہ محور \عددی{y} پر نقطہ \عددی{F(0,p)} پر پایا جاتا ہے اور لکیر \عددی{y=-p} ناظمہ (شکل \حوالہ{شکل_مخروط_قطع_مکافی_الف})  ہے۔ یوں شکل \حوالہ{شکل_مخروط_قطع_مکافی_الف} میں نقطہ \عددی{N(x,y)} صرف اور صرف اس صورت اس قطع مکافی پر پایا جائے گا جب \عددی{NF=NQ} ہو۔ فاصلے کے کلیہ سے
 \begin{align*}
 NF&=\sqrt{(x-0)^2+(y-p)^2}=\sqrt{x^2+(y-p)^2}\\
 NQ&=\sqrt{(x-x)^2+(y-(-p))^2}=\sqrt{(y+p)^2}
 \end{align*}
-لکھا جا سکتا ہے۔ ان مساوات کو ایک دوسرے کے برابر پر کر کے حل کرتے ہوئے درج ذیل حاصل ہو گا۔
+لکھا جا سکتا ہے۔ ان مساوات کو  برابر  رکھ کر کے حل کرتے ہوئے درج ذیل حاصل ہو گا۔
 \begin{align}\label{مساوات_مخروط_قطع_مکافی_معیاری_الف}
 y&=\frac{x^2}{4p}\quad \implies \quad x^2=4py&&\text{\RL{معیاری روپ}}
 \end{align}
-اس مساوات سے قطع مکافی کی محور \عددی{y} کے لحاظ سے تشاکلی واضح ہے۔ ہم کہتے ہیں کہ محور \عددی{y} اس قطع مکافی کا محور تشاکلی ہے جس کو عموماً چھوٹا کر کے صرف \اصطلاح{محور}\فرہنگ{محور}\حاشیہب{axis}\فرہنگ{axis} پکارا جاتا ہے۔
+اس مساوات سے قطع مکافی کے  محور \عددی{y} کے لحاظ سے تشاکل واضح ہے۔ ہم کہتے ہیں کہ محور \عددی{y} اس قطع مکافی کا محور تشاکل ہے جس کو عموماً چھوٹا کر کے صرف \اصطلاح{محور}\فرہنگ{محور}\حاشیہب{axis}\فرہنگ{axis} پکارا جاتا ہے۔
 
-وہ نقطہ جس پر قطع مکافی اپنے محور کو قطع کرتا ہو \اصطلاح{راس}\فرہنگ{راس}\حاشیہب{vertex}\فرہنگ{vertex} کہلاتا ہے۔ قطع مکافی \عددی{x^2=4py} کا راس مبدا پر پایا جاتا ہے (شکل \حوالہ{شکل_مخروط_قطع_مکافی_الف})۔ مثبت عدد \عددی{p} کو قطع مکافی کا \اصطلاح{طول ماسکہ}\فرہنگ{ماسکہ!طول}\حاشیہب{focal length}\فرہنگ{focal!length} کہتے ہیں۔
+وہ نقطہ جس پر قطع مکافی اپنے محور کو قطع کرتا ہے   \اصطلاح{راس}\فرہنگ{راس}\حاشیہب{vertex}\فرہنگ{vertex} کہلاتا ہے۔ قطع مکافی \عددی{x^2=4py} کا راس مبدا پر پایا جاتا ہے (شکل \حوالہ{شکل_مخروط_قطع_مکافی_الف})۔ مثبت عدد \عددی{p} کو قطع مکافی کا \اصطلاح{طول ماسکہ}\فرہنگ{ماسکہ!طول}\حاشیہب{focal length}\فرہنگ{focal!length} کہتے ہیں۔
 \begin{figure}
 \centering
 \begin{minipage}{0.45\textwidth}
@@ -53,7 +287,8 @@ y&=\frac{x^2}{4p}\quad \implies \quad x^2=4py&&\text{\RL{معیاری روپ}}
 \addplot[]plot coordinates {(0,0)}node[circ]{}node[below right]{راس};
 \end{axis}
 \end{tikzpicture}
-\caption{قطع مکافی \عددی{x^2=4py}؛ راس کا فاصلہ ماسکہ اور ناظمہ سے ایک سا ہے۔}
+\caption
+{قطع مکافی \عددی{x^2=4py}؛   ماسکہ اور ناظمہ سے  راس کا فاصلہ ایک جتنا ہے۔}
 \label{شکل_مخروط_قطع_مکافی_الف}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
@@ -77,10 +312,10 @@ y&=\frac{x^2}{4p}\quad \implies \quad x^2=4py&&\text{\RL{معیاری روپ}}
 \begin{align*}
 y=-\frac{x^2}{4p}\quad \implies \quad x^2=-4py
 \end{align*}
-ہم اسی طرح کے مساوات ہم دائیں اور بائیں کھلنے والے قطع مکافی کے لیے حاصل کر سکتے ہیں (جدول \حوالہ{جدول_مخروط_کھلنے_کی_سمت} اور شکل \حوالہ{شکل_مخروط_قطع+مکافی_بائیں_دائیں})۔
+ہم اسی طرح کی مساواتیں    دائیں اور بائیں کھلنے والے قطع مکافی کے لیے حاصل کر سکتے ہیں (جدول \حوالہ{جدول_مخروط_کھلنے_کی_سمت} اور شکل \حوالہ{شکل_مخروط_قطع+مکافی_بائیں_دائیں})۔
 
 \begin{table}
-\caption{مبدا پر راس والے قطع مکافی کے معیاری مساوات (\عددی{p>0})}
+\caption{مبدا پر راس والے قطع مکافی کی  معیاری مساواتیں (\عددی{p>0})}
 \label{جدول_مخروط_کھلنے_کی_سمت}
 \centering
 \begin{tabular}{LCLCC}
@@ -123,7 +358,7 @@ y^2=-4px&(-p,0)&x=p&\text{محور \عددی{x}}&\text{بائیں}
 \end{axis}
 \end{tikzpicture}
 \end{subfigure}
-\caption{قطع مکافی \عددی{y^2=4px} اور \عددی{y^2=-4px} کے ترسیمات۔}
+\caption{قطع مکافی \عددی{y^2=4px} اور \عددی{y^2=-4px} کی  ترسیمات۔}
 \label{شکل_مخروط_قطع+مکافی_بائیں_دائیں}
 \end{figure}
 
@@ -131,11 +366,11 @@ y^2=-4px&(-p,0)&x=p&\text{محور \عددی{x}}&\text{بائیں}
 قطع مکافی \عددی{y^2=10x} کا ماسکہ اور ناظمہ تلاش کریں۔
 
 \حل
-ہم معیاری مساوات \عددی{y^2=4px} میں \عددی{p} کی قیمت تلاش کرتے ہیں:
+ہم معیاری مساوات \عددی{y^2=4px} میں \عددی{p} کی قیمت تلاش کرتے ہیں۔
 \begin{align*}
 4p=10\quad \implies \quad p=\frac{10}{4}=\frac{5}{2}
 \end{align*}
-اس کے بعد ہم حاصل کردہ \عددی{p} کے لیے ماسکہ اور ناظمہ تلاش کرتے ہیں۔
+اس کے بعد ہم حاصل کردہ \عددی{p} کے لیے  ماسکہ اور ناظمہ تلاش کرتے ہیں۔
 \begin{align*}
 (p,0)&=\big(\frac{5}{2},0\big)&&\text{ماسکہ}\\
 x&=-p, \quad \quad x=-\frac{5}{2}&&\text{ناظمہ}
@@ -143,34 +378,35 @@ x&=-p, \quad \quad x=-\frac{5}{2}&&\text{ناظمہ}
 \انتہا{مثال}
 %=======================
 
-جدول \حوالہ{جدول_مخروط_کھلنے_کی_سمت} کے کلیات پر حصہ \حوالہ{حصہ_ابتدا_ترسیم_کی_منتقلی} میں دیے گئے  کلیات انتقال  لاگو کرتے ہوئے دیگر مقامات پر واقع قطع مکافی کے مساوات حاصل کیے جا سکتے ہیں۔ (سوال \حوالہ{سوال_مخروط_ہر_قسم_الف}، سوال \حوالہ{سوال_مخروط_ہر_قسم_درکار_پ} اور سوال \حوالہ{سوال_مخروط_قطع_مکافی_منتقل_الف} تا سوال \حوالہ{سوال_مخروط_قطع_مکافی_منتقل_ب} دیکھیں۔)
+جدول \حوالہ{جدول_مخروط_کھلنے_کی_سمت} کے کلیات پر حصہ \حوالہ{حصہ_ابتدا_ترسیم_کی_منتقلی} میں دیے گئے  کلیات انتقال  لاگو کرتے ہوئے دیگر مقامات پر واقع قطع مکافی کی  مساواتیں  حاصل کی جا سکتی ہیں۔ (سوال \حوالہ{سوال_مخروط_ہر_قسم_الف}، سوال \حوالہ{سوال_مخروط_ہر_قسم_درکار_پ} اور سوال \حوالہ{سوال_مخروط_قطع_مکافی_منتقل_الف} تا سوال \حوالہ{سوال_مخروط_قطع_مکافی_منتقل_ب} دیکھیں۔)
 
 \جزوحصہء{ترخیم}
 \ابتدا{تعریف}
-ایک مستوی پر رہتے ہوئے، مستوی پر دو مقررہ نقطوں سے جن نقطوں کے فاصلوں کا مجموعہ مستقل ہو، ان کے سلسلہ کو \اصطلاح{ترخیم}\فرہنگ{ترخیم}\حاشیہب{ellipse}\فرہنگ{ellipse} کہتے ہیں۔ ان دو مقررہ نقطوں کو ترخیم کے \اصطلاح{ماسکے} کہتے ہیں (شکل \حوالہ{شکل_مخروط_ترخیم_کی_تعریف} اور شکل \حوالہ{شکل_مخروط_ترخیم_اہم_نقطے})۔
+ایک مستوی پر رہتے ہوئے، ان نقطوں کے سلسلے کو   \اصطلاح{ترخیم}\فرہنگ{ترخیم}\حاشیہب{ellipse}\فرہنگ{ellipse}  کہتے ہیں جن کا دو مقررہ نقطوں سے فاصلوں  کا مجموعہ مستقل ہو۔  ان دو مقررہ نقطوں کو ترخیم کے \اصطلاح{ماسکے} کہتے ہیں (شکل \حوالہ{شکل_مخروط_ترخیم_کی_تعریف} اور شکل \حوالہ{شکل_مخروط_ترخیم_اہم_نقطے})۔
 \انتہا{تعریف}
 %================
 
-ترخیم کو اس کی تعریف استعمال کرتے ہوئے بہت جلد ترسیم کیا جا سکتا ہے۔ مقررہ نقطوں \عددی{F_1} اور \عددی{F_2} پر ڈوری باندھیں۔ ڈوری کو قلم سے کھینچ کر رکھتے ہوئے قلم کو بند دائری حرکت دیں۔ چونکہ ڈوری کی لمبائی مستقل ہے لہٰذا قلم ترخیم کو ترسیم کرے گا (شکل \حوالہ{شکل_مخروط_ترخیم_کی_تعریف})۔
+ترخیم  کی تعریف استعمال کرتے ہوئے  اسے نہایت آسانی سے  ترسیم کیا جا سکتا ہے۔ مقررہ نقطوں \عددی{F_1} اور \عددی{F_2} پر ڈوری باندھیں۔ ڈوری کو قلم سے کھینچ کر رکھتے ہوئے قلم کو بند دائری حرکت دیں۔ چونکہ ڈوری کی لمبائی مستقل ہے لہٰذا قلم ترخیم کو ترسیم کرے گا (شکل \حوالہ{شکل_مخروط_ترخیم_کی_تعریف})۔
 
 \begin{figure}
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}
-\draw ([shift={(0:2cm and 1cm)}]0,0)arc  (0:360:2cm and 1cm)coordinate[pos=0.2](a)coordinate[pos=0.55](b); 
+\draw[thick] ([shift={(0:2cm and 1cm)}]0,0)arc  (0:360:2cm and 1cm)coordinate[pos=0.2](a)coordinate[pos=0.55](b); 
 \draw(1.25,0)node[circ]{}node[below]{$F_2$};
 \draw(-1.25,0)node[circ]{}node[below]{$F_1$};
 \draw[dashed](1.25,0)--(a)node[above]{$N$}--(-1.25,0);
 \end{tikzpicture}
-\caption{دونوں ماسکوں (\عددی{F_1} اور \عددی{F_2}) سے کسی بھی نقطہ \عددی{N} تک فاصلوں کا مجموعہ (نقطہ دار لکیر) ایک مستقل ہے۔}
+\caption
+{دونوں ماسکوں (\عددی{F_1} اور \عددی{F_2}) سے کسی بھی نقطہ \عددی{N} تک فاصلوں کا مجموعہ (نقطہ دار لکیر) ایک مستقل ہے۔}
 \label{شکل_مخروط_ترخیم_کی_تعریف}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}
 \draw(-2.5,0)--(2.5,0)node[pos=0.5,below]{\RL{محور ماسکہ}};
-\draw (0,0)circle (2cm and 1cm); 
+\draw[thick] (0,0)circle (2cm and 1cm); 
 \draw(0,0)node[circ]{}node[above]{مرکز};
 \draw(1.25,0)node[circ]{}node[above]{ماسکہ};
 \draw(-1.25,0)node[circ]{}node[above]{ماسکہ};
@@ -190,24 +426,26 @@ x&=-p, \quad \quad x=-\frac{5}{2}&&\text{ناظمہ}
 \begin{align}\label{مساوات_مخروط_ترخیم_الف}
 \frac{x^2}{a^2}+\frac{y^2}{a^2-c^2}=1
 \end{align} 
-چونکہ \عددی{NF_1+NF_2} کی لمبائی \عددی{F_1F_2} کی لمبائی سے زیادہ ہے (تکون \عددی{NF_1F_2} کے لیے تکونی عدم مساوات) لہٰذا عدد \عددی{2a}  عدد \عددی{2c} سے بڑا ہو گا۔ یوں \عددی{a>c} ہو گا لہٰذا  مساوات \حوالہ{مساوات_مخروط_ترخیم_الف} میں \عددی{a^2-c^2} ایک مثبت عدد ہو گا۔
+چونکہ \عددی{NF_1+NF_2} کی لمبائی \عددی{F_1F_2} کی لمبائی سے زیادہ ہے (تکون \عددی{NF_1F_2} کے لیے تکونی عدم مساوات) لہٰذا عدد \عددی{2a}،   عدد \عددی{2c} سے بڑا ہو گا۔ یوں \عددی{a>c} ہو گا لہٰذا  مساوات \حوالہ{مساوات_مخروط_ترخیم_الف} میں \عددی{a^2-c^2} ایک مثبت عدد ہو گا۔
 
 \begin{figure}
 \centering
 \begin{tikzpicture}
 \draw[-latex](-2.5,0)--(2.75,0)node[right]{$x$};
 \draw[-latex](0,-1.25)--(0,1.75)node[left]{$y$};
-\draw([shift={(0:2cm and 1cm)}]0,0) arc (0:360:2cm and 1cm)coordinate[pos=0.15](a);
+\draw[thick]([shift={(0:2cm and 1cm)}]0,0) arc (0:360:2cm and 1cm)coordinate[pos=0.15](a);
 \draw(2,0)node[below right]{$a$};
 \draw(0,1)node[above right]{$b$};
 \draw(-1.25,0)node[circ]{}node[below]{\small {$F_1(-c,0)$}}  (1.25,0)node[circ]{}node[below]{\small{$F_2(c,0)$}};
 \draw(-1.25,0)--(a)node[circ]{}node[above]{\small{$N(x,y)$}}--(1.25,0);
 \end{tikzpicture}
-\caption{ترخیم کی تعریف\عددی{NF_1+NF_2=2a} اور اس کی مساوات \عددی{\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}=1}  ہے۔}
+\caption
+{ترخیم کی تعریف\عددی{NF_1+NF_2=2a} اور اس کی مساوات \عددی{\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}=1}  ہے۔}
 \label{شکل_مخروط_مساوات_ترخیم}
 \end{figure}
 
-ہم مساوات \حوالہ{مساوات_مخروط_ترخیم_الف} حاصل کرنے کے اقدام کو الٹ کرتے ہوئے دکھا سکتے ہیں کہ ہر وہ نقطہ جو مساوات \حوالہ{مساوات_مخروط_ترخیم_الف}  کو \عددی{0<c<a} کے لیے مطمئن کرتا ہو \عددی{NF_1+NF_2=2a} کو بھی مطمئن کرے گا۔ یوں ایک نقطہ صرف اور صرف اس صورت ترخیم پر پایا جائے گا اگر وہ مساوات \حوالہ{مساوات_مخروط_ترخیم_الف} کو مطمئن کرتا ہو۔
+
+ہم مساوات \حوالہ{مساوات_مخروط_ترخیم_الف} حاصل کرنے کے اقدامات کو الٹ کرتے ہوئے دکھا سکتے ہیں کہ ہر وہ نقطہ جو مساوات \حوالہ{مساوات_مخروط_ترخیم_الف}  کو \عددی{0<c<a} کے لیے مطمئن کرتا ہو  مساوات \عددی{NF_1+NF_2=2a} کو بھی مطمئن کرے گا۔ یوں ایک نقطہ صرف اور صرف اس صورت ترخیم پر پایا جائے گا  جب   وہ مساوات \حوالہ{مساوات_مخروط_ترخیم_الف} کو مطمئن کرتا ہو۔
 
 اگر
 \begin{align}\label{مساوات_مخروط_ترخیم_ب}
@@ -218,29 +456,29 @@ b=\sqrt{a^2-c^2}
 \frac{x^2}{a^2}+\frac{y^2}{b^2}=1
 \end{align}
 
-مساوات \حوالہ{مساوات_مخروط_ترخیم_پ} کے تحت  مبدا اور دونوں محوروں کے لحاظ سے تشاکلی ہے۔ یہ \عددی{x=\pm a} اور \عددی{y=\pm b} لکیروں میں بند مستطیل کے اندر پایا جاتا ہے۔ یہ محوروں کو نقطہ \عددی{(\pm a,0)} اور \عددی{(0,\pm b)} پر قطع کرتا ہے۔ چونکہ
+مساوات \حوالہ{مساوات_مخروط_ترخیم_پ} کے تحت    مبدا اور دونوں محوروں کے لحاظ سے ترخیم  تشاکلی ہے۔ یہ \عددی{x=\pm a} اور \عددی{y=\pm b} لکیروں میں بند مستطیل کے اندر پائی جاتی ہے اور  محوروں کو نقطہ \عددی{(\pm a,0)} اور \عددی{(0,\pm b)} پر قطع کرتی ہے۔ چونکہ
 \begin{align*}
 \frac{\dif y}{\dif x}&=-\frac{b^2x}{a^2y}&&\text{\RL{مساوات \حوالہ{مساوات_مخروط_ترخیم_پ} سے حاصل کیا گیا}}
 \end{align*}
-کی قیمت \عددی{x=0} پر صفر اور \عددی{y=0} پر لامتناہی ہے  لہٰذا \عددی{(\pm a,0)} اور \عددی{(0,\pm b)} پر  مماثل محوروں کو عمودی ہوں گے۔
+کی قیمت \عددی{x=0} پر صفر اور \عددی{y=0} پر لامتناہی ہے  لہٰذا \عددی{(\pm a,0)} اور \عددی{(0,\pm b)} پر   مماس، محوروں کو  عمودی ہوں گے۔
 
-\جزوحصہء{ترخیم کا اکبر اور اصغر محور}
-مساوات \حوالہ{مساوات_مخروط_ترخیم_پ} کی ترخیم کا \اصطلاح{اکبر محور}\فرہنگ{محور!اکبر}\حاشیہب{major axis}\فرہنگ{axis!major} نقاط \عددی{(\pm 2,0)} کو جوڑنا والی لکیر ہے جس کی لمبائی \عددی{2a} ہے۔ اس کے \اصطلاح{اصغر محور}\فرہنگ{محور!اصغر}\حاشیہب{minor axis}\فرہنگ{axis!minor} کی لمبائی \عددی{2b} ہے جو نقاط \عددی{(0,\pm b)} کے بیچ لکیر ہے۔ عدد \عددی{a} از خود  نصف اکبر محور جبکہ عدد \عددی{ب} نصف اصغر محور کہلاتے ہیں۔ مساوات \حوالہ{مساوات_مخروط_ترخیم_ب} سے عدد \عددی{c}
+\جزوحصہء{ترخیم کا محور  اکبر اور محور   اصغر}
+مساوات \حوالہ{مساوات_مخروط_ترخیم_پ} کی ترخیم کا \اصطلاح{محور اکبر}\فرہنگ{محور!اکبر}\حاشیہب{major axis}\فرہنگ{axis!major} نقاط \عددی{(\pm 2,0)} کو ملانے   والی لکیر ہے جس کی لمبائی \عددی{2a} ہے۔ اس کے \اصطلاح{محور اصغر}\فرہنگ{محور!اصغر}\حاشیہب{minor axis}\فرہنگ{axis!minor} کی لمبائی \عددی{2b} ہے جو نقاط \عددی{(0,\pm b)} کو ملانے والی  لکیر ہے۔ عدد \عددی{a}  کو نصف محور  اکبر  جبکہ عدد \عددی{b}  کو نصف محور  اصغر  کہتے  ہیں۔ مساوات \حوالہ{مساوات_مخروط_ترخیم_ب} سے عدد \عددی{c}
 \begin{align*}
 c=\sqrt{a^2-b^2}
 \end{align*}
-حاصل ہوتا ہے جو مرکز تا ماسکہ فاصلہ ہے۔
+حاصل ہوتا ہے جو مرکز  سے  ماسکہ تک   کا فاصلہ ہے۔
 
-\ابتدا{مثال}\شناخت{مثال_مخروط_اکبر_محور_الف}\ترچھا{افقی اکبر محور}\\
+\ابتدا{مثال}\شناخت{مثال_مخروط_اکبر_محور_الف}\ترچھا{افقی محور  اکبر}\\
 درج ذیل ترخیم
 \begin{align}\label{مساوات_مخروط_افقی_اکبر_محور}
 \frac{x^2}{16}+\frac{y^2}{9}=1
 \end{align}
  جس کو شکل \حوالہ{شکل_مثال_مخروط_اکبر_محور_الف} میں دکھایا گیا ہے کے لیے درج ذیل ہوں گے۔
 \begin{align*}
-a&=\sqrt{16}=4&&\text{\RL{نصف اکبر محور}}\\
-b&=\sqrt{9}=3&&\text{\RL{نصف اصغر محور}}\\
-c&=\sqrt{16-9}=\sqrt{7}&&\text{\RL{ماسکہ سے مرکز تک فاصلہ}}\\
+a&=\sqrt{16}=4&&\text{\RL{نصف محور اکبر}}\\
+b&=\sqrt{9}=3&&\text{\RL{نصف محور اصغر}}\\
+c&=\sqrt{16-9}=\sqrt{7}&&\text{\RL{ماسکہ سے مرکز تک کا  فاصلہ}}\\
 (\pm c,0)&=(\pm 7,0)&&\text{ماسکے}\\
 (\pm a,0)&=(\pm 4,0)&&\text{راس}\\
 &(0,0)&&\text{مرکز}
@@ -271,7 +509,7 @@ c&=\sqrt{16-9}=\sqrt{7}&&\text{\RL{ماسکہ سے مرکز تک فاصلہ}}\\
 \addplot[]plot coordinates{(0,0)}node[circ]{}node[below right]{مرکز};
 \end{axis}
 \end{tikzpicture}
-\caption{اکبر محور افقی ہے۔ (مثال \حوالہ{مثال_مخروط_اکبر_محور_الف})}
+\caption{محور اکبر افقی ہے۔ (مثال \حوالہ{مثال_مخروط_اکبر_محور_الف})}
 \label{شکل_مثال_مخروط_اکبر_محور_الف}
 \end{minipage}\hfill
 \begin{minipage}{0.35\textwidth}
@@ -295,21 +533,21 @@ c&=\sqrt{16-9}=\sqrt{7}&&\text{\RL{ماسکہ سے مرکز تک فاصلہ}}\\
 \addplot[]plot coordinates{(0,0)}node[circ]{}node[below right]{مرکز};
 \end{axis}
 \end{tikzpicture}
-\caption{اکبر محور عمودی ہے۔ (مثال \حوالہ{مثال_مخروط_اکبر_محور_ب})}
+\caption{محور اکبر عمودی ہے۔ (مثال \حوالہ{مثال_مخروط_اکبر_محور_ب})}
 \label{شکل_مثال_مخروط_اکبر_محور_ب}
 \end{minipage}
 \end{figure}
 
-\ابتدا{مثال}\شناخت{مثال_مخروط_اکبر_محور_ب}\ترچھا{عمودی اکبر محور}\\
-مساوات \حوالہ{مساوات_مخروط_افقی_اکبر_محور} میں \عددی{x} اور \عددی{y} کو ایک دوسرے کے ساتھ بدل کر درج ذیل ترخیم حاصل ہوتا ہے
+\ابتدا{مثال}\شناخت{مثال_مخروط_اکبر_محور_ب}\ترچھا{عمودی محور اکبر}\\
+مساوات \حوالہ{مساوات_مخروط_افقی_اکبر_محور} میں \عددی{x} اور \عددی{y} کو  آپس میں بدل کر درج ذیل ترخیم حاصل ہوتی ہے
 \begin{align}\label{مساوات_مخروط_عمودی_اکبر_محور}
 \frac{x^2}{9}+\frac{y^2}{16}=1
 \end{align}
  جس کو شکل \حوالہ{شکل_مثال_مخروط_اکبر_محور_ب} میں دکھایا گیا ہے۔ اس کے لیے درج ذیل ہوں گے۔
 \begin{align*}
-a&=\sqrt{16}=4&&\text{\RL{نصف اکبر محور}}\\
-b&=\sqrt{9}=3&&\text{\RL{نصف اصغر محور}}\\
-c&=\sqrt{16-9}=\sqrt{7}&&\text{\RL{ماسکہ سے مرکز تک فاصلہ}}\\
+a&=\sqrt{16}=4&&\text{\RL{نصف محور اکبر}}\\
+b&=\sqrt{9}=3&&\text{\RL{نصف محور اصغر}}\\
+c&=\sqrt{16-9}=\sqrt{7}&&\text{\RL{ماسکہ سے مرکز تک کا  فاصلہ}}\\
 (0,\pm c)&=(0,\pm 7)&&\text{ماسکے}\\
 (0,\pm a)&=(0,\pm 4)&&\text{راس}\\
 &(0,0)&&\text{مرکز}
@@ -317,25 +555,25 @@ c&=\sqrt{16-9}=\sqrt{7}&&\text{\RL{ماسکہ سے مرکز تک فاصلہ}}\\
 \انتہا{مثال}
 %=========================
 
-مساوات \حوالہ{مساوات_مخروط_افقی_اکبر_محور} اور مساوات \حوالہ{مساوات_مخروط_عمودی_اکبر_محور} کو سمجھنے میں کبھی دشواری پیش نہیں آتی ہے۔ ہم محددی محور پر نقطہ تقاطع  معلوم کر کے لمبی محور کو اکبر محور چنتے ہیں۔مرکز ان صورتوں میں مبدا پر ہو گا اور ماسکہ اکبر محور پر پائے جائیں گے۔
+مساوات \حوالہ{مساوات_مخروط_افقی_اکبر_محور} اور مساوات \حوالہ{مساوات_مخروط_عمودی_اکبر_محور} کو سمجھنے میں کبھی دشواری پیش نہیں آتی۔ ہم محددی محور پر نقطہ تقاطع  معلوم کر کے لمبی محور کو محور اکبر چنتے ہیں۔ ان صورتوں میں مبدا پر ہو  مرکز گا اور ماسکے محور اکبر پر پائے جائیں گے۔
 
-\موٹا{مبدا پر مرکز والے ترخیم کے معیاری مساوات}\\
+\موٹا{مبدا پر مرکز والی ترخیم کی معیاری مساوات}\\
 \begin{align*}
 \frac{x^2}{a^2}+\frac{y^2}{b^2}&=1\quad (a>b)&&\text{\RL{محور \عددی{x} پر ماسکہ}}\\
-c&=\sqrt{a^2-b^2}&&\text{\RL{مرکز سے ماسکہ تک فاصلہ}}\\
+c&=\sqrt{a^2-b^2}&&\text{\RL{مرکز سے ماسکہ تک کا  فاصلہ}}\\
 &(\pm c,0)  &&\text{ماسکے}\\
 &(\pm a,0)  &&\text{راس}\\
 \\
 \frac{x^2}{b^2}+\frac{y^2}{a^2}&=1\quad (a>b)&&\text{\RL{محور \عددی{y} پر ماسکہ}}\\
-c&=\sqrt{a^2-b^2}&&\text{\RL{مرکز سے ماسکہ تک فاصلہ}}\\
+c&=\sqrt{a^2-b^2}&&\text{\RL{مرکز سے ماسکہ تک کا  فاصلہ}}\\
 &(0,\pm c)  &&\text{ماسکے}\\
 &(0,\pm a)  &&\text{راس}
 \end{align*}
-دونوں صورتوں میں نصف اکبر محور \عددی{a} اور نصف اصغر محور \عددی{b} ہیں۔
+دونوں صورتوں میں نصف محور اکبر \عددی{a} اور نصف محور اصغر \عددی{b} ہیں۔
 
 \جزوحصہء{قطع زائد}
 \ابتدا{تعریف}
-ایک مستوی میں رہتے ہوئے مستوی میں دو مقررہ نقطوں سے جن نقطوں کے فاصلوں کا فرق ایک مستقل ہو، ان تمام نقطوں کے سلسلہ کو \اصطلاح{قطع زائد}\فرہنگ{قطع زائد}\حاشیہب{hyperbola}\فرہنگ{hyperbola} کہتے ہیں۔ یہ دو مقررہ نقطے قطع زائد کے \اصطلاح{ماسکہ}\فرہنگ{ماسکہ} کہلاتے ہیں۔  
+ایک مستوی میں رہتے ہوئے ،    ان نقطوں کے سلسلے کو   \اصطلاح{قطع زائد}\فرہنگ{قطع زائد}\حاشیہب{hyperbola}\فرہنگ{hyperbola} کہتے ہیں جن  کا دو مقررہ نقطوں سے   فاصلوں کا فرق ایک مستقل ہو۔  یہ دو مقررہ نقطے قطع زائد کے \اصطلاح{ماسکہ}\فرہنگ{ماسکہ} کہلاتے ہیں۔  
 \انتہا{تعریف}
 %==================
 \begin{figure}
@@ -363,7 +601,8 @@ c&=\sqrt{a^2-b^2}&&\text{\RL{مرکز سے ماسکہ تک فاصلہ}}\\
 \addplot[]plot coordinates{(0,0)}node[below left]{M};
 \end{axis}
 \end{tikzpicture}
-\caption{قطع زائد کے دائیں بازو کے لیے\\ \عددی{NF_1-NF_2=2a} جبکہ بائیں بازو کے لیے \عددی{NF_2-NF_1=2a} ہو گا۔}
+\caption
+{قطع زائد کے دائیں بازو کے لیے\\ \عددی{NF_1-NF_2=2a} جبکہ بائیں بازو کے لیے \عددی{NF_2-NF_1=2a} ہو گا۔}
 \label{شکل_مخروط_قطع_زائد}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
@@ -388,22 +627,22 @@ c&=\sqrt{a^2-b^2}&&\text{\RL{مرکز سے ماسکہ تک فاصلہ}}\\
 \addplot[]plot coordinates{(1,0)}node[below]{\RL{محور ماسکہ}};
 \end{axis}
 \end{tikzpicture}
-\caption{قطع مکافی کے محور ماسکہ پر نقطے۔}
+\caption{قطع مکافی کے محور ماسکہ پر  اہم نقطے۔}
 \label{شکل_مخروط_قطع_زائد_ب}
 \end{minipage}
 \end{figure}
 
-اگر ماسکے \عددی{F_1(-c,0)} اور \عددی{(F_2(c,0))} ہوں  (شکل \حوالہ{شکل_مخروط_قطع_زائد}) اور مستقل فرق \عددی{2a} ہو تب نقطہ \عددی{(x,y)} صرف اور صرف اس صورت قطع زائد پر پایا جائے گا جب درج ذیل مطمئن ہو۔
+اگر ماسکے \عددی{F_1(-c,0)} اور \عددی{(F_2(c,0))} ہوں  (شکل \حوالہ{شکل_مخروط_قطع_زائد}) اور مستقل فرق \عددی{2a} ہو تب نقطہ \عددی{(x,y)} صرف اور صرف اس صورت قطع زائد پر پایا جائے گا جب درج ذیل مساوات  مطمئن ہو۔
 \begin{align}\label{مساوات_مخروط_قطع_مکافی_الف}
 \sqrt{(x+c)^2+y^2}-\sqrt{(x-c)^2+y^2}=\pm 2a
 \end{align} 
-اس مساوات کی سادہ روپ حاصل کرنے کی خاطر ہم دوسرے جذر کو دائیں ہاتھ منتقل کر کے دونوں ہاتھ کا مربع لے کر جذر کو ایک ہاتھ رکھ کر دوبارہ دونوں ہاتھ کا مربع لیتے ہیں۔ یوں درج ذیل حاصل ہو گا۔
+اس مساوات کا سادہ روپ حاصل کرنے کی خاطر ہم دوسرے جذر کو دائیں ہاتھ منتقل کر کے دونوں ہاتھوں کا مربع لے کر جذر کو ایک ہاتھ  پر رکھ کر دوبارہ دونوں ہاتھوں کا مربع لیتے ہیں۔ یوں درج ذیل حاصل ہو گا۔
 \begin{align}\label{مساوات_مخروط_قطع_مکافی_ب}
 \frac{x^2}{a^2}+\frac{y^2}{a^2-c^2}=1
 \end{align}
 اب تک یہ مساوات بالکل ترخیم کی مساوات کی طرح ہے۔ البتہ اب چونکہ تکون \عددی{NF_1F_2} کے دو اضلاع کا فرق \عددی{2a} ہے جو تیسرے ضلع \عددی{2c} سے کم ہو گا لہٰذا \عددی{a^2-c^2} منفی قیمت ہے۔
 
-ہم مساوات \حوالہ{مساوات_مخروط_قطع_مکافی_ب} کے حصول کے اقدام کو الٹ کرتے ہوئے دکھا سکتے ہیں کہ ہر وہ نقطہ \عددی{N} جو \عددی{0<a<c} کے لیے اس طرز کی مساوات کو مطمئن کرتا ہو، مساوات \حوالہ{مساوات_مخروط_قطع_مکافی_الف} کو بھی مطمئن کرے گا۔ یوں ایک نقطہ صرف اور صرف اس صورت قطع زائد پر پایا جائے گا اگر اس کے محدد مساوات \حوالہ{مساوات_مخروط_قطع_مکافی_ب} کو مطمئن کرتے ہوں۔
+ہم مساوات \حوالہ{مساوات_مخروط_قطع_مکافی_ب} کے حصول کے اقدامات کو الٹ کرتے ہوئے دکھا سکتے ہیں کہ ہر وہ نقطہ \عددی{N} جو \عددی{0<a<c} کے لیے اس طرز کی مساوات کو مطمئن کرتا ہو، مساوات \حوالہ{مساوات_مخروط_قطع_مکافی_الف} کو بھی مطمئن کرے گا۔ یوں ایک نقطہ صرف اور صرف اس صورت قطع زائد پر پایا جائے گا جب  اس کے محدد مساوات \حوالہ{مساوات_مخروط_قطع_مکافی_ب} کو مطمئن کرتے ہوں۔
 
 اگر ہم \عددی{c^2-a^2} کے مثبت جذر کو \عددی{b} سے ظاہر کریں،
 \begin{align}\label{مساوات_مخروط_قطع_مکافی_پ}
@@ -413,7 +652,7 @@ b=\sqrt{c^2-a^2}
 \begin{align}\label{مساوات_مخروط_قطع_زائد}
 \frac{x^2}{a^2}-\frac{y^2}{b^2}=1
 \end{align}
-قطع زائد کی مساوات \حوالہ{مساوات_مخروط_قطع_زائد} اور ترخیم کی مساوات \حوالہ{مساوات_مخروط_ترخیم_پ} میں فرق منفی علامت کا اور درج ذیل نئے تعلق کا ہے۔
+قطع زائد کی مساوات \حوالہ{مساوات_مخروط_قطع_زائد} اور ترخیم کی مساوات \حوالہ{مساوات_مخروط_ترخیم_پ} میں فرق منفی علامت  اور درج ذیل نئے تعلق کا ہے۔
 \begin{align*}
 c^2&=a^2+b^2&&\text{\RL{مساوات \حوالہ{مساوات_مخروط_قطع_مکافی_پ} سے حاصل کیا گیا}}
 \end{align*}
@@ -422,10 +661,10 @@ c^2&=a^2+b^2&&\text{\RL{مساوات \حوالہ{مساوات_مخروط_قطع_
 \begin{align*}
 \frac{\dif y}{\dif x}&=\frac{b^2x}{a^2y}&&\text{\RL{مساوات \حوالہ{مساوات_مخروط_قطع_زائد} سے حاصل کیا گیا}}
 \end{align*}
-ہے لہٰذا یہاں مماس عمودی ہوں گے۔
+ہے لہٰذا یہاں مماس   انتصابی ہوں گے۔
 
 \ابتدا{تعریف}
-قطع زائد کے ماسکوں کے بیچ لکیر کو \اصطلاح{محور ماسکہ}\فرہنگ{محور!ماسکہ}\حاشیہب{focal axis}\فرہنگ{axis!focal} کہتے ہیں جس کے وسطی نقطہ کو قطع مکافی کا \اصطلاح{مرکز}\فرہنگ{قطع زائد!مرکز}\حاشیہب{center}\فرہنگ{hyperbola!center}  کہتے ہیں۔ جن نقطوں پر محور ماسکہ اور قطع مکافی ایک دوسرے کو قطع کرتے ہوں، انہیں \اصطلاح{راس}\فرہنگ{راس}\حاشیہب{vertices}\فرہنگ{vertices} کہتے ہیں (شکل \حوالہ{شکل_مخروط_قطع_زائد_ب})۔
+قطع زائد کے ماسکوں کو ملانے والی لکیر کو \اصطلاح{محور ماسکہ}\فرہنگ{محور!ماسکہ}\حاشیہب{focal axis}\فرہنگ{axis!focal} کہتے ہیں جس کے وسطی نقطہ کو قطع مکافی کا \اصطلاح{مرکز}\فرہنگ{قطع زائد!مرکز}\حاشیہب{center}\فرہنگ{hyperbola!center}  کہتے ہیں۔ جن نقطوں پر محور ماسکہ اور قطع زائد  ایک دوسرے کو قطع کرتے ہوں، انہیں \اصطلاح{رؤوس}\فرہنگ{رؤوس}\حاشیہب{vertices}\فرہنگ{vertices} (راس کی جمع) کہتے ہیں (شکل \حوالہ{شکل_مخروط_قطع_زائد_ب})۔
 \انتہا{تعریف}
 %==========================
 
@@ -438,7 +677,7 @@ c^2&=a^2+b^2&&\text{\RL{مساوات \حوالہ{مساوات_مخروط_قطع_
 \begin{align*}
 y=\pm \frac{b}{a}x
 \end{align*}
-متقارب کی مدد سے ہم قطع زائد کو جلدی ترسیم کر پاتے ہیں۔ متقارب کی مساوات حاصل کرنے کا آسان ترین طریقہ مساوات \حوالہ{مساوات_مخروط_قطع_زائد_مساوات_الف} میں دائیں ہاتھ \عددی{1} کی جگہ \عددی{0} پر کر کے \عددی{y} کے لیے حل کرنا ہے:
+متقارب کی مدد سے ہم قطع زائد کو جلدی ترسیم کر پاتے ہیں۔ متقارب کی مساوات حاصل کرنے کا آسان ترین طریقہ مساوات \حوالہ{مساوات_مخروط_قطع_زائد_مساوات_الف} میں دائیں ہاتھ \عددی{1} کی جگہ \عددی{0}  رکھ  کر  \عددی{y} کے لیے حل کرنا ہے۔
 \begin{align*}
 \underbrace{\frac{x^2}{a^2}-\frac{y^2}{b^2}=1}_{\text{\RL{قطع زائد}}}\implies \underbrace{\frac{x^2}{a^2}-\frac{y^2}{b^2}=0}_{\text{\RL{\عددی{1} کی جگہ \عددی{0}}}}\implies \underbrace{y=\pm \frac{b}{a}x}_{\text{متقارب}} 
 \end{align*}
@@ -446,29 +685,29 @@ y=\pm \frac{b}{a}x
 \موٹا{مرکز پر مبدا والے قطع زائد کی معیاری مساواتیں}
 \begin{align*}
 \frac{x^2}{a^2}-\frac{y^2}{b^2}&=1&&\text{\RL{محور \عددی{x} پر ماسکے ہیں}}\\
-c&=\sqrt{a^2+b^2}&&\text{\RL{مرکز سے ماسکہ تک فاصلہ}}\\
+c&=\sqrt{a^2+b^2}&&\text{\RL{مرکز سے ماسکہ تک  کا فاصلہ}}\\
 &(\pm c,0)&&\text{ماسکے}\\
-&(\pm a,0)&&\text{راس}\\
-y&=\pm\frac{b}{a}x&&\text{متقارب}\\
+&(\pm a,0)&&\text{رؤوس}\\
+y&=\pm\frac{b}{a}x&&\text{متقاربات}\\
 \\
 \frac{y^2}{a^2}-\frac{x^2}{b^2}&=1&&\text{\RL{محور \عددی{y} پر ماسکے ہیں}}\\
-c&=\sqrt{a^2+b^2}&&\text{\RL{مرکز سے ماسکہ تک فاصلہ}}\\
+c&=\sqrt{a^2+b^2}&&\text{\RL{مرکز سے ماسکہ تک  کا فاصلہ}}\\
 &(0,\pm c)&&\text{ماسکے}\\
-&(0,\pm a)&&\text{راس}\\
-y&=\pm\frac{a}{b}x&&\text{متقارب}
+&(0,\pm a)&&\text{رؤوس}\\
+y&=\pm\frac{a}{b}x&&\text{متقاربات}
 \end{align*}
 
-دھیان رہے کہ پہلی صورت میں متقارب کی مساوات میں \عددی{\tfrac{b}{a}} اور دوسری صورت میں \عددی{\tfrac{a}{b}} ہیں۔ 
+دھیان رہے کہ پہلی صورت میں متقارب کی مساوات میں \عددی{\tfrac{b}{a}} اور دوسری صورت میں \عددی{\tfrac{a}{b}} ہے۔ 
 
 \جزوحصہء{قطع زائد ترسیم کرنے کا عمل}
-قطع زائد \عددی{\tfrac{y^2}{a^2}-\tfrac{x^2}{b^2}=1} ترسیم کرنے کے لیے درج ذیل اقدام کریں (شکل \حوالہ{شکل_مخروط_متقارب_سے_قطع_زائد})۔
+قطع زائد \عددی{\tfrac{y^2}{a^2}-\tfrac{x^2}{b^2}=1} ترسیم کرنے کے لیے درج ذیل اقدامات  کریں (شکل \حوالہ{شکل_مخروط_متقارب_سے_قطع_زائد})۔
 \begin{enumerate}[a.]
 \item
 نقاط \عددی{(\pm a,0)} اور \عددی{0,\pm b} کو ترسیم کرتے ہوئے اس مستطیل کو مکمل کریں جن کے اضلاع میں یہ نقطے پائے جاتے ہوں۔ 
 \item
 مستطیل کے وتر کو بڑھا کر متقارب  ترسیم کریں۔
 \item
-مستطیل اور متقارب کو راہ بر لیتے ہوئے قطع زائد ترسیم کریں۔
+مستطیل اور متقارب کو رہبر لیتے ہوئے قطع زائد ترسیم کریں۔
 \end{enumerate}
 
 \begin{figure}
@@ -542,10 +781,10 @@ y&=\pm\frac{a}{b}x&&\text{متقارب}
 \end{align*}
 جس میں \عددی{a^2=4} اور \عددی{b^2=5} ہیں (مساوات \حوالہ{مساوات_مخروط_قطع_زائد})۔ یوں درج ذیل ہوں گے۔
 \begin{align*}
-c&=\sqrt{a^2+b^2}=\sqrt{4+5}=3&&\text{\RL{مرکز سے ماسکہ تک فاصلہ}}\\
+c&=\sqrt{a^2+b^2}=\sqrt{4+5}=3&&\text{\RL{مرکز سے ماسکہ تک کا  فاصلہ}}\\
 (\pm c,0)&=(\pm 3,0)&&\text{ماسکے}\\
-(\pm a,0)&=(\pm 2,0)&&\text{راس}\\
-y&=\pm \frac{\sqrt{5}}{2}x&&\text{متقارب}
+(\pm a,0)&=(\pm 2,0)&&\text{رؤوس}\\
+y&=\pm \frac{\sqrt{5}}{2}x&&\text{متقاربات}
 \end{align*}
 \انتہا{مثال}
 %================
@@ -592,24 +831,24 @@ y&=\pm \frac{\sqrt{5}}{2}x&&\text{متقارب}
 \end{figure}
 
 \ابتدا{مثال}\شناخت{مثال_مخروط_ماسکہ_عمودی_محور_پر}
-درج ذیل قطع زائد کو  مثال \حوالہ{مثال_مخروط_ماسکہ_افقی_محور_پر} کے قطع زائد میں \عددی{x} اور \عددی{y} کو ایک دوسرے کے ساتھ بدل کر حاصل کیا گیا ہے۔ 
+درج ذیل قطع زائد کو  مثال \حوالہ{مثال_مخروط_ماسکہ_افقی_محور_پر} کے قطع زائد میں \عددی{x} اور \عددی{y} کو  آپس میں بدل کر حاصل کیا گیا ہے۔ 
 \begin{align*}
 \frac{y^2}{4}-\frac{x^2}{5}=1
 \end{align*}
-اس قطع زائد کے راس عمودی محور پر پائے جائیں گے (شکل \حوالہ{شکل_مثال_مخروط_ماسکہ_عمودی_محور_پر})۔ اب بھی \عددی{a^2=4} اور \عددی{b^2=5} ہوں گے۔یوں درج ذیل ہو گا۔
+اس قطع زائد کے رؤوس  انتصابی  محور پر پائے جائیں گے (شکل \حوالہ{شکل_مثال_مخروط_ماسکہ_عمودی_محور_پر})۔ اب بھی \عددی{a^2=4} اور \عددی{b^2=5} ہوں گے۔یوں درج ذیل ہو گا۔
 \begin{align*}
-c&=\sqrt{a^2+b^2}=\sqrt{4+5}=3&&\text{\RL{مرکز سے ماسکہ تک فاصلہ}}\\
+c&=\sqrt{a^2+b^2}=\sqrt{4+5}=3&&\text{\RL{مرکز سے ماسکہ تک  کا فاصلہ}}\\
 (0,\pm c)&=(0,\pm 3)&&\text{ماسکے}\\
-(0,\pm a)&=(0,\pm 2)&&\text{راس}\\
+(0,\pm a)&=(0,\pm 2)&&\text{رؤوس}\\
 &(0,0)&&\text{مرکز}\\
-y&=\pm \frac{2}{\sqrt{5}}x&&\text{متقارب}
+y&=\pm \frac{2}{\sqrt{5}}x&&\text{متقاربات}
 \end{align*}
 \انتہا{مثال}
 %==================
 
+
 \جزوحصہء{عکسی خواص}
-قطع مکافی کا اہم ترین استعمال بطور  شعاع اور ریڈیو امواج کا عاکس ہے۔ قطع مکافی کے ماسکہ سے خارج شعاع، قطع مکافی کے محور کے متوازی منعکس ہوتا ہے (شکل \حوالہ{شکل_مخروط_قطع_مکافی_آئینہ_خاصیت})۔ یہ خاصیت ہاتھ بتی اور گاڑیوں کی اگلی بتیوں میں بروئے کار لایا جاتا ہے۔ اس کے علاوہ خرد امواج نشر کرنے کے لیے بھی قطع مکافی اینٹینا استعمال کیا جاتا ہے جو نقطہ منبع سے خارج برقناطیسی امواج کو ایک محدود شعاع  کی صورت میں خارج کرتا ہے۔ اس کے برعکس قطع مکافی عاکس کے محور کے متوازی آمد  برقناطیسی امواج عاکس کے ماسکہ پر مرکوز کیے جاتے ہیں (شکل \حوالہ{شکل_مخروط_دور_بینی_آئینہ})۔اس خاصیت کی وجہ سے ٹیلی وژن کا ڈش اینٹینا یا ریڈیو دوربین  کمزور اشارات کو اکٹھے کر کے زیادہ طاقتور اشارہ حاصل کرتا ہے۔
-اسی طرح سورج کی روشنی کو ایک نقطہ پر مرتکز کیا جا سکتا ہے۔
+قطع مکافی کا اہم ترین استعمال بطور  شعاع اور ریڈیو امواج کا عاکس ہے۔ قطع مکافی کے ماسکہ سے خارج شعاع، قطع مکافی کے محور کے متوازی منعکس ہوتی ہے (شکل \حوالہ{شکل_مخروط_قطع_مکافی_آئینہ_خاصیت})۔ یہ خاصیت ہاتھ بتی اور گاڑیوں کی اگلی بتیوں میں بروئے کار لائی جاتی ہے۔ اس کے علاوہ خرد امواج نشر کرنے کے لیے بھی قطع مکافی اینٹینا استعمال کیا جاتا ہے جو نقطوی  منبع سے خارج برقناطیسی امواج کو ایک محدود  سمتی شعاع  کی صورت میں خارج کرتا ہے۔ اس کے برعکس قطع مکافی عاکس کے محور کے متوازی آمد  برقناطیسی امواج عاکس کے ماسکہ پر مرکوز کیے جاتے ہیں (شکل \حوالہ{شکل_مخروط_دور_بینی_آئینہ})۔اس خاصیت کی وجہ سے ٹیلی وژن کا ڈش اینٹینا یا ریڈیو دوربین  کمزور اشارات کو اکٹھے کر کے زیادہ طاقتور اشارہ حاصل کرتا ہے۔اسی طرح سورج کی روشنی کو ایک نقطہ پر مرتکز کیا جا سکتا ہے۔
 
 \begin{figure}
 \centering
@@ -637,7 +876,7 @@ y&=\pm \frac{2}{\sqrt{5}}x&&\text{متقارب}
 \addplot[->-=0.75]plot coordinates  {({f(\c)},-\c)(1.5,-\c)};
 \end{axis}
 \end{tikzpicture}
-\caption{قطع مکافی آئینہ کے ماسکہ سے نکلتا شعاع انعکاس کے بعد محور کے متوازی ہو گا۔}
+\caption{قطع مکافی آئینہ کے ماسکہ سے نکلتی شعاع انعکاس کے بعد محور کے متوازی ہو گی۔}
 \label{شکل_مخروط_قطع_مکافی_آئینہ_خاصیت}
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}
@@ -666,7 +905,7 @@ y&=\pm \frac{2}{\sqrt{5}}x&&\text{متقارب}
 \end{axis}
 \end{scope}
 \end{tikzpicture}
-\caption{قطع مکافی عاکس پر آمد شعاع ماسکہ پر پہنچتا ہے۔}
+\caption{قطع مکافی عاکس پر آمد شعاع ماسکہ پر پہنچتی ہے۔}
 \label{شکل_مخروط_دور_بینی_آئینہ}
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}
@@ -686,25 +925,25 @@ y&=\pm \frac{2}{\sqrt{5}}x&&\text{متقارب}
 \addplot[->-=0.5]plot coordinates {(1.3,{f(1.3)})(\c,0)};
 \end{axis}
 \end{tikzpicture}
-\caption{ترخیم کے ایک ماسکہ سے خارج شعاع دوسرے ماسکہ پر پہنچتا ہے۔}
+\caption{ترخیم کے ایک ماسکہ سے خارج شعاع دوسرے ماسکہ پر پہنچتی ہے۔}
 \label{شکل_مخروط_ترخیم_کمرہ_سرگوشی}
 \end{minipage}
 \end{figure}
 
-ایک ترخیم کو اس کے محور کے گرد گھما کر سطح طواف پیدا کیا جا سکتا ہے جو \اصطلاح{ترخیمی سطح}\فرہنگ{ترخیمی سطح}\حاشیہب{ellipsoid}\فرہنگ{ellipsoid} کہلاتا ہے۔اس کی اندرونی سطح پر چاندی کی تہہ لگا کر آئینہ بنایا جا سکتا ہے۔ ایک ماسکہ سے خارج شعاع دوسرے ماسکہ پر منعکس ہو گا (شکل \حوالہ{شکل_مخروط_ترخیم_کمرہ_سرگوشی} اور سوال \حوالہ{سوال_مخروط_کمرہ_سرگوشی})۔ ترخیمی سطح اسی طرح آواز کو بھی ایک ماسکہ سے دوسرے ماسکہ منتقل کرتا ہے۔ اس خاصیت کو استعمال کرتے ہوئے کمرہ سرگوشی بنایا جا سکتا ہے جس میں ایک ماسکہ پر بیٹھا شخص دوسرے ماسکہ پر بیٹھے شخص کے ساتھ سرگوشی سے باتیں کر سکتا ہے۔ کمرہ سرگوشی میں موجود باقی لوگ ان کی باتیں سننے  سے قاصر ہوں  گے۔ ہوائی جہازوں کی کارکردگی پر ہوائی سرنگ میں غور کیا جاتا ہے۔ جہاز کے شور پر غور کرتے ہوئے نقطہ غور کو ترخیمی سطح کے ایک ماسکہ پر رکھا جاتا ہے جبکہ مائکروفون  کو  اس کی دوسرے ماسکہ پر رکھا جاتا ہے۔ دیگر نقطوں سے پیدا شور کے اثر کو یوں بہت کم کرنا ممکن ہوتا ہے۔
+ ترخیم کو اس کے محور کے گرد گھما کر سطح طواف پیدا کی جا سکتی ہے جو \اصطلاح{ترخیمی سطح}\فرہنگ{ترخیمی سطح}\حاشیہب{ellipsoid}\فرہنگ{ellipsoid} کہلاتی ہے۔اس کی اندرونی سطح پر چاندی کی تہہ لگا کر آئینہ بنایا جا سکتا ہے۔اس آئینہ کے  ایک ماسکہ سے خارج شعاع دوسرے ماسکہ پر منعکس ہو گی (شکل \حوالہ{شکل_مخروط_ترخیم_کمرہ_سرگوشی} اور سوال \حوالہ{سوال_مخروط_کمرہ_سرگوشی})۔ ترخیمی سطح اسی طرح آواز کو بھی ایک ماسکہ سے دوسرے ماسکہ منتقل کرتی ہے۔ اس خاصیت کو استعمال کرتے ہوئے کمرہ سرگوشی بنایا جا سکتا ہے جس میں ایک ماسکہ پر بیٹھا شخص دوسرے ماسکہ پر بیٹھے شخص کے ساتھ سرگوشی سے باتیں کر سکتا ہے۔ کمرہ سرگوشی میں موجود باقی لوگ ان کی باتیں سننے  سے قاصر ہوں  گے۔ ہوائی جہازوں کی کارکردگی پر ہوائی سرنگ میں غور کیا جاتا ہے۔ جہاز کے شور پر غور کرتے ہوئے نقطہ غور کو ترخیمی سطح کے ایک ماسکہ پر رکھا جاتا ہے جبکہ مائکروفون  کو  اس کے دوسرے ماسکہ پر رکھا جاتا ہے۔ دیگر نقطوں سے پیدا شور کے اثر کو یوں بہت کم کرنا ممکن ہوتا ہے۔
 
-قطع زائد آئینہ کے ایک ماسکہ پر آمد شعاع کو آئینہ دوسرے ماسکہ پر بھیجتا ہے۔ قطع مکافی سطح، ترخیمی سطح اور قطع مکافی سطحوں کے خواص کو استعمال کرتے ہوئے جدید دور بین تیار کیے جاتے ہیں۔   
+قطع زائد آئینہ کے ایک ماسکہ پر آمد شعاع کو آئینہ دوسرے ماسکہ پر بھیجتا ہے۔ قطع مکافی سطح، ترخیمی سطح،  اور قطع مکافی سطح کے خواص کو استعمال کرتے ہوئے جدید دور بین تیار کیے جاتے ہیں۔   
 
 %sec 10.1 questions start here
 %sec 10.1 questions start here
 \حصہء{سوالات}
 \ابتدا{سوالات}
 \موٹا{ترسیم کی پہچان}\\
-سوال \حوالہ{سوال_مخروط_ہم_پلہ_الف} تا سوال \حوالہ{سوال_مخروط_ہم_پلہ_ب} میں دی  گئی قطع مکافی کی مساوات درج ذیل میں تلاش کریں۔
+سوال \حوالہ{سوال_مخروط_ہم_پلہ_الف} تا سوال \حوالہ{سوال_مخروط_ہم_پلہ_ب} میں دیے گئے قطع مکافی کی مساوات درج ذیل میں تلاش کریں۔
 \begin{align*}
 x^2=2y,\quad x^2=-6y,\quad y^2=8x,\quad y^2=-4x
 \end{align*}
-اس کے بعد قطع مکافی کے ماسکہ اور ناظمہ دریافت کریں۔
+اس کے بعد قطع مکافی کا  ماسکہ اور ناظمہ دریافت کریں۔
 
 %=============================
 \ابتدا{سوال}\شناخت{سوال_مخروط_ہم_پلہ_الف}
@@ -791,32 +1030,32 @@ x^2=2y,\quad x^2=-6y,\quad y^2=8x,\quad y^2=-4x
 \begin{align*}
 \frac{x^2}{4}+\frac{y^2}{9}=1,\quad \frac{x^2}{2}+y^2=1,\quad \frac{y^2}{4}-x^2=1,\quad \frac{x^2}{4}-\frac{y^2}{9}=1
 \end{align*}
-دیے گئے مخروط کا ماسکہ اور راس تلاش کریں۔ اگر قطع زائد دیا گیا ہو تب اس کے متقارب بھی دریافت کریں۔
+دیے گئے مخروط کا ماسکہ اور رؤوس  تلاش کریں۔ اگر مخروطی حصہ ایک  قطع زائد  ہو تب اس کے متقارب بھی دریافت کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_ہم_پلہ_تلاش_الف}
 ترسیم شکل \حوالہ{شکل_مخروط_کئی_الف}-ا میں دیا گیا ہے۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\عددی{\tfrac{x^2}{4}-\tfrac{y^2}{9}=1}، ماسکے \عددی{F(\pm\sqrt{13},0)}، راس \عددی{V(\pm 2,0)} اور متقارب \عددی{y=\pm\tfrac{3}{2}x}
+\عددی{\tfrac{x^2}{4}-\tfrac{y^2}{9}=1}، ماسکے \عددی{F(\pm\sqrt{13},0)}، رؤوس  \عددی{V(\pm 2,0)} اور متقارب \عددی{y=\pm\tfrac{3}{2}x}
 }}
 \انتہا{جواب}
 %===================
 \ابتدا{سوال}
-ترسیم شکل \حوالہ{شکل_مخروط_کئی_الف}-ب میں دیا گیا ہے۔
+ترسیم شکل \حوالہ{شکل_مخروط_کئی_الف}-ب میں دی گئی ہے۔
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}
-ترسیم شکل \حوالہ{شکل_مخروط_کئی_الف}-ج میں دیا گیا ہے۔
+ترسیم شکل \حوالہ{شکل_مخروط_کئی_الف}-ج میں دی گئی ہے۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\عددی{\tfrac{x^2}{2}+y^2=1}، ماسکے \عددی{F(\pm 1,0)}، راس \عددی{V(\pm\sqrt{2},0)}
+\عددی{\tfrac{x^2}{2}+y^2=1}، ماسکے \عددی{F(\pm 1,0)}، رؤوس  \عددی{V(\pm\sqrt{2},0)}
 }}
 \انتہا{جواب}
 %========================
 \ابتدا{سوال}\شناخت{سوال_مخروط_ہم_پلہ_تلاش_ب}
-ترسیم شکل \حوالہ{شکل_مخروط_کئی_الف}-د میں دیا گیا ہے۔
+ترسیم شکل \حوالہ{شکل_مخروط_کئی_الف}-د میں  دی گئی ہے۔
 \انتہا{سوال}
 %========================
 \begin{figure}
@@ -975,7 +1214,7 @@ $x=2y^2$
 %=====================
 
 \موٹا{ترخیم}\\
-سوال \حوالہ{سوال_مخروط_ترخیم_دیا_الف} تا سوال \حوالہ{سوال_مخروط_ترخیم_دیا_ٹ} میں دیے گئے ترخیم کی مساوات کو معیاری روپ میں لکھ کر ترسیم کریں۔ ترسیم پر ماسکے  دکھائیں۔ 
+سوال \حوالہ{سوال_مخروط_ترخیم_دیا_الف} تا سوال \حوالہ{سوال_مخروط_ترخیم_دیا_ٹ} میں دی گئی ترخیم کی مساوات کو معیاری روپ میں لکھ کر ترسیم کریں۔ ترسیم پر ماسکے  دکھائیں۔ 
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_دیا_الف}
 $16x^2+25y^2=400$
@@ -1087,10 +1326,10 @@ $169x^2+25y^2=4225$
 \انتہا{سوال}
 %=====================
 
-سوال \حوالہ{سوال_مخروط_ترسیم_معلومات_الف} اور سوال \حوالہ{سوال_مخروط_ترسیم_معلومات_ب} میں مستوی  \عددی{xy} میں پائے جانے والے  ترخیم کے ماسکہ اور راس  دیے  گئے ہیں۔ ترخیم کا مرکز  مستوی  \عددی{xy} کے مبدا پر ہے۔ ترخیم کی معیاری مساوات تلاش کریں۔
+سوال \حوالہ{سوال_مخروط_ترسیم_معلومات_الف} اور سوال \حوالہ{سوال_مخروط_ترسیم_معلومات_ب} میں مستوی  \عددی{xy} میں پائی  جانے والی   ترخیم کے ماسکے اور راسیں دیے  گئے ہیں۔ ترخیم کا مرکز  مستوی  \عددی{xy} کے مبدا پر ہے۔ ترخیم کی معیاری مساوات تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_ترسیم_معلومات_الف}
-ماسکے \عددی{(\pm \sqrt{2},0)} اور راس \عددی{(\pm 2,0)}
+ماسکے \عددی{(\pm \sqrt{2},0)} اور رؤوس \عددی{(\pm 2,0)}
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -1099,12 +1338,12 @@ $\tfrac{x^2}{4}+\tfrac{y^2}{2}=1$
 \انتہا{جواب}
 %=======================
 \ابتدا{سوال}\شناخت{سوال_مخروط_ترسیم_معلومات_ب}
-ماسکے \عددی{(0,\pm 4)} اور راس \عددی{(0,\pm 5)}
+ماسکے \عددی{(0,\pm 4)} اور رؤوس \عددی{(0,\pm 5)}
 \انتہا{سوال}
 %========================
 
 \موٹا{قطع زائد}\\
-سوال \حوالہ{سوال_مخروط_قطع_زائد_معلومات_الف} تا سوال \حوالہ{سوال_مخروط_قطع_زائد_معلومات_ٹ} میں قطع زائد کی مساواتیں دی گئی ہیں۔ مساوات کو معیاری روپ میں لکھیں اور قطع زائد کا متقارب دریافت کریں۔ قطع زائد کا خاکہ کھینچ کر متقارب اور ماسکہ بھی دکھائیں۔ 
+سوال \حوالہ{سوال_مخروط_قطع_زائد_معلومات_الف} تا سوال \حوالہ{سوال_مخروط_قطع_زائد_معلومات_ٹ} میں قطع زائد کی مساواتیں دی گئی ہیں۔ مساوات کو معیاری روپ میں لکھیں اور قطع زائد کا متقارب دریافت کریں۔ قطع زائد کا خاکہ بنا کر متقارب اور ماسکے بھی دکھائیں۔ 
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_قطع_زائد_معلومات_الف}
 $x^2-y^2=1$
@@ -1216,7 +1455,7 @@ $64x^2-36y^2=2304$
 \انتہا{سوال}
 %=================================
 %=====================
-سوال \حوالہ{سوال_مخروط_قطع_زائد_معلومات_سے_مساوات_الف} تا سوال \حوالہ{سوال_مخروط_قطع_زائد_معلومات_سے_مساوات_ب} میں مستوی  \عددی{xy} پر پائے جانے والے قطع زائد کے ماسکہ، راس اور متقارب کی معلومات دی گئی ہے۔ قطع زائد کا مرکز مستوی  \عددی{xy} کے مبدا پر ہے۔قطع زائد کی معیاری مساوات حاصل کریں۔
+سوال \حوالہ{سوال_مخروط_قطع_زائد_معلومات_سے_مساوات_الف} تا سوال \حوالہ{سوال_مخروط_قطع_زائد_معلومات_سے_مساوات_ب} میں مستوی  \عددی{xy} پر پائے جانے والے قطع زائد کے ماسکوں،رؤوس،  اور متقاربات  کی معلومات دی گئی ہے۔ قطع زائد کا مرکز مستوی  \عددی{xy} کے مبدا پر ہے۔قطع زائد کی معیاری مساوات حاصل کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_قطع_زائد_معلومات_سے_مساوات_الف}
 ماسکے \عددی{(0,\pm \sqrt{2})} اور متقارب \عددی{y=\pm x}
@@ -1232,7 +1471,7 @@ $y^2-x^2=1$
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}
-راس \عددی{(\pm 3,0)} اور متقارب \عددی{y=\pm\tfrac{4}{3}x}
+رؤوس \عددی{(\pm 3,0)} اور متقاربات \عددی{y=\pm\tfrac{4}{3}x}
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -1241,13 +1480,13 @@ $\tfrac{x^2}{9}-\tfrac{y^2}{16}=1$
 \انتہا{جواب}
 %========================
 \ابتدا{سوال}\شناخت{سوال_مخروط_قطع_زائد_معلومات_سے_مساوات_ب}
-راس \عددی{(0,\pm 2)} اور متقارب \عددی{y=\pm\tfrac{1}{2}x}
+رؤوس \عددی{(0,\pm 2)} اور متقاربات \عددی{y=\pm\tfrac{1}{2}x}
 \انتہا{سوال}
 %========================
 %=====================
 \موٹا{مخروطی حصوں کا انتقال}\\
 \ابتدا{سوال}\شناخت{سوال_مخروط_ہر_قسم_الف}
-قطع مکافی \عددی{y^2=8x} کو \عددی{2} اکائیاں نیچے اور \عددی{1} اکائی دائیں منتقل کر کے قطع مکافی  \عددی{(y+2)^2=8(x-1)} پیدا کیا جاتا ہے۔ (الف) نئے قطع مکافی کے راس، ماسکہ اور ناظمہ دریافت کریں۔ (ب) نئے راس، ماسکہ اور ناظمہ کو ترسیم کرتے ہوئے نئے قطع مکافی کا خاکہ بنائیں۔
+قطع مکافی \عددی{y^2=8x} کو \عددی{2} اکائیاں نیچے اور \عددی{1} اکائی دائیں منتقل کر کے قطع مکافی  \عددی{(y+2)^2=8(x-1)} پیدا کیا جاتا ہے۔ (الف) نئے قطع مکافی کے راس، ماسکہ،  اور ناظمہ دریافت کریں۔ (ب) نئے راس، ماسکہ ، اور ناظمہ کو ترسیم کرتے ہوئے نئے قطع مکافی کا خاکہ بنائیں۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -1268,11 +1507,11 @@ $\tfrac{x^2}{9}-\tfrac{y^2}{16}=1$
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}\شناخت{سوال_مخروط_ہر_قسم_ب}
-ترخیم \عددی{\tfrac{x^2}{16}+\tfrac{y^2}{9}=1} کو \عددی{4} اکائیاں دائیں اور \عددی{3} اکائیاں اوپر منتقل کر کے ترخیم \عددی{\tfrac{(x-4)^2}{16}+\tfrac{(y-3)^2}{9}=1} پیدا کیا جاتا ہے۔ (الف) نئے ترخیم کے ماسکے، راس اور مرکز دریافت کریں۔ (ب) نئے ماسکے، راس اور مرکز ترسیم کرتے ہوئے نئے ترخیم کا خاکہ بنائیں۔
+ترخیم \عددی{\tfrac{x^2}{16}+\tfrac{y^2}{9}=1} کو \عددی{4} اکائیاں دائیں اور \عددی{3} اکائیاں اوپر منتقل کر کے ترخیم \عددی{\tfrac{(x-4)^2}{16}+\tfrac{(y-3)^2}{9}=1} پیدا کی جاتی ہے۔ (الف) نئی ترخیم کے ماسکے، رؤوس،  اور مرکز دریافت کریں۔ (ب) نئے ماسکے، رؤوس ، اور مرکز ترسیم کرتے ہوئے نئی ترخیم کا خاکہ بنائیں۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-(الف) ماسکے \عددی{(4\pm\sqrt{7},3)}، راس \عددی{(8,3)} اور \عددی{(0,3)}، مرکز \عددی{(4,3)}؛ (ب)\\
+(الف) ماسکے \عددی{(4\pm\sqrt{7},3)}، رؤوس  \عددی{(8,3)} اور \عددی{(0,3)}، مرکز \عددی{(4,3)}؛ (ب)\\
 \begin{minipage}{0.45\textwidth}
 \begin{tikzpicture}[font=\tiny,declare function={fp(\x)=3+3/4*sqrt(16-(\x-4)^2);fn(\x)=3-3/4*sqrt(16-(\x-4)^2);}]
 \begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={4,8},ytick={6}]
@@ -1295,17 +1534,17 @@ $\tfrac{x^2}{9}-\tfrac{y^2}{16}=1$
 %=====================
 \ابتدا{سوال}
 ترخیم \عددی{\tfrac{x^2}{9}+\tfrac{y^2}{25}=1} کو \عددی{3} اکائیاں بائیں اور \عددی{2} اکائیاں نیچے منتقل کر کے
- ترخیم \عددی{\tfrac{(x+3)^2}{9}+\tfrac{(y+2)^2}{25}=1} پیدا کیا جاتا ہے۔ (الف) نئے ترخیم کے ماسکے، راس اور مرکز دریافت کریں۔ (ب) نئے ماسکے، راس اور مرکز ترسیم کرتے ہوئے نئے ترخیم کا خاکہ بنائیں۔
+ ترخیم \عددی{\tfrac{(x+3)^2}{9}+\tfrac{(y+2)^2}{25}=1} پیدا کی جاتی ہے۔ (الف) نئی  ترخیم کے ماسکے، رؤوس،  اور مرکز دریافت کریں۔ (ب) نئے ماسکے، رؤوس،  اور مرکز ترسیم کرتے ہوئے نئی  ترخیم کا خاکہ بنائیں۔
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}\شناخت{سوال_مخروط_ہر_قسم_پ}
 قطع زائد \عددی{\tfrac{x^2}{16}-\tfrac{y^2}{9}=1} کو \عددی{2} اکائیاں دائیں منتقل کر کے قطع زائد
- \عددی{\tfrac{(x-2)^2}{16}-\tfrac{y^2}{9}=1} پیدا کیا جاتا ہے۔ (الف) نئے قطع زائد کا مرکز، ماسکے، راس اور متقارب دریافت کریں۔ (ب) نئے مرکز، ماسکے، راس اور متقارب ترسیم کرتے ہوئے نئے قطع زائد کا خاکہ بنائیں۔
+ \عددی{\tfrac{(x-2)^2}{16}-\tfrac{y^2}{9}=1} پیدا کیا جاتا ہے۔ (الف) نئے قطع زائد کا مرکز، ماسکے، رؤوس،  اور متقاربات دریافت کریں۔ (ب) نئے مرکز، ماسکے، رؤوس،  اور متقاربات ترسیم کرتے ہوئے نئے قطع زائد کا خاکہ بنائیں۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-(الف) مرکز \عددی{(2,0)}، ماسکے \عددی{(7,0)} اور \عددی{(-3,0)}، راس \عددی{(6,0)} اور \عددی{(-2,0)}،\\
- متقارب \عددی{y=\pm\tfrac{3}{4}(x-2)}؛  (ب) \\
+(الف) مرکز \عددی{(2,0)}، ماسکے \عددی{(7,0)} اور \عددی{(-3,0)}، رؤوس \عددی{(6,0)} اور \عددی{(-2,0)}،\\
+ متقاربات  \عددی{y=\pm\tfrac{3}{4}(x-2)}؛  (ب) \\
 \begin{minipage}{0.45\textwidth}
 \begin{tikzpicture}[font=\tiny,declare function={fp(\x)=2+4/3*sqrt(9+(\x)^2);fn(\x)=2-4/3*sqrt(9+(\x)^2);fa(\x)=3/4*(\x-2);}]
 \pgfmathsetmacro{\k}{5}
@@ -1325,11 +1564,11 @@ $\tfrac{x^2}{9}-\tfrac{y^2}{16}=1$
 \انتہا{جواب}
 %======================
 \ابتدا{سوال}
-قطع زائد \عددی{\tfrac{y^2}{4}-\tfrac{x^2}{5}=1} کو \عددی{2} اکائیاں نیچے منتقل کرتے ہوئے قطع زائد \عددی{\tfrac{(y+2)^2}{4}-\tfrac{x^2}{5}=1} پیدا کیا جاتا ہے۔ (الف) نئے قطع زائد کا مرکز، ماسکے اور متقارب دریافت کریں۔ (ب) نیا مرکز، ماسکے اور متقارب ترسیم کر کے نئے قطع زائد کا خاکہ بنائیں۔
+قطع زائد \عددی{\tfrac{y^2}{4}-\tfrac{x^2}{5}=1} کو \عددی{2} اکائیاں نیچے منتقل کرتے ہوئے قطع زائد \عددی{\tfrac{(y+2)^2}{4}-\tfrac{x^2}{5}=1} پیدا کیا جاتا ہے۔ (الف) نئے قطع زائد کا مرکز، ماسکے،  اور متقارب دریافت کریں۔ (ب) نیا مرکز، ماسکے ، اور متقارب ترسیم کر کے نئے قطع زائد کا خاکہ بنائیں۔
 \انتہا{سوال}
 %===================
 
-سوال \حوالہ{سوال_مخروط_قطع_مکافی_منتقل_الف} تا سوال \حوالہ{سوال_مخروط_قطع_مکافی_منتقل_ب} میں قطع مکافی کی مساوات اور اس کی منتقلی کی معلومات دی گئی ہے۔ نئے قطع مکافی کی مساوات تلاش کر کے نئے قطع مکافی کا راس، ماسکہ اور ناظمہ معلوم کریں۔
+سوال \حوالہ{سوال_مخروط_قطع_مکافی_منتقل_الف} تا سوال \حوالہ{سوال_مخروط_قطع_مکافی_منتقل_ب} میں قطع مکافی کی مساوات اور اس کی منتقلی کی معلومات دی گئی ہے۔ نئے قطع مکافی کی مساوات تلاش کر کے نئے قطع مکافی کا راس، ماسکہ،  اور ناظمہ معلوم کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_قطع_مکافی_منتقل_الف}
 \عددی{y^2=4x}، 
@@ -1366,7 +1605,7 @@ $\tfrac{x^2}{9}-\tfrac{y^2}{16}=1$
 \انتہا{سوال}
 %=====================
 
-سوال \حوالہ{سوال_مخروط_ترخیم_منتقل_الف} تا سوال \حوالہ{سوال_مخروط_ترخیم_منتقل_ب} میں ترخیم کی مساوات اور اس کی منتقلی کی معلومات دی گئی ہے۔ نئے ترخیم کی مساوات تلاش کر کے نئے ترخیم کے ماسکے، راس اور مرکز معلوم کریں۔
+سوال \حوالہ{سوال_مخروط_ترخیم_منتقل_الف} تا سوال \حوالہ{سوال_مخروط_ترخیم_منتقل_ب} میں ترخیم کی مساوات اور اس کی منتقلی کی معلومات دی گئی ہے۔ نئی  ترخیم کی مساوات تلاش کر کے نئی  ترخیم کے ماسکے، رؤوس،  اور مرکز معلوم کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_منتقل_الف}
 \عددی{\tfrac{x^2}{6}+\tfrac{y^2}{9}=1}، 
@@ -1404,7 +1643,7 @@ $\tfrac{x^2}{9}-\tfrac{y^2}{16}=1$
 %=====================
 
 
-سوال \حوالہ{سوال_مخروط_قطع_زائد_منتقل_الف} تا سوال \حوالہ{سوال_مخروط_قطع_زائد_منتقل_ب} میں قطع زائد کی مساوات اور اس کی منتقلی کی معلومات دی گئی ہے۔ نئے قطع زائد کی مساوات تلاش کر کے نئے قطع زائد کا مرکز، ماسکے، راس اور متقارب معلوم کریں۔
+سوال \حوالہ{سوال_مخروط_قطع_زائد_منتقل_الف} تا سوال \حوالہ{سوال_مخروط_قطع_زائد_منتقل_ب} میں قطع زائد کی مساوات اور اس کی منتقلی کی معلومات دی گئی ہے۔ نئے قطع زائد کی مساوات تلاش کر کے نئے قطع زائد کا مرکز، ماسکے، رؤوس،  اور متقاربات معلوم کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_قطع_زائد_منتقل_الف}
 $\tfrac{x^2}{4}-\tfrac{y^2}{5}=1$\quad
@@ -1438,7 +1677,7 @@ $\tfrac{y^2}{3}-x^2=1$\quad
 \انتہا{سوال}
 %=======================
 
-سوال \حوالہ{سوال_مخروط_مساوات_منتقلی_الف} تا سوال \حوالہ{سوال_مخروط_مساوات_منتقلی_ب} میں دیے گئے مخروط حصوں کا (جیسا مناسب ہو) مرکز، ماسکے، راس، متقارب اور رداس دریافت کریں۔
+سوال \حوالہ{سوال_مخروط_مساوات_منتقلی_الف} تا سوال \حوالہ{سوال_مخروط_مساوات_منتقلی_ب} میں دیے گئے مخروط حصوں کا (جیسا مناسب ہو) مرکز، ماسکے، رؤوس، متقاربات،  اور رداس دریافت کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_مساوات_منتقلی_الف}
 $x^2+4x+y^2=12$
@@ -1523,7 +1762,7 @@ $y^2-4x^2+16x=24$
 %====================
 
 \موٹا{عدم مساوات}\\
-سوال \حوالہ{سوال_مخروط_خطے_الف} تا سوال \حوالہ{سوال_مخروط_خطے_ت} میں ایک خطہ کو مطمئن کرنے والی  عدم مساوات یا عدم مساوات کی جوڑی  دی گئی ہے۔ مستوی  \عددی{xy} میں اس خطہ کو ترسیم کریں۔
+سوال \حوالہ{سوال_مخروط_خطے_الف} تا سوال \حوالہ{سوال_مخروط_خطے_ت} میں ایک خطہ کو مطمئن کرنے والی  عدم مساوات یا عدم مساوات کی جوڑی  دی گئی ہے۔ مستوی  \عددی{xy} میں اس خطے کو ترسیم کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_خطے_الف}
 $9x^2+16y^2\le 144$
@@ -1661,8 +1900,8 @@ $\abs{x^2-y^2}\le 1$
 \end{minipage}
 \end{figure}
 
-\ابتدا{سوال}\ترچھا{معلق پل کی رسیاں قطع مکافی کی صورت میں لٹکی ہوتی ہیں۔}\\
-ایک معلق پل کی کمیت \عددی{m} کلو گرام فی میٹر ہے۔ اس پل کو رسیوں سے لٹکایا گیا ہے۔ اگر مبدا پر رسّی کا افقی تناو \عددی{H} ہو تب رسّی کی منحنی درج ذیل مساوات کو مطمئن کرتی ہے جہاں \عددی{g=\SI{9.8}{\meter\per\second\squared}} ہے۔
+\ابتدا{سوال}\ترچھا{معلق پُل کی رسیاں قطع مکافی کی صورت میں لٹکی ہوتی ہیں۔}\\
+ایک معلق پُل کی کمیت \عددی{m} کلو گرام فی میٹر ہے۔ اس پُل کو رسیوں سے لٹکایا گیا ہے۔ اگر مبدا پر رسّی کا افقی تناو \عددی{H} ہو تب رسّی کی منحنی درج ذیل مساوات کو مطمئن کرتی ہے جہاں \عددی{g=\SI{9.8}{\meter\per\second\squared}} ہے۔
 \begin{align*}
 \frac{\dif y}{\dif x}=\frac{mg}{H}x
 \end{align*}
@@ -1670,7 +1909,7 @@ $\abs{x^2-y^2}\le 1$
 \انتہا{سوال}
 %========================
 \ابتدا{سوال}
-نقاط \عددی{(1,0)}، \عددی{(0,1)} اور \عددی{(2,2)} سے گزرتے دائرے کی مساوات دریافت کریں۔
+نقاط \عددی{(1,0)}، \عددی{(0,1)}،  اور \عددی{(2,2)} سے گزرتے دائرے کی مساوات دریافت کریں۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -1679,11 +1918,11 @@ $3x^2+3y^2-7x-7y+4=0$
 \انتہا{جواب}
 %=======================
 \ابتدا{سوال}
-نقاط \عددی{(2,3)}، \عددی{(3,2)} اور \عددی{(-4,3)} سے گزرتے دائرے کی مساوات دریافت کریں۔
+نقاط \عددی{(2,3)}، \عددی{(3,2)}،  اور \عددی{(-4,3)} سے گزرتے دائرے کی مساوات دریافت کریں۔
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
-ایک دائرہ جس کا مرکز \عددی{(-2,1)} پر ہے نقطہ \عددی{(1,3)} سے گزرتا ہے۔  کیا نقطہ \عددی{(1.1,2.8)} اس دائرے پر، اس کے اندر یا اس کے باہر پایا جاتا ہے؟
+ایک دائرہ جس کا مرکز \عددی{(-2,1)} پر ہے نقطہ \عددی{(1,3)} سے گزرتا ہے۔  کیا نقطہ \عددی{(1.1,2.8)} اس دائرے پر، اس کے اندر،  یا اس کے باہر پایا جاتا ہے؟
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -1697,7 +1936,7 @@ $(x+2)^2+(y-1)^2=13$\quad
 \انتہا{سوال}
 %===================
 \ابتدا{سوال}\شناخت{سوال_مخلوط_قطع_مکافی_خطے}
-قطع مکافی \عددی{y^2=kx,\, k>0} پر نقطہ \عددی{N} سے محددی محور کے متوازی لکیریں کھینچی جاتی ہیں۔ ان لکیروں اور محددی محوروں کے کے بیچ مستطیل خطہ کو قطع مکافی دو حصوں \عددی{A} اور \عددی{B} میں تقسیم کرتا ہے (شکل \حوالہ{شکل_سوال_مخلوط_قطع_مکافی_خطے})۔ (الف) دکھائیں کہ ان خطوں کو محور \عددی{y} کے گرد گھما کر حاصل اجسام طواف کے حجم کی نسبت \عددی{4:1} ہے۔ (ب) ان خطوں کو محور \عددی{x} کے گرد گھما کر حاصل اجسام طواف کے حجم کی نسبت کیا ہو گی؟
+قطع مکافی \عددی{y^2=kx,\, k>0} پر نقطہ \عددی{N} سے محددی محور کے متوازی لکیریں کھینچی جاتی ہیں۔ ان لکیروں اور محددی محوروں کے بیچ مستطیل خطے  کو قطع مکافی دو حصوں \عددی{A} اور \عددی{B} میں تقسیم کرتا ہے (شکل \حوالہ{شکل_سوال_مخلوط_قطع_مکافی_خطے})۔ (الف) دکھائیں کہ ان خطوں کو محور \عددی{y} کے گرد گھما کر حاصل اجسام طواف کے حجم کی نسبت \عددی{4:1} ہے۔ (ب) ان خطوں کو محور \عددی{x} کے گرد گھما کر حاصل اجسام طواف کے حجم کی نسبت کیا ہو گی؟
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -1706,7 +1945,7 @@ $(x+2)^2+(y-1)^2=13$\quad
 \انتہا{جواب}
 %===================
 \ابتدا{سوال}
-دکھائیں کہ لکیر \عددی{x=-p} پر  کسی بھی نقطہ سے منحنی \عددی{y^2=4px} پر دو مماس، آپس میں عمودی ہوں گے۔  
+دکھائیں کہ لکیر \عددی{x=-p} کے   کسی بھی نقطہ سے منحنی \عددی{y^2=4px} پر دو مماس، آپس میں عمودی ہوں گے۔  
 \انتہا{سوال}
 %=================
 \ابتدا{سوال}
@@ -1719,11 +1958,11 @@ $(x+2)^2+(y-1)^2=13$\quad
 \انتہا{جواب}
 %====================
 \ابتدا{سوال}
-ترخیم \عددی{9x^2+4y^2=36} کو (الف) محور \عددی{x}، (ب) محور \عددی{y} کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔ اس کا حجم معلوم کریں۔
+ترخیم \عددی{9x^2+4y^2=36} کو (الف) محور \عددی{x}، (ب) محور \عددی{y} کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔ اس جسم طواف  کا حجم معلوم کریں۔
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
-ربع اول میں محور \عددی{x}، لکیر \عددی{x=4} اور قطع زائد \عددی{9x^2-4y^2=36} کے بیچ تکونی خطہ کو محور \عددی{x} کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔  اس جسم کا حجم تلاش کریں۔
+ربع اول میں محور \عددی{x}، لکیر \عددی{x=4}،  اور قطع زائد \عددی{9x^2-4y^2=36} کے بیچ تکونی خطہ کو محور \عددی{x} کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔  اس جسم  طواف کا حجم تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -1732,11 +1971,11 @@ $(x+2)^2+(y-1)^2=13$\quad
 \انتہا{جواب}
 %====================
 \ابتدا{سوال}
-ایک خطہ کا بایاں سرحد محور \عددی{y}، دایاں سرحد قطع زائد \عددی{x^2-y^2=1}  جبکہ اس کا نچلا اور بالائی سرحد لکیر \عددی{y=\pm 3} ہیں۔ اس خطہ کو محور \عددی{y} کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔ اس جسم کا حجم تلاش کریں۔ 
+ایک خطے  کی بائیں سرحد محور \عددی{y}، دائیں سرحد قطع زائد \عددی{x^2-y^2=1}  جبکہ اس کی  نچلی اور بالائی سرحد لکیر \عددی{y=\pm 3} ہے۔ اس خطے کو محور \عددی{y} کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔ اس جسم طواف  کا حجم تلاش کریں۔ 
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
-محور \عددی{x} کے بالائی اور ترخیم \عددی{\tfrac{x^2}{9}+\tfrac{y^2}{16}=1} کے نیچے  خطے کا وسطانی مرکز تلاش کریں۔
+محور \عددی{x} سے  اوپر  اور ترخیم \عددی{\tfrac{x^2}{9}+\tfrac{y^2}{16}=1} کے نیچے  خطے کا وسطانی مرکز تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -1745,14 +1984,14 @@ $(x+2)^2+(y-1)^2=13$\quad
 \انتہا{جواب}
 %================
 \ابتدا{سوال}
-قطع زائد \عددی{y^2-x^2=1} کے بالائی شاخ \عددی{y=\sqrt{x^2+1},\, 0\le x\le \sqrt{2}} کو محور \عددی{x} کر گرد گھما کر سطح طواف پیدا کیا جاتا ہے۔ اس سطح کا رقبہ تلاش کریں۔
+قطع زائد \عددی{y^2-x^2=1} کی  بالائی شاخ \عددی{y=\sqrt{x^2+1},\, 0\le x\le \sqrt{2}} کو محور \عددی{x} کر گرد گھما کر سطح طواف پیدا کی جاتی ہے۔ اس سطح کا رقبہ تلاش کریں۔
 \انتہا{سوال}
 %==================
 \ابتدا{سوال}\شناخت{سوال_مخروط_امواج}
-پانی کی سطح کو پہلے \عددی{A} اور بعد میں \عددی{B} پر چھو کر شکل \حوالہ{شکل_سوال_مخروط_امواج} میں دکھائے گئے امواج پیدا کیے گئے۔ جیسے جیسے یہ امواج پھیلتے ہیں، ان کا نقطہ تقاطع ایک منحنی بناتا ہے جو قطع زائد کی طرح معلوم ہوتا ہے۔ کیا ایسا حقیقتاً ہو گا؟  یہ جاننے کے کیے ہم \عددی{A} اور \عددی{B} پر مرکز دائروں کو امواج کا نمونہ لے سکتے ہیں۔
+پانی کی سطح کو پہلے \عددی{A} اور بعد میں \عددی{B} پر چھو کر شکل \حوالہ{شکل_سوال_مخروط_امواج} میں دکھائی گئی امواج پیدا کی گئیں۔ جیسے جیسے یہ امواج پھیلتی ہیں، ان کا نقطہ تقاطع ایک منحنی بناتا ہے جو قطع زائد کی طرح معلوم ہوتی  ہے۔ کیا ایسا حقیقتاً ہو گا؟  یہ جاننے کے کیے ہم \عددی{A} اور \عددی{B} پر مرکز دائروں کو امواج کا نمونہ لے سکتے ہیں۔
 
 لمحہ \عددی{t} پر نقطہ \عددی{N} مرکز \عددی{A} سے \عددی{r_A(t)}  اور \عددی{B} سے \عددی{r_B(t)} فاصلہ پر ہو گا۔ چونکہ دائروں کے رداس ایک مستقل رفتار (موج کی رفتار) سے بڑھتے ہیں لہٰذا \عددی{\tfrac{\dif r_A}{\dif t}=\tfrac{\dif r_B}{\dif t}} ہو گا۔ اس سے اخذ کریں کہ
- \عددی{r_A-r_B} ایک مستقل ہو گا لہٰذا \عددی{N} اس قطع زائد پر پایا جائے گا جس کے ماسکہ \عددی{A} اور \عددی{B} ہیں۔
+ \عددی{r_A-r_B} ایک مستقل ہو گا لہٰذا \عددی{N} اس قطع زائد پر پایا جائے گا جس کے ماسکے \عددی{A} اور \عددی{B} ہیں۔
 \انتہا{سوال}
 %============
 \begin{figure}
@@ -1760,10 +1999,10 @@ $(x+2)^2+(y-1)^2=13$\quad
 \begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}
-\draw[name path=a] (0,0)node[circ]{}node[below]{$A$} circle (1.5);
-\draw[name path=b] (0.75,0)node[circ]{}node[below]{$B$} circle (1.25);
+\draw[thick,name path=a] (0,0)node[circ]{}node[below]{$A$} circle (1.5);
+\draw[thick,name path=b] (0.75,0)node[circ]{}node[below]{$B$} circle (1.25);
 \draw[name intersections={of={a and b}}](0,0)--(intersection-1)node[circ]{}node[above]{$N(t)$}node[pos=0.5,shift={(-1ex,1ex)},font=\scriptsize]{$r_A(t)$};
-\draw(0.75,0)--(intersection-1)node[pos=0.4,xshift=1ex,,fill=white,font=\scriptsize]{$r_B(t)$};
+\draw(0.75,0)--(intersection-1)node[pos=0.4,xshift=0.85ex,,fill=white,font=\scriptsize]{$r_B(t)$};
 \end{tikzpicture}
 \caption{امواج برائے سوال \حوالہ{سوال_مخروط_امواج}}
 \label{شکل_سوال_مخروط_امواج}
@@ -1776,11 +2015,11 @@ $(x+2)^2+(y-1)^2=13$\quad
 \pgfmathsetmacro{\D}{\P-\B}
 \draw[-latex](0,0)--(2,0)node[right]{$x$};
 \draw[-latex](0,0)--(0,1.5)node[above]{$y$};
-\draw[domain=0:2]plot (\x,{ft(\x)});
-\draw[domain=0.2:2]plot (\x,{f(\x)});
-\draw[domain=0:0.2]plot(\x,{f(\x)});
-\draw[domain=0:0.2]plot(\x,{-f(\x)});
-\draw[domain=0.2:2]plot (\x,{-f(\x)});
+\draw[thick,domain=0:2]plot (\x,{ft(\x)});
+\draw[thick,domain=0.2:2]plot (\x,{f(\x)});
+\draw[thick,domain=0:0.2]plot(\x,{f(\x)});
+\draw[thick,domain=0:0.2]plot(\x,{-f(\x)});
+\draw[thick,domain=0.2:2]plot (\x,{-f(\x)});
 \draw[]plot coordinates {(0.25,0)(1,{f(1)})};
 \draw[]plot coordinates {(0,{f(1)})(2,{f(1)})}node[right]{$L'$};
 \draw([shift={(0:0.7)}]1,1) arc (0:\B:0.7);
@@ -1804,14 +2043,14 @@ $(x+2)^2+(y-1)^2=13$\quad
 
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_قطع_مکافی_انعکاس}\ترچھا{قطع مکافی کے خواص انعکاس}\\
-قطع مکافی \عددی{y^2=4px} پر عمومی نقطہ \عددی{N(x_0,y_0)} کو شکل \حوالہ{شکل_سوال_مخروط_قطع_مکافی_انعکاس} میں دکھایا گیا ہے۔ نقطہ \عددی{N} پر لکیر \عددی{L} اس قطع مکافی کا مماس ہے۔ قطع مکافی کا ماسکہ \عددی{F(p,0)} ہے۔نقطہ \عددی{N} سے دائیں منعکس شعاع \عددی{L'}، محور \عددی{x} کے متوازی  ہے۔ ہم دکھاتے ہیں کہ \عددی{F} سے خارج، \عددی{N} پر پہنچتا شعاع انعکاس کے بعد \عددی{L'} کا ہم مکان ہو گا۔ یہ دکھانے کی خاطر ہم دکھاتے ہیں کہ \عددی{\beta=\alpha} ہو گا۔ اس مساوات کی تصدیق درج ذیل اقدام کے ذریعہ کریں۔
+قطع مکافی \عددی{y^2=4px} پر عمومی نقطہ \عددی{N(x_0,y_0)} کو شکل \حوالہ{شکل_سوال_مخروط_قطع_مکافی_انعکاس} میں دکھایا گیا ہے۔ نقطہ \عددی{N} پر لکیر \عددی{L} اس قطع مکافی کا مماس ہے۔ قطع مکافی کا ماسکہ \عددی{F(p,0)} ہے۔نقطہ \عددی{N} سے دائیں منعکس شعاع \عددی{L'}، محور \عددی{x} کے متوازی  ہے۔ ہم دکھاتے ہیں کہ \عددی{F} سے خارج، \عددی{N} پر پہنچتی شعاع انعکاس کے بعد \عددی{L'} کی ہم مکان ہو گی۔ یہ دکھانے کی خاطر ہم دکھاتے ہیں کہ \عددی{\beta=\alpha} ہو گا۔ اس مساوات کی تصدیق درج ذیل اقدامات کے ذریعہ کریں۔
 \begin{enumerate}[a.]
 \item
 دکھائیں کہ \عددی{\tan \beta=\tfrac{2p}{y_0}} ہو گا۔
 \item
 دکھائیں کہ \عددی{\tan \phi=\tfrac{y_0}{x_0-p}} ہو گا۔
 \item
-درج ذیل مماثل
+درج ذیل تماثل
 \begin{align*}
 \tan \alpha=\frac{\tan \phi-\tan\beta}{1+\tan\phi\tan\beta}
 \end{align*}
@@ -1825,24 +2064,25 @@ $(x+2)^2+(y-1)^2=13$\quad
 %sec 10.1 questions end here
 %======================
 
-\حصہ{سنک لے لحاظ سے مخروط حصوں کی جماعت بندی}
-ہم ہر مخروط حصہ کے ساتھ ایک عدد منسلک کر سکتے ہیں جس کو مخروط حصے کا سنک کہتے ہیں۔ سنک سے مخروط حصے کی قسم (دائرہ، ترخیم، قطع مکافی یا قطع زائد) معلوم کی جا سکتی ہے۔ ترخیم اور قطع زائد کی صورت میں یہ عدد مخروط کی عمومی جسامت کی معلومات بھی فراہم کرتا ہے۔
+
+\حصہ{سنک کے  لحاظ سے مخروط حصوں کی جماعت بندی}
+ہم ہر مخروط حصہ  کے ساتھ ایک عدد منسلک کر سکتے ہیں جس کو مخروط حصے کا سنک کہتے ہیں۔ سنک سے مخروط حصے کی قسم (دائرہ، ترخیم، قطع مکافی ، یا قطع زائد) معلوم کی جا سکتی ہے۔ ترخیم اور قطع زائد کی صورت میں یہ عدد مخروط کی عمومی جسامت کی معلومات بھی فراہم کرتا ہے۔
 
 \جزوحصہء{سنک}
-اگرچہ مرکز سے ماسکہ تک فاصلہ \عددی{c} درج ذیل مساوات میں نہیں پایا جاتا ہے
+اگرچہ مرکز سے ماسکہ تک کا  فاصلہ \عددی{c} درج ذیل مساوات میں نہیں پایا جاتا 
 \begin{align*}
 \frac{x^2}{a^2}+\frac{y^2}{b^2}=1\quad (a>b)
 \end{align*}
-ترخیم کے لیے ہم \عددی{c} کو \عددی{c=\sqrt{a^2-b^2}} سے معلوم کر سکتے ہیں۔ اگر \عددی{a} کو مستقل رکھ کر \عددی{c} کو وقفہ \عددی{0\le c\le a} پر تبدیل کیا جائے تب حاصل ترخیم کی صورت  بھی تبدیل ہو گی (شکل \حوالہ{شکل_مخروط_تبدیلی_صورت_ترخیم})۔ اگر \عددی{c=0} (یعنی \عددی{a=b}) ہو تب یہ دائرہ ہو گا جبکہ \عددی{c} بڑھانے سے یہ چپٹا ہو گا۔ اگر \عددی{c=a} ہو تب راس اور ماسکے ایک دوسرے کے اوپر ہوں گے اور ترخیم ایک سیدھی لکیر کی صورت اختیار کرے گا۔
+ترخیم کے لیے ہم \عددی{c} کو \عددی{c=\sqrt{a^2-b^2}} سے معلوم کر سکتے ہیں۔ اگر \عددی{a} کو مستقل رکھ کر \عددی{c} کو وقفہ \عددی{0\le c\le a} پر تبدیل کیا جائے تب حاصل ترخیم کی صورت  بھی تبدیل ہو گی (شکل \حوالہ{شکل_مخروط_تبدیلی_صورت_ترخیم})۔ اگر \عددی{c=0} (یعنی \عددی{a=b}) ہو تب یہ دائرہ ہو گا جبکہ \عددی{c} بڑھانے سے یہ چپٹا ہو گا۔ اگر \عددی{c=a} ہو تب رؤوس  اور ماسکے ایک دوسرے کے اوپر ہوں گے اور ترخیم ایک سیدھی لکیر کی صورت اختیار کرے گی۔
 
-ہم \عددی{c} اور \عددی{a} کی نسبت سے ترخیم کی صورت بیان کرتے ہیں۔ یہ نسبت ترخیم کی \اصطلاح{سنک} کہلاتی ہے۔
+ہم \عددی{c} اور \عددی{a} کی نسبت سے ترخیم کی صورت بیان کرتے ہیں۔ یہ نسبت ترخیم کا \اصطلاح{سنک} کہلاتا ہے۔
 \begin{figure}
 \centering
 \begin{subfigure}{0.3\textwidth}
 \centering
 \begin{tikzpicture}
 \draw(-2,0)--(2,0);
-\draw(0,0)node[circ]{}node[below]{$F_1=F_2$} circle (1.5cm);
+\draw[thick](0,0)node[circ]{}node[below]{$F_1=F_2$} circle (1.5cm);
 \draw(1.5,0)node[circ]{}  (-1.5,0)node[circ]{};
 \draw(0,0.5)node[left,xshift=-2ex]{$c=0$}node[right,xshift=2ex]{$e=0$};
 \end{tikzpicture}
@@ -1854,7 +2094,7 @@ $(x+2)^2+(y-1)^2=13$\quad
 \pgfmathsetmacro{\b}{3/5*\a}
 \pgfmathsetmacro{\c}{sqrt(\a^2-\b^2)}
 \draw(-2,0)--(2,0);
-\draw(0,0)node[circ]{} circle (\a cm and \b cm);
+\draw[thick](0,0)node[circ]{} circle (\a cm and \b cm);
 \draw(-\c,0)node[circ]{}node[below]{$F_1$};
 \draw(\c,0)node[circ]{}node[below,xshift={-0.25ex}]{$F_2$};
 \draw(1.5,0)node[circ]{}  (-1.5,0)node[circ]{};
@@ -1867,7 +2107,7 @@ $(x+2)^2+(y-1)^2=13$\quad
 \pgfmathsetmacro{\a}{1.5}
 \pgfmathsetmacro{\b}{3/5*\a}
 \pgfmathsetmacro{\c}{sqrt(\a^2-\b^2)}
-\draw(-2,0)--(2,0);
+\draw[thick](-2,0)--(2,0);
 \draw(0,0)node[circ]{};
 \draw(-\a,0)node[circ]{}node[below]{$F_1$};
 \draw(\a,0)node[circ]{}node[below,xshift={-0.25ex}]{$F_2$};
@@ -1875,22 +2115,23 @@ $(x+2)^2+(y-1)^2=13$\quad
 \draw(0,0.4)node[left,xshift=-0.5ex]{$c=a$}node[right,xshift=0.5ex]{$e=1$};
 \end{tikzpicture}
 \end{subfigure}
-\caption{اگر \عددی{c} کو \عددی{0} سے بڑھا کر \عددی{a} کیا جائے تب ترخیم کی صورت دائرہ سے لکیر کی ہو جاتی ہے۔}
+\caption
+{اگر \عددی{c} کو \عددی{0} سے بڑھا کر \عددی{a}   کر دیا  جائے تب ترخیم کی صورت دائرہ سے تبدیل ہو کر  لکیر کی ہو جاتی ہے۔}
 \label{شکل_مخروط_تبدیلی_صورت_ترخیم}
 \end{figure}
 
 \ابتدا{تعریف}
-ترخیم \عددی{\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}=1,\,\, (a>b)} کی \اصطلاح{سنک}\فرہنگ{سنک}\حاشیہب{eccentricity}\فرہنگ{eccentricity} درج ذیل ہے۔
+ترخیم \عددی{\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}=1,\,\, (a>b)} کا \اصطلاح{سنک}\فرہنگ{سنک}\حاشیہب{eccentricity}\فرہنگ{eccentricity} درج ذیل ہے۔
 \begin{align*}
 e=\frac{c}{a}=\frac{\sqrt{a^2-b^2}}{a}
 \end{align*}
 \انتہا{تعریف}
 %==========
 
-نظام شمسی میں سورج کے گرد سیاروں کا مدار ترخیمی ہے۔  جیسا جدول \حوالہ{جدول_مخروط_سنک} میں ان مدار کے  سنک سے دیکھا جا سکتا ہے  یہ زیادہ تر تقریباً دائری ہیں۔ پلوٹو کا مدار بہت سنکی ہے اور اس  کا  سنک \عددی{e=0.21} ہے۔اسی طرح عطارہ کا سنک \عددی{0.21} ہے۔ نظام شمسی کے دیگر ارکان کے مدار مزید زیادہ سنکی ہیں۔مثال کے طور پر سیارچہ آئکارس  جو تقریباً \عددی{1.4} کلومیٹر چوڑا  اور سورج کے گرد \عددی{409} زمینی دنوں میں ایک چکر کاٹتا ہے کی سنک \عددی{0.83} ہے۔
+نظام شمسی میں سورج کے گرد سیاروں کی مدارات ترخیمی ہیں۔  جیسا جدول \حوالہ{جدول_مخروط_سنک} میں ان مدارات  کے  سنک سے دیکھا جا سکتا ہے  یہ زیادہ تر تقریباً دائری ہیں۔ پلوٹو کا مدار بہت سنکی ہے اور اس  کا  سنک \عددی{e=0.21} ہے۔اسی طرح عطارہ کا سنک \عددی{0.21} ہے۔ نظام شمسی کے دیگر ارکان کے مدار مزید زیادہ سنکی ہیں۔مثال کے طور پر سیارچہ آئکارس  جو تقریباً \عددی{1.4} کلومیٹر چوڑا  اور سورج کے گرد \عددی{409} زمینی دنوں میں ایک چکر کاٹتا ہے کا  سنک \عددی{0.83} ہے۔
 
 \begin{table}
-\caption{سورج کے گرد سیاروں کے مداروں کی سنک}
+\caption{سورج کے گرد سیاروں کی مدارات  کا سنک}
 \label{جدول_مخروط_سنک}
 \centering
 \begin{tabular}{lllllllll}
@@ -1902,18 +2143,18 @@ e=\frac{c}{a}=\frac{\sqrt{a^2-b^2}}{a}
 \end{table}
 
 \ابتدا{مثال}\شناخت{مثال_مخروط_ہالی_دم_دار_ستارہ_الف}
-دم دار ستارہ ہالی کا مدار \عددی{36.18} فلکیاتی اکائیاں لمبا اور \عددی{9.12} فلکیاتی اکائیاں چوڑا ہے۔ فلکیاتی اکائی سے مراد زمین کے مدار کے نصف  اکبر محور کی لمبائی ہے جو \عددی{\num{149597870}} کلومیٹر ہے۔ اس کی سنک
+دُم دار ستارہ ہالی کا مدار \عددی{36.18} فلکیاتی اکائیاں لمبا اور \عددی{9.12} فلکیاتی اکائیاں چوڑا ہے۔ فلکیاتی اکائی سے مراد زمین کے مدار کے نصف  محور اکبر کی لمبائی ہے جو \عددی{\num{149597870}} کلومیٹر ہے۔ اس کا سنک درج ذیل ہو گا۔
 \begin{align*}
-e=\frac{\sqrt{a^2-b^2}}{a}=\frac{\sqrt{(36.18/2)^2+(9.12/2)^2}}{36.18/2}\approx 0.97
+e=\frac{\sqrt{a^2-b^2}}{a}=\frac{\sqrt{(36.18/2)^2-(9.12/2)^2}}{36.18/2}\approx 0.97
 \end{align*}
 \انتہا{مثال}
 %======================
 
-قطع مکافی کا ایک ماسکہ اور ایک ناظمہ ہوتے ہیں جبکہ ترخیم کے دو ماسکے اور دو ناظمہ ہوتے ہیں جو محور اکبر کے متوازی، مرکز سے \عددی{\tfrac{a}{e}} فاصلے پر ہوتے ہیں۔ قطع مکافی کی ایک خاصیت درج ذیل ہے
+قطع مکافی کا ایک ماسکہ اور ایک ناظمہ ہوتا  ہے جبکہ ترخیم کے دو ماسکے اور دو ناظمے  ہوتے ہیں ۔  محور اکبر کے متوازی، مرکز سے \عددی{\tfrac{a}{e}} فاصلے پر یہ ناظمے   ہوتی  ہیں۔ قطع مکافی کی ایک خاصیت درج ذیل ہے
 \begin{align}\label{مساوات_مخروط_قطع_مکافی_خاصیت_الف}
 NF=1\cdot ND
 \end{align}
-یعنی ترخیم پر کسی بھی نقطہ \عددی{N} کا ماسکہ سے فاصلہ  اور \عددی{N} کا ناظمہ پر قریبی نقطہ \عددی{  D} سے  فاصلہ ایک سا ہو گا۔  ترخیم کے لیے یہ دکھایا جا سکتا ہے کہ  مساوات \حوالہ{مساوات_مخروط_قطع_مکافی_خاصیت_الف} کی جگہ درج ذیل ہو گا۔
+یعنی ترخیم پر کسی بھی نقطہ \عددی{N} کا ماسکے  سے فاصلہ  اور \عددی{N} کا ناظمہ پر قریبی نقطہ \عددی{  D} سے  فاصلہ ایک جتنا ہو گا۔  ترخیم کے لیے یہ دکھایا جا سکتا ہے کہ  مساوات \حوالہ{مساوات_مخروط_قطع_مکافی_خاصیت_الف} کی جگہ درج ذیل ہو گا۔
 \begin{align}\label{مساوات_مخروط_ترخیم_خاصیت_الف}
 NF_1=e\cdot ND_1,\quad \quad NF_2=e\cdot ND_2
 \end{align}
@@ -1938,9 +2179,10 @@ NF_1=e\cdot ND_1,\quad \quad NF_2=e\cdot ND_2
 \addplot[]plot coordinates {(-\c,0)}node[circ]{}node[shift={(3.5ex,1.5ex)},font=\scriptsize]{$F_1(-c,0)$};
 \addplot[]plot coordinates {(\c,0)}node[circ]{}node[shift={(-3ex,1.5ex)},font=\scriptsize]{$F_2(c,0)$};
 \addplot[]plot coordinates {(0,\b)}node[above left]{$b$} {(0,-\b)}node[below left]{$-b$};
-\addplot[]plot coordinates {({-\a/\e},-3.2)({-\a/\e},2)}node[above]{$x=-\frac{a}{e}$}node[above,yshift=4ex]{\RL{ناظمہ 1}};
-\addplot[]plot coordinates {({\a/\e},-3.2)({\a/\e},2)}node[above]{$x=\frac{a}{e}$}node[above, yshift=4ex]{\RL{ناظمہ 2}};
+\addplot[]plot coordinates {({-\a/\e},-3.2)({-\a/\e},2)}node[above]{$x=-\frac{a}{e}$}node[above,yshift=4ex]{\RL{ناظمہ \اردوعدد{1}}};
+\addplot[]plot coordinates {({\a/\e},-3.2)({\a/\e},2)}node[above]{$x=\frac{a}{e}$}node[above, yshift=4ex]{\RL{ناظمہ \اردوعدد{2}}};
 \addplot[]plot coordinates {(-\c,0) (-1.5,{-f(-1.5)})}node[circ]{}node[below]{$N(x,y)$};
+\addplot[]plot coordinates {(\c,0) (-1.5,{-f(-1.5)})};
 \addplot[thick]plot coordinates {(-1.5,{-f(-1.5)})({-\a/\e},{-f(-1.5)})}node[circ]{}node[left]{$D_1$};
 \addplot[]plot coordinates {(-1.5,{-f(-1.5)})({\a/\e},{-f(-1.5)})}node[circ]{}node[right]{$D_2$};
 \addplot[]plot coordinates {(\c,-0.25)(\c,-2)};
@@ -1950,7 +2192,8 @@ NF_1=e\cdot ND_1,\quad \quad NF_2=e\cdot ND_2
 \addplot[latex-latex]plot coordinates {(0,-2.9)({\a/\e},-2.9)}node[pos=0.5,fill=white]{$\frac{a}{e}$};
 \end{axis}
 \end{tikzpicture}
-\caption{ترخیم \عددی{\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}=1} کے ناظمہ اور ماسکے۔ ناظمہ 1 کا مطابقتی ماسکہ \عددی {F_1} ہے جبکہ ناظمہ 2 کا مطابقتی ماسکہ \عددی{F_2} ہے۔}
+\caption
+{ترخیم \عددی{\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}=1} کی  ناظمات اور ماسکے۔ ناظمہ \اردوعدد{1} کا مطابقتی ماسکہ \عددی {F_1} ہے جبکہ ناظمہ  \اردوعدد{2} کا مطابقتی ماسکہ \عددی{F_2} ہے۔}
 \label{شکل_مخروط_مطابقتی_ناظمہ_ماسکہ}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
@@ -1967,8 +2210,8 @@ NF_1=e\cdot ND_1,\quad \quad NF_2=e\cdot ND_2
 \addplot[domain=-\kk:\kk]({-f(x)},x);
 \addplot[]plot coordinates {(-\c,0)}node[circ]{}node[below,xshift=-2ex,font=\scriptsize]{$F_1(-c,0)$};
 \addplot[]plot coordinates {(\c,0)}node[circ]{}node[below,xshift=3ex,font=\scriptsize]{$F_2(c,0)$};
-\addplot[]plot coordinates {({-\a/\e},-3.2)({-\a/\e},5)}node[left]{$x=-\frac{a}{e}$}node[left, yshift=4ex]{\RL{ناظمہ 1}};
-\addplot[]plot coordinates {({\a/\e},-1.5)({\a/\e},5)}node[right]{$x=\frac{a}{e}$}node[right,yshift=4ex]{\RL{ناظمہ 2}};
+\addplot[]plot coordinates {({-\a/\e},-3.2)({-\a/\e},5)}node[left]{$x=-\frac{a}{e}$}node[left, yshift=4ex]{\RL{ناظمہ  \اردوعدد{1}}};
+\addplot[]plot coordinates {({\a/\e},-1.5)({\a/\e},5)}node[right]{$x=\frac{a}{e}$}node[right,yshift=4ex]{\RL{ناظمہ \اردوعدد{2}}};
 \addplot[]plot coordinates {(\c,0) ({f(\k)},\k)}node[circ]{}node[right]{$N(x,y)$};
 \addplot[thick]plot coordinates {({f(\k)},\k)({\a/\e},\k)}node[circ]{}node[above,xshift=1.5ex]{$D_2$};
 \addplot[]plot coordinates {({f(\k)},\k)({-\a/\e},\k)}node[circ]{}node[above,xshift=-1.5ex]{$D_1$};
@@ -1979,14 +2222,15 @@ NF_1=e\cdot ND_1,\quad \quad NF_2=e\cdot ND_2
 \addplot[latex-latex]plot coordinates {(0,-1.25)({\a/\e},-1.25)}node[pos=0.5,fill=white]{$\frac{a}{e}$};
 \end{axis}
 \end{tikzpicture}
-\caption{قطع زائد \عددی{\tfrac{x^2}{a^2}-\tfrac{y^2}{b^2}=1} کے ماسکے اور ناظمہ۔ قطع زائد پر ہر \عددی{N} کے لیے \عددی{NF_1=e\cdot ND_1} اور \عددی{NF_2=e\cdot ND_2} ہوں گے۔}
+\caption
+{قطع زائد \عددی{\tfrac{x^2}{a^2}-\tfrac{y^2}{b^2}=1} کے ماسکے اور ناظمے۔ قطع زائد پر ہر \عددی{N} کے لیے \عددی{NF_1=e\cdot ND_1} اور \عددی{NF_2=e\cdot ND_2} ہوں گے۔}
 \label{شکل_قطع_مکافی_ناظمہ_ماسکہ}
 \end{minipage}
 \end{figure}
 
-مساوات \حوالہ{مساوات_مخروط_ترخیم_خاصیت_الف} کے دونوں اجزاء میں ماسکہ اور ناظمہ میں مطابقت لازمی ہے، یعنی، اگر ہم \عددی{N} سے \عددی{F_1} تک فاصلہ لیں تب ہم \عددی{N} سے ناظمہ تک فاصلہ لیتے ہوئے ترخیم کا وہ ناظمہ لیں گے جو ترخیم کے اسی ہاتھ ہو۔ ناظمہ \عددی{x=-\tfrac{a}{e}} اور ماسکہ \عددی{F_1(-c,0)} مطابقت رکھتے ہیں جبکہ ناظمہ \عددی{x=\tfrac{a}{e}} اور ناظمہ \عددی{F_2(c,0)} مطابقت رکھتے ہیں۔ 
+مساوات \حوالہ{مساوات_مخروط_ترخیم_خاصیت_الف} کے دونوں اجزاء میں ماسکہ اور ناظمہ میں مطابقت لازمی ہے، یعنی، اگر ہم \عددی{N} سے \عددی{F_1} تک  کا  فاصلہ لیں تب ہم \عددی{N} سے ناظمہ تک کا  فاصلہ لیتے ہوئے ترخیم کی  وہ ناظمہ لیں گے جو ترخیم کے اسی ہاتھ ہو۔ ناظمہ \عددی{x=-\tfrac{a}{e}} اور ماسکہ \عددی{F_1(-c,0)} مطابقت رکھتی ہیں جبکہ ناظمہ \عددی{x=\tfrac{a}{e}} اور  ماسکہ  \عددی{F_2(c,0)} مطابقت رکھتی ہیں۔ 
 
-قطع زائد کا سنک بھی \عددی{e=\tfrac{c}{a}} ہے، البتہ اب \عددی{c} کی قیمت  \عددی{\sqrt{a^2+b^2}}  نا کہ \عددی{\sqrt{a^2-b^2}} ہو گی۔ مزید ترخیم کے سنک کے برعکس،  قطع زائد کا سنک ہر صورت \عددی{1} سے زیادہ ہو گی۔
+قطع زائد کا سنک بھی \عددی{e=\tfrac{c}{a}} ہے، البتہ اب \عددی{c} کی قیمت  \عددی{\sqrt{a^2+b^2}}  نہ کہ \عددی{\sqrt{a^2-b^2}} ہو گی۔ مزید ترخیم کے سنک کے برعکس،  قطع زائد کا سنک ہر صورت \عددی{1} سے زیادہ ہو گا۔
 
 \ابتدا{تعریف}
 قطع زائد \عددی{\tfrac{x^2}{a^2}-\tfrac{y^2}{b^2}=1} کا  سنک درج ذیل ہو گا۔
@@ -1996,18 +2240,18 @@ e=\frac{c}{a}=\frac{\sqrt{a^2+b^2}}{a}
 \انتہا{تعریف}
 %================
 
-ترخیم اور قطع زائد دونوں میں ماسکوں کے بیچ فاصلہ اور راس کے بیچ فاصلہ کا نسبت، سنک کے برابر ہو گا۔
+ترخیم اور قطع زائد دونوں میں ماسکوں کے درمیان  فاصلہ اور رؤوس  کے  درمیان  فاصلوں کی نسبت، سنک کے برابر ہو گی۔
 \begin{align*}
-\text{سنک}=\frac{\text{ماسکوں کے بیچ فاصلہ}}{\text{راس کے بیچ فاصلہ}}
+\text{سنک}=\frac{\text{ماسکوں کے درمیان فاصلہ}}{\text{رؤوس کے درمیان  فاصلہ}}
 \end{align*}  
 
-ترخیم میں راس دور اور ماسکے قریب ہوتے ہیں اور ان کی نسبت \عددی{1} سے کم ہوتی ہے۔ قطع مکافی میں ماسکے دور اور راس قریب ہوتے ہیں لہٰذا سنک \عددی{1} سے زیادہ ہوتا ہے۔ 
+ترخیم میں رؤوس دور اور ماسکے قریب ہوتے ہیں اور ان کی نسبت \عددی{1} سے کم ہوتی ہے۔ قطع مکافی میں ماسکے دور اور  رؤوس  قریب ہوتے ہیں لہٰذا سنک \عددی{1} سے زیادہ ہوتا ہے۔ 
 
 \ابتدا{مثال}
-ایک ترخیم کا سنک \عددی{0.8} اور ماسکے \عددی{(0,\pm 7)} ہیں۔ اس کے راس تلاش کریں۔
+ایک ترخیم کا سنک \عددی{0.8} اور ماسکے \عددی{(0,\pm 7)} ہیں۔ اس کے رؤوس  تلاش کریں۔
 
 \حل
-چونکہ \عددی{e=\tfrac{c}{a}} ہے لہٰذا راس \عددی{(0,\pm a)} پر ہوں گے جہاں
+چونکہ \عددی{e=\tfrac{c}{a}} ہے لہٰذا رؤوس  \عددی{(0,\pm a)} پر ہوں گے جہاں
 \begin{align*}
 a=\frac{c}{e}=\frac{7}{0.8}=8.75
 \end{align*}
@@ -2022,27 +2266,27 @@ a=\frac{c}{e}=\frac{7}{0.8}=8.75
 \begin{align*}
 \frac{9x^2}{144}-\frac{16y^2}{144}=1,\quad \implies \quad \frac{x^2}{16}-\frac{y^2}{9}=1
 \end{align*}
-یوں \عددی{a^2=16} اور \عددی{b^2=9} ہیں  لہٰذا \عددی{c=\sqrt{a^2+b^2}=\sqrt{16+9}=5} ہو گا جس سے درج ذیل ملتا ہے۔
+یوں \عددی{a^2=16} اور \عددی{b^2=9} ہیں  لہٰذا \عددی{c=\sqrt{a^2+b^2}=\sqrt{16+9}=5} ہو گا جس سے درج ذیل سنک  ملتا ہے۔
 \begin{align*}
 e=\frac{c}{a}=\frac{5}{4}
 \end{align*}
 \انتہا{مثال}
 %=========================
 
-ترخیم کی طرح یہاں بھی دکھایا جا سکتا ہے کہ لکیریں \عددی{x=\pm \tfrac{a}{e}} قطع زائد کے ناظمہ ہوں گے، یعنی:
+ترخیم کی طرح یہاں بھی دکھایا جا سکتا ہے کہ لکیریں \عددی{x=\pm \tfrac{a}{e}} قطع زائد کی  ناظمات ہوں گی، یعنی درج ذیل ہو گا۔
 \begin{align}\label{مساوات_مخروط_قطع_زائد_ناظمہ_ماسکہ_خاصیت}
 NF_1=e\cdot ND_1,\quad NF_2=e\cdot ND_2
 \end{align}
-یہاں قطع زائد پر \عددی{N} کوئی نقطہ ہے، \عددی{F_1} اور \عددی{F_2} ماسکے ہیں جبکہ  ناظمہ پر \عددی{N} کے قریب ترین نقطے  \عددی{D_1} اور \عددی{D_2} ہیں (شکل \حوالہ{شکل_قطع_مکافی_ناظمہ_ماسکہ})۔ 
+یہاں قطع زائد پر \عددی{N} کوئی نقطہ ہے، \عددی{F_1} اور \عددی{F_2} ماسکے ہیں جبکہ  ناظمات  پر \عددی{N} کے قریب ترین نقطے  \عددی{D_1} اور \عددی{D_2} ہیں (شکل \حوالہ{شکل_قطع_مکافی_ناظمہ_ماسکہ})۔ 
 
-تصویر مکمل کرنے کی خاطر ہم قطع مکافی کے  سنک کی تعریف \عددی{e=1} لیتے ہیں۔ مساوات \حوالہ{مساوات_مخروط_قطع_مکافی_خاصیت_الف} تا مساوات \حوالہ{مساوات_مخروط_قطع_زائد_ناظمہ_ماسکہ_خاصیت} کو یوں ایک ہی روپ \عددی{NF=e\cdot ND} میں لکھا جا سکتا ہے۔
+تصویر مکمل کرنے کی خاطر ہم قطع مکافی کے  سنک کی تعریف \عددی{e=1} لیتے ہیں۔ اس طرح  مساوات \حوالہ{مساوات_مخروط_قطع_مکافی_خاصیت_الف} تا مساوات \حوالہ{مساوات_مخروط_قطع_زائد_ناظمہ_ماسکہ_خاصیت} کو  ایک ہی روپ \عددی{NF=e\cdot ND} میں لکھا جا سکتا ہے۔
 
 \ابتدا{تعریف}
 قطع مکافی کا سنک \عددی{e=1} ہے۔
 \انتہا{تعریف}
 %======================
 
-ماسکہ اور ناظمہ کی مساوات \عددی{NF=e\cdot ND}، قطع مکافی، ترخیم اور قطع زائد کو ایک دوسرے کے ساتھ درج ذیل طریقہ سے ملاتی ہے۔ فرض کریں نقطہ \عددی{N} سے کسی مقررہ لکیر (ناظمہ) تک فاصلہ ضرب \عددی{e} اس نقطے  سے کسی مقررہ نقطہ \عددی{F} (ماسکہ) کے فاصلہ کے برابر ہو یعنی:
+ماسکہ و  ناظمہ کی مساوات \عددی{NF=e\cdot ND} قطع مکافی، ترخیم،  اور قطع زائد کو آپس میں  درج ذیل طریقے سے ملاتی ہے۔ فرض کریں نقطہ \عددی{N} سے کسی مقررہ لکیر (ناظمہ) تک فاصلے کو   \عددی{e}  سے ضرب دینے سے  ، نقطے  سے کسی مقررہ نقطہ \عددی{F} (ماسکہ) تک کا  فاصلہ  حاصل ہوتا ہے، یعنی:
 \begin{align}\label{مساوات_مخروط_سنکی_تعلق} 
 NF=e\cdot ND
 \end{align}
@@ -2051,14 +2295,14 @@ NF=e\cdot ND
 \item
 قطع مکافی اگر \عددی{e=1} ہو،
 \item
-ترخیم اگر \عددی{<1} ہو،
+ترخیم اگر \عددی{0\le e<1} ہو(\عددی{e=0} در حقیقت دائرہ  دے گا)، 
 \item
 قطع زائد اگر \عددی{e>1} ہو۔
 \end{enumerate} 
 
-مساوات \حوالہ{مساوات_مخروط_سنکی_تعلق} ظاہری طور پر زیادہ دلچسپ نظر نہیں آتی ہے۔ اس میں کوئی محدد نہیں پائے جاتے ہیں اور اس کو  محددی روپ میں لکھنے سے، \عددی{e} کی قیمت پر منحصر، مختلف مساوات حاصل ہوتے ہیں۔کم از کم کارتیسی محدد میں ایسا ہوتا ہے۔ البتہ جیسا ہم حصہ \حوالہ{حصہ_مخرط_حصوں_کے_قطبی_مساوات} میں دیکھیں گے، قطبی محدد میں، \عددی{e} کی قیمت سے قطع نظر، مساوات \عددی{NF=e\cdot ND} کی ترجمانی ایک ہی انتہائی سادہ مساوات کرتی ہے جو تقریباً \عددی{300} سالوں سے  فلکی سائنسدانوں  کی پسندیدہ مساوات رہی ہے۔
+مساوات \حوالہ{مساوات_مخروط_سنکی_تعلق} ظاہری طور پر زیادہ دلچسپ نظر نہیں آتی۔ اس میں کوئی محدد نہیں پائے جاتے  اور اس کو  محددی روپ میں لکھنے سے، \عددی{e} کی قیمت پر منحصر، مختلف مساوات حاصل ہوتی  ہیں۔کم از کم کارتیسی محدد میں ایسا ہوتا ہے۔ البتہ جیسا ہم حصہ \حوالہ{حصہ_مخرط_حصوں_کے_قطبی_مساوات} میں دیکھیں گے، قطبی محدد میں، \عددی{e} کی قیمت سے قطع نظر، مساوات \عددی{NF=e\cdot ND} کی ترجمانی ایک ہی انتہائی سادہ مساوات کرتی ہے جو تقریباً \عددی{300} سال سے ماہرین فلکیات   کی پسندیدہ مساوات رہی ہے۔
 
-ایک قطع مکافی جس کا مرکز مبدا پر ہو کا محور \عددی{x} پر ماسکہ اور مطابقتی ناظمہ جانتے ہوئے ہم شکل سے \عددی{e} کی قیمت معلوم کر سکتے ہیں۔ سنک \عددی{e} کی قیمت جانتے ہوئے ہم کارتیسی نظام میں  قطع زائد کی مساوات کو، اگلی مثال کی طرح، مساوات \عددی{NF=e\cdot ND} سے  حاصل کر سکتے ہیں۔ ہم اسی طرح شکل \حوالہ{شکل_مخروط_مطابقتی_ناظمہ_ماسکہ} کی مدد سے  اس ترخیم کی مساوات بھی کارتیسی محدد میں حاصل کر سکتے ہیں جس کا مرکز مبدا پر اور ماسکے محور \عددی{x} پر ہوں۔
+ایک قطع مکافی جس کا مرکز مبدا پر ہو  کے  محور \عددی{x} پر ماسکے  اور مطابقتی ناظمات جانتے ہوئے ہم  شکل \حوالہ{شکل_قطع_مکافی_ناظمہ_ماسکہ}  سے \عددی{e} کی قیمت معلوم کر سکتے ہیں۔ سنک \عددی{e} کی قیمت جانتے ہوئے ہم کارتیسی نظام میں  قطع زائد کی مساوات کو، اگلی مثال کی طرح، مساوات \عددی{NF=e\cdot ND} سے  حاصل کر سکتے ہیں۔ ہم اسی طرح شکل \حوالہ{شکل_مخروط_مطابقتی_ناظمہ_ماسکہ} کی مدد سے  اس ترخیم کی مساوات بھی کارتیسی محدد میں حاصل کر سکتے ہیں جس کا مرکز مبدا پر اور ماسکے محور \عددی{x} پر ہوں۔
 
 \begin{figure}
 \centering
@@ -2091,7 +2335,7 @@ NF=e\cdot ND
 \begin{align*}
 x=\frac{a}{e}=1
 \end{align*}
-لہٰذا \عددی{a=e} ہو گا۔ سنک کی مساوات \عددی{e=\tfrac{c}{a}} کے ساتھ ملا کر  \عددی{e=\tfrac{c}{a}=\tfrac{3}{e}} لہٰذا \عددی{e^2=3} یعنی \عددی{e=\sqrt{3}} حاصل ہوتا ہے۔ سنک \عددی{e} جانتے ہوئے ہم شکل \حوالہ{شکل_مثال_مخروط_قطع_زائد_سنک_سے_حصول_مساوات} کو دیکھ کر  \عددی{NF=e\cdot ND} سے مساوات حاصل کرتے ہیں۔
+لہٰذا \عددی{a=e} ہو گا۔ سنک کی مساوات \عددی{e=\tfrac{c}{a}} کے ساتھ  ان نتائج کو ملا کر  \عددی{e=\tfrac{c}{a}=\tfrac{3}{e}} لہٰذا \عددی{e^2=3} یعنی \عددی{e=\sqrt{3}} حاصل ہوتا ہے۔ سنک \عددی{e} جانتے ہوئے ہم شکل \حوالہ{شکل_مثال_مخروط_قطع_زائد_سنک_سے_حصول_مساوات} کو دیکھ کر  \عددی{NF=e\cdot ND} سے مساوات حاصل کرتے ہیں۔
 \begin{align*}
 NF&=e\cdot ND&&\text{\RL{مساوات \حوالہ{مساوات_مخروط_سنکی_تعلق}}}\\
 \sqrt{(x-3)^2+(y-0)^2}&=\sqrt{3}\abs{x-1}&&e=\sqrt{3}\\
@@ -2107,7 +2351,7 @@ x^2-6x+9+y^2&=3(x^2-2x+1)\\
 \حصہء{سوالات}
 \ابتدا{سوالات}
 \موٹا{ترخیم}\\
-سوال \حوالہ{سوال_مخروط_ترخیم_ماسکے_ناظمہ_الف} تا سوال \حوالہ{سوال_مخروط_ترخیم_ماسکے_ناظمہ_ب} میں ترخیم کا سنک تلاش کریں۔ اس کے بعد ترخیم کے ماسکے اور ناظمہ تلاش کر کے ترسیم کریں۔
+سوال \حوالہ{سوال_مخروط_ترخیم_ماسکے_ناظمہ_الف} تا سوال \حوالہ{سوال_مخروط_ترخیم_ماسکے_ناظمہ_ب} میں ترخیم کا سنک تلاش کریں۔ اس کے بعد ترخیم کے ماسکے اور ناظمے تلاش کر کے ترسیم کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_ماسکے_ناظمہ_الف}
 $16x^2+25y^2=400$
@@ -2162,7 +2406,7 @@ $169x^2+25y^2=4225$
 \انتہا{سوال}
 %====================
 
-سوال \حوالہ{سوال_مخروط_ترخیم_مساوات_حاصل_الف} تا سوال \حوالہ{سوال_مخروط_ترخیم_مساوات_حاصل_ب} میں ترخیم کے ماسکے یا راس اور سنک دیا گیا ہے۔ ترخیم مستوی  \عددی{xy} میں پایا جاتا ہے اور اس کا  مرکز مبدا پر ہے۔ان میں ترخیم کی معیاری مساوات حاصل کریں۔
+سوال \حوالہ{سوال_مخروط_ترخیم_مساوات_حاصل_الف} تا سوال \حوالہ{سوال_مخروط_ترخیم_مساوات_حاصل_ب} میں ترخیم کے ماسکے یا رؤوس  اور سنک دیا گیا ہے۔ ترخیم مستوی  \عددی{xy} میں پائی جاتی ہے اور اس کا  مرکز مبدا پر ہے۔ ترخیم کی معیاری مساوات حاصل کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_مساوات_حاصل_الف}
 ماسکے \عددی{(0,\pm 3)} اور سنک \عددی{0.5}
@@ -2191,7 +2435,7 @@ $\tfrac{x^2}{4851}+\tfrac{y^2}{4900}=1$
 \انتہا{سوال}
 %======================
 
-سوال \حوالہ{سوال_مخروط_ترخیم_ماسکہ_ناظمہ_دیا_الف} تا سوال \حوالہ{سوال_مخروط_ترخیم_ماسکہ_ناظمہ_دیا_ب} میں ترخیم کے ماسکے اور مطابقتی ناظمہ دیے گئے ہیں۔ ترخیم مستوی  \عددی{xy} میں پایا جاتا ہے اور اس کا مرکز مبدا پر ہے۔ شکل \حوالہ{شکل_مخروط_مطابقتی_ناظمہ_ماسکہ} کو دیکھ کر ترخیم کا سنک معلوم کریں۔ اس کے بعد ترخیم کی معیاری مساوات حاصل کریں۔
+سوال \حوالہ{سوال_مخروط_ترخیم_ماسکہ_ناظمہ_دیا_الف} تا سوال \حوالہ{سوال_مخروط_ترخیم_ماسکہ_ناظمہ_دیا_ب} میں ترخیم کے ماسکے اور مطابقتی ناظمے  دیے گئے ہیں۔ ترخیم مستوی  \عددی{xy} میں پایا جاتا ہے اور اس کا مرکز مبدا پر ہے۔ شکل \حوالہ{شکل_مخروط_مطابقتی_ناظمہ_ماسکہ} کو دیکھ کر ترخیم کا سنک معلوم کریں۔ اس کے بعد ترخیم کی معیاری مساوات حاصل کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_ترخیم_ماسکہ_ناظمہ_دیا_الف}
 ماسکہ \عددی{(\sqrt{5},0)}، ناظمہ \عددی{x=\tfrac{9}{\sqrt{5}}}
@@ -2229,7 +2473,7 @@ $e=\tfrac{1}{2},\, \tfrac{x^2}{64}+\tfrac{y^2}{48}=1$
 \انتہا{سوال}
 %==================
 \ابتدا{سوال}
-ایک ترخیم کے آخری سر \عددی{(1,1)}، \عددی{(3,4)}، \عددی{(1,7)} اور \عددی{(-1,4)} ہیں۔ اس ترخیم کا خاکہ کھینچیں، اس کی معیاری مساوات، ماسکے، سنک اور ناظمہ تلاش کریں۔
+ایک ترخیم کے آخری سر \عددی{(1,1)}، \عددی{(3,4)}، \عددی{(1,7)}،  اور \عددی{(-1,4)} ہیں۔ اس ترخیم کا خاکہ بنائیں۔ ترخیم کی معیاری مساوات، ماسکے، سنک،  اور ناظمہ تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -2243,7 +2487,7 @@ e=\tfrac{\sqrt{5}}{3},\, y=4\pm\tfrac{9\sqrt{5}}{5}$
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}
-درج ذیل ترخیم \عددی{a}، \عددی{b} اور \عددی{c} کی کن قیمتوں کے لیے مبدا پر محور \عددی{x} کے متوازی ہو گا اور نقطہ \عددی{(-1,2)} سے گزرے گا؟
+درج ذیل ترخیم \عددی{a}، \عددی{b}،  اور \عددی{c} کی کن قیمتوں کے لیے مبدا پر محور \عددی{x} کے متوازی ہو گی  اور نقطہ \عددی{(-1,2)} سے گزرے گی؟
 \begin{align*}
 4x^2+y^2+ax+by+c=0
 \end{align*}
@@ -2256,12 +2500,12 @@ $a=0,\, b=-4,\, c=0,\, e=\tfrac{\sqrt{3}}{2}$
 \انتہا{جواب}
 %======================
 \ابتدا{سوال}\شناخت{سوال_مخروط_کمرہ_سرگوشی}\ترچھا{ترخیم کی خاصیت انعکاس}\\
- ایک ترخیم کو اس کے محور اکبر کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔ اس ترخیمی جسم کی اندرونی سطح پر چاندی لگا کر ترخیمی آئینہ بنایا جاتا ہے۔ دکھائیں کہ اس ترخیمی آئینہ کے ایک ماسکہ سے خارج شعاع انعکاس کے بعد دوسرے ماسکہ پر پہنچتا ہے۔ صدا بھی اسی راہ کو اپناتا ہے۔ اس حقیقت کو بروئے کار لاتے ہوئے کمرہ سرگوشی بنایا جاتا ہے۔ (اشارہ: ترخیم کو مستوی  \عددی{xy} پر معیاری مقام پر رکھ کر دکھائیں کہ کسی بھی نقطہ \عددی{N} سے دونوں ماسکوں تک لکیر، \عددی{N} پر ترخیم کے مماس کے ساتھ ایک  سے زاویے بناتے ہیں۔)
+ ایک ترخیم کو اس کے محور اکبر کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔ اس ترخیمی جسم کی اندرونی سطح پر چاندی لگا کر ترخیمی آئینہ بنایا جاتا ہے۔ دکھائیں کہ اس ترخیمی آئینے کے ایک ماسکہ سے خارج شعاع انعکاس کے بعد دوسرے ماسکہ پر پہنچتی ہے۔ صدا بھی اسی راہ کو اپناتی  ہے۔ اس حقیقت کو بروئے کار لاتے ہوئے کمرہ سرگوشی بنایا جاتا ہے۔ (اشارہ: ترخیم کو مستوی  \عددی{xy} میں  معیاری مقام پر رکھ کر دکھائیں کہ کسی بھی نقطہ \عددی{N} سے دونوں ماسکوں تک لکیر، \عددی{N} پر ترخیم کے مماس کے ساتھ،  برابر    زاویے بناتی  ہے۔)
 \انتہا{سوال}
 %======================
 
 \موٹا{قطع زائد}\\
-سوال \حوالہ{سوال_مخروط_قطع_زائد_ماسکہ_ناظمہ_الف} تا سوال \حوالہ{سوال_مخروط_قطع_زائد_ماسکہ_ناظمہ_ب} میں قطع زائد کا  سنک تلاش کریں۔ اس کے بعد قطع زائد کے ماسکہ اور ناظمہ معلوم کر کے ترسیم کریں۔
+سوال \حوالہ{سوال_مخروط_قطع_زائد_ماسکہ_ناظمہ_الف} تا سوال \حوالہ{سوال_مخروط_قطع_زائد_ماسکہ_ناظمہ_ب} میں قطع زائد کا  سنک تلاش کریں۔ اس کے بعد قطع زائد کے ماسکے اور ناظمے معلوم کر کے ترسیم کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_قطع_زائد_ماسکہ_ناظمہ_الف}
 $x^2-y^2=1$
@@ -2316,10 +2560,10 @@ $64x^2-36y^2=2304$
 \انتہا{سوال}
 %=====================
 
-سوال\حوالہ{سوال_مخروط_قطع_زائد_سنک_راس_الف} تا سوال \حوالہ{سوال_مخروط_قطع_زائد_سنک_راس_ب} میں قطع زائد کا سنک اور راس یا ماسکے دیے گئے ہیں۔ یہ قطع زائد مستوی  \عددی{xy} میں پائے جاتے ہیں جن کا مرکز مبدا پر ہے۔ ان قطع زائد کی  معیاری مساوات تلاش کریں۔
+سوال\حوالہ{سوال_مخروط_قطع_زائد_سنک_راس_الف} تا سوال \حوالہ{سوال_مخروط_قطع_زائد_سنک_راس_ب} میں قطع زائد کا سنک اور رؤوس  یا ماسکے دیے گئے ہیں۔  قطع زائد مستوی  \عددی{xy} میں پائے جاتے ہیں جن کا مرکز مبدا پر ہے۔ قطع زائد کی  معیاری مساوات تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_قطع_زائد_سنک_راس_الف}
-سنک \عددی{3} راس \عددی{(0,\pm 1)}
+سنک \عددی{3} رؤوس  \عددی{(0,\pm 1)}
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -2328,7 +2572,7 @@ $y^2-\tfrac{x^2}{8}=1$
 \انتہا{جواب}
 %====================
 \ابتدا{سوال}
-سنک \عددی{2} راس \عددی{(\pm 2,0)}
+سنک \عددی{2} رؤوس \عددی{(\pm 2,0)}
 \انتہا{سوال}
 %====================
 \ابتدا{سوال}
@@ -2345,7 +2589,7 @@ $x^2-\tfrac{y^2}{8}=1$
 \انتہا{سوال}
 %====================
 
-سوال \حوالہ{سوال_مخروط_سنک_معیاری_الف} تا سوال \حوالہ{سوال_مخروط_سنک_معیاری_ب} میں قطع زائد کے ماسکے اور مطابقتی ناظمہ دیے گئے ہیں۔ یہ قطع زائد مستوی  \عددی{xy} میں پائے جاتے ہیں اور ان کا مرکز مبدا پر پایا جاتا ہے۔ قطع زائد کا سنک اور معیاری مساوات تلاش کریں۔
+سوال \حوالہ{سوال_مخروط_سنک_معیاری_الف} تا سوال \حوالہ{سوال_مخروط_سنک_معیاری_ب} میں قطع زائد کے ماسکے اور مطابقتی ناظمے  دیے گئے ہیں۔  قطع زائد مستوی  \عددی{xy} میں پائے جاتے ہیں اور ان کا مرکز مبدا پر  ہے۔ قطع زائد کا سنک اور معیاری مساوات تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_سنک_معیاری_الف}
 ماسکہ \عددی{(4,0)}، ناظمہ \عددی{x=2}
@@ -2375,7 +2619,7 @@ $e=2,\,x^2-\tfrac{y^2}{3}=1$
 %======================
 
 \ابتدا{سوال}
-ایک قطع زائد کا سنک \عددی{\tfrac{3}{2}}  اور ایک ماسکہ \عددی{(1,-3)} ہے۔ اس کا مطابقتی ناظمہ لکیر \عددی{y=2} ہے۔ اس قطع زائد کی مساوات تلاش کریں۔
+ قطع زائد کا سنک \عددی{\tfrac{3}{2}}  اور ایک ماسکہ \عددی{(1,-3)} ہے۔ اس کا مطابقتی ناظمہ لکیر \عددی{y=2} ہے۔  قطع زائد کی مساوات تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -2388,11 +2632,11 @@ $\tfrac{(y-6)^2}{36}-\tfrac{(x-1)^2}{45}=1$
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}\شناخت{سوال_مخروط_قطع_زائد_آئینہ_الف}\ترچھا{قطع زائد کی خاصیت انعکاس}\\
-دکھائیں کہ قطع زائد کے ایک ماسکہ کی طرف گامزن شعاع، قطع زائد سے انعکاس کے بعد  دوسرے ماسکہ پر پہنچتا ہے (شکل\حوالہ{شکل_سوال_مخروط_قطع_زائد_آئینہ_الف})۔ (اشارہ: دکھائیں کہ نقطہ \عددی{N} پر قطع زائد کا مماس  قطعہ \عددی{NF_1} اور \عددی{NF_2} کے بیچ زاویہ کو نصف میں تقسیم کرتا ہے۔)
+دکھائیں کہ قطع زائد کے ایک ماسکہ کی طرف گامزن شعاع، قطع زائد سے انعکاس کے بعد  دوسرے ماسکہ پر پہنچتی ہے (شکل\حوالہ{شکل_سوال_مخروط_قطع_زائد_آئینہ_الف})۔ (اشارہ: دکھائیں کہ نقطہ \عددی{N} پر قطع زائد کا مماس  قطعہ \عددی{NF_1} اور \عددی{NF_2} کے بیچ زاویے کو نصف میں تقسیم کرتا ہے۔)
 \انتہا{سوال}
 %===================
-\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_زائد_آئینہ_ب}\ترچھا{ہم ماسکہ ترخیم اور قطع زائد}\\
-دکھائیں کہ ایک ترخیم اور قطع زائد جن کے  ایک سے ماسکے \عددی{A} اور \عددی{B} ہوں، ایک دوسرے کو \عددی{90} درجہ پر قطع کرتے ہیں (شکل \حوالہ{شکل_سوال_مخروط_قطع_زائد_آئینہ_ب})۔ (اشارہ: ماسکہ \عددی{A} سے خارج شعاع قطع زائد کے نقطہ \عددی{N} پر پہنچ کر قطع زائد سے یوں منعکس ہو گا جیسا یہ شعاع ماسکہ \عددی{B} سے خارج ہوا ہو (سوال \حوالہ{سوال_مخروط_قطع_زائد_آئینہ_الف})۔ یہی شعاع ترخیم سے منعکس ہو کر ماسکہ \عددی{B} پر پہنچتا ہے (سوال \حوالہ{سوال_مخروط_کمرہ_سرگوشی})۔)
+\ابتدا{سوال}\شناخت{سوال_مخروط_قطع_زائد_آئینہ_ب}\ترچھا{ہم  ماسکہ ترخیم اور قطع زائد}\\
+دکھائیں کہ اگر ترخیم اور قطع زائد جن کے   ماسکے \عددی{A} اور \عددی{B} ایک    جیسے ہوں، یہ نقطہ تقاطع پر  ایک دوسرے کو \عددی{90} درجہ پر قطع کرتے ہیں (شکل \حوالہ{شکل_سوال_مخروط_قطع_زائد_آئینہ_ب})۔ (اشارہ: ماسکہ \عددی{A} سے خارج شعاع قطع زائد کے نقطہ \عددی{N} پر پہنچ کر قطع زائد سے یوں منعکس ہو گی  جیسے یہ شعاع ماسکہ \عددی{B} سے خارج ہوئی ہو (سوال \حوالہ{سوال_مخروط_قطع_زائد_آئینہ_الف})۔ یہی شعاع ترخیم سے منعکس ہو کر ماسکہ \عددی{B} پر پہنچتی  ہے (سوال \حوالہ{سوال_مخروط_کمرہ_سرگوشی})۔)
 \انتہا{سوال}
 %====================
 \begin{figure}
@@ -2456,24 +2700,24 @@ $\tfrac{(y-6)^2}{36}-\tfrac{(x-1)^2}{45}=1$
 
 
 \حصہ{دو درجی مساوات اور گھومنا}\شناخت{حصہ_مخروط_دو_درجی_مساوات_گھمانا}
-ہم اس حصہ میں تحلیلی جیومیٹری کی اس حیرت کن نتیجہ پر غور کریں گے کہ درج ذیل مساوات کی کارتیسی ترسیم
+ہم اس حصے میں تحلیلی ہندسہ  کے اس حیرت کن نتیجے پر غور کریں گے کہ درج ذیل مساوات کی کارتیسی ترسیم
 \begin{align}\label{مساوات_مخروط_مخروطی_حصہ_عمومی_مساوات_الف}
 Ax^2+Bxy+Cy^2+Dx+Ey+F=0
 \end{align}
-جہاں \عددی{A}، \عددی{B}، \عددی{C} اور \عددی{D} بیک وقت تمام صفر نہ ہوں، تقریباً ہر بار مخروطی حصہ ہو گا۔ ایسا تب نہیں ہوتا جب یا ترسیم ہی نہ پائی جاتی ہو اور یا جب ترسیم دو متوازی لکیروں پر مشتمل ہو۔ مساوات \حوالہ{مساوات_مخروط_مخروطی_حصہ_عمومی_مساوات_الف} کی تمام ترسیمات، چاہیں وہ قوسی ہو یا نہیں، \اصطلاح{دو درجی منحنیات}\فرہنگ{دو درجی!منحنیات}\حاشیہب{quadratic curves}\فرہنگ{quadratic!curves} کہلاتی ہیں۔
+جہاں \عددی{A}، \عددی{B}،  اور \عددی{C}   تمام بیک وقت  صفر نہ ہوں، تقریباً ہر  مرتبہ  مخروطی حصہ ہو گی۔ ایسا تب نہیں ہوتا جب  ترسیم ہی نہ پائی جاتی ہو اور   یا جب ترسیم دو متوازی لکیروں پر مشتمل ہو۔ مساوات \حوالہ{مساوات_مخروط_مخروطی_حصہ_عمومی_مساوات_الف} کی تمام ترسیمات، چاہیں وہ قوسی ہو ں یا نہیں، \اصطلاح{دو درجی منحنیات}\فرہنگ{دو درجی!منحنیات}\حاشیہب{quadratic curves}\فرہنگ{quadratic!curves} کہلاتی ہیں۔
 
-\جزوحصہء{جزو \عددی{Bxy}}
-آپ نے دیکھا کہ حصہ \حوالہ{حصہ_مخروط_حصے_دو_قدری_مساواتیں} میں مخروطی حصوں کی مساواتوں میں جزو \عددی{Bxy} نہیں پایا جاتا، چونکہ ان کے محور  ، محددی نظام کے محور کے متوازی (بلکہ ہم مکان) ہیں۔ 
+\جزوحصہء{دو متغیرات کا ضربی جزو}
+آپ نے دیکھا کہ حصہ \حوالہ{حصہ_مخروط_حصے_دو_قدری_مساواتیں} میں مخروطی حصوں کی مساواتوں میں دو متغیرات کا  ضربی  جزو \عددی{Bxy} نہیں پایا جاتا، کیونکہ ان مخروطی حصوں  کے محور  ، محددی نظام کے محوروں  کے متوازی (بلکہ ہم مکان) ہیں۔ 
 
-مخروط حصہ کے محور، محددی محور  کے غیر متوازی ہونے کی صورت کو دیکھنے کی خاطر ہم ایک قطع زائد کی مساوات حاصل کرتے ہیں جس کا \عددی{a=3} ہو اور جس کے ماسکے \عددی{F_1(-3,-3)} اور \عددی{F_2(3,3)} ہوں (شکل \حوالہ{شکل_مخروط_ترچھا_قطع_زائد})۔ مساوات \عددی{\abs{NF_1-NF_2}=2a} اب \عددی{\abs{NF_1-NF_2}=2(3)=6} یا
+مخروطی حصے کے محور، محددی محور  کے غیر متوازی ہونے کی صورت کو دیکھنے کی خاطر ہم ایسے  قطع زائد کی مساوات حاصل کرتے ہیں جس کا \عددی{a=3} ہو اور جس کے ماسکے \عددی{F_1(-3,-3)} اور \عددی{F_2(3,3)} ہوں (شکل \حوالہ{شکل_مخروط_ترچھا_قطع_زائد})۔ مساوات \عددی{\abs{NF_1-NF_2}=2a} اب \عددی{\abs{NF_1-NF_2}=2(3)=6} یا
 \begin{align*}
 \sqrt{(x+3)^2+(y+3)^2}-\sqrt{(x-3)^2+(y-3)^2}=\pm 6
 \end{align*}
-روپ اختیار کرتا ہے۔ہم ایک جذر کو دوسرے ہاتھ منتقل کر کے دونوں اطراف کا مربع لے کر حاصل واحد جذر کو  اکیلے ایک طرف رکھ کر دونوں اطراف کا مربع لے کر
+روپ اختیار کرتی ہے۔ ایک جذر کو دوسرے ہاتھ منتقل کر کے دونوں اطراف کا مربع لے کر حاصل واحد جذر کو  اکیلے ایک طرف رکھ کر دونوں اطراف کا  دوبارہ مربع لے کر
 \begin{align}\label{مساوات_مخروط_قطع_زائد_ب}
 2xy=9
 \end{align}
-حاصل کرتے ہیں جو مساوات \حوالہ{مساوات_مخروط_مخروطی_حصہ_عمومی_مساوات_الف} کی ایک روپ ہے جس میں جزو \عددی{Bxy} پایا جاتا ہے۔ مساوات \حوالہ{مساوات_مخروط_قطع_زائد_ب} میں دیے گئے قطع زائد کے متقارب \عددی{x} اور محور \عددی{y} ہیں، جبکہ اس کا  محور ماسکہ مثبت محور \عددی{x} کے ساتھ \عددی{\tfrac{\pi}{4}} ریڈیئن زاویہ بناتا ہے۔ اس مثال کی طرح مساوات \حوالہ{مساوات_مخروط_مخروطی_حصہ_عمومی_مساوات_الف} میں جزو \عددی{Bxy} صرف اس صورت پایا جاتا ہے جب مخروط کے محور ترچھے ہوں۔
+حاصل کرتے ہیں ، جو مساوات \حوالہ{مساوات_مخروط_مخروطی_حصہ_عمومی_مساوات_الف} کا ایک روپ ہے ، جس میں جزو \عددی{Bxy} پایا جاتا ہے۔ مساوات \حوالہ{مساوات_مخروط_قطع_زائد_ب} میں دیے گئے قطع زائد کی  متقاربات   محور \عددی{x} اور محور \عددی{y} ہیں، جبکہ اس کا  محور ماسکہ مثبت محور \عددی{x} کے ساتھ \عددی{\tfrac{\pi}{4}} ریڈیئن زاویہ بناتا ہے۔ اس مثال کی طرح مساوات \حوالہ{مساوات_مخروط_مخروطی_حصہ_عمومی_مساوات_الف} میں جزو \عددی{Bxy} صرف اس صورت پایا جاتا ہے جب مخروط کے محور ترچھے ہوں۔
 
 \begin{figure}
 \centering
@@ -2492,7 +2736,8 @@ Ax^2+Bxy+Cy^2+Dx+Ey+F=0
 \addplot[stealth-,domain=sqrt(2):2]{g(x)}node[font=\scriptsize,shift={(1ex,1ex)}]{$^\pi\!/\!_4$};
 \end{axis}
 \end{tikzpicture}
-\caption{قطع زائد \عددی{2xy=9} کا محور ماسکہ، مثبت محور \عددی{x} کے ساتھ \عددی{\tfrac{\pi}{4}} زاویہ بناتا ہے۔}
+\caption
+{قطع زائد \عددی{2xy=9} کا محور ماسکہ، مثبت محور \عددی{x} کے ساتھ \عددی{\tfrac{\pi}{4}} زاویہ بناتا ہے۔}
 \label{شکل_مخروط_ترچھا_قطع_زائد}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
@@ -2511,13 +2756,14 @@ Ax^2+Bxy+Cy^2+Dx+Ey+F=0
 \draw[-stealth]([shift={(30:0.6)}]0,0) arc (30:\ka:0.6);
 \draw(42.5:0.8)node[]{$\theta$};
 \end{tikzpicture}
-\caption{مبدا کے گرد گھڑی کی الٹ رخ محور کو \عددی{\alpha} زاویہ گھمانا۔}
+\caption
+{مبدا کے گرد گھڑی مخالف  رخ محور کو \عددی{\alpha} زاویہ گھمانا۔}
 \label{شکل_مخروط_محور_گھمانا}
 \end{minipage}
 \end{figure}
 
-\جزوحصہء{محددی محور گھمانے سے جزو \عددی{Bxy} سے نجات}
-مخروط کی مساوات سے جزو \عددی{Bxy} ہٹانے کی خاطر ہم محددی محور کر گھما کر مخروط کے محور کو محددی محور کے متوازی بناتے ہیں۔ گھمانے کی مساواتوں کو ہم درج ذیل طریقہ سے حاصل کرتے ہیں۔ شکل \حوالہ{شکل_مخروط_محور_گھمانا} میں گھڑی کی سوئیوں کے گھومنے کی الٹ رخ، مبدا کے گرد زاویہ \عددی{\alpha} گھمانا دکھایا گیا ہے۔اس شکل سے درج ذیل لکھا جا سکتا ہے۔
+\جزوحصہء{محددی محور گھمانے سے دو متغیرات کے    ضربی جزو  سے نجات}
+مخروط کی مساوات سے جزو \عددی{Bxy} ہٹانے کی خاطر ہم محددی محور کو گھما کر مخروط کے محور کے متوازی بناتے ہیں۔ گھمانے  کے لئے درکار  مساوات  کو ہم درج ذیل طریقے سے حاصل کرتے ہیں۔ شکل \حوالہ{شکل_مخروط_محور_گھمانا} میں گھڑی مخالف  رخ، مبدا کے گرد زاویہ \عددی{\alpha} گھمانا دکھایا گیا ہے۔اس شکل سے درج ذیل لکھا جا سکتا ہے۔
 \begin{gather}
 \begin{aligned}\label{مساوات_مخروط_گھمانا_الف}
 x&=OM=ON\cos(\theta+\alpha)=ON\cos\theta\cos \alpha-ON\sin\theta\sin\alpha\\
@@ -2532,27 +2778,27 @@ ON\cos\theta=OM'=x'
 \begin{align*}
 ON\sin\theta=M'N=y'
 \end{align*}
-ہیں لہٰذا مساوات \حوالہ{مساوات_مخروط_گھمانا_الف} درج ذیل دیں گے۔
-
-\موٹا{محددی محور مبدا کے گرد گھمانے کی مساواتیں}
-
+ہیں لہٰذا مساوات \حوالہ{مساوات_مخروط_گھمانا_الف} درج ذیل  مطلوبہ  مساوات  دے  گی۔
 \begin{gather}
 \begin{aligned}\label{مساوات_مخروط_محور_کی_گھمائی}
 x&=x'\cos \alpha-y'\sin\alpha\\
 y&=x'\sin\alpha+y'\cos\alpha
-\end{aligned}
+\end{aligned}%
+\begin{minipage}{0.30\textwidth}
+محددی محور مبدا کے گرد \\گھمانے کی مساوات
+\end{minipage}
 \end{gather}
 
 
 \ابتدا{مثال}\شناخت{مثال_مخروط_محور_گھما_کر_قطع_زائد}
-مبدا کے گرد، گھڑی کے الٹ رخ، \عددی{x} اور محور \عددی{y} کو \عددی{\tfrac{\pi}{4}} ریڈیئن گھمایا جاتا ہے۔ قطع زائد \عددی{2xy=9} کا ان نئے محور میں مساوات تلاش کریں۔  
+مبدا کے گرد گھڑی  مخالف رخ  \عددی{x} اور محور \عددی{y} کو \عددی{\tfrac{\pi}{4}} ریڈیئن گھمایا جاتا ہے۔ قطع زائد \عددی{2xy=9} کی ان نئے محور میں مساوات تلاش کریں۔  
 
 \حل
-چونکہ \عددی{\cos\tfrac{\pi}{4}=\sin\tfrac{\pi}{4}=\tfrac{1}{\sqrt{2}}} لہٰذا ہم مساوات \حوالہ{مساوات_مخروط_محور_کی_گھمائی} سے
+چونکہ \عددی{\cos\tfrac{\pi}{4}=\sin\tfrac{\pi}{4}=\tfrac{1}{\sqrt{2}}} ہے  لہٰذا ہم مساوات \حوالہ{مساوات_مخروط_محور_کی_گھمائی} سے
 \begin{align*}
 x=\frac{x'-y'}{\sqrt{2}},\quad y=\frac{x'+y'}{\sqrt{2}}
 \end{align*}
-کو \عددی{2xy=9} میں پر کر کے درج ذیل حاصل کرتے ہیں (شکل \حوالہ{شکل_مثال_مخروط_محور_گھما_کر_قطع_زائد})۔
+کو \عددی{2xy=9} میں رکھ  کر  درج ذیل حاصل کرتے ہیں (شکل \حوالہ{شکل_مثال_مخروط_محور_گھما_کر_قطع_زائد})۔
 \begin{align*}
 2\big(\frac{x'-y'}{\sqrt{2}}\big)\big(\frac{x'+y'}{\sqrt{2}}\big)&=9\\
 x'^2-y'^2&=0\\
@@ -2575,7 +2821,8 @@ x'^2-y'^2&=0\\
 \addplot[-latex]plot coordinates {(5,-5)(-5,5)}node[above]{$y'$};
 \end{axis}
 \end{tikzpicture}
-\caption{نئے محور \عددی{x'} اور \عددی{y'} میں قطع زائد کی مساوات (مثال \حوالہ{مثال_مخروط_محور_گھما_کر_قطع_زائد})}
+\caption
+{نئے محور \عددی{x'} اور \عددی{y'} میں قطع زائد کی مساوات (مثال \حوالہ{مثال_مخروط_محور_گھما_کر_قطع_زائد})}
 \label{شکل_مثال_مخروط_محور_گھما_کر_قطع_زائد}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
@@ -2594,7 +2841,8 @@ x'^2-y'^2&=0\\
 \draw[-stealth]([shift={(-30:1)}]0,0) arc (-30:0:1);
 \draw(-15:1.5)node[font=\small]{$\tfrac{\pi}{6}$};
 \end{tikzpicture}
-\caption{مخروط کو \عددی{\tfrac{\pi}{6}} زاویہ گھڑی کے الٹ رخ گھمایا گیا ہے (مثال \حوالہ{مثال_مخروط_گھماو})}
+\caption
+{مخروط کو \عددی{\tfrac{\pi}{6}} زاویہ گھڑی مخالف گھمایا گیا ہے (مثال \حوالہ{مثال_مخروط_گھماو})}
 \label{شکل_مثال_مخروط_گھماو}
 \end{minipage}
 \end{figure}
@@ -2603,7 +2851,7 @@ x'^2-y'^2&=0\\
 \begin{align}\label{مساوات_مخروط_گھمانے_کے_بعد}
 A'x'^2+B'x'y'+C'y'^2+D'x'+E'y'+F'=0
 \end{align}
-جہاں پرانے اور نئے مستقلوں کے رشتے درج ذیل ہوں گے۔
+جہاں پرانے اور نئے مستقلات کے درمیان  رشتے درج ذیل ہوں گے۔
 \begin{gather}
 \begin{aligned}\label{مساوات_مخروط_گھما_کر_مستقل_کے_تعلق}
 A'&=A\cos^2\alpha+B\cos\alpha\sin\alpha+C\sin^2\alpha\\
@@ -2615,7 +2863,7 @@ F'&=F
 \end{aligned}
 \end{gather}
 
-یہ مساوات دیگر معلومات کے ساتھ ہمیں \عددی{B'=0} کے حصول کا طریقہ بھی دیتے ہیں۔یوں \عددی{Bxy} جزو والی مساوات سے شروع کر کے ہم اس کو  زاویہ \عددی{\alpha} گھما کر ایسی دو درجی مساوات حاصل کر سکتے ہیں جس میں \عددی{B'xy} کا جزو نہیں پایا جاتا ہو۔ ایسا زاویہ جاننے کے لیے ہم مساوات \حوالہ{مساوات_مخروط_گھما_کر_مستقل_کے_تعلق} میں \عددی{B'=0} لے کر \عددی{\alpha} کے حاصل مساوات
+یہ مساوات دیگر معلومات کے ساتھ ہمیں \عددی{B'=0} کے حصول کا طریقہ بھی دیتی ہیں۔یوں \عددی{Bxy} جزو والی مساوات سے شروع کر کے ہم اس کو  زاویہ \عددی{\alpha} گھما کر ایسی دو درجی مساوات حاصل کر سکتے ہیں جس میں \عددی{B'xy} کا جزو نہیں پایا جاتا ہو۔ ایسا زاویہ جاننے کے لیے ہم مساوات \حوالہ{مساوات_مخروط_گھما_کر_مستقل_کے_تعلق} میں \عددی{B'=0} لے کر \عددی{\alpha} کی  حاصل مساوات
 \begin{align*}
 B\cos2\alpha+(C-A)\sin2\alpha=0
 \end{align*}
@@ -2625,30 +2873,30 @@ B\cos2\alpha+(C-A)\sin2\alpha=0
 \end{align} 
 
 \ابتدا{مثال}\شناخت{مثال_مخروط_گھماو}
-درج ذیل دو درجی مساوات میں \عددی{\sqrt{3}xy} کے جزو کے خاتمہ کے لیے محددی محور کو زاویہ \عددی{\alpha} گھمایا جاتا ہے۔ اس زاویہ کو تلاش کریں۔
+درج ذیل دو درجی مساوات میں \عددی{\sqrt{3}xy}   جزو کے خاتمہ کے لیے محددی محور کو زاویہ \عددی{\alpha} گھمایا جاتا ہے۔ اس زاویہ کو تلاش کریں۔
 \begin{align*}
 2x^2+\sqrt{3}xy+y^2-10=0
 \end{align*}
-نئی مساوات تلاش کریں اور اس کو پہچانیں۔
+نئی مساوات تلاش کریں اور اس کی شناخت کریں۔
 
 \حل
-دی گئی مساوات میں \عددی{A=2}، \عددی{B=\sqrt{3}} اور \عددی{C=1} ہیں۔ مساوات \حوالہ{مساوات_مخروط_زاویہ_جو_سادہ_مساوات_دیگا} میں ان قیمتوں کو پر کر کے \عددی{\alpha} معلوم کرتے ہیں۔
+دی گئی مساوات میں \عددی{A=2}، \عددی{B=\sqrt{3}}،  اور \عددی{C=1} ہے۔ مساوات \حوالہ{مساوات_مخروط_زاویہ_جو_سادہ_مساوات_دیگا} میں ان قیمتوں کو رکھ کر  \عددی{\alpha} معلوم کرتے ہیں۔
 \begin{align*}
 \cot2\alpha=\frac{A-C}{B}=\frac{2-1}{\sqrt{3}}=\frac{1}{\sqrt{3}},\implies 2\alpha=\frac{\pi}{3}
 \end{align*}
-یوں \عددی{\alpha=\tfrac{\pi}{6}}، \عددی{A=2}، \عددی{B=\sqrt{3}}، \عددی{C=1}، \عددی{D=E=0} اور \عددی{F=-10} کو مساوات \حوالہ{مساوات_مخروط_گھما_کر_مستقل_کے_تعلق} میں پر کر کے
+یوں \عددی{\alpha=\tfrac{\pi}{6}}، \عددی{A=2}، \عددی{B=\sqrt{3}}، \عددی{C=1}، \عددی{D=E=0}،  اور \عددی{F=-10} کو مساوات \حوالہ{مساوات_مخروط_گھما_کر_مستقل_کے_تعلق} میں پُر کر کے
 \begin{align*}
 A'=\frac{5}{2},\, B'=0,\, C'=\frac{1}{2},\, D'=E'=0,\, F'=-10
 \end{align*}
-حاصل ہوں گے اور مساوات \حوالہ{مساوات_مخروط_گھمانے_کے_بعد} درج ذیل دے گا۔
+حاصل ہو گا  اور مساوات \حوالہ{مساوات_مخروط_گھمانے_کے_بعد} درج ذیل دے گی۔
 \begin{align*}
 \frac{x'^2}{4}+\frac{y'^2}{20}=1\quad \text{یا}\quad \frac{5}{2}x'^2+\frac{1}{2}y'^2-10=0
 \end{align*}
-یہ منحنی ترخیم ہے جس کے ماسکے نئی \عددی{y'} محور پر پائے جاتے ہیں (شکل \حوالہ{شکل_مثال_مخروط_گھماو})۔
+یہ منحنی ایک  ترخیم ہے جس کے ماسکے نئے   \عددی{y'}   محور پر پائے جاتے ہیں (شکل \حوالہ{شکل_مثال_مخروط_گھماو})۔
 \انتہا{مثال}
 %==========================
 
-\جزوحصہء{دو درجی مساوات کے ممکنہ ترسیمات}
+\جزوحصہء{دو درجی مساوات کی ممکنہ ترسیمات}
 ہم اب عمومی دو درجی مساوات کی ترسیمات پر آتے ہیں۔
 
 چونکہ محور کو گھما کر \عددی{Bxy} طرز کے جزو کو ہٹایا جا سکتا ہے لہٰذا ہم تصور کرتے ہیں کہ یہی کرتے ہوئے درج ذیل عمومی دو درجی مساوات حاصل کی گئی ہے
@@ -2658,11 +2906,11 @@ Ax^2+Cy^2+Dx+Ey+F=0
 جہاں \عددی{A'} تا \عددی{F'} کو بالترتیب \عددی{A} تا \عددی{F} لکھا گیا ہے۔ مساوات \حوالہ{مساوات_مخروط_عمومی_سادہ_دو_درجی_الف} درج ذیل کو ظاہر کرتی ہے۔
 \begin{enumerate}[a.]
 \item
-جب \عددی{A=C\ne 0} ہو تب دائرہ (مخصوص حالات میں یہ نقطہ مانند ہو سکتا ہے یا اس کی کوئی ترسیم نہیں ہو گی۔)
+جب \عددی{A=C\ne 0} ہو تب دائرہ (مخصوص حالات میں یہ نقطہ مانند ہو سکتا ہے اور یا  اس کی کوئی  ترسیم نہیں ہو گی۔)
 \item
 اگر مساوات \حوالہ{مساوات_مخروط_عمومی_سادہ_دو_درجی_الف} ایک متغیر میں خطی اور دوسرے میں دو درجی ہو تب یہ قطع مکافی کو ظاہر کرتی ہے۔ 
 \item
-اگر \عددی{A} اور \عددی{C} دونوں مثبت یا دونوں منفی ہوں تب یہ ترخیم کو ظاہر کرتی ہے۔(مخصوص حالات میں یہ دائرہ، واحد نقطہ دے سکتی ہے یا اس کی کوئی ترسیم نہیں ہو سکتی ہے۔)
+اگر \عددی{A} اور \عددی{C} دونوں مثبت یا دونوں منفی ہوں تب یہ ترخیم کو ظاہر کرتی ہے۔(مخصوص حالات میں یہ دائرہ یا واحد نقطہ دے سکتی ہے یا اس کی کوئی ترسیم نہیں ہو گی۔)
 \item
 اگر \عددی{A} اور \عددی{C} کی علامتیں ایک دوسرے کی الٹ ہوں تب یہ قطع زائد کو ظاہر کرتی ہے۔(مخصوص حالات میں یہ دو منقطع لکیروں کو ظاہر کر سکتی ہے۔)
 \item
@@ -2673,6 +2921,7 @@ Ax^2+Cy^2+Dx+Ey+F=0
 
 دو درجی ترسیمات کی مثالوں کے لیے صفحہ \حوالہصفحہ{جدول_مخروط_اقسام_دو_درجی} پر جدول \حوالہ{جدول_مخروط_اقسام_دو_درجی}  دیکھیں۔
 
+%KKK??? am here
 \جزوحصہء{ممیز پرکھ}
 درج ذیل مساوات کی قسم جاننے کے لیے ہمیں اس کا جزو \عددی{Bxy} ہٹانے کی ضرورت نہیں۔
 \begin{align}\label{مساوات_مخروط_ممیز_پرکھ_الف}
@@ -3165,7 +3414,7 @@ $y=mx+b$\quad
 \انتہا{جواب}
 %======================
 \ابتدا{سوال}
-قطع زائد \عددی{xy=2} کی سنک دریافت کریں۔
+قطع زائد \عددی{xy=2} کا سنک دریافت کریں۔
 \انتہا{سوال}
 %====================
 \ابتدا{سوال}
@@ -4819,7 +5068,7 @@ $x=\sin \pi t,\, y=\cos \pi t,\, -\frac{1}{2}\le t\le \frac{1}{2}$
 \begin{align*}
 L=4a\int_0^{\pi/2}\sqrt{1-e^2\cos^2t}\dif t
 \end{align*}
-جہاں \عددی{e} ترخیم کی سنک ہے۔ ماسوائے \عددی{e=0} یا \عددی{e=1} یہ تکمل، جو \اصطلاح{ترخیمی تکمل}\فرہنگ{تکمل!ترخیمی}\فرہنگ{ترخیمی!تکمل}\حاشیہب{elliptic integral}\فرہنگ{elliptic!integral} کہلاتا ہے، غیر بنیادی ہے۔ 
+جہاں \عددی{e} ترخیم کا سنک ہے۔ ماسوائے \عددی{e=0} یا \عددی{e=1} یہ تکمل، جو \اصطلاح{ترخیمی تکمل}\فرہنگ{تکمل!ترخیمی}\فرہنگ{ترخیمی!تکمل}\حاشیہب{elliptic integral}\فرہنگ{elliptic!integral} کہلاتا ہے، غیر بنیادی ہے۔ 
 \begin{enumerate}[a.]
 \item
 قاعدہ ذوزنقہ میں \عددی{n=10} لے کر \عددی{a=1} اور \عددی{e=\tfrac{1}{2}} کے لیے  اس ترخیم کی لمبائی کا اندازہ لگائیں۔
@@ -5659,7 +5908,7 @@ $-\tfrac{\pi}{2}\le \theta \le \tfrac{\pi}{2},\quad 1\le r\le 2$
 $0\le \theta \le \tfrac{\pi}{2},\quad 1\le \abs{r}\le 2$
 \انتہا{سوال}
 %======================
-%KKk???
+
 
 \موٹا{قطبی سے کارتیسی مساوات}\\
 سوال \حوالہ{سوال_مخروط_قطبی_سے_کارتیسی_الف} تا سوال \حوالہ{سوال_مخروط_قطبی_سے_کارتیسی_ب} میں مطابقتی کارتیسی مساوات دریافت کریں۔ اس کے بعد ترسیم کو پہچانئے۔
@@ -6842,7 +7091,7 @@ $2y=\tfrac{2\sqrt{6}}{9}$
 
 
 \حصہ{مخروط حصوں کے قطبی مساوات}\شناخت{حصہ_مخرط_حصوں_کے_قطبی_مساوات}
-چاند، سیارے، مصنوعی سیارے اور دم دار ستارے ترخیم، قطع مکافی اور قطع زائد پر حرکت کرتے ہیں۔ ان کی حرکت کو قطبی محدد میں ایک آسان مساوات سے ظاہر کیا جا سکتا ہے لہٰذا فلکیات اور فلکیاتی انجینئری میں قطبی محدد  اہمیت رکھتے ہیں۔ ہم اس مساوات کو یہاں حاصل کرتے ہیں۔
+چاند، سیارے، مصنوعی سیارے اور دُم دار ستارے ترخیم، قطع مکافی اور قطع زائد پر حرکت کرتے ہیں۔ ان کی حرکت کو قطبی محدد میں ایک آسان مساوات سے ظاہر کیا جا سکتا ہے لہٰذا فلکیات اور فلکیاتی انجینئری میں قطبی محدد  اہمیت رکھتے ہیں۔ ہم اس مساوات کو یہاں حاصل کرتے ہیں۔
 
 \جزوحصہء{خطوط}
 فرض کریں مبدا \عددی{O} سے خط \عددی{L} تک عمودی لکیر، \عددی{L} پر  نقطہ \عددی{N_0(r_0,\theta_0)} پہنچتی ہے جہاں \عددی{ r\ge0} ہے (شکل \حوالہ{شکل_مخروط_خط_قطبی_مساوات})۔ اب اگر \عددی{L} پر \عددی{N(r,\theta)} کوئی دوسرا نقطہ ہو تب نقاط \عددی{O}، \عددی{N_0} اور \عددی{N} ایک قائمہ الزاویہ مثلث کے راس ہوں گے جس سے
@@ -7128,7 +7377,7 @@ r=\frac{ke}{1-e\cos\theta}
 
 %========================================
 \ابتدا{مثال}
-ایک قطع زائد جس کی سنک \عددی{\tfrac{3}{2}} اور ناظمہ \عددی{x=2} ہو کی مساوات  دریافت کریں۔
+ایک قطع زائد جس کا سنک \عددی{\tfrac{3}{2}} اور ناظمہ \عددی{x=2} ہو کی مساوات  دریافت کریں۔
 
 \حل
 ہم شکل \حوالہ{شکل_مخروط_قطبی_مخروط_عمومی}-الف کی مساوات میں \عددی{k=2} اور \عددی{e=\tfrac{3}{2}} لیتے ہیں۔
@@ -7159,9 +7408,9 @@ r=\frac{ke}{1+e\cos\theta}
 \begin{align}\label{مساوات_مخروط_تعلق_کے}
 k=\frac{a}{e}-ea
 \end{align}
-ہے جس سے \عددی{ke=a(1-e^2)} ملتا ہے۔ مساوات \حوالہ{مساوات_مخروط_ترخیم_قطع_مکافی_قطع_زائد} میں \عددی{ke} کی جگہ \عددی{} پر کرنے سے ترخیم کی درج ذیل معیاری مساوات حاصل ہوتی ہے۔
+ہے جس سے \عددی{ke=a(1-e^2)} ملتا ہے۔ مساوات \حوالہ{مساوات_مخروط_ترخیم_قطع_مکافی_قطع_زائد} میں \عددی{ke} کی جگہ \عددی{a(1-e^2)} پُر کرنے سے ترخیم کی درج ذیل معیاری مساوات حاصل ہوتی ہے۔
 \begin{align}\label{مساوات_مخروط_ترخیم_معیاری_قطبی}
-r=\frac{a(1-e^2)}{1+e\cos\theta}&&\text{\RL{سنک \عددی{e} اور نصف اکبر محور \عددی{a}}}
+r=\frac{a(1-e^2)}{1+e\cos\theta}&&\text{\RL{سنک \عددی{e} اور نصف محور اکبر \عددی{a}}}
 \end{align}
 
 \begin{figure}
@@ -7188,7 +7437,9 @@ r=\frac{a(1-e^2)}{1+e\cos\theta}&&\text{\RL{سنک \عددی{e} اور نصف ا
 \draw[stealth-stealth] (axis cs:0,-4.2)--(axis cs:4.5,-4.2)node[pos=0.5,fill=white]{$\tfrac{a}{e}$};
 \end{axis}
 \end{tikzpicture}
-\caption{ایک ترخیم جس کا نصف محور اکبر \عددی{a} ہو، ماسکہ تا ناظمہ فاصلہ \عددی{} لہٰذا \عددی{k=\tfrac{a}{e}-ea} یعنی \عددی{ke=a(1-e^2)} ہو گا۔}
+\caption
+{ایک ترخیم میں،  جس کا نصف محور اکبر \عددی{a} ہو،   ماسکہ تا ناظمہ فاصلہ   \عددی{k=\tfrac{a}{e}-ea} ہوتا  ہے لہٰذا 
+\عددی{ke=a(1-e^2)} ہو گا۔}
 \label{شکل_مخروط_ترخیم_تعلق_متغیرات}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
@@ -7568,7 +7819,7 @@ $x^2+y^2-\tfrac{4}{3}y=0$
 
 \موٹا{سنک اور ناظمہ سے مخروط خطے}
 
-سوال \حوالہ{سوال_مخروط_سنک_ناظمہ_قطبی_الف} تا سوال \حوالہ{سوال_مخروط_سنک_ناظمہ_قطبی_ب} میں مخروط حصوں کی سنک دی گئی ہے۔ مخروط حصے کا ایک ماسکہ مبدا پر واقع ہے اور اس کا مطابقتی ناظمہ بھی دیا گیا ہے۔ اس مخروط حصے کی قطبی مساوات تلاش کریں۔
+سوال \حوالہ{سوال_مخروط_سنک_ناظمہ_قطبی_الف} تا سوال \حوالہ{سوال_مخروط_سنک_ناظمہ_قطبی_ب} میں مخروط حصوں کا سنک دیا  گیا ہے۔ مخروط حصے کا ایک ماسکہ مبدا پر واقع ہے اور اس کا مطابقتی ناظمہ بھی دیا گیا ہے۔ اس مخروط حصے کی قطبی مساوات تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_مخروط_سنک_ناظمہ_قطبی_الف}
 $e=1,\quad x=2$
@@ -7910,13 +8161,13 @@ $r=\tfrac{4}{1+\cos\theta}$
 \ابتدا{سوال}\ترچھا{خلائی مہندس}
 \begin{enumerate}[a.]
 \item
-ترخیمی مدار کی سنک کا کلیہ خلائی مہندس درج ذیل لکھے گا
+ترخیمی مدار کے سنک کا کلیہ خلائی مہندس درج ذیل لکھے گا
 \begin{align*}
 e=\frac{r_{\text{اعظم}}-r_\text{\RL{اقل}}}{r_{\text{اعظم}}+r_\text{\RL{اقل}}}
 \end{align*}
 جہاں خلائی جہاز سے قوت کشش کے مرکز تک فاصلہ \عددی{r} ہے۔ یہ کلیہ کیوں قابل استعمال ہے؟
 \item
-\ترچھا{ترخیم کی ترسیم بذریعہ دھاگہ۔} آپ کے پاس \عددی{\SI{10}{\centi\meter}} لمبائی کا ایک دھاگہ ہے جس کے  سر پنیوں کے ساتھ بندھے ہوئے ہیں۔ آپ صفحہ \حوالہصفحہ{شکل_مخروط_ترخیم_کی_تعریف} پر شکل \حوالہ{شکل_مخروط_ترخیم_کی_تعریف} میں دکھائی گئی ترکیب استعمال کر کے ایک ترخیم ترسیم کریں جس کی سنک \عددی{0.2} ہو۔ یہ ترخیم سیارہ مریخ کا مدار دے گا۔
+\ترچھا{ترخیم کی ترسیم بذریعہ دھاگہ۔} آپ کے پاس \عددی{\SI{10}{\centi\meter}} لمبائی کا ایک دھاگہ ہے جس کے  سر پنیوں کے ساتھ بندھے ہوئے ہیں۔ آپ صفحہ \حوالہصفحہ{شکل_مخروط_ترخیم_کی_تعریف} پر شکل \حوالہ{شکل_مخروط_ترخیم_کی_تعریف} میں دکھائی گئی ترکیب استعمال کر کے ایک ترخیم ترسیم کریں جس کا سنک \عددی{0.2} ہو۔ یہ ترخیم سیارہ مریخ کا مدار دے گا۔
 \end{enumerate}
 \انتہا{سوال}
 \ابتدا{جواب}
@@ -7925,12 +8176,12 @@ e=\frac{r_{\text{اعظم}}-r_\text{\RL{اقل}}}{r_{\text{اعظم}}+r_\text{\R
 }}
 \انتہا{جواب}
 %=================
-\ابتدا{سوال}\ترچھا{ہالی دم دار ستارہ} (مثال \حوالہ{مثال_مخروط_ہالی_دم_دار_ستارہ_الف} دیکھیں۔)\\
+\ابتدا{سوال}\ترچھا{ہالی دُم دار ستارہ} (مثال \حوالہ{مثال_مخروط_ہالی_دم_دار_ستارہ_الف} دیکھیں۔)\\
 \begin{enumerate}[a.]
 \item
-دم دار ستارہ ہالی کے مدار کی مساوات اس محددی نظام میں لکھیں جس میں شمس مبدا پر ہو جبکہ دوسرا ماسکہ منفی محور \عددی{x} پر ہو۔ فلکی اکائیاں استعمال کریں۔
+دُم دار ستارہ ہالی کے مدار کی مساوات اس محددی نظام میں لکھیں جس میں شمس مبدا پر ہو جبکہ دوسرا ماسکہ منفی محور \عددی{x} پر ہو۔ فلکی اکائیاں استعمال کریں۔
 \item 
-یہ دم دار ستارہ سورج کے کتنے قریب پہنچتا ہے؟ جواب فلکی اکائیوں میں اور کلو میٹر میں دیں۔
+یہ دُم دار ستارہ سورج کے کتنے قریب پہنچتا ہے؟ جواب فلکی اکائیوں میں اور کلو میٹر میں دیں۔
 \end{enumerate}
 \انتہا{سوال}
 %=====================
