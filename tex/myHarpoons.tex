@@ -1,25 +1,27 @@
-\newcommand{\krightharpoonup}[1]{\overset{\rightharpoonup}{\rule{0pt}{.9ex}\smash{#1}}}
-\newcommand{\kleftharpoonup}[1]{\overset{\leftharpoonup}{\rule{0pt}{.9ex}\smash{#1}}}
+%the following works in captions of figures and footnotes
 
+\newcommand{\kkrightharpoonup}[1]{\overset{\rightharpoonup}{\rule{0pt}{.9ex}\smash{#1}}}
 
-\newcommand{\koverleftharp}[1]{\overharp{\leftharpoonup}{#1}{.7}}
-\newcommand{\koverrightharp}[1]{\overharp{\rightharpoonup}{#1}{.7}}
-\newcommand{\koverleftharpdown}[1]{\overharp{\leftharpoondown}{#1}{.9}}
-\newcommand{\koverrightharpdown}[1]{\overharp{\rightharpoondown}{#1}{.9}}
-\newcommand{\kunderleftharp}[1]{\overharp{\leftharpoonup}{#1}{-1}}
-\newcommand{\kunderrightharp}[1]{\overharp{\rightharpoonup}{#1}{-1}}
-\newcommand{\kunderleftharpdown}[1]{\overharp{\leftharpoondown}{#1}{-.8}}
-\newcommand{\kunderrightharpdown}[1]{\overharp{\rightharpoondown}{#1}{-.8}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%the following uses TIKZ only. it is used in the text
 
-\newlength{\argwd}  \newlength{\arght}%-Two variables
-\newcommand{\overharp}[3]{%        -The command name
-  \settowidth{\argwd}{#2}\settoheight{\arght}{#2}%
-  %                                    -Set the variables
-  \raisebox{#3\arght}{%                -Put the harp 6/10 of a line higher
-    \makebox[0pt][r]{%                 -Put everything in a box ;           corrected by me for Flush Right
-      \resizebox{\argwd}{.8\arght}{\!$#1$}% 
-      %                                -Set harp to right length
-    }%
-  }%
-#2}%                                   -Print the argument
+\NewDocumentCommand{\krightharpoonup}{m}{%
+    \mathchoice
+        {\tvindexformat{\displaystyle}{#1}}%
+        {\tvindexformat{\textstyle}{#1}}%
+        {\tvindexformat{\scriptstyle}{#1}}%
+        {\tvindexformat{\scriptscriptstyle}{#1}}%
+}
 
+\newcommand{\tvindexformat}[2]{%
+    \setbox0=\hbox{$#1#2$}% Store the content box to get its exact width
+    \text{\tikz[baseline=(content.base)]{
+        % 1. Render the text as a named node
+        \node[inner sep=0pt, outer sep=0pt] (content) {$#1#2$};
+        % 2. Draw the harpoon matching the text width precisely
+        \draw[
+            -{Stealth[harpoon, length=3pt, width=2.5pt]}, % Adjust tip size here
+            line width=0.4pt,                             % Arrow shaft thickness
+        ] ([xshift=1.5pt, yshift=1.5pt]content.north west) -- ([xshift=-0.25pt, yshift=1.5pt]content.north east);
+    }}%
+}

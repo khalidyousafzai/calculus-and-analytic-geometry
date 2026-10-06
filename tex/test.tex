@@ -1,1 +1,19 @@
-$\kvec{B}_{\parallel \kvec{A}}$
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro{\kangA}{-45}
+\pgfmathsetmacro{\kangB}{-120}
+\pgfmathsetmacro{\kangC}{180+\kangB}
+\pgfmathsetmacro{\kangD}{-170}
+%\draw[gray,thick](-4,0) grid (4,-3);
+\draw[<->,thick,name path=kA](-3,-1) to [out=\kangA,in=\kangB](0,0)node[circ]{}node[left]{\text{\RL{جہاز}}} to  [out=\kangC,in=\kangD] (1.5,1);
+\draw[<->,thick,name path=kB](3,-1) to [out=-180-\kangA,in=-180-\kangB] (0,0) to  [out=-180-\kangC,in=-180-\kangD] (-1.5,1);
+\draw[thick,name path=kC](-4,-1.40)--++(8,0);
+\draw(2,-1.40)node[below]{\text{\RL{الف}}};
+\draw(-2,-1.40)node[below]{\text{\RL{ب}}};
+\draw[<->](-2,-2)--(2,-2)node[pos=0.5,fill=white]{$w$};
+\end{tikzpicture}
+\caption
+{جہاز سے نیچے اور اس سے اوپر ہوا کے درجہ حرارت  میں تبدیلی کی بدولت  صوتی موج مڑتی ہے۔ جہاز کے نیچے پٹی \عددی{w} میں صوتی دھماکہ سنائی دیتا ہے۔}
+\label{}
+\end{figure}
