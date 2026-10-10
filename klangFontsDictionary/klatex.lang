@@ -2787,7 +2787,7 @@ This file is placed in    khalid\.local\share\gtksourceview-3.0\language-specs\k
         </context>
 
 
- <context id="kPink" style-ref="kPinkPainted">
+ <context id="kMasMarkers" style-ref="kMasculine">
 	<keyword>کا</keyword>
 	<keyword>کے</keyword>
 	<keyword>تھا</keyword>
@@ -2826,7 +2826,7 @@ This file is placed in    khalid\.local\share\gtksourceview-3.0\language-specs\k
 	<keyword>دبتا</keyword>
         </context>
 
- <context id="kRed" style-ref="kRedPainted">
+ <context id="kFemMarkers" style-ref="kFeminine">
 	<keyword>کی</keyword>
 	<keyword>تھی</keyword>
 	<keyword>پہچانی</keyword>
@@ -2882,6 +2882,23 @@ This file is placed in    khalid\.local\share\gtksourceview-3.0\language-specs\k
         </context>
 
 <context id="kTechMasculineCoinedMulti" style-ref="kTechnicalMasculineCoined">
+        <keyword>مسئلہ\s+اوسط\s+قیمت</keyword>
+        <keyword>ابتدائی\s+قیمت\s+مسئلہ</keyword>
+        <keyword>ابتدائی\s+قیمت\s+مسئلے</keyword>
+        <keyword>ابتدائی\s+قیمت\s+مسائل</keyword>
+    <keyword>رقبہ\s+عمودی\s+تراش</keyword>
+    <keyword>رقبے\s+عمودی\s+تراش</keyword>
+    <keyword>قائمہ\s+الزاویہ\s+مثلث</keyword>
+    <keyword>قائمہ\s+الزاویہ\s+مثلثات</keyword>
+    <keyword>اکائی\s+عمود\s+سمتیہ</keyword>
+    <keyword>اکائی\s+عمود\s+سمتیات</keyword>
+    <keyword>اکائی\s+مماس\s+سمتیہ</keyword>
+    <keyword>اکائی\s+مماس\s+سمتیات</keyword>
+    <keyword>اکائی\s+متعامد\s+سمتیہ</keyword>
+    <keyword>اکائی\s+متعامد\s+سمتیات</keyword>
+    <keyword>تعین\s+گر\s+سمتیہ</keyword>
+    <keyword>تعین\s+گر\s+سمتیے</keyword>
+    <keyword>تعین\s+گر\s+سمتیات</keyword>
          <keyword>برقی\s+دباؤ</keyword>
          <keyword>وتری\s+قطعہ</keyword>
         <keyword>مسئلہ\s+اوسط\s+قیمت</keyword>
@@ -3226,8 +3243,8 @@ This file is placed in    khalid\.local\share\gtksourceview-3.0\language-specs\k
                 <context ref="kSpellWrongFeminine"/>
                 <context ref="kTechMasculineCoined"/>
                 <context ref="kTechFeminineCoined"/>
-                <context ref="kPink"/>
-                <context ref="kRed"/>
+                <context ref="kMasMarkers"/>
+                <context ref="kFemMarkers"/>
 
 
 

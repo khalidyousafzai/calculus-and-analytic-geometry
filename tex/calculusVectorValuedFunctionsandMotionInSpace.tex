@@ -175,7 +175,7 @@ x=\cos t,\quad y=\sin t,\quad z=t
 &=[f(t+\Delta t)\ai+g(t+\Delta t)\aj+h(t+\Delta t)\ak]-[f(t)\ai+g(t)\aj+h(t)\ak]\\
 &=[f(t+\Delta t)-f(t)]\ai+[g(t+\Delta t)-g(t)]\aj+[h(t+\Delta t)-h(t)]\ak
 \end{align*}
-اب اگر \عددی{\Delta t} صفر کے قریب  ہونے کی کوشش کرے تب تین  اقدام بیکوقت ہوتے نظر آئیں گے۔اول،  منحنی پر چلتے ہوئے \عددی{Q} نقطہ \عددی{N} تک پہنچے گا۔ دوسرا،  سیکنٹ خط \عددی{NQ}  نقطہ \عددی{N} پر منحنی کے تحدیدی   مماسی مقام پر پہنچے گا۔ تیسرا، حاصل تقسیم \عددی{\tfrac{\Delta \kvec{r}}{\Delta t}} درج ذیل حد  تک پہنچے گا۔
+اب اگر \عددی{\Delta t} صفر کے قریب  ہونے کی کوشش کرے تب تین  اقدام بیک وقت ہوتے نظر آئیں گے۔اول،  منحنی پر چلتے ہوئے \عددی{Q} نقطہ \عددی{N} تک پہنچے گا۔ دوسرا،  سیکنٹ خط \عددی{NQ}  نقطہ \عددی{N} پر منحنی کے تحدیدی   مماسی مقام پر پہنچے گا۔ تیسرا، حاصل تقسیم \عددی{\tfrac{\Delta \kvec{r}}{\Delta t}} درج ذیل حد  تک پہنچے گا۔
 \begin{align*}
 \lim_{\Delta t\to 0}\frac{\Delta \kvec{r}}{\Delta t}&=\big[\lim_{\Delta t\to 0}\frac{f(t+\Delta t)-f(t)}{\Delta t}\big]\ai+\big[\lim_{\Delta t\to 0}\frac{g(t+\Delta t)-g(t)}{\Delta t}\big]\aj\\
 &\quad +\big[\lim_{\Delta t\to 0}\frac{h(t+\Delta t)-h(t)}{\Delta t}\big]\ak\\
@@ -213,7 +213,7 @@ x=\cos t,\quad y=\sin t,\quad z=t
 \frac{\dif \kvec{r}}{\dif t}=\lim_{\Delta t\to 0}\frac{\kvec{r}(t+\Delta t)-\kvec{r}(t)}{\Delta t}=\frac{\dif f}{\dif t}\ai+\frac{\dif g}{\dif t}\aj+\frac{\dif h}{\dif t}\ak
 \end{align*}
 
-اگر \عددی{\tfrac{\dif \kvec{r}}{\dif t}} استمراری  اور کبھی بھی  \عددی{\kvec{0}} نہ ہو، یعنی جب \عددی{f}، \عددی{g} ، اور \عددی{h} کے استمراری  پہلے تفرق پائے جاتے ہوں اور جو بیکوقت \عددی{0}  نہ ہوں،    تب   جس منحنی پر  \عددی{\kvec{r}} چلتا  ہو وہ   \اصطلاح{ہموار}\فرہنگ{ہموار}\حاشیہب{smooth}\فرہنگ{smooth} ہو گی۔
+اگر \عددی{\tfrac{\dif \kvec{r}}{\dif t}} استمراری  اور کبھی بھی  \عددی{\kvec{0}} نہ ہو، یعنی جب \عددی{f}، \عددی{g} ، اور \عددی{h} کے استمراری  پہلے تفرق پائے جاتے ہوں اور جو بیک وقت \عددی{0}  نہ ہوں،    تب   جس منحنی پر  \عددی{\kvec{r}} چلتا  ہو وہ   \اصطلاح{ہموار}\فرہنگ{ہموار}\حاشیہب{smooth}\فرہنگ{smooth} ہو گی۔
 \انتہا{تعریف}
 %==========
 
@@ -908,7 +908,7 @@ $\kvec{v}(t)=2\sqrt{5}\ai+\sqrt{5}\aj$
 \begin{align*}
 \kvec{r}(t)=(t-\sin t)\ai+(1-\cos t)\aj
 \end{align*}
-ہوتا ہے۔ \عددی{\abs{\kvec{r}}} اور \عددی{\abs{\kvec{a}}} کی اقل اور اعظم قیمتیں تلاش کریں۔(اشارہ: پہلے \عددی{\abs{\kvec{v}}^2} اور \عددی{\abs{\kvec{a}}^2} کی انتہائی قیمتیں تلاش کریں اور بعد میں جذر لیں۔)
+ہوتا ہے۔ \عددی{\abs{\kvec{r}}} اور \عددی{\abs{\kvec{a}}} کی اقل اور اعظم قیمتیں تلاش کریں۔(اشارہ: پہلے \عددی{\abs{\kvec{v}}^2} اور \عددی{\abs{\kvec{a}}^2} کی انتہا قیمتیں تلاش کریں اور بعد میں جذر لیں۔)
 \انتہا{سوال}
 %=============
 \ابتدا{سوال}
@@ -1867,7 +1867,7 @@ axis x line=none,axis y line=none,axis z line=none]
 \draw(1,0)node[circ]{};
 \draw[smooth,domain=0:150,variable=\t]plot ({fx(\t)},{fy(\t)});
 \draw[-latex,thick](0,0)--({fx(120)},{fy(120)})coordinate(ka)node[pos=0.75,below,yshift=-0.5ex]{$\kvec{r}$}node[circ]{}node[right]{$N(x,y)$};
-\draw(120:1)--({fx(120)},{fy(120)})node[pos=0,circ]{}node[pos=0,above]{$Q$}node[pos=0.65,sloped,above]{دھاگہ};
+\draw(120:1)--({fx(120)},{fy(120)})node[pos=0,circ]{}node[pos=0,above]{$Q$}node[pos=0.65,sloped,above]{دھاگا};
 \draw(1,0)node[pos=0,circ]{};
 \draw[-latex]({fx(60)},{fy(60)})--({fx(61)},{fy(61)});
 \draw(0,0)node[below left]{$O$};
@@ -2629,7 +2629,7 @@ a_N&=\sqrt{\abs{\kvec{a}}^2-a_T^2}\\
 \draw(1,0)node[circ]{}node[below right]{$(1,0)$};
 \draw[smooth,domain=0:160,variable=\t]plot ({fx(\t)},{fy(\t)});
 \draw[-latex,thick](0,0)--({fx(120)},{fy(120)})coordinate(ka)node[pos=0.75,below,yshift=-0.5ex]{$\kvec{r}$}node[circ]{}node[right]{$P(x,y)$};
-\draw(120:1)--({fx(120)},{fy(120)})coordinate[pos=0.6](kN)node[pos=0,circ]{}node[pos=0,above]{$Q$}node[pos=0.45,sloped,above]{دھاگہ};
+\draw(120:1)--({fx(120)},{fy(120)})coordinate[pos=0.6](kN)node[pos=0,circ]{}node[pos=0,above]{$Q$}node[pos=0.45,sloped,above]{دھاگا};
 \draw[latex-,thick](kN)--({fx(120)},{fy(120)})node[pos=0.45,shift={(120:1.25ex)}]{$t\kvec{N}$};
 \draw(kN)--++(120:1)coordinate(kacc);
 \draw(1,0)node[pos=0,circ]{};
