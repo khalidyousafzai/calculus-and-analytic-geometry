@@ -108,10 +108,10 @@
 %================
 
 %environment for examples مثال
-%\newcounter{examplecounter}[section]
-%\renewcommand{\theexamplecounter}{\arabic{examplecounter}}
-\newcounter{examplecounter}[chapter]
-\renewcommand{\theexamplecounter}{\thechapter.\arabic{examplecounter}}
+\newcounter{examplecounter}[section]
+\renewcommand{\theexamplecounter}{\arabic{examplecounter}}
+%\newcounter{examplecounter}[chapter]
+%\renewcommand{\theexamplecounter}{\thechapter.\arabic{examplecounter}}
 %\renewcommand{\theexamplecounter}{\arabic{examplecounter}}
 
 
@@ -124,23 +124,23 @@
 %------
 %practice problems environment مشق
 
-%\newcounter{practicecounter}[section]                              %practice here means مشق
-%\renewcommand{\thepracticecounter}{\arabic{practicecounter}}
-\newcounter{practicecounter}[chapter]                              %practice here means مشق
-\renewcommand{\thepracticecounter}{\thechapter.\arabic{practicecounter}}
+\newcounter{practicecounter}[section]                              %practice here means مشق
+\renewcommand{\thepracticecounter}{\arabic{practicecounter}}
+%\newcounter{practicecounter}[chapter]                              %practice here means مشق
+%\renewcommand{\thepracticecounter}{\thechapter.\arabic{practicecounter}}
 %\renewcommand{\thepracticecounter}{\arabic{practicecounter}}
 
 \newenvironment*{مشق}
 {\par\noindent\ignorespaces \vspace{\baselineskip} \hrule \vspace{\baselineskip} مشق \refstepcounter{practicecounter} \thepracticecounter :\quad}%
 {\par\noindent \hrule  \vspace{\baselineskip}}
-%---------
+%--------------------------------------------------------------------
 
 %end of chapter questions environment سوال
 
-%\newcounter{questioncounter}[section]                           %for reseting at every section. to be used only during writing stage
-%\renewcommand{\thequestioncounter}{\arabic{questioncounter}}
-\newcounter{questioncounter}[chapter]						%when book is finished, use this instead of the above
-\renewcommand{\thequestioncounter}{\thechapter.\arabic{questioncounter}}
+\newcounter{questioncounter}[section]             %for reseting at every section. to be used only during writing stage
+\renewcommand{\thequestioncounter}{\arabic{questioncounter}}
+%\newcounter{questioncounter}[chapter]		%when book is finished, use this instead of the above
+%\renewcommand{\thequestioncounter}{\thechapter.\arabic{questioncounter}}
 %\renewcommand{\thequestioncounter}{\arabic{questioncounter}}
 
 \newenvironment*{سوال}				
@@ -150,10 +150,10 @@
 
 %defining a LAW   قانون
 
-%\newcounter{lawcounter}[section]
-%\renewcommand{\thelawcounter}{\arabic{lawcounter}}
-\newcounter{lawcounter}[chapter]
-\renewcommand{\thelawcounter}{\thechapter.\arabic{lawcounter}}
+\newcounter{lawcounter}[section]
+\renewcommand{\thelawcounter}{\arabic{lawcounter}}
+%\newcounter{lawcounter}[chapter]
+%\renewcommand{\thelawcounter}{\thechapter.\arabic{lawcounter}}
 %\renewcommand{\thelawcounter}{\arabic{lawcounter}}
 
 \newenvironment*{قانون}				
@@ -171,10 +171,10 @@
 
 %defining a THEOREM   مسئلہ
 
-%\newcounter{kthcounter}[section]
-%\renewcommand{\thekthcounter}{\arabic{kthcounter}}
-\newcounter{kthcounter}[chapter]
-\renewcommand{\thekthcounter}{\thechapter.\arabic{kthcounter}}
+\newcounter{kthcounter}[section]
+\renewcommand{\thekthcounter}{\arabic{kthcounter}}
+%\newcounter{kthcounter}[chapter]
+%\renewcommand{\thekthcounter}{\thechapter.\arabic{kthcounter}}
 %\renewcommand{\thekthcounter}{\arabic{kthcounter}}
 
 
@@ -224,9 +224,11 @@
 %defining a COROLLARY   ضمنی نتیجہ
 
 
-\newcounter{kcocounter}[chapter]
-%\newcounter{kcocounter}[section]
-\renewcommand{\thekcocounter}{\thechapter.\arabic{kcocounter}}
+
+\newcounter{kcocounter}[section]
+\renewcommand{\thekcocounter}{\arabic{kcocounter}}
+%\newcounter{kcocounter}[chapter]
+%\renewcommand{\thekcocounter}{\thechapter.\arabic{kcocounter}}
 %\renewcommand{\thekcocounter}{\arabic{kcocounter}}
 
 \newenvironment*{ضمنی نتیجہ}				
@@ -285,10 +287,10 @@
 
 %defining a RULE   قاعدہ
 
-%\newcounter{krucounter}[section]
-%\renewcommand{\thekrucounter}{\arabic{krucounter}}
-\newcounter{krucounter}[chapter]
-\renewcommand{\thekrucounter}{\thechapter.\arabic{krucounter}}
+\newcounter{krucounter}[section]
+\renewcommand{\thekrucounter}{\arabic{krucounter}}
+%\newcounter{krucounter}[chapter]
+%\renewcommand{\thekrucounter}{\thechapter.\arabic{krucounter}}
 %\renewcommand{\thekrucounter}{\arabic{krucounter}}
 
 
@@ -315,10 +317,10 @@
 
 %defining a TEST   پرکھ
 
-%\newcounter{kttcounter}[section]
-%\renewcommand{\thekttcounter}{\arabic{kttcounter}}
-\newcounter{kttcounter}[chapter]
-\renewcommand{\thekttcounter}{\thechapter.\arabic{kttcounter}}
+\newcounter{kttcounter}[section]
+\renewcommand{\thekttcounter}{\arabic{kttcounter}}
+%\newcounter{kttcounter}[chapter]
+%\renewcommand{\thekttcounter}{\thechapter.\arabic{kttcounter}}
 %\renewcommand{\thekttcounter}{\arabic{kttcounter}}
 
 \newenvironment*{پرکھ}				
