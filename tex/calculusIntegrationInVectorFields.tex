@@ -1,5 +1,6 @@
-%chapter completed. edited, figures, questions, answers added.
-%the question counter needs to be reset for the last End Of Chapter Questions (beyond P1720)
+%edited using colouring and AI
+%dated 27 oct 2026
+
 
 \باب{سمتیہ میدان میں تکمل}\شناخت{باب_سمتی_میدان_میں_تکمل}
 \موٹا{ایک جائزہ}\quad
@@ -243,7 +244,7 @@ M_{xy}&=\int_0^C z\delta \dif s=\int_C z(2-z)\dif s=\int_0^{\pi} (\sin t)(2-\sin
 سوال \حوالہ{سوال_سمتی_تکمل_مساوات_ترسیم_الف} تا سوال \حوالہ{سوال_سمتی_تکمل_مساوات_ترسیم_چ} میں دی گئی مساوات کی مطابقتی ترسیم شکل \حوالہ{شکل_سوال_سمتی_تکمل_مساوات_ترسیم_پ} تا شکل \حوالہ{شکل_سوال_سمتی_تکمل_مساوات_ترسیم_ت} میں تلاش کریں۔
 \begin{figure}
 \centering
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}[b]{0.20\textwidth}
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=2*cos(deg(\t));fy(\t)=2*sin(deg(\t));fz(\t)=0;}]
 \begin{axis}[clip=false,width=4cm, font=\tiny,view/h=120,axis lines=middle,xtick={2},ytick={2},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},xmax=2.25,ymax=2.125]
@@ -253,17 +254,17 @@ M_{xy}&=\int_0^C z\delta \dif s=\int_C z(2-z)\dif s=\int_0^{\pi} (\sin t)(2-\sin
 \caption{}
 \label{شکل_سوال_سمتی_تکمل_مساوات_ترسیم_پ}
 \end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}[b]{0.22\textwidth}
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=0;fy(\t)=(\t^2-1);fz(\t)=2*\t;}]
 \begin{axis}[clip=false,width=4cm, font=\tiny,view/h=120,axis lines=middle,xtick={\empty},ytick={-1},ztick={-2,2},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},zmin=-2.5,zmax=2.5]
-\addplot3[thick,domain=-1:1,variable=\t,samples y=0,->-=0.25]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=1,circ]{};
+\addplot3[thick,domain=-1:1,variable=\t,samples y=0,->-=0.35]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=1,circ]{};
 \end{axis}
 \end{tikzpicture}
 \caption{}
 \label{شکل_سوال_سمتی_تکمل_مساوات_ترسیم_ج}
 \end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}[b]{0.22\textwidth}
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=\t;fy(\t)=1-\t;fz(\t)=0;}]
 \begin{axis}[clip=false,width=4cm, font=\tiny,view/h=110,axis lines=middle,xtick={1},ytick={1},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},xmax=1.25,ymax=1.125]
@@ -273,7 +274,7 @@ M_{xy}&=\int_0^C z\delta \dif s=\int_C z(2-z)\dif s=\int_0^{\pi} (\sin t)(2-\sin
 \caption{}
 \label{شکل_سوال_سمتی_تکمل_مساوات_ترسیم_الف}
 \end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}[b]{0.24\textwidth}
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=\t;fy(\t)=\t;fz(\t)=\t;}]
 \begin{axis}[clip=false,width=4cm, font=\tiny,view/h=110,axis lines=middle,xtick={2},ytick={2},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},xmax=2.5]
@@ -285,17 +286,17 @@ M_{xy}&=\int_0^C z\delta \dif s=\int_C z(2-z)\dif s=\int_0^{\pi} (\sin t)(2-\sin
 \caption{}
 \label{شکل_سوال_سمتی_تکمل_مساوات_ترسیم_ٹ}
 \end{minipage}
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}[b]{0.25\textwidth}
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=1;fy(\t)=1;fz(\t)=\t;}]
-\begin{axis}[clip=false,width=4cm, font=\tiny,view/h=110,axis lines=middle,xtick={1},ytick={1},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);}]
+\begin{axis}[clip=false,width=4cm, font=\tiny,view/h=110,axis lines=middle,xtick={1},ytick={1},ztick={\empty},enlargelimits=false, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},]
 \addplot3[thick,domain=-1:1,variable=\t,samples y=0,->-=0.5]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=0,right]{$(1,1,-1)$}node[pos=1,circ]{}node[pos=1,above]{$(1,1,1)$};
 \end{axis}
 \end{tikzpicture}
 \caption{}
 \label{شکل_سوال_سمتی_تکمل_مساوات_ترسیم_ب}
 \end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}[b]{0.20\textwidth}
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=0;fy(\t)=\t;fz(\t)=(2-2*\t);}]
 \begin{axis}[clip=false,width=4cm, font=\tiny,view/h=110,axis lines=middle,xtick={\empty},ytick={1},ztick={2},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},ymax=1.25,zmax=2.5]
@@ -305,17 +306,17 @@ M_{xy}&=\int_0^C z\delta \dif s=\int_C z(2-z)\dif s=\int_0^{\pi} (\sin t)(2-\sin
 \caption{}
 \label{شکل_سوال_سمتی_تکمل_مساوات_ترسیم_ث}
 \end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}[b]{0.20\textwidth}
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=2*cos(deg(\t));fy(\t)=0;fz(\t)=2*sin(deg(\t));}]
 \begin{axis}[clip=false,width=4cm, font=\tiny,view/h=135,axis lines=middle,xtick={-2,2},ytick={\empty},ztick={2},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},xmin=-2.5,xmax=2.5,zmax=2.5]
-\addplot3[thick,domain=0:pi,variable=\t,samples y=0,->-=0.25]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=1,circ]{};
+\addplot3[thick,domain=0:pi,variable=\t,samples y=0,->-=0.35]({fx(t)},{fy(t)},{fz(t)})node[pos=0,circ]{}node[pos=1,circ]{};
 \end{axis}
 \end{tikzpicture}
 \caption{}
 \label{شکل_سوال_سمتی_تکمل_مساوات_ترسیم_چ}
 \end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}[b]{0.20\textwidth}
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=\t;fy(\t)=0;fz(\t)=0;}]
 \begin{axis}[clip=false,width=4cm, font=\tiny,view/h=135,axis lines=middle,xtick={-1,1},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},xmin=-1.25,xmax=1.25]
@@ -332,7 +333,7 @@ M_{xy}&=\int_0^C z\delta \dif s=\int_C z(2-z)\dif s=\int_0^{\pi} (\sin t)(2-\sin
 %
 \ابتدا{جواب}
 \wf{\unexpanded{
-شکل \حوالہ{شکل_سوال_سمتی_تکمل_مساوات_ترسیم_الف}}}
+شکل \حوالہ{شکل_سوال_سمتی_تکمل_مساوات_ترسیم_الف}}} 
 \انتہا{جواب}
 \ابتدا{سوال}\شناخت{سوال_سمتی_تکمل_مساوات_ترسیم_ب}
 \(\kvec{r}(t)=\ai+\aj+t\ak,\quad -1\le t\le 1\)
@@ -1029,7 +1030,7 @@ W&=\int_{t=a}^{t=b}\kvec{F}\cdot\kvec{T}\dif s&&\text{\RL{تعریف}}\\
 \end{tikzpicture}
 \caption{گھڑی وار حرکت کے لیے \عددی{\ak\times\kvec{T}} باہر کے  رخ ہو گا۔}
 \end{subfigure}\hfill
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.50\textwidth}
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=3+2*cos(\t);fy(\t)=1.5+sin(\t);fz(\t)=0;}]
 \begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},zmin=0,zmax=0.75]
@@ -1113,7 +1114,6 @@ N&=x=\cos t,&&\dif x=\dif\,(\cos t)=-\sin t\dif t
 \ابتدا{سوال}
 \(f(x,y,z)=\ln \sqrt{x^2+y^2+z^2}\)
 \انتہا{سوال}
-
 \ابتدا{سوال}
 \(g(x,y,z)=e^z-\ln \sqrt{x^2+y^2}\)
 \انتہا{سوال}
@@ -1390,7 +1390,7 @@ N&=x=\cos t,&&\dif x=\dif\,(\cos t)=-\sin t\dif t
 بڑھتے \عددی{t} کے   رخ میں  چلتے ہوئے درج ذیل تین  بند راہوں پر \عددی{\kvec{F}=2x\ai+2z\aj+2y\ak} کا   سیلان تلاش کریں (شکل \حوالہ{شکل_سوال_سمتی_تکمل_تین_راہ_تکونی})۔
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.55\textwidth}
 \centering
 \begin{tikzpicture}[declare function={fx(\t)=cos(deg(\t));fy(\t)=sin(deg(\t));fz(\t)=\t;}]
 \begin{axis}[clip=false,view/h=110,small,axis lines=middle,xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true, xlabel={$x$}, ylabel={$y$},zlabel={$z$}, xlabel style={anchor=north},ylabel style={anchor=north},zlabel style={anchor=south},colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},xmax=1.25]
@@ -1414,7 +1414,7 @@ N&=x=\cos t,&&\dif x=\dif\,(\cos t)=-\sin t\dif t
 \addplot3[thick]plot coordinates {({fx(-\ks)},{fy(-\ks)},{0})({fx(-\ks)},{fy(-\ks)},{1})};
 \addplot3[thick]plot coordinates {({fx(\ke)},{fy(\ke)},{0})({fx(\ke)},{fy(\ke)},{1})};
 \addplot3[thick]plot coordinates {(-1,-1,-1)(1,-1,1) (1,2,1) (-1,2,-1)(-1,-1,-1)};
-\addplot3[thick,->-=0.5,domain=0:1,thick,samples y=0]({x},{x^2},{x})node[circ]{}node[above,yshift=0.5ex]{$(1,1,1)$};
+\addplot3[thick,->-=0.5,domain=0:1,thick,samples y=0]({x},{x^2},{x})node[circ]{}node[pin={[xshift=1em]100:{$(1,1,1)$}}]{};
 \addplot3[]plot coordinates {(1,2,1)}node[right]{$z=x$};
 \end{axis}
 \end{tikzpicture}
@@ -2362,7 +2362,7 @@ $\text{\RL{گردش \(\kvec{F}\)}}(x_0,y_0)<0$\\
 \انتہا{تعریف}
 
 
-مستوی \عددی{xy} میں نہایت کم گہرائی کے رواں پانی میں نقطہ \عددی{(x_0,y_0)} پر گردش یا کثافتِ دائری سیلان، اس نقطے پر نصب چرخی، جس کا محور مستوی کو لمب ہو، کی حرکت کی رفتار اور  گھومنے کے رخ کی پیمائش ہو گی (شکل \حوالہ{شکل_سمتی_تکمل_گردش_تعریف_مثبت})۔
+مستوی \عددی{xy} میں نہایت کم گہرائی کے رواں پانی میں نقطہ \عددی{(x_0,y_0)} پر گردش یا کثافتِ دائری سیلان، اس نقطے پر نصب چرخی، جس کا محور مستوی کے \بدل{قائمہ} ہو، کی حرکت کی رفتار اور  گھومنے کے رخ کی پیمائش ہو گی (شکل \حوالہ{شکل_سمتی_تکمل_گردش_تعریف_مثبت})۔
 
 
 \ابتدا{مثال}
@@ -2409,7 +2409,7 @@ $\text{\RL{گردش \(\kvec{F}\)}}(x_0,y_0)<0$\\
 \label{شکل_مستوی_سمتی_تکمل_بند_منحنیات_اقسام}
 \end{figure}
 \ابتدا{مسئلہ}\موٹا{مسئلہ گرین (بہاؤ و انفراج یا عمود  روپ)}\\
-سادہ بند منحنی \عددی{C} سے میدان \عددی{\kvec{F}=M\ai+N\aj} کا  اخراجی بہاؤ، \عددی{C} میں محصور خطہ \عددی{R} پر \عددی{F} کے انفراج کے دہرے  تکمل کے برابر ہو گا۔
+سادہ   بند منحنی \عددی{C} سے میدان \عددی{\kvec{F}=M\ai+N\aj} کا  اخراجی بہاؤ، \عددی{C} میں محصور خطہ \عددی{R} پر \عددی{F} کے انفراج کے دہرے  تکمل کے برابر ہو گا۔
 \begin{align}\label{مساوات_سمتی_تکمل_اخراج_اور_تکمل_پھیلاو}
 \ointctrclockwise\limits_C \kvec{F}\cdot \kvec{n}\dif s&=\ointctrclockwise\limits_C M\dif y-N\dif x=\iint\limits_R \big(\frac{\partial M}{\partial x}+\frac{\partial N}{\partial y}\big)\dif x\dif y\\
 \text{\RL{اخراجی بہاؤ}}&\phantom{=\oint_C M\dif y-N\dif x=\int\int}\text{\RL{تکمل انفراج}}\nonumber
@@ -2529,7 +2529,8 @@ C:\quad \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj,\quad 0\le t\le 2\pi
 
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.47\textwidth}
+\centering
 \begin{tikzpicture}[declare function={f(\x)=3+ 2*cos(\x)*cos(30) - 1*sin(\x)*sin(30);g(\x)=2 + 2*cos(\x)*sin(30) + 1*sin(\x)*cos(30);}]
 \begin{axis}[xmin=0,xmax=4,ymin=0,ymax=3.5,clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,}, enlarge x limits=0.3,
  enlarge y limits=0.1,xtick={f(170),f(350),f(50)} ,xticklabels={$a$,$b$,$x$}, ytick={\empty},extra x tick style={xticklabel style={yshift=0.5ex,anchor=south}},
@@ -2552,6 +2553,7 @@ C:\quad \kvec{r}(t)=(\cos t)\ai+(\sin t)\aj,\quad 0\le t\le 2\pi
 \label{شکل_سمتی_میدان_تکمل_گرین_مخصوص_خطے}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}[declare function={f(\x)=3+ 2*cos(\x)*cos(30) - 1*sin(\x)*sin(30);g(\x)=2 + 2*cos(\x)*sin(30) + 1*sin(\x)*cos(30);}]
 \begin{axis}[xmin=0,xmax=4,ymin=0,ymax=3.5,,clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,}, enlarge x limits=0.3,
  enlarge y limits=0.1,ytick={g(220),g(40),g(330)} ,yticklabels={$c$,$d$,$y$}, xtick={\empty},extra x tick style={xticklabel style={yshift=0.5ex,anchor=south}},
@@ -2774,7 +2776,7 @@ extra y tick style={
 \end{tikzpicture}
 \caption{}
 \end{subfigure}\hfill
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.52\textwidth}
 \centering
 \begin{tikzpicture}[declare function={fa(\x)=2*cos(\x);ga(\x)=2*sin(\x);fb(\x)=1*cos(\x);gb(\x)=1*sin(\x);}]
 \begin{axis}[axis equal,clip=false, axis on top, small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)} ,anchor=south,},xtick={\empty},xticklabels={$-a$,$-b$,$a$,$b$},ytick={\empty} ,yticklabels={$a$,$b$},enlargelimits=true, extra x ticks={0.7,2.2},extra x tick labels={$a$,$b$},extra x tick style={tick style={draw=none}}]
@@ -3653,7 +3655,7 @@ y domain = -0.5:0.5
  
 ظاہر کرتا ہے۔
 
-اگر\عددی{\kvec{F}} تین ابعادی سیالی بہاؤ کا سرعتی میدان ہو ، تب \عددی{S}   کو   عبور کرنے والا\عددی{\kvec{F}} کا بہاؤ ،  منتخب مثبت رخ میں \عددی{S}   سے گزرنے والے   سیال  کی  خالص  شرح دے گا ۔ایسے  بہاؤ پر تفصیلاً تبصرہ حصہ \حوالہ{حصہ_سمتی_میدان_مسئلہ_سٹوکس}   میں کیا جائے گا۔
+اگر\عددی{\kvec{F}} تین ابعادی سیالی بہاؤ کا سرعتی میدان ہو ، تب \عددی{S}   کو   عبور کرنے والا\عددی{\kvec{F}} کا بہاؤ ،  منتخب مثبت رخ میں \عددی{S}   سے گزرنے والے   سیال  کی  صافی   شرح دے گا ۔ایسے  بہاؤ پر تفصیلاً تبصرہ حصہ \حوالہ{حصہ_سمتی_میدان_مسئلہ_سٹوکس}   میں کیا جائے گا۔
 
 اگر \عددی{\kvec{S}}  ہم قیمت سطح \عددی{g(x,y,z)=c} کا حصہ ہو ، تب  \عددی{\kvec{n}} درج ذیل میں سے   وہ ہو گا  جو منتخب رخ دیتا ہو۔
 %eq-12, p1101
@@ -4314,7 +4316,6 @@ zmin=0,
 کرہ \عددی{x^{2}+y^{2}+z^{2}=a^{2}}  کا مقدار معلوم  روپ تلاش کریں۔
 
 \begin{figure}
-\begin{minipage}{0.45\textwidth}
 \centering
 \pgfmathsetmacro{\kR}{2.25}
 \pgfmathsetmacro{\kt}{40}
@@ -4335,7 +4336,7 @@ zmin=0,
 \addplot3[-stealth,thin]coordinates {(0,\kR,0)(0,\kR+0.7,0)}node[pos=0,circle, fill=black, minimum size=2.5pt, inner sep=0pt, outer sep=0pt]{}node[pos=1,below]{$y$};
 \addplot3[dashed,thin]coordinates {(0,0,0)(0,0,\kR)};
 \addplot3[-stealth,thin]coordinates {(0,0,\kR)(0,0,\kR+0.7)}node[pos=0,left]{$a$}node[pos=0,circle, fill=black, minimum size=2.5pt, inner sep=0pt, outer sep=0pt]{}node[pos=1,above]{$z$};
-\addplot3[-stealth,thick]coordinates {(0,0,0)({fx(\kt,\kp)},{fy(\kt,\kp)},{fz(\kt,\kp)})}node[pos=1,circle, fill=black, minimum size=2.5pt, inner sep=0pt, outer sep=0pt]{}node[pos=1,pin={[pin edge={-},pin distance={1cm},above]85:{$(x,y,z)=(a\sin\theta\cos\phi,a\sin\theta\sin\phi,a\cos\theta)$}}]{}node[pos=0.5,pin={[pin edge={-},pin distance={1cm},right]10:{$\kvec{r}(\theta,\phi)$}}]{};
+\addplot3[-stealth,thick]coordinates {(0,0,0)({fx(\kt,\kp)},{fy(\kt,\kp)},{fz(\kt,\kp)})}node[pos=1,circle, fill=black, minimum size=2.5pt, inner sep=0pt, outer sep=0pt]{}node[pos=1,pin={[pin edge={-},pin distance={1cm},above]70:{$(x,y,z)=(a\sin\theta\cos\phi,a\sin\theta\sin\phi,a\cos\theta)$}}]{}node[pos=0.5,pin={[pin edge={-},pin distance={1cm},right]10:{$\kvec{r}(\theta,\phi)$}}]{};
 \addplot3[smooth,domain=0:\kt,domain y=0:\kp,samples y=1]({0.4*fx(x,\kp)},{0.4*fy(x,\kp)},{0.4*fz(x,\kp)})coordinate[pos=0.9](ktA)coordinate[pos=1](ktB);
 \addplot3[smooth,domain=0:\kt,domain y=0:\kp]({0.4*fx(90,y)},{0.4*fy(90,y)},{0.4*fz(90,y)})coordinate[pos=0.9](kpA)coordinate[pos=1](kpB);
 \addplot3[dashed]coordinates{(0,0,0)({fx(\kt,\kp)},{fy(\kt,\kp)},{0})({fx(\kt,\kp)},{fy(\kt,\kp)},{fz(\kt,\kp)})};
@@ -4346,8 +4347,9 @@ zmin=0,
 \caption
 {کروی محدد استعمال کر کے مثال \حوالہ{مثال_سمتی_میدان_کرہ_مثال_ب} کے کرہ کا مقدار معلوم روپ۔  }
 \label{شکل_سمتی_میدان_کرہ_مثال_ب}
-\end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
+\end{figure}
+%
+\begin{figure}
 \centering
 \pgfmathsetmacro{\kt}{60}
 \pgfmathsetmacro{\kz}{4}
@@ -4361,7 +4363,7 @@ zmin=0,
 %xmax=2,ymax=1.5,zmax=3.5,xmin=0,ymin=0,zmin=0,
 ]
 \addplot3[colormap name={graywhitegray},surf,z buffer=sort,shader=interp,fill opacity=0.4,draw opacity=0.5,domain=0:180,domain y=0:5]({fx(x,y)},{fy(x,y)},{fz(x,y)});
-\addplot3[-stealth,thick,black]coordinates {(0,0,0)({fx(\kt,\kz)},{fy(\kt,\kz)},{fz(\kt,\kz)})}node[circle, fill=black, minimum size=2.5pt, inner sep=0pt, outer sep=0pt]{}node[pin={[pin edge={-},right,align=left,pin distance={1cm}]30:{$(x,y,z)$\\$=(3\sin 2\phi,6\sin^2\phi,z)$}}]{}node[pos=0.6,pin={[pin edge={-},above]50:{$\kvec{r}(\phi,z)$}}]{};
+\addplot3[-stealth,thick,black]coordinates {(0,0,0)({fx(\kt,\kz)},{fy(\kt,\kz)},{fz(\kt,\kz)})}node[circle, fill=black, minimum size=2.5pt, inner sep=0pt, outer sep=0pt]{}node[pin={[pin edge={-},align=left,pin distance={1.75cm}]30:{$(x,y,z)$\\$=(3\sin 2\phi,6\sin^2\phi,z)$}}]{}node[pos=0.6,pin={[pin edge={-},above]50:{$\kvec{r}(\phi,z)$}}]{};
 \addplot3[dashed]coordinates {(0,0,0)({fx(\kt,\kz)},{fy(\kt,\kz)},{0}) ({fx(\kt,\kz)},{fy(\kt,\kz)},{fz(\kt,\kz)}) ({0},{0},{fz(\kt,\kz)})};
 \addplot3[smooth,domain=0:\kt,domain y=0:5,samples y=1]({2*cos(x)},{2*sin(x)},{0})coordinate[pos=0.9](ktA)coordinate[pos=1](ktB)node[pos=0.3,below,xshift=-0.5em]{$\phi$};
 \addplot3[thin,dashed]coordinates {(0,0,0)(1,0,0)};
@@ -4377,7 +4379,6 @@ zmin=0,
 \caption
 {نلکی محدد استعمال کر کے مثال \حوالہ{مثال_سمتی_میدان_بیلن_مثال_پ} کے بیلن کا مقدار معلوم روپ۔  }
 \label{شکل_سمتی_میدان_بیلن_مثال_پ}
-\end{minipage}
 \end{figure}
 
 \حل
@@ -4498,7 +4499,7 @@ hide z axis,width=5cm]
  \عددی{\Delta A_{uv}}  کا ہر پہلو سطح \عددی{S} پر ایک منحنی  پر نقش  ہو جاتا ہے، اور یہ چار منحنیات مل کر سطح پر ایک" چھوٹے خمیدہ رقبے " \عددی{\Delta S_{uv}}   کے گرد گھیرا  بناتی ہیں۔ شکل کے مطابق  ضلع \عددی{v=v_0}    منحنی \عددی{C_1}  پر نقش ہے،  \عددی{u=u_0} منحنی \عددی{C_2} پر، اور  ان کا مشترک   راس  \عددی{(u_0,v_0)}   نقطہ \عددی{P_0} پر نقش ہے۔
 
 \begin{figure}
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.50\textwidth}
 \centering
 \begin{tikzpicture}
 \draw[-stealth](0,0)--(-0.75,-0.7)node[below]{$x$};
@@ -5020,7 +5021,7 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 
 %Q35
 \ابتدا{سوال}\شناخت{سوال_مقدار_معلوم_پینتیس}\موٹا{قطع مکافی  بیلن }\quad
-قطع مکافی بیلن \عددی{z=4-y^2} سے  سطوح \عددی{x=0}، \عددی{x=1}، اور \عددی{z=0}  جو سطح کاٹتی ہیں اس سے  گزرنے والا باہر  کے رخ  میں (یعنی محور \عددی{x}  کے لمب) بہاؤ  ، میدان  \عددی{\kvec{F} = z^2 \ai + x \aj - 3z \ak}کے لیے ، تلاش کریں۔
+قطع مکافی بیلن \عددی{z=4-y^2} سے  سطوح \عددی{x=0}، \عددی{x=1}، اور \عددی{z=0}  جو سطح کاٹتی ہیں اس سے  گزرنے والا باہر  کے رخ  میں (یعنی محور \عددی{x}  کے \بدل{قائمہ}) بہاؤ  ، میدان  \عددی{\kvec{F} = z^2 \ai + x \aj - 3z \ak}کے لیے ، تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -5029,7 +5030,7 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 \انتہا{جواب}
 %Q36
 \ابتدا{سوال}\موٹا{قطع مکافی  بیلن }\quad
-قطع مکافی بیلن \عددی{y=x^2,\, -1\le x\le 1} سے  سطوح \عددی{z=0}، اور \عددی{z=2}   سطح کاٹتی ہیں ۔ اس سطح   سے   باہر  کے رخ      میں (یعنی  مستوی  \عددی{yz}  کے لمب)    گزرنے والا بہاؤ،  میدان  \عددی{\kvec{F} = x^2 \aj - xz \ak}کے لیے،  تلاش کریں۔
+قطع مکافی بیلن \عددی{y=x^2,\, -1\le x\le 1} سے  سطوح \عددی{z=0}، اور \عددی{z=2}   سطح کاٹتی ہیں ۔ اس سطح   سے   باہر  کے رخ      میں (یعنی  مستوی  \عددی{yz}  کے \بدل{قائمہ})    گزرنے والا بہاؤ،  میدان  \عددی{\kvec{F} = x^2 \aj - xz \ak}کے لیے،  تلاش کریں۔
 \انتہا{سوال}
 %Q37
 \ابتدا{سوال}\موٹا{کرہ }\quad
@@ -5061,7 +5062,7 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 
 %Q41
 \ابتدا{سوال}\موٹا{مخروط}\quad
-میدان $\kvec{f}= xy \ai - z \ak$ کا ، مخروط \عددی{z = \sqrt{x^2 + y^2},\, 0 \le z \le 1}  سے  باہر کی سمت  میں (محور \عددی{z}    کے لمب)    گزرنے والا ،  بہاؤ     تلاش کریں۔
+میدان $\kvec{f}= xy \ai - z \ak$ کا ، مخروط \عددی{z = \sqrt{x^2 + y^2},\, 0 \le z \le 1}  سے  باہر کی سمت  میں (محور \عددی{z}    کے \بدل{قائمہ})    گزرنے والا ،  بہاؤ     تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -5070,11 +5071,11 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 \انتہا{جواب}
 %Q42
 \ابتدا{سوال}\موٹا{مخروط}\quad
-میدان $\kvec{F} = y^2 \ai + xz \aj - \ak$ کا  ، مخروط \عددی{z = 2 - x^2 - y^2, 0 \le z \le 2} سے باہر کی سمت (محور \عددی{z}   کے لمب)   گزرنے والا، بہاؤ       تلاش کریں۔
+میدان $\kvec{F} = y^2 \ai + xz \aj - \ak$ کا  ، مخروط \عددی{z = 2 - x^2 - y^2, 0 \le z \le 2} سے باہر کی سمت (محور \عددی{z}   کے \بدل{قائمہ})   گزرنے والا، بہاؤ       تلاش کریں۔
 \انتہا{سوال}
 %Q43
 \ابتدا{سوال}\موٹا{ مخروطی  مقطوع}\quad
-میدان $\kvec{F} = -x \ai - y \aj + z^2 \ak$ کا،   مخروط \عددی{z = \sqrt{x^2 +y^2}} کے اس حصے  سے باہر کی سمت  میں (محور \عددی{z}   کے لمب)   گزرنے والا بہاؤ       تلاش کریں جو مستویات \عددی{z=1} اور \عددی{z=2} کے درمیان واقع ہے۔
+میدان $\kvec{F} = -x \ai - y \aj + z^2 \ak$ کا،   مخروط \عددی{z = \sqrt{x^2 +y^2}} کے اس حصے  سے باہر کی سمت  میں (محور \عددی{z}   کے \بدل{قائمہ})   گزرنے والا بہاؤ       تلاش کریں جو مستویات \عددی{z=1} اور \عددی{z=2} کے درمیان واقع ہے۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -5083,7 +5084,7 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 \انتہا{جواب}
 %Q44
 \ابتدا{سوال}\شناخت{سوال_مقدار_معلوم_چوالیس}\موٹا{قطع مکافی جسم}\quad
-مخروط \عددی{z = \sqrt{x^2 +y^2}} کے نچلے حصہ سے   مستوی \عددی{z=1}    جو سطح کاٹتا ہے، اس سطح  سے باہر کی سمت  میں (محور \عددی{z}   کے لمب)   گزرنے والا بہاؤ ، میدان  \عددی{\kvec{F} = 4x \ai + 4y \aj + 2 \ak} کے لئے        تلاش کریں ۔
+مخروط \عددی{z = \sqrt{x^2 +y^2}} کے نچلے حصہ سے   مستوی \عددی{z=1}    جو سطح کاٹتا ہے، اس سطح  سے باہر کی سمت  میں (محور \عددی{z}   کے \بدل{قائمہ})   گزرنے والا بہاؤ ، میدان  \عددی{\kvec{F} = 4x \ai + 4y \aj + 2 \ak} کے لئے        تلاش کریں ۔
 \انتہا{سوال}
 
 
@@ -5129,7 +5130,8 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.35\textwidth}
+\centering
 \begin{tikzpicture}
 \draw[thick](0,2)circle (1cm and 0.25cm);
 \draw[thick](-1,2)--(0,0)--(1,2);
@@ -5157,6 +5159,7 @@ M_{xy}&=\iint_S \delta z\, \dif \sigma=\int_0^{2\pi} \int_1^2\delta r \sqrt{2}\,
 \ابتدا{جواب}
 \wf{\unexpanded{
 \begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}
 \draw[thick](0,1.5)circle (1cm and 0.25cm);
 \draw[thick](0,0)++(-180:1cm and 0.25cm) arc (180:360:1cm and 0.25cm); 
@@ -5255,7 +5258,7 @@ hide z axis,hide x axis,height=10cm]
 \pgfmathsetmacro{\kp}{2.5}
 \draw[-stealth](0,0)--++(-135:2)node[left]{$z$};
 \draw[-stealth](0,0)--++(0:4)node[right]{$x$};
-\draw[-stealth](0,0)--++(90:4)node[left]{$y$};
+\draw[-stealth](0,0)--++(90:2)node[left]{$y$};
 \draw[thick,domain=1:3,variable=\x]plot ({fx(\x)},{fy(\x)})node[left]{$C$};
 \draw[] ({fx(\kp)},{fy(\kp)})node[circle, fill=black, minimum size=2.5pt, inner sep=0pt, outer sep=0pt]{}node[pin={[right,pin distance={1cm}]45:{$(f(u),g(u),0)$}}]{};
 \draw ({fx(\kp)},{fy(\kp)})--({fx(\kp)},{0})--++(-135:2);
@@ -5289,7 +5292,9 @@ hide z axis,hide x axis,height=10cm]
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\(A=\int_0^{2\pi}\int_0^{\pi}[a^2b^2\sin^2\theta\cos^2\theta+b^2c^2\sin^4\theta\cos^2\phi+a^2c^2\sin^2\theta\sin^2\phi]^{1\!/\!2}\dif\theta\dif\phi\)
+\(A=\int_0^{2\pi}\int_0^{\pi}[a^2b^2\sin^2\theta\cos^2\theta\\
++b^2c^2\sin^4\theta\cos^2\phi\\
++a^2c^2\sin^2\theta\sin^2\phi]^{1\!/\!2}\dif\theta\dif\phi\)
 }}
 \انتہا{جواب}
 %56
@@ -5320,10 +5325,10 @@ hide z axis,hide x axis,height=10cm]
 \انتہا{سوالات}
 %sec 14.7 of finney 5th edition
 
-%KKKK??? am here
+
 
 \حصہ{مسئلہ سٹوکس  }\شناخت{حصہ_سمتی_میدان_مسئلہ_سٹوکس}
-ہم نے  حصہ\حوالہ{حصہ_مستوی_میں_مسئلہ_گرین} میں دیکھا کہ دو بُعدی میدان \عددی{\kvec{F} = M\ai + N\aj}  میں  نقطہ  \عددی{(x,y)}  پر کثافت  دائری سیلان یعنی    گردش  کو    عددیہ  مقدار  \عددی{\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}}  بیان کرتا ہے۔ تین  ابعاد  میں  مستوی میں نقطہ \عددی{P} کے گرد دائری سیلان   کو   سمتیہ کے ذریعے بیان کیا جاتا ہے۔یہ سمتیہ  دائری  بہاؤ  کے مستوی  کے  عمود ہو گا  (شکل\حوالہ{شکل_گردش_نقطہ_پر_بیان_سمتیہ})، اور سمتیہ  کا رخ دائری سیلان   کے خط    کے ساتھ دائیں ہاتھ کا تعلق رکھے گا۔سمتیہ کی لمبائی  سیال کے گھومنے کی شرح ظاہر کرتی ہے، جو  \عددی{P}  کے لحاظ سے دائری سیلان کا مستوی  جھکانے سے  عموماً  تبدیل ہو گی۔ہم کیا دیکھتے ہیں کہ  جب دائری سیلان کا سرعتی میدان \عددی{\kvec{F}=M\ai+N\aj+P\ak}  ہو،  زیادہ سے زیادہ دائری سیلان کا سمتیہ درج ذیل \اصطلاح{گردشی سمتیہ} \فرہنگ{گردشی سمتیہ}\حاشیہب{curl vector}\فرہنگ{curl vector} ہو گا۔
+ہم نے  حصہ\حوالہ{حصہ_مستوی_میں_مسئلہ_گرین} میں دیکھا کہ دو بُعدی میدان \عددی{\kvec{F} = M\ai + N\aj}  میں  نقطہ  \عددی{(x,y)}  پر   دائری سیلان  کی کثافت یعنی    گردش  کو    عددیہ  مقدار  \عددی{\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}}  بیان کرتا ہے۔ تین  ابعاد  میں  مستوی میں نقطہ \عددی{P} کے گرد دائری سیلان   کو   سمتیہ کے ذریعے بیان کیا جاتا ہے۔یہ سمتیہ  دائری  سیلان کے مستوی  کے  عمود ہو گا  (شکل\حوالہ{شکل_گردش_نقطہ_پر_بیان_سمتیہ})، اور سمتیہ  کا رخ دائری سیلان   کے خط    کے ساتھ دائیں ہاتھ کا تعلق رکھے گا۔سمتیہ کی لمبائی  سیال کے گھومنے کی شرح ظاہر کرتی ہے، جو  \عددی{P}  کے لحاظ سے دائری سیلان کا مستوی  جھکانے سے  عموماً  تبدیل ہو گی۔ہم  دیکھتے ہیں کہ  جب دائری سیلان کا سرعتی میدان \عددی{\kvec{F}=M\ai+N\aj+P\ak}  ہو،  زیادہ سے زیادہ دائری سیلان کا    \اصطلاح{سمتیہ گردش} \فرہنگ{سمتیہ گردش}\حاشیہب{curl vector}\فرہنگ{curl vector} درج ذیل  ہو گا۔
 
 \begin{figure}
 \centering
@@ -5333,7 +5338,7 @@ hide z axis,hide x axis,height=10cm]
 \draw[thick,->-=0](0,0)node[left]{$P$} circle(0.5);
 \end{tikzpicture}
 \caption
-{سیال کے  تین ابعادی بہاؤ میں مستوی میں نقطہ \عددی{P} پر دائری سیلان سمتیہ۔ دھیان رہے کہ دائری لکیر کے ساتھ اس کا  دائیں ہاتھ کا تعلق ہے۔}
+{سیال کے  تین ابعادی  سیلان  میں مستوی میں نقطہ \عددی{P} پر دائری سیلان سمتیہ۔ دھیان رہے کہ دائری سیلان کی لکیر کے ساتھ اس کا دائیں ہاتھ کے  قاعدے کے مطابق تعلق ہے۔}
 \label{شکل_گردش_نقطہ_پر_بیان_سمتیہ}
 \end{figure}
 
@@ -5343,7 +5348,7 @@ hide z axis,hide x axis,height=10cm]
 \left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)\ak
 \end{align}
 
-یہ معلومات ہمیں\اصطلاح{مسئلہ سٹوکس }\فرہنگ{سٹوکس!مسئلہ}\حاشیہب{Stokes’ Theorem}\فرہنگ{Stokes!theorem}  دیتا ہے، جو مسئلہ گرین کی  دائری سیلان و گردشی روپ کی  تین بُعدی   وسعت ہے۔
+یہ معلومات ہمیں\اصطلاح{مسئلہ سٹوکس }\فرہنگ{سٹوکس!مسئلہ}\حاشیہب{Stokes’ Theorem}\فرہنگ{Stokes!theorem}   فراہم کرتا  ہے، جو مسئلہ گرین کے دائری سیلان و گردشی روپ کی تین بُعدی   توسیع ہے۔
 
 دھیان رہے کہ \عددی{(\kvec{F}\text{گردش}) \cdot \ak=\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}} اور \عددی{\kvec{F} = M(x,y)\ai + N(x,y)\aj}    کی صورت میں حصہ\حوالہ{حصہ_مستوی_میں_مسئلہ_گرین}   میں پیش کی گئی   تعریف   بلا تضاد  ہیں۔مساوات \حوالہ{مساوات_گردش_تعریف_الف}  میں گردش \عددی{\kvec{F}}   کا  کلیہ عموماً        درج ذیل علامتی عامل  کے ذریعے لکھا جاتا ہے۔
 \begin{align}
@@ -5351,19 +5356,19 @@ hide z axis,hide x axis,height=10cm]
 \end{align}
 
 
-(علامت \عددی{\nabla} کو  ہم "ڈیل\حاشیہب{del} "  پڑھتے ہیں۔)  یہ عامل استعمال کر کے  گردش \عددی{\kvec{F}} \فرہنگ{گردش!کلیہ}\حاشیہب{curl}\فرہنگ{curl!equation} کو  ہم \عددی{\nabla\times\kvec{F}} لکھتے ہیں۔
+(علامت \عددی{\nabla} کو  ہم "ڈیل\حاشیہب{del} "  پڑھتے ہیں۔)  یہ \اصطلاح{عامل}\فرہنگ{عامل!ڈیل}\حاشیہب{operator}\فرہنگ{operator!del}  استعمال کر کے  گردش \عددی{\kvec{F}} \فرہنگ{گردش!کلیہ}\حاشیہب{curl}\فرہنگ{curl!equation} کو  ہم \عددی{\nabla\times\kvec{F}} لکھتے ہیں۔
 
-\begin{align*}
+\begin{align}
 \nabla \times \kvec{F}&=\begin{vmatrix}
 \ai & \aj & \ak \\
 \frac{\partial}{\partial x} &\frac{\partial}{\partial y} &\frac{\partial}{\partial z} \\
 M & N & P
-\end{vmatrix}\\
+\end{vmatrix}\notag\\
 &=\left(\frac{\partial P}{\partial y} - \frac{\partial N}{\partial z}\right)\ai+
 \left(\frac{\partial M}{\partial z} - \frac{\partial P}{\partial x}\right)\aj+
 \left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)\ak\\
-&=\kvec{F}\text{گردش}
-\end{align*}
+&=\kvec{F}\text{گردش}\notag
+\end{align}
 مختصراً درج ذیل لکھا جائے گا۔
 \begin{align}
   \kvec{F}\text{گردش}=\nabla \times \kvec{F}
@@ -5384,8 +5389,8 @@ M & N & P
 \frac{\partial}{\partial z} \\
 x^2 - y & 4z & x^2
 \end{vmatrix}\\
-&=\left(\frac{\partial}{\partial y}(x^2) - \frac{\partial }{\partial z}(4z)\right)\ai-
-\left(\frac{\partial }{\partial x}(x^2) - \frac{\partial }{\partial z}(x^2-y)\right)\aj+
+&=\left(\frac{\partial}{\partial y}(x^2) - \frac{\partial }{\partial z}(4z)\right)\ai\\
+&\quad\quad-\left(\frac{\partial }{\partial x}(x^2) - \frac{\partial }{\partial z}(x^2-y)\right)\aj+
 \left(\frac{\partial}{\partial x}(4z) - \frac{\partial}{\partial y}(x^2 - y)\right)\ak\\
 &=(0 - 4)\ai-(2x - 0)\aj+(0 +1)\ak\\
 &=-4\ai - 2x\aj + \ak
@@ -5393,15 +5398,15 @@ x^2 - y & 4z & x^2
 \انتہا{مثال}
 
 
- ہم دیکھیں گے کہ عامل  \عددی{\nabla} کے دیگر استعمال بھی ہیں۔مثلاً ، عددیہ تفاعل \عددی{f(x,y,z)} پر  لگانے سے \اصطلاح{ڈھلوان }\فرہنگ{ڈھلوان!کلیہ}\حاشیہب{gradient}\فرہنگ{gradient!equation}  حاصل ہو گا۔
+ ہم دیکھیں گے کہ عامل  \عددی{\nabla} کے دیگر استعمال بھی ہیں۔مثلاً ،  عددیہ تفاعل \عددی{f(x,y,z)} پر  لگانے سے \اصطلاح{ڈھلوان }\فرہنگ{ڈھلوان!کلیہ}\حاشیہب{gradient}\فرہنگ{gradient!equation}  حاصل ہو گا۔
 \begin{align*}
 \nabla f=\frac{\partial f}{\partial x}\ai+\frac{\partial f}{\partial y}\aj+\frac{\partial f}{\partial z}\ak
 \end{align*}
-اسے ہم    \قول{ڈھلوان \عددی{f}} اور\حاشیہب{grad f} یا \قول{ڈیل \عددی{f}}کہیں \حاشیہب{del f} گے۔
+اسے ہم    \قول{ڈھلوان \عددی{f}} اور\حاشیہب{grad f} یا \قول{ڈیل \عددی{f}} کہیں \حاشیہب{del f} گے۔
 
 
 \جزوحصہء{مسئلہ سٹوکس}
-\اصطلاح{مسئلہ سٹوکس }\فرہنگ{سٹوکس!مسئلہ}\حاشیہب{Stokes' Theorem} \فرہنگ{Stokes!theorem}  کہتا ہے  کہ  ایسی صورتوں میں جو عملاً عام طور پائی جاتی ہیں،    فضا میں    سمت بند سطح  کی سرحد پر،      سطح کے اکائی عمود سمتیہ \عددی{\kvec{n}} لے لحاظ سے گھڑی مخالف رخ  چلتے ہوئے (شکل \حوالہ{شکل_سٹوکس_اور_دائری}) ، سمتیہ میدان کا دائری سیلان  اور   سطح پر میدان کی گردش کے عمود جزو کا تکمل برابر ہوں گے۔
+\اصطلاح{مسئلہ سٹوکس }\فرہنگ{سٹوکس!مسئلہ}\حاشیہب{Stokes' Theorem} \فرہنگ{Stokes!theorem}  کہتا ہے  کہ  ایسی صورتوں میں جو عملاً عام طور پائی جاتی ہیں،    فضا میں    سمت بند سطح  کی سرحد پر،      سطح کے اکائی عمود سمتیہ \عددی{\kvec{n}}   کے  لحاظ سے گھڑی مخالف رخ  چلتے ہوئے (شکل \حوالہ{شکل_سٹوکس_اور_دائری}) ، سمتیہ میدان کا دائری سیلان  اور   سطح پر میدان کی گردش کے عمود \بدل{عنصر_سمتیہ} کا تکمل برابر ہوں گے۔
 
 \begin{figure}
 \centering
@@ -5417,36 +5422,36 @@ x^2 - y & 4z & x^2
 \draw[thick,-stealth](45:1.5)--++(45:1)node[above]{$\an$};
 \end{tikzpicture}
 \caption{
-تحدیدی منحنی \عددی{C} کی سمت بندی، عمود   میدان \عددی{\an} کے ساتھ دائیں ہاتھ کا تعلق رکھتی ہے۔
+سرحدی  منحنی \عددی{C} کی سمت بندی، عمود   میدان \عددی{\an} کے ساتھ ، دائیں ہاتھ کا تعلق رکھتی ہے۔
 }
 \label{شکل_سٹوکس_اور_دائری}
 \end{figure}
 
 \ابتدا{مسئلہ}\موٹا{مسئلہ سٹوکس}\\
-    سمت بند سطح \عددی{S}   کی سرحد \عددی{C}   پر،      سطح کے اکائی عمود سمتیہ \عددی{\kvec{n}} لے لحاظ سے گھڑی مخالف  چلتے ہوئے سمتیہ میدان  \عددی{\kvec{F}=M\ai+N\aj+P\ak} کا دائری سیلان   \عددی{S} پر \عددی{\nabla\times \kvec{F}\cdot\kvec{n}} کے تکمل کا  برابر ہو گا۔
+    سمت بند سطح \عددی{S}   کی سرحد \عددی{C}   پر،      سطح کے اکائی عمود سمتیہ \عددی{\kvec{n}}  کے  لحاظ سے گھڑی مخالف  چلتے ہوئے سمتیہ میدان  \عددی{\kvec{F}=M\ai+N\aj+P\ak} کا دائری سیلان   \عددی{S} پر \عددی{\nabla\times \kvec{F}\cdot\kvec{n}} کے تکمل کے   برابر ہو  گا۔
 \begin{align}\label{مساوات_سمتی_میدان_مسئلہ_سٹوکس_تعریف}
  \underbrace{\ointctrclockwise\limits_C \kvec{F} \cdot \dif \kvec{r}}_{\text{\RL{گھڑی مخالف دائری سیلان}}}=\underbrace{\iint\limits_S (\nabla \times \kvec{F}) \cdot \an\, \dif \sigma}_{\text{\RL{تکمل گردش}}}
 \end{align}
 \انتہا{مسئلہ}
 
-ہم مساوات \حوالہ{مساوات_سمتی_میدان_مسئلہ_سٹوکس_تعریف} کو دیکھ کر کہہ سکتے ہیں کہ   ایسی دو مختلف سمت  بند سطحیں  \عددی{S_1} اور \عددی{S_2}  جن کی سرحد  \عددی{C} ایک ہو، کے تکمل گردش برابر ہوں گے۔
+ہم مساوات \حوالہ{مساوات_سمتی_میدان_مسئلہ_سٹوکس_تعریف} کو دیکھ کر کہہ سکتے ہیں کہ   ایسی دو مختلف سمت  بند سطحیں  \عددی{S_1} اور \عددی{S_2}   پر، جن کی سرحد  \عددی{C}  ایک ہو،   تکمل گردش برابر ہوں گے۔
 \begin{align*}
 \iint\limits_{S_1} (\nabla \times \kvec{F}) \cdot \an_1\, \dif \sigma=\iint\limits_{S_2} (\nabla \times \kvec{F}) \cdot \an_2\, \dif \sigma
 \end{align*}
-بشرطیکہ اکائی  عمود  سمتیات \عددی{\kvec{n}_1} اور \عددی{\kvec{n}_2}   سطوح کی درست سمت بندی کرتی ہوں، دونوں   تکمل گردش مساوات \حوالہ{مساوات_سمتی_میدان_مسئلہ_سٹوکس_تعریف}کے  بائیں ہاتھ  کے برابر  ، لہٰذا  ایک دوسرے کے برابر ہوں گے۔
+بشرطیکہ اکائی  عمود  سمتیات \عددی{\kvec{n}_1} اور \عددی{\kvec{n}_2}   سطوح کی درست سمت بندی کرتی ہوں، دونوں    سطوح پر تکمل گردش مساوات \حوالہ{مساوات_سمتی_میدان_مسئلہ_سٹوکس_تعریف}کے  بائیں ہاتھ     کی قیمت کے برابر  ، لہٰذا  ایک دوسرے کے برابر ہوں گے۔
 
-مسئلہ سٹوکس میں موجود  تکملات کی   وجودیت یقینی بنانے کے لیے  \عددی{\kvec{F}}، \عددی{C}، اور \عددی{S} پر  ریاضیاتی شرائط مسلط ہوں گے۔ درکار عمومی شرائط  کہتے ہیں کہ تمام تفاعل، سمتیہ میدان، اور ان کے تفرق استمراری ہوں۔
+مسئلہ سٹوکس میں موجود  تکملات کی   وجودیت یقینی بنانے کے لیے  \عددی{\kvec{F}}، \عددی{C}، اور \عددی{S} پر  ریاضیاتی شرائط مسلط ہوں گی۔ درکار عمومی شرائط  کہتی ہیں کہ تمام تفاعلات، سمتیہ میدان، اور ان کے تفارق استمراری ہوں۔
 
-اگر  \عددی{C} مستوی  \عددی{xy}  میں   موجود ، گھڑی مخالف سمت بند  منحنی   ہو، اور \عددی{R} مستوی \عددی{xy} میں ایک خطہ ہو جس کو \عددی{C} گھیرتی ہو، تب \عددی{\dif \sigma=\dif x\dif y}    اور درج ذیل ہو گا۔
-\begin{align*}
+اگر  \عددی{C} مستوی  \عددی{xy}  میں   موجود ، گھڑی مخالف سمت بند  منحنی   ہو، اور \عددی{R} مستوی \عددی{xy} میں ایک خطہ ہو جس کا احاطہ  \عددی{C}  کرتی ہو، تب \عددی{\dif \sigma=\dif x\dif y}    اور درج ذیل ہو گا۔
+\begin{align}
 (\nabla \times \kvec{F}) \cdot \an=(\nabla \times \kvec{F}) \cdot \ak=\left(
 \frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)
-\end{align*}
-ان حالات میں مساوات سٹوکس درج ذیل صورت اختیار  کرتی ہے
+\end{align}
+ان  شرائط کے تحت   مساوات سٹوکس درج ذیل صورت اختیار  کرتی ہے
 \begin{align*}
 \ointctrclockwise\limits_C \kvec{F} \cdot \dif \kvec{r}=\iint\limits_R\left(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\right)\dif x\dif y
 \end{align*}
-جو مسئلہ گرین میں  موجود مساوات کی دائری سیلان و گردشی روپ ہے۔اسی طرح انہیں قدموں پر  الٹ  چلتے ہوئے  ہم مسئلہ گرین کے  دائری سیلان و گردشی  روپ کو دو بُعدی میدان کے لیے  درج ذیل \قول{ڈیل }علامتیت میں لکھ سکتے ہیں۔ شکل\حوالہ{شکل_سمتی_میدان_گرین_سٹوکس} ملاحظہ کریں۔
+جو مسئلہ گرین میں  موجود مساوات کا دائری سیلان و گردشی روپ ہے۔  اسی طرح انہیں قدموں پر  الٹ  چلتے ہوئے  ہم مسئلہ گرین کے  دائری سیلان و گردشی  روپ کو دو بُعدی میدان کے لیے  درج ذیل \قول{ڈیل }علامتیت میں لکھ سکتے ہیں۔ شکل\حوالہ{شکل_سمتی_میدان_گرین_سٹوکس} ملاحظہ کریں۔
 \begin{align}\label{مساوات_سمتی_بند_گرین_دو_بعدی}
 \ointctrclockwise\limits_C \kvec{F} \cdot \dif \kvec{r}=\iint\limits_R (\nabla \times \kvec{F}) \cdot \ak\, \dif A
 \end{align}
@@ -5484,11 +5489,11 @@ x^2 - y & 4z & x^2
 
 
 \ابتدا{مثال}   نصف کرہ کے لیے مساوات سٹوکس کی تصدیق\\
-نصف کرہ \عددی{S:\, x^2+y^2+z^2=9,\, z\ge 0}  کو گھیرنے والے دائرہ \عددی{C:\, x^2+y^2=9,\,z=0} اور میدان \عددی{\kvec{F}=y\ai-x\aj} کے لیے مساوات \حوالہ{مساوات_سمتی_میدان_مسئلہ_سٹوکس_تعریف}  کی قیمت تلاش کریں۔
+نصف کرہ \عددی{S:\, x^2+y^2+z^2=9,\, z\ge 0}  کو احاطہ کرنے  والے دائرے \عددی{C:\, x^2+y^2=9,\,z=0} اور میدان \عددی{\kvec{F}=y\ai-x\aj} کے لیے مساوات \حوالہ{مساوات_سمتی_میدان_مسئلہ_سٹوکس_تعریف}  کی قیمت تلاش کریں۔
 
 
 \حل
-مقدار معلوم روپ \عددی{\kvec{r}(\phi)=(3\cos\phi)\ai+(3\sin\phi)\aj,\,0\le \phi \le 2\pi} استعمال کرتے ہوئے اوپر  سے نظارہ کرتے ہوئے \عددی{C} کے گرد گھڑی مخالف دائری سیلان تلاش کرتے ہیں۔
+مقدار معلوم روپ \عددی{\kvec{r}(\phi)=(3\cos\phi)\ai+(3\sin\phi)\aj,\,0\le \phi \le 2\pi} استعمال کر کے،    اوپر  سے دیکھنے   پر   \عددی{C} کے گرد گھڑی مخالف دائری سیلان تلاش کرتے ہیں۔
 \begin{align*}
 \dif \kvec{r}&=-3\sin \phi\,\dif \phi\,\ai+3\cos \phi\,\dif\phi\,\aj\\
 \kvec{F} &= y\ai - x\aj=3\sin \phi\,\ai-3\cos \phi\,\aj\\
@@ -5514,7 +5519,7 @@ x^2 - y & 4z & x^2
 \انتہا{مثال}
 
 \ابتدا{مثال}\شناخت{مثال_سمتی_میدان_دائری_بہاؤ_تین}  دائری سیلان کی تلاش\\
-مستوی \عددی{z=2} مخروط \عددی{z=\sqrt{x^2+y^2}} سے منحنی \عددی{C}  پر ملتا ہے۔ اس منحنی پر ، اوپر سے دیکھتے ہوئے گھڑی مخالف (شکل \حوالہ{شکل_سمتی_میدان_دائری_بہاؤ_تین})، میدان \عددی{\kvec{F} = (x^2 - y)\ai + 4z\aj + x^2\ak}  کا ، دائری سیلان تلاش کریں۔
+مستوی \عددی{z=2} مخروط \عددی{z=\sqrt{x^2+y^2}} کو  منحنی \عددی{C}  پر کاٹتا ہے۔ اس منحنی پر ، اوپر سے دیکھنے پر گھڑی مخالف (شکل \حوالہ{شکل_سمتی_میدان_دائری_بہاؤ_تین})  سمت میں چلتے ہوئے  ،   میدان \عددی{\kvec{F} = (x^2 - y)\ai + 4z\aj + x^2\ak}  کا  دائری سیلان تلاش کریں۔
 \begin{figure}
 \centering
 \begin{tikzpicture}
@@ -5531,12 +5536,13 @@ x^2 - y & 4z & x^2
 \draw[-stealth](0,0)--++(-135:1)node[left]{$x$};
 \draw(\kR/4,2*\kH/3)node[pin={[right]-45:{$S:\, \kvec{r}(\phi)=r\cos\phi \ai+r\sin\phi \aj+r\ak$}}]{};
 \end{tikzpicture}
-\caption{۔منحنی \عددی{C} اور مخروط \عددی{S} برائے مثال \حوالہ{مثال_سمتی_میدان_دائری_بہاؤ_تین}}
+\caption
+{منحنی \عددی{C} اور مخروط \عددی{S} برائے مثال \حوالہ{مثال_سمتی_میدان_دائری_بہاؤ_تین}۔}
 \label{شکل_سمتی_میدان_دائری_بہاؤ_تین}
 \end{figure}
 
 \حل
-مسئلہ سٹوکس کے استعمال سے ہم دائری سیلان سطح پر تکمل سے حاصل کرتے ہیں۔ اوپر سے دیکھتے ہوئے \عددی{C} پر گھڑی مخالف چلنا   \ترچھا{اندرونی }عمود  \عددی{\kvec{n}}  لینے کے مترادف ہے  جس کا  \عددی{z}   جزو مثبت ہو گا۔ہم مخروط کا  مقدار معلوم روپ لکھتے  ہیں۔
+مسئلہ سٹوکس  استعمال کر کے، مخروط کی    سطح پر تکمل سے ، ہم دائری سیلان   حاصل کرتے ہیں۔ اوپر سے دیکھنے پر \عددی{C} پر گھڑی مخالف سمت میں  چلنا  ،  \ترچھا{اندرونی }عمود  \عددی{\kvec{n}}  لینے کے مترادف ہے،   جس کا  \عددی{z}    \بدل{عنصر_سمتیہ} مثبت ہو گا۔ہم مخروط کا  مقدار معلوم روپ لکھتے  ہیں۔
 \begin{align*}
 \kvec{r}(r,\phi)=r\cos \phi\,\ai+r\sin \phi\,\aj+r\,\ak,\quad0 \le r \le 2,\; 0 \le \phi \le 2\pi
 \end{align*}
@@ -5563,7 +5569,7 @@ x^2 - y & 4z & x^2
 
 
 \جزوحصہء{\عددی{\nabla \times \kvec{F}} کی چپو چرخی   سے  تشبیہ}
-فرض کریں حرکت پذیر سیال کی رفتار \عددی{\kvec{v}(x,y,z)} اور نقطہ \عددی{(x,y,z)} پر اس کی کثافت \عددی{\delta(x,y,z)} ہے۔ مزید فرض کریں \عددی{\kvec{F}=\delta \kvec{v}} ہے۔ایسی صورت میں بند منحنی \عددی{C} کے ہمراہ  سیال کا دائری سیلان درج ذیل ہو گا۔
+فرض کریں حرکت پذیر سیال کی سرعت  \عددی{\kvec{v}(x,y,z)} اور نقطہ \عددی{(x,y,z)} پر اس کی کثافت \عددی{\delta(x,y,z)} ہے۔ مزید فرض کریں \عددی{\kvec{F}=\delta \kvec{v}} ہے۔ایسی صورت میں بند منحنی \عددی{C} کے ہمراہ  سیال کا دائری سیلان درج ذیل ہو گا۔
 \begin{figure}
 \centering
 \begin{tikzpicture}
@@ -5598,38 +5604,40 @@ x^2 - y & 4z & x^2
 \draw[-latex]([shift={(\kAngEE:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngEE:\kAngFF:1.75 cm and 1.25cm);
  \draw[-latex]([shift={(\kAngGG:{1.75cm and 1.25 cm})}]0,0)  arc (\kAngGG:\kAngHH:1.75 cm and 1.25cm);
 \end{tikzpicture}
-\caption{گردش \عددی{\kvec{F}} کی  چپو چرخی   سے  تشبیہ۔}
+\caption
+{گردش \عددی{\kvec{F}} کی  چپو چرخی   سے  تشبیہ۔}
 \label{شکل_سمتی_میدان_سٹوکس_چپو_چرخی}
 \end{figure}
 %
 \begin{align*}
 \ointctrclockwise\limits_C \kvec{F}\cdot \dif \kvec{r}
 \end{align*}
-مسئلہ سٹوکس کے مطابق   یہ دائری سیلان  ، \عددی{C} میں محیط  سطح \عددی{S}  سے گزرتا \عددی{\nabla \times\kvec{F}} کے بہاؤ  کا برابر ہو گا۔
+مسئلہ سٹوکس کے مطابق   یہ دائری سیلان  ، \عددی{C} میں محیط  سطح \عددی{S}  سے   گزرنے والے \عددی{\nabla \times\kvec{F}} کے   بہاؤ  کے برابر ہو گا۔
 \begin{align*}
 \ointctrclockwise\limits_C \kvec{F}\cdot \dif \kvec{r}=\iint\limits_S (\nabla \times \kvec{F}) \cdot \an\, \dif\delta
 \end{align*}
- ہم  \عددی{\kvec{F}} کے دائرہ کار میں    اٹل  نقطہ \عددی{Q}، اور    اس نقطہ پر   مخصوص سمت \عددی{\kvec{u}} منتخب کرتے  ہیں۔  فرض کریں  \عددی{C} ایک دائرہ ہے جس کا رداس \عددی{\rho} اور مرکز \عددی{Q} ہے اور جس کا مستوی \عددی{\kvec{u}} کے عمود ہے۔اگر \عددی{Q} پر \عددی{\nabla\times\kvec{F}} استمراری ہو،   \عددی{C} میں محیط دائری قرص \عددی{S} پر \عددی{\nabla\times\kvec{F}} کے \عددی{\kvec{u}} ویں جزو کی اوسط قیمت \عددی{\rho\to 0} کی صورت میں \عددی{Q}  پر \عددی{\nabla\times\kvec{F}} کے \عددی{\kvec{u}} ویں جزو  کو پہنچے گی۔
-\begin{align*}
+ ہم  \عددی{\kvec{F}} کے دائرہ کار میں    اٹل  نقطہ \عددی{Q}، اور    اس نقطے پر   مخصوص سمت \عددی{\kvec{u}} منتخب کرتے  ہیں۔  فرض کریں  \عددی{C} ایک دائرہ ہے جس کا رداس \عددی{\rho} اور مرکز \عددی{Q} ہے اور جس کا مستوی \عددی{\kvec{u}} کے عمود ہے۔اگر \عددی{Q} پر \عددی{\nabla\times\kvec{F}} استمراری ہو،   \عددی{C} سے  محیط دائری قرص \عددی{S} پر \عددی{\nabla\times\kvec{F}} کے \عددی{\kvec{u}} ویں \بدل{عنصر_سمتیہ} کی اوسط قیمت،  \عددی{\rho\to 0} کی صورت میں،   \عددی{Q}  پر \عددی{\nabla\times\kvec{F}} کے \عددی{\kvec{u}} ویں  \بدل{عنصر_سمتیہ} کی قیمت کے قریب  پہنچے گی۔ 
+\begin{align}\label{مساوات_سٹوکس_ایک_عنصر}
 (\nabla \times \kvec{F} \cdot \kvec{u})_Q=\lim_{\rho\to 0}\frac{1}{\pi \rho^2}\iint\limits_S (\nabla \times \kvec{F}) \cdot \kvec{u}\, \dif\sigma
-\end{align*}
-آخری مساوات میں سطحی تکمل کی جگہ دائری سیلان لکھ کر درج ذیل حاصل ہو گا۔
+\end{align}
+مساوات  \حوالہ{مساوات_سٹوکس_ایک_عنصر} میں سطحی تکمل کی جگہ دائری سیلان لکھ کر درج ذیل حاصل ہو گا۔
 \begin{align}\label{مساوات_سٹوکس_نقطہ_کیو}
 (\nabla \times \kvec{F} \cdot \kvec{u})_Q=\lim_{\rho \to 0}\frac{1}{\pi \rho^2}\ointctrclockwise\limits_C \kvec{F}\cdot \dif \kvec{r}
 \end{align}
-مساوات \حوالہ{مساوات_سٹوکس_نقطہ_کیو}     کے بائیں ہاتھ کی قیمت اس صورت زیادہ سے زیادہ ہو گی جب \عددی{\kvec{u}} کا رخ، \عددی{\nabla \times \kvec{F}} کی سمت میں ہو۔چھوٹے \عددی{\rho} کے لیے مساوات \حوالہ{مساوات_سٹوکس_نقطہ_کیو}   کے دائیں ہاتھ   کی حد تخمیناً درج ذیل ہو گی، جو  \عددی{C} کے ہمراہ  دائری سیلان تقسیمِ رقبہ قرص    (دائری سیلان کی کثافت)ہے۔
+مساوات \حوالہ{مساوات_سٹوکس_نقطہ_کیو}     کے بائیں ہاتھ کی قیمت اس صورت  میں اعظم  ہو گی جب \عددی{\kvec{u}} کا رخ، \عددی{\nabla \times \kvec{F}} کی سمت میں ہو۔چھوٹے \عددی{\rho} کے لیے مساوات \حوالہ{مساوات_سٹوکس_نقطہ_کیو}   کے دائیں ہاتھ   کی حد تخمیناً درج ذیل ہو گی، جو  \عددی{C} کے ہمراہ دائری سیلان اور قرص کے رقبے کا  تناسب      (دائری سیلان کی کثافت)ہے۔
 \begin{align*}
 \frac{1}{\pi \rho^2}\ointctrclockwise\limits_C \kvec{F}\cdot \dif \kvec{r}
 \end{align*}
-فرض کریں \عددی{Q} پر رداس \عددی{\rho} کی چپو چرخی رکھی جاتی ہے جس کا دھرا  \عددی{\kvec{u}}  کے ہمراہ ہے۔ سیال کا \عددی{C} کے ہمراہ دائری سیلان  چپو چرخی کے   گھومنے کی رفتار پر اثر انداز ہو گا۔ جب  دائری سیلان تکمل کی قیمت زیادہ سے زیادہ ہو اس صورت چپو چرخی تیز سے تیز گھومے گی؛ یوں  جب دھرا \عددی{\nabla\times\kvec{F}} کے رخ ہو، چپو چرخی تیز سے تیز گھومے گی (شکل \حوالہ{شکل_سمتی_میدان_سٹوکس_چپو_چرخی})۔
+فرض کریں \عددی{Q} پر رداس \عددی{\rho} کی چپو چرخی یوں  رکھی جاتی ہے کہ اس کا دھرا  \عددی{\kvec{u}}  کے ہمراہ ہو۔ سیال کا \عددی{C} کے ہمراہ دائری سیلان  چپو چرخی کے   گھومنے کی رفتار پر اثر انداز ہو گا۔ جب  دائری سیلان تکمل کی قیمت اعظم  ہو اس صورت چپو چرخی تیز سے تیز گھومے گی؛ یوں  جب دھرے کا رخ  \عددی{\nabla\times\kvec{F}} کے رخ ہو، چپو چرخی تیز سے تیز گھومے گی (شکل \حوالہ{شکل_سمتی_میدان_سٹوکس_چپو_چرخی})۔
 
 
-\ابتدا{مثال}  \شناخت{مثال_سمتی_میدان_سیال_برقرار_بیلنی}کثافت دائری سیلان اور \عددی{\nabla\times\kvec{F}} کا تعلق\\
-اٹل کثافت کا سیال محور \عددی{z} کے گرد \عددی{\kvec{v}=\omega(-y\ai+x\aj)}  سرعت سے گھوم رہا ہے جہاں \عددی{\omega} ایک مثبت  مستقل جس کو گھومنے  کا\اصطلاح{زاویائی رفتار }\فرہنگ{زاویائی!رفتار}کہتے ہیں(شکل \حوالہ{شکل_سمتی_گردش_سیال_بیلنی})۔  اگر \عددی{\kvec{F}=\kvec{v}} ہو،  \عددی{\nabla\times \kvec{F}} کیا ہو گا اور کثافت دائری سیلان کے ساتھ اس کا تعلق کیا ہو گا؟
+\ابتدا{مثال}  \شناخت{مثال_سمتی_میدان_سیال_برقرار_بیلنی} دائری سیلان  کی کثافت اور \عددی{\nabla\times\kvec{F}} کا تعلق\\
+اٹل کثافت کا سیال محور \عددی{z} کے گرد \عددی{\kvec{v}=\omega(-y\ai+x\aj)} کی   سرعت سے گھوم رہا ہے ، جہاں \عددی{\omega} ایک مثبت  مستقل ہے،  جس کو گھومنے  کی \اصطلاح{زاویائی سرعت}\فرہنگ{زاویائی!سرعت}کہتے ہیں(شکل \حوالہ{شکل_سمتی_گردش_سیال_بیلنی})۔  اگر \عددی{\kvec{F}=\kvec{v}} ہو،  \عددی{\nabla\times \kvec{F}} کیا ہو گا اور دائری سیلان  کی کثافت کے ساتھ اس کا تعلق کیا ہو گا؟
 
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.50\textwidth}
+\centering
 \begin{tikzpicture}
 \pgfmathsetmacro{\kR}{1.5}
 \pgfmathsetmacro{\krr}{0.75}
@@ -5652,11 +5660,12 @@ x^2 - y & 4z & x^2
 \draw[-stealth,thick](kC)--++(30:1.5)node[above]{$\kvec{v}$};
 \end{tikzpicture}
 \caption{
-مستوی \عددی{xy} میں  مثبت (گھڑی مخالف) مستقل زاویائی سرعت \عددی{\omega} کے ساتھ ، مستوی \عددی{xy} کے متوازی سیال برقرار   گھوم رہا ہے (مثال \حوالہ{مثال_سمتی_میدان_سیال_برقرار_بیلنی})۔
+  مثبت (گھڑی مخالف) مستقل زاویائی سرعت \عددی{\omega} کے ساتھ ، مستوی \عددی{xy} کے متوازی ، سیال برقرار   گھوم رہا ہے (مثال \حوالہ{مثال_سمتی_میدان_سیال_برقرار_بیلنی})۔
 }
 \label{شکل_سمتی_گردش_سیال_بیلنی}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}
 \pgfmathsetmacro{\kA}{1}
 \pgfmathsetmacro{\kB}{2}
@@ -5673,7 +5682,8 @@ x^2 - y & 4z & x^2
 \draw[thick,-stealth](kP)++(60:\krr) arc (60:360:\krr);
 \draw[](0.8,0.75)node[pin={[pin distance={1cm},right]20:{$2x+y+z=2$}}]{};
 \end{tikzpicture}
-\caption{مسطح سطح برائے مثال \حوالہ{مثال_سمتی_میدان_سٹوکس_اطلاق }   }
+\caption
+{مستوی  سطح برائے مثال \حوالہ{مثال_سمتی_میدان_سٹوکس_اطلاق }   }
 \label{شکل_سمتی_میدان_سٹوکس_اطلاق }
 \end{minipage}
 \end{figure}
@@ -5681,14 +5691,13 @@ x^2 - y & 4z & x^2
 چونکہ \عددی{\kvec{F}=\kvec{v}=-\omega y\ai+\omega x\aj} ہے لہٰذا درج ذیل ہو گا۔
 
 \begin{align*}
-\nabla \times \kvec{F}=
 \nabla\times\kvec{F}&=\left(\frac{\partial P}{\partial y}-\frac{\partial N}{\partial z}\right)\ai+
 \left(\frac{\partial M}{\partial z}-\frac{\partial P}{\partial x}\right)\aj+
 \left(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\right)\ak\\
 &=(0-0)\ai+(0-0)\aj+(\omega-(-\omega))\ak=2\omega\ak
 \end{align*}
 
-مسئلہ سٹوکس  کے مطابق،    رداس \عددی{\rho} کے دائرہ \عددی{C}   کے ہمراہ، جو مستوی مثلاً مستوی  \عددی{xy}     میں قرص \عددی{S}  کا احاطہ کرتا ہو، کے ہمراہ \عددی{\kvec{F}} کا دائری سیلان درج ذیل ہو گا۔
+مسئلہ سٹوکس  کے مطابق،    رداس \عددی{\rho} کے دائرہ \عددی{C}   کے ہمراہ، جو مستوی،  مثلاً مستوی  \عددی{xy}     ،   میں قرص \عددی{S}  کا احاطہ کرتا ہو،   \عددی{\kvec{F}} کا دائری سیلان درج ذیل ہو گا۔
 
 \begin{align*}
 \ointctrclockwise\limits_C \kvec{F} \cdot \dif \kvec{r}=\iint\limits_S (\nabla \times \kvec{F}) \cdot \an\, \dif \sigma=\iint\limits_S 2\omega \ak\cdot\ak \dif x\dif y=(2\omega)(\pi \rho^2)
@@ -5700,11 +5709,11 @@ x^2 - y & 4z & x^2
 \انتہا{مثال}
 
 \ابتدا{مثال}\شناخت{مثال_سمتی_میدان_سٹوکس_اطلاق }   مسئلہ سٹوکس کا اطلاق\\
-اوپر سے نظارہ کرتے  ہوئے ثُمن  اول  میں واقع  مستوی \عددی{2x+y+z=2} کے ایک  ٹکڑے  کی سرحد \عددی{C} پر گھڑی مخالف چل کر 
+ ثُمن  اول  میں واقع  مستوی \عددی{2x+y+z=2} کے ایک  ٹکڑے  کی سرحد \عددی{C} پر ، اوپر سے دیکھنے پر، گھڑی مخالف چل کر 
   \عددی{\int\limits_C \kvec{F}\cdot\dif \kvec{r}} کی قیمت مسئلہ سٹوکس استعمال کرتے ہوئے تلاش کریں، جہاں \عددی{\kvec{F}=xz\ai+xy\aj+3xz\ak} ہے (شکل \حوالہ{شکل_سمتی_میدان_سٹوکس_اطلاق    })۔
 
 \حل
-یہ مستوی    تفاعل   \عددی{f(x,y,z) = 2x + y + z}  کی  ہم قیمت سطح \عددی{f(x,y,z)=2} ہے۔اس کا اکائی عمود سمتیہ
+یہ مستوی،     تفاعل   \عددی{f(x,y,z) = 2x + y + z}  کی  ہم قیمت سطح \عددی{f(x,y,z)=2} ہے۔اس کا اکائی عمود سمتیہ
 \begin{align*}
 \kvec{n}=\frac{\nabla f}{|\nabla f|}=\frac{2\ai+\aj+\ak}{|2\ai+\aj+\ak|}=\frac{1}{\sqrt{6}}(2\ai+\aj+\ak)
 \end{align*}
@@ -5722,9 +5731,7 @@ xz & xy & 3xz
 \end{align*}
  مستوی پر\عددی{z = 2 - 2x - y} ہے لہٰذا
 \begin{align*}
-\nabla \times \kvec{F}
-=
-( x - 3(2 - 2x - y) )\aj + y\ak=(7x + 3y - 6)\aj + y\ak
+\nabla \times \kvec{F}=( x - 3(2 - 2x - y) )\aj + y\ak=(7x + 3y - 6)\aj + y\ak
 \end{align*}
 
 اور
@@ -5737,14 +5744,14 @@ xz & xy & 3xz
 \end{align*}
 دائری سیلان درج ذیل ہو گا۔
 \begin{align*}
-\ointctrclockwise\limits_C \kvec{F}\cdot \dif \kvec{r}&=\iint\limits_S\nabla \times \kvec{F}) \cdot \an\, \dif\sigma&&
+\ointctrclockwise\limits_C \kvec{F}\cdot \dif \kvec{r}&=\iint\limits_S(\nabla \times \kvec{F}) \cdot \an\, \dif\sigma&&
 \text{\RL{مسئلہ سٹوکس، مساوات \حوالہ{مساوات_سمتی_میدان_مسئلہ_سٹوکس_تعریف}}}\\
 &=\int_{0}^{1}\int_{0}^{2-2x}\frac{1}{\sqrt{6}}(7x+4y-6)\sqrt{6}\dif y\dif x=-1
 \end{align*}
 \انتہا{مثال}
 
-\جزوحصہء{کثیر سطحی  سطح کے لیے مسئلہ سٹوکس کا ثبوت}
-فرض کریں \عددی{S} کثیر سطحی سطح ہے جو  محدود تعداد  کے  مسطح حصوں  پر مشتمل  ہے (مثلاً شکل\حوالہ{شکل_سمتی_کثیر_سطحی_سٹوکس})۔ ہم  \عددی{S} کے علیحدہ علیحدہ تختی  حصوں  پر مسئلہ گرین کا اطلاق  کرتے ہیں۔  تختیوں    کی دو  قسمیں ہیں۔
+\جزوحصہء{کثیر السطوح  کی سطحوں کے لیے مسئلہ سٹوکس کا ثبوت}
+فرض کریں \عددی{S} کثیر السطوح کی سطح ہے جو  محدود تعداد  کے  مستوی  حصوں  پر مشتمل  ہے (مثلاً شکل\حوالہ{شکل_سمتی_کثیر_سطحی_سٹوکس})۔ ہم  \عددی{S} کے علیحدہ علیحدہ تختی  حصوں  پر مسئلہ گرین کا اطلاق  کرتے ہیں۔  تختیوں    کی دو  قسمیں ہیں۔
 \begin{figure}
 \centering
 \begin{tikzpicture}
@@ -5774,34 +5781,34 @@ xz & xy & 3xz
 \path($(kCC)!0.50!(kEE)$)++(-0.2,0)coordinate(kPD);
 \draw[-stealth,rounded corners] plot[] coordinates {(kPA)(kPB)(kPC)(kPD)};
 \end{tikzpicture}
-\caption{کثیر سطحی کا کچھ حصہ۔}
+\caption{کثیر السطوح  کا کچھ حصہ۔}
 \label{شکل_سمتی_کثیر_سطحی_سٹوکس}
 \end{figure}
 
 \begin{enumerate}[1.]
 \item 
-وہ  جن  کو ہر طرف سے  دوسرے تختی  گھیرتے ہوں۔
+وہ  جن  کو ہر طرف سے  دوسری  تختیاں گھیرتی ہوں۔
 \item 
-وہ جن کا ایک یا ایک سے زیادہ  ضلع     کسی دوسرے  تختی  سے متصل نہ ہو۔
+وہ جن کا ایک یا ایک سے زیادہ  ضلع     کسی دوسری  تختی  سے متصل نہ ہو۔
 \end{enumerate}
 
-سطح  \عددی{S}   کی سرحد \عددی{\Delta}،      دوسری  (\اردوعدد{2})قسم کی  مستویات کے ان کناروں پر مشتمل ہے جو دوسری مستویات سے متصل نہیں۔شکل \حوالہ{شکل_سمتی_کثیر_سطحی_سٹوکس} میں مثلثات   \عددی{EAB}، \عددی{BCE}، اور \عددی{CDE} سطح \عددی{S}  کے کچھ حصے کو ظاہر کرتے ہیں جبکہ \عددی{ABCD} سرحد \عددی{\Delta} کے کچھ حصے کو ظاہر کرتا ہے۔ تینوں مثلثات  پر بالترتیب مسئلہ گرین کا اطلاق کر کے نتائج جمع کر کے درج ذیل حاصل ہو گا۔
+سطح  \عددی{S}   کی سرحد \عددی{\Delta}،      دوسری  (\اردوعدد{2}) قسم کی  تختیوں  کے ان کناروں پر مشتمل ہے جو دوسری تختیوں  سے متصل نہیں۔ شکل \حوالہ{شکل_سمتی_کثیر_سطحی_سٹوکس} میں مثلثات   \عددی{EAB}، \عددی{BCE}، اور \عددی{CDE} سطح \عددی{S}  کے کچھ حصے کو ظاہر کرتے ہیں جبکہ \عددی{ABCD} سرحد \عددی{\Delta} کے کچھ حصے کو ظاہر کرتا ہے۔ تینوں مثلثات  پر بالترتیب مسئلہ گرین کا اطلاق کر کے نتائج جمع کر کے درج ذیل حاصل ہو گا۔
 \begin{align}\label{مساوات_سمتی_میدان_کثیر_سطحی_سات}
 \left(\ointctrclockwise\limits_{EAB}+\ointctrclockwise\limits_{BCE}+\ointctrclockwise\limits_{CDE}\right) \kvec{F}\cdot \dif \kvec{r}=
 \left( \iint \limits_{EAB}+\iint\limits_{BCE}+\iint\limits_{CDE}\right)\nabla \times \kvec{F}\cdot \an\, \dif\sigma
 \end{align}
-چونکہ مساوات \حوالہ{مساوات_سمتی_میدان_کثیر_سطحی_سات}  میں  بائیں ہاتھ کے تین لکیری تکملات میں  اندرونی   (متصل  مثلثات کے مشترک)اضلاع  پر  لکیری تکملات  کے جوڑے ایک دوسرے کو کاٹتے ہیں لہٰذا  تینوں   مل کر  کنارہ \عددی{ABCDE} پر   واحد ایک  تکمل دیتے ہیں۔مثال کے طور پر  مثلث \عددی{ABE} کے ضلع  \عددی{BE} پر لکیری تکمل کی علامت \عددی{(\pm)} مثلث \عددی{EBC} کے اسی ضلع پر لکیری تکمل کی علامت  \عددی{(\mp)}کی  الٹ ہو گی۔ضلع \عددی{CE} پر بھی ایسا ہو گا۔ یوں مساوات \حوالہ{مساوات_سمتی_میدان_کثیر_سطحی_سات}   گھٹ کر    درج ذیل روپ اختیار کرتی ہے۔
+چونکہ مساوات \حوالہ{مساوات_سمتی_میدان_کثیر_سطحی_سات}  میں  بائیں ہاتھ کے تین لکیری تکملات میں  اندرونی   (متصل  مثلثات کے مشترک)اضلاع  پر  لکیری تکملات  کے جوڑے ایک دوسرے کو منسوخ کرتے  ہیں لہٰذا  تینوں تکمل    مل کر  کنارہ \عددی{ABCDE} پر   واحد ایک  تکمل دیتے ہیں۔مثال کے طور پر  مثلث \عددی{ABE} کے ضلع  \عددی{BE} پر لکیری تکمل کی علامت \عددی{(\pm)} مثلث \عددی{EBC} کے اسی ضلع پر لکیری تکمل کی علامت  \عددی{(\mp)}کے مخالف  ہو گی۔ضلع \عددی{CE} پر بھی ایسا ہو گا۔ یوں مساوات \حوالہ{مساوات_سمتی_میدان_کثیر_سطحی_سات}   گھٹ کر    درج ذیل روپ اختیار کرتی ہے۔
 \begin{align*}
 \ointctrclockwise\limits_{ABCDE} \kvec{F}\cdot \dif \kvec{r}=\iint\limits_{ABCDE}\nabla \times \kvec{F}\cdot \an\, \dif\sigma
 \end{align*}
-تمام تختوں  پر مسئلہ گرین کا اطلاق کر کے درج ذیل حاصل ہو گا جو  درحقیقت کثیر سطحی  کی   سطح \عددی{S} کا مسئلہ سٹوکس ہے۔ زیادہ عمومی  سطوح کے   لیے   ثبوت آپ کو   اعلیٰ نصاب  میں  ملیں گے۔
+تمام تختیوں  پر مسئلہ گرین کا اطلاق کر کے درج ذیل حاصل ہو گا جو  درحقیقت کثیر  السطوح    کی   سطح \عددی{S} کا مسئلہ سٹوکس ہے۔ زیادہ عمومی  سطوح کے   لیے   ثبوت آپ کو   اعلیٰ نصاب  میں  ملیں گے۔
 \begin{align*}
 \ointctrclockwise\limits_{\Delta} \kvec{F}\cdot \dif\kvec{r}=\iint\limits_{S}\nabla \times \kvec{F}\cdot \an\, \dif\sigma
 \end{align*}
 
 
 \جزوحصہء{مسئلہ سٹوکس برائے سوراخ دار سطوح}
-مسئلہ گرین کو وسعت  دینے  کے طرز پر ،  مسئلہ سٹوکس کو  ایسی  سمت بند  سطح \عددی{S} تک وسعت دی جا سکتی ہے جس میں ایک یا ایک سے زیادہ سوراخ ہوں (شکل \حوالہ{شکل_سوراخ_دور_سٹوکس})۔سطح \عددی{S} پر \عددی{\nabla\times\kvec{F}}  کے عمود  جزو کا   سطحی تکمل  اور  تمام سرحدی منحنیات پر \عددی{\kvec{F}} کے مماسی جزو کے لکیری تکملات کا مجموعہ ایک دوسرے کے  برابر ہو گا، جہاں   \عددی{S} کی سمت بندی کو مد نظر  رکھ کر منحنیات پر چلنا ہو گا۔
+مسئلہ گرین کو وسعت  دینے  کے طرز پر ،  مسئلہ سٹوکس کو  ایسی  سمت بند  سطح \عددی{S} تک وسعت دی جا سکتی ہے جس میں ایک یا ایک سے زیادہ سوراخ ہوں (شکل \حوالہ{شکل_سوراخ_دور_سٹوکس})۔سطح \عددی{S} پر \عددی{\nabla\times\kvec{F}}  کے عمود  \بدل{عنصر_سمتیہ}کا   سطحی تکمل  اور  تمام سرحدی منحنیات پر \عددی{\kvec{F}} کے مماسی \بدل{عنصر_سمتیہ} کے لکیری تکملات کا مجموعہ ایک دوسرے کے   برابر ہو گا، جہاں   \عددی{S} کی سمت بندی کو مد نظر  رکھ کر منحنیات پر چلنا ہو گا۔
 \begin{figure}
 \centering
 \begin{tikzpicture}
@@ -5812,16 +5819,17 @@ xz & xy & 3xz
 \draw[-stealth,thick](3.5,1.7)--++(45:1)node[above]{$\an$};
 \draw[-stealth,thick](3.5,1.7)++(65:0.2) arc (65:380:0.2);
 \end{tikzpicture}
-\caption{سوراخ دار سمت بند سطوح پر بھی مسئلہ سٹوکس کا اطلاق ہوتا ہے۔}
+\caption
+{سوراخ دار سمت بند سطوح پر بھی مسئلہ سٹوکس کا اطلاق ہوتا ہے۔}
 \label{شکل_سوراخ_دور_سٹوکس}
 \end{figure}
 
 \جزوجزوحصہء{ایک اہم تماثل}
 ریاضیات اور طبیعی سائنس میں درج ذیل تماثل بار بار پیش آتا ہے۔
 \begin{align}\label{مساوات_سمتی_میدان_تماثل_آٹھ}
-\nabla\times \nabla f&=\kvec{0} && f\,\text{\RL{گردش ڈھلوان}}=\kvec{0} 
+\nabla\times \nabla f=\kvec{0} \quad \quad \text{\RL{یعنی}}\quad \quad  \text{\RL{گردش(ڈھلوان \عددی{f})}}=\kvec{0} 
 \end{align}
-یہ تماثل  جو ہر اس تفاعل \عددی{f(x,y,z)} کے لیے  کارآمد ہے جس کے دوہرے جزوی تفرق استمراری ہوں، کہتا ہے کہ تفاعل \عددی{f(x,y,z)} کے ڈھلوان کی گردش   صفر ہو گی۔اس کا ثبوت درج ذیل ہے۔
+یہ تماثل  جو ہر اس تفاعل \عددی{f(x,y,z)} کے لیے  کارآمد ہے جس کے دوہرے جزوی تفارق استمراری ہوں، کہتا ہے کہ تفاعل \عددی{f(x,y,z)} کے ڈھلوان کی گردش   صفر ہو گی۔اس کا ثبوت درج ذیل ہے۔
 \begin{align*}
 \renewcommand{\arraystretch}{1.5}
 \nabla \times \nabla f =
@@ -5834,19 +5842,19 @@ xz & xy & 3xz
 \end{align*}
 
 
-ثانی  جزوی تفرق استمراری ہونے کی صورت میں  قوسین میں بند  مختلف اقسام کے ثانی  تفرق  برابر ہوں گے   (حصہ \حوالہ{حصہ_کثیر_متغیر_جزوی_تفرق}، مسئلہ \حوالہ{مسئلہ_کثیرالمتغیر_یولر}) لہٰذا سمتیہ صفر ہو گا۔
+ثانی  جزوی تفارق استمراری ہونے کی صورت میں  ، قوسین میں بند  مختلف اقسام کے ثانی   مدغم تفارق  برابر ہوں گے   (حصہ \حوالہ{حصہ_کثیر_متغیر_جزوی_تفرق}، مسئلہ \حوالہ{مسئلہ_کثیرالمتغیر_یولر}) لہٰذا سمتیہ صفر ہو گا۔
 
 \حصہء{بقائی میدان اور مسئلہ سٹوکس}
-ہم نے حصہ \حوالہ{حصہ_راہ_آزادی_تفاعل_خفی_توانائی_بقائی}میں دیکھا  کہ کھلے خطہ \عددی{D} میں میدان \عددی{\kvec{F}} کا بقائی ہونا اس کے مترادف ہے کہ  \عددی{D} میں ہر بند راہ پر \عددی{\kvec{F}} کا لکیری تکمل صفر ہو۔یہ از خود، \ترچھا{سادہ تعلق }خطوں میں، اس کے مترادف ہے کہ \عددی{\nabla\times\kvec{F}=\kvec{0}} ہو۔
+ہم نے حصہ \حوالہ{حصہ_راہ_آزادی_تفاعل_خفی_توانائی_بقائی} میں دیکھا  کہ کھلے خطہ \عددی{D} میں میدان \عددی{\kvec{F}} کا بقائی ہونا اس کے مترادف ہے کہ  \عددی{D} میں ہر بند راہ پر \عددی{\kvec{F}} کا لکیری تکمل صفر ہو؛  جو     \ترچھا{سادہ تعلق } و  کھلے خطوں میں   اس کے مترادف ہے کہ\عددی{\nabla\times\kvec{F}=\kvec{0}} ہو۔
 
-\ابتدا{مسئلہ}\شناخت{مسئلہ_سمتی_میدان_بند_حلقہ_خاصیت}\quad \موٹا{\عددی{\nabla\times \kvec{F}=\kvec{0}}  اور بند حلقہ   کی خاصیت کا تعلق} \\
-اگر فضا میں سادہ تعلق آزاد خطہ \عددی{D} کے ہر نقطہ پر \عددی{\nabla\times\kvec{F}=\kvec{0}} ہو تب \عددی{D} میں  ٹکڑوں میں  ہموار و  بند راہ \عددی{C} پر درج ذیل ہو گا۔
+\ابتدا{مسئلہ}\شناخت{مسئلہ_سمتی_میدان_بند_حلقہ_خاصیت}  \موٹا{\عددی{\nabla\times \kvec{F}=\kvec{0}}  اور بند  راہ    کی خاصیت کا تعلق} \\
+اگر فضا میں سادہ تعلق و  کھلے خطہ \عددی{D} کے ہر نقطہ پر \عددی{\nabla\times\kvec{F}=\kvec{0}} ہو تب \عددی{D} میں  ٹکڑوں میں  ہموار و  بند راہ \عددی{C} پر درج ذیل ہو گا۔
 \begin{align*}
 \ointctrclockwise\limits_C \kvec{F}\cdot\dif\kvec{r}=0
 \end{align*}
 \انتہا{مسئلہ}
 \ابتدا{ثبوت}\موٹا{خاکہ}\quad
-مسئلہ \حوالہ{مسئلہ_سمتی_میدان_بند_حلقہ_خاصیت}  کا ثبوت عموماً دو مراحل میں  کیا جاتا ہے۔ پہلا مرحلہ سادہ بند منحنیات کے لیے ہو گا۔ اعلیٰ ریاضیات کی ایک شاخ \اصطلاح{ربڑی ہندسہ}\فرہنگ{ربڑی ہندسہ}\حاشیہب{topology}\فرہنگ{topology}   کا ایک مسئلہ  کہتا ہے کہ سادہ تعلق کھلے خطہ \عددی{D} میں ہر قابل تفرق   سادہ بند منحنی  \عددی{C}  ایک ہموار دو طرفہ سطح \عددی{S}،   جو \عددی{D} میں پائی جاتی ہو، کی سرحد ہو گی ۔یوں مسئلہ سٹوکس کے تحت درج ذیل ہو گا۔
+مسئلہ \حوالہ{مسئلہ_سمتی_میدان_بند_حلقہ_خاصیت}  کا ثبوت عموماً دو مراحل میں  کیا جاتا ہے۔ پہلا مرحلہ سادہ بند منحنیات کے لیے ہو گا۔ اعلیٰ ریاضیات کی ایک شاخ \اصطلاح{ربڑی ہندسہ}\فرہنگ{ربڑی ہندسہ}\حاشیہب{topology}\فرہنگ{topology}   کا ایک مسئلہ  کہتا ہے کہ سادہ تعلق  و کھلے خطہ \عددی{D} میں ہر قابل تفرق   سادہ بند منحنی  \عددی{C}  ایک ہموار دو طرفہ سطح \عددی{S}،   جو \عددی{D} میں واقع ہو، کی سرحد ہو گی ۔یوں مسئلہ سٹوکس کے تحت درج ذیل ہو گا۔
 \begin{align*}
 \ointctrclockwise\limits_C \kvec{F} \cdot \dif\kvec{r}=\iint\limits_S(\nabla \times \kvec{F}) \cdot \an\, \dif\sigma= 0
 \end{align*}
@@ -5858,13 +5866,14 @@ xz & xy & 3xz
 %\draw[gray,thin,step=0.1](0,-2)grid (4,2);
 \draw[thick,->-=0,->-=0.105,->-=0.2,->-=0.4,->-=0.7,->-=0.85] plot[smooth cycle,tension=0.9] coordinates {(0,0) (1,-1) (2.5,1) (3,0.5)(2.5,0) (2,1.5)(4,1)(3,-1)(1,1)};
 \end{tikzpicture}
-\caption{فضا میں سادہ تعلق خطہ میں،  قابل تفرق منحنیات جو خود کو کاٹتی ہوں کو بند رگھیروں   میں تقسیم کیا جا سکتا ہے جن پر مسئلہ سٹوکس کا اطلاق ہوتا ہے۔}
+\caption
+{فضا میں سادہ تعلق  خطہ میں،  قابل تفرق منحنیات، جو خود کو کاٹتی ہوں ، کو بند  گھیروں   میں تقسیم کیا جا سکتا ہے جن پر مسئلہ سٹوکس کا اطلاق ہوتا ہے۔}
 \label{شکل_منحنی_خود_کو_کاٹتی}
 \end{figure}
-دوسرا مرحلہ اُن منحنیات کے لیے ہے جو خود کو کاٹتی ہیں، جیسے کہ شکل\حوالہ{شکل_منحنی_خود_کو_کاٹتی} میں دکھائی گئی ہے۔ ایسی منحنیات کو سادہ  حلقات، جن  کا احاطہ قابل سمت بند سطوح کرتی ہوں،  میں تقسیم کر کے باری باری ایک ایک حلقہ پر مسئلہ سٹوکس کا اطلاق کر کے نتائج کا مجموعہ لیا جاتا ہے۔
+دوسرا مرحلہ اُن منحنیات کے لیے ہے جو خود کو کاٹتی ہیں، جیسے کہ شکل\حوالہ{شکل_منحنی_خود_کو_کاٹتی} میں دکھائی  گئی ہے۔ ایسی منحنیات کو سادہ  حلقات، جن  کا احاطہ قابل سمت بند سطوح کرتی ہوں،  میں تقسیم کر کے باری باری ایک ایک حلقے پر مسئلہ سٹوکس کا اطلاق کر کے نتائج کا مجموعہ لیا جاتا ہے۔
 \انتہا{ثبوت}
 
-  تعلق دار، سادہ تعلق کھلے خطوں پر معین بقائی میدان کے لیے حاصل  نتائج  کا نچوڑ درج ذیل شکل میں پیش کیا گیا ہے۔
+  تعلق دار،سادہ تعلق  کے کھلے خطوں پر معین بقائی میدان کے لیے حاصل  نتائج  کا نچوڑ درج ذیل شکل میں پیش کیا گیا ہے۔
 \begin{center}
 \begin{tikzpicture}
 \node[draw, single arrow,minimum height=30mm, minimum width=5mm,single arrow head extend=2mm,anchor=east,rotate=180] at (0,0) {}
@@ -5889,33 +5898,31 @@ xz & xy & 3xz
 
 \ابتدا{سوال}\شناخت{سوال_سٹوکس_ایک}
 \(\kvec{F}=x^2\,\ai+2x\,\aj+z^2\,\ak\)\\
-مستوی \عددی{xy} میں   \عددی{C} ترخیم \عددی{4x^2+y^2=4}  ہے  جو اوپر سے دیکھتے ہوئے گھڑی مخالف ہے۔
+مستوی \عددی{xy} میں   \عددی{C} ترخیم \عددی{4x^2+y^2=4}  ہے   جو اوپر سے دیکھنے پر گھڑی مخالف ہے۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{$4\pi$}}
 \انتہا{جواب}
 \ابتدا{سوال}\(\kvec{F}=2y\,\ai+3x\,\aj-z^2\,\ak\)\\
-مستوی \عددی{xy} میں   \عددی{C}  دائرہ  \عددی{x^2+y^2=9}  ہے  جو اوپر سے دیکھتے ہوئے گھڑی مخالف ہے۔
+مستوی \عددی{xy} میں   \عددی{C}  دائرہ  \عددی{x^2+y^2=9}  ہے  جو اوپر سے دیکھنے پر گھڑی مخالف ہے۔
 \انتہا{سوال}
-
 \ابتدا{سوال}\(\kvec{F}=y\,\ai+xz\,\aj+x^2\,\ak\)\\
- مستوی \عددی{x+y+z=1}  سے ثُمن اول  مثلث کاٹتا ہے جس کی سرحد  \عددی{C}  ہے   جو اوپر سے دیکھتے ہوئے گھڑی مخالف ہے۔
+ مستوی \عددی{x+y+z=1}  سے ثُمن اول  مثلث کاٹتا ہے،  جس کی سرحد  \عددی{C}  ہے   جو اوپر سے دیکھنے پر گھڑی مخالف ہے۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{$-5/6$}}
 \انتہا{جواب}
 \ابتدا{سوال}\(\kvec{F}=(y^2+z^2)\,\ai+(x^2+z^2)\,\aj+(x^2+y^2)\,\ak\)\\
- مستوی \عددی{x+y+z=1}  سے ثُمن اول  مثلث کاٹتا ہے جس کی سرحد  \عددی{C}  ہے   جو اوپر سے دیکھتے ہوئے گھڑی مخالف ہے۔
+ مستوی \عددی{x+y+z=1}  سے ثُمن اول  مثلث کاٹتا ہے،  جس کی سرحد  \عددی{C}  ہے   جو اوپر سے دیکھنے پر گھڑی مخالف ہے۔
 \انتہا{سوال}
-
 \ابتدا{سوال}\(\kvec{F}=(y^2+z^2)\,\ai+(x^2+y^2)\,\aj+(x^2+y^2)\,\ak\)\\
-مستوی \عددی{xy} میں خطوط \عددی{x=\pm 1} اور \عددی{y=\pm 1}    ایک مربع \عددی{C}   گھیرتے  ہیں  جو اوپر سے دیکھتے ہوئے گھڑی مخالف ہے۔
+مستوی \عددی{xy} میں خطوط \عددی{x=\pm 1} اور \عددی{y=\pm 1}    ایک مربع \عددی{C}   گھیرتے  ہیں  جو اوپر سے دیکھنے پر گھڑی مخالف ہے۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{$0$}}
 \انتہا{جواب}
 \ابتدا{سوال}\شناخت{سوال_سٹوکس_چھ}\(\kvec{F}=x^2y^3\,\ai+\aj+z\,\ak\)\\
-بیلن \عددی{x^2+y^2=4} اور نصف کرہ \عددی{x^2+y^2+z^2=16,\qquad z\ge 0}  کے تقاطع سے حاصل  منحنی \عددی{C} جو اوپر سے دیکھتے ہوئے   گھڑی مخالف  ہے۔
+بیلن \عددی{x^2+y^2=4} اور نصف کرہ \عددی{x^2+y^2+z^2=16,\qquad z\ge 0}  کے تقاطع سے حاصل  منحنی \عددی{C}  جو اوپر سے دیکھنے پر   گھڑی مخالف  ہے۔
 \انتہا{سوال}
 
 \جزوحصہء{گردش کا بہاؤ}
@@ -5929,36 +5936,34 @@ xz & xy & 3xz
 \انتہا{جواب}
 %Q8
 \ابتدا{سوال}
-قطع مکافی  خول \عددی{S:\, 4x^2+y+z^2=4,\, y\ge 0}  کا بیرونی (مبدا سے دوری کی جانب)  اکائی عمود سمتیہ  \عددی{\kvec{n}}ہے۔درج ذیل  میدان
+قطع مکافی  خول \عددی{S:\, 4x^2+y+z^2=4,\, y\ge 0}  کا بیرونی (مبدا سے دُور کی جانب)  اکائی عمود سمتیہ  \عددی{\kvec{n}}ہے۔درج ذیل  میدان
 \[\kvec{F}=\left(-z+\frac{1}{2+x}\right)\ai+(\tan^{-1}y)\aj+\left(x+\frac{1}{4+z}\right)\ak\]
  کے لیے  تکمل  \عددی{\iint\limits_S \nabla\times\kvec{F}\cdot\kvec{n}\dif\sigma} کی قیمت تلاش کریں۔
 \انتہا{سوال}
 %Q9
 \ابتدا{سوال}
-فرض کریں سطح \عددی{S}  بیلن   \عددی{x^2+y^2=a^2,\, 0\le z\le h}  اور اس کا بالائی ڈھکن   \عددی{x^2+y^2\le a^2,\,  z=h}  پر مشتمل ہے۔میدان \عددی{\kvec{F}=-y\ai+x\aj+x^2\ak} کے لیے سطح \عددی{S} سے \عددی{\nabla\times\kvec{F}} کا  باہر رخ  بہاؤ  تلاش کریں۔
+فرض کریں سطح \عددی{S}  ، بیلن   \عددی{x^2+y^2=a^2,\, 0\le z\le h}  اور اس کے بالائی ڈھکن   \عددی{x^2+y^2\le a^2,\,  z=h}  پر مشتمل ہے۔میدان \عددی{\kvec{F}=-y\ai+x\aj+x^2\ak} کے لیے سطح \عددی{S} سے باہر رخ  گزرنے والا بہاؤ    \عددی{\nabla\times\kvec{F}}  کے لئے تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{$2\pi a^2$}}
 \انتہا{جواب}
-
+%Q10
 \ابتدا{سوال}
  درج ذیل تکمل کا حساب کریں   جہاں \عددی{S}  نصف کرہ \عددیء{x^2+y^2+z^2=1,\,z\ge0} ہے۔
 \[\iint\limits_S\bigl(\nabla\times(y\ai)\bigr)\cdot\an\,\dif \sigma\]
 \انتہا{سوال}
-
 \ابتدا{سوال} \موٹا{گردش \عددی{\kvec{F}} کا بہاؤ}\\
 دکھائیں کہ  ان تمام سمت بند  سطوح \عددی{S} کے لیے ، جو  \عددی{C} کا  احاطہ  ہوں اور جن کا  \عددی{C} پر مثبت رخ ایک  ہو،درج ذیل تکمل کی قیمتیں  برابر ہوں  گی۔
 \[\iint\limits_S(\nabla\times\kvec{F})\cdot\an\,\dif \sigma\]
 \انتہا{سوال}
-
 \ابتدا{سوال}
- فرض کریں \(\kvec{F}\)  قابل  سمت بند  سمتیہ میدان ہے جو   ایسے خطے پر معین ہے جس میں ایک ہموار بند سمت بند سطح \(S\) اور اس کا اندرونی حصہ شامل ہیں۔سطح  \(S\) پر اکائی عمود سمتیہ میدان \(\an\) ہے۔ مزید فرض کریں کہ \(S\)، دو سطحوں \(S_1\) اور \(S_2\) کا مجموعہ ہے جو آپس میں  ایک ہموار سادہ بند منحنی \(C\)  پر  جُڑی ہوئی ہیں۔ کیا درج ذیل کے بارے میں کچھ کہا جا سکتا ہے؟
+ فرض کریں  \عددی{\kvec{F}} قابل  ِسمت بند  سمتیہ میدان ہے جو   ایسے خطے پر معین ہے جس میں  ہموار بند  اور سمت بند سطح \عددی{S} اور اس کا اندرونی حصہ شامل ہیں۔سطح  \عددی{S} پر اکائی عمود سمتیہ میدان \عددی{\an}  ہے۔ مزید فرض کریں کہ \عددی{S} ، دو سطحوں \عددی{S_1} اور \عددی{S_2} کا مجموعہ ہے جو آپس میں    ہموار سادہ بند منحنی \عددی{C}  پر  جُڑی ہوئی ہیں۔ کیا درج ذیل کے بارے میں کچھ کہا جا سکتا ہے؟
 \[\iint\limits_S(\nabla\times\kvec{F})\cdot\an\,\dif \sigma\]
 اپنے جواب کی وجوہات بیان کریں۔
 \انتہا{سوال}
 
 \جزوحصہء{مقدار معلوم سطوح کے لیے مسئلہ سٹوکس}
-سوال \حوالہ{سوال_سٹوکس_تیرہ} تا  \حوالہ{سوال_سٹوکس_اٹارہ}میں بیرونی سمت  اکائی عمود سمتیہ \عددی{\kvec{n}} کے رخ ، سطح \عددی{S} سے گزرتا میدان \عددی{\kvec{F}}  کی گردش کے بہاؤ کی قیمت  مسئلہ سٹوکس کا سطحی تکمل استعمال کر کے تلاش کریں۔
+سوال \حوالہ{سوال_سٹوکس_تیرہ} تا  \حوالہ{سوال_سٹوکس_اٹارہ}  میں   سطح \عددی{S} سے، بیرونی سمت    اکائی عمود سمتیہ \عددی{\kvec{n}} کے رخ میں ،   میدان \عددی{\kvec{F}}  کی گردش کے بہاؤ کی قیمت  مسئلہ سٹوکس کا سطحی تکمل استعمال کر کے تلاش کریں۔
 %Q13
 \ابتدا{سوال}\شناخت{سوال_سٹوکس_تیرہ}
 \(\kvec{F}=2z\ai+3x\aj+5y\ak\)\\
@@ -5977,7 +5982,6 @@ S:\quad \kvec{r}(r,\theta)=r\cos \theta\,\ai+r\sin \theta\,\aj+(4-r^2)\ak,\qquad
  0\le r\le3, \, 0\le \theta \le 2\pi
 \]
 \انتہا{سوال}
-
 \ابتدا{سوال}  \( \kvec{F} = x^2y\,\ai + 2y^3z\,\aj + 3z\,\ak \)
 \[S:\quad  \kvec{r}(r,\theta) = r\cos \theta\,\ai + r\sin \theta\,\aj + r\,\ak,\qquad 0\le r\le1, \, 0\le \theta\le2\pi \]
 \انتہا{سوال}
@@ -5987,7 +5991,6 @@ S:\quad \kvec{r}(r,\theta)=r\cos \theta\,\ai+r\sin \theta\,\aj+(4-r^2)\ak,\qquad
 \ابتدا{سوال}  \( \kvec{F} = (x-y)\ai + (y-z)\aj + (z-x)\ak \)
 \[ S:\quad \kvec{r}(r,\theta) = r\cos \theta\,\ai + r\sin \theta\,\aj + (5-r)\ak,\qquad 0\le r\le5, \, 0\le \theta\le2\pi \]
 \انتہا{سوال}
-
 \ابتدا{سوال}  \( \kvec{F} = 3y\,\ai + (5-2x)\aj + (z^2-2)\ak \)
 \[S:\quad  \kvec{r}(\phi,\theta) = \sqrt{3}\sin\phi\cos \theta\,\ai + \sqrt{3}\sin\phi\sin \theta\,\aj + \sqrt{3}\cos\phi\,\ak\]
 \[ 0\le\phi\le\frac{\pi}{2}, \, 0\le \theta\le2\pi \]
@@ -6001,10 +6004,9 @@ S:\quad \kvec{r}(r,\theta)=r\cos \theta\,\ai+r\sin \theta\,\aj+(4-r^2)\ak,\qquad
  \انتہا{سوال} 
 
 \جزوحصہ{نظریہ اور مثالیں}
-
 %Q19
 \ابتدا{سوال}\موٹا{ صفر  دائری سیلان}\quad
- تماثل \عددی{\nabla\times\nabla f} ( مساوات \حوالہ{مساوات_سمتی_میدان_تماثل_آٹھ})  اور مسئلہ سٹوکس استعمال کرتے ہوئے دکھائی کہ فضا میں کسی بھی ہموار قابل سمت بند سطح  کی سرحد  کے ہمراہ  درج ذیل میدان کا دائری سیلان صفر ہو گا۔
+ تماثل \عددی{\nabla\times\nabla f} ( مساوات \حوالہ{مساوات_سمتی_میدان_تماثل_آٹھ})  اور مسئلہ سٹوکس استعمال کرتے ہوئے دکھائیں کہ فضا میں کسی بھی ہموار قابل سمت بند سطح  کی سرحد  کے ہمراہ  درج ذیل میدان کا دائری سیلان صفر ہو گا۔
 \begin{enumerate}[a.]
 \item \( \kvec{F} = 2x\ai + 2y\aj + 2z\ak \) 
 \item \( \kvec{F} = \nabla(xy^2z^3) \) 
@@ -6012,7 +6014,6 @@ S:\quad \kvec{r}(r,\theta)=r\cos \theta\,\ai+r\sin \theta\,\aj+(4-r^2)\ak,\qquad
 \item \( \kvec{F} = \nabla f \)
 \end{enumerate}
 \انتہا{سوال}
-
 \ابتدا{سوال} \موٹا{صفر دائری سیلان}\quad
 تفاعل \عددی{f(x,y,z)=(x^2+y^2+z^2)^{-1/2}} اور میدان \عددیء{\kvec{F}=\nabla f} ہیں۔درج ذیل طریقوں  سے  دکھائیں  کہ مستوی \عددی{xy}   میں  دائرہ \عددی{x^2+y^2=a^2}  پر میدان کا  گھڑی وار   دائری سیلان صفر ہے۔
 \begin{enumerate}[a.]
@@ -6022,10 +6023,9 @@ S:\quad \kvec{r}(r,\theta)=r\cos \theta\,\ai+r\sin \theta\,\aj+(4-r^2)\ak,\qquad
 مسئلہ سٹوکس کا استعمال کریں۔
 \end{enumerate}
 \انتہا{سوال}
-
 %Q21
 \ابتدا{سوال}
-مستوی \عددی{2x+2y+z=2}  میں  \عددی{C} ایک سادہ بند ہموار منحنی ہے جس کی سمت بندی  یہاں دکھائی گئی ہے۔ دکھائیں کہ درج ذیل کی قیمت  \عددی{C} میں محیط خطے کے رقبے پر منحصر ہے نا کہ \عددی{C} کی شکل و صورت یا مقام پر۔
+مستوی \عددی{2x+2y+z=2}  میں  \عددی{C} ایک سادہ بند ہموار منحنی ہے جس کی سمت بندی  یہاں دکھائی گئی ہے۔ دکھائیں کہ درج ذیل کی قیمت  \عددی{C} میں محصور خطے کے رقبے پر منحصر ہے نہ کہ \عددی{C} کی شکل و صورت یا مقام پر۔
 \[\ointctrclockwise\limits_C\left(2y\,dx+3z\,dy-x\,dz\right)\]
 \begin{center}
 \begin{tikzpicture}
@@ -6043,19 +6043,15 @@ S:\quad \kvec{r}(r,\theta)=r\cos \theta\,\ai+r\sin \theta\,\aj+(4-r^2)\ak,\qquad
 \end{tikzpicture}
 \end{center}
 \انتہا{سوال}
-
 \ابتدا{سوال}
- ثابت کریں اگر\(\kvec{F}=x\ai+y\aj+z\ak\) ہو تب \(\nabla\times\kvec{F}=0\)   ہوگا۔
+ ثابت کریں  کہ اگر\(\kvec{F}=x\ai+y\aj+z\ak\) ہو تب \(\nabla\times\kvec{F}=0\)   ہوگا۔
 \انتہا{سوال}
-
 \ابتدا{سوال}
- ایسا سمتیہ میدان معلوم کریں جس کے اجزاء دو مرتبہ قابل تفرق ہوں اور جس کی گردش  \(x\ai+y\aj+z\ak\) ہو، یا ثابت کریں  ایسا کوئی میدان موجود نہیں۔
+ ایسا سمتیہ میدان معلوم کریں جس کے \بدل{عناصر_سمتیہ}دو مرتبہ قابل تفرق ہوں اور جس کی گردش   \عددی{x\ai+y\aj+z\ak} ہو، یا ثابت کریں  کہ  ایسا کوئی میدان موجود نہیں۔
 \انتہا{سوال}
-
 \ابتدا{سوال}
- کیا  مسئلہ  سٹوکس  ایسے میدان میں گردش کے بارے میں کوئی خاص نتیجہ دیتا ہے جس کی  گردش صفر ہو؟ اپنے جواب کی وجوہات بیان کریں۔
+ کیا  مسئلہ  سٹوکس  ایسے میدان  میں  دائری سیلان   کے بارے میں کوئی خاص نتیجہ دیتا ہے جس کی  گردش صفر ہو؟ اپنے جواب کی وجوہات بیان کریں۔
 \انتہا{سوال}
-
 \ابتدا{سوال}
 مستوی \عددی{xy} میں \عددی{R} ایسا خطہ ہے  جس کو  ٹکڑوں میں  ہموار سادہ بند منحنی  \عددی{C}  گھیرتی ہے۔  فرض کریں  محور \عددی{x} اور محور \عددی{y}   کے لحاظ سے \عددی{R} کے   جمود  بالترتیب \عددی{I_x} اور \عددی{I_y} ہیں۔ درج ذیل تکمل کی قیمت  \عددی{I_x} اور \عددی{I_y} کے روپ میں  تلاش کریں جہاں \عددی{r=\sqrt{x^2+y^2}}  ہے۔
 \[\ointctrclockwise\limits_C \nabla(r^4)\cdot \kvec{n}\dif  s\]
@@ -6074,16 +6070,17 @@ S:\quad \kvec{r}(r,\theta)=r\cos \theta\,\ai+r\sin \theta\,\aj+(4-r^2)\ak,\qquad
 
 
 \حصہ{مسئلہ  انفراج اور  ایک مربوط نظریہ}\شناخت{حصہ_سمتی_میدان_مسئلہ_پھیلاؤ}
-مستوی میں  مسئلہ گرین کا گردشی روپ   کہتا  ہے کہ   سادہ بند منحنی کو  پار   کرنے والا ،سمتیہ میدان کا  خالص بیرونی بہاؤ     ، منحنی میں محیط خطے پر میدان کے انفراج  پر تکمل  سے حاصل کیا جا سکتا ہے۔ تین ابعاد  میں متعلقہ  مسئلہ، جو مسئلہ انفراج کہلاتا ہے،  کے تحت فضا میں بند سطح سے   سمتیہ میدان  کا  باہر رخ گزرنے والا بہاؤ ، سطح میں محیط  خطے پر  ، میدان کے انفراج    کے تکمل سے حاصل  کیا جا سکتا ہے۔اس حصے میں ہم مسئلہ انفراج ثابت کرتے ہیں، اور دکھاتے ہیں  کہ یہ بہاؤ کی قیمت کی  تلاش  کیسے آسان بناتا ہے۔ ہم  برقی میدان میں بہاؤ  کا قانون گاوس اور  ماقوا حرکیات  کی  استمراری مساوات بھی اخذ کرتے ہیں۔ آخر  میں ہم  باب  کے سمتیہ تکملی مسائل کو ایک بنیادی مسئلہ  کے روپ میں پیش کرتے ہیں۔
+مستوی میں  مسئلہ گرین کا گردشی روپ   کہتا  ہے کہ   سادہ بند منحنی کو   عبور    کرنے والا  سمتیہ میدان کا     بیرونی   صافی  بہاؤ     ، منحنی میں محصور خطے پر میدان کے انفراج   کے  تکمل  سے حاصل کیا جا سکتا ہے۔ تین ابعاد  میں متعلقہ  مسئلہ، جو مسئلہ انفراج کہلاتا ہے،  کے تحت فضا میں بند سطح سے   سمتیہ میدان  کا  باہر کے  رخ میں  گزرنے والا بہاؤ ، سطح میں محصور خطے پر  ، میدان کے انفراج    کے تکمل سے حاصل  کیا جا سکتا ہے۔اس حصے میں ہم مسئلہ انفراج ثابت کرتے ہیں، اور دکھاتے ہیں  کہ یہ بہاؤ کی قیمت کی  تلاش  کیسے آسان بناتا ہے۔ ہم  برقی میدان میں بہاؤ  کا قانون گاؤس اور  ماقوا حرکیات  کی  استمراری مساوات بھی اخذ کرتے ہیں۔ آخر  میں ہم  باب  کے سمتیہ تکملی مسائل کو ایک بنیادی مسئلہ  کے روپ میں پیش کرتے ہیں۔
 
 \جزوحصہء{تین ابعاد میں انفراج}
 سمتیہ میدان \عددی{\kvec{F} = M(x,y,z)\ai + N(x,y,z)\aj + P(x,y,z)\ak}  کا\اصطلاح{ انفراج}\فرہنگ{انفراج}\حاشیہب{divergence}\فرہنگ{divergence} درج ذیل عددیہ تفاعل ہو گا۔
 \begin{align}\label{مساوات_سمتی_میدان__پھیلاؤ_تعریف_الف}
 \kvec{F}\text{انفراج}  = \nabla \cdot \kvec{F}=\frac{\partial M}{\partial x}+\frac{\partial N}{\partial y}+\frac{\partial P}{\partial z}
 \end{align}
-علامت \قول{انفراج $\kvec{F}$} کو  \قول{$F$ کا  انفراج} پڑھا جاتا ہے، جبکہ علامت  \قول{$\nabla\cdot \kvec{F}$}  کو  \قول{ڈیل  ایف} پڑھا جاتا ہے۔
+علامت \قول{انفراج  \عددی{\kvec{F}}} کو  \قول{\عددی{\kvec{F}}  کا  انفراج} پڑھا جاتا ہے، جبکہ
+ علامت  \قول{\عددی{\nabla\cdot \kvec{F}}}  کو  \قول{ڈیل  ایف} پڑھا جاتا ہے۔
 
- تین ابعاد میں  انفراج   \عددی{\kvec{F}} کا  وہی طبیعی   مفہوم  ہے جو دو ابعاد  میں ہے۔ اگر  \عددی{\kvec{F}} سیال کے بہاؤ کا سمتیہ میدان رفتار  ہو،  نقطہ  \عددی{(x,y,z)}  پر  بہاؤ \عددی{\kvec{F}}کی قیمت   اس نقطے پر سیال  کے دخول یا خروج کی شرح  دے گی۔  انفراج سے مراد  نقطے پر بہاؤ  فی اکائی حجم   یعنی کثافت بہاؤ ہے۔
+ تین ابعاد میں  انفراج   \عددی{\kvec{F}} کا  وہی طبیعی   مفہوم  ہے جو دو ابعاد  میں ہے۔ اگر  \عددی{\kvec{F}} سیال کے  سیلان کا سرعتی میدان   ہو،  نقطہ  \عددی{(x,y,z)}  پر    \عددی{\kvec{F}} کے انفراج کی قیمت   اس نقطے پر سیال  کے دخول یا خروج کی شرح  دے گی۔  انفراج سے مراد  نقطے پر بہاؤ  فی اکائی حجم   یعنی کثافت بہاؤ ہے۔
 
 
 \ابتدا{مثال} انفراج کی تلاش\\
@@ -6098,11 +6095,11 @@ S:\quad \kvec{r}(r,\theta)=r\cos \theta\,\ai+r\sin \theta\,\aj+(4-r^2)\ak,\qquad
 
 
 \جزوحصہء{مسئلہ انفراج}
-مسئلہ انفراج  کہتا ہے کہ  مناسب شرائط کے تحت،       (باہر  رخ سمت بند)  بند سطح سے  سمتیہ میدان کا  باہر  گزرنے والا  بہاؤ ، سطح میں محیط خطے پر ، میدان کے انفراج کے تہرا تکمل کے  برابر ہو گا۔
+مسئلہ انفراج  کہتا ہے کہ  مناسب شرائط کے تحت،       (باہر  رخ سمت بند اور)   بند سطح سے  سمتیہ میدان کا  باہر  گزرنے والا  بہاؤ ، سطح میں محصور  خطے پر ، میدان کے انفراج کے تہرے  تکمل کے  برابر ہو گا۔
 
 
 \ابتدا{مسئلہ}\موٹا{مسئلہ انفراج}\\
- بند ، سمت بند سطح \عددی{S}    سے   سمتیہ میدان \عددی{\kvec{F}} کا،      سطح کے باہر رخ  اکائی عمود سمتیہ کے رخ ،گزرنے والا  بہاؤ،  سطح میں محیط خطہ \عددی{D}  پر \عددی{\nabla\cdot \kvec{F}} کے تکمل کے برابر ہو گا۔
+ بند   اور سمت بند سطح \عددی{S}    سے   سمتیہ میدان \عددی{\kvec{F}} کا،      سطح کے باہر رخ  اکائی عمود سمتیہ کے رخ میں ،گزرنے والا  بہاؤ،  سطح میں محصور خطہ \عددی{D}  پر \عددی{\nabla\cdot \kvec{F}} کے تکمل کے برابر ہو گا۔
 \begin{align}\label{مساوات_سمتی_میدان__پھیلاؤ_تعریف_ب}
 \underbrace{\iint\limits_S \kvec{F}\cdot\kvec{n}\dif \sigma}_{\text{\RL{باہر رخ بہاؤ}}}=\underbrace{\iint\limits_D \nabla \cdot\kvec{F}\dif H}_{\text{\RL{تکمل انفراج}}}
 \end{align}
@@ -6120,22 +6117,22 @@ S:\quad \kvec{r}(r,\theta)=r\cos \theta\,\ai+r\sin \theta\,\aj+(4-r^2)\ak,\qquad
 \begin{align*}
 \kvec{F}\cdot \an \dif\sigma=\frac{x^2+y^2+z^2}{a}\dif \sigma=\frac{a^2}{a}\dif\sigma=a\dif\sigma
 \end{align*}
-لہٰذا مساوات \حوالہ{مساوات_سمتی_میدان__پھیلاؤ_تعریف_ب}  کا ایک ہاتھ   ا درج ذیل ہو گا۔
+لہٰذا مساوات \حوالہ{مساوات_سمتی_میدان__پھیلاؤ_تعریف_ب}  کا  بایاں ہاتھ   ا درج ذیل ہو گا۔
 \begin{align*}
 \iint\limits_S \kvec{F}\cdot \an\dif \sigma=\iint\limits_S a\dif \sigma=a\iint\limits_S \dif\sigma=4\pi a^3
 \end{align*}
-میدان \عددی{\kvec{F}} کا انفراج 
+میدان \عددی{\kvec{F}} کا انفراج  درج ذیل ہے
 \begin{align*}
 \nabla\cdot \kvec{F}=\frac{\partial}{\partial x}(x)+\frac{\partial}{\partial y}(y)+\frac{\partial}{\partial z}(z)=3
 \end{align*}
-لہٰذا  مساوات \حوالہ{مساوات_سمتی_میدان__پھیلاؤ_تعریف_ب}  کا دوسرا ہاتھ ا درج ذیل ہو گا۔
+لہٰذا  مساوات \حوالہ{مساوات_سمتی_میدان__پھیلاؤ_تعریف_ب}  کا دایاں  ہاتھ ا درج ذیل ہو گا۔
 \begin{align*}
 \iiint\limits_D \nabla\cdot \kvec{F}\,\dif H=\iiint\limits_D 3 \dif H=3\left(\frac{4}{3}\pi a^3\right)=4\pi a^3
 \end{align*}
 \انتہا{مثال}
 
 \ابتدا{مثال} بہاؤ کی تلاش\\
-ثُمن اول سے مستویات \عددی{x=1}، \عددی{y=1}، اور \عددی{z=1}  مکعب کاٹتی ہیں۔  سمتیہ میدان \عددی{\kvec{F}=xy\ai+yz\aj+xz\ak} کا  مکعب کی سطح سے باہر رخ گزرتا بہاؤ تلاش کریں۔
+ثُمن اول سے مستویات \عددی{x=1}، \عددی{y=1}، اور \عددی{z=1}  مکعب کاٹتی ہیں۔  سمتیہ میدان \عددی{\kvec{F}=xy\ai+yz\aj+xz\ak} کا  مکعب کی سطح سے باہر رخ گزرنے والا بہاؤ تلاش کریں۔
 
 \حل
 مکعب کی  چھ  سطوح پر تکمل لے کر بہاؤ  کی قیمت تلاش کرنے کے بجائے ہم  انفراج
@@ -6152,15 +6149,15 @@ S:\quad \kvec{r}(r,\theta)=r\cos \theta\,\ai+r\sin \theta\,\aj+(4-r^2)\ak,\qquad
 
 
 \جزوحصہء{مخصوص خطوں  کے لیے مسئلہ انفراج کا ثبوت}
-ہم فرض کرتے ہیں کہ \عددی{\kvec{F}} کے اجزاء کے جزوی یک رتبی  تفرق استمراری ہیں۔ ہم مزید فرض کرتے ہیں کہ خطہ  \عددی{D} محدب ہے اور اس میں کوئی سوراخ  یا بلبلا نہیں پایا جاتا، مثلاً ٹھوس مکعب، کرہ، یا ترخیمی جسم، اور   اس کی سطح \عددی{S} ٹکڑوں میں ہموار ہے۔ اس کے ساتھ ساتھ ہم فرض کرتے ہیں کہ  مستوی \عددی{xy} پر \عددی{D} کی  قائمہ تظلیل   \عددی{R_{xy}}  کے اندرونی  ہر نقطے پر ، \عددی{xy}  مستوی کے  عمود لکیر  ، سطح \عددی{S} کو ٹھیک دو نقاط  پر قطع کرتی ہے جس سے ہمیں درج ذیل دو سطوح ملتے ہیں
+ہم فرض کرتے ہیں کہ \عددی{\kvec{F}} کے  \بدل{عناصر_سمتیہ} کے جزوی یک رتبی  تفارق استمراری ہیں۔ ہم مزید فرض کرتے ہیں کہ خطہ  \عددی{D} محدب ہے اور اس میں کوئی سوراخ  یا بلبلا نہیں پایا جاتا، مثلاً ٹھوس مکعب، کرہ، یا ترخیمی جسم، اور   اس کی سطح \عددی{S} ٹکڑوں میں ہموار ہے۔ اس کے ساتھ ساتھ ہم فرض کرتے ہیں کہ  مستوی \عددی{xy} پر \عددی{D} کی  قائمہ تظلیل   \عددی{R_{xy}}  کے اندرونی  ہر نقطے پر ، \عددی{xy}  مستوی کے  عمود میں کھینچی گئی  لکیر  ، سطح \عددی{S} کو ٹھیک دو نقاط  پر قطع کرتی ہے جس سے ہمیں درج ذیل دو سطوح ملتی ہیں
 \begin{align*}
-S_1:\quad z&=f_1(x,y),\quad \text{\RL{نقطہ $(x,y)$  تظلیل $R_{xy}$ میں ہے}}\\
-S_2:\quad z&=f_2(x,y),\quad \text{\RL{نقطہ $(x,y)$  تظلیل $R_{xy}$ میں ہے}}
+S_1:\quad z&=f_1(x,y),\quad \text{\RL{نقطہ  \عددی{(x,y)}  تظلیل  \عددی{R_{xy}} میں ہے}}\\
+S_2:\quad z&=f_2(x,y),\quad \text{\RL{نقطہ  \عددی{(x,y)} تظلیل  \عددی{R_{xy}} میں ہے}}
 \end{align*}
- جہاں \عددی{f_1\le f_2} ہے۔ہم اسی طرح کے مفروضے   دیگر محددی سطوح پر \عددی{D}  کی  قائمہ تظلیل  کے  لیے فرض کرتے ہیں۔شکل \حوالہ{شکل_مسئلہ_پھیلاؤ_ثبوت}  دیکھیں۔
+ جہاں \عددی{f_1\le f_2} ہے۔ہم اسی طرح کے مفروضے   دیگر محددی مستویات  پر \عددی{D}  کی  قائمہ تظلیل  کے  لیے فرض کرتے ہیں۔شکل \حوالہ{شکل_مسئلہ_پھیلاؤ_ثبوت}  دیکھیں۔
 
 \begin{figure}
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.50\textwidth}
 \centering
 \begin{tikzpicture}
 \draw[-stealth](0,0)--++(-135:1)node[left]{$x$};
@@ -6173,7 +6170,8 @@ S_2:\quad z&=f_2(x,y),\quad \text{\RL{نقطہ $(x,y)$  تظلیل $R_{xy}$ می
 \draw[](1.5,-0.75)node[right]{$R_{xy}$} circle (1cm and 0.5cm);
 \draw[](-1,1.5)node[above]{$R_{xz}$} circle (0.5cm and 1cm);
 \end{tikzpicture}
-\caption{دکھائی گئی  قسم کے  تین ابعادی خطے کے لیے مسئلہ انفراج ثابت کرنے کے بعد مسئلے کو دیگر خطوں تک وسعت دی جائے گی۔}
+\caption
+{دکھائی گئے   قسم کے  تین ابعادی خطے کے لیے مسئلہ انفراج ثابت کرنے کے بعد مسئلے کو دیگر خطوں تک وسعت دی جائے گی۔}
 \label{شکل_مسئلہ_پھیلاؤ_ثبوت}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
@@ -6197,14 +6195,14 @@ S_2:\quad z&=f_2(x,y),\quad \text{\RL{نقطہ $(x,y)$  تظلیل $R_{xy}$ می
 \draw[-stealth,thick](0,0)--++(0,2.5)node[right]{$\ak$};
 \end{tikzpicture}
 \caption
-{   اکائی سمتیات   \عددی{\ai}، \عددی{\aj}، اور \عددی{\ak}  کے ساتھ اکائی عمود سمتیہ \عددی{\an}  بالترتیب زاویہ  \عددی{\alpha}، \عددی{\beta}،  اور \عددی{\gamma} بناتا ہے۔ ان زاویوں  کے کوسائن \عددی{\an} کے عددیہ اجزاء ہیں۔
+{   اکائی سمتیات   \عددی{\ai}، \عددی{\aj}، اور \عددی{\ak}  کے ساتھ اکائی عمود سمتیہ \عددی{\an}  بالترتیب زاویہ  \عددی{\alpha}، \عددی{\beta}،  اور \عددی{\gamma} بناتا ہے۔ ان زاویوں  کے کوسائن \عددی{\an} کے عددیہ  \بدل{عناصر_سمتیہ}  ہیں۔
 }
 \label{شکل_سمتی_میدان_اکائی_عمودی_سمتیہ_کے_جزو}
 \end{minipage}
 \end{figure}
 
-
-اکائی عمود سمتیہ \عددی{\an=n_1\ai+n_2\aj+n_3\ak} کے اجزاء ، زاویات \عددی{\alpha}، \عددی{\beta}، اور \عددی{\gamma}   کے کوسائن ہیں ، جو \عددی{\an} اکائی سمتیات \عددی{\ai}، \عددی{\aj}، اور \عددی{\ak} کے ساتھ بناتا ہے (شکل \حوالہ{شکل_سمتی_میدان_اکائی_عمودی_سمتیہ_کے_جزو})۔  تمام سمتیات اکائی  ہونے کی وجہ سے ایسا  ہو گا۔یوں 
+اکائی سمتیات \عددی{\ai}، \عددی{\aj}، اور \عددی{\ak} کے ساتھ  \عددی{\an}    بالترتیب   \عددی{\alpha}، \عددی{\beta}، اور \عددی{\gamma}  زاویے بناتا ہے۔ ان زاویوں کے کوسائن (\عددی{\cos \alpha}،\عددی{\cos\beta}،  اور \عددی{\cos\gamma}) اکائی عمود سمتیہ \عددی{\an=n_1\ai+n_2\aj+n_3\ak} کے \بدل{عناصر_سمتیہ}  ہوں گے   (شکل \حوالہ{شکل_سمتی_میدان_اکائی_عمودی_سمتیہ_کے_جزو})۔
+  تمام سمتیے  اکائی  ہونے کی بدولت  ایسا  ہو گا۔یوں 
 \begin{align*}
 n_1&=\an\cdot\ai=|\an||\ai|\cos\alpha=\cos\alpha\\
 n_2&=\an\cdot\aj=|\an||\aj|\cos\beta=\cos\beta\\
@@ -6218,7 +6216,7 @@ n_3&=\an\cdot\ak=|\an||\ak|\cos\gamma=\cos\gamma
 \begin{align*}
 \kvec{F}\cdot\an=M\cos\alpha+N\cos\beta+P\cos\gamma
 \end{align*}
-اجزاء کے روپ میں مسئلہ انفراج  کہتا ہے درج ذیل  ہو گا۔
+\بدل{عناصر_سمتیہ} کے روپ میں مسئلہ انفراج  کہتا ہے کہ  درج ذیل  ہو گا۔
 \begin{align*}
 \iint\limits_S(M\cos\alpha+N\cos\beta+P\cos\gamma)\dif\sigma=\iiint\limits_D\left(\frac{\partial M}{\partial x}+\frac{\partial N}{\partial y}+\frac{\partial P}{\partial z}\right)\dif x\dif y\dif z
 \end{align*}
@@ -6231,7 +6229,7 @@ n_3&=\an\cdot\ak=|\an||\ak|\cos\gamma=\cos\gamma
 
 
 \ابتدا{ثبوتءء}\موٹا{مساوات \حوالہ{مساوات_سمتی_میدان_پھیلا_پ} کا ثبوت}\\
-ہم بائیں ہاتھ کے سطحی تکمل کو مستوی \عددی{xy} پر \عددی{D} کی  تظلیل   قائمہ پر دوہرے تکمل میں تبدیل کر کے مساوات \حوالہ{مساوات_سمتی_میدان_پھیلا_پ} ثابت  کرتے ہیں (شکل \حوالہ{شکل_مسئلہ_پھیلاؤ_ثبوت_تظلیل})۔ سطح \عددی{S}   دو سطوح  \عددی{S_2} اور \عددی{S_1} پر مشتمل ہے جہاں \عددی{S_2} بالا حصہ ہے اور اس کی مساوات \عددی{z=f_2(x,y)} ہے اور \عددی{S_1}  نچلا حصہ  ہے اور اس کی مساوات \عددی{z=f_1(x,y)} ہے۔سطح \عددی{S_2} پر باہر رخ اکائی عمود سمتیہ \عددی{\an}  کا \عددی{\ak} جزو مثبت علامت رکھتا ہے اور  چونکہ 
+ہم بائیں ہاتھ کے سطحی تکمل کو مستوی \عددی{xy} پر \عددی{D} کی قائمہ   تظلیل    پر دوہرے تکمل میں تبدیل کر کے مساوات \حوالہ{مساوات_سمتی_میدان_پھیلا_پ} ثابت  کرتے ہیں (شکل \حوالہ{شکل_مسئلہ_پھیلاؤ_ثبوت_تظلیل})۔ سطح \عددی{S}   دو سطوح  \عددی{S_2} اور \عددی{S_1} پر مشتمل ہے جہاں \عددی{S_2} بالا حصہ ہے اور اس کی مساوات \عددی{z=f_2(x,y)} ہے اور \عددی{S_1}  نچلا حصہ  ہے اور اس کی مساوات \عددی{z=f_1(x,y)} ہے۔سطح \عددی{S_2} پر باہر رخ اکائی عمود سمتیہ \عددی{\an}  کا \عددی{\ak}  \بدل{عنصر_سمتیہ}  مثبت علامت رکھتا ہے اور  چونکہ 
 \begin{align*}
 \dif\sigma=\frac{\dif A}{|\cos\gamma|}=\frac{\dif x\dif y}{\cos\gamma}
 \end{align*}
@@ -6239,7 +6237,7 @@ n_3&=\an\cdot\ak=|\an||\ak|\cos\gamma=\cos\gamma
 \begin{align*}
 \cos\gamma\dif\sigma=\dif x\dif y
 \end{align*}
-سطح \عددی{S_1} پر \عددی{\an} کا \عددی{\ak} جزو منفی علامت رکھتا ہے لہٰذا  اس سطح پر درج ذیل ہو گا۔
+سطح \عددی{S_1} پر \عددی{\an} کا \عددی{\ak}  \بدل{عنصر_سمتیہ}  منفی علامت رکھتا ہے لہٰذا  اس سطح پر درج ذیل ہو گا۔
 \begin{align*}
 \cos\gamma\dif\sigma=-\dif x\dif y
 \end{align*}
@@ -6250,7 +6248,7 @@ n_3&=\an\cdot\ak=|\an||\ak|\cos\gamma=\cos\gamma
 &=\iint\limits_{R_{xy}}[P(x,y,f_2(x,y))-P(x,y,f_1(x,y))]\dif  x\dif y\\
 &=\iint\limits_{R_{xy}}\left[\int_{f_1(x,y)}^{f_2(x,y)}\frac{\partial P}{\partial z}\dif z\right]\dif x\dif y=\iiint\limits_D\frac{\partial P}{\partial z}\dif z\dif x\dif y
 \end{align*}
-یوں مساوات \حوالہ{مساوات_سمتی_میدان_پھیلا_پ} ثابت ہوا۔
+یوں مساوات \حوالہ{مساوات_سمتی_میدان_پھیلا_پ} ثابت ہُوا۔
 \begin{figure}
 \begin{minipage}{0.50\textwidth}
 \centering
@@ -6284,7 +6282,7 @@ n_3&=\an\cdot\ak=|\an||\ak|\cos\gamma=\cos\gamma
 \draw($(kkCC)!0.5!(kkDD)$)node[pin={[below]-135:{$\dif A=\dif x\dif y$}}]{};
 \end{tikzpicture}
 \caption{
-تین بُعدی خطہ \عددی{D}، جو مستوی \عددی{xy}  پر دو ابعادی   تظلیل   قائمہ \عددی{R_{xy}} ڈالتا ہے، کو سطوح \عددی{S_1} اور \عددی{S_2} گھیرتی ہیں۔
+تین بُعدی خطہ \عددی{D}، جو مستوی \عددی{xy}  پر دو ابعادی قائمہ    تظلیل    \عددی{R_{xy}} ڈالتا ہے،  سطوح \عددی{S_1} اور \عددی{S_2}  کے درمیان واقع ہے۔
 }
 \label{شکل_مسئلہ_پھیلاؤ_ثبوت_تظلیل}
 \end{minipage}\hfill
@@ -6318,8 +6316,9 @@ node[pin={[align=center]-10:{\text{\RL{یہاں \عددی{\gamma}  زاویہ ح
 
 مساوات \حوالہ{مساوات_سمتی_میدان_پھیلا_الف} اور مساوات \حوالہ{مساوات_سمتی_میدان_پھیلا_ب}  کے ثبوت  اسی طرز پر حاصل ہوں گے؛ یا مساوات \حوالہ{مساوات_سمتی_میدان_پھیلا_پ}  میں بالترتیب \عددی{x}، \عددی{y}، \عددی{z}؛ \عددی{M}، \عددی{N}، \عددی{P}؛ \عددی{\alpha}، \عددی{\beta}،\عددی{\gamma}  ایک دوسرے کی جگہ  رکھ  کر نتائج   لکھیں۔
 
+
 \جزوحصہء{دیگر خطوں کے لیے مسئلہ انفراج}
-مسئلہ انفراج کو  ان   خطوں تک وسعت دی جا سکتی ہے جنہیں محدود تعداد  کے مذکورہ  سادہ قسم کے  خطوں  میں تقسیم کیا جا سکتا ہے  یا ایسے خطوں تک  جنہیں  کسی طرح سادہ خطوں کی حد  تصور کیا جا سکتا ہے۔مثال کے طور پر، فرض کریں دو  ہم مرکز کرّات  کے بیچ خطہ   \عددی{D}  ہے  جہاں \عددی{D} کے اندر اور اس کے تحدیدی سطوح  پر \عددی{\kvec{F{}}} کے جزوی تفرق استمراری ہیں۔استوائی مستوی پر \عددی{D} کو دو حصوں میں تقسیم کر کے دونوں نصف حصوں  پر مسئلہ  انفراج کا اطلاق کریں۔نچلا نصف حصہ  \عددی{D_1} شکل \حوالہ{شکل_پھیلاؤ_دیگر_خطے_الف} میں پیش کیا گیا ہے جس کی تحدیدی سطح \عددی{S_1} ہے جو   بیرونی کرہ، مسطح چھلا، اور   اندرونی کرہ  پر مشتمل ہے۔ مسئلہ انفراج درج ذیل کہتا ہے۔
+مسئلہ انفراج کو  ان   خطوں تک وسعت دی جا سکتی ہے جنہیں   مذکورہ  سادہ قسم کے   محدود تعداد   میں خطوں  میں تقسیم کیا جا سکتا ہے  یا ایسے خطوں تک  جنہیں  کسی طرح سادہ خطوں کی حد  تصور کیا جا سکتا ہے۔مثال کے طور پر، فرض کریں دو  ہم مرکز کروں   کے درمیان خطہ   \عددی{D} واقع   ہے  جہاں \عددی{D} کے اندر اور اس کی تحدیدی سطوح  پر \عددی{\kvec{F{}}} کے جزوی تفرق استمراری ہیں۔استوائی مستوی پر \عددی{D} کو دو حصوں میں تقسیم کر کے دونوں نصف حصوں  پر مسئلہ  انفراج کا اطلاق کریں۔نچلا نصف حصہ  \عددی{D_1} شکل \حوالہ{شکل_پھیلاؤ_دیگر_خطے_الف} میں پیش کیا گیا ہے جس کی تحدیدی سطح \عددی{S_1} ہے جو   بیرونی  نصف کرہ، مسطح چھلا، اور   اندرونی  نصف کرہ  پر مشتمل ہے۔ مسئلہ انفراج درج ذیل کہتا ہے۔
 \begin{figure}
 \begin{minipage}{0.45\textwidth}
 \centering
@@ -6337,7 +6336,7 @@ node[pin={[align=center]-10:{\text{\RL{یہاں \عددی{\gamma}  زاویہ ح
 \draw[thick,-stealth](30:\krr cm and \krra cm)++(30:0.25)node[circ]{}--++(0,0.75)node[right]{$\ak$};
 \draw[thick,-stealth](-45:\kR cm and \kRa cm)++(0,-0.25)node[circ]{}--++(-45:0.75)node[right]{$\an_1$};
 \end{tikzpicture}
-\caption{دو ہم مرکز کرّات کے بیچ ٹھوس  خطے کا نچلا نصف حصہ۔}
+\caption{دو ہم مرکز کروں کے درمیان واقع  ٹھوس  خطے کا نچلا نصف حصہ۔}
 \label{شکل_پھیلاؤ_دیگر_خطے_الف}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
@@ -6361,7 +6360,7 @@ node[pin={[align=center]-10:{\text{\RL{یہاں \عددی{\gamma}  زاویہ ح
 \draw[thick,-stealth](intersection-1)--++(0,-0.5)node[right]{$-\ak$};
 \draw[thick,-stealth](45:\kR cm and \kRa cm)++(0,0.25)node[circ]{}--++(45:0.75)node[right]{$\an_2$};
 \end{tikzpicture}
-\caption{دو ہم مرکز کرّات کے بیچ ٹھوس  خطے کا بالائی  نصف حصہ۔}
+\caption{دو ہم مرکز کروں  کے  درمیان واقع ٹھوس  خطے کا بالائی  نصف حصہ۔}
 \label{شکل_پھیلاؤ_دیگر_خطے_ب}
 \end{minipage}
 \end{figure}
@@ -6369,20 +6368,20 @@ node[pin={[align=center]-10:{\text{\RL{یہاں \عددی{\gamma}  زاویہ ح
 \begin{align}
 \iint\limits_{S_1}\kvec{F}\cdot\an_1\dif \sigma_1=\iiint\limits_{D_1}\nabla\cdot\kvec{F}\dif H_1\label{مساوات_سمتی_میدان_نچلا_کرہ}
 \end{align}
-اکائی عمود سمتیہ \عددی{\an_1}  کا رخ نچلے نصف حصہ \عددی{D_1} کے بیرونی سطح پر مبدا سے دوری جانب ہے، چھلے پر یہ \عددی{\ak} کے برابر ہے، اور اندرونی سطح پر  اس کا رخ مبدا کی جانب ہے۔ اس کے بعد \عددی{D_2} اور اس کی سطح \عددی{S_2}  پر مسئلہ انفراج کا اطلاق کریں (شکل \حوالہ{شکل_پھیلاؤ_دیگر_خطے_ب})۔
+اکائی عمود سمتیہ \عددی{\an_1}  کا رخ نچلے نصف حصہ \عددی{D_1} کے بیرونی سطح پر مبدا سے دُور  کی جانب  ہے، چھلے پر یہ \عددی{\ak} کے برابر ہے، اور اندرونی سطح پر  اس کا رخ مبدا کی جانب  ہے۔ خطہ  \عددی{D_2} اور اس کی سطح \عددی{S_2}  پر مسئلہ انفراج کا اطلاق کریں (شکل \حوالہ{شکل_پھیلاؤ_دیگر_خطے_ب})۔
 \begin{align}
 \iint\limits_{S_2}\kvec{F}\cdot\an_2\dif \sigma_2=\iiint\limits_{D_2}\nabla\cdot\kvec{F}\dif H_2\label{مساوات_سمتی_میدان_بالا_کرہ}
 \end{align}
-بالائی نصف حصہ \عددی{D_2} کی سطح  \عددی{S_2}   پر چلتے ہوئے  عمادی اکائی سمتیہ \عددی{\an_2} پر نظر رکھیں۔ بیرونی کرہ پر اس کا رخ مبدا سے دور  جانب ہے، چھلا پر یہ \عددی{-\ak} کے برابر ہے، جبکہ اندرونی کرہ پر اس کا رخ مبدا کی جانب ہے۔ مساوات \حوالہ{مساوات_سمتی_میدان_نچلا_کرہ} اور مساوات \حوالہ{مساوات_سمتی_میدان_بالا_کرہ} جمع کرتے ہوئے ، چھلے پر  \عددی{\an_1} اور \عددی{\an_2}   کی علامتیں الٹ ہونے کی وجہ سے، اس پر تکمل  ایک دوسرے کو کاٹتے ہیں۔یوں درج ذیل نتیجہ حاصل ہو گا 
+بالائی نصف حصہ \عددی{D_2} کی سطح  \عددی{S_2}   پر چلتے ہوئے  اکائی  عمود سمتیہ \عددی{\an_2} پر نظر رکھیں۔ بیرونی کرہ پر اس کا رخ مبدا سے دُور  کی  جانب   ہے، چھلے  پر یہ \عددی{-\ak} کے برابر ہے، جبکہ اندرونی کرہ پر اس کا رخ مبدا کی جانب    ہے۔ مساوات \حوالہ{مساوات_سمتی_میدان_نچلا_کرہ} اور مساوات \حوالہ{مساوات_سمتی_میدان_بالا_کرہ} کو  جمع کرتے ہوئے ، چھلے پر  \عددی{\an_1} اور \عددی{\an_2}   کی علامتیں  مخالف ہونے کی وجہ سے، چھلے  پر تکملات ایک دوسرے کو منسوخ کرتے    ہیں۔یوں درج ذیل نتیجہ حاصل ہو گا 
 \begin{align*}
 \iint\limits_{S}\kvec{F}\cdot\an\dif \sigma=\iiint\limits_{D}\nabla\cdot\kvec{F}\dif H
 \end{align*}
-جہاں دو کرّات (اندرونی اور بیرونی) کے بیچ خطہ \عددی{D} ہے، \عددی{D} کی سرحد \عددی{S} دو کرّات  (اندرونی اور بیرونی) کی سطوح پر مشتمل ہے، اور \عددی{S} پر \عددی{D} سے باہر رخ اکائی عمود سمتیہ \عددی{\an} ہے۔
+جہاں دو کروں (اندرونی اور بیرونی) کے درمیان خطہ \عددی{D}  واقع ہے، \عددی{D} کی سرحد \عددی{S} دو کروں  (اندرونی اور بیرونی) کی سطوح پر مشتمل ہے، اور \عددی{S} پر \عددی{D} سے باہر رخ اکائی عمود سمتیہ \عددی{\an} ہے۔
 
 \ابتدا{مثال}\شناخت{مثال_سمتی_میدان_تکمل_کرہ_بہاؤ} باہر رخ بہاؤ کا حصول\\
 خطہ \عددی{D:\,0< a^2\le x^2+y^2+z^2\le b^2}  کی سرحد  سے   باہر رخ  گزرنے والا صافی بہاؤ درج ذیل میدان کے لیے تلاش کریں۔
 \begin{align*}
-\kvec{F}=\frac{x\ai+y\ai+z\ak}{\rho^3},\quad \rho=\sqrt{x^2+y^2+z^2}
+\kvec{F}=\frac{x\ai+y\aj+z\ak}{\rho^3},\quad \rho=\sqrt{x^2+y^2+z^2}
 \end{align*}
 \حل
 خطہ \عددی{D} پر \عددی{\nabla\cdot\kvec{F}} کا تکمل ہمیں بہاؤ دے گا۔درج ذیل لکھتے ہیں۔
@@ -6403,9 +6402,9 @@ node[pin={[align=center]-10:{\text{\RL{یہاں \عددی{\gamma}  زاویہ ح
 \iiint\limits_D \nabla\cdot\kvec{F}\dif H=0
 \end{align*}
 
-اس طرح \عددی{D} پر \عددی{\nabla\cdot\kvec{F}} کا تکمل صفر ہے اور \عددی{D} کی سرحد کو  باہر رخ عبور کرتا ہوا  صافی بہاؤ صفر ہو گا۔ اس مثال  سے مزید معلومات بھی حاصل ہوتی ہیں۔ اندرونی کرہ \عددی{S_a}  کو پار کرتا  ہوا جو بہاؤ \عددی{D} سے خارج  ہوتا ہے  کی علامت اس بہاؤ کے الٹ ہو گی جو بیرونی کرہ \عددی{S_b}  کو عبور کرتا ہوا \عددی{D} سے خارج ہوتا ہے (یاد رہے ان بہاؤ کا مجموعہ صفر ہے)۔ یوں مبدا سے دوری کے رخ \عددی{\kvec{F}}   کا بہاؤ جو \عددی{S_a} کو عبور کرتا ہے  \عددی{\kvec{F}}  کے اس بہاؤ کے برابر ہو گا جو   مبدا سے دوری کے رخ \عددی{S_b} کو پار کرتا ہوا \عددی{D} سے خارج ہوتا ہے۔یوں مبدا  مرکز کرہ   کو عبور کرتا \عددی{\kvec{F}} کا  بہاؤ کرہ کے رداس پر منحصر نہیں۔ یہ بہاؤ کتنا ہو گا؟
+اس طرح \عددی{D} پر \عددی{\nabla\cdot\kvec{F}} کا تکمل صفر ہے اور \عددی{D} کی سرحد کو  باہر کے   رخ  میں عبور کرنے والا صافی بہاؤ صفر ہو گا۔ اس مثال  سے مزید معلومات بھی حاصل ہوتی ہیں۔ اندرونی کرہ \عددی{S_a}  کو  عبور کرنے والا  بہاؤ  ، جو \عددی{D} سے خارج  ہوتا ہے  ، کی علامت اس بہاؤ کی علامت  کے  مخالف  ہو گی جو بیرونی کرہ \عددی{S_b}  کو عبور کر کے \عددی{D} سے خارج ہوتا ہے (یاد رہے  کہ ان   دونوں بہاؤوں کا مجموعہ صفر ہے)۔ یوں مبدا سے دُور کے رخ  میں \عددی{\kvec{F}}   کا بہاؤ جو \عددی{S_a} کو عبور کرتا ہے  \عددی{\kvec{F}}  کے اس بہاؤ کے برابر ہو گا جو   مبدا سے دُور کے رخ میں  \عددی{S_b} کو  عبور کر کے  \عددی{D} سے خارج ہوتا ہے۔یوں مبدا  مرکز کرہ   کو عبور کرنے والا \عددی{\kvec{F}} کا  بہاؤ کرہ کے رداس پر منحصر نہیں۔ یہ بہاؤ کتنا ہو گا؟ 
 
-اس کی قیمت جاننے کی خاطر ہم بہاؤ کا تکمل حل کرتے ہیں۔ رداس \عددی{a} کے کرہ  کا باہر رخ اکائی عمود سمتیہ درج ذیل ہو گا۔
+اس کی قیمت جاننے کی خاطر ہم بہاؤ کا تکمل حل کرتے ہیں۔ رداس \عددی{a} کے کرہ  کا باہر  کے رخ اکائی عمود سمتیہ درج ذیل ہو گا۔
 \begin{align*}
 \an=\frac{x\ai+y\aj+z\ak}{\sqrt{x^2+y^2+z^2}}=\frac{x\ai+y\aj+z\ak}{a}
 \end{align*}
@@ -6417,46 +6416,47 @@ node[pin={[align=center]-10:{\text{\RL{یہاں \عددی{\gamma}  زاویہ ح
 \begin{align*}
 \iint\limits_{S_a}\kvec{F}\cdot\an\dif\sigma =\frac{1}{a^2}\iint\limits_{S_a}\dif \sigma=\frac{1}{a^2}(4\pi a^2)=4\pi
 \end{align*}
-ہر مبدا  مرکز  کرہ سے \عددی{\kvec{F}} کا  باہر  رخ بہاؤ \عددی{4\pi} ہو گا۔
+ہر  اس کرہ سے \عددی{\kvec{F}} کا  باہر   کے رخ  میں بہاؤ \عددی{4\pi} ہو گا جس کے مرکز  کا مقام مبدا پر ہو۔
 \انتہا{مثال}
 
-\جزوحصہء{گاوس کا قانون: برقناطیسیت کے چار عظیم  قوانین میں سے ایک}
-ابھی  مثال \حوالہ{مثال_سمتی_میدان_تکمل_کرہ_بہاؤ} سے بہت کچھ سیکھا جا سکتا ہے۔ برقناطیسی نظریہ میں، مبدا پر موجود  نقطی بار \عددی{q}  درج ذیل برقی میدان پیدا کرتا ہے
+\جزوحصہء{گاؤس کا قانون: برقناطیسیت کے چار عظیم  قوانین میں سے ایک}
+ابھی  مثال \حوالہ{مثال_سمتی_میدان_تکمل_کرہ_بہاؤ} سے بہت کچھ سیکھا جا سکتا ہے۔ برقناطیسی نظریہ میں، مبدا پر موجود  نقطوی برقی بار \عددی{q}  درج ذیل برقی میدان پیدا کرتا ہے
 \begin{align*}
-\kvec{E}(x,y,z)=\frac{1}{4\pi \epsilon_0}\frac{q}{|\kvec{r}|^2}\left(\frac{\kvec{r}}{|\kvec{r}|}\right)=\frac{q}{4\pi \epsilon_0}\frac{\kvec{r}}{|\kvec{r}|^3}=\frac{q}{4\pi\epsilon_0}\frac{x\ai+y\aj+z\ak}{\rho^3}
+\kvec{E}(x,y,z)=\frac{1}{4\pi \epsilon_0}\frac{q}{|\kvec{r}|^2}\left(\frac{\kvec{r}}{|\kvec{r}|}\right)=\frac{q}{4\pi \epsilon_0}\frac{\kvec{r}}{|\kvec{r}|^3}=\frac{q}{4\pi\epsilon_0}\frac{x\ai+y\aj+z\ak}{r^3}
 \end{align*}
-جہاں \عددی{\epsilon_0} طبیعی مستقل،  \عددی{\kvec{r}} نقطہ \عددی{(x,y,z)} کا  تعین گر سمتیہ، اور \عددی{\rho=|\kvec{r}|=\sqrt{x^2+y^2+z^2}} ہے۔   مثال \حوالہ{مثال_سمتی_میدان_تکمل_کرہ_بہاؤ}  کی علامتیت  میں  اس کو لکھتے ہیں۔
+جہاں \عددی{\epsilon_0} طبیعی مستقل،  \عددی{\kvec{r}} نقطہ \عددی{(x,y,z)} کا  تعین گر سمتیہ، 
+اور \عددی{r=|\kvec{r}|=\sqrt{x^2+y^2+z^2}} ہے۔   مثال \حوالہ{مثال_سمتی_میدان_تکمل_کرہ_بہاؤ}  کی علامتی  صورت میں  اس کو لکھتے ہیں۔
 \begin{align*}
 \kvec{E}=\frac{q}{4\pi\epsilon_0}\kvec{F}
 \end{align*}
 
-   مثال \حوالہ{مثال_سمتی_میدان_تکمل_کرہ_بہاؤ}  سے  ہم دیکھتے ہیں کہ  ہر مبدا  مرکز  کرہ سے باہر رخ \عددی{\kvec{E}} کا  بہاؤ \عددی{q/\epsilon_0} ہو گا، لیکن یہ نتیجہ صرف کرہ تک محدود نہیں۔کسی بھی بند سطح \عددی{S} سے، جو مبدا کو گھیرتی ہو (اور جس پر مسئلہ انفراج کا اطلاق ہوتا ہو)، \عددی{\kvec{E}} کا باہر رخ بہاؤ \عددی{q/\epsilon_0} ہو گا۔اس کی وجہ جاننے کی خاطر    اتنے بڑے مبدا مرکز  کرہ \عددی{S_a} کا تصور کریں جو \عددی{S} کو گھیرتا ہو۔جب  \عددی{\rho>0} ہو  درج ذیل ہو گا
+   مثال \حوالہ{مثال_سمتی_میدان_تکمل_کرہ_بہاؤ}  سے  ہم دیکھتے ہیں کہ  ہر مبدا  مرکز  کرہ سے باہر  کے رخ  میں \عددی{\kvec{E}} کا  بہاؤ \عددی{q/\epsilon_0} ہو گا، لیکن یہ نتیجہ صرف کرے تک محدود نہیں۔کسی بھی بند سطح \عددی{S} سے، جو مبدا کو گھیرتی ہو (اور جس پر مسئلہ انفراج کا اطلاق ہوتا ہو)، \عددی{\kvec{E}} کا باہر  کے رخ  گزرنے والا بہاؤ \عددی{q/\epsilon_0} ہو گا۔اس کی وجہ جاننے کی خاطر مبدا مرکز       اتنے بڑے کرہ \عددی{S_a} کا تصور کریں جو \عددی{S} کو گھیرتا ہو۔جب  \عددی{\rho>0} ہو  درج ذیل ہو گا
 \begin{align*}
 \nabla\cdot\kvec{E}=\nabla\cdot \frac{q}{4\pi\epsilon_0}\kvec{F}=\frac{q}{4\pi\epsilon_0}\nabla\cdot\kvec{F}=0
 \end{align*}
-جس کی وجہ سے  \عددی{S} اور \عددی{S_a} کے بیچ خطہ \عددی{D} پر \عددی{\nabla\cdot\kvec{E}}  کا تکمل صفر ہو گا۔لہٰذا مسئلہ انفراج کے تحت 
+جس کی وجہ سے  \عددی{S} اور \عددی{S_a} کے  درمیان واقع خطہ \عددی{D} پر \عددی{\nabla\cdot\kvec{E}}  کا تکمل صفر ہو گا۔لہٰذا مسئلہ انفراج کے تحت 
 \begin{align*}
 \iint\limits_{\text{\RL{$D$ کی سرحد}}}\kvec{E}\cdot\an\dif \sigma=0
 \end{align*}
-ہو گا، اور مبدا سے دوری کے رخ \عددی{S} کو عبور کرتا  ہوا \عددی{\kvec{E}} کا بہاؤ لازماً مبدا سے دوری کے رخ  \عددی{S_a} کو عبور کرتے ہوئے  \عددی{\kvec{E}} کے بہاؤ کے برابر ہو گا، جو \عددی{q/\epsilon_0} ہے۔یہ فقرہ، جو  \اصطلاح{قانون گاوس}\فرہنگ{گاوس!کا قانون}\حاشیہب{Gauss' law}\فرہنگ{Gauss' law}  کہلاتا ہے، یہاں فرض کیے گئے بار سے زیادہ عمومی  تقسیم بار کے لیے بھی درست ہے، جیسا  آپ طبیعیات کے کسی بھی نصابی کتاب میں  پڑھ سکتے ہیں۔
+ہو گا، اور مبدا سے دُور کے رخ  میں \عددی{S} کو عبور کرنے والا \عددی{\kvec{E}} کا بہاؤ لازماً مبدا سے دُور کے رخ   میں \عددی{S_a} کو عبور کرنے والے \عددی{\kvec{E}} کے بہاؤ کے برابر ہو گا، جو \عددی{q/\epsilon_0} ہے۔یہ فقرہ، جو  \اصطلاح{قانون گاؤس}\فرہنگ{گاؤس!کا قانون}\حاشیہب{Gauss' law}\فرہنگ{Gauss' law}  کہلاتا ہے، یہاں فرض کیے گئے برقی  بار سے زیادہ عمومی  تقسیم  بار کے لیے بھی درست ہے، جیسا  آپ طبیعیات کے کسی بھی نصابی کتاب میں  پڑھ سکتے ہیں۔
 \begin{align*}
-\iint\limits_{S}\kvec{E}\cdot\an\dif \sigma&=\frac{q}{\epsilon_0}&&\text{\RL{قانون گاوس}}
+\iint\limits_{S}\kvec{E}\cdot\an\dif \sigma&=\frac{q}{\epsilon_0}&&\text{\RL{قانون گاؤس}}
 \end{align*}
 
 
 
 \جزوحصہء{  ماقوا حرکیات  کی  استمراری مساوات}
-فرض کریں فضا میں خطہ \عددی{D} بند ، سمت بند سطح \عددی{S} میں محدود  ہے۔ اگر  نقطہ \عددی{(x,y,z)}   اور وقت \عددی{t} پر \عددی{D} میں بہتے ہوئے  سیال کا سرعتی میدان  \عددی{\kvec{v}(x,y,z)} ،  اور  کثافت \عددی{\delta=\delta(t,x,y,z)} ہو، اور \عددی{\kvec{F}=\delta\kvec{v}}  ہو، تب ماقوا حرکیات کی  \اصطلاح{استمراری مساوات}\فرہنگ{استمراری مساوات}\حاشیہب{continuity equation}\فرہنگ{continuity equation}  درج ذیل کہتی ہے۔
+فرض کریں فضا میں خطہ \عددی{D} بند ، سمت بند سطح \عددی{S} میں محصور ہے۔ اگر  نقطہ \عددی{(x,y,z)}   اور وقت \عددی{t} پر \عددی{D} میں بہتے ہوئے  سیال کا سرعتی میدان  \عددی{\kvec{v}(x,y,z)} ،  اور  کثافت \عددی{\delta=\delta(t,x,y,z)} ہو، اور \عددی{\kvec{F}=\delta\kvec{v}}  ہو، تب ماقوا حرکیات کی  \اصطلاح{استمراری مساوات}\فرہنگ{استمراری مساوات}\حاشیہب{continuity equation}\فرہنگ{continuity equation}  درج ذیل کہتی ہے۔
 \begin{align*}
 \nabla\cdot\kvec{F}+\frac{\partial \delta}{\partial t}=0
 \end{align*}
-اگر ملوث  تفاعلات کے یک رتبی جزوی تفرق  استمراری ہوں، یہ مساوات  مسئلہ انفراج سے اخذ  کی جا سکتی ہے۔ آئیں یہ عمل دیکھیں۔
+اگر ملوث  تفاعلات کے یک رتبی جزوی تفارق  استمراری ہوں، یہ مساوات  مسئلہ انفراج سے اخذ  کی جا سکتی ہے۔ آئیں یہ عمل دیکھیں۔
 
-درج ذیل تکمل  ، \عددی{S} کو عبور کر کے \عددی{D} سے  کمیتی اخراج  (اخراج اس لیے کہ \عددی{\an}   باہر رخ عمود  ہے) کی شرح دیتا ہے۔
+درج ذیل تکمل  ، \عددی{S} کو عبور  کرنے والے  \عددی{D} سے  کمیتی اخراج  (اخراج اس لیے کہ \عددی{\an}    باہر  کے رخ  میں عمود  ہے)  کی شرح دیتا ہے۔
 \begin{align*}
 \iint\limits_S \kvec{F}\cdot\an\dif \sigma
 \end{align*}
-اس کی وجہ جاننے کی خاطر، سطح پر   رقبے کا ٹکڑا \عددی{\Delta \sigma}   لیں (شکل \حوالہ{شکل_استمراری_مساوات})۔ قلیل زمانی  وقفہ \عددی{\Delta t}  میں، اس ٹکڑے کو \عددی{\Delta H} حجم عبور کرتا ہے جو تخمیناً اس بیلن کے حجم کے برابر ہو گا جس کا تل \عددی{\Delta \sigma} اور   لمبائی \عددی{(\kvec{v}\Delta t)\cdot \an} ہو، جہاں اس ٹکڑے کے کسی ایک نقطے پر سرعتی سمتیہ\عددی{\kvec{v}} ہے۔
+اس کی وجہ جاننے کی خاطر، سطح پر   رقبے کا ٹکڑا \عددی{\Delta \sigma}   لیں (شکل \حوالہ{شکل_استمراری_مساوات})۔ قلیل زمانی  وقفہ \عددی{\Delta t}  میں، اس ٹکڑے کو \عددی{\Delta H}  حجم عبور کرتا ہے جو تخمیناً اس بیلن کے حجم کے برابر ہو گا جس کا تل \عددی{\Delta \sigma} اور   لمبائی \عددی{(\kvec{v}\Delta t)\cdot \an} ہو، جہاں اس ٹکڑے کے کسی ایک نقطے پر سرعتی سمتیہ\عددی{\kvec{v}} ہے۔
 \begin{figure}
 \centering
 \begin{tikzpicture}
@@ -6481,7 +6481,7 @@ node[pin={[align=center]-10:{\text{\RL{یہاں \عددی{\gamma}  زاویہ ح
 \draw[stealth-stealth](kTop)--($(kL)!(kTop)!(kR)$)node[pos=0.5,xshift=2em,fill=white]{$h=(\kvec{v}\Delta t)\cdot\an$};
 \end{tikzpicture}
 \caption{
-قلیل وقت  \عددی{\Delta t} کے دوران جو سیال رقبے کے ٹکڑا \عددی{\Delta \sigma} سے  اوپر رخ گزرتا ہے اس کا حجم بیلن  \عددی{\kvec{v}\cdot \an\Delta \sigma \Delta t}  کے برابر  ہو گا۔
+قلیل وقت  \عددی{\Delta t} کے دوران جو سیال رقبے کے ٹکڑا \عددی{\Delta \sigma} سے  اوپر  کے رخ  میں گزرتا ہے اس کا حجم بیلن  \عددی{\kvec{v}\cdot \an\Delta \sigma \Delta t}  کے برابر  ہو گا۔
 }
 \label{شکل_استمراری_مساوات}
 \end{figure}
@@ -6493,7 +6493,7 @@ node[pin={[align=center]-10:{\text{\RL{یہاں \عددی{\gamma}  زاویہ ح
 \begin{align*}
 \Delta m\approx \delta \kvec{v}\cdot \an\Delta \sigma\Delta t
 \end{align*}
-ہو گی، لہٰذا   سے اس ٹکڑے سے گزر کر \عددی{D} سے کمیت کے اخراج کی شرح تخمیناً  درج ذیل ہو گی۔
+ہو گی، لہٰذا     اس ٹکڑے   کے ذریعے \عددی{D} سے کمیت کے اخراج کی شرح تخمیناً  درج ذیل ہو گی۔
 \begin{align*}
 \frac{\Delta m}{\Delta t}\approx \delta \kvec{v}\cdot \an\Delta \sigma
 \end{align*}
@@ -6501,7 +6501,7 @@ node[pin={[align=center]-10:{\text{\RL{یہاں \عددی{\gamma}  زاویہ ح
 \begin{align*}
 \frac{\sum \Delta m}{\Delta t}\approx \sum \delta \kvec{v}\cdot \an\Delta \sigma
 \end{align*}
-جو \عددی{S} سے گزرنے والی کمیت کی  تخمیناً اوسط شرح ظاہر کرتی ہے۔ آخر میں \عددی{\Delta \sigma\to 0} اور \عددی{\Delta t\to 0} لیتے ہوئے  \عددی{D} سے \عددی{S} کے ذریعہ اخراج کی لمحاتی شرح:
+جو \عددی{S} سے گزرنے والی کمیت کی  تخمیناً اوسط شرح ظاہر کرتا  ہے۔ آخر میں \عددی{\Delta \sigma\to 0} اور \عددی{\Delta t\to 0} لیتے ہوئے  \عددی{D} سے \عددی{S} کے ذریعہ اخراج کی لمحاتی شرح:
 \begin{align*}
 \frac{\dif  m}{\dif  t}= \iint\limits_S \delta \kvec{v}\cdot \an\dif \sigma
 \end{align*}
@@ -6510,54 +6510,53 @@ node[pin={[align=center]-10:{\text{\RL{یہاں \عددی{\gamma}  زاویہ ح
 \frac{\dif  m}{\dif  t}= \iint\limits_S \kvec{F}\cdot \an\dif  \sigma
 \end{align*}
 
-اب فرض کریں سیال  میں نقطہ \عددی{Q}   کو مرکز رکھنے والا ٹھوس کرہ \عددی{B} رکھا جاتا ہے۔ کرہ \عددی{B} پر \عددی{\nabla\cdot\kvec{F}} کی اوسط قیمت درج ذیل ہو گی۔
+اب فرض کریں سیال  میں   ٹھوس کرہ \عددی{B} رکھا جاتا ہے جس کا مرکز نقطہ \عددی{Q}   ہے۔ کرہ \عددی{B} پر \عددی{\nabla\cdot\kvec{F}} کی اوسط قیمت درج ذیل ہو گی۔
 \begin{align*}
-\frac{1}{\text{\RL{$B$ کا حجم}}}\iiint\limits_B\nabla\cdot\kvec{F}\dif H
+\frac{1}{\text{\RL{\عددی{B} کا حجم}}}\iiint\limits_B\nabla\cdot\kvec{F}\dif H
 \end{align*}
 انفراج کے استمرار کا ایک پہلو یہ ہے کہ \عددی{B} میں  کسی ایک نقطہ \عددی{P} پر  \عددی{\nabla\cdot\kvec{F}} کی قیمت یہی ہو گی۔یوں درج ذیل ہو گا۔
 \begin{align}
 (\nabla\cdot\kvec{F})_P&=\frac{1}{\text{\RL{\عددی{B} کا حجم}}}\iiint\limits_B\nabla\cdot\kvec{F}\dif H=\frac{\iint\limits_S\kvec{F}\cdot\an\dif\sigma}{\text{\RL{\عددی{B} کا حجم}}}\notag\\
 &=\frac{\text{\RL{سطح \عددی{S} کے ذریعہ \عددی{B} سے کمیتی اخراج کی شرح}}}{\text{\RL{\عددی{B} کا حجم}}}\label{مساوات_سمتی_میدان_کمیتی_شرح_اخراج}
 \end{align}
-دائیں ہاتھ  کسر اکائی حجم میں کمیت کی کمی  کی شرح بیان کرتا ہے۔
+دائیں ہاتھ کا   کسر اکائی حجم میں کمیت کی کمی  کی شرح بیان کرتا ہے۔
 
-اب مرکز \عددی{Q} کو ایک ہی مقام پر رکھتے ہوئے  \عددی{B} کے رداس کو صفر کے قریب پہنچائیں۔ مساوات  \حوالہ{مساوات_سمتی_میدان_کمیتی_شرح_اخراج} کا بایاں ہاتھ \عددی{(\nabla\cdot\kvec{F})_Q}  کو، جبکہ اس کا دایاں ہاتھ \عددی{(-\partial \delta/\partial t)_Q} پر مرتکز ہو گا۔ان دو حدوں   کی مساویت  ہمیں درج ذیل \اصطلاح{استمراری مساوات }\فرہنگ{استمراری!مساوات}\حاشیہب{continuity equation}\فرہنگ{continuity!equation} دیتی ہے۔
+اب مرکز \عددی{Q} کو ایک ہی مقام پر رکھتے ہوئے  \عددی{B} کے رداس کو صفر کے قریب پہنچائیں۔ مساوات  \حوالہ{مساوات_سمتی_میدان_کمیتی_شرح_اخراج} کا بایاں ہاتھ \عددی{(\nabla\cdot\kvec{F})_Q}   پر مرتکز ہو گا، جبکہ اس کا دایاں ہاتھ \عددی{(-\partial \delta/\partial t)_Q} پر مرتکز ہو گا۔ان دو حدوں   کی مساویت  ہمیں درج ذیل \اصطلاح{استمراری مساوات }\فرہنگ{استمراری!مساوات}\حاشیہب{continuity equation}\فرہنگ{continuity!equation} دیتی ہے۔
 \begin{align*}
 \nabla\cdot\kvec{F}=-\frac{\partial \delta}{\partial t}
 \end{align*}
 
 استمراری مساوات ہمیں \عددی{\nabla\cdot\kvec{F}} کا مفہوم دیتی ہے: کسی نقطے پر \عددی{\kvec{F}} کا انفراج اس نقطے پر سیال کی کثافت میں کمی کی شرح دیتا ہے۔
 
-مسئلہ انفراج
+مسئلہ انفراج:
 \begin{align*}
 \iint\limits_S\kvec{F}\cdot\an\dif \sigma=\iiint\limits_D\nabla\cdot\kvec{F}\dif H
 \end{align*}
-اب کہتا ہے کہ خطہ \عددی{D} میں کثافت  کی صافی کمی کی وجہ   کمیت کی  سطح \عددی{S} سے دوسری جانب منتقلی  ہے۔ یوں یہ مسئلہ کمیت کی بقا  بیان کرتا ہے (سوال \حوالہ{سوال_سمتی_میدان_کمیت_بقا})۔
+اب کہتا ہے کہ خطہ \عددی{D} میں کثافت  کی صافی کمی کی وجہ   کمیت کی  سطح \عددی{S}  کے پار  منتقلی  ہے۔ یوں یہ مسئلہ کمیت کی بقا  بیان کرتا ہے (سوال \حوالہ{سوال_سمتی_میدان_کمیت_بقا})۔
 
 
 
-\جزوحصہء{تکملی مسائل کی یکجائی}
-دو بُعدی میدان \عددی{\kvec{F}=M(x,y)\ai+N(x,y)\aj} کو ایسا تین بُعدی میدان تصور کر کے جس کا \عددی{\ak} جزو
- صفر ہو ہم
+\جزوحصہء{تکملی مسائل کی یکجائی} 
+دو بُعدی میدان \عددی{\kvec{F}=M(x,y)\ai+N(x,y)\aj} کو ایسا تین بُعدی میدان تصور کر کے جس کا \عددی{\ak}  \بدل{عنصر_سمتیہ}   صفر ہو ہم
 \begin{align*}
 \nabla\cdot\kvec{F}=(\partial M/\partial x)+(\partial N/\partial y)
 \end{align*}
-لکھ سکتے ہیں اور  یوں مسئلہ گرین   کا عمود روپ درج ذیل لکھا جا سکتا ہے۔
+لکھ سکتے ہیں اور  یوں مسئلہ گرین   کا عمودی روپ درج ذیل لکھا جا سکتا ہے۔
 \begin{align*}
 \ointctrclockwise\limits_C \kvec{F}\cdot\an\dif s=\iint\limits_R\left(\frac{\partial M}{\partial x}+\frac{\partial N}{\partial y}\right)\dif x\dif y=\iint\limits_R \nabla\cdot\kvec{F}\dif A
 \end{align*}
 اسی طرح \عددی{\nabla\times\kvec{F}\cdot\ak=(\partial N/\partial x)-(\partial M/\partial y)}  ہو گا لہٰذا مسئلہ گرین کا مماسی روپ درج ذیل لکھا جا سکتا ہے۔
 \begin{align*}
-\ointctrclockwise\limits_C \kvec{F}\cdot\dif \kvec{r}=\iint\limits_R\left(\frac{\partial M}{\partial x}-\frac{\partial N}{\partial y}\right)\dif x\dif y=\iint\limits_R\nabla \times\kvec{F}\cdot\ak\dif A
+\ointctrclockwise\limits_C \kvec{F}\cdot\dif \kvec{r}=\iint\limits_R\left(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\right)\dif x\dif y=\iint\limits_R\nabla \times\kvec{F}\cdot\ak\dif A
 \end{align*}
-مسئلہ  گرین کی مساوات  ڈیل علامتیت  میں لکھ کر ان کا مسئلہ سٹوکس اور مسئلہ انفراج کے ساتھ تعلق افشا ہوتا ہے۔
+مسئلہ  گرین کی مساواتوں  کو   ڈیل علامتیت  میں لکھ کر ان کا مسئلہ سٹوکس اور مسئلہ انفراج کے ساتھ تعلق افشا ہوتا ہے۔
 
-\جزوجزوحصہء{مسئلہ گرین کی تین ابعادی تعمیم  }
+\جزوحصہء{مسئلہ گرین کی تین ابعادی تعمیم  }
 \[
 \renewcommand{\arraystretch}{2}
 \begin{array}{lr}
 \ointctrclockwise\limits_C\kvec{F}\cdot\an\dif s=\iint\limits_R\nabla\cdot\kvec{F}\dif A&
-\text{\RL{مسئلہ گرین کا عمود   روپ}}\\
+\text{\RL{مسئلہ گرین کا عمودی روپ}}\\
  \iint\limits_S\kvec{F}\cdot\an\dif\sigma=\iiint\limits_D\nabla\cdot\kvec{F}\dif H&
 \text{\RL{مسئلہ انفراج}}\\
 \ointctrclockwise\limits_C\kvec{F}\cdot\dif\kvec{r}=\iint\limits_R\nabla\times\kvec{F}\cdot\ak\dif A&
@@ -6567,11 +6566,11 @@ node[pin={[align=center]-10:{\text{\RL{یہاں \عددی{\gamma}  زاویہ ح
 \end{array}
 \]
 
-مستوی میں  چپٹی سطح  پر مسئلہ گرین کے مماسی (گردش)  روپ    کو   مسئلہ سٹوکس تین ابعادی فضا میں سطح پر عمومیت دیتا ہے۔دنوں  میں،  سطح کے اندرون پر گردش \عددی{\kvec{F}} کے عمود  جزو کا تکمل اور سرحد کے ہمراہ  \عددی{\kvec{F}} کا دائری سیلان  برابر ہو گا۔
+مستوی میں  چپٹی سطح  پر مسئلہ گرین کے مماسی (گردش)  روپ    کو   مسئلہ سٹوکس تین ابعادی فضا میں سطح پر عمومیت دیتا ہے۔دونوں  میں،  سطح کے اندرون پر گردش \عددی{\kvec{F}} کے عمود  \بدل{عنصر_سمتیہ} کا تکمل اور سرحد کے ہمراہ  \عددی{\kvec{F}} کا دائری سیلان  برابر ہو گا۔
 
-اسی طرح دو ابعادی   مستوی میں خطہ  پر مسئلہ گرین کے  عمود   (بہاؤ) روپ کو     مسئلہ انفراج فضا میں  تین ابعادی خطہ پر عمومیت دیتا ہے۔ دونوں  میں ، خطے کے اندرون پر \عددی{\nabla\cdot\kvec{F}} کا تکمل اور سرحد  کو عبور کرتے ہوئے میدان کا کُل بہاؤ   برابر ہو گا۔
+اسی طرح دو ابعادی   مستوی میں خطے     پر مسئلہ گرین کے  عمودی (بہاؤ) روپ کو     مسئلہ انفراج فضا میں  تین ابعادی خطے  پر عمومیت دیتا ہے۔ دونوں  میں ، خطے کے اندرون پر \عددی{\nabla\cdot\kvec{F}} کا تکمل اور سرحد  کو عبور کرنے والے میدان کا کُل بہاؤ   برابر ہو گا۔
 
-ابھی مزید معلومات  حاصل کی جا سکتی ہیں۔ ان تمام نتائج کو ایک بنیادی مسئلے کے مختلف روپ تصور کیا جا سکتا ہے۔ حصہ \حوالہ{حصہ_تکمل_بنیادی_مسئلہ} میں تکمل کا بنیادی مسئلہ پیش کیا گیا جو کہتا ہے  اگر \عددی{(a,b)} پر \عددی{f(x)} قابل تفرق  اور \عددی{[a,b]} پر استمراری  ہو تب درج ذیل ہو گا۔
+ابھی مزید معلومات  حاصل کی جا سکتی ہیں۔ ان تمام نتائج کو ایک بنیادی مسئلے کے مختلف روپ تصور کیا جا سکتا ہے۔ حصہ \حوالہ{حصہ_تکمل_بنیادی_مسئلہ} میں تکمل کا بنیادی مسئلہ پیش کیا گیا جو کہتا ہے   کہ اگر \عددی{(a,b)} پر \عددی{f(x)} قابل تفرق  اور \عددی{[a,b]} پر استمراری  ہو تب درج ذیل ہو گا۔
 \begin{align*}
 \int\limits_a^b \frac{\dif f}{\dif x}\dif x=f(b)-f(a)
 \end{align*}
@@ -6584,30 +6583,30 @@ node[pin={[align=center]-10:{\text{\RL{یہاں \عددی{\gamma}  زاویہ ح
 \draw[thick,-stealth](0.5,0)node[below]{$b$}--++(,0)node[pos=0.5,above]{$\an=\ai$};
 \draw[thin](-0.5,0)--++(0,0.1)  (0.5,0)--++(0,0.1);
 \end{tikzpicture}
-\caption{یک بُعدی فضا میں \عددی{[a,b]}  کی سرحد پر باہر کے  رخ  میں اکائی عمود سمتیات۔}
+\caption
+{یک بُعدی فضا میں \عددی{[a,b]}  کی سرحد پر باہر کے  رخ  میں اکائی عمود سمتیات۔}
 \label{شکل_سمتی_میدان_تکملی_یکجائی}
 \end{figure}
 %
 \begin{align*}
-f(b)-f(a)&=f(b)\ai\cdot\ai+f(a)\ai\cdot(-\ai)\\
+f(b)-f(a)&=f(b)\ai\cdot (\ai)+f(a)\ai\cdot(-\ai)\\
 &=\kvec{F}(b)\cdot\an+\kvec{F}(a)\cdot\an\\
 &=\text{\RL{ \عددی{[a,b]}   کی سرحد پر باہر کے  رخ  میں \عددی{\kvec{F}} کا کُل بہاؤ }}
 \end{align*}
 
-تکمل کا بنیادی مسئلہ یوں درج ذیل کہتا ہے۔
+یوں تکمل کا بنیادی مسئلہ  درج ذیل کہتا ہے۔
 \begin{align*}
 \kvec{F}(b)\cdot\an+\kvec{F}(a)\cdot\an=\int\limits_{[a,b]}\nabla\cdot\kvec{F}\dif x
 \end{align*}
-تکمل کا بنیادی مسئلہ، مسئلہ گرین کا عمود روپ، اور مسئلہ انفراج تینوں کہتے ہیں  کہ تفرقی عامل \عددی{\nabla\cdot} جو  کسی خطے میں میدان \عددی{\kvec{F}} پر عمل کرتا ہو اس خطے کی سرحد پر میدان کے عمود  اجزاء کے مجموعے کے برابر ہو گا۔ (یہاں ہم مسئلہ گرین میں موجود لکیری  تکمل اور مسئلہ انفراج میں موجود سطحی تکمل سے مراد  سرحد پر "مجموعہ" لیتے  ہیں۔)
+تکمل کا بنیادی مسئلہ، مسئلہ گرین کا عمودی روپ، اور مسئلہ انفراج تینوں کہتے ہیں  کہ تفرقی عامل \عددی{\nabla\cdot} جو  کسی خطے میں میدان \عددی{\kvec{F}} پر عمل کرتا ہو اس خطے کی سرحد پر میدان کے عمود   \بدل{عناصر_سمتیہ}  کے مجموعے کے برابر ہو گا۔ (یہاں ہم مسئلہ گرین میں موجود لکیری  تکمل اور مسئلہ انفراج میں موجود سطحی تکمل سے مراد  سرحد پر "مجموعہ" لیتے  ہیں۔)
 
 
-مسئلہ سٹوکس اور مسئلہ گرین کا مماسی روپ دونوں  کہتے ہیں  کہ  درست سمت بندی کر کے،گردش   میدان  کے عمود    جزو کا تکمل اور  سطح کی سرحد پر میدان کے  مماسی اجزاء کا مجموعہ برابر ہوں گے۔
+مسئلہ سٹوکس اور مسئلہ گرین کا مماسی روپ دونوں  کہتے ہیں  کہ  درست سمت بندی کر کے،گردش   میدان  کے عمود    \بدل{عنصر_سمتیہ}  کا تکمل اور  سطح کی سرحد پر میدان کے  مماسی  \بدل{عناصر_سمتیہ}  کا مجموعہ برابر ہوں گے۔
 
-مفہوم کو اس طرح  سمجھنے  سے  ایک  مربوط اصول   ابھرتا ہے جو درج ذیل بیان کیا جا سکتا ہے۔
-%KKK??? am here
+مفہوم کو اس طرح  سمجھنے  سے  ایک  مربوط اصول   ابھرتا ہے جسے درج ذیل بیان کیا جا سکتا ہے۔
 
 \ابتدا{قانونء}
-  تفرقی عامل کے زیر اثر  میدان  کا  خطے میں تکمل اور خطے کی سرحد پر، عامل کے لحاظ سے موزوں،    میدان کے  اجزاء کا مجموعہ برابر ہو گا۔
+  تفرقی عامل کے زیر اثر  میدان  کا  خطے میں تکمل اور خطے کی سرحد پر، عامل کے لحاظ سے موزوں،    میدان کے  \بدل{عناصر_سمتیہ}  کا مجموعہ برابر ہوں گے۔
 \انتہا{قانونء}
 
 
@@ -6656,16 +6655,16 @@ $-16$
 \ابتدا{سوال}\عددی{\kvec{F}=x^2\ai+y^2\ay+z^2\ak}\\
 \begin{enumerate}[a.]
 \item
- \موٹا{مکعب} \quad   مکعب \عددی{D}  جسے ثمن اول سے مستویات \عددی{x=1} ، \عددی{y=1}، \عددی{z=1}  کاٹتی ہیں۔
+ \موٹا{مکعب}  \عددی{D}  جسے ثمن اول سے مستویات \عددی{x=1} ، \عددی{y=1}، \عددی{z=1}  کاٹتی ہیں۔
 \item
-\موٹا{مکعب}\quad   مکعب \عددی{D}  جسے مستویات \عددی{x=\pm 1}، \عددی{y=\pm 1}، اور \عددی{z=\pm 1} گھیرتی ہیں۔
+\موٹا{مکعب}    \عددی{D}  جسے مستویات \عددی{x=\pm 1}، \عددی{y=\pm 1}، اور \عددی{z=\pm 1} گھیرتی ہیں۔
 \item
-\موٹا{بیلن}\quad  خطہ \عددی{D} جس کو مستویات \عددی{z=0} اور \عددی{z=1} ٹھوس بیلن \عددی{x^2+y^2\le 4} سے کاٹتی ہیں۔
+\موٹا{بیلنی ڈبہ}  \عددی{D} جس کو مستویات \عددی{z=0} اور \عددی{z=1} ٹھوس بیلن \عددی{x^2+y^2\le 4} سے کاٹتی ہیں۔
 \end{enumerate}
 \انتہا{سوال}
 %Q7
 \ابتدا{سوال}\موٹا{بیلن اور  مکافی جسم} \quad \عددی{\kvec{F}=y\ai+xy\aj-z\ak}\\
-ٹھوس بیلن \عددی{x^2+y^2\le 4} کے اندر  خطہ \عددی{D}  جو مستوی \عددی{z=0} اور مکافی جسم \عددی{z=x^2+y^2} کے بیچ ہے۔
+ٹھوس بیلن \عددی{x^2+y^2\le 4} کے اندر  خطہ \عددی{D}  جو مستوی \عددی{z=0} اور مکافی جسم \عددی{z=x^2+y^2} کے  درمیان واقع  ہے۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -6677,7 +6676,7 @@ $-8\pi$
 \انتہا{سوال}
 %Q9
 \ابتدا{سوال}\موٹا{کرے  کا ٹکڑا}\quad \عددی{\kvec{F}=x^2\ai-2xy\aj+3xz\ak}\\
-خطہ \عددی{D} وہ ہے جسے ثمن اول سے    کرہ  \عددی{x^2+y^2+z^2= 4}  کاٹتا ہے۔
+خطہ \عددی{D}  جسے ثمن اول سے    کرہ  \عددی{x^2+y^2+z^2= 4}  کاٹتا ہے۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -6698,7 +6697,7 @@ $-40\!/\!3$
 }}
 \انتہا{جواب}
 \ابتدا{سوال}\موٹا{کرہ}\quad \عددی{\kvec{F}=x^3\ai+y^3\aj+z^3\ak}\\
-خطہ \عددی{D} ٹھوس کرہ \عددی{x^2+y^2+z^2\le a^2} ہے۔
+خطہ \عددی{D}  ٹھوس کرہ \عددی{x^2+y^2+z^2\le a^2} ہے۔
 \انتہا{سوال}
 %Q13
 \ابتدا{سوال}\موٹا{موٹا کرہ}\quad \عددی{\kvec{F}=\sqrt{x^2+y^2+z^2}(x\ai+y\aj+z\ak)}\\
@@ -6715,7 +6714,7 @@ $12\pi$
 \انتہا{سوال}
 %Q15
 \ابتدا{سوال}\موٹا{موٹا کرہ}\quad \عددی{\kvec{F}=(5x^3+12xy^2)\ai+(y^3+e^y\sin z)\aj+(5z^3+e^y\cos z)\ak}\\
-کرہ \عددی{x^2+y^2+z^2=1} اور کرہ \عددی{x^2+y^2+z^2=2} کے بیچ ٹھوس  خطہ \عددی{D} ہے۔
+کرہ \عددی{x^2+y^2+z^2=1} اور کرہ \عددی{x^2+y^2+z^2=2} کے درمیان واقع  ٹھوس  خطہ \عددی{D} ہے۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -6731,9 +6730,9 @@ $12\pi(4\sqrt{2}-1)$
 \ابتدا{سوال}\موٹا{گردش \عددی{G} کا انفراج صفر ہو گا}\\
 \begin{enumerate}[a.]
 \item
-دکھائیں اگر  میدان \عددی{\kvec{G}=M\ai+N\aj+P\ak} کے مطلوبہ جزوی تفرق استمراری  ہوں، تب \عددی{\nabla\cdot \nabla\times \kvec{G}=0} ہو گا۔
+دکھائیں  کہ اگر  میدان \عددی{\kvec{G}=M\ai+N\aj+P\ak} کے مطلوبہ جزوی تفارق استمراری  ہوں، تب \عددی{\nabla\cdot \nabla\times \kvec{G}=0} ہو گا۔
 \item
-کیا آپ اس سے  ، میدان \عددی{\nabla\times \kvec{G}} کا بند سطح سے گزرتے بہاؤ کے بارے میں ،  کوئی   نتیجہ اخذ  کر  سکتے ہیں؟ اپنے جواب کی وجہ پیش کریں۔
+کیا آپ اس سے  ، میدان \عددی{\nabla\times \kvec{G}} کا بند سطح سے گزرنے والے  بہاؤ کے بارے میں ،  کوئی   نتیجہ اخذ  کر  سکتے ہیں؟ اپنے جواب کی وجہ پیش کریں۔
 \end{enumerate}
 \انتہا{سوال}
 %Q18
@@ -6758,7 +6757,6 @@ $12\pi(4\sqrt{2}-1)$
 \(\nabla\times(g\kvec{F})=g\nabla\times\kvec{F}+\nabla g\times\kvec{F}\)
 \end{enumerate}
 \انتہا{سوال}
-
 \ابتدا{سوال}
 قابل تفرق سمتیہ میدان \عددی{\kvec{F}=M\ai+N\aj+P\ak} کے لیے علامتی اظہار \عددی{\kvec{F}\cdot\nabla}  کی تعریف درج ذیل ہے۔
 \[M\frac{\partial}{\partial x}+N\frac{\partial}{\partial y}+P\frac{\partial}{\partial z}\]
@@ -6774,7 +6772,7 @@ $12\pi(4\sqrt{2}-1)$
 \جزوحصہء{نظریہ اور مثالیں}
 %Q21
 \ابتدا{سوال}
-سمتیہ میدان \عددی{\kvec{F}} کے اجزاء کے یک رتبی تفرق    فضا  کے  ایک  ایسے حصہ میں استمراری ہیں جس کے اندر   ہموار بند سطح \عددی{S}  میں محدود خطہ \عددی{D}   واقع ہے۔اگر \عددی{\kvec{F}\le 1} ہو کیا درج ذیل کی قیمت  کی حد بندی ممکن ہے؟ اپنے جواب  کی وجہ پیش کریں۔
+سمتیہ میدان \عددی{\kvec{F}} کے   \بدل{عناصر_سمتیہ} کے یک رتبی تفارق    فضا  کے  ایک  ایسے حصہ میں استمراری ہیں جس کے اندر   ہموار بند سطح \عددی{S}  میں محصور خطہ \عددی{D}   واقع ہے۔اگر \عددی{\kvec{F}\le 1} ہو ، کیا درج ذیل کی قیمت  کی حد بندی ممکن ہے؟ اپنے جواب  کی وجہ پیش کریں۔
 \[\iiint\limits_D \nabla\cdot\kvec{F}\dif H\]
 \انتہا{سوال}
 \ابتدا{جواب}
@@ -6783,7 +6781,7 @@ $12\pi(4\sqrt{2}-1)$
 }}
 \انتہا{جواب}
 \ابتدا{سوال}
-مستوی  \عددی{xy}  پر اکائی  مربع دکھائے گئے کعبی نما سطح کا تل  ہے۔سطح کے چار اطراف مستویات \عددی{x=0}، \عددی{x=1}، \عددی{y=0}، اور \عددی{y=1} میں پائے جاتے ہیں۔ بالائی سطح اختیاری ہموار  لیکن نامعلوم  ہے۔ فرض کریں \عددی{\kvec{F}=x\ai-2y\aj+(z+3)\ak} ہے اور باہر رخ  بہاؤ    الف طرف سے  \عددی{1}  اور ب  طرف سے  \عددی{-3} ہے۔ کیا آپ بالائی سطح سے باہر رخ بہاؤ کے بارے میں نتیجہ اخذ کر سکتے ہیں؟ اپنے جواب کی وجہ پیش کریں۔
+مستوی  \عددی{xy}  پر اکائی  مربع دکھائی   گئی مکعب نما سطح کا تل  ہے۔سطح کے چار اطراف مستویات \عددی{x=0}، \عددی{x=1}، \عددی{y=0}، اور \عددی{y=1} میں پائے جاتے ہیں۔ بالائی سطح اختیاری ہموار  لیکن نامعلوم  ہے۔ فرض کریں \عددی{\kvec{F}=x\ai-2y\aj+(z+3)\ak} ہے اور باہر کے  رخ   میں بہاؤ    الف طرف سے  \عددی{1}  اور ب  طرف سے  \عددی{-3} ہے۔ کیا آپ بالائی سطح سے باہر  کے رخ  میں بہاؤ کے بارے میں  کوئی نتیجہ اخذ کر سکتے ہیں؟ اپنے جواب کی وجہ پیش کریں۔
 \begin{center}
 \begin{tikzpicture}
 \pgfmathsetmacro{\kA}{1}
@@ -6812,88 +6810,82 @@ $12\pi(4\sqrt{2}-1)$
 \ابتدا{سوال}
 \begin{enumerate}[a.]
 \item
-دکھائیں کہ  ہموار بند سطح  \عددی{S} سے تعین گر سمتیہ میدان \عددی{\kvec{F}=x\ai+y\aj+z\ak} کا باہر رخ بہاؤ ، اس خطے کے حجم کے تین گنا ہے جس کو سطح \عددی{S} گھیرتی ہے۔
+دکھائیں کہ  ہموار بند سطح  \عددی{S} سے تعین گر سمتیہ میدان \عددی{\kvec{F}=x\ai+y\aj+z\ak} کا باہر  کے رخ  میں بہاؤ ، اس خطے کے حجم کے تین گنا ہے جس کو سطح \عددی{S} گھیرتی ہے۔
 \item
-فرض کریں \عددی{S} کا باہر رخ اکائی عمود سمتیہ \عددی{\an} ہے۔دکھائیں  ایسا ممکن نہیں کہ \عددی{S} کے ہر نقطے پر \عددی{\kvec{F}} سمتیہ \عددی{\an} کے عمود   ہو۔
+فرض کریں  کہ  سطح \عددی{S} کا باہر  کی سمت   اکائی عمود سمتیہ \عددی{\an} ہے۔دکھائیں    ایسا ممکن نہیں کہ \عددی{S} کے ہر نقطے پر \عددی{\kvec{F}} سمتیہ \عددی{\an} کے عمود   ہو۔
 \end{enumerate}
 \انتہا{سوال}
-
-\ابتدا{سوال}\موٹا{زیادہ سے زیادہ بہاؤ}\quad
-ان تمام ٹھوس   مستطیل میں سے،  جنہیں عدم مساوات \عددی{0\le x\le a}، \عددی{0\le y\le b} ، اور \عددی{0\le z\le 1} بیان کرتی ہوں، وہ تلاش کریں جس کے چار اطراف سے باہر رخ \عددی{\kvec{F}=(-x^2-4xy)\ai-6yz\aj+12z\ak} کا بہاؤ زیادہ سے زیادہ ہو گا۔ زیادہ سے زیادہ بہاؤ کی قیمت کیا ہو گی؟
+\ابتدا{سوال}\موٹا{اعظم بہاؤ}\quad
+ان تمام ٹھوس   مستطیل اجسام  میں سے،  جنہیں عدم مساوات \عددی{0\le x\le a}، \عددی{0\le y\le b} ، اور \عددی{0\le z\le 1} بیان کرتی ہیں، وہ تلاش کریں جس کے چار اطراف سے باہر رخ \عددی{\kvec{F}=(-x^2-4xy)\ai-6yz\aj+12z\ak} کا بہاؤ اعظم ہو گا۔ اعظم بہاؤ کی قیمت کیا ہو گی؟
 \انتہا{سوال}
-
 \ابتدا{سوال}\موٹا{ٹھوس خطے کا حجم}\quad
-فرض کریں \عددی{S} اور \عددی{D} مسئلہ انفراج کی شرائط پر پورا اترتے ہیں، اور \عددی{\kvec{F}=x\ai+y\aj+z\ak} ہے۔دکھائیں کہ \عددی{D} کا حجم درج ذیل دے گا۔
+فرض کریں \عددی{S} اور \عددی{D} مسئلہ انفراج کی شرائط پر پورا اترتے ہیں، اور \عددی{\kvec{F}=x\ai+y\aj+z\ak} ہے۔دکھائیں کہ \عددی{D} کا حجم درج ذیل  کلیے سے حاصل ہو گا۔
 \[\text{\RL{$D$ کا حجم}}=\frac{1}{3}\iint\limits_S\kvec{F}\cdot\an\dif\sigma\]
 \انتہا{سوال}
 %Q26
 \ابتدا{سوال}\موٹا{مستقل میدان کا بہاؤ}\quad
-دکھائیں کہ مستقل سمتیہ میدان \عددی{\kvec{F}=\kvec{C}} کا  کسی بھی بند سطح ، جس پر مسئلہ انفراج کا اطلاق ہوتا ہو، سے باہر رخ  بہاؤ صفر ہو گا۔
+دکھائیں کہ مستقل سمتیہ میدان \عددی{\kvec{F}=\kvec{C}} کا  کسی بھی  ایسی بند سطح سے باہر کی سمت میں   بہاؤ صفر ہو گا   جس پر مسئلہ انفراج کا اطلاق ہوتا ہو۔
 \انتہا{سوال}
-
 \ابتدا{سوال}\موٹا{ہارمونی تفاعلات}\quad
-فضا کے خطہ  \عددی{D} میں تفاعل \عددی{f(x,y,z)} اس صورت \اصطلاح{ہارمونی }\فرہنگ{ہارمونی}\حاشیہب{harmonic}\فرہنگ{harmonic}کہلاتا ہے  جب وہ پورے \عددی{D} میں درج ذیل  لاپلاسی مساوات کو مطمئن کرتا ہو۔
+فضا کے خطہ  \عددی{D} میں تفاعل \عددی{f(x,y,z)} اس صورت میں  \اصطلاح{ہارمونی }\فرہنگ{ہارمونی}\حاشیہب{harmonic}\فرہنگ{harmonic}کہلاتا ہے  جب وہ پورے \عددی{D} میں درج ذیل  لاپلاسی مساوات کو مطمئن کرتا ہو۔
 \[\nabla^2f=\nabla\cdot\nabla f=\frac{\partial^2f}{\partial x^2}+\frac{\partial^2f}{\partial y^2}+\frac{\partial^2f}{\partial z^2}=0\]
 \begin{enumerate}[a.]
 \item
-فرض کریں ہموار سطح \عددی{S}    ، جس کا منتخب اکائی عمود سمتیہ \عددی{\an} ہے، محدود خطہ  \عددی{D} کو گھیرتی ہے اور \عددی{f} 
-اس  پورے خطے میں ہارمونی ہے۔ دکھائیں کہ \عددی{S} پر \عددی{\nabla f\cdot \an} کا تکمل،  یعنی \عددی{\an} کے رخ \عددی{f}  کا تفرق، صفر ہے۔
+فرض کریں ہموار سطح \عددی{S}    ، جس کا منتخب اکائی عمود سمتیہ \عددی{\an} ہے،  خطہ  \عددی{D} کو  محصور کرتی ہے اور \عددی{f} 
+اس  پورے خطے میں ہارمونی ہے۔ دکھائیں کہ \عددی{S} پر \عددی{\nabla f\cdot \an} کا تکمل،  یعنی \عددی{\an} کے رخ میں  \عددی{f}  کا تفرق، صفر ہے۔
 \item
 دکھائیں اگر \عددی{D} میں \عددی{f} ہارمونی ہو تب درج ذیل ہو گا۔
 \[\iint\limits_Sf\nabla f\cdot \an\dif\sigma=\iiint\limits_D|\nabla f|^2\dif H\]
 \end{enumerate}
 \انتہا{سوال}
-
 %Q28
 \ابتدا{سوال}\موٹا{ڈھلوان میدان کا بہاؤ} \quad
-فرض کریں ثمن اول میں موجود کرہ \عددی{x^2+y^2+z^2\le a^2} کے ٹکڑے کی سطح \عددی{S} ہے اور \عددی{f(x,y,z)=\ln\sqrt{x^2+y^2+z^2}} ہے۔ درج ذیل کی قیمت تلاش کریں۔ (سمتیہ \عددی{\an} کے رخ \عددی{f} کا تفرق \عددی{\nabla f\cdot \an} ہے۔)
+فرض کریں ثمن اول میں واقع ٹھوس   کرہ \عددی{x^2+y^2+z^2\le a^2} کے ٹکڑے کی سطح \عددی{S} ہے اور \عددی{f(x,y,z)=\ln\sqrt{x^2+y^2+z^2}} ہے۔ درج ذیل کی قیمت تلاش کریں۔ (سمتیہ \عددی{\an} کے رخ  میں \عددی{f} کا تفرق \عددی{\nabla f\cdot \an} ہے۔)
 \[\iint\limits_S \nabla f\cdot\an\dif\sigma\]
 \انتہا{سوال}
-
 \ابتدا{سوال}\شناخت{سوال_سمتی_میدان_گرین_کلیہ_اول}\موٹا{گرین کا کلیہ اول}\quad
-ٹکڑوں میں ہموار بند  سطح \عددی{S} میں بند  پورے خطے \عددی{D}  پر عددیہ تفاعلات \عددی{f} اور \عددی{g}  کے یک رتبی اور  دو رتبی جزوی تفرق  استمراری ہیں۔دکھائیں کہ درج ذیل ہو گا۔
+ٹکڑوں میں ہموار بند  سطح \عددی{S} میں محصور   پورے خطے \عددی{D}  پر عددیہ تفاعلات \عددی{f} اور \عددی{g}  کے یک رتبی اور  دو رتبی جزوی تفارق  استمراری ہیں۔دکھائیں کہ درج ذیل ہو گا۔
 \begin{align}\label{مساوات_سمتی_میدان_گرین_کلیہ_اول}
 \iint\limits_S f\nabla g\cdot \an\dif\sigma=\iiint\limits_D (f\nabla^2g+\nabla f\cdot \nabla g)\dif H
 \end{align}
 مساوات \حوالہ{مساوات_سمتی_میدان_گرین_کلیہ_اول} \اصطلاح{گرین کا کلیہ اول }\فرہنگ{گرین!کلیہ اول}\حاشیہب{Greens's first formula}\فرہنگ{Greens'!first formula}ہے۔ (اشارہ: میدان \عددی{\kvec{F}=f\nabla g} پر مسئلہ انفراج کا اطلاق کریں۔)
 \انتہا{سوال}
-
 \ابتدا{سوال}\موٹا{گرین کا کلیہ دوم}\quad (\ترچھا{سوال \حوالہ{سوال_سمتی_میدان_گرین_کلیہ_اول} کو آگے بڑھاتے ہیں۔})
-مساوات \حوالہ{مساوات_سمتی_میدان_گرین_کلیہ_اول} میں \عددی{f} اور \عددی{g}  کی جگہیں آپس میں تبدیل کر کے اسی قسم کا دوسرا کلیہ  اخذ کریں۔اس کلیہ کو مساوات \حوالہ{مساوات_سمتی_میدان_گرین_کلیہ_اول} سے منفی کر کے درج ذیل دکھائیں۔
+مساوات \حوالہ{مساوات_سمتی_میدان_گرین_کلیہ_اول} میں \عددی{f} اور \عددی{g}  کی جگہیں آپس میں تبدیل کر کے اسی قسم کا دوسرا کلیہ  اخذ کریں۔اس کلیے  کو مساوات \حوالہ{مساوات_سمتی_میدان_گرین_کلیہ_اول} سے منفی کر کے درج ذیل دکھائیں۔
 \begin{align}\label{مساوات_سمتی_میدان_گرین_کلیہ_دوم}
 \iint\limits_S (f\nabla g-g\nabla f)\cdot \an\dif\sigma=\iiint\limits_D (f\nabla^2g-g\nabla^2f)\dif H
 \end{align}
 مساوات \حوالہ{مساوات_سمتی_میدان_گرین_کلیہ_دوم} \اصطلاح{گرین کا کلیہ دوم }\فرہنگ{گرین!کلیہ دوم}\حاشیہب{Green's second formula}\فرہنگ{Green's!second formula}ہے۔ 
 \انتہا{سوال}
-
 \ابتدا{سوال}\شناخت{سوال_سمتی_میدان_کمیت_بقا}\موٹا{کمیت کی بقا}\quad
 فضا میں خطہ \عددی{D} پر \عددی{\kvec{v}(t,x,y,z)}  استمراری قابل تفرق سمتیہ میدان ہے، جبکہ \عددی{p(t,x,y,z)}  استمراری قابل تفرق عددیہ تفاعل ہے۔ متغیر \عددی{t} وقت کو ظاہر کرتا ہے۔ \اصطلاح{کمیت کی بقا کا قانون }\فرہنگ{قانون!بقا کمیت}\حاشیہب{Law of Conservation of Mass}\فرہنگ{law!conservation of mass}درج ذیل کہتا ہے:
 \[\frac{\dif}{\dif t}\iiint\limits_D p(t,x,y,z)\dif H=-\iint\limits_S p\kvec{v}\cdot\an\dif\sigma\]
-جہاں \عددی{S} وہ سطح ہے جو \عددی{D} کو گھیرتی ہے۔
+جہاں \عددی{S} وہ سطح ہے جس میں \عددی{D}  محصور ہے۔
 \begin{enumerate}[a.]
 \item
-سمتیہ بہاؤ میدان  \عددی{\kvec{v}} اور لمحہ \عددی{t}  پر نقطہ \عددی{(x,y,z)} پر سیال کی کثافت \عددی{p} لے کر کمیت کی بقا کے قانون کا طبیعی مفہوم پیش کریں۔
+سمتیہ سیلان میدان  \عددی{\kvec{v}} اور لمحہ \عددی{t}  پر نقطہ \عددی{(x,y,z)} پر سیال کی کثافت \عددی{p} لے کر کمیت کی بقا کے قانون کا طبیعی مفہوم پیش کریں۔
 \item
 مسئلہ انفراج اور    لیبنز کا قاعدہ:
 \[\frac{\dif}{\dif t}\iiint\limits_D p(t,x,y,z)\dif H=\iiint\limits_D \frac{\partial p}{\partial t}\dif H\]
 \end{enumerate}
 استعمال کر کے دکھائیں کہ کمیت کی بقا کا قانون استمراری مساوات:
 \[\nabla \cdot p\kvec{v}+\frac{\partial p}{\partial t}=0\]
-کا معادل  ہے۔(اول رکن  \عددی{\nabla \cdot p\kvec{v}} میں  متغیر \عددی{t} اٹل رکھا جاتا ہے، جبکہ دوسرے رکن \عددی{\partial p/\partial t} میں، ہم فرض کرتے ہیں کہ نقطہ \عددی{(x,y,z)} خطہ  \عددی{D} میں   اٹل رکھا گیا ہے۔)
+کے معادل  ہے۔(اول رکن  \عددی{\nabla \cdot p\kvec{v}} میں  متغیر \عددی{t} اٹل رکھا جاتا ہے، جبکہ دوسرے رکن \عددی{\partial p/\partial t} میں، ہم فرض کرتے ہیں کہ نقطہ \عددی{(x,y,z)} خطہ  \عددی{D} میں   اٹل رکھا گیا ہے۔)
 \انتہا{سوال}
 %Q32
-\ابتدا{سوال}\موٹا{نفوذ حر کی مساوات}\quad
-فرض کریں فضا میں خطہ \عددی{D}  میں مکین  ٹھوس جسم  کے نقطہ \عددی{(x,y,z)} کا درجہ حرارت لمحہ \عددی{t} پر  تفاعل \عددی{T(t,x,y,z)} دیتا ہو جس کے دوہرے تفرق  استمراری ہیں۔ جسم کی حری استعداد \عددی{c} اور کمیتی  کثافت \عددی{\rho} ہے۔مقدار \عددی{c\rho T} جسم کی  فی اکائی حجم حری توانائی کہلاتی ہے۔
+\ابتدا{سوال}\موٹا{نفوذ حرارت کی مساوات}\quad
+فرض کریں فضا میں خطہ \عددی{D}  میں واقع   ٹھوس جسم  کے نقطہ \عددی{(x,y,z)} کا درجہ حرارت کو  لمحہ \عددی{t} پر  تفاعل \عددی{T(t,x,y,z)} دیتا ہو جس کے دوہرے تفارق  استمراری ہیں۔ جسم کی حراری استعداد \عددی{c} اور کمیتی  کثافت \عددی{\rho} ہے۔مقدار \عددی{c\rho T} کو  جسم کی  حراری توانائی فی اکائی حجم   کہتے ہیں۔
 \begin{enumerate}[a.]
 \item
-بتلائیں \عددی{-\nabla T} کیوں حرارت کے بہاؤ کا رخ دے گا۔
+بتائیں \عددی{-\nabla T} کیوں حرارت کے  سیلان کا رخ دے گا۔
 \item
-\اصطلاح{بہاؤ  حر کا سمتیہ }\فرہنگ{بہاؤ حر سمتیہ}\حاشیہب{energy flux vector}\فرہنگ{energy flux vector} \عددی{-k\nabla T} لیں۔ (یہاں مستقل \عددی{k} \اصطلاح{موصلیت }\فرہنگ{موصلیت}\حاشیہب{conductivity}\فرہنگ{conductivity}کہلاتا ہے۔) کمیتی بقا کے قانون  (سوال \حوالہ{سوال_سمتی_میدان_کمیت_بقا}) میں \عددی{-k\nabla T=\kvec{v}} اور \عددی{c\rho T=p} لے کر مساوات نفوذ (برائے حرارت):
+\اصطلاح{توانائی کے بہاؤ کا سمتیہ }\فرہنگ{سمتیہ!بہاؤ توانائی}\حاشیہب{energy flux vector}\فرہنگ{energy flux vector} کو  \عددی{-k\nabla T}  لیں۔ (یہاں مستقل \عددی{k} \اصطلاح{موصلیت }\فرہنگ{موصلیت}\حاشیہب{conductivity}\فرہنگ{conductivity}کہلاتا ہے۔) کمیتی بقا کے قانون  (سوال \حوالہ{سوال_سمتی_میدان_کمیت_بقا}) میں \عددی{-k\nabla T=\kvec{v}} اور \عددی{c\rho T=p} لے کر مساوات نفوذ (برائے حرارت):
 \[\frac{\partial T}{\partial t}=K\nabla^2 T\]
-اخذ کریں، جہاں \عددی{K=k/(c\rho)>0}  \اصطلاح{نفوذیت }\فرہنگ{نفوذیت!مستقل}\حاشیہب{diffusivity}\فرہنگ{diffusivity!constant} کا مستقل کہلاتا ہے۔(دھیان رہے اگر یکساں موصل سلاخ جس کے سرے مکمل غیر موصل رکھے گئے ہوں کے نقطہ \عددی{x}  اور لمحہ \عددی{t} پر  درجہ حرارت کو  \عددی{T(t,x)}  ظاہر کرتا ہو ، تب \عددی{\nabla^2T=\partial^2T/\partial x^2} ہو گا اور مساوات نفوذ ، باب \حوالہ{باب_کثیر_المتغیر_تفاعل_اور_جزوی_تفرقات} کے  اضافی سوالات میں دی گئی یک بُعدی مساوات حرّ دیگی۔)
+اخذ کریں، جہاں \عددی{K=k/(c\rho)>0}  \اصطلاح{نفوذیت }\فرہنگ{نفوذیت!مستقل}\حاشیہب{diffusivity}\فرہنگ{diffusivity!constant} کا مستقل کہلاتا ہے۔(دھیان رہے کہ  اگر یکساں موصل سلاخ ، جس کے سرے مکمل غیر موصل رکھے گئے ہوں،  کے نقطہ \عددی{x}  اور لمحہ \عددی{t} پر  درجہ حرارت کو  \عددی{T(t,x)}  ظاہر کرتا ہو ، تب \عددی{\nabla^2T=\partial^2T/\partial x^2} ہو گا اور مساوات نفوذ ، باب \حوالہ{باب_کثیر_المتغیر_تفاعل_اور_جزوی_تفرقات} کے  اضافی سوالات میں دی گئی یک بُعدی مساوات حرارت   کی صورت اختیار کرتی ہے۔)
 \end{enumerate}
 \انتہا{سوال}
 \انتہا{سوالات}
+%KKKK??? am here
 
 %Questions for the entire chapter
 \حصہء{نظرثانی کی خاطر چند سوالات}
@@ -6904,10 +6896,10 @@ $12\pi(4\sqrt{2}-1)$
 اسپرنگ کا کمیتی مرکز لکیری تکملات سے کیسے حاصل کیا جا سکتا ہے؟  وضاحت کریں۔
 \انتہا{سوال}
 \ابتدا{سوال}
-سمتیہ میدان ، اور  ڈھلوان میدان  سے کیا مراد ہے؟ مثال پیش کریں۔
+سمتیہ میدان   اور  ڈھلوان میدان  سے کیا مراد ہے؟ مثال پیش کریں۔
 \انتہا{سوال}
 \ابتدا{سوال}
-منحنی کے ہمراہ   ذرے کو حرکت دینے والے قوت کے کام کی قیمت کیسے تلاش کی جائیگی؟ ایک مثال دیں۔
+منحنی کے ہمراہ   ذرے کو حرکت دینے والی قوت کے کام کی قیمت کیسے تلاش کی جائیگی؟ ایک مثال دیں۔
 \انتہا{سوال}
 \ابتدا{سوال}
 بہاؤ، دائری سیلان، اور گردش سے کیا مراد ہے؟
@@ -6919,7 +6911,7 @@ $12\pi(4\sqrt{2}-1)$
 آپ کیسے جان پاتے ہیں کہ  میدان بقائی ہے؟
 \انتہا{سوال}
 \ابتدا{سوال}
-مخفی تفاعل سے کیا مراد ہے؟مثال سے دکھائیں  کہ بقائی میدان کا مخفی تفاعل کیسے تلاش کیا جاتا ہے۔
+مخفیہ تفاعل سے کیا مراد ہے؟مثال سے دکھائیں  کہ بقائی میدان کا مخفیہ تفاعل کیسے تلاش کیا جاتا ہے۔
 \انتہا{سوال}
 \ابتدا{سوال}
 تفرقی روپ سے کیا مراد ہے؟ ایسا  روپ  قطعی ہونے سے کیا مراد ہے؟ قطعی ہونے کی پرکھ کیا ہے؟ مثال پیش کریں۔
@@ -6952,7 +6944,7 @@ $12\pi(4\sqrt{2}-1)$
 مسئلہ سٹوکس کیا ہے؟ اس  کا مفہوم بیان کریں۔
 \انتہا{سوال}
 \ابتدا{سوال}
- باب میں پیش ، بقائی میدان کے  نتائج  کا خلاصہ پیش کریں۔
+ باب میں پیش  بقائی میدان کے  نتائج  کا خلاصہ پیش کریں۔
 \انتہا{سوال}
 \ابتدا{سوال}
 مسئلہ انفراج کیا ہے؟ اس کا مفہوم بیان کریں۔
@@ -6965,12 +6957,15 @@ $12\pi(4\sqrt{2}-1)$
 \انتہا{سوال}
 
 \حصہء{مشق}
-\ابتدا{سوالاتباب}
+\ابتدا{سوالات_باب}
+\setcounter{questioncounter}{0}
 \جزوحصہء{لکیری تکمل کی قیمت}
 %Q1
 \ابتدا{سوال}\شناخت{مشق_سمتی_میدان_فضا_میں_جوڑنا}
 مبدا کو نقطہ \عددی{(1,1,1)}  سے فضا میں جوڑنے کے دو راستے شکل میں دکھائے گئے ہیں۔ باری باری ان راہ پر \عددی{{f(x,y,z)=2x-3y^2-2z+3}} کا تکمل لیں۔
+
 \begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}
 \begin{axis}[clip=false,view={120}{30}, axis on top,  small, axis lines=middle , xlabel={$x$}  ,ylabel={$y$}, zlabel={$z$}, xtick={\empty}, xticklabels={}, ytick={\empty},ztick={\empty},name=kFig,, xlabel style={anchor=north}, ylabel style={anchor=west},zlabel style={anchor=east},]
 \addplot3[thick]coordinates{(0,0,0)(1,1,1)}node[pos=0,circ]{}node[pos=0,left]{$(0,0,0)$}node[pos=1,circ]{}node[pos=1,right,xshift=0.25em]{$(1,1,1)$};
@@ -6981,6 +6976,7 @@ $12\pi(4\sqrt{2}-1)$
 \end{tikzpicture}
 \end{minipage}%
 \begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}
 \begin{axis}[clip=false,view={120}{30}, axis on top,  small, axis lines=middle , xlabel={$x$}  ,ylabel={$y$}, zlabel={$z$}, xtick={\empty}, xticklabels={}, ytick={\empty},ztick={\empty},name=kFig,, xlabel style={anchor=north}, ylabel style={anchor=west},zlabel style={anchor=east},]
 \addplot3[thick]coordinates{(0,0,0) (1,1,0) (1,1,1)}node[pos=0,circ]{}node[pos=0,left]{$(0,0,0)$}node[pos=1,circ]{}node[pos=1,right,xshift=0.25em]{$(1,1,1)$};
@@ -7001,7 +6997,8 @@ $12\pi(4\sqrt{2}-1)$
 \ابتدا{سوال}
 مبدا کو نقطہ \عددی{(1,1,1)}  سے فضا میں جوڑنے کے تین راستے شکل میں دکھائے گئے ہیں۔ باری باری ان راہ پر \عددی{{f(x,y,z)=x^2+y-z}} کا تکمل لیں۔
 
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.50\textwidth}
+\centering
 \begin{tikzpicture}
 \begin{axis}[clip=false,view={120}{30}, axis on top,  small, axis lines=middle , xlabel={$x$}  ,ylabel={$y$}, zlabel={$z$}, xtick={\empty}, xticklabels={}, ytick={\empty},ztick={\empty},name=kFig,, xlabel style={anchor=north}, ylabel style={anchor=west},zlabel style={anchor=east},enlargelimits,enlarge x limits=0.2,]
 \addplot3[thick]coordinates{(0,0,0) (1,0,0) (1,1,0) (1,1,1)};
@@ -7015,8 +7012,9 @@ $12\pi(4\sqrt{2}-1)$
 \end{axis}
 \node[below] at (kFig.south) {\RL{پہلی راہ}};
 \end{tikzpicture}
-\end{minipage}%
+\end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}
 \begin{axis}[clip=false,view={120}{30}, axis on top,  small, axis lines=middle , xlabel={$x$}  ,ylabel={$y$}, zlabel={$z$}, xtick={\empty}, xticklabels={}, ytick={\empty},ztick={\empty},name=kFig,, xlabel style={anchor=north}, ylabel style={anchor=west},zlabel style={anchor=east},]
 \addplot3[thick]coordinates{(0,0,0) (1,1,0) (1,1,1)}node[pos=0,circ]{}node[pos=0,left]{$(0,0,0)$}node[pos=1,circ]{}node[pos=1,right,xshift=0.25em]{$(1,1,1)$};
@@ -7054,10 +7052,10 @@ $4a^2$
 }}
 \انتہا{جواب}
 \ابتدا{سوال}
-\اصطلاح{منحنی لف }\فرہنگ{منحنی لف}\حاشیہب{involute}\فرہنگ{involute}منحنی \عددی{\kvec{r}(t)=(\cos t+t\sin t)\ai+(\sin t-t\cos t)\aj,\,0\le t\le \sqrt{3}} پر تفاعل \عددی{{f(x,y,z)=\sqrt{x^2+y^2}}}  تکمل  کریں۔
+\اصطلاح{منحنی لف }\فرہنگ{منحنی لف}\حاشیہب{involute}\فرہنگ{involute}منحنی \عددی{\kvec{r}(t)=(\cos t+t\sin t)\ai+(\sin t-t\cos t)\aj,\,0\le t\le \sqrt{3}} پر تفاعل \عددی{{f(x,y,z)=\sqrt{x^2+y^2}}} کا   تکمل  کریں۔
 \انتہا{سوال}
 
-مشق \حوالہ{سوال_سمتی_اضافی_پانچ}  اور \حوالہ{سوال_سمتی_اضافی_چھ}  میں تکملات کی قیمت  تلاش کریں۔
+سوال  \حوالہ{سوال_سمتی_اضافی_پانچ}  اور  سوال \حوالہ{سوال_سمتی_اضافی_چھ}  میں تکملات کی قیمت  تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_سمتی_اضافی_پانچ}
 \[\int\limits_{(-1,1,1)}^{(4,-3,0)}\frac{\dif x+\dif y+\dif z}{\sqrt{x+y+z}}\]
@@ -7071,7 +7069,7 @@ $0$
 \[\int\limits_{(1,1,1)}^{(10,3,3)} \dif x-\sqrt{\frac{z}{y}}\dif y-\sqrt{\frac{y}{z}}\dif z\]
 \انتہا{سوال}
 \ابتدا{سوال}
-کرہ  \عددی{x^2+y^2+z^2=5} سے مستوی  \عددی{z=-1} ایک دائرہ کاٹتا ہے۔ اوپر سے دیکھتے ہوئے  اس دائرے پر گھڑی وار چلتے ہوئے  \عددی{\kvec{F}=-(y\sin z)\ai+(x\sin z)\aj+(xy\cos z)\ak} کا تکمل لیں۔
+کرہ  \عددی{x^2+y^2+z^2=5} سے مستوی  \عددی{z=-1} ایک دائرہ کاٹتا ہے۔ اوپر سے دیکھنے پر،    دائرے پر گھڑی وار چلتے ہوئے  \عددی{\kvec{F}=-(y\sin z)\ai+(x\sin z)\aj+(xy\cos z)\ak} کا تکمل لیں۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -7082,12 +7080,11 @@ $0$
 تفاعل   \عددی{{\kvec{F}=3x^2y\ai+(x^3+1)\aj+9z^2\ak}}  کا تکمل اس دائرے پر لیں جس کو 
 کرہ  \عددی{x^2+y^2+z^2=9} سے مستوی  \عددی{x=2}  کاٹتا ہے۔ 
 \انتہا{سوال}
-
-مشق \حوالہ{سوال_سمتی_اضافی_نو}  اور \حوالہ{سوال_سمتی_اضافی_دس}  میں تکمل کی قیمت تلاش کریں۔
+سوال \حوالہ{سوال_سمتی_اضافی_نو}  اور  سوال \حوالہ{سوال_سمتی_اضافی_دس}  میں تکمل کی قیمت تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_سمتی_اضافی_نو}
 \[\int\limits_C 8x \sin y \dif x-8y\cos x\dif y\]
-مربع \عددی{C} کو  ربع اول سے لکیر \عددی{x=\pi/2} اور \عددی{y=\pi/2}    کاٹتی ہیں۔
+  ربع اول سے لکیریں  \عددی{x=\pi/2} اور \عددی{y=\pi/2} مربع \عددی{C}        کاٹتی ہیں۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -7109,7 +7106,7 @@ $\pi\sqrt{3}$
 }}
 \انتہا{جواب}
 \ابتدا{سوال}\موٹا{قطع مکافی ٹوپی  کا رقبہ}\quad
-قطع مکافی مجسم \عددی{y^2+z^2=3x}  سے مستوی \عددی{x=1} ایک ٹوپی کاٹتا ہے۔ اس ٹوپی کا رقبہ   تلاش کریں۔
+قطع مکافی مجسم \عددی{y^2+z^2=3x}  سے مستوی \عددی{x=1} ایک ٹوپی کاٹتا ہے۔ اس  ٹوپی کا رقبہ   تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{سوال}\موٹا{کروی  ٹوپی  کا رقبہ}\quad
 کرہ  \عددی{x^2+y^2+z^2=1}   کے اوپری حصے سے مستوی \عددی{z=\sqrt{2}/2} ایک ٹوپی کاٹتا ہے۔ اس ٹوپی کا رقبہ   تلاش کریں۔
@@ -7123,8 +7120,8 @@ $2\pi(1-1\!/\!\sqrt{2})$
 \ابتدا{سوال}
 \begin{enumerate}[a.]
 \item
-\موٹا{نصف کرہ کو بیلن کاٹتا ہے}\quad
-نصف کرہ \عددی{x^2+y^2+z^2=4,\,z\ge 0} سے بیلن \عددی{x^2+y^2=2x} سطح کاٹتا ہے۔ اس سطح کا رقبہ تلاش کریں۔
+\موٹا{نصف کرے کو بیلن کاٹتا ہے}\quad
+نصف کرہ \عددی{x^2+y^2+z^2=4,\,z\ge 0} سے بیلن \عددی{x^2+y^2=2x} سطح ایک  کاٹتا ہے۔ اس سطح کا رقبہ تلاش کریں۔
 \item
 نصف کرہ کے اندر موجود بیلن کے ٹکڑے کا رقبہ تلاش کریں۔ (اشارہ: مستوی \عددی{xy} پر قائمہ تظلیل لیں۔ یا تکمل \عددی{\int h\dif s} تلاش کریں جہاں کرہ کے اندر  \عددی{h} بیلن کا قد دیتا ہے اور   مستوی \عددی{xy} میں \عددی{x^2+y^2=2x}    کا  چھوٹا قطع  \عددی{\dif s} ہے۔)
 \end{enumerate}
@@ -7141,7 +7138,7 @@ $2\pi(1-1\!/\!\sqrt{2})$
 \انتہا{سوال}
 %Q15
 \ابتدا{سوال}\موٹا{مثلث کا رقبہ}\quad
-ثمن اول کو مستوی \عددی{x/a+y/b+z/c=1,\, (a,b,c>1)} ایک مثلث  میں قطع کرتی ہیں۔ اس مثلث کا رقبہ تلاش کریں۔ نتیجے کی تصدیق سمتیہ حساب کر کے کریں۔
+ثمن اول کو مستوی \عددی{x/a+y/b+z/c=1,\, (a,b,c>1)} ایک مثلث  میں قطع کرتا  ہیں۔ اس مثلث کا رقبہ تلاش کریں۔ نتیجے کی تصدیق سمتیہ حساب کر کے کریں۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -7158,7 +7155,7 @@ $\tfrac{abc}{2}\sqrt{\tfrac{1}{a^2}+\tfrac{1}{b^2}+\tfrac{1}{c^2}}$
 \end{enumerate}
 \انتہا{سوال}
 \ابتدا{سوال}\موٹا{بیلن کو مستویات قطع کرتی ہیں}\quad
-ثمن اول میں بیلن \عددی{x^2+z^2=25} کے اس حصے پر ، جو مستویات \عددی{x=0} اور \عددی{x=1} کے بیچ   مستوی \عددی{z=3} سے اوپر واقع ہے  ، \عددی{g(x,y,z)=x^4y(y^2+z^2)} کا تکمل لیں۔
+ثمن اول میں بیلن \عددی{x^2+z^2=25} کے اس حصے پر ، جو مستویات \عددی{x=0} اور \عددی{x=1} کے درمیان    مستوی \عددی{z=3} سے اوپر واقع ہے  ، \عددی{g(x,y,z)=x^4y(y^2+z^2)} کا تکمل لیں۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -7166,14 +7163,14 @@ $50$
 }}
 \انتہا{جواب}
 \ابتدا{سوال}
-حکومت پاکستان معدنیات کی تلاش کی غرض  سے خطوط طول  بلد \عددی{\ang{62;13;0}}  اور \عددی{\ang{69;13;0}} کے  درمیان اور   شمالی خطوط  عرض بلد  \عددی{\ang{41}}اور  \عددی{\ang{45}} کے بیچ   علاقے کا معائنہ کرنا چاہتی ہے۔  زمین کا رداس \عددی{R=\SI{6371}{\kilo\meter}} لیتے ہوئے اس علاقے کا رقبہ تلاش کریں۔
+حکومت پاکستان معدنیات کی تلاش کی غرض  سے خطوط طول  بلد \عددی{\ang{62;13;0}}  اور \عددی{\ang{69;13;0}} کے  درمیان اور   شمالی خطوط  عرض بلد  \عددی{\ang{41}}اور  \عددی{\ang{45}} کے درمیان    علاقے کا معائنہ کرنا چاہتی ہے۔  زمین کا رداس \عددی{R=\SI{6371}{\kilo\meter}} لیتے ہوئے اس علاقے کا رقبہ تلاش کریں۔
 \انتہا{سوال}
 
 \جزوحصہء{مقدار معلوم شدہ سطوح}
-مشق \حوالہ{سوال_سمتی_میدان_مقدار_معلوم_سطوح_انیس}  تا \حوالہ{سوال_سمتی_میدان_مقدار_معلوم_سطوح_چوبیس}  میں سطوح کے مقدار معلوم روپ تلاش کریں۔ (چونکہ ایسا کرنے کے کئی طریقے ہیں لہٰذا آپ کے جواب، کتاب میں دیے گئے  جواب سے مختلف ہو سکتے ہیں۔)
+سوال \حوالہ{سوال_سمتی_میدان_مقدار_معلوم_سطوح_انیس}  تا سوال  \حوالہ{سوال_سمتی_میدان_مقدار_معلوم_سطوح_چوبیس}  میں سطوح کے مقدار معلوم روپ تلاش کریں۔ (چونکہ ایسا کرنے کے کئی طریقے ہیں لہٰذا آپ کے جواب، کتاب میں دیے گئے  جواب سے مختلف ہو سکتے ہیں۔)
 
 \ابتدا{سوال}\شناخت{سوال_سمتی_میدان_مقدار_معلوم_سطوح_انیس}\موٹا{کروی پٹی} \quad
-مستویات \عددی{z=-3} اور \عددی{z=3\sqrt{3}}   کے بیچ کرہ \عددی{x^2+y^2+z^2=36} کا ٹکڑا۔
+مستویات \عددی{z=-3} اور \عددی{z=3\sqrt{3}}   کے درمیان  واقع کرہ \عددی{x^2+y^2+z^2=36} کا ٹکڑا۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -7181,7 +7178,7 @@ $\kvec{r}(\theta,\phi)=6\sin\theta\cos\phi\ai+6\sin\theta\sin\phi\aj\\+6\cos\the
 }}
 \انتہا{جواب}
 \ابتدا{سوال}\موٹا{قطع مکافی ٹوپی}\quad
-مستوی \عددی{z=-2} سے اوپر قطع مکافی جسم \عددی{z=-(x^2+y^2)\!/\!2} کا ٹکڑا۔
+مستوی \عددی{z=-2} سے اوپر  واقع قطع مکافی جسم \عددی{z=-(x^2+y^2)\!/\!2} کا ٹکڑا۔
 \انتہا{سوال}
 \ابتدا{سوال}\موٹا{مخروط}\quad
 مخروط \عددی{z=1+\sqrt{x^2+y^2},\, z\le 3}
@@ -7195,7 +7192,7 @@ $\kvec{r}(r,\phi)=r\cos\phi \ai+r\sin\phi\aj+\\(1+r)\ak,\, 0\le r\le 2, 0\le \ph
 ربع اول اور مستوی \عددی{xy}  میں مربع \عددی{0\le x\le 2} ، \عددی{0\le y\le 2}کے اوپر موجود  مستوی \عددی{4x+2y+4z=12} کا ٹکڑا۔
 \انتہا{سوال}
 \ابتدا{سوال}\موٹا{قطع مکافی مجسم کا ٹکڑا}\quad
-مستوی \عددی{xy} سے اوپر موجود  قطع مکافی مجسم \عددی{y=2(x^2+z^2),\,y\le 2} کا ٹکڑا۔
+مستوی \عددی{xy} سے اوپر واقع قطع مکافی مجسم \عددی{y=2(x^2+z^2),\,y\le 2} کا ٹکڑا۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -7204,10 +7201,10 @@ $\kvec{r}(u,v)=u\cos v\ai+2u^2\aj+u\sin v\ak,\\ 0\le u\le1, 0\le v\le \pi$
 \انتہا{جواب}
 %Q24
 \ابتدا{سوال}\شناخت{سوال_سمتی_میدان_مقدار_معلوم_سطوح_چوبیس}\موٹا{نصف کرے کا ٹکڑا}\quad
-ثمن اول میں موجود کرہ \عددی{x^2+y^2+z^2=10,\, y\ge 0} کا ٹکڑا۔
+ثمن اول میں واقع  کرہ \عددی{x^2+y^2+z^2=10,\, y\ge 0} کا ٹکڑا۔
 \انتہا{سوال}
 \ابتدا{سوال}\شناخت{مشق_سمتی_میدان_سطح}\موٹا{سطحی رقبہ}\quad
-درج ذیل سطح کا رقبہ تلاش کریں۔
+درج ذیل سطحے کا رقبہ تلاش کریں۔
 \begin{align*}
 \kvec{r}(u,v)&=(u+v)\ai+(u-v)\aj+v\ak\\
 &0\le u\le 1,\qquad 0\le v\le 1
@@ -7219,7 +7216,7 @@ $\sqrt{6}$
 }}
 \انتہا{جواب}
 \ابتدا{سوال}\موٹا{سطحی تکمل}\quad
-مشق \حوالہ{مشق_سمتی_میدان_سطح} کی سطح پر \عددی{f(x,y,z)=xy-z^2} کا تکمل لیں۔
+سوال  \حوالہ{مشق_سمتی_میدان_سطح} کی سطح پر \عددی{f(x,y,z)=xy-z^2} کا تکمل لیں۔
 \انتہا{سوال}
 %Q27
 \ابتدا{سوال}\شناخت{مشق_سمتی_میدان_چکردار_زینہ}\موٹا{چکر دار زینہ کا رقبہ}\quad
@@ -7247,11 +7244,11 @@ $\pi[\sqrt{2}+\ln(1+\sqrt{2})]$
 }}
 \انتہا{جواب}
 \ابتدا{سوال}\موٹا{سطحی تکمل}\quad
-تکمل \عددی{\iint\limits_S \sqrt{x^2+y^2+1}\dif \sigma}     کو مشق \حوالہ{مشق_سمتی_میدان_چکردار_زینہ} میں دی گئی سطح  پر حل کریں۔
+تکمل \عددی{\iint\limits_S \sqrt{x^2+y^2+1}\dif \sigma}     کو سوال  \حوالہ{مشق_سمتی_میدان_چکردار_زینہ} میں دی گئی سطح  پر حل کریں۔
 \انتہا{سوال}
 
 \جزوحصہء{بقائی میدان}
-مشق \حوالہ{سوال_سمتی_میدان_بقائی_انتیس}  تا \حوالہ{سوال_سمتی_میدان_بقائی_بتیس}    میں بقائی اور غیر  بقائی میدان کی نشاندہی کریں۔
+سوال  \حوالہ{سوال_سمتی_میدان_بقائی_انتیس}  تا سوال  \حوالہ{سوال_سمتی_میدان_بقائی_بتیس}    میں بقائی اور غیر  بقائی میدان کی نشاندہی کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_سمتی_میدان_بقائی_انتیس}
 \(\kvec{F}=x\ai+y\aj+z\ak\)
@@ -7276,7 +7273,7 @@ $\pi[\sqrt{2}+\ln(1+\sqrt{2})]$
 \(\kvec{F}=(\ai+z\aj+y\ak)/(x+yz)\)
 \انتہا{سوال}
 
-مشق \حوالہ{سوال_سمتی_میدان_بقائی_تینتیس}      اور \حوالہ{سوال_سمتی_میدان_بقائی_چونتیس}      میں میدان کے مخفی تفاعل تلاش کریں۔
+سوال \حوالہ{سوال_سمتی_میدان_بقائی_تینتیس}      اور  سوال \حوالہ{سوال_سمتی_میدان_بقائی_چونتیس}      میں میدان کے مخفیہ تفاعل تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_سمتی_میدان_بقائی_تینتیس}    
 \(\kvec{F}=2\ai+(2y+z)\aj+(y+1)\ak\)
@@ -7292,7 +7289,7 @@ $f(x,y,z)=y^2+yz+2x+z$
 
 \جزوحصہء{کام اور دائری سیلان}
 
-مشق \حوالہ{مشق_سمتی_میدان_فضا_میں_جوڑنا} میں نقطہ \عددی{(0,0,0)}  سے  \عددی{(1,1,1)}  تک راہ  کے ہمراہ مشق  \حوالہ{سوال_سمتی_میدان_بقائی_پینتیس}      اور \حوالہ{سوال_سمتی_میدان_بقائی_چتیس}       کے میدان  کا کام تلاش کریں۔
+سوال  \حوالہ{مشق_سمتی_میدان_فضا_میں_جوڑنا} میں نقطہ \عددی{(0,0,0)}  سے  \عددی{(1,1,1)}  تک راہ  کے ہمراہ  سوال  \حوالہ{سوال_سمتی_میدان_بقائی_پینتیس}      اور  سوال \حوالہ{سوال_سمتی_میدان_بقائی_چتیس}       کے میدان  کا     کام تلاش کریں۔
 
 %Q35
 \ابتدا{سوال}\شناخت{سوال_سمتی_میدان_بقائی_پینتیس}    
@@ -7308,12 +7305,12 @@ $f(x,y,z)=y^2+yz+2x+z$
 \انتہا{سوال}
 %Q37
 \ابتدا{سوال}\موٹا{دو طریقوں سے کام کی تلاش}\quad
- مسطح منحنی  \عددی{\kvec{r}(t)=(e^t\cos t)\ai+(e^t\sin t)\aj} پر چلتے  ہوئے  نقطہ \عددی{(1,0)} سے \عددی{(e^{{2\pi},0})} تک   درج ذیل  قوت \عددی{\kvec{F}=(x\ai+y\aj)\!/\!(x^2+y^2)^{3/2}} کا کام دو طریقوں سے تلاش کریں۔
+ مستوی منحنی  \عددی{\kvec{r}(t)=(e^t\cos t)\ai+(e^t\sin t)\aj} پر چلتے  ہوئے  نقطہ \عددی{(1,0)} سے \عددی{(e^{{2\pi},0})} تک   درج ذیل  قوت \عددی{\kvec{F}=(x\ai+y\aj)\!/\!(x^2+y^2)^{3/2}} کا کام دو طریقوں سے تلاش کریں۔
 \begin{enumerate}[a.]
 \item
 منحنی کا مقدار معلوم روپ استعمال کر کے تکمل کام  کی قیمت تلاش کریں۔
 \item
-سمتیہ \عددی{\kvec{F}}  کے مخفی تفاعل  کی قیمت تلاش کرتے ہوئے۔
+سمتیہ \عددی{\kvec{F}}  کے مخفیہ تفاعل  کی قیمت تلاش کرتے ہوئے۔
 \end{enumerate}
 \انتہا{سوال}
 \ابتدا{جواب}
@@ -7322,12 +7319,12 @@ $f(x,y,z)=y^2+yz+2x+z$
 }}
 \انتہا{جواب}
 \ابتدا{سوال}\موٹا{مختلف راہ کے ہمراہ  سیال کا گزر}\quad
-میدان \عددی{\kvec{F}=\nabla(x^2ze^y)}  کا بہاؤ درج ذیل پر تلاش کریں۔
+میدان \عددی{\kvec{F}=\nabla(x^2ze^y)}  کا  سیلان درج ذیل پر تلاش کریں۔
 \begin{enumerate}[a.]
 \item
-مثبت محور \عددی{y}  سے دیکھتے ہوئے    اس ترخیم \عددی{C} پر ایک چکر گھڑی وار چل کر ، جس پر مستوی \عددی{x+y+z=1} بیلن \عددی{x^2+z^2=25}  کو کاٹتا ہے۔
+مستوی \عددی{x+y+z=1} بیلن \عددی{x^2+z^2=25}  کو   ترخیم \عددی{C}  پر کاٹتا ہے۔ مثبت محور \عددی{y}  سے دیکھنے پر   ترخیم \عددی{C} پر ایک چکر گھڑی وار چل کر۔
 \item
-مشق \حوالہ{مشق_سمتی_میدان_چکردار_زینہ}  میں چکردار   زینہ کی  قوسی  سرحد کے ہمراہ \عددی{(1,0,0)} سے \عددی{(1,0,2\pi)} تک۔
+سوال \حوالہ{مشق_سمتی_میدان_چکردار_زینہ}  میں چکردار   زینہ کی  قوسی  سرحد کے ہمراہ \عددی{(1,0,0)} سے \عددی{(1,0,2\pi)} تک۔
 \end{enumerate}
 \انتہا{سوال}
 
@@ -7357,11 +7354,11 @@ $f(x,y,z)=y^2+yz+2x+z$
 \انتہا{سوال}
 \end{comment}
 
-مشق \حوالہ{سوال_سمتی_انتالیس}  اور \حوالہ{سوال_سمتی_چالیس} میں مسئلہ سٹوکس کا تکمل استعمال کر کے  \عددی{C} پر دی گئی سمت چلتے ہوئے  میدان \عددی{\kvec{F}} کا دائری سیلان تلاش کریں۔
+سوال  \حوالہ{سوال_سمتی_انتالیس}  اور سوال  \حوالہ{سوال_سمتی_چالیس} میں مسئلہ سٹوکس کا تکمل استعمال کر کے  \عددی{C} پر دی گئی سمت  میں چلتے ہوئے  میدان \عددی{\kvec{F}} کا دائری سیلان تلاش کریں۔
 
 %Q41
 \ابتدا{سوال}\شناخت{سوال_سمتی_انتالیس}\موٹا{ترخیم  پر دائری سیلان}\quad \عددی{\kvec{F}=y^2\ai-y\aj+3z^2\ak}\\
-مستوی \عددی{2x+6y-3z=6} بیلن \عددی{x^2+y^2=1} کو  ترخیم \عددی{C} پر ملتا ہے۔اوپر سے دیکھتے ہوئے  ترخیم پر گھڑی مخالف چلیں۔ 
+مستوی \عددی{2x+6y-3z=6} بیلن \عددی{x^2+y^2=1} کو  ترخیم \عددی{C} پر  قطع کرتا  ہے۔اوپر سے دیکھنے پر   ، ترخیم پر گھڑی مخالف چلیں۔ 
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -7369,7 +7366,7 @@ $0$
 }}
 \انتہا{جواب}
 \ابتدا{سوال}\شناخت{سوال_سمتی_چالیس}\موٹا{دائرے کے ہمراہ  بہاؤ}\quad \عددی{\kvec{F}=(x^2+y)\ai+(x+y)\aj+(4y^2-z)\ak}\\
-مستوی \عددی{z=-y}  کرہ \عددی{x^2+y^2+z^2=4} کو   دائرہ  \عددی{C} پر ملتا ہے۔اوپر سے دیکھتے ہوئے  دائرے  پر گھڑی مخالف چلیں۔ 
+مستوی \عددی{z=-y}  کرہ \عددی{x^2+y^2+z^2=4} کو   دائرہ  \عددی{C} پر قطع کرتا  ہے۔اوپر سے دیکھنے پر   ، دائرے  پر گھڑی مخالف چلیں۔ 
 \انتہا{سوال}
 
 \جزوحصہء{کمیت اور معیار اثر}
@@ -7387,7 +7384,7 @@ $0$
 منحنی \عددی{\kvec{r}(t)=t\ai+(2/3)t^{3/2}\ak,\,0\le t\le 2} کے ہمراہ تار کی کثافت \عددی{t} پر \عددی{\delta=3\sqrt{5+t}} ہے۔ تار کا مرکز کمیت تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{سوال}\موٹا{متغیر کثافت کا تار }\quad
-باریک تار    جس کی کثافت \عددی{t} پر \عددی{\delta=1/(t+1)} ہے درج ذیل منحنی کے ہمراہ ہے۔ تار  کا مرکز کمیت اور جمودی معیار اثر اور  رداس دوار محددی محور کے لحاظ  سے تلاش کریں۔
+باریک تار    جس کی کثافت \عددی{t} پر \عددی{\delta=1/(t+1)} ہے درج ذیل منحنی کے ہمراہ ہے۔ تار  کا مرکز کمیت،  اور جمودی معیار اثر اور  رداس دوار محددی محور کے لحاظ  سے تلاش کریں۔
 \[\kvec{r}(t)=t\ai+\frac{2\sqrt{2}}{3}t^{3/2}\aj+\frac{t^2}{2}\ak,\qquad 0\le t\le 2\]
 \انتہا{سوال}
 \ابتدا{جواب}
@@ -7398,7 +7395,7 @@ $(\bar{x},\bar{y},\bar{z})=(1,\tfrac{16}{15},\tfrac{2}{3});\\ I_x=\tfrac{232}{45
 \انتہا{جواب}
 %Q44
 \ابتدا{سوال}\موٹا{محراب کا مرکز کمیت}\quad 
-مستوی \عددی{xy} میں باریک دھاتی محراب نصف دائرہ \عددی{y=\sqrt{a^2-x^2}} کے ہمراہ موجود ہے۔نقطہ \عددی{(x,y)} پر محراب کی  کثافت \عددی{\delta(x,y)=2a-y} ہے۔ محراب کا مرکز کمیت تلاش کریں۔
+مستوی \عددی{xy} میں باریک دھاتی محراب نصف دائرہ \عددی{y=\sqrt{a^2-x^2}} کے ہمراہ واقع  ہے۔نقطہ \عددی{(x,y)} پر محراب کی  کثافت \عددی{\delta(x,y)=2a-y} ہے۔ محراب کا مرکز کمیت تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{سوال}\موٹا{مستقل کثافت کا تار}\quad 
  منحنی \عددی{\kvec{r}(t)=(e^t\cos t)\ai+(e^t\sin t)\aj+e^t\ak,\, 0\le t\le \ln 2} کے ہمراہ  مستقل کثافت \عددی{\delta=1}  کا تار موجود ہے۔ گزارش ہے کہ \عددی{\bar{z}}، \عددی{I_z}، اور \عددی{R_z} تلاش کریں۔
@@ -7409,11 +7406,11 @@ $\bar{z}=\tfrac{3}{2},I_z=\tfrac{7\sqrt{3}}{3},R_z=\sqrt{\tfrac{7}{3}}$
 }}
 \انتہا{جواب}
 %Q46
-\ابتدا{سوال}\موٹا{مستقل کثافت  پیچ دار تار}\quad 
+\ابتدا{سوال}\موٹا{مستقل کثافت والا   پیچ دار تار}\quad 
 پیچ دار منحنی \عددی{\kvec{r}(t)=(2\sin t)\ai+(2\cos t)\aj+3t\ak,\,0\le t\le 2\pi} کے ہمراہ موجود تار کی مستقل کثافت \عددی{\delta} ہے۔ تار کی کمیت اور اس  کا  مرکز کمیت  تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{سوال}\موٹا{خول کا جمود، رداس دوار،  اور مرکز کمیت}\quad 
-مستوی \عددی{z=3} کرہ  \عددی{x^2+y^2+z^2=25} کے بالا حصہ سے   باریک خول کاٹتا ہے جس کی کثافت \عددی{\delta(x,y,z)=z} ہے۔ خول کے \عددی{I_z}، \عددی{R_z}، اور  مرکز کمیت تلاش کریں۔
+مستوی \عددی{z=3} کرہ  \عددی{x^2+y^2+z^2=25} کے بالا حصہ سے   باریک خول کاٹتا ہے جس کی کثافت \عددی{\delta(x,y,z)=z} ہے۔ خول کا \عددی{I_z}، \عددی{R_z}، اور  مرکز کمیت تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -7424,8 +7421,8 @@ $(\bar{x},\bar{y},\bar{z})=(0,0,\tfrac{49}{12}),I_z=640\pi,\\ R_z=2\sqrt{2}$
  محور \عددی{z} کے لحاظ سے اس مکعب  کی سطح کا جمودی معیار  اثر معلوم کریں جس کو مستویات \عددی{x=1}، \عددی{y=1}، اور \عددی{z=1} ثمن اول سے کاٹتی ہیں۔کثافت \عددی{\delta =1} ہے۔
 \انتہا{سوال}
 
-\جزوحصہء{مسطح منحنی یا سطح سے   باہر   رخ گزرنے والا   بہاؤ} 
-مشق \حوالہ{سوال_سمتی_انچاس} اور \حوالہ{سوال_سمتی_پچاس} میں دیے گئے میدان  \عددی{\kvec{F}} اور منحنیات \عددی{C}  کے لیے  مسئلہ گرین استعمال کر کے  گھڑی مخالف دائری سیلان اور باہر رخ بہاؤ  تلاش کریں۔
+\جزوحصہء{مستوی منحنی یا سطح سے   باہر   رخ گزرنے والا   بہاؤ} 
+سوال  \حوالہ{سوال_سمتی_انچاس} اور  سوال \حوالہ{سوال_سمتی_پچاس} میں دیے گئے میدان  \عددی{\kvec{F}} اور منحنیات \عددی{C}  کے لیے  مسئلہ گرین استعمال کر کے  گھڑی مخالف دائری سیلان اور باہر کے  رخ  میں بہاؤ  تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_سمتی_انچاس}\موٹا{مربع}\quad \عددی{\kvec{F}=(2xy+x)\ai+(xy-y)\aj}\\ 
 منحنیات \عددی{x=0}، \عددی{x=1}، \عددی{y=0}، اور \عددی{y=1} مربع  \عددی{C} دیتی ہیں۔
@@ -7443,18 +7440,17 @@ $(\bar{x},\bar{y},\bar{z})=(0,0,\tfrac{49}{12}),I_z=640\pi,\\ R_z=2\sqrt{2}$
 دکھائیں کہ کسی بھی بند  منحنی \عددی{C}   کے لیے، جس پر مسئلہ گرین کا اطلاق ہوتا ہو ، درج ذیل ہو گا۔
 \[\ointctrclockwise\limits_C (\ln x\sin y \dif y-\frac{\cos y}{x}\dif x)=0\]
 \انتہا{سوال}
-
 \ابتدا{سوال}
 \begin{enumerate}[a.]
 \item
 \موٹا{باہر رخ بہاؤ اور رقبہ}\quad
-دکھائیں کہ   تعین گر سمتیہ میدان \عددی{\kvec{F}=x\ai+y\aj} کا باہر  رخ بہاؤ کسی بھی بند منحنی پر، جس پر مسئلہ گرین کا اطلاق ہوتا ہو،  منحنی میں محیط خطے کے رقبے کا دگنا ہو گا۔
+دکھائیں کہ   تعین گر سمتیہ میدان \عددی{\kvec{F}=x\ai+y\aj} کا باہر    کے رخ  میں بہاؤ کسی بھی بند منحنی پر، جس پر مسئلہ گرین کا اطلاق ہوتا ہو،  منحنی میں محصور  خطے کے رقبے کا دگنا ہو گا۔
 \item
-فرض کریں  \عددی{\an} ایسے بند  منحنی   \عددی{C} کا باہر رخ   اکائی  عمود سمتیہ ہے جس پر مسئلہ گرین کا اطلاق ہو تا ہے۔  دکھائیں یہ ممکن نہیں کہ  \عددی{C} کے ہر نقطے پر \عددی{\an}   تعین گر سمتیہ  میدان \عددی{\kvec{F}=x\ai+y\aj}  کے  عمود ہو۔
+فرض کریں  \عددی{\an} ایسی بند  منحنی   \عددی{C} کا باہر  کے رخ    اکائی  عمود سمتیہ ہے جس پر مسئلہ گرین کا اطلاق ہو تا ہے۔  دکھائیں یہ ممکن نہیں کہ  \عددی{C} کے ہر نقطے پر \عددی{\an}   تعین گر سمتیہ  میدان \عددی{\kvec{F}=x\ai+y\aj}  کے  عمود ہو۔
 \end{enumerate}
 \انتہا{سوال}
 
-مشق \حوالہ{سوال_سمتی_ترپن}   تا \حوالہ{سوال_سمتی_چپن}  میں  سرحد \عددی{D} کو باہر رخ  عبور کرتا  ہوا  \عددی{\kvec{F}}  کا بہاؤ تلاش کریں۔
+سوال  \حوالہ{سوال_سمتی_ترپن}   تا  سوال \حوالہ{سوال_سمتی_چپن}  میں  سرحد \عددی{D} کو باہر  کے رخ   میں عبور کرنے والا  \عددی{\kvec{F}}  کا بہاؤ تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_سمتی_ترپن}\موٹا{مکعب} \quad
 \(\kvec{F}=2xy\ai+2yz\aj+2xz\ak\)\\
@@ -7480,10 +7476,10 @@ $\tfrac{2\pi}{3}(7-8\sqrt{2})$
 \انتہا{جواب}
 \ابتدا{سوال}\شناخت{سوال_سمتی_چپن}\موٹا{مخروط اور بیلن}\quad 
 \(\kvec{F}=(6x+y)\ai-(x+z)\ay+4yz\ak\)\\
-ثمن اول میں  مخروط \عددی{z=\sqrt{x^2+y^2}}، بیلن \عددی{x^2+y^2=1}، اور  محددی مستویات کے بیچ خطہ \عددی{D} ہے۔
+ثمن اول میں  مخروط \عددی{z=\sqrt{x^2+y^2}}، بیلن \عددی{x^2+y^2=1}، اور  محددی مستویات کے درمیان واقع خطہ \عددی{D} ہے۔
 \انتہا{سوال}
 %Q57
-\ابتدا{سوال}\موٹا{نصف کرہ، بیلن، اور مستوی}\quad \عددی{S} وہ سطح ہے  جس کو بائیں سے نصف کرہ \عددی{x^2+y^2+z^2=a^2,\,y\le 0}، درمیان  میں  بیلن \عددی{x^2+z^2=a^2,\,0\le y\le a}، اور  دائیں سے  مستوی \عددی{y=a}  محدود کرتے ہیں۔ سطح \عددی{S} سے باہر رخ \عددی{\kvec{F}=y\ai+z\aj+x\ak} کا بہاؤ تلاش کریں۔
+\ابتدا{سوال}\موٹا{نصف کرہ، بیلن، اور مستوی}\quad \عددی{S} وہ سطح ہے  جس کو بائیں سے نصف کرہ \عددی{x^2+y^2+z^2=a^2,\,y\le 0}، درمیان  میں  بیلن \عددی{x^2+z^2=a^2,\,0\le y\le a}، اور  دائیں سے  مستوی \عددی{y=a}  محصور کرتے ہیں۔ سطح \عددی{S} سے باہر  کے رخ  میں \عددی{\kvec{F}=y\ai+z\aj+x\ak} کا بہاؤ تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -7491,11 +7487,11 @@ $0$
 }}
 \انتہا{جواب}
 \ابتدا{سوال}\موٹا{بیلن اور مستویات}\quad 
-ثمن اول میں بیلن \عددی{x^2+4y^2=16}  اور مستویات \عددی{y=2z}، \عددی{x=0}، اور \عددی{z=0} کے بیچ خطے کی سرحد سے باہر رخ \عددی{\kvec{F}=3xz^2\ai+y\aj-z^3\ak}  کا بہاؤ تلاش کریں۔
+ثمن اول میں بیلن \عددی{x^2+4y^2=16}  اور مستویات \عددی{y=2z}، \عددی{x=0}، اور \عددی{z=0} کے درمیان واقع  خطے کی سرحد سے باہر کے  رخ  میں \عددی{\kvec{F}=3xz^2\ai+y\aj-z^3\ak}  کا بہاؤ تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{سوال}\موٹا{بیلن برتن}\quad 
 بیلن \عددی{x^2+y^2=1} اور مستویات \عددی{z=1} اور  \عددی{z=-1} میں محصور  خطہ کی سطح 
- سے باہر رخ \عددی{{\kvec{F}=xy^2\ai+x^2y\aj+y\ak}} کا بہاؤ ، مسئلہ انفراج  استعمال کر کے  تلاش کریں۔
+ سے باہر  کے  رخ  میں \عددی{{\kvec{F}=xy^2\ai+x^2y\aj+y\ak}} کا بہاؤ ، مسئلہ انفراج  استعمال کر کے  تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -7503,15 +7499,16 @@ $\pi$
 }}
 \انتہا{جواب}
 \ابتدا{سوال}\موٹا{نصف کرہ} \quad 
-نصف کرہ \عددی{x^2+y^2+z^2=a^2,\,z\ge 0} سے اوپر رخ \عددی{\kvec{F}=(3z+1)\ak} کا بہاؤ (ا) مسئلہ انفراج استعمال کر کے اور (ب) بہاؤ کا تکمل   حل  کے تلاش کریں۔
+نصف کرہ \عددی{x^2+y^2+z^2=a^2,\,z\ge 0} سے اوپر کے  رخ  میں \عددی{\kvec{F}=(3z+1)\ak} کا بہاؤ (ا) مسئلہ انفراج استعمال کر کے اور (ب) بہاؤ کا تکمل   حل  کے تلاش کریں۔
 \انتہا{سوال}
-\انتہا{سوالاتباب}
+\انتہا{سوالات_باب}
 
 
-\ابتدا{سوالاتباب}
-\جزوحصہء{مسئلہ گرین کے  استعمال   سے رقبہ کی تلاش}
+\ابتدا{سوالات_باب}
+\setcounter{questioncounter}{0}
+\جزوحصہء{مسئلہ گرین کے  استعمال   سے رقبے کی تلاش}
 
-مسئلہ گرین  کا کلیہ برائے رقبہ (صفحہ \حوالہصفحہ{مساوات_سمتی_میدان_مسئلہ_گرین_رقبہ}  پر مساوات \حوالہ{مساوات_سمتی_میدان_مسئلہ_گرین_رقبہ}) استعمال  کر کے سوال \حوالہ{سوال_سمتی_آخری_اضافی_ایک}  تا\حوالہ{سوال_سمتی_آخری_اضافی_چار}  میں  دی منحنیات میں محصور خطوں کے رقبے تلاش کریں۔
+مسئلہ گرین  کا کلیہ برائے رقبہ (صفحہ \حوالہصفحہ{مساوات_سمتی_میدان_مسئلہ_گرین_رقبہ}  پر مساوات \حوالہ{مساوات_سمتی_میدان_مسئلہ_گرین_رقبہ}) استعمال  کر کے سوال \حوالہ{سوال_سمتی_آخری_اضافی_ایک}  تا سوال \حوالہ{سوال_سمتی_آخری_اضافی_چار}  میں  دی منحنیات میں محصور خطوں کے رقبے تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_سمتی_آخری_اضافی_ایک}
 گھونگا  \عددی{x=2\cos t-\cos 2t}، \عددی{y=2\sin t-\sin 2t}، \عددی{0\le t\le 2\pi}
@@ -7572,11 +7569,11 @@ $\tfrac{2}{3}$
 \ابتدا{سوال}
 \begin{enumerate}[a.]
 \item
-ایسے سمتیہ میدان \عددی{\kvec{F}(x,y,z)} کی مثال پیش کریں  جو صرف ایک نقطہ پر \عددی{\kvec{0}} ہو اور جس کا گردش \عددی{\kvec{F}} ہر نقطے   پر غیر صفر ہو۔ اس نقطے کی نشاندہی کریں اور گردش کی قیمت تلاش کریں۔
+ایسے سمتیہ میدان \عددی{\kvec{F}(x,y,z)} کی مثال پیش کریں  جو صرف ایک نقطہ پر \عددی{\kvec{0}} ہو اور جس کی گردش \عددی{\kvec{F}} ہر نقطے   پر غیر صفر ہو۔ اس نقطے کی نشاندہی کریں اور گردش کی قیمت تلاش کریں۔
 \item
-ایسے سمتیہ میدان \عددی{\kvec{F}(x,y,z)} کی مثال پیش کریں  جو صرف ایک  لکیر  پر \عددی{\kvec{0}} ہو اور جس کا گردش \عددی{\kvec{F}} ہر  مقام    پر غیر صفر ہو۔ اس لکیر  کی نشاندہی کریں اور گردش کی قیمت تلاش کریں۔
+ایسے سمتیہ میدان \عددی{\kvec{F}(x,y,z)} کی مثال پیش کریں  جو صرف ایک  لکیر  پر \عددی{\kvec{0}} ہو اور جس کی  گردش \عددی{\kvec{F}} ہر  مقام    پر غیر صفر ہو۔ اس لکیر  کی نشاندہی کریں اور گردش کی قیمت تلاش کریں۔
 \item
-ایسے سمتیہ میدان \عددی{\kvec{F}(x,y,z)} کی مثال پیش کریں  جو ایک    سطح  پر \عددی{\kvec{0}} ہو اور جس کا گردش \عددی{\kvec{F}} ہر  مقام پر غیر صفر ہو۔ اس سطح کی نشاندہی کریں اور گردش کی قیمت تلاش کریں۔
+ایسے سمتیہ میدان \عددی{\kvec{F}(x,y,z)} کی مثال پیش کریں  جو ایک    سطح  پر \عددی{\kvec{0}} ہو اور جس کی گردش \عددی{\kvec{F}} ہر  مقام پر غیر صفر ہو۔ اس سطح کی نشاندہی کریں اور گردش کی قیمت تلاش کریں۔
 \end{enumerate}
 \انتہا{سوال}
 \ابتدا{جواب}
@@ -7588,10 +7585,10 @@ $\tfrac{2}{3}$
 \انتہا{جواب}
 %Q6
 \ابتدا{سوال}
-کرہ \عددی{x^2+y^2+z^2=R^2} کی سطح پر ایسے تمام نقطے \عددی{(a,b,c)} تلاش کریں جہاں  \عددی{\kvec{F}(a,b,c)\ne \kvec{0}} اور سطح کو  سمتیہ میدان \عددی{\kvec{F}=yz^2\ai+xz^2\aj+2xyz\ak}   عمود  ہو۔
+کرہ \عددی{x^2+y^2+z^2=R^2} کی سطح پر ایسے تمام نقطے \عددی{(a,b,c)} تلاش کریں جہاں  \عددی{\kvec{F}(a,b,c)\ne \kvec{0}} اور سطح کے   سمتیہ میدان \عددی{\kvec{F}=yz^2\ai+xz^2\aj+2xyz\ak}   عمود  ہو۔
 \انتہا{سوال}
 \ابتدا{سوال}
-رداس \عددی{R} کے  کروی خول  کے نقطہ \عددی{(x,y,z)} پر کمیتی  کثافت  \عددی{\delta(x,y,z)}   سطح پر اٹل نقطہ \عددی{(a,b,c)} سے اس نقطے تک  فاصلے کے برابر ہے۔ خول کی کمیت تلاش کریں۔
+رداس \عددی{R} کے  کروی خول  کے نقطہ \عددی{(x,y,z)} پر کمیتی  کثافت  \عددی{\delta(x,y,z)}   سطح پر اٹل نقطہ \عددی{(a,b,c)} سے اس نقطے تک کے   فاصلے کے برابر ہے۔ خول کی کمیت تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -7599,30 +7596,30 @@ $\tfrac{16\pi R^3}{3}$
 }}
 \انتہا{جواب}
 \ابتدا{سوال}
-پیچ دار سطح \عددی{\kvec{r}(r,\theta)=(r\cos \theta)\ai+(r\sin\theta)\aj+\theta\ak} جہاں \عددی{0\le r\le 1,\, 0\le \theta\le 2\pi} ہے کی کثافت \عددی{\delta(x,y,z)=2\sqrt{x^2+y^2}} ہے۔ اس کی کمیت تلاش کریں۔ (مشق \حوالہ{مشق_سمتی_میدان_چکردار_زینہ}  میں پیش شکل پر نظر ڈالیں۔)
+پیچ دار سطح \عددی{\kvec{r}(r,\theta)=(r\cos \theta)\ai+(r\sin\theta)\aj+\theta\ak} جہاں \عددی{0\le r\le 1,\, 0\le \theta\le 2\pi} ہے کی کثافت \عددی{\delta(x,y,z)=2\sqrt{x^2+y^2}} ہے۔ اس کی کمیت تلاش کریں۔ (سوال \حوالہ{مشق_سمتی_میدان_چکردار_زینہ}  میں پیش شکل پر نظر ڈالیں۔)
 \انتہا{سوال}
 \ابتدا{سوال}
-ایسے تمام مستطیل خطے  \عددی{0\le x\le a}، \عددی{0\le y\le b} تلاش کریں جس کے چار اطراف سے
- \عددی{{\kvec{F}=(x^2+4xy)\ai-6y\aj}} کا کُل باہر رخ بہاؤ  کم سے کم ہو۔اس بہاؤ کی قیمت کیا ہو گی؟
+ایسے تمام مستطیل خطوں   \عددی{0\le x\le a}، \عددی{0\le y\le b}  میں سے وہ ایک خطہ تلاش کریں جس کے چار اطراف سے
+ \عددی{{\kvec{F}=(x^2+4xy)\ai-6y\aj}} کا کُل باہر  کے رخ  میں بہاؤ   کمتر  ہو۔اس بہاؤ کی قیمت کیا ہو گی؟
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\عددی{a=2}، \عددی{b=1} ہیں اور کم سے کم بہاؤ \عددی{-4}  ہے۔
+\عددی{a=2}، \عددی{b=1} ہیں اور کمتر  بہاؤ \عددی{-4}  ہے۔
 }}
 \انتہا{جواب}
 \ابتدا{سوال}
-مبدا سے گزرتا     مستوی کرہ \عددی{x^2+y^2+z^2=4} کو  دائرے پر  قطع کرتا ہے جس  پر میدان    \عددی{{\kvec{F}=z\ai+x\aj+y\ak}}  کا  دائری سیلان زیادہ سے زیادہ ہونے کی صورت میں مستوی کی مساوات تلاش کریں۔
+مبدا سے گزرنے والا      مستوی کرہ \عددی{x^2+y^2+z^2=4} کو  دائرے پر  قطع کرتا ہے ۔دائرے پر میدان    \عددی{{\kvec{F}=z\ai+x\aj+y\ak}}  کا  دائری سیلان اعظم ہونے کی صورت میں مستوی کی مساوات تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{سوال}
-ربع اول میں \عددی{(2,0)} تا \عددی{(0,2)} دائرہ \عددی{x^2+y^2=4} پر  دھاگا پڑا ہو ا ہے جس کی کثافت \عددی{\delta(x,y)=xy} ہے۔
+  دائرہ \عددی{x^2+y^2=4} پر ربع اول میں \عددی{(2,0)} سے \عددی{(0,2)}  تک   دھاگا پڑا ہو ا ہے جس کی کثافت \عددی{\delta(x,y)=xy} ہے۔
 \begin{enumerate}[a.]
 \item
-دھاگے کو محدود تعداد کے چھوٹے چھوٹے ٹکڑوں میں تقسیم کر کے دکھائیں کہ دھاگے کو سیدھا نیچے \عددی{x}    محور تک  کھینچتے ہوئے ثقلی  کشش درج ذیل کام سرانجام دیگی جہاں \عددی{g}  تجاذبی  مستقل ہے۔
+دھاگے کو محدود تعداد کے چھوٹے چھوٹے ٹکڑوں میں تقسیم کر کے دکھائیں کہ دھاگے کو سیدھا نیچے \عددی{x}    محور  پر منتقل  کرتے ہوئے ثقلی  کشش درج ذیل کام سرانجام دیگی جہاں \عددی{g}  تجاذبی  مستقل ہے۔
 \[\text{کام}=\lim_{n\to\infty}\sum_{k=1}^{n} gx_k y_k^2\Delta s_k=\int\limits_C gxy^2\dif s\]
 \item
 جزو (ا) میں تکمل حل کر کے کُل کام تلاش کریں۔
 \item
-دکھائیں کہ یہ کام اس کام کے برابر ہے جو دھاگے کا مرکز کمیت \عددی{(\bar{x},\bar{y})} سیدھا نیچے محور \عددی{x}  محور تک کھینچنے کے لیے درکار ہو گا۔
+دکھائیں کہ یہ کام اس کام کے برابر ہے جو دھاگے کا مرکز کمیت \عددی{(\bar{x},\bar{y})} سیدھا نیچے م \عددی{x}  محور  پر منتقل کرنے کے لیے درکار ہو گا۔
 \end{enumerate}
 \انتہا{سوال}
 \ابتدا{جواب}
@@ -7632,29 +7629,29 @@ $\tfrac{16\pi R^3}{3}$
 }}
 \انتہا{جواب}
 \ابتدا{سوال}
-ثمن اول میں باریک چادر   کا ٹکڑا مستوی \عددی{x+y+z=1} کے ہمراہ ہے۔ چادر کی کثافت \عددی{\delta(x,y,z)=xy} ہے۔
+ثمن اول میں باریک چادر   کا ٹکڑا مستوی \عددی{x+y+z=1} کے ہمراہ واقع  ہے۔ چادر کی کثافت \عددی{\delta(x,y,z)=xy} ہے۔
 \begin{enumerate}[a.]
 \item
-چادر  کو محدود تعداد کے چھوٹے چھوٹے ٹکڑوں میں تقسیم کر کے دکھائیں کہ چادر  کو سیدھا نیچے \عددی{xy}    مستوی تک کھینچتے ہوئے ثقلی  کشش درج ذیل کام سرانجام دیگی جہاں \عددی{g}  تجاذبی  مستقل ہے۔
+چادر  کو محدود تعداد کے چھوٹے چھوٹے ٹکڑوں میں تقسیم کر کے دکھائیں کہ چادر  کو سیدھا نیچے \عددی{xy}    مستوی  پر منتقل کرتے ہوئے ثقلی  کشش درج ذیل کام سرانجام دیگی جہاں \عددی{g}  تجاذبی  مستقل ہے۔
 \[\text{کام}=\lim_{n\to\infty}\sum_{k=1}^{n} gx_k y_k z_k \Delta \sigma_k=\int\limits_S gxyz\dif \sigma\]
 \item
 جزو (ا) میں  سطحی تکمل حل کر کے کُل کام تلاش کریں۔
 \item
-دکھائیں کہ یہ کام اس کام کے برابر ہے جو چادر گے کا مرکز کمیت \عددی{(\bar{x},\bar{y},\bar{z})} سیدھا نیچے محور \عددی{xy}  مستوی تک کھینچنے کے لیے درکار ہو گا۔
+دکھائیں کہ یہ کام اس کام کے برابر ہے جو چادر  کا مرکز کمیت \عددی{(\bar{x},\bar{y},\bar{z})} سیدھا نیچے محور \عددی{xy}  مستوی  پر منتقل  کر نے  کے لیے درکار ہو گا۔
 \end{enumerate}
 \انتہا{سوال}
 \ابتدا{سوال}\موٹا{اصول آرشمیدسی}\quad
 اگر کوئی جسم  مثلاً  ایک  گیند  سیال میں رکھا جائے، یہ یا ڈوب  کر تل تک پہنچتا ہے، تیرتا ہے،  یا کچھ فاصلے تک ڈوب کر  سیال میں آویزاں رہتا ہے۔فرض کریں سیال کی وزنی کثافت \عددی{w} مستقل  ہے اور سیال کی سطح مستوی \عددی{z=4} پر پائی جاتی ہے۔سیال میں آویزاں ایک کروی گیند خطہ \عددی{x^2+y^2+(z-2)^2\le 1}  گھیرے ہوئے ہے۔
 \begin{enumerate}[a.]
 \item
-دکھائیں کہ گیند پر سیال کے دباؤ  کی  سے  پیدا  کُل قوت درج ذیل  سطحی تکمل دیتا ہے۔
+دکھائیں کہ گیند پر سیال کے دباؤ   سے  پیدا  کُل قوت درج ذیل  سطحی تکمل  سے حاصل ہو گا۔
 \[\text{قوت}=\lim_{n\to\infty}\sum_{k=1}^{n}w(4-z_k)\Delta\sigma_k=\iint\limits_S w(4-z)\dif\sigma\]
 \item
-چونکہ گیند ساکن ہے،  دکھائیں کہ گیند  کو   درج ذیل قوت اچھال  آویزاں رکھتی ہے جہاں \عددی{(x,y,z)} پر \عددی{\an} باہر رخ اکائی عمود سمتیہ ہے۔
+چونکہ گیند ساکن ہے،  دکھائیں کہ    درج ذیل قوتِ اچھال گیند  کو   آویزاں رکھتی ہے جہاں \عددی{(x,y,z)} پر \عددی{\an}  باہر  کے رخ  میں اکائی عمود سمتیہ ہے۔
 \[\text{\RL{قوت اچھال}}=\iint\limits_S w(z-4)\ak\cdot\an\dif\sigma\]
-یہ اصول آرشمیدسی   اجگر کرتا ہے جس کے تحت  ، ٹھوس جسم پر قوت اچھال ، اس  سیال  کے وزن کے برابر ہو گا جو  زیر سیال ہو۔
+یہ اصول آرشمیدسی   اجاگر کرتا ہے جس کے تحت  ، ٹھوس جسم پر قوتِ اچھال ، اس  سیال  کے وزن کے برابر ہو گی جو  زیرِ  سیال ہو۔
 \item
-مسئلہ انفراج استعمال کر کے جزو (ب) میں قوت اچھال کی قدر تلاش کریں۔
+مسئلہ انفراج استعمال کر کے جزو (ب) میں قوتِ اچھال کی قدر تلاش کریں۔
 \end{enumerate}
 \انتہا{سوال}
 \ابتدا{جواب}
@@ -7662,29 +7659,29 @@ $\tfrac{16\pi R^3}{3}$
 ج) \عددی{\tfrac{4}{3}\pi w}
 }}
 \انتہا{جواب}
-\ابتدا{سوال}\موٹا{قوسی سطح پر قوت سیال} \quad 
-ایک مخروط  جس کی شکل سطح \عددی{z=\sqrt{x^2+y^2},\,0\le z\le 2} دیتی ہے مستقل وزنی کثافت \عددی{w} کے سیال سے بھرا جاتا ہے۔ محددی \عددی{xy }  مستوی  کو سطح زمین تصور کریں۔ دکھائیں کہ \عددی{z=1} تا \عددی{z=2}  مخروطی سطح ہر سیال کی کُل قوت درج ذیل سطحی تکمل دیتا ہے۔
+\ابتدا{سوال}\موٹا{قوسی سطح پر قوتِ سیال} \quad 
+ایک مخروط  ، جس کی شکل  کو سطح \عددی{z=\sqrt{x^2+y^2},\,0\le z\le 2}  ظاہر کرتی ہے ، مستقل وزنی کثافت \عددی{w} کے سیال سے بھرا جاتا ہے۔ مستوی  \عددی{xy }     کو سطح زمین تصور کریں۔ دکھائیں کہ \عددی{z=1} تا \عددی{z=2}  مخروطی سطح  پر سیال کی کُل قوت درج ذیل سطحی تکمل  سے حاصل ہو گی۔
 \[F=\iint\limits_S w(2-z)\dif\sigma\]
 اس تکمل کی قیمت تلاش کریں۔
 \انتہا{سوال}
 \ابتدا{سوال}\موٹا{قانون فیراڈے}\quad 
  نظریہ برقناطیسیت  کے  ایک اصول کے تحت   اگر نقطہ \عددی{(x,y,z)} اور لمحہ \عددی{t} پر برقی میدان اور مقناطیسی میدان بالترتیب  \عددی{\kvec{E}(t,x,y,z)} اور  \عددی{\kvec{B}(t,x,y,z)} ہوں تب \عددی{\nabla \times\kvec{E}=-\partial \kvec{B}\!/\!\partial t} ہو گا۔ اس میں \عددی{\nabla\times\kvec{E}} کی قیمت تلاش کرتے ہوئے \عددی{t}  اٹل رکھا جاتا ہے اور \عددی{\partial\kvec{B}\!/\!\partial t} کی قیمت تلاش کرتے ہوئے \عددی{(x,y,z)} اٹل رکھا جاتا ہے۔ مسئلہ سٹوکس استعمال کرتے ہوئے  فیراڈے کا قانون (درج ذیل)  اخذ کریں 
 \[\ointctrclockwise\limits_C \kvec{E}\cdot\dif\kvec{r}=-\frac{\partial}{\partial t}\iint\limits_S\kvec{B}\cdot\an\dif\sigma\]
-جہاں \عددی{C} دائری برقی تار کو ظاہر کرتا ہے جس میں سطح کے اکائی عمود سمتیہ \عددی{\an} کے لحاظ سے گھڑی مخالف برقی رو رواں ہے جو  \عددی{C} پر  درج ذیل برقی دباؤ پیدا ہوتا ہے۔
+جہاں \عددی{C} دائری برقی تار کو ظاہر کرتا ہے جس میں سطح کے اکائی عمود سمتیہ \عددی{\an} کے لحاظ سے گھڑی مخالف برقی رو رواں ہے جس کی بدولت  \عددی{C} پر  درج ذیل برقی دباؤ پیدا ہوتا ہے۔
 \[\ointctrclockwise\limits_C \kvec{E}\cdot\dif\kvec{r}\]
-مساوات کے دائیں ہاتھ سطحی تکمل کو\اصطلاح{مقناطیسی بہاؤ }\فرہنگ{بہاؤ!مقناطیسی}\حاشیہب{magnetic flux}\فرہنگ{flux!magnetic} کہتے ہیں جہاں \عددی{S} ہر وہ سطح ہو سکتا ہے جس کی سرحد \عددی{C} ہو۔
+مساوات کے دائیں ہاتھ موجود  سطحی تکمل کو\اصطلاح{مقناطیسی بہاؤ }\فرہنگ{بہاؤ!مقناطیسی}\حاشیہب{magnetic flux}\فرہنگ{flux!magnetic} کہتے ہیں جہاں \عددی{S} ہر وہ سطح ہو سکتی ہے جس کی سرحد \عددی{C} ہو۔
 \انتہا{سوال}
 \ابتدا{سوال}
-تجاذبی قوت کے میدان   \عددی{\kvec{F}} کی تعریف \عددی{\kvec{r}\ne \kvec{0}} کے لیے درج ذیل ہے۔
+تجاذبی قوت کے میدان   \عددی{\kvec{F}} کی تعریف،  \عددی{\kvec{r}\ne \kvec{0}} کے لیے ، درج ذیل ہے۔
 \[\kvec{F}=-\frac{GmM}{|\kvec{r}|^3}\kvec{r}\]
-حصہ \حوالہ{حصہ_سمتی_میدان_مسئلہ_پھیلاؤ} میں پیش   قانون گاوس استعمال کر کے  دکھائیں کہ ایسا کوئی استمراری قابل تفرق سمتیہ میدان \عددی{\kvec{H}} نہیں پایا جاتا جو \عددی{\kvec{F}=\nabla\times\kvec{H}} کو مطمئن کرتا ہو۔
+حصہ \حوالہ{حصہ_سمتی_میدان_مسئلہ_پھیلاؤ} میں پیش کردہ    قانون گاؤس استعمال کر کے  دکھائیں کہ ایسا کوئی استمراری قابل تفرق سمتیہ میدان \عددی{\kvec{H}} نہیں پایا جاتا جو \عددی{\kvec{F}=\nabla\times\kvec{H}} کو مطمئن کرتا ہو۔
 \انتہا{سوال}
 \ابتدا{سوال}
-ثابت کریں اگر سمت بند سطح \عددی{S}، جس کی تحدیدی سرحد \عددی{C} ہو،  پر  \عددی{f(x,y,z)} اور \عددی{g(x,y,z)} استمراری قابل تفرق عددیہ میدان ہوں تب درج ذیل ہو گا۔
+ثابت کریں کہ  اگر سمت بند سطح \عددی{S}، جس کی تحدیدی سرحد \عددی{C} ہو،  پر  \عددی{f(x,y,z)} اور \عددی{g(x,y,z)} استمراری قابل تفرق عددیہ میدان ہوں تب درج ذیل ہو گا۔
 \[\iint\limits_S (\nabla f\times \nabla g)\cdot\an\dif\sigma=\ointctrclockwise\limits_C f\nabla g\cdot\dif \kvec{r}\]
 \انتہا{سوال}
 \ابتدا{سوال}
-فرض کریں خطہ \عددی{D}  میں   ، جو سمت بند سطح \عددی{S}  میں محصور ہے   جس کا باہر رخ اکائی عمود سمتیہ \عددی{\an} ہے، \عددی{\nabla \cdot\kvec{F}_1=\nabla\cdot\kvec{F}_2} اور \عددی{\nabla\times\kvec{F}_1=\nabla\times\kvec{F}_2} ہیں اور \عددی{S} پر \عددی{\kvec{F}_1\cdot\an=\kvec{F}_2\cdot\an} ہے۔ ثابت کریں پورے \عددی{D} پر \عددی{\kvec{F}_1=\kvec{F}_2} ہو گا۔
+فرض کریں  کہ   سمت بند سطح \عددی{S}       میں، جس کا باہر  کے رخ  میں اکائی عمود سمتیہ \عددی{\an} ہے، خطہ   \عددی{D} محصور ہے اور \عددی{D}  میں   \عددی{\nabla \cdot\kvec{F}_1=\nabla\cdot\kvec{F}_2} اور \عددی{\nabla\times\kvec{F}_1=\nabla\times\kvec{F}_2} ہیں  اور \عددی{S} پر \عددی{\kvec{F}_1\cdot\an=\kvec{F}_2\cdot\an} ہے۔ ثابت کریں کہ  پورے \عددی{D} پر \عددی{\kvec{F}_1=\kvec{F}_2} ہو گا۔
 \انتہا{سوال}
 \ابتدا{سوال}
 اگر \عددی{\nabla\cdot\kvec{F}=0}  اور \عددی{\nabla\times\kvec{F}=\kvec{0}} ہوں تب  درست یا غلط ثابت کریں کہ \عددی{\kvec{F}=\kvec{0}} ہو گا۔
@@ -7695,16 +7692,15 @@ $\tfrac{16\pi R^3}{3}$
 }}
 \انتہا{جواب}
 \ابتدا{سوال}
-فرض کریں سمت بند سطح کا  مقدار معلوم روپ  \عددی{\kvec{r}(u,v)} ہے۔ایسی علامتیت متعارف کریں کہ \عددی{\dif\kvec{\sigma}=\kvec{r}_u\dif u\times\kvec{r}_v\dif v} ہو تا کہ \عددی{\dif\kvec{\sigma}}  سطح کا    عمود سمتیہ ہو۔ مزید (حصہ \حوالہ{حصہ_مقدار_معلوم_روپ}  میں مساوات \حوالہ{مساوات_مقدار_معلوم_ٹ}  کے تحت)مقدار   \عددی{\dif\sigma=|\dif\kvec{\sigma}|} سطح کے چھوٹے ٹکڑے کا رقبہ دے گا۔ درج ذیل تماثل اخذ کریں
+فرض کریں سمت بند سطح کا  مقدار معلوم روپ  \عددی{\kvec{r}(u,v)} ہے۔ایسی علامتیت متعارف کریں کہ \عددی{\dif\kvec{\sigma}=\kvec{r}_u\dif u\times\kvec{r}_v\dif v} ہو تا کہ \عددی{\dif\kvec{\sigma}}  سطح کے عمود سمتیہ ہو۔ مزید (حصہ \حوالہ{حصہ_مقدار_معلوم_روپ}  میں مساوات \حوالہ{مساوات_مقدار_معلوم_ٹ}  کے تحت)مقدار   \عددی{\dif\sigma=|\dif\kvec{\sigma}|} سطح کے چھوٹے ٹکڑے کا رقبہ دے گا۔ درج ذیل تماثل اخذ کریں
 \[\dif\sigma=(EG-F^2)^{1/2}\dif u\dif v\]
 جہاں درج ذیل ہے۔
 \[E=|\kvec{r}_u|^2,\quad F=\kvec{r}_u\cdot\kvec{r}_v,\quad G=|\kvec{r}_v|^2\]
 \انتہا{سوال}
 \ابتدا{سوال}
- فضا میں    خطہ \عددی{D}سمت بند سطح \عددی{S}  جس  کا باہر رخ اکائی عمود سمتیہ \عددی{\an} ہے میں محصور ہے۔ دکھائیں کہ خطے کا حجم \عددی{H} درج ذیل تماثل کو مطمئن کرتا ہے
+ فضا میں    خطہ \عددی{D}سمت بند سطح \عددی{S}   میں محصور ہے جس  کا باہر  کے  رخ  میں  اکائی عمود سمتیہ \عددی{\an} ہے ۔ دکھائیں کہ خطے کا حجم \عددی{H} درج ذیل تماثل کو مطمئن کرتا ہے
 \[H=\frac{1}{3}\iint\limits_S\kvec{r}\cdot\an\dif\sigma\]
 جہاں \عددی{D} میں نقطہ \عددی{(x,y,z)} کا تعین گر سمتیہ \عددی{\kvec{r}} ہے۔
 \انتہا{سوال}
-
-\انتہا{سوالاتباب}
+\انتہا{سوالات_باب}
 

@@ -2248,7 +2248,7 @@ f(x,y,z)=x\sin(y+3z)
 %====================
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.50\textwidth}
 \centering
 \begin{tikzpicture}
 \pgfmathsetmacro{\k}{1.5}
@@ -3452,7 +3452,7 @@ f_{xx}=2, f_{yy}=0, f_{zz}=-3\sin z, f_{xy}=-1,f_{xz}=0,f_{yz}=0
 %===========
 \begin{figure}
 \centering
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.40\textwidth}
 \centering
 \begin{tikzpicture}
 \pgfmathsetmacro{\len}{3.75}
@@ -3464,15 +3464,20 @@ f_{xx}=2, f_{yy}=0, f_{zz}=-3\sin z, f_{xy}=-1,f_{xz}=0,f_{yz}=0
 \draw(0,0)to [out=\sa,in=\sb]coordinate[pos=0.5](kM)++(\len,0)--++(0,\h)coordinate(k)to [out=\sb,in=\sa]++(-\len,0)--++(0,-\h);
 \draw(\len,0)--++(\ang:\w)node[pos=0.5,right]{$w$}--++(0,\h)node[pos=0.5,right]{$h$}to [out=\sb,in=\sa]++(-\len,0)--++(\ang:-\w);
 \draw(k)--++(\ang:\w);
-\draw[dashed](0,\h/2)--++(\len,0);
+\draw[dashed](0,\h/2)to [out=\sa,in=\sb]coordinate[pos=0.5](kMM)++(\len,0);
+\draw[dashed](0,\h/2)--++(\len,0)coordinate[pos=0.5](kMMM);
 \draw(0,\h)++(\ang:\w)++(0,0.1)--++(0,0.2)coordinate[pos=0.5](kL);
 \draw(\len,\h)++(\ang:\w)++(0,0.1)--++(0,0.2)coordinate[pos=0.5](kR);
 \draw[stealth-stealth](kL)--(kR)node[pos=0.5,fill=white]{$x$};
-\draw[stealth-stealth](\len/2,\h/2)--(kM)node[pos=0.3,pin={[pin edge=-]-45:{جھول\,$=S$}}]{};
+\draw[stealth-](kMMM)--++(0,0.25);
+\draw[stealth-](kMM)--++(0,-0.20)--++(0.5,-0.5)node[below]{جھول\,$=S$};
+%\draw[stealth-stealth](kMM)--(kM)node[pos=0.3,pin={[pin edge=-]-45:{جھول\,$=S$}}]{};
 \end{tikzpicture}
-\caption{شہتیر کا جھول}
+\caption{
+شہتیر کا جھول۔
+}
 \end{subfigure}\hfill
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.55\textwidth}
 \centering
 \begin{tikzpicture}
 \pgfmathsetmacro{\len}{3.75}
@@ -3485,12 +3490,14 @@ f_{xx}=2, f_{yy}=0, f_{zz}=-3\sin z, f_{xy}=-1,f_{xz}=0,f_{yz}=0
 \end{tikzpicture}
 \caption{شہتیر کی جسامت}
 \end{subfigure}
-\caption{}
+\caption{
+افقی طولی محور (نقطہ دار لکیر)    کا  جھول  \عددی{S} ہے۔ 
+}
 \label{شکل_مثال_کثیرالمتغیر_شہتیر_جھول}
 \end{figure}
 
 \ابتدا{مثال}\شناخت{مثال_کثیرالمتغیر_شہتیر_جھول}\ترچھا{یکساں بار بردار شہتیر کا جھول }\\
-ایک ایسا  افقی مستطیل شہتیر ، جس کے  دونوں سروں کو  سہارا دیا گیا ہو   اور جس پر یکساں بوجھ (یکساں وزن فی میٹر لمبائی) ڈالا گیا ہو،   بوجھ کے نیچے جھک جائے گا (شکل \حوالہ{شکل_مثال_کثیرالمتغیر_شہتیر_جھول}-ا)۔ جھکاو \عددی{S}  کو درج ذیل کلیہ سے معلوم کیا جا سکتا ہے ۔
+ایک ایسا  افقی مستطیل شہتیر ، جس کے  دونوں سروں کو  سہارا دیا گیا ہو   اور جس پر یکساں بوجھ (یکساں وزن فی میٹر لمبائی) ڈالا گیا ہو،   بوجھ کے نیچے جھک جائے گا (شکل \حوالہ{شکل_مثال_کثیرالمتغیر_شہتیر_جھول}-ا)۔ جھکاؤ \عددی{S}  کو درج ذیل کلیہ سے معلوم کیا جا سکتا ہے ۔
 \begin{align*}
 S=C\frac{px^4}{wh}
 \end{align*}
@@ -4119,7 +4126,7 @@ w=f(g(r,s),h(r,s),k(r,s))
 
 \begin{figure}
 \centering
-\begin{subfigure}{0.30\textwidth}
+\begin{subfigure}{0.45\textwidth}
 \centering
 \begin{tikzpicture}
 \pgfmathsetmacro{\h}{1.25}
@@ -4140,8 +4147,8 @@ w=f(g(r,s),h(r,s),k(r,s))
 \draw(\w,-\h)node[below,yshift={-0.5cm}]{$w=f(g(r,s),h(r,s),k(r,s))$};
 \end{tikzpicture}
 \caption{}
-\end{subfigure}\hfill
-\begin{subfigure}{0.30\textwidth}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\small]
 \pgfmathsetmacro{\h}{1.25}
@@ -4161,7 +4168,7 @@ w=f(g(r,s),h(r,s),k(r,s))
 \end{tikzpicture}
 \caption{}
 \end{subfigure}\hfill
-\begin{subfigure}{0.30\textwidth}
+\begin{subfigure}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\small]
 \pgfmathsetmacro{\h}{1.25}
@@ -5200,9 +5207,13 @@ x=x_0+su_1,\quad y=y_0+su_2
 \end{align}
 سے شروع کرتے ہیں، جو نقطہ \عددی{N_0(x_0,y_0)} سے گزرنے والے  خط کی مقدار معلوم مساوات ہے اور  جس میں  اکائی سمتیہ \عددی{\uu=u_1\ai+u_2\aj} کے رخ میں  بڑھتا ہوا  \عددی{s}  مقدار معلوم لمبائی قوس  ہے۔ تب درج ذیل ہو گا۔
 \begin{align}
-\big(\frac{\dif f}{\dif s}\big)_{\uu,N_0}&=\big(\frac{\partial f}{\partial x}\big)_{N_0}\frac{\dif x}{\dif s}+\big(\frac{\partial f}{\partial y}\big)_{N_0}\frac{\dif y}{\dif s}&&\text{\RL{زنجیری قاعدہ}}\nonumber\\
-&=\big(\frac{\partial f}{\partial x}\big)_{N_0}\cdot u_1+\big(\frac{\partial f}{\partial y}\big)_{N_0}\cdot u_2&&\text{\RL{مساوات \حوالہ{مساوات_کثیرالمتغیر_خط_مقدار_معلوم_الف} سے \عددی{\tfrac{\dif x}{\dif s}=u_1} اور \عددی{\tfrac{\dif y}{\dif s}=u_2}}}\nonumber\\
-&=\underbrace{\big[\big(\frac{\partial f}{\partial x}\big)_{N_0}\ai+\big(\frac{\partial f}{\partial y}\big)_{N_0}\cdot \aj\big]}_{\text{\RL{\عددی{N_0} پر \عددی{f} کا ڈھلوان}}}\cdot\underbrace{\big[u_1\ai+u_2\aj\big]}_{\text{\RL{\عددی{\uu} کا رخ}}}\label{مساوات_کثیرالمتغیر_خط_مقدار_معلوم_ب}
+\big(\frac{\dif f}{\dif s}\big)_{\uu,N_0}&=\big(\frac{\partial f}{\partial x}\big)_{N_0}\frac{\dif x}{\dif s}+\big(\frac{\partial f}{\partial y}\big)_{N_0}\frac{\dif y}{\dif s}\quad\quad\quad\text{\RL{زنجیری قاعدہ}}\nonumber\\
+&=\big(\frac{\partial f}{\partial x}\big)_{N_0} u_1+\big(\frac{\partial f}{\partial y}\big)_{N_0} u_2\quad\quad
+\begin{minipage}{0.25\textwidth}
+مساوات \حوالہ{مساوات_کثیرالمتغیر_خط_مقدار_معلوم_الف} سے\\
+   \عددی{\tfrac{\dif x}{\dif s}=u_1} اور \عددی{\tfrac{\dif y}{\dif s}=u_2}
+\end{minipage}\nonumber\\
+&=\underbrace{\big[\big(\frac{\partial f}{\partial x}\big)_{N_0}\cdot\ai+\big(\frac{\partial f}{\partial y}\big)_{N_0}\cdot \aj\big]}_{\text{\RL{\عددی{N_0} پر \عددی{f} کا ڈھلوان}}}\cdot\underbrace{\big[u_1\ai+u_2\aj\big]}_{\text{\RL{\عددی{\uu} کا رخ}}}\label{مساوات_کثیرالمتغیر_خط_مقدار_معلوم_ب}
 \end{align}
 
 \ابتدا{تعریف}
@@ -5475,7 +5486,7 @@ f_x&=\left. 3x^2-y^2\right\vert_{(1,1,0)}=2,\quad f_y=\left. -2xy\right\vert_{(1
 \end{align}
 منحنی  کے ہمراہ ہر نقطے   پر \عددی{\nabla f}،  منحنی کے سرعتی سمتیہ    کے متعامد  ہو گا۔
 
-آئیں اب نقطہ \عددی{N_0}  سے گزرنے والی  منحنی تک اپنے آپ کو محدود رکھتے ہیں (شکل \حوالہ{شکل_کثیرالمتغیر_نقطہ_پر_مماسی_سطح_کی_تعریف})۔نقطہ \عددی{N_0} پر تمام سرعتی سمتیات،  \عددی{N_0} پر \عددی{\nabla f} کے  متعامد ہوں گے لہٰذا منحنی  کے تمام مماسی خط  اس مستوی میں پائے جائیں گے جو \عددی{N_0} پر \عددی{\nabla f} کے عمود ہو۔ اس مستوی کو ہم \عددی{N_0} پر سطح کا مماسی مستوی کہتے ہیں۔ نقطہ \عددی{N_0} سے گزرنے والا  ایسا خط جو  اس مستوی کے لمب  ہو، \عددی{N_0} پر سطح کا عمود  ہو گا۔
+آئیں اب نقطہ \عددی{N_0}  سے گزرنے والی  منحنی تک اپنے آپ کو محدود رکھتے ہیں (شکل \حوالہ{شکل_کثیرالمتغیر_نقطہ_پر_مماسی_سطح_کی_تعریف})۔نقطہ \عددی{N_0} پر تمام سرعتی سمتیات،  \عددی{N_0} پر \عددی{\nabla f} کے  متعامد ہوں گے لہٰذا منحنی  کے تمام مماسی خط  اس مستوی میں پائے جائیں گے جو \عددی{N_0} پر \عددی{\nabla f} کے عمود ہو۔ اس مستوی کو ہم \عددی{N_0} پر سطح کا مماسی مستوی کہتے ہیں۔ نقطہ \عددی{N_0} سے گزرنے والا  ایسا خط جو  اس مستوی کے \بدل{قائمہ}  ہو، \عددی{N_0} پر سطح کا عمود  ہو گا۔
 
 \ابتدا{تعریفات}
   ہم قیمت سطح  \عددی{f(x,y,z)=c}  کے    نقطہ  \عددی{N_0(x_0,y_0,z_0)} پر    \اصطلاح{مماسی مستوی  }\فرہنگ{مماسی مستوی}\حاشیہب{tangent plane}\فرہنگ{tangent plane} سے مراد   نقطہ \عددی{N_0}  پر وہ مستوی ہے جو   \عددی{\left.\nabla f\right\vert_{N_0}} کے عمود ہو۔
@@ -5543,7 +5554,7 @@ x=x_0+f_x(N_0)t,\quad y=y_0+f_y(N_0)t,\quad z=z_0+f_z(N_0)t \label{مساوات_
 f(x,y,z)&=x^2+y^2+z-9=0&&\text{\RL{دائری قطع مکافی}}
 \end{align*}
 \حل
-وہ مستوی جو نقطہ \عددی{N_0} پر \عددی{f} کے ڈھلوان کے  لمب  ہو نقطہ \عددی{N_0} پر  مماسی مستوی   ہو گا۔ ڈھلوان
+وہ مستوی جو نقطہ \عددی{N_0} پر \عددی{f} کے ڈھلوان کے  \بدل{قائمہ}  ہو نقطہ \عددی{N_0} پر  مماسی مستوی   ہو گا۔ ڈھلوان
 \begin{align*}
 \left.\nabla f\right\vert_{N_0}=(2x\ai+2y\aj+\ak)_{(1,2,4)}=2\ai+4\aj+\ak
 \end{align*}
@@ -6488,7 +6499,7 @@ z=f(a,b)
 %==================
 \begin{figure}
 \centering
-\begin{minipage}{0.3\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[declare function={f(\x,\y)=\x*\y*((\x)^2-(\y)^2)/((\x)^2+(\y)^2);}]
   \begin{axis}[axis on top,view/h=110,small,axis lines=center,colormap={kgray}{gray(0.2cm)=(0.6);gray(1cm)=(0.9);},xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east}]
@@ -6497,7 +6508,7 @@ z=f(a,b)
 \end{tikzpicture}
 \caption{$z=\tfrac{xy(x^2-y^2)}{x^2+y^2}$}
 \end{minipage}\hfill
-\begin{minipage}{0.3\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[declare function={f(\x,\y)=(\y)^2-(\y)^4-(\x)^2;}]
   \begin{axis}[axis on top,view/h=110,small,axis lines=center,colormap={kgray}{gray(0.2cm)=(0.6);gray(1cm)=(0.9);},xtick={\empty},ytick={\empty},ztick={\empty},enlargelimits=true,xmax=2,ymax=1.5,zmax=0.5,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=west},zlabel style={anchor=east}]
@@ -7544,7 +7555,7 @@ N\big(\frac{5}{3},\frac{5}{6},-\frac{5}{6}\big)
 
 \begin{figure}
 \centering
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.40\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={fz(\x,\y)=sqrt((\x)^2-1);}]
 \begin{axis}[view/h=135,clip=false,axis lines=center,small,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=north},ylabel style={anchor=north},zlabel style={anchor=west},xtick={\empty},ytick={\empty},ztick={\empty},hide axis]
@@ -7567,7 +7578,7 @@ N\big(\frac{5}{3},\frac{5}{6},-\frac{5}{6}\big)
 \end{tikzpicture}
 \caption{قطع زائد بیلن۔}
 \end{subfigure}\hfill
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.50\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={fz(\x,\y)=sqrt((\x)^2-1);}]
 \begin{axis}[view/h=160,clip=false,axis lines=center,small,colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},enlargelimits=true,xlabel={$x$},ylabel={$y$},zlabel={$z$},xlabel style={anchor=east},ylabel style={anchor=north},zlabel style={anchor=west},xtick={\empty},ytick={\empty},ztick={\empty},axis on top]
@@ -7755,7 +7766,7 @@ C:\quad \kvec{r}=g(t)\ai+h(t)\aj+k(t)\ak
 
 \begin{figure}
 \centering
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.40\textwidth}
 \centering
 \begin{tikzpicture}[scale=0.75,font=\small,declare function={f(\x)=sqrt(2-1/4*(\x)^2);}]
  \pgfmathsetmacro{\k}{2*sqrt(2)}
@@ -7776,7 +7787,7 @@ C:\quad \kvec{r}=g(t)\ai+h(t)\aj+k(t)\ak
 \end{tikzpicture}
 \caption{}
 \end{subfigure}\hfill
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.60\textwidth}
 \centering
 \begin{tikzpicture}[scale=0.75,font=\small,declare function={f(\x)=sqrt(2-1/4*(\x)^2);}]
  \pgfmathsetmacro{\k}{2*sqrt(2)}
@@ -8528,7 +8539,7 @@ f_{xx}Q(0)=(hf_{xx}+kf_{xy})^2+(f_{xx}f_{yy}-f_{xy}^2)k^2
 
 
 \جزوحصہء{خطی تخمین کا کلیہ خلل}
-ہم دکھانا چاہتے ہیں کہ \عددی{(x_0,y_0)} پر  تفاعل \عددی{f(x,y)}   اور اس کی خطی تخمین \عددی{L(x,y)}  کی قیمتوں میں فرق \عددی{E(x,y)}  درج ذیل مساوات کو مطمئن کرتا ہے۔
+ہم دکھانا چاہتے ہیں کہ \عددی{(x_0,y_0)} پر  تفاعل \عددی{f(x,y)}   اور اس کے خطی تخمین \عددی{L(x,y)}  کی قیمتوں میں فرق \عددی{E(x,y)}  درج ذیل مساوات کو مطمئن کرتا ہے۔
 \begin{align*}
 \abs{E(x,y)}\le \frac{1}{2}B(\abs{x-x_0}+\abs{y-y_0})^2
 \end{align*}

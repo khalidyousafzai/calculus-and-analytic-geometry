@@ -46,7 +46,7 @@
 \usepackage{multirow}   %for multiple row cells in a table column
 \usepackage[misc]{ifsym} 
 
-\usepackage{./tex/khalidUrduBooks}     % my sty polyglossia must be the last package as it handles urdu
+\usepackage{./tex/khalidUrduBooksCalculus}     % my sty polyglossia must be the last package as it handles urdu
 
 \newcommand{\tikzmark}[1]{%
   \tikz[overlay,remember picture] \node (#1) {};}
@@ -77,9 +77,12 @@
 \newwrite\tempfile
 \immediate\openout\tempfile=answer.tex
 \newcommand*\wf[1]{\immediate\write\tempfile{#1}}
-
 \newcommand*\kwf[1]{#1}
-%
+%=======================================
+
+
+
+%===========================================================
 %%the  \اصطلاح and \حاشیہب have been disabled  in "myUrduCommandsCalculus.tex" and instead 
 %%the following is used. this retains their original definitions and writes them to a "technicalTerms.tex" text file too.
 %\newwrite\tempfileTerms				 %collecting technical terms. uses newfile package
@@ -102,15 +105,15 @@
 \input{./tex/myCircuitDimensionsAndMathematicalSymbols.tex} % resistor sizes and Laplace, Fourier, Complex, Phasor, etc  symbols
 \input{./tex/myTikzCommandsCircuitAnalysis.tex}
 
-\input{./tex/myConfigurableTechicalTerms.tex}	%uses dictionary entries for the technical terms used. useage:    \لفظ{عنصر_سمتیہ}
-
+\input{./tex/myConfigurableTechicalTerms.tex}	%uses dictionary entries for the technical terms used. useage:    \بدل{عنصر_سمتیہ}
 
 %\input{./tex/myElectronicsVariablesBetter.tex}         %these are all tested. to use at the very end when book is finished
+
 
 \graphicspath{{./fig/figFrontPage/}{./fig/figCalculusLimits/}{./fig/figCalculusDerivatives/}{./fig/figCalculusIntegration/}{./fig/figCalculusApplicationsOfIntegrals}{./fig/figCalculusTechniquesOfIntegration/}}%paths to figures
 
 
-%\includeonly{./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusFunctions,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusIntegration,./tex/calculusApplicationsOfIntegrals,./tex/calculusTranscendentalFunctions,./tex/calculusTechniquesOfIntegration,./tex/calculusInfiniteSeries,./tex/calculusConicSectionsParametrizedCurvesPolarCoordinates,./tex/calculusVectorsAndAnalyticGeometryInSpace,./tex/calculusVectorValuedFunctionsandMotionInSpace,./tex/calculusMultivariableFunctionsAndPartialDerivatives,./tex/calculusMultipleIntegrals,./tex/calculusIntegrationInVectorFields,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI,./tex/calculusIntegrationTable}
+\includeonly{./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusFunctions,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusIntegration,./tex/calculusApplicationsOfIntegrals,./tex/calculusTranscendentalFunctions,./tex/calculusTechniquesOfIntegration,./tex/calculusInfiniteSeries,./tex/calculusConicSectionsParametrizedCurvesPolarCoordinates,./tex/calculusVectorsAndAnalyticGeometryInSpace,./tex/calculusVectorValuedFunctionsandMotionInSpace,./tex/calculusMultivariableFunctionsAndPartialDerivatives,./tex/calculusMultipleIntegrals,./tex/calculusIntegrationInVectorFields,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI,./tex/calculusIntegrationTable}
 %
 
 %\includeonly{,./tex/calculusIntegrationInVectorFields,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI,./tex/calculusIntegrationTable}%
@@ -121,8 +124,8 @@
 %\includeonly{,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI,./tex/calculusIntegrationTable}
 %\includeonly{./tex/calculusPreface,./tex/prefaceFirstBook,,./tex/calculusAppendixA.}
 %\includeonly{,./tex/calculusVectorsAndAnalyticGeometryInSpace}
-%\includeonly{./tex/calculusVectorValuedFunctionsandMotionInSpace}
-\includeonly{./tex/calculusIntegrationInVectorFields}
+%\includeonly{./tex/calculusInfiniteSeries}
+%\includeonly{./tex/calculusIntegrationInVectorFields}
 %\includeonly{./tex/test}
 
 
@@ -156,9 +159,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setlatin
-\linenumbers
-\makeindex
-
+%\linenumbers
+%\makeindex
 %==========
 \begin{document}
 \sloppy
@@ -281,6 +283,5 @@
 
 \addcontentsline{toc}{chapter}{اشاریہ}
 
-%\printindex
-
+\printindex
 \end{document}

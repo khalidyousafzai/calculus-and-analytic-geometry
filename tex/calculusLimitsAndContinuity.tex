@@ -93,12 +93,12 @@ $\tfrac{\Delta y}{\Delta t}=\tfrac{4.9(2)^2-4.9(1)^2}{2-1}=\SI{14.7}{\meter\per\
  \begin{figure}
 \centering
 \begin{minipage}{0.45\textwidth}
-\includegraphics{normalDistributionFlies}
+\includegraphics[width=\linewidth]{normalDistributionFlies}
 \caption{مکھی کی نمو آبادی}
 \label{شکل_حد_مکھی_نمو_آبادی}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
-\includegraphics{normalDistributionFliesInstantaneous}
+\includegraphics[width=\linewidth]{normalDistributionFliesInstantaneous}
 \caption{مکھی کی بیسویں دن نمو آبادی}
 \label{شکل_حد_مکھی_نمو_آبادی_بیس}
 \end{minipage}%
@@ -1806,7 +1806,7 @@ $f(x)=\sqrt{3x+1},\quad x=0$
 \draw(4,0)node[circ]{}node[below]{$4$};
 \draw [decorate,decoration={brace,amplitude=2pt},yshift=0pt](5,-2) -- (3,-2)node [black,midway,yshift=-9pt] {\footnotesize
 \RL{یہ قابو کرتے ہوئے}};
-\draw [decorate,decoration={brace,amplitude=2pt},xshift=-9pt,yshift=0pt](-1,5) -- (-1,9)node [black,midway,left,xshift=0pt] {\footnotesize
+\draw [decorate,decoration={brace,amplitude=2pt},xshift=-9pt,yshift=0pt](-1,5) -- (-1,9)node [black,midway,above,,rotate=90] {\footnotesize
 \RL{اس کو قابو کریں}};
 \draw(4,7)node[circ]{};
 \end{tikzpicture}
@@ -2090,11 +2090,11 @@ $\lim_{x\to x_0}k=k$
 چونکہ \عددی{k-k=0} ہے لہٰذا کسی بھی مثبت عدد کو  \عددی{\delta} لیا جا سکتا ہے (شکل \حوالہ{شکل_مثال_حد_تلاش_مطلوبہ_ب}-ب)۔یوں ثابت ہوا کہ \عددی{\lim_{x\to x_0} k=k} ہے۔
 \begin{figure}
 \centering
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}[t]{0.40\textwidth}
 \centering
 \begin{tikzpicture}
 \begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1,2,3},xticklabels={$x_0-\delta$,$x_0$,$x_0+\delta$},ytick={0.5,1,2,3,3.5},yticklabels={$x_0-\epsilon$,$x_0-\delta$,$x_0$,$x_0+\delta$,$x_0+\epsilon$}]
-\addplot[domain=-0.25:4]{x}node[left]{$y=x$};
+\addplot[domain=-0.25:3.25]{x}node[above left]{$y=x$};
 \draw[dashed](axis cs:0,2)--(axis cs:2,2)--(axis cs:2,0);
 \draw[dashed](axis cs:0,1)--(axis cs:1,1)--(axis cs:1,0);
 \draw[dashed](axis cs:0,3)--(axis cs:3,3)--(axis cs:3,0);
@@ -2104,18 +2104,18 @@ $\lim_{x\to x_0}k=k$
 \عددی{0<\abs{x-x_0}<\delta} کی صورت میں \عددی{f(x)=x} کے لیے جب بھی \عددی{\delta\le \epsilon} ہو تب  \عددی{\abs{f(x)-x_0}<\epsilon} ہو گا۔
 }
 \end{subfigure}\hfill
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}[t]{0.50\textwidth}
 \centering
 \begin{tikzpicture}
 \begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1,2,3},xticklabels={$x_0-\delta$,$x_0$,$x_0+\delta$},ytick={1,2,3},yticklabels={$k-\epsilon$,$k$,$k+\epsilon$},xmin=-0.25,ymin=0,ymax=5]
-\addplot[domain=0:4]{2}node[pos=0.9,above]{$y=k$};
+\addplot[domain=0:3.25]{2}node[pos=0.9,above]{$y=k$};
 \draw[dashed](axis cs:1,2)--(axis cs:1,0);
 \draw[dashed](axis cs:2,2)--(axis cs:2,0);
 \draw[dashed](axis cs:3,2)--(axis cs:3,0);
 \end{axis}
 \end{tikzpicture}
 \caption{
-تفاعل \عددی{f(x)=k} کے لیے کسی بھی مثبت \عددی{\delta} کی صورت میں \عددی{\abs{f(x)-k}<\epsilon} ہو گا۔
+تفاعل \عددی{f(x)=k} کے لیے کسی بھی مثبت \عددی{\delta} کی صورت \\میں \عددی{\abs{f(x)-k}<\epsilon} ہو گا۔
 }
 \end{subfigure}%
 \caption{اشکال برائے مثال \حوالہ{مثال_حد_تلاش_مطلوبہ_ب}}
@@ -3106,7 +3106,7 @@ $f(x)=\tfrac{3x^2-(7x+1)\sqrt{x}+5}{x-1}, x_0=1$
 %
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.50\textwidth}
 \centering
 \begin{tikzpicture}
 \draw[-latex] (-0.25,0)--(5,0)node[right]{$x$};
@@ -3119,7 +3119,7 @@ $f(x)=\tfrac{3x^2-(7x+1)\sqrt{x}+5}{x-1}, x_0=1$
 \caption{ترسیم برائے مثال \حوالہ{مثال_حد_یک_طرفہ_دو_طرفہ_الف}}
 \label{شکل_مثال_حد_یک_طرفہ_دو_طرفہ_الف}
 \end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.40\textwidth}
 \centering
 \begin{tikzpicture}
 \begin{axis}[small,axis lines=middle,xtick={\empty},ytick={-1,1},ymin=-1.2,ymax=1.2,xmax=0.15,xlabel={$x$},ylabel={$y$},ylabel style={at={(current axis.above origin)},anchor=south}]
@@ -4266,7 +4266,7 @@ $\lim_{x\to 1^-}\tfrac{1}{1-x^2}=\infty$
 \حصہ{استمرار}\شناخت{حصہ_تفرق_استمرار}
 تجرباتی حاصل معلومات  کو ہم عموماً بطور نقطے ترسیم کر کے  ہموار خط سے جوڑتے ہیں۔ یوں نقطوں کے بیچ وقت، جہاں کوئی معلومات حاصل نہیں کی گئی، کے بارے میں بھی کچھ کہنا ممکن ہوتا ہے۔ایسا کرتے ہوئے ہم فرض کرتے ہیں کہ ہم استمراری تفاعل  ترسیم کر رہے ہیں جو مسلسل تبدیل ہوتے ہوئے ایک نقطے سے دوسرے نقطے تک پہنچتا ہے نہ کہ ان کے بیچ قیمتوں کو نظر انداز کرتے ہوئے چھلانگ لگا کر پہنچتا ہے۔   
 
-اتنے زیادہ طبعی اعمال  استمراری ہیں کہ اٹھارویں اور  انیسویں  صدی میں شاہد ہی کسی نے کسی اور قسم کے عمل کے بارے میں سوچا ہو۔ بیسویں صدی میں ماہر طبیعیات نے دریافت کیا کہ ہائیڈروجن  سالمہ (مالیکیول) میں  جوہر (ایٹم ) صرف مخصوص سطح توانائی پر ارتعاش کر سکتے ہیں اور روشنی در حقیقت ذراتی ہے اور گرم مادہ صرف مخصوص انفرادی تعدد کی روشنی خارج کرتا ہے نہ کہ تمام تعدد پر استمراری  روشنی خارج کرتا ہے۔ان غیر متوقع نتائج کے علاوہ شماریات اور  کمپیوٹر میں منفصل  تفاعل کے استعمال نے استمرار کے تصور کو عملاً اور نظریاتی طور پر اہم بنایا۔
+اتنے زیادہ طبعی اعمال  استمراری ہیں کہ اٹھارویں اور  انیسویں  صدی میں شاہد ہی کسی نے کسی اور قسم کے عمل کے بارے میں سوچا ہو۔ بیسویں صدی میں ماہر طبیعیات نے دریافت کیا کہ ہائیڈروجن  سالمہ (مالیکیول) میں  جوہر (ایٹم ) صرف مخصوص سطح توانائی پر ارتعاش کر سکتے ہیں اور روشنی در حقیقت ذراتی ہے اور گرم مادّہ صرف مخصوص انفرادی تعدد کی روشنی خارج کرتا ہے نہ کہ تمام تعدد پر استمراری  روشنی خارج کرتا ہے۔ان غیر متوقع نتائج کے علاوہ شماریات اور  کمپیوٹر میں منفصل  تفاعل کے استعمال نے استمرار کے تصور کو عملاً اور نظریاتی طور پر اہم بنایا۔
 
 اس حصے میں استمرار کی تعریف پیش کی جائے گی اور کسی نقطہ پر تفاعل کا استمراری یا غیر استمراری ہونا دکھایا جائے گا۔استمراری تفاعل کی متوسط قیمت خاصیت پر بھی بات کی جائے گی۔
 
@@ -4754,7 +4754,7 @@ f,&x\ne 2\\
 فرض کریں کہ تفاعل \عددی{f} وقفہ \عددی{I} پر استمراری ہے جبکہ \عددی{a} اور \عددی{b} اس وقفے پر کوئی دو نقطے ہیں۔  اگر \عددی{f(a)} اور \عددی{f(b)} کے بیچ \عددی{y_0} ایک عدد ہو تب \عددی{a} اور \عددی{b} کے بیچ ایک ایسا عدد \عددی{c} پایا جائے گا   جس پر  \عددی{f(c)=y_0} ہو  گا(شکل \حوالہ{شکل_حد_بیچ_ہر_قیمت})۔
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.50\textwidth}
 \centering
 \begin{tikzpicture}
 \draw[-latex](-0.25,0)--(4.5,0)node[right]{$x$};
@@ -4773,7 +4773,7 @@ f,&x\ne 2\\
 }
 \label{شکل_حد_بیچ_ہر_قیمت}
 \end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.40\textwidth}
 \centering
 \begin{tikzpicture}
 \draw[-latex](-0.25,0)--(3,0)node[right]{$x$};
@@ -4787,7 +4787,7 @@ f,&x\ne 2\\
 تفاعل \عددی{y=\lfloor x\rfloor, 0\le x\le 1} کوئی بھی قیمت \عددی{f(0)=0} اور \عددی{f(1)=1} کے بیچ قبول نہیں کرتا۔
 }
 \label{شکل_حد_بیچ_نہیں}
-\end{minipage}%
+\end{minipage}
 \end{figure}  
 \انتہا{مسئلہ}
 %========================
@@ -5402,7 +5402,7 @@ $2\sin x=x$
 دائرے کے  مماس  کا مطلب سیدھا سادہ ہے۔نقطہ \عددی{N} پر دائرہ \عددی{C} کے مماس سے مراد خط \عددی{L} ہے جو نقطہ \عددی{N} سے گزرتا ہے  اور جو   \عددی{N} پر رداس کے قائمہ الزاویہ ہے (شکل \حوالہ{شکل_حد_مماس_دائرہ})۔  نقطہ \عددی{N} پر کسی دوسری  منحنی \عددی{C} کے مماس سے کیا مراد ہے؟ دائرے کی ہندسہ دیکھ کر ہم کہہ سکتے ہیں کہ مماس کا مطلب درج ذیل میں سے ایک ہو سکتا ہے۔
 \begin{enumerate}[1.]
 \item
-\عددی{N} سے \عددی{C} کے مرکز تک لکیر  کے لمب  خط \عددی{L} ہے،
+\عددی{N} سے \عددی{C} کے مرکز تک لکیر  کے \بدل{قائمہ}  خط \عددی{L} ہے،
 \item
 خط \عددی{L} منحنی \عددی{C} کو صرف ایک نقطہ، یعنی \عددی{N} پر مس کرتا ہے،
 \item

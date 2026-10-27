@@ -46,6 +46,7 @@
 
 \newcommand*{\فرہنگ}[1]{\index{#1}}
 
+
 %references and labels
 \newcommand*{\شناخت}[1]{\label{#1}}
 \newcommand*{\حوالہ}[1]{\ref{#1}}
@@ -108,30 +109,30 @@
 %================
 
 %environment for examples مثال
-\newcounter{examplecounter}[section]
-\renewcommand{\theexamplecounter}{\arabic{examplecounter}}
-%\newcounter{examplecounter}[chapter]
-%\renewcommand{\theexamplecounter}{\thechapter.\arabic{examplecounter}}
+%\newcounter{examplecounter}[section]
+%\renewcommand{\theexamplecounter}{\arabic{examplecounter}}
+\newcounter{examplecounter}[chapter]
+\renewcommand{\theexamplecounter}{\thechapter.\arabic{examplecounter}}
 %\renewcommand{\theexamplecounter}{\arabic{examplecounter}}
 
 
 \newenvironment*{مثال}
-{\par\noindent\ignorespaces    مثال \refstepcounter{examplecounter} \theexamplecounter :\quad}%
+{\par\noindent\ignorespaces    مثال \refstepcounter{examplecounter} \theexamplecounter\quad}%
 {\hfill\qedsymbol  \vspace{\baselineskip}\par}
-%{\noindent\ignorespaces \vspace{\baselineskip} \hrule \vspace{\baselineskip}  مثال \refstepcounter{examplecounter} \theexamplecounter :}%
+%{\noindent\ignorespaces \vspace{\baselineskip} \hrule \vspace{\baselineskip}  مثال \refstepcounter{examplecounter} \theexamplecounter}%
 %{\par\noindent \hrule  \vspace{\baselineskip}}
 
 %------
 %practice problems environment مشق
 
-\newcounter{practicecounter}[section]                              %practice here means مشق
-\renewcommand{\thepracticecounter}{\arabic{practicecounter}}
-%\newcounter{practicecounter}[chapter]                              %practice here means مشق
-%\renewcommand{\thepracticecounter}{\thechapter.\arabic{practicecounter}}
+%\newcounter{practicecounter}[section]                              %practice here means مشق
+%\renewcommand{\thepracticecounter}{\arabic{practicecounter}}
+\newcounter{practicecounter}[chapter]                              %practice here means مشق
+\renewcommand{\thepracticecounter}{\thechapter.\arabic{practicecounter}}
 %\renewcommand{\thepracticecounter}{\arabic{practicecounter}}
 
 \newenvironment*{مشق}
-{\par\noindent\ignorespaces \vspace{\baselineskip} \hrule \vspace{\baselineskip} مشق \refstepcounter{practicecounter} \thepracticecounter :\quad}%
+{\par\noindent\ignorespaces \vspace{\baselineskip} \hrule \vspace{\baselineskip} مشق \refstepcounter{practicecounter} \thepracticecounter\quad}%
 {\par\noindent \hrule  \vspace{\baselineskip}}
 %--------------------------------------------------------------------
 
@@ -144,16 +145,16 @@
 %\renewcommand{\thequestioncounter}{\arabic{questioncounter}}
 
 \newenvironment*{سوال}				
-{\noindent\ignorespaces  سوال \refstepcounter{questioncounter} \thequestioncounter :\quad}%
+{\noindent\ignorespaces  سوال \refstepcounter{questioncounter} \thequestioncounter\quad}%
 {\par\noindent\ignorespaces }
 %--------------------
 
 %defining a LAW   قانون
 
-\newcounter{lawcounter}[section]
-\renewcommand{\thelawcounter}{\arabic{lawcounter}}
-%\newcounter{lawcounter}[chapter]
-%\renewcommand{\thelawcounter}{\thechapter.\arabic{lawcounter}}
+%\newcounter{lawcounter}[section]
+%\renewcommand{\thelawcounter}{\arabic{lawcounter}}
+\newcounter{lawcounter}[chapter]
+\renewcommand{\thelawcounter}{\thechapter.\arabic{lawcounter}}
 %\renewcommand{\thelawcounter}{\arabic{lawcounter}}
 
 \newenvironment*{قانون}				
@@ -171,15 +172,15 @@
 
 %defining a THEOREM   مسئلہ
 
-\newcounter{kthcounter}[section]
-\renewcommand{\thekthcounter}{\arabic{kthcounter}}
-%\newcounter{kthcounter}[chapter]
-%\renewcommand{\thekthcounter}{\thechapter.\arabic{kthcounter}}
+%\newcounter{kthcounter}[section]
+%\renewcommand{\thekthcounter}{\arabic{kthcounter}}
+\newcounter{kthcounter}[chapter]
+\renewcommand{\thekthcounter}{\thechapter.\arabic{kthcounter}}
 %\renewcommand{\thekthcounter}{\arabic{kthcounter}}
 
 
 \newenvironment*{مسئلہ}				
-{\par\noindent\ignorespaces  مسئلہ \refstepcounter{kthcounter} \thekthcounter :\quad}%
+{\par\noindent\ignorespaces  مسئلہ \refstepcounter{kthcounter} \thekthcounter\quad}%
 {\par\noindent }
 %--------------------
 %--------------------
@@ -225,14 +226,14 @@
 
 
 
-\newcounter{kcocounter}[section]
-\renewcommand{\thekcocounter}{\arabic{kcocounter}}
-%\newcounter{kcocounter}[chapter]
-%\renewcommand{\thekcocounter}{\thechapter.\arabic{kcocounter}}
+%\newcounter{kcocounter}[section]
+%\renewcommand{\thekcocounter}{\arabic{kcocounter}}
+\newcounter{kcocounter}[chapter]
+\renewcommand{\thekcocounter}{\thechapter.\arabic{kcocounter}}
 %\renewcommand{\thekcocounter}{\arabic{kcocounter}}
 
 \newenvironment*{ضمنی نتیجہ}				
-{\par\noindent\ignorespaces  ضمنی نتیجہ \refstepcounter{kcocounter} \thekcocounter :\quad}%
+{\par\noindent\ignorespaces  ضمنی نتیجہ \refstepcounter{kcocounter} \thekcocounter\quad}%
 {\par\noindent }
 %--------------------
 %--------------------
@@ -287,15 +288,15 @@
 
 %defining a RULE   قاعدہ
 
-\newcounter{krucounter}[section]
-\renewcommand{\thekrucounter}{\arabic{krucounter}}
-%\newcounter{krucounter}[chapter]
-%\renewcommand{\thekrucounter}{\thechapter.\arabic{krucounter}}
+%\newcounter{krucounter}[section]
+%\renewcommand{\thekrucounter}{\arabic{krucounter}}
+\newcounter{krucounter}[chapter]
+\renewcommand{\thekrucounter}{\thechapter.\arabic{krucounter}}
 %\renewcommand{\thekrucounter}{\arabic{krucounter}}
 
 
 \newenvironment*{قاعدہ}				
-{\par\noindent\ignorespaces  قاعدہ \refstepcounter{krucounter} \thekrucounter :\quad}%
+{\par\noindent\ignorespaces  قاعدہ \refstepcounter{krucounter} \thekrucounter\quad}%
 {\par\noindent }
 %--------------------
 %--------------------
@@ -317,10 +318,10 @@
 
 %defining a TEST   پرکھ
 
-\newcounter{kttcounter}[section]
-\renewcommand{\thekttcounter}{\arabic{kttcounter}}
-%\newcounter{kttcounter}[chapter]
-%\renewcommand{\thekttcounter}{\thechapter.\arabic{kttcounter}}
+%\newcounter{kttcounter}[section]
+%\renewcommand{\thekttcounter}{\arabic{kttcounter}}
+\newcounter{kttcounter}[chapter]
+\renewcommand{\thekttcounter}{\thechapter.\arabic{kttcounter}}
 %\renewcommand{\thekttcounter}{\arabic{kttcounter}}
 
 \newenvironment*{پرکھ}				
@@ -375,7 +376,7 @@
 
 %the following is the environment for end of chapter questions 
 %it too accepts the answer environment above
-\newenvironment*{سوالاتباب}				
+\newenvironment*{سوالات_باب}				
 {\noindent\ignorespaces\wf{
 \موٹا{مشق برائے باب} 
 \thechapter
@@ -386,6 +387,22 @@
 }%
 {\wf{\unexpanded{\end{description}}}\par\noindent\ignorespacesafterend}
 %==================
+%the following is the environment for end of Appendix questions 
+%it too accepts the answer environment above
+\newenvironment*{سوالات_ضمیمہ}				
+{\noindent\ignorespaces\wf{
+\موٹا{مشق برائے ضمیمہ} 
+\thechapter
+\quad
+\موٹا{صفحہ}
+\thepage}
+\wf{\unexpanded{\begin{description}\setlength{\parskip}{0pt} \setlength{\itemsep}{0pt plus 1pt}}}
+}%
+{\wf{\unexpanded{\end{description}}}\par\noindent\ignorespacesafterend}
+%==================
+%==================
+%\numberwithin{equation}{section}
+%\renewcommand{\theequation}{\arabic{equation}}
 
-\numberwithin{equation}{section}
-\renewcommand{\theequation}{\arabic{equation}}
+\numberwithin{equation}{chapter}
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}

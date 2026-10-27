@@ -2766,9 +2766,9 @@ $\approx 44.8,\, \SI{6.7}{\litre\per\minute}$
 %=================
 \begin{figure}
 \centering
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}[b]{0.40\textwidth}
 \centering
-\begin{tabular}{C|C}
+\begin{tabular}[b]{C|C}
 \toprule
 t\,\text{\RL{لمحہ}}&c\,\text{\RL{کثافت رنگ}}\\
 \midrule
@@ -2787,9 +2787,9 @@ t\,\text{\RL{لمحہ}}&c\,\text{\RL{کثافت رنگ}}\\
 \bottomrule
 \end{tabular}
 \end{subfigure}\hfill
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}[b]{0.50\textwidth}
 \centering
-\begin{tikzpicture}
+\begin{tikzpicture}[baseline=(current bounding box.south)]
 \begin{axis}[small,axis lines=middle,xlabel={$t(\si{\second})$},ylabel={$c(\si{\milli\gram\per\litre})$}, ymax=4.75,xmax=26,grid=both,xtick={2,4,6,8,10,12,14,16,18,20,22,24}, ytick={0.5,1,1.5,2,2.5,3,3.5,4,4.5}, yticklabels={,$1$,,$2$,,$3$,,$4$},ylabel style={at={(current axis.above origin)},anchor=south}]
 \addplot[smooth]plot coordinates {(2,0) (4,0.6) (6,1.4) (8,2.7) (10,3.7) (12,4.1) (14,3.8) (16,2.9) (18,1.7) (20,1.0) (22,0.5) (24,0)};
 \draw(axis cs:18,3)node[right]{$c=f(t)$};
@@ -2836,7 +2836,7 @@ t&c&t&c\\
 %====================
 \begin{figure}
 \centering
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.40\textwidth}
 \centering
 \begin{tabular}{@{}CC|CC@{}}
 \toprule
@@ -2853,7 +2853,7 @@ t(\si{\second})&v(\si{\meter\per\second})&t(\si{\second})&v(\si{\meter\per\secon
 \end{tabular}
 \caption{رفتار بالمقابل وقت برائے سوال \حوالہ{سوال_تکمل_رفتار_ریل_گاڑی}}
 \end{subfigure}\hfill
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.50\textwidth}
 \centering
 \begin{tabular}{@{}CC|CC@{}}
 \toprule
@@ -3075,7 +3075,7 @@ t(\si{\minute})&v(\si{\meter\per\second})&t(\si{\minute})&v(\si{\meter\per\secon
 \انتہا{سوال}
 %=======================
 \ابتدا{سوال}\شناخت{سوال_تکمل_بہت_زیادہ_خلل_چوکور}\ترچھا{اندازاً حجم میں بہت زیادہ خلل}\\
-نقطہ \عددی{x=0} اور \عددی{x=4} پر محور  \عددی{x} کے لمب سطحوں کے بیچ ایک ٹھوس جسم پایا جاتا ہے۔ اس  محور کے لمب، جسم کا رقبہ عمودی تراش چوکور ہے، جس کے کنارے  قطع مکافی \عددی{y=-\sqrt{x}} اور \عددی{y=\sqrt{x}} کو مس کرتے ہیں (شکل \حوالہ{شکل_سوال_تکمل_بہت_زیادہ_خلل_چوکور})۔ (ا) وقفہ \عددی{0\le x\le 4} کو چار برابر ذیلی وقفوں میں تقسیم کرتے ہوئے دائیں سر نقاط پر رقبہ عمودی تراش لیتے ہوئے حجم \عددی{H_4} تلاش کریں۔ اصل حجم \عددی{H=32} ہے۔ خلل \عددی{\abs{H-H_4}} کو \عددی{H} کے لحاظ سے فی صد کی صورت میں لکھیں۔ (ج) یہی  مسئلہ  \عددی{H_8} کے لیے حل کریں۔\\
+نقطہ \عددی{x=0} اور \عددی{x=4} پر محور  \عددی{x} کے \بدل{قائمہ} سطحوں کے بیچ ایک ٹھوس جسم پایا جاتا ہے۔ اس  محور کے \بدل{قائمہ}، جسم کا رقبہ عمودی تراش چوکور ہے، جس کے کنارے  قطع مکافی \عددی{y=-\sqrt{x}} اور \عددی{y=\sqrt{x}} کو مس کرتے ہیں (شکل \حوالہ{شکل_سوال_تکمل_بہت_زیادہ_خلل_چوکور})۔ (ا) وقفہ \عددی{0\le x\le 4} کو چار برابر ذیلی وقفوں میں تقسیم کرتے ہوئے دائیں سر نقاط پر رقبہ عمودی تراش لیتے ہوئے حجم \عددی{H_4} تلاش کریں۔ اصل حجم \عددی{H=32} ہے۔ خلل \عددی{\abs{H-H_4}} کو \عددی{H} کے لحاظ سے فی صد کی صورت میں لکھیں۔ (ج) یہی  مسئلہ  \عددی{H_8} کے لیے حل کریں۔\\
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -3124,7 +3124,7 @@ t(\si{\minute})&v(\si{\meter\per\second})&t(\si{\minute})&v(\si{\meter\per\secon
 \end{figure}
 
 \ابتدا{سوال}\شناخت{سوال_تکمل_بہت_زیادہ_خلل_تکون}\ترچھا{اندازاً حجم میں بہت زیادہ خلل}\\
-نقطہ \عددی{x=0} اور \عددی{x=4} پر محور  \عددی{x} کے لمب  سطحوں کے بیچ ایک ٹھوس جسم پایا جاتا ہے۔ اس محور کے لمب، جسم کا رقبہ عمودی تراش متساوی الاضلاع شکل کا ہے جس کا قاعدہ  قطع مکافی \عددی{y=-\sqrt{x}} اور \عددی{y=\sqrt{x}} کو مس کرتا ہے (شکل \حوالہ{شکل_سوال_تکمل_بہت_زیادہ_خلل_تکون})۔(ا) وقفہ \عددی{0\le x\le 4} کو چار برابر ذیلی وقفوں میں تقسیم کرتے ہوئے بائیں سر نقاط پر رقبہ عمودی تراش لیتے ہوئے حجم \عددی{H_4} تلاش کریں۔ اصل حجم \عددی{H=8\sqrt{3}} ہے۔ \عددی{H} کے لحاظ سے خلل \عددی{\abs{H-H_4}} کی فی صد قیمت کتنی ہے؟ (ج) سوال کو دوبارہ \عددی{H_8} کے لیے حل کریں۔
+نقطہ \عددی{x=0} اور \عددی{x=4} پر محور  \عددی{x} کے \بدل{قائمہ}  سطحوں کے بیچ ایک ٹھوس جسم پایا جاتا ہے۔ اس محور کے \بدل{قائمہ}، جسم کا رقبہ عمودی تراش متساوی الاضلاع شکل کا ہے جس کا قاعدہ  قطع مکافی \عددی{y=-\sqrt{x}} اور \عددی{y=\sqrt{x}} کو مس کرتا ہے (شکل \حوالہ{شکل_سوال_تکمل_بہت_زیادہ_خلل_تکون})۔(ا) وقفہ \عددی{0\le x\le 4} کو چار برابر ذیلی وقفوں میں تقسیم کرتے ہوئے بائیں سر نقاط پر رقبہ عمودی تراش لیتے ہوئے حجم \عددی{H_4} تلاش کریں۔ اصل حجم \عددی{H=8\sqrt{3}} ہے۔ \عددی{H} کے لحاظ سے خلل \عددی{\abs{H-H_4}} کی فی صد قیمت کتنی ہے؟ (ج) سوال کو دوبارہ \عددی{H_8} کے لیے حل کریں۔
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}\شناخت{سوال_تکمل_نصف_کروی_ٹینکی_میں_پانی}
@@ -3163,7 +3163,7 @@ x&h&x&h\\
 %==================
 
 \ابتدا{سوال}\شناخت{سوال_تکمل_راکٹ_نوک}
-منحنی \عددی{y=\sqrt{x},\,0\le x\le 5} کو محور  \عددی{y} کے گرد گمانے سے   راکٹ کی قطع مکافی مجسم نوک حاصل ہوتی ہے جہاں \عددی{x} کی پیمائش میٹر  میں ہے (شکل \حوالہ{شکل_سوال_تکمل_راکٹ_نوک})۔ اس نوک کا حجم معلوم کرنے کی خاطر ہم \عددی{[0,5]} کو پانچ  برابر حصوں میں تقسیم کرتے ہیں۔یوں ہر حصے کی لمبائی \عددی{1} ہو گی۔ ہر حصہ کے بائیں سر نقطہ پر، محور  \عددی{x}  کے لمب،  جسم کو کاٹا جاتا ہے اور ان نقطوں پر جسم کے رقبہ عمودی تراش کے برابر بیلن استعمال کرتے ہوئے نوک کا حجم دریافت کیا جاتا ہے۔ بیلنوں کی لمبائی \عددی{1} ہو گی۔ (ا) مجموعہ \عددی{H_5} تلاش کریں۔ کیا \عددی{H_5} کی قیمت \عددی{H} سے کم یا زیادہ ہو گی؟ اپنے جواب کی وجہ پیش کریں۔ (ب) نوک کا اصل حجم جو آپ سوال \حوالہ{سوال_تکمل_حجم_ٹھوس_جسم_ت} میں تلاش کریں گے  \عددی{H=2\pi\,\si{\meter\cubed}} ہے۔ خلل \عددی{\abs{H-H_5}} کو \عددی{H} کے فی صد کی صورت میں لکھیں۔ \\
+منحنی \عددی{y=\sqrt{x},\,0\le x\le 5} کو محور  \عددی{y} کے گرد گمانے سے   راکٹ کی قطع مکافی مجسم نوک حاصل ہوتی ہے جہاں \عددی{x} کی پیمائش میٹر  میں ہے (شکل \حوالہ{شکل_سوال_تکمل_راکٹ_نوک})۔ اس نوک کا حجم معلوم کرنے کی خاطر ہم \عددی{[0,5]} کو پانچ  برابر حصوں میں تقسیم کرتے ہیں۔یوں ہر حصے کی لمبائی \عددی{1} ہو گی۔ ہر حصہ کے بائیں سر نقطہ پر، محور  \عددی{x}  کے \بدل{قائمہ}،  جسم کو کاٹا جاتا ہے اور ان نقطوں پر جسم کے رقبہ عمودی تراش کے برابر بیلن استعمال کرتے ہوئے نوک کا حجم دریافت کیا جاتا ہے۔ بیلنوں کی لمبائی \عددی{1} ہو گی۔ (ا) مجموعہ \عددی{H_5} تلاش کریں۔ کیا \عددی{H_5} کی قیمت \عددی{H} سے کم یا زیادہ ہو گی؟ اپنے جواب کی وجہ پیش کریں۔ (ب) نوک کا اصل حجم جو آپ سوال \حوالہ{سوال_تکمل_حجم_ٹھوس_جسم_ت} میں تلاش کریں گے  \عددی{H=2\pi\,\si{\meter\cubed}} ہے۔ خلل \عددی{\abs{H-H_5}} کو \عددی{H} کے فی صد کی صورت میں لکھیں۔ \\
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -3379,7 +3379,7 @@ $\sum\limits_{k=1}^nc=n\cdot c$
 \انتہا{مثال}
 %=====================
 \جزوحصہء{مثبت عدد صحیح کے کلیات مجموعہ}
-متناہی مجموعوں کے کئی کلیات پائے جاتے ہیں جن میں سے مشہور ترین کلیات شروع کے \عددی{n} عدد صحیح کا مجموعہ ہے (جو گاوس نے \عددی{5} سال کی عمر میں اخذ کیا) اور شروع کے \عددی{n} عدد صحیح کے مربع اور مکعب کے مجموعوں کے کلیات ہیں۔
+متناہی مجموعوں کے کئی کلیات پائے جاتے ہیں جن میں سے مشہور ترین کلیات شروع کے \عددی{n} عدد صحیح کا مجموعہ ہے (جو گاؤس نے \عددی{5} سال کی عمر میں اخذ کیا) اور شروع کے \عددی{n} عدد صحیح کے مربع اور مکعب کے مجموعوں کے کلیات ہیں۔
 \begin{gather}
 \begin{aligned}\label{مساوات_تکمل_قاعدہ_عدد_صحیح_مجموعہ}
 \sum\limits_{k=1}^nk&=\frac{n(n+1)}{2}&&\text{\RL{ابتدائی $n$ عدد صحیح}}\\
@@ -4807,7 +4807,7 @@ $\tfrac{b^3}{3}$
 %======================
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.50\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=1.5-cos(deg(\x));}]
 \begin{axis}[clip=false,small,axis lines=middle,ytick={\empty},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}, xlabel={$x$},ylabel={$y$},xtick={0.25,0.8,1.35,1.9,2.45,3}, xticklabels={$x_0$,$x_1$,,,$x_{n-1}$,$x_n$},xmin=0,xmax=4.5,ymin=0,domain=0.25:3]
@@ -4817,7 +4817,7 @@ $\tfrac{b^3}{3}$
     {f(x)}\closedcycle;
 \addplot[smooth, thick]{f(x)};
 \draw(axis cs:0.25,{f(0.25)})node[pin=135:{$Q_0$}]{};
-\draw(axis cs:0.8,{f(0.8)})node[pin=135:{$Q_1$}]{};
+\draw(axis cs:0.8,{f(0.8)})node[pin={[xshift=0.25em]135:{$Q_1$}}]{};
 \draw(axis cs:2.45,{f(2.45)})node[pin=135:{$Q_{n-1}$}]{};
 \draw(axis cs:3,{f(3)})node[pin=45:{$Q_n$}]{};
 \draw[fill=lgray](axis cs:3.5,{f(0.25)})--(axis cs:3.5,{f(3)})--(axis cs:4,{f(3)})--(axis cs:4,{f(0.25)})--(axis cs:3.5,{f(0.25)});
@@ -4836,7 +4836,7 @@ $\tfrac{b^3}{3}$
 \draw(kB)++(0,1mm)--++(0,-2mm);
 \draw(axis cs:4,{f(0.25)})++(2mm,0)coordinate(kC);
 \draw(axis cs:4,{f(3)})++(2mm,0)coordinate(kD);
-\draw[stealth-stealth](kC)--(kD)node[pos=0.5,right]{$f(b)-f(a)$};
+\draw[stealth-stealth](kC)--(kD)node[pos=0.5,below,rotate=90]{$f(b)-f(a)$};
 \draw(kC)++(-1mm,0)--++(2mm,0);
 \draw(kD)++(-1mm,0)--++(2mm,0);
 \draw(axis cs:3.75,{f(3)})node[above]{$R$};
@@ -4845,7 +4845,7 @@ $\tfrac{b^3}{3}$
 \caption{بالائی اور زیریں مجموعوں میں\\ فرق $[f(b)-f(a)]\Delta x$ ہو گا۔}
 \label{شکل_تکمل_بتدریج_بڑھتا_تفاعل}
 \end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.40\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=(\x)^2;}]
 \begin{axis}[clip=false,small,axis lines=middle,xmax=7,ytick={\empty},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}, xlabel={$x$},ylabel={$y$},xtick={1,2,5,6},xticklabels={$x_1$,$x_2$,$x_{n-1}$,$x_n$},]
@@ -5294,7 +5294,7 @@ $\int_a^b=\int_a^{x_1}+\int_{x_1}^{x_2}+\int_{x_2}^b=S_1-S_2+S_3$
 \draw[name intersections={of=cur and fk}] (intersection-1)--(5.7,0)node[circ]{};
 \draw(axis cs:0.5,0)node[pin=90:{$x_0=a$}]{};
 \draw(axis cs:1,0)node[above]{$x_1$};
-\draw(axis cs:6,0)node[pin=-45:{$x_n=b$}]{};
+\draw(axis cs:6,0)node[pin=-110:{$x_n=b$}]{};
 \end{axis}
 \end{tikzpicture}
 \caption{وقفہ $[a,b]$ پر تفاعل کی نمونی قیمتیں۔}
@@ -5811,8 +5811,8 @@ $\tfrac{3}{2}$
 \begin{tikzpicture}[font=\footnotesize]
 \draw[-latex](-2.25,0)--(1.25,0)node[right]{$x$};
 \draw[-latex](0,0)node[below]{$0$}--(0,1.25)node[above]{$y$};
-\draw(-2,0)node[below]{$-4$}--(-0.5,1)node[pos=0.5,above left]{$y=x+4$};
-\draw(1,0)node[below]{$2$}--(-0.5,1)node[pos=0.5,above right]{$y=-x+2$};
+\draw[thick](-2,0)node[below]{$-4$}--(-0.5,1)node[pos=0.5,above left]{$y=x+4$};
+\draw[thick](1,0)node[below]{$2$}--(-0.5,1)node[pos=0.5,above right]{$y=-x+2$};
 \draw(0,1)node[left]{$3$}--++(0.1,0);
 \end{tikzpicture}
 \caption{}
@@ -5823,7 +5823,7 @@ $\tfrac{3}{2}$
 \begin{tikzpicture}[font=\footnotesize]
 \draw[-latex](-1.25,0)--(1.25,0)node[right]{$t$};
 \draw[-latex](0,0)node[below]{$0$}--(0,1.25)node[above]{$s$};
-\draw([shift={(180:1)}]0,1) arc (180:360:1);
+\draw[thick]([shift={(180:1)}]0,1) arc (180:360:1);
 \draw(-1,0)node[below]{$-1$}--++(0,0.1)  (1,0)node[below]{$1$}--++(0,0.1)  (0,1)node[left]{$1$}--++(0.1,0);
 \draw(1,1)node[above,xshift=2mm]{$s=1-\sqrt{1-t^2}$};
 \end{tikzpicture}
@@ -6174,7 +6174,7 @@ f(x)=x^3-x^2-2x=x(x^2-x-2)=x(x+1)(x-2)
 %=======================
 \begin{figure}
 \centering
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\small,declare function={f(\x)=\x^3-\x^2-2*\x;}]
 \begin{axis}[axis on top,clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-1,2},ytick={\empty}]
@@ -6189,7 +6189,7 @@ f(x)=x^3-x^2-2x=x(x^2-x-2)=x(x+1)(x-2)
 {تفاعل $y=x^3-x^2-2x$ اور  محور  $\,x\,$کے بیچ رقبہ (مثال \حوالہ{مثال_تکمل_ترسیم_اور_محور_کے_بیچ_رقبہ_الف})۔}
 \label{شکل_مثال_تکمل_ترسیم_اور_محور_کے_بیچ_رقبہ_الف}
 \end{minipage}\hfill
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.40\textwidth}
 \centering
 \begin{tikzpicture}[font=\small,declare function={f(\x)=sin(deg(100*pi*\x));}]
 \begin{axis}[axis on top,clip=false,small,axis lines=middle,xlabel={$t$},ylabel={$V$},xlabel style={at={(current axis.right of origin)},anchor=south},ylabel style={at={(current axis.above origin)},anchor=south},xtick={0,0.01,0.02},xticklabels={$0$,$\tfrac{1}{100}$,$\tfrac{1}{50}$},ytick={1},yticklabels={$V_{\text{چوٹی}}$},xmax=0.021,scaled x ticks=false,ymax=1.25]
@@ -7566,7 +7566,7 @@ f(x)&=\sqrt{x-4},\,a=4,\, b=8,\, c=5&&\text{(ج)}
 \draw(axis cs:2,{f(2)})node[pin=-45:{$N_0(x_0,y_0)$}]{};
 \draw(axis cs:3,{f(3)})node[pin=-45:{$N_1(x_1,y_1)$}]{};
 \draw(axis cs:4,{f(4)})node[pin={[pin distance=0.15cm]135:{$N_2(x_2,y_2)$}}]{};
-\draw(axis cs:8,{f(8)})node[pin=-30:{$N_n(x_n,y_n)$}]{};
+\draw(axis cs:8,{f(8)})node[pin={[xshift=-1em]-30:{$N_n(x_n,y_n)$}}]{};
 \addplot[domain=1:9,smooth,on layer=foreground]{f(x)}node[above]{$y=f(x)$};
 \end{axis}
 \end{tikzpicture}
@@ -7749,7 +7749,7 @@ b-a=2-1=1,\quad h=\frac{b-a}{n}=\frac{1}{n},\quad f''(x)=\frac{\dif^{\,2}}{\dif 
 قاعدہ سمسن میں \عددی{\int_a^bf(x)\dif x} کے حصول میں \عددی{f} کو مستقیم خطوط کے بجائے دو رتبی کثیر رکنی (قطع مکافی) سے ظاہر کیا جاتا ہے۔ہم ترسیم کو سیدھی لکیروں کے بجائے قطع مکافی قوسین سے ظاہر کرتے ہیں (شکل \حوالہ{شکل_تکمل_قاعدہ_سمسن_قطع_مکافی})۔ 
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.50\textwidth}
 \centering
 \begin{tikzpicture}[declare function={f(\x)=cos(deg(\x))-1/3*cos(deg(3*\x));},font=\small]
 \pgfmathsetmacro{\ky}{f(0.8)+0.25}
@@ -7780,14 +7780,14 @@ b-a=2-1=1,\quad h=\frac{b-a}{n}=\frac{1}{n},\quad f''(x)=\frac{\dif^{\,2}}{\dif 
 \caption{قاعدہ سمسن میں ذیلی وقفوں کی جوڑی کو انفرادی قطع مکافی سے ظاہر کیا جاتا ہے۔}
 \label{شکل_تکمل_قاعدہ_سمسن_قطع_مکافی}
 \end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.40\textwidth}
 \centering
 \begin{tikzpicture}[declare function={f(\x)=-0.6667*\x^2+0.16667*\x+1;},font=\small]
 \begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},ymin=0,xmax=1,ymax=1.25,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-0.75,0,0.75},xticklabels={$-h$,$0$,$h$},ytick={\empty}]
-\addplot[domain=-0.9:0.9,thick]{f(x)}node[pos=0.65,above right,font=\scriptsize]{$y=Ax^2+Bx+C$};
-\draw(axis cs:-0.75,0)--(axis cs:-0.75,{f(-0.75)})node[pos=0.3,left]{$y_0$}node[above left]{$(-h,y_0)$};
+\addplot[domain=-0.9:0.9,thick]{f(x)}node[pos=0.65,above right,xshift=-1em,font=\scriptsize]{$y=Ax^2+Bx+C$};
+\draw(axis cs:-0.75,0)--(axis cs:-0.75,{f(-0.75)})node[pos=0.3,left]{$y_0$}node[above left,xshift=0.5em]{$(-h,y_0)$};
 \draw(axis cs:0,0)--(axis cs:0,{f(0)})node[pos=0.5,left]{$y_1$}node[above left]{$(0,y_1)$};
-\draw(axis cs:0.75,0)--(axis cs:0.75,{f(0.75)})node[pos=0.5,left]{$y_2$}node[above right]{$(h,y_2)$};
+\draw(axis cs:0.75,0)--(axis cs:0.75,{f(0.75)})node[pos=0.5,left]{$y_2$}node[above right,xshift=-0.5em]{$(h,y_2)$};
 \addplot[name path=fun,domain=-0.75:0.75,draw=none]{f(x)};
 \draw[name path=axis](axis cs:-0.75,0)--(axis cs:0.75,0);
 \addplot[fill=lgray]fill between[of=axis and fun];

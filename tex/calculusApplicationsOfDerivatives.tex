@@ -643,7 +643,7 @@ $g(x)=\sqrt{4-x^2},\quad -2\le x\le 1$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-مطلق اعظم:\عددی{2}، مطلق اقل :\عددی{0} ہے۔
+مطلق اعظم:\عددی{2}، مطلق اقل :\عددی{0} ہے۔\\
 \begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\small]
@@ -1070,21 +1070,21 @@ h(x)&=f(x)-g(x)\\
 ہو گا۔شکل \حوالہ{شکل_مسئلہ_استعمال_اوسط_قیمت}-ب میں \عددی{f}، \عددی{g}،  اور \عددی{h} دکھائے گئے ہیں۔
 \begin{figure}
 \centering
-\begin{subfigure}[t]{0.45\textwidth}
+\begin{subfigure}[t]{0.40\textwidth}
 \centering
 \begin{tikzpicture}
 \begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},xmin=0,ymin=0,xtick={\empty},ytick={\empty},y axis line style={draw=none}]
 \addplot[domain=0.2:2.5]{sin(deg(x))}node[pos=0.4,above left]{$y=f(x)$};
 \addplot[domain=0.25:2.5]{0.25*x+0.354};
 %\draw[] (axis cs:0.49932,0.4788)node[left]{$A$}--(axis cs:2.08,0.873)node[above]{$B$};
-\draw[dashed](axis cs:0.49932,0.4788)node[left,yshift={1mm}]{$A(a,f(a))$}--(axis cs:0.49932,0)node[below]{$a$};
+\draw[dashed](axis cs:0.49932,0.4788)node[right,yshift={-1mm}]{$A(a,f(a))$}--(axis cs:0.49932,0)node[below]{$a$};
 \draw[dashed](axis cs:2.08,0.873)node[right,xshift=2mm]{$B(b,f(b))$}--(axis cs:2.08,0)node[below]{$b$};
 \end{axis}
 \end{tikzpicture}
 \caption
 {وقفہ \عددی{[a,b]} پر \عددی{f} اور  وتری قطعہ \عددی{AB} کی ترسیم۔}
 \end{subfigure}\hfill
-\begin{subfigure}[t]{0.45\textwidth}
+\begin{subfigure}[t]{0.50\textwidth}
 \centering
 \begin{tikzpicture}[font=\small]
 \begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},xmin=0,ymin=0,xtick={\empty},ytick={\empty},y axis line style={draw=none}]
@@ -1092,7 +1092,7 @@ h(x)&=f(x)-g(x)\\
 \addplot[,domain=0.25:2.5]{0.25*x+0.354}node[pos=0.5,sloped,below]{$y=g(x)$};
 \addplot[domain=0.4993:2.08]{sin(deg(x))-0.25*x-0.354}node[pos=0.5,sloped,above,font=\scriptsize]{$h(x)=f(x)-g(x)$};
 %\draw[] (axis cs:0.49932,0.4788)node[left]{$A$}--(axis cs:2.08,0.873)node[above]{$B$};
-\draw[dashed](axis cs:0.49932,0.4788)node[left,yshift={1mm}]{$A(a,f(a))$}--(axis cs:0.49932,0)node[below]{$a$};
+\draw[dashed](axis cs:0.49932,0.4788)node[left,xshift=0.5em,yshift={3mm}]{$A(a,f(a))$}--(axis cs:0.49932,0)node[below]{$a$};
 \draw[dashed](axis cs:2.08,0.873)node[right,xshift=2mm]{$B(b,f(b))$}--(axis cs:2.08,0)node[below]{$b$};
 \end{axis}
 \end{tikzpicture}
@@ -1207,7 +1207,7 @@ h'(x)=f'(x)-h'(x)=0
 ضمنی نتیجہ \حوالہ{نتیجہ_صریح_استعمال_دوم} کہتا ہے  کہ وقفہ پر دو تفاعل کے فرق کا تفرق صرف اس صورت صفر کے برابر ہو گا جب اس وقفہ پر ان تفاعل کا فرق  ایک مستقل ہو۔ مثال کے طور پر ہم جانتے ہیں کہ \عددی{(-\infty,\infty)} پر \عددی{f(x)=x^2} کا تفرق \عددی{2x} ہے۔ایسا  دوسرا تفاعل جس کا \عددی{(-\infty,\infty)} پر تفرق \عددی{2x} ہو کا کلیہ لازماً \عددی{x^2+C} ہو گا (شکل \حوالہ{شکل_نتیجہ_صریح_استعمال_دوم})۔
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.50\textwidth}
 \centering
 \begin{tikzpicture}
 \begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},ytick={-2,-1,1,2},xtick={\empty}]
@@ -1221,7 +1221,7 @@ h'(x)=f'(x)-h'(x)=0
 \caption{ضمنی نتیجہ \حوالہ{نتیجہ_صریح_استعمال_دوم} کہتا ہے کہ ایک سے تفرق والے تفاعل میں صرف انتصابی فرق پایا جاتا ہے۔}
 \label{شکل_نتیجہ_صریح_استعمال_دوم}
 \end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.40\textwidth}
 \centering
 \begin{tikzpicture}
 \begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},ytick={2,3},xtick={\empty},ymin=-0.25,ymax=3.5]
@@ -2122,7 +2122,7 @@ $f'(x)=x^{-1/2}(x-3)$
 $g(t)=-t^2-3t+3$
 \انتہا{سوال}
 \ابتدا{جواب}
-\wf{\unexpanded{0
+\wf{\unexpanded{
 (ا) \عددی{(-\infty,-1.5)} پر بڑھتا، \عددی{(-1.5,\infty)} پر گھٹتا؛  \\
 (ب) \عددی{t=-1.5} پر مقامی اعظم \عددی{5.25}؛\\
  (ج) \عددی{t=-1.5} پر مطلق اعظم \عددی{5.25} ہے۔ 
@@ -2448,9 +2448,9 @@ $h(\theta)=5\sin\tfrac{\theta}{2},\quad 0\le \theta\le \pi,\quad \theta=0,\, \pi
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.33\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}
+\begin{tikzpicture}[font=\small]
 \draw[-latex](-0.5,0)--(3,0)node[right]{$x$}node[pos=0.75,below,yshift=-0.5em]{\text{\RL{(ا)}}};
 \draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
 \draw(1,1) to [out=-135,in=10]++(-2,-0.75)   (1,1) to [out=-45,in=170]node[pos=0.25,above right]{$y=f(x)$}++(2,-0.75);
@@ -2459,9 +2459,9 @@ $h(\theta)=5\sin\tfrac{\theta}{2},\quad 0\le \theta\le \pi,\quad \theta=0,\, \pi
 \draw(0,1)node[left]{$2$}--++(0.1,0);
 \end{tikzpicture}
 \end{minipage}
-\begin{minipage}{0.33\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
-\begin{tikzpicture}
+\begin{tikzpicture}[font=\small]
 \draw[-latex](-0.5,0)--(3,0)node[right]{$x$}node[pos=0.75,below,yshift=-0.5em]{\text{\RL{(ب)}}};
 \draw[-latex](0,-0.2)--(0,2)node[above]{$y$};
 \draw(1,1) to [out=135,in=-10]++(-2,0.75)   (1,1) to [out=45,in=-170]node[pos=0.25,below right]{$y=f(x)$}++(2,0.75);
@@ -5091,7 +5091,7 @@ x&=-1
 \end{minipage}
 
 \موٹا{پانچواں قدم:}\quad \ترچھا{درج بالا معلومات  اکٹھی  کر کے ترسیم کا خاکہ بناتے ہیں۔}\\
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.50\textwidth}
 \centering
 \begin{tikzpicture}[font=\small]
 \draw[-latex](-2.5,0)--(3,0)node[right]{$x$};
@@ -5113,7 +5113,7 @@ x&=-1
 \draw[-latex](1.75,0.5)node[below right]{\RL{مقعر اوپر}}--++(0.5,0.5);
 \end{tikzpicture}
 \end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.40\textwidth}
 \centering
 \begin{tikzpicture}
 \draw[dashed](0,0)--++(0,2);
@@ -6455,7 +6455,7 @@ f(0)&=0,\quad f(20)=0
 %====================
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.50\textwidth}
 \centering
 \begin{tikzpicture}[declare function={f(\x)=\x*(20-\x);}]
 \begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={10,20},ytick=100,ymax=120,xmax=22]
@@ -6468,7 +6468,7 @@ f(0)&=0,\quad f(20)=0
 \عددی{x} اور \عددی{(20-x)} کے حاصل ضرب کی اعظم قیمت \عددی{100} ہے (مثال \حوالہ{مثال_استعمال_دو_اعداد})۔
 }
 \label{شکل_مثال_استعمال_دو_اعداد}
-\end{minipage}\hfill\begin{minipage}{0.45\textwidth}
+\end{minipage}\hfill\begin{minipage}{0.40\textwidth}
 \centering
 \begin{tikzpicture}[declare function={f(\x)=sqrt(4-\x^2);}]
 \pgfmathsetmacro{\a}{1.25}
@@ -6477,7 +6477,7 @@ f(0)&=0,\quad f(20)=0
 \addplot[domain=-2:-1.8,smooth]{f(x)};
 \addplot[domain=1.8:2,smooth]{f(x)};
 \addplot[domain=-1.8:1.8,smooth]{f(x)}node[pos=0.5,above left]{$x^2+y^2=4$};
-\draw(axis cs:\a,0)node[below]{$x$}--(axis cs:\a,\b)node[pin=45:{$(x,\sqrt{4-x^2})$}]{}--(axis cs:-\a,\b)--(axis cs:-\a,0)node[below]{$-x$};
+\draw(axis cs:\a,0)node[below]{$x$}--(axis cs:\a,\b)node[pin={[xshift=-1em]45:{$(x,\sqrt{4-x^2})$}}]{}--(axis cs:-\a,\b)--(axis cs:-\a,0)node[below]{$-x$};
 \draw(axis cs:-2,0)node[below,xshift=-2mm]{$-2$} (axis cs:2,0)node[below]{$2$};
 \end{axis}
 \end{tikzpicture}
@@ -7334,8 +7334,8 @@ $2\sqrt{2}\,\si{\ampere}$
 \pgfmathsetmacro{\ang}{60}
 \pgfmathsetmacro{\len}{2}
 \draw(-2,0)--(2,0)node[pos=0.5,below]{\RL{مستوی آئینہ}};
-\draw[->-=0.5](0,0)--++(90-\ang:\len)node[right]{ب};
-\draw[-<-=0.5](0,0)--++(90+\ang:\len)node[left]{الف};
+\draw[thick,->-=0.5](0,0)--++(90-\ang:\len)node[right]{ب};
+\draw[thick,-<-=0.5](0,0)--++(90+\ang:\len)node[left]{الف};
 \draw(0,0)--++(0,1.5)node[above]{عمود};
 \draw([shift={(90:0.5)}]0,0) arc (90:90-\ang:0.5);
 \draw(90-\ang/2:0.8)node[]{$\theta_2$};
@@ -7444,8 +7444,8 @@ $\tfrac{7\sqrt{17}}{2}$
 \centering
 \begin{tikzpicture}
 \draw[-latex](0,0)--++(4.25,0)node[right]{$x$};
-\draw[name path=a](0.25,0.25)node[left]{$y=f(x)$} to [out=80,in=-170]coordinate[pos=0.5](kT)++(4,1.8);
-\draw[name path=b](0.25,0.75) to [out=-10,in=-100]++(4,2)node[left]{$y=g(x)$};
+\draw[thick,name path=a](0.25,0.25)node[left]{$y=f(x)$} to [out=80,in=-170]coordinate[pos=0.5](kT)++(4,1.8);
+\draw[thick,name path=b](0.25,0.75) to [out=-10,in=-100]++(4,2)node[left]{$y=g(x)$};
 \draw[dashed,name intersections={of={a and b}}] (intersection-1)--($(0,0)!(intersection-1)!(4,0)$)node[below]{$a$}  (intersection-2)--($(0,0)!(intersection-2)!(4,0)$)node[below]{$b$};
 \draw[dashed](kT)--($(0,0)!(kT)!(4,0)$)node[below]{$c$};
 \end{tikzpicture}
@@ -8701,7 +8701,7 @@ $f(x)=\sqrt{x}-\sin x,\quad [0,2\pi],\quad a=2$
 ترکیب نیوٹن مساوات \عددی{f(x)=0} کے حل کی تخمینی قیمتوں کی ترتیب حاصل کرتی ہے جو اصل حل تک پہنچنے کی کوشش کرتی ہے۔ہم اس ترتیب کا پہلا عدد \عددی{x_0} منتخب کرتے ہیں۔ موزوں صورتوں میں یہ ترتیب قدم بہ قدم آگے بڑھتے ہوئے دیگر نقطے دیتی ہے۔  \عددی{x_0} پر \عددی{f} کا مماس   محور \عددی{x} کو ترتیب کے اگلے نقطہ \عددی{x_1} پر قطع کرتا ہے (شکل \حوالہ{شکل_استعمال_نیوٹن_ترکیب})۔
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.50\textwidth}
 \centering
 \begin{tikzpicture}[declare function={f(\x)=\x*\x-0.5;df(\x)=2*\x;}]
 \pgfmathsetmacro{\rt}{sqrt(0.5)}
@@ -8727,7 +8727,7 @@ $f(x)=\sqrt{x}-\sin x,\quad [0,2\pi],\quad a=2$
 \draw[dashed](axis cs:\xb,\yb)node[circ]{}--(axis cs:\xb,0)node[osquare]{};
 \draw(axis cs:\xb,\yb)node[pin=110:{$(x_1,f(x_1))$}]{};
 \draw[dashed](axis cs:\xc,\yc)node[circ]{}--(axis cs:\xc,0)node[osquare]{};
-\draw(axis cs:\xc,\yc)node[pin=135:{$(x_2,f(x_2))$}]{};
+\draw(axis cs:\xc,\yc)node[pin={[fill=white,xshift=2em]135:{$(x_2,f(x_2))$}}]{};
 \draw(axis cs:\xa,0)++(0,-1.8)node[below]{پہلا};
 \draw(axis cs:\xb,0)++(0,-1.8)node[below]{دوسرا};
 \draw(axis cs:\xc,0)++(0,-1.8)node[below]{تیسرا};
@@ -8737,7 +8737,7 @@ $f(x)=\sqrt{x}-\sin x,\quad [0,2\pi],\quad a=2$
 \caption{ترکیب نیوٹن ابتدائی قیاس $x_0$ سے شروع ہو کر (موزوں صورت میں) بتدریج بہتر جواب دیتی ہے۔}
 \label{شکل_استعمال_نیوٹن_ترکیب}
 \end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.40\textwidth}
 \centering
 \begin{tikzpicture}[declare function={f(\x)=\x*\x-0.5;df(\x)=2*\x;}]
 \pgfmathsetmacro{\rt}{sqrt(0.5)}
@@ -8924,7 +8924,7 @@ n&x_n&f(x_n)&f'(x_n)&x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}\\
 \begin{tikzpicture}
 \pgfmathsetmacro{\ang}{10}
 \draw[-latex](0,0)--(3.5,0)node[right]{$x$};
-\draw(1.5,0)node[below]{$r$} to [out=\ang,in=-110]coordinate[pos=0.75](kA) node[pos=1,left]{$y=f(x)$}(3,1)  (1.5,0) to [out=-180+\ang,in=80] coordinate[pos=0.6](kB)(0,-1);
+\draw[thick](1.5,0)node[below]{$r$} to [out=\ang,in=-110]coordinate[pos=0.75](kA) node[pos=1,left]{$y=f(x)$}(3,1)  (1.5,0) to [out=-180+\ang,in=80] coordinate[pos=0.6](kB)(0,-1);
 \draw[dashed](kA)--($(0,0)!(kA)!(3,0)$)node[below]{$x_0'$};
 \draw[dashed](kB)--($(0,0)!(kB)!(3,0)$)node[above]{$x_0$};
 \end{tikzpicture}
@@ -8974,7 +8974,7 @@ f(x)=
 \centering
 \begin{tikzpicture}
 \draw[-latex](0,0)--(3.5,0)node[right]{$x$};
-\draw(3,1.5)node[circ]{}node[above]{$(x_n,f(x_n))$}to [out=180,in=10](0,-0.25)  (3,1.5)to[out=0,in=140](3.5,1.25);
+\draw[thick](3,1.5)node[circ]{}node[above]{$(x_n,f(x_n))$}to [out=180,in=10](0,-0.25)  (3,1.5)to[out=0,in=140](3.5,1.25);
 \draw(0,1.5)--(3.5,1.5);
 \draw[dashed](3,1.5)--($(0,0)!(3,1.5)!(3.5,0)$)node[below]{$x_n$};
 \end{tikzpicture}
@@ -8987,7 +8987,7 @@ f(x)=
 \centering
 \begin{tikzpicture}
 \draw[-latex](-2,0)--(2,0)node[right]{$x$};
-\draw(0,0)node[above right]{$r$} to [out=90,in=-135]++(0.7,1.5)node[circ]{} to [out=45,in=-155]++(0.75,0.5)node[below right]{$y=f(x)$};
+\draw[thick](0,0)node[above right]{$r$} to [out=90,in=-135]++(0.7,1.5)node[circ]{} to [out=45,in=-155]++(0.75,0.5)node[below right]{$y=f(x)$};
 \draw(0,0) to [out=-90,in=45]++(-0.7,-1.5)node[circ]{} to [out=-135,in=25]++(-0.75,-0.5);
 \draw[shorten <=-0.5cm, shorten >=-0.5cm](0.7,1.5)--(-0.7,0);
 \draw[shorten <=-0.5cm, shorten >=-0.5cm](-0.7,-1.5)--(0.7,0);
@@ -9006,7 +9006,7 @@ f(x)=
 ایسی صورت میں، کمپیوٹر پر تفاعل کی ترسیم یا احصاء کی   تراکیب استعمال کرتے ہوئے درکار جذر کے قریب ابتدائی نقطہ تلاش کرتے ہوئے حل کریں۔ امید کی جاتی ہے کہ اس سے مسئلہ حل ہو جائے گا۔  
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.50\textwidth}
 \centering
 \begin{tikzpicture}[declare function={f(\x)=\x^2-1;m(\x)=2*\x;}]
 \pgfmathsetmacro{\xa}{0.5}
@@ -9019,13 +9019,13 @@ f(x)=
 \addplot[domain=0:1.75]{\ya+m(\xa)*(x-\xa)};
 \draw[dashed](axis cs:0.5,0)node[osquare]{}node[below left]{$x_0$}node[pin={[pin edge=solid]155:{\RL{ابتدائی نقطہ}}}]{}--(axis cs:0.5,\ya);
 \draw[dashed](axis cs:\xb,0)node[osquare]{}node[below]{$x_1$}--(axis cs:\xb,\yb);
-\draw(axis cs:-1,0)node[osquare,fill=black]{}node[pin=-100:{\RL{مطلوبہ جذر}}]{} (axis cs:1,0)node[osquare,fill=black]{} 
+\draw(axis cs:-1,0)node[osquare,fill=black]{}node[pin={[xshift=1em]-100:{\RL{مطلوبہ جذر}}}]{} (axis cs:1,0)node[osquare,fill=black]{} 
 node[pin={[pin distance=0.75cm]110:{\RL{حاصل کردہ جذر}}}]{};
 \addplot[domain=\xb+0.25:\xc-0.1]{\yb+m(\xb)*(x-\xb)};
 \end{axis}
 \end{tikzpicture}
 \end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.40\textwidth}
 \centering
 \begin{tikzpicture}[declare function={f(\x)=sin(deg(\x));m(\x)=cos(deg(\x));}]
 \pgfmathsetmacro{\xa}{2.444*pi}
@@ -9040,7 +9040,7 @@ node[pin={[pin distance=0.75cm]110:{\RL{حاصل کردہ جذر}}}]{};
 \addplot[domain=\xa+0.3:\xb-0.4]{\ya+m(\xa)*(x-\xa)};
 \addplot[domain=\xc+0.3:\xb-0.4]{\yb+m(\xb)*(x-\xb)};
 \addplot[domain=\xc+0.4:\xd-0.1]{\yc+m(\xc)*(x-\xc)};
-\draw[dashed](axis cs:\xa,0)node[osquare]{}node[below]{$x_0$}node[pin={[pin edge=solid]45:{\RL{ابتدائی نقطہ}}}]{}--(axis cs:\xa,\ya);
+\draw[dashed](axis cs:\xa,0)node[osquare]{}node[below]{$x_0$}node[pin={[pin edge=solid,xshift=-1em]45:{\RL{ابتدائی نقطہ}}}]{}--(axis cs:\xa,\ya);
 \draw(axis cs:pi,0)node[osquare,fill=black]{}node[pin=-100:{\RL{حاصل کردہ جذر}}]{} (axis cs:2*pi,0)node[osquare,fill=black]{}node[pin=-80:{\RL{مطلوبہ جذر}}]{};
 \draw[dashed](axis cs:\xb,0)node[osquare]{}node[below]{$x_1$}--(axis cs:\xb,\yb);
 \draw[dashed](axis cs:\xc,0)node[osquare]{}node[above,xshift=1mm]{$x_2$}--(axis cs:\xc,\yc);
@@ -9060,13 +9060,13 @@ node[pin={[pin distance=0.75cm]110:{\RL{حاصل کردہ جذر}}}]{};
  
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.50\textwidth}
 \centering
 \begin{tikzpicture}
 \pgfmathsetmacro{\xa}{sqrt(21)/7}
 \pgfmathsetmacro{\xb}{sqrt(2)/2}
 \begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={\empty},ytick={-1},ymin=-1.1,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}, xmin=-1.2,xmax=1.25]
-\addplot[domain=-1.1:1.1,smooth]{4*x^4-4*x^2}node[pos=0.95,left]{$y=4x^4-4x^2$};
+\addplot[domain=-1.1:1.1,smooth]{4*x^4-4*x^2}node[pos=1,above left,xshift=2em]{$y=4x^4-4x^2$};
 \draw[thick,white] (axis cs:\xb+0.05,0)--(axis cs:\xa,0);
 \draw[thick,white] (axis cs:-\xb-0.05,0)--(axis cs:-\xa,0);
 \draw(axis cs:\xb+0.05,0)node[ocirc]{}node[above]{$\tfrac{\sqrt{2}}{2}$};
@@ -9079,7 +9079,7 @@ node[pin={[pin distance=0.75cm]110:{\RL{حاصل کردہ جذر}}}]{};
 \end{axis}
 \end{tikzpicture}
 \end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.40\textwidth}
 \centering
 \begin{tikzpicture}[declare function={f(\x)=4*\x^4-4*\x^2;}]
 \pgfmathsetmacro{\xa}{sqrt(21)/7}

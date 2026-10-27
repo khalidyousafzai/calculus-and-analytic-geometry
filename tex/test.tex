@@ -1,22 +1,9 @@
-
-\begin{tikzpicture}
-\begin{axis}[    hide axis,    view = {40}{40}]
-\addplot3 [
-    surf,
-colormap={}{gray(0cm)=(0.6);gray(1cm)=(0.9);},
-    shader = faceted interp,
-    point meta = x,
-    samples = 40,
-    samples y = 5,
-    z buffer = sort,
-    domain = 0:360,
-    y domain = -0.5:0.5
-] (
-    {(1 + 0.5*y*cos(x/2)) * cos(x)},
-    {(1 + 0.5*y*cos(x/2)) * sin(x)},
-    {0.5*y*sin(x/2)}
-);
-\end{axis}
-\end{tikzpicture}
-
-
+\begin{align}
+\big(\frac{\dif f}{\dif s}\big)_{\uu,N_0}&=\big(\frac{\partial f}{\partial x}\big)_{N_0}\frac{\dif x}{\dif s}+\big(\frac{\partial f}{\partial y}\big)_{N_0}\frac{\dif y}{\dif s}\quad\quad\quad\text{\RL{زنجیری قاعدہ}}\nonumber\\
+&=\big(\frac{\partial f}{\partial x}\big)_{N_0}\cdot u_1+\big(\frac{\partial f}{\partial y}\big)_{N_0}\cdot u_2\quad\quad
+\begin{minipage}{0.25\textwidth}
+مساوات \حوالہ{مساوات_کثیرالمتغیر_خط_مقدار_معلوم_الف} سے\\
+   \عددی{\tfrac{\dif x}{\dif s}=u_1} اور \عددی{\tfrac{\dif y}{\dif s}=u_2}
+\end{minipage}\nonumber\\
+&=\underbrace{\big[\big(\frac{\partial f}{\partial x}\big)_{N_0}\cdot\ai+\big(\frac{\partial f}{\partial y}\big)_{N_0}\cdot \aj\big]}_{\text{\RL{\عددی{N_0} پر \عددی{f} کا ڈھلوان}}}\cdot\underbrace{\big[u_1\ai+u_2\aj\big]}_{\text{\RL{\عددی{\uu} کا رخ}}}\label{مساوات_کثیرالمتغیر_خط_مقدار_معلوم_ب}
+\end{align}

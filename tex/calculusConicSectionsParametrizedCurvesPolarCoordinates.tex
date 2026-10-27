@@ -37,7 +37,7 @@
 \draw[,thick,name intersections={of=kSlantL and kplane}] (-\kR,-\kH)--(intersection-1);
 \draw[,thick,name intersections={of=kSlantR and kplane}] (\kR,-\kH)--(intersection-2);
 \end{tikzpicture}
-\caption{دائرہ: مخروط کا محور مستوی  پر لمب ہے}
+\caption{دائرہ: مخروط کا محور مستوی  کے \بدل{قائمہ} ہے}
 \end{subfigure}%
 \begin{subfigure}{0.30\textwidth}
 \centering
@@ -280,7 +280,7 @@ y&=\frac{x^2}{4p}\quad \implies \quad x^2=4py&&\text{\RL{معیاری روپ}}
 \pgfmathsetmacro{\a}{1.5}
 \pgfmathsetmacro{\b}{f(\a)}
 \begin{axis}[clip=false,small,axis lines=middle, xtick={\empty},ytick={\empty}, enlargelimits=true,ymin=-1.25, xlabel={$x$},ylabel={$y$}, xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
-\addplot[domain=-2.5:2.5]{f(x)}node[pos=0.1,left]{$x^2=4py$};
+\addplot[domain=-2.5:2.5]{f(x)}node[pos=0,above,xshift=1em]{$x^2=4py$};
 \addplot[]plot coordinates {(0,1)}node[circ]{}node[left]{ماسکہ}node[above right]{$F(0,p)$};
 \addplot[]plot coordinates {(0,1)(\a,\b)}node[circ]{}node[right]{$N(x,y)$};
 \addplot[]plot coordinates {(-2.5,-1)(2.5,-1)}node[right]{$L$}node[pos=0.25,above]{ناظمہ}node[pos=0.25,yshift={-0.5ex},below]{$y=-p$};
@@ -463,7 +463,7 @@ b=\sqrt{a^2-c^2}
 \begin{align*}
 \frac{\dif y}{\dif x}&=-\frac{b^2x}{a^2y}&&\text{\RL{مساوات \حوالہ{مساوات_مخروط_ترخیم_پ} سے حاصل کیا گیا}}
 \end{align*}
-کی قیمت \عددی{x=0} پر صفر اور \عددی{y=0} پر لامتناہی ہے  لہٰذا \عددی{(\pm a,0)} اور \عددی{(0,\pm b)} پر   مماس، محوروں کے   لمب ہوں گے۔
+کی قیمت \عددی{x=0} پر صفر اور \عددی{y=0} پر لامتناہی ہے  لہٰذا \عددی{(\pm a,0)} اور \عددی{(0,\pm b)} پر   مماس، محوروں کے   \بدل{قائمہ} ہوں گے۔
 
 \جزوحصہء{ترخیم کا محور  اکبر اور محور   اصغر}
 مساوات \حوالہ{مساوات_مخروط_ترخیم_پ} کی ترخیم کا \اصطلاح{محور اکبر}\فرہنگ{محور!اکبر}\حاشیہب{major axis}\فرہنگ{axis!major} نقاط \عددی{(\pm 2,0)} کو ملانے   والی لکیر ہے جس کی لمبائی \عددی{2a} ہے۔ اس کے \اصطلاح{محور اصغر}\فرہنگ{محور!اصغر}\حاشیہب{minor axis}\فرہنگ{axis!minor} کی لمبائی \عددی{2b} ہے جو نقاط \عددی{(0,\pm b)} کو ملانے والی  لکیر ہے۔ عدد \عددی{a}  کو نصف محور  اکبر  جبکہ عدد \عددی{b}  کو نصف محور  اصغر  کہتے  ہیں۔ مساوات \حوالہ{مساوات_مخروط_ترخیم_ب} سے عدد \عددی{c}
@@ -491,7 +491,7 @@ c&=\sqrt{16-9}=\sqrt{7}&&\text{\RL{ماسکہ سے مرکز تک کا  فاصل�
 %======================
 \begin{figure}
 \centering
-\begin{minipage}{0.5\textwidth}
+\begin{minipage}{0.52\textwidth}
 \centering
 \begin{tikzpicture}[declare function={f(\x)=3/4*sqrt(16-\x^2);}]
 \pgfmathsetmacro{\c}{sqrt(7)}
@@ -581,7 +581,7 @@ c&=\sqrt{a^2-b^2}&&\text{\RL{مرکز سے ماسکہ تک کا  فاصلہ}}\\
 %==================
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.50\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(5)/2*sqrt(\x^2-4);}]
 \pgfmathsetmacro{\a}{sqrt(5)/2*sqrt(16-4)}
@@ -608,7 +608,7 @@ c&=\sqrt{a^2-b^2}&&\text{\RL{مرکز سے ماسکہ تک کا  فاصلہ}}\\
 {قطع زائد کے دائیں بازو کے لیے\\ \عددی{NF_1-NF_2=2a} جبکہ بائیں بازو کے لیے \عددی{NF_2-NF_1=2a} ہو گا۔}
 \label{شکل_مخروط_قطع_زائد}
 \end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.40\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=sqrt(5)/2*sqrt(\x^2-4);}]
 \pgfmathsetmacro{\a}{sqrt(5)/2*sqrt(16-4)}
@@ -1130,6 +1130,7 @@ $y^2=12x$
 \ابتدا{جواب}
 \wf{\unexpanded{
 \begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt(12*\x);}]
 \begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-3},ytick={3}]
 \addplot[domain=0:0.2]{f(x)};
@@ -1154,6 +1155,7 @@ $x^2=-8y$
 \ابتدا{جواب}
 \wf{\unexpanded{
 \begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=-1/8*(\x)^2;}]
 \begin{axis}[width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={2},ytick={2},y tick label style={yshift=0.5ex}]
 \addplot[domain=-3:3]{f(x)}node[pos=0.25,below,yshift=-0.5ex]{$x^2=-8y$};
@@ -1175,6 +1177,7 @@ $y=4x^2$
 \ابتدا{جواب}
 \wf{\unexpanded{
 \begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=4*(\x)^2;}]
 \pgfmathsetmacro{\d}{1/16}
 \begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={0.25},ytick={0.25},xticklabels={$\tfrac{1}{4}$},yticklabels={$\tfrac{1}{4}$}]
@@ -1197,6 +1200,7 @@ $x=-3y^2$
 \ابتدا{جواب}
 \wf{\unexpanded{
 \begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt(-1/3*\x);}]
 \pgfmathsetmacro{\d}{1/12}
 \pgfmathsetmacro{\yt}{1/6}
@@ -1225,6 +1229,7 @@ $16x^2+25y^2=400$
 \ابتدا{جواب}
 \wf{\unexpanded{
 \begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=4/5*sqrt(25-(\x)^2);}]
 \begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-3,3},ytick={-4,4}]
 \addplot[domain=-4.8:4.8]{f(x)}node[pos=0.8,above,xshift=1ex]{$\tfrac{x^2}{25}+\tfrac{y^2}{16}=1$};
@@ -1250,6 +1255,7 @@ $2x^2+y^2=2$
 \ابتدا{جواب}
 \wf{\unexpanded{
 \begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt(2-2*(\x)^2);}]
 \pgfmathsetmacro{\k}{sqrt(2)}
 \begin{axis}[axis equal,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-1,1},ytick={-1,1}]
@@ -1277,6 +1283,7 @@ $3x^2+2y^2=6$
 \ابتدا{جواب}
 \wf{\unexpanded{
 \begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt(3/2)*sqrt(2-(\x)^2);}]
 \pgfmathsetmacro{\k}{sqrt(2)}
 \pgfmathsetmacro{\kk}{sqrt(3)}
@@ -1305,6 +1312,7 @@ $6x^2+9y^2=54$
 \ابتدا{جواب}
 \wf{\unexpanded{
 \begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt(6/9)*sqrt(9-(\x)^2);}]
 \pgfmathsetmacro{\k}{sqrt(9)}
 \pgfmathsetmacro{\kk}{sqrt(6)}
@@ -1353,8 +1361,9 @@ $x^2-y^2=1$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-متقارب \عددی{y=\pm x}  ہیں۔
+متقارب \عددی{y=\pm x}  ہیں۔\\
 \begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt((\x)^2-1);fa(\x)=\x;}]
 \pgfmathsetmacro{\f}{sqrt(2)}
 \begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={-\f,\f,1,-1},xticklabels={\llap{$-\sqrt{2}$},\rlap{$\sqrt{2}$},\llap{$1$},},ytick={\empty}]
@@ -1380,8 +1389,9 @@ $y^2-x^2=8$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-متقارب \عددی{y=\pm x} ہیں۔
+متقارب \عددی{y=\pm x} ہیں۔\\
 \begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt((\x)^2+8);fa(\x)=\x;}]
 \pgfmathsetmacro{\f}{4}
 \pgfmathsetmacro{\k}{sqrt(8)}
@@ -1406,8 +1416,9 @@ $8x^2-2y^2=16$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-متقارب \عددی{y=\pm 2x} ہیں۔
+متقارب \عددی{y=\pm 2x} ہیں۔\\
 \begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=1/2*sqrt((\x)^2+8);fa(\x)=2*\x;}]
 \pgfmathsetmacro{\f}{sqrt(10)}
 \pgfmathsetmacro{\k}{sqrt(2)}
@@ -1434,8 +1445,9 @@ $8y^2-2x^2=16$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-متقارب \عددی{y=\pm \tfrac{x}{2}} ہیں۔
+متقارب \عددی{y=\pm \tfrac{x}{2}} ہیں۔\\
 \begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=1/2*sqrt((\x)^2+8);fa(\x)=1/2*\x;}]
 \pgfmathsetmacro{\f}{sqrt(10)}
 \pgfmathsetmacro{\k}{sqrt(2)}
@@ -1495,6 +1507,7 @@ $\tfrac{x^2}{9}-\tfrac{y^2}{16}=1$
 \wf{\unexpanded{
 (الف) راس \عددی{(1,-2)}، ماسکہ \عددی{(3,-2)}، ناظمہ \عددی{{x{=}-1}}؛ (ب) \\
 \begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=1+1/8*(\x+2)^2;}]
 \begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={1,2,3},ytick={-4,-2,2}]
 \addplot[domain=-4:4]({f(x)},x)node[above left]{$(y+2)^2=8(x-1)$};
@@ -1516,6 +1529,7 @@ $\tfrac{x^2}{9}-\tfrac{y^2}{16}=1$
 \wf{\unexpanded{
 (الف) ماسکے \عددی{(4\pm\sqrt{7},3)}، رؤوس  \عددی{(8,3)} اور \عددی{(0,3)}، مرکز \عددی{(4,3)}؛ (ب)\\
 \begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}[font=\tiny,declare function={fp(\x)=3+3/4*sqrt(16-(\x-4)^2);fn(\x)=3-3/4*sqrt(16-(\x-4)^2);}]
 \begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={4,8},ytick={6}]
 \addplot[domain=0.2:8-0.2]{fp(x)}node[pos=0.6,above]{$\tfrac{(x-4)^2}{16}+\tfrac{(y-3)^2}{9}=1$};
@@ -1549,6 +1563,7 @@ $\tfrac{x^2}{9}-\tfrac{y^2}{16}=1$
 (الف) مرکز \عددی{(2,0)}، ماسکے \عددی{(7,0)} اور \عددی{(-3,0)}، رؤوس \عددی{(6,0)} اور \عددی{(-2,0)}،\\
  متقاربات  \عددی{y=\pm\tfrac{3}{4}(x-2)}؛  (ب) \\
 \begin{minipage}{0.45\textwidth}
+\centering
 \begin{tikzpicture}[font=\tiny,declare function={fp(\x)=2+4/3*sqrt(9+(\x)^2);fn(\x)=2-4/3*sqrt(9+(\x)^2);fa(\x)=3/4*(\x-2);}]
 \pgfmathsetmacro{\k}{5}
 \begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={\empty},ytick={\empty}]
@@ -2104,7 +2119,7 @@ $(x+2)^2+(y-1)^2=13$\quad
 \draw(0,0.4)node[left,xshift=-0.5ex]{$c=\tfrac{4a}{5}$}node[right,xshift=0.5ex]{$e=\tfrac{4}{5}$};
 \end{tikzpicture}
 \end{subfigure}\hfill
-\begin{subfigure}{0.3\textwidth}
+\begin{subfigure}{0.32\textwidth}
 \centering
 \begin{tikzpicture}
 \pgfmathsetmacro{\a}{1.5}
@@ -2165,7 +2180,7 @@ NF_1=e\cdot ND_1,\quad \quad NF_2=e\cdot ND_2
 
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.47\textwidth}
 \centering
 \begin{tikzpicture}[declare function={f(\x)=1/2*sqrt(4-(\x)^2);}]
 \pgfmathsetmacro{\a}{2}
@@ -3004,7 +3019,8 @@ B^2-4AC=(1)^2-4(0)(-1)=1>0
 \caption{دو درجی منحنیات کی مثالیں۔}
 \label{جدول_مخروط_اقسام_دو_درجی}
 \centering
-\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraystretch}{1.5}
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{RRRRRRRRR}
 \multicolumn{9}{C}{Ax^2+Bxy+Cy^2+Dx+Ey+F=0}\\
 \midrule
@@ -3053,7 +3069,8 @@ B^2-4AC=(1)^2-4(0)(-1)=1>0
 &1&&&&&1&x^2=-1&
 \text{\RL{ترسیم نہیں کی جا سکتی}}\\
 \bottomrule
-\end{tabular}
+\end{tabular}%
+}
 \end{table}
 
 \جزوحصہء{فنیات}
@@ -3654,10 +3671,10 @@ y=t=(\sqrt{t})^2=x^2
 \centering
 \begin{tikzpicture}[declare function={f(\x)=(\x)^2;}]
 \begin{axis}[clip=false,small,axis lines=middle,xtick={\empty},ytick={\empty},xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
-\addplot[domain=-3:3]{f(x)};
-\addplot[->-=0.85,thick,domain=0:3]{f(x)}node[above]{$y=x^2,\, x\ge 0$};
+\addplot[lgray,domain=-3:0]{f(x)};
+\addplot[->-=0.85,thick,domain=0:3]{f(x)}node[above,xshift=-1.2em]{$y=x^2,\, x\ge 0$};
 \addplot[]plot coordinates {(0,0)}node[circ]{}node[below]{\begin{minipage}{1cm}$t=0$\\ ابتدا  \end{minipage}};
-\addplot[]plot coordinates {(1,1)}node[circ]{}node[right]{$(1,1)$}node[left]{$t=1$};
+\addplot[]plot coordinates {(1,1)}node[circ]{}node[right]{$(1,1)$}node[pin={[xshift=1em]110:{$t=1$}}]{};
 \addplot[]plot coordinates {(1.5,{f(1.5)})}node[circ]{}node[right]{$N(\sqrt{t},t)$};
 \end{axis}
 \end{tikzpicture}
@@ -3670,7 +3687,7 @@ y=t=(\sqrt{t})^2=x^2
 \begin{axis}[clip=false,small,axis lines=middle,xtick={\empty},ytick={\empty},xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
 \addplot[->-=0.1,->-=0.9,thick,domain=-3:3]{f(x)}node[above]{$y=x^2$};
 \addplot[]plot coordinates {(0,0)}node[circ]{}node[below left]{$O$};
-\addplot[]plot coordinates {(1,1)}node[circ]{}node[right]{$(1,1)$}node[left]{$t=1$};
+\addplot[]plot coordinates {(1,1)}node[circ]{}node[right]{$(1,1)$}node[pin={[xshift=1em]110:{$t=1$}}]{};
 \addplot[]plot coordinates {(1.5,{f(1.5)})}node[circ]{}node[right]{$N(t,t^2)$};
 \addplot[]plot coordinates {(-2,f{-2})}node[circ]{}node[left]{$(-2,4)$}node[pin=60:{$t=-2$}]{};
 \end{axis}
@@ -4415,7 +4432,7 @@ y=(a-b)\sin\theta-b\sin\big(\tfrac{a-b}{b}\theta\big)$
 %====================
 \begin{figure}
 \centering
-\begin{minipage}{0.30\textwidth}
+\begin{minipage}{0.38\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,scale=1.5,declare function={f(\x)=(cos(deg(\x)))^3;g(\x)=(sin(deg(\x)))^3;}]
 \pgfmathsetmacro{\ang}{25}
@@ -4432,7 +4449,7 @@ y=(a-b)\sin\theta-b\sin\big(\tfrac{a-b}{b}\theta\big)$
 \caption{ستارہ نما۔ سوال \حوالہ{سوال_مخروط_ستارہ_نما}}
 \label{شکل_سوال_مخروط_ستارہ_نما}
 \end{minipage}\hfill
-\begin{minipage}{0.30\textwidth}
+\begin{minipage}{0.22\textwidth}
 \centering
 \begin{tikzpicture}[scale=0.5]
 \draw(0,0) circle (2);
@@ -5475,31 +5492,31 @@ $\frac{2\pi}{3}\le \theta\le \frac{5\pi}{6}\quad \text{اور} -\infty<r<\infty$
 \centering
 \begin{tikzpicture}[font=\small,declare function={f(\x)=\x;fc(\x)=cos(\x);fs(\x)=sin(\x);}]
 \begin{axis}[clip=false,axis equal,width=4cm,axis lines=middle, xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits=true, axis on top]
-\addplot[domain=-3:2]{f(x)}node[pos=0,circ]{}node[circ]{}node[pos=0.4,left]{$3$}node[pos=0.9,left]{$2$};
-\addplot[-stealth,domain=0:45]({1*fc(x)},{1*fs(x)})node[pos=0.5,right,yshift=0.5ex]{$\tfrac{\pi}{4}$};
+\addplot[domain=-3:2]{f(x)}node[pos=0,circ]{}node[circ]{}node[pos=0.35,left]{$3$}node[pos=0.95,left]{$2$};
+\addplot[-stealth,domain=0:45]({1.5*fc(x)},{1.5*fs(x)})node[pos=0.5,right,yshift=0.5ex]{$\tfrac{\pi}{4}$};
 \addplot[]plot coordinates {(0,1)}node[above left]{$\begin{aligned} \theta&=\tfrac{\pi}{4}\\ -3&\le r\le 2 \end{aligned}$};
 \end{axis}
 \end{tikzpicture}
 \end{subfigure}\hfill
-\begin{subfigure}{0.22\textwidth}
+\begin{subfigure}{0.20\textwidth}
 \centering
 \begin{tikzpicture}[font=\small,declare function={f(\x)=\x;fc(\x)=cos(\x);fs(\x)=sin(\x);}]
 \begin{axis}[clip=false,axis equal,width=4cm,axis lines=middle, xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits=true, axis on top]
 \addplot[latex-,domain=-3:0]{f(x)}node[pos=1,circ]{};
 \addplot[dashed,domain=0:2]{f(x)};
-\addplot[-stealth,domain=0:45]({1*fc(x)},{1*fs(x)})node[pos=0.5,right,yshift=0.5ex]{$\tfrac{\pi}{4}$};
+\addplot[-stealth,domain=0:45]({1.5*fc(x)},{1.5*fs(x)})node[pos=0.5,right,yshift=0.5ex]{$\tfrac{\pi}{4}$};
 \draw(-0.5,0)node[above left]{$\begin{aligned} \theta&=\tfrac{\pi}{4}\\ r&\le 0 \end{aligned}$};
 \end{axis}
 \end{tikzpicture}
 \end{subfigure}\hfill
-\begin{subfigure}{0.22\textwidth}
+\begin{subfigure}{0.24\textwidth}
 \centering
 \begin{tikzpicture}[font=\small,declare function={f(\x)=-0.6*\x;g(\x)=-1.5*\x;}]
-\begin{axis}[clip=false,axis equal,width=4cm,axis lines=middle, xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits=true, axis on top]
+\begin{axis}[clip=false,axis equal,width=4cm,axis lines=middle, xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits=true,]
 \addplot[name path=a,domain=-2:2]{f(x)}node[pos=0,left]{$\tfrac{5\pi}{6}$};
 \addplot[name path=b,domain=-2:2]{g(x)}node[pos=0,left]{$\tfrac{2\pi}{3}$};
 \addplot[lgray] fill between [of=a and b];
-\draw(0.5,0.5)node[above right,font=\scriptsize]{$\tfrac{2\pi}{3}\le \theta\le \tfrac{5\pi}{6}$};
+\draw(0.5,-3)node[fill=white]{$\tfrac{2\pi}{3}\le \theta\le \tfrac{5\pi}{6}$};
 \end{axis}
 \end{tikzpicture}
 \end{subfigure}
@@ -5676,7 +5693,7 @@ $(-2,0)$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize]
 \pgfmathsetmacro{\k}{pi/2}
@@ -6242,7 +6259,7 @@ $(x+2)^2+(y-5)^2=16$
 \begin{subfigure}{0.3\textwidth}
 \centering
 \begin{tikzpicture}
-\draw[-latex](-1.5,0)--(1.5,0)node[right]{$x$};
+\draw[-latex](-0.5,0)--(1.5,0)node[right]{$x$};
 \draw[-latex](0,-1.25)--(0,1.5)node[above]{$y$};
 \draw(1,1)node[circ]{}node[right]{$(r,\theta)$}--(0,0)node[below left]{$O$}--(1,-1)node[circ]{}
 node[right]{$\begin{aligned}&(r,-\theta)\\ &(-r,\pi-\theta)\, \text{یا}\end{aligned}$}--(1,1);
@@ -6255,7 +6272,7 @@ node[right]{$\begin{aligned}&(r,-\theta)\\ &(-r,\pi-\theta)\, \text{یا}\end{al
 \draw[-latex](-1.5,0)--(1.5,0)node[right]{$x$};
 \draw[-latex](0,-1.25)--(0,1.5)node[above]{$y$};
 \draw(1,1)node[circ]{}node[above]{$(r,\theta)$}--(0,0)node[below left]{$O$}--(-1,1)node[circ]{}
-node[above]{$\begin{aligned} &(r,\pi-\theta)\\ &(-r,-\theta)\, \text{یا}  \end{aligned}$}--(1,1);
+node[above,xshift=-1em]{$\begin{aligned} &(r,\pi-\theta)\\ &(-r,-\theta)\, \text{یا}  \end{aligned}$}--(1,1);
 \end{tikzpicture}
 \caption{محور \عددی{y} کے لحاظ سے۔}
 \end{subfigure}\hfill
@@ -6264,8 +6281,8 @@ node[above]{$\begin{aligned} &(r,\pi-\theta)\\ &(-r,-\theta)\, \text{یا}  \end
 \begin{tikzpicture}
 \draw[-latex](-1.5,0)--(1.5,0)node[right]{$x$};
 \draw[-latex](0,-1.25)--(0,1.5)node[above]{$y$};
-\draw(1,1)node[circ]{}node[above]{$(r,\theta)$}--(-1,-1)node[circ]{}node[below]{$\begin{aligned}&(-r,\theta)\\  &(r,\theta+\pi)\,\text{یا}\end{aligned}$};
-\draw(0,0)node[below left]{$O$};
+\draw(1,1)node[circ]{}node[above]{$(r,\theta)$}--(-1,-1)node[circ]{}node[below,xshift=1em]{$\begin{aligned}&(-r,\theta)\\  &(r,\theta+\pi)\,\text{یا}\end{aligned}$};
+\draw(0,0)node[below right]{$O$};
 \end{tikzpicture}
 \caption{مبدا کے لحاظ سے۔}
 \end{subfigure}
@@ -7123,7 +7140,7 @@ $2y=\tfrac{2\sqrt{6}}{9}$
 چاند، سیارے، مصنوعی سیارے،  اور دُم دار ستارے ترخیم، قطع مکافی،  اور قطع زائد پر حرکت کرتے ہیں۔ ان کی حرکت کو قطبی محدد میں ایک آسان مساوات سے ظاہر کیا جا سکتا ہے لہٰذا فلکیات اور فلکیاتی انجینئری میں قطبی محدد  اہمیت رکھتا ہے۔ ہم اس مساوات کو یہاں حاصل کرتے ہیں۔
 
 \جزوحصہء{خطوط}
-فرض کریں مبدا \عددی{O} سے خط \عددی{L} تک لمب لکیر، \عددی{L}   کو نقطہ \عددی{N_0(r_0,\theta_0)}  پر  مس کرتی ہے ، جہاں \عددی{ r_0\ge0} ہے (شکل \حوالہ{شکل_مخروط_خط_قطبی_مساوات})۔ اب اگر \عددی{L} پر \عددی{N(r,\theta)} کوئی دوسرا نقطہ ہو تب نقاط \عددی{O}، \عددی{N_0} ، اور \عددی{N} ایک قائم الزاویہ مثلث کے راس ہوں گے جس سے
+فرض کریں مبدا \عددی{O} سے خط \عددی{L} تک \بدل{قائمہ} لکیر، \عددی{L}   کو نقطہ \عددی{N_0(r_0,\theta_0)}  پر  مس کرتی ہے ، جہاں \عددی{ r_0\ge0} ہے (شکل \حوالہ{شکل_مخروط_خط_قطبی_مساوات})۔ اب اگر \عددی{L} پر \عددی{N(r,\theta)} کوئی دوسرا نقطہ ہو تب نقاط \عددی{O}، \عددی{N_0} ، اور \عددی{N} ایک قائم الزاویہ مثلث کے راس ہوں گے جس سے
 \begin{align*}
 \frac{r_0}{r}=\cos(\theta-\theta_0)
 \end{align*}
@@ -7234,8 +7251,8 @@ r=2a\sin\theta
 \pgfmathsetmacro{\r}{1}
 \draw[-latex](-0.2,0)--(2.25,0)node[right]{$x$};
 \draw[-latex](0,-1)--(0,1.5)node[above]{$y$};
-\draw(\r,0)node[circ]{}node[below]{$(a,0)$} circle(\r);
-\draw(\r,\r)node[above]{$r=2a\cos\theta$};
+\draw[thick](\r,0)node[circ]{}node[below]{$(a,0)$} circle(\r);
+\draw(\r,-\r)node[below]{$r=2a\cos\theta$};
 \end{tikzpicture}
 \end{subfigure}\hfill
 \begin{subfigure}{0.22\textwidth}
@@ -7243,9 +7260,9 @@ r=2a\sin\theta
 \begin{tikzpicture}[font=\small]
 \pgfmathsetmacro{\r}{1}
 \draw[-latex](-1,0)--(1.25,0)node[right]{$x$};
-\draw[-latex](0,-0.2)--(0,2.25)node[above]{$y$};
-\draw(0,\r)node[circ]{}node[right]{$(a,\tfrac{\pi}{2})$} circle(\r);
-\draw(0,2*\r)node[above right]{$r=2a\sin\theta$};
+\draw[-latex](0,0)--(0,2.25)node[above]{$y$};
+\draw[thick](0,\r)node[circ]{}node[right]{$(a,\tfrac{\pi}{2})$} circle(\r);
+\draw(0,0)node[below]{$r=2a\sin\theta$};
 \end{tikzpicture}
 \end{subfigure}\hfill
 \begin{subfigure}{0.22\textwidth}
@@ -7254,8 +7271,8 @@ r=2a\sin\theta
 \pgfmathsetmacro{\r}{1}
 \draw[-latex](-2,0)--(0.25,0)node[right]{$x$};
 \draw[-latex](0,-1)--(0,1.25)node[above]{$y$};
-\draw(-\r,0)node[circ]{}node[below]{$(-a,0)$} circle(\r);
-\draw(-\r,\r)node[above,xshift=-1ex]{$r=-2a\cos\theta$};
+\draw[thick](-\r,0)node[circ]{}node[below]{$(-a,0)$} circle(\r);
+\draw(-\r,-\r)node[below]{$r=-2a\cos\theta$};
 \end{tikzpicture}
 \end{subfigure}\hfill
 \begin{subfigure}{0.22\textwidth}
@@ -7263,12 +7280,12 @@ r=2a\sin\theta
 \begin{tikzpicture}[font=\small]
 \pgfmathsetmacro{\r}{1}
 \draw[-latex](-1,0)--(1.25,0)node[right]{$x$};
-\draw[-latex](0,-2.25)--(0,0.25)node[above]{$y$};
-\draw(0,-\r)node[circ]{}node[right]{$(-a,\tfrac{\pi}{2})$} circle(\r);
-\draw(0,-2*\r)node[below right]{$r=-2a\sin\theta$};
+\draw[-latex](0,-2)--(0,0.25)node[above]{$y$};
+\draw[thick](0,-\r)node[circ]{}node[right,font=\scriptsize]{$(-a,\tfrac{\pi}{2})$} circle(\r);
+\draw(0,-2*\r)node[below]{$r=-2a\sin\theta$};
 \end{tikzpicture}
 \end{subfigure}
-\caption{کارتیسی محور پر مرکز والے دائروں کی  قطبی مساواتیں۔}
+\caption{کارتیسی محور پر مرکز رکھنے  والے دائروں کی  قطبی مساواتیں۔}
 \label{شکل_مخروط_محددی_مرکوز_دائرے}
 \end{figure}
 
@@ -7378,7 +7395,7 @@ r=\frac{ke}{1-e\cos\theta}
 \begin{tikzpicture}[declare function={f(\x)=(\x)^2;}]
 \begin{axis}[clip=false,small, axis lines=middle,xtick={\empty},ytick={\empty},enlargelimits=true,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel={$y$},ylabel style={at={(current axis.above origin)},anchor=south}]
 \pgfmathsetmacro{\k}{3}
-\addplot[domain=0:2] (x,{-f(x)})node[pos=0.6,above right]{$r=\frac{ke}{1+e\sin\theta}$};
+\addplot[domain=0:2] (x,{-f(x)})node[pos=0.6,above right,xshift=-0.75em]{$r=\frac{ke}{1+e\sin\theta}$};
 \addplot[domain=0:2] (-x,{-f(x)});
 \addplot[] plot coordinates {(-2,\k)(2,\k)}node[pos=0.25,below]{\RL{ناظمہ}};
 \addplot[draw=none] plot coordinates {(-2,\k)(2,\k)}node[pos=0.25,above]{$y=k$};
@@ -7387,12 +7404,12 @@ r=\frac{ke}{1-e\cos\theta}
 \end{tikzpicture}
 \caption{}
 \end{subfigure}\hfill
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.50\textwidth}
 \centering
 \begin{tikzpicture}[declare function={f(\x)=(\x)^2;}]
 \begin{axis}[clip=false,small, axis lines=middle,xtick={\empty},ytick={\empty},enlargelimits=true,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel={$y$},ylabel style={at={(current axis.above origin)},anchor=south}]
 \pgfmathsetmacro{\k}{3}
-\addplot[domain=0:2] (x,{f(x)})node[pos=0.6,below right]{$r=\frac{ke}{1-e\sin\theta}$};
+\addplot[domain=0:2] (x,{f(x)})node[pos=0.6,below right,xshift=-0.75em]{$r=\frac{ke}{1-e\sin\theta}$};
 \addplot[domain=0:2] (-x,{f(x)});
 \addplot[] plot coordinates {(-2,-\k)(2,-\k)}node[pos=0.25,below]{\RL{ناظمہ}};
 \addplot[draw=none] plot coordinates {(-2,-\k)(2,-\k)}node[pos=0.25,above]{$y=-k$};
@@ -7568,22 +7585,22 @@ $r\cos(\theta-\tfrac{4\pi}{3})=3,\quad y=-\tfrac{\sqrt{3}}{3}x-2\sqrt{3}$
 %========================
 \begin{figure}
 \centering
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.27\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize]
 \pgfmathsetmacro{\a}{30}
 \pgfmathsetmacro{\d}{2}
-\draw[-latex](-0.15,0)--(3,0)node[right]{$x$};
+\draw[-latex](-0.15,0)--(2.6,0)node[right]{$x$};
 \draw[-latex](0,-0.15)--(0,2)node[above]{$y$};
 \draw(0,0)--++(\a:\d)coordinate(ka)node[pos=0.5,above]{$5$};
 \draw[thick](\a:\d)++(\a-90:1.5)coordinate(kb)--++(\a+90:2.5);
 \RightAngle{(0,0)}{(ka)}{(kb)}
-\draw[-stealth]([shift={(0:0.5)}]0,0) arc (0:\a:0.5)node[right,yshift=-1ex]{$\tfrac{\pi}{6}$};
+\draw[-stealth]([shift={(0:0.75)}]0,0) arc (0:\a:0.75)node[right,yshift=-1ex]{$\tfrac{\pi}{6}$};
 \end{tikzpicture}
-\caption{ترسیم برائے  سوال \حوالہ{سوال_مخروط_خط_قطبی_کارتیسی_الف}}
+\caption{برائے  سوال \حوالہ{سوال_مخروط_خط_قطبی_کارتیسی_الف}}
 \label{شکل_سوال_مخروط_خط_قطبی_کارتیسی_الف}
 \end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.25\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize]
 \pgfmathsetmacro{\a}{135}
@@ -7595,10 +7612,10 @@ $r\cos(\theta-\tfrac{4\pi}{3})=3,\quad y=-\tfrac{\sqrt{3}}{3}x-2\sqrt{3}$
 \RightAngle{(0,0)}{(ka)}{(kb)}
 \draw[-stealth]([shift={(0:0.3)}]0,0) arc (0:\a:0.3)node[pos=0.25,above]{$\tfrac{3\pi}{4}$};
 \end{tikzpicture}
-\caption{ترسیم  برائے سوال \حوالہ{سوال_مخروط_خط_قطبی_کارتیسی_ب}}
+\caption{برائے سوال \حوالہ{سوال_مخروط_خط_قطبی_کارتیسی_ب}}
 \label{شکل_سوال_مخروط_خط_قطبی_کارتیسی_ب}
 \end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.20\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize]
 \pgfmathsetmacro{\a}{240}
@@ -7610,10 +7627,10 @@ $r\cos(\theta-\tfrac{4\pi}{3})=3,\quad y=-\tfrac{\sqrt{3}}{3}x-2\sqrt{3}$
 \RightAngle{(0,0)}{(ka)}{(kb)}
 \draw[-stealth]([shift={(0:0.3)}]0,0) arc (0:\a:0.3)node[pos=0.75,above left]{$\tfrac{4\pi}{3}$};
 \end{tikzpicture}
-\caption{ترسیم    برائے  سوال \حوالہ{سوال_مخروط_خط_قطبی_کارتیسی_پ}}
+\caption{برائے  سوال \حوالہ{سوال_مخروط_خط_قطبی_کارتیسی_پ}}
 \label{شکل_سوال_مخروط_خط_قطبی_کارتیسی_پ}
 \end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.20\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize]
 \pgfmathsetmacro{\a}{-45}
@@ -7623,9 +7640,9 @@ $r\cos(\theta-\tfrac{4\pi}{3})=3,\quad y=-\tfrac{\sqrt{3}}{3}x-2\sqrt{3}$
 \draw(0,0)--++(\a:\d)coordinate(ka)node[pos=0.5,below]{$4$};
 \draw[thick](\a:\d)++(\a-90:1.5)coordinate(kb)--++(\a+90:2.5);
 \RightAngle{(0,0)}{(ka)}{(kb)}
-\draw[-stealth]([shift={(0:0.3)}]0,0) arc (0:\a:0.3)node[pos=0.8,right]{$-\tfrac{\pi}{4}$};
+\draw[-stealth]([shift={(0:0.5)}]0,0) arc (0:\a:0.5)node[pos=0.8,right]{$-\tfrac{\pi}{4}$};
 \end{tikzpicture}
-\caption{ترسیم    برائے  سوال \حوالہ{سوال_مخروط_خط_قطبی_کارتیسی_ت}}
+\caption{برائے  سوال \حوالہ{سوال_مخروط_خط_قطبی_کارتیسی_ت}}
 \label{شکل_سوال_مخروط_خط_قطبی_کارتیسی_ت}
 \end{minipage}
 \end{figure}
@@ -7718,48 +7735,48 @@ $r=2\sqrt{2}\sin\theta$
 %========================
 \begin{figure}
 \centering
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}[b]{0.25\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize]
-\draw[-latex](-0.15,0)--(2.5,0)node[right]{$x$};
+\draw[-latex](-0.15,0)--(2.25,0)node[right]{$x$};
 \draw[-latex](0,-1)--(0,1)node[above]{$y$};
-\draw(1,0)node[circ]{}  circle (1);
+\draw[thick](1,0)node[circ]{}  circle (1);
 \draw(1,1)node[above]{رداس $=4$};
 \end{tikzpicture}
-\caption{دائرہ   برائے سوال \حوالہ{سوال_مخروط_دائرے_کی_قطبی_الف}}
+\caption{برائے سوال \حوالہ{سوال_مخروط_دائرے_کی_قطبی_الف}}
 \label{شکل_سوال_مخروط_دائرے_کی_قطبی_الف}
 \end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}[b]{0.22\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize]
 \draw[-latex](-1,0)--(1,0)node[right]{$x$};
 \draw[-latex](0,-2.25)--(0,0.25)node[above]{$y$};
-\draw(0,-1)node[circ]{}  circle (1);
+\draw[thick](0,-1)node[circ]{}  circle (1);
 \draw(0,0)node[above right]{رداس $=1$};
 \end{tikzpicture}
-\caption{دائرہ     برائے  سوال \حوالہ{سوال_مخروط_دائرے_کی_قطبی_ب}}
+\caption{برائے  سوال \حوالہ{سوال_مخروط_دائرے_کی_قطبی_ب}}
 \label{شکل_سوال_مخروط_دائرے_کی_قطبی_ب}
 \end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}[b]{0.22\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize]
 \draw[-latex](-1,0)--(1,0)node[right]{$x$};
 \draw[-latex](0,-0.15)--(0,2.25)node[above]{$y$};
-\draw(0,1)node[circ]{}  circle (1);
+\draw[thick](0,1)node[circ]{}  circle (1);
 \draw(0,2)node[above right]{رداس $=\sqrt{2}$};
 \end{tikzpicture}
-\caption{دائرہ     برائے  سوال \حوالہ{سوال_مخروط_دائرے_کی_قطبی_پ}}
+\caption{برائے  سوال \حوالہ{سوال_مخروط_دائرے_کی_قطبی_پ}}
 \label{شکل_سوال_مخروط_دائرے_کی_قطبی_پ}
 \end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}[b]{0.22\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize]
-\draw[-latex](-2.25,0)--(0.15,0)node[right]{$x$};
+\draw[-latex](-2.5,0)--(0.25,0)node[right]{$x$};
 \draw[-latex](0,-1)--(0,1)node[above]{$y$};
-\draw(-1,0)node[circ]{}  circle (1);
+\draw[thick](-1,0)node[circ]{}  circle (1);
 \draw(-1,1)node[above]{رداس $=\tfrac{1}{2}$};
 \end{tikzpicture}
-\caption{دائرہ    برائے   سوال \حوالہ{سوال_مخروط_دائرے_کی_قطبی_ت}}
+\caption{برائے   سوال \حوالہ{سوال_مخروط_دائرے_کی_قطبی_ت}}
 \label{شکل_سوال_مخروط_دائرے_کی_قطبی_ت}
 \end{minipage}
 \end{figure}
@@ -8123,7 +8140,7 @@ $r=\tfrac{1}{1+2\cos\theta}$
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
-(ب) 
+(ب) \\
 \begin{minipage}{0.45\textwidth}
 \centering
 \begin{tabular}{ccc}
@@ -8384,13 +8401,13 @@ S=\int_{\alpha}^{\beta}\frac{1}{2}r^2\dif\theta
 %============
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.50\textwidth}
 \centering
 \begin{tikzpicture}[font=\small,declare function={f(\x)=2*(1+cos(\x));}]
 \begin{axis}[clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={4},xticklabels={\rlap{$4$}},ytick={2}]
 \addplot[->-=0.25,data cs=polar,samples=100,domain=0:360]{f(x)}node[pos=0.2,above]{$r=2(1+\cos\theta)$};
 \addplot[data cs=polar]plot coordinates {(0,0)(30,{f(30)})}node[pos=0,below right]{$O$}node[pos=0.5,above]{$r$}node[circ]{}node[right]{$N(r,\theta)$};
-\addplot[data cs=polar] plot coordinates {(0,4)}node[pin=-45:{$\theta=2\pi$}]{};
+\addplot[data cs=polar] plot coordinates {(0,4)}node[pin={[xshift=-1em]-45:{$\theta=2\pi$}}]{};
 \end{axis}
 \end{tikzpicture}
 \caption{قلب نما کی ترسیم برائے مثال \حوالہ{مثال_مخروط_قلب_نما_رقبہ}}
@@ -8399,11 +8416,11 @@ S=\int_{\alpha}^{\beta}\frac{1}{2}r^2\dif\theta
 \begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\small,declare function={f(\x)=1+2*cos(\x);}]
-\begin{axis}[axis on top,clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={4},xticklabels={\rlap{$4$}},ytick={2}]
+\begin{axis}[axis on top,clip=false,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={\empty},xticklabels={\rlap{$4$}},ytick={\empty}]
 \addplot[data cs=polar,samples=100,domain=0:360]{f(x)}node[pos=0.2,above]{$r=1+2\cos\theta$};
 \addplot[data cs=polar,smooth,fill=lgray,domain=120:240]{f(x)};
-\addplot[data cs=polar]plot coordinates {(-60,1)(120,1.5)}node[above left]{$\theta=\tfrac{2}{3}\pi$};
-\addplot[data cs=polar]plot coordinates {(240,1.5)(60,1)}node[pos=0,below left]{$\theta=\tfrac{4}{3}\pi$};
+\addplot[data cs=polar]plot coordinates {(-60,1)(120,1.5)}node[above left,xshift=1em]{$\theta=\tfrac{2}{3}\pi$};
+\addplot[data cs=polar]plot coordinates {(240,1.5)(60,1)}node[pos=0,below left,xshift=1em]{$\theta=\tfrac{4}{3}\pi$};
 \addplot[data cs=polar]plot coordinates {(180,{f(180)})}node[pin=45:{$\theta=\pi$}]{};
 \end{axis}
 \end{tikzpicture}
@@ -8740,7 +8757,7 @@ $\tfrac{3}{2}-\tfrac{\pi}{4}$
 %================
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.50\textwidth}
 \centering
 \begin{tikzpicture}[font=\scriptsize,declare function={f(\x)=tan(\x);g(\x)=1/sqrt(2)*cosec(\x);}]
 \begin{axis}[small,axis on top,clip=false,axis lines=middle,xtick={-1,1},ytick={\empty},xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true]

@@ -90,7 +90,7 @@ S=\lim_{\norm{P}\to 0}\sum\limits_{k=1}^n[f(c_k)-g(c_k)]\Delta x_k=\int\limits_a
 \end{axis}
 \end{tikzpicture}
 \caption{
-ہم خطہ کو تخمیناً محور \عددی{x} پر  لمب  مستطیلوں کے برابر لیتے ہیں۔
+ہم خطہ کو تخمیناً محور \عددی{x}  کے \بدل{قائمہ}  مستطیلوں کے برابر لیتے ہیں۔
 }
 \label{شکل_استعمال_تکمل_مستطیل_رقبے}
 \end{minipage}\hfill
@@ -351,7 +351,7 @@ S=\int_c^d[f(y)-g(y)]\dif y
 %
 \begin{figure}
 \centering
-\begin{minipage}{0.3\textwidth}
+\begin{minipage}{0.35\textwidth}
 \centering
 \begin{tikzpicture}[font=\small,declare function={g(\x)=-1+\x^3-\x;f(\x)=1+0.5*\x^3-\x;}]
 \begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={\empty},enlargelimits=true]
@@ -370,7 +370,7 @@ S=\int_c^d[f(y)-g(y)]\dif y
 \begin{minipage}{0.3\textwidth}
 \centering
 \begin{tikzpicture}[font=\small,declare function={g(\x)=1+\x^2-3*\x+2;f(\x)=1-\x^2+4*\x-3;}]
-\begin{axis}[width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={1,1.8},yticklabels={$c$,$d$},xmin=0,ymin=0,enlargelimits=true]
+\begin{axis}[width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)}, anchor=north},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={1,1.8},yticklabels={$c$,$d$},xmin=0,ymin=0,enlargelimits=true]
 \addplot[domain=0.9:2]({f(x)},{\x})node[pos=0.3,right,yshift=-0.5ex]{$x=f(y)$};
 \addplot[domain=0.9:2]({g(x)},{\x})node[pos=0.35,left]{$x=g(y)$};
 \draw(axis cs:{f(1.8)},1.8)--(axis cs:{g(1.8)},1.8);
@@ -382,12 +382,12 @@ S=\int_c^d[f(y)-g(y)]\dif y
 \end{axis}
 \end{tikzpicture}
 \end{minipage}\hfill
-\begin{minipage}{0.3\textwidth}
+\begin{minipage}{0.25\textwidth}
 \centering
 \begin{tikzpicture}[font=\small,declare function={g(\x)=1+\x^2-3*\x+2;f(\x)=1-\x^2+4*\x-3;}]
-\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={1,2.5},yticklabels={$c$,$d$},xmin=0,ymin=0,enlargelimits=true]
-\addplot[domain=0.9:2.6]({f(x)},{\x})node[pos=0.3,below right]{$x=f(y)$};
-\addplot[domain=0.9:2.6]({g(x)},{\x})node[pos=0.65,above left]{$x=g(y)$};
+\begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=north},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty},ytick={1,2.5},yticklabels={$c$,$d$},xmin=0,ymin=0,enlargelimits=true]
+\addplot[domain=0.9:2.6]({f(x)},{\x})node[pos=0.3,below right,xshift=-0.5em,yshift=0.5em]{$x=f(y)$};
+\addplot[domain=0.9:2.6]({g(x)},{\x})node[pos=0.65,above left,xshift=0.5em]{$x=g(y)$};
 \draw(axis cs:{f(1.5)},1.5)--(axis cs:{g(1.5)},1.5);
 \draw(axis cs:{f(1.6)},1.6)--(axis cs:{g(1.6)},1.6);
 \addplot[name path=funf,domain=1.5:1.6,draw=none]({f(x)},{\x});
@@ -437,17 +437,17 @@ S=\int_a^b[f(y)-g(y)]\dif y&=\int_0^2[2+y-y^2]\dif y\\
 \centering
 \begin{tikzpicture}[declare function={f(\x)=\x+2;g(\x)=\x^2;}]
 \begin{axis}[clip=false,axis on top,small,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={2,4},ytick={2,4},enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
-\addplot[domain=0:2]({f(x)},x)node[pos=0.75,right]{$x=y+2$};
-\addplot[domain=0:2]({g(x)},x)node[pos=0.75,above]{$x=y^2$};
+\addplot[domain=0:2]({f(x)},x)node[pos=0.80,below,sloped]{$x=y+2$};
+\addplot[domain=0:2]({g(x)},x)node[pos=0.75,above,xshift=-0.25em]{$x=y^2$};
 \pgfmathsetmacro{\k}{0.9}
 \pgfmathsetmacro{\w}{0.5}
 \draw(axis cs:{g(\k)},\k+\w/2)--(axis cs:{f(\k)},\k+\w/2)coordinate(kTR)--(axis cs:{f(\k)},\k-\w/2)coordinate(kBR)--(axis cs:{g(\k)},\k-\w/2)coordinate(kBL)--(axis cs:{g(\k)},\k+\w/2)coordinate(kTL);
 \draw[stealth-stealth]($(kBL)!0.75!(kBR)$)--($(kTL)!0.75!(kTR)$)node[pos=0.5,left]{$\Delta y$};
 \draw(axis cs:1,0)node[below]{$y=0$};
 \draw[stealth-stealth] (axis cs:{g(\k)},\k-0.75*\w)--(axis cs:{f(\k)},\k-0.75*\w)node[pos=0.5,below]{$f(y)-g(y)$};
-\draw(axis cs:{f(\k)},\k)node[circ]{}node[right]{$(f(y),y)$};
+\draw(axis cs:{f(\k)},\k)node[circ]{}node[right,yshift=-0.25em]{$(f(y),y)$};
 \draw(axis cs:{g(\k)},\k)node[circ]{}node[left]{$(g(y),y)$};
-\draw(axis cs:4,2)node[right]{$(4,2)$};
+\draw(axis cs:4,2)node[above]{$(4,2)$};
 \draw(axis cs:0,0)node[below left,font=\footnotesize]{$0$};
 \end{axis}
 \end{tikzpicture}
@@ -710,17 +710,17 @@ $\tfrac{49}{6}$
 %=======================
 \begin{figure}
 \centering
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.25\textwidth}
 \centering
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=\x^2-4;g(\x)=-\x^2-2*\x;}]
 \begin{axis}[axis on top,clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xtick={-3,1},ytick={-4,5}, enlargelimits=true,xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
 \addplot[domain=-3:1.1,smooth]{f(x)}node[pos=0.15,right]{$y=x^2-4$};
-\addplot[domain=-3:1.1]{g(x)}node[pos=0.5,pin=30:{$y=-x^2-2x$}]{};
+\addplot[domain=-3:1.1]{g(x)}node[pos=0.5,pin={[xshift=-0.25em]30:{$y=-x^2-2x$}}]{};
 \addplot[name path=funf,domain=-3:1,draw=none]{f(x)};
 \addplot[name path=fung,domain=-3:1,draw=none]{g(x)};
 \addplot[fill=lgray]fill between[of=funf and fung];
 \draw(axis cs:-3,-3)--(axis cs:-3,5);
-\draw(axis cs:1,-3)node[right]{$(1,-3)$}  (axis cs:-3,5)node[above]{$(-3,5)$} (axis cs:-3,-3)node[below]{$(-3,-3)$};
+\draw(axis cs:1,-3)node[right]{$(1,-3)$}  (axis cs:-3,5)node[above,xshift=0.5em]{$(-3,5)$} (axis cs:-3,-3)node[below,xshift=0.5em]{$(-3,-3)$};
 \end{axis}
 \end{tikzpicture}
 \caption{}
@@ -1057,7 +1057,7 @@ $\tfrac{3}{4}$
 %======================
 \begin{figure}
 \centering
-\begin{minipage}{0.3\textwidth}
+\begin{minipage}{0.35\textwidth}
 \centering
 \begin{tikzpicture}[font=\tiny,declare function={fa(\x)=1+sqrt(\x); fb(\x)=3-\x; fc(\x)=x^2/4;}]
 \begin{axis}[width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={1,2},ytick={1,2}]
@@ -1082,7 +1082,7 @@ $\tfrac{3}{4}$
 \caption{خطہ برائے سوال \حوالہ{سوال_تکمل_استعمال_رقبہ_محیط_خاکہ_ب}}
 \label{شکل_سوال_تکمل_استعمال_رقبہ_محیط_خاکہ_ب}
 \end{minipage}\hfill
-\begin{minipage}{0.3\textwidth}
+\begin{minipage}{0.25\textwidth}
 \centering
 \begin{tikzpicture}[font=\tiny,declare function={fa(\x)=\x; fb(\x)=-\x;}]
 \begin{axis}[clip=false,width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-1,1},xticklabels={,},ytick={-1,1}]
@@ -1223,7 +1223,7 @@ $f(x)=x^2\cos x,\quad g(x)=x^3-x$
 \end{minipage}
 \end{figure}
 
-ہم محور \عددی{x} کے لحاظ سے وقفہ \عددی{[a,b]} کی خانہ بندی کر کے جسم کو خانہ بندی کے  نقاط پر محور \عددی{x} کے لمب    مستویات سے کتلوں میں تقسیم کرتے  ہیں۔یوں نقطہ \عددی{x_{k-1}} اور \عددی{x_k} پر  مستویات  کے بیچ \عددی{k} واں کتلے  کا حجم تقریباً اس بیلن جتنا ہو گا جو ان  مستویات کے بیچ  واقع ہے اور جس کی عمودی تراش خطہ \عددی{R(x_k)} ہے (شکل \حوالہ{شکل_تکمل_استعمال_تخمینی_بیلن})۔ اس بیلن کا حجم درج ذیل ہو گا۔
+ہم محور \عددی{x} کے لحاظ سے وقفہ \عددی{[a,b]} کی خانہ بندی کر کے جسم کو خانہ بندی کے  نقاط پر محور \عددی{x} کے \بدل{قائمہ}    مستویات سے کتلوں میں تقسیم کرتے  ہیں۔یوں نقطہ \عددی{x_{k-1}} اور \عددی{x_k} پر  مستویات  کے بیچ \عددی{k} واں کتلے  کا حجم تقریباً اس بیلن جتنا ہو گا جو ان  مستویات کے بیچ  واقع ہے اور جس کی عمودی تراش خطہ \عددی{R(x_k)} ہے (شکل \حوالہ{شکل_تکمل_استعمال_تخمینی_بیلن})۔ اس بیلن کا حجم درج ذیل ہو گا۔
 \begin{align*}
 H_k&=\text{\RL{رقبہ تلہ}}\times \text{قد}\\
 &=S(x_k)\times (\text{\RL{$x_{k-1}$ اور $x_k$ کے بیچ فاصلہ}})\\
@@ -1323,11 +1323,11 @@ H=\int_a^bS(x)\dif x=\int_0^3x^2\dif x=\left.\tfrac{x^3}{3}\right\vert_0^3=9
 \end{minipage}
 \end{figure}
 \ابتدا{مثال}\شناخت{مثال_تکمل_استعمال_قوسی_پچر}
-رداس \عددی{3} کے بیلن کو دو مستوی سے کاٹ کر قوسی پچر بنایا جاتا ہے۔ایک مستوی بیلن کے محور پر لمب ہے جبکہ دوسرا مستوی پہلے مستوی کو بیلن کے وسط پر \عددی{45^{\circ}}  کے زاویے پر قطع کرتا ہے۔ پچر کا حجم تلاش کریں۔
+رداس \عددی{3} کے بیلن کو دو مستوی سے کاٹ کر قوسی پچر بنایا جاتا ہے۔ایک مستوی بیلن کے محور کے  \بدل{قائمہ} ہے جبکہ دوسرا مستوی پہلے مستوی کو بیلن کے وسط پر \عددی{45^{\circ}}  کے زاویے پر قطع کرتا ہے۔ پچر کا حجم تلاش کریں۔
 
 \حل
 \موٹا{پہلا قدم:} \quad \ترچھا{خاکہ۔}\quad
-ہم پچر اور نمائندہ عمودی تراش کا خاکہ بناتے ہیں (شکل \حوالہ{شکل_مثال_تکمل_استعمال_قوسی_پچر})۔ عمودی تراش محور \عددی{x} کے لمب ہے۔\\
+ہم پچر اور نمائندہ عمودی تراش کا خاکہ بناتے ہیں (شکل \حوالہ{شکل_مثال_تکمل_استعمال_قوسی_پچر})۔ عمودی تراش محور \عددی{x} کے \بدل{قائمہ} ہے۔\\
 \موٹا{دوسرا قدم:}\quad \ترچھا{کلیہ برائے \عددی{S(x)}۔}
 \quad
 نقطہ \عددی{x} پر مستطیل عمودی تراش کا رقبہ درج ذیل ہو گا۔
@@ -1402,7 +1402,7 @@ H=\int_a^bS(x)\dif x&=\int_0^32x\sqrt{9-x^2}\dif x\\
 سوال \حوالہ{سوال_تکمل_استعمال_رقبہ_عمودی_تراش_الف} اور سوال \حوالہ{سوال_تکمل_استعمال_رقبہ_عمودی_تراش_ب} میں محور \عددی{x} کے عمودی، ٹھوس جسم کے رقبہ عمودی تراش \عددی{S(x)} کا کلیہ اخذ کریں۔ 
 
 \ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_رقبہ_عمودی_تراش_الف}
-ایک ٹھوس جسم  \عددی{x=-1} اور \عددی{x=1} پر محور \عددی{x}  کے لمب مستویات  کے بیچ  واقع  ہے۔  محور \عددی{x} کے لمب، جسم  کے  عمودی تراش رقبے،  نصف دائرہ \عددی{y=-\sqrt{1-x^2}} اور نصف دائرہ \عددی{y=\sqrt{1-x^2}} کے بیچ  واقع ہیں۔ 
+ایک ٹھوس جسم  \عددی{x=-1} اور \عددی{x=1} پر محور \عددی{x}  کے \بدل{قائمہ} مستویات  کے بیچ  واقع  ہے۔  محور \عددی{x} کے \بدل{قائمہ}، جسم  کے  عمودی تراش رقبے،  نصف دائرہ \عددی{y=-\sqrt{1-x^2}} اور نصف دائرہ \عددی{y=\sqrt{1-x^2}} کے بیچ  واقع ہیں۔ 
 \begin{enumerate}[a.]
 \item
 عمودی تراش دائری  اقراص  ہیں جن کے قطر مستوی  \عددی{xy} میں ہیں (شکل \حوالہ{شکل_سوال_تکمل_استعمال_رقبہ_عمودی_تراش_الف}-ا)۔
@@ -1432,12 +1432,11 @@ H=\int_a^bS(x)\dif x&=\int_0^32x\sqrt{9-x^2}\dif x\\
 \pgfmathsetmacro{\lb}{0.8}
 \draw[-latex] (1,0)--++(0.5,0)node[right]{$x$};
 \draw[-latex](0,0.5)--++(0,0.5)node[above]{$y$};
-\draw([shift={(0:1cm and 0.5cm)}]0,0) arc (0:360:1cm and 0.5cm)coordinate[pos=0.1](ka)coordinate[pos=0.9](kb);
+\draw([shift={(0:1cm and 0.5cm)}]0,0) arc (0:360:1cm and 0.5cm)coordinate[pos=0.1](ka)coordinate[pos=0.9](kb)node[pos=0.75,below]{$x^2+y^2=1$};
 \draw([shift={(90:0.15cm and 0.35cm)}]0.75,0) arc (90:270:0.15 cm and 0.35cm);
 \draw[dashed]([shift={(-90:0.15cm and 0.35cm)}]0.75,0) arc (-90:90:0.15 cm and 0.35cm);
 \draw([shift={(90:0.15cm and 0.5cm)}]0,0) arc (90:270:0.15 cm and 0.5cm);
 \draw[dashed]([shift={(-90:0.15cm and 0.5cm)}]0,0) arc (-90:90:0.15 cm and 0.5cm);
-\draw(55:1cm and 0.5cm)++(0,0.1)--++(45:0.75)node[above,xshift=3ex]{$x^2+y^2=1$};
 \end{tikzpicture}
 \caption{}
 \end{subfigure}\hfill
@@ -1488,7 +1487,7 @@ H=\int_a^bS(x)\dif x&=\int_0^32x\sqrt{9-x^2}\dif x\\
 \draw[fill=white](ka)--(kb)--++(\ang:\lb)--(ka);
 \end{tikzpicture}
 \caption{}
-\end{subfigure}\hfill
+\end{subfigure}
 \caption{عمودی تراش برائے سوال \حوالہ{سوال_تکمل_استعمال_رقبہ_عمودی_تراش_الف}}
 \label{شکل_سوال_تکمل_استعمال_رقبہ_عمودی_تراش_الف}
 \end{figure}
@@ -1536,13 +1535,13 @@ H=\int_a^bS(x)\dif x&=\int_0^32x\sqrt{9-x^2}\dif x\\
 \draw(0.5,{-sqrt(0.5)})node[below,yshift=-0.5ex]{$x=y^2$};
 \end{tikzpicture}
 \caption{}
-\end{subfigure}\hfill
+\end{subfigure}
 \caption{عمودی تراش برائے سوال \حوالہ{سوال_تکمل_استعمال_رقبہ_عمودی_تراش_ب}}
 \label{شکل_سوال_تکمل_استعمال_رقبہ_عمودی_تراش_ب}
 \end{figure}
 
 \ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_رقبہ_عمودی_تراش_ب}
-ایک ٹھوس جسم  \عددی{x=0} اور \عددی{x=4} پر  محور \عددی{x}  کے لمب  مستویات  کے بیچ  واقع ہے۔ جسم  کے رقبہ عمودی تراش  محور \عددی{x} کے لمب، قطع مکافی  \عددی{y=-\sqrt{x}} اور قطع مکافی \عددی{y=\sqrt{x}} کے بیچ  واقع ہیں۔ 
+ایک ٹھوس جسم  \عددی{x=0} اور \عددی{x=4} پر  محور \عددی{x}  کے \بدل{قائمہ}  مستویات  کے بیچ  واقع ہے۔ جسم  کے رقبہ عمودی تراش  محور \عددی{x} کے \بدل{قائمہ}، قطع مکافی  \عددی{y=-\sqrt{x}} اور قطع مکافی \عددی{y=\sqrt{x}} کے بیچ  واقع ہیں۔ 
 \begin{enumerate}[a.]
 \item
 عمودی تراش دائری اقراص ہیں جن کے قطر مستوی  \عددی{xy} میں ہیں (شکل \حوالہ{شکل_سوال_تکمل_استعمال_رقبہ_عمودی_تراش_ب}-ا)۔
@@ -1560,7 +1559,7 @@ H=\int_a^bS(x)\dif x&=\int_0^32x\sqrt{9-x^2}\dif x\\
 سوال \حوالہ{سوال_تکمل_استعمال_ٹھوس_جسم_حجم_الف} تا سوال \حوالہ{سوال_تکمل_استعمال_ٹھوس_جسم_حجم_ب} میں دیے گئے ٹھوس اجسام کے حجم تلاش کریں۔
 
 \ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ٹھوس_جسم_حجم_الف}
-ایک ٹھوس جسم \عددی{x=0} اور \عددی{x=4} پر  محور \عددی{x} کے لمب مستویات کے بیچ واقع ہے۔ جسم کی عمودی تراش کی صورت چوکور ہے جو  محور \عددی{x} کے لمب ہیں اور جن کے وتر قطع مکافی \عددی{y=-\sqrt{x}} سے قطع مکافی \عددی{y=\sqrt{x}} تک ہیں۔\\
+ایک ٹھوس جسم \عددی{x=0} اور \عددی{x=4} پر  محور \عددی{x} کے \بدل{قائمہ} مستویات کے بیچ واقع ہے۔ جسم کی عمودی تراش کی صورت چوکور ہے جو  محور \عددی{x} کے \بدل{قائمہ} ہیں اور جن کے وتر قطع مکافی \عددی{y=-\sqrt{x}} سے قطع مکافی \عددی{y=\sqrt{x}} تک ہیں۔\\
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -1569,11 +1568,11 @@ $16$
 \انتہا{جواب}
 %========================
 \ابتدا{سوال}
-ایک ٹھوس جسم \عددی{x=-1} اور \عددی{x=1} پر  محور \عددی{x} کے لمب مستویات کے بیچ واقع ہے۔ جسم کی  عمودی تراش محور \عددی{x} کے لمب ہیں جن کے قطر دائری اقراص ہیں جو قطع مکافی \عددی{y=x^2} سے قطع مکافی \عددی{y=2-x^2} تک ہیں۔   
+ایک ٹھوس جسم \عددی{x=-1} اور \عددی{x=1} پر  محور \عددی{x} کے \بدل{قائمہ} مستویات کے درمیان  واقع ہے۔ جسم کی  عمودی تراش محور \عددی{x} کے \بدل{قائمہ} ہیں جن کے قطر دائری اقراص ہیں جو قطع مکافی \عددی{y=x^2} سے قطع مکافی \عددی{y=2-x^2} تک ہیں۔   
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
-ایک ٹھوس جسم \عددی{x=-1} اور \عددی{x=1} پر  محور \عددی{x} کے لمب مستویات کے بیچ واقع ہے۔ جسم کی  چوکور عمودی تراش محور \عددی{x} کے لمب ہیں جن کے  قاعدوں کے کنارے نصف دائرہ \عددی{y=-\sqrt{1-x^2}} سے نصف دائرہ \عددی{y=\sqrt{1-x^2}} تک ہیں۔ \\
+ایک ٹھوس جسم \عددی{x=-1} اور \عددی{x=1} پر  محور \عددی{x} کے \بدل{قائمہ} مستویات کے بیچ واقع ہے۔ جسم کی  چوکور عمودی تراش محور \عددی{x} کے \بدل{قائمہ} ہیں جن کے  قاعدوں کے کنارے نصف دائرہ \عددی{y=-\sqrt{1-x^2}} سے نصف دائرہ \عددی{y=\sqrt{1-x^2}} تک ہیں۔ \\
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -1582,11 +1581,11 @@ $\tfrac{16}{3}$
 \انتہا{جواب}
 %======================
 \ابتدا{سوال}
-ایک ٹھوس جسم \عددی{x=-1} اور \عددی{x=1} پر  محور \عددی{x} کے لمب مستویات کے بیچ واقع ہے۔ جسم کی  چوکور عمودی تراش محور \عددی{x} کے لمب ہیں جن کے وتر نصف دائرہ \عددی{y=-\sqrt{1-x^2}} سے نصف دائرہ \عددی{y=\sqrt{1-x^2}} تک ہیں۔ چوکور کے وتر کی لمبائی چوکور کے ضلع کے \عددی{\sqrt{2}} گنا ہوتی ہے۔
+ایک ٹھوس جسم \عددی{x=-1} اور \عددی{x=1} پر  محور \عددی{x} کے \بدل{قائمہ} مستویات کے بیچ واقع ہے۔ جسم کی  چوکور عمودی تراش محور \عددی{x} کے \بدل{قائمہ} ہیں جن کے وتر نصف دائرہ \عددی{y=-\sqrt{1-x^2}} سے نصف دائرہ \عددی{y=\sqrt{1-x^2}} تک ہیں۔ چوکور کے وتر کی لمبائی چوکور کے ضلع کے \عددی{\sqrt{2}} گنا ہوتی ہے۔
 \انتہا{سوال}
 %======================
 \ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_شکل_دیا_گیا_ہے_الف}
-ایک ٹھوس جسم کا قاعدہ منحنی \عددی{y=2\sqrt{\sin x}} اور محور \عددی{x} پر وقفہ \عددی{[0,\pi]}  کے بیچ واقع  ہے۔درج ذیل عمودی تراش  محور \عددی{x} کے لمب ہیں۔
+ایک ٹھوس جسم کا قاعدہ منحنی \عددی{y=2\sqrt{\sin x}} اور محور \عددی{x} پر وقفہ \عددی{[0,\pi]}  کے بیچ واقع  ہے۔درج ذیل عمودی تراش  محور \عددی{x} کے \بدل{قائمہ} ہیں۔
 \begin{enumerate}[a.]
 \item
 مساوی الاضلاع  مثلث جن کے قاعدے محور \عددی{x} سے منحنی تک ہیں (شکل \حوالہ{شکل_سوال_تکمل_استعمال_شکل_دیا_گیا_ہے_الف})۔
@@ -1647,7 +1646,7 @@ $\tfrac{16}{3}$
 \end{minipage}
 \end{figure}
 \ابتدا{سوال}
-ایک ٹھوس جسم \عددی{x=-\tfrac{\pi}{3}} اور \عددی{x=\tfrac{\pi}{3}} پر  محور \عددی{x} کے لمب مستویات کے بیچ واقع ہے۔ جسم کی   عمودی تراش محور \عددی{x} کے لمب ہیں جن کے  خواص درج ذیل ہیں۔
+ایک ٹھوس جسم \عددی{x=-\tfrac{\pi}{3}} اور \عددی{x=\tfrac{\pi}{3}} پر  محور \عددی{x} کے \بدل{قائمہ} مستویات کے بیچ واقع ہے۔ جسم کی   عمودی تراش محور \عددی{x} کے \بدل{قائمہ} ہیں جن کے  خواص درج ذیل ہیں۔
 \begin{enumerate}[a.]
 \item
 دائری اقراص جن کے قطر \عددی{y=\tan x} سے \عددی{y=\sec x} تک ہیں۔
@@ -1657,7 +1656,7 @@ $\tfrac{16}{3}$
 \انتہا{سوال}
 %=====================
 \ابتدا{سوال}
-ایک ٹھوس جسم \عددی{y=0} اور \عددی{y=2} پر  محور \عددی{y} کے لمب مستویات کے بیچ واقع ہے۔ جسم کی دائری عمودی تراش محور \عددی{y} کے لمب ہیں جن کے قطر محور \عددی{y} سے قطع مکافی \عددی{x=\sqrt{5}y^2} تک ہیں۔\\
+ایک ٹھوس جسم \عددی{y=0} اور \عددی{y=2} پر  محور \عددی{y} کے \بدل{قائمہ} مستویات کے بیچ واقع ہے۔ جسم کی دائری عمودی تراش محور \عددی{y} کے \بدل{قائمہ} ہیں جن کے قطر محور \عددی{y} سے قطع مکافی \عددی{x=\sqrt{5}y^2} تک ہیں۔\\
 \انتہا{سوال}
 \ابتدا{جواب}
 \wf{\unexpanded{
@@ -1666,12 +1665,12 @@ $8\pi$
 \انتہا{جواب}
 %======================
 \ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_شکل_دیا_گیا_ہے_ب}
-ایک ٹھوس جسم کا قاعدہ قرص \عددی{x^2+y^2\le 1} ہے۔ عمودی تراش    \عددی{y=-1} اور \عددی{y=1} کے بیچ محور \عددی{y} کے لمب ہیں جو مساوی الساقین مثلث ہیں جن کا ایک ضلع قرص میں  واقع ہے (شکل \حوالہ{شکل_سوال_تکمل_استعمال_شکل_دیا_گیا_ہے_ب})۔
+ایک ٹھوس جسم کا قاعدہ قرص \عددی{x^2+y^2\le 1} ہے۔ عمودی تراش    \عددی{y=-1} اور \عددی{y=1} کے بیچ محور \عددی{y} کے \بدل{قائمہ} ہیں جو مساوی الساقین مثلث ہیں جن کا ایک ضلع قرص میں  واقع ہے (شکل \حوالہ{شکل_سوال_تکمل_استعمال_شکل_دیا_گیا_ہے_ب})۔
 \انتہا{سوال}
 %=====================
 \موٹا{مسئلہ کوالئیرے}\\
 \ابتدا{سوال}\ترچھا{بلدار ٹھوس جسم}\\
-ایک چوکور جس کا ضلع \عددی{s} ہے لکیر \عددی{L} کے لمب مستوی میں واقع ہے۔چوکور کا ایک راس \عددی{L} پر واقع ہے۔ یہ چوکور \عددی{L} پر \عددی{h} فاصلہ طے کرنے کے دوران    \عددی{L} کے گرد ایک چکر  کاٹ کر پیچ  دار  ستون  پیدا کرتا ہے جس کا رقبہ عمودی تراش چوکور ہو گا۔
+ایک چوکور جس کا ضلع \عددی{s} ہے لکیر \عددی{L} کے \بدل{قائمہ} مستوی میں واقع ہے۔چوکور کا ایک راس \عددی{L} پر واقع ہے۔ یہ چوکور \عددی{L} پر \عددی{h} فاصلہ طے کرنے کے دوران    \عددی{L} کے گرد ایک چکر  کاٹ کر پیچ  دار  ستون  پیدا کرتا ہے جس کا رقبہ عمودی تراش چوکور ہو گا۔
 \begin{enumerate}[a.]
 \item
 پیچ دار ستون کا حجم تلاش کریں۔
@@ -1686,7 +1685,7 @@ $8\pi$
 \انتہا{جواب}
 %=======================
 \ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_ٹھوس_جسم_حجم_ب}
-ایک ٹھوس جسم \عددی{x=01} اور \عددی{x=12} پر  محور \عددی{x} کے لمب مستویات کے بیچ واقع ہے۔ جسم کی  عمودی تراش محور \عددی{x} کے لمب ہیں جن کے  قطر لکیر \عددی{y=\tfrac{x}{2}} سے لکیر \عددی{y=x} تک ہیں (شکل \حوالہ{شکل_سوال_تکمل_استعمال_ٹھوس_جسم_حجم_ب})۔ اس جسم کا حجم کیوں اس قائمہ مخروط جتنا ہو گا جس کا قد \عددی{12} اور جس کے قاعدے  کا رداس \عددی{3} ہو؟ 
+ایک ٹھوس جسم \عددی{x=01} اور \عددی{x=12} پر  محور \عددی{x} کے \بدل{قائمہ} مستویات کے بیچ واقع ہے۔ جسم کی  عمودی تراش محور \عددی{x} کے \بدل{قائمہ} ہیں جن کے  قطر لکیر \عددی{y=\tfrac{x}{2}} سے لکیر \عددی{y=x} تک ہیں (شکل \حوالہ{شکل_سوال_تکمل_استعمال_ٹھوس_جسم_حجم_ب})۔ اس جسم کا حجم کیوں اس قائمہ مخروط جتنا ہو گا جس کا قد \عددی{12} اور جس کے قاعدے  کا رداس \عددی{3} ہو؟ 
 \انتہا{سوال}
 %======================
 \begin{figure}
@@ -1740,17 +1739,22 @@ $8\pi$
 \draw(-\la,0)--(0,-\h)--(\la,0);
 \draw(0,-\h/2) circle (\laa cm and 0.25*\laa cm);
 \draw(0,-\h)--(0,-\h/2)node[pos=0.6,left]{$h$}--++(\laa,0)node[pos=0.5,above,fill=white]{$h$};
-\begin{scope}[xshift=-3.5cm,yscale=1.5]
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\begin{tikzpicture}[yscale=1.5]
+\pgfmathsetmacro{\la}{1.25}
+\pgfmathsetmacro{\laa}{\la/2}
+\pgfmathsetmacro{\h}{4/3*\la}
 \draw([shift={(180:\la cm and 0.25*\la cm)}]0,-2/3*\h) arc (180:360:\la cm and 0.25*\la cm);
 \draw[dashed]([shift={(0:\la cm and 0.25*\la cm)}]0,-2/3*\h) arc (0:180:\la cm and 0.25*\la cm);
 \draw([shift={(0:\la cm)}]0,-2/3*\h) arc (0:180:\la)node[pos=0.75,left]{\RL{نصف کرہ}};
 \draw(0,-2/3*\h)--++(0,\h/3)node[pos=0.35,left]{$h$}--++({sqrt(\la^2-(\h/3)^2)},0)node[pos=0.5,above,xshift=-1ex]{$\sqrt{R^2-h^2}$}--(0,-2/3*\h)node[pos=0.6,below right]{$R$};
-\end{scope}
 \end{tikzpicture}
+\end{minipage}
 \caption
 {کرہ اور بیلن دونوں میں  سے مخروط منفی کر کے دونوں صورتوں میں  برابر حجم  حاصل ہوتا ہے (سوال \حوالہ{سوال_تکمل_استعمال_نصف_کرہ_حجم})۔}
 \label{شکل_سوال_تکمل_استعمال_نصف_کرہ_حجم}
-\end{minipage}
 \end{figure}
 \ابتدا{سوال}\شناخت{سوال_تکمل_استعمال_چوڑائی_برابر}\ترچھا{مسئلہ کوالئیرے کی ابتدائی صورت}\\
 کوالئیرے نے طالب علمی کے دوران دریافت کیا کہ اگر دو مستوی خطوں کو محور \عددی{x} کے یکساں وقفہ پر یوں رکھنا ممکن ہو کہ کسی بھی \عددی{x} پر دونوں خطوں کی چوڑائی یکساں  ہو تب دونوں خطوں کا رقبہ یکساں  ہو گا (شکل \حوالہ{شکل_سوال_تکمل_استعمال_چوڑائی_برابر})۔ ٹھوس اجسام کے لیے   کوالئیرے نے یہی مسئلہ  کبھی ثابت نہیں کیا۔ اگر شکل \حوالہ{سوال_تکمل_استعمال_چوڑائی_برابر} میں بالائی اور زیریں سرحدیں استمراری تفاعل ہوں تب اس مسئلے کو ثابت کریں۔
@@ -2093,7 +2097,7 @@ H&=\int_{-\sqrt{2}}^{\sqrt{2}}\pi[R(y)]^2\dif y&&\text{\RL{مساوات \حوا�
 %==========================
 \begin{figure}
 \centering
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.38\textwidth}
 \centering
 \begin{tikzpicture}[font=\small,declare function={f(\x)=sqrt(\x-1);}]
 \draw[-latex](-0.2,0)--(3.5,0)node[right]{$x$};
@@ -2116,7 +2120,7 @@ H&=\int_{-\sqrt{2}}^{\sqrt{2}}\pi[R(y)]^2\dif y&&\text{\RL{مساوات \حوا�
 \end{tikzpicture}
 \caption{}
 \end{subfigure}\hfill
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.52\textwidth}
 \centering
 \begin{tikzpicture}[font=\small,declare function={f(\x)=sqrt(\x-1);}]
 \pgfmathsetmacro{\a}{f(1.5)}
@@ -2226,7 +2230,7 @@ H=\int_a^b\pi([R(x)]^2-[r(x)]^2)\dif x
 
 \حل
 \موٹا{پہلا قدم:}\quad
-منحنی اور لکیر ترسیم کر کے خطے کا خاکہ بنا کر خطے پر محور طواف کے لمب لکیر کھینچیں (شکل \حوالہ{شکل_مثال_تکمل_استعمال_چھلا_عجیب})۔\\
+منحنی اور لکیر ترسیم کر کے خطے کا خاکہ بنا کر خطے پر محور طواف کے \بدل{قائمہ} لکیر کھینچیں (شکل \حوالہ{شکل_مثال_تکمل_استعمال_چھلا_عجیب})۔\\
 \موٹا{دوسرا قدم:}\quad
 نقاط تقاطع سے تکمل کی حدیں تلاش کریں۔
 \begin{align*}
@@ -2312,7 +2316,7 @@ H&=\int_a^b\pi([R(x)]^2-[r(x)]^2)\dif x\\
 \موٹا{ترکیب چھلا سے حجم کی تلاش}\\
 \begin{enumerate}[a.]
 \item
-خطے کا خاکہ بنا کر اس پر محور طواف کے لمب لکیری قطعہ کھینچیں۔ خطہ کو محور طواف کے گرد گھمانے سے یہ قطعہ  نمائندہ عمودی تراش دے گا۔
+خطے کا خاکہ بنا کر اس پر محور طواف کے \بدل{قائمہ} لکیری قطعہ کھینچیں۔ خطہ کو محور طواف کے گرد گھمانے سے یہ قطعہ  نمائندہ عمودی تراش دے گا۔
 \item
 تکمل کی حدیں دریافت کریں۔
 \item
@@ -2328,7 +2332,7 @@ H&=\int_a^b\pi([R(x)]^2-[r(x)]^2)\dif x\\
 
 \حل
 \موٹا{پہلا قدم:}\quad
-خطے کا خاکہ کھینچ کر خطہ پر محور طواف کے لمب لکیری قطعہ  بنائیں (شکل \حوالہ{شکل_مثال_تکمل_استعمال_دو_منحنیات_کے_بیچ})۔ یہاں محور طواف محور \عددی{y} ہے۔\\
+خطے کا خاکہ کھینچ کر خطہ پر محور طواف کے \بدل{قائمہ} لکیری قطعہ  بنائیں (شکل \حوالہ{شکل_مثال_تکمل_استعمال_دو_منحنیات_کے_بیچ})۔ یہاں محور طواف محور \عددی{y} ہے۔\\
 \موٹا{دوسرا قدم:}\quad
 قطع مکافی اور لکیر ایک دوسرے کو \عددی{y=0} اور \عددی{y=4} پر قطع کرتے ہیں لہٰذا تکمل کی حدیں \عددی{c=0} اور \عددی{d=4} ہوں گی۔\\
 \موٹا{تیسرا قدم:}\quad
@@ -2401,7 +2405,7 @@ H&=\int_c^d\pi([R(y)]^2-[r(y)]^2)\dif y\\
 
 \حل
 \موٹا{پہلا قدم:}\quad
-خطہ کے خاکہ پر محور طواف \عددی{x=\tfrac{3}{2}} کے لمب، لکیری قطعہ بنائیں (شکل \حوالہ{شکل_مثال_تکمل_استعمال_پیچیدہ})۔\\
+خطہ کے خاکہ پر محور طواف \عددی{x=\tfrac{3}{2}} کے \بدل{قائمہ}، لکیری قطعہ بنائیں (شکل \حوالہ{شکل_مثال_تکمل_استعمال_پیچیدہ})۔\\
 \موٹا{دوسرا قدم:}\quad
 تکمل کی حدیں \عددی{y=0} اور \عددی{y=1} ہیں۔\\
 \موٹا{تیسرا قدم:}\quad
@@ -2421,12 +2425,12 @@ H&=\int_c^d\pi([R(y)]^2-[r(y)]^2)\dif y\\
 \centering
 \begin{tikzpicture}[xscale=2,yscale=2,font=\small,declare function={fa(\x)=\x^2;}]
 \pgfmathsetmacro{\c}{0.7}
-\draw[-latex](-0.2,0)--(2,0)node[right]{$x$};
+\draw[-latex](-0.2,0)--(1.75,0)node[right]{$x$};
 \draw[-latex](0,-0.2)--(0,1.5)node[above]{$y$};
 \draw[]plot[domain=0:1]({\x},{fa(\x)});
 \draw(0,1)node[left]{$1$}--(1,1);
 \draw[thick,gray]([shift={(-50:0.3cm and 0.1cm)}]1.5,1) arc (-50:120:0.3cm and 0.1cm);
-\draw(1,0)node[below]{$1$}--++(0,0.1)  (1.5,0)node[below]{$\tfrac{3}{2}$}--++(0,1.5)node[pos=0.9,right]{$x=\tfrac{3}{2}$};
+\draw(1,0)node[below]{$1$}--++(0,0.1)  (1.5,0)node[below]{$\tfrac{3}{2}$}--++(0,1.5)node[above]{$x=\tfrac{3}{2}$};
 \draw[thick,gray,-stealth]([shift={(120:0.3cm and 0.1cm)}]1.5,1) arc (120:240:0.3cm and 0.1cm);
 \draw(0.5,{fa(0.5)})node[right]{$x=\sqrt{y}$};
 \draw[stealth-stealth](0,1.25)--(1.5,1.25)node[pos=0.5,fill=white]{$R(x)$};
@@ -2460,7 +2464,7 @@ H&=\int_c^d\pi([R(y)]^2-[r(y)]^2)\dif y\\
 \end{scope}
 \draw(0,{fa(\c)})++(-0.1,0)--++(-0.2,0)coordinate[pos=0.5](kt);
 \draw(0,{fa(\c)-0.05})++(-0.1,0)--++(-0.2,0)coordinate[pos=0.5](kb);
-\draw[stealth-] (kt)--++(0,0.2)--++(-0.2,0)node[left]{$\dif y$};
+\draw[stealth-] (kt)--++(0,0.2)node[above]{$\dif y$};
 \draw[stealth-](kb)--++(0,-0.2);
 \end{tikzpicture}
 \caption{}
@@ -2677,7 +2681,7 @@ $\pi^2-2\pi$
 %=====================
 \begin{figure}
 \centering
-\begin{minipage}{0.2\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt(cos(deg(\x)));}]
 \pgfmathsetmacro{\k}{pi/2}
@@ -2691,10 +2695,10 @@ $\pi^2-2\pi$
 \draw(axis cs:-\k,0)--(axis cs:-\k,1)  (axis cs:\k,0)--(axis cs:\k,1);
 \end{axis}
 \end{tikzpicture}
-\caption{}
+\caption{خطہ برائے سوال \حوالہ{سوال_تکمل_استعمال_حجم_سوراخ_الف}}
 \label{شکل_سوال_تکمل_استعمال_حجم_سوراخ_الف}
 \end{minipage}\hfill
-\begin{minipage}{0.2\textwidth}
+\begin{minipage}{0.45\textwidth}
 \centering
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=tan(deg(\x));}]
 \pgfmathsetmacro{\k}{pi/4}
@@ -2705,7 +2709,7 @@ $\pi^2-2\pi$
 \draw(axis cs:1,0)--(axis cs:1,\k);
 \end{axis}
 \end{tikzpicture}
-\caption{}
+\caption{خطہ برائے سوال \حوالہ{سوال_تکمل_استعمال_حجم_سوراخ_ب}}
 \label{شکل_سوال_تکمل_استعمال_حجم_سوراخ_ب}
 \end{minipage}
 \end{figure}
@@ -3195,7 +3199,7 @@ H=\int_c^d2\pi(\text{\RL{رداس خول}})(\text{\RL{قد خول}})\dif y=\int_
 جہاں خول کا اوسط رداس \عددی{\tfrac{R_2+R_1}{2}}، خول کی موٹائی \عددی{R_2-R_1r}، اور خول کا قد \عددی{h} ہے۔
 \begin{figure}
 \centering
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.40\textwidth}
 \centering
 \begin{tikzpicture}
 \pgfmathsetmacro{\rr}{1.25}
@@ -3224,7 +3228,7 @@ H=\int_c^d2\pi(\text{\RL{رداس خول}})(\text{\RL{قد خول}})\dif y=\int_
 \end{tikzpicture}
 \caption{}
 \end{subfigure}\hfill
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.55\textwidth}
 \centering
 \begin{tikzpicture}
 \pgfmathsetmacro{\rr}{1.25}
@@ -3643,7 +3647,7 @@ $\tfrac{14\pi}{3}$
 %
 \begin{figure}
 \centering
-\begin{minipage}{0.3\textwidth}
+\begin{minipage}{0.32\textwidth}
 \centering
 \begin{tikzpicture}[font=\footnotesize,declare function={f(\x)=3-\x^2;}]
 \pgfmathsetmacro{\c}{0.9}
@@ -3930,7 +3934,7 @@ $y=\sqrt{x},\quad y=0,\quad y=2-x$
 %============================
 \begin{figure}
 \centering
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.26\textwidth}
 \centering
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=sin(deg(\x))/(\x);}]
 \begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={3.124},xticklabels={$\pi$},ytick={1},enlargelimits=true]
@@ -3954,7 +3958,7 @@ $y=\sqrt{x},\quad y=0,\quad y=2-x$
 \caption{}
 \label{شکل_سوال_تکمل_استعمال_خطہ_تراکیب_مختلف_ب}
 \end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.20\textwidth}
 \centering
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=sqrt((\x+2)/3);g(\x)=sqrt(\x);}]
 \begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={-2,1}, ytick={1},enlargelimits=true]
@@ -3966,7 +3970,7 @@ $y=\sqrt{x},\quad y=0,\quad y=2-x$
 \caption{}
 \label{شکل_سوال_تکمل_استعمال_خطہ_تراکیب_مختلف_ج}
 \end{minipage}\hfill
-\begin{minipage}{0.22\textwidth}
+\begin{minipage}{0.20\textwidth}
 \centering
 \begin{tikzpicture}[font=\tiny,declare function={f(\x)=\x^2;g(\x)=-\x^4;}]
 \begin{axis}[clip=false,width=4cm,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},xtick={\empty}, ytick={-1,1},enlargelimits=true]
@@ -4060,7 +4064,7 @@ $3x$
 \centering
 \begin{tikzpicture}[declare function={f(\x)=0.25+\x*(\x-1)*(\x-1.5);}]
 \begin{axis}[small,axis lines=middle,xlabel={$x$},ylabel={$y$},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south},enlargelimits=true,xtick={0.2,0.4,0.7,0.9,1.3,1.6},xticklabels={$a$,,,$x_{k-1}$,$x_k$,$b$},ytick={\empty},ymin=0]
-\addplot[domain=0.2:1.6,smooth]{f(x)}node[pos=0,left]{$A$}node[pos=1,right]{$B$}node[pos=0.25,above right]{$y=f(x)$};
+\addplot[domain=0.2:1.6,smooth]{f(x)}node[pos=0,left,xshift=0.2em]{$A$}node[pos=1,right]{$B$}node[pos=0.25,above right]{$y=f(x)$};
 \draw(0.2,{f(0.2)})--(0.4,{f(0.4)})--(0.7,{f(0.7)})--(0.9,{f(0.9)})--(1.3,{f(1.3)})--(1.6,{f(1.6)});
 \draw[dashed](0.9,{f(0.9)})node[left,xshift={-1ex}]{$P$}--(0.9,{f(1.3)})node[pos=0.6,left]{$\Delta y_k$}--(1.3,{f(1.3)})node[pos=0.4,below]{$\Delta x_x$}node[below right]{$Q$};
 \draw($(0.9,{f(0.9)})!0.5!(1.3,{f(1.3)})$)node[pin={[font=\footnotesize,xshift={1ex},yshift={1ex}]90:{$\sqrt{(\Delta x_k)^2+(\Delta y_k)^2}$}}]{};
@@ -4478,7 +4482,7 @@ $1$
 %==========================
 \begin{figure}
 \centering
-\begin{minipage}{0.30\textwidth}
+\begin{minipage}{0.32\textwidth}
 \centering
 \begin{tikzpicture}[font=\footnotesize,declare function={f(\x)=(1-\x^(2/3))^(3/2);}]
 \begin{axis}[width=5cm,axis lines=middle,xlabel={$x$},ylabel={$y$},enlargelimits=true,xtick={-1,1},ytick={-1,1},xlabel style={at={(current axis.right of origin)},anchor=west},ylabel style={at={(current axis.above origin)},anchor=south}]
@@ -4491,7 +4495,7 @@ $1$
 \caption{ستارہ نما۔}
 \label{شکل_سوال_تکمل_استعمال_ستارہ_نما}
 \end{minipage}\hfill
-\begin{minipage}{0.30\textwidth}
+\begin{minipage}{0.25\textwidth}
 \centering
 \begin{tikzpicture}[xscale=0.75,declare function={f(\x)=0.2*sin(deg(10*\x));}]
 \pgfmathsetmacro{\l}{2}
@@ -4504,7 +4508,7 @@ $1$
 \caption{نالیدار چادر۔}
 \label{شکل_سوال_تکمل_استعمال_اعدادی_الف}
 \end{minipage}\hfill
-\begin{minipage}{0.30\textwidth}
+\begin{minipage}{0.34\textwidth}
 \centering
 \begin{tikzpicture}[font=\small]
 \pgfmathsetmacro{\l}{2}
@@ -4729,7 +4733,7 @@ $f(x)=x^3-x^2,\quad -1\le x\le 1$
 
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.50\textwidth}
 \centering
 \begin{tikzpicture}[font=\small,declare function={f(\x)=2-\x^2;}]
 \begin{axis}[clip=false,small,axis lines=middle,axis y line=none,ymin=0,xtick={\a,\c},xticklabels={$x_{k-1}$,$x_k$},enlargelimits=true,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west}]
@@ -4738,7 +4742,7 @@ $f(x)=x^3-x^2,\quad -1\le x\le 1$
 \pgfmathsetmacro{\c}{1}
 \addplot[thick,domain=0:\b]{f(x)};
 \addplot[thick,domain=0:0.5]({-x},{f(x)})node[pos=1,above,xshift=-1.5ex,yshift=1ex]{$y=f(x)$};
-\draw(\a,{f(\a)})node[above]{$P$}--(\c,{f(\c)})node[above]{$Q$}node[pos=0.25,pin={[font=\footnotesize]60:{$L=\sqrt{(\Delta x_k)^2+(\Delta y_k)^2}$}}]{};
+\draw(\a,{f(\a)})node[above]{$P$}--(\c,{f(\c)})node[above]{$Q$}node[pos=0.25,pin={[font=\footnotesize,xshift=-1em]60:{$L=\sqrt{(\Delta x_k)^2+(\Delta y_k)^2}$}}]{};
 \draw[dashed](0,{f(\c)})--(0,0);
 \draw[dashed](\c,{f(\c)})--(\c,0);
 \draw(\c,{f(\c)})--(0,{f(\c)})--(0,{f(0)});
@@ -4756,7 +4760,7 @@ $f(x)=x^3-x^2,\quad -1\le x\le 1$
 \caption{لکیر اور قوس $PQ$ کے ساتھ وابستہ متغیرات۔}
 \label{مساوات_تکمل_استعمال_لکیر_قوس_اہم_متغیرات}
 \end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.40\textwidth}
 \centering
 \begin{tikzpicture}[font=\small,declare function={f(\x)=2-\x^2;g(\x)=7/4-(\x-1/2);}]
 \begin{axis}[clip=false,small,axis lines=middle,axis y line=none,ymin=0,xtick={\a,\c,0.5},xticklabels={$x_{k-1}$,$x_k$,$c_k$},enlargelimits=true,xlabel={$x$},xlabel style={at={(current axis.right of origin)},anchor=west}]
@@ -5252,7 +5256,7 @@ $y=\tfrac{1}{3}(x^2+2)^{3/2},\quad 0\le x\le \sqrt{2},\quad y\,\text{محور}$
 %================
 \begin{figure}
 \centering
-\begin{minipage}{0.3\textwidth}
+\begin{minipage}{0.36\textwidth}
 \centering
 \begin{tikzpicture}[scale=4/3,font=\small,declare function={f(\x)=(1-\x^(2/3))^(3/2);}]
 \draw[-latex](-1.25,0)--(1.5,0)node[right]{$x$};
@@ -5267,7 +5271,7 @@ $y=\tfrac{1}{3}(x^2+2)^{3/2},\quad 0\le x\le \sqrt{2},\quad y\,\text{محور}$
 \caption{}
 \label{شکل_سوال_تکمل_استعمال_دوبارہ_ستارہ_نما}
 \end{minipage}\hfill
-\begin{minipage}{0.3\textwidth}
+\begin{minipage}{0.28\textwidth}
 \begin{tikzpicture}[scale=2/3,font=\small]
 \centering
 \pgfmathsetmacro{\rr}{1.5}
@@ -5280,7 +5284,7 @@ $y=\tfrac{1}{3}(x^2+2)^{3/2},\quad 0\le x\le \sqrt{2},\quad y\,\text{محور}$
 \draw[dashed]([shift={(-\ang:\rr)}]0,0) arc (-\ang:180+\ang:\rr);
 \draw(0,-\rr+\h) circle (\r cm and 0.2 cm);
 \draw([shift={(180+\ang:\rr)}]0,0) arc (180+\ang:360-\ang:\rr);
-\draw(45:\rr)node[above right]{$x^2+y^2=16^2$};
+\draw(45:\rr)node[above right,xshift=-1em]{$x^2+y^2=16^2$};
 \draw[stealth-stealth](\r+0.4,-\rr+\h)--++(0,-\h)node[pos=0.5,right]{$\SI{9}{\centi\meter}$};
 \draw(\r+0.3,-\rr+\h)--++(0.2,0);
 \draw(\r+0.3,-\rr)--++(0.2,0);
@@ -5288,7 +5292,7 @@ $y=\tfrac{1}{3}(x^2+2)^{3/2},\quad 0\le x\le \sqrt{2},\quad y\,\text{محور}$
 \caption{}
 \label{شکل_سوال_تکمل_استعمال_رنگ}
 \end{minipage}\hfill
-\begin{minipage}{0.3\textwidth}
+\begin{minipage}{0.32\textwidth}
 \begin{tikzpicture}[scale=1,font=\small,declare function={f(\x)=sqrt(1-\x^2);}]
 \pgfmathsetmacro{\k}{0.3}
 \pgfmathsetmacro{\t}{0.3}
@@ -5915,7 +5919,7 @@ M=\int\dif m=\int_0^2\frac{3}{2}(2-y)\dif y=\frac{3}{2}\left[2y-\frac{y^2}{2}\ri
 \end{tikzpicture}
 \caption{انتصابی پٹیاں۔}
 \end{subfigure}\hfill
-\begin{subfigure}{0.3\textwidth}
+\begin{subfigure}{0.34\textwidth}
 \centering
 \begin{tikzpicture}[font=\small,xscale=2,declare function={f(\x)=2*\x;}]
 \pgfmathsetmacro{\k}{0.6}
@@ -7050,7 +7054,7 @@ $\SI{400}{\newton\per\meter}$
 %=======================
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.50\textwidth}
 \centering
 \begin{tikzpicture}
 \pgfmathsetmacro{\l}{2.5}
@@ -7074,7 +7078,7 @@ $\SI{400}{\newton\per\meter}$
 \caption{زیر زمین حوض (سوال \حوالہ{سوال_تکمل_استعمال_حوض_زیر_زمین_الف})}
 \label{شکل_سوال_تکمل_استعمال_حوض_زیر_زمین_الف}
 \end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.40\textwidth}
 \centering
 \begin{tikzpicture}
 \pgfmathsetmacro{\l}{2.5}
@@ -7439,7 +7443,7 @@ F=pS=(392000)(50\pi)=\SI{61575216.01}{\newton}
 اس مثال میں پٹی کے نچلے حصے کی گہرائی \عددی{\SI{40}{\meter}} اور بالائی حصے کی گہرائی \عددی{\SI{39}{\meter}} تھی، لہٰذا ان پر فشار   مختلف ہو گا۔ ہم نے اس حقیقت کو نظر انداز کیا۔ آئیں متغیر گہرائی کی صورت میں فشار پر غور کریں۔
 
 \جزوحصہء{متغیر گہرائی پر فشار}
-فرض کریں ہم کثافت \عددی{\rho} کے سیال میں ڈوبی ہوئی انتصابی تختی کی ایک طرف پر قوت سیال جاننا چاہتے ہیں۔ ہم تختی کو مستوی  \عددی{xy} میں خطہ \عددی{y=a} تا \عددی{y=b} تصور کرتے ہیں (شکل \حوالہ{شکل_تکمل_استعمال_قوت_سیال})۔ ہم \عددی{[a,b]} کی خانہ بندی کرتے ہیں۔ ہم اس خطہ کو نقاط خانہ بندی پر محور \عددی{y} کے لمب فرضی سطحوں سے باریک افقی پٹیوں میں تقسیم کرتے ہیں۔ ایک نمائندہ پٹی، جو \عددی{y} سے \عددی{y+\Delta y} تک ہو، کی چوڑائی \عددی{\Delta y} ہو گی، جبکہ اس پٹی کے نچلے ضلع کی لمبائی \عددی{L(y)} ہو گی۔ ہم فرض کرتے ہیں کہ \عددی{L(y)} متغیر \عددی{y} کا استمراری تفاعل ہے۔
+فرض کریں ہم کثافت \عددی{\rho} کے سیال میں ڈوبی ہوئی انتصابی تختی کی ایک طرف پر قوت سیال جاننا چاہتے ہیں۔ ہم تختی کو مستوی  \عددی{xy} میں خطہ \عددی{y=a} تا \عددی{y=b} تصور کرتے ہیں (شکل \حوالہ{شکل_تکمل_استعمال_قوت_سیال})۔ ہم \عددی{[a,b]} کی خانہ بندی کرتے ہیں۔ ہم اس خطہ کو نقاط خانہ بندی پر محور \عددی{y} کے \بدل{قائمہ} فرضی سطحوں سے باریک افقی پٹیوں میں تقسیم کرتے ہیں۔ ایک نمائندہ پٹی، جو \عددی{y} سے \عددی{y+\Delta y} تک ہو، کی چوڑائی \عددی{\Delta y} ہو گی، جبکہ اس پٹی کے نچلے ضلع کی لمبائی \عددی{L(y)} ہو گی۔ ہم فرض کرتے ہیں کہ \عددی{L(y)} متغیر \عددی{y} کا استمراری تفاعل ہے۔
 \begin{figure}
 \centering
 \begin{tikzpicture}[font=\small]
@@ -7655,7 +7659,7 @@ $\SI{6.08e7}{\newton}$
 %=======================
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.50\textwidth}
 \centering
 \begin{tikzpicture}[scale=0.75,font=\small,declare function={f(\x)=\x;}]
 \pgfmathsetmacro{\L}{4}
@@ -7678,7 +7682,7 @@ $\SI{6.08e7}{\newton}$
 \caption{مثلث تختی (سوال \حوالہ{سوال_تکمل_استعمال_مثلث_قوت_پانی_الف})}
 \label{شکل_سوال_تکمل_استعمال_مثلث_قوت_پانی_الف}
 \end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.40\textwidth}
 \centering
 \begin{tikzpicture}[scale=0.75,font=\small,declare function={f(\x)=\x;}]
 \pgfmathsetmacro{\L}{4}
@@ -7742,7 +7746,7 @@ $\SI{163333}{\newton}$
 \draw(-\l/2,\h+0.1)--++(0,0.2)  (\l/2,\h+0.1)--++(0,0.2);
 \draw(0,0)--(\l/2,\h)--(-\l/2,\h)--(0,0);
 \draw(-\l/2-0.5,\h+0.5)--++(\l+1,0)node[above left]{\text{\RL{سطح پانی}}};
-\draw[stealth-stealth](\l/2+0.4,0)--++(0,\h)node[pos=0.5,right]{$\SI{4}{\meter}$};
+\draw[stealth-stealth](\l/2+0.4,0)--++(0,\h)node[pos=0.3,left]{$\SI{4}{\meter}$};
 \draw(\l/2+0.3,\h)--++(0.2,0);
 \draw(\l/2+0.3,0)--++(0.2,0);
 \draw[stealth-stealth](-\l/2-0.4,\h)--++(0,0.5)node[pos=0.5,left]{$\SI{1}{\meter}$};
@@ -8104,7 +8108,7 @@ s(b)-s(a)=(F(b)+C)-(F(a)+C)=F(b)-F(a)=\int_a^bv(t)\dif t
 \end{tikzpicture}
 \caption{سرعتی  تفاعل۔}
 \end{subfigure}\hfill
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.50\textwidth}
 \centering
 \begin{tikzpicture}
 \pgfmathsetmacro{\ka}{1/2*pi}
@@ -8123,9 +8127,9 @@ s(b)-s(a)=(F(b)+C)-(F(a)+C)=F(b)-F(a)=\int_a^bv(t)\dif t
 \جزوحصہء{قاعدہ دولس}
 آپ جانتے ہیں کہ  چننے کے بعد سیب کا ذائقہ  وقت کے ساتھ تبدیل ہوتا ہے۔ سیب میں شکر وقت کے ساتھ نشاستے میں تبدیل ہوتی ہے۔ سیب میں نشاستے  کی مقدار معلوم کرنے کے لیے ہم سیب کے ایک باریک کتلے  کو خوردبین میں دیکھتے ہیں۔ نشاستہ کے ہر دانے  کی  سطح عمودی تراش میں  خوردبین  سے  صاف نظر آتی ہے، لہٰذا کتلے کی سطح میں نشاستے  کے رقبے اور عمودی تراش کے رقبے  کا تناسب معلوم کیا جا سکتا ہے۔ یہ دو بُعدی تناسب سیب میں نشاستہ کے تین بُعدی تناسب کے برابر ہو گا۔ دو بُعدی اور تین بُعدی تناسب کی یکسانیت  اوسط  کی قیمت کے  تصور پر مبنی ہے۔
 
-فرض کریں ہم کسی ٹھوس  جسم میں دانہ دار مادّہ کی تناسب جاننا چاہتے ہیں۔ ہم ٹھوس جسم سے موزوں نمونہ حاصل کرتے ہیں جس کو کاٹ کر ایک مکعب حاصل کیا جاتا ہے۔ اس مکعب کا ضلع \عددی{L} ہے۔ اس مکعب کو شکل \حوالہ{شکل_تکمل_استعمال_مسئلہ_دوسل} میں دکھایا گیا ہے جہاں مکعب کا ضلع محور \عددی{x} پر  ہے۔ ہم وقفہ \عددی{[0,L]} کے لمب سطحوں سے اس مکعب کو کتلوں میں تقسیم کرتے ہیں۔ فرض کریں \عددی{x} پر دانہ دار مادے کے رقبے کا تناسب \عددی{r(x)} ہے۔ فرض کریں کہ \عددی{r(x)} متغیر \عددی{x} کا استمراری تفاعل ہے۔ 
+فرض کریں ہم کسی ٹھوس  جسم میں دانہ دار مادّہ کی تناسب جاننا چاہتے ہیں۔ ہم ٹھوس جسم سے موزوں نمونہ حاصل کرتے ہیں جس کو کاٹ کر ایک مکعب حاصل کیا جاتا ہے۔ اس مکعب کا ضلع \عددی{L} ہے۔ اس مکعب کو شکل \حوالہ{شکل_تکمل_استعمال_مسئلہ_دوسل} میں دکھایا گیا ہے جہاں مکعب کا ضلع محور \عددی{x} پر  ہے۔ ہم وقفہ \عددی{[0,L]} کے \بدل{قائمہ} سطحوں سے اس مکعب کو کتلوں میں تقسیم کرتے ہیں۔ فرض کریں \عددی{x} پر دانہ دار مادّے کے رقبے کا تناسب \عددی{r(x)} ہے۔ فرض کریں کہ \عددی{r(x)} متغیر \عددی{x} کا استمراری تفاعل ہے۔ 
 
-اب وقفہ \عددی{[0,L]} کی خانہ بندی کریں۔نقاط خانہ بندی پر محور \عددی{x} کے لمب سطحوں سے مکعب کو کتلوں میں تقسیم کریں۔ \عددی{k} ویں ذیلی وقفے کی لمبائی \عددی{\Delta x_k} ہو گی، جو نقطہ \عددی{x_{k-1}} اور نقطہ \عددی{x_k} پر واقع سطحوں کے بیچ فاصلہ  ہے۔اگر یہ سطحیں کافی قریب قریب  ہوں،  تب یہ دانوں کو بیلنی شکل میں کاٹیں گی۔ ان بیلنوں کا قاعدہ \عددی{x_k} پر ہو گا۔ ان سطحوں کے بیچ دانہ دار مادّہ کا حجمی تناسب وہی ہو گا  جو \عددی{x_k} پر سطح میں دانہ دار مادّہ کا سطحی تناسب ہے،  جو ان بیلنوں کے قاعدے  کے برابر ہے، جو از خود تقریباً \عددی{r(x)} ہو گا۔یوں دو قریبی سطحوں کے بیچ دانہ دار مادّہ کی مقدار درج ذیل ہو گی۔
+اب وقفہ \عددی{[0,L]} کی خانہ بندی کریں۔نقاط خانہ بندی پر محور \عددی{x} کے \بدل{قائمہ} سطحوں سے مکعب کو کتلوں میں تقسیم کریں۔ \عددی{k} ویں ذیلی وقفے کی لمبائی \عددی{\Delta x_k} ہو گی، جو نقطہ \عددی{x_{k-1}} اور نقطہ \عددی{x_k} پر واقع سطحوں کے بیچ فاصلہ  ہے۔اگر یہ سطحیں کافی قریب قریب  ہوں،  تب یہ دانوں کو بیلنی شکل میں کاٹیں گی۔ ان بیلنوں کا قاعدہ \عددی{x_k} پر ہو گا۔ ان سطحوں کے بیچ دانہ دار مادّہ کا حجمی تناسب وہی ہو گا  جو \عددی{x_k} پر سطح میں دانہ دار مادّہ کا سطحی تناسب ہے،  جو ان بیلنوں کے قاعدے  کے برابر ہے، جو از خود تقریباً \عددی{r(x)} ہو گا۔یوں دو قریبی سطحوں کے بیچ دانہ دار مادّہ کی مقدار درج ذیل ہو گی۔
 \begin{align*}
 (\text{\RL{تناسب}})\times(\text{\RL{کتلے کا حجم}})=r(x)L^2\Delta x_k
 \end{align*}
@@ -8145,9 +8149,9 @@ s(b)-s(a)=(F(b)+C)-(F(a)+C)=F(b)-F(a)=\int_a^bv(t)\dif t
 &=\frac{\int_0^L r(x)L^2\dif x}{L^3}\\
 &=\frac{1}{L}\int_0^L r(x)\dif x\\
 &=\text{\RL{$[0,L]$ پر $r$  کی اوسط قیمت}}\\
-&=\text{\RL{نمائندہ سطح عمودی تراش میں دانہ دار مادے کا سطحی تناسب}}
+&=\text{\RL{نمائندہ سطح عمودی تراش میں دانہ دار مادّے کا سطحی تناسب}}
 \end{align*}
-یہ \اصطلاح{قاعدہ دولس}\فرہنگ{قاعدہ!دولس}\حاشیہب{Delesse's rule}\فرہنگ{rule!Delesse's} ہے، جسے فرانسیسی  ماہر ارضیات اشیلہ ارنسٹ دولس\عددی{ [1817-1881]} نے دریافت کیا۔ یوں وقفہ \عددی{[0,L]} پر \عددی{r(x)} کی اوسط قیمت \عددی{\bar{r}} سے ٹھوس جسم میں دانہ دار مادے کا تناسب حاصل ہو گا۔حقیقت میں کئی رقبہ عمودی تراش پر \عددی{\bar{r}} حاصل کر کے ان کی اوسط لی جاتی ہے۔ 
+یہ \اصطلاح{قاعدہ دولس}\فرہنگ{قاعدہ!دولس}\حاشیہب{Delesse's rule}\فرہنگ{rule!Delesse's} ہے، جسے فرانسیسی  ماہر ارضیات اشیلہ ارنسٹ دولس\عددی{ [1817-1881]} نے دریافت کیا۔ یوں وقفہ \عددی{[0,L]} پر \عددی{r(x)} کی اوسط قیمت \عددی{\bar{r}} سے ٹھوس جسم میں دانہ دار مادّے کا تناسب حاصل ہو گا۔حقیقت میں کئی رقبہ عمودی تراش پر \عددی{\bar{r}} حاصل کر کے ان کی اوسط لی جاتی ہے۔ 
 
 جناب دولس پتھر میں دانہ دار مادّے کے تناسب میں دلچسپی رکھتے تھے۔ وہ نمونی پتھر کی ایک سطح کو اچھی طرح چمکدار بنا کر سطح کے برابر مومی کاغذ کو چمکیلی سطح پر رکھ کر دانہ دار خطوں کی نشاندہی کرتے۔کاغذ کا وزن کرنے کے بعد، دانہ دار خطوں کو کاغذ سے کاٹ کر کاغذ کا وزن دوبارہ کرتے۔ یوں دانہ دار خطوں کے رقبے کا تناسب حاصل کیا جاتا۔ یہ ترکیب آج بھی پٹرول   کے  تیل کی تلاش میں استعمال کی جاتی ہے۔
 \begin{figure}
@@ -8309,7 +8313,7 @@ H=2\pi \rho S
 \انتہا{مسئلہ}
 %====================== 
 \ابتدا{ثبوت}\شناخت{ثبوت_تکمل_استعمال_پاپس_الف}
-ہم محور طواف کو محور \عددی{x}  اور خطہ \عددی{R} کو ربع اول میں لیتے ہیں۔ ہم \عددی{y} پر، محور \عددی{y} کے لمب، خطے  کی  عمودی تراش کی لمبائی کو \عددی{L(y)} سے ظاہر کرتے ہیں (شکل \حوالہ{شکل_ثبوت_تکمل_استعمال_پاپس_الف})۔ ہم فرض کرتے ہیں کہ \عددی{L(y)} استمراری ہے۔ اس خطے  کو محور \عددی{x} کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔
+ہم محور طواف کو محور \عددی{x}  اور خطہ \عددی{R} کو ربع اول میں لیتے ہیں۔ ہم \عددی{y} پر، محور \عددی{y} کے \بدل{قائمہ}، خطے  کی  عمودی تراش کی لمبائی کو \عددی{L(y)} سے ظاہر کرتے ہیں (شکل \حوالہ{شکل_ثبوت_تکمل_استعمال_پاپس_الف})۔ ہم فرض کرتے ہیں کہ \عددی{L(y)} استمراری ہے۔ اس خطے  کو محور \عددی{x} کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔
 
 ہم نلکی خول کی ترکیب سے  اس جسم طواف کا حجم تلاش کرتے ہیں۔
 \begin{align}\label{مساوات_تکمل_استعمال_حجم_مثال}
@@ -8324,7 +8328,7 @@ H=\int_c^d2\pi(\text{\RL{رداس خول}})(\text{\RL{قد خول}})\dif y=2\pi\
 %=====================
 \begin{figure}
 \centering
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.52\textwidth}
 \centering
 \begin{tikzpicture}[]
 \draw[-latex](-0.25,0)--(5.5,0)node[right]{$x$};
@@ -8342,7 +8346,7 @@ H=\int_c^d2\pi(\text{\RL{رداس خول}})(\text{\RL{قد خول}})\dif y=2\pi\
 \caption{خطہ $R$ کو ایک بار محور $x$ کے گرد گھما کر جسم طواف پیدا کیا جاتا ہے۔}
 \label{شکل_ثبوت_تکمل_استعمال_پاپس_الف}
 \end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.40\textwidth}
 \centering
 \begin{tikzpicture}
 \pgfmathsetmacro{\ra}{1.25}
@@ -8565,7 +8569,7 @@ $v(t)=6t^2-18t+12=6(t-1)(t-2),\quad 0\le t\le 3$
 \end{tikzpicture}
 \caption{}
 \end{subfigure}\hfill
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.50\textwidth}
 \centering
 \begin{tikzpicture}[xscale=0.4,yscale=0.3]
 \draw[-latex](-0.25,0)--(11,0)node[right]{$t\,[\si{\second}]$};
