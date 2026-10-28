@@ -55,6 +55,7 @@ if this doesnot work, then first add ~/.local/share/gtksourceview-4/styles/kUrdu
   <color name="very_light_red"                  value="#fcf1f2"/>
   <color name="pale_gray_green"      value="#ebf0eb"/>
   <color name="pastel_green"      value="#e2ece2"/>
+  <color name="urduMas"      value="#00A896"/>
 
   <!-- Global Settings -->
   <style name="current-line"                background="#eeeeec"/>
@@ -127,18 +128,18 @@ if this doesnot work, then first add ~/.local/share/gtksourceview-4/styles/kUrdu
   <style name="latex:command"               foreground="#2E8B57" bold="true"/>
   <style name="latex:include"               use-style="def:preprocessor"/>
  
- <style name="def:masculine"           foreground="pink"/>
-  <style name="def:technicalMasculine"        foreground="pink" background="light_gray"/>
+ <style name="def:masculine"           foreground="urduMas"/>
+  <style name="def:technicalMasculine"        foreground="urduMas" background="light_gray"/>
   <style name="def:feminine"           foreground="red"/>
   <style name="def:technicalFeminine"           foreground="red" background="light_gray"/>
-   <style name="def:genderFree"           foreground="green" underline="true"/>
-   <style name="def:spellingWrongMasculine"           foreground="pink" underline="true"/>
+   <style name="def:genderFree"           foreground="gray" underline="true"/>
+   <style name="def:spellingWrongMasculine"           foreground="urduMas" underline="true"/>
    <style name="def:spellingWrongFeminine"           foreground="red" underline="true"/>
- <style name="def:technicalMasculineCoined"           foreground="pink" background="pastel_green"/>
+ <style name="def:technicalMasculineCoined"           foreground="urduMas" background="pastel_green"/>
  <style name="def:technicalFeminineCoined"           foreground="red" background="pastel_green"/>
- <style name="def:pinkPainted"           foreground="pink" background="very_light_pink" />
- <style name="def:redPainted"           foreground="red" background="very_light_red"/>
- <style name="def:greenUnderlined"           foreground="cyan" background="very_light_red" underline="true"/>
+ <style name="def:masculinePainted"           foreground="urduMas" background="very_light_pink" />
+ <style name="def:femininePainted"           foreground="red" background="very_light_red"/>
+ <style name="def:greenUnderlined"           foreground="green" background="very_light_red" underline="true"/>
 
 
   <style name="sh:variable"                 foreground="#6A5ACD"/>
