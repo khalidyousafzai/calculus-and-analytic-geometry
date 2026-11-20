@@ -23,7 +23,7 @@
 %%\newcommand*{\اصطلاح}[1]{{\color{red}{#1}}}   %colours spills to next word when there is index or footnote entry with the word
 %%\newcommand{\اصطلاح}[1]{{\urdufontBig{#1}}}
 
-\newcommand{\اصطلاح}[1]{{\urduTechTermsfont{#1}}}  %%%moved to main file
+%\newcommand{\اصطلاح}[1]{{\urduTechTermsfont{#1}}}  %%%moved to main file
 \newcommand{\اصطلاحء}[1]{{\small{#1}}} %highlighted where  chance of mixup with  regular urdu meaning
 
 
@@ -40,7 +40,7 @@
 \newcommand*{\استعمال}[1]{\usepackage{#1}}
 
 %footnotes and indexes
-\newcommand*{\حاشیہب}[1]{{\raggedright{\footnote{\textenglish{#1}}}} }          %  moved to main file. footnote to the left hand side
+%\newcommand*{\حاشیہب}[1]{{\raggedright{\footnote{\textenglish{#1}}}}}          %  moved to main file. footnote to the left hand side
 \newcommand*{\حاشیہد}[1]{{\raggedleft{\footnote{#1}}}}
 \newcommand*{\حاشیہط}[1]{\marginpar{#1}}
 
@@ -348,58 +348,6 @@
 %{\par\noindent\ignorespacesafterend}
 %==================
 
-\newenvironment*{سوالات}				
-{\noindent\ignorespaces\wf{
-\موٹا{حصہ} 
-\thesection
-\quad
-\موٹا{صفحہ}
-\thepage}
-\wf{\unexpanded{\begin{description}\setlength{\parskip}{0pt} \setlength{\itemsep}{0pt plus 1pt}}}
-}%
-{\wf{\unexpanded{\end{description}}}\par\noindent\ignorespacesafterend}
-%==================
-\newenvironment*{جواب}  %the next is a better environment. it take less input		
-{\noindent\ignorespaces\wf{\unexpanded{\item[}}\wf{\thequestioncounter)}\wf{\unexpanded{]}}}%
-{\noindent\ignorespacesafterend}
-%%==================
-%%==================
-%%this takes one input hence there is no need to write \wf{\unexpanded{...}} in every answer
-%\newenvironment*{جواب}[1]			%put actual answer in {} examples {\(\sqrt{2}\)} 	
-%{\noindent\ignorespaces\wf{\unexpanded{\item[}}\wf{\thequestioncounter)}\wf{\unexpanded{]}}\wf{\unexpanded{#1}}}%
-%{\noindent\ignorespacesafterend}
-%==================
-%\newenvironment*{جوابء}				%i think is wrong and not used	
-%{\noindent\ignorespaces\wf{\unexpanded{[}}\wf{\thequestioncounter)}\wf{\unexpanded{]}}}%
-%{\par\noindent\ignorespacesafterend}
-%==================
-
-%the following is the environment for end of chapter questions 
-%it too accepts the answer environment above
-\newenvironment*{سوالات_باب}				
-{\noindent\ignorespaces\wf{
-\موٹا{مشق برائے باب} 
-\thechapter
-\quad
-\موٹا{صفحہ}
-\thepage}
-\wf{\unexpanded{\begin{description}\setlength{\parskip}{0pt} \setlength{\itemsep}{0pt plus 1pt}}}
-}%
-{\wf{\unexpanded{\end{description}}}\par\noindent\ignorespacesafterend}
-%==================
-%the following is the environment for end of Appendix questions 
-%it too accepts the answer environment above
-\newenvironment*{سوالات_ضمیمہ}				
-{\noindent\ignorespaces\wf{
-\موٹا{مشق برائے ضمیمہ} 
-\thechapter
-\quad
-\موٹا{صفحہ}
-\thepage}
-\wf{\unexpanded{\begin{description}\setlength{\parskip}{0pt} \setlength{\itemsep}{0pt plus 1pt}}}
-}%
-{\wf{\unexpanded{\end{description}}}\par\noindent\ignorespacesafterend}
-%==================
 %==================
 %\numberwithin{equation}{section}
 %\renewcommand{\theequation}{\arabic{equation}}

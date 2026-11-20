@@ -1,0 +1,287 @@
+\documentclass[leqno,b5paper]{book}
+%\documentclass[leqno]{book} %the geometry package defines the paper size
+
+% xelatex --shell-escape calculusAndAnalyticGeometry   %must run to avail gnuplot functionality. gnuplot must be installed.
+\typeout{kkk: to avail gnuplot functionality must run   "xelatex --shell-escape calculusAndAnalyticGeometry"}
+
+%===================
+%testing tikz inside book
+\usepackage[arrowmos,RPvoltages]{circuitikz}
+\usepackage{pgfplotstable}
+\usepackage{pgfplots}
+
+\usepackage{tikz-3dplot}
+%\pgfplotsset{compat=newest,}
+%\pgfplotsset{compat=1.9}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{units}
+\usepgfplotslibrary{polar}
+\usepackage{ifdraft}
+\usepackage{multicol}                                        %for getting multicolumn itemize, enumerate etc
+\usepackage{enumerate}                   %for getting better auto numbering in enumerate
+
+
+%pathmorphing gives the ripples like look
+\usetikzlibrary{shapes,snakes,3d, shadings,fadings,intersections,calc,decorations.markings, decorations.pathreplacing, external,shapes.misc,decorations.pathmorphing,patterns,shapes.arrows,matrix}
+
+
+%\tikzexternalize[mode=list and make] %disable to generate figures
+%\tikzexternaldisable  %enables figures after this command. put this is the tex file
+
+\usepackage{scrextend}   % \begin{labeling}{}  \end{labeling}   just like Description
+%for vertical spacing in tables use\Tstrut and \Bstrut  
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}       % Top strut
+\newcommand\Bstrut{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
+%\renewcommand{\arraystretch}{2} give this before tabular for vertical space 
+
+\definecolor{lgray}{cmyk}{0,0,0,0.2}
+\colorlet{llgray}{gray!10}
+\definecolor{dgray}{cmyk}{0,0,0,0.7}
+%========================
+%%\usepackage[hidelinks]{hyperref}  %used in machines book but not here
+%\usepackage{./tex/khalidUrduBooksMaths}                     %moved to last place
+\usepackage{amsbsy} %for bold Poynting, lessgtr symbol
+\usepackage{mathrsfs}   %for Poynting symbol
+\usepackage{IEEEtrantools}
+\usepackage{multirow}   %for multiple row cells in a table column
+\usepackage[misc]{ifsym} 
+
+\usepackage{./tex/khalidUrduBooksCalculus}     % my sty polyglossia must be the last package as it handles urdu
+
+\newcommand{\tikzmark}[1]{%
+  \tikz[overlay,remember picture] \node (#1) {};}
+
+ 
+\newcommand*{\kStrokeOne}{|}                                      %tally marks (statistics)
+\newcommand*{\kStrokeTwo}{|\!|}
+\newcommand*{\kStrokeThree}{|\!|\!|}
+\newcommand*{\kStrokeFour}{|\!|\!|\!|}
+\newcommand*{\kStrokeFive}{\cancel\kStrokeFour}
+
+\pgfplotsset{every axis plot/.append style={thick}}
+%\renewcommand{\arraystretch}{2}   %space in tables and arrays
+
+\DeclareSIUnit \var {var}    %used in electric circuits volt-ampere-reactive
+
+\input longdiv.tex		%this is a package but doesnot load with usepackage. it writes pen and paper long division
+\usepackage{polynom}		%this writes pen and paper long division for polynomials
+\usepgfplotslibrary{fillbetween}
+\usepackage[]{gnuplottex}
+\usepackage{esint}              %added on 2 jan 2023 for sec 14-4 onwards for counterclockwise integrals
+%============================
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%to write answere to the following "answer" file, enclose all questions in ابتدا{سوالات}  ، انتہا{سوالات}   environment 
+%and enclose each answer within  \wf{\unexpanded{}}. this is placed inside the  ابتدا{جواب} environment. with no answers, it gives error
+
+\usepackage{newfile}                                                                  %writing answers to the end of the book
+\newwrite\tempfile
+\immediate\openout\tempfile=answer.tex
+\newcommand*\wf[1]{\immediate\write\tempfile{#1}}
+\newcommand*\kwf[1]{#1}
+%=======================================
+
+
+
+%===========================================================
+%%the  \اصطلاح and \حاشیہب have been disabled  in "myUrduCommandsCalculus.tex" and instead 
+%%the following is used. this retains their original definitions and writes them to a "technicalTerms.tex" text file too.
+%\newwrite\tempfileTerms				 %collecting technical terms. uses newfile package
+%\immediate\openout\tempfileTerms=technicalTerms.tex
+%\newcommand*\wTechTerms[1]{\immediate\write\tempfileTerms{#1}}
+%\newcommand*{\اصطلاح}[1]{\wTechTerms{\unexpanded{ur, #1 ,}}{\urduTechTermsfont{#1}}}
+%\newcommand*{\حاشیہب}[1]{ \wTechTerms{\unexpanded{en, #1,}}{\raggedright{\footnote{\textenglish{#1}}}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%============================                                                            
+%=================================
+%=================================
+
+\input{./tex/myHarpoons.tex}                       %testing harpoons
+
+
+\input{./tex/myUrduCommandsCalculus.tex}                  %turning latex into urdu
+\input{./tex/myUrduGreek.tex}
+\input{./tex/myEMTvectors.tex}
+\input{./tex/myDeclareFunctions.tex}     %\sech, \csch, \arcsh, \arcs   hyperbolic and arc-secant etc
+\input{./tex/myCircuitDimensionsAndMathematicalSymbols.tex} % resistor sizes and Laplace, Fourier, Complex, Phasor, etc  symbols
+\input{./tex/myTikzCommandsCircuitAnalysis.tex}
+
+\input{./tex/myConfigurableTechicalTerms.tex}	%uses dictionary entries for the technical terms used. useage:    \بدل{عنصر_سمتیہ}
+
+%\input{./tex/myElectronicsVariablesBetter.tex}         %these are all tested. to use at the very end when book is finished
+
+
+\graphicspath{{./fig/figFrontPage/}{./fig/figCalculusLimits/}{./fig/figCalculusDerivatives/}{./fig/figCalculusIntegration/}{./fig/figCalculusApplicationsOfIntegrals}{./fig/figCalculusTechniquesOfIntegration/}}%paths to figures
+
+
+\includeonly{./tex/calculusPreface,./tex/prefaceFirstBook,./tex/calculusFunctions,./tex/calculusLimitsAndContinuity,./tex/calculusDerivatives,./tex/calculusApplicationsOfDerivatives,./tex/calculusIntegration,./tex/calculusApplicationsOfIntegrals,./tex/calculusTranscendentalFunctions,./tex/calculusTechniquesOfIntegration,./tex/calculusInfiniteSeries,./tex/calculusConicSectionsParametrizedCurvesPolarCoordinates,./tex/calculusVectorsAndAnalyticGeometryInSpace,./tex/calculusVectorValuedFunctionsandMotionInSpace,./tex/calculusMultivariableFunctionsAndPartialDerivatives,./tex/calculusMultipleIntegrals,./tex/calculusIntegrationInVectorFields,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI,./tex/calculusIntegrationTable}
+%
+
+%\includeonly{,./tex/calculusIntegrationInVectorFields,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI,./tex/calculusIntegrationTable}%
+
+%\includeonly{./tex/calculusDerivatives}
+%\includeonly{,./tex/calculusMultivariableFunctionsAndPartialDerivatives}
+%\includeonly{./tex/calculusIntegrationInVectorFields,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI}
+%\includeonly{,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI,./tex/calculusIntegrationTable}
+%\includeonly{./tex/calculusPreface,./tex/prefaceFirstBook,,./tex/calculusAppendixA.}
+%\includeonly{,./tex/calculusVectorsAndAnalyticGeometryInSpace}
+%\includeonly{./tex/calculusInfiniteSeries}
+%\includeonly{./tex/calculusIntegrationInVectorFields}
+%\includeonly{./tex/test}
+
+
+\author{
+خالد خان یوسفزئی\\
+\\
+{\small {جامعہ کامسیٹ، اسلام آباد}}\\
+\texttt{brekhnazaryab@gmail.com}
+}
+
+%=========
+
+
+
+\title{
+احصاء اور تحلیلی ہندسہ
+}
+%\date{}                           %if absent gives date in arabic which is a rubbish
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%included the following to correct the RTL issues with equation numbering after upgradation to ubuntu 18.04
+%might break bidi package as said on the internet
+\makeatletter
+\def\maketag@@@#1{\hbox{\m@th\normalfont\RTL{{\beginR #1\endR}}}}
+\def\tagform@#1{\maketag@@@{(\ignorespaces{\beginR#1\endR}\unskip)}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlatin
+%\linenumbers
+%\makeindex
+%==========
+\begin{document}
+\sloppy
+
+
+\renewcommand*{\contentsname}{عنوان}    %this command has to be placed right here
+%\renewcommand*{\proofname}{ثبوت}   %if placed before start of begin{urdufont}, it gets swept by the settings of the font environment
+%\renewcommand*{\appendixname}{ضمیمہ}
+
+
+\frontmatter                          %just added instead of \pagenumbering{roman}
+%%\pagenumbering{roman}
+
+\maketitle
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+\pagestyle{empty}
+\newpage
+
+\addcontentsline{toc}{chapter}{دیباچہ}
+\include{./tex/calculusPreface}
+
+\newpage
+
+\addcontentsline{toc}{chapter}{میری پہلی کتاب کا دیباچہ}
+
+\include{./tex/prefaceFirstBook}
+%\newpage
+%\include{./tex/cktSymbols}
+
+
+\mainmatter                      %added this
+%\renewcommand*{\chaptername}{باب}
+%%\pagenumbering{arabic}   %instead of this
+
+\pagestyle{headings}
+
+
+\include{./tex/calculusFunctions}
+\include{./tex/calculusLimitsAndContinuity}
+\include{./tex/calculusDerivatives}
+\include{./tex/calculusApplicationsOfDerivatives}
+\include{./tex/calculusIntegration}
+\include{./tex/calculusApplicationsOfIntegrals}
+\include{./tex/calculusTranscendentalFunctions}
+\include{./tex/calculusTechniquesOfIntegration}
+\include{./tex/calculusInfiniteSeries}
+\include{./tex/calculusConicSectionsParametrizedCurvesPolarCoordinates}
+\include{./tex/calculusVectorsAndAnalyticGeometryInSpace}
+\include{./tex/calculusVectorValuedFunctionsandMotionInSpace}
+\include{./tex/calculusMultivariableFunctionsAndPartialDerivatives}
+\include{./tex/calculusMultipleIntegrals}
+\include{./tex/calculusIntegrationInVectorFields}
+%\include{./tex/questions}
+%\include{./tex/test}
+
+%=========================================================
+%\addcontentsline{toc}{chapter}{حوالہ}     %it is standard not to include References in toc. 
+%\renewcommand*{\bibname}{حوالہ}      %this command has to be placed right here
+%\begin{thebibliography}{99}\label{حوالہ_بیرونی_مواد}
+%\begin{otherlanguage*}{english}
+%%\cite{حوالہ_کریزگ_الف_گیارہ}         this is how it is referenced in the text
+%\bibitem{حوالہ_کریزگ_الف_سات}
+ %Coddington, E. A. and N. Levinson, Theory of
+%Ordinary Differential Equations. Malabar, FL: Krieger,
+%1984.
+%\bibitem{حوالہ_کریزگ_الف_گیارہ}
+%Ince, E. L., Ordinary Differential Equations. New
+%York: Dover, 1956.
+%\bibitem{حوالہ_کریزگ_ب_اٹھارہ}
+%Watson, G. N., A Treatise on the Theory of Bessel Functions. 2nd ed. Cambridge: University Press, 1944.
+%\end{otherlanguage*}
+%\end{thebibliography}
+%============================================================
+%=======================
+\appendix
+\addcontentsline{toc}{chapter}{ضمیمے}
+\cleardoublepage
+\renewcommand{\theequation}{\arabic{equation}}
+\include{./tex/calculusAppendixA}
+\include{./tex/calculusAppendixB}
+\include{./tex/calculusAppendixC}
+\include{./tex/calculusAppendixD}
+\include{./tex/calculusAppendixE}
+\include{./tex/calculusAppendixF}
+\include{./tex/calculusAppendixG}
+\include{./tex/calculusAppendixH}
+\include{./tex/calculusAppendixI}
+\include{./tex/calculusIntegrationTable}
+%
+
+%\include{./tex/emtEndOfBookTableDivergenceCurlGradientLaplacian}
+%\include{./tex/toDoList}
+%\include{./tex/emtQuestions}
+
+\backmatter
+\cleardoublepage
+%\include{./tex/emtDataTables}        %appendices
+%\include{./tex/emtLinearAlgebra}
+%\include{./tex/emtCoordinatesRelations}
+%================
+%\immediate\closeout\tempfileTerms
+
+\chapter*{جوابات}
+\typeout{kkk: am about to put answers at the end of the book}
+\addcontentsline{toc}{chapter}{جوابات}
+\immediate\closeout\tempfile
+\begin{multicols}{2}
+{\small
+\input{answer}
+}
+\end{multicols}
+\typeout{kkk:  finished putting answers at the end of the book}
+
+%=================
+
+%\renewcommand*{\indexname}{فرہنگ}      %this command has to be placed right here just before printindex command
+%\chapter*{اشاریہ}
+
+\addcontentsline{toc}{chapter}{اشاریہ}
+
+\printindex
+\end{document}

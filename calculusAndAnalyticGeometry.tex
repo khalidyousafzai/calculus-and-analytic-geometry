@@ -5,7 +5,6 @@
 \typeout{kkk: to avail gnuplot functionality must run   "xelatex --shell-escape calculusAndAnalyticGeometry"}
 
 %===================
-%testing tikz inside book
 \usepackage[arrowmos,RPvoltages]{circuitikz}
 \usepackage{pgfplotstable}
 \usepackage{pgfplots}
@@ -23,10 +22,6 @@
 
 %pathmorphing gives the ripples like look
 \usetikzlibrary{shapes,snakes,3d, shadings,fadings,intersections,calc,decorations.markings, decorations.pathreplacing, external,shapes.misc,decorations.pathmorphing,patterns,shapes.arrows,matrix}
-
-
-%\tikzexternalize[mode=list and make] %disable to generate figures
-%\tikzexternaldisable  %enables figures after this command. put this is the tex file
 
 \usepackage{scrextend}   % \begin{labeling}{}  \end{labeling}   just like Description
 %for vertical spacing in tables use\Tstrut and \Bstrut  
@@ -68,37 +63,14 @@
 \usepgfplotslibrary{fillbetween}
 \usepackage[]{gnuplottex}
 \usepackage{esint}              %added on 2 jan 2023 for sec 14-4 onwards for counterclockwise integrals
+\usepackage{newfile}		%used to write answers and technical terms to files 
 %============================
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%to write answere to the following "answer" file, enclose all questions in ابتدا{سوالات}  ، انتہا{سوالات}   environment 
-%and enclose each answer within  \wf{\unexpanded{}}. this is places inside the  ابتدا{جواب} environment 
-
-\usepackage{newfile}                                                                  %writing answers to the end of the book
-\newwrite\tempfile
-\immediate\openout\tempfile=answer.tex
-\newcommand*\wf[1]{\immediate\write\tempfile{#1}}
-\newcommand*\kwf[1]{#1}
-%=======================================
-
-
-
-%===========================================================
-%%the  \اصطلاح and \حاشیہب have been disabled  in "myUrduCommandsCalculus.tex" and instead 
-%%the following is used. this retains their original definitions and writes them to a "technicalTerms.tex" text file too.
-%\newwrite\tempfileTerms				 %collecting technical terms. uses newfile package
-%\immediate\openout\tempfileTerms=technicalTerms.tex
-%\newcommand*\wTechTerms[1]{\immediate\write\tempfileTerms{#1}}
-%\newcommand*{\اصطلاح}[1]{\wTechTerms{\unexpanded{ur, #1 ,}}{\urduTechTermsfont{#1}}}
-%\newcommand*{\حاشیہب}[1]{ \wTechTerms{\unexpanded{en, #1,}}{\raggedright{\footnote{\textenglish{#1}}}}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%============================                                                            
-%=================================
-%=================================
 
 \input{./tex/myHarpoons.tex}                       %testing harpoons
 
-
 \input{./tex/myUrduCommandsCalculus.tex}                  %turning latex into urdu
+\input{./tex/kConditionalAnswersLocation.tex}		%if there is a tex error in an answer. it is better to keep answers near the questions
+\input{./tex/kConditionalCollectTerms}
 \input{./tex/myUrduGreek.tex}
 \input{./tex/myEMTvectors.tex}
 \input{./tex/myDeclareFunctions.tex}     %\sech, \csch, \arcsh, \arcs   hyperbolic and arc-secant etc
@@ -125,7 +97,7 @@
 %\includeonly{./tex/calculusPreface,./tex/prefaceFirstBook,,./tex/calculusAppendixA.}
 %\includeonly{,./tex/calculusVectorsAndAnalyticGeometryInSpace}
 %\includeonly{./tex/calculusInfiniteSeries}
-%\includeonly{./tex/calculusIntegrationInVectorFields}
+%\includeonly{./tex/calculusMultipleIntegrals}
 %\includeonly{./tex/test}
 
 
@@ -263,7 +235,6 @@
 %\include{./tex/emtLinearAlgebra}
 %\include{./tex/emtCoordinatesRelations}
 %================
-%\immediate\closeout\tempfileTerms
 
 \chapter*{جوابات}
 \typeout{kkk: am about to put answers at the end of the book}
