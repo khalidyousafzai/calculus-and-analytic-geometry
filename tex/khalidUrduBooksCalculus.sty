@@ -1,6 +1,8 @@
 \ProvidesPackage{khalidUrduBooksCalculus}
 \usepackage{fontspec}
-\usepackage{makeidx}								%generates index
+%\usepackage{makeidx}								%generates index
+\usepackage[noautomatic]{imakeidx}		%generates index; run upmendex bookName.idx to generate *.ind file
+\makeindex[options={-s myurdu.ist}]
 \usepackage{amsmath}                                                                         %\tfrac for fractions in text
 %\numberwithin{equation}{section}				%resets equation numbers at each section 
 \numberwithin{equation}{chapter}
