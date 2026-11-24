@@ -70,7 +70,7 @@
 
 \input{./tex/myUrduCommandsCalculus.tex}                  %turning latex into urdu
 \input{./tex/kConditionalAnswersLocation.tex}		%if there is a tex error in an answer. it is better to keep answers near the questions
-\input{./tex/kConditionalCollectTerms}
+\input{./tex/kConditionalCollectTerms}			%technical terms used in the book are written to a file
 \input{./tex/myUrduGreek.tex}
 \input{./tex/myEMTvectors.tex}
 \input{./tex/myDeclareFunctions.tex}     %\sech, \csch, \arcsh, \arcs   hyperbolic and arc-secant etc
@@ -96,8 +96,8 @@
 %\includeonly{,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI,./tex/calculusIntegrationTable}
 %\includeonly{./tex/calculusPreface,./tex/prefaceFirstBook,,./tex/calculusAppendixA.}
 %\includeonly{,./tex/calculusVectorsAndAnalyticGeometryInSpace}
-%\includeonly{./tex/calculusInfiniteSeries}
-%\includeonly{./tex/calculusMultipleIntegrals}
+%\includeonly{./tex/calculusFunctions,./tex/calculusAppendixA,./tex/calculusAppendixB,./tex/calculusAppendixC,./tex/calculusAppendixD,./tex/calculusAppendixE,./tex/calculusAppendixF,./tex/calculusAppendixG,./tex/calculusAppendixH,./tex/calculusAppendixI,./tex/calculusIntegrationTable}
+%\includeonly{./tex/calculusFunctions}
 %\includeonly{./tex/test}
 
 
@@ -209,20 +209,23 @@
 %\end{thebibliography}
 %============================================================
 %=======================
-\appendix
-\addcontentsline{toc}{chapter}{ضمیمے}
+%using \include{} below gave toc problems, while \input{} doesnot give problems
+%
 \cleardoublepage
-\renewcommand{\theequation}{\arabic{equation}}
-\include{./tex/calculusAppendixA}
-\include{./tex/calculusAppendixB}
-\include{./tex/calculusAppendixC}
-\include{./tex/calculusAppendixD}
-\include{./tex/calculusAppendixE}
-\include{./tex/calculusAppendixF}
-\include{./tex/calculusAppendixG}
-\include{./tex/calculusAppendixH}
-\include{./tex/calculusAppendixI}
-\include{./tex/calculusIntegrationTable}
+\addcontentsline{toc}{chapter}{ضمیمے}
+\appendix
+
+\input{./tex/calculusAppendixA}
+\input{./tex/calculusAppendixB}
+\input{./tex/calculusAppendixC}
+\input{./tex/calculusAppendixD}
+\input{./tex/calculusAppendixE}
+\input{./tex/calculusAppendixF}
+\input{./tex/calculusAppendixG}
+\input{./tex/calculusAppendixH}
+\input{./tex/calculusAppendixI}
+\input{./tex/calculusIntegrationTable}
+
 %
 
 %\include{./tex/emtEndOfBookTableDivergenceCurlGradientLaplacian}
@@ -235,20 +238,9 @@
 %\include{./tex/emtLinearAlgebra}
 %\include{./tex/emtCoordinatesRelations}
 %================
-
-\chapter*{جوابات}
-\typeout{kkk: am about to put answers at the end of the book}
-\addcontentsline{toc}{chapter}{جوابات}
-\immediate\closeout\tempfile
-\begin{multicols}{2}
-{\small
-\input{answer}
-}
-\end{multicols}
-\typeout{kkk:  finished putting answers at the end of the book}
-
+%prints answers at the back of the book if  "\AnswersAtBacktrue" in kConditionalAnswersLocation.tex
+\kprintAnswers
 %=================
-
 %\renewcommand*{\indexname}{فرہنگ}      %this command has to be placed right here just before printindex command
 %\chapter*{اشاریہ}
 

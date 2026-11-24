@@ -1,0 +1,13 @@
+% \linenumbers      ;Enable to show PDF line numbers
+%disable \حوالہ{} definition in main urduCommands file, since it is redefined here
+%\renewcommand{\thequestioncounter}{\thesection-\arabic{questioncounter}}    ; redefine it as shown here
+
+\usepackage{refcount}
+\newwrite\tempRef				 %collecting technical terms. uses newfile package
+\immediate\openout\tempRef=references.tex
+\AtEndDocument{\immediate\closeout\tempRef}
+\newcommand*\wTechTerms[1]{\immediate\write\tempRef{#1}}
+
+\newcommand*{\حوالہ}[1]{\wTechTerms{\expanded{page \thepage, pdf line \number\value{linenumber}, line \the\inputlineno,  \ref{#1} , in sec\thesection, ref is}}\wTechTerms{\getrefbykeydefault{#1}{}{??}}{\ref{#1}}}
+%\newcommand*{\حوالہ}[1]{\ref{#1}}
+

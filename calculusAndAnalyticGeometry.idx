@@ -12,10 +12,10 @@
 \indexentry{اعداد!غیر ناطق}{3}
 \indexentry{interval}{3}
 \indexentry{وقفہ}{3}
-\indexentry{وقفہ!لا متناہی}{3}
+\indexentry{interval!infinite}{3}
+\indexentry{وقفہ!لامتناہی}{3}
 \indexentry{interval!finite}{3}
 \indexentry{وقفہ!متناہی}{3}
-\indexentry{interval!infinite}{3}
 \indexentry{half-open}{3}
 \indexentry{نصف کھلا}{3}
 \indexentry{closed}{3}
@@ -59,8 +59,8 @@
 \indexentry{بڑھوتری}{14}
 \indexentry{unit circle}{16}
 \indexentry{اکائی دائرہ}{16}
-\indexentry{قطع مکافی}{16}
 \indexentry{parabola}{16}
+\indexentry{قطع مکافی}{16}
 \indexentry{slope}{17}
 \indexentry{ڈھلوان}{17}
 \indexentry{angle of inclination}{18}
@@ -164,21 +164,21 @@
 \indexentry{discontinuity!jump}{139}
 \indexentry{عدم استمرار!چھلانگ}{139}
 \indexentry{discontinuity!infinite}{139}
-\indexentry{عدم استمرار!لا متناہی}{139}
+\indexentry{عدم استمرار!لامتناہی}{139}
 \indexentry{discontinuity!oscillating}{139}
 \indexentry{عدم استمرار!ارتعاشی}{139}
 \indexentry{continuous!right}{141}
 \indexentry{استمراری!دائیں}{141}
 \indexentry{continuous!left}{141}
 \indexentry{استمراری!بائیں}{141}
+\indexentry{extended function}{145}
 \indexentry{وسیع تفاعل}{145}
 \indexentry{continuous extension}{145}
 \indexentry{استمراری توسیع}{145}
-\indexentry{extended function}{145}
 \indexentry{continuous!on interval}{146}
 \indexentry{استمراری!وقفہ پر}{146}
-\indexentry{خاصیت!متوسط قیمت}{146}
 \indexentry{property!intermediate value}{146}
+\indexentry{خاصیت!متوسط قیمت}{146}
 \indexentry{root}{148}
 \indexentry{جذر}{148}
 \indexentry{zero}{148}
@@ -266,8 +266,8 @@
 \indexentry{marginal!cost of production}{208}
 \indexentry{حاشیائی لاگت پیداوار}{208}
 \indexentry{حاشیائی لاگت}{209}
-\indexentry{لاوا}{216}
 \indexentry{lava}{216}
+\indexentry{لاوا}{216}
 \indexentry{jerk}{224}
 \indexentry{جھٹکا}{224}
 \indexentry{difference!centered quotient}{232}
@@ -387,32 +387,32 @@
 \indexentry{وقفہ!ذیلی}{453}
 \indexentry{Riemann!sum}{454}
 \indexentry{ریمان!مجموعہ}{454}
-\indexentry{norm}{455}
-\indexentry{معیار}{455}
+\indexentry{norm}{454}
+\indexentry{معیار}{454}
 \indexentry{integrable}{455}
 \indexentry{تکمل!قابل}{455}
 \indexentry{integral!definite}{455}
 \indexentry{تکمل!قطعی}{455}
 \indexentry{قطعی!تکمل}{455}
-\indexentry{converges}{455}
-\indexentry{مرتکز}{455}
+\indexentry{converges}{456}
+\indexentry{مرتکز}{456}
 \indexentry{sum!lower}{456}
 \indexentry{مجموعہ!زیریں}{456}
 \indexentry{sum!upper}{456}
 \indexentry{مجموعہ!بالائی}{456}
-\indexentry{continuity!uniform}{456}
-\indexentry{استمرار!یکساں}{456}
+\indexentry{continuity!uniform}{457}
+\indexentry{استمرار!یکساں}{457}
 \indexentry{variable!dummy}{459}
 \indexentry{متغیر!نقلی}{459}
 \indexentry{mean}{480}
 \indexentry{average}{480}
 \indexentry{اوسط قیمت}{480}
-\indexentry{مسئلہ!اوسط قیمت}{481}
 \indexentry{theorem!mean value}{481}
+\indexentry{مسئلہ!اوسط قیمت}{481}
 \indexentry{theorem!The Fundamental}{488}
 \indexentry{بنیادی مسئلہ!تکملی احصاء}{488}
-\indexentry{دباؤ!چوٹی}{495}
 \indexentry{voltage!peak}{495}
+\indexentry{دباؤ!چوٹی}{495}
 \indexentry{voltmeter}{495}
 \indexentry{دباؤ!پیما}{495}
 \indexentry{step!size}{511}
@@ -536,8 +536,8 @@
 \indexentry{الخوارزم!کمپیوٹر}{731}
 \indexentry{search!sequential}{731}
 \indexentry{تلاش!ترتیبی}{731}
-\indexentry{ثنائی تلاش}{731}
 \indexentry{search!binary}{731}
+\indexentry{ثنائی تلاش}{731}
 \indexentry{function!hyperbolic}{779}
 \indexentry{تفاعل!ہذلولی}{779}
 \indexentry{catenary}{780}
@@ -632,8 +632,8 @@
 \indexentry{فبونیکی اعداد}{899}
 \indexentry{factorial}{900}
 \indexentry{ضربیہ}{900}
-\indexentry{ترتیب!ذیلی}{900}
 \indexentry{sequence!sub}{900}
+\indexentry{ترتیب!ذیلی}{900}
 \indexentry{sequence!tail}{901}
 \indexentry{ترتیب!دُم}{901}
 \indexentry{sequence!nondecreasing}{901}
@@ -1209,8 +1209,8 @@
 \indexentry{رقبہ!تعریف}{1605}
 \indexentry{surface!integral}{1610}
 \indexentry{تکمل!سطحی}{1610}
-\indexentry{ٹکڑوں میں ہموار}{1610}
 \indexentry{piecewise smooth}{1610}
+\indexentry{ٹکڑوں میں ہموار}{1610}
 \indexentry{دو طرفہ}{1612}
 \indexentry{orientable}{1612}
 \indexentry{قابل سمت بند}{1612}
@@ -1302,7 +1302,7 @@
 \indexentry{مطلق قیمت}{1705}
 \indexentry{argument}{1705}
 \indexentry{دلیل}{1705}
-\indexentry{ Euler's!formula}{1705}
+\indexentry{Euler's formula}{1705}
 \indexentry{یولر!کلیہ}{1705}
 \indexentry{De Moivre's theorem}{1708}
 \indexentry{مسئلہ ڈی موےور}{1708}

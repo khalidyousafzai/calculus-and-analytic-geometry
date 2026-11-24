@@ -53,6 +53,19 @@
 \wf{\unexpanded{\begin{description}\setlength{\parskip}{0pt} \setlength{\itemsep}{0pt plus 1pt}}}
 }%
 {\wf{\unexpanded{\end{description}}}\par\noindent\ignorespacesafterend}
+%===================================================
+\newcommand*\kprintAnswers{
+\chapter*{جوابات}
+\typeout{kkk: am about to put answers at the end of the book}
+\addcontentsline{toc}{chapter}{جوابات}
+\immediate\closeout\tempfile
+\begin{multicols}{2}
+{\small
+\input{answer}
+}
+\end{multicols}
+\typeout{kkk:  finished putting answers at the end of the book}
+}
 %============================================================================================
 %============================================================================================
 \else
@@ -82,5 +95,6 @@
 \newenvironment*{سوالات_ضمیمہ}				
 {\par\medskip\noindent}%
 {\par\medskip}
-
+%==============================================
+\newcommand*\kprintAnswers{}
 \fi
